@@ -8,8 +8,9 @@ void Messagef(const char* format, ...);
 void Displayf(const char* format, ...);
 void Warningf(const char* format, ...);
 void Errorf(const char* format, ...);
-void Quitf(const char* format, ...);
-void Abortf(const char* format, ...);
+
+[[noreturn]] void Quitf(const char* format, ...);
+[[noreturn]] void Abortf(const char* format, ...);
 
 void ageDebug(int enabled, char const * format, ...);
 

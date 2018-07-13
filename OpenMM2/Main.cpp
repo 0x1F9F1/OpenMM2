@@ -57,14 +57,14 @@ void CreateGameMutex(const char* name)
 uint32_t __ComputeCpuSpeed()
 {
     DWORD64 cycleStart = __rdtsc();
-    DWORD timeStart = GetTickCount();
+    DWORD64 timeStart = GetTickCount64();
 
     Sleep(100);
 
     DWORD64 cycleDelta = __rdtsc() - cycleStart;
-    DWORD timeDelta = GetTickCount() - timeStart;
+    DWORD64 timeDelta = GetTickCount64() - timeStart;
 
-    return (uint32_t)((cycleDelta + 500 * timeDelta) / (1000 * timeDelta));
+    return (uint32_t)((cycleDelta + timeDelta * 500) / (timeDelta * 1000));
 }
 
 uint32_t ComputeCpuSpeed()
@@ -78,17 +78,17 @@ uint32_t ComputeCpuSpeed()
 
 void CheckGlobalMemory()
 {
-    MEMORYSTATUS status;
-    status.dwLength = sizeof(MEMORYSTATUS);
-    GlobalMemoryStatus(&status);
+    MEMORYSTATUSEX status;
+    status.dwLength = sizeof(status);
+    GlobalMemoryStatusEx(&status);
 
     Displayf(
         "Avail Phys: %dM  Avail Page: %dM  Avail addr: %dM",
-        status.dwAvailPhys >> 20,
-        status.dwAvailPageFile >> 20,
-        status.dwAvailVirtual >> 20);
+        status.ullAvailPhys >> 20,
+        status.ullAvailPageFile >> 20,
+        status.ullAvailVirtual >> 20);
 
-    if (status.dwAvailPageFile + status.dwAvailPhys < 0x5000000)
+    if (status.ullAvailPageFile + status.ullAvailPhys < 0x5000000)
     {
         MessageBoxA(0, LANG_STRING(0xF8), APPTITLE, MB_ICONERROR);
 
@@ -98,14 +98,13 @@ void CheckGlobalMemory()
 
 void CheckDiskSpace()
 {
-    DWORD TotalNumberOfClusters; // [sp+0h] [bp-10h]@1
-    DWORD NumberOfFreeClusters; // [sp+4h] [bp-Ch]@1
-    DWORD BytesPerSector; // [sp+8h] [bp-8h]@1
-    DWORD SectorsPerCluster; // [sp+Ch] [bp-4h]@1
+    ULARGE_INTEGER FreeBytesAvailableToCaller;
+    ULARGE_INTEGER TotalNumberOfBytes;
+    ULARGE_INTEGER TotalNumberOfFreeBytes;
 
-    if (GetDiskFreeSpaceA(0, &SectorsPerCluster, &BytesPerSector, &NumberOfFreeClusters, &TotalNumberOfClusters))
+    if (GetDiskFreeSpaceExA(0, &FreeBytesAvailableToCaller, &TotalNumberOfBytes, &TotalNumberOfFreeBytes))
     {
-        if ((NumberOfFreeClusters * BytesPerSector * SectorsPerCluster) < 0x20000)
+        if (FreeBytesAvailableToCaller.QuadPart < 0x20000)
         {
             MessageBoxA(0, LANG_STRING(0xF9), APPTITLE, MB_OK);
         }
@@ -353,25 +352,25 @@ void InitHooks()
 {
     Displayf("Initialization Begin");
 
-    std::clock_t begin = std::clock();
+    clock_t begin = clock();
 
     mem::init_function::init();
 
     hook::create_patch("sfPointer::Update", "Enables pointer in windowed mode", 0x4F136E, "\x90\x90", 2);
 
-    Displayf("Initialize Completed in %.2f Seconds", double(std::clock() - begin) / CLOCKS_PER_SEC);
+    Displayf("Initialize Completed in %.2f Seconds", double(clock() - begin) / CLOCKS_PER_SEC);
 }
 
 std::aligned_storage_t<0x4000, 0x8> ShadowMem;
 
-int CALLBACK WinMain(
-    _In_ HINSTANCE hInstance,
-    _In_ HINSTANCE hPrevInstance,
-    _In_ LPSTR     lpCmdLine,
-    _In_ int       nCmdShow
+int CALLBACK MidtownMain(
+    HINSTANCE hInstance,
+    HINSTANCE hPrevInstance,
+    LPSTR     lpCmdLine,
+    int       nCmdShow
 )
 {
-    (void)(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+    (void)hInstance, hPrevInstance, lpCmdLine, nCmdShow;
 
     InitHooks();
 

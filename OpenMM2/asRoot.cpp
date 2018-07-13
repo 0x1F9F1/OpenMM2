@@ -10,15 +10,14 @@ void EnableNanSignal(bool enabled)
 }
 
 asRoot::asRoot()
+    : Matrix()
+    , Paused(false)
+    , byte49(false)
+    , EnableNan(false)
 {
     Matrix.Identity();
-
     asLinearCS::CurrentMatrix = &Matrix;
-
     Reset();
-
-    EnableNan = false;
-    byte49 = false;
 }
 
 void asRoot::Init(bool nanSignal)

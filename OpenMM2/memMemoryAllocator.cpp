@@ -2,10 +2,18 @@
 #include "memMemoryAllocator.h"
 
 memMemoryAllocator::memMemoryAllocator()
-    : HeapData(nullptr)
+    : Prev(memMemoryAllocator::First)
+    , HeapData(nullptr)
     , TotalSize(0)
+    , Alignment(0)
     , Locked(0)
-    , Prev(memMemoryAllocator::First)
+    , field_14(false)
+    , field_15(false)
+    , CheckAlloc(false)
+    , field_17(false)
+    , Array1()
+    , Array2()
+    , fieldD8(0.0f)
 {
     memMemoryAllocator::First = this;
 
@@ -19,7 +27,7 @@ memMemoryAllocator::~memMemoryAllocator()
     HeapData = 0;
 }
 
-void memMemoryAllocator::Init(void * heapData, unsigned int heapSize, BOOL a3, BOOL checkAlloc)
+void memMemoryAllocator::Init(void * heapData, uint32_t heapSize, BOOL a3, BOOL checkAlloc)
 {
     HeapData = heapData;
     TotalSize = heapSize;

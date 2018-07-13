@@ -27,12 +27,12 @@ extern "C" HRESULT WINAPI DirectInputCreateA_Impl(HINSTANCE hinst, DWORD dwVersi
             }
             else
             {
-                Displayf("Failed to find DirectInputCreateA");
+                Quitf("Failed to find DirectInputCreateA");
             }
         }
         else
         {
-            Displayf("Failed to load real dinput.dll");
+            Quitf("Failed to load real dinput.dll");
         }
     }
 

@@ -30,8 +30,8 @@ public:
     DPID PlayerID;
     DPLCONNECTION *pConnection;
     GUID *pGUID;
-    void *nRecvBufSize;
-    uint32_t pRecvBuf;
+    void* pRecvBuf;
+    uint32_t nRecvBufSize;
     float float34;
     uint32_t MaxPlayers;
     uint32_t SessionOpen;

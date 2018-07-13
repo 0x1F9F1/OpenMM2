@@ -2,6 +2,7 @@
 #include "Timer.h"
 
 Timer::Timer()
+    : StartTime(0)
 {
     stub<thiscall_t<void, Timer>>(0x4C7840, this);
 }

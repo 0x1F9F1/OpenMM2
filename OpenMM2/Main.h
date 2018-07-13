@@ -9,9 +9,9 @@ declvar(char*, APPTITLE);
 declvar(char*, DEFAULT_CITY);
 declvar(char*, VERSION_STRING);
 
-int CALLBACK WinMain(
-    _In_ HINSTANCE hInstance,
-    _In_ HINSTANCE hPrevInstance,
-    _In_ LPSTR     lpCmdLine,
-    _In_ int       nCmdShow
+int CALLBACK MidtownMain(
+    HINSTANCE hInstance,
+    HINSTANCE hPrevInstance,
+    LPSTR     lpCmdLine,
+    int       nCmdShow
 );

@@ -193,6 +193,7 @@ void Abortf(const char* format, ...)
     {
         JustBeforeQuit();
     }
+
     DebugBreak();
 
     *static_cast<volatile bool*>(nullptr) = false;

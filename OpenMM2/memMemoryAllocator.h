@@ -19,7 +19,7 @@ public:
     memMemoryAllocator();
     ~memMemoryAllocator();
 
-    void Init(void * heapData, unsigned int heapSize, BOOL a3, BOOL checkalloc);
+    void Init(void * heapData, uint32_t heapSize, BOOL a3, BOOL checkalloc);
     void Kill(void);
 
     static void DisplayUsed(char const* status);

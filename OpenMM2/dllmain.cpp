@@ -2,6 +2,7 @@
 #include "stdafx.h"
 
 #include "OpenMM2.h"
+#include "Main.h"
 
 BOOL APIENTRY DllMain( HMODULE hModule,
                        DWORD  ul_reason_for_call,
@@ -22,7 +23,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
         Printer = &CustomPrinter;
         PrintString = &CustomPrintString;
 
-        hook::create_hook("WinMain", "Entry Point", 0x582025, &WinMain, HookType::CALL);
+        hook::create_hook("WinMain", "Entry Point", 0x582025, &MidtownMain, HookType::CALL);
     }
 
     return TRUE;

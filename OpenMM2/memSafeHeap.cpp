@@ -7,12 +7,16 @@
 #include "memMemoryAllocator.h"
 
 memSafeHeap::memSafeHeap()
-{
-    this->Heap = 0;
-    this->CommitedData = 0;
-    this->SomeAlignmentThingy = 0;
-    this->AllocSize = 0;
-}
+    : Allocator(nullptr)
+    , Heap(0)
+    , CommitedData(nullptr)
+    , SomeAlignmentThingy(0)
+    , AllocSize(0)
+    , bool14(false)
+    , bool15(false)
+    , CheckAlloc(false)
+    , byte17(false)
+{ }
 
 memSafeHeap::~memSafeHeap()
 {
@@ -82,8 +86,9 @@ void memSafeHeap::Kill(void)
 
         if (this->bool14)
         {
-            VirtualFree(this->CommitedData, 0, 0x8000u);
+            VirtualFree(this->CommitedData, 0, MEM_RELEASE);
         }
+
         this->CommitedData = 0;
     }
 }
