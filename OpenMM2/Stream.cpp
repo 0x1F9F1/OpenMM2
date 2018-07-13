@@ -202,19 +202,19 @@ void fprintf(Stream * stream, char const * format, ...)
 
 int fscanf(Stream * stream, char const * format, ...)
 {
-    int currentChar; // eax@1
+    int currentChar = -1; // eax@1
 
     do
     {
         do
         {
-            stream->GetCh();
+            currentChar = stream->GetCh();
         } while (currentChar == '\t');
     } while (currentChar == '\n' || currentChar == ' ' || currentChar == '\r');
 
     char buffer[256];
-
     buffer[0] = (char) currentChar;
+
     if (fgets(&buffer[1], 255, stream))
     {
         va_list va;

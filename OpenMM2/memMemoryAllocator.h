@@ -20,6 +20,7 @@ public:
     ~memMemoryAllocator();
 
     void Init(void * heapData, unsigned int heapSize, BOOL a3, BOOL checkalloc);
+    void Kill(void);
 
     static void DisplayUsed(char const* status);
 

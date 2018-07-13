@@ -15,3 +15,6 @@ struct gfxImage
 };
 
 check_size(gfxImage, 0x1C);
+
+void InstallJPEGSupport(void);
+void InstallTextureVariantHandler(void);

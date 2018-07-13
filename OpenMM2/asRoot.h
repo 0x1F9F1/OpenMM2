@@ -8,8 +8,18 @@ struct asRoot
 {
     Matrix34 Matrix;
     bool Paused;
-    char byte49;
-    char EnableNan;
+    bool byte49;
+    bool EnableNan;
+
+    virtual ~asRoot() override = default;
+
+    void Init(bool nanSignal);
+
+    virtual void Update(void) override;
+    virtual void Reset(void) override;
+    virtual char * GetClassName(void) override;
 };
 
 check_size(asRoot, 0x4C);
+
+declvar(asRoot, ROOT);

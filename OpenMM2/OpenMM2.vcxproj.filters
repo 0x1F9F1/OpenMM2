@@ -90,6 +90,27 @@
     <ClInclude Include="ColorConvert.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ioInput.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="lvlProgress.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="asLinearCS.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="mmStatePack.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="datAssetManager.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="zipFile.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="asNetwork.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -158,5 +179,37 @@
     <ClCompile Include="gfxInterface.cpp">
       <Filter>MM2</Filter>
     </ClCompile>
+    <ClCompile Include="localize.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="ioInput.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="lvlProgress.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="asRoot.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="asLinearCS.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="mmStatePack.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="datAssetManager.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="zipFile.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="asNetwork.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="localize.h">
+      <Filter>MM2</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -198,7 +198,13 @@ void Abortf(const char* format, ...)
     *static_cast<volatile bool*>(nullptr) = false;
 }
 
-call_once([]
+void ageDebug(int enabled, char const * format, ...)
 {
-    // Printer = &DefaultPrinter;
-});
+    if (enabled || true)
+    {
+        va_list va;
+        va_start(va, format);
+        CustomPrinter(1, format, va);
+        va_end(va);
+    }
+}

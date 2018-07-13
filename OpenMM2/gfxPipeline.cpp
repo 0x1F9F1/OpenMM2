@@ -11,6 +11,8 @@
 
 #include "ColorConvert.h"
 
+#include "localize.h"
+
 uint32_t GetPixelFormatColor(DDPIXELFORMAT* lpDDPixelFormat, uint32_t color)
 {
     switch (lpDDPixelFormat->dwGBitMask)
@@ -230,7 +232,7 @@ void gfxPipeline::SetRes(int width, int height, int cdepth, int zdepth, bool par
 
 void gfxPipeline::gfxWindowCreate(const char * windowName)
 {
-    if (hWndMain)
+    if (hwndMain)
     {
         return;
     }
@@ -264,7 +266,7 @@ void gfxPipeline::gfxWindowCreate(const char * windowName)
 
     if (inWindow)
     {
-        if (hWndParent)
+        if (hwndParent)
         {
             dwStyle = WS_CHILD;
         }
@@ -281,7 +283,7 @@ void gfxPipeline::gfxWindowCreate(const char * windowName)
     // update the position
     gfxWindowMove(false);
 
-    hWndMain = CreateWindowExA(
+    hwndMain = CreateWindowExA(
         WS_EX_APPWINDOW,
         "gfxWindow",
         windowName,
@@ -290,7 +292,7 @@ void gfxPipeline::gfxWindowCreate(const char * windowName)
         m_Y,
         640,
         480,
-        hWndParent,
+        hwndParent,
         0,
         0,
         0);
@@ -303,9 +305,9 @@ void gfxPipeline::gfxWindowCreate(const char * windowName)
     SetCursor(NULL);
     ShowCursor(FALSE);
 
-    ShowWindow(hWndMain, TRUE);
-    UpdateWindow(hWndMain);
-    SetFocus(hWndMain);
+    ShowWindow(hwndMain, TRUE);
+    UpdateWindow(hwndMain);
+    SetFocus(hwndMain);
 }
 
 void gfxPipeline::gfxWindowMove(bool isOpen)
@@ -320,16 +322,36 @@ void gfxPipeline::gfxWindowMove(bool isOpen)
 
     if (isOpen)
     {
-        MoveWindow(hWndMain, m_X, m_Y, m_iWidth, m_iHeight, 0);
+        MoveWindow(hwndMain, m_X, m_Y, m_iWidth, m_iHeight, 0);
     }
 }
 
 void gfxPipeline::gfxWindowUpdate(bool isOpen)
 {
     RECT rect;
-    GetClientRect(hWndMain, &rect);
+    GetClientRect(hwndMain, &rect);
 
-    MoveWindow(hWndMain, m_X, m_Y, (2 * m_iWidth - rect.right), (2 * m_iHeight - rect.bottom), isOpen);
+    MoveWindow(hwndMain, m_X, m_Y, (2 * m_iWidth - rect.right), (2 * m_iHeight - rect.bottom), isOpen);
+}
+
+void gfxPipeline::SetTitle(const char * title)
+{
+    lpWindowTitle = title;
+
+    if (hwndMain)
+    {
+        SetWindowTextA(hwndMain, title);
+    }
+}
+
+bool gfxPipeline::BeginGfx2D(void)
+{
+    return stub<cdecl_t<bool>>(0x4A9370);
+}
+
+void gfxPipeline::EndGfx2D(void)
+{
+    return stub<cdecl_t<void>>(0x4AAA10);
 }
 
 LRESULT CALLBACK gfxPipeline::gfxWindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
@@ -355,8 +377,8 @@ void ProgressRect(int x, int y, int width, int height, unsigned int color)
     lpdsRend->Blt(&position, NULL, NULL, DDBLT_COLORFILL | DDBLT_WAIT, &ddBltFx);
 }
 
-defnvar(0x682FA0, hWndParent);
-defnvar(0x6830B8, hWndMain);
+defnvar(0x682FA0, hwndParent);
+defnvar(0x6830B8, hwndMain);
 defnvar(0x68311C, lpWindowTitle);
 defnvar(0x6830F0, ATOM_Class);
 defnvar(0x683108, IconID);
@@ -374,6 +396,9 @@ defnvar(0x6830D5, useAgeSoftware);
 defnvar(0x6830D6, useBlade);
 defnvar(0x6830D7, useSysMem);
 defnvar(0x6830D8, useInterface);
+defnvar(0x6B19BC, useIME);
+defnvar(0x6B19C0, immContext);
+
 defnvar(0x684518, lpDirectDrawCreateEx);
 defnvar(0x6830A8, lpDD);
 defnvar(0x6830AC, lpD3D);
@@ -407,3 +432,31 @@ call_once([ ]
     hook::create_hook("AutoDetectCallback", "Replaces the default AutoDetect method with a much faster one", 0x4AC030, &AutoDetectCallback, HookType::JMP);
     hook::create_hook("ProgressRect", "Fixes white loading bar in 32-bit display mode.", 0x401010, &ProgressRect, HookType::JMP);
 });
+
+BOOL gfxAutoDetect(BOOL * success)
+{
+    return stub<cdecl_t<BOOL, BOOL*>>(0x4ABE00, success);
+}
+
+void gfxFindSafeAdapter()
+{
+    return stub<cdecl_t<void>>(0x4AC820);
+}
+
+void InitDirectDraw(void)
+{
+    if (gfxPipeline::BeginGfx2D())
+    {
+        return;
+    }
+
+    gfxFindSafeAdapter();
+
+    if (gfxPipeline::BeginGfx2D())
+    {
+        return;
+    }
+
+    MessageBoxA(0, LANG_STRING(0xF6u), APPTITLE, MB_ICONERROR);
+    exit(0);
+}

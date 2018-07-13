@@ -11,6 +11,11 @@ public:
     static void gfxWindowMove(bool isOpen);
     static void gfxWindowUpdate(bool isOpen);
 
+    static void SetTitle(const char* title);
+
+    static bool BeginGfx2D(void);
+    static void EndGfx2D(void);
+
     static LRESULT CALLBACK gfxWindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
     declstatic(float, m_fWidth);
@@ -23,8 +28,12 @@ public:
     declstatic(int, m_Y);
 };
 
-declvar(HWND, hWndParent);
-declvar(HWND, hWndMain);
+BOOL gfxAutoDetect(BOOL* success);
+
+void InitDirectDraw(void);
+
+declvar(HWND, hwndParent);
+declvar(HWND, hwndMain);
 declvar(LPCSTR, lpWindowTitle);
 declvar(ATOM, ATOM_Class);
 declvar(LPCSTR, IconID);
@@ -42,6 +51,8 @@ declvar(bool, useAgeSoftware);
 declvar(bool, useBlade);
 declvar(bool, useSysMem);
 declvar(int, useInterface);
+declvar(int, useIME);
+declvar(HIMC, immContext);
 declvar(decltype(&DirectDrawCreateEx), lpDirectDrawCreateEx);
 declvar(IDirectDraw7 *, lpDD);
 declvar(IDirect3D7 *, lpD3D);

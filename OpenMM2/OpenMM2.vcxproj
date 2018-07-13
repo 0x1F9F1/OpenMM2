@@ -87,11 +87,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="asCullable.h" />
+    <ClInclude Include="asLinearCS.h" />
+    <ClInclude Include="asNetwork.h" />
     <ClInclude Include="asNode.h" />
     <ClInclude Include="asRoot.h" />
     <ClInclude Include="Base.h" />
     <ClInclude Include="ColorConvert.h" />
     <ClInclude Include="datArgParser.h" />
+    <ClInclude Include="datAssetManager.h" />
     <ClInclude Include="datOutput.h" />
     <ClInclude Include="datStack.h" />
     <ClInclude Include="gfxImage.h" />
@@ -99,22 +102,30 @@
     <ClInclude Include="gfxPipeline.h" />
     <ClInclude Include="gfxTexture.h" />
     <ClInclude Include="Hooking.h" />
+    <ClInclude Include="ioInput.h" />
     <ClInclude Include="Logging.h" />
+    <ClInclude Include="lvlProgress.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="memMemoryAllocator.h" />
     <ClInclude Include="memSafeHeap.h" />
     <ClInclude Include="mmDirSnd.h" />
+    <ClInclude Include="mmStatePack.h" />
     <ClInclude Include="OpenMM2.h" />
     <ClInclude Include="sfPointer.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Stream.h" />
     <ClInclude Include="Vector.h" />
+    <ClInclude Include="zipFile.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="asCullable.cpp" />
+    <ClCompile Include="asLinearCS.cpp" />
+    <ClCompile Include="asNetwork.cpp" />
     <ClCompile Include="asNode.cpp" />
+    <ClCompile Include="asRoot.cpp" />
     <ClCompile Include="datArgParser.cpp" />
+    <ClCompile Include="datAssetManager.cpp" />
     <ClCompile Include="datOutput.cpp" />
     <ClCompile Include="datStack.cpp" />
     <ClCompile Include="dllmain.cpp">
@@ -130,12 +141,16 @@
     <ClCompile Include="gfxPipeline.cpp" />
     <ClCompile Include="gfxTexture.cpp" />
     <ClCompile Include="Hooking.cpp" />
+    <ClCompile Include="ioInput.cpp" />
+    <ClCompile Include="localize.cpp" />
     <ClCompile Include="Logging.cpp" />
+    <ClCompile Include="lvlProgress.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="memMemoryAllocator.cpp" />
     <ClCompile Include="memSafeHeap.cpp" />
     <ClCompile Include="mmDirSnd.cpp" />
+    <ClCompile Include="mmStatePack.cpp" />
     <ClCompile Include="OpenMM2.cpp" />
     <ClCompile Include="sfPointer.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -144,6 +159,10 @@
     </ClCompile>
     <ClCompile Include="Stream.cpp" />
     <ClCompile Include="Vector.cpp" />
+    <ClCompile Include="zipFile.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="localize.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

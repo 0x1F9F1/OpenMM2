@@ -4,19 +4,86 @@
 #include "Hooking.h"
 #include "datArgParser.h"
 
-void memSafeHeap::Init(memMemoryAllocator *allocator, uint32_t heapSize, bool p3, bool p4, bool checkAlloc)
+#include "memMemoryAllocator.h"
+
+memSafeHeap::memSafeHeap()
 {
-    int heapSizeMB = 128;
-    datArgParser::Get("heapsize", 0, heapSizeMB);
-
-    heapSize = heapSizeMB * (1024 * 1024);
-
-    Displayf("[memSafeHeap::Init]: Allocating %dMB heap (%d bytes)\n", heapSizeMB, heapSize);
-
-    return stub<thiscall_t<void, memSafeHeap, memMemoryAllocator*, uint32_t, bool, bool, bool>>(0x577210, this, allocator, heapSize, p3, p4, checkAlloc);
+    this->Heap = 0;
+    this->CommitedData = 0;
+    this->SomeAlignmentThingy = 0;
+    this->AllocSize = 0;
 }
 
-call_once([ ]
+memSafeHeap::~memSafeHeap()
 {
-    hook::create_hook("memSafeHeap::Init", "Adds '-heapsize' parameter that takes a size in megabytes. Defaults to 128MB", 0x4015DD, &memSafeHeap::Init, HookType::CALL);
-})
+    Kill();
+}
+
+void memSafeHeap::Init(memMemoryAllocator *allocator, uint32_t heapSize, bool p3, bool p4, bool checkAlloc)
+{
+    this->bool14 = p3;
+    this->Allocator = allocator;
+    this->AllocSize = heapSize;
+    this->bool15 = p4;
+    this->CheckAlloc = checkAlloc;
+
+    SYSTEM_INFO SystemInfo;
+    GetSystemInfo(&SystemInfo);
+    uint32_t alignedAllocSize = ~(SystemInfo.dwPageSize - 1) & (this->AllocSize + SystemInfo.dwPageSize - 1);
+    this->bool14 = 0;
+    this->AllocSize = alignedAllocSize;
+    this->CommitedData = VirtualAlloc(0, alignedAllocSize, MEM_COMMIT, PAGE_READWRITE);
+
+    Activate();
+}
+
+void memSafeHeap::Activate(void)
+{
+    void* preferredAddress = (void*)((char*)(CommitedData) + AllocSize * SomeAlignmentThingy);
+
+    Heap = preferredAddress;
+
+    if (bool14)
+    {
+        VirtualAlloc(preferredAddress, AllocSize, MEM_COMMIT, PAGE_READWRITE);
+    }
+
+    Allocator->Init(Heap, AllocSize, bool15, CheckAlloc);
+}
+
+void memSafeHeap::Deactivate(void)
+{
+    if (bool14)
+    {
+        VirtualFree(Heap, AllocSize, MEM_DECOMMIT);
+    }
+
+    this->Heap = 0;
+    Allocator->Kill();
+}
+
+void memSafeHeap::Restart(void)
+{
+    Deactivate();
+
+    if (this->bool14)
+    {
+        this->SomeAlignmentThingy = (this->SomeAlignmentThingy + 1) & 3;
+    }
+
+    Activate();
+}
+
+void memSafeHeap::Kill(void)
+{
+    if (this->CommitedData)
+    {
+        Deactivate();
+
+        if (this->bool14)
+        {
+            VirtualFree(this->CommitedData, 0, 0x8000u);
+        }
+        this->CommitedData = 0;
+    }
+}

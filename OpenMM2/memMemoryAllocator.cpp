@@ -37,6 +37,12 @@ void memMemoryAllocator::Init(void * heapData, unsigned int heapSize, BOOL a3, B
     memset(Array2, 0, sizeof(Array2));
 }
 
+void memMemoryAllocator::Kill(void)
+{
+    this->HeapData = 0;
+    this->field_15 = 0;
+}
+
 void memMemoryAllocator::DisplayUsed(char const * status)
 {
     return stub<cdecl_t<void, const char*>>(0x577170, status);
