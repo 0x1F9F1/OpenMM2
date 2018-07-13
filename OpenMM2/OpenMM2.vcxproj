@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{B614BBA0-E809-4840-993F-B5B47A20AED2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MidtownRevisited</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>dinput</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>dinput</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;MIDTOWNREVISITED_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;MIDTOWNREVISITED_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="asCullable.h" />
+    <ClInclude Include="asNode.h" />
+    <ClInclude Include="asRoot.h" />
+    <ClInclude Include="Base.h" />
+    <ClInclude Include="ColorConvert.h" />
+    <ClInclude Include="datArgParser.h" />
+    <ClInclude Include="datOutput.h" />
+    <ClInclude Include="datStack.h" />
+    <ClInclude Include="gfxImage.h" />
+    <ClInclude Include="gfxInterface.h" />
+    <ClInclude Include="gfxPipeline.h" />
+    <ClInclude Include="gfxTexture.h" />
+    <ClInclude Include="Hooking.h" />
+    <ClInclude Include="Logging.h" />
+    <ClInclude Include="Main.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="memMemoryAllocator.h" />
+    <ClInclude Include="memSafeHeap.h" />
+    <ClInclude Include="mmDirSnd.h" />
+    <ClInclude Include="OpenMM2.h" />
+    <ClInclude Include="sfPointer.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Stream.h" />
+    <ClInclude Include="Vector.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="asCullable.cpp" />
+    <ClCompile Include="asNode.cpp" />
+    <ClCompile Include="datArgParser.cpp" />
+    <ClCompile Include="datOutput.cpp" />
+    <ClCompile Include="datStack.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="gfxImage.cpp" />
+    <ClCompile Include="gfxInterface.cpp" />
+    <ClCompile Include="gfxPipeline.cpp" />
+    <ClCompile Include="gfxTexture.cpp" />
+    <ClCompile Include="Hooking.cpp" />
+    <ClCompile Include="Logging.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="memMemoryAllocator.cpp" />
+    <ClCompile Include="memSafeHeap.cpp" />
+    <ClCompile Include="mmDirSnd.cpp" />
+    <ClCompile Include="OpenMM2.cpp" />
+    <ClCompile Include="sfPointer.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Stream.cpp" />
+    <ClCompile Include="Vector.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <!-- Get MM2 directory if config file present -->
+  <Target Name="GetMM2Dir" BeforeTargets="Build;Debug">
+    <PropertyGroup>
+      <CfgFilename>$(SolutionDir)mm2.cfg</CfgFilename>
+    </PropertyGroup>
+    <ReadLinesFromFile File="$(CfgFilename)" Condition="Exists('$(CfgFilename)')">
+      <Output PropertyName="MM2Directory" TaskParameter="Lines" />
+    </ReadLinesFromFile>
+    <Message Text="Found directory configuration file." Importance="High" Condition="'$(MM2Directory)' != ''" />
+  </Target>
+  <!-- DirectInput target settings -->
+  <Target Name="MakeDInputDLL" AfterTargets="Build">
+    <PropertyGroup>
+      <TargetPath_PDB>$(TargetDir)$(TargetName).pdb</TargetPath_PDB>
+      <DITargetDir>$(OutDir)out\</DITargetDir>
+      <DITargetName>dinput</DITargetName>
+    </PropertyGroup>
+    <ItemGroup>
+      <!-- Get DLL and PDB -->
+      <TargetFiles Include="$(TargetPath);$(TargetPath_PDB)" />
+    </ItemGroup>
+    <Error Text="Couldn't find compiled DLL/PDB files!" Condition="'@(TargetFiles)' == ''" />
+    <Message Text="Creating DirectInput8 DLL/PDB files:" Importance="high" />
+    <Copy SourceFiles="@(TargetFiles)" DestinationFiles="@(TargetFiles->'$(DITargetDir)$(DITargetName)%(Extension)')">
+      <Output ItemName="Changed" TaskParameter="CopiedFiles" />
+    </Copy>
+    <Message Text="  - %(Changed.Identity)" Importance="High" />
+  </Target>
+  <!-- Move compiled files to MM2 directory (if applicable) -->
+  <Target Name="CopyDInputFiles" AfterTargets="MakeDInputDLL" Condition="'$(MM2Directory)' != ''">
+    <ItemGroup>
+      <TargetFiles Include="$(DITargetDir)*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(TargetFiles)" DestinationFiles="@(TargetFiles->'$(MM2Directory)%(Filename)%(Extension)')" />
+    <Message Text="Sucessfully copied files to Midtown Madness 2 directory ($(MM2Directory))" Importance="High" />
+  </Target>
+</Project>
