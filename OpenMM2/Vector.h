@@ -7,6 +7,8 @@ public:
     float y;
 };
 
+check_size(Vector2, 0x8);
+
 class Vector3
 {
 public:
@@ -14,3 +16,5 @@ public:
     float y;
     float z;
 };
+
+check_size(Vector3, 0xC);
