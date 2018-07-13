@@ -13,8 +13,8 @@ namespace hook
 
     const char* const HookTypeNames[static_cast<size_t>(HookType::COUNT)] =
     {
-        "JMP",
-        "CALL",
+        "jump",
+        "call",
     };
 
     void create_hook(const char* name, const char* description, mem::pointer pHook, mem::pointer pDetour, HookType type)

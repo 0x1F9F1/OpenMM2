@@ -95,8 +95,10 @@
     <ClInclude Include="ColorConvert.h" />
     <ClInclude Include="datArgParser.h" />
     <ClInclude Include="datAssetManager.h" />
+    <ClInclude Include="datCallback.h" />
     <ClInclude Include="datOutput.h" />
     <ClInclude Include="datStack.h" />
+    <ClInclude Include="gfxBitmap.h" />
     <ClInclude Include="gfxImage.h" />
     <ClInclude Include="gfxInterface.h" />
     <ClInclude Include="gfxPipeline.h" />
@@ -115,6 +117,7 @@
     <ClInclude Include="sfPointer.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Stream.h" />
+    <ClInclude Include="Timer.h" />
     <ClInclude Include="Vector.h" />
     <ClInclude Include="zipFile.h" />
   </ItemGroup>
@@ -126,6 +129,7 @@
     <ClCompile Include="asRoot.cpp" />
     <ClCompile Include="datArgParser.cpp" />
     <ClCompile Include="datAssetManager.cpp" />
+    <ClCompile Include="datCallback.cpp" />
     <ClCompile Include="datOutput.cpp" />
     <ClCompile Include="datStack.cpp" />
     <ClCompile Include="dllmain.cpp">
@@ -136,6 +140,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="gfxBitmap.cpp" />
     <ClCompile Include="gfxImage.cpp" />
     <ClCompile Include="gfxInterface.cpp" />
     <ClCompile Include="gfxPipeline.cpp" />
@@ -158,6 +163,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Stream.cpp" />
+    <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Vector.cpp" />
     <ClCompile Include="zipFile.cpp" />
   </ItemGroup>

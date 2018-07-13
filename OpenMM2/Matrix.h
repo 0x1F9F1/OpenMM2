@@ -17,6 +17,8 @@ public:
     float m32;
     float m33;
     float m34;
+
+    void Identity();
 };
 
 check_size(Matrix34, 0x30);

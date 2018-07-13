@@ -10,6 +10,7 @@
 #include "gfxInterface.h"
 
 #include "ColorConvert.h"
+#include "gfxBitmap.h"
 
 #include "localize.h"
 
@@ -354,9 +355,99 @@ void gfxPipeline::EndGfx2D(void)
     return stub<cdecl_t<void>>(0x4AAA10);
 }
 
+void gfxPipeline::BeginFrame(void)
+{
+    return stub<cdecl_t<void>>(0x4AA130);
+}
+
+void gfxPipeline::EndFrame(void)
+{
+    return stub<cdecl_t<void>>(0x4AA330);
+}
+
+void gfxPipeline::CopyBitmap(int destX, int destY, gfxBitmap * bitmap, int srcX, int srcY, int width, int height, BOOL srcColorKey)
+{
+    RECT position = {
+        srcX,
+        srcY,
+        srcX + width,
+        srcY + height
+    };
+
+    lpdsRend->BltFast(destX, destY, bitmap->Surface, &position, (srcColorKey != 0) + DDBLTFAST_WAIT);
+}
+
+LRESULT CALLBACK InputWindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+{
+    return stub<WNDPROC>(0x4BAD20, hWnd, message, wParam, lParam);
+}
+
 LRESULT CALLBACK gfxPipeline::gfxWindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-    return stub<WNDPROC>(0x4A88F0, hWnd, message, wParam, lParam);
+    switch (message)
+    {
+        case WM_POWERBROADCAST:
+        {
+            Displayf("gfxPipeline::gfxWindowProc -> WM_POWERBROADCAST recieved.");
+
+            switch (wParam)
+            {
+            case PBT_APMQUERYSUSPEND:
+                Displayf("gfxPipeline::gfxWindowProc -> PBT_APMQUERYSUSPEND recieved.");
+                return BROADCAST_QUERY_DENY;
+            case PBT_APMSUSPEND:
+                Displayf("gfxPipeline::gfxWindowProc -> PBT_APMSUSPEND heard.");
+                break;
+            case PBT_APMRESUMECRITICAL:
+                Displayf("gfxPipeline::gfxWindowProc -> PBT_APMRESUMECRITICAL recieved.");
+                break;
+            case PBT_APMRESUMESUSPEND:
+                Displayf("gfxPipeline::gfxWindowProc -> PBT_APMRESUMESUSPEND recieved.");
+                break;
+            }
+        } break;
+
+        case WM_CLOSE:
+        {
+            ageDebug(gfxDebug, "gfxWindowProc: WM_CLOSE received");
+
+            gfxPipeline::m_EvtFlags &= ~2;
+            gfxPipeline::m_EvtFlags |= 1;
+
+            return 0;
+        } break;
+
+        case WM_ACTIVATEAPP:
+        {
+            if (wParam)
+            {
+                ageDebug(gfxDebug, "gfxWindowProc: WM_ACTIVATEAPP, Regaining focus.");
+
+                gfxPipeline::m_EvtFlags &= ~2;
+            }
+            else
+            {
+                ageDebug(gfxDebug, "gfxWindowProc: WM_ACTIVATEAPP, Losing focus.");
+
+                if (gfxLostCallback)
+                {
+                    gfxLostCallback();
+                }
+
+                gfxPipeline::m_EvtFlags |= 2;
+            }
+        } break;
+
+        case WM_SYSCOMMAND:
+        {
+            if (GET_SC_WPARAM(wParam) == SC_KEYMENU || !(gfxPipeline::m_EvtFlags & 2))
+            {
+                return 0;
+            }
+        } break;
+    }
+
+    return InputWindowProc(hWnd, message, wParam, lParam);
 }
 
 void ProgressRect(int x, int y, int width, int height, unsigned int color)
@@ -375,6 +466,39 @@ void ProgressRect(int x, int y, int width, int height, unsigned int color)
     };
 
     lpdsRend->Blt(&position, NULL, NULL, DDBLT_COLORFILL | DDBLT_WAIT, &ddBltFx);
+}
+
+uint32_t ProgressBarColor = 0xFF0D2CBA;
+
+void ProgressCB(const char *unused, signed int progress)
+{
+    (void) unused;
+
+    if (progress)
+    {
+        gfxPipeline::BeginFrame();
+
+        if (lpLoadingBitmap)
+        {
+            gfxPipeline::CopyBitmap(0, 0, lpLoadingBitmap, 0, 0, lpLoadingBitmap->Width, lpLoadingBitmap->Height, 0);
+        }
+
+        if (gameState)
+        {
+            ProgressRect(
+                (int)(gfxPipeline::m_iWidth * 0.55),
+                (int)(gfxPipeline::m_iHeight * 0.896),
+                (int)(gfxPipeline::m_iWidth * 0.42343751 * progress * 0.01),
+                (int)(gfxPipeline::m_iHeight * 0.02),
+                ProgressBarColor);
+        }
+        else
+        {
+            ProgressRect(349, 448, 640 * progress / 284, 10, ProgressBarColor);
+        }
+
+        gfxPipeline::EndFrame();
+    }
 }
 
 defnvar(0x682FA0, hwndParent);
@@ -412,6 +536,8 @@ defnvar(0x6844D8, gfxMaxScreenHeight);
 defnvar(0x6B165C, gfxTexQuality);
 defnvar(0x6857D0, gfxTexReduceSize);
 
+defnvar(0x6830E8, gfxLostCallback);
+
 defnvar(0x6A38EC, ioMouse__InvWidth);
 defnvar(0x6A38D4, ioMouse__InvHeight);
 
@@ -423,15 +549,11 @@ defnvar(0x6830E4, gfxPipeline::m_ZDepth);
 defnvar(0x6830F8, gfxPipeline::m_ColorDepth);
 defnvar(0x6830EC, gfxPipeline::m_X);
 defnvar(0x683110, gfxPipeline::m_Y);
+defnvar(0x683114, gfxPipeline::m_EvtFlags);
 
-call_once([ ]
-{
-    hook::create_hook("gfxPipeline::SetRes", "Custom implementation allowing for more control of the window", 0x4A8CE0, &gfxPipeline::SetRes, HookType::JMP);
-    hook::create_hook("gfxPipeline::gfxWindowCreate", "Custom implementation allowing for more control of the windo.", 0x4A8A90, &gfxPipeline::gfxWindowCreate, HookType::JMP);
+defnvar(0x5E0CCC, lpLoadingBitmap);
 
-    hook::create_hook("AutoDetectCallback", "Replaces the default AutoDetect method with a much faster one", 0x4AC030, &AutoDetectCallback, HookType::JMP);
-    hook::create_hook("ProgressRect", "Fixes white loading bar in 32-bit display mode.", 0x401010, &ProgressRect, HookType::JMP);
-});
+defnvar(0x683104, gfxDebug);
 
 BOOL gfxAutoDetect(BOOL * success)
 {
@@ -460,3 +582,24 @@ void InitDirectDraw(void)
     MessageBoxA(0, LANG_STRING(0xF6u), APPTITLE, MB_ICONERROR);
     exit(0);
 }
+
+void gfxDebugf(bool enabled, const char * format, ...)
+{
+    if (enabled)
+    {
+        va_list va;
+        va_start(format, va);
+
+        Printer(1, format, va);
+
+        va_end(va);
+    }
+}
+
+call_once([]
+{
+    hook::create_hook("gfxPipeline::SetRes", "Custom implementation allowing for more control of the window", 0x4A8CE0, &gfxPipeline::SetRes, HookType::JMP);
+    hook::create_hook("gfxPipeline::gfxWindowCreate", "Custom implementation allowing for more control of the window", 0x4A8A90, &gfxPipeline::gfxWindowCreate, HookType::JMP);
+
+    hook::create_hook("AutoDetectCallback", "Replaces the default AutoDetect method with a much faster one", 0x4AC030, &AutoDetectCallback, HookType::JMP);
+});

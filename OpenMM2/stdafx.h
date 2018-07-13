@@ -24,6 +24,8 @@
 
 #define call_once(func) namespace { static mem::static_function CallOnce(func); }
 
+#define unimplemented Quitf("Error calling unimplemented function %s in %s (%i)", __FUNCTION__, __FILE__, __LINE__)
+
 using namespace mem::conventions;
 
 template <typename Func, typename... Args>

@@ -204,7 +204,7 @@ void ageDebug(int enabled, char const * format, ...)
     {
         va_list va;
         va_start(va, format);
-        CustomPrinter(1, format, va);
+        Printer(1, format, va);
         va_end(va);
     }
 }

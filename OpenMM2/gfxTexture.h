@@ -21,11 +21,15 @@ public:
     uint32_t RefCount;
     gfxTexture *PrevLOD;
     gfxTexture *NextLOD;
-    uint8_t m_LOD;
-    uint8_t m_MaxLOD;
+    int8_t m_LOD;
+    int8_t m_MaxLOD;
+
+    gfxTexture();
+    ~gfxTexture();
 
     declstatic(bool, sm_EnableSetLOD);
     declstatic(bool, sm_Allow32);
+    declstatic(gfxTexture*, sm_First);
 };
 
 class gfxTextureCacheEntry

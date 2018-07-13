@@ -9,6 +9,18 @@ void EnableNanSignal(bool enabled)
     return stub<cdecl_t<void, bool>>(0x4C51F0, enabled);
 }
 
+asRoot::asRoot()
+{
+    Matrix.Identity();
+
+    asLinearCS::CurrentMatrix = &Matrix;
+
+    Reset();
+
+    EnableNan = false;
+    byte49 = false;
+}
+
 void asRoot::Init(bool nanSignal)
 {
     Reset();

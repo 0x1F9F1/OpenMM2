@@ -14,7 +14,9 @@ public:
     asNode* Children;
     asNode* Parent;
     uint32_t Flags;
-    const char *Name;
+    char *Name;
+
+    asNode();
 
     virtual ~asNode() override;
 
@@ -36,6 +38,8 @@ public:
     int NumChildren(void);
     void RemoveAllChildren(void);
     int InsertChild(int index, asNode* child);
+
+    void SetName(const char* name);
 };
 
 check_size(asNode, 0x18);

@@ -111,6 +111,15 @@
     <ClInclude Include="asNetwork.h">
       <Filter>MM2</Filter>
     </ClInclude>
+    <ClInclude Include="datCallback.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="gfxBitmap.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -204,6 +213,15 @@
       <Filter>MM2</Filter>
     </ClCompile>
     <ClCompile Include="asNetwork.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="datCallback.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="gfxBitmap.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
       <Filter>MM2</Filter>
     </ClCompile>
   </ItemGroup>

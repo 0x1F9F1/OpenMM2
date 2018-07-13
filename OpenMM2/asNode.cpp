@@ -1,6 +1,15 @@
 #include "stdafx.h"
 #include "asNode.h"
 
+asNode::asNode()
+{
+    this->Flags = 3;
+    this->Parent = 0;
+    this->Children = 0;
+    this->Next = 0;
+    this->Name = 0;
+}
+
 asNode::~asNode()
 {
     if (Parent)
@@ -9,6 +18,11 @@ asNode::~asNode()
     }
 
     RemoveAllChildren();
+
+    if (Name)
+    {
+        free(Name);
+    }
 }
 
 void asNode::Update(void)
@@ -193,4 +207,14 @@ int asNode::InsertChild(int index, asNode * child)
     }
 
     return 0;
+}
+
+void asNode::SetName(const char * name)
+{
+    if (Name)
+    {
+        free(Name);
+    }
+
+    Name = _strdup(name);
 }

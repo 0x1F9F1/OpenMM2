@@ -3,6 +3,8 @@
 #include <d3d.h>
 #include <ddraw.h>
 
+class gfxBitmap;
+
 class gfxPipeline
 {
 public:
@@ -16,6 +18,11 @@ public:
     static bool BeginGfx2D(void);
     static void EndGfx2D(void);
 
+    static void BeginFrame(void);
+    static void EndFrame(void);
+
+    static void CopyBitmap(int destX, int destY, gfxBitmap* bitmap, int srcX, int srcY, int width, int height, BOOL srcColorKey);
+
     static LRESULT CALLBACK gfxWindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
     declstatic(float, m_fWidth);
@@ -26,11 +33,18 @@ public:
     declstatic(int, m_ColorDepth);
     declstatic(int, m_X);
     declstatic(int, m_Y);
+
+    // 0x1 | Closing
+    // 0x2 | Focused
+    declstatic(uint32_t, m_EvtFlags);
 };
 
 BOOL gfxAutoDetect(BOOL* success);
 
 void InitDirectDraw(void);
+void ProgressCB(const char *unused, signed int progress);
+
+void gfxDebugf(bool enabled, const char* format, ...);
 
 declvar(HWND, hwndParent);
 declvar(HWND, hwndMain);
@@ -66,5 +80,11 @@ declvar(int, gfxMaxScreenHeight);
 declvar(int, gfxTexQuality);
 declvar(int, gfxTexReduceSize);
 
+declvar(void(*)(void), gfxLostCallback);
+
 declvar(float, ioMouse__InvWidth);
 declvar(float, ioMouse__InvHeight);
+
+declvar(bool, gfxDebug);
+
+declvar(gfxBitmap*, lpLoadingBitmap);

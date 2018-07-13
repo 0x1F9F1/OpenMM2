@@ -11,7 +11,7 @@ struct asRoot
     bool byte49;
     bool EnableNan;
 
-    virtual ~asRoot() override = default;
+    asRoot();
 
     void Init(bool nanSignal);
 

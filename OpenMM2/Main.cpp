@@ -149,11 +149,6 @@ void ebolaPlayMovie(char * name)
     return stub<cdecl_t<void, char*>>(0x402780, name);
 }
 
-void ProgressCB(const char *unused, signed int progress)
-{
-    return stub<cdecl_t<void, const char*, int>>(0x4010F0, unused, progress);
-}
-
 instvar(0x6B0454, uint32_t, mmCpuSpeed);
 instvar(0x683108, int, gfxIcon);
 
@@ -244,12 +239,11 @@ int Main(void)
     Displayf("Playing movie now...");
     if (!datArgParser::Exists("nomovie") && !inWindow)
     {
-#pragma warning(suppress: 4996)
-        FILE* hLOGOS = fopen("logos.avi", "r");
+        FILE* hLogos = nullptr;
 
-        if (hLOGOS)
+        if (fopen_s(&hLogos, "logos.avi", "r") == NO_ERROR)
         {
-            fclose(hLOGOS);
+            fclose(hLogos);
 
             ebolaPlayMovie("logos.avi");
         }
