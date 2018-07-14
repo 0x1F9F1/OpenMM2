@@ -1,6 +1,11 @@
 #include "stdafx.h"
 #include "Stream.h"
 
+defnvar(0x6A3D68, Stream::sm_Streams);
+defnvar(0x6A3EB8, Stream::sm_Buffers);
+
+instvar(0x5CED80, int, MaxFilesOpenAtOnce);
+
 int Stream::Read(void* dstBuf, int size)
 {
     return stub<thiscall_t<int, Stream, void*, int>>(0x4C9AA0, this, dstBuf, size);
@@ -128,7 +133,68 @@ int Stream::Flush(void)
     }
 
     return result;
-};
+}
+
+Stream * Stream::Open(char const * fileName, coreFileMethods const * methods, bool readOnly)
+{
+    int handle = methods->Open(fileName, readOnly);
+
+    if (handle != -1)
+    {
+        return AllocStream(fileName, handle, methods);
+    }
+
+    return nullptr;
+}
+
+Stream * Stream::AllocStream(char const * fileName, int handle, coreFileMethods const * methods)
+{
+    (void)fileName;
+
+    for (int i = 0; i < MAX_STREAMS; ++i)
+    {
+        Stream* stream = &sm_Streams[i];
+
+        if (stream->Methods == nullptr)
+        {
+            stream->Handle = handle;
+            stream->Methods = methods;
+
+            stream->CurrentFileOffset = 0;
+            stream->CurrentBufferOffset = 0;
+            stream->CurrentBufferSize = 0;
+
+            stream->Buffer = sm_Buffers[i];
+            stream->BufferSize = STREAM_BUFFER_SIZE;
+
+            if (i > MaxFilesOpenAtOnce)
+            {
+                MaxFilesOpenAtOnce = i;
+            }
+
+            return stream;
+        }
+    }
+
+    DumpOpenFiles();
+
+    Errorf("Out of file handles.");
+
+    return nullptr;
+}
+
+void Stream::DumpOpenFiles(void)
+{
+    for (int i = 0; i < MAX_STREAMS; ++i)
+    {
+        Stream* stream = &sm_Streams[i];
+
+        if (stream->Methods)
+        {
+            Displayf("%d. HANDLE=%x", i, stream->Handle);
+        }
+    }
+}
 
 int fseek(Stream * stream, int position, seekWhence whence)
 {
@@ -234,3 +300,7 @@ int fscanf(Stream * stream, char const * format, ...)
 
     return 0;
 }
+
+defnvar(0x5CED78, ReadWriteFileMethods);
+defnvar(0x5CED7C, ReadOnlyFileMethos);
+defnvar(0x5CEE28, rawFileMethods);

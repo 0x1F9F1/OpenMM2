@@ -1,5 +1,8 @@
 #pragma once
 
+#define MAX_STREAMS 12
+#define STREAM_BUFFER_SIZE 4096
+
 enum seekWhence
 {
     SeekBegin,
@@ -25,7 +28,7 @@ class Stream
 public:
     const coreFileMethods * Methods;
     int Handle;
-    char *Buffer;
+    uint8_t *Buffer;
     uint32_t CurrentFileOffset;
     uint32_t CurrentBufferOffset;
     uint32_t CurrentBufferSize;
@@ -40,9 +43,21 @@ public:
     int Close(void);
     int Size(void);
     int Flush(void);
+
+    static Stream* Open(char const * fileName, coreFileMethods const * methods, bool readOnly);
+    static Stream* AllocStream(char const * fileName, int handle, coreFileMethods const * methods);
+
+    static void DumpOpenFiles(void);
+
+    declstatic(Stream[MAX_STREAMS], sm_Streams);
+    declstatic(uint8_t[MAX_STREAMS][STREAM_BUFFER_SIZE], sm_Buffers);
 };
 
 int fseek(Stream *stream, int position, seekWhence whence);
 int fgets(char *buffer, int length, Stream *stream);
 void fprintf(Stream *stream, char const *format, ...);
 int fscanf(Stream *stream, char const *format, ...);
+
+declvar(coreFileMethods*, ReadWriteFileMethods);
+declvar(coreFileMethods*, ReadOnlyFileMethos);
+declvar(coreFileMethods, rawFileMethods);
