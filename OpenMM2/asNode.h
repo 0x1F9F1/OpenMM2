@@ -39,6 +39,8 @@ public:
     void RemoveAllChildren(void);
     int InsertChild(int index, asNode* child);
 
+    int AddChild(asNode* child);
+
     void SetName(const char* name);
 };
 

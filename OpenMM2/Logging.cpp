@@ -208,3 +208,37 @@ void ageDebug(int enabled, char const * format, ...)
         va_end(va);
     }
 }
+
+
+instvar(0x6A3D1C, Stream*, debugLogStream);
+instvar(0x6A3D20, bool, debugLogAppend);
+
+void DebugLogInit(bool append)
+{
+    DebugLogShutdown();
+
+    if (debugLogStream)
+    {
+        debugLogAppend = append;
+    }
+    else if (append)
+    {
+        debugLogAppend = append;
+        debugLogStream = Stream::Open("c:\\debug.log", false);
+    }
+    else
+    {
+        debugLogAppend = 0;
+        debugLogStream = Stream::Create("c:\\debug.log");
+    }
+}
+
+void DebugLogShutdown()
+{
+    if (debugLogStream)
+    {
+        debugLogStream->Close();
+
+        debugLogStream = 0;
+    }
+}

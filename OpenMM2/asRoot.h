@@ -15,6 +15,10 @@ struct asRoot
 
     void Init(bool nanSignal);
 
+    bool IsPaused();
+    void SetPause(bool paused);
+    void TogglePause();
+
     virtual void Update(void) override;
     virtual void Reset(void) override;
     virtual char * GetClassName(void) override;

@@ -91,6 +91,8 @@
     <ClInclude Include="asNetwork.h" />
     <ClInclude Include="asNode.h" />
     <ClInclude Include="asRoot.h" />
+    <ClInclude Include="AudioOptions.h" />
+    <ClInclude Include="AudManager.h" />
     <ClInclude Include="Base.h" />
     <ClInclude Include="ColorConvert.h" />
     <ClInclude Include="datArgParser.h" />
@@ -98,6 +100,8 @@
     <ClInclude Include="datCallback.h" />
     <ClInclude Include="datOutput.h" />
     <ClInclude Include="datStack.h" />
+    <ClInclude Include="datTimeManager.h" />
+    <ClInclude Include="GameLoop.h" />
     <ClInclude Include="gfxBitmap.h" />
     <ClInclude Include="gfxImage.h" />
     <ClInclude Include="gfxInterface.h" />
@@ -111,7 +115,12 @@
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="memMemoryAllocator.h" />
     <ClInclude Include="memSafeHeap.h" />
+    <ClInclude Include="mmCDPlayer.h" />
     <ClInclude Include="mmDirSnd.h" />
+    <ClInclude Include="mmGameManager.h" />
+    <ClInclude Include="mmInterface.h" />
+    <ClInclude Include="mmPlayer.h" />
+    <ClInclude Include="mmReplayManager.h" />
     <ClInclude Include="mmStatePack.h" />
     <ClInclude Include="OpenMM2.h" />
     <ClInclude Include="sfPointer.h" />
@@ -127,11 +136,14 @@
     <ClCompile Include="asNetwork.cpp" />
     <ClCompile Include="asNode.cpp" />
     <ClCompile Include="asRoot.cpp" />
+    <ClCompile Include="AudioOptions.cpp" />
+    <ClCompile Include="AudManager.cpp" />
     <ClCompile Include="datArgParser.cpp" />
     <ClCompile Include="datAssetManager.cpp" />
     <ClCompile Include="datCallback.cpp" />
     <ClCompile Include="datOutput.cpp" />
     <ClCompile Include="datStack.cpp" />
+    <ClCompile Include="datTimeManager.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -140,6 +152,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="GameLoop.cpp" />
     <ClCompile Include="gfxBitmap.cpp" />
     <ClCompile Include="gfxImage.cpp" />
     <ClCompile Include="gfxInterface.cpp" />
@@ -154,7 +167,12 @@
     <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="memMemoryAllocator.cpp" />
     <ClCompile Include="memSafeHeap.cpp" />
+    <ClCompile Include="mmCDPlayer.cpp" />
     <ClCompile Include="mmDirSnd.cpp" />
+    <ClCompile Include="mmGameManager.cpp" />
+    <ClCompile Include="mmInterface.cpp" />
+    <ClCompile Include="mmPlayer.cpp" />
+    <ClCompile Include="mmReplayManager.cpp" />
     <ClCompile Include="mmStatePack.cpp" />
     <ClCompile Include="OpenMM2.cpp" />
     <ClCompile Include="sfPointer.cpp" />

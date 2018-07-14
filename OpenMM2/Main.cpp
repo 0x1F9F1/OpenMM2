@@ -23,6 +23,10 @@
 
 #include "asNetwork.h"
 
+#include "GameLoop.h"
+
+#include "AudioOptions.h"
+
 #include <ctime>
 #include <shellapi.h>
 
@@ -150,13 +154,6 @@ void ebolaPlayMovie(char * name)
 
 instvar(0x6B0454, uint32_t, mmCpuSpeed);
 instvar(0x683108, int, gfxIcon);
-
-instvar(0x6B1670, int, audioFlags);
-
-void MainPhase(bool parsedStateArgs, int firstLoad)
-{
-    return stub<cdecl_t<void, bool, bool>>(0x4016D0, parsedStateArgs, firstLoad);
-}
 
 int Main(void)
 {

@@ -115,7 +115,7 @@ bool zipFile::Init(char const * fileName)
 {
     if (pRawFileMethods == nullptr)
     {
-        pRawFileMethods = std::exchange(ReadWriteFileMethods, &zipFileMethods);
+        pRawFileMethods = std::exchange(ReadOnlyFileMethos, &zipFileMethods);
     }
 
     Stream* stream = Stream::Open(fileName, pRawFileMethods, true);
@@ -360,8 +360,6 @@ FAILURE:
     stream->Close();
 
     return false;
-
-    // return stub<thiscall_t<bool, zipFile, const char*>>(0x573480, this, fileName);
 }
 
 zipFile::zipFile()

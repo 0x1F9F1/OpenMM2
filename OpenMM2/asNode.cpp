@@ -209,6 +209,40 @@ int asNode::InsertChild(int index, asNode * child)
     return 0;
 }
 
+int asNode::AddChild(asNode * child)
+{
+    if (!child)
+    {
+        Errorf("asNode::AddChild()- N=0");
+    }
+
+    if (child->Parent)
+    {
+        Errorf("asNode::AddChild()- Node already parented");
+    }
+
+    child->Parent = this;
+    child->Next = 0;
+
+    if (Children)
+    {
+        asNode* last = this->Children;
+
+        while (last->Next)
+        {
+            last = last->Next;
+        }
+
+        last->Next = child;
+    }
+    else
+    {
+        Children = child;
+    }
+
+    return 1;
+}
+
 void asNode::SetName(const char * name)
 {
     if (Name)

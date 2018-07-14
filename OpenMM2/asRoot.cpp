@@ -29,6 +29,21 @@ void asRoot::Init(bool nanSignal)
     EnableNanSignal(nanSignal);
 }
 
+bool asRoot::IsPaused()
+{
+    return Paused;
+}
+
+void asRoot::SetPause(bool paused)
+{
+    Paused = paused;
+}
+
+void asRoot::TogglePause()
+{
+    Paused = !Paused;
+}
+
 void asRoot::Update(void)
 {
     if (EnableNan)

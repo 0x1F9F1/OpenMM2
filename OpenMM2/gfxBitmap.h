@@ -2,6 +2,8 @@
 
 #include <ddraw.h>
 
+class gfxImage;
+
 class gfxBitmap
 {
 public:
@@ -15,7 +17,14 @@ public:
     gfxBitmap(uint16_t width, uint16_t height);
     ~gfxBitmap();
 
+    bool Load(gfxImage *image);
+
     void SetName(const char* name);
+
+    void Release();
+
+    static gfxBitmap* Create(gfxImage* image, bool unused);
+    static gfxBitmap* Create(int width, int height, bool unused);
 
     declstatic(gfxBitmap*, sm_First);
 };

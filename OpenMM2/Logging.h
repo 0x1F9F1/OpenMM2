@@ -14,6 +14,9 @@ void Errorf(const char* format, ...);
 
 void ageDebug(int enabled, char const * format, ...);
 
+void DebugLogInit(bool append);
+void DebugLogShutdown();
+
 declvar(int, PrinterFlags);
 declvar(void(*)(int, const char*, va_list), Printer);
 declvar(void(*)(const char *), PrintString);

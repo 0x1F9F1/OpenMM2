@@ -552,6 +552,7 @@ defnvar(0x683110, gfxPipeline::m_Y);
 defnvar(0x683114, gfxPipeline::m_EvtFlags);
 
 defnvar(0x5E0CCC, lpLoadingBitmap);
+defnvar(0x6844B8, gfxRestoreCallback);
 
 defnvar(0x683104, gfxDebug);
 

@@ -83,6 +83,10 @@ public:
     static Stream* Open(char const * fileName, coreFileMethods const * methods, bool readOnly);
     static Stream* AllocStream(char const * fileName, int handle, coreFileMethods const * methods);
 
+    static Stream* Open(char const * fileName, bool readOnly);
+
+    static Stream* Create(const char* fileName);
+
     static void DumpOpenFiles(void);
 
     declstatic(Stream[MAX_STREAMS], sm_Streams);

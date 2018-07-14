@@ -183,6 +183,32 @@ Stream * Stream::AllocStream(char const * fileName, int handle, coreFileMethods 
     return nullptr;
 }
 
+Stream * Stream::Open(char const * fileName, bool readOnly)
+{
+    coreFileMethods* fileMethods = readOnly ? ReadOnlyFileMethos : ReadWriteFileMethods;
+
+    int fileHandle = fileMethods->Open(fileName, readOnly);
+
+    if (fileHandle == -1)
+    {
+        return nullptr;
+    }
+
+    return Stream::AllocStream(fileName, fileHandle, fileMethods);
+}
+
+Stream * Stream::Create(const char * fileName)
+{
+    int handle = ReadWriteFileMethods->Create(fileName);
+
+    if (handle == -1)
+    {
+        return nullptr;
+    }
+
+    return Stream::AllocStream(fileName, handle, ReadWriteFileMethods);
+}
+
 void Stream::DumpOpenFiles(void)
 {
     for (int i = 0; i < MAX_STREAMS; ++i)
@@ -301,6 +327,6 @@ int fscanf(Stream * stream, char const * format, ...)
     return 0;
 }
 
-defnvar(0x5CED78, ReadWriteFileMethods);
-defnvar(0x5CED7C, ReadOnlyFileMethos);
+defnvar(0x5CED7C, ReadWriteFileMethods);
+defnvar(0x5CED78, ReadOnlyFileMethos);
 defnvar(0x5CEE28, rawFileMethods);

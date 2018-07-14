@@ -120,6 +120,33 @@
     <ClInclude Include="Timer.h">
       <Filter>MM2</Filter>
     </ClInclude>
+    <ClInclude Include="GameLoop.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="datTimeManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mmReplayManager.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="mmInterface.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="mmCDPlayer.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioOptions.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="AudManager.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="mmPlayer.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="mmGameManager.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -222,6 +249,33 @@
       <Filter>MM2</Filter>
     </ClCompile>
     <ClCompile Include="Timer.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLoop.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="datTimeManager.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="mmReplayManager.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="mmInterface.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="mmCDPlayer.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioOptions.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="AudManager.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="mmPlayer.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="mmGameManager.cpp">
       <Filter>MM2</Filter>
     </ClCompile>
   </ItemGroup>
