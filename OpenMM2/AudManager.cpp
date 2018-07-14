@@ -35,3 +35,8 @@ int AudManager::PlayCDTrack(int a1, int a2)
 {
     return stub<thiscall_t<int, AudManager, int, int>>(0x519960, this, a1, a2);
 }
+
+void InitAudioManager(bool enableSound)
+{
+    return stub<cdecl_t<void, bool>>(0x401E70, enableSound);
+}

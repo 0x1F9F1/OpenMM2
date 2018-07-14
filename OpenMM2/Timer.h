@@ -7,6 +7,8 @@ public:
 
     Timer();
 
+    void Reset();
+
     uint32_t Elapsed();
 
     double ElapsedSeconds();

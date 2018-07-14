@@ -1,5 +1,7 @@
 #pragma once
 
+#include "gfxImage.h"
+
 #include <d3d.h>
 
 class gfxTextureCacheEntry;
@@ -27,9 +29,19 @@ public:
     gfxTexture();
     ~gfxTexture();
 
+    void Load(gfxImage* image);
+
+    void SetTexEnv(int texEnv);
+
+    static gfxTexture* Create(gfxImage * image, bool mipMap);
+    static gfxTexture* Create(int width, int height, gfxImage::gfxImageFormat type, gfxImage::gfxImageFormat paletteType, int mipMapCount);
+
+    static void EnableCache(bool enabled);
+
     declstatic(bool, sm_EnableSetLOD);
     declstatic(bool, sm_Allow32);
     declstatic(gfxTexture*, sm_First);
+    declstatic(bool, sm_UseInternalCache);
 };
 
 class gfxTextureCacheEntry

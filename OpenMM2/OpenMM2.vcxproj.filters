@@ -147,6 +147,21 @@
     <ClInclude Include="mmGameManager.h">
       <Filter>MM2</Filter>
     </ClInclude>
+    <ClInclude Include="vgl.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="eqEventHandler.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="asCullManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mmInput.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -276,6 +291,21 @@
       <Filter>MM2</Filter>
     </ClCompile>
     <ClCompile Include="mmGameManager.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="vgl.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="eqEventHandler.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="asCullManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mmInput.cpp">
       <Filter>MM2</Filter>
     </ClCompile>
   </ItemGroup>

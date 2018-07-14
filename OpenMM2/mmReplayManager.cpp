@@ -2,6 +2,7 @@
 #include "mmReplayManager.h"
 
 defnvar(0x627248, mmReplayManager::Instance);
+defnvar(0x6B16CC, mmReplayManager::ReplayName);
 
 mmReplayManager::mmReplayManager()
 {
@@ -19,5 +20,3 @@ void mmReplayManager::LoadReplay(char * name)
 {
     return stub<thiscall_t<void, mmReplayManager, char*>> (0x407000, this, name);
 }
-
-defnvar(0x6B16CC, replayName);

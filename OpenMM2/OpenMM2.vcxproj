@@ -87,6 +87,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="asCullable.h" />
+    <ClInclude Include="asCullManager.h" />
     <ClInclude Include="asLinearCS.h" />
     <ClInclude Include="asNetwork.h" />
     <ClInclude Include="asNode.h" />
@@ -101,6 +102,8 @@
     <ClInclude Include="datOutput.h" />
     <ClInclude Include="datStack.h" />
     <ClInclude Include="datTimeManager.h" />
+    <ClInclude Include="eqEventHandler.h" />
+    <ClInclude Include="Font.h" />
     <ClInclude Include="GameLoop.h" />
     <ClInclude Include="gfxBitmap.h" />
     <ClInclude Include="gfxImage.h" />
@@ -118,6 +121,7 @@
     <ClInclude Include="mmCDPlayer.h" />
     <ClInclude Include="mmDirSnd.h" />
     <ClInclude Include="mmGameManager.h" />
+    <ClInclude Include="mmInput.h" />
     <ClInclude Include="mmInterface.h" />
     <ClInclude Include="mmPlayer.h" />
     <ClInclude Include="mmReplayManager.h" />
@@ -128,10 +132,12 @@
     <ClInclude Include="Stream.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Vector.h" />
+    <ClInclude Include="vgl.h" />
     <ClInclude Include="zipFile.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="asCullable.cpp" />
+    <ClCompile Include="asCullManager.cpp" />
     <ClCompile Include="asLinearCS.cpp" />
     <ClCompile Include="asNetwork.cpp" />
     <ClCompile Include="asNode.cpp" />
@@ -152,6 +158,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="eqEventHandler.cpp" />
+    <ClCompile Include="Font.cpp" />
     <ClCompile Include="GameLoop.cpp" />
     <ClCompile Include="gfxBitmap.cpp" />
     <ClCompile Include="gfxImage.cpp" />
@@ -170,6 +178,7 @@
     <ClCompile Include="mmCDPlayer.cpp" />
     <ClCompile Include="mmDirSnd.cpp" />
     <ClCompile Include="mmGameManager.cpp" />
+    <ClCompile Include="mmInput.cpp" />
     <ClCompile Include="mmInterface.cpp" />
     <ClCompile Include="mmPlayer.cpp" />
     <ClCompile Include="mmReplayManager.cpp" />
@@ -183,6 +192,7 @@
     <ClCompile Include="Stream.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Vector.cpp" />
+    <ClCompile Include="vgl.cpp" />
     <ClCompile Include="zipFile.cpp" />
   </ItemGroup>
   <ItemGroup>

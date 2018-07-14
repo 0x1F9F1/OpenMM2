@@ -3,6 +3,16 @@
 class gfxImage
 {
 public:
+    enum gfxImageFormat
+    {
+        ARGB_8888 = 1,
+        RGB_0888 = 2,
+        ARGB_1555 = 3,
+        RGB_0555 = 4,
+        Palette8 = 5,
+        Palette4 = 6,
+    };
+
     uint16_t Width;
     uint16_t Height;
     uint16_t BytesPerRow;
@@ -17,6 +27,13 @@ public:
     ~gfxImage();
 
     void Release();
+
+    void Scale(int width, int height);
+
+    static gfxImage* GetFont(int & outWidth, int & outHeight);
+    static void FreeFont(void);
+
+    declstatic(gfxImage*, sm_Font);
 };
 
 check_size(gfxImage, 0x1C);

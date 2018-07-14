@@ -18,6 +18,8 @@ public:
     static bool BeginGfx2D(void);
     static void EndGfx2D(void);
 
+    static bool BeginGfx3D(void);
+
     static void BeginFrame(void);
     static void EndFrame(void);
 
@@ -68,10 +70,12 @@ declvar(int, useInterface);
 declvar(int, useIME);
 declvar(HIMC, immContext);
 declvar(decltype(&DirectDrawCreateEx), lpDirectDrawCreateEx);
+
 declvar(IDirectDraw7 *, lpDD);
 declvar(IDirect3D7 *, lpD3D);
 declvar(IDirect3DDevice7 *, lpD3DDev);
 declvar(IDirectDrawSurface7 *, lpdsRend);
+declvar(IDirectDrawSurface7 *, lpdsFront);
 
 declvar(int, gfxMinScreenWidth);
 declvar(int, gfxMinScreenHeight);

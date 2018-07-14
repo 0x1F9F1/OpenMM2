@@ -49,3 +49,5 @@ check_size(AudManager, 0x54);
 
 declvar(AudManagerBase*, AUDMGRPTR);
 declvar(AudManager*, MMAUDMGRPTR);
+
+void InitAudioManager(bool enableSound);

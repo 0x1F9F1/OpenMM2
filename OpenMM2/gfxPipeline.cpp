@@ -54,7 +54,7 @@ BOOL PASCAL AutoDetectCallback(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lp
         strncpy_s(currentInterface->Name, lpDriverDescription, std::size(currentInterface->Name));
 
         currentInterface->DeviceCaps = 1;
-        currentInterface->AcceptableDepths = gfxInterface::gfxDepthFlags::Depth32;
+        currentInterface->AcceptableDepths = gfxDepthFlag_Depth32;
 
         DDDEVICEIDENTIFIER2 ddDeviceIdentifier = { NULL };
 
@@ -73,7 +73,7 @@ BOOL PASCAL AutoDetectCallback(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lp
             lpD3D = nullptr;
         }
 
-        currentInterface->DeviceType = gfxInterface::gfxDeviceType::HardwareWithTnL;
+        currentInterface->DeviceType = gfxDeviceType_HardwareWithTnL;
 
         currentInterface->ResolutionCount = 0;
         currentInterface->ResolutionChoice = 0;
@@ -355,6 +355,11 @@ void gfxPipeline::EndGfx2D(void)
     return stub<cdecl_t<void>>(0x4AAA10);
 }
 
+bool gfxPipeline::BeginGfx3D(void)
+{
+    return stub<cdecl_t<bool>>(0x4A96C0);
+}
+
 void gfxPipeline::BeginFrame(void)
 {
     return stub<cdecl_t<void>>(0x4AA130);
@@ -528,6 +533,7 @@ defnvar(0x6830A8, lpDD);
 defnvar(0x6830AC, lpD3D);
 defnvar(0x6830C8, lpD3DDev);
 defnvar(0x6830CC, lpdsRend);
+defnvar(0x6830B0, lpdsFront);
 
 defnvar(0x6844B0, gfxMinScreenWidth);
 defnvar(0x6844CC, gfxMinScreenHeight);

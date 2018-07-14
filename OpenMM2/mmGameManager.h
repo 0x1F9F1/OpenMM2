@@ -12,6 +12,9 @@ public:
     ~mmGameManager();
 
     void ForceReplayUI(void);
+    void ForcePopupUI(void);
+
+    declstatic(mmGameManager*, mmGameManager::Instance);
 };
 
 check_size(mmGameManager, 0x1B8);

@@ -74,8 +74,7 @@ public:
     void LoadReplay(char * name);
 
     declstatic(mmReplayManager*, Instance);
+    declstatic(char[40], ReplayName);
 };
-
-declvar(char[40], replayName);
 
 check_size(mmReplayManager, 0x840);

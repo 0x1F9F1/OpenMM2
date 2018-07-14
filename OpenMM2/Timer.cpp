@@ -7,6 +7,11 @@ Timer::Timer()
     stub<thiscall_t<void, Timer>>(0x4C7840, this);
 }
 
+void Timer::Reset()
+{
+    StartTime = Ticks();
+}
+
 uint32_t Timer::Elapsed()
 {
     return Ticks() - StartTime;
