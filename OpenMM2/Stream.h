@@ -44,18 +44,40 @@ public:
     int Size(void);
     int Flush(void);
 
+    bool ReadBytes(void* buffer, int size)
+    {
+        return Read(buffer, size) == size;
+    }
+
     template <typename T>
     bool Read(T& value)
     {
-        return Read(&value, sizeof(value)) == sizeof(value);
+        return ReadBytes(&value, sizeof(value));
+    }
+
+    template <typename T>
+    T Read()
+    {
+        T result;
+
+        bool success = Read(result);
+
+#ifdef _DEBUG
+        if (!success)
+        {
+            Errorf("Failed to read %s", typeid(T).name());
+        }
+#else
+        (void)success;
+#endif
+
+        return result;
     }
 
     template <typename T>
     bool ReadArray(T* values, size_t count)
     {
-        int size = sizeof(T) * count;
-
-        return Read(values, size) == size;
+        return ReadBytes(values, count * sizeof(*values));
     }
 
     static Stream* Open(char const * fileName, coreFileMethods const * methods, bool readOnly);

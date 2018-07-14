@@ -125,40 +125,42 @@ bool zipFile::Init(char const * fileName)
         return false;
     }
 
-    Timer timer;
+    Timer startTime;
 
     uint32_t magic;
 
-    stream->Read(magic);
-    if (magic == 0x45564144) // DAVE
+    if (stream->Read(magic) && (magic == 0x45564144)) // DAVE
     {
         Displayf("'%s' is optimized archive.", fileName);
 
-        uint32_t fileCount;
-
-        stream->Read(fileCount);
-
-        uint32_t entriesSize; // namesOffset
-        stream->Read(entriesSize);
+        uint32_t fileCount = stream->Read<uint32_t>();
+        uint32_t entriesSize = stream->Read<uint32_t>(); // namesOffset
 
         if (entriesSize != (fileCount * sizeof(zipEntry)))
         {
-            Errorf("'%s' is fishy.", fileName);
+            // Errorf("'%s' is fishy.", fileName);
         }
 
-        uint32_t namesSize;
-        stream->Read(namesSize);
+        uint32_t namesSize = stream->Read<uint32_t>();
+
+        stream->Seek(2048);
 
         EntryCount = fileCount;
         Entries = new zipEntry[EntryCount];
 
-        NamesBuffer = new char[namesSize];
-
-        stream->Seek(2048);
-        stream->ReadArray(Entries, EntryCount);
+        if (!stream->ReadArray(Entries, EntryCount))
+        {
+            Errorf("%s: Failed to read entries.", fileName);
+        }
 
         stream->Seek(2048 + entriesSize);
-        stream->Read(NamesBuffer, namesSize);
+
+        NamesBuffer = new char[namesSize];
+
+        if (!stream->ReadArray(NamesBuffer, namesSize))
+        {
+            Errorf("%s: Failed to read names.", fileName);
+        }
 
         for (int i = 0; i < EntryCount; ++i)
         {
@@ -171,15 +173,11 @@ bool zipFile::Init(char const * fileName)
     }
 
     stream->Seek(stream->Size() - 0x16);
-    stream->Read(magic);
 
-    if (magic == 0x06054B50) // ZIPENDLOCATOR
+    if (stream->Read(magic) && (magic == 0x06054B50)) // ZIPENDLOCATOR
     {
-        uint16_t diskNumber;
-        uint16_t startDiskNumber;
-
-        stream->Read(diskNumber);
-        stream->Read(startDiskNumber);
+        uint16_t diskNumber = stream->Read<uint16_t>();
+        uint16_t startDiskNumber = stream->Read<uint16_t>();
 
         if (diskNumber != startDiskNumber)
         {
@@ -188,15 +186,10 @@ bool zipFile::Init(char const * fileName)
             goto FAILURE;
         }
 
-        uint16_t fileCount;
-        uint16_t filesInDirectory;
-        uint32_t directorySize;
-        uint32_t directoryOffset;
-
-        stream->Read(fileCount);
-        stream->Read(filesInDirectory);
-        stream->Read(directorySize);
-        stream->Read(directoryOffset);
+        uint16_t fileCount = stream->Read<uint16_t>();
+        /*uint16_t filesInDirectory = */stream->Read<uint16_t>();
+        uint32_t directorySize = stream->Read<uint32_t>();
+        uint32_t directoryOffset = stream->Read<uint32_t>();
 
         EntryCount = fileCount;
         Entries = new zipEntry[EntryCount];
@@ -214,17 +207,11 @@ bool zipFile::Init(char const * fileName)
         {
             if (totalFiles < EntryCount)
             {
-                uint16_t versionMadeBy;
-                uint16_t versionToExtract;
-                uint16_t flags;
+                /*uint16_t versionMadeBy = */stream->Read<uint16_t>();
+                /*uint16_t versionToExtract = */stream->Read<uint16_t>();
+                /*uint16_t flags = */stream->Read<uint16_t>();
 
-                stream->Read(versionMadeBy);
-                stream->Read(versionToExtract);
-                stream->Read(flags);
-
-                uint16_t compressionMethod;
-
-                stream->Read(compressionMethod);
+                uint16_t compressionMethod = stream->Read<uint16_t>();
 
                 if (compressionMethod != 0 && compressionMethod != 8)
                 {
@@ -233,66 +220,74 @@ bool zipFile::Init(char const * fileName)
                     goto FAILURE;
                 }
 
-                uint16_t fileTime;
-                uint16_t fileDate;
-                uint32_t crc;
+                /*uint16_t fileTime = */stream->Read<uint16_t>();
+                /*uint16_t fileDate = */stream->Read<uint16_t>();
+                /*uint32_t crc = */stream->Read<uint32_t>();
 
-                stream->Read(fileTime);
-                stream->Read(fileDate);
-                stream->Read(crc);
+                int compressedSize = stream->Read<int>();
+                int uncompressedSize = stream->Read<int>();
 
-                int compressedSize;
-                int uncompressedSize;
+                if (compressedSize < 0 || uncompressedSize < 0)
+                {
+                    Warningf("%s: Negative size.", fileName);
 
-                stream->Read(compressedSize);
-                stream->Read(uncompressedSize);
+                    goto FAILURE;
+                }
 
-                uint16_t nameLength;
-                uint16_t extraLength;
-                uint16_t commentLength;
+                uint16_t nameLength = stream->Read<uint16_t>();
+                uint16_t extraLength = stream->Read<uint16_t>();
+                uint16_t commentLength = stream->Read<uint16_t>();
 
-                stream->Read(nameLength);
-                stream->Read(extraLength);
-                stream->Read(commentLength);
+                /*uint16_t diskNumberStart = */stream->Read<uint16_t>();
 
-                uint16_t diskNumberStart;
-                stream->Read(diskNumberStart);
+                /*uint16_t internalAttributes = */stream->Read<uint16_t>();
+                /*uint32_t externalAttributes = */stream->Read<uint32_t>();
 
-                uint16_t internalAttributes;
-                uint32_t externalAttributes;
-                stream->Read(internalAttributes);
-                stream->Read(externalAttributes);
-
-                uint32_t recordOffset;
-                stream->Read(recordOffset);
+                uint32_t recordOffset = stream->Read<uint32_t>();
 
                 char nameBuffer[128];
-                stream->Read(nameBuffer, nameLength);
+                if (!stream->ReadArray(nameBuffer, nameLength))
+                {
+                    Errorf("%s: Failed to read file name.", fileName);
+
+                    goto FAILURE;
+                }
+
                 nameBuffer[nameLength] = '\0';
 
                 if (extraLength > 256)
                 {
-                    Errorf("%s: Attempted to buffer overflow extra buffer (%u)", extraLength);
+                    Errorf("%s: Attempted to buffer overflow extra buffer (%u)", fileName, extraLength);
 
                     goto FAILURE;
                 }
 
                 char extraBuffer[256];
-                stream->Read(extraBuffer, extraLength);
+                if (!stream->ReadArray(extraBuffer, extraLength))
+                {
+                    Errorf("%s: Failed to read extra.", fileName);
+
+                    goto FAILURE;
+                }
 
                 if (commentLength > 256)
                 {
-                    Errorf("%s: Attempted to buffer overflow comment buffer (%u)", commentLength);
+                    Errorf("%s: Attempted to buffer overflow comment buffer (%u)", fileName, commentLength);
 
                     goto FAILURE;
                 }
 
                 char commentBuffer[256];
-                stream->Read(commentBuffer, commentLength);
+                if (!stream->ReadArray(commentBuffer, commentLength))
+                {
+                    Errorf("%s: Failed to read comment.", fileName);
+
+                    goto FAILURE;
+                }
 
                 if ((totalNamesLength + nameLength) > namesBufferLength)
                 {
-                    Errorf("%s: Attempted to buffer overflow names buffer");
+                    Errorf("%s: Attempted to buffer overflow names buffer", fileName);
 
                     goto FAILURE;
                 }
@@ -301,7 +296,7 @@ bool zipFile::Init(char const * fileName)
 
                 if ((dataOffset + uncompressedSize) > stream->Size())
                 {
-                    Errorf("%s: Attempted to buffer overflow data buffer");
+                    Errorf("%s: Attempted to buffer overflow data buffer", fileName);
 
                     goto FAILURE;
                 }
@@ -351,7 +346,7 @@ bool zipFile::Init(char const * fileName)
     return false;
 
 SUCCESS:
-    Displayf("%f seconds to read directory", timer.ElapsedSeconds());
+    Displayf("%s: %f seconds to read directory", fileName, startTime.ElapsedSeconds());
 
     stream->Close();
 
