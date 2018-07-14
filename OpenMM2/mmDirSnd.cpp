@@ -23,7 +23,7 @@ mmDirSnd* mmDirSnd::Init(int sampleRate, bool enableStero, int a4, float volume,
     return stub<cdecl_t<mmDirSnd*, int, bool, int, float, const char*, bool>>(0x51CC50, sampleRate, enableStero, a4, volume, deviceName, enable3D);
 }
 
-call_once([ ]
+run_once([ ]
 {
     hook::create_hook("mmDirSnd::Init", "Fixes no sound issue on startup.", 0x51941D, &mmDirSnd::Init, HookType::CALL);
 })

@@ -22,7 +22,10 @@
 
 #define check_size(type, size) static_assert(sizeof(type) == size, "Type "#type" has invalid size");
 
-#define call_once(func) namespace { static mem::static_function CallOnce(func); }
+#define PASTE_HELPER(a,b) a ## b
+#define PASTE(a,b) PASTE_HELPER(a,b)
+
+#define run_once(func) namespace { static mem::static_function PASTE(RunOnce, __LINE__)(func); }
 
 #define unimplemented Quitf("Error calling unimplemented function %s in %s (%i)", __FUNCTION__, __FILE__, __LINE__)
 

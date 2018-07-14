@@ -596,7 +596,7 @@ void gfxDebugf(bool enabled, const char * format, ...)
     }
 }
 
-call_once([]
+run_once([]
 {
     hook::create_hook("gfxPipeline::SetRes", "Custom implementation allowing for more control of the window", 0x4A8CE0, &gfxPipeline::SetRes, HookType::JMP);
     hook::create_hook("gfxPipeline::gfxWindowCreate", "Custom implementation allowing for more control of the window", 0x4A8A90, &gfxPipeline::gfxWindowCreate, HookType::JMP);
