@@ -351,7 +351,7 @@ bool zipFile::Init(char const * fileName)
     return false;
 
 SUCCESS:
-    Displayf("%f seconds to read directory", (double) timer.Elapsed() * Timer::TicksToSeconds);
+    Displayf("%f seconds to read directory", timer.ElapsedSeconds());
 
     stream->Close();
 
