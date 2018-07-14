@@ -1,5 +1,15 @@
 #pragma once
 
+struct memMemStats
+{
+    uint32_t dword0;
+    uint32_t dword4;
+    uint32_t dword8;
+    uint32_t dwordC;
+    uint32_t dword10;
+    uint32_t dword14;
+};
+
 class memMemoryAllocator
 {
 public:
@@ -22,6 +32,8 @@ public:
     void Init(void * heapData, uint32_t heapSize, BOOL a3, BOOL checkalloc);
     void Kill(void);
 
+    void GetStats(memMemStats * stats, BOOL unused);
+
     static void DisplayUsed(char const* status);
 
     declstatic(memMemoryAllocator*, First);
@@ -29,5 +41,8 @@ public:
 };
 
 declvar(void(*)(char const *), datDisplayUsed);
+
+declvar(int, datCurrentMemoryAlign);
+declvar(int, datCurrentMemoryBucket);
 
 check_size(memMemoryAllocator, 0xDC);

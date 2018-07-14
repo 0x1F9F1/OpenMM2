@@ -3,7 +3,9 @@
 
 #include <dinput.h>
 
-decltype(&DirectInputCreateA) pDirectInputCreate = nullptr;
+using DirectInputCreateA_t = HRESULT(WINAPI*)(HINSTANCE hinst, DWORD dwVersion, LPDIRECTINPUTA *ppDI, LPUNKNOWN punkOuter);
+
+DirectInputCreateA_t pDirectInputCreate = nullptr;
 
 #pragma comment(linker, "/EXPORT:DirectInputCreateA=_DirectInputCreateA_Impl@16")
 #pragma comment(linker, "/EXPORT:DirectInputCreateW=_DirectInputCreateA_Impl@16")
@@ -17,13 +19,13 @@ extern "C" HRESULT WINAPI DirectInputCreateA_Impl(HINSTANCE hinst, DWORD dwVersi
 
         if (HMODULE hDinput = LoadLibraryA(szDllFile))
         {
-            Displayf("Loaded real dinput.dll at %X", (uintptr_t)(hDinput));
+            Displayf("Loaded real dinput.dll at 0x%zX", (uintptr_t)(hDinput));
 
-            pDirectInputCreate = reinterpret_cast<decltype(&DirectInputCreateA)>(GetProcAddress(hDinput, "DirectInputCreateA"));
+            pDirectInputCreate = (DirectInputCreateA_t) GetProcAddress(hDinput, "DirectInputCreateA");
 
             if (pDirectInputCreate)
             {
-                Displayf("Found DirectInputCreateA at %X", (uintptr_t)(pDirectInputCreate));
+                Displayf("Found DirectInputCreateA at 0x%zX", (uintptr_t)(pDirectInputCreate));
             }
             else
             {

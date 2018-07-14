@@ -295,6 +295,7 @@ int Main(void)
     InstallJPEGSupport();
     InstallTextureVariantHandler();
 
+#ifndef USE_CUSTOM_ALLOCATOR
     memMemoryAllocator allocator;
     memSafeHeap heap;
 
@@ -308,10 +309,13 @@ int Main(void)
     heap.Init(&allocator, heapSize, 0, 1, datArgParser::Exists("checkalloc"));
 
     memMemoryAllocator::Current = &allocator;
+#endif
 
     do
     {
+#ifndef USE_CUSTOM_ALLOCATOR
         heap.Restart();
+#endif
 
         MainPhase(parseStateArgs, firstLoad);
 
@@ -361,7 +365,9 @@ void InitHooks()
     Displayf("Initialize Completed in %.2f Seconds", double(clock() - begin) / CLOCKS_PER_SEC);
 }
 
+#ifndef USE_CUSTOM_ALLOCATOR
 std::aligned_storage_t<0x4000, 0x8> ShadowMem;
+#endif
 
 int CALLBACK MidtownMain(
     HINSTANCE hInstance,
@@ -374,11 +380,13 @@ int CALLBACK MidtownMain(
 
     InitHooks();
 
+#ifndef USE_CUSTOM_ALLOCATOR
     memMemoryAllocator allocator;
 
     allocator.Init(&ShadowMem, sizeof(ShadowMem), 1, 0);
 
     memMemoryAllocator::Current = &allocator;
+#endif
 
     datArgParser::Init(ArgC, ArgV);
 

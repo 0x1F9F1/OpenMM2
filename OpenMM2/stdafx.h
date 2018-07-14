@@ -29,6 +29,8 @@
 
 #define unimplemented Quitf("Error calling unimplemented function %s in %s (%i)", __FUNCTION__, __FILE__, __LINE__)
 
+#define USE_CUSTOM_ALLOCATOR
+
 using namespace mem::conventions;
 
 template <typename Func, typename... Args>
