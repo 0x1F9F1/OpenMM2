@@ -99,5 +99,5 @@ void fprintf(Stream *stream, char const *format, ...);
 int fscanf(Stream *stream, char const *format, ...);
 
 declvar(coreFileMethods*, ReadWriteFileMethods);
-declvar(coreFileMethods*, ReadOnlyFileMethos);
+declvar(coreFileMethods*, ReadOnlyFileMethods);
 declvar(coreFileMethods, rawFileMethods);

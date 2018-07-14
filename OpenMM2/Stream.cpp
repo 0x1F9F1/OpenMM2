@@ -185,7 +185,7 @@ Stream * Stream::AllocStream(char const * fileName, int handle, coreFileMethods 
 
 Stream * Stream::Open(char const * fileName, bool readOnly)
 {
-    coreFileMethods* fileMethods = readOnly ? ReadOnlyFileMethos : ReadWriteFileMethods;
+    coreFileMethods* fileMethods = readOnly ? ReadOnlyFileMethods : ReadWriteFileMethods;
 
     int fileHandle = fileMethods->Open(fileName, readOnly);
 
@@ -328,5 +328,5 @@ int fscanf(Stream * stream, char const * format, ...)
 }
 
 defnvar(0x5CED7C, ReadWriteFileMethods);
-defnvar(0x5CED78, ReadOnlyFileMethos);
+defnvar(0x5CED78, ReadOnlyFileMethods);
 defnvar(0x5CEE28, rawFileMethods);

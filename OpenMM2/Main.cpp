@@ -27,6 +27,8 @@
 
 #include "AudioOptions.h"
 
+#include "datOutput.h"
+
 #include <ctime>
 #include <shellapi.h>
 
@@ -375,6 +377,8 @@ int CALLBACK MidtownMain(
 {
     (void)hInstance, hPrevInstance, lpCmdLine, nCmdShow;
 
+    datOutput::OpenLog("mm2.log");
+
     InitHooks();
 
 #ifndef USE_CUSTOM_ALLOCATOR
@@ -387,6 +391,12 @@ int CALLBACK MidtownMain(
 
     datArgParser::Init(ArgC, ArgV);
 
-    return ExceptMain();
+    int result = ExceptMain();
+
+    Displayf("Good Bye.");
+
+    datOutput::CloseLog();
+
+    return result;
 }
 

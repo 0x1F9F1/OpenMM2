@@ -115,7 +115,7 @@ bool zipFile::Init(char const * fileName)
 {
     if (pRawFileMethods == nullptr)
     {
-        pRawFileMethods = std::exchange(ReadOnlyFileMethos, &zipFileMethods);
+        pRawFileMethods = std::exchange(ReadOnlyFileMethods, &zipFileMethods);
     }
 
     Stream* stream = Stream::Open(fileName, pRawFileMethods, true);

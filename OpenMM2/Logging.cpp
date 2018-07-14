@@ -11,8 +11,6 @@ defnvar(0x5CECF0, PrintString);
 instvar(0x6A3D3C, bool, b_popUpErrors);
 instvar(0x5CECE8, bool, b_popUpQuits);
 
-instvar(0x6A3D40, Stream*, debugFile);
-
 instvar(0x6A3D38, void(*)(const char *), gFatalMessageHandler);
 
 const char* outputTypeStrings[6] =
@@ -65,11 +63,13 @@ void CustomPrinter(int level, const char *format, va_list args)
 
     PrintString(formatBuffer);
 
-    if (debugFile)
-    {
-        fprintf(debugFile, "%s%s%s", outputTypeStrings[level], mainBuffer, outputTypeLineEndings[level]);
+    Stream* logFile = datOutput::DebugLogFile;
 
-        debugFile->Flush();
+    if (logFile)
+    {
+        fprintf(logFile, "%s%s%s", outputTypeStrings[level], mainBuffer, outputTypeLineEndings[level]);
+
+        logFile->Flush();
     }
 
     if (level == 5)
@@ -209,7 +209,6 @@ void ageDebug(int enabled, char const * format, ...)
     }
 }
 
-
 instvar(0x6A3D1C, Stream*, debugLogStream);
 instvar(0x6A3D20, bool, debugLogAppend);
 
@@ -217,19 +216,20 @@ void DebugLogInit(bool append)
 {
     DebugLogShutdown();
 
-    if (debugLogStream)
+    debugLogAppend = append;
+
+    if (!debugLogStream)
     {
-        debugLogAppend = append;
-    }
-    else if (append)
-    {
-        debugLogAppend = append;
-        debugLogStream = Stream::Open("c:\\debug.log", false);
-    }
-    else
-    {
-        debugLogAppend = 0;
-        debugLogStream = Stream::Create("c:\\debug.log");
+        if (append)
+        {
+            debugLogAppend = append;
+            debugLogStream = Stream::Open("debug.log", false);
+        }
+        else
+        {
+            debugLogAppend = 0;
+            debugLogStream = Stream::Create("debug.log");
+        }
     }
 }
 
