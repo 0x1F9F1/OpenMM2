@@ -222,7 +222,7 @@ int Main(void)
     gfxMinScreenWidth = atoi(LANG_STRING(612u));
     gfxMinScreenHeight = atoi(LANG_STRING(613u));
 
-    BOOL success = 0;
+    bool success = 0;
 
     if (!gfxAutoDetect(&success))
     {

@@ -43,9 +43,9 @@ HRESULT PASCAL ResCallback(LPDDSURFACEDESC2 lpSurfaceDesc, LPVOID lpContext)
     return stub<decltype(&ResCallback)>(0x4AC6F0, lpSurfaceDesc, lpContext);
 }
 
-BOOL __stdcall AutoDetectCallback(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverName, LPVOID lpContext)
+BOOL PASCAL AutoDetectCallback(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverName, LPVOID lpContext)
 {
-    (void)(lpDriverName, lpContext);
+    (void)lpDriverName, lpContext;
 
     if (lpDirectDrawCreateEx(lpGUID, (LPVOID*)&lpDD, IID_IDirectDraw7, nullptr) == DD_OK)
     {
@@ -365,7 +365,7 @@ void gfxPipeline::EndFrame(void)
     return stub<cdecl_t<void>>(0x4AA330);
 }
 
-void gfxPipeline::CopyBitmap(int destX, int destY, gfxBitmap * bitmap, int srcX, int srcY, int width, int height, BOOL srcColorKey)
+void gfxPipeline::CopyBitmap(int destX, int destY, gfxBitmap * bitmap, int srcX, int srcY, int width, int height, bool srcColorKey)
 {
     RECT position = {
         srcX,
@@ -555,9 +555,9 @@ defnvar(0x5E0CCC, lpLoadingBitmap);
 
 defnvar(0x683104, gfxDebug);
 
-BOOL gfxAutoDetect(BOOL * success)
+bool gfxAutoDetect(bool* success)
 {
-    return stub<cdecl_t<BOOL, BOOL*>>(0x4ABE00, success);
+    return stub<cdecl_t<bool, bool*>>(0x4ABE00, success);
 }
 
 void gfxFindSafeAdapter()

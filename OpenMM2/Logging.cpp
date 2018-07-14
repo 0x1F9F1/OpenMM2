@@ -35,7 +35,6 @@ const char *outputTypeLineEndings[6] =
     "\n"
 };
 
-
 void CustomPrinter(int level, const char *format, va_list args)
 {
     char formatBuffer[4096]; // [sp+4h] [bp-2000h]@9

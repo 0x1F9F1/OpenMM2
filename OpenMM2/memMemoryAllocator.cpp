@@ -27,7 +27,7 @@ memMemoryAllocator::~memMemoryAllocator()
     HeapData = 0;
 }
 
-void memMemoryAllocator::Init(void * heapData, uint32_t heapSize, BOOL a3, BOOL checkAlloc)
+void memMemoryAllocator::Init(void * heapData, uint32_t heapSize, bool a3, bool checkAlloc)
 {
     HeapData = heapData;
     TotalSize = heapSize;
@@ -51,7 +51,7 @@ void memMemoryAllocator::Kill(void)
     this->field_15 = 0;
 }
 
-void memMemoryAllocator::GetStats(memMemStats* stats, BOOL)
+void memMemoryAllocator::GetStats(memMemStats* stats, bool)
 {
     memset(stats, 0, sizeof(*stats));
 }

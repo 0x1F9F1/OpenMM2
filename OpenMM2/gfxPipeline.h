@@ -21,7 +21,7 @@ public:
     static void BeginFrame(void);
     static void EndFrame(void);
 
-    static void CopyBitmap(int destX, int destY, gfxBitmap* bitmap, int srcX, int srcY, int width, int height, BOOL srcColorKey);
+    static void CopyBitmap(int destX, int destY, gfxBitmap* bitmap, int srcX, int srcY, int width, int height, bool srcColorKey);
 
     static LRESULT CALLBACK gfxWindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
@@ -39,7 +39,7 @@ public:
     declstatic(uint32_t, m_EvtFlags);
 };
 
-BOOL gfxAutoDetect(BOOL* success);
+bool gfxAutoDetect(bool* success);
 
 void InitDirectDraw(void);
 void ProgressCB(const char *unused, signed int progress);

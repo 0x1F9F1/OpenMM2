@@ -44,6 +44,20 @@ public:
     int Size(void);
     int Flush(void);
 
+    template <typename T>
+    bool Read(T& value)
+    {
+        return Read(&value, sizeof(value)) == sizeof(value);
+    }
+
+    template <typename T>
+    bool ReadArray(T* values, size_t count)
+    {
+        int size = sizeof(T) * count;
+
+        return Read(values, size) == size;
+    }
+
     static Stream* Open(char const * fileName, coreFileMethods const * methods, bool readOnly);
     static Stream* AllocStream(char const * fileName, int handle, coreFileMethods const * methods);
 

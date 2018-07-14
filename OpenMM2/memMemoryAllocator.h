@@ -29,10 +29,10 @@ public:
     memMemoryAllocator();
     ~memMemoryAllocator();
 
-    void Init(void * heapData, uint32_t heapSize, BOOL a3, BOOL checkalloc);
+    void Init(void * heapData, uint32_t heapSize, bool a3, bool checkalloc);
     void Kill(void);
 
-    void GetStats(memMemStats * stats, BOOL unused);
+    void GetStats(memMemStats * stats, bool unused);
 
     static void DisplayUsed(char const* status);
 
