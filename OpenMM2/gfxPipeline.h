@@ -67,8 +67,6 @@ declvar(bool, useAgeSoftware);
 declvar(bool, useBlade);
 declvar(bool, useSysMem);
 declvar(int, useInterface);
-declvar(int, useIME);
-declvar(HIMC, immContext);
 declvar(decltype(&DirectDrawCreateEx), lpDirectDrawCreateEx);
 
 declvar(IDirectDraw7 *, lpDD);
@@ -81,7 +79,6 @@ declvar(int, gfxMinScreenWidth);
 declvar(int, gfxMinScreenHeight);
 declvar(int, gfxMaxScreenWidth);
 declvar(int, gfxMaxScreenHeight);
-declvar(int, gfxTexQuality);
 declvar(int, gfxTexReduceSize);
 
 declvar(void(*)(void), gfxLostCallback);

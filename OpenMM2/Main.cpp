@@ -34,9 +34,6 @@
 
 #pragma comment(lib, "imm32.lib")
 
-defnvar(0x6B17C8, gameState);
-defnvar(0x6B1708, gameEnding);
-
 defnvar(0x5E0CF9, ZoneStartup);
 
 instvar(0x6B48A0, int, ArgC);
@@ -162,7 +159,7 @@ int Main(void)
     ioInput::bUseJoystick = false;
     mmCpuSpeed = ComputeCpuSpeed();
     gfxIcon = 0x6F;
-    audioFlags = 0xC73;
+    MMSTATE.AudioFlags = 0xC73;
 
     DEVMODEA device;
     memset(&device, 0, sizeof(device));
@@ -212,7 +209,7 @@ int Main(void)
 
     if (datArgParser::Exists("ime"))
     {
-        useIME = 1;
+        MMSTATE.UseIME = 1;
     }
 
     inWindow = 0;
@@ -261,9 +258,9 @@ int Main(void)
 
             if (systemLangID == 1041 || systemLangID == 1028)
             {
-                useIME = 1;
+                MMSTATE.UseIME = 1;
 
-                immContext = ImmAssociateContext(hwndMain, 0);
+                MMSTATE.IMEContext = ImmAssociateContext(hwndMain, 0);
             }
             else if (systemLangID == 1042)
             {
@@ -277,7 +274,7 @@ int Main(void)
         }
     }
 
-    if (useIME)
+    if (MMSTATE.UseIME)
     {
         gfxPipeline::EndGfx2D();
     }
@@ -319,7 +316,7 @@ int Main(void)
         MainPhase(parseStateArgs, firstLoad);
 
         firstLoad = 1;
-    } while (!gameEnding);
+    } while (!MMSTATE.Shutdown);
 
     NETMGR.Logout();
 

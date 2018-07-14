@@ -2,7 +2,6 @@
 #include "mmReplayManager.h"
 
 defnvar(0x627248, mmReplayManager::Instance);
-defnvar(0x6B16CC, mmReplayManager::ReplayName);
 
 mmReplayManager::mmReplayManager()
 {

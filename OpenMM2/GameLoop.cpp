@@ -42,7 +42,7 @@ void GetLoadScreenName(char *buffer)
 {
     char gameModeBuffer[20]; // [sp+8h] [bp-14h]@3
 
-    if (gameState)
+    if (MMSTATE.GameState)
     {
         sprintf_s(buffer, 80, "%s_", MMSTATE.CityName);
         sprintf_s(gameModeBuffer, dgGameModeNames[MMSTATE.GameMode], MMSTATE.RaceId);
@@ -125,7 +125,7 @@ void BeginPhase(bool splashScreen)
 
     datDisplayUsed("Just before InitAudioManager");
 
-    InitAudioManager(audioFlags & 1);
+    InitAudioManager(MMSTATE.AudioFlags & 1);
 
     datDisplayUsed("Just after InitAudioManager");
 
@@ -184,7 +184,7 @@ void GameLoop(bool update)
 
 void MainPhase(bool parsedStateArgs, int firstLoad)
 {
-    BeginPhase(gameState == 0);
+    BeginPhase(MMSTATE.GameState == 0);
 
     datTimeManager::RealTime(0.0);
 
@@ -213,17 +213,17 @@ void MainPhase(bool parsedStateArgs, int firstLoad)
         LoadingBitmap = 0;
     }
 
-    EnableTextureVariantHandler = gameState == 1;
+    EnableTextureVariantHandler = MMSTATE.GameState == 1;
 
     mmReplayManager* replayManager = nullptr;
     mmInterface* uiInterface = nullptr;
     mmGameManager* gameManager = nullptr;
 
-    switch (gameState)
+    switch (MMSTATE.GameState)
     {
         case 0:
         {
-            mmReplayManager::ReplayName[0] = '\0';
+            MMSTATE.ReplayName[0] = '\0';
 
             replayManager = new mmReplayManager();
             uiInterface = new mmInterface();
@@ -238,7 +238,7 @@ void MainPhase(bool parsedStateArgs, int firstLoad)
 
         case 1:
         {
-            if (hasMusicCD && audioFlags & 4)
+            if (MMSTATE.HasMusicCD && (MMSTATE.AudioFlags & 4))
             {
                 MMAUDMGRPTR->EnableCD();
                 MMAUDMGRPTR->PlayCDTrack(2, 1);
@@ -248,9 +248,9 @@ void MainPhase(bool parsedStateArgs, int firstLoad)
 
             replayManager = new mmReplayManager();
 
-            if (mmReplayManager::ReplayName[0])
+            if (MMSTATE.ReplayName[0])
             {
-                replayManager->LoadReplay(mmReplayManager::ReplayName);
+                replayManager->LoadReplay(MMSTATE.ReplayName);
             }
 
             datDisplayUsed("Before mmGameManager");
@@ -263,7 +263,7 @@ void MainPhase(bool parsedStateArgs, int firstLoad)
 
             replayManager->Player = PLAYER;
 
-            if (mmReplayManager::ReplayName[0])
+            if (MMSTATE.ReplayName[0])
             {
                 gameManager->ForceReplayUI();
             }
@@ -276,7 +276,7 @@ void MainPhase(bool parsedStateArgs, int firstLoad)
     lpLoadingBitmap = 0;
 
     SetFocus(hwndMain);
-    gameState = -1;
+    MMSTATE.GameState = -1;
     datDisplayUsed("Just before GameLoop");
 
     GameLoop(parsedStateArgs);

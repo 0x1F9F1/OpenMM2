@@ -12,6 +12,8 @@
 #include "ColorConvert.h"
 #include "gfxBitmap.h"
 
+#include "mmStatePack.h"
+
 #include "localize.h"
 
 uint32_t GetPixelFormatColor(DDPIXELFORMAT* lpDDPixelFormat, uint32_t color)
@@ -170,7 +172,8 @@ void gfxPipeline::SetRes(int width, int height, int cdepth, int zdepth, bool par
     }
 
     // We don't want to set the width/height if we are in a menu, it just fucks it up
-    if (gameState != 0) {
+    if (MMSTATE.GameState != 0)
+    {
         if (datArgParser::Exists("max")) {
             HDC hDC = GetDC(NULL);
             width = GetDeviceCaps(hDC, HORZRES);
@@ -488,7 +491,7 @@ void ProgressCB(const char *unused, signed int progress)
             gfxPipeline::CopyBitmap(0, 0, lpLoadingBitmap, 0, 0, lpLoadingBitmap->Width, lpLoadingBitmap->Height, 0);
         }
 
-        if (gameState)
+        if (MMSTATE.GameState)
         {
             ProgressRect(
                 (int)(gfxPipeline::m_iWidth * 0.55),
@@ -525,8 +528,6 @@ defnvar(0x6830D5, useAgeSoftware);
 defnvar(0x6830D6, useBlade);
 defnvar(0x6830D7, useSysMem);
 defnvar(0x6830D8, useInterface);
-defnvar(0x6B19BC, useIME);
-defnvar(0x6B19C0, immContext);
 
 defnvar(0x684518, lpDirectDrawCreateEx);
 defnvar(0x6830A8, lpDD);
@@ -539,7 +540,6 @@ defnvar(0x6844B0, gfxMinScreenWidth);
 defnvar(0x6844CC, gfxMinScreenHeight);
 defnvar(0x6844FC, gfxMaxScreenWidth);
 defnvar(0x6844D8, gfxMaxScreenHeight);
-defnvar(0x6B165C, gfxTexQuality);
 defnvar(0x6857D0, gfxTexReduceSize);
 
 defnvar(0x6830E8, gfxLostCallback);

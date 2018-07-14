@@ -60,6 +60,11 @@ public:
 
     BOOL EnablePedestrians;
     void *unk_68; // related to hookmen
+
+    dgStatePack();
+    ~dgStatePack();
+
+    declstatic(dgStatePack*, Instance);
 };
 
 check_size(dgStatePack, 0x6C);
@@ -68,6 +73,11 @@ class NetStartArray
 {
 public:
     uint32_t Slots[10];
+
+    NetStartArray();
+    ~NetStartArray();
+
+    void Clear();
 };
 
 check_size(NetStartArray, 0x28);
@@ -111,7 +121,7 @@ public:
 
     float TimeLimit;
 
-    int SplashScreen; // -1 = ???, 0 = main menu, 1 = race
+    int GameState; // -1 = ???, 0 = main menu, 1 = race
     BOOL DisableRegen; // educated guess based on a skipped call to mmPlayer::UpdateRegen if true
 
                        /*
@@ -206,8 +216,10 @@ public:
 
     NetStartArray NetStartArray;
 
-    void SetDefaults(const char* level, const char* car);
+    mmStatePack();
+    ~mmStatePack();
 
+    void SetDefaults(const char* level, const char* car);
     bool ParseStateArgs(void);
 };
 

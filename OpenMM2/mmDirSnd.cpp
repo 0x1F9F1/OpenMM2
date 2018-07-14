@@ -2,19 +2,17 @@
 #include "mmDirSnd.h"
 #include "datArgParser.h"
 
-auto $mmDirSnd_Init = mem::pointer(0x51CC50).as<void*(*)(int, bool, int, float, const char*, bool)>();
-
-auto& CurrentAudioDevice = mem::pointer(0x6B17F2).as<char[200]>();
+#include "mmStatePack.h"
 
 mmDirSnd* mmDirSnd::Init(int sampleRate, bool enableStero, int a4, float volume, const char* deviceName, bool enable3D)
 {
     if (deviceName[0] == '\0')
     {
-        strncpy_s(CurrentAudioDevice, "Primary Sound Driver", std::size(CurrentAudioDevice));
+        strcpy_s(MMSTATE.AudioDeviceName, "Primary Sound Driver");
 
-        deviceName = CurrentAudioDevice;
+        deviceName = MMSTATE.AudioDeviceName;
 
-        Displayf("[mmDirSnd::Init]: Using Primary Sound Driver");
+        Displayf("[mmDirSnd::Init]: Using %s", deviceName);
     }
     
     sampleRate = 48000;

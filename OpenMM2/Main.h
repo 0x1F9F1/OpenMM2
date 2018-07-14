@@ -1,8 +1,5 @@
 #pragma once
 
-declvar(int, gameState);
-declvar(int, gameEnding);
-
 declvar(bool, ZoneStartup);
 
 declvar(char*, APPTITLE);
