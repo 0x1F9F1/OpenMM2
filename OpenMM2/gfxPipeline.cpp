@@ -448,7 +448,7 @@ LRESULT CALLBACK gfxPipeline::gfxWindowProc(HWND hWnd, UINT message, WPARAM wPar
 
         case WM_SYSCOMMAND:
         {
-            if (GET_SC_WPARAM(wParam) == SC_KEYMENU || !(gfxPipeline::m_EvtFlags & 2))
+            if (GET_SC_WPARAM(wParam) == SC_KEYMENU && !(gfxPipeline::m_EvtFlags & 2))
             {
                 return 0;
             }
