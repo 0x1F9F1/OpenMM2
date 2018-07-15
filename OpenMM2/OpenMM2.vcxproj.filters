@@ -123,9 +123,6 @@
     <ClInclude Include="GameLoop.h">
       <Filter>MM2</Filter>
     </ClInclude>
-    <ClInclude Include="datTimeManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="mmReplayManager.h">
       <Filter>MM2</Filter>
     </ClInclude>
@@ -156,13 +153,19 @@
     <ClInclude Include="eqEventHandler.h">
       <Filter>MM2</Filter>
     </ClInclude>
-    <ClInclude Include="asCullManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="mmInput.h">
       <Filter>MM2</Filter>
     </ClInclude>
     <ClInclude Include="d3dpipe.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="datTimeManager.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="asCullManager.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="HashTable.h">
       <Filter>MM2</Filter>
     </ClInclude>
   </ItemGroup>
@@ -305,13 +308,16 @@
     <ClCompile Include="eqEventHandler.cpp">
       <Filter>MM2</Filter>
     </ClCompile>
-    <ClCompile Include="asCullManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="mmInput.cpp">
       <Filter>MM2</Filter>
     </ClCompile>
     <ClCompile Include="d3dpipe.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="HashTable.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="asCullManager.cpp">
       <Filter>MM2</Filter>
     </ClCompile>
   </ItemGroup>

@@ -111,6 +111,7 @@
     <ClInclude Include="gfxInterface.h" />
     <ClInclude Include="gfxPipeline.h" />
     <ClInclude Include="gfxTexture.h" />
+    <ClInclude Include="HashTable.h" />
     <ClInclude Include="Hooking.h" />
     <ClInclude Include="ioInput.h" />
     <ClInclude Include="Logging.h" />
@@ -168,6 +169,7 @@
     <ClCompile Include="gfxInterface.cpp" />
     <ClCompile Include="gfxPipeline.cpp" />
     <ClCompile Include="gfxTexture.cpp" />
+    <ClCompile Include="HashTable.cpp" />
     <ClCompile Include="Hooking.cpp" />
     <ClCompile Include="ioInput.cpp" />
     <ClCompile Include="localize.cpp" />
