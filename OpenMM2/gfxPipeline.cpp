@@ -263,15 +263,14 @@ bool gfxPipeline::BeginGfx2D(void)
         Errorf("Required DLL not found: %s", gfxLibName);
     }
 
-    auto pDirectDrawCreateEx = (decltype(&DirectDrawCreateEx)) GetProcAddress(
-        hGfxLib,
-        "DirectDrawCreateEx");
+    auto pDirectDrawCreateEx = (decltype(&DirectDrawCreateEx)) GetProcAddress(hGfxLib, "DirectDrawCreateEx");
 
     if (!pDirectDrawCreateEx)
     {
         Errorf("Required DLL is corrupt: %s", gfxLibName);
     }
-    gfxPipeline::EnumDDAdapters(hGfxLib, (LPDDENUMCALLBACK)DDEnumProc, 0);
+
+    gfxPipeline::EnumDDAdapters(hGfxLib, DDEnumProc, 0);
 
     DX_ASSERT(pDirectDrawCreateEx(lpInterfaceGUID ? &sInterfaceGUID : 0, (LPVOID*)&lpDD, IID_IDirectDraw7, NULL));
 
@@ -284,27 +283,53 @@ bool gfxPipeline::BeginGfx2D(void)
     if (!(ddCaps.dwCaps2 & 0x80000))
     {
         ageDebug(gfxDebug, "D3D: Selected device can't render to a window.");
+
         inWindow = 0;
     }
 
     gfxPipeline::gfxWindowCreate("D3D Pipeline");
+
     _control87(0xA001Fu, 0xB001Fu);
 
-    DX_ASSERT(lpDD->SetCooperativeLevel(hwndMain, inWindow != 0 ? DDSCL_FPUSETUP | DDSCL_NORMAL : DDSCL_FPUSETUP | DDSCL_EXCLUSIVE | DDSCL_ALLOWREBOOT | DDSCL_FULLSCREEN));
+    DX_ASSERT(lpDD->SetCooperativeLevel(hwndMain, inWindow ? DDSCL_FPUSETUP | DDSCL_NORMAL : DDSCL_FPUSETUP | DDSCL_EXCLUSIVE | DDSCL_ALLOWREBOOT | DDSCL_FULLSCREEN));
 
     if (!inWindow)
     {
         DX_ASSERT(lpDD->SetDisplayMode(m_iWidth, m_iHeight, m_ColorDepth, 0, 0));
-
-        ShowCursor(0);
     }
+
+    ShowCursor(FALSE);
 
     return true;
 }
 
 void gfxPipeline::EndGfx2D(void)
 {
-    return stub<cdecl_t<void>>(0x4AAA10);
+    if (!inWindow)
+    {
+        ShowCursor(1);
+
+        if (lpDD)
+        {
+            ageDebug(gfxDebug, "RESTORING DISPLAY MODE");
+
+            lpDD->RestoreDisplayMode();
+            lpDD->SetCooperativeLevel(hwndMain, 8);
+        }
+    }
+    else if (lpDD)
+    {
+        DX_ASSERT(lpDD->EnumSurfaces(DDENUMSURFACES_DOESEXIST | DDENUMSURFACES_ALL, NULL, 0, EnumAllSurfCallback));
+
+        DX_RELEASE(lpDD);
+    }
+
+    if (hwndMain)
+    {
+        DestroyWindow(hwndMain);
+
+        hwndMain = 0;
+    }
 }
 
 bool gfxPipeline::BeginGfx3D(void)

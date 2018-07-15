@@ -78,6 +78,17 @@ BOOL PASCAL MultiMonCallback(GUID* lpGUID, LPSTR lpDriverDescription, LPSTR lpDr
     return gfxDDEnumCallback(lpGUID, lpDriverDescription, lpDriverName, lpContext);
 }
 
+HRESULT PASCAL EnumAllSurfCallback(LPDIRECTDRAWSURFACE7 lpSurface, LPDDSURFACEDESC2 lpSurfaceDesc, LPVOID lpContext)
+{
+    (void)lpContext;
+
+    Warningf("D3D: Unreleased surface: A %d by %d surface.", lpSurfaceDesc->dwWidth, lpSurfaceDesc->dwHeight);
+
+    lpSurface->Release();
+
+    return 1;
+}
+
 HRESULT PASCAL ResCallback(LPDDSURFACEDESC2 lpSurfaceDesc, LPVOID lpContext)
 {
     return stub<decltype(&ResCallback)>(0x4AC6F0, lpSurfaceDesc, lpContext);

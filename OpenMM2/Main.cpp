@@ -358,9 +358,9 @@ int CALLBACK MidtownMain(
 
     datOutput::OpenLog("mm2.log");
 
-    InitHooks();
-
     datArgParser::Init(ArgC, ArgV);
+
+    InitHooks();
 
     int result = ExceptMain();
 
