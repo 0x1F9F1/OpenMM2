@@ -1,111 +1,14 @@
 #include "stdafx.h"
 #include "gfxPipeline.h"
 
-#include "Hooking.h"
-
 #include "datArgParser.h"
 #include "Main.h"
 
 #include "gfxTexture.h"
-#include "gfxInterface.h"
-
-#include "ColorConvert.h"
 #include "gfxBitmap.h"
-
 #include "mmStatePack.h"
-
 #include "localize.h"
-
-uint32_t GetPixelFormatColor(DDPIXELFORMAT* lpDDPixelFormat, uint32_t color)
-{
-    switch (lpDDPixelFormat->dwGBitMask)
-    {
-        // 555
-    case 0x3E0:
-        return ConvertColor<0, 8, 8, 8, 0, 5, 5, 5>(color);
-        // 565
-    case 0x7E0:
-        return ConvertColor<0, 8, 8, 8, 0, 5, 6, 5>(color);
-        // 888
-    case 0xFF00:
-        // already in the right format
-        return color;
-    }
-    // unknown format
-    return 0xFFFFFFFF;
-};
-
-HRESULT CALLBACK DeviceCallback(LPSTR lpDeviceDescription, LPSTR lpDeviceName, LPD3DDEVICEDESC7 lpDeviceDesc, LPVOID lpContext)
-{
-    return stub<decltype(&DeviceCallback)>(0x4AC3D0, lpDeviceDescription, lpDeviceName, lpDeviceDesc, lpContext);
-}
-
-HRESULT PASCAL ResCallback(LPDDSURFACEDESC2 lpSurfaceDesc, LPVOID lpContext)
-{
-    return stub<decltype(&ResCallback)>(0x4AC6F0, lpSurfaceDesc, lpContext);
-}
-
-BOOL PASCAL AutoDetectCallback(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverName, LPVOID lpContext)
-{
-    (void)lpDriverName, lpContext;
-
-    if (lpDirectDrawCreateEx(lpGUID, (LPVOID*)&lpDD, IID_IDirectDraw7, nullptr) == DD_OK)
-    {
-        gfxInterface *currentInterface = &gfxInterfaces[gfxInterfaceCount++];
-
-        strcpy_s(currentInterface->Name, lpDriverDescription);
-
-        currentInterface->DeviceCaps = 1;
-        currentInterface->AcceptableDepths = gfxDepthFlag_Depth32;
-
-        DDDEVICEIDENTIFIER2 ddDeviceIdentifier = { NULL };
-
-        if (lpDD->GetDeviceIdentifier(&ddDeviceIdentifier, 0) == DD_OK)
-        {
-            currentInterface->VendorID = ddDeviceIdentifier.dwVendorId;
-            currentInterface->DeviceID = ddDeviceIdentifier.dwDeviceId;
-            currentInterface->GUID = ddDeviceIdentifier.guidDeviceIdentifier;
-        }
-
-        if (lpDD->QueryInterface(IID_IDirect3D7, (LPVOID*)&lpD3D) == DD_OK)
-        {
-            lpD3D->EnumDevices(&DeviceCallback, currentInterface);
-            lpD3D->Release();
-
-            lpD3D = nullptr;
-        }
-
-        currentInterface->DeviceType = gfxDeviceType_HardwareWithTnL;
-
-        currentInterface->ResolutionCount = 0;
-        currentInterface->ResolutionChoice = 0;
-
-        DWORD availableMemory = 0x40000000; // 1GB = 1024 * 1024 * 1024
-
-        DDSCAPS2 ddsCaps = { NULL };
-
-        ddsCaps.dwCaps = DDSCAPS_VIDEOMEMORY | DDSCAPS_LOCALVIDMEM;
-
-        if (lpDD->GetAvailableVidMem(&ddsCaps, &availableMemory, NULL) != DD_OK)
-        {
-            Displayf("Couldn't get video memory, using default");
-        }
-
-        Displayf("Total video memory: %dMB", (availableMemory >> 20));
-
-        currentInterface->AvailableMemory = availableMemory;
-
-        gfxMaxScreenWidth = 0;
-        gfxMaxScreenHeight = 0;
-
-        lpDD->EnumDisplayModes(0, 0, currentInterface, &ResCallback);
-        lpDD->Release();
-
-        lpDD = nullptr;
-    }
-
-    return TRUE;
-}
+#include "d3dpipe.h"
 
 void gfxPipeline::SetRes(int width, int height, int cdepth, int zdepth, bool parseArgs)
 {
@@ -351,7 +254,52 @@ void gfxPipeline::SetTitle(const char * title)
 
 bool gfxPipeline::BeginGfx2D(void)
 {
-    return stub<cdecl_t<bool>>(0x4A9370);
+    const char* gfxLibName = useBlade ? "BLADE.DLL" : "DDRAW.DLL";
+
+    HMODULE hGfxLib = LoadLibraryA(gfxLibName);
+
+    if (!hGfxLib)
+    {
+        Errorf("Required DLL not found: %s", gfxLibName);
+    }
+
+    auto pDirectDrawCreateEx = (decltype(&DirectDrawCreateEx)) GetProcAddress(
+        hGfxLib,
+        "DirectDrawCreateEx");
+
+    if (!pDirectDrawCreateEx)
+    {
+        Errorf("Required DLL is corrupt: %s", gfxLibName);
+    }
+    gfxPipeline::EnumDDAdapters(hGfxLib, (LPDDENUMCALLBACK)DDEnumProc, 0);
+
+    DX_ASSERT(pDirectDrawCreateEx(lpInterfaceGUID ? &sInterfaceGUID : 0, (LPVOID*)&lpDD, IID_IDirectDraw7, NULL));
+
+    DDCAPS ddCaps;
+    memset(&ddCaps, 0, sizeof(ddCaps));
+    ddCaps.dwSize = sizeof(ddCaps);
+
+    DX_ASSERT(lpDD->GetCaps(&ddCaps, 0));
+
+    if (!(ddCaps.dwCaps2 & 0x80000))
+    {
+        ageDebug(gfxDebug, "D3D: Selected device can't render to a window.");
+        inWindow = 0;
+    }
+
+    gfxPipeline::gfxWindowCreate("D3D Pipeline");
+    _control87(0xA001Fu, 0xB001Fu);
+
+    DX_ASSERT(lpDD->SetCooperativeLevel(hwndMain, inWindow != 0 ? DDSCL_FPUSETUP | DDSCL_NORMAL : DDSCL_FPUSETUP | DDSCL_EXCLUSIVE | DDSCL_ALLOWREBOOT | DDSCL_FULLSCREEN));
+
+    if (!inWindow)
+    {
+        DX_ASSERT(lpDD->SetDisplayMode(m_iWidth, m_iHeight, m_ColorDepth, 0, 0));
+
+        ShowCursor(0);
+    }
+
+    return true;
 }
 
 void gfxPipeline::EndGfx2D(void)
@@ -385,6 +333,28 @@ void gfxPipeline::CopyBitmap(int destX, int destY, gfxBitmap * bitmap, int srcX,
     };
 
     lpdsRend->BltFast(destX, destY, bitmap->Surface, &position, (srcColorKey ? DDBLTFAST_SRCCOLORKEY : DDBLTFAST_NOCOLORKEY) | DDBLTFAST_WAIT);
+}
+
+void gfxPipeline::EnumDDAdapters(HMODULE hGfxLib, LPDDENUMCALLBACKA lpCallback, LPVOID lpContext)
+{
+    auto pDirectDrawEnumerateExA = (decltype(&DirectDrawEnumerateExA)) GetProcAddress(hGfxLib, "DirectDrawEnumerateExA");
+    auto pDirectDrawEnumerateA = (decltype(&DirectDrawEnumerateA)) GetProcAddress(hGfxLib, "DirectDrawEnumerateA");
+
+    interfaceCount = 0;
+    gfxInterfaceEnumIdx = useInterface;
+
+    if (pDirectDrawEnumerateExA)
+    {
+        ageDebug(gfxDebug, "D3D: Using DirectDrawEnumerateEx...");
+
+        gfxDDEnumCallback = lpCallback;
+
+        pDirectDrawEnumerateExA(&MultiMonCallback, lpContext, 7);
+    }
+    else if (pDirectDrawEnumerateA)
+    {
+        pDirectDrawEnumerateA(lpCallback, lpContext);
+    }
 }
 
 LRESULT CALLBACK InputWindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
@@ -531,13 +501,6 @@ defnvar(0x6830D6, useBlade);
 defnvar(0x6830D7, useSysMem);
 defnvar(0x6830D8, useInterface);
 
-defnvar(0x684518, lpDirectDrawCreateEx);
-defnvar(0x6830A8, lpDD);
-defnvar(0x6830AC, lpD3D);
-defnvar(0x6830C8, lpD3DDev);
-defnvar(0x6830CC, lpdsRend);
-defnvar(0x6830B0, lpdsFront);
-
 defnvar(0x6844B0, gfxMinScreenWidth);
 defnvar(0x6844CC, gfxMinScreenHeight);
 defnvar(0x6844FC, gfxMaxScreenWidth);
@@ -558,8 +521,8 @@ defnvar(0x6830F8, gfxPipeline::m_ColorDepth);
 defnvar(0x6830EC, gfxPipeline::m_X);
 defnvar(0x683110, gfxPipeline::m_Y);
 
-// 0x1 | Closing?
-// 0x2 | Lost Focus?
+// 0x1 | Closing
+// 0x2 | Lost Focus
 defnvar(0x683114, gfxPipeline::m_EvtFlags);
 
 defnvar(0x5E0CCC, LoadingScreenBitmap);

@@ -2,7 +2,9 @@
 
 #include "gfxBitmap.h"
 #include "gfxImage.h"
+
 #include "gfxPipeline.h"
+#include "d3dpipe.h"
 
 defnvar(0x684D40, gfxBitmap::sm_First);
 

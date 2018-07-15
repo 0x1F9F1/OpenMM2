@@ -162,6 +162,9 @@
     <ClInclude Include="mmInput.h">
       <Filter>MM2</Filter>
     </ClInclude>
+    <ClInclude Include="d3dpipe.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -306,6 +309,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="mmInput.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="d3dpipe.cpp">
       <Filter>MM2</Filter>
     </ClCompile>
   </ItemGroup>

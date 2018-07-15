@@ -20,7 +20,9 @@ mmStatePack::~mmStatePack()
 
 void mmStatePack::SetDefaults(const char* level, const char* car)
 {
-    return stub<thiscall_t<void, mmStatePack, const char*, const char*>>(0x523310, this, level, car);
+    stub<thiscall_t<void, mmStatePack, const char*, const char*>>(0x523310, this, level, car);
+
+    strcpy_s(AudioDeviceName, "Primary Sound Driver");
 }
 
 bool mmStatePack::ParseStateArgs(void)
@@ -32,23 +34,23 @@ dgStatePack::dgStatePack()
 {
     memset(this, 0, sizeof(dgStatePack));
 
-    this->MaxAmbientPedestrians = 0;
-    this->EnablePedestrians = 0;
-    this->NumberOfCTFRacers = 0;
-    this->unk_68 = 0;
-    this->TextureQuality = 1;
-    this->unk_50 = 99;
-    this->TrafficDensity = 1.0f;
-    this->PedestrianDensity = 1.0f;
-    this->MaxAmbientVehicles = 100;
-    this->EnableCableCars = 1;
-    this->EnableSubways = 1;
-    this->CopDensity = 1.0f;
-    this->OpponentDensity = 8.0f;
-    this->unk_18 = 1.0f;
-    this->unk_1C = 1.0f;
-    this->unk_20 = 1.0f;
-    this->unk_24 = 1;
+    MaxAmbientPedestrians = 0;
+    EnablePedestrians = 0;
+    NumberOfCTFRacers = 0;
+    unk_68 = 0;
+    TextureQuality = 1;
+    unk_50 = 99;
+    TrafficDensity = 1.0f;
+    PedestrianDensity = 1.0f;
+    MaxAmbientVehicles = 100;
+    EnableCableCars = 1;
+    EnableSubways = 1;
+    CopDensity = 1.0f;
+    OpponentDensity = 8.0f;
+    unk_18 = 1.0f;
+    unk_1C = 1.0f;
+    unk_20 = 1.0f;
+    unk_24 = 1;
 
     dgStatePack::Instance = this;
 }

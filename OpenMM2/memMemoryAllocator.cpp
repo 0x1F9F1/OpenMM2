@@ -88,6 +88,11 @@ void mm2_delete_array(void* ptr)
     return operator delete[](ptr);
 }
 
+void DisplayUsed(const char* status)
+{
+    Displayf("%s", status);
+}
+
 run_once([]
 {
     hook::create_hook("operator new", "Custom Memory Allocator", 0x577360, &mm2_new, HookType::JMP);
@@ -100,5 +105,5 @@ run_once([]
     memMemoryAllocator::First = nullptr;
     memMemoryAllocator::Current = nullptr;
 
-    datDisplayUsed = [](const char*) {};
+    datDisplayUsed = &DisplayUsed;
 });

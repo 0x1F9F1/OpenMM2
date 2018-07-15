@@ -32,6 +32,7 @@
 #include "mmInput.h"
 
 #include "gfxTexture.h"
+#include "d3dpipe.h"
 
 #include "localize.h"
 

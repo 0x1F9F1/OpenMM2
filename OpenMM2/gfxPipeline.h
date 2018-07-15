@@ -25,6 +25,8 @@ public:
 
     static void CopyBitmap(int destX, int destY, gfxBitmap* bitmap, int srcX, int srcY, int width, int height, bool srcColorKey);
 
+    static void EnumDDAdapters(HMODULE hGfxLib, LPDDENUMCALLBACKA lpCallback, LPVOID lpContext);
+
     static LRESULT CALLBACK gfxWindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
     declstatic(float, m_fWidth);
@@ -43,7 +45,6 @@ public:
 
 bool gfxAutoDetect(bool* success);
 
-void InitDirectDraw(void);
 void ProgressCB(const char *unused, signed int progress);
 
 void gfxDebugf(bool enabled, const char* format, ...);
@@ -67,13 +68,6 @@ declvar(bool, useAgeSoftware);
 declvar(bool, useBlade);
 declvar(bool, useSysMem);
 declvar(int, useInterface);
-declvar(decltype(&DirectDrawCreateEx), lpDirectDrawCreateEx);
-
-declvar(IDirectDraw7 *, lpDD);
-declvar(IDirect3D7 *, lpD3D);
-declvar(IDirect3DDevice7 *, lpD3DDev);
-declvar(IDirectDrawSurface7 *, lpdsRend);
-declvar(IDirectDrawSurface7 *, lpdsFront);
 
 declvar(int, gfxMinScreenWidth);
 declvar(int, gfxMinScreenHeight);

@@ -29,6 +29,8 @@
 
 #include "datOutput.h"
 
+#include "d3dpipe.h"
+
 #include <shellapi.h>
 
 #pragma comment(lib, "imm32.lib")
@@ -71,11 +73,15 @@ uint32_t __ComputeCpuSpeed()
 
 uint32_t ComputeCpuSpeed()
 {
+#ifdef DETECT_CPU_SPEED
     uint32_t speed0 = __ComputeCpuSpeed();
     uint32_t speed1 = __ComputeCpuSpeed();
     uint32_t speed2 = __ComputeCpuSpeed();
 
     return (speed0 + speed1 + speed2) / 3;
+#else
+    return 0x1000;
+#endif
 }
 
 void CheckGlobalMemory()
@@ -85,12 +91,12 @@ void CheckGlobalMemory()
     GlobalMemoryStatusEx(&status);
 
     Displayf(
-        "Avail Phys: %dM  Avail Page: %dM  Avail addr: %dM",
+        "Avail Phys: %dM  Avail Page: %dM  Avail Virtual: %dM",
         status.ullAvailPhys >> 20,
         status.ullAvailPageFile >> 20,
         status.ullAvailVirtual >> 20);
 
-    if (status.ullAvailPageFile + status.ullAvailPhys < 0x5000000)
+    if (status.ullAvailPhys < (256 << 20)) // 256 MB
     {
         MessageBoxA(0, LANG_STRING(0xF8), APPTITLE, MB_ICONERROR);
 
@@ -180,6 +186,7 @@ int Main(void)
     if (!FirstRunEula())
     {
         Displayf("Failed to load EBUeula.dll or user declined.");
+
         exit(0);
     }
 

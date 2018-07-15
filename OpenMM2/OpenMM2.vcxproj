@@ -96,6 +96,7 @@
     <ClInclude Include="AudManager.h" />
     <ClInclude Include="Base.h" />
     <ClInclude Include="ColorConvert.h" />
+    <ClInclude Include="d3dpipe.h" />
     <ClInclude Include="datArgParser.h" />
     <ClInclude Include="datAssetManager.h" />
     <ClInclude Include="datCallback.h" />
@@ -144,6 +145,7 @@
     <ClCompile Include="asRoot.cpp" />
     <ClCompile Include="AudioOptions.cpp" />
     <ClCompile Include="AudManager.cpp" />
+    <ClCompile Include="d3dpipe.cpp" />
     <ClCompile Include="datArgParser.cpp" />
     <ClCompile Include="datAssetManager.cpp" />
     <ClCompile Include="datCallback.cpp" />

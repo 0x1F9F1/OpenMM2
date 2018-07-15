@@ -37,11 +37,13 @@ public:
     static gfxTexture* Create(int width, int height, gfxImage::gfxImageFormat type, gfxImage::gfxImageFormat paletteType, int mipMapCount);
 
     static void EnableCache(bool enabled);
+    static void ShutdownCache(void);
 
     declstatic(bool, sm_EnableSetLOD);
     declstatic(bool, sm_Allow32);
     declstatic(gfxTexture*, sm_First);
     declstatic(bool, sm_UseInternalCache);
+    declstatic(gfxTextureCachePool*, sm_FirstPool);
 };
 
 class gfxTextureCacheEntry
@@ -51,6 +53,13 @@ public:
     IDirectDrawSurface7 *Surface;
     uint32_t LastAccessTime;
     gfxTextureCacheEntry *PrevEntry;
+
+    declstatic(uint32_t, sm_CurrentTime);
+
+    gfxTextureCacheEntry(IDirectDrawSurface7* surface, gfxTextureCacheEntry* prevEntry);
+    ~gfxTextureCacheEntry();
+
+    void Evict();
 };
 
 class gfxTextureCachePool
@@ -65,4 +74,7 @@ public:
     gfxTextureCacheEntry *FirstEntry;
     gfxTextureCachePool *PrevPool;
     DDPIXELFORMAT Format;
+
+    gfxTextureCachePool(gfxTextureCachePool* prevPool);
+    ~gfxTextureCachePool();
 };
