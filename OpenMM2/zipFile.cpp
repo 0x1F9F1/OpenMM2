@@ -257,7 +257,7 @@ bool zipFile::Init(char const * fileName)
 
                 if (extraLength > 256)
                 {
-                    Errorf("%s: Attempted to buffer overflow extra buffer (%u)", fileName, extraLength);
+                    Errorf("%s: Attempted to buffer overflow extra buffer (%u) on %s", fileName, extraLength, nameBuffer);
 
                     goto FAILURE;
                 }
@@ -265,14 +265,14 @@ bool zipFile::Init(char const * fileName)
                 char extraBuffer[256];
                 if (!stream->ReadArray(extraBuffer, extraLength))
                 {
-                    Errorf("%s: Failed to read extra.", fileName);
+                    Errorf("%s: Failed to read extra on %s", fileName, nameBuffer);
 
                     goto FAILURE;
                 }
 
                 if (commentLength > 256)
                 {
-                    Errorf("%s: Attempted to buffer overflow comment buffer (%u)", fileName, commentLength);
+                    Errorf("%s: Attempted to buffer overflow comment buffer (%u) on %s", fileName, commentLength, nameBuffer);
 
                     goto FAILURE;
                 }
@@ -280,23 +280,23 @@ bool zipFile::Init(char const * fileName)
                 char commentBuffer[256];
                 if (!stream->ReadArray(commentBuffer, commentLength))
                 {
-                    Errorf("%s: Failed to read comment.", fileName);
+                    Errorf("%s: Failed to read comment on %s", fileName, nameBuffer);
 
                     goto FAILURE;
                 }
 
                 if ((totalNamesLength + nameLength) > namesBufferLength)
                 {
-                    Errorf("%s: Attempted to buffer overflow names buffer", fileName);
+                    Errorf("%s: Attempted to buffer overflow names buffer on %s", fileName, nameBuffer);
 
                     goto FAILURE;
                 }
 
                 int dataOffset = recordOffset + 30 + nameLength;
 
-                if ((dataOffset + uncompressedSize) > stream->Size())
+                if ((dataOffset + compressedSize) > stream->Size())
                 {
-                    Errorf("%s: Attempted to buffer overflow data buffer", fileName);
+                    Errorf("%s: Attempted to buffer overflow data buffer on %s", fileName, nameBuffer);
 
                     goto FAILURE;
                 }
@@ -376,6 +376,21 @@ zipFile::zipFile()
 
 zipFile::~zipFile()
 {
+    if (NamesBuffer)
+    {
+        delete NamesBuffer;
+    }
+
+    if (FileCrcs)
+    {
+        delete FileCrcs;
+    }
+
+    if (Entries)
+    {
+        delete Entries;
+    }
+
     if (FileHandle != 0xFFFFFFFF && pRawFileMethods)
     {
         pRawFileMethods->Close(FileHandle);
