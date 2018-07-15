@@ -106,7 +106,8 @@ void BeginPhase(bool splashScreen)
         }
     }
 
-    loadingImage->Scale(width, height);
+    // loadingImage->Scale(width, height);
+    loadingImage->Scale(gfxPipeline::m_iWidth, gfxPipeline::m_iHeight);
 
     LoadingScreenBitmap = gfxBitmap::Create(loadingImage, 0);
 
