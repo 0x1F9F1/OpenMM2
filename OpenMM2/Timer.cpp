@@ -17,12 +17,12 @@ uint32_t Timer::Elapsed()
     return Ticks() - StartTime;
 }
 
-double Timer::ElapsedSeconds()
+float Timer::ElapsedSeconds()
 {
     return Elapsed() * TicksToSeconds;
 }
 
-double Timer::ElapsedMilliseconds()
+float Timer::ElapsedMilliseconds()
 {
     return Elapsed() * TicksToMilliseconds;
 }

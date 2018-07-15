@@ -11,8 +11,6 @@ void datAssetManager::SetPath(const char * path)
 
     if (*path)
     {
-        size_t v2 = strlen(sm_Path) + 1;
-
         for (char* v1 = sm_Path; *v1; ++v1)
         {
             if (*v1 == '/')
@@ -21,12 +19,14 @@ void datAssetManager::SetPath(const char * path)
             }
         }
 
-        if (v2 != 1 && sm_Path[v2 - 2] != '\\')
+        size_t pathLength = strlen(sm_Path);
+
+        if (pathLength && (sm_Path[pathLength - 1] != '\\'))
         {
-            sm_Path[v2 - 1] = '\\';
-            sm_Path[v2] = 0;
+            sm_Path[pathLength] = '\\';
+            sm_Path[pathLength + 1] = 0;
         }
 
-        ageDebug(assetDebug, "datAssetManager::SetPath(%s)", sm_Path);
+        ageDebug(assetDebug, "datAssetManager::SetPath: %s", sm_Path);
     }
 }

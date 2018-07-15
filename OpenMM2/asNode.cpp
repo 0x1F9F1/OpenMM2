@@ -214,11 +214,15 @@ int asNode::AddChild(asNode * child)
     if (!child)
     {
         Errorf("asNode::AddChild()- N=0");
+
+        return 0;
     }
 
     if (child->Parent)
     {
         Errorf("asNode::AddChild()- Node already parented");
+
+        return 0;
     }
 
     child->Parent = this;

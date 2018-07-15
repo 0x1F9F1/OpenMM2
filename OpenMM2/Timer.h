@@ -11,8 +11,8 @@ public:
 
     uint32_t Elapsed();
 
-    double ElapsedSeconds();
-    double ElapsedMilliseconds();
+    float ElapsedSeconds();
+    float ElapsedMilliseconds();
 
     static uint32_t Ticks(void);
 

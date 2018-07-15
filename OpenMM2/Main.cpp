@@ -358,7 +358,7 @@ void InitHooks()
 
     hook::create_patch("sfPointer::Update", "Enables pointer in windowed mode", 0x4F136E, "\x90\x90", 2);
 
-    Displayf("Initialize Completed in %.2f Seconds", double(clock() - begin) / CLOCKS_PER_SEC);
+    Displayf("Initialize Completed in %.2f Seconds", float(clock() - begin) / CLOCKS_PER_SEC);
 }
 
 #ifndef USE_CUSTOM_ALLOCATOR

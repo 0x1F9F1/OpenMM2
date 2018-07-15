@@ -109,7 +109,7 @@ gfxBitmap * gfxBitmap::Create(int width, int height, bool unused)
 
     IDirectDrawSurface7 *surface = nullptr;
 
-    if (lpDD->CreateSurface(&surfaceDesc, &surface, 0))
+    if (lpDD->CreateSurface(&surfaceDesc, &surface, 0) != DD_OK)
     {
         return nullptr;
     }

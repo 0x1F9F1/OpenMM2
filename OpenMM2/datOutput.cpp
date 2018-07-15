@@ -10,6 +10,8 @@ defnvar(0x6A3D4C, datOutput::OutputSent);
 defnvar(0x6A3D4D, datOutput::OnExitAdded);
 defnvar(0x6A3D40, datOutput::DebugLogFile);
 
+HANDLE datOutput::DebugLogConsole = INVALID_HANDLE_VALUE;
+
 void datOutput::CallBeforeMsgBoxFunction(void)
 {
     if (beforeMsgBoxCB)
@@ -45,6 +47,15 @@ bool datOutput::OpenLog(char const * fileName)
         }
     }
 
+    if (DebugLogConsole == INVALID_HANDLE_VALUE)
+    {
+        AllocConsole();
+
+        SetConsoleTitleA("OpenMM2");
+
+        DebugLogConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    }
+
     return 1;
 }
 
@@ -55,5 +66,12 @@ void datOutput::CloseLog(void)
         DebugLogFile->Close();
 
         DebugLogFile = 0;
+    }
+
+    if (DebugLogConsole != INVALID_HANDLE_VALUE)
+    {
+        FreeConsole();
+
+        DebugLogConsole = INVALID_HANDLE_VALUE;
     }
 }

@@ -14,4 +14,6 @@ public:
     declstatic(bool, OutputSent);
     declstatic(bool, OnExitAdded);
     declstatic(Stream*, DebugLogFile);
+
+    static HANDLE DebugLogConsole;
 };

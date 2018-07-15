@@ -45,14 +45,17 @@ void gfxTexture::SetTexEnv(int texEnv)
 
 gfxTexture * gfxTexture::Create(gfxImage * image, bool mipMap)
 {
+    if (image == nullptr)
+    {
+        return nullptr;
+    }
+
     int mipMapCount = 0;
 
     if (mipMap)
     {
-        while (image)
+        for (gfxImage* i = image; i; i = i->Next)
         {
-            image = image->Next;
-
             ++mipMapCount;
         }
     }
