@@ -93,7 +93,7 @@ void DisplayUsed(const char* status)
     Displayf("%s", status);
 }
 
-run_once([]
+void InitMemoryHooks()
 {
     hook::create_hook("operator new", "Custom Memory Allocator", 0x577360, &mm2_new, HookType::JMP);
     hook::create_hook("operator new[]", "Custom Memory Allocator", 0x5773A0, &mm2_new_array, HookType::JMP);
@@ -106,4 +106,4 @@ run_once([]
     memMemoryAllocator::Current = nullptr;
 
     datDisplayUsed = &DisplayUsed;
-});
+}

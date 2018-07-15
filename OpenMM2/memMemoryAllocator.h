@@ -46,3 +46,5 @@ declvar(int, datCurrentMemoryAlign);
 declvar(int, datCurrentMemoryBucket);
 
 check_size(memMemoryAllocator, 0xDC);
+
+void InitMemoryHooks();

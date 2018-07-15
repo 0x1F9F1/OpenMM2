@@ -4,6 +4,8 @@
 #include "OpenMM2.h"
 #include "Main.h"
 
+#include "memMemoryAllocator.h"
+
 BOOL APIENTRY DllMain( HMODULE hModule,
                        DWORD  ul_reason_for_call,
                        LPVOID lpReserved
@@ -22,6 +24,8 @@ BOOL APIENTRY DllMain( HMODULE hModule,
 
         Printer = &CustomPrinter;
         PrintString = &CustomPrintString;
+
+        InitMemoryHooks();
 
         hook::create_hook("WinMain", "Entry Point", 0x582025, &MidtownMain, HookType::CALL);
     }
