@@ -12,11 +12,13 @@ void EnableNanSignal(bool enabled)
 asRoot::asRoot()
     : Matrix()
     , Paused(false)
-    , byte49(false)
+    , ShouldPause(false)
     , EnableNan(false)
 {
     Matrix.Identity();
+
     asLinearCS::CurrentMatrix = &Matrix;
+
     Reset();
 }
 
@@ -55,17 +57,17 @@ void asRoot::Update(void)
 
     asNode::Update();
 
-    if (byte49)
+    if (ShouldPause)
     {
-        byte49 = 0;
-        Paused = 1;
+        ShouldPause = false;
+        Paused = true;
     }
 }
 
 void asRoot::Reset(void)
 {
-    Paused = 0;
-    byte49 = 0;
+    Paused = false;
+    ShouldPause = false;
 }
 
 char* asRoot::GetClassName(void)

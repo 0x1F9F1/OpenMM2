@@ -23,11 +23,12 @@ gfxImage::~gfxImage()
     if (Next)
     {
         Next->Release();
+
         Next = nullptr;
     }
     else
     {
-        delete(PaletteData);
+        delete PaletteData;
     }
 }
 
@@ -53,10 +54,10 @@ gfxImage* gfxImage::GetFont(int & outWidth, int & outHeight)
 
 void gfxImage::FreeFont(void)
 {
-    if (gfxImage::sm_Font)
+    if (sm_Font)
     {
-        delete gfxImage::sm_Font;
+        delete sm_Font;
 
-        gfxImage::sm_Font = nullptr;
+        sm_Font = nullptr;
     }
 }

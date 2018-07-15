@@ -19,33 +19,33 @@ namespace hook
 
     void create_hook(const char* name, const char* description, mem::pointer pHook, mem::pointer pDetour, HookType type)
     {
-        std::intptr_t RVA = pDetour.as<std::intptr_t>() - pHook.add(5).as<std::intptr_t>();
+        intptr_t rva = pDetour.as<intptr_t>() - pHook.add(5).as<intptr_t>();
 
         switch (type)
         {
         case HookType::JMP:
         {
-            unsigned char buffer[5] = { 0xE9 };
-            reinterpret_cast<int&>(buffer[1]) = RVA;
+            uint8_t buffer[5] = { 0xE9 };
+            reinterpret_cast<int&>(buffer[1]) = rva;
 
-            mem::region(pHook, sizeof(buffer)).unprotect().copy(buffer);
+            write_protected(pHook, buffer, sizeof(buffer));
         } break;
 
         case HookType::CALL:
         {
-            unsigned char buffer[5] = { 0xE8 };
-            reinterpret_cast<int&>(buffer[1]) = RVA;
+            uint8_t buffer[5] = { 0xE8 };
+            reinterpret_cast<int&>(buffer[1]) = rva;
 
-            mem::region(pHook, sizeof(buffer)).unprotect().copy(buffer);
+            write_protected(pHook, buffer, sizeof(buffer));
         } break;
         }
 
         Displayf(
-            "Created %s %s hook at 0x%X pointing to 0x%X - %s",
-            name,
+            "Created %s hook '%s' from 0x%zX to 0x%zX: %s",
             HookTypeNames[static_cast<size_t>(type)],
-            pHook.as<std::uintptr_t>(),
-            pDetour.as<std::uintptr_t>(),
+            name,
+            pHook.as<uintptr_t>(),
+            pDetour.as<uintptr_t>(),
             description
         );
     }
@@ -55,9 +55,9 @@ namespace hook
         mem::region(dest, size).unprotect().copy(src);
 
         Displayf(
-            "Created %s patch at 0x%X of size %zu - %s",
+            "Created patch '%s' at 0x%zX of size %zu: %s",
             name,
-            dest.as<std::uintptr_t>(),
+            dest.as<uintptr_t>(),
             size,
             description
         );

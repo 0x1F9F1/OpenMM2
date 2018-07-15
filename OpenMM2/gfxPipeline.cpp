@@ -53,7 +53,7 @@ BOOL PASCAL AutoDetectCallback(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lp
     {
         gfxInterface *currentInterface = &gfxInterfaces[gfxInterfaceCount++];
 
-        strncpy_s(currentInterface->Name, lpDriverDescription, std::size(currentInterface->Name));
+        strcpy_s(currentInterface->Name, lpDriverDescription);
 
         currentInterface->DeviceCaps = 1;
         currentInterface->AcceptableDepths = gfxDepthFlag_Depth32;
@@ -174,19 +174,20 @@ void gfxPipeline::SetRes(int width, int height, int cdepth, int zdepth, bool par
     // We don't want to set the width/height if we are in a menu, it just fucks it up
     if (MMSTATE.GameState != 0)
     {
-        if (datArgParser::Exists("max")) {
-            HDC hDC = GetDC(NULL);
-            width = GetDeviceCaps(hDC, HORZRES);
-            height = GetDeviceCaps(hDC, VERTRES);
-            ReleaseDC(0, hDC);
+        if (datArgParser::Exists("max"))
+        {
+            HDC hdc = GetDC(NULL);
+
+            width = GetDeviceCaps(hdc, HORZRES);
+            height = GetDeviceCaps(hdc, VERTRES);
+
+            ReleaseDC(0, hdc);
         }
-        else {
+        else
+        {
             datArgParser::Get("width", 0, width);
             datArgParser::Get("height", 0, height);
         }
-
-        // datArgParser::Exists("width",  0, &width);
-        // datArgParser::Exists("height", 0, &height);
     }
 
     useSysMem = useSoftware;
@@ -375,14 +376,15 @@ void gfxPipeline::EndFrame(void)
 
 void gfxPipeline::CopyBitmap(int destX, int destY, gfxBitmap * bitmap, int srcX, int srcY, int width, int height, bool srcColorKey)
 {
-    RECT position = {
+    RECT position =
+    {
         srcX,
         srcY,
         srcX + width,
         srcY + height
     };
 
-    lpdsRend->BltFast(destX, destY, bitmap->Surface, &position, (srcColorKey != 0) + DDBLTFAST_WAIT);
+    lpdsRend->BltFast(destX, destY, bitmap->Surface, &position, (srcColorKey ? DDBLTFAST_SRCCOLORKEY : DDBLTFAST_NOCOLORKEY) | DDBLTFAST_WAIT);
 }
 
 LRESULT CALLBACK InputWindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
@@ -486,9 +488,9 @@ void ProgressCB(const char *unused, signed int progress)
     {
         gfxPipeline::BeginFrame();
 
-        if (lpLoadingBitmap)
+        if (LoadingScreenBitmap)
         {
-            gfxPipeline::CopyBitmap(0, 0, lpLoadingBitmap, 0, 0, lpLoadingBitmap->Width, lpLoadingBitmap->Height, 0);
+            gfxPipeline::CopyBitmap(0, 0, LoadingScreenBitmap, 0, 0, LoadingScreenBitmap->Width, LoadingScreenBitmap->Height, 0);
         }
 
         if (MMSTATE.GameState)
@@ -555,9 +557,12 @@ defnvar(0x6830E4, gfxPipeline::m_ZDepth);
 defnvar(0x6830F8, gfxPipeline::m_ColorDepth);
 defnvar(0x6830EC, gfxPipeline::m_X);
 defnvar(0x683110, gfxPipeline::m_Y);
+
+// 0x1 | Closing?
+// 0x2 | Lost Focus?
 defnvar(0x683114, gfxPipeline::m_EvtFlags);
 
-defnvar(0x5E0CCC, lpLoadingBitmap);
+defnvar(0x5E0CCC, LoadingScreenBitmap);
 defnvar(0x6844B8, gfxRestoreCallback);
 
 defnvar(0x683104, gfxDebug);
@@ -587,6 +592,7 @@ void InitDirectDraw(void)
     }
 
     MessageBoxA(0, LANG_STRING(0xF6u), APPTITLE, MB_ICONERROR);
+
     exit(0);
 }
 

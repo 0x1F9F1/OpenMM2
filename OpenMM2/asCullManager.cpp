@@ -115,7 +115,6 @@ void asCullManager::DeclareCullable2DFG(asCullable * cullable)
     if (CurrentCullables2DFG >= MaxCullables2DFG)
     {
         Warningf("Increase CULLMGR::MaxCullables2DFG!. MaxCullables2DFG=%d", MaxCullables2DFG);
-        Warningf("Increase CULLMGR::MaxCullables2DFG!");
     }
     else
     {

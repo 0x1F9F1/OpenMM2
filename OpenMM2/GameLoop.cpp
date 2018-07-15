@@ -35,12 +35,12 @@
 
 #include "localize.h"
 
-instvar(0x5E0CE0, gfxBitmap*, LoadingBitmap);
+instvar(0x5E0CE0, gfxBitmap*, RestoringScreenBitmap);
 instvar(0x5E0CF8, bool, NeedStartup);
 
 void GetLoadScreenName(char *buffer)
 {
-    char gameModeBuffer[20]; // [sp+8h] [bp-14h]@3
+    char gameModeBuffer[20];
 
     if (MMSTATE.GameState)
     {
@@ -107,7 +107,7 @@ void BeginPhase(bool splashScreen)
 
     loadingImage->Scale(width, height);
 
-    lpLoadingBitmap = gfxBitmap::Create(loadingImage, 0);
+    LoadingScreenBitmap = gfxBitmap::Create(loadingImage, 0);
 
     loadingImage->Release();
 
@@ -116,12 +116,11 @@ void BeginPhase(bool splashScreen)
 
     gfxReleaseFont();
 
-    gfxTexture::EnableCache(0);
+    gfxTexture::EnableCache(false);
 
     gfxCreateFont();
 
-    eqEventHandler* eventHandler = new eqEventHandler();
-    eqEventHandler::SuperQ = eventHandler;
+    eqEventHandler::SuperQ = new eqEventHandler();
 
     datDisplayUsed("Just before InitAudioManager");
 
@@ -145,8 +144,6 @@ void BeginPhase(bool splashScreen)
     GameInputPtr->Init(MMSTATE.InputDevice);
 
     datDisplayUsed("At end of BeginPhase");
-
-    // return stub<cdecl_t<void, bool>>(0x401AA0, splashScreen);
 }
 
 void EndPhase(void)
@@ -156,8 +153,8 @@ void EndPhase(void)
 
 void RestoreFocus(void)
 {
-    uint16_t width = LoadingBitmap->Width;
-    uint16_t height = LoadingBitmap->Height;
+    uint16_t width = RestoringScreenBitmap->Width;
+    uint16_t height = RestoringScreenBitmap->Height;
 
     RECT position =
     {
@@ -167,7 +164,7 @@ void RestoreFocus(void)
     lpdsFront->BltFast(
         (gfxPipeline::m_iWidth - width) / 2,
         (gfxPipeline::m_iHeight - height) / 2,
-        LoadingBitmap->Surface,
+        RestoringScreenBitmap->Surface,
         &position,
         DDBLTFAST_WAIT);
 
@@ -195,22 +192,22 @@ void MainPhase(bool parsedStateArgs, int firstLoad)
         ROOT.SetPause(0);
     }
 
-    gfxImage* imgReloading = gfxLoadImage("reloading", 0);
+    gfxImage* imageRestoring = gfxLoadImage("reloading", 0);
 
-    if (imgReloading)
+    if (imageRestoring)
     {
-        LoadingBitmap = gfxBitmap::Create(imgReloading, false);
+        RestoringScreenBitmap = gfxBitmap::Create(imageRestoring, false);
 
-        imgReloading->Release();
+        imageRestoring->Release();
 
-        if (LoadingBitmap)
+        if (RestoringScreenBitmap)
         {
-            gfxRestoreCallback = RestoreFocus;
+            gfxRestoreCallback = &RestoreFocus;
         }
     }
     else
     {
-        LoadingBitmap = 0;
+        RestoringScreenBitmap = 0;
     }
 
     EnableTextureVariantHandler = MMSTATE.GameState == 1;
@@ -272,8 +269,8 @@ void MainPhase(bool parsedStateArgs, int firstLoad)
         } break;
     }
 
-    lpLoadingBitmap->Release();
-    lpLoadingBitmap = 0;
+    LoadingScreenBitmap->Release();
+    LoadingScreenBitmap = nullptr;
 
     SetFocus(hwndMain);
     MMSTATE.GameState = -1;
@@ -300,10 +297,11 @@ void MainPhase(bool parsedStateArgs, int firstLoad)
         delete gameManager;
     }
 
-    if (LoadingBitmap)
+    if (RestoringScreenBitmap)
     {
-        LoadingBitmap = 0;
-        gfxRestoreCallback = 0;
+        RestoringScreenBitmap = nullptr;
+
+        gfxRestoreCallback = nullptr;
     }
 
     EndPhase();

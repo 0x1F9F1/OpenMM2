@@ -35,7 +35,7 @@ void eqEventHandler::RemoveClient(eqEventMonitor * client)
         Errorf("RemoveClient: not added?");
     }
 
-    Clients[client->Index] = 0;
+    Clients[client->Index] = nullptr;
 
     client->Handler = nullptr;
     client->Index = -1;

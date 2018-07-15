@@ -29,7 +29,6 @@
 
 #include "datOutput.h"
 
-#include <ctime>
 #include <shellapi.h>
 
 #pragma comment(lib, "imm32.lib")
@@ -256,13 +255,13 @@ int Main(void)
         {
             int systemLangID = GetSystemDefaultLangID();
 
-            if (systemLangID == 1041 || systemLangID == 1028)
+            if (systemLangID == MAKELANGID(LANG_JAPANESE, SUBLANG_JAPANESE_JAPAN) || systemLangID == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL))
             {
                 MMSTATE.UseIME = 1;
 
                 MMSTATE.IMEContext = ImmAssociateContext(hwndMain, 0);
             }
-            else if (systemLangID == 1042)
+            else if (systemLangID == MAKELANGID(LANG_KOREAN, SUBLANG_KOREAN))
             {
                 HIMC imm = ImmAssociateContext(hwndMain, 0);
 
@@ -330,15 +329,15 @@ int ExceptMain()
 
 void InitHooks()
 {
-    Displayf("Initialization Begin");
+    Displayf("Begin Hooking");
 
-    clock_t begin = clock();
+    Timer start;
 
     mem::init_function::init();
 
     hook::create_patch("sfPointer::Update", "Enables pointer in windowed mode", 0x4F136E, "\x90\x90", 2);
 
-    Displayf("Initialize Completed in %.2f Seconds", float(clock() - begin) / CLOCKS_PER_SEC);
+    Displayf("Hooks completed in %.3f Seconds", start.ElapsedSeconds());
 }
 
 int CALLBACK MidtownMain(

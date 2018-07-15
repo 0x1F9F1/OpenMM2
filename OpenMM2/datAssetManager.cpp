@@ -24,7 +24,7 @@ void datAssetManager::SetPath(const char * path)
         if (pathLength && (sm_Path[pathLength - 1] != '\\'))
         {
             sm_Path[pathLength] = '\\';
-            sm_Path[pathLength + 1] = 0;
+            sm_Path[pathLength + 1] = '\0';
         }
 
         ageDebug(assetDebug, "datAssetManager::SetPath: %s", sm_Path);

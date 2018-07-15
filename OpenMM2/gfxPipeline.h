@@ -88,5 +88,5 @@ declvar(float, ioMouse__InvHeight);
 
 declvar(bool, gfxDebug);
 
-declvar(gfxBitmap*, lpLoadingBitmap);
+declvar(gfxBitmap*, LoadingScreenBitmap);
 declvar(void(*)(void), gfxRestoreCallback);

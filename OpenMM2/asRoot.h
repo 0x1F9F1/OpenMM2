@@ -8,7 +8,7 @@ struct asRoot
 {
     Matrix34 Matrix;
     bool Paused;
-    bool byte49;
+    bool ShouldPause;
     bool EnableNan;
 
     asRoot();

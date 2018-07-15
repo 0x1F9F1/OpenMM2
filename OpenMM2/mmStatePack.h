@@ -56,6 +56,9 @@ public:
     int TimeOfDay;
     int WeatherType;
     dgSkillLevel SkillLevel;
+
+    // 0x1 | Sound Enabled
+    // 0x4 | CD Player Enabled
     int AudioFlags;
 
     BOOL EnablePedestrians;
