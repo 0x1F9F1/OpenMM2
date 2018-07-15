@@ -68,7 +68,6 @@ defnvar(0x5CE81C, datDisplayUsed);
 defnvar(0x6A3C34, datCurrentMemoryAlign);
 defnvar(0x6A3C38, datCurrentMemoryBucket);
 
-#ifdef USE_CUSTOM_ALLOCATOR
 void* mm2_new(size_t count)
 {
     return operator new(count);
@@ -103,4 +102,3 @@ run_once([]
 
     datDisplayUsed = [](const char*) {};
 });
-#endif

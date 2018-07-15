@@ -291,28 +291,8 @@ int Main(void)
     InstallJPEGSupport();
     InstallTextureVariantHandler();
 
-#ifndef USE_CUSTOM_ALLOCATOR
-    memMemoryAllocator allocator;
-    memSafeHeap heap;
-
-    int heapSizeMB = 128;
-    datArgParser::Get("heapsize", 0, heapSizeMB);
-
-    int heapSize = heapSizeMB * (1024 * 1024);
-
-    Displayf("[memSafeHeap::Init]: Allocating %dMB heap (%d bytes)\n", heapSizeMB, heapSize);
-
-    heap.Init(&allocator, heapSize, 0, 1, datArgParser::Exists("checkalloc"));
-
-    memMemoryAllocator::Current = &allocator;
-#endif
-
     do
     {
-#ifndef USE_CUSTOM_ALLOCATOR
-        heap.Restart();
-#endif
-
         MainPhase(parseStateArgs, firstLoad);
 
         firstLoad = 1;
@@ -361,10 +341,6 @@ void InitHooks()
     Displayf("Initialize Completed in %.2f Seconds", float(clock() - begin) / CLOCKS_PER_SEC);
 }
 
-#ifndef USE_CUSTOM_ALLOCATOR
-std::aligned_storage_t<0x4000, 0x8> ShadowMem;
-#endif
-
 int CALLBACK MidtownMain(
     HINSTANCE hInstance,
     HINSTANCE hPrevInstance,
@@ -377,14 +353,6 @@ int CALLBACK MidtownMain(
     datOutput::OpenLog("mm2.log");
 
     InitHooks();
-
-#ifndef USE_CUSTOM_ALLOCATOR
-    memMemoryAllocator allocator;
-
-    allocator.Init(&ShadowMem, sizeof(ShadowMem), 1, 0);
-
-    memMemoryAllocator::Current = &allocator;
-#endif
 
     datArgParser::Init(ArgC, ArgV);
 
