@@ -18,7 +18,7 @@ struct zipFile
     char *NamesBuffer;
     uint32_t *FileCrcs;
     zipEntry *Entries;
-    int EntryCount;
+    uint32_t EntryCount;
     uint32_t CurrentOffset;
 
     bool Init(char const * fileName);

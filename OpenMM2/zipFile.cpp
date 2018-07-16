@@ -111,6 +111,51 @@ void zipMultiAutoInit(char const * extension)
     }
 }
  
+#pragma pack(push, 1)
+struct DAVEHEADER
+{
+    uint32_t FileCount;
+    uint32_t NamesOffset;
+    uint32_t NamesSize;
+};
+
+check_size(DAVEHEADER, 0xC);
+
+struct ZIPENDLOCATOR
+{
+    uint16_t DiskNumber;
+    uint16_t StartDiskNumber;
+    uint16_t FileCount;
+    uint16_t FilesInDirectory;
+    uint32_t DirectorySize;
+    uint32_t DirectoryOffset;
+};
+
+check_size(ZIPENDLOCATOR, 0x10);
+
+struct ZIPDIRENTRY
+{
+    uint16_t VersionMadeBy;
+    uint16_t VersionToExtract;
+    uint16_t Flags;
+    uint16_t CompressionMethod;
+    uint16_t FileTime;
+    uint16_t FileDate;
+    uint32_t Crc;
+    uint32_t CompressedSize;
+    uint32_t UncompressedSize;
+    uint16_t NameLength;
+    uint16_t ExtraLength;
+    uint16_t CommentLength;
+    uint16_t DiskNumberStart;
+    uint16_t InternalAttributes;
+    uint32_t ExternalAttributes;
+    uint32_t RecordOffset;
+};
+
+check_size(ZIPDIRENTRY, 0x2A);
+#pragma pack(pop)
+
 bool zipFile::Init(char const * fileName)
 {
     if (pRawFileMethods == nullptr)
@@ -133,19 +178,11 @@ bool zipFile::Init(char const * fileName)
     {
         Displayf("'%s' is optimized archive.", fileName);
 
-        uint32_t fileCount = stream->Read<uint32_t>();
-        uint32_t entriesSize = stream->Read<uint32_t>(); // namesOffset
-
-        if (entriesSize != (fileCount * sizeof(zipEntry)))
-        {
-            // Errorf("'%s' is fishy.", fileName);
-        }
-
-        uint32_t namesSize = stream->Read<uint32_t>();
+        DAVEHEADER daveHeader = stream->Read<DAVEHEADER>();
 
         stream->Seek(2048);
 
-        EntryCount = fileCount;
+        EntryCount = daveHeader.FileCount;
         Entries = new zipEntry[EntryCount];
 
         if (!stream->ReadArray(Entries, EntryCount))
@@ -153,16 +190,16 @@ bool zipFile::Init(char const * fileName)
             Errorf("%s: Failed to read entries.", fileName);
         }
 
-        stream->Seek(2048 + entriesSize);
+        stream->Seek(2048 + daveHeader.NamesOffset);
 
-        NamesBuffer = new char[namesSize];
+        NamesBuffer = new char[daveHeader.NamesSize];
 
-        if (!stream->ReadArray(NamesBuffer, namesSize))
+        if (!stream->ReadArray(NamesBuffer, daveHeader.NamesSize))
         {
             Errorf("%s: Failed to read names.", fileName);
         }
 
-        for (int i = 0; i < EntryCount; ++i)
+        for (uint32_t i = 0; i < EntryCount; ++i)
         {
             Entries[i].Name += (uintptr_t) NamesBuffer;
         }
@@ -176,141 +213,70 @@ bool zipFile::Init(char const * fileName)
 
     if (stream->Read(magic) && (magic == 0x06054B50)) // ZIPENDLOCATOR
     {
-        uint16_t diskNumber = stream->Read<uint16_t>();
-        uint16_t startDiskNumber = stream->Read<uint16_t>();
+        ZIPENDLOCATOR endLocator = stream->Read<ZIPENDLOCATOR>();
 
-        if (diskNumber != startDiskNumber)
+        if (endLocator.DiskNumber != endLocator.StartDiskNumber)
         {
             Warningf("%s: Multi-part zipfiles not supported.", fileName);
 
             goto FAILURE;
         }
 
-        uint16_t fileCount = stream->Read<uint16_t>();
-        /*uint16_t filesInDirectory = */stream->Read<uint16_t>();
-        uint32_t directorySize = stream->Read<uint32_t>();
-        uint32_t directoryOffset = stream->Read<uint32_t>();
-
-        EntryCount = fileCount;
+        EntryCount = endLocator.FileCount;
         Entries = new zipEntry[EntryCount];
 
-        int namesBufferLength = directorySize - (0x2D * EntryCount);
+        uint32_t namesBufferLength = endLocator.DirectorySize - (0x2D * EntryCount);
 
         NamesBuffer = new char[namesBufferLength];
 
-        stream->Seek(directoryOffset);
+        stream->Seek(endLocator.DirectoryOffset);
 
-        int totalFiles = 0;
-        int totalNamesLength = 0;
+        uint32_t totalFiles = 0;
+        uint32_t totalNamesLength = 0;
 
         while (stream->Read(magic) && (magic == 0x02014B50)) // ZIPDIRENTRY
         {
             if (totalFiles < EntryCount)
             {
-                /*uint16_t versionMadeBy = */stream->Read<uint16_t>();
-                /*uint16_t versionToExtract = */stream->Read<uint16_t>();
-                /*uint16_t flags = */stream->Read<uint16_t>();
+                ZIPDIRENTRY dirEntry = stream->Read<ZIPDIRENTRY>();
 
-                uint16_t compressionMethod = stream->Read<uint16_t>();
-
-                if (compressionMethod != 0 && compressionMethod != 8)
+                if (dirEntry.CompressionMethod != 0 && dirEntry.CompressionMethod != 8)
                 {
                     Warningf("%s: Compression method besides store or deflate encountered.", fileName);
 
                     goto FAILURE;
                 }
 
-                /*uint16_t fileTime = */stream->Read<uint16_t>();
-                /*uint16_t fileDate = */stream->Read<uint16_t>();
-                /*uint32_t crc = */stream->Read<uint32_t>();
-
-                int compressedSize = stream->Read<int>();
-                int uncompressedSize = stream->Read<int>();
-
-                if (compressedSize < 0 || uncompressedSize < 0)
+                if ((totalNamesLength + dirEntry.NameLength + 1) > namesBufferLength)
                 {
-                    Warningf("%s: Negative size.", fileName);
+                    Errorf("%s: Names buffer overflow", fileName);
 
                     goto FAILURE;
                 }
 
-                uint16_t nameLength = stream->Read<uint16_t>();
-                uint16_t extraLength = stream->Read<uint16_t>();
-                uint16_t commentLength = stream->Read<uint16_t>();
+                char* nameBuffer = &NamesBuffer[totalNamesLength];
+                stream->Read(nameBuffer, dirEntry.NameLength);
+                nameBuffer[dirEntry.NameLength] = '\0';
 
-                /*uint16_t diskNumberStart = */stream->Read<uint16_t>();
+                totalNamesLength += strlen(nameBuffer) + 1;
 
-                /*uint16_t internalAttributes = */stream->Read<uint16_t>();
-                /*uint32_t externalAttributes = */stream->Read<uint32_t>();
+                uint32_t dataOffset = dirEntry.RecordOffset + 30 + dirEntry.NameLength;
 
-                uint32_t recordOffset = stream->Read<uint32_t>();
-
-                char nameBuffer[128];
-                if (!stream->ReadArray(nameBuffer, nameLength))
+                if ((dataOffset + dirEntry.CompressedSize) > (uint32_t) stream->Size())
                 {
-                    Errorf("%s: Failed to read file name.", fileName);
+                    Errorf("%s: %s overflows file", fileName, nameBuffer);
 
                     goto FAILURE;
                 }
 
-                nameBuffer[nameLength] = '\0';
-
-                if (extraLength > 256)
-                {
-                    Errorf("%s: Attempted to buffer overflow extra buffer (%u) on %s", fileName, extraLength, nameBuffer);
-
-                    goto FAILURE;
-                }
-
-                char extraBuffer[256];
-                if (!stream->ReadArray(extraBuffer, extraLength))
-                {
-                    Errorf("%s: Failed to read extra on %s", fileName, nameBuffer);
-
-                    goto FAILURE;
-                }
-
-                if (commentLength > 256)
-                {
-                    Errorf("%s: Attempted to buffer overflow comment buffer (%u) on %s", fileName, commentLength, nameBuffer);
-
-                    goto FAILURE;
-                }
-
-                char commentBuffer[256];
-                if (!stream->ReadArray(commentBuffer, commentLength))
-                {
-                    Errorf("%s: Failed to read comment on %s", fileName, nameBuffer);
-
-                    goto FAILURE;
-                }
-
-                if ((totalNamesLength + nameLength) > namesBufferLength)
-                {
-                    Errorf("%s: Attempted to buffer overflow names buffer on %s", fileName, nameBuffer);
-
-                    goto FAILURE;
-                }
-
-                int dataOffset = recordOffset + 30 + nameLength;
-
-                if ((dataOffset + compressedSize) > stream->Size())
-                {
-                    Errorf("%s: Attempted to buffer overflow data buffer on %s", fileName, nameBuffer);
-
-                    goto FAILURE;
-                }
+                stream->Seek(dirEntry.ExtraLength + dirEntry.CommentLength, SeekCurrent);
 
                 zipEntry* entry = &Entries[totalFiles];
 
-                entry->Name = &NamesBuffer[totalNamesLength];
+                entry->Name = nameBuffer;
                 entry->Data = dataOffset;
-                entry->UncompresedSize = uncompressedSize;
-                entry->CompressedSize = compressedSize;
-
-                memcpy(&NamesBuffer[totalNamesLength], nameBuffer, nameLength + 1);
-
-                totalNamesLength += nameLength + 1;
+                entry->UncompresedSize = dirEntry.UncompressedSize;
+                entry->CompressedSize = dirEntry.CompressedSize;
             }
 
             ++totalFiles;

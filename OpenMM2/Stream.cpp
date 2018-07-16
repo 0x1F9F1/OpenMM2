@@ -56,7 +56,26 @@ int Stream::Seek(int offset)
     CurrentBufferOffset = offset;
 
     return offset;
-};
+}
+
+int Stream::Seek(int offset, seekWhence whence)
+{
+    switch (whence)
+    {
+    case SeekBegin:
+        break;
+
+    case SeekCurrent:
+        offset += Tell();
+        break;
+
+    case SeekEnd:
+        offset += Size();
+        break;
+    }
+
+    return Seek(offset);
+}
 
 int Stream::Tell(void)
 {
@@ -67,7 +86,7 @@ int Stream::Close(void)
 {
     if (!CurrentBufferSize)
     {
-        if (this->CurrentBufferOffset)
+        if (CurrentBufferOffset)
         {
             Flush();
         }
@@ -85,7 +104,7 @@ int Stream::Size(void)
 {
     if (Methods->Size)
     {
-        return Methods->Size(this->Handle);
+        return Methods->Size(Handle);
     }
 
     if (Flush() >= 0)
@@ -121,10 +140,8 @@ int Stream::Flush(void)
         result = Methods->Write(Handle, Buffer, CurrentBufferOffset);
     }
 
-    int v5 = CurrentBufferOffset + CurrentFileOffset;
-
     CurrentBufferSize = 0;
-    CurrentFileOffset = v5;
+    CurrentFileOffset = CurrentBufferOffset + CurrentFileOffset;
     CurrentBufferOffset = 0;
 
     if (Methods->Flush)
@@ -224,25 +241,7 @@ void Stream::DumpOpenFiles(void)
 
 int fseek(Stream * stream, int position, seekWhence whence)
 {
-    switch (whence)
-    {
-    case SeekBegin:
-    {
-        stream->Seek(position);
-    } break;
-
-    case SeekCurrent:
-    {
-        stream->Seek(position + stream->Tell());
-    } break;
-
-    case SeekEnd:
-    {
-        stream->Seek(position + stream->Size());
-    } break;
-    }
-
-    return -1;
+    return stream->Seek(position, whence);
 }
 
 int fgets(char * buffer, int length, Stream * stream)
@@ -282,8 +281,8 @@ int fgets(char * buffer, int length, Stream * stream)
 
 void fprintf(Stream * stream, char const * format, ...)
 {
-    char buffer[512]; // [sp+4h] [bp-200h]@1
-    va_list va; // [sp+214h] [bp+10h]@1
+    char buffer[512];
+    va_list va;
 
     va_start(va, format);
     vsprintf_s(buffer, format, va);
@@ -294,7 +293,7 @@ void fprintf(Stream * stream, char const * format, ...)
 
 int fscanf(Stream * stream, char const * format, ...)
 {
-    int currentChar = -1; // eax@1
+    int currentChar = -1;
 
     do
     {
@@ -318,7 +317,7 @@ int fscanf(Stream * stream, char const * format, ...)
 
         if (!result)
         {
-            Errorf("scan of '%s' == '%s' failed", format, buffer);
+            Errorf("fscanf of '%s' == '%s' failed", format, buffer);
         }
 
         return result;

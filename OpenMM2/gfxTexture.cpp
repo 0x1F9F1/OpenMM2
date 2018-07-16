@@ -207,7 +207,7 @@ gfxTexture * gfxTexture::Create(int width, int height, gfxImage::gfxImageFormat 
     case gfxImage::ARGB_8888:
         memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_8888, sizeof(ddSurfaceDesc.ddpfPixelFormat));
 
-        if (!gfxTexture::sm_Allow32 || lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0))
+        if (!gfxTexture::sm_Allow32 || lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0) != DD_OK)
         {
             memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_4444, sizeof(ddSurfaceDesc.ddpfPixelFormat));
 
@@ -217,7 +217,7 @@ gfxTexture * gfxTexture::Create(int width, int height, gfxImage::gfxImageFormat 
         break;
     case gfxImage::RGB_0888:
         memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_0888, sizeof(ddSurfaceDesc.ddpfPixelFormat));
-        if (!gfxTexture::sm_Allow32 || lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0))
+        if (!gfxTexture::sm_Allow32 || lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0) != DD_OK)
         {
             pixelFormat = &ddPixelFormat_0565;
 
@@ -250,7 +250,7 @@ gfxTexture * gfxTexture::Create(int width, int height, gfxImage::gfxImageFormat 
         break;
     case gfxImage::Palette8:
         memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_Pallete8, sizeof(ddSurfaceDesc.ddpfPixelFormat));
-        if (lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0))
+        if (lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0) != DD_OK)
         {
             memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_0555, sizeof(ddSurfaceDesc.ddpfPixelFormat));
 
@@ -264,10 +264,10 @@ gfxTexture * gfxTexture::Create(int width, int height, gfxImage::gfxImageFormat 
         break;
     case gfxImage::Palette4:
         memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_Pallete4, sizeof(ddSurfaceDesc.ddpfPixelFormat));
-        if (lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0))
+        if (lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0) != DD_OK)
         {
             memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_Pallete8, sizeof(ddSurfaceDesc.ddpfPixelFormat));
-            if (lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0))
+            if (lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0) != DD_OK)
             {
                 memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_0555, sizeof(ddSurfaceDesc.ddpfPixelFormat));
 

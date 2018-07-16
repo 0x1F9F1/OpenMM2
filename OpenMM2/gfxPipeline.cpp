@@ -261,6 +261,8 @@ bool gfxPipeline::BeginGfx2D(void)
     if (!hGfxLib)
     {
         Errorf("Required DLL not found: %s", gfxLibName);
+
+        return false;
     }
 
     auto pDirectDrawCreateEx = (decltype(&DirectDrawCreateEx)) GetProcAddress(hGfxLib, "DirectDrawCreateEx");
@@ -268,6 +270,8 @@ bool gfxPipeline::BeginGfx2D(void)
     if (!pDirectDrawCreateEx)
     {
         Errorf("Required DLL is corrupt: %s", gfxLibName);
+
+        return false;
     }
 
     gfxPipeline::EnumDDAdapters(hGfxLib, DDEnumProc, 0);

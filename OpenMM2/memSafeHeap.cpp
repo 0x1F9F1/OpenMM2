@@ -59,6 +59,7 @@ void memSafeHeap::Deactivate(void)
 {
     if (bool14)
     {
+#pragma warning(suppress: 6250)
         VirtualFree(Heap, AllocSize, MEM_DECOMMIT);
     }
 

@@ -39,10 +39,12 @@ public:
     int GetCh(void);
     int PutCh(unsigned char ch);
     int Seek(int offset);
+    int Seek(int offset, seekWhence whence);
     int Tell(void);
     int Close(void);
     int Size(void);
     int Flush(void);
+
 
     bool ReadBytes(void* buffer, int size)
     {
