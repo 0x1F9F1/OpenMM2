@@ -124,6 +124,7 @@ bool FirstRunEula()
     bool result = false;
 
     HMODULE hEbuEula = LoadLibraryA("EBUEula.dll");
+
     if (hEbuEula)
     {
         auto EBUEula = (int(*)(const char *, const char *, const char *, int)) GetProcAddress(hEbuEula, "EBUEula");
@@ -303,6 +304,8 @@ int Main(void)
 
         firstLoad = 1;
     } while (!MMSTATE.Shutdown);
+
+    Displayf("Shutting Down.");
 
     NETMGR.Logout();
 

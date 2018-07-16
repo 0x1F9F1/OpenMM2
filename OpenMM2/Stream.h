@@ -45,7 +45,6 @@ public:
     int Size(void);
     int Flush(void);
 
-
     bool ReadBytes(void* buffer, int size)
     {
         return Read(buffer, size) == size;

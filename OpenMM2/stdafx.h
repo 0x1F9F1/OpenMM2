@@ -4,7 +4,7 @@
 #include <Windows.h>
 
 #define MEM_WINDOWS 32
-#include "mem/mem.h"
+#include "mem.h"
 
 #define DIRECTX_VERSION 0x0700
 
