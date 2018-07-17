@@ -168,6 +168,9 @@
     <ClInclude Include="HashTable.h">
       <Filter>MM2</Filter>
     </ClInclude>
+    <ClInclude Include="DirSnd.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -318,6 +321,9 @@
       <Filter>MM2</Filter>
     </ClCompile>
     <ClCompile Include="asCullManager.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="DirSnd.cpp">
       <Filter>MM2</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,23 +1,69 @@
 #include "stdafx.h"
 #include "AudManager.h"
 
+#include "DirSnd.h"
+
 defnvar(0x6B1474, AUDMGRPTR);
 defnvar(0x6B15D0, MMAUDMGRPTR);
 
 AudManagerBase::AudManagerBase()
 {
-    unimplemented;
+    pManager = 0;
+    dword2C = 0;
+    word1E = 0;
+    byte1C = 0;
+
+    AUDMGRPTR = this;
 }
 
-#pragma warning (suppress: 4722)
 AudManagerBase::~AudManagerBase()
 {
-    unimplemented;
+    if (pManager)
+    {
+        ShutDownAudio();
+    }
+
+    if (DSGlobalPtr)
+    {
+        delete DSGlobalPtr;
+    }
+
+    DSGlobalPtr = nullptr;
+    AUDMGRPTR = nullptr;
+}
+
+void AudManagerBase::ShutDownAudio(void)
+{
+    return stub<thiscall_t<void, AudManagerBase>>(0x50F000, this);
+}
+
+void AudManagerBase::Update(void)
+{
+    return stub<thiscall_t<void, AudManagerBase>>(0x50F130, this);
+}
+
+void AudManagerBase::UpdatePaused(void)
+{
+    return stub<thiscall_t<void, AudManagerBase>>(0x50F1A0, this);
 }
 
 AudManager::AudManager()
 {
-    unimplemented;
+    MMAUDMGRPTR = this;
+
+    dword38 = 0;
+    SpeechContainer = 0;
+    Num3DHalBuffers = 0;
+    pManager = 0;
+    pDirSound = 0;
+    SampleRate = 22050;
+
+    bool4A = false;
+    bool4B = true;
+
+    dword50 = 1.0f;
+
+    MMAUDMGRPTR = this;
 }
 
 #pragma warning (suppress: 4722)

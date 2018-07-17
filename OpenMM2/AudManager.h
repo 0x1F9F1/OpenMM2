@@ -9,12 +9,18 @@ class AudManagerBase
     : public asNode
 {
 public:
-    audManager *dword18;
-    uint32_t dword1C;
+    audManager *pManager;
+    uint8_t byte1C;
+    uint16_t word1E;
     uint32_t dword20;
     uint32_t dword24;
     uint32_t dword28;
     uint32_t dword2C;
+
+    void ShutDownAudio(void);
+
+    virtual void Update(void) override;
+    virtual void UpdatePaused(void) override;
 
     AudManagerBase();
     ~AudManagerBase();
@@ -35,7 +41,7 @@ public:
     uint16_t SampleSharing;
     bool bool4A;
     bool bool4B;
-    mmDirSnd *DirSnd;
+    mmDirSnd *pDirSound;
     float dword50;
 
     AudManager();

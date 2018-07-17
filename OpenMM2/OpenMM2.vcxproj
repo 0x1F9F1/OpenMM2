@@ -103,6 +103,7 @@
     <ClInclude Include="datOutput.h" />
     <ClInclude Include="datStack.h" />
     <ClInclude Include="datTimeManager.h" />
+    <ClInclude Include="DirSnd.h" />
     <ClInclude Include="eqEventHandler.h" />
     <ClInclude Include="Font.h" />
     <ClInclude Include="GameLoop.h" />
@@ -153,6 +154,7 @@
     <ClCompile Include="datOutput.cpp" />
     <ClCompile Include="datStack.cpp" />
     <ClCompile Include="datTimeManager.cpp" />
+    <ClCompile Include="DirSnd.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

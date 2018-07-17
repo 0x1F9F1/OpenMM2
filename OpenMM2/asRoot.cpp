@@ -50,7 +50,7 @@ void asRoot::Update(void)
 {
     if (EnableNan)
     {
-        EnableNanSignal(1);
+        EnableNanSignal(true);
     }
 
     asLinearCS::CurrentMatrix = &Matrix;

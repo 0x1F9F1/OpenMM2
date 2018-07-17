@@ -13,6 +13,9 @@ public:
     asNode* Next;
     asNode* Children;
     asNode* Parent;
+
+    // 0x1 | Update
+    // 0x400 | Update while paused
     uint32_t Flags;
     char *Name;
 
