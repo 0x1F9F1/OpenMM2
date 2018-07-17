@@ -15,9 +15,9 @@ struct zipFile
 {
     zipFile *PrevFile;
     int FileHandle;
-    char *NamesBuffer;
-    uint32_t *FileCrcs;
-    zipEntry *Entries;
+    std::unique_ptr<char[]> NamesBuffer;
+    std::unique_ptr<uint32_t[]> FileCrcs;
+    std::unique_ptr<zipEntry[]> Entries;
     uint32_t EntryCount;
     uint32_t CurrentOffset;
 

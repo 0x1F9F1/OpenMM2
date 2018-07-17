@@ -8,9 +8,8 @@
 defnvar(0x6B4698, zipFile::sm_First);
 defnvar(0x6B4208, zipFile::sm_LogOpen);
 instvar(0x6B4218, zipHandle[16], ZipHandles);
-instvar(0x6B4204, coreFileMethods *, pRawFileMethods);
-
-instvar(0x5DA768, coreFileMethods, zipFileMethods);
+instvar(0x6B4204, const coreFileMethods *, zipFileOpenMethods);
+instvar(0x5DA768, const coreFileMethods, zipFileMethods);
 
 void* zcalloc(void * opaque, uint32_t items, uint32_t size)
 {
@@ -158,12 +157,12 @@ check_size(ZIPDIRENTRY, 0x2A);
 
 bool zipFile::Init(char const * fileName)
 {
-    if (pRawFileMethods == nullptr)
+    if (zipFileOpenMethods == nullptr)
     {
-        pRawFileMethods = std::exchange(ReadOnlyFileMethods, &zipFileMethods);
+        zipFileOpenMethods = std::exchange(Stream::sm_DefaultOpenMethods, &zipFileMethods);
     }
 
-    Stream* stream = Stream::Open(fileName, pRawFileMethods, true);
+    Stream* stream = Stream::Open(fileName, zipFileOpenMethods, true);
 
     if (stream == nullptr)
     {
@@ -183,25 +182,25 @@ bool zipFile::Init(char const * fileName)
         stream->Seek(2048);
 
         EntryCount = daveHeader.FileCount;
-        Entries = new zipEntry[EntryCount];
+        Entries = std::make_unique<zipEntry[]>(EntryCount);
 
-        if (!stream->ReadArray(Entries, EntryCount))
+        if (!stream->ReadArray(Entries.get(), EntryCount))
         {
             Errorf("%s: Failed to read entries.", fileName);
         }
 
         stream->Seek(2048 + daveHeader.NamesOffset);
 
-        NamesBuffer = new char[daveHeader.NamesSize];
+        NamesBuffer = std::make_unique<char[]>(daveHeader.NamesSize);
 
-        if (!stream->ReadArray(NamesBuffer, daveHeader.NamesSize))
+        if (!stream->ReadArray(NamesBuffer.get(), daveHeader.NamesSize))
         {
             Errorf("%s: Failed to read names.", fileName);
         }
 
         for (uint32_t i = 0; i < EntryCount; ++i)
         {
-            Entries[i].Name += (uintptr_t) NamesBuffer;
+            Entries[i].Name += (uintptr_t) NamesBuffer.get();
         }
 
         // TODO: Load checksum (.CHK) file.
@@ -223,11 +222,11 @@ bool zipFile::Init(char const * fileName)
         }
 
         EntryCount = endLocator.FileCount;
-        Entries = new zipEntry[EntryCount];
+        Entries = std::make_unique<zipEntry[]>(EntryCount);
 
         uint32_t namesBufferLength = endLocator.DirectorySize - (0x2D * EntryCount);
 
-        NamesBuffer = new char[namesBufferLength];
+        NamesBuffer = std::make_unique<char[]>(namesBufferLength);
 
         stream->Seek(endLocator.DirectoryOffset);
 
@@ -301,7 +300,7 @@ bool zipFile::Init(char const * fileName)
             totalNamesLength,
             namesBufferLength);
 
-        std::sort(Entries, Entries + EntryCount, [ ] (const zipEntry& lhs, const zipEntry& rhs)
+        std::sort(Entries.get(), Entries.get() + EntryCount, [ ] (const zipEntry& lhs, const zipEntry& rhs)
         {
             return strcmp(lhs.Name, rhs.Name) < 0;
         });
@@ -318,7 +317,7 @@ SUCCESS:
 
     CurrentOffset = 0;
 
-    FileHandle = pRawFileMethods->Open(fileName, 1);
+    FileHandle = zipFileOpenMethods->Open(fileName, 1);
 
     return true;
 
@@ -342,24 +341,9 @@ zipFile::zipFile()
 
 zipFile::~zipFile()
 {
-    if (NamesBuffer)
+    if (FileHandle != 0xFFFFFFFF && zipFileOpenMethods)
     {
-        delete NamesBuffer;
-    }
-
-    if (FileCrcs)
-    {
-        delete FileCrcs;
-    }
-
-    if (Entries)
-    {
-        delete Entries;
-    }
-
-    if (FileHandle != 0xFFFFFFFF && pRawFileMethods)
-    {
-        pRawFileMethods->Close(FileHandle);
+        zipFileOpenMethods->Close(FileHandle);
     }
 
     zipFile::sm_First = PrevFile;

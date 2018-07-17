@@ -92,6 +92,9 @@ public:
 
     declstatic(Stream[MAX_STREAMS], sm_Streams);
     declstatic(uint8_t[MAX_STREAMS][STREAM_BUFFER_SIZE], sm_Buffers);
+
+    declstatic(coreFileMethods const *, sm_DefaultCreateMethods);
+    declstatic(coreFileMethods const *, sm_DefaultOpenMethods);
 };
 
 int fseek(Stream *stream, int position, seekWhence whence);
@@ -99,6 +102,4 @@ int fgets(char *buffer, int length, Stream *stream);
 void fprintf(Stream *stream, char const *format, ...);
 int fscanf(Stream *stream, char const *format, ...);
 
-declvar(coreFileMethods*, ReadWriteFileMethods);
-declvar(coreFileMethods*, ReadOnlyFileMethods);
-declvar(coreFileMethods, rawFileMethods);
+declvar(coreFileMethods, coreFileStandard);
