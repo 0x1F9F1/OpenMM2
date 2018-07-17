@@ -2,7 +2,7 @@
 #include "Hooking.h"
 
 #define MEM_IMPLEMENTATION
-#include "mem.h"
+#include "mem/mem.h"
 
 namespace hook
 {

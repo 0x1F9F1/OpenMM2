@@ -4,7 +4,7 @@
 #include <Windows.h>
 
 #define MEM_WINDOWS 32
-#include "mem.h"
+#include "mem/mem.h"
 
 #define DIRECTX_VERSION 0x0700
 
@@ -25,7 +25,7 @@
 #define PASTE_HELPER(a,b) a ## b
 #define PASTE(a,b) PASTE_HELPER(a,b)
 
-#define run_once(func) namespace { static mem::static_function PASTE(RunOnce, __LINE__)(func); }
+#define run_once(func) namespace { static mem::init_function PASTE(RunOnce, __LINE__)(func); }
 
 #define unimplemented Quitf("Error calling unimplemented function %s in %s (%i)", __FUNCTION__, __FILE__, __LINE__)
 

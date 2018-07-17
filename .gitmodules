@@ -1,0 +1,3 @@
+[submodule "OpenMM2/mem"]
+	path = OpenMM2/mem
+	url = git@gist.github.com:7b975ad0b22cfb9b3cac591b4aedf762.git
