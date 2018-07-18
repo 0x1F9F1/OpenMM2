@@ -41,6 +41,11 @@ void eqEventHandler::RemoveClient(eqEventMonitor * client)
     client->Index = -1;
 }
 
+void eqEventHandler::Update()
+{
+    return stub<thiscall_t<void, eqEventHandler>>(0x4A1790, this);
+}
+
 eqEventMonitor::eqEventMonitor()
     : Handler(nullptr)
     , Index(-1)

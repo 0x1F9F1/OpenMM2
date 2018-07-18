@@ -22,6 +22,8 @@ public:
 
     void RemoveClient(eqEventMonitor* client);
 
+    void Update(void);
+
     declstatic(eqEventHandler*, SuperQ);
 };
 

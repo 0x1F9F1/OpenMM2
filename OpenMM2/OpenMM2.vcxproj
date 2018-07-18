@@ -117,6 +117,7 @@
     <ClInclude Include="HashTable.h" />
     <ClInclude Include="Hooking.h" />
     <ClInclude Include="ioInput.h" />
+    <ClInclude Include="ioJoystick.h" />
     <ClInclude Include="Logging.h" />
     <ClInclude Include="lvlProgress.h" />
     <ClInclude Include="Main.h" />
@@ -178,6 +179,7 @@
     <ClCompile Include="HashTable.cpp" />
     <ClCompile Include="Hooking.cpp" />
     <ClCompile Include="ioInput.cpp" />
+    <ClCompile Include="ioJoystick.cpp" />
     <ClCompile Include="localize.cpp" />
     <ClCompile Include="Logging.cpp" />
     <ClCompile Include="lvlProgress.cpp" />

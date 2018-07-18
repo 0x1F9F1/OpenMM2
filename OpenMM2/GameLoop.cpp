@@ -35,9 +35,13 @@
 #include "d3dpipe.h"
 
 #include "localize.h"
+#include "ioInput.h"
 
 instvar(0x5E0CE0, gfxBitmap*, RestoringScreenBitmap);
 instvar(0x5E0CF8, bool, NeedStartup);
+
+instvar(0x5E0CC4, int(*)(void), __VtResumeSampling);
+instvar(0x5E0CD8, int(*)(void), __VtPauseSampling);
 
 void GetLoadScreenName(char *buffer)
 {
@@ -178,7 +182,41 @@ void RestoreFocus(void)
 
 void GameLoop(bool update)
 {
-    return stub<cdecl_t<void, bool>>(0x401A00, update);
+    if (__VtResumeSampling)
+    {
+        __VtResumeSampling();
+    }
+
+    memMemStats memoryStats;
+    memMemoryAllocator::Current->GetStats(&memoryStats, true);
+
+    while (MMSTATE.GameState == -1)
+    {
+        datTimeManager::Update();
+        ioInput::Poll();
+        gfxPipeline::Manage();
+        eqEventHandler::SuperQ->Update();
+        MMAUDMGRPTR->Update();
+
+        ROOT.Update();
+
+        if (update)
+        {
+            asCullManager::Instance->Update();
+        }
+
+        if (gfxPipeline::m_EvtFlags & 1)
+        {
+            MMSTATE.Shutdown = 1;
+
+            break;
+        }
+    }
+
+    if (__VtPauseSampling)
+    {
+        __VtPauseSampling();
+    }
 }
 
 void MainPhase(bool parsedStateArgs, int firstLoad)
@@ -232,7 +270,7 @@ void MainPhase(bool parsedStateArgs, int firstLoad)
             uiInterface->Reset();
             uiInterface->ShowMain(firstLoad);
 
-            parsedStateArgs = 1;
+            parsedStateArgs = true;
         } break;
 
         case 1:
@@ -267,7 +305,7 @@ void MainPhase(bool parsedStateArgs, int firstLoad)
                 gameManager->ForceReplayUI();
             }
 
-            parsedStateArgs = 0;
+            parsedStateArgs = false;
         } break;
     }
 
@@ -294,10 +332,7 @@ void MainPhase(bool parsedStateArgs, int firstLoad)
         delete replayManager;
     }
 
-    if (gameManager)
-    {
-        delete gameManager;
-    }
+    delete gameManager;
 
     if (RestoringScreenBitmap)
     {
@@ -308,3 +343,8 @@ void MainPhase(bool parsedStateArgs, int firstLoad)
 
     EndPhase();
 }
+
+run_once([]
+{
+    new (&ROOT) asRoot();
+});

@@ -11,6 +11,7 @@
 #include "d3dpipe.h"
 
 #include "gfxRenderState.h"
+#include "ioInput.h"
 
 instvar(0x6844B4, bool, g_VisualizeZ);
 
@@ -417,6 +418,28 @@ void gfxPipeline::EndScene(void)
 void gfxPipeline::Clear(int flags, uint32_t color, float zValue, uint32_t stencil)
 {
     return stub<cdecl_t<void, int, uint32_t, float, uint32_t>>(0x4AADC0, flags, color, zValue, stencil);
+}
+
+void gfxPipeline::Manage()
+{
+    tagMSG Msg;
+
+    while (true)
+    {
+        bool success = (!(m_EvtFlags & 0xA) || m_EvtFlags & 0x10) ? PeekMessageA(&Msg, 0, 0, 0, 1u) : GetMessageA(&Msg, 0, 0, 0);
+
+        if (success)
+        {
+            TranslateMessage(&Msg);
+            DispatchMessageA(&Msg);
+        }
+        else
+        {
+            break;
+        }
+    }
+
+    ioInput::Update();
 }
 
 LRESULT CALLBACK InputWindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)

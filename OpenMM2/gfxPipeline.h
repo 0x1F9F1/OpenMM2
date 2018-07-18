@@ -32,6 +32,8 @@ public:
 
     static void Clear(int flags, uint32_t color, float zValue, uint32_t stencil);
 
+    static void Manage();
+
     static LRESULT CALLBACK gfxWindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
     declstatic(float, m_fWidth);
