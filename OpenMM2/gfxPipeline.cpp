@@ -402,7 +402,7 @@ void gfxPipeline::BeginScene(void)
 
 void gfxPipeline::EndScene(void)
 {
-    RSTATE.SetTexture(nullptr, 0);
+    RSTATE.SetTexture(0, nullptr);
 
     RSTATE.Flush();
 

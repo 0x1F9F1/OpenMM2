@@ -38,14 +38,31 @@ public:
     int Ambient;
     int FogColor;
     int FogDensity;
-    bool m_COLOROP1;
-    bool byte3D;
+    bool m_COLOROP[2];
     bool SpecularEnable;
     bool FogEnable;
     bool NormalizeNormals;
     bool RangeFogEnable;
     gfxTexture *m_Texture[2];
     gfxMaterial *m_Material;
+};
+
+enum TransformStateType // D3DTRANSFORMSTATETYPE
+{
+    TransformState_World = 1,
+    TransformState_View = 2,
+    TransformState_Projection = 3,
+    TransformState_World1 = 4,  // 2nd matrix to blend
+    TransformState_World2 = 5,  // 3rd matrix to blend
+    TransformState_World3 = 6,  // 4th matrix to blend
+    TransformState_Texture0 = 16,
+    TransformState_Texture1 = 17,
+    TransformState_Texture2 = 18,
+    TransformState_Texture3 = 19,
+    TransformState_Texture4 = 20,
+    TransformState_Texture5 = 21,
+    TransformState_Texture6 = 22,
+    TransformState_Texture7 = 23,
 };
 
 class gfxRenderState
@@ -55,17 +72,20 @@ public:
 
     static void SetCamera(const Matrix34& camera);
     static void SetCamera(const Matrix44& camera);
+    static void SetTransform(int index, const Matrix44& transform);
 
     void Flush();
     void DoFlush(gfxRenderStateData * oldState);
 
-    void SetTexture(gfxTexture* texture, int index);
+    void SetTexture(int index, gfxTexture* texture);
 
     /*
         0x01 | State Changed
         0x02 | Texture Changed
         0x04 | Material Changed
         0x08 | Transform Changed
+        0x10 | Light Changed 1 (Only seen as 0x30)
+        0x20 | Light Changed 2 (Only seen as 0x30)
         0x80 | Should Regenerate (gfxRenderState::Regenerate())
     */
     declstatic(int, m_Touched);

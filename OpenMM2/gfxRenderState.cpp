@@ -20,15 +20,18 @@ void gfxRenderState::SetCamera(const Matrix34& camera)
     sm_Camera.m00 = camera.m00;
     sm_Camera.m01 = camera.m01;
     sm_Camera.m02 = camera.m02;
+
     sm_Camera.m03 = 0.0f;
     sm_Camera.m10 = camera.m03;
     sm_Camera.m11 = camera.m10;
     sm_Camera.m12 = camera.m11;
     sm_Camera.m13 = 0.0f;
+
     sm_Camera.m20 = camera.m12;
     sm_Camera.m21 = camera.m13;
     sm_Camera.m22 = camera.m20;
     sm_Camera.m23 = 0.0f;
+
     sm_Camera.m30 = camera.m21;
     sm_Camera.m31 = camera.m22;
     sm_Camera.m32 = camera.m23;
@@ -44,7 +47,12 @@ void gfxRenderState::SetCamera(const Matrix44& camera)
     sm_View.FastInverse(sm_Camera);
     sm_View.Dot(sm_FullComposite);
 
-    lpD3DDev->SetTransform(D3DTRANSFORMSTATE_VIEW, (LPD3DMATRIX)&gfxRenderState::sm_View);
+    SetTransform(TransformState_View, sm_View);
+}
+
+void gfxRenderState::SetTransform(int index, const Matrix44& transform)
+{
+    lpD3DDev->SetTransform((D3DTRANSFORMSTATETYPE)index, (LPD3DMATRIX)&transform);
 
     m_Touched |= 0x80;
 }
@@ -62,7 +70,7 @@ void gfxRenderState::DoFlush(gfxRenderStateData * oldState)
     return stub<thiscall_t<void, gfxRenderState, gfxRenderStateData*>>(0x4B4C40, this, oldState);
 }
 
-void gfxRenderState::SetTexture(gfxTexture * texture, int index)
+void gfxRenderState::SetTexture(int index, gfxTexture * texture)
 {
 #ifdef _DEBUG
     if (index > 1)

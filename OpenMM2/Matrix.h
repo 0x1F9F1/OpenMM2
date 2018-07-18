@@ -25,6 +25,7 @@ public:
     void FastInverse(const Matrix44& rhs);
 
     Matrix44& Dot(const Matrix44& rhs);
+    Matrix44& Dot(const Matrix44& lhs, const Matrix44& rhs);
 };
 
 check_size(Matrix44, 0x40);
