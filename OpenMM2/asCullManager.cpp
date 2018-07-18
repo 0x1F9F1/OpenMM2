@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "asCullManager.h"
 #include "asLinearCS.h"
+#include "gfxPipeline.h"
+#include "asCamera.h"
 
 defnvar(0x661784, asCullManager::Instance);
 
@@ -49,7 +51,59 @@ asCullManager::~asCullManager()
 
 void asCullManager::Update()
 {
-    stub<thiscall_t<void, asCullManager>>(0x4A1450, this);
+    if (ShouldReset)
+    {
+        ShouldReset = false;
+    }
+    else
+    {
+        gfxPipeline::BeginFrame();
+
+        gfxPipeline::Clear(3, BaseColor, 1.0, 0);
+
+        for (int i = 0; i < CurrentCullables2D; ++i)
+        {
+            Cullables2D[i]->Cull();
+        }
+
+        gfxPipeline::BeginScene();
+
+        Matrix34* oldMatrix = asLinearCS::CurrentMatrix;
+
+        for (uint32_t i = 0; i < CameraCount; ++i)
+        {
+            CurrentCamera = CameraArray[i];
+
+            CurrentCamera->DrawBegin();
+
+            for (int j = 0; j < CurrentCullables; ++j)
+            {
+                asLinearCS::CurrentMatrix = CullablsMatrices[j];
+
+                CullableArray[j]->Cull();
+            }
+
+            CurrentCamera->DrawEnd();
+        }
+
+        CurrentCamera = nullptr;
+
+        asLinearCS::CurrentMatrix = oldMatrix;
+
+        gfxPipeline::EndScene();
+
+        for (int i = 0; i < CurrentCullables2DFG; ++i)
+        {
+            Cullables2DFG[i]->Cull();
+        }
+
+        gfxPipeline::EndFrame();
+    }
+
+    CameraCount = 0;
+    CurrentCullables2DFG = 0;
+    CurrentCullables2D = 0;
+    CurrentCullables = 0;
 }
 
 void asCullManager::Reset()

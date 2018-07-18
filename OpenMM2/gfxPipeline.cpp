@@ -10,6 +10,10 @@
 #include "localize.h"
 #include "d3dpipe.h"
 
+#include "gfxRenderState.h"
+
+instvar(0x6844B4, bool, g_VisualizeZ);
+
 void gfxPipeline::SetRes(int width, int height, int cdepth, int zdepth, bool parseArgs)
 {
     (void)(parseArgs);
@@ -384,6 +388,35 @@ void gfxPipeline::EnumDDAdapters(HMODULE hGfxLib, LPDDENUMCALLBACKA lpCallback, 
     {
         pDirectDrawEnumerateA(lpCallback, lpContext);
     }
+}
+
+void gfxPipeline::BeginScene(void)
+{
+    if (useSoftware)
+    {
+        g_VisualizeZ = true;
+
+        DX_ASSERT(lpD3DDev->BeginScene());
+    }
+}
+
+void gfxPipeline::EndScene(void)
+{
+    RSTATE.SetTexture(nullptr, 0);
+
+    RSTATE.Flush();
+
+    if (useSoftware)
+    {
+        g_VisualizeZ = false;
+        
+        DX_ASSERT(lpD3DDev->EndScene());
+    }
+}
+
+void gfxPipeline::Clear(int flags, uint32_t color, float zValue, uint32_t stencil)
+{
+    return stub<cdecl_t<void, int, uint32_t, float, uint32_t>>(0x4AADC0, flags, color, zValue, stencil);
 }
 
 LRESULT CALLBACK InputWindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)

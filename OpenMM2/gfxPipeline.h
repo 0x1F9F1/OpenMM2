@@ -27,6 +27,11 @@ public:
 
     static void EnumDDAdapters(HMODULE hGfxLib, LPDDENUMCALLBACKA lpCallback, LPVOID lpContext);
 
+    static void BeginScene(void);
+    static void EndScene(void);
+
+    static void Clear(int flags, uint32_t color, float zValue, uint32_t stencil);
+
     static LRESULT CALLBACK gfxWindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
     declstatic(float, m_fWidth);

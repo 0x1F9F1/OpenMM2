@@ -171,6 +171,12 @@
     <ClInclude Include="DirSnd.h">
       <Filter>MM2</Filter>
     </ClInclude>
+    <ClInclude Include="asCamera.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="gfxRenderState.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -324,6 +330,12 @@
       <Filter>MM2</Filter>
     </ClCompile>
     <ClCompile Include="DirSnd.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="asCamera.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="gfxRenderState.cpp">
       <Filter>MM2</Filter>
     </ClCompile>
   </ItemGroup>

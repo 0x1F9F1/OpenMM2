@@ -32,7 +32,7 @@ public:
     Timer Timer1;
     Timer Timer2;
     int field_A0;
-    char ShouldReset;
+    bool ShouldReset;
     char field_A5;
     char field_A6;
     char field_A7;
