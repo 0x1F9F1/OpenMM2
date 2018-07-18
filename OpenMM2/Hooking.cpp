@@ -1,14 +1,11 @@
 #include "stdafx.h"
 #include "Hooking.h"
 
-#define MEM_IMPLEMENTATION
-#include "mem/mem.h"
-
 namespace hook
 {
     inline void write_protected(mem::pointer dest, mem::pointer src, size_t length)
     {
-        dest.as<mem::region>(length).unprotect().copy(src);
+        mem::region(dest, length).unprotect().copy(src);
     }
 
     const char* const HookTypeNames[static_cast<size_t>(HookType::COUNT)] =
