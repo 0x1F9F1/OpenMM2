@@ -45,9 +45,19 @@ int WINAPI MyLoadStringA(HINSTANCE hInstance, UINT uID, char *lpBuffer, int cchB
 
     char* current = lpBuffer;
 
-    while (current[0] && current[1] && IsDBCSLeadByte(current[0]))
+    for (; *current != '\0'; ++current)
     {
-        current += 2;
+        if (IsDBCSLeadByte(*current))
+        {
+            if (current[1])
+            {
+                ++current;
+            }
+            else
+            {
+                break;
+            }
+        }
     }
 
     *current = 0;

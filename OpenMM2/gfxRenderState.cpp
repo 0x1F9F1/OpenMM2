@@ -62,7 +62,7 @@ void gfxRenderState::SetTransform(int index, const Matrix44& transform)
     m_Touched |= 0x80;
 }
 
-void gfxRenderState::Flush()
+void gfxRenderState::Flush() const
 {
     if (m_Touched & m_TouchedMask)
     {
@@ -70,7 +70,7 @@ void gfxRenderState::Flush()
     }
 }
 
-void gfxRenderState::DoFlush(gfxRenderStateData * prevState)
+void gfxRenderState::DoFlush(gfxRenderStateData* prevState) const
 {
     if (m_Touched & 8)
     {
@@ -261,13 +261,13 @@ void gfxRenderState::DoFlush(gfxRenderStateData * prevState)
         if (FogStart != prevState->FogStart)
         {
             prevState->FogStart = FogStart;
-            lpD3DDev->SetRenderState(D3DRENDERSTATE_FOGSTART, reinterpret_cast<uint32_t&>(FogStart));
+            lpD3DDev->SetRenderState(D3DRENDERSTATE_FOGSTART, reinterpret_cast<const uint32_t&>(FogStart));
         }
 
         if (FogEnd != prevState->FogEnd)
         {
             prevState->FogEnd = FogEnd;
-            lpD3DDev->SetRenderState(D3DRENDERSTATE_FOGEND, reinterpret_cast<uint32_t&>(FogEnd));
+            lpD3DDev->SetRenderState(D3DRENDERSTATE_FOGEND, reinterpret_cast<const uint32_t&>(FogEnd));
         }
 
         if (FogColor != prevState->FogColor)
@@ -297,13 +297,13 @@ void gfxRenderState::DoFlush(gfxRenderStateData * prevState)
         }
     }
 
-    uint32_t v20 = m_Texture[0] ? m_Texture[0]->TexEnv : 0;
-    AddressU[0] = (2 * (v20 & 1)) | 1;
-    AddressV[0] = (v20 >> 15) & 2 | 1;
+    uint32_t texEnv0 = m_Texture[0] ? m_Texture[0]->TexEnv : 0;
+    AddressU[0] = (2 * (texEnv0 & 1)) | 1;
+    AddressV[0] = (texEnv0 >> 15) & 2 | 1;
 
-    uint32_t v22 = m_Texture[1] ? m_Texture[1]->TexEnv : 0;
-    AddressU[1] = (2 * (v22 & 1)) | 1;
-    AddressV[1] = (v22 >> 15 & 2) | 1;
+    uint32_t texEnv1 = m_Texture[1] ? m_Texture[1]->TexEnv : 0;
+    AddressU[1] = (2 * (texEnv1 & 1)) | 1;
+    AddressV[1] = (texEnv1 >> 15 & 2) | 1;
 
     if (m_Touched & 2)
     {
@@ -330,7 +330,7 @@ void gfxRenderState::DoFlush(gfxRenderStateData * prevState)
     m_Touched &= 0x80u;
 }
 
-void gfxRenderState::SetTexture(int index, gfxTexture * texture)
+void gfxRenderState::SetTexture(int index, gfxTexture* texture)
 {
 #ifdef _DEBUG
     if (index > 1)
@@ -343,6 +343,6 @@ void gfxRenderState::SetTexture(int index, gfxTexture * texture)
     {
         m_Texture[index] = texture;
 
-        gfxRenderState::m_Touched |= 2;
+        m_Touched |= 2;
     }
 }

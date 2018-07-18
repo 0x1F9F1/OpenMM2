@@ -32,8 +32,8 @@ public:
     bool ZBias;
     bool AntiAlias;
     bool FogVertexMode;
-    char AddressU[2];
-    char AddressV[2];
+    mutable uint8_t AddressU[2];
+    mutable uint8_t AddressV[2];
     int dword2C;
     int Ambient;
     int FogColor;
@@ -53,9 +53,9 @@ enum TransformStateType // D3DTRANSFORMSTATETYPE
     TransformState_World = 1,
     TransformState_View = 2,
     TransformState_Projection = 3,
-    TransformState_World1 = 4,  // 2nd matrix to blend
-    TransformState_World2 = 5,  // 3rd matrix to blend
-    TransformState_World3 = 6,  // 4th matrix to blend
+    TransformState_World1 = 4, // 2nd matrix to blend
+    TransformState_World2 = 5, // 3rd matrix to blend
+    TransformState_World3 = 6, // 4th matrix to blend
     TransformState_Texture0 = 16,
     TransformState_Texture1 = 17,
     TransformState_Texture2 = 18,
@@ -85,8 +85,8 @@ public:
     static void SetCamera(const Matrix44& camera);
     static void SetTransform(int index, const Matrix44& transform);
 
-    void Flush();
-    void DoFlush(gfxRenderStateData * prevState);
+    void Flush() const;
+    void DoFlush(gfxRenderStateData * prevState) const;
 
     void SetTexture(int index, gfxTexture* texture);
 

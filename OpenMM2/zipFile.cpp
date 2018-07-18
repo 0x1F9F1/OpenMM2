@@ -49,7 +49,7 @@ void zipMultiAutoInit(char const * extension)
 {
     if (datArgParser::Exists("logopen"))
     {
-        zipFile::sm_LogOpen = 1;
+        zipFile::sm_LogOpen = true;
     }
 
     char stringBuffer[MAX_PATH];
