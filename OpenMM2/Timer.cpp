@@ -1,10 +1,48 @@
 #include "stdafx.h"
 #include "Timer.h"
 
+#include <timeapi.h>
+#pragma comment(lib, "winmm.lib")
+
+instvar(0x6A3D08, int, dword_6A3D08);
+
 Timer::Timer()
     : StartTime(0)
 {
-    stub<thiscall_t<void, Timer>>(0x4C7840, this);
+    LARGE_INTEGER frequency;
+    if (TicksToSeconds == 0.0)
+    {
+        dword_6A3D08 = QueryPerformanceFrequency(&frequency) + 1;
+
+        if (dword_6A3D08 == 1)
+        {
+            TicksToSeconds = 0.001f;
+        }
+        else
+        {
+            TicksToSeconds = 1.0f / frequency.QuadPart;
+        }
+
+        TicksToMilliseconds = TicksToSeconds * 1000.0f;
+
+        LARGE_INTEGER counterStart;
+        QueryPerformanceCounter(&counterStart);
+
+        int tickCount = GetTickCount();
+        Sleep(100);
+
+        LARGE_INTEGER counterEnd;
+        QueryPerformanceCounter(&counterEnd);
+
+        QuickTicksToMilliseconds = (static_cast<float>(counterEnd.QuadPart) - static_cast<float>(counterStart.QuadPart))
+            / static_cast<float>(frequency.QuadPart)
+            * 1000.0f
+            / static_cast<float>(GetTickCount() - tickCount);
+
+        CpuSpeed = 0.001f / QuickTicksToMilliseconds;
+    }
+
+    StartTime = Ticks();
 }
 
 void Timer::Reset()
@@ -12,25 +50,34 @@ void Timer::Reset()
     StartTime = Ticks();
 }
 
-uint32_t Timer::Elapsed()
+uint32_t Timer::Elapsed() const
 {
     return Ticks() - StartTime;
 }
 
-float Timer::ElapsedSeconds()
+float Timer::ElapsedSeconds() const
 {
     return Elapsed() * TicksToSeconds;
 }
 
-float Timer::ElapsedMilliseconds()
+float Timer::ElapsedMilliseconds() const
 {
     return Elapsed() * TicksToMilliseconds;
 }
 
 uint32_t Timer::Ticks(void)
 {
-    return stub<cdecl_t<uint32_t>>(0x4C77E0);
+    if (dword_6A3D08 == 1)
+    {
+        return timeGetTime();
+    }
+
+    LARGE_INTEGER counter;
+    QueryPerformanceCounter(&counter);
+    return counter.LowPart;
 }
 
+defnvar(0x6A3CF0, Timer::CpuSpeed);
+defnvar(0x6A3CFC, Timer::QuickTicksToMilliseconds);
 defnvar(0x6A3D00, Timer::TicksToSeconds);
 defnvar(0x6A3D04, Timer::TicksToMilliseconds);

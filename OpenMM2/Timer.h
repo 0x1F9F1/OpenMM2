@@ -9,13 +9,15 @@ public:
 
     void Reset();
 
-    uint32_t Elapsed();
+    uint32_t Elapsed() const;
 
-    float ElapsedSeconds();
-    float ElapsedMilliseconds();
+    float ElapsedSeconds() const;
+    float ElapsedMilliseconds() const;
 
     static uint32_t Ticks(void);
 
+    declstatic(float, CpuSpeed);
+    declstatic(float, QuickTicksToMilliseconds);
     declstatic(float, TicksToSeconds);
     declstatic(float, TicksToMilliseconds);
 };
