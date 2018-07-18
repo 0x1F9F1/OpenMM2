@@ -29,10 +29,10 @@ public:
     const coreFileMethods * Methods;
     int Handle;
     uint8_t *Buffer;
-    uint32_t CurrentFileOffset;
-    uint32_t CurrentBufferOffset;
-    uint32_t CurrentBufferSize;
-    uint32_t BufferSize;
+    int CurrentFileOffset;
+    int CurrentBufferOffset;
+    int CurrentBufferSize;
+    int BufferSize;
 
     int Read(void* buffer, int size);
     int Write(const void* buffer, int size);
@@ -40,7 +40,7 @@ public:
     int PutCh(unsigned char ch);
     int Seek(int offset);
     int Seek(int offset, seekWhence whence);
-    int Tell(void);
+    int Tell(void) const;
     int Close(void);
     int Size(void);
     int Flush(void);

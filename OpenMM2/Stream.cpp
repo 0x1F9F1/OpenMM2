@@ -6,14 +6,124 @@ defnvar(0x6A3EB8, Stream::sm_Buffers);
 
 instvar(0x5CED80, int, MaxFilesOpenAtOnce);
 
-int Stream::Read(void* dstBuf, int size)
+int Stream::Read(void* buffer, int size)
 {
-    return stub<thiscall_t<int, Stream, void*, int>>(0x4C9AA0, this, dstBuf, size);
+    int total = 0;
+
+    if (!CurrentBufferSize && CurrentBufferOffset && Flush() < 0)
+    {
+        return -1;
+    }
+
+    int bufferSpace = CurrentBufferSize - CurrentBufferOffset;
+
+    if (size > bufferSpace)
+    {
+        if (bufferSpace)
+        {
+            memcpy(buffer, &Buffer[CurrentBufferOffset], bufferSpace);
+
+            buffer = static_cast<char *>(buffer) + bufferSpace;
+
+            total += bufferSpace;
+            size -= bufferSpace;
+
+            CurrentBufferOffset = CurrentBufferSize;
+        }
+
+        CurrentFileOffset += CurrentBufferOffset;
+
+        if (size >= BufferSize)
+        {
+            int bytesRead = Methods->Read(Handle, buffer, size);
+
+            if (bytesRead >= 0)
+            {
+                CurrentBufferSize = 0;
+                CurrentFileOffset += bytesRead;
+                CurrentBufferOffset = 0;
+
+                total += bytesRead;
+
+                return total;
+            }
+
+            CurrentBufferOffset = 0;
+            CurrentBufferSize = 0;
+
+            return -1;
+        }
+
+        int bytesRead = Methods->Read(Handle, Buffer, BufferSize);
+
+        CurrentBufferSize = bytesRead;
+        CurrentBufferOffset = 0;
+
+        if (bytesRead < 0)
+        {
+            CurrentBufferOffset = 0;
+            CurrentBufferSize = 0;
+
+            return -1;
+        }
+    }
+
+    bufferSpace = CurrentBufferSize - CurrentBufferOffset;
+
+    if (size > bufferSpace)
+    {
+        size = bufferSpace;
+    }
+
+    memcpy(buffer, &Buffer[CurrentBufferOffset], size);
+    this->CurrentBufferOffset += size;
+    total += size;
+
+    return total;
 };
 
-int Stream::Write(const void* srcBuf, int size)
+int Stream::Write(const void* buffer, int size)
 {
-    return stub<thiscall_t<int, Stream, const void*, int>>(0x4C9BF0, this, srcBuf, size);
+    if (!CurrentBufferSize || Flush() >= 0)
+    {
+        if (size < BufferSize)
+        {
+            int bufferSpace = BufferSize - CurrentBufferOffset;
+
+            if (size >= bufferSpace)
+            {
+                memcpy(&Buffer[CurrentBufferOffset], buffer, bufferSpace);
+
+                buffer = static_cast<const char *>(buffer) + bufferSpace;
+                size -= bufferSpace;
+
+                CurrentBufferOffset = BufferSize;
+
+                if (Flush() < 0)
+                {
+                    return -1;
+                }
+            }
+
+            memcpy(&Buffer[CurrentBufferOffset], buffer, size);
+            CurrentBufferOffset += size;
+            return size;
+        }
+
+        if (Flush() >= 0)
+        {
+            int result = Methods->Write(Handle, buffer, size);
+
+            if (result >= 0)
+            {
+                this->CurrentFileOffset += result;
+
+                return result;
+            }
+        }
+    }
+
+    return -1;
 };
 
 int Stream::GetCh(void)
@@ -40,22 +150,21 @@ int Stream::PutCh(unsigned char ch)
 
 int Stream::Seek(int offset)
 {
-    if (Methods->Seek)
+    if (!Methods->Seek)
     {
-        if (Flush() >= 0)
-        {
-            CurrentFileOffset = offset;
-            return Methods->Seek(Handle, offset, 0);
-        }
-        else
-        {
-            return -1;
-        }
+        CurrentBufferOffset = offset;
+
+        return offset;
     }
 
-    CurrentBufferOffset = offset;
+    if (Flush() >= 0)
+    {
+        CurrentFileOffset = offset;
 
-    return offset;
+        return Methods->Seek(Handle, offset, 0);
+    }
+
+    return -1;
 }
 
 int Stream::Seek(int offset, seekWhence whence)
@@ -77,7 +186,7 @@ int Stream::Seek(int offset, seekWhence whence)
     return Seek(offset);
 }
 
-int Stream::Tell(void)
+int Stream::Tell(void) const
 {
     return CurrentFileOffset + CurrentBufferOffset;
 };
@@ -95,7 +204,7 @@ int Stream::Close(void)
     Methods->Close(Handle);
 
     Handle = -1;
-    Methods = 0;
+    Methods = nullptr;
 
     return 0;
 };
@@ -126,13 +235,9 @@ int Stream::Flush(void)
 
     if (CurrentBufferSize)
     {
-        if (CurrentBufferSize == CurrentBufferOffset)
+        if (CurrentBufferOffset != CurrentBufferSize)
         {
-            result = 0;
-        }
-        else
-        {
-            result = Methods->Seek(Handle, CurrentBufferOffset + CurrentFileOffset, 0);
+            result = Methods->Seek(Handle, CurrentFileOffset + CurrentBufferOffset, 0);
         }
     }
     else if (CurrentBufferOffset)
@@ -141,7 +246,7 @@ int Stream::Flush(void)
     }
 
     CurrentBufferSize = 0;
-    CurrentFileOffset = CurrentBufferOffset + CurrentFileOffset;
+    CurrentFileOffset += CurrentBufferOffset;
     CurrentBufferOffset = 0;
 
     if (Methods->Flush)
@@ -152,7 +257,7 @@ int Stream::Flush(void)
     return result;
 }
 
-Stream * Stream::Open(char const * fileName, coreFileMethods const * methods, bool readOnly)
+Stream* Stream::Open(char const* fileName, coreFileMethods const* methods, bool readOnly)
 {
     int handle = methods->Open(fileName, readOnly);
 
@@ -164,7 +269,7 @@ Stream * Stream::Open(char const * fileName, coreFileMethods const * methods, bo
     return nullptr;
 }
 
-Stream * Stream::AllocStream(char const * fileName, int handle, coreFileMethods const * methods)
+Stream* Stream::AllocStream(char const* fileName, int handle, coreFileMethods const* methods)
 {
     (void)fileName;
 
@@ -200,7 +305,7 @@ Stream * Stream::AllocStream(char const * fileName, int handle, coreFileMethods 
     return nullptr;
 }
 
-Stream * Stream::Open(char const * fileName, bool readOnly)
+Stream* Stream::Open(char const* fileName, bool readOnly)
 {
     const coreFileMethods* fileMethods = readOnly ? sm_DefaultOpenMethods : sm_DefaultCreateMethods;
 
@@ -211,10 +316,10 @@ Stream * Stream::Open(char const * fileName, bool readOnly)
         return nullptr;
     }
 
-    return Stream::AllocStream(fileName, fileHandle, fileMethods);
+    return AllocStream(fileName, fileHandle, fileMethods);
 }
 
-Stream * Stream::Create(const char * fileName)
+Stream* Stream::Create(const char* fileName)
 {
     int handle = sm_DefaultCreateMethods->Create(fileName);
 
@@ -223,10 +328,10 @@ Stream * Stream::Create(const char * fileName)
         return nullptr;
     }
 
-    return Stream::AllocStream(fileName, handle, sm_DefaultCreateMethods);
+    return AllocStream(fileName, handle, sm_DefaultCreateMethods);
 }
 
-void Stream::DumpOpenFiles(void)
+void Stream::DumpOpenFiles()
 {
     for (int i = 0; i < MAX_STREAMS; ++i)
     {
@@ -239,12 +344,12 @@ void Stream::DumpOpenFiles(void)
     }
 }
 
-int fseek(Stream * stream, int position, seekWhence whence)
+int fseek(Stream* stream, int position, seekWhence whence)
 {
     return stream->Seek(position, whence);
 }
 
-int fgets(char * buffer, int length, Stream * stream)
+int fgets(char* buffer, int length, Stream* stream)
 {
     int total = 0;
 
@@ -266,7 +371,7 @@ int fgets(char * buffer, int length, Stream * stream)
             break;
         }
 
-        buffer[total] = (char) currentChar;
+        buffer[total] = static_cast<char>(currentChar);
 
         if (currentChar == '\n')
         {
@@ -279,7 +384,7 @@ int fgets(char * buffer, int length, Stream * stream)
     return total;
 }
 
-void fprintf(Stream * stream, char const * format, ...)
+void fprintf(Stream* stream, char const* format, ...)
 {
     char buffer[512];
     va_list va;
@@ -291,28 +396,28 @@ void fprintf(Stream * stream, char const * format, ...)
     stream->Write(buffer, strlen(buffer));
 }
 
-int fscanf(Stream * stream, char const * format, ...)
+int fscanf(Stream* stream, char const* format, ...)
 {
-    int currentChar = -1;
+    int currentChar;
 
     do
     {
         do
         {
             currentChar = stream->GetCh();
-        } while (currentChar == '\t');
-    } while (currentChar == '\n' || currentChar == ' ' || currentChar == '\r');
+        }
+        while (currentChar == '\t');
+    }
+    while (currentChar == '\n' || currentChar == ' ' || currentChar == '\r');
 
     char buffer[256];
-    buffer[0] = (char) currentChar;
+    buffer[0] = static_cast<char>(currentChar);
 
     if (fgets(&buffer[1], 255, stream))
     {
         va_list va;
         va_start(va, format);
-
         int result = vsscanf_s(buffer, format, va);
-
         va_end(va);
 
         if (!result)
