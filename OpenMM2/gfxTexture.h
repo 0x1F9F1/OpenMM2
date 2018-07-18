@@ -33,6 +33,13 @@ public:
 
     void SetTexEnv(int texEnv);
 
+    IDirectDrawSurface7* FindEntry();
+
+    IDirectDrawSurface7* GetResidentSurface();
+
+    void MarkFirstUse();
+    void MarkHigherUse();
+
     static gfxTexture* Create(gfxImage * image, bool mipMap);
     static gfxTexture* Create(int width, int height, gfxImage::gfxImageFormat type, gfxImage::gfxImageFormat paletteType, int mipMapCount);
 
@@ -44,6 +51,8 @@ public:
     declstatic(gfxTexture*, sm_First);
     declstatic(bool, sm_UseInternalCache);
     declstatic(gfxTextureCachePool*, sm_FirstPool);
+    declstatic(uint8_t, sm_LOD);
+    declstatic(gfxTexture*, sm_FirstActive);
 };
 
 class gfxTextureCacheEntry
@@ -59,6 +68,7 @@ public:
     gfxTextureCacheEntry(IDirectDrawSurface7* surface, gfxTextureCacheEntry* prevEntry);
     ~gfxTextureCacheEntry();
 
+    void Lease(gfxTexture *texture);
     void Evict();
 };
 
@@ -77,4 +87,6 @@ public:
 
     gfxTextureCachePool(gfxTextureCachePool* prevPool);
     ~gfxTextureCachePool();
+
+    void FindEntry(gfxTexture *texture);
 };

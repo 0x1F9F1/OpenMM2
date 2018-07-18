@@ -569,6 +569,8 @@ defnvar(0x6844FC, gfxMaxScreenWidth);
 defnvar(0x6844D8, gfxMaxScreenHeight);
 defnvar(0x6857D0, gfxTexReduceSize);
 
+defnvar(0x684500, sm_UseInternal);
+
 defnvar(0x6830E8, gfxLostCallback);
 
 defnvar(0x6A38EC, ioMouse__InvWidth);

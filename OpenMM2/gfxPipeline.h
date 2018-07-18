@@ -80,6 +80,8 @@ declvar(int, gfxMaxScreenWidth);
 declvar(int, gfxMaxScreenHeight);
 declvar(int, gfxTexReduceSize);
 
+declvar(bool, sm_UseInternal);
+
 declvar(void(*)(void), gfxLostCallback);
 
 declvar(float, ioMouse__InvWidth);

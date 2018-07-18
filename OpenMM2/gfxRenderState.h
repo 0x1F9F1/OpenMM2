@@ -38,7 +38,8 @@ public:
     int Ambient;
     int FogColor;
     int FogDensity;
-    bool m_COLOROP[2];
+    uint8_t m_COLOROP1;
+    bool byte3D;
     bool SpecularEnable;
     bool FogEnable;
     bool NormalizeNormals;
@@ -65,35 +66,39 @@ enum TransformStateType // D3DTRANSFORMSTATETYPE
     TransformState_Texture7 = 23,
 };
 
+enum TouchMask
+{
+    TouchMask_State = 0x01,
+    TouchMask_Texture = 0x02,
+    TouchMask_Material = 0x04,
+    TouchMask_Transform = 0x08,
+    TouchMask_Light1 = 0x10,
+    TouchMask_Light2 = 0x20,
+    TouchMask_Regenerate = 0x80
+};
+
 class gfxRenderState
+    : public gfxRenderStateData
 {
 public:
-    gfxRenderStateData State;
-
     static void SetCamera(const Matrix34& camera);
     static void SetCamera(const Matrix44& camera);
     static void SetTransform(int index, const Matrix44& transform);
 
     void Flush();
-    void DoFlush(gfxRenderStateData * oldState);
+    void DoFlush(gfxRenderStateData * prevState);
 
     void SetTexture(int index, gfxTexture* texture);
 
-    /*
-        0x01 | State Changed
-        0x02 | Texture Changed
-        0x04 | Material Changed
-        0x08 | Transform Changed
-        0x10 | Light Changed 1 (Only seen as 0x30)
-        0x20 | Light Changed 2 (Only seen as 0x30)
-        0x80 | Should Regenerate (gfxRenderState::Regenerate())
-    */
     declstatic(int, m_Touched);
     declstatic(int, m_TouchedMask);
 
     declstatic(Matrix44, sm_Camera);
     declstatic(Matrix44, sm_View);
+    declstatic(Matrix44, sm_World);
     declstatic(Matrix44, sm_FullComposite);
+
+    declstatic(int, sm_MaxTextures);
 };
 
 declvar(gfxRenderState, RSTATE);

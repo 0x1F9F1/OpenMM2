@@ -10,6 +10,8 @@ defnvar(0x684D36, gfxTexture::sm_Allow32);
 defnvar(0x684D38, gfxTexture::sm_First);
 defnvar(0x684524, gfxTexture::sm_UseInternalCache);
 defnvar(0x68452C, gfxTexture::sm_FirstPool);
+defnvar(0x684D35, gfxTexture::sm_LOD);
+defnvar(0x684D3C, gfxTexture::sm_FirstActive);
 
 defnvar(0x684528, gfxTextureCacheEntry::sm_CurrentTime);
 
@@ -74,6 +76,55 @@ void gfxTexture::Load(gfxImage * image)
 void gfxTexture::SetTexEnv(int texEnv)
 {
     TexEnv = texEnv;
+}
+
+IDirectDrawSurface7* gfxTexture::FindEntry()
+{
+    CachePool->FindEntry(this);
+
+    CacheEntry->LastAccessTime = gfxTextureCacheEntry::sm_CurrentTime++;
+
+    return CacheEntry->Surface;
+}
+
+IDirectDrawSurface7* gfxTexture::GetResidentSurface()
+{
+    if (CachePool)
+    {
+        if (CacheEntry)
+        {
+            CacheEntry->LastAccessTime = gfxTextureCacheEntry::sm_CurrentTime++;
+
+            return CacheEntry->Surface;
+        }
+
+        return FindEntry();
+    }
+
+    return this->m_Surface;
+}
+
+void gfxTexture::MarkFirstUse()
+{
+    NextLOD = std::exchange(sm_FirstActive, this);
+
+    MarkHigherUse();
+}
+
+void gfxTexture::MarkHigherUse()
+{
+    m_LOD = std::min<int8_t>(sm_LOD, m_MaxLOD);
+
+    if (m_MaxLOD)
+    {
+        if (sm_EnableSetLOD)
+        {
+            if (m_Surface)
+            {
+                DX_ASSERT(m_Surface->SetLOD(m_LOD));
+            }
+        }
+    }
 }
 
 gfxTexture * gfxTexture::Create(gfxImage * image, bool mipMap)
@@ -387,11 +438,30 @@ gfxTextureCachePool::~gfxTextureCachePool()
     {
         FirstEntry = i->PrevEntry;
 
-        if (i)
+        delete i;
+    }
+}
+
+void gfxTextureCachePool::FindEntry(gfxTexture* texture)
+{
+    gfxTextureCacheEntry *entry = FirstEntry;
+
+    uint32_t earliest = entry->LastAccessTime;
+
+    for (entry = entry->PrevEntry; entry; entry = entry->PrevEntry)
+    {
+        if (!earliest)
         {
-            delete i;
+            break;
+        }
+        if (entry->LastAccessTime < earliest)
+        {
+            earliest = entry->LastAccessTime;
         }
     }
+
+    entry->Evict();
+    entry->Lease(texture);
 }
 
 gfxTextureCacheEntry::gfxTextureCacheEntry(IDirectDrawSurface7 * surface, gfxTextureCacheEntry * prevEntry)
@@ -408,6 +478,14 @@ gfxTextureCacheEntry::~gfxTextureCacheEntry()
 
     Surface->Release();
     Surface = nullptr;
+}
+
+void gfxTextureCacheEntry::Lease(gfxTexture* texture)
+{
+    Texture = texture;
+    texture->CacheEntry = this;
+    lpD3DDev->Load(Surface, nullptr, texture->m_Surface, nullptr, 0);
+    texture->m_Surface->AddRef();
 }
 
 void gfxTextureCacheEntry::Evict()
