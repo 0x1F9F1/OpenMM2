@@ -21,11 +21,99 @@ void InitMap()
 {
     if (!IsMapInitialized)
     {
+        IsMapInitialized = 1;
+
         SymSetOptions(SYMOPT_UNDNAME | SYMOPT_DEFERRED_LOADS);
 
         DbgHelpLoaded = SymInitialize(GetCurrentProcess(), NULL, TRUE);
 
-        stub<cdecl_t<void>>(0x4C7130);
+        char moduleFileName[128];
+        GetModuleFileNameA(nullptr, moduleFileName, 128);
+
+        if (char* find = strrchr(moduleFileName, '.'))
+        {
+            *find = '\0';
+        }
+
+        strcat_s(moduleFileName, ".MAP");
+
+        char* stringBuffer = 0;
+
+        strcpy_s(MapFileTimestamp, "NO TIMESTAMP");
+
+        FILE* hMap = nullptr;
+
+        if (fopen_s(&hMap, moduleFileName, "r"))
+        {
+            char outputBuffer[256];
+
+            sprintf_s(outputBuffer, "Couldn't open '%s'", moduleFileName);
+            OutputDebugStringA(outputBuffer);
+
+            return;
+        }
+
+        size_t stringBufferSize = 0;
+
+        for (int state = 1; state <= 2; ++state)
+        {
+            size_t stringLengths = 0;
+            bool parsingAddresses = false;
+
+            MapFileAddressCount = 0;
+
+            fseek(hMap, 0, SEEK_SET);
+
+            char lineBuffer[256];
+
+            while (fgets(lineBuffer, 256, hMap))
+            {
+                if (strstr(lineBuffer, "Timestamp is"))
+                {
+                    strcpy_s(MapFileTimestamp, lineBuffer);
+                }
+                else if (strstr(lineBuffer, "Publics by Value"))
+                {
+                    parsingAddresses = true;
+                }
+                else if (!parsingAddresses)
+                {
+                    continue;
+                }
+
+                int address;
+
+                char valueBuffer[256];
+                if (!strncmp(lineBuffer, " 0001:", 6u) && sscanf_s(lineBuffer, "%*s %s %x", valueBuffer, sizeof(valueBuffer), &address) == 2)
+                {
+                    if (state == 2)
+                    {
+                        strcpy_s(&stringBuffer[stringLengths], stringBufferSize - stringLengths, valueBuffer);
+                        MapFileAddresses[MapFileAddressCount].Name = &stringBuffer[stringLengths];
+                        MapFileAddresses[MapFileAddressCount].Address = address;
+                    }
+
+                    ++MapFileAddressCount;
+
+                    stringLengths += strlen(valueBuffer) + 1;
+                }
+                else if (parsingAddresses && !strncmp(lineBuffer, " 0002:", 6u))
+                {
+                    break;
+                }
+            }
+
+            if (state == 1)
+            {
+                MapFileAddresses = new MapSymbol[MapFileAddressCount];
+                stringBufferSize = stringLengths;
+                stringBuffer = new char[stringBufferSize];
+
+                Errorf("%d symbols parsed from map file.", MapFileAddressCount);
+            }
+        }
+
+        fclose(hMap);
 
         std::sort(MapFileAddresses, MapFileAddresses + MapFileAddressCount, [](const MapSymbol& lhs, const MapSymbol& rhs)
         {
