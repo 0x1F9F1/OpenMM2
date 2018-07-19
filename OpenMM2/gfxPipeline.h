@@ -52,7 +52,7 @@ public:
 
 bool gfxAutoDetect(bool* success);
 
-void ProgressCB(const char *unused, signed int progress);
+void ProgressCB(const char *message, signed int progress);
 
 void gfxDebugf(bool enabled, const char* format, ...);
 

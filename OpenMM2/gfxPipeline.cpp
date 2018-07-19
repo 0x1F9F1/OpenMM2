@@ -535,9 +535,9 @@ void ProgressRect(int x, int y, int width, int height, unsigned int color)
 
 uint32_t ProgressBarColor = 0xFF0D2CBA;
 
-void ProgressCB(const char *unused, signed int progress)
+void ProgressCB(const char *message, signed int progress)
 {
-    (void) unused;
+    (void)message;
 
     if (progress)
     {
@@ -551,10 +551,10 @@ void ProgressCB(const char *unused, signed int progress)
         if (MMSTATE.GameState)
         {
             ProgressRect(
-                (int)(gfxPipeline::m_iWidth * 0.55),
-                (int)(gfxPipeline::m_iHeight * 0.896),
-                (int)(gfxPipeline::m_iWidth * 0.42343751 * progress * 0.01),
-                (int)(gfxPipeline::m_iHeight * 0.02),
+                static_cast<int>(gfxPipeline::m_iWidth * 0.55),
+                static_cast<int>(gfxPipeline::m_iHeight * 0.896),
+                static_cast<int>(gfxPipeline::m_iWidth * 0.42343751 * progress * 0.01),
+                static_cast<int>(gfxPipeline::m_iHeight * 0.02),
                 ProgressBarColor);
         }
         else

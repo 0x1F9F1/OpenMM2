@@ -3,7 +3,23 @@
 #include "asNode.h"
 #include "Vector.h"
 
+class Stream;
+
 class mmPlayer;
+
+struct mmReplayData
+{
+    float Delta;
+    float ElapsedTime;
+    char Steering;
+    char Brakes;
+    char Throttle;
+    char HandBrakes;
+    char data;
+    char field_D;
+    char field_E;
+    char field_F;
+};
 
 class mmReplayManager
     : public asNode
@@ -19,7 +35,8 @@ public:
     char field_1F;
     uint32_t CurrentFrame;
     int FrameCount;
-    int field_28;
+    uint8_t field_28;
+    uint8_t pad29[3];
     int field_2C;
     char field_30;
     char field_31;
@@ -72,6 +89,9 @@ public:
     ~mmReplayManager();
 
     void LoadReplay(char * name);
+    void ReadReplayInfo(Stream * stream);
+    void SetReplayInfo();
+    void StartReplay();
 
     declstatic(mmReplayManager*, Instance);
 };

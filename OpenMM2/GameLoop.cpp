@@ -117,7 +117,7 @@ void BeginPhase(bool splashScreen)
 
     loadingImage->Release();
 
-    ProgressCB("", 10);
+    ProgressCB("Begin", 10);
     datDisplayUsed("Just after loading screen");
 
     gfxReleaseFont();
@@ -136,7 +136,7 @@ void BeginPhase(bool splashScreen)
 
     ROOT.AddChild(MMAUDMGRPTR);
 
-    asCullManager* cullManager = new asCullManager(512, 64);
+    asCullManager* cullManager = new asCullManager(1024, 256);
 
     (void)cullManager;
 

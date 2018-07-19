@@ -1,7 +1,11 @@
 #include "stdafx.h"
 #include "mmReplayManager.h"
+#include "Stream.h"
+#include "datAssetManager.h"
 
 defnvar(0x627248, mmReplayManager::Instance);
+
+instvar(0x5E0D48, mmReplayData[18000], replayData);
 
 mmReplayManager::mmReplayManager()
 {
@@ -10,12 +14,62 @@ mmReplayManager::mmReplayManager()
 
 mmReplayManager::~mmReplayManager()
 {
-    mmReplayManager::Instance = 0;
+    Instance = nullptr;
 
     DebugLogShutdown();
 }
 
-void mmReplayManager::LoadReplay(char * name)
+void mmReplayManager::LoadReplay(char * path)
 {
-    return stub<thiscall_t<void, mmReplayManager, char*>> (0x407000, this, name);
+
+    Stream *stream = datAssetManager::Open(path, "rpl", 0, 0);
+    if (!stream)
+    {
+        Errorf("Couldn't load replay '%s'", path);
+    }
+
+    char magic[8];
+    stream->ReadBytes(magic, 8);
+
+    int frameSize = stream->Read<int>();
+
+    if (memcmp(magic, "REPLAY18", 8u) != 0 || frameSize != sizeof(mmReplayData))
+    {
+        Errorf("Version mismatch on '%s', cannot load.", path);
+    }
+
+    stream->ReadBytes(SomeBuffer, sizeof(SomeBuffer));
+
+    ReadReplayInfo(stream);
+
+    CurrentFrame = stream->Read<uint32_t>();
+
+    stream->ReadArray(replayData, CurrentFrame);
+
+    field_6D4 = stream->Read<int>();
+
+    stream->ReadArray(CameraPoints, field_6D4);
+
+    this->field_28 = 0;
+    this->field_31 = 1;
+
+    SetReplayInfo();
+    StartReplay();
+
+    stream->Close();
+}
+
+void mmReplayManager::ReadReplayInfo(Stream* stream)
+{
+    return stub<thiscall_t<void, mmReplayManager, Stream*>>(0x407920, this, stream);
+}
+
+void mmReplayManager::SetReplayInfo()
+{
+    return stub<thiscall_t<void, mmReplayManager>>(0x4075A0, this);
+}
+
+void mmReplayManager::StartReplay()
+{
+    return stub<thiscall_t<void, mmReplayManager>>(0x406E80, this);
 }

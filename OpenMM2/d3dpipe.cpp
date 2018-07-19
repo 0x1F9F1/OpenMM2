@@ -96,7 +96,7 @@ HRESULT PASCAL ResCallback(LPDDSURFACEDESC2 lpSurfaceDesc, LPVOID lpContext)
 
 BOOL PASCAL AutoDetectCallback(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverName, LPVOID lpContext)
 {
-    (void)lpDriverName, lpContext;
+    (void)lpContext;
 
     if (lpDirectDrawCreateEx(lpGUID, (LPVOID*)&lpDD, IID_IDirectDraw7, nullptr) == DD_OK)
     {
@@ -107,7 +107,7 @@ BOOL PASCAL AutoDetectCallback(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lp
         currentInterface->DeviceCaps = 1;
         currentInterface->AcceptableDepths = gfxDepthFlag_Depth32;
 
-        DDDEVICEIDENTIFIER2 ddDeviceIdentifier = { NULL };
+        DDDEVICEIDENTIFIER2 ddDeviceIdentifier {};
 
         if (lpDD->GetDeviceIdentifier(&ddDeviceIdentifier, 0) == DD_OK)
         {
@@ -116,7 +116,7 @@ BOOL PASCAL AutoDetectCallback(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lp
             currentInterface->GUID = ddDeviceIdentifier.guidDeviceIdentifier;
         }
 
-        if (lpDD->QueryInterface(IID_IDirect3D7, (LPVOID*)&lpD3D) == DD_OK)
+        if (lpDD->QueryInterface(IID_IDirect3D7, reinterpret_cast<LPVOID*>(&lpD3D)) == DD_OK)
         {
             lpD3D->EnumDevices(&DeviceCallback, currentInterface);
             lpD3D->Release();
@@ -131,23 +131,23 @@ BOOL PASCAL AutoDetectCallback(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lp
 
         DWORD availableMemory = 0x40000000; // 1GB = 1024 * 1024 * 1024
 
-        DDSCAPS2 ddsCaps = { NULL };
+        DDSCAPS2 ddsCaps {};
 
         ddsCaps.dwCaps = DDSCAPS_VIDEOMEMORY | DDSCAPS_LOCALVIDMEM;
 
-        if (lpDD->GetAvailableVidMem(&ddsCaps, &availableMemory, NULL) != DD_OK)
+        if (lpDD->GetAvailableVidMem(&ddsCaps, &availableMemory, nullptr) != DD_OK)
         {
-            Displayf("Couldn't get video memory, using default");
+            Displayf("%s: Couldn't get video memory, using default", lpDriverName);
         }
 
-        Displayf("Total video memory: %dMB", (availableMemory >> 20));
+        Displayf("%s: Total video memory: %dMB", lpDriverName, (availableMemory >> 20));
 
         currentInterface->AvailableMemory = availableMemory;
 
         gfxMaxScreenWidth = 0;
         gfxMaxScreenHeight = 0;
 
-        lpDD->EnumDisplayModes(0, 0, currentInterface, &ResCallback);
+        lpDD->EnumDisplayModes(0, nullptr, currentInterface, &ResCallback);
         lpDD->Release();
 
         lpDD = nullptr;
