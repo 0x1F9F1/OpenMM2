@@ -298,6 +298,8 @@ int Main(void)
     InstallJPEGSupport();
     InstallTextureVariantHandler();
 
+    *(int*)(0) = 0;
+
     do
     {
         MainPhase(parseStateArgs, firstLoad);
