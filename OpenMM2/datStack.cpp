@@ -84,31 +84,26 @@ const char* GetErrorCodeString(int code)
 int datStack::ExceptionFilter(_EXCEPTION_POINTERS* exception)
 {
     CONTEXT* context = exception->ContextRecord;
+    EXCEPTION_RECORD* record = exception->ExceptionRecord;
 
-    char stackTrace[256];
-    datStack::LookupAddress(stackTrace, context->Eip);
+    char eipTrace[256];
+    datStack::LookupAddress(eipTrace, context->Eip);
 
     Displayf(
         "EAX=%08X EBX=%08X ECX=%08X EDX=%08X\n"
         "ESI=%08X EDI=%08X EBP=%08X ESP=%08X",
-        context->Eax,
-        context->Ebx,
-        context->Ecx,
-        context->Edx,
-        context->Esi,
-        context->Edi,
-        context->Ebp,
-        context->Esp);
+        context->Eax, context->Ebx, context->Ecx, context->Edx,
+        context->Esi, context->Edi, context->Ebp, context->Esp);
 
-    const char* errorCode = GetErrorCodeString(exception->ExceptionRecord->ExceptionCode);
+    const char* errorCode = GetErrorCodeString(record->ExceptionCode);
 
     if (errorCode)
     {
-        Displayf("%s at EIP=%s", errorCode, stackTrace);
+        Displayf("%s at EIP=%s", errorCode, eipTrace);
     }
     else
     {
-        Displayf("Exception 0x%08X at EIP=%s", exception->ExceptionRecord->ExceptionCode, stackTrace);
+        Displayf("Exception 0x%08X at EIP=%s", record->ExceptionCode, eipTrace);
     }
 
     datStack::DoTraceback(16, (int *)context->Ebp, 0, "\n");
@@ -135,7 +130,7 @@ void datStack::LookupAddress(char* buffer, int address)
 
         if (SymFromAddr(GetCurrentProcess(), address, &dwDisplacement, pSymbol) && SymGetModuleInfo(GetCurrentProcess(), address, &module))
         {
-            sprintf_s(buffer, 128, "0x%X(%s.%s+0x%X)", address, module.ModuleName, pSymbol->Name, (int)dwDisplacement);
+            sprintf_s(buffer, 128, "0x%08X (%s.%s+0x%X)", address, module.ModuleName, pSymbol->Name, (int)dwDisplacement);
 
             return;
         }
@@ -159,12 +154,12 @@ void datStack::LookupAddress(char* buffer, int address)
             | UNDNAME_NO_MEMBER_TYPE
             | UNDNAME_NO_RETURN_UDT_MODEL) ? undName : entry->Name;
 
-        sprintf_s(buffer, 128, "0x%X(%s.%s+0x%X)", address, "Midtown2", functionName, offset);
+        sprintf_s(buffer, 128, "0x%08X (Midtown2.%s+0x%X)", address, functionName, offset);
 
         return;
     }
 
-    sprintf_s(buffer, 128, "0x%X(Unknown)", address);
+    sprintf_s(buffer, 128, "0x%08X (Unknown)", address);
 }
 
 void datStack::DoTraceback(int maxDepth, int * ebp, FILE * fileOut, char const * seperator)
