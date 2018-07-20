@@ -136,8 +136,10 @@
     <ClInclude Include="sfPointer.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Stream.h" />
+    <ClInclude Include="String.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Vector.h" />
+    <ClInclude Include="vehCarAudioContainer.h" />
     <ClInclude Include="vgl.h" />
     <ClInclude Include="zipFile.h" />
   </ItemGroup>
@@ -202,8 +204,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Stream.cpp" />
+    <ClCompile Include="String.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Vector.cpp" />
+    <ClCompile Include="vehCarAudioContainer.cpp" />
     <ClCompile Include="vgl.cpp" />
     <ClCompile Include="zipFile.cpp" />
   </ItemGroup>

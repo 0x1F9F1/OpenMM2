@@ -180,6 +180,12 @@
     <ClInclude Include="ioJoystick.h">
       <Filter>MM2</Filter>
     </ClInclude>
+    <ClInclude Include="vehCarAudioContainer.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
+    <ClInclude Include="String.h">
+      <Filter>MM2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -342,6 +348,12 @@
       <Filter>MM2</Filter>
     </ClCompile>
     <ClCompile Include="ioJoystick.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="vehCarAudioContainer.cpp">
+      <Filter>MM2</Filter>
+    </ClCompile>
+    <ClCompile Include="String.cpp">
       <Filter>MM2</Filter>
     </ClCompile>
   </ItemGroup>

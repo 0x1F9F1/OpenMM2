@@ -327,6 +327,34 @@ FAILURE:
     return false;
 }
 
+int zipFile::Open(char const * fileName)
+{
+    return stub<thiscall_t<int, zipFile, const char*>>(0x573A80, this, fileName);
+}
+
+int zipFile::EnumFiles2(const char * path, void(*callback)(Stream* stream, void *context), void * context)
+{
+    int count = 0;
+
+    for (zipFile* i = sm_First; i; i = i->PrevFile)
+    {
+        int handle = i->Open(path);
+
+        if (handle != -1)
+        {
+            Stream* stream = Stream::AllocStream(path, handle, &zipFileMethods);
+
+            callback(stream, context);
+            
+            stream->Close();
+
+            ++count;
+        }
+    }
+
+    return count;
+}
+
 zipFile::zipFile()
     : PrevFile(sm_First)
     , FileHandle(-1)

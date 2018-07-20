@@ -3,6 +3,8 @@
 void zipAutoInit(void);
 void zipMultiAutoInit(char const * extension);
 
+class Stream;
+
 struct zipEntry
 {
     char *Name;
@@ -22,6 +24,10 @@ struct zipFile
     uint32_t CurrentOffset;
 
     bool Init(char const * fileName);
+
+    int Open(char const * fileName);
+
+    static int EnumFiles2(const char* path, void(*callback)(Stream* stream, void *context), void* context);
 
     declstatic(zipFile *, sm_First);
     declstatic(bool, sm_LogOpen);
