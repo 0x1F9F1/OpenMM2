@@ -2,8 +2,8 @@
 
 #include "datCallback.h"
 
-#include "dx7/include/dplay.h"
-#include "dx7/include/dplobby.h"
+#include "dplayx/include/dplay.h"
+#include "dplayx/include/dplobby.h"
 
 #include "Timer.h"
 
