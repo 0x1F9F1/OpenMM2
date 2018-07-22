@@ -5,12 +5,12 @@ class gfxImage
 public:
     enum gfxImageFormat
     {
-        ARGB_8888 = 1,
-        RGB_0888 = 2,
-        ARGB_1555 = 3,
-        RGB_0555 = 4,
-        Palette8 = 5,
-        Palette4 = 6,
+        rif8888 = 1,
+        rif888 = 2,
+        rif5551 = 3,
+        rif555 = 4,
+        rif8 = 5,
+        rif4 = 6,
     };
 
     uint16_t Width;

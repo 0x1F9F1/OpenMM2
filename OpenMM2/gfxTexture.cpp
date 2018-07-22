@@ -157,6 +157,7 @@ gfxTexture * gfxTexture::Create(gfxImage * image, bool mipMap)
 
         texture->SetTexEnv(image->TexEnv | texture->TexEnv);
     }
+
     return texture;
 }
 
@@ -255,7 +256,7 @@ gfxTexture * gfxTexture::Create(int width, int height, gfxImage::gfxImageFormat 
 
     switch (type)
     {
-    case gfxImage::ARGB_8888:
+    case gfxImage::rif8888:
         memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_8888, sizeof(ddSurfaceDesc.ddpfPixelFormat));
 
         if (!gfxTexture::sm_Allow32 || lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0) != DD_OK)
@@ -266,7 +267,7 @@ gfxTexture * gfxTexture::Create(int width, int height, gfxImage::gfxImageFormat 
         }
         hasAlpha = 1;
         break;
-    case gfxImage::RGB_0888:
+    case gfxImage::rif888:
         memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_0888, sizeof(ddSurfaceDesc.ddpfPixelFormat));
         if (!gfxTexture::sm_Allow32 || lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0) != DD_OK)
         {
@@ -282,7 +283,7 @@ gfxTexture * gfxTexture::Create(int width, int height, gfxImage::gfxImageFormat 
             DX_ASSERT(lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0));
         }
         break;
-    case gfxImage::RGB_0555:
+    case gfxImage::rif555:
         pixelFormat = &ddPixelFormat_0565;
 
         if (!g_Tex565)
@@ -294,12 +295,12 @@ gfxTexture * gfxTexture::Create(int width, int height, gfxImage::gfxImageFormat 
 
         DX_ASSERT(lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0));
         break;
-    case gfxImage::ARGB_1555:
+    case gfxImage::rif5551:
         memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_1555, sizeof(ddSurfaceDesc.ddpfPixelFormat));
         lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0);
         hasAlpha = 1;
         break;
-    case gfxImage::Palette8:
+    case gfxImage::rif8:
         memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_Pallete8, sizeof(ddSurfaceDesc.ddpfPixelFormat));
         if (lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0) != DD_OK)
         {
@@ -313,7 +314,7 @@ gfxTexture * gfxTexture::Create(int width, int height, gfxImage::gfxImageFormat 
             DX_ASSERT(ddrawSurface->SetPalette(ddrawPalette));
         }
         break;
-    case gfxImage::Palette4:
+    case gfxImage::rif4:
         memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_Pallete4, sizeof(ddSurfaceDesc.ddpfPixelFormat));
         if (lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0) != DD_OK)
         {
