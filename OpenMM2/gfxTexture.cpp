@@ -17,29 +17,16 @@ defnvar(0x684528, gfxTextureCacheEntry::sm_CurrentTime);
 
 instvar(0x6844C4, bool, g_Tex565);
 
-DDPIXELFORMAT ddPixelFormat_8888 =
-{ 32u, 65u, 0u,{ 32u },{ 16711680u },{ 65280u },{ 255u },{ 4278190080u } };
+DDPIXELFORMAT ddPixelFormat_8888 = { sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_ALPHAPIXELS, 0, 32, 0x00FF0000, 0x0000FF00, 0x000000FF, 0xFF000000 };
+DDPIXELFORMAT ddPixelFormat_0888 = { sizeof(DDPIXELFORMAT), DDPF_RGB,                    0, 32, 0x00FF0000, 0x0000FF00, 0x000000FF, 0x00000000 };
 
-DDPIXELFORMAT ddPixelFormat_0888 =
-{ 32u, 64u, 0u,{ 32u },{ 16711680u },{ 65280u },{ 255u },{ 0u } };
+DDPIXELFORMAT ddPixelFormat_1555 = { sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_ALPHAPIXELS, 0, 16, 0x7C00, 0x03E0, 0x001F, 0x8000 };
+DDPIXELFORMAT ddPixelFormat_4444 = { sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_ALPHAPIXELS, 0, 16, 0x0F00, 0x00F0, 0x000F, 0xF000 };
+DDPIXELFORMAT ddPixelFormat_0565 = { sizeof(DDPIXELFORMAT), DDPF_RGB,                    0, 16, 0xF800, 0x07E0, 0x001F, 0x0000 };
+DDPIXELFORMAT ddPixelFormat_0555 = { sizeof(DDPIXELFORMAT), DDPF_RGB,                    0, 16, 0x7C00, 0x03E0, 0x001F, 0x0000 };
 
-DDPIXELFORMAT ddPixelFormat_1555 =
-{ 32u, 65u, 0u,{ 16u },{ 31744u },{ 992u },{ 31u },{ 32768u } };
-
-DDPIXELFORMAT ddPixelFormat_4444 =
-{ 32u, 65u, 0u,{ 16u },{ 3840u },{ 240u },{ 15u },{ 61440u } };
-
-DDPIXELFORMAT ddPixelFormat_0565 =
-{ 32u, 64u, 0u,{ 16u },{ 63488u },{ 2016u },{ 31u },{ 0u } };
-
-DDPIXELFORMAT ddPixelFormat_0555 =
-{ 32u, 64u, 0u,{ 16u },{ 31744u },{ 992u },{ 31u },{ 0u } };
-
-DDPIXELFORMAT ddPixelFormat_Pallete8 =
-{ 32u, 96u, 0u,{ 8u },{ 0u },{ 0u },{ 0u },{ 0u } };
-
-DDPIXELFORMAT ddPixelFormat_Pallete4 =
-{ 32u, 72u, 0u,{ 4u },{ 0u },{ 0u },{ 0u },{ 0u } };
+DDPIXELFORMAT ddPixelFormat_Pallete8 = { sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_PALETTEINDEXED8, 0, 8, 0, 0, 0, 0 };
+DDPIXELFORMAT ddPixelFormat_Pallete4 = { sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_PALETTEINDEXED4, 0, 4, 0, 0, 0, 0 };
 
 PALETTEENTRY paletteEntry;
 

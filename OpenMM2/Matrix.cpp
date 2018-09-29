@@ -8,17 +8,18 @@ void Matrix34::Identity()
     m00 = 1.0f;
     m01 = 0.0f;
     m02 = 0.0f;
-    m03 = 0.0f;
 
-    m10 = 1.0f;
-    m11 = 0.0f;
+    m10 = 0.0f;
+    m11 = 1.0f;
     m12 = 0.0f;
-    m13 = 0.0f;
 
-    m20 = 1.0f;
+    m20 = 0.0f;
     m21 = 0.0f;
-    m22 = 0.0f;
-    m23 = 0.0f;
+    m22 = 1.0f;
+
+    m30 = 0.0f;
+    m31 = 0.0f;
+    m32 = 0.0f;
 }
 
 void Matrix44::FastInverse(const Matrix44 & rhs)

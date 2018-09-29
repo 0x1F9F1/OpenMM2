@@ -22,32 +22,14 @@ defnvar(0x685788, gfxRenderState::sm_MaxTextures);
 
 void gfxRenderState::SetCamera(const Matrix34& camera)
 {
-    sm_Camera.m00 = camera.m00;
-    sm_Camera.m01 = camera.m01;
-    sm_Camera.m02 = camera.m02;
-
-    sm_Camera.m03 = 0.0f;
-    sm_Camera.m10 = camera.m03;
-    sm_Camera.m11 = camera.m10;
-    sm_Camera.m12 = camera.m11;
-    sm_Camera.m13 = 0.0f;
-
-    sm_Camera.m20 = camera.m12;
-    sm_Camera.m21 = camera.m13;
-    sm_Camera.m22 = camera.m20;
-    sm_Camera.m23 = 0.0f;
-
-    sm_Camera.m30 = camera.m21;
-    sm_Camera.m31 = camera.m22;
-    sm_Camera.m32 = camera.m23;
-    sm_Camera.m33 = 1.0f;
+    sm_Camera = camera;
 
     SetCamera(sm_Camera);
 }
 
 void gfxRenderState::SetCamera(const Matrix44& camera)
 {
-    memcpy(&sm_Camera, &camera, sizeof(sm_Camera));
+    sm_Camera = camera;
 
     sm_View.FastInverse(sm_Camera);
     sm_View.Dot(sm_FullComposite);

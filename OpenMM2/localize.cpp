@@ -19,7 +19,7 @@ int WINAPI MyLoadStringA(HINSTANCE hInstance, UINT uID, char *lpBuffer, int cchB
 
     *lpBuffer = 0;
 
-    char* rawBuffer = (char*) GlobalAlloc(0x40u, 2 * cchBufferMax);
+    char* rawBuffer = (char*) GlobalAlloc(GPTR, 2 * cchBufferMax);
 
     if (!rawBuffer)
     {
