@@ -13,11 +13,11 @@ void datAssetManager::SetPath(const char* path)
 
     if (*path)
     {
-        for (char* v1 = sm_Path; *v1; ++v1)
+        for (char* i = sm_Path; *i; ++i)
         {
-            if (*v1 == '/')
+            if (*i == '/')
             {
-                *v1 = '\\';
+                *i = '\\';
             }
         }
 
@@ -48,5 +48,24 @@ Stream* datAssetManager::Open(const char* path, const char* ext, bool a2, bool r
 
 void datAssetManager::FullPath(char* buffer, int bufferLength, const char* path, const char* ext)
 {
-    return stub<cdecl_t<void, char*, int, const char*, const char*>>(0x4C55E0, buffer, bufferLength, path, ext);
+    if (strchr(path, '/') || strchr(path, '\\') || path[1] == ':')
+    {
+        *buffer = 0;
+    }
+    else
+    {
+        strcpy_s(buffer, bufferLength, datAssetManager::sm_Path);
+    }
+
+    strcat_s(buffer, bufferLength, path);
+
+    const char* path_ext = strrchr(path, '.');
+
+    if (!path_ext || _strcmpi(path_ext, ext))
+    {
+        strcat_s(buffer, bufferLength, ".");
+        strcat_s(buffer, bufferLength, ext);
+    }
+
+    ageDebug(assetDebug, "FullPath(%s,%s) = %s", path, ext, buffer);
 }
