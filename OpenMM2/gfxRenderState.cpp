@@ -41,10 +41,10 @@ void gfxRenderState::SetTransform(int index, const Matrix44& transform)
 {
     lpD3DDev->SetTransform(static_cast<D3DTRANSFORMSTATETYPE>(index), LPD3DMATRIX(&transform));
 
-    m_Touched |= 0x80;
+    m_Touched |= TouchMask_Regenerate;
 }
 
-void gfxRenderState::Flush() const
+void gfxRenderState::Flush()
 {
     if (m_Touched & m_TouchedMask)
     {
@@ -52,9 +52,9 @@ void gfxRenderState::Flush() const
     }
 }
 
-void gfxRenderState::DoFlush(gfxRenderStateData* prevState) const
+void gfxRenderState::DoFlush(gfxRenderStateData* prevState)
 {
-    if (m_Touched & 8)
+    if (m_Touched & TouchMask_Transform)
     {
         lpD3DDev->SetTransform(D3DTRANSFORMSTATE_WORLD, LPD3DMATRIX(&sm_World));
     }
@@ -116,12 +116,12 @@ void gfxRenderState::DoFlush(gfxRenderStateData* prevState) const
         prevState->m_Material = m_Material;
     }
 
-    if (m_Touched & 1)
+    if (m_Touched & TouchMask_State)
     {
         if (TextureFactor != prevState->TextureFactor)
         {
-            lpD3DDev->SetTextureStageState(0, D3DTSS_COLORARG2, TextureFactor != 0 ? D3DTA_TFACTOR : D3DTA_DIFFUSE);
-            lpD3DDev->SetTextureStageState(0, D3DTSS_ALPHAARG2, TextureFactor != 0 ? D3DTA_TFACTOR : D3DTA_DIFFUSE);
+            lpD3DDev->SetTextureStageState(0, D3DTSS_COLORARG2, TextureFactor ? D3DTA_TFACTOR : D3DTA_DIFFUSE);
+            lpD3DDev->SetTextureStageState(0, D3DTSS_ALPHAARG2, TextureFactor ? D3DTA_TFACTOR : D3DTA_DIFFUSE);
             lpD3DDev->SetRenderState(D3DRENDERSTATE_TEXTUREFACTOR, TextureFactor);
 
             prevState->TextureFactor = TextureFactor;
@@ -279,15 +279,15 @@ void gfxRenderState::DoFlush(gfxRenderStateData* prevState) const
         }
     }
 
-    uint32_t texEnv0 = m_Texture[0] ? m_Texture[0]->TexEnv : 0;
-    AddressU[0] = (2 * (texEnv0 & 1)) | 1;
-    AddressV[0] = (texEnv0 >> 15) & 2 | 1;
+    for (int i = 0; i < 2; ++i)
+    {
+        uint32_t texEnv = m_Texture[i] ? m_Texture[i]->TexEnv : 0;
 
-    uint32_t texEnv1 = m_Texture[1] ? m_Texture[1]->TexEnv : 0;
-    AddressU[1] = (2 * (texEnv1 & 1)) | 1;
-    AddressV[1] = (texEnv1 >> 15 & 2) | 1;
+        AddressU[i] = ((texEnv &     0x1) ? D3DTADDRESS_MIRROR : 0) | D3DTADDRESS_WRAP;
+        AddressV[i] = ((texEnv & 0x10000) ? D3DTADDRESS_MIRROR : 0) | D3DTADDRESS_WRAP;
+    }
 
-    if (m_Touched & 2)
+    if (m_Touched & TouchMask_Texture)
     {
         if (!useSoftware)
         {
@@ -297,10 +297,7 @@ void gfxRenderState::DoFlush(gfxRenderStateData* prevState) const
                 {
                     lpD3DDev->SetTextureStageState(i, D3DTSS_ADDRESSU, AddressU[i]);
                 }
-            }
 
-            for (int i = 0; i < 2; ++i)
-            {
                 if (AddressV[i] != prevState->AddressV[i])
                 {
                     lpD3DDev->SetTextureStageState(i, D3DTSS_ADDRESSV, AddressV[i]);
@@ -309,7 +306,8 @@ void gfxRenderState::DoFlush(gfxRenderStateData* prevState) const
         }
     }
 
-    m_Touched &= 0x80u;
+    // Clear everything but TouchMask_Regenerate
+    m_Touched &= 0x80;
 }
 
 void gfxRenderState::SetTexture(int index, gfxTexture* texture)
@@ -325,6 +323,6 @@ void gfxRenderState::SetTexture(int index, gfxTexture* texture)
     {
         m_Texture[index] = texture;
 
-        m_Touched |= 2;
+        m_Touched |= TouchMask_Texture;
     }
 }

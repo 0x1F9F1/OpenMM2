@@ -32,8 +32,8 @@ public:
     bool ZBias;
     bool AntiAlias;
     bool FogVertexMode;
-    mutable uint8_t AddressU[2];
-    mutable uint8_t AddressV[2];
+    uint8_t AddressU[2];
+    uint8_t AddressV[2];
     int dword2C;
     int Ambient;
     int FogColor;
@@ -85,8 +85,8 @@ public:
     static void SetCamera(const Matrix44& camera);
     static void SetTransform(int index, const Matrix44& transform);
 
-    void Flush() const;
-    void DoFlush(gfxRenderStateData * prevState) const;
+    void Flush();
+    void DoFlush(gfxRenderStateData * prevState);
 
     void SetTexture(int index, gfxTexture* texture);
 
