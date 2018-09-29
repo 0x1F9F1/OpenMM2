@@ -68,13 +68,14 @@ enum TransformStateType // D3DTRANSFORMSTATETYPE
 
 enum TouchMask
 {
-    TouchMask_State = 0x01,
-    TouchMask_Texture = 0x02,
-    TouchMask_Material = 0x04,
-    TouchMask_Transform = 0x08,
-    TouchMask_Light1 = 0x10,
-    TouchMask_Light2 = 0x20,
-    TouchMask_Regenerate = 0x80
+    TouchMask_State     = (1 << 0),
+    TouchMask_Texture   = (1 << 1),
+    TouchMask_Material  = (1 << 2),
+    TouchMask_Transform = (1 << 3),
+    TouchMask_Light1    = (1 << 4),
+    TouchMask_Light2    = (1 << 5),
+
+    TouchMask_Regenerate = (1 << 7)
 };
 
 class gfxRenderState
