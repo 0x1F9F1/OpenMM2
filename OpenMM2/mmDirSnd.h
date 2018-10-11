@@ -6,11 +6,10 @@ class mmDirSnd
     : public DirSnd
 {
 public:
-    int EAXEnabled;
-    int DSound3DEnabled;
+    int EAXEnabled {0};
+    int DSound3DEnabled {0};
 
-    mmDirSnd();
-    ~mmDirSnd();
+    mmDirSnd() = default;
 
     virtual int InitPrimarySoundBuffer(uint32_t sampleRate, bool enableStero, const char* deviceName) override;
 

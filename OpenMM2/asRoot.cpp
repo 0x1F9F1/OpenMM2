@@ -10,10 +10,6 @@ void EnableNanSignal(bool enabled)
 }
 
 asRoot::asRoot()
-    : Matrix()
-    , Paused(false)
-    , ShouldPause(false)
-    , EnableNan(false)
 {
     Matrix.Identity();
 

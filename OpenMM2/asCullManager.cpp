@@ -7,30 +7,13 @@
 defnvar(0x661784, asCullManager::Instance);
 
 asCullManager::asCullManager(int maxCullables, int maxCullables2D)
-    : dword18(0)
-    , CameraCount(0)
-    , CameraArray()
-    , CurrentCamera(nullptr)
-    , CurrentCullables(0)
-    , MaxCullables(maxCullables)
-    , CurrentCullables2D(0)
+    : MaxCullables(maxCullables)
     , MaxCullables2D(maxCullables2D)
-    , CurrentCullables2DFG(0)
     , MaxCullables2DFG(maxCullables2D)
     , CullableArray(new asCullable*[maxCullables])
     , Cullables2D(new asCullable*[maxCullables2D])
     , Cullables2DFG(new asCullable*[maxCullables2D])
     , CullablsMatrices(new Matrix34*[maxCullables])
-    , BaseColor(0xFF001E3C)
-    , field_90(0)
-    , field_94(0)
-    , Timer1()
-    , Timer2()
-    , field_A0(0)
-    , ShouldReset(0)
-    , field_A5(0)
-    , field_A6(0)
-    , field_A7(0)
 {
     Instance = this;
 

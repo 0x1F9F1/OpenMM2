@@ -13,16 +13,17 @@ public:
         rif4 = 6,
     };
 
-    uint16_t Width;
-    uint16_t Height;
-    uint16_t BytesPerRow;
-    uint8_t Type;
-    uint8_t PaletteType;
-    uint32_t TexEnv;
-    void *ImageData;
-    void *PaletteData;
-    uint32_t RefCount;
-    gfxImage *Next;
+    uint16_t Width {0};
+    uint16_t Height {0};
+    uint16_t BytesPerRow {0};
+    uint8_t Type {0};
+    uint8_t PaletteType {0};
+    uint32_t TexEnv {0};
+    void *ImageData {nullptr};
+    void *PaletteData {nullptr};
+
+    uint32_t RefCount {1};
+    gfxImage *Next {nullptr};
 
     ~gfxImage();
 

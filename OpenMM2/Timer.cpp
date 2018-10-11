@@ -7,7 +7,6 @@
 instvar(0x6A3D08, int, dword_6A3D08);
 
 Timer::Timer()
-    : StartTime(0)
 {
     LARGE_INTEGER frequency;
     if (TicksToSeconds == 0.0)

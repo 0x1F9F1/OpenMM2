@@ -10,21 +10,21 @@ class gfxTextureCachePool;
 class gfxTexture
 {
 public:
-    uint32_t VglBindIndex;
-    const char *Name;
-    uint16_t Width;
-    uint16_t Height;
-    uint32_t TexEnv;
-    uint32_t DominantColor;
-    IDirectDrawSurface7 *m_Surface;
-    IDirectDrawPalette *m_Palette;
-    gfxTextureCacheEntry *CacheEntry;
-    gfxTextureCachePool *CachePool;
-    uint32_t RefCount;
-    gfxTexture *PrevLOD;
-    gfxTexture *NextLOD;
-    int8_t m_LOD;
-    int8_t m_MaxLOD;
+    uint32_t VglBindIndex {0};
+    char *Name {nullptr};
+    uint16_t Width {0};
+    uint16_t Height {0};
+    uint32_t TexEnv {0};
+    uint32_t DominantColor {0};
+    IDirectDrawSurface7 *m_Surface {nullptr};
+    IDirectDrawPalette *m_Palette {nullptr};
+    gfxTextureCacheEntry *CacheEntry {nullptr};
+    gfxTextureCachePool *CachePool {nullptr};
+    uint32_t RefCount {1};
+    gfxTexture *PrevLOD {nullptr};
+    gfxTexture *NextLOD {nullptr};
+    int8_t m_LOD {-1};
+    int8_t m_MaxLOD {0};
 
     gfxTexture();
     ~gfxTexture();
@@ -58,10 +58,10 @@ public:
 class gfxTextureCacheEntry
 {
 public:
-    gfxTexture *Texture;
-    IDirectDrawSurface7 *Surface;
-    uint32_t LastAccessTime;
-    gfxTextureCacheEntry *PrevEntry;
+    gfxTexture *Texture {nullptr};
+    IDirectDrawSurface7 *Surface {nullptr};
+    uint32_t LastAccessTime {0};
+    gfxTextureCacheEntry *PrevEntry {nullptr};
 
     declstatic(uint32_t, sm_CurrentTime);
 

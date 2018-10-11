@@ -9,14 +9,12 @@
 defnvar(0x684D40, gfxBitmap::sm_First);
 
 gfxBitmap::gfxBitmap(uint16_t width, uint16_t height)
-    : Name(nullptr)
-    , Width(width)
+    : Width(width)
     , Height(height)
-    , Surface(nullptr)
-    , RefCount(1)
-    , Prev(gfxBitmap::sm_First)
 {
-    gfxBitmap::sm_First = this;
+    Prev = sm_First;
+
+    sm_First = this;
 }
 
 gfxBitmap::~gfxBitmap()

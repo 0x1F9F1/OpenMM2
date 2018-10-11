@@ -9,13 +9,13 @@ class AudManagerBase
     : public asNode
 {
 public:
-    audManager *pManager;
-    uint8_t byte1C;
-    uint16_t word1E;
-    uint32_t dword20;
-    uint32_t dword24;
-    uint32_t dword28;
-    uint32_t dword2C;
+    audManager *pManager {nullptr};
+    uint8_t byte1C {0};
+    uint16_t word1E {0};
+    uint32_t dword20 {0};
+    uint32_t dword24 {0};
+    uint32_t dword28 {0};
+    uint32_t dword2C {0};
 
     void ShutDownAudio(void);
 

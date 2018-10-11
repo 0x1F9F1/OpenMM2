@@ -11,19 +11,6 @@ DirSnd::DirSnd()
     }
 
     DSGlobalPtr = this;
-
-    lpDSBuffer = 0;
-    lpDS = 0;
-    field_1C = 0;
-    CurrentDriver = 0;
-    SoundEnabled = 0;
-    FirstDriver = 0;
-    DeviceCount = 0;
-    SoundDevices = 0;
-    DeviceCaps = 0;
-    DeviceFlags = 0;
-    hWnd = 0;
-    BitDepth = 1;
 }
 
 DirSnd::~DirSnd()

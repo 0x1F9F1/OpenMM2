@@ -5,17 +5,18 @@ class memMemoryAllocator;
 class memSafeHeap
 {
 public:
-    memMemoryAllocator * Allocator;
-    void* Heap;
-    void *CommitedData;
-    uint32_t SomeAlignmentThingy;
-    uint32_t AllocSize;
-    bool bool14;
-    bool bool15;
-    bool CheckAlloc;
-    bool byte17;
+    memMemoryAllocator * Allocator {nullptr};
+    void* Heap {nullptr};
+    void* CommitedData {nullptr};
+    uint32_t SomeAlignmentThingy {0};
+    uint32_t AllocSize {0};
+    bool bool14 {false};
+    bool bool15 {false};
+    bool CheckAlloc {false};
+    bool byte17 {false};
 
-    memSafeHeap();
+    memSafeHeap() = default;
+
     ~memSafeHeap();
 
     void Init(memMemoryAllocator *allocator, uint32_t heapSize, bool p3, bool p4, bool checkAlloc);

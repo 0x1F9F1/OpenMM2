@@ -7,13 +7,8 @@ defnvar(0x6A3C28, datArgParser::Argv);
 
 struct ArgEntry
 {
-    uint32_t WordCount;
-    char **Words;
-
-    ArgEntry()
-        : WordCount(0)
-        , Words(nullptr)
-    { }
+    uint32_t WordCount {0};
+    char **Words {nullptr};
 };
 
 bool datArgParser::Exists(const char * name)

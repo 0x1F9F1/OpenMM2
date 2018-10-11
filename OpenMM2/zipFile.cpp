@@ -327,9 +327,68 @@ FAILURE:
     return false;
 }
 
+int CompareZipEntries(const void *a1, const void *a2)
+{
+    const char* v2 = static_cast<const char*>(a1);
+    const char* v3 = static_cast<const zipEntry*>(a2)->Name;
+
+    signed int v4;
+    signed int v5;
+
+    do
+    {
+        v4 = *v2++;
+        v5 = *v3++;
+
+        if (v4 >= 'A' && v4 <= 'Z')
+            v4 += 0x20;
+        else if (v4 == '\\')
+            v4 = '/';
+
+        if (v5 >= 'A' && v5 <= 'Z')
+            v5 += 0x20;
+        else if (v5 == '\\')
+            v5 = '/';
+    }
+    while ( v4 && v4 == v5 );
+
+    return v4 - v5;
+}
+
 int zipFile::Open(char const * fileName)
 {
-    return stub<thiscall_t<int, zipFile, const char*>>(0x573A80, this, fileName);
+    zipEntry* entry = (zipEntry*) std::bsearch(fileName, Entries.get(), EntryCount, sizeof(zipEntry), &CompareZipEntries);
+
+    if (entry)
+    {
+        for (int i = 0; i < 16; ++i)
+        {
+            if (ZipHandles[i].pZipEntry == nullptr)
+            {
+                zipHandle* handle = &ZipHandles[i];
+
+                handle->pZipFile = this;
+                handle->pZipEntry = entry;
+                handle->CurrentRawDataSize = 0;
+                handle->CurrentOffset = 0;
+
+                if (entry->UncompresedSize != entry->CompressedSize)
+                {
+                    handle->Inflater.next_in = 0;
+                    handle->Inflater.avail_in = 0;
+
+                    if (inflateInit2_(&handle->Inflater, -15, "1.1.3", sizeof(handle->Inflater)) != 0)
+                    {
+                        Errorf("zipFile::Open(%s) - inflateInit failed.", fileName);
+                    }
+                }
+
+                return i;
+            }
+        }
+    }
+
+    return -1;
 }
 
 int zipFile::EnumFiles2(const char * path, void(*callback)(Stream* stream, void *context), void * context)
@@ -375,4 +434,9 @@ zipFile::~zipFile()
     }
 
     zipFile::sm_First = PrevFile;
+}
+
+int inflateInit2_(z_stream * strm, int windowBits, const char * version, int stream_size)
+{
+    return stub<cdecl_t<int, z_stream*, int, const char*, int>>(0x573D00, strm, windowBits, version, stream_size);
 }

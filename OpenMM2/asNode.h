@@ -10,16 +10,16 @@ class asNode
     : public asCullable
 {
 public:
-    asNode* Next;
-    asNode* Children;
-    asNode* Parent;
+    asNode* Next {nullptr};
+    asNode* Children {nullptr};
+    asNode* Parent {nullptr};
 
     // 0x1 | Update
     // 0x400 | Update while paused
-    uint32_t Flags;
-    char *Name;
+    uint32_t Flags {0x3};
+    char *Name {nullptr};
 
-    asNode();
+    asNode() = default;
 
     virtual ~asNode() override;
 

@@ -4,18 +4,10 @@
 defnvar(0x661788, eqEventHandler::SuperQ);
 
 eqEventHandler::eqEventHandler()
-    : dword4(0)
-    , dword8(1)
-    , dwordC(0)
-    , Clients()
-    , gap30()
-    , dword38(0)
-    , dword3C(0)
-    , dword40(0)
-    , dword44(0)
-    , char48()
-    , gap148()
-{ }
+{
+    memset(Clients, 0, sizeof(Clients));
+    memset(char48, 0, sizeof(char48));
+}
 
 eqEventHandler::~eqEventHandler()
 {
@@ -45,11 +37,6 @@ void eqEventHandler::Update()
 {
     return stub<thiscall_t<void, eqEventHandler>>(0x4A1790, this);
 }
-
-eqEventMonitor::eqEventMonitor()
-    : Handler(nullptr)
-    , Index(-1)
-{ }
 
 eqEventMonitor::~eqEventMonitor()
 {

@@ -13,18 +13,18 @@ struct memMemStats
 class memMemoryAllocator
 {
 public:
-    memMemoryAllocator* Prev;
-    void *HeapData;
-    int TotalSize;
-    int Alignment;
-    int Locked;
-    bool field_14;
-    bool field_15;
-    bool CheckAlloc;
-    bool field_17;
-    int Array1[32];
-    int Array2[16];
-    float fieldD8;
+    memMemoryAllocator* Prev {nullptr};
+    void *HeapData {nullptr};
+    int TotalSize {0};
+    int Alignment {0};
+    int Locked {0};
+    bool field_14 {false};
+    bool field_15 {false};
+    bool CheckAlloc {false};
+    bool field_17 {false};
+    int Array1[32] {};
+    int Array2[16] {};
+    float fieldD8 {0.0f};
 
     memMemoryAllocator();
     ~memMemoryAllocator();

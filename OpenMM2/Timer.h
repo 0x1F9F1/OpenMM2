@@ -3,7 +3,7 @@
 class Timer
 {
 public:
-    uint32_t StartTime;
+    uint32_t StartTime {0};
 
     Timer();
 

@@ -12,36 +12,37 @@
 class netZoneScore
 {
 public:
-    IDirectPlayLobby3 *pLobby;
-    GUID GUID;
-    IUnknown* pZoneScore; // IZoneScore
+    IDirectPlayLobby3 *pLobby {nullptr};
+    GUID GUID {};
+    IUnknown* pZoneScore {nullptr}; // IZoneScore
 
-    netZoneScore();
+    netZoneScore() = default;
+
     ~netZoneScore();
 };
 
 class asNetwork
 {
 public:
-    datCallback SysMessageCB;
-    datCallback AppMessageCB;
-    IDirectPlay4A *pDPlay;
-    IDirectPlayLobby3A *pLobby;
-    DPID PlayerID;
-    DPLCONNECTION *pConnection;
-    GUID *pGUID;
-    void* pRecvBuf;
-    uint32_t nRecvBufSize;
-    float float34;
-    uint32_t MaxPlayers;
-    uint32_t SessionOpen;
-    uint32_t InLobby;
-    uint32_t dword44;
-    uint32_t dword48;
-    uint8_t IsHost;
-    Timer Time;
-    float Elapsed;
-    netZoneScore NetScore;
+    datCallback SysMessageCB {};
+    datCallback AppMessageCB {};
+    IDirectPlay4A *pDPlay {nullptr};
+    IDirectPlayLobby3A *pLobby {nullptr};
+    DPID PlayerID {0};
+    DPLCONNECTION *pConnection {nullptr};
+    GUID *pGUID {nullptr};
+    void* pRecvBuf {nullptr};
+    uint32_t nRecvBufSize {0};
+    float float34 {0.0f};
+    uint32_t MaxPlayers {32};
+    uint32_t SessionOpen {0};
+    uint32_t InLobby {0};
+    uint32_t dword44 {0};
+    uint32_t dword48 {0};
+    uint8_t IsHost {0};
+    Timer Time {};
+    float Elapsed {0.0f};
+    netZoneScore NetScore {};
 
     asNetwork();
     ~asNetwork();

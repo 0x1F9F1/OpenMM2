@@ -31,23 +31,10 @@ DDPIXELFORMAT ddPixelFormat_Pallete4 = { sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_
 PALETTEENTRY paletteEntry;
 
 gfxTexture::gfxTexture()
-    : VglBindIndex(0)
-    , Name(nullptr)
-    , Width(0)
-    , Height(0)
-    , TexEnv(0)
-    , DominantColor(0)
-    , m_Surface(nullptr)
-    , m_Palette(nullptr)
-    , CacheEntry(0)
-    , CachePool(0)
-    , RefCount(1)
-    , PrevLOD(gfxTexture::sm_First)
-    , NextLOD(nullptr)
-    , m_LOD(-1)
-    , m_MaxLOD(0)
 {
-    gfxTexture::sm_First = this;
+    PrevLOD = sm_First;
+
+    sm_First = this;
 }
 
 gfxTexture::~gfxTexture()
@@ -453,12 +440,9 @@ void gfxTextureCachePool::FindEntry(gfxTexture* texture)
 }
 
 gfxTextureCacheEntry::gfxTextureCacheEntry(IDirectDrawSurface7 * surface, gfxTextureCacheEntry * prevEntry)
-{
-    Texture = nullptr;
-    Surface = surface;
-    LastAccessTime = 0;
-    PrevEntry = prevEntry;
-}
+    : Surface(surface)
+    , PrevEntry(prevEntry)
+{ }
 
 gfxTextureCacheEntry::~gfxTextureCacheEntry()
 {

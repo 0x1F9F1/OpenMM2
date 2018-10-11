@@ -8,11 +8,6 @@ defnvar(0x6B15D0, MMAUDMGRPTR);
 
 AudManagerBase::AudManagerBase()
 {
-    pManager = 0;
-    dword2C = 0;
-    word1E = 0;
-    byte1C = 0;
-
     AUDMGRPTR = this;
 }
 
@@ -23,12 +18,10 @@ AudManagerBase::~AudManagerBase()
         ShutDownAudio();
     }
 
-    if (DSGlobalPtr)
-    {
-        delete DSGlobalPtr;
-    }
+    delete DSGlobalPtr;
 
     DSGlobalPtr = nullptr;
+
     AUDMGRPTR = nullptr;
 }
 

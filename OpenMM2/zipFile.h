@@ -15,13 +15,13 @@ struct zipEntry
 
 struct zipFile
 {
-    zipFile *PrevFile;
-    int FileHandle;
-    std::unique_ptr<char[]> NamesBuffer;
-    std::unique_ptr<uint32_t[]> FileCrcs;
-    std::unique_ptr<zipEntry[]> Entries;
-    uint32_t EntryCount;
-    uint32_t CurrentOffset;
+    zipFile *PrevFile {nullptr};
+    int FileHandle {-1};
+    std::unique_ptr<char[]> NamesBuffer {};
+    std::unique_ptr<uint32_t[]> FileCrcs {};
+    std::unique_ptr<zipEntry[]> Entries {};
+    uint32_t EntryCount {0};
+    uint32_t CurrentOffset {0};
 
     bool Init(char const * fileName);
 
@@ -60,9 +60,11 @@ struct z_stream
 
 struct zipHandle
 {
-    zipFile *pZipFile;
-    zipEntry *pZipEntry;
-    DWORD CurrentOffset;
-    DWORD CurrentRawDataSize;
-    z_stream Inflater;
+    zipFile *pZipFile {nullptr};
+    zipEntry *pZipEntry {nullptr};
+    uint32_t CurrentOffset {0};
+    uint32_t CurrentRawDataSize {0};
+    z_stream Inflater {};
 };
+
+int inflateInit2_(z_stream * strm, int windowBits, const char * version, int stream_size);

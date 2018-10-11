@@ -2,14 +2,14 @@
 
 #include <d3d.h>
 
-enum gfxDeviceType : uint32_t
+enum gfxDeviceType
 {
     gfxDeviceType_Software = 0, // Software (No 3D Video Card)
     gfxDeviceType_Hardware = 1, // Hardware (3D Video Card)
     gfxDeviceType_HardwareWithTnL = 2  // Hardware (3D Video Card With T&L)
 };
 
-enum gfxDepthFlags : uint32_t
+enum gfxDepthFlags
 {
     gfxDepthFlag_Depth16 = 0x400,
     gfxDepthFlag_Depth24 = 0x200,
@@ -26,23 +26,23 @@ struct gfxResData
 
 struct gfxInterface
 {
-    GUID GUID;
-    char Name[64];
+    GUID GUID {};
+    char Name[64] {};
 
-    uint32_t DeviceCaps;
+    uint32_t DeviceCaps {0};
 
-    gfxDeviceType DeviceType;
+    int DeviceType {-1};
 
-    uint32_t ResolutionCount;   // Max of 64 resolutions
-    uint32_t ResolutionChoice;
+    int ResolutionCount {-1};   // Max of 64 resolutions
+    int ResolutionChoice {-1};
 
-    gfxDepthFlags AcceptableDepths;  // Used to check if mmResolution::Depth is allowed
+    uint32_t AcceptableDepths {0};  // Used to check if mmResolution::Depth is allowed
 
-    uint32_t AvailableMemory;
-    uint32_t VendorID;
-    uint32_t DeviceID;
+    uint32_t AvailableMemory {0};
+    uint32_t VendorID {0};
+    uint32_t DeviceID {0};
 
-    gfxResData Resolutions[64];
+    gfxResData Resolutions[64] {};
 
     gfxResData* CurrentResolution();
 

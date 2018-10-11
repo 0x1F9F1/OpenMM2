@@ -2,22 +2,12 @@
 #include "memMemoryAllocator.h"
 
 memMemoryAllocator::memMemoryAllocator()
-    : Prev(memMemoryAllocator::First)
-    , HeapData(nullptr)
-    , TotalSize(0)
-    , Alignment(0)
-    , Locked(0)
-    , field_14(false)
-    , field_15(false)
-    , CheckAlloc(false)
-    , field_17(false)
-    , Array1()
-    , Array2()
-    , fieldD8(0.0f)
 {
-    memMemoryAllocator::First = this;
+    Prev = First;
 
-    datDisplayUsed = memMemoryAllocator::DisplayUsed;
+    First = this;
+
+    datDisplayUsed = DisplayUsed;
 }
 
 memMemoryAllocator::~memMemoryAllocator()

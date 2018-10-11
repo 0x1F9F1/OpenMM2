@@ -16,21 +16,21 @@ check_size(mmSoundDriver, 0x1C);
 class DirSnd
 {
 public:
-    IDirectSoundBuffer* lpDSBuffer;
-    IDirectSound* lpDS;
-    HWND hWnd;
-    int gap10;
-    mmSoundDriver *FirstDriver;
-    mmSoundDriver *CurrentDriver;
-    IUnknown *field_1C;
-    int DeviceCount;
-    int BitDepth;
-    int DeviceFlags;
-    bool Enable3D;
-    bool Initialized;
-    int SoundEnabled;
-    int DeviceCaps;
-    mmSoundDriver **SoundDevices;
+    IDirectSoundBuffer* lpDSBuffer {nullptr};
+    IDirectSound* lpDS {nullptr};
+    HWND hWnd {nullptr};
+    int gap10 {0};
+    mmSoundDriver *FirstDriver {nullptr};
+    mmSoundDriver *CurrentDriver {nullptr};
+    IUnknown *field_1C {nullptr};
+    int DeviceCount {0};
+    int BitDepth {1};
+    int DeviceFlags {0};
+    bool Enable3D {false};
+    bool Initialized {false};
+    int SoundEnabled {false};
+    int DeviceCaps {0};
+    mmSoundDriver **SoundDevices {nullptr};
 
     DirSnd();
     ~DirSnd();

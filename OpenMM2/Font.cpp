@@ -6,14 +6,14 @@
 
 struct gfxFontInfo
 {
-    uint8_t byte0;
-    uint8_t byte1;
-    uint8_t byte2;
-    uint8_t Width;
-    uint8_t Height;
-    uint8_t byte5;
-    uint8_t Width2;
-    uint32_t dword8;
+    uint8_t byte0 {0x20};
+    uint8_t byte1 {0x7F};
+    uint8_t byte2 {1};
+    uint8_t Width {8};
+    uint8_t Height {8};
+    uint8_t byte5 {0x10};
+    uint8_t Width2 {0};
+    uint32_t dword8 {0};
 };
 
 instvar(0x685454, gfxTexture*, font_texture);

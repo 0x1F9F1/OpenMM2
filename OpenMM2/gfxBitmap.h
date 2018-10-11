@@ -7,12 +7,12 @@ class gfxImage;
 class gfxBitmap
 {
 public:
-    char* Name;
-    uint16_t Width;
-    uint16_t Height;
-    IDirectDrawSurface7 *Surface;
-    uint32_t RefCount;
-    gfxBitmap *Prev;
+    char* Name {nullptr};
+    uint16_t Width {0};
+    uint16_t Height {0};
+    IDirectDrawSurface7 *Surface {nullptr};
+    uint32_t RefCount {1};
+    gfxBitmap *Prev {nullptr};
 
     gfxBitmap(uint16_t width, uint16_t height);
     ~gfxBitmap();

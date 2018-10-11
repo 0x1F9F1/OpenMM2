@@ -6,18 +6,6 @@
 
 #include "memMemoryAllocator.h"
 
-memSafeHeap::memSafeHeap()
-    : Allocator(nullptr)
-    , Heap(0)
-    , CommitedData(nullptr)
-    , SomeAlignmentThingy(0)
-    , AllocSize(0)
-    , bool14(false)
-    , bool15(false)
-    , CheckAlloc(false)
-    , byte17(false)
-{ }
-
 memSafeHeap::~memSafeHeap()
 {
     Kill();

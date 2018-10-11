@@ -1,15 +1,6 @@
 #include "stdafx.h"
 #include "asNode.h"
 
-asNode::asNode()
-{
-    this->Flags = 3;
-    this->Parent = 0;
-    this->Children = 0;
-    this->Next = 0;
-    this->Name = 0;
-}
-
 asNode::~asNode()
 {
     if (Parent)

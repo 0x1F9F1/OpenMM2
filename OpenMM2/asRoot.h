@@ -6,10 +6,11 @@
 struct asRoot
     : public asNode
 {
-    Matrix34 Matrix;
-    bool Paused;
-    bool ShouldPause;
-    bool EnableNan;
+    Matrix34 Matrix {};
+
+    bool Paused {false};
+    bool ShouldPause {false};
+    bool EnableNan {false};
 
     asRoot();
 
