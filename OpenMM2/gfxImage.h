@@ -31,6 +31,7 @@ public:
 
     void Scale(int width, int height);
 
+    static gfxImage * Create(int width, int height, int type, int paletteType, int a5);
     static gfxImage* GetFont(int & outWidth, int & outHeight);
     static void FreeFont(void);
 
