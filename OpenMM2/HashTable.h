@@ -40,6 +40,8 @@ public:
 
     void MakePermanent();
 
+    void Kill();
+
     declstatic(HashTable*, First);
 
     HashTable() = delete;

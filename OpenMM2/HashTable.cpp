@@ -59,3 +59,8 @@ void HashTable::MakePermanent()
         }
     }
 }
+
+void HashTable::Kill()
+{
+    return stub<thiscall_t<void, HashTable>>(0x4C67B0, this);
+}

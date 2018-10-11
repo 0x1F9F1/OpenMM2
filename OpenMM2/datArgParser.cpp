@@ -152,5 +152,5 @@ void datArgParser::Init(int argc, char ** argv)
 
 void datArgParser::Kill(void)
 {
-    return stub<cdecl_t<void>>(0x4C6110);
+    datArgParser::ArgHash.Kill();
 }
