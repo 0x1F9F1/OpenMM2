@@ -39,7 +39,38 @@ gfxTexture::gfxTexture()
 
 gfxTexture::~gfxTexture()
 {
-    stub<thiscall_t<void, gfxTexture>>(0x4AC910, this);
+    if (CacheEntry)
+    {
+        CacheEntry->Evict();
+    }
+
+    delete Name;
+
+    gfxTexture** ppFirst = &gfxTexture::sm_First;
+
+    for (gfxTexture* i = gfxTexture::sm_First ; i; i = i->PrevLOD )
+    {
+        if ( i == this )
+        {
+            break;
+        }
+
+        ppFirst = &i->PrevLOD;
+    }
+
+    *ppFirst = PrevLOD;
+
+    if ( m_Surface )
+    {
+        gfxDebugf(gfxDebug, "Releasing %s: %d", "m_Surface", m_Surface->Release());
+        m_Surface = 0;
+    }
+
+    if ( m_Palette )
+    {
+        gfxDebugf(gfxDebug, "Releasing %s: %d", "m_Palette", m_Palette->Release());
+        m_Palette = 0;
+    }
 }
 
 void gfxTexture::Load(gfxImage * image)
