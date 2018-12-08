@@ -1,4 +1,4 @@
 #include "stdafx.h"
 
-#define MEM_IMPLEMENTATION
-#include "mem/mem.h"
+#include <mem/platform-inl.h>
+#include <mem/init_function-inl.h>

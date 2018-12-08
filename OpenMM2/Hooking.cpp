@@ -5,7 +5,7 @@ namespace hook
 {
     inline void write_protected(mem::pointer dest, mem::pointer src, size_t length)
     {
-        mem::region(dest, length).unprotect().copy(src);
+        mem::protect({ dest, length }).copy(src);
     }
 
     const char* const HookTypeNames[static_cast<size_t>(HookType::COUNT)] =
@@ -49,7 +49,7 @@ namespace hook
 
     void create_patch(const char* name, const char* description, mem::pointer dest, mem::pointer src, size_t size)
     {
-        mem::region(dest, size).unprotect().copy(src);
+        write_protected(dest, src, size);
 
         Displayf(
             "Created patch '%s' at 0x%zX of size %zu: %s",

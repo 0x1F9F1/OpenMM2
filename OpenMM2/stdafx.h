@@ -4,10 +4,13 @@
 #define NOMINMAX
 #include <Windows.h>
 
-#define MEM_WINDOWS 32
-#define MEM_ALWAYS_INLINE
-#define MEM_MACROS
-#include "mem/mem.h"
+#include <mem/mem.h>
+#include <mem/platform.h>
+#include <mem/init_function.h>
+
+#include <memory>
+#include <algorithm>
+#include <functional>
 
 #define DIRECTX_VERSION 0x0700
 
@@ -28,16 +31,39 @@
 #define PASTE_HELPER(a,b) a ## b
 #define PASTE(a,b) PASTE_HELPER(a,b)
 
-#define run_once(func) MEM_RUN_ONCE(func)
+#define run_once(body) static mem::init_function PASTE(RunOnce, __LINE__)(body);
 
 #define unimplemented Quitf("Error calling unimplemented function %s in %s (%i)", __FUNCTION__, __FILE__, __LINE__)
+
+namespace mem
+{
+    namespace conventions
+    {
+        template <typename Result, typename... Args>
+        using func_t = Result(*)(Args...);
+
+        template <typename Result, typename Class, typename... Args>
+        using thiscall_t = Result(Class::*)(Args...);
+
+#if defined(_WIN32)
+        template <typename Result, typename... Args>
+        using cdecl_t = Result(__cdecl*)(Args...);
+
+        template <typename Result, typename... Args>
+        using stdcall_t = Result(__stdcall*)(Args...);
+
+        template <typename Result, typename... Args>
+        using fastcall_t = Result(__fastcall*)(Args...);
+#endif // MEM_WINDOWS
+    }
+}
 
 using namespace mem::conventions;
 
 template <typename Func, typename... Args>
 constexpr decltype(auto) stub(mem::pointer address, Args&&... args)
 {
-    return address.invoke<Func>(std::forward<Args>(args)...);
+    return std::invoke(address.as<Func>(), std::forward<Args>(args)... );
 }
 
 #include "Hooking.h"

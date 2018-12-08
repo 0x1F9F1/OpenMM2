@@ -20,9 +20,9 @@ target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE
 find_library(DPLAY_LIBRARY dplayx
     HINTS vendor/dplay/lib)
 
-target_link_libraries(${PROJECT_NAME} ${DPLAY_LIBRARY} dxguid)
+target_link_libraries(${PROJECT_NAME} ${DPLAY_LIBRARY} dxguid mem)
 
-file (STRINGS "GameDirectory.txt" GAME_DIRECTORY)
+file(STRINGS "GameDirectory.txt" GAME_DIRECTORY)
 
 message(${GAME_DIRECTORY})
 
