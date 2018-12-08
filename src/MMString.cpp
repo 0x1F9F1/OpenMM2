@@ -1,5 +1,6 @@
 #include "stdafx.h"
-#include "String.h"
+
+#include "MMString.h"
 
 #include <cstring>
 

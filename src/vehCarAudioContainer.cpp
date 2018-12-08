@@ -6,7 +6,7 @@
 #include "zipFile.h"
 #include "Stream.h"
 
-#include "String.h"
+#include "MMString.h"
 
 #include <unordered_set>
 #include <string>
