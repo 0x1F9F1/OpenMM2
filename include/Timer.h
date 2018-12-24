@@ -16,8 +16,8 @@ public:
 
     static uint32_t Ticks(void);
 
-    declstatic(float, CpuSpeed);
-    declstatic(float, QuickTicksToMilliseconds);
-    declstatic(float, TicksToSeconds);
-    declstatic(float, TicksToMilliseconds);
+    decl_static(float, CpuSpeed);
+    decl_static(float, QuickTicksToMilliseconds);
+    decl_static(float, TicksToSeconds);
+    decl_static(float, TicksToMilliseconds);
 };

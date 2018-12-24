@@ -4,7 +4,7 @@
 #include <timeapi.h>
 #pragma comment(lib, "winmm.lib")
 
-instvar(0x6A3D08, int, dword_6A3D08);
+static_var(0x6A3D08, int, dword_6A3D08);
 
 Timer::Timer()
 {
@@ -76,7 +76,7 @@ uint32_t Timer::Ticks(void)
     return counter.LowPart;
 }
 
-defnvar(0x6A3CF0, Timer::CpuSpeed);
-defnvar(0x6A3CFC, Timer::QuickTicksToMilliseconds);
-defnvar(0x6A3D00, Timer::TicksToSeconds);
-defnvar(0x6A3D04, Timer::TicksToMilliseconds);
+defn_static(0x6A3CF0, Timer::CpuSpeed);
+defn_static(0x6A3CFC, Timer::QuickTicksToMilliseconds);
+defn_static(0x6A3D00, Timer::TicksToSeconds);
+defn_static(0x6A3D04, Timer::TicksToMilliseconds);

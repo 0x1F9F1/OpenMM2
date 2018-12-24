@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "HashTable.h"
 
-defnvar(0x6A3C60, HashTable::First);
+defn_static(0x6A3C60, HashTable::First);
 
 int HashTable::Hash(const char *string)
 {

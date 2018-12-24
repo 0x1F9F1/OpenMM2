@@ -1,9 +1,9 @@
 #include "stdafx.h"
 #include "datArgParser.h"
 
-defnvar(0x6A3C10, datArgParser::ArgHash);
-defnvar(0x6A3C30, datArgParser::Argc);
-defnvar(0x6A3C28, datArgParser::Argv);
+defn_static(0x6A3C10, datArgParser::ArgHash);
+defn_static(0x6A3C30, datArgParser::Argc);
+defn_static(0x6A3C28, datArgParser::Argv);
 
 struct ArgEntry
 {

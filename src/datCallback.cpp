@@ -58,5 +58,3 @@ void datCallback::Call(void* parameter)
         }
     }
 }
-
-defnvar(0x6A3D10, NullCallback);

@@ -16,12 +16,12 @@ struct gfxFontInfo
     uint32_t dword8 {0};
 };
 
-instvar(0x685454, gfxTexture*, font_texture);
+static_var(0x685454, gfxTexture*, font_texture);
 
-instvar(0x685458, int, font_width);
-instvar(0x68545C, int, font_height);
+static_var(0x685458, int, font_width);
+static_var(0x68545C, int, font_height);
 
-instvar(0x5CD530, gfxFontInfo, SYSFONT);
+static_var(0x5CD530, gfxFontInfo, SYSFONT);
 
 void gfxCreateFont(void)
 {

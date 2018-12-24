@@ -1,8 +1,6 @@
 #include "stdafx.h"
 #include "mmInput.h"
 
-defnvar(0x6B1CF0, GameInputPtr);
-
 mmInput::mmInput()
 {
     stub<thiscall_t<void, mmInput>>(0x52A990, this);

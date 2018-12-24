@@ -35,16 +35,10 @@
 
 #pragma comment(lib, "imm32.lib")
 
-defnvar(0x5E0CF9, ZoneStartup);
+static_var(0x6B48A0, int, ArgC);
+static_var(0x6B48A4, char**, ArgV);
 
-instvar(0x6B48A0, int, ArgC);
-instvar(0x6B48A4, char**, ArgV);
-
-defnvar(0x5C28D4, APPTITLE);
-defnvar(0x5C28D8, DEFAULT_CITY);
-defnvar(0x5C28DC, VERSION_STRING);
-
-instvar(0x6614D4, char[256], ExecPath);
+static_var(0x6614D4, char[256], ExecPath);
 
 void CreateGameMutex(const char* name)
 {
@@ -157,8 +151,8 @@ void ebolaPlayMovie(char * name)
     return stub<cdecl_t<void, char*>>(0x402780, name);
 }
 
-instvar(0x6B0454, uint32_t, mmCpuSpeed);
-instvar(0x683108, int, gfxIcon);
+static_var(0x6B0454, uint32_t, mmCpuSpeed);
+static_var(0x683108, int, gfxIcon);
 
 int Main(void)
 {

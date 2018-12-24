@@ -7,6 +7,7 @@
 #include <mem/mem.h>
 #include <mem/platform.h>
 #include <mem/init_function.h>
+#include <mem/macros.h>
 
 #include <memory>
 #include <algorithm>
@@ -18,20 +19,6 @@
 #define DIRECTDRAW_VERSION DIRECTX_VERSION
 #define DIRECTINPUT_VERSION DIRECTX_VERSION
 #define DIRECTSOUND_VERSION DIRECTX_VERSION
-
-#include <type_traits>
-
-#define declvar(type, name) extern std::add_lvalue_reference_t<type> name
-#define declstatic(type, name) static std::add_lvalue_reference_t<type> name
-#define defnvar(address, name) decltype(name) name = mem::pointer(address).as<decltype(name)>()
-#define instvar(address, type, name) std::add_lvalue_reference_t<type> name = mem::pointer(address).as<decltype(name)>()
-
-#define check_size(type, size) static_assert(sizeof(type) == size, "Type "#type" has invalid size");
-
-#define PASTE_HELPER(a,b) a ## b
-#define PASTE(a,b) PASTE_HELPER(a,b)
-
-#define run_once(body) static mem::init_function PASTE(RunOnce, __LINE__)(body);
 
 #define unimplemented Quitf("Error calling unimplemented function %s in %s (%i)", __FUNCTION__, __FILE__, __LINE__)
 

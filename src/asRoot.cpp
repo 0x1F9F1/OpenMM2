@@ -2,8 +2,6 @@
 #include "asRoot.h"
 #include "asLinearCS.h"
 
-defnvar(0x661738, ROOT);
-
 void EnableNanSignal(bool enabled)
 {
     return stub<cdecl_t<void, bool>>(0x4C51F0, enabled);

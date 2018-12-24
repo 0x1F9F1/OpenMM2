@@ -37,11 +37,11 @@
 #include "localize.h"
 #include "ioInput.h"
 
-instvar(0x5E0CE0, gfxBitmap*, RestoringScreenBitmap);
-instvar(0x5E0CF8, bool, NeedStartup);
+static_var(0x5E0CE0, gfxBitmap*, RestoringScreenBitmap);
+static_var(0x5E0CF8, bool, NeedStartup);
 
-instvar(0x5E0CC4, int(*)(void), __VtResumeSampling);
-instvar(0x5E0CD8, int(*)(void), __VtPauseSampling);
+static_var(0x5E0CC4, int(*)(void), __VtResumeSampling);
+static_var(0x5E0CD8, int(*)(void), __VtPauseSampling);
 
 void GetLoadScreenName(char *buffer)
 {

@@ -17,6 +17,6 @@ void ageDebug(int enabled, char const * format, ...);
 void DebugLogInit(bool append);
 void DebugLogShutdown();
 
-declvar(int, PrinterFlags);
-declvar(void(*)(int, const char*, va_list), Printer);
-declvar(void(*)(const char *), PrintString);
+static_var(0x5CECEC, int, PrinterFlags);
+static_var(0x5CED24, void(*)(int, const char*, va_list), Printer);
+static_var(0x5CECF0, void(*)(const char *), PrintString);

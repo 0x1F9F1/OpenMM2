@@ -42,7 +42,7 @@ public:
 
     void Kill();
 
-    declstatic(HashTable*, First);
+    decl_static(HashTable*, First);
 
     HashTable() = delete;
     ~HashTable() = delete;

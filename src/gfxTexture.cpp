@@ -5,17 +5,17 @@
 #include "gfxPipeline.h"
 #include "d3dpipe.h"
 
-defnvar(0x684D34, gfxTexture::sm_EnableSetLOD);
-defnvar(0x684D36, gfxTexture::sm_Allow32);
-defnvar(0x684D38, gfxTexture::sm_First);
-defnvar(0x684524, gfxTexture::sm_UseInternalCache);
-defnvar(0x68452C, gfxTexture::sm_FirstPool);
-defnvar(0x684D35, gfxTexture::sm_LOD);
-defnvar(0x684D3C, gfxTexture::sm_FirstActive);
+defn_static(0x684D34, gfxTexture::sm_EnableSetLOD);
+defn_static(0x684D36, gfxTexture::sm_Allow32);
+defn_static(0x684D38, gfxTexture::sm_First);
+defn_static(0x684524, gfxTexture::sm_UseInternalCache);
+defn_static(0x68452C, gfxTexture::sm_FirstPool);
+defn_static(0x684D35, gfxTexture::sm_LOD);
+defn_static(0x684D3C, gfxTexture::sm_FirstActive);
 
-defnvar(0x684528, gfxTextureCacheEntry::sm_CurrentTime);
+defn_static(0x684528, gfxTextureCacheEntry::sm_CurrentTime);
 
-instvar(0x6844C4, bool, g_Tex565);
+static_var(0x6844C4, bool, g_Tex565);
 
 DDPIXELFORMAT ddPixelFormat_8888 = { sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_ALPHAPIXELS, 0, 32, 0x00FF0000, 0x0000FF00, 0x000000FF, 0xFF000000 };
 DDPIXELFORMAT ddPixelFormat_0888 = { sizeof(DDPIXELFORMAT), DDPF_RGB,                    0, 32, 0x00FF0000, 0x0000FF00, 0x000000FF, 0x00000000 };

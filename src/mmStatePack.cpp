@@ -1,8 +1,7 @@
 #include "stdafx.h"
 #include "mmStatePack.h"
 
-defnvar(0x6B1610, MMSTATE);
-defnvar(0x6276F8, dgStatePack::Instance);
+defn_static(0x6276F8, dgStatePack::Instance);
 
 const char* dgGameModeNames[7] =
 {

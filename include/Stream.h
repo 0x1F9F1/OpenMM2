@@ -90,11 +90,11 @@ public:
 
     static void DumpOpenFiles(void);
 
-    declstatic(Stream[MAX_STREAMS], sm_Streams);
-    declstatic(uint8_t[MAX_STREAMS][STREAM_BUFFER_SIZE], sm_Buffers);
+    decl_static(Stream[MAX_STREAMS], sm_Streams);
+    decl_static(uint8_t[MAX_STREAMS][STREAM_BUFFER_SIZE], sm_Buffers);
 
-    declstatic(coreFileMethods const *, sm_DefaultCreateMethods);
-    declstatic(coreFileMethods const *, sm_DefaultOpenMethods);
+    decl_static(coreFileMethods const *, sm_DefaultCreateMethods);
+    decl_static(coreFileMethods const *, sm_DefaultOpenMethods);
 };
 
 int fseek(Stream *stream, int position, seekWhence whence);
@@ -102,4 +102,4 @@ int fgets(char *buffer, int length, Stream *stream);
 void fprintf(Stream *stream, char const *format, ...);
 int fscanf(Stream *stream, char const *format, ...);
 
-declvar(coreFileMethods, coreFileStandard);
+static_var(0x5CEE28, coreFileMethods, coreFileStandard);

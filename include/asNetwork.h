@@ -52,4 +52,4 @@ public:
 
 check_size(asNetwork, 0x70);
 
-declvar(asNetwork, NETMGR);
+static_var(0x6B3968, asNetwork, NETMGR);

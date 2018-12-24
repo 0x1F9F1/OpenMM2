@@ -4,22 +4,22 @@
 #include <d3d.h>
 #include <ddraw.h>
 
-instvar(0x661970, void(*)(float, float, float), vglVertex);
-instvar(0x681B44, uint32_t, currentVertexType);
-instvar(0x661978, uint32_t, currentVertexSize);
+static_var(0x661970, void(*)(float, float, float), vglVertex);
+static_var(0x681B44, uint32_t, currentVertexType);
+static_var(0x661978, uint32_t, currentVertexSize);
 
-instvar(0x661974, uint32_t, vglCurrentColor);
-instvar(0x682B5C, float, vglCurrentT);
-instvar(0x682B60, float, vglCurrentS);
+static_var(0x661974, uint32_t, vglCurrentColor);
+static_var(0x682B5C, float, vglCurrentT);
+static_var(0x682B60, float, vglCurrentS);
 
-instvar(0x682B48, vglVCT1_t*, vglVCT1);
-instvar(0x682B68, vglVNT1_t*, vglVNT1);
+static_var(0x682B48, vglVCT1_t*, vglVCT1);
+static_var(0x682B68, vglVNT1_t*, vglVNT1);
 
-instvar(0x682B58, int, vglCount);
+static_var(0x682B58, int, vglCount);
 
-instvar(0x682B4C, float, vglCurrentNZ);
-instvar(0x682B50, float, vglCurrentNX);
-instvar(0x682B54, float, vglCurrentNY);
+static_var(0x682B4C, float, vglCurrentNZ);
+static_var(0x682B50, float, vglCurrentNX);
+static_var(0x682B54, float, vglCurrentNY);
 
 void vgl_VERTEX_VCT1(float x, float y, float z)
 {

@@ -15,7 +15,7 @@ public:
     static void Init(int argc, char** argv);
     static void Kill(void);
 
-    declstatic(HashTable, ArgHash);
-    declstatic(int, Argc);
-    declstatic(char **, Argv);
+    decl_static(HashTable, ArgHash);
+    decl_static(int, Argc);
+    decl_static(char **, Argv);
 };

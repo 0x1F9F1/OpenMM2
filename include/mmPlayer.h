@@ -10,4 +10,4 @@ class mmPlayer
 
 check_size(mmPlayer, 0x23A4 + 0x18);
 
-declvar(mmPlayer*, PLAYER);
+static_var(0x5E0D40, mmPlayer*, PLAYER);

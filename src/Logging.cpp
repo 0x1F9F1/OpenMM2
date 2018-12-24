@@ -42,14 +42,10 @@
 #define BACKCOLOR_MASK              (0xF << 4)
 #define FULLCOLOR_MASK              (TEXTCOLOR_MASK | BACKCOLOR_MASK)
 
-defnvar(0x5CECEC, PrinterFlags);
-defnvar(0x5CED24, Printer);
-defnvar(0x5CECF0, PrintString);
+static_var(0x6A3D3C, bool, b_popUpErrors);
+static_var(0x5CECE8, bool, b_popUpQuits);
 
-instvar(0x6A3D3C, bool, b_popUpErrors);
-instvar(0x5CECE8, bool, b_popUpQuits);
-
-instvar(0x6A3D38, void(*)(const char *), gFatalMessageHandler);
+static_var(0x6A3D38, void(*)(const char *), gFatalMessageHandler);
 
 short PrinterConsoleColors[6] = {
     TEXTCOLOR_WHITE,
@@ -211,7 +207,7 @@ void Errorf(const char* format, ...)
     }
 }
 
-instvar(0x6A3D50, int(*)(void), JustBeforeQuit);
+static_var(0x6A3D50, int(*)(void), JustBeforeQuit);
 
 void Quitf(const char* format, ...)
 {
@@ -267,8 +263,8 @@ void ageDebug(int enabled, char const * format, ...)
     }
 }
 
-instvar(0x6A3D1C, Stream*, debugLogStream);
-instvar(0x6A3D20, bool, debugLogAppend);
+static_var(0x6A3D1C, Stream*, debugLogStream);
+static_var(0x6A3D20, bool, debugLogAppend);
 
 void DebugLogInit(bool append)
 {

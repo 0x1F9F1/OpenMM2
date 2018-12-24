@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "mmGameManager.h"
 
-defnvar(0x5E0D08, mmGameManager::Instance);
+defn_static(0x5E0D08, mmGameManager::Instance);
 
 mmGameManager::mmGameManager()
 {

@@ -3,9 +3,9 @@
 #include "Stream.h"
 #include "datAssetManager.h"
 
-defnvar(0x627248, mmReplayManager::Instance);
+defn_static(0x627248, mmReplayManager::Instance);
 
-instvar(0x5E0D48, mmReplayData[18000], replayData);
+static_var(0x5E0D48, mmReplayData[18000], replayData);
 
 mmReplayManager::mmReplayManager()
 {

@@ -1,10 +1,7 @@
 #include "stdafx.h"
 #include "gfxImage.h"
 
-defnvar(0x5CD38C, gfxLoadImage);
-defnvar(0x6276EC, EnableTextureVariantHandler);
-
-defnvar(0x684D48, gfxImage::sm_Font);
+defn_static(0x684D48, gfxImage::sm_Font);
 
 void InstallJPEGSupport(void)
 {
@@ -52,7 +49,7 @@ gfxImage * gfxImage::Create(int width, int height, int type, int paletteType, in
     return stub<cdecl_t<gfxImage*, int, int, int, int, int>>(0x4AE920, width, height, type, paletteType, a5);
 }
 
-instvar(0x5CCFA4, char[96][8], BuiltinFont);
+static_var(0x5CCFA4, char[96][8], BuiltinFont);
 
 gfxImage* gfxImage::GetFont(int & outWidth, int & outHeight)
 {

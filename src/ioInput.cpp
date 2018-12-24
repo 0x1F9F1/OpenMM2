@@ -2,7 +2,7 @@
 #include "ioInput.h"
 #include "ioJoystick.h"
 
-defnvar(0x5CDDE4, ioInput::bUseJoystick);
+defn_static(0x5CDDE4, ioInput::bUseJoystick);
 
 void ioInput::Update()
 {

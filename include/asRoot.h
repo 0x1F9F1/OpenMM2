@@ -27,4 +27,4 @@ struct asRoot
 
 check_size(asRoot, 0x4C);
 
-declvar(asRoot, ROOT);
+static_var(0x661738, asRoot, ROOT);

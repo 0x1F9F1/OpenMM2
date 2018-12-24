@@ -10,10 +10,10 @@ struct MapSymbol
     int Address;
 };
 
-instvar(0x6A3C64, char[128], MapFileTimestamp);
-instvar(0x6A3CE4, MapSymbol*, MapFileAddresses);
-instvar(0x6A3CE8, int, MapFileAddressCount);
-instvar(0x6A3CEC, bool, IsMapInitialized);
+static_var(0x6A3C64, char[128], MapFileTimestamp);
+static_var(0x6A3CE4, MapSymbol*, MapFileAddresses);
+static_var(0x6A3CE8, int, MapFileAddressCount);
+static_var(0x6A3CEC, bool, IsMapInitialized);
 
 bool DbgHelpLoaded = false;
 

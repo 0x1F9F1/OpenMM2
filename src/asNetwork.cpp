@@ -1,8 +1,7 @@
 #include "stdafx.h"
 #include "asNetwork.h"
 
-defnvar(0x6B3968, NETMGR);
-instvar(0x6B39E0, uint8_t[1024], NetworkBuffer);
+static_var(0x6B39E0, uint8_t[1024], NetworkBuffer);
 
 asNetwork::asNetwork()
 {

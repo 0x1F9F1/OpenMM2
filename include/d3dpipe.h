@@ -3,20 +3,20 @@
 #include <d3d.h>
 #include <ddraw.h>
 
-declvar(IDirectDraw7 *, lpDD);
-declvar(IDirect3D7 *, lpD3D);
-declvar(IDirect3DDevice7 *, lpD3DDev);
-declvar(IDirectDrawSurface7 *, lpdsRend);
-declvar(IDirectDrawSurface7 *, lpdsFront);
+static_var(0x6830A8, IDirectDraw7 *, lpDD);
+static_var(0x6830AC, IDirect3D7 *, lpD3D);
+static_var(0x6830C8, IDirect3DDevice7 *, lpD3DDev);
+static_var(0x6830CC, IDirectDrawSurface7 *, lpdsRend);
+static_var(0x6830B0, IDirectDrawSurface7 *, lpdsFront);
 
-declvar(decltype(&DirectDrawCreateEx), lpDirectDrawCreateEx);
-declvar(LPDDENUMCALLBACKA, gfxDDEnumCallback);
+static_var(0x684518, decltype(&DirectDrawCreateEx), lpDirectDrawCreateEx);
+static_var(0x6844F0, LPDDENUMCALLBACKA, gfxDDEnumCallback);
 
-declvar(GUID*, lpInterfaceGUID);
-declvar(GUID, sInterfaceGUID);
+static_var(0x6844BC, GUID*, lpInterfaceGUID);
+static_var(0x6844E0, GUID, sInterfaceGUID);
 
-declvar(int, interfaceCount);
-declvar(int, gfxInterfaceEnumIdx);
+static_var(0x6830DC, int, interfaceCount);
+static_var(0x6844D4, int, gfxInterfaceEnumIdx);
 
 #define DX_ASSERT(expression) \
 do { \

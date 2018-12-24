@@ -13,7 +13,7 @@
 #include "gfxRenderState.h"
 #include "ioInput.h"
 
-instvar(0x6844B4, bool, g_VisualizeZ);
+static_var(0x6844B4, bool, g_VisualizeZ);
 
 void gfxPipeline::SetRes(int width, int height, int cdepth, int zdepth, bool parseArgs)
 {
@@ -566,56 +566,18 @@ void ProgressCB(const char *message, signed int progress)
     }
 }
 
-defnvar(0x682FA0, hwndParent);
-defnvar(0x6830B8, hwndMain);
-defnvar(0x68311C, lpWindowTitle);
-defnvar(0x6830F0, ATOM_Class);
-defnvar(0x683108, IconID);
-defnvar(0x5CA3EC, pageFlip);
-defnvar(0x5CA3ED, hasBorder);
-defnvar(0x5CA3EE, useMultiTexture);
-defnvar(0x5CA664, enableHWTnL);
-defnvar(0x68451D, novblank);
-defnvar(0x6830D0, inWindow);
-defnvar(0x6830D1, isMaximized);
-defnvar(0x6830D2, tripleBuffer);
-defnvar(0x6830D3, useReference);
-defnvar(0x6830D4, useSoftware);
-defnvar(0x6830D5, useAgeSoftware);
-defnvar(0x6830D6, useBlade);
-defnvar(0x6830D7, useSysMem);
-defnvar(0x6830D8, useInterface);
-
-defnvar(0x6844B0, gfxMinScreenWidth);
-defnvar(0x6844CC, gfxMinScreenHeight);
-defnvar(0x6844FC, gfxMaxScreenWidth);
-defnvar(0x6844D8, gfxMaxScreenHeight);
-defnvar(0x6857D0, gfxTexReduceSize);
-
-defnvar(0x684500, sm_UseInternal);
-
-defnvar(0x6830E8, gfxLostCallback);
-
-defnvar(0x6A38EC, ioMouse__InvWidth);
-defnvar(0x6A38D4, ioMouse__InvHeight);
-
-defnvar(0x6830F4, gfxPipeline::m_fWidth);
-defnvar(0x683120, gfxPipeline::m_fHeight);
-defnvar(0x683128, gfxPipeline::m_iWidth);
-defnvar(0x683100, gfxPipeline::m_iHeight);
-defnvar(0x6830E4, gfxPipeline::m_ZDepth);
-defnvar(0x6830F8, gfxPipeline::m_ColorDepth);
-defnvar(0x6830EC, gfxPipeline::m_X);
-defnvar(0x683110, gfxPipeline::m_Y);
+defn_static(0x6830F4, gfxPipeline::m_fWidth);
+defn_static(0x683120, gfxPipeline::m_fHeight);
+defn_static(0x683128, gfxPipeline::m_iWidth);
+defn_static(0x683100, gfxPipeline::m_iHeight);
+defn_static(0x6830E4, gfxPipeline::m_ZDepth);
+defn_static(0x6830F8, gfxPipeline::m_ColorDepth);
+defn_static(0x6830EC, gfxPipeline::m_X);
+defn_static(0x683110, gfxPipeline::m_Y);
 
 // 0x1 | Closing
 // 0x2 | Lost Focus
-defnvar(0x683114, gfxPipeline::m_EvtFlags);
-
-defnvar(0x5E0CCC, LoadingScreenBitmap);
-defnvar(0x6844B8, gfxRestoreCallback);
-
-defnvar(0x683104, gfxDebug);
+defn_static(0x683114, gfxPipeline::m_EvtFlags);
 
 bool gfxAutoDetect(bool* success)
 {

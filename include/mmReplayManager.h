@@ -93,7 +93,7 @@ public:
     void SetReplayInfo();
     void StartReplay();
 
-    declstatic(mmReplayManager*, Instance);
+    decl_static(mmReplayManager*, Instance);
 };
 
 check_size(mmReplayManager, 0x840);

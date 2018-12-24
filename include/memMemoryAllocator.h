@@ -36,14 +36,14 @@ public:
 
     static void DisplayUsed(char const* status);
 
-    declstatic(memMemoryAllocator*, First);
-    declstatic(memMemoryAllocator*, Current);
+    decl_static(memMemoryAllocator*, First);
+    decl_static(memMemoryAllocator*, Current);
 };
 
-declvar(void(*)(char const *), datDisplayUsed);
+static_var(0x5CE81C, void(*)(char const *), datDisplayUsed);
 
-declvar(int, datCurrentMemoryAlign);
-declvar(int, datCurrentMemoryBucket);
+static_var(0x6A3C34, int, datCurrentMemoryAlign);
+static_var(0x6A3C38, int, datCurrentMemoryBucket);
 
 check_size(memMemoryAllocator, 0xDC);
 

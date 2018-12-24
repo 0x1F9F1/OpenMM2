@@ -1,6 +1,9 @@
 #include "stdafx.h"
 #include "memMemoryAllocator.h"
 
+defn_static(0x6B46AC, memMemoryAllocator::First);
+defn_static(0x6B46A8, memMemoryAllocator::Current);
+
 memMemoryAllocator::memMemoryAllocator()
 {
     Prev = First;
@@ -50,13 +53,6 @@ void memMemoryAllocator::DisplayUsed(char const * status)
 {
     return stub<cdecl_t<void, const char*>>(0x577170, status);
 }
-
-defnvar(0x6B46AC, memMemoryAllocator::First);
-defnvar(0x6B46A8, memMemoryAllocator::Current);
-defnvar(0x5CE81C, datDisplayUsed);
-
-defnvar(0x6A3C34, datCurrentMemoryAlign);
-defnvar(0x6A3C38, datCurrentMemoryBucket);
 
 void* mm2_new(size_t count)
 {

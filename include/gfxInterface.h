@@ -51,6 +51,6 @@ struct gfxInterface
 
 check_size(gfxInterface, 0x270);
 
-declvar(gfxInterface[8], gfxInterfaces);
-declvar(int, gfxInterfaceCount);
-declvar(int, gfxInterfaceChoice);
+static_var(0x683130, gfxInterface[8], gfxInterfaces);
+static_var(0x6844C0, int, gfxInterfaceCount);
+static_var(0x6844C8, int, gfxInterfaceChoice);

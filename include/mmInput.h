@@ -20,4 +20,4 @@ public:
 
 check_size(mmInput, 0x248);
 
-declvar(mmInput*, GameInputPtr);
+static_var(0x6B1CF0, mmInput*, GameInputPtr);

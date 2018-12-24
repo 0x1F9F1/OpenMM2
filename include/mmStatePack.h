@@ -67,7 +67,7 @@ public:
     dgStatePack();
     ~dgStatePack();
 
-    declstatic(dgStatePack*, Instance);
+    decl_static(dgStatePack*, Instance);
 };
 
 check_size(dgStatePack, 0x6C);
@@ -231,4 +231,4 @@ extern const char* dgGameModeNames[7];
 // Guess
 check_size(mmStatePack, 0x3E0);
 
-declvar(mmStatePack, MMSTATE);
+static_var(0x6B1610, mmStatePack, MMSTATE);

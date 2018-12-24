@@ -11,9 +11,9 @@ public:
     static bool OpenLog(char const * fileName);
     static void CloseLog(void);
 
-    declstatic(bool, OutputSent);
-    declstatic(bool, OnExitAdded);
-    declstatic(Stream*, DebugLogFile);
+    decl_static(bool, OutputSent);
+    decl_static(bool, OnExitAdded);
+    decl_static(Stream*, DebugLogFile);
 
     static HANDLE DebugLogConsole;
 };

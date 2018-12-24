@@ -56,4 +56,4 @@ public:
     void Call(void* parameter);
 };
 
-declvar(datCallback, NullCallback);
+static_var(0x6A3D10, datCallback, NullCallback);

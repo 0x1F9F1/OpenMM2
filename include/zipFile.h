@@ -29,8 +29,8 @@ struct zipFile
 
     static int EnumFiles2(const char* path, void(*callback)(Stream* stream, void *context), void* context);
 
-    declstatic(zipFile *, sm_First);
-    declstatic(bool, sm_LogOpen);
+    decl_static(zipFile *, sm_First);
+    decl_static(bool, sm_LogOpen);
 
     zipFile();
     ~zipFile();

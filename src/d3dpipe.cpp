@@ -6,23 +6,7 @@
 #include "ColorConvert.h"
 #include "gfxInterface.h"
 
-defnvar(0x6830A8, lpDD);
-defnvar(0x6830AC, lpD3D);
-defnvar(0x6830C8, lpD3DDev);
-defnvar(0x6830CC, lpdsRend);
-defnvar(0x6830B0, lpdsFront);
-
-defnvar(0x684518, lpDirectDrawCreateEx);
-
-defnvar(0x6844F0, gfxDDEnumCallback);
-
-defnvar(0x6844BC, lpInterfaceGUID);
-defnvar(0x6844E0, sInterfaceGUID);
-
-defnvar(0x6830DC, interfaceCount);
-defnvar(0x6844D4, gfxInterfaceEnumIdx);
-
-instvar(0x682FA8, char[8][32], interfaceNames);
+static_var(0x682FA8, char[8][32], interfaceNames);
 
 uint32_t GetPixelFormatColor(DDPIXELFORMAT* lpDDPixelFormat, uint32_t color)
 {

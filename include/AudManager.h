@@ -53,7 +53,7 @@ public:
 
 check_size(AudManager, 0x54);
 
-declvar(AudManagerBase*, AUDMGRPTR);
-declvar(AudManager*, MMAUDMGRPTR);
+static_var(0x6B1474, AudManagerBase*, AUDMGRPTR);
+static_var(0x6B15D0, AudManager*, MMAUDMGRPTR);
 
 void InitAudioManager(bool enableSound);

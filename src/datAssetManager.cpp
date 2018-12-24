@@ -3,9 +3,8 @@
 
 #include "Stream.h"
 
-defnvar(0x6A3B8C, datAssetManager::sm_Path);
-defnvar(0x5CE760, datAssetManager::sm_IgnorePrefix);
-defnvar(0x6A3C0C, assetDebug);
+defn_static(0x6A3B8C, datAssetManager::sm_Path);
+defn_static(0x5CE760, datAssetManager::sm_IgnorePrefix);
 
 void datAssetManager::SetPath(const char* path)
 {

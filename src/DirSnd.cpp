@@ -1,8 +1,6 @@
 #include "stdafx.h"
 #include "DirSnd.h"
 
-defnvar(0x6B4C2C, DSGlobalPtr);
-
 DirSnd::DirSnd()
 {
     if (DSGlobalPtr)

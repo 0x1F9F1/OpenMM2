@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "eqEventHandler.h"
 
-defnvar(0x661788, eqEventHandler::SuperQ);
+defn_static(0x661788, eqEventHandler::SuperQ);
 
 eqEventHandler::eqEventHandler()
 {

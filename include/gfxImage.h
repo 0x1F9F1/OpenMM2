@@ -35,7 +35,7 @@ public:
     static gfxImage* GetFont(int & outWidth, int & outHeight);
     static void FreeFont(void);
 
-    declstatic(gfxImage*, sm_Font);
+    decl_static(gfxImage*, sm_Font);
 };
 
 check_size(gfxImage, 0x1C);
@@ -43,5 +43,5 @@ check_size(gfxImage, 0x1C);
 void InstallJPEGSupport(void);
 void InstallTextureVariantHandler(void);
 
-declvar(gfxImage*(*)(const char * fileName, bool createMipMaps), gfxLoadImage);
-declvar(bool, EnableTextureVariantHandler);
+static_var(0x5CD38C, gfxImage*(*)(const char * fileName, bool createMipMaps), gfxLoadImage);
+static_var(0x6276EC, bool, EnableTextureVariantHandler);

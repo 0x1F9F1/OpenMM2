@@ -3,9 +3,6 @@
 
 #include "DirSnd.h"
 
-defnvar(0x6B1474, AUDMGRPTR);
-defnvar(0x6B15D0, MMAUDMGRPTR);
-
 AudManagerBase::AudManagerBase()
 {
     AUDMGRPTR = this;

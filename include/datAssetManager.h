@@ -11,8 +11,8 @@ public:
 
     static void FullPath(char * buffer, int bufferLength, const char* path, const char* ext);
 
-    declstatic(char[128], sm_Path);
-    declstatic(bool, sm_IgnorePrefix);
+    decl_static(char[128], sm_Path);
+    decl_static(bool, sm_IgnorePrefix);
 };
 
-declvar(bool, assetDebug);
+static_var(0x6A3C0C, bool, assetDebug);

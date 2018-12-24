@@ -40,4 +40,4 @@ public:
 
 check_size(DirSnd, 0x3C);
 
-declvar(DirSnd*, DSGlobalPtr);
+static_var(0x6B4C2C, DirSnd*, DSGlobalPtr);

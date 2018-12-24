@@ -11,11 +11,11 @@ public:
     static void RegisterSemiNames(Stream* stream, char* names);
     static void RegisterPoliceNames(Stream* stream, char* names);
 
-    declstatic(bool, s_bAlwaysNitro);
+    decl_static(bool, s_bAlwaysNitro);
 
-    declstatic(int, s_iNumPoliceNames);
-    declstatic(int, s_iNumSemiNames);
+    decl_static(int, s_iNumPoliceNames);
+    decl_static(int, s_iNumSemiNames);
 
-    declstatic(char**, s_ppPoliceName);
-    declstatic(char**, s_ppSemiName);
+    decl_static(char**, s_ppPoliceName);
+    decl_static(char**, s_ppSemiName);
 };
