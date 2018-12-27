@@ -12,9 +12,9 @@ int HashTable::Hash(const char *string)
 
     uint32_t hash = 0;
 
-    for (char currentChar; (currentChar = *string) != '\0'; ++string)
+    while (*string)
     {
-        hash = (hash << 4) + currentChar;
+        hash = (hash << 4) + *string++;
 
         if (hash & 0xF0000000)
         {
@@ -27,7 +27,9 @@ int HashTable::Hash(const char *string)
 
 void * HashTable::Access(const char *name)
 {
-    for (HashEntry* i = EntryList[Hash(name)]; i; i = i->Next)
+    int hash = Hash(name);
+
+    for (HashEntry* i = EntryList[hash]; i; i = i->Next)
     {
         if (!strcmp(i->Name, name))
         {
