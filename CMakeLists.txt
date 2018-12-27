@@ -1,12 +1,10 @@
 set(CMAKE_VS_INCLUDE_INSTALL_TO_DEFAULT_BUILD 1)
 
-if (MSVC)
-    add_compile_options(/MP /arch:SSE2)
-endif()
-
 cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
 
 project(OpenMM2 CXX)
+
+add_compile_options(/MP /arch:SSE2)
 
 add_subdirectory(vendor)
 
