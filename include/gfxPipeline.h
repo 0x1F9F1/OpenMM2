@@ -36,18 +36,18 @@ public:
 
     static LRESULT CALLBACK gfxWindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
-    decl_static(float, m_fWidth);
-    decl_static(float, m_fHeight);
-    decl_static(int, m_iWidth);
-    decl_static(int, m_iHeight);
-    decl_static(int, m_ZDepth);
-    decl_static(int, m_ColorDepth);
-    decl_static(int, m_X);
-    decl_static(int, m_Y);
+    inline_var(0x6830F4, float, m_fWidth);
+    inline_var(0x683120, float, m_fHeight);
+    inline_var(0x683128, int, m_iWidth);
+    inline_var(0x683100, int, m_iHeight);
+    inline_var(0x6830E4, int, m_ZDepth);
+    inline_var(0x6830F8, int, m_ColorDepth);
+    inline_var(0x6830EC, int, m_X);
+    inline_var(0x683110, int, m_Y);
 
     // 0x1 | Closing
     // 0x2 | Focused
-    decl_static(uint32_t, m_EvtFlags);
+    inline_var(0x683114, uint32_t, m_EvtFlags);
 };
 
 bool gfxAutoDetect(bool* success);

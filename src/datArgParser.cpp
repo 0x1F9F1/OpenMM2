@@ -1,10 +1,6 @@
 #include "stdafx.h"
 #include "datArgParser.h"
 
-defn_static(0x6A3C10, datArgParser::ArgHash);
-defn_static(0x6A3C30, datArgParser::Argc);
-defn_static(0x6A3C28, datArgParser::Argv);
-
 struct ArgEntry
 {
     uint32_t WordCount {0};

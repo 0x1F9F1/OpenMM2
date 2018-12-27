@@ -3,9 +3,6 @@
 
 #include "Stream.h"
 
-defn_static(0x6A3B8C, datAssetManager::sm_Path);
-defn_static(0x5CE760, datAssetManager::sm_IgnorePrefix);
-
 void datAssetManager::SetPath(const char* path)
 {
     strcpy_s(sm_Path, path);

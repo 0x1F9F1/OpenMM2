@@ -6,8 +6,6 @@
 #include "gfxPipeline.h"
 #include "d3dpipe.h"
 
-defn_static(0x684D40, gfxBitmap::sm_First);
-
 gfxBitmap::gfxBitmap(uint16_t width, uint16_t height)
     : Width(width)
     , Height(height)

@@ -90,11 +90,11 @@ public:
 
     static void DumpOpenFiles(void);
 
-    decl_static(Stream[MAX_STREAMS], sm_Streams);
-    decl_static(uint8_t[MAX_STREAMS][STREAM_BUFFER_SIZE], sm_Buffers);
+    inline_var(0x6A3D68, Stream[MAX_STREAMS], sm_Streams);
+    inline_var(0x6A3EB8, uint8_t[MAX_STREAMS][STREAM_BUFFER_SIZE], sm_Buffers);
 
-    decl_static(coreFileMethods const *, sm_DefaultCreateMethods);
-    decl_static(coreFileMethods const *, sm_DefaultOpenMethods);
+    inline_var(0x5CED7C, coreFileMethods const *, sm_DefaultCreateMethods);
+    inline_var(0x5CED78, coreFileMethods const *, sm_DefaultOpenMethods);
 };
 
 int fseek(Stream *stream, int position, seekWhence whence);

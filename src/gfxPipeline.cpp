@@ -566,19 +566,6 @@ void ProgressCB(const char *message, signed int progress)
     }
 }
 
-defn_static(0x6830F4, gfxPipeline::m_fWidth);
-defn_static(0x683120, gfxPipeline::m_fHeight);
-defn_static(0x683128, gfxPipeline::m_iWidth);
-defn_static(0x683100, gfxPipeline::m_iHeight);
-defn_static(0x6830E4, gfxPipeline::m_ZDepth);
-defn_static(0x6830F8, gfxPipeline::m_ColorDepth);
-defn_static(0x6830EC, gfxPipeline::m_X);
-defn_static(0x683110, gfxPipeline::m_Y);
-
-// 0x1 | Closing
-// 0x2 | Lost Focus
-defn_static(0x683114, gfxPipeline::m_EvtFlags);
-
 bool gfxAutoDetect(bool* success)
 {
     return stub<cdecl_t<bool, bool*>>(0x4ABE00, success);

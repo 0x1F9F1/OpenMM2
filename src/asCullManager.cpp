@@ -4,8 +4,6 @@
 #include "gfxPipeline.h"
 #include "asCamera.h"
 
-defn_static(0x661784, asCullManager::Instance);
-
 asCullManager::asCullManager(int maxCullables, int maxCullables2D)
     : MaxCullables(maxCullables)
     , MaxCullables2D(maxCullables2D)

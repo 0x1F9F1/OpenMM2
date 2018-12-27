@@ -1,8 +1,6 @@
 #include "stdafx.h"
 #include "mmStatePack.h"
 
-defn_static(0x6276F8, dgStatePack::Instance);
-
 const char* dgGameModeNames[7] =
 {
     "roam", "race%d", "multicop", "circuit%d", "blitz%d", "croam", "crash%d"

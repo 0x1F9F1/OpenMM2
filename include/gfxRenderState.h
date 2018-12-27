@@ -91,15 +91,15 @@ public:
 
     void SetTexture(int index, gfxTexture* texture);
 
-    decl_static(int, m_Touched);
-    decl_static(int, m_TouchedMask);
+    inline_var(0x685778, int, m_Touched);
+    inline_var(0x685780, int, m_TouchedMask);
 
-    decl_static(Matrix44, sm_Camera);
-    decl_static(Matrix44, sm_View);
-    decl_static(Matrix44, sm_World);
-    decl_static(Matrix44, sm_FullComposite);
+    inline_var(0x685460, Matrix44, sm_Camera);
+    inline_var(0x685660, Matrix44, sm_View);
+    inline_var(0x685538, Matrix44, sm_World);
+    inline_var(0x685620, Matrix44, sm_FullComposite);
 
-    decl_static(int, sm_MaxTextures);
+    inline_var(0x685788, int, sm_MaxTextures);
 };
 
 static_var(0x6856A0, gfxRenderState, RSTATE);

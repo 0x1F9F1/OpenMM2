@@ -13,14 +13,6 @@
 
 #define _CRT_SECURE_NO_WARNINGS
 
-defn_static(0x6AFFA1, vehCarAudioContainer::s_bAlwaysNitro);
-
-defn_static(0x6AFF34, vehCarAudioContainer::s_iNumPoliceNames);
-defn_static(0x6AFF38, vehCarAudioContainer::s_iNumSemiNames);
-
-defn_static(0x6AFFA8, vehCarAudioContainer::s_ppPoliceName);
-defn_static(0x6AFFA4, vehCarAudioContainer::s_ppSemiName);
-
 std::unordered_set<std::string> PoliceNames;
 std::unordered_set<std::string> SemiNames;
 

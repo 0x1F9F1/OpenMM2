@@ -2,8 +2,6 @@
 #include "ioInput.h"
 #include "ioJoystick.h"
 
-defn_static(0x5CDDE4, ioInput::bUseJoystick);
-
 void ioInput::Update()
 {
     return stub<cdecl_t<void>>(0x4BA910);

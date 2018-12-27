@@ -1,8 +1,6 @@
 #include "stdafx.h"
 #include "gfxImage.h"
 
-defn_static(0x684D48, gfxImage::sm_Font);
-
 void InstallJPEGSupport(void)
 {
     return stub<cdecl_t<void>>(0x497B70);

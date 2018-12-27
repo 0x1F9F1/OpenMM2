@@ -36,8 +36,8 @@ public:
 
     static void DisplayUsed(char const* status);
 
-    decl_static(memMemoryAllocator*, First);
-    decl_static(memMemoryAllocator*, Current);
+    inline_var(0x6B46AC, memMemoryAllocator*, First);
+    inline_var(0x6B46A8, memMemoryAllocator*, Current);
 };
 
 static_var(0x5CE81C, void(*)(char const *), datDisplayUsed);

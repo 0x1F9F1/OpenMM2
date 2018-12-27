@@ -1,8 +1,6 @@
 #include "stdafx.h"
 #include "HashTable.h"
 
-defn_static(0x6A3C60, HashTable::First);
-
 int HashTable::Hash(const char *string)
 {
     if (!EntryList)

@@ -7,16 +7,6 @@
 #include "gfxPipeline.h"
 #include "gfxTexture.h"
 
-defn_static(0x685778, gfxRenderState::m_Touched);
-defn_static(0x685780, gfxRenderState::m_TouchedMask);
-
-defn_static(0x685460, gfxRenderState::sm_Camera);
-defn_static(0x685660, gfxRenderState::sm_View);
-defn_static(0x685538, gfxRenderState::sm_World);
-defn_static(0x685620, gfxRenderState::sm_FullComposite);
-
-defn_static(0x685788, gfxRenderState::sm_MaxTextures);
-
 void gfxRenderState::SetCamera(const Matrix34& camera)
 {
     sm_Camera = camera;

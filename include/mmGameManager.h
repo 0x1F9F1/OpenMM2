@@ -14,7 +14,7 @@ public:
     void ForceReplayUI(void);
     void ForcePopupUI(void);
 
-    decl_static(mmGameManager*, mmGameManager::Instance);
+    inline_var(0x5E0D08, mmGameManager*, Instance);
 };
 
 check_size(mmGameManager, 0x1B8);

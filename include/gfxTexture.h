@@ -46,13 +46,13 @@ public:
     static void EnableCache(bool enabled);
     static void ShutdownCache(void);
 
-    decl_static(bool, sm_EnableSetLOD);
-    decl_static(bool, sm_Allow32);
-    decl_static(gfxTexture*, sm_First);
-    decl_static(bool, sm_UseInternalCache);
-    decl_static(gfxTextureCachePool*, sm_FirstPool);
-    decl_static(uint8_t, sm_LOD);
-    decl_static(gfxTexture*, sm_FirstActive);
+    inline_var(0x684D34, bool, sm_EnableSetLOD);
+    inline_var(0x684D36, bool, sm_Allow32);
+    inline_var(0x684D38, gfxTexture*, sm_First);
+    inline_var(0x684524, bool, sm_UseInternalCache);
+    inline_var(0x68452C, gfxTextureCachePool*, sm_FirstPool);
+    inline_var(0x684D35, uint8_t, sm_LOD);
+    inline_var(0x684D3C, gfxTexture*, sm_FirstActive);
 };
 
 class gfxTextureCacheEntry
@@ -63,7 +63,7 @@ public:
     uint32_t LastAccessTime {0};
     gfxTextureCacheEntry *PrevEntry {nullptr};
 
-    decl_static(uint32_t, sm_CurrentTime);
+    inline_var(0x684528, uint32_t, sm_CurrentTime);
 
     gfxTextureCacheEntry(IDirectDrawSurface7* surface, gfxTextureCacheEntry* prevEntry);
     ~gfxTextureCacheEntry();

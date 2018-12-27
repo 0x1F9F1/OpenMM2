@@ -24,7 +24,7 @@ public:
 
     void Update(void);
 
-    decl_static(eqEventHandler*, SuperQ);
+    inline_var(0x661788, eqEventHandler*, SuperQ);
 };
 
 class eqEventMonitor

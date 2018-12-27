@@ -1,12 +1,6 @@
 #include "stdafx.h"
 #include "Stream.h"
 
-defn_static(0x6A3D68, Stream::sm_Streams);
-defn_static(0x6A3EB8, Stream::sm_Buffers);
-
-defn_static(0x5CED7C, Stream::sm_DefaultCreateMethods);
-defn_static(0x5CED78, Stream::sm_DefaultOpenMethods);
-
 static_var(0x5CED80, int, MaxFilesOpenAtOnce);
 
 int Stream::Read(void* buffer, int size)

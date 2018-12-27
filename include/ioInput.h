@@ -3,7 +3,7 @@
 class ioInput
 {
 public:
-    decl_static(bool, bUseJoystick);
+    inline_var(0x5CDDE4, bool, bUseJoystick);
 
     static void Update();
     static void Poll(void);

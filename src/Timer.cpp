@@ -75,8 +75,3 @@ uint32_t Timer::Ticks(void)
     QueryPerformanceCounter(&counter);
     return counter.LowPart;
 }
-
-defn_static(0x6A3CF0, Timer::CpuSpeed);
-defn_static(0x6A3CFC, Timer::QuickTicksToMilliseconds);
-defn_static(0x6A3D00, Timer::TicksToSeconds);
-defn_static(0x6A3D04, Timer::TicksToMilliseconds);

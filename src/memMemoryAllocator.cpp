@@ -1,9 +1,6 @@
 #include "stdafx.h"
 #include "memMemoryAllocator.h"
 
-defn_static(0x6B46AC, memMemoryAllocator::First);
-defn_static(0x6B46A8, memMemoryAllocator::Current);
-
 memMemoryAllocator::memMemoryAllocator()
 {
     Prev = First;

@@ -26,7 +26,7 @@ public:
     static gfxBitmap* Create(gfxImage* image, bool unused);
     static gfxBitmap* Create(int width, int height, bool unused);
 
-    decl_static(gfxBitmap*, sm_First);
+    inline_var(0x684D40, gfxBitmap*, sm_First);
 };
 
 check_size(gfxBitmap, 0x14);

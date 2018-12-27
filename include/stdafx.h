@@ -22,35 +22,12 @@
 
 #define unimplemented Quitf("Error calling unimplemented function %s in %s (%i)", __FUNCTION__, __FILE__, __LINE__)
 
-namespace mem
-{
-    namespace conventions
-    {
-        template <typename Result, typename... Args>
-        using func_t = Result(*)(Args...);
-
-        template <typename Result, typename Class, typename... Args>
-        using thiscall_t = Result(Class::*)(Args...);
-
-#if defined(_WIN32)
-        template <typename Result, typename... Args>
-        using cdecl_t = Result(__cdecl*)(Args...);
-
-        template <typename Result, typename... Args>
-        using stdcall_t = Result(__stdcall*)(Args...);
-
-        template <typename Result, typename... Args>
-        using fastcall_t = Result(__fastcall*)(Args...);
-#endif // MEM_WINDOWS
-    }
-}
-
 using namespace mem::conventions;
 
 template <typename Func, typename... Args>
 constexpr decltype(auto) stub(mem::pointer address, Args&&... args)
 {
-    return std::invoke(address.as<Func>(), std::forward<Args>(args)... );
+    return std::invoke(address.as<Func>(), std::forward<Args>(args)...);
 }
 
 #include "Hooking.h"

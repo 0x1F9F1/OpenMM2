@@ -6,10 +6,6 @@
 static_var(0x6A3D44, void(*)(void), beforeMsgBoxCB);
 static_var(0x6A3D48, void(*)(void), afterMsgBoxCB);
 
-defn_static(0x6A3D4C, datOutput::OutputSent);
-defn_static(0x6A3D4D, datOutput::OnExitAdded);
-defn_static(0x6A3D40, datOutput::DebugLogFile);
-
 HANDLE datOutput::DebugLogConsole = INVALID_HANDLE_VALUE;
 
 void datOutput::CallBeforeMsgBoxFunction(void)

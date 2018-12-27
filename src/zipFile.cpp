@@ -5,8 +5,6 @@
 #include "datAssetManager.h"
 #include "Timer.h"
 
-defn_static(0x6B4698, zipFile::sm_First);
-defn_static(0x6B4208, zipFile::sm_LogOpen);
 static_var(0x6B4218, zipHandle[16], ZipHandles);
 static_var(0x6B4204, const coreFileMethods *, zipFileOpenMethods);
 static_var(0x5DA768, const coreFileMethods, zipFileMethods);

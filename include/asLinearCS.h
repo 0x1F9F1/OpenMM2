@@ -5,5 +5,5 @@
 class asLinearCS
 {
 public:
-    decl_static(Matrix34*, CurrentMatrix);
+    inline_var(0x6618AC, Matrix34*, CurrentMatrix);
 };
