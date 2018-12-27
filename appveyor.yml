@@ -1,0 +1,22 @@
+version: 1.0.{build}
+
+build:
+  verbosity: minimal
+
+environment:
+  matrix:
+  - CMAKE_GENERATOR: Visual Studio 15 2017
+    BUILD_TYPE: RelWithDebInfo
+    APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+
+build_script:
+  - cmd: mkdir build
+  - cmd: cd build
+  - cmd: cmake .. -DMM2_GAME_DIRECTORY="%cd%/output" -G "%CMAKE_GENERATOR%" -DCMAKE_BUILD_TYPE="%BUILD_TYPE%"
+  - cmd: cmake --build . --config "%BUILD_TYPE%" --target "install"
+  - cmd: ctest
+
+artifacts:
+  - path: build/output
+    name: OpenMM2
+    type: zip
