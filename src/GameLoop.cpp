@@ -72,17 +72,16 @@ void BeginPhase(bool splashScreen)
 
     datDisplayUsed("Just before CreateBankManager");
 
-    int width = 640;
+    gfxResData* res = gfxInterface::Current()->CurrentResolution();
+
+    int width  = 640;
     int height = 480;
-    int depth = 16;
+    int depth  = res->ColorDepth;
 
     if (!splashScreen)
     {
-        auto currentRes = gfxInterface::Current()->CurrentResolution();
-
-        width = currentRes->ScreenWidth;
-        height = currentRes->ScreenHeight;
-        depth = currentRes->ColorDepth;
+        width  = res->ScreenWidth;
+        height = res->ScreenHeight;
     }
 
     gfxPipeline::SetRes(width, height, depth, depth, 0);

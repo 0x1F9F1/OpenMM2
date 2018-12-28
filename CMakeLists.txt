@@ -3,7 +3,13 @@ cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
 set(CMAKE_VS_INCLUDE_INSTALL_TO_DEFAULT_BUILD 1)
 set(CMAKE_GENERATOR_PLATFORM Win32)
 
+set(CMAKE_DISABLE_SOURCE_CHANGES ON)
+set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
+
 project(OpenMM2 CXX)
+
+option(MM2_GAME_DIRECTORY "MM2 Game Directory")
+option(MM2_COMMAND_LINE "MM2 Command Line")
 
 add_compile_options(/MP /arch:SSE2)
 
@@ -69,6 +75,8 @@ add_library(${PROJECT_NAME} SHARED
     src/vgl.cpp include/vgl.h
     src/zipFile.cpp include/zipFile.h)
 
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${PROJECT_NAME})
+
 target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE
     include
     vendor)
@@ -78,24 +86,36 @@ find_library(DPLAY_LIBRARY dplayx
 
 target_link_libraries(${PROJECT_NAME} ${DPLAY_LIBRARY} dxguid mem)
 
-option(MM2_GAME_DIRECTORY "Midtown Madness 2 Game Directory")
-
-if(NOT MM2_GAME_DIRECTORY)
-    file(STRINGS "GameDirectory.txt" MM2_GAME_DIRECTORY)
-endif()
-
-message("Midtown Madness 2: " ${MM2_GAME_DIRECTORY})
-
 set_target_properties(${PROJECT_NAME} PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
     ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin
     LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin
-    VS_DEBUGGER_COMMAND "${MM2_GAME_DIRECTORY}/Midtown2.exe"
-    VS_DEBUGGER_WORKING_DIRECTORY "${MM2_GAME_DIRECTORY}"
     OUTPUT_NAME "dinput"
 )
 
-install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${MM2_GAME_DIRECTORY})
-install(FILES $<TARGET_PDB_FILE:${PROJECT_NAME}> "extra/midtown2.map" DESTINATION ${MM2_GAME_DIRECTORY} OPTIONAL)
+if((NOT MM2_GAME_DIRECTORY) AND (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/GameDirectory.txt"))
+    file(STRINGS "${CMAKE_CURRENT_SOURCE_DIR}/GameDirectory.txt" MM2_GAME_DIRECTORY)
+endif()
+
+if(MM2_GAME_DIRECTORY)
+    set_target_properties(${PROJECT_NAME} PROPERTIES
+        VS_DEBUGGER_COMMAND "${MM2_GAME_DIRECTORY}/Midtown2.exe"
+        VS_DEBUGGER_WORKING_DIRECTORY "${MM2_GAME_DIRECTORY}"
+    )
+
+    if((NOT MM2_COMMAND_LINE) AND (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/CommandLine.txt"))
+        file(STRINGS "${CMAKE_CURRENT_SOURCE_DIR}/CommandLine.txt" MM2_COMMAND_LINE)
+    endif()
+
+    if (MM2_COMMAND_LINE)
+        set_target_properties(${PROJECT_NAME} PROPERTIES
+            VS_DEBUGGER_COMMAND_ARGUMENTS "${MM2_COMMAND_LINE}"
+        )
+    endif()
+
+    install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${MM2_GAME_DIRECTORY})
+    install(FILES "extra/midtown2.map" DESTINATION ${MM2_GAME_DIRECTORY})
+    install(FILES $<TARGET_PDB_FILE:${PROJECT_NAME}> DESTINATION ${MM2_GAME_DIRECTORY} OPTIONAL)
+endif()

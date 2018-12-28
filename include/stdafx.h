@@ -25,7 +25,7 @@
 using namespace mem::conventions;
 
 template <typename Func, typename... Args>
-constexpr decltype(auto) stub(mem::pointer address, Args&&... args)
+static constexpr inline decltype(auto) stub(mem::pointer address, Args&&... args)
 {
     return std::invoke(address.as<Func>(), std::forward<Args>(args)...);
 }

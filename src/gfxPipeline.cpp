@@ -552,14 +552,19 @@ void ProgressCB(const char *message, signed int progress)
         {
             ProgressRect(
                 static_cast<int>(gfxPipeline::m_iWidth * 0.55),
-                static_cast<int>(gfxPipeline::m_iHeight * 0.896),
+                static_cast<int>(gfxPipeline::m_iHeight * 0.895),
                 static_cast<int>(gfxPipeline::m_iWidth * 0.42343751 * progress * 0.01),
                 static_cast<int>(gfxPipeline::m_iHeight * 0.02),
                 ProgressBarColor);
         }
         else
         {
-            ProgressRect(349, 448, 640 * progress / 284, 10, ProgressBarColor);
+            ProgressRect(
+                static_cast<int>(gfxPipeline::m_iWidth * 0.5453125),
+                static_cast<int>(gfxPipeline::m_iHeight * 0.935),
+                static_cast<int>(gfxPipeline::m_iWidth * 0.44374 * progress * 0.01),
+                static_cast<int>(gfxPipeline::m_iHeight * 0.02),
+                ProgressBarColor);
         }
 
         gfxPipeline::EndFrame();
