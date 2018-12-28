@@ -42,6 +42,15 @@ Stream* datAssetManager::Open(const char* path, const char* ext, bool a2, bool r
     return Stream::Open(fullPath, readOnly);
 }
 
+Stream * datAssetManager::Open(const char * prefix, const char * path, const char * ext, bool a4, bool readOnly)
+{
+    char buffer[128];
+
+    datAssetManager::FullPath(buffer, 128, prefix, path, ext);
+    ageDebug(assetDebug, "Opening '%s'...", buffer);
+    return Stream::Open(buffer, readOnly);
+}
+
 void datAssetManager::FullPath(char* buffer, int bufferLength, const char* path, const char* ext)
 {
     if (strchr(path, '/') || strchr(path, '\\') || path[1] == ':')
@@ -64,4 +73,43 @@ void datAssetManager::FullPath(char* buffer, int bufferLength, const char* path,
     }
 
     ageDebug(assetDebug, "FullPath(%s,%s) = %s", path, ext, buffer);
+}
+
+void datAssetManager::FullPath(char * buffer, int bufferLength, const char * prefix, const char * path, const char * ext)
+{
+    const char *v8; // eax
+
+    if ( strchr(path, '/') || strchr(path, '\\') || path[1] == ':' )
+    {
+        *buffer = 0;
+    }
+    else
+    {
+        strcpy_s(buffer, bufferLength, datAssetManager::sm_Path);
+        if ( prefix )
+        {
+            if ( *prefix )
+            {
+                if ( !datAssetManager::sm_IgnorePrefix )
+                {
+                    strcat_s(buffer, bufferLength, prefix);
+                    strcat_s(buffer, bufferLength, "\\");
+                }
+            }
+        }
+    }
+    strcat_s(buffer, bufferLength, path);
+    if ( ext )
+    {
+        if ( *ext )
+        {
+            if ( !strrchr(path, '.') || (v8 = strrchr(path, '.'), _strcmpi(v8 + 1, ext)) )
+            {
+                strcat_s(buffer, bufferLength, ".");
+                strcat_s(buffer, bufferLength, ext);
+            }
+        }
+    }
+
+    ageDebug(assetDebug, "FullPath(%s,%s,%s) = %s", prefix, path, ext, buffer);
 }
