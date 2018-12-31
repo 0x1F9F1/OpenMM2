@@ -6,7 +6,7 @@
 
 int mmDirSnd::InitPrimarySoundBuffer(uint32_t sampleRate, bool enableStero, const char * deviceName)
 {
-    return stub<thiscall_t<int, mmDirSnd, uint32_t, bool, const char*>>(0x51CD90, this, sampleRate, enableStero, deviceName);
+    return stub<member_func_t<int, mmDirSnd, uint32_t, bool, const char*>>(0x51CD90, this, sampleRate, enableStero, deviceName);
 }
 
 mmDirSnd* mmDirSnd::Init(int sampleRate, bool enableStero, int a4, float volume, const char* deviceName, bool enable3D)

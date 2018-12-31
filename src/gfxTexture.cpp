@@ -65,7 +65,7 @@ gfxTexture::~gfxTexture()
 
 void gfxTexture::Load(gfxImage * image)
 {
-    return stub<thiscall_t<void, gfxTexture, gfxImage*>>(0x4AD100, this, image);
+    return stub<member_func_t<void, gfxTexture, gfxImage*>>(0x4AD100, this, image);
 }
 
 void gfxTexture::SetTexEnv(int texEnv)

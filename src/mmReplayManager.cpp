@@ -7,7 +7,7 @@ static_var(0x5E0D48, mmReplayData[18000], replayData);
 
 mmReplayManager::mmReplayManager()
 {
-    stub<thiscall_t<void, mmReplayManager>>(0x406870, this);
+    stub<member_func_t<void, mmReplayManager>>(0x406870, this);
 }
 
 mmReplayManager::~mmReplayManager()
@@ -59,15 +59,15 @@ void mmReplayManager::LoadReplay(char * path)
 
 void mmReplayManager::ReadReplayInfo(Stream* stream)
 {
-    return stub<thiscall_t<void, mmReplayManager, Stream*>>(0x407920, this, stream);
+    return stub<member_func_t<void, mmReplayManager, Stream*>>(0x407920, this, stream);
 }
 
 void mmReplayManager::SetReplayInfo()
 {
-    return stub<thiscall_t<void, mmReplayManager>>(0x4075A0, this);
+    return stub<member_func_t<void, mmReplayManager>>(0x4075A0, this);
 }
 
 void mmReplayManager::StartReplay()
 {
-    return stub<thiscall_t<void, mmReplayManager>>(0x406E80, this);
+    return stub<member_func_t<void, mmReplayManager>>(0x406E80, this);
 }

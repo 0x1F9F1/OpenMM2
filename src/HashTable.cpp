@@ -42,7 +42,7 @@ void * HashTable::Access(const char *name)
 
 bool HashTable::Insert(char const * name, void * value)
 {
-    return stub<thiscall_t<bool, HashTable, const char*, void*>>(0x4C69F0, this, name, value);
+    return stub<member_func_t<bool, HashTable, const char*, void*>>(0x4C69F0, this, name, value);
 }
 
 void HashTable::MakePermanent()
@@ -62,5 +62,5 @@ void HashTable::MakePermanent()
 
 void HashTable::Kill()
 {
-    return stub<thiscall_t<void, HashTable>>(0x4C67B0, this);
+    return stub<member_func_t<void, HashTable>>(0x4C67B0, this);
 }

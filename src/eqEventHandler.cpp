@@ -33,7 +33,7 @@ void eqEventHandler::RemoveClient(eqEventMonitor * client)
 
 void eqEventHandler::Update()
 {
-    return stub<thiscall_t<void, eqEventHandler>>(0x4A1790, this);
+    return stub<member_func_t<void, eqEventHandler>>(0x4A1790, this);
 }
 
 eqEventMonitor::~eqEventMonitor()

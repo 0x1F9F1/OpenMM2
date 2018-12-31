@@ -24,17 +24,17 @@ AudManagerBase::~AudManagerBase()
 
 void AudManagerBase::ShutDownAudio(void)
 {
-    return stub<thiscall_t<void, AudManagerBase>>(0x50F000, this);
+    return stub<member_func_t<void, AudManagerBase>>(0x50F000, this);
 }
 
 void AudManagerBase::Update(void)
 {
-    return stub<thiscall_t<void, AudManagerBase>>(0x50F130, this);
+    return stub<member_func_t<void, AudManagerBase>>(0x50F130, this);
 }
 
 void AudManagerBase::UpdatePaused(void)
 {
-    return stub<thiscall_t<void, AudManagerBase>>(0x50F1A0, this);
+    return stub<member_func_t<void, AudManagerBase>>(0x50F1A0, this);
 }
 
 AudManager::AudManager()
@@ -64,12 +64,12 @@ AudManager::~AudManager()
 
 bool AudManager::EnableCD(void)
 {
-    return stub<thiscall_t<bool, AudManager>>(0x5198C0, this);
+    return stub<member_func_t<bool, AudManager>>(0x5198C0, this);
 }
 
 int AudManager::PlayCDTrack(int a1, int a2)
 {
-    return stub<thiscall_t<int, AudManager, int, int>>(0x519960, this, a1, a2);
+    return stub<member_func_t<int, AudManager, int, int>>(0x519960, this, a1, a2);
 }
 
 void InitAudioManager(bool enableSound)

@@ -15,7 +15,7 @@ asNetwork::~asNetwork()
 
 void asNetwork::Logout(void)
 {
-    return stub<thiscall_t<void, asNetwork>>(0x5701C0, this);
+    return stub<member_func_t<void, asNetwork>>(0x5701C0, this);
 }
 
 netZoneScore::~netZoneScore()

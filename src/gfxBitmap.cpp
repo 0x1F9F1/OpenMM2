@@ -46,7 +46,7 @@ gfxBitmap::~gfxBitmap()
 
 bool gfxBitmap::Load(gfxImage * image)
 {
-    return stub<thiscall_t<bool, gfxBitmap, gfxImage*>>(0x4AE5C0, this, image);
+    return stub<member_func_t<bool, gfxBitmap, gfxImage*>>(0x4AE5C0, this, image);
 }
 
 void gfxBitmap::SetName(const char * name)

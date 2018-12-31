@@ -5,7 +5,7 @@
 
 void asCamera::Update()
 {
-    return stub<thiscall_t<void, asCamera>>(0x4A24A0, this);
+    return stub<member_func_t<void, asCamera>>(0x4A24A0, this);
 }
 
 void asCamera::DrawBegin()

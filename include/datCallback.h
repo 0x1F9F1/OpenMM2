@@ -34,7 +34,7 @@ protected:
 
     template <typename ...Args>
     void virtual_callback(uint32_t callback, Args ...args) const {
-        return stub<thiscall_t<void, Base, Args...>>(callback, _class, args...);
+        return stub<member_func_t<void, Base, Args...>>(callback, _class, args...);
     }
 
     template <typename ...Args>

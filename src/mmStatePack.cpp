@@ -17,7 +17,7 @@ mmStatePack::~mmStatePack()
 
 void mmStatePack::SetDefaults(const char* level, const char* car)
 {
-    stub<thiscall_t<void, mmStatePack, const char*, const char*>>(0x523310, this, level, car);
+    stub<member_func_t<void, mmStatePack, const char*, const char*>>(0x523310, this, level, car);
 
     strcpy_s(AudioDeviceName, "Primary Sound Driver");
 }

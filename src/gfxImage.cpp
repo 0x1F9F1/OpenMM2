@@ -39,7 +39,7 @@ void gfxImage::Release()
 
 void gfxImage::Scale(int width, int height)
 {
-    return stub<thiscall_t<void, gfxImage, int, int>>(0x4AEDC0, this, width, height);
+    return stub<member_func_t<void, gfxImage, int, int>>(0x4AEDC0, this, width, height);
 }
 
 gfxImage * gfxImage::Create(int width, int height, int type, int paletteType, int a5)

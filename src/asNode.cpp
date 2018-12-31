@@ -76,12 +76,12 @@ void asNode::BeforeSave(void)
 
 bool asNode::Save(void)
 {
-    return stub<thiscall_t<bool, asNode>>(0x4A11D0, this);
+    return stub<member_func_t<bool, asNode>>(0x4A11D0, this);
 }
 
 bool asNode::Load(void)
 {
-    return stub<thiscall_t<bool, asNode>>(0x4A1120, this);
+    return stub<member_func_t<bool, asNode>>(0x4A1120, this);
 }
 
 char* asNode::GetClassName(void)
