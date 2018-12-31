@@ -13,7 +13,8 @@ option(MM2_COMMAND_LINE "MM2 Command Line")
 
 add_compile_options(/MP /arch:SSE2)
 
-add_subdirectory(vendor)
+add_subdirectory(vendor EXCLUDE_FROM_ALL)
+include_directories(${zlib_BINARY_DIR})
 
 add_library(${PROJECT_NAME} SHARED
     src/asCamera.cpp include/asCamera.h
@@ -84,7 +85,7 @@ target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE
 find_library(DPLAY_LIBRARY dplayx
     HINTS vendor/dplayx/lib)
 
-target_link_libraries(${PROJECT_NAME} ${DPLAY_LIBRARY} dxguid mem)
+target_link_libraries(${PROJECT_NAME} ${DPLAY_LIBRARY} dxguid mem zlibstatic)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
     CXX_STANDARD 17

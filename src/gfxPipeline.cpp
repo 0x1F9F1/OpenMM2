@@ -300,7 +300,9 @@ bool gfxPipeline::BeginGfx2D(void)
 
     _control87(0xA001Fu, 0xB001Fu);
 
-    DX_ASSERT(lpDD->SetCooperativeLevel(hwndMain, inWindow ? DDSCL_FPUSETUP | DDSCL_NORMAL : DDSCL_FPUSETUP | DDSCL_EXCLUSIVE | DDSCL_ALLOWREBOOT | DDSCL_FULLSCREEN));
+    DX_ASSERT(lpDD->SetCooperativeLevel(hwndMain, inWindow
+        ? (DDSCL_FPUSETUP | DDSCL_NORMAL)
+        : (DDSCL_FPUSETUP | DDSCL_EXCLUSIVE | DDSCL_ALLOWREBOOT | DDSCL_FULLSCREEN)));
 
     if (!inWindow)
     {

@@ -5,19 +5,20 @@
 #include "datAssetManager.h"
 #include "Timer.h"
 
+#include <zlib/zlib.h>
+
+struct zipHandle
+{
+    zipFile *pZipFile {nullptr};
+    zipEntry *pZipEntry {nullptr};
+    uint32_t CurrentOffset {0};
+    uint32_t CurrentRawDataSize {0};
+    z_stream Inflater {};
+};
+
 static_var(0x6B4218, zipHandle[16], ZipHandles);
 static_var(0x6B4204, const coreFileMethods *, zipFileOpenMethods);
 static_var(0x5DA768, const coreFileMethods, zipFileMethods);
-
-void* zcalloc(void * opaque, uint32_t items, uint32_t size)
-{
-    return stub<cdecl_t<void*, void*, uint32_t, uint32_t>>(0x574580, opaque, items, size);
-}
-
-void zcfree(void * opaque, void * ptr)
-{
-    return stub<cdecl_t<void, void*, void*>>(0x5745A0, opaque, ptr);
-}
 
 void zipAutoInit(void)
 {
@@ -375,7 +376,7 @@ int zipFile::Open(char const * fileName)
                     handle->Inflater.next_in = 0;
                     handle->Inflater.avail_in = 0;
 
-                    if (inflateInit2_(&handle->Inflater, -15, "1.1.3", sizeof(handle->Inflater)) != 0)
+                    if (inflateInit2(&handle->Inflater, -15) != Z_OK)
                     {
                         Errorf("zipFile::Open(%s) - inflateInit failed.", fileName);
                     }
@@ -434,7 +435,10 @@ zipFile::~zipFile()
     zipFile::sm_First = PrevFile;
 }
 
-int inflateInit2_(z_stream * strm, int windowBits, const char * version, int stream_size)
+run_once([ ]
 {
-    return stub<cdecl_t<int, z_stream*, int, const char*, int>>(0x573D00, strm, windowBits, version, stream_size);
-}
+    hook::create_hook("inflateInit2_", "Update ZLIB", 0x573D00, &inflateInit2_, HookType::JMP);
+    hook::create_hook("inflateReset", "Update ZLIB", 0x573C60, &inflateReset, HookType::JMP);
+    hook::create_hook("inflateEnd", "Update ZLIB", 0x573CB0, &inflateEnd, HookType::JMP);
+    hook::create_hook("inflate", "Update ZLIB", 0x573E40, &inflate, HookType::JMP);
+})
