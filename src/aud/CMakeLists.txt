@@ -1,0 +1,50 @@
+cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
+
+add_library(aud STATIC
+    adpcm_decode.cpp
+    adpcm_decode.h
+    cd.cpp
+    cd.h
+    cdobject.cpp
+    cdobject.h
+    control.cpp
+    control.h
+    dirsnd.cpp
+    dirsnd.h
+    echoeffect.cpp
+    echoeffect.h
+    effectbase.cpp
+    effectbase.h
+    filesystem.cpp
+    filesystem.h
+    fx.cpp
+    fx.h
+    head.cpp
+    head.h
+    list.cpp
+    list.h
+    manager.cpp
+    manager.h
+    memmgr.cpp
+    memmgr.h
+    midi.cpp
+    midi.h
+    mixer.cpp
+    mixer.h
+    object.cpp
+    object.h
+    redbook.cpp
+    redbook.h
+    sound.cpp
+    sound.h
+    soundbank.cpp
+    soundbank.h
+    soundbuffer.cpp
+    soundbuffer.h
+    soundheap.cpp
+    soundheap.h
+    stream.cpp
+    stream.h
+)
+
+target_link_libraries(aud hooking)
