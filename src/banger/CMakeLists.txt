@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(banger STATIC
+add_library(banger OBJECT
     active.cpp
     active.h
     banger.cpp

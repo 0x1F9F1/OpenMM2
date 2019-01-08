@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(mmeffects STATIC
+add_library(mmeffects OBJECT
     damage.cpp
     damage.h
     meshform.cpp

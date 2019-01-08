@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(ai STATIC
+add_library(ai OBJECT
     ArrayList.cpp
     ArrayList.h
     aiAmbientActiveData.cpp

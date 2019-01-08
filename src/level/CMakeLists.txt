@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(level STATIC
+add_library(level OBJECT
     fixed.cpp
     fixed.h
     inst.cpp

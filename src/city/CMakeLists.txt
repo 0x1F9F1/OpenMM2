@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(city STATIC
+add_library(city OBJECT
     ai.cpp
     ai.h
     citylevel.cpp

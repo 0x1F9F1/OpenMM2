@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(gizmo STATIC
+add_library(gizmo OBJECT
     bridge.cpp
     bridge.h
     bridgeaudio.cpp

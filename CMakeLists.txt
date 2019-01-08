@@ -27,10 +27,6 @@ add_library(${PROJECT_NAME} SHARED
 
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${PROJECT_NAME})
 
-target_include_directories(${PROJECT_NAME} SYSTEM PRIVATE
-    loader
-    vendor)
-
 target_link_libraries(${PROJECT_NAME} dxguid mem testgame)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES

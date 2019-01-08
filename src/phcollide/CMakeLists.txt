@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(phcollide STATIC
+add_library(phcollide OBJECT
     collider.cpp
     collider.h
     colliderbase.cpp

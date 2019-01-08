@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(mmui STATIC
+add_library(mmui OBJECT
     about.cpp
     about.h
     audio.cpp

@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(effects STATIC
+add_library(effects OBJECT
     birth.cpp
     birth.h
     card2d.cpp

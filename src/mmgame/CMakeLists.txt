@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(mmgame STATIC
+add_library(mmgame OBJECT
     cd.cpp
     cd.h
     dash.cpp

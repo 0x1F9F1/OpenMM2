@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(cranimation STATIC
+add_library(cranimation OBJECT
     animation.cpp
     animation.h
     frame.cpp

@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(core STATIC
+add_library(core OBJECT
     assert.cpp
     assert.h
     file.cpp

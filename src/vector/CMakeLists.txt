@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(vector STATIC
+add_library(vector OBJECT
     geometry.cpp
     geometry.h
     matrix34.cpp

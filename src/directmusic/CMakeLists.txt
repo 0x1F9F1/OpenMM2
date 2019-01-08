@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(directmusic STATIC
+add_library(directmusic OBJECT
     cfilestream.cpp
     cfilestream.h
     cmemstream.cpp

@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(mmwidget STATIC
+add_library(mmwidget OBJECT
     bm_button.cpp
     bm_button.h
     bm_label.cpp

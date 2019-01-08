@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(node STATIC
+add_library(node OBJECT
     camera.cpp
     camera.h
     cullable.cpp

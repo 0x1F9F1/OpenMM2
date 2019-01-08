@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(mmcityinfo STATIC
+add_library(mmcityinfo OBJECT
     cityinfo.cpp
     cityinfo.h
     citylist.cpp

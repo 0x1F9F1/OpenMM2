@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(crskeleton STATIC
+add_library(crskeleton OBJECT
     bone.cpp
     bone.h
     bonedata.cpp

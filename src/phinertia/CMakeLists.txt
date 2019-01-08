@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(phinertia STATIC
+add_library(phinertia OBJECT
     inertia.cpp
     inertia.h
     joint.cpp

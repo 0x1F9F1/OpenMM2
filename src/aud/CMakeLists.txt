@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(aud STATIC
+add_library(aud OBJECT
     adpcm_decode.cpp
     adpcm_decode.h
     cd.cpp

@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(mminput STATIC
+add_library(mminput OBJECT
     collide.cpp
     collide.h
     effect.cpp

@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(gfx STATIC
+add_library(gfx OBJECT
     bank.cpp
     bank.h
     buildpkt.cpp

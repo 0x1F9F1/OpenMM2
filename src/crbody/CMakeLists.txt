@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(crbody STATIC
+add_library(crbody OBJECT
     armdata.cpp
     armdata.h
     bodydata.cpp

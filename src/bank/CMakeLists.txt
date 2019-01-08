@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(bank STATIC
+add_library(bank OBJECT
     bank.cpp
     bank.h
     bklocbank.cpp

@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(ped STATIC
+add_library(ped OBJECT
     ped.cpp
     ped.h
     pedactive.cpp

@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(mmaudio STATIC
+add_library(mmaudio OBJECT
     cd.cpp
     cd.h
     mixer.cpp

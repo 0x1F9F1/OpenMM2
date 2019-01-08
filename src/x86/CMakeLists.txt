@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(x86 STATIC
+add_library(x86 OBJECT
     speed.cpp
     speed.h
 )

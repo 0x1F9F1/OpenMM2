@@ -1,6 +1,4 @@
-cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-
-add_library(vehicle STATIC
+add_library(vehicle OBJECT
     aero.cpp
     aero.h
     aiambientvehicleaudio.cpp
