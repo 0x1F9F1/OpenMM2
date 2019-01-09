@@ -18,8 +18,7 @@
 
 #include "ebola.h"
 
-#define WIN32_MEAN_AND_LEAN
-#include <Windows.h>
+#include "minwin.h"
 
 bool FirstRunEula()
 {

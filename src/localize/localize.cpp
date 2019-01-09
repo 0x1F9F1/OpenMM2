@@ -18,8 +18,7 @@
 
 #include "localize.h"
 
-#define WIN32_LEAN_AND_MEAN
-#include <Windows.h>
+#include "minwin.h"
 
 int MyLoadStringA(HINSTANCE hInstance, UINT uID, char *lpBuffer, int cchBufferMax)
 {

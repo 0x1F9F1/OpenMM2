@@ -20,8 +20,7 @@
 
 #include "core/output.h"
 
-#define WIN32_LEAN_AND_MEAN
-#include <Windows.h>
+#include "minwin.h"
 
 #include <DbgHelp.h>
 #pragma comment(lib, "Dbghelp.lib")

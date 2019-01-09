@@ -30,9 +30,7 @@
 
 #include "hooking.h"
 
-#define WIN32_LEAN_AND_MEAN
-#include <Windows.h>
-#undef GetClassName
+#include "minwin.h"
 
 enum dgGameMode : uint32_t
 {

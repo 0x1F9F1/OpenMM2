@@ -18,8 +18,7 @@
 
 #include "speed.h"
 
-#define WIN32_LEAN_AND_MEAN
-#include <Windows.h>
+#include "minwin.h"
 
 unsigned int __ComputeCpuSpeed()
 {
