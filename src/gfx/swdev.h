@@ -71,7 +71,7 @@
     0x4BA6C0 | public: virtual unsigned long __stdcall AgeDevice::AddRef(void) | ?AddRef@AgeDevice@@UAGKXZ
     0x4BA6D0 | public: virtual long __stdcall AgeDevice::QueryInterface(struct _GUID const &,void * *) | ?QueryInterface@AgeDevice@@UAGJABU_GUID@@PAPAX@Z
     0x4BA6F0 | public: virtual long __stdcall AgeDevice::Initialize(struct IDirectDrawSurface7 *) | ?Initialize@AgeDevice@@UAGJPAUIDirectDrawSurface7@@@Z
-    0x4BA890 | _CreateAgeDevice | _CreateAgeDevice
+    0x4BA890 | _CreateAgeDevice
     0x5B2A34 | const AgeDevice::`vftable' | ??_7AgeDevice@@6B@
     float swPixelConvert | ?swPixelConvert@@3MA
 */

@@ -96,8 +96,8 @@
     public: virtual void __thiscall netStats::Cull(void) | ?Cull@netStats@@UAEXXZ
     public: virtual void * __thiscall netStats::`vector deleting destructor'(unsigned int) | ??_EnetStats@@UAEPAXI@Z
     public: virtual void * __thiscall netStats::`scalar deleting destructor'(unsigned int) | ??_GnetStats@@UAEPAXI@Z
-    0x5B5C88 | _MM2_GUID | _MM2_GUID
-    0x5B5C98 | _MM2_ZONESCORE_GUID | _MM2_ZONESCORE_GUID
+    0x5B5C88 | _MM2_GUID
+    0x5B5C98 | _MM2_ZONESCORE_GUID
     const netStats::`vftable' | ??_7netStats@@6B@
     0x6B3968 | class asNetwork NETMGR | ?NETMGR@@3VasNetwork@@A
     0x6B39E0 | unsigned char * SEND_BUFFER | ?SEND_BUFFER@@3PAEA

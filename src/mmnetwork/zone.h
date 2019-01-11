@@ -32,13 +32,13 @@
     0x572B50 | public: void __thiscall netZoneScore::InitResults(int,bool) | ?InitResults@netZoneScore@@QAEXH_N@Z
     public: void __thiscall netZoneScore::SendPlayerResults(class netScoreInfo *) | ?SendPlayerResults@netZoneScore@@QAEXPAVnetScoreInfo@@@Z
     public: void __thiscall netZoneScore::Deallocate(void) | ?Deallocate@netZoneScore@@QAEXXZ
-    0x5B5CA8 | _ZONEPROPERTY_LobbyGuid3 | _ZONEPROPERTY_LobbyGuid3
-    0x5B5CB8 | _ZONEPROPERTY_GameOptions | _ZONEPROPERTY_GameOptions
-    0x5B5CC8 | _ZONEPROPERTY_GameState | _ZONEPROPERTY_GameState
-    0x5B5CD8 | _ZONEPROPERTY_GameNewHost | _ZONEPROPERTY_GameNewHost
-    0x5B5CE8 | _IID_IZoneScore | _IID_IZoneScore
-    0x5B5CF8 | _LIBID_ZONESCORECLIENTLib | _LIBID_ZONESCORECLIENTLib
-    0x5B5D08 | _CLSID_ZoneScore | _CLSID_ZoneScore
+    0x5B5CA8 | _ZONEPROPERTY_LobbyGuid3
+    0x5B5CB8 | _ZONEPROPERTY_GameOptions
+    0x5B5CC8 | _ZONEPROPERTY_GameState
+    0x5B5CD8 | _ZONEPROPERTY_GameNewHost
+    0x5B5CE8 | _IID_IZoneScore
+    0x5B5CF8 | _LIBID_ZONESCORECLIENTLib
+    0x5B5D08 | _CLSID_ZoneScore
 */
 
 #include "hooking.h"

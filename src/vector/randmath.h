@@ -28,8 +28,8 @@
     0x4BBDF0 | int __cdecl irand(void) | ?irand@@YAHXZ
     0x4BBE30 | float __cdecl frand(void) | ?frand@@YAMXZ
     0x4BBE50 | float __cdecl frand(int) | ?frand@@YAMH@Z
-    0x4BBE70 | _rand | _rand
-    _srand | _srand
+    0x4BBE70 | _rand
+    _srand
     0x6A3AB0 | void (__cdecl* LogRandomCalls)(void) | ?LogRandomCalls@@3P6AXXZA
     0x6A3AB4 | int saveSeed | ?saveSeed@@3HA
     0x6A3AB8 | void (__cdecl* oldLog)(void) | ?oldLog@@3P6AXXZA

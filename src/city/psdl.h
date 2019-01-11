@@ -61,7 +61,7 @@
     0x45C540 | private: static bool __cdecl lvlSDL::IsoLerp(class Vector3 &,int &,class Vector3 const *,int,unsigned short const *,int,float,bool,bool) | ?IsoLerp@lvlSDL@@CA_NAAVVector3@@AAHPBV2@HPBGHM_N4@Z
     0x45C660 | public: static void __cdecl lvlSDL::Propulate(class lvlSDL const &,int,int,int,unsigned short const *,void *) | ?Propulate@lvlSDL@@SAXABV1@HHHPBGPAX@Z
     0x45CB90 | public: virtual class Vector3 const & __thiscall lvlSDL::GetVertex(int) const | ?GetVertex@lvlSDL@@UBEABVVector3@@H@Z
-    0x45CBB0 | _sqrtf | _sqrtf
+    0x45CBB0 | _sqrtf
     0x45CBC0 | public: static bool __cdecl sdlCommon::BACKFACE(class Vector3 const &,class Vector3 const &) | ?BACKFACE@sdlCommon@@SA_NABVVector3@@0@Z
     0x45CC10 | float __cdecl Max(float,float) | ?Max@@YAMMM@Z
     0x45CC30 | float __cdecl Lerp(float,float,float) | ?Lerp@@YAMMMM@Z

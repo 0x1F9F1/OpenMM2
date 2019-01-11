@@ -9,10 +9,9 @@ UnDecorateSymbolName = ctypes.windll.dbghelp.UnDecorateSymbolName
 UnDecorateSymbolName.argtypes = [ctypes.c_char_p, ctypes.c_char_p, ctypes.c_uint, ctypes.c_uint]
 
 def demangle(symbol):
-    symbol = symbol.encode('ascii')
     result = ctypes.create_string_buffer(1024)
 
-    if not UnDecorateSymbolName(symbol, result, ctypes.sizeof(result), 0):
+    if not UnDecorateSymbolName(symbol.encode('ascii'), result, ctypes.sizeof(result), 0):
         return None
 
     result = result.value.decode('ascii')
@@ -126,25 +125,24 @@ def process_lib(lib, symbols, only_update):
     sym_comment = ''
 
     if len(symbols):
-        sym_comment += ('/*\n')
-        sym_comment += ('    ' + lib + '\n\n')
+        sym_comment += '/*\n'
+        sym_comment += '    ' + lib + '\n\n'
 
         for sym_name, sym_addr in symbols:
-            sym_comment += ('    ')
+            sym_comment += '    '
 
             if sym_addr is not None:
-                sym_comment += ('0x%06X | ' % (sym_addr))
+                sym_comment += '0x%06X | ' % (sym_addr)
 
             demangled = demangle(sym_name)
 
             if demangled is not None:
-                sym_comment += (demangled + ' | ' + sym_name)
-            else:
-                sym_comment += (sym_name)
+                sym_comment += demangled + ' | '
 
-            sym_comment += ('\n')
+            sym_comment += sym_name
+            sym_comment += '\n'
 
-        sym_comment += ('*/')
+        sym_comment += '*/'
 
     if only_update:
         if sym_comment:

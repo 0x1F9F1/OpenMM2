@@ -28,7 +28,7 @@
     0x4022B0 | int __cdecl ExceptMain(void) | ?ExceptMain@@YAHXZ
     0x402340 | void __cdecl ArchInit(int,char * *) | ?ArchInit@@YAXHPAPAD@Z
     0x402350 | void __cdecl ageProcessEvents(void) | ?ageProcessEvents@@YAXXZ
-    0x402360 | _main | _main
+    0x402360 | _main
     0x402600 | void __stdcall `vector constructor iterator'(void *,unsigned int,int,void (__thiscall*)(void *)) | ??_H@YGXPAXIHP6EX0@Z@Z
     int page_override | ?page_override@@3HA
     0x5C28D4 | char * APPTITLE | ?APPTITLE@@3PADA

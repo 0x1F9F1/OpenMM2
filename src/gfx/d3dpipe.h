@@ -69,7 +69,7 @@
     0x4ABE00 | bool __cdecl gfxAutoDetect(bool *) | ?gfxAutoDetect@@YA_NPA_N@Z
     void __cdecl gfxSafeMode(void) | ?gfxSafeMode@@YAXXZ
     void __cdecl gfxApplySettings(void) | ?gfxApplySettings@@YAXXZ
-    0x5B2A00 | _IID_IDirect3DBladeDevice | _IID_IDirect3DBladeDevice
+    0x5B2A00 | _IID_IDirect3DBladeDevice
     0x5CA664 | bool allowHWTnL | ?allowHWTnL@@3_NA
     float g_ZNear | ?g_ZNear@@3MA
     float g_ZMid | ?g_ZMid@@3MA
