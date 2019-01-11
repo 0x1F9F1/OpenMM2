@@ -39,7 +39,7 @@
     0x4A7750 | void __cdecl rglPushMatrix(void) | ?rglPushMatrix@@YAXXZ
     0x4A7790 | void __cdecl rglPopMatrix(void) | ?rglPopMatrix@@YAXXZ
     0x4A77D0 | void __cdecl rglMultMatrix(class Matrix34 &) | ?rglMultMatrix@@YAXAAVMatrix34@@@Z
-    0x682F98 | class Matrix44 * mtxstack | ?mtxstack@@3PAVMatrix44@@A
+    0x682B90 | class Matrix44 * mtxstack | ?mtxstack@@3PAVMatrix44@@A
 */
 
 #include "hooking.h"

@@ -59,7 +59,7 @@
     0x541880 | public: __thiscall dgUnhitBangerInstance::dgUnhitBangerInstance(void) | ??0dgUnhitBangerInstance@@QAE@XZ
     public: virtual unsigned int __thiscall dgUnhitBangerInstance::SizeOf(void) | ?SizeOf@dgUnhitBangerInstance@@UAEIXZ
     0x5418A0 | public: __thiscall dgUnhitYBangerInstance::~dgUnhitYBangerInstance(void) | ??1dgUnhitYBangerInstance@@QAE@XZ
-    0x5418B0 | public: __thiscall dgUnhitBangerInstance::~dgUnhitBangerInstance(void) | ??1dgUnhitBangerInstance@@QAE@XZ
+    public: __thiscall dgUnhitBangerInstance::~dgUnhitBangerInstance(void) | ??1dgUnhitBangerInstance@@QAE@XZ
     0x5B5604 | const aiCableCar::`vftable' | ??_7aiCableCar@@6B@
     0x5B5658 | const aiCableCarInstance::`vftable' | ??_7aiCableCarInstance@@6B@
     0x5B56D4 | const dgUnhitBangerInstance::`vftable' | ??_7dgUnhitBangerInstance@@6B@

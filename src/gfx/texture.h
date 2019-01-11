@@ -98,7 +98,10 @@ public:
     char *Name {nullptr};
     uint16_t Width {0};
     uint16_t Height {0};
+
+    // 0x20000 | Alpha Enable
     uint32_t TexEnv {0};
+
     uint32_t DominantColor {0};
     IDirectDrawSurface7 *m_Surface {nullptr};
     IDirectDrawPalette *m_Palette {nullptr};

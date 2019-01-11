@@ -53,7 +53,7 @@
     0x682B5C | float vglCurrentT | ?vglCurrentT@@3MA
     0x682B60 | float vglCurrentS | ?vglCurrentS@@3MA
     0x682B68 | struct vglVNT1_t * vglVNT1 | ?vglVNT1@@3PAUvglVNT1_t@@A
-    0x682F94 | class gfxTexture * vglCloudMapTexture | ?vglCloudMapTexture@@3PAVgfxTexture@@A
+    0x682B74 | class gfxTexture * vglCloudMapTexture | ?vglCloudMapTexture@@3PAVgfxTexture@@A
 */
 
 #include "hooking.h"
