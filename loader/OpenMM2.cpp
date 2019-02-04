@@ -76,11 +76,16 @@ int CALLBACK MidtownMain(HINSTANCE /*hInstance*/, HINSTANCE /*hPrevInstance*/, L
 
     Displayf("Begin Hooking");
 
+    HookCount = 0;
+    PatchCount = 0;
+
     Timer start;
 
-    mem::init_function::init();
+    size_t init_funcs = mem::init_function::init();
 
-    Displayf("Hooks completed in %.3f Seconds", start.ElapsedSeconds());
+    float hooking_elapsed = start.ElapsedSeconds();
+
+    Displayf("Hooks completed in %.3f Seconds (%zu, %zu, %zu)", hooking_elapsed, init_funcs, HookCount, PatchCount);
 
     int result = ExceptMain();
 

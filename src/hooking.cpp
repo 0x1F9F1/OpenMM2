@@ -33,6 +33,9 @@ const char* const HookTypeNames[static_cast<size_t>(hook_type::count)] =
     "call",
 };
 
+size_t HookCount = 0;
+size_t PatchCount = 0;
+
 void create_hook(const char* name, const char* description, mem::pointer pHook, mem::pointer pDetour, hook_type type)
 {
     intptr_t rva = pDetour.as<intptr_t>() - pHook.add(5).as<intptr_t>();
@@ -64,6 +67,8 @@ void create_hook(const char* name, const char* description, mem::pointer pHook, 
         pDetour.as<uintptr_t>(),
         description
     );
+
+    ++HookCount;
 }
 
 void create_patch(const char* name, const char* description, mem::pointer dest, mem::pointer src, size_t size)
@@ -77,4 +82,6 @@ void create_patch(const char* name, const char* description, mem::pointer dest, 
         size,
         description
     );
+
+    ++PatchCount;
 }
