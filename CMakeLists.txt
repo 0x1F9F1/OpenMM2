@@ -13,7 +13,8 @@ project(OpenMM2 CXX)
 option(MM2_GAME_DIRECTORY "MM2 Game Directory")
 option(MM2_COMMAND_LINE "MM2 Command Line")
 
-add_compile_options(/MP /arch:SSE2)
+add_compile_options(/MP /Zi /arch:SSE2)
+set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} /DEBUG /OPT:REF")
 
 add_subdirectory(vendor EXCLUDE_FROM_ALL)
 
