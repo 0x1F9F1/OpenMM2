@@ -41,4 +41,4 @@
 
 class gfxImage;
 
-inline_var(0x5CD38C, gfxImage*(*)(const char * fileName, bool createMipMaps), gfxLoadImage);
+inline extern_var(0x5CD38C, gfxImage*(*)(const char * fileName, bool createMipMaps), gfxLoadImage);

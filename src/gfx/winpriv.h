@@ -54,31 +54,31 @@
 
 #include "d3dpipe.h"
 
-inline_var(0x6830A8, IDirectDraw7 *, lpDD);
-inline_var(0x6830AC, IDirect3D7 *, lpD3D);
-inline_var(0x6830C8, IDirect3DDevice7 *, lpD3DDev);
-inline_var(0x6830CC, IDirectDrawSurface7 *, lpdsRend);
-inline_var(0x6830B0, IDirectDrawSurface7 *, lpdsFront);
+inline extern_var(0x6830A8, IDirectDraw7 *, lpDD);
+inline extern_var(0x6830AC, IDirect3D7 *, lpD3D);
+inline extern_var(0x6830C8, IDirect3DDevice7 *, lpD3DDev);
+inline extern_var(0x6830CC, IDirectDrawSurface7 *, lpdsRend);
+inline extern_var(0x6830B0, IDirectDrawSurface7 *, lpdsFront);
 
-inline_var(0x682FA0, HWND, hwndParent);
-inline_var(0x6830B8, HWND, hwndMain);
-inline_var(0x68311C, LPCSTR, lpWindowTitle);
-inline_var(0x6830F0, ATOM, ATOM_Class);
-inline_var(0x683108, LPCSTR, IconID);
-inline_var(0x5CA3EC, bool, pageFlip);
-inline_var(0x5CA3ED, bool, bWinBorder);
+inline extern_var(0x682FA0, HWND, hwndParent);
+inline extern_var(0x6830B8, HWND, hwndMain);
+inline extern_var(0x68311C, LPCSTR, lpWindowTitle);
+inline extern_var(0x6830F0, ATOM, ATOM_Class);
+inline extern_var(0x683108, LPCSTR, IconID);
+inline extern_var(0x5CA3EC, bool, pageFlip);
+inline extern_var(0x5CA3ED, bool, bWinBorder);
 
-inline_var(0x5CA3EE, bool, useMultiTexture);
-inline_var(0x6830D0, bool, inWindow);
-inline_var(0x6830D1, bool, isMaximized);
-inline_var(0x6830D2, bool, tripleBuffer);
-inline_var(0x6830D3, bool, useReference);
-inline_var(0x6830D4, bool, useSoftware);
-inline_var(0x6830D5, bool, useAgeSoftware);
-inline_var(0x6830D6, bool, useBlade);
-inline_var(0x6830D7, bool, useSysMem);
-inline_var(0x6830D8, int, useInterface);
+inline extern_var(0x5CA3EE, bool, useMultiTexture);
+inline extern_var(0x6830D0, bool, inWindow);
+inline extern_var(0x6830D1, bool, isMaximized);
+inline extern_var(0x6830D2, bool, tripleBuffer);
+inline extern_var(0x6830D3, bool, useReference);
+inline extern_var(0x6830D4, bool, useSoftware);
+inline extern_var(0x6830D5, bool, useAgeSoftware);
+inline extern_var(0x6830D6, bool, useBlade);
+inline extern_var(0x6830D7, bool, useSysMem);
+inline extern_var(0x6830D8, int, useInterface);
 
-inline_var(0x683104, bool, gfxDebug);
+inline extern_var(0x683104, bool, gfxDebug);
 
-inline_var(0x6844B8, void(*)(void), gfxRestoreCallback);
+inline extern_var(0x6844B8, void(*)(void), gfxRestoreCallback);

@@ -22,7 +22,7 @@
 #include "core/stream.h"
 #include "data/asset.h"
 
-inline_var(0x5E0D48, mmReplayData[18000], replayData);
+inline extern_var(0x5E0D48, mmReplayData[18000], replayData);
 
 mmReplayManager::mmReplayManager()
 {

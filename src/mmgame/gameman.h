@@ -60,7 +60,7 @@ public:
     void ForceReplayUI(void);
     void ForcePopupUI(void);
 
-    inline_var(0x5E0D08, mmGameManager*, Instance);
+    static inline extern_var(0x5E0D08, mmGameManager*, Instance);
 };
 
 check_size(mmGameManager, 0x1B8);

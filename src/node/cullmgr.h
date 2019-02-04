@@ -87,7 +87,7 @@ public:
     virtual void DeclareCullable2D(asCullable * cullable);
     virtual void DeclareCullable2DFG(asCullable * cullable);
 
-    inline_var(0x661784, asCullManager*, Instance);
+    static inline extern_var(0x661784, asCullManager*, Instance);
 };
 
 check_size(asCullManager, 0xA8);

@@ -43,6 +43,6 @@
 class ioMouse
 {
 public:
-    inline_var(0x6A38EC, float, InvWidth);
-    inline_var(0x6A38D4, float, InvHeight);
+    static inline extern_var(0x6A38EC, float, InvWidth);
+    static inline extern_var(0x6A38D4, float, InvHeight);
 };

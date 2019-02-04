@@ -109,8 +109,6 @@ find_library(DPLAY_LIBRARY dplayx
 
 target_link_libraries(testgame
     hooking
-
     zlibstatic
-
     ${DPLAY_LIBRARY}
 )

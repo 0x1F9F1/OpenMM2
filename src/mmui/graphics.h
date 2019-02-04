@@ -52,4 +52,4 @@
 
 #include "hooking.h"
 
-inline_var(0x6B0454, uint32_t, mmCpuSpeed);
+inline extern_var(0x6B0454, uint32_t, mmCpuSpeed);

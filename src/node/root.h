@@ -66,4 +66,4 @@ struct asRoot
 
 check_size(asRoot, 0x4C);
 
-inline_var(0x661738, asRoot, ROOT);
+inline extern_var(0x661738, asRoot, ROOT);

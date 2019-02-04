@@ -65,8 +65,8 @@ extern "C" HRESULT WINAPI DirectInputCreateA_Impl(HINSTANCE hinst, DWORD dwVersi
     return DirectInputCreateA_Orig(hinst, dwVersion, ppDI, punkOuter);
 }
 
-inline_var(0x6B48A0, int, ArgC);
-inline_var(0x6B48A4, char**, ArgV);
+static extern_var(0x6B48A0, int, ArgC);
+static extern_var(0x6B48A4, char**, ArgV);
 
 int CALLBACK MidtownMain(HINSTANCE /*hInstance*/, HINSTANCE /*hPrevInstance*/, LPSTR /*lpCmdLine*/, int /*nCmdShow*/)
 {

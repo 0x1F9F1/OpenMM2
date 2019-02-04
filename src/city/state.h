@@ -99,7 +99,7 @@ public:
     dgStatePack();
     ~dgStatePack();
 
-    inline_var(0x6276F8, dgStatePack*, Instance);
+    static inline extern_var(0x6276F8, dgStatePack*, Instance);
 };
 
 check_size(dgStatePack, 0x6C);

@@ -60,8 +60,8 @@
 
 #pragma comment(lib, "imm32.lib")
 
-inline_var(0x5E0CC4, int(*)(void), __VtResumeSampling);
-inline_var(0x5E0CD8, int(*)(void), __VtPauseSampling);
+inline extern_var(0x5E0CC4, int(*)(void), __VtResumeSampling);
+inline extern_var(0x5E0CD8, int(*)(void), __VtPauseSampling);
 
 void GetLoadScreenName(char *buffer)
 {
@@ -369,7 +369,7 @@ run_once([]
 });
 
 
-inline_var(0x6614D4, char[256], ExecPath);
+inline extern_var(0x6614D4, char[256], ExecPath);
 
 void ProgressRect(int x, int y, int width, int height, unsigned int color)
 {

@@ -90,4 +90,4 @@ public:
 
 check_size(DirSnd, 0x3C);
 
-inline_var(0x6B4C2C, DirSnd*, DSGlobalPtr);
+inline extern_var(0x6B4C2C, DirSnd*, DSGlobalPtr);

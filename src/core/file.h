@@ -35,4 +35,4 @@
 
 #include "core/stream.h"
 
-inline_var(0x5CEE28, coreFileMethods, coreFileStandard);
+inline extern_var(0x5CEE28, coreFileMethods, coreFileStandard);

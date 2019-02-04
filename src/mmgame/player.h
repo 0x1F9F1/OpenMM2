@@ -84,4 +84,4 @@ class mmPlayer
 
 check_size(mmPlayer, 0x23A4 + 0x18);
 
-inline_var(0x5E0D40, mmPlayer*, PLAYER);
+inline extern_var(0x5E0D40, mmPlayer*, PLAYER);

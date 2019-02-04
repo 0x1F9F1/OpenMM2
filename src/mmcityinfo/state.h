@@ -203,4 +203,4 @@ extern const char* dgGameModeNames[7];
 // Guess
 check_size(mmStatePack, 0x3E0);
 
-inline_var(0x6B1610, mmStatePack, MMSTATE);
+inline extern_var(0x6B1610, mmStatePack, MMSTATE);

@@ -79,14 +79,14 @@ public:
     static bool OpenLog(char const * fileName);
     static void CloseLog(void);
 
-    inline_var(0x6A3D4C, bool, OutputSent);
-    inline_var(0x6A3D4D, bool, OnExitAdded);
-    inline_var(0x6A3D40, Stream*, DebugLogFile);
+    static inline extern_var(0x6A3D4C, bool, OutputSent);
+    static inline extern_var(0x6A3D4D, bool, OnExitAdded);
+    static inline extern_var(0x6A3D40, Stream*, DebugLogFile);
 };
 
 void gfxDebugf(int enabled, const char* format, ...);
 void ageDebug(int enabled, char const* format, ...);
 
-inline_var(0x5CECEC, int, PrinterFlags);
-inline_var(0x5CED24, void(*)(int, const char*, va_list), Printer);
-inline_var(0x5CECF0, void(*)(const char *), PrintString);
+inline extern_var(0x5CECEC, int, PrinterFlags);
+inline extern_var(0x5CED24, void(*)(int, const char*, va_list), Printer);
+inline extern_var(0x5CECF0, void(*)(const char *), PrintString);

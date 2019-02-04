@@ -43,5 +43,5 @@ class asLinearCS
 public:
     asLinearCS() = delete;
 
-    inline_var(0x6618AC, Matrix34*, CurrentMatrix);
+    static inline extern_var(0x6618AC, Matrix34*, CurrentMatrix);
 };

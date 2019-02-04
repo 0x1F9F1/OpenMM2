@@ -18,7 +18,7 @@
 
 #include "network.h"
 
-inline_var(0x6B39E0, uint8_t[1024], NetworkBuffer);
+inline extern_var(0x6B39E0, uint8_t[1024], NetworkBuffer);
 
 asNetwork::asNetwork()
 {

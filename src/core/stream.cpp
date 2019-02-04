@@ -22,7 +22,7 @@
 
 #include <cstdarg>
 
-inline_var(0x5CED80, int, MaxFilesOpenAtOnce);
+inline extern_var(0x5CED80, int, MaxFilesOpenAtOnce);
 
 int Stream::Read(void* buffer, int size)
 {
@@ -453,4 +453,4 @@ run_once([ ]
 {
     create_hook("Stream::AllocStream", "", 0x4C98D0, &Stream::AllocStream);
     create_hook("Stream::DumpOpenFiles", "", 0x4C9970, &Stream::DumpOpenFiles);
-})
+});

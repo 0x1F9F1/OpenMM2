@@ -78,11 +78,11 @@ public:
     static void RegisterSemiNames(Stream* stream, char* names);
     static void RegisterPoliceNames(Stream* stream, char* names);
 
-    inline_var(0x6AFFA1, bool, s_bAlwaysNitro);
+    static inline extern_var(0x6AFFA1, bool, s_bAlwaysNitro);
 
-    inline_var(0x6AFF34, int, s_iNumPoliceNames);
-    inline_var(0x6AFF38, int, s_iNumSemiNames);
+    static inline extern_var(0x6AFF34, int, s_iNumPoliceNames);
+    static inline extern_var(0x6AFF38, int, s_iNumSemiNames);
 
-    inline_var(0x6AFFA8, char**, s_ppPoliceName);
-    inline_var(0x6AFFA4, char**, s_ppSemiName);
+    static inline extern_var(0x6AFFA8, char**, s_ppPoliceName);
+    static inline extern_var(0x6AFFA4, char**, s_ppSemiName);
 };

@@ -98,7 +98,7 @@ public:
 
     void Kill();
 
-    inline_var(0x6A3C60, HashTable*, First);
+    static inline extern_var(0x6A3C60, HashTable*, First);
 
     HashTable() = delete;
     ~HashTable() = delete;

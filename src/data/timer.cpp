@@ -23,7 +23,7 @@
 #include <timeapi.h>
 #pragma comment(lib, "winmm.lib")
 
-inline_var(0x6A3D08, int, dword_6A3D08);
+inline extern_var(0x6A3D08, int, dword_6A3D08);
 
 Timer::Timer()
 {

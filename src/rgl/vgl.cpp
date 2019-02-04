@@ -24,22 +24,22 @@
 #include <d3d.h>
 #include <ddraw.h>
 
-inline_var(0x661970, void(*)(float, float, float), vglVertex);
-inline_var(0x681B44, unsigned int, currentVertexType);
-inline_var(0x661978, unsigned int, currentVertexSize);
+inline extern_var(0x661970, void(*)(float, float, float), vglVertex);
+inline extern_var(0x681B44, unsigned int, currentVertexType);
+inline extern_var(0x661978, unsigned int, currentVertexSize);
 
-inline_var(0x661974, unsigned int, vglCurrentColor);
-inline_var(0x682B5C, float, vglCurrentT);
-inline_var(0x682B60, float, vglCurrentS);
+inline extern_var(0x661974, unsigned int, vglCurrentColor);
+inline extern_var(0x682B5C, float, vglCurrentT);
+inline extern_var(0x682B60, float, vglCurrentS);
 
-inline_var(0x682B48, vglVCT1_t*, vglVCT1);
-inline_var(0x682B68, vglVNT1_t*, vglVNT1);
+inline extern_var(0x682B48, vglVCT1_t*, vglVCT1);
+inline extern_var(0x682B68, vglVNT1_t*, vglVNT1);
 
-inline_var(0x682B58, int, vglCount);
+inline extern_var(0x682B58, int, vglCount);
 
-inline_var(0x682B4C, float, vglCurrentNZ);
-inline_var(0x682B50, float, vglCurrentNX);
-inline_var(0x682B54, float, vglCurrentNY);
+inline extern_var(0x682B4C, float, vglCurrentNZ);
+inline extern_var(0x682B50, float, vglCurrentNX);
+inline extern_var(0x682B54, float, vglCurrentNY);
 
 void vgl_VERTEX_VCT1(float x, float y, float z)
 {
@@ -105,4 +105,4 @@ run_once([ ]
     create_hook("vgl_VERTEX_VCT1", "", 0x4A5370, &vgl_VERTEX_VCT1);
     create_hook("vgl_VERTEX_VNT1", "", 0x4A5400, &vgl_VERTEX_VNT1);
     create_hook("vglSetFormat", "", 0x4A5490, &vglSetFormat);
-})
+});

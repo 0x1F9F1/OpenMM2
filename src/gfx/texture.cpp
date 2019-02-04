@@ -24,7 +24,7 @@
 
 #include <algorithm>
 
-inline_var(0x6844C4, bool, g_Tex565);
+inline extern_var(0x6844C4, bool, g_Tex565);
 
 DDPIXELFORMAT ddPixelFormat_8888 = { sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_ALPHAPIXELS, 0, 32, 0x00FF0000, 0x0000FF00, 0x000000FF, 0xFF000000 };
 DDPIXELFORMAT ddPixelFormat_0888 = { sizeof(DDPIXELFORMAT), DDPF_RGB,                    0, 32, 0x00FF0000, 0x0000FF00, 0x000000FF, 0x00000000 };

@@ -39,4 +39,4 @@
 
 #include "hooking.h"
 
-inline_var(0x6857D0, int, gfxTexReduceSize);
+inline extern_var(0x6857D0, int, gfxTexReduceSize);

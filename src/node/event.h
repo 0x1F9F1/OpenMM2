@@ -73,7 +73,7 @@ public:
 
     void Update(void);
 
-    inline_var(0x661788, eqEventHandler*, SuperQ);
+    static inline extern_var(0x661788, eqEventHandler*, SuperQ);
 };
 
 check_size(eqEventHandler, 0x160);

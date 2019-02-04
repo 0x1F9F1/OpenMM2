@@ -90,4 +90,4 @@ public:
     void Call(void* parameter);
 };
 
-inline_var(0x6A3D10, datCallback, NullCallback);
+inline extern_var(0x6A3D10, datCallback, NullCallback);

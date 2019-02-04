@@ -147,7 +147,7 @@ public:
     void SetReplayInfo();
     void StartReplay();
 
-    inline_var(0x627248, mmReplayManager*, Instance);
+    static inline extern_var(0x627248, mmReplayManager*, Instance);
 };
 
 check_size(mmReplayManager, 0x840);

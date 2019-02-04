@@ -144,4 +144,4 @@ public:
 
 check_size(asNetwork, 0x70);
 
-inline_var(0x6B3968, asNetwork, NETMGR);
+inline extern_var(0x6B3968, asNetwork, NETMGR);

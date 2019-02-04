@@ -51,14 +51,14 @@ class gfxBitmap;
 
 void ProgressCB(const char *message, signed int progress);
 
-inline_var(0x5E0CCC, gfxBitmap*, LoadingScreenBitmap);
-inline_var(0x5E0CE0, gfxBitmap*, RestoringScreenBitmap);
+inline extern_var(0x5E0CCC, gfxBitmap*, LoadingScreenBitmap);
+inline extern_var(0x5E0CE0, gfxBitmap*, RestoringScreenBitmap);
 
-inline_var(0x5E0CF8, bool, NeedStartup);
-inline_var(0x5E0CF9, bool, ZoneStartup);
+inline extern_var(0x5E0CF8, bool, NeedStartup);
+inline extern_var(0x5E0CF9, bool, ZoneStartup);
 
-inline_var(0x5C28D4, char*, APPTITLE);
-inline_var(0x5C28D8, char*, DEFAULT_CITY);
-inline_var(0x5C28DC, char*, VERSION_STRING);
+inline extern_var(0x5C28D4, char*, APPTITLE);
+inline extern_var(0x5C28D8, char*, DEFAULT_CITY);
+inline extern_var(0x5C28DC, char*, VERSION_STRING);
 
 int ExceptMain();

@@ -36,7 +36,7 @@
 
 #include "localize/localize.h"
 
-inline_var(0x6844B4, bool, g_VisualizeZ);
+inline extern_var(0x6844B4, bool, g_VisualizeZ);
 
 void gfxPipeline::SetRes(int width, int height, int cdepth, int zdepth, bool parseArgs)
 {
@@ -607,7 +607,7 @@ inline unsigned int ConvertColor(const unsigned int color)
         (((color & OF::SMB) >> OF::SB) * NF::MB / (OF::MB ? OF::MB : 1) << NF::SB);
 }
 
-inline_var(0x682FA8, char[8][32], interfaceNames);
+inline extern_var(0x682FA8, char[8][32], interfaceNames);
 
 unsigned int GetPixelFormatColor(DDPIXELFORMAT* lpDDPixelFormat, uint32_t color)
 {
@@ -644,13 +644,21 @@ BOOL PASCAL DDEnumProc(GUID * lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverN
 
     ageDebug(gfxDebug, "D3D: GUID %x Description [%s] DriverName [%s]", lpGUID, lpDriverDescription, lpDriverName);
 
-    strncpy_s(interfaceNames[interfaceCount++], lpDriverDescription, 0x20u);
+    if (interfaceCount >= 8)
+    {
+        ageDebug(gfxDebug, "D3D: Too Many Interfaces");
+
+        return false;
+    }
+
+    strncpy_s(interfaceNames[interfaceCount++], lpDriverDescription, 31);
     lpInterfaceGUID = lpGUID;
 
     if (lpGUID)
     {
         memcpy(&sInterfaceGUID, lpGUID, sizeof(sInterfaceGUID));
     }
+
     if (gfxInterfaceEnumIdx)
     {
         --gfxInterfaceEnumIdx;
@@ -684,7 +692,7 @@ HRESULT PASCAL ResCallback(LPDDSURFACEDESC2 lpSurfaceDesc, LPVOID lpContext)
     return stub<decltype(&ResCallback)>(0x4AC6F0, lpSurfaceDesc, lpContext);
 }
 
-inline_var(0x684518, decltype(&DirectDrawCreateEx), lpDirectDrawCreateEx);
+inline extern_var(0x684518, decltype(&DirectDrawCreateEx), lpDirectDrawCreateEx);
 
 BOOL PASCAL AutoDetectCallback(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverName, LPVOID lpContext)
 {

@@ -166,16 +166,16 @@ public:
 
     void SetTexture(int index, gfxTexture* texture);
 
-    inline_var(0x685778, int, m_Touched);
-    inline_var(0x685780, int, m_TouchedMask);
+    static inline extern_var(0x685778, int, m_Touched);
+    static inline extern_var(0x685780, int, m_TouchedMask);
 
-    inline_var(0x685460, Matrix44, sm_Camera);
-    inline_var(0x685660, Matrix44, sm_View);
-    inline_var(0x685538, Matrix44, sm_World);
-    inline_var(0x685620, Matrix44, sm_FullComposite);
+    static inline extern_var(0x685460, Matrix44, sm_Camera);
+    static inline extern_var(0x685660, Matrix44, sm_View);
+    static inline extern_var(0x685538, Matrix44, sm_World);
+    static inline extern_var(0x685620, Matrix44, sm_FullComposite);
 
-    inline_var(0x685788, int, sm_MaxTextures);
+    static inline extern_var(0x685788, int, sm_MaxTextures);
 };
 
-inline_var(0x6856A0, gfxRenderState, RSTATE);
-inline_var(0x6854A0, gfxRenderStateData, LASTRSTATE);
+inline extern_var(0x6856A0, gfxRenderState, RSTATE);
+inline extern_var(0x6854A0, gfxRenderStateData, LASTRSTATE);

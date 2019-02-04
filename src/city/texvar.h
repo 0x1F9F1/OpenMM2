@@ -29,4 +29,4 @@
 
 void InstallTextureVariantHandler(void);
 
-inline_var(0x6276EC, bool, EnableTextureVariantHandler);
+inline extern_var(0x6276EC, bool, EnableTextureVariantHandler);

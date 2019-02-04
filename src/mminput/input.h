@@ -133,4 +133,4 @@ public:
 
 check_size(mmInput, 0x248);
 
-inline_var(0x6B1CF0, mmInput*, GameInputPtr);
+inline extern_var(0x6B1CF0, mmInput*, GameInputPtr);

@@ -24,8 +24,8 @@
 
 #include "core/stream.h"
 
-inline_var(0x6A3D44, void(*)(void), beforeMsgBoxCB);
-inline_var(0x6A3D48, void(*)(void), afterMsgBoxCB);
+inline extern_var(0x6A3D44, void(*)(void), beforeMsgBoxCB);
+inline extern_var(0x6A3D48, void(*)(void), afterMsgBoxCB);
 
 HANDLE DebugLogConsole = INVALID_HANDLE_VALUE;
 
@@ -144,10 +144,10 @@ void gfxDebugf(int enabled, const char * format, ...)
 #define BACKCOLOR_MASK              (0xF << 4)
 #define FULLCOLOR_MASK              (TEXTCOLOR_MASK | BACKCOLOR_MASK)
 
-inline_var(0x6A3D3C, bool, b_popUpErrors);
-inline_var(0x5CECE8, bool, b_popUpQuits);
+inline extern_var(0x6A3D3C, bool, b_popUpErrors);
+inline extern_var(0x5CECE8, bool, b_popUpQuits);
 
-inline_var(0x6A3D38, void(*)(const char *), gFatalMessageHandler);
+inline extern_var(0x6A3D38, void(*)(const char *), gFatalMessageHandler);
 
 short PrinterConsoleColors[6] = {
     TEXTCOLOR_WHITE,
@@ -309,7 +309,7 @@ void Errorf(const char* format, ...)
     }
 }
 
-inline_var(0x6A3D50, int(*)(void), JustBeforeQuit);
+inline extern_var(0x6A3D50, int(*)(void), JustBeforeQuit);
 
 void Quitf(const char* format, ...)
 {
@@ -365,8 +365,8 @@ void ageDebug(int enabled, char const * format, ...)
     }
 }
 
-inline_var(0x6A3D1C, Stream*, debugLogStream);
-inline_var(0x6A3D20, bool, debugLogAppend);
+inline extern_var(0x6A3D1C, Stream*, debugLogStream);
+inline extern_var(0x6A3D20, bool, debugLogAppend);
 
 void DebugLogInit(bool append)
 {

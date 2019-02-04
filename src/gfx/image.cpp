@@ -54,7 +54,7 @@ gfxImage * gfxImage::Create(int width, int height, int type, int paletteType, in
     return stub<cdecl_t<gfxImage*, int, int, int, int, int>>(0x4AE920, width, height, type, paletteType, a5);
 }
 
-inline_var(0x5CCFA4, char[96][8], BuiltinFont);
+inline extern_var(0x5CCFA4, char[96][8], BuiltinFont);
 
 gfxImage* gfxImage::GetFont(int & outWidth, int & outHeight)
 {

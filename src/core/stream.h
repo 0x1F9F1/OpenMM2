@@ -143,11 +143,11 @@ public:
 
     static void DumpOpenFiles(void);
 
-    inline_var(0x6A3D68, Stream[MAX_STREAMS], sm_Streams);
-    inline_var(0x6A3EB8, uint8_t[MAX_STREAMS][STREAM_BUFFER_SIZE], sm_Buffers);
+    static inline extern_var(0x6A3D68, Stream[MAX_STREAMS], sm_Streams);
+    static inline extern_var(0x6A3EB8, uint8_t[MAX_STREAMS][STREAM_BUFFER_SIZE], sm_Buffers);
 
-    inline_var(0x5CED7C, coreFileMethods const *, sm_DefaultCreateMethods);
-    inline_var(0x5CED78, coreFileMethods const *, sm_DefaultOpenMethods);
+    static inline extern_var(0x5CED7C, coreFileMethods const *, sm_DefaultCreateMethods);
+    static inline extern_var(0x5CED78, coreFileMethods const *, sm_DefaultOpenMethods);
 };
 
 int fseek(Stream *stream, int position, seekWhence whence);

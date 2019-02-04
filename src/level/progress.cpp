@@ -18,7 +18,7 @@
 
 #include "progress.h"
 
-inline_var(0x631654, void(*)(const char *, int), progressCB);
+inline extern_var(0x631654, void(*)(const char *, int), progressCB);
 
 void lvlProgress::SetCallback(void(*callback)(char const *, int))
 {

@@ -40,9 +40,9 @@ struct zipHandle
     z_stream Inflater {};
 };
 
-inline_var(0x6B4218, zipHandle[16], ZipHandles);
-inline_var(0x6B4204, const coreFileMethods *, zipFileOpenMethods);
-inline_var(0x5DA768, const coreFileMethods, zipFileMethods);
+inline extern_var(0x6B4218, zipHandle[16], ZipHandles);
+inline extern_var(0x6B4204, const coreFileMethods *, zipFileOpenMethods);
+inline extern_var(0x5DA768, const coreFileMethods, zipFileMethods);
 
 #pragma pack(push, 1)
 struct DAVEHEADER
@@ -376,4 +376,4 @@ run_once([ ]
     create_hook("inflateReset", "Update ZLIB", 0x573C60, &inflateReset);
     create_hook("inflateEnd", "Update ZLIB", 0x573CB0, &inflateEnd);
     create_hook("inflate", "Update ZLIB", 0x573E40, &inflate);
-})
+});

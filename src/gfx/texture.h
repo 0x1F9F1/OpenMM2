@@ -133,13 +133,13 @@ public:
     static void EnableCache(bool enabled);
     static void ShutdownCache(void);
 
-    inline_var(0x684D34, bool, sm_EnableSetLOD);
-    inline_var(0x684D36, bool, sm_Allow32);
-    inline_var(0x684D38, gfxTexture*, sm_First);
-    inline_var(0x684524, bool, sm_UseInternalCache);
-    inline_var(0x68452C, gfxTextureCachePool*, sm_FirstPool);
-    inline_var(0x684D35, uint8_t, sm_LOD);
-    inline_var(0x684D3C, gfxTexture*, sm_FirstActive);
+    static inline extern_var(0x684D34, bool, sm_EnableSetLOD);
+    static inline extern_var(0x684D36, bool, sm_Allow32);
+    static inline extern_var(0x684D38, gfxTexture*, sm_First);
+    static inline extern_var(0x684524, bool, sm_UseInternalCache);
+    static inline extern_var(0x68452C, gfxTextureCachePool*, sm_FirstPool);
+    static inline extern_var(0x684D35, uint8_t, sm_LOD);
+    static inline extern_var(0x684D3C, gfxTexture*, sm_FirstActive);
 };
 
 class gfxBitmap
@@ -164,7 +164,7 @@ public:
     static gfxBitmap* Create(gfxImage* image, bool unused);
     static gfxBitmap* Create(int width, int height, bool unused);
 
-    inline_var(0x684D40, gfxBitmap*, sm_First);
+    static inline extern_var(0x684D40, gfxBitmap*, sm_First);
 };
 
 check_size(gfxBitmap, 0x14);
@@ -177,7 +177,7 @@ public:
     uint32_t LastAccessTime {0};
     gfxTextureCacheEntry *PrevEntry {nullptr};
 
-    inline_var(0x684528, uint32_t, sm_CurrentTime);
+    static inline extern_var(0x684528, uint32_t, sm_CurrentTime);
 
     gfxTextureCacheEntry(IDirectDrawSurface7* surface, gfxTextureCacheEntry* prevEntry);
     ~gfxTextureCacheEntry();

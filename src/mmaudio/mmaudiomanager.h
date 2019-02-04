@@ -118,6 +118,6 @@ public:
 
 check_size(AudManager, 0x54);
 
-inline_var(0x6B15D0, AudManager*, MMAUDMGRPTR);
+inline extern_var(0x6B15D0, AudManager*, MMAUDMGRPTR);
 
 void InitAudioManager(bool enableSound);

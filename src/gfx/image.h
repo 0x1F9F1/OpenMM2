@@ -74,7 +74,7 @@ public:
     static gfxImage* GetFont(int & outWidth, int & outHeight);
     static void FreeFont(void);
 
-    inline_var(0x684D48, gfxImage*, sm_Font);
+    static inline extern_var(0x684D48, gfxImage*, sm_Font);
 };
 
 check_size(gfxImage, 0x1C);

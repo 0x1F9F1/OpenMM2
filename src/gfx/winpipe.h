@@ -47,4 +47,4 @@
 
 #include "hooking.h"
 
-inline_var(0x683108, int, gfxIcon);
+inline extern_var(0x683108, int, gfxIcon);

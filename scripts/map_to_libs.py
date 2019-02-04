@@ -47,7 +47,8 @@ BAD_LIB_PREFIXES = [
     'dinput',
     'dxguid',
     'uuid',
-    '__imp__'
+    '__imp__',
+    '<common>'
 ]
 
 MAP_REGEX = re.compile(r'[0-9a-fA-F]+:[0-9a-fA-F]+\s+(\S+)\s+([0-9a-fA-F]+).* (\S+)')
@@ -72,7 +73,8 @@ def map_to_symbols(map_lines, sym_addrs = None):
 
         if lib_name.endswith('.dll') \
         or sym_name.startswith('__') \
-        or sym_name.startswith('??_C@'):
+        or sym_name.startswith('??_C@') \
+        or sym_name.startswith('_$E'):
             continue
 
         if lib_name.endswith('.obj'):
@@ -209,12 +211,12 @@ if not only_update:
                 f.write('\n')
 
                 f.write('''add_library(hooking STATIC
-        hooking.cpp
-        hooking.h
-    )
+    hooking.cpp
+    hooking.h
+)
 
-    target_link_libraries(hooking mem)
-    ''')
+target_link_libraries(hooking mem)
+''')
                 f.write('\n')
 
             f.write('add_library(' + lib_name + ' OBJECT\n')

@@ -21,6 +21,7 @@
 #include <mem/mem.h>
 #include <mem/init_function.h>
 #include <mem/macros.h>
+#include <mem/stub.h>
 
 #include <functional>
 #include <utility>
@@ -35,12 +36,7 @@
 #define unimplemented Quitf("Error calling unimplemented function %s in %s (%i)", __FUNCTION__, __FILE__, __LINE__)
 
 using namespace mem::conventions;
-
-template <typename Func, typename... Args>
-static MEM_STRONG_INLINE decltype(auto) stub(mem::pointer address, Args&&... args)
-{
-    return std::invoke(address.as<Func>(), std::forward<Args>(args)...);
-}
+using mem::stub;
 
 enum class hook_type
 {

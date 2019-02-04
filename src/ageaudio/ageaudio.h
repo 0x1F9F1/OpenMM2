@@ -84,4 +84,4 @@ public:
 
 check_size(AudManagerBase, 0x30);
 
-inline_var(0x6B1474, AudManagerBase*, AUDMGRPTR);
+inline extern_var(0x6B1474, AudManagerBase*, AUDMGRPTR);

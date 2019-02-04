@@ -39,4 +39,4 @@ mmDirSnd* mmDirSnd::Init(int sampleRate, bool enableStero, int a4, float volume,
 run_once([ ]
 {
     create_hook("mmDirSnd::Init", "Fixes no sound issue on startup.", 0x51941D, &mmDirSnd::Init, hook_type::call);
-})
+});

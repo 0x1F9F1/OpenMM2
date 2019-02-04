@@ -82,8 +82,8 @@ public:
 
     static void DisplayUsed(char const* status);
 
-    inline_var(0x6B46AC, memMemoryAllocator*, First);
-    inline_var(0x6B46A8, memMemoryAllocator*, Current);
+    static inline extern_var(0x6B46AC, memMemoryAllocator*, First);
+    static inline extern_var(0x6B46A8, memMemoryAllocator*, Current);
 };
 
 check_size(memMemoryAllocator, 0xDC);

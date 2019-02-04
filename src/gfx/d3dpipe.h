@@ -149,18 +149,18 @@ public:
 
     static LRESULT CALLBACK gfxWindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
-    inline_var(0x6830F4, float, m_fWidth);
-    inline_var(0x683120, float, m_fHeight);
-    inline_var(0x683128, int, m_iWidth);
-    inline_var(0x683100, int, m_iHeight);
-    inline_var(0x6830E4, int, m_ZDepth);
-    inline_var(0x6830F8, int, m_ColorDepth);
-    inline_var(0x6830EC, int, m_X);
-    inline_var(0x683110, int, m_Y);
+    static inline extern_var(0x6830F4, float, m_fWidth);
+    static inline extern_var(0x683120, float, m_fHeight);
+    static inline extern_var(0x683128, int, m_iWidth);
+    static inline extern_var(0x683100, int, m_iHeight);
+    static inline extern_var(0x6830E4, int, m_ZDepth);
+    static inline extern_var(0x6830F8, int, m_ColorDepth);
+    static inline extern_var(0x6830EC, int, m_X);
+    static inline extern_var(0x683110, int, m_Y);
 
     // 0x1 | Closing
     // 0x2 | Focused
-    inline_var(0x683114, uint32_t, m_EvtFlags);
+    static inline extern_var(0x683114, uint32_t, m_EvtFlags);
 };
 
 enum gfxDeviceType
@@ -212,29 +212,29 @@ struct gfxInterface
 
 check_size(gfxInterface, 0x270);
 
-inline_var(0x683130, gfxInterface[8], gfxInterfaces);
-inline_var(0x6844C0, int, gfxInterfaceCount);
-inline_var(0x6844C8, int, gfxInterfaceChoice);
+inline extern_var(0x683130, gfxInterface[8], gfxInterfaces);
+inline extern_var(0x6844C0, int, gfxInterfaceCount);
+inline extern_var(0x6844C8, int, gfxInterfaceChoice);
 
-inline_var(0x6844BC, GUID*, lpInterfaceGUID);
-inline_var(0x6844E0, GUID, sInterfaceGUID);
+inline extern_var(0x6844BC, GUID*, lpInterfaceGUID);
+inline extern_var(0x6844E0, GUID, sInterfaceGUID);
 
-inline_var(0x6830DC, int, interfaceCount);
-inline_var(0x6844D4, int, gfxInterfaceEnumIdx);
+inline extern_var(0x6830DC, int, interfaceCount);
+inline extern_var(0x6844D4, int, gfxInterfaceEnumIdx);
 
-inline_var(0x6844F0, LPDDENUMCALLBACKA, gfxDDEnumCallback);
+inline extern_var(0x6844F0, LPDDENUMCALLBACKA, gfxDDEnumCallback);
 
-inline_var(0x5CA664, bool, allowHWTnL);
-inline_var(0x68451D, bool, novblank);
+inline extern_var(0x5CA664, bool, allowHWTnL);
+inline extern_var(0x68451D, bool, novblank);
 
-inline_var(0x6844B0, int, gfxMinScreenWidth);
-inline_var(0x6844CC, int, gfxMinScreenHeight);
-inline_var(0x6844FC, int, gfxMaxScreenWidth);
-inline_var(0x6844D8, int, gfxMaxScreenHeight);
+inline extern_var(0x6844B0, int, gfxMinScreenWidth);
+inline extern_var(0x6844CC, int, gfxMinScreenHeight);
+inline extern_var(0x6844FC, int, gfxMaxScreenWidth);
+inline extern_var(0x6844D8, int, gfxMaxScreenHeight);
 
-inline_var(0x684500, bool, sm_UseInternal);
+inline extern_var(0x684500, bool, sm_UseInternal);
 
-inline_var(0x6830E8, void(*)(void), gfxLostCallback);
+inline extern_var(0x6830E8, void(*)(void), gfxLostCallback);
 
 unsigned int GetPixelFormatColor(DDPIXELFORMAT* lpDDPixelFormat, unsigned int color);
 
