@@ -62,6 +62,8 @@ Stream* datAssetManager::Open(const char* path, const char* ext, bool a2, bool r
 
 Stream * datAssetManager::Open(const char * prefix, const char * path, const char * ext, bool a4, bool readOnly)
 {
+    (void) a4;
+
     char buffer[128];
 
     datAssetManager::FullPath(buffer, 128, prefix, path, ext);
