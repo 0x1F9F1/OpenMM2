@@ -76,3 +76,8 @@ Matrix44 & Matrix44::Dot(const Matrix44 & lhs, const Matrix44 & rhs)
 
     return *this;
 }
+
+run_once([]
+{
+    create_hook("Matrix44::Dot", "SSE Dot", 0x4C0FC0, static_cast<Matrix44& (Matrix44::*)(const Matrix44& lhs, const Matrix44& rhs)>(&Matrix44::Dot));
+});
