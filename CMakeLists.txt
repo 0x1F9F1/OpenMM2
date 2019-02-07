@@ -16,6 +16,9 @@ option(MM2_COMMAND_LINE "MM2 Command Line")
 add_compile_options(/MP /Zi /arch:SSE2)
 set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} /DEBUG /OPT:REF")
 
+# This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+set(CMAKE_STATIC_LINKER_FLAGS "${CMAKE_STATIC_LINKER_FLAGS} /IGNORE:4221")
+
 add_subdirectory(vendor EXCLUDE_FROM_ALL)
 
 include_directories(src)
