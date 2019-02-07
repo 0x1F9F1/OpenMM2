@@ -61,7 +61,7 @@ struct asRoot
 
     virtual void Update(void) override;
     virtual void Reset(void) override;
-    virtual char * GetClassName(void) override;
+    virtual const char * GetClassName(void) override;
 };
 
 check_size(asRoot, 0x4C);

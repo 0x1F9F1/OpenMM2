@@ -83,7 +83,7 @@ public:
     virtual void BeforeSave(void);
     virtual bool Save(void);
     virtual bool Load(void);
-    virtual char * GetClassName(void);
+    virtual const char * GetClassName(void);
     virtual const char * GetDirName(void);
 
     int RemoveChild(asNode* child);

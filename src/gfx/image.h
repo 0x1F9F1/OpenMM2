@@ -58,8 +58,8 @@ public:
     uint8_t Type {0};
     uint8_t PaletteType {0};
     uint32_t TexEnv {0};
-    void *ImageData {nullptr};
-    void *PaletteData {nullptr};
+    uint8_t *ImageData {nullptr};
+    uint8_t *PaletteData {nullptr};
 
     uint32_t RefCount {1};
     gfxImage *Next {nullptr};

@@ -102,7 +102,7 @@ bool asNode::Load(void)
     return stub<member_func_t<bool, asNode>>(0x4A1120, this);
 }
 
-char* asNode::GetClassName(void)
+const char* asNode::GetClassName(void)
 {
     return "asNode";
 }

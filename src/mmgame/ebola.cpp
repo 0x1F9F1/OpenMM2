@@ -53,7 +53,7 @@ bool FirstRunEula()
     return result;
 }
 
-void ebolaPlayMovie(char * name)
+void ebolaPlayMovie(const char * name)
 {
-    return stub<cdecl_t<void, char*>>(0x402780, name);
+    return stub<cdecl_t<void, const char*>>(0x402780, name);
 }

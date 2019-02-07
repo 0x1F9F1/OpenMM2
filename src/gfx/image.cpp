@@ -20,7 +20,7 @@
 
 gfxImage::~gfxImage()
 {
-    delete ImageData;
+    delete[] ImageData;
 
     if (Next)
     {
@@ -30,7 +30,7 @@ gfxImage::~gfxImage()
     }
     else
     {
-        delete PaletteData;
+        delete[] PaletteData;
     }
 }
 

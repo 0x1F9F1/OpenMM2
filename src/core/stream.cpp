@@ -435,7 +435,7 @@ int fscanf(Stream* stream, char const* format, ...)
     {
         va_list va;
         va_start(va, format);
-        int result = vsscanf_s(buffer, format, va);
+        int result = vsscanf(buffer, format, va);
         va_end(va);
 
         if (!result)

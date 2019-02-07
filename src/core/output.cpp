@@ -98,7 +98,7 @@ void gfxDebugf(int enabled, const char * format, ...)
     if (enabled)
     {
         va_list va;
-        va_start(format, va);
+        va_start(va, format);
 
         Printer(1, format, va);
 
@@ -185,7 +185,8 @@ void CustomPrinter(int level, const char *format, va_list args)
 
     vsprintf_s(mainBuffer, format, args);
 
-    if (b_popUpErrors && level == 4 || b_popUpQuits && level == 5)
+    if ((b_popUpErrors && (level == 4)) ||
+        (b_popUpQuits  && (level == 5)))
     {
         datOutput::CallBeforeMsgBoxFunction();
 
@@ -352,6 +353,8 @@ void Abortf(const char* format, ...)
     DebugBreak();
 
     *static_cast<volatile bool*>(nullptr) = false;
+
+    exit(1);
 }
 
 void ageDebug(int enabled, char const * format, ...)

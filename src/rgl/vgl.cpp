@@ -45,7 +45,7 @@ void vgl_VERTEX_VCT1(float x, float y, float z)
 {
     if (vglCount >= 4096)
     {
-        Warningf(__FUNCTION__ " : vgl_VERTEX_VCT1 Overflow");
+        Warningf("vgl_VERTEX_VCT1 Overflow");
 
         return;
     }
@@ -69,7 +69,7 @@ void vgl_VERTEX_VNT1(float x, float y, float z)
 {
     if (vglCount >= 4096)
     {
-        Warningf(__FUNCTION__ " : vgl_VERTEX_VNT1 Overflow");
+        Warningf("vgl_VERTEX_VNT1 Overflow");
 
         return;
     }
@@ -90,7 +90,9 @@ void vgl_VERTEX_VNT1(float x, float y, float z)
 
 void vglSetFormat(unsigned int format, unsigned int a2, unsigned int a3, unsigned int a4)
 {
-    (void)a2, a3, a4;
+    (void)a2;
+    (void)a3;
+    (void)a4;
 
     vglVertex = (format & D3DFVF_DIFFUSE) ? &vgl_VERTEX_VCT1 : &vgl_VERTEX_VNT1;
 

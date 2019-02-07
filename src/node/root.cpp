@@ -82,7 +82,7 @@ void asRoot::Reset(void)
     ShouldPause = false;
 }
 
-char* asRoot::GetClassName(void)
+const char* asRoot::GetClassName(void)
 {
     return "asRoot";
 }

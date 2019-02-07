@@ -163,7 +163,7 @@ const MapSymbol* LookupMapSymbol(int address)
     return find - 1;
 }
 
-const char* GetErrorCodeString(int code)
+const char* GetErrorCodeString(unsigned int code)
 {
     switch (code)
     {
