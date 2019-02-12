@@ -58,4 +58,4 @@
     long (__stdcall* sOldSliderEditWinProc)(struct HWND__ *,unsigned int,unsigned int,long) | ?sOldSliderEditWinProc@@3P6GJPAUHWND__@@IIJ@ZA
 */
 
-#include "hooking.h"
+// #include "hooking.h"

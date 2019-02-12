@@ -32,4 +32,4 @@
     0x6A3880 | struct IDirectInputA * lpDI | ?lpDI@@3PAUIDirectInputA@@A
 */
 
-#include "hooking.h"
+// #include "hooking.h"

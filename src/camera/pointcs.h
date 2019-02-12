@@ -37,4 +37,4 @@
     0x5B4FD8 | const camPointCS::`vftable' | ??_7camPointCS@@6B@
 */
 
-#include "hooking.h"
+// #include "hooking.h"

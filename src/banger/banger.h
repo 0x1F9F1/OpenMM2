@@ -78,4 +78,4 @@
     public: static class gfxTexture * dgBangerInstance::DefaultGlowTexture | ?DefaultGlowTexture@dgBangerInstance@@2PAVgfxTexture@@A
 */
 
-#include "hooking.h"
+// #include "hooking.h"

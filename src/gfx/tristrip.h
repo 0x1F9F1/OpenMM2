@@ -24,4 +24,4 @@
     unsigned short * __cdecl GenerateTriStrips(unsigned int,unsigned int,unsigned short const *,unsigned int &,unsigned int) | ?GenerateTriStrips@@YAPAGIIPBGAAII@Z
 */
 
-#include "hooking.h"
+// #include "hooking.h"

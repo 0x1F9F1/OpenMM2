@@ -36,4 +36,4 @@
     public: static float camBaseCS::sm_cameraFar | ?sm_cameraFar@camBaseCS@@2MA
 */
 
-#include "hooking.h"
+// #include "hooking.h"

@@ -48,4 +48,4 @@
     protected: static char const * const bkManager::AppName | ?AppName@bkManager@@1PBDB
 */
 
-#include "hooking.h"
+// #include "hooking.h"

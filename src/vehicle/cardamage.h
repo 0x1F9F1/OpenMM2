@@ -48,4 +48,4 @@
     0x6AFED8 | private: static int vehCarDamage::EngineSmokeRuleRef | ?EngineSmokeRuleRef@vehCarDamage@@0HA
 */
 
-#include "hooking.h"
+// #include "hooking.h"

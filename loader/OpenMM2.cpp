@@ -27,7 +27,6 @@
 #include "minwin.h"
 
 #include <dinput.h>
-#include <mem/init_function-inl.h>
 
 static decltype(&DirectInputCreateA) DirectInputCreateA_Orig = nullptr;
 

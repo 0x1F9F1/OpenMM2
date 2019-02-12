@@ -37,4 +37,4 @@
     private: static int modShader::sm_StaticMaterialCount | ?sm_StaticMaterialCount@modShader@@0HA
 */
 
-#include "hooking.h"
+// #include "hooking.h"

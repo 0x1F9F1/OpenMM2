@@ -27,4 +27,4 @@
     public: virtual void __thiscall bkLocalManager::Draw(void) | ?Draw@bkLocalManager@@UAEXXZ
 */
 
-#include "hooking.h"
+// #include "hooking.h"

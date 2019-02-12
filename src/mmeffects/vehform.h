@@ -33,4 +33,4 @@
     private: static class gfxTexture * mmVehicleForm::SphMapTex | ?SphMapTex@mmVehicleForm@@0PAVgfxTexture@@A
 */
 
-#include "hooking.h"
+// #include "hooking.h"

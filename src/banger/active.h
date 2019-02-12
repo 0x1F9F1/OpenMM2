@@ -47,4 +47,4 @@
     0x627630 | protected: static class dgBangerActiveManager * dgBangerActiveManager::Instance | ?Instance@dgBangerActiveManager@@1PAV1@A
 */
 
-#include "hooking.h"
+// #include "hooking.h"

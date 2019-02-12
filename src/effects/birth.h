@@ -38,4 +38,4 @@
     0x5B18F8 | const asBirthRule::`vftable' | ??_7asBirthRule@@6B@
 */
 
-#include "hooking.h"
+// #include "hooking.h"

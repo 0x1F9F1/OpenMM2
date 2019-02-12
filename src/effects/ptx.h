@@ -41,4 +41,4 @@
     public: static struct asMeshCardVertex * asMeshCardInfo::sQuad | ?sQuad@asMeshCardInfo@@2PAUasMeshCardVertex@@A
 */
 
-#include "hooking.h"
+// #include "hooking.h"

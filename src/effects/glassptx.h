@@ -31,4 +31,4 @@
     0x462D90 | public: virtual void __thiscall ptxGlassBirthRules::FileIO(class datParser &) | ?FileIO@ptxGlassBirthRules@@UAEXAAVdatParser@@@Z
 */
 
-#include "hooking.h"
+// #include "hooking.h"

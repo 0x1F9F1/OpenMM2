@@ -39,4 +39,4 @@
     public: class Vector3 * __thiscall aiPath::VertXDir(int,int) | ?VertXDir@aiPath@@QAEPAVVector3@@HH@Z
 */
 
-#include "hooking.h"
+// #include "hooking.h"

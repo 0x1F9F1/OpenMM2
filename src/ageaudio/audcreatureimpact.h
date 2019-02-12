@@ -41,4 +41,4 @@
     private: static int AudCreatureImpact::s_iPrevPlayIndex | ?s_iPrevPlayIndex@AudCreatureImpact@@0HA
 */
 
-#include "hooking.h"
+// #include "hooking.h"

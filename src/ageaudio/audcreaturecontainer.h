@@ -50,4 +50,4 @@
     private: static float AudCreatureContainer::s_fImpactReactionTimer | ?s_fImpactReactionTimer@AudCreatureContainer@@0MA
 */
 
-#include "hooking.h"
+// #include "hooking.h"

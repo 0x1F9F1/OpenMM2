@@ -72,4 +72,4 @@
     public: static int dgPhysManager::sm_ncollidable_locs2 | ?sm_ncollidable_locs2@dgPhysManager@@2HA
 */
 
-#include "hooking.h"
+// #include "hooking.h"

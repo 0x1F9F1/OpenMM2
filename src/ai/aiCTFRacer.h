@@ -39,4 +39,4 @@
     const aiCTFRacer::`vftable' | ??_7aiCTFRacer@@6B@
 */
 
-#include "hooking.h"
+// #include "hooking.h"

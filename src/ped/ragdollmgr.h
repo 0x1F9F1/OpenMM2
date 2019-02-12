@@ -37,4 +37,4 @@
     0x6B4740 | public: static class pedRagdollMgr * pedRagdollMgr::Instance | ?Instance@pedRagdollMgr@@2PAV1@A
 */
 
-#include "hooking.h"
+// #include "hooking.h"

@@ -38,4 +38,4 @@
     private: static class gfxViewport * ltProjection::ShadowViewport | ?ShadowViewport@ltProjection@@0PAVgfxViewport@@A
 */
 
-#include "hooking.h"
+// #include "hooking.h"

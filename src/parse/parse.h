@@ -38,4 +38,4 @@
     0x5CA2E4 | public: static void (__cdecl* datParser::sm_Errorf)(char const *,...) | ?sm_Errorf@datParser@@2P6AXPBDZZA
 */
 
-#include "hooking.h"
+// #include "hooking.h"

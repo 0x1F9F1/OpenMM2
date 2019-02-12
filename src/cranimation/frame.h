@@ -45,4 +45,4 @@
     0x57E300 | public: void __thiscall crAnimFrame::Pose(class crSkeleton &,bool) | ?Pose@crAnimFrame@@QAEXAAVcrSkeleton@@_N@Z
 */
 
-#include "hooking.h"
+// #include "hooking.h"

@@ -47,4 +47,4 @@
     0x5B4DD4 | const CMemStream::`vftable'{for `IStream'} | ??_7CMemStream@@6BIStream@@@
 */
 
-#include "hooking.h"
+// #include "hooking.h"

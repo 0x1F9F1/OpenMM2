@@ -32,4 +32,4 @@
     private: static class Stream * asStatsManager::g_pstream | ?g_pstream@asStatsManager@@0PAVStream@@A
 */
 
-#include "hooking.h"
+// #include "hooking.h"

@@ -36,4 +36,4 @@
     public: static class gfxTexture * asMeshSetForm::SphMapTex | ?SphMapTex@asMeshSetForm@@2PAVgfxTexture@@A
 */
 
-#include "hooking.h"
+// #include "hooking.h"

@@ -41,4 +41,4 @@
     private: static int AudCreatureAvoid::s_iPrevPlayIndex | ?s_iPrevPlayIndex@AudCreatureAvoid@@0HA
 */
 
-#include "hooking.h"
+// #include "hooking.h"

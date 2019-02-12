@@ -41,4 +41,4 @@
     0x631650 | private: static int asLineSparks::RefCount | ?RefCount@asLineSparks@@0HA
 */
 
-#include "hooking.h"
+// #include "hooking.h"

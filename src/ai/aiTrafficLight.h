@@ -37,4 +37,4 @@
     0x6B2FFC | private: static short aiTrafficLightSet::ObjCount | ?ObjCount@aiTrafficLightSet@@0FA
 */
 
-#include "hooking.h"
+// #include "hooking.h"

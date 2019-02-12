@@ -81,4 +81,4 @@
     public: static int aiVehicleManager::SignalClock | ?SignalClock@aiVehicleManager@@2HA
 */
 
-#include "hooking.h"
+// #include "hooking.h"

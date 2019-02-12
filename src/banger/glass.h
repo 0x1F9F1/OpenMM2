@@ -35,4 +35,4 @@
     0x6276E8 | private: static class gfxTexture * dgGlassInstance::sm_Texture | ?sm_Texture@dgGlassInstance@@0PAVgfxTexture@@A
 */
 
-#include "hooking.h"
+// #include "hooking.h"

@@ -39,4 +39,4 @@
     private: static struct IDirectMusicLoader * SegmentWrapper::s_pLoader | ?s_pLoader@SegmentWrapper@@0PAUIDirectMusicLoader@@A
 */
 
-#include "hooking.h"
+// #include "hooking.h"

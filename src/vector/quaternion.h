@@ -30,4 +30,4 @@
     0x4C5150 | public: void __thiscall Quaternion::MultiplyInverse(class Quaternion const &) | ?MultiplyInverse@Quaternion@@QAEXABV1@@Z
 */
 
-#include "hooking.h"
+// #include "hooking.h"

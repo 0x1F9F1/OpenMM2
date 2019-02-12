@@ -18,13 +18,8 @@
 
 #pragma once
 
-#include <mem/mem.h>
-#include <mem/init_function.h>
 #include <mem/macros.h>
 #include <mem/stub.h>
-
-#include <functional>
-#include <utility>
 
 #define DIRECTX_VERSION 0x0700
 
