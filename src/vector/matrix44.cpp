@@ -20,7 +20,7 @@
 
 #include <xmmintrin.h>
 
-void Matrix44::FastInverse(const Matrix44 & rhs)
+void Matrix44::FastInverse(const Matrix44 & rhs) noexcept
 {
     m00 = rhs.m00;
     m10 = rhs.m01;
@@ -43,36 +43,51 @@ void Matrix44::FastInverse(const Matrix44 & rhs)
     m33 = 1.0f;
 }
 
-Matrix44 & Matrix44::Dot(const Matrix44 & rhs)
+Matrix44 & Matrix44::Dot(const Matrix44 & rhs) noexcept
 {
-    return Dot(*this, rhs);
+    return Dot(rhs, *this);
 }
 
-Matrix44 & Matrix44::Dot(const Matrix44 & lhs, const Matrix44 & rhs)
+Matrix44 & Matrix44::Dot(const Matrix44 & lhs, const Matrix44 & rhs) noexcept
 {
-    __m128 temp = _mm_loadu_ps(&rhs.m00);
-    __m128 res0 = _mm_mul_ps(_mm_load_ps1(&lhs.m00), temp);
-    __m128 res1 = _mm_mul_ps(_mm_load_ps1(&lhs.m10), temp);
-    __m128 res2 = _mm_mul_ps(_mm_load_ps1(&lhs.m20), temp);
-    __m128 res3 = _mm_mul_ps(_mm_load_ps1(&lhs.m30), temp);
+    const __m128 lhs0 = _mm_loadu_ps(&lhs.m00);
+    const __m128 lhs1 = _mm_loadu_ps(&lhs.m10);
+    const __m128 lhs2 = _mm_loadu_ps(&lhs.m20);
+    const __m128 lhs3 = _mm_loadu_ps(&lhs.m30);
 
-    temp = _mm_loadu_ps(&rhs.m10);
-    res0 = _mm_add_ps(res0, _mm_mul_ps(_mm_load_ps1(&lhs.m01), temp));
-    res1 = _mm_add_ps(res1, _mm_mul_ps(_mm_load_ps1(&lhs.m11), temp));
-    res2 = _mm_add_ps(res2, _mm_mul_ps(_mm_load_ps1(&lhs.m21), temp));
-    res3 = _mm_add_ps(res3, _mm_mul_ps(_mm_load_ps1(&lhs.m31), temp));
+    const __m128 rhs0 = _mm_loadu_ps(&rhs.m00);
+    const __m128 rhs1 = _mm_loadu_ps(&rhs.m10);
+    const __m128 rhs2 = _mm_loadu_ps(&rhs.m20);
+    const __m128 rhs3 = _mm_loadu_ps(&rhs.m30);
+ 
+#define SPLAT(x, i) _mm_shuffle_ps(x, x, _MM_SHUFFLE(i, i, i, i))
 
-    temp = _mm_loadu_ps(&rhs.m20);
-    res0 = _mm_add_ps(res0, _mm_mul_ps(_mm_load_ps1(&lhs.m02), temp));
-    res1 = _mm_add_ps(res1, _mm_mul_ps(_mm_load_ps1(&lhs.m12), temp));
-    res2 = _mm_add_ps(res2, _mm_mul_ps(_mm_load_ps1(&lhs.m22), temp));
-    res3 = _mm_add_ps(res3, _mm_mul_ps(_mm_load_ps1(&lhs.m32), temp));
+    __m128 res0 = _mm_mul_ps(SPLAT(rhs0, 0), lhs0);
+    __m128 res1 = _mm_mul_ps(SPLAT(rhs1, 0), lhs0);
+    __m128 res2 = _mm_mul_ps(SPLAT(rhs2, 0), lhs0);
+    __m128 res3 = _mm_mul_ps(SPLAT(rhs3, 0), lhs0);
 
-    temp = _mm_loadu_ps(&rhs.m30);
-    _mm_storeu_ps(&m00, _mm_add_ps(res0, _mm_mul_ps(_mm_load_ps1(&lhs.m03), temp)));
-    _mm_storeu_ps(&m10, _mm_add_ps(res1, _mm_mul_ps(_mm_load_ps1(&lhs.m13), temp)));
-    _mm_storeu_ps(&m20, _mm_add_ps(res2, _mm_mul_ps(_mm_load_ps1(&lhs.m23), temp)));
-    _mm_storeu_ps(&m30, _mm_add_ps(res3, _mm_mul_ps(_mm_load_ps1(&lhs.m33), temp)));
+    res0 = _mm_add_ps(res0, _mm_mul_ps(SPLAT(rhs0, 1), lhs1));
+    res1 = _mm_add_ps(res1, _mm_mul_ps(SPLAT(rhs1, 1), lhs1));
+    res2 = _mm_add_ps(res2, _mm_mul_ps(SPLAT(rhs2, 1), lhs1));
+    res3 = _mm_add_ps(res3, _mm_mul_ps(SPLAT(rhs3, 1), lhs1));
+
+    res0 = _mm_add_ps(res0, _mm_mul_ps(SPLAT(rhs0, 2), lhs2));
+    res1 = _mm_add_ps(res1, _mm_mul_ps(SPLAT(rhs1, 2), lhs2));
+    res2 = _mm_add_ps(res2, _mm_mul_ps(SPLAT(rhs2, 2), lhs2));
+    res3 = _mm_add_ps(res3, _mm_mul_ps(SPLAT(rhs3, 2), lhs2));
+
+    res0 = _mm_add_ps(res0, _mm_mul_ps(SPLAT(rhs0, 3), lhs3));
+    res1 = _mm_add_ps(res1, _mm_mul_ps(SPLAT(rhs1, 3), lhs3));
+    res2 = _mm_add_ps(res2, _mm_mul_ps(SPLAT(rhs2, 3), lhs3));
+    res3 = _mm_add_ps(res3, _mm_mul_ps(SPLAT(rhs3, 3), lhs3));
+
+#undef SPLAT
+
+    _mm_storeu_ps(&m00, res0);
+    _mm_storeu_ps(&m10, res1);
+    _mm_storeu_ps(&m20, res2);
+    _mm_storeu_ps(&m30, res3);
 
     return *this;
 }
@@ -80,4 +95,5 @@ Matrix44 & Matrix44::Dot(const Matrix44 & lhs, const Matrix44 & rhs)
 run_once([]
 {
     create_hook("Matrix44::Dot", "SSE Dot", 0x4C0FC0, static_cast<Matrix44& (Matrix44::*)(const Matrix44& lhs, const Matrix44& rhs)>(&Matrix44::Dot));
+    create_hook("Matrix44::Dot", "SSE Dot", 0x4C0D50, static_cast<Matrix44& (Matrix44::*)(const Matrix44& rhs)>(&Matrix44::Dot));
 });
