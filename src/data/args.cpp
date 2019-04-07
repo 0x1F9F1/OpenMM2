@@ -102,7 +102,7 @@ void datArgParser::Init(int argc, char ** argv)
 
     if (argv)
     {
-        for (int i = 0; i < argc;)
+        for (int i = 1; i < argc;)
         {
             char* currentArg = argv[i];
 
