@@ -64,14 +64,18 @@ extern "C" HRESULT WINAPI DirectInputCreateA_Impl(HINSTANCE hinst, DWORD dwVersi
     return DirectInputCreateA_Orig(hinst, dwVersion, ppDI, punkOuter);
 }
 
-static extern_var(0x6B48A0, int, ArgC);
-static extern_var(0x6B48A4, char**, ArgV);
+static extern_var(0x6B48A0, int, CRT_ArgC);
+static extern_var(0x6B48A4, char**, CRT_ArgV);
 
 int CALLBACK MidtownMain(HINSTANCE /*hInstance*/, HINSTANCE /*hPrevInstance*/, LPSTR /*lpCmdLine*/, int /*nCmdShow*/)
 {
     datOutput::OpenLog("mm2.log");
+    datArgParser::Init(CRT_ArgC, CRT_ArgV);
 
-    datArgParser::Init(ArgC, ArgV);
+    if (!datArgParser::Exists("nodep"))
+    {
+        SetProcessDEPPolicy(PROCESS_DEP_ENABLE);
+    }
 
     Displayf("Begin Hooking");
 
