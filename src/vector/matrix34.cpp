@@ -18,21 +18,31 @@
 
 #include "matrix34.h"
 
-void Matrix34::Identity()
+#include <xmmintrin.h>
+
+void Matrix34::Dot(const Matrix34 & lhs, const Matrix34 & rhs) noexcept
 {
-    m00 = 1.0f;
-    m01 = 0.0f;
-    m02 = 0.0f;
+    m00 = lhs.m00 * rhs.m00 + lhs.m01 * rhs.m10 + lhs.m02 * rhs.m20;
+    m01 = lhs.m00 * rhs.m01 + lhs.m01 * rhs.m11 + lhs.m02 * rhs.m21;
+    m02 = lhs.m00 * rhs.m02 + lhs.m01 * rhs.m12 + lhs.m02 * rhs.m22;
 
-    m10 = 0.0f;
-    m11 = 1.0f;
-    m12 = 0.0f;
+    m10 = lhs.m10 * rhs.m00 + lhs.m11 * rhs.m10 + lhs.m12 * rhs.m20;
+    m11 = lhs.m10 * rhs.m01 + lhs.m11 * rhs.m11 + lhs.m12 * rhs.m21;
+    m12 = lhs.m10 * rhs.m02 + lhs.m11 * rhs.m12 + lhs.m12 * rhs.m22;
 
-    m20 = 0.0f;
-    m21 = 0.0f;
-    m22 = 1.0f;
+    m20 = lhs.m20 * rhs.m00 + lhs.m21 * rhs.m10 + lhs.m22 * rhs.m20;
+    m21 = lhs.m20 * rhs.m01 + lhs.m21 * rhs.m11 + lhs.m22 * rhs.m21;
+    m22 = lhs.m20 * rhs.m02 + lhs.m21 * rhs.m12 + lhs.m22 * rhs.m22;
 
-    m30 = 0.0f;
-    m31 = 0.0f;
-    m32 = 0.0f;
+    m30 = lhs.m30 * rhs.m00 + lhs.m31 * rhs.m10 + lhs.m32 * rhs.m20 + rhs.m30;
+    m31 = lhs.m30 * rhs.m01 + lhs.m31 * rhs.m11 + lhs.m32 * rhs.m21 + rhs.m31;
+    m32 = lhs.m30 * rhs.m02 + lhs.m31 * rhs.m12 + lhs.m32 * rhs.m22 + rhs.m32;
 }
+
+run_once([]
+{
+    create_hook("Matrix34::Dot", "SSE Dot", 0x4BC580, static_cast<void (Matrix34::*)(const Matrix34& lhs, const Matrix34& rhs)>(&Matrix34::Dot));
+    create_hook("Matrix34::Dot", "SSE Dot", 0x4BC400, static_cast<void (Matrix34::*)(const Matrix34& rhs)>(&Matrix34::Dot));
+});
+
+define_dummy_symbol(Matrix34);

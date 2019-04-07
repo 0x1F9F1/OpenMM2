@@ -110,14 +110,40 @@
 class Matrix34
 {
 public:
-    float m00, m01, m02;
-    float m10, m11, m12;
-    float m20, m21, m22;
-    float m30, m31, m32;
+    float m00 {0.0f}, m01 {0.0f}, m02 {0.0f};
+    float m10 {0.0f}, m11 {0.0f}, m12 {0.0f};
+    float m20 {0.0f}, m21 {0.0f}, m22 {0.0f};
+    float m30 {0.0f}, m31 {0.0f}, m32 {0.0f};
 
-    Matrix34() = default;
+    constexpr inline Matrix34() noexcept = default;
 
-    void Identity();
+    void Dot(const Matrix34& rhs) noexcept
+    {
+        Matrix34 lhs = *this;
+
+        Dot(lhs, rhs);
+    }
+
+    void Dot(const Matrix34& lhs, const Matrix34& rhs) noexcept;
+
+    inline void Identity() noexcept
+    {
+        m00 = 1.0f;
+        m01 = 0.0f;
+        m02 = 0.0f;
+
+        m10 = 0.0f;
+        m11 = 1.0f;
+        m12 = 0.0f;
+
+        m20 = 0.0f;
+        m21 = 0.0f;
+        m22 = 1.0f;
+
+        m30 = 0.0f;
+        m31 = 0.0f;
+        m32 = 0.0f;
+    }
 };
 
 check_size(Matrix34, 0x30);

@@ -43,11 +43,6 @@ void Matrix44::FastInverse(const Matrix44 & rhs) noexcept
     m33 = 1.0f;
 }
 
-Matrix44 & Matrix44::Dot(const Matrix44 & rhs) noexcept
-{
-    return Dot(rhs, *this);
-}
-
 Matrix44 & Matrix44::Dot(const Matrix44 & lhs, const Matrix44 & rhs) noexcept
 {
     const __m128 lhs0 = _mm_loadu_ps(&lhs.m00);

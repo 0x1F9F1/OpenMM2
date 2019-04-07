@@ -74,7 +74,11 @@ public:
 
     void FastInverse(const Matrix44& rhs) noexcept;
 
-    Matrix44& Dot(const Matrix44& rhs) noexcept;
+    inline Matrix44& Dot(const Matrix44& rhs) noexcept
+    {
+        return Dot(rhs, *this);
+    }
+
     Matrix44& Dot(const Matrix44& lhs, const Matrix44& rhs) noexcept;
 };
 
