@@ -637,9 +637,6 @@ int ExceptMain()
 {
     int result = -1;
 
-// #define EXCEPTION_BEGIN __try {
-// #define EXCEPTION_END } __except(datStack::ExceptionFilter((struct _EXCEPTION_POINTERS*)_exception_info()))
-
     __try
     {
         result = Main();
@@ -654,5 +651,6 @@ int ExceptMain()
     return result;
 }
 
-include_dummy_symbol(sfPointer)
-include_dummy_symbol(vehCarAudioContainer)
+include_dummy_symbol(sfPointer);
+include_dummy_symbol(vehCarAudioContainer);
+include_dummy_symbol(Matrix34);

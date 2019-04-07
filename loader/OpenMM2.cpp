@@ -44,11 +44,11 @@ extern "C" HRESULT WINAPI DirectInputCreateA_Impl(HINSTANCE hinst, DWORD dwVersi
         {
             Displayf("Loaded real dinput.dll at 0x%zX", (uintptr_t)(hDinput));
 
-            DirectInputCreateA_Orig = (decltype(DirectInputCreateA_Orig)) GetProcAddress(hDinput, "DirectInputCreateA");
+            DirectInputCreateA_Orig = (decltype(DirectInputCreateA_Orig))GetProcAddress(hDinput, "DirectInputCreateA");
 
             if (DirectInputCreateA_Orig)
             {
-                Displayf("Found DirectInputCreateA at 0x%zX", (uintptr_t) DirectInputCreateA_Orig);
+                Displayf("Found DirectInputCreateA at 0x%zX", (uintptr_t)DirectInputCreateA_Orig);
             }
             else
             {
