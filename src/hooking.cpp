@@ -31,6 +31,7 @@ const char* const HookTypeNames[static_cast<size_t>(hook_type::count)] =
 {
     "jmp",
     "call",
+    "push",
 };
 
 size_t HookCount = 0;
@@ -54,6 +55,14 @@ void create_hook(const char* name, const char* description, mem::pointer pHook, 
         {
             uint8_t buffer[5] = { 0xE8 };
             reinterpret_cast<int&>(buffer[1]) = rva;
+
+            write_protected(pHook, buffer, sizeof(buffer));
+        } break;
+
+        case hook_type::push:
+        {
+            uint8_t buffer[5] = { 0x68 };
+            reinterpret_cast<int&>(buffer[1]) = pDetour.as<int>();
 
             write_protected(pHook, buffer, sizeof(buffer));
         } break;
