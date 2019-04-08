@@ -494,7 +494,11 @@ int Main(void)
         exit(0);
     }
 
-    CreateGameMutex("MidtownMadness2Mutex");
+    if (!datArgParser::Exists("nomutex"))
+    {
+        CreateGameMutex("MidtownMadness2Mutex");
+    }
+
     CheckGlobalMemory();
     CheckDiskSpace();
 
