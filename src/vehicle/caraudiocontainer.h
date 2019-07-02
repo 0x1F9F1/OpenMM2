@@ -72,7 +72,7 @@ class Stream;
 class vehCarAudioContainer
 {
 public:
-    static void RegisterTypes(char const * fileName);
+    static void RegisterTypes(char const* fileName);
     static void RegisterTypes2(Stream* stream, void* context);
 
     static void RegisterSemiNames(Stream* stream, char* names);

@@ -57,7 +57,7 @@ public:
     uint32_t dword4 {0};
     uint32_t dword8 {1};
     uint32_t dwordC {0};
-    eqEventMonitor *Clients[8] {nullptr};
+    eqEventMonitor* Clients[8] {nullptr};
     uint8_t gap30[8] {0};
     uint32_t dword38 {0};
     uint32_t dword3C {0};
@@ -85,7 +85,7 @@ public:
 
     virtual ~eqEventMonitor();
 
-    eqEventHandler *Handler {nullptr};
+    eqEventHandler* Handler {nullptr};
     int Index {-1};
 };
 

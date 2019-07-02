@@ -55,12 +55,10 @@ void gfxRenderState::Flush()
 
 void gfxRenderState::SetTexture(int index, gfxTexture* texture)
 {
-#ifdef _DEBUG
     if (index > 1)
     {
         Quitf("Invalid Texture Index");
     }
-#endif
 
     if (m_Texture[index] != texture)
     {
@@ -69,3 +67,9 @@ void gfxRenderState::SetTexture(int index, gfxTexture* texture)
         m_Touched |= TouchMask_Texture;
     }
 }
+
+run_once([] {
+    create_hook("gfxRenderState::SetCamera", "Matrix34", 0x4B2970, static_cast<void (*)(const Matrix34&)>(&gfxRenderState::SetCamera));
+    create_hook("gfxRenderState::SetCamera", "Matrix44", 0x4B2A20, static_cast<void (*)(const Matrix44&)>(&gfxRenderState::SetCamera));
+    create_hook("gfxRenderState::DoFlush", "", 0x4B4C40, &gfxRenderState::DoFlush);
+});

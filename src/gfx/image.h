@@ -58,11 +58,11 @@ public:
     uint8_t Type {0};
     uint8_t PaletteType {0};
     uint32_t TexEnv {0};
-    uint8_t *ImageData {nullptr};
-    uint8_t *PaletteData {nullptr};
+    uint8_t* ImageData {nullptr};
+    uint8_t* PaletteData {nullptr};
 
     uint32_t RefCount {1};
-    gfxImage *Next {nullptr};
+    gfxImage* Next {nullptr};
 
     ~gfxImage();
 
@@ -70,8 +70,8 @@ public:
 
     void Scale(int width, int height);
 
-    static gfxImage * Create(int width, int height, int type, int paletteType, int a5);
-    static gfxImage* GetFont(int & outWidth, int & outHeight);
+    static gfxImage* Create(int width, int height, int type, int paletteType, int a5);
+    static gfxImage* GetFont(int& outWidth, int& outHeight);
     static void FreeFont(void);
 
     static inline extern_var(0x684D48, gfxImage*, sm_Font);

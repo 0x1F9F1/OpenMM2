@@ -18,9 +18,9 @@
 
 #include "autoinit.h"
 
+#include "core/output.h"
 #include "data/args.h"
 #include "data/asset.h"
-#include "core/output.h"
 
 #include "zipfile/zipfile.h"
 
@@ -52,7 +52,7 @@ void zipAutoInit(void)
     }
 }
 
-void zipMultiAutoInit(char const * extension)
+void zipMultiAutoInit(char const* extension)
 {
     if (datArgParser::Exists("logopen"))
     {
@@ -93,8 +93,7 @@ void zipMultiAutoInit(char const * extension)
         FindClose(hFindFile);
     }
 
-    std::sort(fileList, fileList + fileCount, [](char* lhs, char* rhs)
-    {
+    std::sort(fileList, fileList + fileCount, [](char* lhs, char* rhs) {
         return strcmp(lhs, rhs) < 0;
     });
 

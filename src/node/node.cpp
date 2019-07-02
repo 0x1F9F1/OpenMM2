@@ -81,7 +81,7 @@ void asNode::UpdatePaused(void)
 
 void asNode::FileIO(datParser& parser)
 {
-    (void)(parser);
+    (void) (parser);
 }
 
 void asNode::AfterLoad(void)
@@ -112,7 +112,7 @@ const char* asNode::GetDirName(void)
     return "tune";
 }
 
-int asNode::RemoveChild(asNode * child)
+int asNode::RemoveChild(asNode* child)
 {
     int index = 1;
 
@@ -156,7 +156,7 @@ int asNode::RemoveChild(int index)
     return 0;
 }
 
-asNode * asNode::GetChild(int index)
+asNode* asNode::GetChild(int index)
 {
     int count = 1;
 
@@ -193,7 +193,7 @@ void asNode::RemoveAllChildren(void)
     }
 }
 
-int asNode::InsertChild(int index, asNode * child)
+int asNode::InsertChild(int index, asNode* child)
 {
     if (child && index >= 1 && index <= NumChildren() + 1)
     {
@@ -218,7 +218,7 @@ int asNode::InsertChild(int index, asNode * child)
     return 0;
 }
 
-int asNode::AddChild(asNode * child)
+int asNode::AddChild(asNode* child)
 {
     if (!child)
     {
@@ -256,7 +256,7 @@ int asNode::AddChild(asNode * child)
     return 1;
 }
 
-void asNode::SetName(const char * name)
+void asNode::SetName(const char* name)
 {
     if (Name)
     {

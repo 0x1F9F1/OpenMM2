@@ -36,7 +36,7 @@ eqEventHandler::~eqEventHandler()
     }
 }
 
-void eqEventHandler::RemoveClient(eqEventMonitor * client)
+void eqEventHandler::RemoveClient(eqEventMonitor* client)
 {
     if (!client->Handler)
     {

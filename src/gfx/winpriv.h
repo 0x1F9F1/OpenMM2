@@ -54,11 +54,11 @@
 
 #include "d3dpipe.h"
 
-inline extern_var(0x6830A8, IDirectDraw7 *, lpDD);
-inline extern_var(0x6830AC, IDirect3D7 *, lpD3D);
-inline extern_var(0x6830C8, IDirect3DDevice7 *, lpD3DDev);
-inline extern_var(0x6830CC, IDirectDrawSurface7 *, lpdsRend);
-inline extern_var(0x6830B0, IDirectDrawSurface7 *, lpdsFront);
+inline extern_var(0x6830A8, IDirectDraw7*, lpDD);
+inline extern_var(0x6830AC, IDirect3D7*, lpD3D);
+inline extern_var(0x6830C8, IDirect3DDevice7*, lpD3DDev);
+inline extern_var(0x6830CC, IDirectDrawSurface7*, lpdsRend);
+inline extern_var(0x6830B0, IDirectDrawSurface7*, lpdsFront);
 
 inline extern_var(0x682FA0, HWND, hwndParent);
 inline extern_var(0x6830B8, HWND, hwndMain);
@@ -81,4 +81,4 @@ inline extern_var(0x6830D8, int, useInterface);
 
 inline extern_var(0x683104, bool, gfxDebug);
 
-inline extern_var(0x6844B8, void(*)(void), gfxRestoreCallback);
+inline extern_var(0x6844B8, void (*)(void), gfxRestoreCallback);

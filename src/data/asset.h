@@ -48,10 +48,10 @@ public:
     static void SetPath(const char* path);
 
     static Stream* Open(char const* path, char const* ext, bool a2, bool readOnly);
-    static Stream* Open(const char* prefix, const char *path, const char *ext, bool a4, bool readOnly);
+    static Stream* Open(const char* prefix, const char* path, const char* ext, bool a4, bool readOnly);
 
-    static void FullPath(char * buffer, int bufferLength, const char* path, const char* ext);
-    static void FullPath(char * buffer, int bufferLength, const char *prefix, const char *path, const char *ext);
+    static void FullPath(char* buffer, int bufferLength, const char* path, const char* ext);
+    static void FullPath(char* buffer, int bufferLength, const char* prefix, const char* path, const char* ext);
 
     static inline extern_var(0x6A3B8C, char[128], sm_Path);
     static inline extern_var(0x5CE760, bool, sm_IgnorePrefix);

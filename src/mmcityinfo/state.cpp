@@ -19,9 +19,8 @@
 #include "state.h"
 
 const char* dgGameModeNames[7] =
-{
-    "roam", "race%d", "multicop", "circuit%d", "blitz%d", "croam", "crash%d"
-};
+    {
+        "roam", "race%d", "multicop", "circuit%d", "blitz%d", "croam", "crash%d"};
 
 mmStatePack::mmStatePack()
 {

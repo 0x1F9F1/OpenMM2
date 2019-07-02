@@ -36,10 +36,9 @@ mmReplayManager::~mmReplayManager()
     // DebugLogShutdown();
 }
 
-void mmReplayManager::LoadReplay(char * path)
+void mmReplayManager::LoadReplay(char* path)
 {
-
-    Stream *stream = datAssetManager::Open(path, "rpl", 0, 0);
+    Stream* stream = datAssetManager::Open(path, "rpl", 0, 0);
     if (!stream)
     {
         Errorf("Couldn't load replay '%s'", path);

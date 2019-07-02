@@ -118,11 +118,11 @@ class asNetwork
 public:
     datCallback SysMessageCB {};
     datCallback AppMessageCB {};
-    IDirectPlay4A *pDPlay {nullptr};
-    IDirectPlayLobby3A *pLobby {nullptr};
+    IDirectPlay4A* pDPlay {nullptr};
+    IDirectPlayLobby3A* pLobby {nullptr};
     DPID PlayerID {0};
-    DPLCONNECTION *pConnection {nullptr};
-    GUID *pGUID {nullptr};
+    DPLCONNECTION* pConnection {nullptr};
+    GUID* pGUID {nullptr};
     void* pRecvBuf {nullptr};
     uint32_t nRecvBufSize {0};
     float float34 {0.0f};

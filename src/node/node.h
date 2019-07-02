@@ -50,8 +50,8 @@
     0x5B28E8 | const asNode::`vftable' | ??_7asNode@@6B@
 */
 
-#include "hooking.h"
 #include "cullable.h"
+#include "hooking.h"
 
 #undef GetClassName
 
@@ -65,10 +65,10 @@ public:
     asNode* Children {nullptr};
     asNode* Parent {nullptr};
 
-    // 0x1 | Update
+    // 0x1 | Enabled
     // 0x400 | Update while paused
     uint32_t Flags {0x3};
-    char *Name {nullptr};
+    char* Name {nullptr};
 
     asNode() = default;
 
@@ -78,13 +78,13 @@ public:
     virtual void Reset(void);
     virtual void ResChange(int width, int height);
     virtual void UpdatePaused(void);
-    virtual void FileIO(datParser &parser);
+    virtual void FileIO(datParser& parser);
     virtual void AfterLoad(void);
     virtual void BeforeSave(void);
     virtual bool Save(void);
     virtual bool Load(void);
-    virtual const char * GetClassName(void);
-    virtual const char * GetDirName(void);
+    virtual const char* GetClassName(void);
+    virtual const char* GetDirName(void);
 
     int RemoveChild(asNode* child);
     int RemoveChild(int index);

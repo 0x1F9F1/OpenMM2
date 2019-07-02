@@ -17,15 +17,15 @@
 */
 
 #include "output.h"
-
+#include "core/stream.h"
 #include "minwin.h"
 
 #include <cstdarg>
+#include <io.h>
+#include <iostream>
 
-#include "core/stream.h"
-
-inline extern_var(0x6A3D44, void(*)(void), beforeMsgBoxCB);
-inline extern_var(0x6A3D48, void(*)(void), afterMsgBoxCB);
+inline extern_var(0x6A3D44, void (*)(void), beforeMsgBoxCB);
+inline extern_var(0x6A3D48, void (*)(void), afterMsgBoxCB);
 
 HANDLE DebugLogConsole = INVALID_HANDLE_VALUE;
 
@@ -45,7 +45,7 @@ void datOutput::CallAfterMsgBoxFunction(void)
     }
 }
 
-bool datOutput::OpenLog(char const * fileName)
+bool datOutput::OpenLog(char const* fileName)
 {
     if (!DebugLogFile)
     {
@@ -66,9 +66,12 @@ bool datOutput::OpenLog(char const * fileName)
 
     if (DebugLogConsole == INVALID_HANDLE_VALUE)
     {
-        AllocConsole();
+        if (GetConsoleWindow() == NULL)
+        {
+            AllocConsole();
 
-        SetConsoleTitleA("OpenMM2");
+            SetConsoleTitleA("OpenMM2");
+        }
 
         DebugLogConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     }
@@ -93,7 +96,7 @@ void datOutput::CloseLog(void)
     }
 }
 
-void gfxDebugf(int enabled, const char * format, ...)
+void gfxDebugf(int enabled, const char* format, ...)
 {
     if (enabled)
     {
@@ -106,48 +109,48 @@ void gfxDebugf(int enabled, const char * format, ...)
     }
 }
 
-#define TEXTCOLOR_BLACK             0
-#define TEXTCOLOR_BLUE              1
-#define TEXTCOLOR_GREEN             2
-#define TEXTCOLOR_CYAN              3
-#define TEXTCOLOR_RED               4
-#define TEXTCOLOR_MAGENTA           5
-#define TEXTCOLOR_BROWN             6
-#define TEXTCOLOR_LIGHTGRAY         7
-#define TEXTCOLOR_DARKGRAY          8
-#define TEXTCOLOR_LIGHTBLUE         9
-#define TEXTCOLOR_LIGHTGREEN        10
-#define TEXTCOLOR_LIGHTCYAN         11
-#define TEXTCOLOR_LIGHTRED          12
-#define TEXTCOLOR_LIGHTMAGENTA      13
-#define TEXTCOLOR_YELLOW            14
-#define TEXTCOLOR_WHITE             15
+#define TEXTCOLOR_BLACK 0
+#define TEXTCOLOR_BLUE 1
+#define TEXTCOLOR_GREEN 2
+#define TEXTCOLOR_CYAN 3
+#define TEXTCOLOR_RED 4
+#define TEXTCOLOR_MAGENTA 5
+#define TEXTCOLOR_BROWN 6
+#define TEXTCOLOR_LIGHTGRAY 7
+#define TEXTCOLOR_DARKGRAY 8
+#define TEXTCOLOR_LIGHTBLUE 9
+#define TEXTCOLOR_LIGHTGREEN 10
+#define TEXTCOLOR_LIGHTCYAN 11
+#define TEXTCOLOR_LIGHTRED 12
+#define TEXTCOLOR_LIGHTMAGENTA 13
+#define TEXTCOLOR_YELLOW 14
+#define TEXTCOLOR_WHITE 15
 
-#define BACKCOLOR_BLACK             (0 << 4)
-#define BACKCOLOR_BLUE              (1 << 4)
-#define BACKCOLOR_GREEN             (2 << 4)
-#define BACKCOLOR_CYAN              (3 << 4)
-#define BACKCOLOR_RED               (4 << 4)
-#define BACKCOLOR_MAGENTA           (5 << 4)
-#define BACKCOLOR_BROWN             (6 << 4)
-#define BACKCOLOR_LIGHTGRAY         (7 << 4)
-#define BACKCOLOR_DARKGRAY          (8 << 4)
-#define BACKCOLOR_LIGHTBLUE         (9 << 4)
-#define BACKCOLOR_LIGHTGREEN        (10 << 4)
-#define BACKCOLOR_LIGHTCYAN         (11 << 4)
-#define BACKCOLOR_LIGHTRED          (12 << 4)
-#define BACKCOLOR_LIGHTMAGENTA      (13 << 4)
-#define BACKCOLOR_YELLOW            (14 << 4)
-#define BACKCOLOR_WHITE             (15 << 4)
+#define BACKCOLOR_BLACK (0 << 4)
+#define BACKCOLOR_BLUE (1 << 4)
+#define BACKCOLOR_GREEN (2 << 4)
+#define BACKCOLOR_CYAN (3 << 4)
+#define BACKCOLOR_RED (4 << 4)
+#define BACKCOLOR_MAGENTA (5 << 4)
+#define BACKCOLOR_BROWN (6 << 4)
+#define BACKCOLOR_LIGHTGRAY (7 << 4)
+#define BACKCOLOR_DARKGRAY (8 << 4)
+#define BACKCOLOR_LIGHTBLUE (9 << 4)
+#define BACKCOLOR_LIGHTGREEN (10 << 4)
+#define BACKCOLOR_LIGHTCYAN (11 << 4)
+#define BACKCOLOR_LIGHTRED (12 << 4)
+#define BACKCOLOR_LIGHTMAGENTA (13 << 4)
+#define BACKCOLOR_YELLOW (14 << 4)
+#define BACKCOLOR_WHITE (15 << 4)
 
-#define TEXTCOLOR_MASK              (0xF)
-#define BACKCOLOR_MASK              (0xF << 4)
-#define FULLCOLOR_MASK              (TEXTCOLOR_MASK | BACKCOLOR_MASK)
+#define TEXTCOLOR_MASK (0xF)
+#define BACKCOLOR_MASK (0xF << 4)
+#define FULLCOLOR_MASK (TEXTCOLOR_MASK | BACKCOLOR_MASK)
 
 inline extern_var(0x6A3D3C, bool, b_popUpErrors);
 inline extern_var(0x5CECE8, bool, b_popUpQuits);
 
-inline extern_var(0x6A3D38, void(*)(const char *), gFatalMessageHandler);
+inline extern_var(0x6A3D38, void (*)(const char*), gFatalMessageHandler);
 
 short PrinterConsoleColors[6] = {
     TEXTCOLOR_WHITE,
@@ -159,26 +162,24 @@ short PrinterConsoleColors[6] = {
 };
 
 const char* PrinterPrefixes[6] =
-{
-    "",
-    "",
-    "",
-    "Warning: ",
-    "Error: ",
-    "Fatal Error: "
-};
+    {
+        "",
+        "",
+        "",
+        "Warning: ",
+        "Error: ",
+        "Fatal Error: "};
 
-const char *PrinterSuffixes[6] =
-{
-    "",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n"
-};
+const char* PrinterSuffixes[6] =
+    {
+        "",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"};
 
-void CustomPrinter(int level, const char *format, va_list args)
+void CustomPrinter(int level, const char* format, va_list args)
 {
     char formatBuffer[4096];
     char mainBuffer[4096];
@@ -186,7 +187,7 @@ void CustomPrinter(int level, const char *format, va_list args)
     vsprintf_s(mainBuffer, format, args);
 
     if ((b_popUpErrors && (level == 4)) ||
-        (b_popUpQuits  && (level == 5)))
+        (b_popUpQuits && (level == 5)))
     {
         datOutput::CallBeforeMsgBoxFunction();
 
@@ -310,7 +311,7 @@ void Errorf(const char* format, ...)
     }
 }
 
-inline extern_var(0x6A3D50, int(*)(void), JustBeforeQuit);
+inline extern_var(0x6A3D50, int (*)(void), JustBeforeQuit);
 
 void Quitf(const char* format, ...)
 {
@@ -357,7 +358,7 @@ void Abortf(const char* format, ...)
     exit(1);
 }
 
-void ageDebug(int enabled, char const * format, ...)
+void ageDebug(int enabled, char const* format, ...)
 {
     if (enabled || true)
     {

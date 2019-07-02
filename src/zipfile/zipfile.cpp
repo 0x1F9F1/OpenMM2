@@ -18,12 +18,12 @@
 
 #include "zipfile.h"
 
-#include "core/stream.h"
 #include "core/output.h"
+#include "core/stream.h"
 
+#include "data/args.h"
 #include "data/asset.h"
 #include "data/timer.h"
-#include "data/args.h"
 
 #include "minwin.h"
 
@@ -33,15 +33,15 @@
 
 struct zipHandle
 {
-    zipFile *pZipFile {nullptr};
-    zipEntry *pZipEntry {nullptr};
+    zipFile* pZipFile {nullptr};
+    zipEntry* pZipEntry {nullptr};
     uint32_t CurrentOffset {0};
     uint32_t CurrentRawDataSize {0};
     z_stream Inflater {};
 };
 
 inline extern_var(0x6B4218, zipHandle[16], ZipHandles);
-inline extern_var(0x6B4204, const coreFileMethods *, zipFileOpenMethods);
+inline extern_var(0x6B4204, const coreFileMethods*, zipFileOpenMethods);
 inline extern_var(0x5DA768, const coreFileMethods, zipFileMethods);
 
 #pragma pack(push, 1)
@@ -89,7 +89,7 @@ struct ZIPDIRENTRY
 check_size(ZIPDIRENTRY, 0x2A);
 #pragma pack(pop)
 
-bool zipFile::Init(char const * fileName)
+bool zipFile::Init(char const* fileName)
 {
     if (zipFileOpenMethods == nullptr)
     {
@@ -118,7 +118,7 @@ bool zipFile::Init(char const * fileName)
         EntryCount = daveHeader.FileCount;
         Entries = std::make_unique<zipEntry[]>(EntryCount);
 
-        if (!stream->ReadArray(Entries.get(), EntryCount))
+        if (!stream->ReadArray(Entries.get(), EntryCount, EntryCount))
         {
             Errorf("%s: Failed to read entries.", fileName);
         }
@@ -127,7 +127,7 @@ bool zipFile::Init(char const * fileName)
 
         NamesBuffer = std::make_unique<char[]>(daveHeader.NamesSize);
 
-        if (!stream->ReadArray(NamesBuffer.get(), daveHeader.NamesSize))
+        if (!stream->ReadArray(NamesBuffer.get(), daveHeader.NamesSize, daveHeader.NamesSize))
         {
             Errorf("%s: Failed to read names.", fileName);
         }
@@ -234,8 +234,7 @@ bool zipFile::Init(char const * fileName)
             totalNamesLength,
             namesBufferLength);
 
-        std::sort(Entries.get(), Entries.get() + EntryCount, [ ] (const zipEntry& lhs, const zipEntry& rhs)
-        {
+        std::sort(Entries.get(), Entries.get() + EntryCount, [](const zipEntry& lhs, const zipEntry& rhs) {
             return strcmp(lhs.Name, rhs.Name) < 0;
         });
 
@@ -261,7 +260,7 @@ FAILURE:
     return false;
 }
 
-int CompareZipEntries(const void *a1, const void *a2)
+int CompareZipEntries(const void* a1, const void* a2)
 {
     const char* v2 = static_cast<const char*>(a1);
     const char* v3 = static_cast<const zipEntry*>(a2)->Name;
@@ -283,13 +282,12 @@ int CompareZipEntries(const void *a1, const void *a2)
             v5 += 0x20;
         else if (v5 == '\\')
             v5 = '/';
-    }
-    while ( v4 && v4 == v5 );
+    } while (v4 && v4 == v5);
 
     return v4 - v5;
 }
 
-int zipFile::Open(char const * fileName)
+int zipFile::Open(char const* fileName)
 {
     zipEntry* entry = (zipEntry*) std::bsearch(fileName, Entries.get(), EntryCount, sizeof(zipEntry), &CompareZipEntries);
 
@@ -325,7 +323,7 @@ int zipFile::Open(char const * fileName)
     return -1;
 }
 
-int zipFile::EnumFiles2(const char * path, void(*callback)(Stream* stream, void *context), void * context)
+int zipFile::EnumFiles2(const char* path, void (*callback)(Stream* stream, void* context), void* context)
 {
     int count = 0;
 
@@ -370,8 +368,7 @@ zipFile::~zipFile()
     zipFile::sm_First = PrevFile;
 }
 
-run_once([ ]
-{
+run_once([] {
     create_hook("inflateInit2_", "Update ZLIB", 0x573D00, &inflateInit2_);
     create_hook("inflateReset", "Update ZLIB", 0x573C60, &inflateReset);
     create_hook("inflateEnd", "Update ZLIB", 0x573CB0, &inflateEnd);

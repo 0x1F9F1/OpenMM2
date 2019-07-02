@@ -20,8 +20,8 @@
 
 #include "gfx/winpriv.h"
 
-#include "gfx/texture.h"
 #include "gfx/d3dpipe.h"
+#include "gfx/texture.h"
 
 void gfxRenderState::DoFlush(gfxRenderStateData* prevState)
 {
@@ -254,7 +254,7 @@ void gfxRenderState::DoFlush(gfxRenderStateData* prevState)
     {
         uint32_t texEnv = m_Texture[i] ? m_Texture[i]->TexEnv : 0;
 
-        AddressU[i] = ((texEnv &     0x1) ? D3DTADDRESS_MIRROR : 0) | D3DTADDRESS_WRAP;
+        AddressU[i] = ((texEnv & 0x1) ? D3DTADDRESS_MIRROR : 0) | D3DTADDRESS_WRAP;
         AddressV[i] = ((texEnv & 0x10000) ? D3DTADDRESS_MIRROR : 0) | D3DTADDRESS_WRAP;
     }
 

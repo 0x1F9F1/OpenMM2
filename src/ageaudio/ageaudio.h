@@ -65,7 +65,7 @@ class AudManagerBase
     : public asNode
 {
 public:
-    audManager *pManager {nullptr};
+    audManager* pManager {nullptr};
     uint8_t byte1C {0};
     uint16_t word1E {0};
     uint32_t dword20 {0};

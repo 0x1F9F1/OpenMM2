@@ -22,12 +22,12 @@
 #include "data/asset.h"
 #include "zipfile/zipfile.h"
 
-#include <unordered_set>
 #include <string>
+#include <unordered_set>
 
 #define _CRT_SECURE_NO_WARNINGS
 
-char* mm2_strdup(const char *string)
+char* mm2_strdup(const char* string)
 {
     if (string)
     {
@@ -43,9 +43,9 @@ char* mm2_strdup(const char *string)
 std::unordered_set<std::string> PoliceNames;
 std::unordered_set<std::string> SemiNames;
 
-void vehCarAudioContainer::RegisterTypes(char const * fileName)
+void vehCarAudioContainer::RegisterTypes(char const* fileName)
 {
-    (void)fileName;
+    (void) fileName;
 
     PoliceNames.clear();
     SemiNames.clear();
@@ -72,9 +72,9 @@ void vehCarAudioContainer::RegisterTypes(char const * fileName)
     SemiNames.clear();
 }
 
-void vehCarAudioContainer::RegisterTypes2(Stream * stream, void* context)
+void vehCarAudioContainer::RegisterTypes2(Stream* stream, void* context)
 {
-    (void)context;
+    (void) context;
 
     char* tokContext = nullptr;
 
@@ -100,9 +100,9 @@ void vehCarAudioContainer::RegisterTypes2(Stream * stream, void* context)
     s_bAlwaysNitro = _strcmpi(alwaysNitro, "TRUE") == 0;
 }
 
-void vehCarAudioContainer::RegisterSemiNames(Stream * stream, char * names)
+void vehCarAudioContainer::RegisterSemiNames(Stream* stream, char* names)
 {
-    (void)stream;
+    (void) stream;
 
     char* tokContext = nullptr;
 
@@ -112,9 +112,9 @@ void vehCarAudioContainer::RegisterSemiNames(Stream * stream, char * names)
     }
 }
 
-void vehCarAudioContainer::RegisterPoliceNames(Stream * stream, char * names)
+void vehCarAudioContainer::RegisterPoliceNames(Stream* stream, char* names)
 {
-    (void)stream;
+    (void) stream;
 
     char* tokContext = nullptr;
 
@@ -126,7 +126,6 @@ void vehCarAudioContainer::RegisterPoliceNames(Stream * stream, char * names)
 
 define_dummy_symbol(vehCarAudioContainer);
 
-run_once([ ]
-{
+run_once([] {
     create_hook("vehCarAudioContainer::RegisterTypes", "Parse multiple vehtypes files", 0x4D0CB0, &vehCarAudioContainer::RegisterTypes);
 });

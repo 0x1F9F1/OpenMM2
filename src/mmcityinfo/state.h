@@ -71,11 +71,11 @@ public:
     int unk_EC; // seems heavily tied into multiplayer, but also has singleplayer uses?
 
     BOOL CopsChaseAI; // cops will chase after opponents
-    int unk_F4; // unused
+    int unk_F4;       // unused
 
     BOOL Shutdown; // stop the process
 
-                   /*
+    /*
                    Player settings
                    */
 
@@ -96,10 +96,10 @@ public:
 
     float TimeLimit;
 
-    int GameState; // -1 = ???, 0 = main menu, 1 = race
+    int GameState;     // -1 = ???, 0 = main menu, 1 = race
     BOOL DisableRegen; // educated guess based on a skipped call to mmPlayer::UpdateRegen if true
 
-                       /*
+    /*
                        Audio settings
                        */
 
@@ -111,7 +111,7 @@ public:
     char AudioDeviceName[200];
     bool HasMusicCD; // allow use of music player if true
 
-                     /*
+    /*
                      Cops 'n Robbers settings
                      */
 
@@ -153,7 +153,7 @@ public:
     Graphics settings
     */
 
-    BOOL BestTextureFilter; // MM1 - unused
+    BOOL BestTextureFilter;   // MM1 - unused
     BOOL InterlacedRendering; // MM1 - unused
     float FarClip;
     BOOL EnableSky;
@@ -167,17 +167,17 @@ public:
     Cheat settings?
     */
 
-    BOOL IsCheating; // true if player entered a cheatcode
+    BOOL IsCheating;         // true if player entered a cheatcode
     float TimeLimitOverride; // overrides TimeLimit when > 0
-    BOOL UnlockRewards; // only works on startup
+    BOOL UnlockRewards;      // only works on startup
 
-                        /*
+    /*
                         Multiplayer settings
                         */
 
-    bool AllowCheaters; // don't check tuning CRC
+    bool AllowCheaters;          // don't check tuning CRC
     bool ShowMultiplayerResults; // display results at end of multiplayer
-    bool IsHost; // unconfirmed
+    bool IsHost;                 // unconfirmed
     bool UseDialup;
 
     /*

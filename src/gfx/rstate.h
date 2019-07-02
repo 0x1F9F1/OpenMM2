@@ -119,8 +119,8 @@ public:
     bool FogEnable {false};
     bool NormalizeNormals {false};
     bool RangeFogEnable {false};
-    gfxTexture *m_Texture[2] {nullptr};
-    gfxMaterial *m_Material {nullptr};
+    gfxTexture* m_Texture[2] {nullptr};
+    gfxMaterial* m_Material {nullptr};
 };
 
 enum TransformStateType // D3DTRANSFORMSTATETYPE
@@ -143,12 +143,12 @@ enum TransformStateType // D3DTRANSFORMSTATETYPE
 
 enum TouchMask
 {
-    TouchMask_State     = (1 << 0),
-    TouchMask_Texture   = (1 << 1),
-    TouchMask_Material  = (1 << 2),
+    TouchMask_State = (1 << 0),
+    TouchMask_Texture = (1 << 1),
+    TouchMask_Material = (1 << 2),
     TouchMask_Transform = (1 << 3),
-    TouchMask_Light1    = (1 << 4),
-    TouchMask_Light2    = (1 << 5),
+    TouchMask_Light1 = (1 << 4),
+    TouchMask_Light2 = (1 << 5),
 
     TouchMask_Regenerate = (1 << 7)
 };
@@ -162,7 +162,7 @@ public:
     static void SetTransform(int index, const Matrix44& transform);
 
     void Flush();
-    void DoFlush(gfxRenderStateData * prevState);
+    void DoFlush(gfxRenderStateData* prevState);
 
     void SetTexture(int index, gfxTexture* texture);
 

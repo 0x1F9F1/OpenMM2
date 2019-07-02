@@ -119,7 +119,7 @@ void asCullManager::Reset()
     BaseColor = 0xFF001E3C;
 }
 
-void asCullManager::DeclareCamera(asCamera * camera)
+void asCullManager::DeclareCamera(asCamera* camera)
 {
     if (CameraCount >= MAX_CULLABLE_CAMERAS)
     {
@@ -133,7 +133,7 @@ void asCullManager::DeclareCamera(asCamera * camera)
     ++CameraCount;
 }
 
-void asCullManager::DeclareCullable(asCullable * cullable)
+void asCullManager::DeclareCullable(asCullable* cullable)
 {
     if (CurrentCullables >= MaxCullables)
     {
@@ -149,7 +149,7 @@ void asCullManager::DeclareCullable(asCullable * cullable)
     }
 }
 
-void asCullManager::DeclareCullable2D(asCullable * cullable)
+void asCullManager::DeclareCullable2D(asCullable* cullable)
 {
     if (CurrentCullables2D >= MaxCullables2D)
     {
@@ -163,7 +163,7 @@ void asCullManager::DeclareCullable2D(asCullable * cullable)
     }
 }
 
-void asCullManager::DeclareCullable2DFG(asCullable * cullable)
+void asCullManager::DeclareCullable2DFG(asCullable* cullable)
 {
     if (CurrentCullables2DFG >= MaxCullables2DFG)
     {

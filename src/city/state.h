@@ -75,7 +75,7 @@ public:
     int unk_30; // unused
     int MaxAmbientVehicles;
     int MaxAmbientPedestrians; // unused -- assumed name (default: 100)
-    int unk_3C; // unused
+    int unk_3C;                // unused
 
     BOOL EnableCableCars;
     BOOL EnableSubways;
@@ -94,7 +94,7 @@ public:
     int AudioFlags;
 
     BOOL EnablePedestrians;
-    void *unk_68; // related to hookmen
+    void* unk_68; // related to hookmen
 
     dgStatePack();
     ~dgStatePack();

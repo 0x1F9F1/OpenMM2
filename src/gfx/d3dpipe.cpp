@@ -24,12 +24,11 @@
 
 #include "data/args.h"
 
-#include "gfx/winpriv.h"
-#include "gfx/texmovie.h"
 #include "gfx/d3dpipe.h"
 #include "gfx/rstate.h"
-#include "gfx/winpriv.h"
+#include "gfx/texmovie.h"
 #include "gfx/texture.h"
+#include "gfx/winpriv.h"
 
 #include "input/input.h"
 #include "input/mouse.h"
@@ -40,64 +39,80 @@ inline extern_var(0x6844B4, bool, g_VisualizeZ);
 
 void gfxPipeline::SetRes(int width, int height, int cdepth, int zdepth, bool parseArgs)
 {
-    (void)(parseArgs);
+    (void) (parseArgs);
 
-    if (datArgParser::Exists("ref")) {
+    if (datArgParser::Exists("ref"))
+    {
         useSoftware = 1;
         useReference = 1;
     }
-    else if (datArgParser::Exists("blade") || datArgParser::Exists("bladed")) {
+    else if (datArgParser::Exists("blade") || datArgParser::Exists("bladed"))
+    {
         useSoftware = 1;
         useBlade = 1;
     }
-    else if (datArgParser::Exists("swage")) {
+    else if (datArgParser::Exists("swage"))
+    {
         useSoftware = 1;
         useAgeSoftware = 1;
     }
-    else if (datArgParser::Exists("sw")) {
+    else if (datArgParser::Exists("sw"))
+    {
         useSoftware = 1;
     }
 
-    if (datArgParser::Exists("sysmem")) {
+    if (datArgParser::Exists("sysmem"))
+    {
         useSysMem = 1;
     }
-    if (datArgParser::Exists("triple")) {
+    if (datArgParser::Exists("triple"))
+    {
         tripleBuffer = 1;
     }
 
-    if (datArgParser::Exists("nomultitexture") || datArgParser::Exists("nomt")) {
+    if (datArgParser::Exists("nomultitexture") || datArgParser::Exists("nomt"))
+    {
         useMultiTexture = 0;
     }
-    if (datArgParser::Exists("novblank") || datArgParser::Exists("novsync")) {
+    if (datArgParser::Exists("novblank") || datArgParser::Exists("novsync"))
+    {
         novblank = 1;
     }
-    if (datArgParser::Exists("nohwtnl")) {
+    if (datArgParser::Exists("nohwtnl"))
+    {
         allowHWTnL = 0;
     }
 
-    if (datArgParser::Exists("primary")) {
+    if (datArgParser::Exists("primary"))
+    {
         useInterface = 0;
     }
-    else {
+    else
+    {
         datArgParser::Get("display", 0, useInterface);
     }
-    if (datArgParser::Exists("single")) {
+    if (datArgParser::Exists("single"))
+    {
         pageFlip = 0;
     }
 
-    if (datArgParser::Exists("window") || datArgParser::Exists("windowed")) {
+    if (datArgParser::Exists("window") || datArgParser::Exists("windowed"))
+    {
         inWindow = 1;
     }
-    else if (datArgParser::Exists("fs") || datArgParser::Exists("fullscreen")) {
+    else if (datArgParser::Exists("fs") || datArgParser::Exists("fullscreen"))
+    {
         inWindow = 0;
     }
 
     int bitDepth = 0;
-    if (datArgParser::Get("bpp", 0, bitDepth) || datArgParser::Get("bitdepth", 0, bitDepth)) {
+    if (datArgParser::Get("bpp", 0, bitDepth) || datArgParser::Get("bitdepth", 0, bitDepth))
+    {
         cdepth = bitDepth;
         zdepth = bitDepth;
     }
-    else {
+    else
+    {
         datArgParser::Get("cdepth", 0, cdepth);
         datArgParser::Get("zdepth", 0, zdepth);
     }
@@ -147,14 +162,14 @@ void gfxPipeline::SetRes(int width, int height, int cdepth, int zdepth, bool par
 
             ddSurfaceDesc.dwSize = 0x7C;
 
-            if ((lpDD->GetDisplayMode(&ddSurfaceDesc) != DD_OK) || ((int)ddSurfaceDesc.dwWidth != m_iWidth) || ((int)ddSurfaceDesc.dwHeight != m_iHeight))
+            if ((lpDD->GetDisplayMode(&ddSurfaceDesc) != DD_OK) || ((int) ddSurfaceDesc.dwWidth != m_iWidth) || ((int) ddSurfaceDesc.dwHeight != m_iHeight))
             {
                 if (lpDD->SetDisplayMode(
-                    m_iWidth,
-                    m_iHeight,
-                    m_ColorDepth,
-                    0,
-                    0) != DD_OK)
+                        m_iWidth,
+                        m_iHeight,
+                        m_ColorDepth,
+                        0,
+                        0) != DD_OK)
                 {
                     Displayf("[gfxPipeline::SetRes]: SHIT! Failed to set the display mode!");
                 }
@@ -166,7 +181,7 @@ void gfxPipeline::SetRes(int width, int height, int cdepth, int zdepth, bool par
     ioMouse::InvHeight = (1.0f / m_fHeight);
 }
 
-void gfxPipeline::gfxWindowCreate(const char * windowName)
+void gfxPipeline::gfxWindowCreate(const char* windowName)
 {
     if (hwndMain)
     {
@@ -181,19 +196,19 @@ void gfxPipeline::gfxWindowCreate(const char * windowName)
     if (ATOM_Class == NULL)
     {
         WNDCLASSA wc =
-        {
-            CS_HREDRAW | CS_VREDRAW,    /* style */
-            gfxWindowProc,              /* lpfnWndProc */
-            0,                          /* cbClsExtra */
-            0,                          /* cbWndExtra */
-            0,                          /* hInstance */
-            LoadIconA(GetModuleHandleA(NULL), IconID ? IconID : IDI_APPLICATION),
-            /* hIcon */
-            LoadCursorA(0, IDC_ARROW),  /* hCursor */
-            CreateSolidBrush(NULL),     /* hbrBackground */
-            NULL,                       /* lpszMenuName */
-            "gfxWindow",                /* lpszClassName */
-        };
+            {
+                CS_HREDRAW | CS_VREDRAW, /* style */
+                gfxWindowProc,           /* lpfnWndProc */
+                0,                       /* cbClsExtra */
+                0,                       /* cbWndExtra */
+                0,                       /* hInstance */
+                LoadIconA(GetModuleHandleA(NULL), IconID ? IconID : IDI_APPLICATION),
+                /* hIcon */
+                LoadCursorA(0, IDC_ARROW), /* hCursor */
+                CreateSolidBrush(NULL),    /* hbrBackground */
+                NULL,                      /* lpszMenuName */
+                "gfxWindow",               /* lpszClassName */
+            };
 
         ATOM_Class = RegisterClassA(&wc);
     }
@@ -270,7 +285,7 @@ void gfxPipeline::gfxWindowUpdate(bool isOpen)
     MoveWindow(hwndMain, m_X, m_Y, (2 * m_iWidth - rect.right), (2 * m_iHeight - rect.bottom), isOpen);
 }
 
-void gfxPipeline::SetTitle(const char * title)
+void gfxPipeline::SetTitle(const char* title)
 {
     lpWindowTitle = title;
 
@@ -293,7 +308,7 @@ bool gfxPipeline::BeginGfx2D(void)
         return false;
     }
 
-    auto pDirectDrawCreateEx = (decltype(&DirectDrawCreateEx))GetProcAddress(hGfxLib, "DirectDrawCreateEx");
+    auto pDirectDrawCreateEx = (decltype(&DirectDrawCreateEx)) GetProcAddress(hGfxLib, "DirectDrawCreateEx");
 
     if (!pDirectDrawCreateEx)
     {
@@ -304,7 +319,7 @@ bool gfxPipeline::BeginGfx2D(void)
 
     gfxPipeline::EnumDDAdapters(hGfxLib, DDEnumProc, 0);
 
-    DX_ASSERT(pDirectDrawCreateEx(lpInterfaceGUID ? &sInterfaceGUID : 0, (LPVOID*)&lpDD, IID_IDirectDraw7, NULL));
+    DX_ASSERT(pDirectDrawCreateEx(lpInterfaceGUID ? &sInterfaceGUID : 0, (LPVOID*) &lpDD, IID_IDirectDraw7, NULL));
 
     DDCAPS ddCaps;
     memset(&ddCaps, 0, sizeof(ddCaps));
@@ -323,9 +338,7 @@ bool gfxPipeline::BeginGfx2D(void)
 
     _control87(0xA001Fu, 0xB001Fu);
 
-    DX_ASSERT(lpDD->SetCooperativeLevel(hwndMain, inWindow
-        ? (DDSCL_FPUSETUP | DDSCL_NORMAL)
-        : (DDSCL_FPUSETUP | DDSCL_EXCLUSIVE | DDSCL_ALLOWREBOOT | DDSCL_FULLSCREEN)));
+    DX_ASSERT(lpDD->SetCooperativeLevel(hwndMain, inWindow ? (DDSCL_FPUSETUP | DDSCL_NORMAL) : (DDSCL_FPUSETUP | DDSCL_EXCLUSIVE | DDSCL_ALLOWREBOOT | DDSCL_FULLSCREEN)));
 
     if (!inWindow)
     {
@@ -361,7 +374,6 @@ void gfxPipeline::EndGfx2D(void)
     if (hwndMain)
     {
         DestroyWindow(hwndMain);
-
         hwndMain = 0;
     }
 }
@@ -381,23 +393,22 @@ void gfxPipeline::EndFrame(void)
     return stub<cdecl_t<void>>(0x4AA330);
 }
 
-void gfxPipeline::CopyBitmap(int destX, int destY, gfxBitmap * bitmap, int srcX, int srcY, int width, int height, bool srcColorKey)
+void gfxPipeline::CopyBitmap(int destX, int destY, gfxBitmap* bitmap, int srcX, int srcY, int width, int height, bool srcColorKey)
 {
     RECT position =
-    {
-        srcX,
-        srcY,
-        srcX + width,
-        srcY + height
-    };
+        {
+            srcX,
+            srcY,
+            srcX + width,
+            srcY + height};
 
     lpdsRend->BltFast(destX, destY, bitmap->Surface, &position, (srcColorKey ? DDBLTFAST_SRCCOLORKEY : DDBLTFAST_NOCOLORKEY) | DDBLTFAST_WAIT);
 }
 
 void gfxPipeline::EnumDDAdapters(HMODULE hGfxLib, LPDDENUMCALLBACKA lpCallback, LPVOID lpContext)
 {
-    auto pDirectDrawEnumerateExA = (decltype(&DirectDrawEnumerateExA))GetProcAddress(hGfxLib, "DirectDrawEnumerateExA");
-    auto pDirectDrawEnumerateA = (decltype(&DirectDrawEnumerateA))GetProcAddress(hGfxLib, "DirectDrawEnumerateA");
+    auto pDirectDrawEnumerateExA = (decltype(&DirectDrawEnumerateExA)) GetProcAddress(hGfxLib, "DirectDrawEnumerateExA");
+    auto pDirectDrawEnumerateA = (decltype(&DirectDrawEnumerateA)) GetProcAddress(hGfxLib, "DirectDrawEnumerateA");
 
     interfaceCount = 0;
     gfxInterfaceEnumIdx = useInterface;
@@ -495,7 +506,8 @@ LRESULT CALLBACK gfxPipeline::gfxWindowProc(HWND hWnd, UINT message, WPARAM wPar
                     Displayf("gfxPipeline::gfxWindowProc -> PBT_APMRESUMESUSPEND recieved.");
                     break;
             }
-        } break;
+        }
+        break;
 
         case WM_CLOSE:
         {
@@ -505,7 +517,8 @@ LRESULT CALLBACK gfxPipeline::gfxWindowProc(HWND hWnd, UINT message, WPARAM wPar
             gfxPipeline::m_EvtFlags |= 1;
 
             return 0;
-        } break;
+        }
+        break;
 
         case WM_ACTIVATEAPP:
         {
@@ -526,7 +539,8 @@ LRESULT CALLBACK gfxPipeline::gfxWindowProc(HWND hWnd, UINT message, WPARAM wPar
 
                 gfxPipeline::m_EvtFlags |= 2;
             }
-        } break;
+        }
+        break;
 
         case WM_SYSCOMMAND:
         {
@@ -534,7 +548,8 @@ LRESULT CALLBACK gfxPipeline::gfxWindowProc(HWND hWnd, UINT message, WPARAM wPar
             {
                 return 0;
             }
-        } break;
+        }
+        break;
     }
 
     return InputWindowProc(hWnd, message, wParam, lParam);
@@ -565,8 +580,7 @@ void InitDirectDraw(void)
 }
 
 template <
-    unsigned int A, unsigned int R, unsigned int G, unsigned int B
->
+    unsigned int A, unsigned int R, unsigned int G, unsigned int B>
 struct ColorFlags
 {
     enum : unsigned int
@@ -593,15 +607,13 @@ struct ColorFlags
 
 template <
     unsigned int OA, unsigned int OR, unsigned int OG, unsigned int OB,
-    unsigned int NA, unsigned int NR, unsigned int NG, unsigned int NB
->
+    unsigned int NA, unsigned int NR, unsigned int NG, unsigned int NB>
 inline unsigned int ConvertColor(const unsigned int color)
 {
     using OF = ColorFlags<OA, OR, OG, OB>;
     using NF = ColorFlags<NA, NR, NG, NB>;
 
-    return
-        (((color & OF::SMA) >> OF::SA) * NF::MA / (OF::MA ? OF::MA : 1) << NF::SA) |
+    return (((color & OF::SMA) >> OF::SA) * NF::MA / (OF::MA ? OF::MA : 1) << NF::SA) |
         (((color & OF::SMR) >> OF::SR) * NF::MG / (OF::MR ? OF::MR : 1) << NF::SR) |
         (((color & OF::SMG) >> OF::SG) * NF::MG / (OF::MG ? OF::MG : 1) << NF::SG) |
         (((color & OF::SMB) >> OF::SB) * NF::MB / (OF::MB ? OF::MB : 1) << NF::SB);
@@ -638,9 +650,9 @@ HRESULT CALLBACK DeviceCallback(LPSTR lpDeviceDescription, LPSTR lpDeviceName, L
     return stub<LPD3DENUMDEVICESCALLBACK7>(0x4AC3D0, lpDeviceDescription, lpDeviceName, lpDeviceDesc, lpContext);
 }
 
-BOOL PASCAL DDEnumProc(GUID * lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverName, LPVOID lpContext)
+BOOL PASCAL DDEnumProc(GUID* lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverName, LPVOID lpContext)
 {
-    (void)lpContext;
+    (void) lpContext;
 
     ageDebug(gfxDebug, "D3D: GUID %x Description [%s] DriverName [%s]", lpGUID, lpDriverDescription, lpDriverName);
 
@@ -678,7 +690,7 @@ BOOL PASCAL MultiMonCallback(GUID* lpGUID, LPSTR lpDriverDescription, LPSTR lpDr
 
 HRESULT PASCAL EnumAllSurfCallback(LPDIRECTDRAWSURFACE7 lpSurface, LPDDSURFACEDESC2 lpSurfaceDesc, LPVOID lpContext)
 {
-    (void)lpContext;
+    (void) lpContext;
 
     Warningf("D3D: Unreleased surface: A %d by %d surface.", lpSurfaceDesc->dwWidth, lpSurfaceDesc->dwHeight);
 
@@ -694,20 +706,20 @@ HRESULT PASCAL ResCallback(LPDDSURFACEDESC2 lpSurfaceDesc, LPVOID lpContext)
 
 inline extern_var(0x684518, decltype(&DirectDrawCreateEx), lpDirectDrawCreateEx);
 
-BOOL PASCAL AutoDetectCallback(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverName, LPVOID lpContext)
+BOOL PASCAL AutoDetectCallback(GUID* lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverName, LPVOID lpContext)
 {
-    (void)lpContext;
+    (void) lpContext;
 
-    if (lpDirectDrawCreateEx(lpGUID, (LPVOID*)&lpDD, IID_IDirectDraw7, nullptr) == DD_OK)
+    if (lpDirectDrawCreateEx(lpGUID, (LPVOID*) &lpDD, IID_IDirectDraw7, nullptr) == DD_OK)
     {
-        gfxInterface *currentInterface = &gfxInterfaces[gfxInterfaceCount++];
+        gfxInterface* currentInterface = &gfxInterfaces[gfxInterfaceCount++];
 
         strcpy_s(currentInterface->Name, lpDriverDescription);
 
         currentInterface->DeviceCaps = 1;
         currentInterface->AcceptableDepths = gfxDepthFlag_Depth32;
 
-        DDDEVICEIDENTIFIER2 ddDeviceIdentifier{};
+        DDDEVICEIDENTIFIER2 ddDeviceIdentifier {};
 
         if (lpDD->GetDeviceIdentifier(&ddDeviceIdentifier, 0) == DD_OK)
         {
@@ -731,7 +743,7 @@ BOOL PASCAL AutoDetectCallback(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lp
 
         DWORD availableMemory = 0x40000000; // 1GB = 1024 * 1024 * 1024
 
-        DDSCAPS2 ddsCaps{};
+        DDSCAPS2 ddsCaps {};
 
         ddsCaps.dwCaps = DDSCAPS_VIDEOMEMORY | DDSCAPS_LOCALVIDMEM;
 
@@ -756,13 +768,11 @@ BOOL PASCAL AutoDetectCallback(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lp
     return TRUE;
 }
 
-run_once([]
-{
+run_once([] {
     create_hook("AutoDetectCallback", "Replaces the default AutoDetect method with a much faster one", 0x4AC030, &AutoDetectCallback);
 });
 
-run_once([]
-{
+run_once([] {
     create_hook("gfxPipeline::SetRes", "Custom implementation allowing for more control of the window", 0x4A8CE0, &gfxPipeline::SetRes);
     create_hook("gfxPipeline::gfxWindowCreate", "Custom implementation allowing for more control of the window", 0x4A8A90, &gfxPipeline::gfxWindowCreate);
 });

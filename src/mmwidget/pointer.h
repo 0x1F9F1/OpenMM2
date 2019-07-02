@@ -46,7 +46,7 @@ class uiWidget;
 class sfPointer
     : public asNode
 {
-    gfxBitmap *CursorBitmap;
+    gfxBitmap* CursorBitmap;
     Vector2 CurrentX;
     Vector2 PrevX;
     uint32_t ScreenW;
@@ -55,7 +55,7 @@ class sfPointer
     uint32_t dword38;
     uint32_t State;
     Vector2 dword40;
-    uiWidget *SelectedWidget;
+    uiWidget* SelectedWidget;
 
     sfPointer() = delete;
 };

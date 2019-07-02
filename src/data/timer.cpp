@@ -52,10 +52,7 @@ Timer::Timer()
         LARGE_INTEGER counterEnd;
         QueryPerformanceCounter(&counterEnd);
 
-        QuickTicksToMilliseconds = (static_cast<float>(counterEnd.QuadPart) - static_cast<float>(counterStart.QuadPart))
-            / static_cast<float>(frequency.QuadPart)
-            * 1000.0f
-            / static_cast<float>(GetTickCount() - tickCount);
+        QuickTicksToMilliseconds = (static_cast<float>(counterEnd.QuadPart) - static_cast<float>(counterStart.QuadPart)) / static_cast<float>(frequency.QuadPart) * 1000.0f / static_cast<float>(GetTickCount() - tickCount);
 
         CpuSpeed = 0.001f / QuickTicksToMilliseconds;
     }

@@ -20,7 +20,7 @@
 
 #include <xmmintrin.h>
 
-void Matrix44::FastInverse(const Matrix44 & rhs) noexcept
+void Matrix44::FastInverse(const Matrix44& rhs) noexcept
 {
     m00 = rhs.m00;
     m10 = rhs.m01;
@@ -43,7 +43,7 @@ void Matrix44::FastInverse(const Matrix44 & rhs) noexcept
     m33 = 1.0f;
 }
 
-Matrix44 & Matrix44::Dot(const Matrix44 & lhs, const Matrix44 & rhs) noexcept
+Matrix44& Matrix44::Dot(const Matrix44& lhs, const Matrix44& rhs) noexcept
 {
     const __m128 lhs0 = _mm_loadu_ps(&lhs.m00);
     const __m128 lhs1 = _mm_loadu_ps(&lhs.m10);
@@ -54,7 +54,7 @@ Matrix44 & Matrix44::Dot(const Matrix44 & lhs, const Matrix44 & rhs) noexcept
     const __m128 rhs1 = _mm_loadu_ps(&rhs.m10);
     const __m128 rhs2 = _mm_loadu_ps(&rhs.m20);
     const __m128 rhs3 = _mm_loadu_ps(&rhs.m30);
- 
+
 #define SPLAT(x, i) _mm_shuffle_ps(x, x, _MM_SHUFFLE(i, i, i, i))
 
     __m128 res0 = _mm_mul_ps(SPLAT(rhs0, 0), lhs0);
@@ -87,8 +87,7 @@ Matrix44 & Matrix44::Dot(const Matrix44 & lhs, const Matrix44 & rhs) noexcept
     return *this;
 }
 
-run_once([]
-{
-    create_hook("Matrix44::Dot", "SSE Dot", 0x4C0FC0, static_cast<Matrix44& (Matrix44::*)(const Matrix44& lhs, const Matrix44& rhs)>(&Matrix44::Dot));
-    create_hook("Matrix44::Dot", "SSE Dot", 0x4C0D50, static_cast<Matrix44& (Matrix44::*)(const Matrix44& rhs)>(&Matrix44::Dot));
+run_once([] {
+    create_hook("Matrix44::Dot", "SSE Dot", 0x4C0FC0, static_cast<Matrix44& (Matrix44::*) (const Matrix44& lhs, const Matrix44& rhs)>(&Matrix44::Dot));
+    create_hook("Matrix44::Dot", "SSE Dot", 0x4C0D50, static_cast<Matrix44& (Matrix44::*) (const Matrix44& rhs)>(&Matrix44::Dot));
 });

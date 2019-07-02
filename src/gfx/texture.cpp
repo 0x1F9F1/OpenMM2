@@ -18,24 +18,24 @@
 
 #include "texture.h"
 
-#include "gfx/image.h"
 #include "gfx/d3dpipe.h"
+#include "gfx/image.h"
 #include "gfx/winpriv.h"
 
 #include <algorithm>
 
 inline extern_var(0x6844C4, bool, g_Tex565);
 
-DDPIXELFORMAT ddPixelFormat_8888 = { sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_ALPHAPIXELS, 0, 32, 0x00FF0000, 0x0000FF00, 0x000000FF, 0xFF000000 };
-DDPIXELFORMAT ddPixelFormat_0888 = { sizeof(DDPIXELFORMAT), DDPF_RGB,                    0, 32, 0x00FF0000, 0x0000FF00, 0x000000FF, 0x00000000 };
+DDPIXELFORMAT ddPixelFormat_8888 = {sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_ALPHAPIXELS, 0, 32, 0x00FF0000, 0x0000FF00, 0x000000FF, 0xFF000000};
+DDPIXELFORMAT ddPixelFormat_0888 = {sizeof(DDPIXELFORMAT), DDPF_RGB, 0, 32, 0x00FF0000, 0x0000FF00, 0x000000FF, 0x00000000};
 
-DDPIXELFORMAT ddPixelFormat_1555 = { sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_ALPHAPIXELS, 0, 16, 0x7C00, 0x03E0, 0x001F, 0x8000 };
-DDPIXELFORMAT ddPixelFormat_4444 = { sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_ALPHAPIXELS, 0, 16, 0x0F00, 0x00F0, 0x000F, 0xF000 };
-DDPIXELFORMAT ddPixelFormat_0565 = { sizeof(DDPIXELFORMAT), DDPF_RGB,                    0, 16, 0xF800, 0x07E0, 0x001F, 0x0000 };
-DDPIXELFORMAT ddPixelFormat_0555 = { sizeof(DDPIXELFORMAT), DDPF_RGB,                    0, 16, 0x7C00, 0x03E0, 0x001F, 0x0000 };
+DDPIXELFORMAT ddPixelFormat_1555 = {sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_ALPHAPIXELS, 0, 16, 0x7C00, 0x03E0, 0x001F, 0x8000};
+DDPIXELFORMAT ddPixelFormat_4444 = {sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_ALPHAPIXELS, 0, 16, 0x0F00, 0x00F0, 0x000F, 0xF000};
+DDPIXELFORMAT ddPixelFormat_0565 = {sizeof(DDPIXELFORMAT), DDPF_RGB, 0, 16, 0xF800, 0x07E0, 0x001F, 0x0000};
+DDPIXELFORMAT ddPixelFormat_0555 = {sizeof(DDPIXELFORMAT), DDPF_RGB, 0, 16, 0x7C00, 0x03E0, 0x001F, 0x0000};
 
-DDPIXELFORMAT ddPixelFormat_Pallete8 = { sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_PALETTEINDEXED8, 0, 8, 0, 0, 0, 0 };
-DDPIXELFORMAT ddPixelFormat_Pallete4 = { sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_PALETTEINDEXED4, 0, 4, 0, 0, 0, 0 };
+DDPIXELFORMAT ddPixelFormat_Pallete8 = {sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_PALETTEINDEXED8, 0, 8, 0, 0, 0, 0};
+DDPIXELFORMAT ddPixelFormat_Pallete4 = {sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_PALETTEINDEXED4, 0, 4, 0, 0, 0, 0};
 
 PALETTEENTRY paletteEntry;
 
@@ -57,9 +57,9 @@ gfxTexture::~gfxTexture()
 
     gfxTexture** ppFirst = &gfxTexture::sm_First;
 
-    for (gfxTexture* i = gfxTexture::sm_First ; i; i = i->PrevLOD )
+    for (gfxTexture* i = gfxTexture::sm_First; i; i = i->PrevLOD)
     {
-        if ( i == this )
+        if (i == this)
         {
             break;
         }
@@ -73,7 +73,7 @@ gfxTexture::~gfxTexture()
     DX_RELEASE(m_Palette);
 }
 
-void gfxTexture::Load(gfxImage * image)
+void gfxTexture::Load(gfxImage* image)
 {
     return stub<member_func_t<void, gfxTexture, gfxImage*>>(0x4AD100, this, image);
 }
@@ -132,7 +132,7 @@ void gfxTexture::MarkHigherUse()
     }
 }
 
-gfxTexture * gfxTexture::Create(gfxImage * image, bool mipMap)
+gfxTexture* gfxTexture::Create(gfxImage* image, bool mipMap)
 {
     if (image == nullptr)
     {
@@ -216,9 +216,9 @@ uint32_t ToPow2(uint32_t size)
     return 2048;
 }
 
-gfxTexture * gfxTexture::Create(int width, int height, gfxImage::gfxImageFormat type, gfxImage::gfxImageFormat paletteType, int mipMapCount)
+gfxTexture* gfxTexture::Create(int width, int height, gfxImage::gfxImageFormat type, gfxImage::gfxImageFormat paletteType, int mipMapCount)
 {
-    (void)paletteType;
+    (void) paletteType;
 
     if (!lpDD)
     {
@@ -229,9 +229,9 @@ gfxTexture * gfxTexture::Create(int width, int height, gfxImage::gfxImageFormat 
 
     gfxTexture::ShutdownCache();
 
-    IDirectDrawSurface7 *ddrawSurface = nullptr;
-    IDirectDrawPalette *ddrawPalette = nullptr;
-    DDPIXELFORMAT *pixelFormat = nullptr;
+    IDirectDrawSurface7* ddrawSurface = nullptr;
+    IDirectDrawPalette* ddrawPalette = nullptr;
+    DDPIXELFORMAT* pixelFormat = nullptr;
 
     DDSURFACEDESC2 ddSurfaceDesc;
     memset(&ddSurfaceDesc, 0, sizeof(ddSurfaceDesc));
@@ -261,21 +261,34 @@ gfxTexture * gfxTexture::Create(int width, int height, gfxImage::gfxImageFormat 
 
     switch (type)
     {
-    case gfxImage::rif8888:
-        memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_8888, sizeof(ddSurfaceDesc.ddpfPixelFormat));
+        case gfxImage::rif8888:
+            memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_8888, sizeof(ddSurfaceDesc.ddpfPixelFormat));
 
-        if (!gfxTexture::sm_Allow32 || lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0) != DD_OK)
-        {
-            memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_4444, sizeof(ddSurfaceDesc.ddpfPixelFormat));
+            if (!gfxTexture::sm_Allow32 || lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0) != DD_OK)
+            {
+                memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_4444, sizeof(ddSurfaceDesc.ddpfPixelFormat));
 
-            DX_ASSERT(lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0));
-        }
-        hasAlpha = 1;
-        break;
-    case gfxImage::rif888:
-        memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_0888, sizeof(ddSurfaceDesc.ddpfPixelFormat));
-        if (!gfxTexture::sm_Allow32 || lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0) != DD_OK)
-        {
+                DX_ASSERT(lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0));
+            }
+            hasAlpha = 1;
+            break;
+        case gfxImage::rif888:
+            memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_0888, sizeof(ddSurfaceDesc.ddpfPixelFormat));
+            if (!gfxTexture::sm_Allow32 || lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0) != DD_OK)
+            {
+                pixelFormat = &ddPixelFormat_0565;
+
+                if (!g_Tex565)
+                {
+                    pixelFormat = &ddPixelFormat_0555;
+                }
+
+                memcpy(&ddSurfaceDesc.ddpfPixelFormat, pixelFormat, sizeof(ddSurfaceDesc.ddpfPixelFormat));
+
+                DX_ASSERT(lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0));
+            }
+            break;
+        case gfxImage::rif555:
             pixelFormat = &ddPixelFormat_0565;
 
             if (!g_Tex565)
@@ -286,43 +299,13 @@ gfxTexture * gfxTexture::Create(int width, int height, gfxImage::gfxImageFormat 
             memcpy(&ddSurfaceDesc.ddpfPixelFormat, pixelFormat, sizeof(ddSurfaceDesc.ddpfPixelFormat));
 
             DX_ASSERT(lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0));
-        }
-        break;
-    case gfxImage::rif555:
-        pixelFormat = &ddPixelFormat_0565;
-
-        if (!g_Tex565)
-        {
-            pixelFormat = &ddPixelFormat_0555;
-        }
-
-        memcpy(&ddSurfaceDesc.ddpfPixelFormat, pixelFormat, sizeof(ddSurfaceDesc.ddpfPixelFormat));
-
-        DX_ASSERT(lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0));
-        break;
-    case gfxImage::rif5551:
-        memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_1555, sizeof(ddSurfaceDesc.ddpfPixelFormat));
-        lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0);
-        hasAlpha = 1;
-        break;
-    case gfxImage::rif8:
-        memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_Pallete8, sizeof(ddSurfaceDesc.ddpfPixelFormat));
-        if (lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0) != DD_OK)
-        {
-            memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_0555, sizeof(ddSurfaceDesc.ddpfPixelFormat));
-
+            break;
+        case gfxImage::rif5551:
+            memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_1555, sizeof(ddSurfaceDesc.ddpfPixelFormat));
             lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0);
-        }
-        else
-        {
-            DX_ASSERT(lpDD->CreatePalette(68, &paletteEntry, &ddrawPalette, 0));
-            DX_ASSERT(ddrawSurface->SetPalette(ddrawPalette));
-        }
-        break;
-    case gfxImage::rif4:
-        memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_Pallete4, sizeof(ddSurfaceDesc.ddpfPixelFormat));
-        if (lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0) != DD_OK)
-        {
+            hasAlpha = 1;
+            break;
+        case gfxImage::rif8:
             memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_Pallete8, sizeof(ddSurfaceDesc.ddpfPixelFormat));
             if (lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0) != DD_OK)
             {
@@ -335,16 +318,33 @@ gfxTexture * gfxTexture::Create(int width, int height, gfxImage::gfxImageFormat 
                 DX_ASSERT(lpDD->CreatePalette(68, &paletteEntry, &ddrawPalette, 0));
                 DX_ASSERT(ddrawSurface->SetPalette(ddrawPalette));
             }
-        }
-        else
-        {
-            DX_ASSERT(lpDD->CreatePalette(1, &paletteEntry, &ddrawPalette, 0));
-            DX_ASSERT(ddrawSurface->SetPalette(ddrawPalette));
-        }
-        break;
-    default:
-        Abortf("Unsupported texture format!");
-        break;
+            break;
+        case gfxImage::rif4:
+            memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_Pallete4, sizeof(ddSurfaceDesc.ddpfPixelFormat));
+            if (lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0) != DD_OK)
+            {
+                memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_Pallete8, sizeof(ddSurfaceDesc.ddpfPixelFormat));
+                if (lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0) != DD_OK)
+                {
+                    memcpy(&ddSurfaceDesc.ddpfPixelFormat, &ddPixelFormat_0555, sizeof(ddSurfaceDesc.ddpfPixelFormat));
+
+                    lpDD->CreateSurface(&ddSurfaceDesc, &ddrawSurface, 0);
+                }
+                else
+                {
+                    DX_ASSERT(lpDD->CreatePalette(68, &paletteEntry, &ddrawPalette, 0));
+                    DX_ASSERT(ddrawSurface->SetPalette(ddrawPalette));
+                }
+            }
+            else
+            {
+                DX_ASSERT(lpDD->CreatePalette(1, &paletteEntry, &ddrawPalette, 0));
+                DX_ASSERT(ddrawSurface->SetPalette(ddrawPalette));
+            }
+            break;
+        default:
+            Abortf("Unsupported texture format!");
+            break;
     }
 
     if (!ddrawSurface)
@@ -392,7 +392,6 @@ void gfxTexture::EnableCache(bool enabled)
 
 void gfxTexture::ShutdownCache(void)
 {
-
     if (gfxTexture::sm_FirstPool)
     {
         Warningf("gfxTexture::ShutdownCache: Shutting down texture cache.");
@@ -412,7 +411,7 @@ void gfxTexture::ShutdownCache(void)
             i->CachePool = nullptr;
         }
 
-        gfxTextureCachePool *currentPool = gfxTexture::sm_FirstPool;
+        gfxTextureCachePool* currentPool = gfxTexture::sm_FirstPool;
 
         while (currentPool)
         {
@@ -447,7 +446,7 @@ gfxBitmap::~gfxBitmap()
         free(Name);
     }
 
-    gfxBitmap ** ppNext = &gfxBitmap::sm_First;
+    gfxBitmap** ppNext = &gfxBitmap::sm_First;
 
     for (gfxBitmap* i = gfxBitmap::sm_First; i; i = i->Prev)
     {
@@ -469,12 +468,12 @@ gfxBitmap::~gfxBitmap()
     }
 }
 
-bool gfxBitmap::Load(gfxImage * image)
+bool gfxBitmap::Load(gfxImage* image)
 {
     return stub<member_func_t<bool, gfxBitmap, gfxImage*>>(0x4AE5C0, this, image);
 }
 
-void gfxBitmap::SetName(const char * name)
+void gfxBitmap::SetName(const char* name)
 {
     if (Name)
     {
@@ -494,9 +493,9 @@ void gfxBitmap::Release()
     }
 }
 
-gfxBitmap * gfxBitmap::Create(gfxImage* image, bool unused)
+gfxBitmap* gfxBitmap::Create(gfxImage* image, bool unused)
 {
-    gfxBitmap *result = gfxBitmap::Create(image->Width, image->Height, unused);
+    gfxBitmap* result = gfxBitmap::Create(image->Width, image->Height, unused);
 
     if (result)
     {
@@ -511,9 +510,9 @@ gfxBitmap * gfxBitmap::Create(gfxImage* image, bool unused)
     return nullptr;
 }
 
-gfxBitmap * gfxBitmap::Create(int width, int height, bool unused)
+gfxBitmap* gfxBitmap::Create(int width, int height, bool unused)
 {
-    (void)unused;
+    (void) unused;
 
     DDSURFACEDESC2 surfaceDesc;
 
@@ -530,7 +529,7 @@ gfxBitmap * gfxBitmap::Create(int width, int height, bool unused)
     surfaceDesc.dwHeight = height;
     surfaceDesc.ddsCaps.dwCaps = 0x800;
 
-    IDirectDrawSurface7 *surface = nullptr;
+    IDirectDrawSurface7* surface = nullptr;
 
     if (lpDD->CreateSurface(&surfaceDesc, &surface, 0) != DD_OK)
     {
@@ -563,7 +562,7 @@ gfxTextureCachePool::~gfxTextureCachePool()
 
 void gfxTextureCachePool::FindEntry(gfxTexture* texture)
 {
-    gfxTextureCacheEntry *entry = FirstEntry;
+    gfxTextureCacheEntry* entry = FirstEntry;
 
     uint32_t earliest = entry->LastAccessTime;
 
@@ -583,10 +582,10 @@ void gfxTextureCachePool::FindEntry(gfxTexture* texture)
     entry->Lease(texture);
 }
 
-gfxTextureCacheEntry::gfxTextureCacheEntry(IDirectDrawSurface7 * surface, gfxTextureCacheEntry * prevEntry)
+gfxTextureCacheEntry::gfxTextureCacheEntry(IDirectDrawSurface7* surface, gfxTextureCacheEntry* prevEntry)
     : Surface(surface)
     , PrevEntry(prevEntry)
-{ }
+{}
 
 gfxTextureCacheEntry::~gfxTextureCacheEntry()
 {

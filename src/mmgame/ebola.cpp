@@ -28,7 +28,7 @@ bool FirstRunEula()
 
     if (hEbuEula)
     {
-        auto EBUEula = (int(*)(const char *, const char *, const char *, int)) GetProcAddress(hEbuEula, "EBUEula");
+        auto EBUEula = (int (*)(const char*, const char*, const char*, int)) GetProcAddress(hEbuEula, "EBUEula");
 
         if (EBUEula)
         {
@@ -53,7 +53,7 @@ bool FirstRunEula()
     return result;
 }
 
-void ebolaPlayMovie(const char * name)
+void ebolaPlayMovie(const char* name)
 {
     return stub<cdecl_t<void, const char*>>(0x402780, name);
 }

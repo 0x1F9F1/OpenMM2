@@ -18,13 +18,13 @@
 
 #include "vgl.h"
 
-#include "gfx/pipecom.h"
 #include "core/output.h"
+#include "gfx/pipecom.h"
 
 #include <d3d.h>
 #include <ddraw.h>
 
-inline extern_var(0x661970, void(*)(float, float, float), vglVertex);
+inline extern_var(0x661970, void (*)(float, float, float), vglVertex);
 inline extern_var(0x681B44, unsigned int, currentVertexType);
 inline extern_var(0x661978, unsigned int, currentVertexSize);
 
@@ -90,9 +90,9 @@ void vgl_VERTEX_VNT1(float x, float y, float z)
 
 void vglSetFormat(unsigned int format, unsigned int a2, unsigned int a3, unsigned int a4)
 {
-    (void)a2;
-    (void)a3;
-    (void)a4;
+    (void) a2;
+    (void) a3;
+    (void) a4;
 
     vglVertex = (format & D3DFVF_DIFFUSE) ? &vgl_VERTEX_VCT1 : &vgl_VERTEX_VNT1;
 
@@ -102,8 +102,7 @@ void vglSetFormat(unsigned int format, unsigned int a2, unsigned int a3, unsigne
     currentVertexSize = gfxFVFSize(format);
 }
 
-run_once([ ]
-{
+run_once([] {
     create_hook("vgl_VERTEX_VCT1", "", 0x4A5370, &vgl_VERTEX_VCT1);
     create_hook("vgl_VERTEX_VNT1", "", 0x4A5400, &vgl_VERTEX_VNT1);
     create_hook("vglSetFormat", "", 0x4A5490, &vglSetFormat);

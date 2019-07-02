@@ -97,24 +97,26 @@
 #include <d3d.h>
 #include <ddraw.h>
 
-#define DX_ASSERT(expression) \
-do { \
-    HRESULT hresult = expression; \
-    if (hresult != DD_OK) \
-    { \
-        Errorf("%s failed, code=%08x (%d)", expression, hresult, hresult); \
-    } \
-} while (false)
+#define DX_ASSERT(expression)                                                  \
+    do                                                                         \
+    {                                                                          \
+        HRESULT hresult = expression;                                          \
+        if (hresult != DD_OK)                                                  \
+        {                                                                      \
+            Errorf("%s failed, code=%08x (%d)", expression, hresult, hresult); \
+        }                                                                      \
+    } while (false)
 
-#define DX_RELEASE(var) \
-do { \
-    if (var) \
-    { \
-        HRESULT hresult = var->Release(); \
-        gfxDebugf(gfxDebug, "Releasing %s: %d", #var, hresult); \
-        var = nullptr; \
-    } \
-} while (false)
+#define DX_RELEASE(var)                                             \
+    do                                                              \
+    {                                                               \
+        if (var)                                                    \
+        {                                                           \
+            HRESULT hresult = var->Release();                       \
+            gfxDebugf(gfxDebug, "Releasing %s: %d", #var, hresult); \
+            var = nullptr;                                          \
+        }                                                           \
+    } while (false)
 
 class gfxBitmap;
 
@@ -165,9 +167,9 @@ public:
 
 enum gfxDeviceType
 {
-    gfxDeviceType_Software = 0, // Software (No 3D Video Card)
-    gfxDeviceType_Hardware = 1, // Hardware (3D Video Card)
-    gfxDeviceType_HardwareWithTnL = 2  // Hardware (3D Video Card With T&L)
+    gfxDeviceType_Software = 0,       // Software (No 3D Video Card)
+    gfxDeviceType_Hardware = 1,       // Hardware (3D Video Card)
+    gfxDeviceType_HardwareWithTnL = 2 // Hardware (3D Video Card With T&L)
 };
 
 enum gfxDepthFlags
@@ -194,10 +196,10 @@ struct gfxInterface
 
     int DeviceType {-1};
 
-    int ResolutionCount {-1};   // Max of 64 resolutions
+    int ResolutionCount {-1}; // Max of 64 resolutions
     int ResolutionChoice {-1};
 
-    uint32_t AcceptableDepths {0};  // Used to check if mmResolution::Depth is allowed
+    uint32_t AcceptableDepths {0}; // Used to check if mmResolution::Depth is allowed
 
     uint32_t AvailableMemory {0};
     uint32_t VendorID {0};
@@ -234,26 +236,26 @@ inline extern_var(0x6844D8, int, gfxMaxScreenHeight);
 
 inline extern_var(0x684500, bool, sm_UseInternal);
 
-inline extern_var(0x6830E8, void(*)(void), gfxLostCallback);
+inline extern_var(0x6830E8, void (*)(void), gfxLostCallback);
 
 unsigned int GetPixelFormatColor(DDPIXELFORMAT* lpDDPixelFormat, unsigned int color);
 
 bool gfxAutoDetect(bool* success);
 
 void InitDirectDraw(void);
-BOOL PASCAL AutoDetectCallback(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverName, LPVOID lpContext);
+BOOL PASCAL AutoDetectCallback(GUID* lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverName, LPVOID lpContext);
 HRESULT PASCAL ResCallback(LPDDSURFACEDESC2 lpSurfaceDesc, LPVOID lpContext);
 HRESULT CALLBACK DeviceCallback(LPSTR lpDeviceDescription, LPSTR lpDeviceName, LPD3DDEVICEDESC7 lpDeviceDesc, LPVOID lpContext);
 BOOL PASCAL DDEnumProc(GUID* lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverName, LPVOID lpContext);
 BOOL PASCAL MultiMonCallback(GUID* lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverName, LPVOID lpContext, HMONITOR hMonitor);
 HRESULT PASCAL EnumAllSurfCallback(LPDIRECTDRAWSURFACE7 lpSurface, LPDDSURFACEDESC2 lpSurfaceDesc, LPVOID lpContext);
 
-inline gfxResData * gfxInterface::CurrentResolution()
+inline gfxResData* gfxInterface::CurrentResolution()
 {
     return &Resolutions[ResolutionChoice];
 }
 
-inline gfxInterface * gfxInterface::Current()
+inline gfxInterface* gfxInterface::Current()
 {
     return &gfxInterfaces[gfxInterfaceChoice];
 }

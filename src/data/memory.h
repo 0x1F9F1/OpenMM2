@@ -28,7 +28,7 @@
 
 #include "hooking.h"
 
-inline extern_var(0x5CE81C, void(*)(char const *), datDisplayUsed);
+inline extern_var(0x5CE81C, void (*)(char const*), datDisplayUsed);
 
 inline extern_var(0x6A3C34, int, datCurrentMemoryAlign);
 inline extern_var(0x6A3C38, int, datCurrentMemoryBucket);

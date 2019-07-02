@@ -106,7 +106,7 @@ public:
     uint16_t SampleSharing;
     bool bool4A;
     bool bool4B;
-    mmDirSnd *pDirSound;
+    mmDirSnd* pDirSound;
     float dword50;
 
     AudManager();

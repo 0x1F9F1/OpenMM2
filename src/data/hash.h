@@ -57,7 +57,7 @@ class HashEntry
 public:
     char* Name;
     void* Value;
-    HashEntry *Next;
+    HashEntry* Next;
 
     HashEntry() = delete;
     ~HashEntry() = delete;
@@ -83,16 +83,16 @@ public:
     uint16_t word0;
     bool FixedSize;
     bool bool3;
-    FixedHashEntry *FixedHashEntrys;
+    FixedHashEntry* FixedHashEntrys;
     int MaxSlots;
     uint32_t UsedSlots;
-    HashEntry **EntryList;
-    HashTable *Next;
+    HashEntry** EntryList;
+    HashTable* Next;
 
-    int Hash(const char *string);
-    void * Access(const char *name);
+    int Hash(const char* string);
+    void* Access(const char* name);
 
-    bool Insert(char const * name, void * value);
+    bool Insert(char const* name, void* value);
 
     void MakePermanent();
 

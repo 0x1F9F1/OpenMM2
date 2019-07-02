@@ -18,7 +18,7 @@
 
 #include "hash.h"
 
-int HashTable::Hash(const char *string)
+int HashTable::Hash(const char* string)
 {
     if (!EntryList)
     {
@@ -42,7 +42,7 @@ int HashTable::Hash(const char *string)
     return hash % MaxSlots;
 }
 
-void * HashTable::Access(const char *name)
+void* HashTable::Access(const char* name)
 {
     int hash = Hash(name);
 
@@ -57,7 +57,7 @@ void * HashTable::Access(const char *name)
     return nullptr;
 }
 
-bool HashTable::Insert(char const * name, void * value)
+bool HashTable::Insert(char const* name, void* value)
 {
     return stub<member_func_t<bool, HashTable, const char*, void*>>(0x4C69F0, this, name, value);
 }

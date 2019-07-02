@@ -53,7 +53,7 @@
 
 #include "hooking.h"
 
-void CustomPrinter(int level, const char *format, va_list args);
+void CustomPrinter(int level, const char* format, va_list args);
 void CustomPrintString(const char* string);
 
 void Printf(const char* format, ...);
@@ -76,7 +76,7 @@ public:
     static void CallBeforeMsgBoxFunction(void);
     static void CallAfterMsgBoxFunction(void);
 
-    static bool OpenLog(char const * fileName);
+    static bool OpenLog(char const* fileName);
     static void CloseLog(void);
 
     static inline extern_var(0x6A3D4C, bool, OutputSent);
@@ -88,5 +88,5 @@ void gfxDebugf(int enabled, const char* format, ...);
 void ageDebug(int enabled, char const* format, ...);
 
 inline extern_var(0x5CECEC, int, PrinterFlags);
-inline extern_var(0x5CED24, void(*)(int, const char*, va_list), Printer);
-inline extern_var(0x5CECF0, void(*)(const char *), PrintString);
+inline extern_var(0x5CED24, void (*)(int, const char*, va_list), Printer);
+inline extern_var(0x5CECF0, void (*)(const char*), PrintString);

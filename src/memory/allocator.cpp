@@ -37,7 +37,7 @@ memMemoryAllocator::~memMemoryAllocator()
     HeapData = 0;
 }
 
-void memMemoryAllocator::Init(void * heapData, uint32_t heapSize, bool a3, bool checkAlloc)
+void memMemoryAllocator::Init(void* heapData, uint32_t heapSize, bool a3, bool checkAlloc)
 {
     HeapData = heapData;
     TotalSize = heapSize;
@@ -66,7 +66,7 @@ void memMemoryAllocator::GetStats(memMemStats* stats, bool)
     memset(stats, 0, sizeof(*stats));
 }
 
-void memMemoryAllocator::DisplayUsed(char const * status)
+void memMemoryAllocator::DisplayUsed(char const* status)
 {
     return stub<cdecl_t<void, const char*>>(0x577170, status);
 }

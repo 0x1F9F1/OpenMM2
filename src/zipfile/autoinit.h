@@ -28,4 +28,4 @@
 #include "hooking.h"
 
 void zipAutoInit(void);
-void zipMultiAutoInit(char const * extension);
+void zipMultiAutoInit(char const* extension);

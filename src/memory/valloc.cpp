@@ -29,7 +29,7 @@ memSafeHeap::~memSafeHeap()
     Kill();
 }
 
-void memSafeHeap::Init(memMemoryAllocator *allocator, uint32_t heapSize, bool p3, bool p4, bool checkAlloc)
+void memSafeHeap::Init(memMemoryAllocator* allocator, uint32_t heapSize, bool p3, bool p4, bool checkAlloc)
 {
     this->bool14 = p3;
     this->Allocator = allocator;
@@ -49,7 +49,7 @@ void memSafeHeap::Init(memMemoryAllocator *allocator, uint32_t heapSize, bool p3
 
 void memSafeHeap::Activate(void)
 {
-    void* preferredAddress = (void*)((char*)(CommitedData) + AllocSize * SomeAlignmentThingy);
+    void* preferredAddress = (void*) ((char*) (CommitedData) + AllocSize * SomeAlignmentThingy);
 
     Heap = preferredAddress;
 
@@ -65,7 +65,7 @@ void memSafeHeap::Deactivate(void)
 {
     if (bool14)
     {
-#pragma warning(suppress: 6250)
+#pragma warning(suppress : 6250)
         VirtualFree(Heap, AllocSize, MEM_DECOMMIT);
     }
 

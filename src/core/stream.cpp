@@ -41,7 +41,7 @@ int Stream::Read(void* buffer, int size)
         {
             memcpy(buffer, &Buffer[CurrentBufferOffset], bufferSpace);
 
-            buffer = static_cast<char *>(buffer) + bufferSpace;
+            buffer = static_cast<char*>(buffer) + bufferSpace;
 
             total += bufferSpace;
             size -= bufferSpace;
@@ -112,7 +112,7 @@ int Stream::Write(const void* buffer, int size)
             {
                 memcpy(&Buffer[CurrentBufferOffset], buffer, bufferSpace);
 
-                buffer = static_cast<const char *>(buffer) + bufferSpace;
+                buffer = static_cast<const char*>(buffer) + bufferSpace;
                 size -= bufferSpace;
 
                 CurrentBufferOffset = BufferSize;
@@ -189,16 +189,16 @@ int Stream::Seek(int offset, seekWhence whence)
 {
     switch (whence)
     {
-    case SeekBegin:
-        break;
+        case SeekBegin:
+            break;
 
-    case SeekCurrent:
-        offset += Tell();
-        break;
+        case SeekCurrent:
+            offset += Tell();
+            break;
 
-    case SeekEnd:
-        offset += Size();
-        break;
+        case SeekEnd:
+            offset += Size();
+            break;
     }
 
     return Seek(offset);
@@ -423,10 +423,8 @@ int fscanf(Stream* stream, char const* format, ...)
         do
         {
             currentChar = stream->GetCh();
-        }
-        while (currentChar == '\t');
-    }
-    while (currentChar == '\n' || currentChar == ' ' || currentChar == '\r');
+        } while (currentChar == '\t');
+    } while (currentChar == '\n' || currentChar == ' ' || currentChar == '\r');
 
     char buffer[256];
     buffer[0] = static_cast<char>(currentChar);
@@ -449,8 +447,7 @@ int fscanf(Stream* stream, char const* format, ...)
     return 0;
 }
 
-run_once([ ]
-{
+run_once([] {
     create_hook("Stream::AllocStream", "", 0x4C98D0, &Stream::AllocStream);
     create_hook("Stream::DumpOpenFiles", "", 0x4C9970, &Stream::DumpOpenFiles);
 });

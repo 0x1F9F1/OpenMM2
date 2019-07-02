@@ -20,9 +20,8 @@
 
 #include "core/output.h"
 
-define_dummy_symbol(sfPointer)
+define_dummy_symbol(sfPointer);
 
-run_once([ ]
-{
+run_once([] {
     create_patch("sfPointer::Update", "Enables pointer in windowed mode", 0x4F136E, "\x90\x90", 2);
 });

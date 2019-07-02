@@ -39,8 +39,8 @@
 
 #include "hooking.h"
 
-#include "node/node.h"
 #include "data/timer.h"
+#include "node/node.h"
 
 class asCamera;
 class Matrix34;
@@ -53,18 +53,18 @@ class asCullManager
 public:
     uint32_t dword18 {0};
     uint32_t CameraCount {0};
-    asCamera *CameraArray[MAX_CULLABLE_CAMERAS] {nullptr};
-    asCamera *CurrentCamera {nullptr};
+    asCamera* CameraArray[MAX_CULLABLE_CAMERAS] {nullptr};
+    asCamera* CurrentCamera {nullptr};
     int CurrentCullables {0};
     int MaxCullables {0};
     int CurrentCullables2D {0};
     int MaxCullables2D {0};
     int CurrentCullables2DFG {0};
     int MaxCullables2DFG {0};
-    asCullable **CullableArray {nullptr};
-    asCullable **Cullables2D {nullptr};
-    asCullable **Cullables2DFG {nullptr};
-    Matrix34 **CullablsMatrices {nullptr};
+    asCullable** CullableArray {nullptr};
+    asCullable** Cullables2D {nullptr};
+    asCullable** Cullables2DFG {nullptr};
+    Matrix34** CullablsMatrices {nullptr};
     uint32_t BaseColor {0xFF001E3C};
     int field_90 {0};
     int field_94 {0};
@@ -82,10 +82,10 @@ public:
     virtual void Update() override;
     virtual void Reset() override;
 
-    virtual void DeclareCamera(asCamera * camera);
-    virtual void DeclareCullable(asCullable * cullable);
-    virtual void DeclareCullable2D(asCullable * cullable);
-    virtual void DeclareCullable2DFG(asCullable * cullable);
+    virtual void DeclareCamera(asCamera* camera);
+    virtual void DeclareCullable(asCullable* cullable);
+    virtual void DeclareCullable2D(asCullable* cullable);
+    virtual void DeclareCullable2DFG(asCullable* cullable);
 
     static inline extern_var(0x661784, asCullManager*, Instance);
 };

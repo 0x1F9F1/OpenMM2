@@ -60,7 +60,7 @@ class memMemoryAllocator
 {
 public:
     memMemoryAllocator* Prev {nullptr};
-    void *HeapData {nullptr};
+    void* HeapData {nullptr};
     int TotalSize {0};
     int Alignment {0};
     int Locked {0};
@@ -75,10 +75,10 @@ public:
     memMemoryAllocator();
     ~memMemoryAllocator();
 
-    void Init(void * heapData, uint32_t heapSize, bool a3, bool checkalloc);
+    void Init(void* heapData, uint32_t heapSize, bool a3, bool checkalloc);
     void Kill(void);
 
-    void GetStats(memMemStats * stats, bool unused);
+    void GetStats(memMemStats* stats, bool unused);
 
     static void DisplayUsed(char const* status);
 

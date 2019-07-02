@@ -65,23 +65,23 @@ enum seekWhence
 
 struct coreFileMethods
 {
-    int(*Open)(const char* fileName, bool readOnly);
-    int(*Create)(const char* fileName);
-    int(*Read)(int handle, void* buffer, int length);
-    int(*Write)(int handle, const void* buffer, int length);
-    int(*Seek)(int handle, int position, int whence);
-    int(*Close)(int handle);
-    int(*EnumFiles)(const char* fileName, void(*callback)(const char*, bool, void*), void* context);
-    int(*Size)(int handle);
-    int(*Flush)(int handle);
+    int (*Open)(const char* fileName, bool readOnly);
+    int (*Create)(const char* fileName);
+    int (*Read)(int handle, void* buffer, int length);
+    int (*Write)(int handle, const void* buffer, int length);
+    int (*Seek)(int handle, int position, int whence);
+    int (*Close)(int handle);
+    int (*EnumFiles)(const char* fileName, void (*callback)(const char*, bool, void*), void* context);
+    int (*Size)(int handle);
+    int (*Flush)(int handle);
 };
 
 class Stream
 {
 public:
-    const coreFileMethods * Methods;
+    const coreFileMethods* Methods;
     int Handle;
-    uint8_t *Buffer;
+    uint8_t* Buffer;
     int CurrentFileOffset;
     int CurrentBufferOffset;
     int CurrentBufferSize;
@@ -122,22 +122,31 @@ public:
             Errorf("Failed to read %s", typeid(T).name());
         }
 #else
-        (void)success;
+        (void) success;
 #endif
 
         return result;
     }
 
-    template <typename T>
-    bool ReadArray(T* values, size_t count)
+    template <typename T, size_t N>
+    bool ReadArray(T (&values)[N], size_t count)
     {
+        return ReadArray(values, N, count);
+    }
+
+    template <typename T>
+    bool ReadArray(T* values, size_t max, size_t count)
+    {
+        if (count > max)
+            return false;
+
         return ReadBytes(values, count * sizeof(*values));
     }
 
-    static Stream* Open(char const * fileName, coreFileMethods const * methods, bool readOnly);
-    static Stream* AllocStream(char const * fileName, int handle, coreFileMethods const * methods);
+    static Stream* Open(char const* fileName, coreFileMethods const* methods, bool readOnly);
+    static Stream* AllocStream(char const* fileName, int handle, coreFileMethods const* methods);
 
-    static Stream* Open(char const * fileName, bool readOnly);
+    static Stream* Open(char const* fileName, bool readOnly);
 
     static Stream* Create(const char* fileName);
 
@@ -146,11 +155,11 @@ public:
     static inline extern_var(0x6A3D68, Stream[MAX_STREAMS], sm_Streams);
     static inline extern_var(0x6A3EB8, uint8_t[MAX_STREAMS][STREAM_BUFFER_SIZE], sm_Buffers);
 
-    static inline extern_var(0x5CED7C, coreFileMethods const *, sm_DefaultCreateMethods);
-    static inline extern_var(0x5CED78, coreFileMethods const *, sm_DefaultOpenMethods);
+    static inline extern_var(0x5CED7C, coreFileMethods const*, sm_DefaultCreateMethods);
+    static inline extern_var(0x5CED78, coreFileMethods const*, sm_DefaultOpenMethods);
 };
 
-int fseek(Stream *stream, int position, seekWhence whence);
-int fgets(char *buffer, int length, Stream *stream);
-void fprintf(Stream *stream, char const *format, ...);
-int fscanf(Stream *stream, char const *format, ...);
+int fseek(Stream* stream, int position, seekWhence whence);
+int fgets(char* buffer, int length, Stream* stream);
+void fprintf(Stream* stream, char const* format, ...);
+int fscanf(Stream* stream, char const* format, ...);

@@ -50,15 +50,17 @@
 
 #include "minwin.h"
 
+// clang-format off
 #include <mmsystem.h>
 #include <dsound.h>
+// clang-format on
 
 struct mmSoundDriver
 {
     GUID GUID;
     char* Name;
     int Rating;
-    mmSoundDriver *Next;
+    mmSoundDriver* Next;
 };
 
 check_size(mmSoundDriver, 0x1C);
@@ -70,9 +72,9 @@ public:
     IDirectSound* lpDS {nullptr};
     HWND hWnd {nullptr};
     int gap10 {0};
-    mmSoundDriver *FirstDriver {nullptr};
-    mmSoundDriver *CurrentDriver {nullptr};
-    IUnknown *field_1C {nullptr};
+    mmSoundDriver* FirstDriver {nullptr};
+    mmSoundDriver* CurrentDriver {nullptr};
+    IUnknown* field_1C {nullptr};
     int DeviceCount {0};
     int BitDepth {1};
     int DeviceFlags {0};
@@ -80,7 +82,7 @@ public:
     bool Initialized {false};
     int SoundEnabled {false};
     int DeviceCaps {0};
-    mmSoundDriver **SoundDevices {nullptr};
+    mmSoundDriver** SoundDevices {nullptr};
 
     DirSnd();
     ~DirSnd();

@@ -22,7 +22,7 @@
 
 #include "mmcityinfo/state.h"
 
-int mmDirSnd::InitPrimarySoundBuffer(uint32_t sampleRate, bool enableStero, const char * deviceName)
+int mmDirSnd::InitPrimarySoundBuffer(uint32_t sampleRate, bool enableStero, const char* deviceName)
 {
     return stub<member_func_t<int, mmDirSnd, uint32_t, bool, const char*>>(0x51CD90, this, sampleRate, enableStero, deviceName);
 }
@@ -36,7 +36,6 @@ mmDirSnd* mmDirSnd::Init(int sampleRate, bool enableStero, int a4, float volume,
     return stub<cdecl_t<mmDirSnd*, int, bool, int, float, const char*, bool>>(0x51CC50, sampleRate, enableStero, a4, volume, deviceName, enable3D);
 }
 
-run_once([ ]
-{
+run_once([] {
     create_hook("mmDirSnd::Init", "Fixes no sound issue on startup.", 0x51941D, &mmDirSnd::Init, hook_type::call);
 });

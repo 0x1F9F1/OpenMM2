@@ -49,7 +49,7 @@
 
 class gfxBitmap;
 
-void ProgressCB(const char *message, signed int progress);
+void ProgressCB(const char* message, signed int progress);
 
 inline extern_var(0x5E0CCC, gfxBitmap*, LoadingScreenBitmap);
 inline extern_var(0x5E0CE0, gfxBitmap*, RestoringScreenBitmap);

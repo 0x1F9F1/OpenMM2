@@ -49,16 +49,16 @@ void gfxImage::Scale(int width, int height)
     return stub<member_func_t<void, gfxImage, int, int>>(0x4AEDC0, this, width, height);
 }
 
-gfxImage * gfxImage::Create(int width, int height, int type, int paletteType, int a5)
+gfxImage* gfxImage::Create(int width, int height, int type, int paletteType, int a5)
 {
     return stub<cdecl_t<gfxImage*, int, int, int, int, int>>(0x4AE920, width, height, type, paletteType, a5);
 }
 
 inline extern_var(0x5CCFA4, char[96][8], BuiltinFont);
 
-gfxImage* gfxImage::GetFont(int & outWidth, int & outHeight)
+gfxImage* gfxImage::GetFont(int& outWidth, int& outHeight)
 {
-    if ( !sm_Font )
+    if (!sm_Font)
     {
         outWidth = 8;
         outHeight = 8;
@@ -67,8 +67,7 @@ gfxImage* gfxImage::GetFont(int & outWidth, int & outHeight)
 
         for (int i = 0; i < 96; ++i)
         {
-            uint16_t* current_row = reinterpret_cast<uint16_t*>(reinterpret_cast<uint8_t*>(result->ImageData)
-                + (i % 16) * 16 + ((i / 2) & 0xFFFFFFF8) * result->BytesPerRow);
+            uint16_t* current_row = reinterpret_cast<uint16_t*>(reinterpret_cast<uint8_t*>(result->ImageData) + (i % 16) * 16 + ((i / 2) & 0xFFFFFFF8) * result->BytesPerRow);
 
             for (int j = 0; j < 8; ++j)
             {
@@ -83,7 +82,7 @@ gfxImage* gfxImage::GetFont(int & outWidth, int & outHeight)
                 current_row[6] = -((v & 0x02) != 0);
                 current_row[7] = -((v & 0x01) != 0);
 
-                current_row = (uint16_t *)((uint8_t*)(current_row) + result->BytesPerRow);
+                current_row = (uint16_t*) ((uint8_t*) (current_row) + result->BytesPerRow);
             }
         }
 

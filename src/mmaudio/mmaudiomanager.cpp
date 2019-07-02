@@ -18,8 +18,8 @@
 
 #include "mmaudiomanager.h"
 
-#include "core/output.h"
 #include "aud/dirsnd.h"
+#include "core/output.h"
 
 AudManager::AudManager()
 {
@@ -40,7 +40,7 @@ AudManager::AudManager()
     MMAUDMGRPTR = this;
 }
 
-#pragma warning (suppress: 4722)
+#pragma warning(suppress : 4722)
 AudManager::~AudManager()
 {
     unimplemented;

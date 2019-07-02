@@ -66,26 +66,29 @@ protected:
         return reinterpret_cast<unsigned int&>(callback) | flags;
     }
 
-    template <typename ...Args>
-    void virtual_callback(uint32_t callback, Args ...args) const {
+    template <typename... Args>
+    void virtual_callback(uint32_t callback, Args... args) const
+    {
         return stub<member_func_t<void, Base, Args...>>(callback, _class, args...);
     }
 
-    template <typename ...Args>
-    void method_callback(uint32_t callback, Args ...args) const {
+    template <typename... Args>
+    void method_callback(uint32_t callback, Args... args) const
+    {
         return stub<cdecl_t<void, Args...>>(callback, args...);
     }
 
 public:
-    inline unsigned int ptr() const {
+    inline unsigned int ptr() const
+    {
         return _callback & ~ParamCountFlags;
     }
 
     datCallback();
-    datCallback(void(*callback)());
-    datCallback(void(__stdcall *callback)(void*), void* parameter);
-    datCallback(void(__stdcall *callback)());
-    datCallback(void(__stdcall *callback)(void*, void*), void* parameter);
+    datCallback(void (*callback)());
+    datCallback(void(__stdcall* callback)(void*), void* parameter);
+    datCallback(void(__stdcall* callback)());
+    datCallback(void(__stdcall* callback)(void*, void*), void* parameter);
 
     void Call(void* parameter);
 };

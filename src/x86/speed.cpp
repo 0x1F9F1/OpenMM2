@@ -18,7 +18,8 @@
 
 #include "speed.h"
 
-#include "minwin.h"
+#ifdef DETECT_CPU_SPEED
+#    include "minwin.h"
 
 unsigned int __ComputeCpuSpeed()
 {
@@ -30,8 +31,9 @@ unsigned int __ComputeCpuSpeed()
     DWORD64 cycleDelta = __rdtsc() - cycleStart;
     DWORD64 timeDelta = GetTickCount64() - timeStart;
 
-    return (unsigned int)((cycleDelta + timeDelta * 500) / (timeDelta * 1000));
+    return (unsigned int) ((cycleDelta + timeDelta * 500) / (timeDelta * 1000));
 }
+#endif
 
 unsigned int ComputeCpuSpeed()
 {

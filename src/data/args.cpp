@@ -21,10 +21,10 @@
 struct ArgEntry
 {
     uint32_t WordCount {0};
-    char **Words {nullptr};
+    char** Words {nullptr};
 };
 
-bool datArgParser::Exists(const char * name)
+bool datArgParser::Exists(const char* name)
 {
     if (!Argc)
     {
@@ -34,7 +34,7 @@ bool datArgParser::Exists(const char * name)
     return ArgHash.Access(name) != nullptr;
 }
 
-bool datArgParser::Get(const char * name, uint32_t index, int & out)
+bool datArgParser::Get(const char* name, uint32_t index, int& out)
 {
     if (!Argc)
     {
@@ -53,7 +53,7 @@ bool datArgParser::Get(const char * name, uint32_t index, int & out)
     return false;
 }
 
-bool datArgParser::Get(const char * name, uint32_t index, float & out)
+bool datArgParser::Get(const char* name, uint32_t index, float& out)
 {
     if (!Argc)
     {
@@ -72,7 +72,7 @@ bool datArgParser::Get(const char * name, uint32_t index, float & out)
     return false;
 }
 
-bool datArgParser::Get(const char * name, uint32_t index, const char *& out)
+bool datArgParser::Get(const char* name, uint32_t index, const char*& out)
 {
     if (!Argc)
     {
@@ -95,7 +95,7 @@ void datArgParser::Init()
 {
 }
 
-void datArgParser::Init(int argc, char ** argv)
+void datArgParser::Init(int argc, char** argv)
 {
     datArgParser::Argc = argc;
     datArgParser::Argv = argv;

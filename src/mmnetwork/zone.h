@@ -50,7 +50,7 @@
 class netZoneScore
 {
 public:
-    IDirectPlayLobby3 *pLobby {nullptr};
+    IDirectPlayLobby3* pLobby {nullptr};
     GUID GUID {};
     IUnknown* pZoneScore {nullptr}; // IZoneScore
 

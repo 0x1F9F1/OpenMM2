@@ -58,5 +58,5 @@ public:
 
     static inline extern_var(0x6A3C10, HashTable, ArgHash);
     static inline extern_var(0x6A3C30, int, Argc);
-    static inline extern_var(0x6A3C28, char **, Argv);
+    static inline extern_var(0x6A3C28, char**, Argv);
 };

@@ -142,8 +142,8 @@ public:
     mmReplayManager();
     ~mmReplayManager();
 
-    void LoadReplay(char * name);
-    void ReadReplayInfo(Stream * stream);
+    void LoadReplay(char* name);
+    void ReadReplayInfo(Stream* stream);
     void SetReplayInfo();
     void StartReplay();
 

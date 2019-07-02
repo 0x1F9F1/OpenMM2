@@ -22,9 +22,8 @@
 #include <ddraw.h>
 
 unsigned int BaseFVFSizes[16] =
-{
-    0u, 0u, 12u, 0u, 16u, 0u, 16u, 0u, 20u, 0u, 24u, 0u, 28u, 0u, 32u, 0u
-};
+    {
+        0u, 0u, 12u, 0u, 16u, 0u, 16u, 0u, 20u, 0u, 24u, 0u, 28u, 0u, 32u, 0u};
 
 unsigned int gfxFVFSize(unsigned int flags)
 {

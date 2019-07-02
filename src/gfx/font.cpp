@@ -18,8 +18,8 @@
 
 #include "font.h"
 
-#include "gfx/texture.h"
 #include "gfx/image.h"
+#include "gfx/texture.h"
 
 struct gfxFontInfo
 {
@@ -51,9 +51,9 @@ void gfxCreateFont(void)
         font_texture->SetTexEnv(font_texture->TexEnv & 0xFFFBFFFF);
     }
 
-    SYSFONT.Height = (uint8_t)font_height;
-    SYSFONT.Width = (uint8_t)font_width;
-    SYSFONT.Width2 = (uint8_t)font_width;
+    SYSFONT.Height = (uint8_t) font_height;
+    SYSFONT.Width = (uint8_t) font_width;
+    SYSFONT.Width2 = (uint8_t) font_width;
 }
 
 void gfxReleaseFont(void)

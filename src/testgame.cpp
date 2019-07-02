@@ -60,17 +60,18 @@
 
 #pragma comment(lib, "imm32.lib")
 
-inline extern_var(0x5E0CC4, int(*)(void), __VtResumeSampling);
-inline extern_var(0x5E0CD8, int(*)(void), __VtPauseSampling);
+inline extern_var(0x5E0CC4, int (*)(void), __VtResumeSampling);
+inline extern_var(0x5E0CD8, int (*)(void), __VtPauseSampling);
 
-void GetLoadScreenName(char *buffer)
+void GetLoadScreenName(char* buffer)
 {
     char gameModeBuffer[20];
 
     if (MMSTATE.GameState)
     {
         sprintf_s(buffer, 80, "%s_", MMSTATE.CityName);
-        sprintf_s(gameModeBuffer, dgGameModeNames[MMSTATE.GameMode], MMSTATE.RaceId);
+        sprintf_s(gameModeBuffer, dgGameModeNames[MMSTATE.GameMode],
+            MMSTATE.RaceId);
         strcat_s(buffer, 80, gameModeBuffer);
     }
     else
@@ -157,13 +158,13 @@ void BeginPhase(bool splashScreen)
 
     asCullManager* cullManager = new asCullManager(1024, 256);
 
-    (void)cullManager;
+    (void) cullManager;
 
     datDisplayUsed("Just before GameInput");
 
     mmInput* input = new mmInput();
 
-    (void)input;
+    (void) input;
 
     GameInputPtr->AttachToPipe();
     GameInputPtr->Init(MMSTATE.InputDevice);
@@ -181,17 +182,11 @@ void RestoreFocus(void)
     uint16_t width = RestoringScreenBitmap->Width;
     uint16_t height = RestoringScreenBitmap->Height;
 
-    RECT position =
-    {
-        0, 0, width, height
-    };
+    RECT position = {0, 0, width, height};
 
-    lpdsFront->BltFast(
-        (gfxPipeline::m_iWidth - width) / 2,
+    lpdsFront->BltFast((gfxPipeline::m_iWidth - width) / 2,
         (gfxPipeline::m_iHeight - height) / 2,
-        RestoringScreenBitmap->Surface,
-        &position,
-        DDBLTFAST_WAIT);
+        RestoringScreenBitmap->Surface, &position, DDBLTFAST_WAIT);
 
     if (mmGameManager::Instance && !ROOT.IsPaused() && !NETMGR.SessionOpen)
     {
@@ -290,7 +285,8 @@ void MainPhase(bool parsedStateArgs, int firstLoad)
             uiInterface->ShowMain(firstLoad);
 
             parsedStateArgs = true;
-        } break;
+        }
+        break;
 
         case 1:
         {
@@ -325,7 +321,8 @@ void MainPhase(bool parsedStateArgs, int firstLoad)
             }
 
             parsedStateArgs = false;
-        } break;
+        }
+        break;
     }
 
     LoadingScreenBitmap->Release();
@@ -363,20 +360,16 @@ void MainPhase(bool parsedStateArgs, int firstLoad)
     EndPhase();
 }
 
-run_once([]
-{
-    new (&ROOT) asRoot();
-});
-
+run_once([] { new (&ROOT) asRoot(); });
 
 inline extern_var(0x6614D4, char[256], ExecPath);
 
 void ProgressRect(int x, int y, int width, int height, unsigned int color)
 {
-    DDPIXELFORMAT ddPixelFormat = { sizeof(ddPixelFormat) };
+    DDPIXELFORMAT ddPixelFormat = {sizeof(ddPixelFormat)};
     lpdsRend->GetPixelFormat(&ddPixelFormat);
 
-    DDBLTFX ddBltFx = { sizeof(ddBltFx) };
+    DDBLTFX ddBltFx = {sizeof(ddBltFx)};
     ddBltFx.dwFillColor = GetPixelFormatColor(&ddPixelFormat, color);
 
     RECT position = {
@@ -391,9 +384,9 @@ void ProgressRect(int x, int y, int width, int height, unsigned int color)
 
 uint32_t ProgressBarColor = 0xFF0D2CBA;
 
-void ProgressCB(const char *message, signed int progress)
+void ProgressCB(const char* message, signed int progress)
 {
-    (void)message;
+    (void) message;
 
     if (progress)
     {
@@ -401,15 +394,17 @@ void ProgressCB(const char *message, signed int progress)
 
         if (LoadingScreenBitmap)
         {
-            gfxPipeline::CopyBitmap(0, 0, LoadingScreenBitmap, 0, 0, LoadingScreenBitmap->Width, LoadingScreenBitmap->Height, 0);
+            gfxPipeline::CopyBitmap(0, 0, LoadingScreenBitmap, 0, 0,
+                LoadingScreenBitmap->Width,
+                LoadingScreenBitmap->Height, 0);
         }
 
         if (MMSTATE.GameState)
         {
-            ProgressRect(
-                static_cast<int>(gfxPipeline::m_iWidth * 0.55),
+            ProgressRect(static_cast<int>(gfxPipeline::m_iWidth * 0.55),
                 static_cast<int>(gfxPipeline::m_iHeight * 0.895),
-                static_cast<int>(gfxPipeline::m_iWidth * 0.42343751 * progress * 0.01),
+                static_cast<int>(gfxPipeline::m_iWidth * 0.42343751 *
+                    progress * 0.01),
                 static_cast<int>(gfxPipeline::m_iHeight * 0.02),
                 ProgressBarColor);
         }
@@ -419,8 +414,7 @@ void ProgressCB(const char *message, signed int progress)
                 static_cast<int>(gfxPipeline::m_iWidth * 0.5453125),
                 static_cast<int>(gfxPipeline::m_iHeight * 0.935),
                 static_cast<int>(gfxPipeline::m_iWidth * 0.44374 * progress * 0.01),
-                static_cast<int>(gfxPipeline::m_iHeight * 0.02),
-                ProgressBarColor);
+                static_cast<int>(gfxPipeline::m_iHeight * 0.02), ProgressBarColor);
         }
 
         gfxPipeline::EndFrame();
@@ -445,10 +439,8 @@ void CheckGlobalMemory()
     status.dwLength = sizeof(status);
     GlobalMemoryStatusEx(&status);
 
-    Displayf(
-        "Avail Phys: %dM  Avail Page: %dM  Avail Virtual: %dM",
-        status.ullAvailPhys >> 20,
-        status.ullAvailPageFile >> 20,
+    Displayf("Avail Phys: %dM  Avail Page: %dM  Avail Virtual: %dM",
+        status.ullAvailPhys >> 20, status.ullAvailPageFile >> 20,
         status.ullAvailVirtual >> 20);
 
     if (status.ullAvailPhys < (256 << 20)) // 256 MB
@@ -465,7 +457,8 @@ void CheckDiskSpace()
     ULARGE_INTEGER TotalNumberOfBytes;
     ULARGE_INTEGER TotalNumberOfFreeBytes;
 
-    if (GetDiskFreeSpaceExA(0, &FreeBytesAvailableToCaller, &TotalNumberOfBytes, &TotalNumberOfFreeBytes))
+    if (GetDiskFreeSpaceExA(0, &FreeBytesAvailableToCaller, &TotalNumberOfBytes,
+            &TotalNumberOfFreeBytes))
     {
         if (FreeBytesAvailableToCaller.QuadPart < 0x20000)
         {
@@ -581,7 +574,9 @@ int Main(void)
         {
             int systemLangID = GetSystemDefaultLangID();
 
-            if (systemLangID == MAKELANGID(LANG_JAPANESE, SUBLANG_JAPANESE_JAPAN) || systemLangID == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL))
+            if (systemLangID == MAKELANGID(LANG_JAPANESE, SUBLANG_JAPANESE_JAPAN) ||
+                systemLangID ==
+                    MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL))
             {
                 MMSTATE.UseIME = 1;
 

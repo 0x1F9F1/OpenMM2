@@ -20,7 +20,7 @@
 
 #include <xmmintrin.h>
 
-void Matrix34::Dot(const Matrix34 & lhs, const Matrix34 & rhs) noexcept
+void Matrix34::Dot(const Matrix34& lhs, const Matrix34& rhs) noexcept
 {
     m00 = lhs.m00 * rhs.m00 + lhs.m01 * rhs.m10 + lhs.m02 * rhs.m20;
     m01 = lhs.m00 * rhs.m01 + lhs.m01 * rhs.m11 + lhs.m02 * rhs.m21;
@@ -39,8 +39,7 @@ void Matrix34::Dot(const Matrix34 & lhs, const Matrix34 & rhs) noexcept
     m32 = lhs.m30 * rhs.m02 + lhs.m31 * rhs.m12 + lhs.m32 * rhs.m22 + rhs.m32;
 }
 
-run_once([]
-{
+run_once([] {
     create_hook("Matrix34::Dot", "SSE Dot", 0x4BC580, static_cast<void (Matrix34::*)(const Matrix34& lhs, const Matrix34& rhs)>(&Matrix34::Dot));
     create_hook("Matrix34::Dot", "SSE Dot", 0x4BC400, static_cast<void (Matrix34::*)(const Matrix34& rhs)>(&Matrix34::Dot));
 });

@@ -76,13 +76,13 @@ check_size(vglVCT1_t, 0x20);
 /* Custom implementation of D3DVERTEX */
 struct vglVNT1_t
 {
-    float x;             /* Homogeneous coordinates */
+    float x; /* Homogeneous coordinates */
     float y;
     float z;
-    float nx;            /* Normal */
+    float nx; /* Normal */
     float ny;
     float nz;
-    float tu;            /* Texture coordinates */
+    float tu; /* Texture coordinates */
     float tv;
 };
 

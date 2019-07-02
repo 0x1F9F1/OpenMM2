@@ -28,4 +28,4 @@
 #include "hooking.h"
 
 bool FirstRunEula();
-void ebolaPlayMovie(const char * name);
+void ebolaPlayMovie(const char* name);

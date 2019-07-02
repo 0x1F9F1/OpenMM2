@@ -40,5 +40,5 @@
 class lvlProgress
 {
 public:
-    static void SetCallback(void(*callback)(char const *, int));
+    static void SetCallback(void (*callback)(char const*, int));
 };

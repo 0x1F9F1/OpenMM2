@@ -20,7 +20,7 @@
 
 #include "minwin.h"
 
-int MyLoadStringA(HINSTANCE hInstance, UINT uID, char *lpBuffer, int cchBufferMax)
+int MyLoadStringA(HINSTANCE hInstance, UINT uID, char* lpBuffer, int cchBufferMax)
 {
     SetLastError(8);
 
@@ -114,7 +114,6 @@ LocString* AngelReadString(uint32_t index)
     return result;
 }
 
-run_once([ ]
-{
+run_once([] {
     create_hook("AngelReadString", "", 0x534790, &AngelReadString);
 });

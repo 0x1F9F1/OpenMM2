@@ -95,7 +95,7 @@ class gfxTexture
 {
 public:
     uint32_t VglBindIndex {0};
-    char *Name {nullptr};
+    char* Name {nullptr};
     uint16_t Width {0};
     uint16_t Height {0};
 
@@ -103,13 +103,13 @@ public:
     uint32_t TexEnv {0};
 
     uint32_t DominantColor {0};
-    IDirectDrawSurface7 *m_Surface {nullptr};
-    IDirectDrawPalette *m_Palette {nullptr};
-    gfxTextureCacheEntry *CacheEntry {nullptr};
-    gfxTextureCachePool *CachePool {nullptr};
+    IDirectDrawSurface7* m_Surface {nullptr};
+    IDirectDrawPalette* m_Palette {nullptr};
+    gfxTextureCacheEntry* CacheEntry {nullptr};
+    gfxTextureCachePool* CachePool {nullptr};
     uint32_t RefCount {1};
-    gfxTexture *PrevLOD {nullptr};
-    gfxTexture *NextLOD {nullptr};
+    gfxTexture* PrevLOD {nullptr};
+    gfxTexture* NextLOD {nullptr};
     int8_t m_LOD {-1};
     int8_t m_MaxLOD {0};
 
@@ -127,7 +127,7 @@ public:
     void MarkFirstUse();
     void MarkHigherUse();
 
-    static gfxTexture* Create(gfxImage * image, bool mipMap);
+    static gfxTexture* Create(gfxImage* image, bool mipMap);
     static gfxTexture* Create(int width, int height, gfxImage::gfxImageFormat type, gfxImage::gfxImageFormat paletteType, int mipMapCount);
 
     static void EnableCache(bool enabled);
@@ -148,14 +148,14 @@ public:
     char* Name {nullptr};
     uint16_t Width {0};
     uint16_t Height {0};
-    IDirectDrawSurface7 *Surface {nullptr};
+    IDirectDrawSurface7* Surface {nullptr};
     uint32_t RefCount {1};
-    gfxBitmap *Prev {nullptr};
+    gfxBitmap* Prev {nullptr};
 
     gfxBitmap(uint16_t width, uint16_t height);
     ~gfxBitmap();
 
-    bool Load(gfxImage *image);
+    bool Load(gfxImage* image);
 
     void SetName(const char* name);
 
@@ -172,17 +172,17 @@ check_size(gfxBitmap, 0x14);
 class gfxTextureCacheEntry
 {
 public:
-    gfxTexture *Texture {nullptr};
-    IDirectDrawSurface7 *Surface {nullptr};
+    gfxTexture* Texture {nullptr};
+    IDirectDrawSurface7* Surface {nullptr};
     uint32_t LastAccessTime {0};
-    gfxTextureCacheEntry *PrevEntry {nullptr};
+    gfxTextureCacheEntry* PrevEntry {nullptr};
 
     static inline extern_var(0x684528, uint32_t, sm_CurrentTime);
 
     gfxTextureCacheEntry(IDirectDrawSurface7* surface, gfxTextureCacheEntry* prevEntry);
     ~gfxTextureCacheEntry();
 
-    void Lease(gfxTexture *texture);
+    void Lease(gfxTexture* texture);
     void Evict();
 };
 
@@ -195,12 +195,12 @@ public:
     uint16_t TextureCount;
     uint16_t EntryCount;
     uint16_t HasNoSurface;
-    gfxTextureCacheEntry *FirstEntry;
-    gfxTextureCachePool *PrevPool;
+    gfxTextureCacheEntry* FirstEntry;
+    gfxTextureCachePool* PrevPool;
     DDPIXELFORMAT Format;
 
     gfxTextureCachePool(gfxTextureCachePool* prevPool);
     ~gfxTextureCachePool();
 
-    void FindEntry(gfxTexture *texture);
+    void FindEntry(gfxTexture* texture);
 };
