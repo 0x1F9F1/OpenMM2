@@ -114,6 +114,4 @@ LocString* AngelReadString(uint32_t index)
     return result;
 }
 
-run_once([] {
-    create_hook("AngelReadString", "", 0x534790, &AngelReadString);
-});
+run_once([] { create_hook("AngelReadString", "", 0x534790, &AngelReadString); });

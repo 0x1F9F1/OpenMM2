@@ -153,8 +153,7 @@ enum TouchMask
     TouchMask_Regenerate = (1 << 7)
 };
 
-class gfxRenderState
-    : public gfxRenderStateData
+class gfxRenderState : public gfxRenderStateData
 {
 public:
     static void SetCamera(const Matrix34& camera);

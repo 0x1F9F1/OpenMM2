@@ -29,8 +29,7 @@
 
 #include "data/base.h"
 
-class asCullable
-    : public Base
+class asCullable : public Base
 {
 public:
     virtual void Cull();

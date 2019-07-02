@@ -42,8 +42,7 @@
 #include "node/node.h"
 #include "vector/matrix34.h"
 
-struct asRoot
-    : public asNode
+struct asRoot : public asNode
 {
     Matrix34 Matrix {};
 

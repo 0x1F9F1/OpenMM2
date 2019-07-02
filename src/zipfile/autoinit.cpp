@@ -93,9 +93,7 @@ void zipMultiAutoInit(char const* extension)
         FindClose(hFindFile);
     }
 
-    std::sort(fileList, fileList + fileCount, [](char* lhs, char* rhs) {
-        return strcmp(lhs, rhs) < 0;
-    });
+    std::sort(fileList, fileList + fileCount, [](char* lhs, char* rhs) { return strcmp(lhs, rhs) < 0; });
 
     for (size_t i = fileCount; i--;)
     {

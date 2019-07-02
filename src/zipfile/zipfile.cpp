@@ -226,17 +226,11 @@ bool zipFile::Init(char const* fileName)
             EntryCount = totalFiles;
         }
 
-        Displayf(
-            "%s: %d files in central directory (%d bytes + %d(%d) string heap).",
-            fileName,
-            totalFiles,
-            totalFiles * sizeof(zipEntry),
-            totalNamesLength,
-            namesBufferLength);
+        Displayf("%s: %d files in central directory (%d bytes + %d(%d) string heap).", fileName, totalFiles,
+            totalFiles * sizeof(zipEntry), totalNamesLength, namesBufferLength);
 
-        std::sort(Entries.get(), Entries.get() + EntryCount, [](const zipEntry& lhs, const zipEntry& rhs) {
-            return strcmp(lhs.Name, rhs.Name) < 0;
-        });
+        std::sort(Entries.get(), Entries.get() + EntryCount,
+            [](const zipEntry& lhs, const zipEntry& rhs) { return strcmp(lhs.Name, rhs.Name) < 0; });
 
         goto SUCCESS;
     }
@@ -289,7 +283,8 @@ int CompareZipEntries(const void* a1, const void* a2)
 
 int zipFile::Open(char const* fileName)
 {
-    zipEntry* entry = (zipEntry*) std::bsearch(fileName, Entries.get(), EntryCount, sizeof(zipEntry), &CompareZipEntries);
+    zipEntry* entry =
+        (zipEntry*) std::bsearch(fileName, Entries.get(), EntryCount, sizeof(zipEntry), &CompareZipEntries);
 
     if (entry)
     {

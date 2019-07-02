@@ -92,8 +92,7 @@ bool datArgParser::Get(const char* name, uint32_t index, const char*& out)
 }
 
 void datArgParser::Init()
-{
-}
+{}
 
 void datArgParser::Init(int argc, char** argv)
 {

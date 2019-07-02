@@ -57,8 +57,7 @@
 
 class datParser;
 
-class asNode
-    : public asCullable
+class asNode : public asCullable
 {
 public:
     asNode* Next {nullptr};

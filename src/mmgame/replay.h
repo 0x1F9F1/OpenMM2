@@ -75,8 +75,7 @@ struct mmReplayData
     char field_F;
 };
 
-class mmReplayManager
-    : public asNode
+class mmReplayManager : public asNode
 {
 public:
     char field_18;

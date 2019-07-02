@@ -124,8 +124,7 @@
 
 #include "node/node.h"
 
-class mmInterface
-    : public asNode
+class mmInterface : public asNode
 {
 public:
     char gap4C[0x7750 - sizeof(asNode)];

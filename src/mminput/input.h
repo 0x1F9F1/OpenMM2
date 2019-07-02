@@ -115,8 +115,7 @@
 
 #include "node/node.h"
 
-class mmInput
-    : public asNode
+class mmInput : public asNode
 {
 public:
     char gap18[0x248 - sizeof(asNode)];

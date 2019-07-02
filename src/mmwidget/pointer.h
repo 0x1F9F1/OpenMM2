@@ -43,8 +43,7 @@
 class gfxBitmap;
 class uiWidget;
 
-class sfPointer
-    : public asNode
+class sfPointer : public asNode
 {
     gfxBitmap* CursorBitmap;
     Vector2 CurrentX;

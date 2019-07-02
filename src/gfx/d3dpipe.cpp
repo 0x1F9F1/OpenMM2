@@ -162,14 +162,10 @@ void gfxPipeline::SetRes(int width, int height, int cdepth, int zdepth, bool par
 
             ddSurfaceDesc.dwSize = 0x7C;
 
-            if ((lpDD->GetDisplayMode(&ddSurfaceDesc) != DD_OK) || ((int) ddSurfaceDesc.dwWidth != m_iWidth) || ((int) ddSurfaceDesc.dwHeight != m_iHeight))
+            if ((lpDD->GetDisplayMode(&ddSurfaceDesc) != DD_OK) || ((int) ddSurfaceDesc.dwWidth != m_iWidth) ||
+                ((int) ddSurfaceDesc.dwHeight != m_iHeight))
             {
-                if (lpDD->SetDisplayMode(
-                        m_iWidth,
-                        m_iHeight,
-                        m_ColorDepth,
-                        0,
-                        0) != DD_OK)
+                if (lpDD->SetDisplayMode(m_iWidth, m_iHeight, m_ColorDepth, 0, 0) != DD_OK)
                 {
                     Displayf("[gfxPipeline::SetRes]: SHIT! Failed to set the display mode!");
                 }
@@ -195,20 +191,19 @@ void gfxPipeline::gfxWindowCreate(const char* windowName)
 
     if (ATOM_Class == NULL)
     {
-        WNDCLASSA wc =
-            {
-                CS_HREDRAW | CS_VREDRAW, /* style */
-                gfxWindowProc,           /* lpfnWndProc */
-                0,                       /* cbClsExtra */
-                0,                       /* cbWndExtra */
-                0,                       /* hInstance */
-                LoadIconA(GetModuleHandleA(NULL), IconID ? IconID : IDI_APPLICATION),
-                /* hIcon */
-                LoadCursorA(0, IDC_ARROW), /* hCursor */
-                CreateSolidBrush(NULL),    /* hbrBackground */
-                NULL,                      /* lpszMenuName */
-                "gfxWindow",               /* lpszClassName */
-            };
+        WNDCLASSA wc = {
+            CS_HREDRAW | CS_VREDRAW, /* style */
+            gfxWindowProc,           /* lpfnWndProc */
+            0,                       /* cbClsExtra */
+            0,                       /* cbWndExtra */
+            0,                       /* hInstance */
+            LoadIconA(GetModuleHandleA(NULL), IconID ? IconID : IDI_APPLICATION),
+            /* hIcon */
+            LoadCursorA(0, IDC_ARROW), /* hCursor */
+            CreateSolidBrush(NULL),    /* hbrBackground */
+            NULL,                      /* lpszMenuName */
+            "gfxWindow",               /* lpszClassName */
+        };
 
         ATOM_Class = RegisterClassA(&wc);
     }
@@ -234,19 +229,8 @@ void gfxPipeline::gfxWindowCreate(const char* windowName)
     // update the position
     gfxWindowMove(false);
 
-    hwndMain = CreateWindowExA(
-        WS_EX_APPWINDOW,
-        "gfxWindow",
-        windowName,
-        dwStyle,
-        m_X,
-        m_Y,
-        640,
-        480,
-        hwndParent,
-        0,
-        0,
-        0);
+    hwndMain =
+        CreateWindowExA(WS_EX_APPWINDOW, "gfxWindow", windowName, dwStyle, m_X, m_Y, 640, 480, hwndParent, 0, 0, 0);
 
     if (inWindow)
     {
@@ -338,7 +322,9 @@ bool gfxPipeline::BeginGfx2D(void)
 
     _control87(0xA001Fu, 0xB001Fu);
 
-    DX_ASSERT(lpDD->SetCooperativeLevel(hwndMain, inWindow ? (DDSCL_FPUSETUP | DDSCL_NORMAL) : (DDSCL_FPUSETUP | DDSCL_EXCLUSIVE | DDSCL_ALLOWREBOOT | DDSCL_FULLSCREEN)));
+    DX_ASSERT(lpDD->SetCooperativeLevel(hwndMain,
+        inWindow ? (DDSCL_FPUSETUP | DDSCL_NORMAL)
+                 : (DDSCL_FPUSETUP | DDSCL_EXCLUSIVE | DDSCL_ALLOWREBOOT | DDSCL_FULLSCREEN)));
 
     if (!inWindow)
     {
@@ -393,21 +379,19 @@ void gfxPipeline::EndFrame(void)
     return stub<cdecl_t<void>>(0x4AA330);
 }
 
-void gfxPipeline::CopyBitmap(int destX, int destY, gfxBitmap* bitmap, int srcX, int srcY, int width, int height, bool srcColorKey)
+void gfxPipeline::CopyBitmap(
+    int destX, int destY, gfxBitmap* bitmap, int srcX, int srcY, int width, int height, bool srcColorKey)
 {
-    RECT position =
-        {
-            srcX,
-            srcY,
-            srcX + width,
-            srcY + height};
+    RECT position = {srcX, srcY, srcX + width, srcY + height};
 
-    lpdsRend->BltFast(destX, destY, bitmap->Surface, &position, (srcColorKey ? DDBLTFAST_SRCCOLORKEY : DDBLTFAST_NOCOLORKEY) | DDBLTFAST_WAIT);
+    lpdsRend->BltFast(destX, destY, bitmap->Surface, &position,
+        (srcColorKey ? DDBLTFAST_SRCCOLORKEY : DDBLTFAST_NOCOLORKEY) | DDBLTFAST_WAIT);
 }
 
 void gfxPipeline::EnumDDAdapters(HMODULE hGfxLib, LPDDENUMCALLBACKA lpCallback, LPVOID lpContext)
 {
-    auto pDirectDrawEnumerateExA = (decltype(&DirectDrawEnumerateExA)) GetProcAddress(hGfxLib, "DirectDrawEnumerateExA");
+    auto pDirectDrawEnumerateExA =
+        (decltype(&DirectDrawEnumerateExA)) GetProcAddress(hGfxLib, "DirectDrawEnumerateExA");
     auto pDirectDrawEnumerateA = (decltype(&DirectDrawEnumerateA)) GetProcAddress(hGfxLib, "DirectDrawEnumerateA");
 
     interfaceCount = 0;
@@ -462,7 +446,8 @@ void gfxPipeline::Manage()
 
     while (true)
     {
-        bool success = (!(m_EvtFlags & 0xA) || m_EvtFlags & 0x10) ? PeekMessageA(&Msg, 0, 0, 0, 1u) : GetMessageA(&Msg, 0, 0, 0);
+        bool success =
+            (!(m_EvtFlags & 0xA) || m_EvtFlags & 0x10) ? PeekMessageA(&Msg, 0, 0, 0, 1u) : GetMessageA(&Msg, 0, 0, 0);
 
         if (success)
         {
@@ -496,9 +481,7 @@ LRESULT CALLBACK gfxPipeline::gfxWindowProc(HWND hWnd, UINT message, WPARAM wPar
                 case PBT_APMQUERYSUSPEND:
                     Displayf("gfxPipeline::gfxWindowProc -> PBT_APMQUERYSUSPEND recieved.");
                     return BROADCAST_QUERY_DENY;
-                case PBT_APMSUSPEND:
-                    Displayf("gfxPipeline::gfxWindowProc -> PBT_APMSUSPEND heard.");
-                    break;
+                case PBT_APMSUSPEND: Displayf("gfxPipeline::gfxWindowProc -> PBT_APMSUSPEND heard."); break;
                 case PBT_APMRESUMECRITICAL:
                     Displayf("gfxPipeline::gfxWindowProc -> PBT_APMRESUMECRITICAL recieved.");
                     break;
@@ -579,8 +562,7 @@ void InitDirectDraw(void)
     exit(0);
 }
 
-template <
-    unsigned int A, unsigned int R, unsigned int G, unsigned int B>
+template <unsigned int A, unsigned int R, unsigned int G, unsigned int B>
 struct ColorFlags
 {
     enum : unsigned int
@@ -605,9 +587,8 @@ struct ColorFlags
     };
 };
 
-template <
-    unsigned int OA, unsigned int OR, unsigned int OG, unsigned int OB,
-    unsigned int NA, unsigned int NR, unsigned int NG, unsigned int NB>
+template <unsigned int OA, unsigned int OR, unsigned int OG, unsigned int OB, unsigned int NA, unsigned int NR,
+    unsigned int NG, unsigned int NB>
 inline unsigned int ConvertColor(const unsigned int color)
 {
     using OF = ColorFlags<OA, OR, OG, OB>;
@@ -645,7 +626,8 @@ bool gfxAutoDetect(bool* success)
     return stub<cdecl_t<bool, bool*>>(0x4ABE00, success);
 }
 
-HRESULT CALLBACK DeviceCallback(LPSTR lpDeviceDescription, LPSTR lpDeviceName, LPD3DDEVICEDESC7 lpDeviceDesc, LPVOID lpContext)
+HRESULT CALLBACK DeviceCallback(
+    LPSTR lpDeviceDescription, LPSTR lpDeviceName, LPD3DDEVICEDESC7 lpDeviceDesc, LPVOID lpContext)
 {
     return stub<LPD3DENUMDEVICESCALLBACK7>(0x4AC3D0, lpDeviceDescription, lpDeviceName, lpDeviceDesc, lpContext);
 }
@@ -681,7 +663,8 @@ BOOL PASCAL DDEnumProc(GUID* lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverNa
     return false;
 }
 
-BOOL PASCAL MultiMonCallback(GUID* lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverName, LPVOID lpContext, HMONITOR hMonitor)
+BOOL PASCAL MultiMonCallback(
+    GUID* lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverName, LPVOID lpContext, HMONITOR hMonitor)
 {
     ageDebug(gfxDebug, "D3D: Callback: lpGUID = %x, %s %s %x", lpGUID, lpDriverDescription, lpDriverName, hMonitor);
 
@@ -769,10 +752,13 @@ BOOL PASCAL AutoDetectCallback(GUID* lpGUID, LPSTR lpDriverDescription, LPSTR lp
 }
 
 run_once([] {
-    create_hook("AutoDetectCallback", "Replaces the default AutoDetect method with a much faster one", 0x4AC030, &AutoDetectCallback);
+    create_hook("AutoDetectCallback", "Replaces the default AutoDetect method with a much faster one", 0x4AC030,
+        &AutoDetectCallback);
 });
 
 run_once([] {
-    create_hook("gfxPipeline::SetRes", "Custom implementation allowing for more control of the window", 0x4A8CE0, &gfxPipeline::SetRes);
-    create_hook("gfxPipeline::gfxWindowCreate", "Custom implementation allowing for more control of the window", 0x4A8A90, &gfxPipeline::gfxWindowCreate);
+    create_hook("gfxPipeline::SetRes", "Custom implementation allowing for more control of the window", 0x4A8CE0,
+        &gfxPipeline::SetRes);
+    create_hook("gfxPipeline::gfxWindowCreate", "Custom implementation allowing for more control of the window",
+        0x4A8A90, &gfxPipeline::gfxWindowCreate);
 });

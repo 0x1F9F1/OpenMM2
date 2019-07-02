@@ -32,7 +32,8 @@ static decltype(&DirectInputCreateA) DirectInputCreateA_Orig = nullptr;
 
 #pragma comment(linker, "/EXPORT:DirectInputCreateA=_DirectInputCreateA_Impl@16")
 
-extern "C" HRESULT WINAPI DirectInputCreateA_Impl(HINSTANCE hinst, DWORD dwVersion, LPDIRECTINPUTA* ppDI, LPUNKNOWN punkOuter)
+extern "C" HRESULT WINAPI DirectInputCreateA_Impl(
+    HINSTANCE hinst, DWORD dwVersion, LPDIRECTINPUTA* ppDI, LPUNKNOWN punkOuter)
 {
     if (DirectInputCreateA_Orig == nullptr)
     {

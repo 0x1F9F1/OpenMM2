@@ -19,5 +19,4 @@
 #include "cullable.h"
 
 void asCullable::Cull()
-{
-}
+{}

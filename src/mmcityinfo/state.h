@@ -57,8 +57,7 @@ public:
 
 check_size(NetStartArray, 0x28);
 
-class mmStatePack
-    : public dgStatePack
+class mmStatePack : public dgStatePack
 {
 public:
     char CityName[40];

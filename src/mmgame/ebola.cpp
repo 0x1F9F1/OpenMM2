@@ -38,11 +38,8 @@ bool FirstRunEula()
             strcpy_s(eula, "eula.rtf");
             strcpy_s(warranty, "warranty.rtf");
 
-            int response = EBUEula(
-                "Software\\Microsoft\\Microsoft Games\\Midtown Madness\\2.0",
-                eula,
-                (GetFileAttributesA(warranty) != -1 ? warranty : 0),
-                1);
+            int response = EBUEula("Software\\Microsoft\\Microsoft Games\\Midtown Madness\\2.0", eula,
+                (GetFileAttributesA(warranty) != -1 ? warranty : 0), 1);
 
             result = response != 0;
         }

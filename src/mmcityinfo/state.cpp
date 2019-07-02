@@ -18,9 +18,7 @@
 
 #include "state.h"
 
-const char* dgGameModeNames[7] =
-    {
-        "roam", "race%d", "multicop", "circuit%d", "blitz%d", "croam", "crash%d"};
+const char* dgGameModeNames[7] = {"roam", "race%d", "multicop", "circuit%d", "blitz%d", "croam", "crash%d"};
 
 mmStatePack::mmStatePack()
 {
@@ -28,8 +26,7 @@ mmStatePack::mmStatePack()
 }
 
 mmStatePack::~mmStatePack()
-{
-}
+{}
 
 void mmStatePack::SetDefaults(const char* level, const char* car)
 {

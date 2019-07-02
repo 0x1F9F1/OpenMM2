@@ -161,23 +161,9 @@ short PrinterConsoleColors[6] = {
     TEXTCOLOR_LIGHTRED,
 };
 
-const char* PrinterPrefixes[6] =
-    {
-        "",
-        "",
-        "",
-        "Warning: ",
-        "Error: ",
-        "Fatal Error: "};
+const char* PrinterPrefixes[6] = {"", "", "", "Warning: ", "Error: ", "Fatal Error: "};
 
-const char* PrinterSuffixes[6] =
-    {
-        "",
-        "\n",
-        "\n",
-        "\n",
-        "\n",
-        "\n"};
+const char* PrinterSuffixes[6] = {"", "\n", "\n", "\n", "\n", "\n"};
 
 void CustomPrinter(int level, const char* format, va_list args)
 {
@@ -186,8 +172,7 @@ void CustomPrinter(int level, const char* format, va_list args)
 
     vsprintf_s(mainBuffer, format, args);
 
-    if ((b_popUpErrors && (level == 4)) ||
-        (b_popUpQuits && (level == 5)))
+    if ((b_popUpErrors && (level == 4)) || (b_popUpQuits && (level == 5)))
     {
         datOutput::CallBeforeMsgBoxFunction();
 

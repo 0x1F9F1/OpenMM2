@@ -67,7 +67,8 @@ gfxImage* gfxImage::GetFont(int& outWidth, int& outHeight)
 
         for (int i = 0; i < 96; ++i)
         {
-            uint16_t* current_row = reinterpret_cast<uint16_t*>(reinterpret_cast<uint8_t*>(result->ImageData) + (i % 16) * 16 + ((i / 2) & 0xFFFFFFF8) * result->BytesPerRow);
+            uint16_t* current_row = reinterpret_cast<uint16_t*>(reinterpret_cast<uint8_t*>(result->ImageData) +
+                (i % 16) * 16 + ((i / 2) & 0xFFFFFFF8) * result->BytesPerRow);
 
             for (int j = 0; j < 8; ++j)
             {

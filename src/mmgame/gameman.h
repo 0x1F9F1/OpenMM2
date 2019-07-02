@@ -48,8 +48,7 @@
 
 #include "node/node.h"
 
-class mmGameManager
-    : public asNode
+class mmGameManager : public asNode
 {
 public:
     char gap18[0x1B8 - sizeof(asNode)];

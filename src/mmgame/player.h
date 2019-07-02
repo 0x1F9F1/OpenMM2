@@ -76,8 +76,7 @@
 
 #include "node/node.h"
 
-class mmPlayer
-    : public asNode
+class mmPlayer : public asNode
 {
     char gap18[0x23A4];
 };

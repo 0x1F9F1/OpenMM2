@@ -26,11 +26,15 @@
 
 inline extern_var(0x6844C4, bool, g_Tex565);
 
-DDPIXELFORMAT ddPixelFormat_8888 = {sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_ALPHAPIXELS, 0, 32, 0x00FF0000, 0x0000FF00, 0x000000FF, 0xFF000000};
-DDPIXELFORMAT ddPixelFormat_0888 = {sizeof(DDPIXELFORMAT), DDPF_RGB, 0, 32, 0x00FF0000, 0x0000FF00, 0x000000FF, 0x00000000};
+DDPIXELFORMAT ddPixelFormat_8888 = {
+    sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_ALPHAPIXELS, 0, 32, 0x00FF0000, 0x0000FF00, 0x000000FF, 0xFF000000};
+DDPIXELFORMAT ddPixelFormat_0888 = {
+    sizeof(DDPIXELFORMAT), DDPF_RGB, 0, 32, 0x00FF0000, 0x0000FF00, 0x000000FF, 0x00000000};
 
-DDPIXELFORMAT ddPixelFormat_1555 = {sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_ALPHAPIXELS, 0, 16, 0x7C00, 0x03E0, 0x001F, 0x8000};
-DDPIXELFORMAT ddPixelFormat_4444 = {sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_ALPHAPIXELS, 0, 16, 0x0F00, 0x00F0, 0x000F, 0xF000};
+DDPIXELFORMAT ddPixelFormat_1555 = {
+    sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_ALPHAPIXELS, 0, 16, 0x7C00, 0x03E0, 0x001F, 0x8000};
+DDPIXELFORMAT ddPixelFormat_4444 = {
+    sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_ALPHAPIXELS, 0, 16, 0x0F00, 0x00F0, 0x000F, 0xF000};
 DDPIXELFORMAT ddPixelFormat_0565 = {sizeof(DDPIXELFORMAT), DDPF_RGB, 0, 16, 0xF800, 0x07E0, 0x001F, 0x0000};
 DDPIXELFORMAT ddPixelFormat_0555 = {sizeof(DDPIXELFORMAT), DDPF_RGB, 0, 16, 0x7C00, 0x03E0, 0x001F, 0x0000};
 
@@ -149,12 +153,8 @@ gfxTexture* gfxTexture::Create(gfxImage* image, bool mipMap)
         }
     }
 
-    gfxTexture* texture = Create(
-        image->Width,
-        image->Height,
-        (gfxImage::gfxImageFormat) image->Type,
-        (gfxImage::gfxImageFormat) image->PaletteType,
-        mipMapCount);
+    gfxTexture* texture = Create(image->Width, image->Height, (gfxImage::gfxImageFormat) image->Type,
+        (gfxImage::gfxImageFormat) image->PaletteType, mipMapCount);
 
     if (texture)
     {
@@ -216,7 +216,8 @@ uint32_t ToPow2(uint32_t size)
     return 2048;
 }
 
-gfxTexture* gfxTexture::Create(int width, int height, gfxImage::gfxImageFormat type, gfxImage::gfxImageFormat paletteType, int mipMapCount)
+gfxTexture* gfxTexture::Create(
+    int width, int height, gfxImage::gfxImageFormat type, gfxImage::gfxImageFormat paletteType, int mipMapCount)
 {
     (void) paletteType;
 
@@ -342,9 +343,7 @@ gfxTexture* gfxTexture::Create(int width, int height, gfxImage::gfxImageFormat t
                 DX_ASSERT(ddrawSurface->SetPalette(ddrawPalette));
             }
             break;
-        default:
-            Abortf("Unsupported texture format!");
-            break;
+        default: Abortf("Unsupported texture format!"); break;
     }
 
     if (!ddrawSurface)

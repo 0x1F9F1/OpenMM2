@@ -189,16 +189,11 @@ int Stream::Seek(int offset, seekWhence whence)
 {
     switch (whence)
     {
-        case SeekBegin:
-            break;
+        case SeekBegin: break;
 
-        case SeekCurrent:
-            offset += Tell();
-            break;
+        case SeekCurrent: offset += Tell(); break;
 
-        case SeekEnd:
-            offset += Size();
-            break;
+        case SeekEnd: offset += Size(); break;
     }
 
     return Seek(offset);

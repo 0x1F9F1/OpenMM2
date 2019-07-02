@@ -59,23 +59,19 @@ extern "C"
 
     // GUID for IPX service provider
     // {685BC400-9D2C-11cf-A9CD-00AA006886E3}
-    DEFINE_GUID(DPSPGUID_IPX,
-        0x685bc400, 0x9d2c, 0x11cf, 0xa9, 0xcd, 0x0, 0xaa, 0x0, 0x68, 0x86, 0xe3);
+    DEFINE_GUID(DPSPGUID_IPX, 0x685bc400, 0x9d2c, 0x11cf, 0xa9, 0xcd, 0x0, 0xaa, 0x0, 0x68, 0x86, 0xe3);
 
     // GUID for TCP/IP service provider
     // 36E95EE0-8577-11cf-960C-0080C7534E82
-    DEFINE_GUID(DPSPGUID_TCPIP,
-        0x36E95EE0, 0x8577, 0x11cf, 0x96, 0xc, 0x0, 0x80, 0xc7, 0x53, 0x4e, 0x82);
+    DEFINE_GUID(DPSPGUID_TCPIP, 0x36E95EE0, 0x8577, 0x11cf, 0x96, 0xc, 0x0, 0x80, 0xc7, 0x53, 0x4e, 0x82);
 
     // GUID for Serial service provider
     // {0F1D6860-88D9-11cf-9C4E-00A0C905425E}
-    DEFINE_GUID(DPSPGUID_SERIAL,
-        0xf1d6860, 0x88d9, 0x11cf, 0x9c, 0x4e, 0x0, 0xa0, 0xc9, 0x5, 0x42, 0x5e);
+    DEFINE_GUID(DPSPGUID_SERIAL, 0xf1d6860, 0x88d9, 0x11cf, 0x9c, 0x4e, 0x0, 0xa0, 0xc9, 0x5, 0x42, 0x5e);
 
     // GUID for Modem service provider
     // {44EAA760-CB68-11cf-9C4E-00A0C905425E}
-    DEFINE_GUID(DPSPGUID_MODEM,
-        0x44eaa760, 0xcb68, 0x11cf, 0x9c, 0x4e, 0x0, 0xa0, 0xc9, 0x5, 0x42, 0x5e);
+    DEFINE_GUID(DPSPGUID_MODEM, 0x44eaa760, 0xcb68, 0x11cf, 0x9c, 0x4e, 0x0, 0xa0, 0xc9, 0x5, 0x42, 0x5e);
 
     /****************************************************************************
  *
@@ -515,10 +511,7 @@ typedef struct IUnknown FAR* LPDIRECTPLAY;
  * Callback for IDirectPlay2::EnumSessions
  */
     typedef BOOL(FAR PASCAL* LPDPENUMSESSIONSCALLBACK2)(
-        LPCDPSESSIONDESC2 lpThisSD,
-        LPDWORD lpdwTimeOut,
-        DWORD dwFlags,
-        LPVOID lpContext);
+        LPCDPSESSIONDESC2 lpThisSD, LPDWORD lpdwTimeOut, DWORD dwFlags, LPVOID lpContext);
 
 /*
  * This flag is set on the EnumSessions callback dwFlags parameter when
@@ -536,11 +529,7 @@ typedef struct IUnknown FAR* LPDIRECTPLAY;
  *              IDirectPlay2::EnumGroupPlayers
  */
     typedef BOOL(FAR PASCAL* LPDPENUMPLAYERSCALLBACK2)(
-        DPID dpId,
-        DWORD dwPlayerType,
-        LPCDPNAME lpName,
-        DWORD dwFlags,
-        LPVOID lpContext);
+        DPID dpId, DWORD dwPlayerType, LPCDPNAME lpName, DWORD dwFlags, LPVOID lpContext);
 
     /*
  * Unicode callback for DirectPlayEnumerate
@@ -548,11 +537,7 @@ typedef struct IUnknown FAR* LPDIRECTPLAY;
  * for Unicode strings
  */
     typedef BOOL(FAR PASCAL* LPDPENUMDPCALLBACK)(
-        LPGUID lpguidSP,
-        LPWSTR lpSPName,
-        DWORD dwMajorVersion,
-        DWORD dwMinorVersion,
-        LPVOID lpContext);
+        LPGUID lpguidSP, LPWSTR lpSPName, DWORD dwMajorVersion, DWORD dwMinorVersion, LPVOID lpContext);
 
     /*
  * ANSI callback for DirectPlayEnumerate
@@ -560,22 +545,13 @@ typedef struct IUnknown FAR* LPDIRECTPLAY;
  * for ANSI strings
  */
     typedef BOOL(FAR PASCAL* LPDPENUMDPCALLBACKA)(
-        LPGUID lpguidSP,
-        LPSTR lpSPName,
-        DWORD dwMajorVersion,
-        DWORD dwMinorVersion,
-        LPVOID lpContext);
+        LPGUID lpguidSP, LPSTR lpSPName, DWORD dwMajorVersion, DWORD dwMinorVersion, LPVOID lpContext);
 
     /*
  * Callback for IDirectPlay3(A)::EnumConnections
  */
-    typedef BOOL(FAR PASCAL* LPDPENUMCONNECTIONSCALLBACK)(
-        LPCGUID lpguidSP,
-        LPVOID lpConnection,
-        DWORD dwConnectionSize,
-        LPCDPNAME lpName,
-        DWORD dwFlags,
-        LPVOID lpContext);
+    typedef BOOL(FAR PASCAL* LPDPENUMCONNECTIONSCALLBACK)(LPCGUID lpguidSP, LPVOID lpConnection, DWORD dwConnectionSize,
+        LPCDPNAME lpName, DWORD dwFlags, LPVOID lpContext);
 
     /*
  * API's
@@ -901,7 +877,8 @@ typedef struct IUnknown FAR* LPDIRECTPLAY;
 #    define IDirectPlay3_DeleteGroupFromGroup(p, a, b) (p)->lpVtbl->DeleteGroupFromGroup(p, a, b)
 #    define IDirectPlay3_EnumConnections(p, a, b, c, d) (p)->lpVtbl->EnumConnections(p, a, b, c, d)
 #    define IDirectPlay3_EnumGroupsInGroup(p, a, b, c, d, e) (p)->lpVtbl->EnumGroupsInGroup(p, a, b, c, d, e)
-#    define IDirectPlay3_GetGroupConnectionSettings(p, a, b, c, d) (p)->lpVtbl->GetGroupConnectionSettings(p, a, b, c, d)
+#    define IDirectPlay3_GetGroupConnectionSettings(p, a, b, c, d) \
+        (p)->lpVtbl->GetGroupConnectionSettings(p, a, b, c, d)
 #    define IDirectPlay3_InitializeConnection(p, a, b) (p)->lpVtbl->InitializeConnection(p, a, b)
 #    define IDirectPlay3_SecureOpen(p, a, b, c, d) (p)->lpVtbl->SecureOpen(p, a, b, c, d)
 #    define IDirectPlay3_SendChatMessage(p, a, b, c, d) (p)->lpVtbl->SendChatMessage(p, a, b, c, d)
@@ -1135,7 +1112,8 @@ typedef struct IUnknown FAR* LPDIRECTPLAY;
 #    define IDirectPlayX_DeleteGroupFromGroup(p, a, b) (p)->lpVtbl->DeleteGroupFromGroup(p, a, b)
 #    define IDirectPlayX_EnumConnections(p, a, b, c, d) (p)->lpVtbl->EnumConnections(p, a, b, c, d)
 #    define IDirectPlayX_EnumGroupsInGroup(p, a, b, c, d, e) (p)->lpVtbl->EnumGroupsInGroup(p, a, b, c, d, e)
-#    define IDirectPlayX_GetGroupConnectionSettings(p, a, b, c, d) (p)->lpVtbl->GetGroupConnectionSettings(p, a, b, c, d)
+#    define IDirectPlayX_GetGroupConnectionSettings(p, a, b, c, d) \
+        (p)->lpVtbl->GetGroupConnectionSettings(p, a, b, c, d)
 #    define IDirectPlayX_InitializeConnection(p, a, b) (p)->lpVtbl->InitializeConnection(p, a, b)
 #    define IDirectPlayX_SecureOpen(p, a, b, c, d) (p)->lpVtbl->SecureOpen(p, a, b, c, d)
 #    define IDirectPlayX_SendChatMessage(p, a, b, c, d) (p)->lpVtbl->SendChatMessage(p, a, b, c, d)
@@ -2074,11 +2052,7 @@ typedef struct IUnknown FAR* LPDIRECTPLAY;
     } DPMSG_DELETEPLAYER;
 
     typedef BOOL(PASCAL* LPDPENUMPLAYERSCALLBACK)(
-        DPID dpId,
-        LPSTR lpFriendlyName,
-        LPSTR lpFormalName,
-        DWORD dwFlags,
-        LPVOID lpContext);
+        DPID dpId, LPSTR lpFriendlyName, LPSTR lpFormalName, DWORD dwFlags, LPVOID lpContext);
 
     typedef struct
     {
@@ -2100,10 +2074,7 @@ typedef struct IUnknown FAR* LPDIRECTPLAY;
     } DPSESSIONDESC, *LPDPSESSIONDESC;
 
     typedef BOOL(PASCAL* LPDPENUMSESSIONSCALLBACK)(
-        LPDPSESSIONDESC lpDPSessionDesc,
-        LPVOID lpContext,
-        LPDWORD lpdwTimeOut,
-        DWORD dwFlags);
+        LPDPSESSIONDESC lpDPSessionDesc, LPVOID lpContext, LPDWORD lpdwTimeOut, DWORD dwFlags);
 
 /*
  * IDirectPlay

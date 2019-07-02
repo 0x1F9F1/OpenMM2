@@ -70,8 +70,7 @@ void GetLoadScreenName(char* buffer)
     if (MMSTATE.GameState)
     {
         sprintf_s(buffer, 80, "%s_", MMSTATE.CityName);
-        sprintf_s(gameModeBuffer, dgGameModeNames[MMSTATE.GameMode],
-            MMSTATE.RaceId);
+        sprintf_s(gameModeBuffer, dgGameModeNames[MMSTATE.GameMode], MMSTATE.RaceId);
         strcat_s(buffer, 80, gameModeBuffer);
     }
     else
@@ -184,8 +183,7 @@ void RestoreFocus(void)
 
     RECT position = {0, 0, width, height};
 
-    lpdsFront->BltFast((gfxPipeline::m_iWidth - width) / 2,
-        (gfxPipeline::m_iHeight - height) / 2,
+    lpdsFront->BltFast((gfxPipeline::m_iWidth - width) / 2, (gfxPipeline::m_iHeight - height) / 2,
         RestoringScreenBitmap->Surface, &position, DDBLTFAST_WAIT);
 
     if (mmGameManager::Instance && !ROOT.IsPaused() && !NETMGR.SessionOpen)
@@ -394,24 +392,20 @@ void ProgressCB(const char* message, signed int progress)
 
         if (LoadingScreenBitmap)
         {
-            gfxPipeline::CopyBitmap(0, 0, LoadingScreenBitmap, 0, 0,
-                LoadingScreenBitmap->Width,
-                LoadingScreenBitmap->Height, 0);
+            gfxPipeline::CopyBitmap(
+                0, 0, LoadingScreenBitmap, 0, 0, LoadingScreenBitmap->Width, LoadingScreenBitmap->Height, 0);
         }
 
         if (MMSTATE.GameState)
         {
             ProgressRect(static_cast<int>(gfxPipeline::m_iWidth * 0.55),
                 static_cast<int>(gfxPipeline::m_iHeight * 0.895),
-                static_cast<int>(gfxPipeline::m_iWidth * 0.42343751 *
-                    progress * 0.01),
-                static_cast<int>(gfxPipeline::m_iHeight * 0.02),
-                ProgressBarColor);
+                static_cast<int>(gfxPipeline::m_iWidth * 0.42343751 * progress * 0.01),
+                static_cast<int>(gfxPipeline::m_iHeight * 0.02), ProgressBarColor);
         }
         else
         {
-            ProgressRect(
-                static_cast<int>(gfxPipeline::m_iWidth * 0.5453125),
+            ProgressRect(static_cast<int>(gfxPipeline::m_iWidth * 0.5453125),
                 static_cast<int>(gfxPipeline::m_iHeight * 0.935),
                 static_cast<int>(gfxPipeline::m_iWidth * 0.44374 * progress * 0.01),
                 static_cast<int>(gfxPipeline::m_iHeight * 0.02), ProgressBarColor);
@@ -439,9 +433,8 @@ void CheckGlobalMemory()
     status.dwLength = sizeof(status);
     GlobalMemoryStatusEx(&status);
 
-    Displayf("Avail Phys: %dM  Avail Page: %dM  Avail Virtual: %dM",
-        status.ullAvailPhys >> 20, status.ullAvailPageFile >> 20,
-        status.ullAvailVirtual >> 20);
+    Displayf("Avail Phys: %dM  Avail Page: %dM  Avail Virtual: %dM", status.ullAvailPhys >> 20,
+        status.ullAvailPageFile >> 20, status.ullAvailVirtual >> 20);
 
     if (status.ullAvailPhys < (256 << 20)) // 256 MB
     {
@@ -457,8 +450,7 @@ void CheckDiskSpace()
     ULARGE_INTEGER TotalNumberOfBytes;
     ULARGE_INTEGER TotalNumberOfFreeBytes;
 
-    if (GetDiskFreeSpaceExA(0, &FreeBytesAvailableToCaller, &TotalNumberOfBytes,
-            &TotalNumberOfFreeBytes))
+    if (GetDiskFreeSpaceExA(0, &FreeBytesAvailableToCaller, &TotalNumberOfBytes, &TotalNumberOfFreeBytes))
     {
         if (FreeBytesAvailableToCaller.QuadPart < 0x20000)
         {
@@ -575,8 +567,7 @@ int Main(void)
             int systemLangID = GetSystemDefaultLangID();
 
             if (systemLangID == MAKELANGID(LANG_JAPANESE, SUBLANG_JAPANESE_JAPAN) ||
-                systemLangID ==
-                    MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL))
+                systemLangID == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL))
             {
                 MMSTATE.UseIME = 1;
 

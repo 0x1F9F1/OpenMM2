@@ -93,8 +93,7 @@
 
 class mmDirSnd;
 
-class AudManager
-    : public AudManagerBase
+class AudManager : public AudManagerBase
 {
 public:
     uint32_t dword30;

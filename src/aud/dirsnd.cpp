@@ -72,5 +72,6 @@ DirSnd::~DirSnd()
 
 int DirSnd::InitPrimarySoundBuffer(uint32_t sampleRate, bool enableStero, const char* deviceName)
 {
-    return stub<member_func_t<int, DirSnd, uint32_t, bool, const char*>>(0x5A5530, this, sampleRate, enableStero, deviceName);
+    return stub<member_func_t<int, DirSnd, uint32_t, bool, const char*>>(
+        0x5A5530, this, sampleRate, enableStero, deviceName);
 }

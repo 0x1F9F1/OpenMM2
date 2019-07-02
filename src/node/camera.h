@@ -69,8 +69,7 @@
 #include "node/node.h"
 #include "vector/matrix34.h"
 
-class asCamera
-    : public asNode
+class asCamera : public asNode
 {
 public:
     int Cullable2D;

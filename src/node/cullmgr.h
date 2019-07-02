@@ -47,8 +47,7 @@ class Matrix34;
 
 #define MAX_CULLABLE_CAMERAS 16
 
-class asCullManager
-    : public asNode
+class asCullManager : public asNode
 {
 public:
     uint32_t dword18 {0};

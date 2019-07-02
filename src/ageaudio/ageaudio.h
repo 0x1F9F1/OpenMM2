@@ -61,8 +61,7 @@
 
 class audManager;
 
-class AudManagerBase
-    : public asNode
+class AudManagerBase : public asNode
 {
 public:
     audManager* pManager {nullptr};

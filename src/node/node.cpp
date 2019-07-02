@@ -85,12 +85,10 @@ void asNode::FileIO(datParser& parser)
 }
 
 void asNode::AfterLoad(void)
-{
-}
+{}
 
 void asNode::BeforeSave(void)
-{
-}
+{}
 
 bool asNode::Save(void)
 {

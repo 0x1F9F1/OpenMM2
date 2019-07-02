@@ -65,8 +65,7 @@ public:
 
 check_size(HashEntry, 0xC);
 
-class FixedHashEntry
-    : public HashEntry
+class FixedHashEntry : public HashEntry
 {
 public:
     bool IsFixed;

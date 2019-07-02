@@ -107,7 +107,8 @@ void InitMap()
                 int address;
 
                 char valueBuffer[256];
-                if (!strncmp(lineBuffer, " 0001:", 6u) && sscanf_s(lineBuffer, "%*s %s %x", valueBuffer, sizeof(valueBuffer), &address) == 2)
+                if (!strncmp(lineBuffer, " 0001:", 6u) &&
+                    sscanf_s(lineBuffer, "%*s %s %x", valueBuffer, sizeof(valueBuffer), &address) == 2)
                 {
                     if (state == 2)
                     {
@@ -138,9 +139,8 @@ void InitMap()
 
         fclose(hMap);
 
-        std::sort(MapFileAddresses, MapFileAddresses + MapFileAddressCount, [](const MapSymbol& lhs, const MapSymbol& rhs) {
-            return lhs.Address < rhs.Address;
-        });
+        std::sort(MapFileAddresses, MapFileAddresses + MapFileAddressCount,
+            [](const MapSymbol& lhs, const MapSymbol& rhs) { return lhs.Address < rhs.Address; });
     }
 }
 
@@ -149,9 +149,8 @@ const MapSymbol* LookupMapSymbol(int address)
     const MapSymbol* first = MapFileAddresses;
     const MapSymbol* last = first + MapFileAddressCount;
 
-    const MapSymbol* find = std::upper_bound(first, last, address, [](int address, const MapSymbol& entry) {
-        return entry.Address >= address;
-    });
+    const MapSymbol* find = std::upper_bound(
+        first, last, address, [](int address, const MapSymbol& entry) { return entry.Address >= address; });
 
     if (find == first || find == last)
     {
@@ -198,11 +197,9 @@ int datStack::ExceptionFilter(_EXCEPTION_POINTERS* exception)
     char eipTrace[256];
     datStack::LookupAddress(eipTrace, context->Eip);
 
-    Displayf(
-        "EAX=%08X EBX=%08X ECX=%08X EDX=%08X\n"
-        "ESI=%08X EDI=%08X EBP=%08X ESP=%08X",
-        context->Eax, context->Ebx, context->Ecx, context->Edx,
-        context->Esi, context->Edi, context->Ebp, context->Esp);
+    Displayf("EAX=%08X EBX=%08X ECX=%08X EDX=%08X\n"
+             "ESI=%08X EDI=%08X EBP=%08X ESP=%08X",
+        context->Eax, context->Ebx, context->Ecx, context->Edx, context->Esi, context->Edi, context->Ebp, context->Esp);
 
     const char* errorCode = GetErrorCodeString(record->ExceptionCode);
 
@@ -237,9 +234,11 @@ void datStack::LookupAddress(char* buffer, int address)
         IMAGEHLP_MODULE module = {0};
         module.SizeOfStruct = sizeof(IMAGEHLP_MODULE);
 
-        if (SymFromAddr(GetCurrentProcess(), address, &dwDisplacement, pSymbol) && SymGetModuleInfo(GetCurrentProcess(), address, &module))
+        if (SymFromAddr(GetCurrentProcess(), address, &dwDisplacement, pSymbol) &&
+            SymGetModuleInfo(GetCurrentProcess(), address, &module))
         {
-            sprintf_s(buffer, 128, "0x%08X (%s.%s+0x%X)", address, module.ModuleName, pSymbol->Name, (int) dwDisplacement);
+            sprintf_s(
+                buffer, 128, "0x%08X (%s.%s+0x%X)", address, module.ModuleName, pSymbol->Name, (int) dwDisplacement);
 
             return;
         }
@@ -253,7 +252,13 @@ void datStack::LookupAddress(char* buffer, int address)
 
         char undName[256];
 
-        const char* functionName = UnDecorateSymbolName(entry->Name, undName, std::size(undName), UNDNAME_COMPLETE | UNDNAME_NO_FUNCTION_RETURNS | UNDNAME_NO_ALLOCATION_MODEL | UNDNAME_NO_ALLOCATION_LANGUAGE | UNDNAME_NO_ACCESS_SPECIFIERS | UNDNAME_NO_THROW_SIGNATURES | UNDNAME_NO_MEMBER_TYPE | UNDNAME_NO_RETURN_UDT_MODEL) ? undName : entry->Name;
+        const char* functionName =
+            UnDecorateSymbolName(entry->Name, undName, std::size(undName),
+                UNDNAME_COMPLETE | UNDNAME_NO_FUNCTION_RETURNS | UNDNAME_NO_ALLOCATION_MODEL |
+                    UNDNAME_NO_ALLOCATION_LANGUAGE | UNDNAME_NO_ACCESS_SPECIFIERS | UNDNAME_NO_THROW_SIGNATURES |
+                    UNDNAME_NO_MEMBER_TYPE | UNDNAME_NO_RETURN_UDT_MODEL)
+            ? undName
+            : entry->Name;
 
         sprintf_s(buffer, 128, "0x%08X (Midtown2.%s+0x%X)", address, functionName, offset);
 
