@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
 
+include_directories(${SDL2_INCLUDE_DIRS})
+
 add_subdirectory(ageaudio)
 add_subdirectory(ai)
 add_subdirectory(aud)
@@ -111,4 +113,5 @@ target_link_libraries(testgame
     hooking
     zlibstatic
     ${DPLAY_LIBRARY}
+    ${SDL2_LIBRARIES}
 )
