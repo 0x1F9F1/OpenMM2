@@ -62,4 +62,8 @@ class ioEventQueue
 {
 public:
     static void Queue(ioEvent::ioEventType type, int x, int y, int modifiers);
+
+    static inline extern_var(0x6A3468, int, m_Head);
+    static inline extern_var(0x6A3670, int, m_Tail);
+    static inline extern_var(0x6A3470, ioEvent[32], Q);
 };

@@ -343,6 +343,16 @@ void HandleKeyboardEvent(SDL_KeyboardEvent& e)
     }
 }
 
+void HandleTextInput(SDL_TextInputEvent& e)
+{
+    // TODO: Handle Unicode
+    for (char* c = e.text; *c != '\0'; ++c)
+    {
+        if (*c < 0x7F)
+            ioEventQueue::Queue(ioEvent::Char, 0, 0, *c);
+    }
+}
+
 void HandleEvent(SDL_Event& e)
 {
     switch (e.type)
@@ -361,6 +371,8 @@ void HandleEvent(SDL_Event& e)
 
         case SDL_KEYDOWN:
         case SDL_KEYUP: HandleKeyboardEvent(e.key); break;
+
+        case SDL_TEXTINPUT: HandleTextInput(e.text); break;
     }
 }
 

@@ -20,5 +20,23 @@
 
 void ioEventQueue::Queue(ioEvent::ioEventType type, int x, int y, int modifiers)
 {
-    return stub<cdecl_t<void, ioEvent::ioEventType, int, int, int>>(0x4BA9D0, type, x, y, modifiers);
+    if ((m_Tail == m_Head) || (type != ioEvent::MouseMove) || (Q[m_Tail].Type != ioEvent::MouseMove))
+    {
+        int i = (m_Tail + 1) % 32;
+
+        if (i != m_Head)
+        {
+            m_Tail = i;
+
+            Q[i].Type = type;
+            Q[i].X = x;
+            Q[i].Y = y;
+            Q[i].Modifiers = modifiers;
+        }
+    }
+    else
+    {
+        Q[m_Tail].X = x;
+        Q[m_Tail].Y = y;
+    }
 }
