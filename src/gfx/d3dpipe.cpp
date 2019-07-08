@@ -35,6 +35,8 @@
 
 #include "localize/localize.h"
 
+#include "sdlpipe.h"
+
 inline extern_var(0x6844B4, bool, g_VisualizeZ);
 
 void gfxPipeline::SetRes(int width, int height, int cdepth, int zdepth, bool parseArgs)
@@ -179,104 +181,22 @@ void gfxPipeline::SetRes(int width, int height, int cdepth, int zdepth, bool par
 
 void gfxPipeline::gfxWindowCreate(const char* windowName)
 {
-    if (hwndMain)
-    {
-        return;
-    }
-
-    if (lpWindowTitle)
-    {
-        windowName = lpWindowTitle;
-    }
-
-    if (ATOM_Class == NULL)
-    {
-        WNDCLASSA wc = {
-            CS_HREDRAW | CS_VREDRAW, /* style */
-            gfxWindowProc,           /* lpfnWndProc */
-            0,                       /* cbClsExtra */
-            0,                       /* cbWndExtra */
-            0,                       /* hInstance */
-            LoadIconA(GetModuleHandleA(NULL), IconID ? IconID : IDI_APPLICATION),
-            /* hIcon */
-            LoadCursorA(0, IDC_ARROW), /* hCursor */
-            CreateSolidBrush(NULL),    /* hbrBackground */
-            NULL,                      /* lpszMenuName */
-            "gfxWindow",               /* lpszClassName */
-        };
-
-        ATOM_Class = RegisterClassA(&wc);
-    }
-
-    DWORD dwStyle = WS_POPUP;
-
-    if (inWindow)
-    {
-        if (hwndParent)
-        {
-            dwStyle = WS_CHILD;
-        }
-        else if (bWinBorder = !(datArgParser::Exists("noborder") || datArgParser::Exists("borderless")))
-        {
-            dwStyle |= (WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX);
-        }
-    }
-    else
-    {
-        dwStyle |= WS_SYSMENU;
-    }
-
-    // update the position
-    gfxWindowMove(false);
-
-    hwndMain =
-        CreateWindowExA(WS_EX_APPWINDOW, "gfxWindow", windowName, dwStyle, m_X, m_Y, 640, 480, hwndParent, 0, 0, 0);
-
-    if (inWindow)
-    {
-        gfxWindowUpdate(false);
-    }
-
-    SetCursor(NULL);
-    ShowCursor(FALSE);
-
-    ShowWindow(hwndMain, TRUE);
-    UpdateWindow(hwndMain);
-    SetFocus(hwndMain);
+    sdlPipeline::gfxWindowCreate(windowName);
 }
 
 void gfxPipeline::gfxWindowMove(bool isOpen)
 {
-    HDC hDC = GetDC(NULL);
-    int screenWidth = GetDeviceCaps(hDC, HORZRES);
-    int screenHeight = GetDeviceCaps(hDC, VERTRES);
-    ReleaseDC(0, hDC);
-
-    m_X = (screenWidth - m_iWidth) / 2;
-    m_Y = (screenHeight - m_iHeight) / 2;
-
-    if (isOpen)
-    {
-        MoveWindow(hwndMain, m_X, m_Y, m_iWidth, m_iHeight, 0);
-    }
+    sdlPipeline::gfxWindowMove(isOpen);
 }
 
 void gfxPipeline::gfxWindowUpdate(bool isOpen)
 {
-    RECT rect;
-    GetClientRect(hwndMain, &rect);
-
-    MoveWindow(hwndMain, m_X, m_Y, (2 * m_iWidth - rect.right), (2 * m_iHeight - rect.bottom), isOpen);
+    sdlPipeline::gfxWindowUpdate(isOpen);
 }
 
 void gfxPipeline::SetTitle(const char* title)
 {
-    lpWindowTitle = title;
-
-    if (hwndMain)
-    {
-        SetWindowTextA(hwndMain, title);
-    }
+    sdlPipeline::SetTitle(title);
 }
 
 bool gfxPipeline::BeginGfx2D(void)
@@ -338,30 +258,7 @@ bool gfxPipeline::BeginGfx2D(void)
 
 void gfxPipeline::EndGfx2D(void)
 {
-    if (!inWindow)
-    {
-        ShowCursor(1);
-
-        if (lpDD)
-        {
-            ageDebug(gfxDebug, "RESTORING DISPLAY MODE");
-
-            lpDD->RestoreDisplayMode();
-            lpDD->SetCooperativeLevel(hwndMain, 8);
-        }
-    }
-    else if (lpDD)
-    {
-        DX_ASSERT(lpDD->EnumSurfaces(DDENUMSURFACES_DOESEXIST | DDENUMSURFACES_ALL, NULL, 0, EnumAllSurfCallback));
-
-        DX_RELEASE(lpDD);
-    }
-
-    if (hwndMain)
-    {
-        DestroyWindow(hwndMain);
-        hwndMain = 0;
-    }
+    sdlPipeline::EndGfx2D();
 }
 
 bool gfxPipeline::BeginGfx3D(void)
@@ -753,9 +650,6 @@ BOOL PASCAL AutoDetectCallback(GUID* lpGUID, LPSTR lpDriverDescription, LPSTR lp
 
 run_once([] {
     auto_hook(0x4AC030, AutoDetectCallback);
-});
-
-run_once([] {
     auto_hook(0x4A8CE0, gfxPipeline::SetRes);
     auto_hook(0x4A8A90, gfxPipeline::gfxWindowCreate);
 });

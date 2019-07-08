@@ -39,6 +39,9 @@ add_library(gfx OBJECT
     winpipe.h
     winpriv.cpp
     winpriv.h
+
+    sdlpipe.h
+    sdlpipe.cpp
 )
 
 target_link_libraries(gfx hooking)

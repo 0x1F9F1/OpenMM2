@@ -97,14 +97,14 @@
 #include <d3d.h>
 #include <ddraw.h>
 
-#define DX_ASSERT(expression)                                                  \
-    do                                                                         \
-    {                                                                          \
-        HRESULT hresult = expression;                                          \
-        if (hresult != DD_OK)                                                  \
-        {                                                                      \
-            Errorf("%s failed, code=%08x (%d)", expression, hresult, hresult); \
-        }                                                                      \
+#define DX_ASSERT(expression)                                                   \
+    do                                                                          \
+    {                                                                           \
+        HRESULT hresult = expression;                                           \
+        if (hresult != DD_OK)                                                   \
+        {                                                                       \
+            Errorf("%s failed, code=%08x (%d)", #expression, hresult, hresult); \
+        }                                                                       \
     } while (false)
 
 #define DX_RELEASE(var)                                             \
