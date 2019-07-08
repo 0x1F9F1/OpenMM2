@@ -506,6 +506,8 @@ int Main(void)
 
     gfxPipeline::EndGfx2D();
 
+    SDL_Quit();
+
     return 0;
 }
 

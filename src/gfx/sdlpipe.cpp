@@ -43,14 +43,6 @@ SDL_Window* sdlPipeline::sm_Window = nullptr;
         }                                                               \
     } while (false)
 
-static void LogSDL_Impl(int level, const char* format, ...)
-{
-    va_list args;
-    va_start(args, format);
-    Printer(level, format, args);
-    va_end(args);
-}
-
 static void LogSDL(void* /*userdata*/, int /*category*/, SDL_LogPriority priority, const char* message)
 {
     int level = OUTPUT_LEVEL_MESSAGE;
@@ -64,7 +56,7 @@ static void LogSDL(void* /*userdata*/, int /*category*/, SDL_LogPriority priorit
         default: return;
     }
 
-    LogSDL_Impl(level, "%s", message);
+    Outputf(level, "%s", message);
 }
 
 void sdlPipeline::InitSDL()

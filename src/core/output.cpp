@@ -343,6 +343,34 @@ void Abortf(const char* format, ...)
     exit(1);
 }
 
+void Outputf(int level, const char* format, ...)
+{
+    switch (level)
+    {
+        case 0:
+        case 1:
+        case 2:
+            if (!(PrinterFlags & 2))
+                return;
+            break;
+
+        case 3:
+            if (!(PrinterFlags & 4))
+                return;
+            break;
+
+        case 4:
+            if (!(PrinterFlags & 8))
+                return;
+            break;
+    }
+
+    va_list va;
+    va_start(va, format);
+    Printer(level, format, va);
+    va_end(va);
+}
+
 void ageDebug(int enabled, char const* format, ...)
 {
     if (enabled || true)

@@ -72,6 +72,8 @@ void Errorf(const char* format, ...);
 [[noreturn]] void Quitf(const char* format, ...);
 [[noreturn]] void Abortf(const char* format, ...);
 
+void Outputf(int level, const char* format, ...);
+
 void DebugLogInit(bool append);
 void DebugLogShutdown();
 
