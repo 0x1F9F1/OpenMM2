@@ -50,6 +50,9 @@ struct ioEvent
         KeyDown = 7,
         Char = 8,
         KeyUp = 9,
+
+        // Unused
+        Command = 10,
     };
 
     ioEventType Type;
@@ -62,6 +65,8 @@ class ioEventQueue
 {
 public:
     static void Queue(ioEvent::ioEventType type, int x, int y, int modifiers);
+    static bool Peek(ioEvent& event, int& index);
+    static bool Pop(ioEvent& event);
 
     static inline extern_var(0x6A3468, int, m_Head);
     static inline extern_var(0x6A3670, int, m_Tail);

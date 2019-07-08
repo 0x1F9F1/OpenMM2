@@ -40,3 +40,31 @@ void ioEventQueue::Queue(ioEvent::ioEventType type, int x, int y, int modifiers)
         Q[m_Tail].Y = y;
     }
 }
+
+bool ioEventQueue::Peek(ioEvent& event, int& index)
+{
+    int i = (m_Head + index) % 32;
+
+    if (i == m_Tail)
+    {
+        return false;
+    }
+
+    event = Q[i];
+    ++index;
+    return true;
+}
+
+bool ioEventQueue::Pop(ioEvent& event)
+{
+    if (m_Tail == m_Head)
+    {
+        return false;
+    }
+
+    int i = (m_Head + 1) % 32;
+    m_Head = i;
+    event = Q[i];
+
+    return true;
+}
