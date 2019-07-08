@@ -310,61 +310,6 @@ void gfxPipeline::Manage()
     sdlPipeline::Manage();
 }
 
-LRESULT CALLBACK InputWindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
-{
-    return stub<WNDPROC>(0x4BAD20, hWnd, message, wParam, lParam);
-}
-
-LRESULT CALLBACK gfxPipeline::gfxWindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
-{
-    switch (message)
-    {
-        case WM_CLOSE:
-        {
-            ageDebug(gfxDebug, "gfxWindowProc: WM_CLOSE received");
-
-            gfxPipeline::m_EvtFlags &= ~2;
-            gfxPipeline::m_EvtFlags |= 1;
-
-            return 0;
-        }
-        break;
-
-        case WM_ACTIVATEAPP:
-        {
-            if (wParam)
-            {
-                ageDebug(gfxDebug, "gfxWindowProc: WM_ACTIVATEAPP, Regaining focus.");
-
-                gfxPipeline::m_EvtFlags &= ~2;
-            }
-            else
-            {
-                ageDebug(gfxDebug, "gfxWindowProc: WM_ACTIVATEAPP, Losing focus.");
-
-                if (gfxLostCallback)
-                {
-                    gfxLostCallback();
-                }
-
-                gfxPipeline::m_EvtFlags |= 2;
-            }
-        }
-        break;
-
-        case WM_SYSCOMMAND:
-        {
-            if (GET_SC_WPARAM(wParam) == SC_KEYMENU && !(gfxPipeline::m_EvtFlags & 2))
-            {
-                return 0;
-            }
-        }
-        break;
-    }
-
-    return InputWindowProc(hWnd, message, wParam, lParam);
-}
-
 void gfxFindSafeAdapter()
 {
     return stub<cdecl_t<void>>(0x4AC820);

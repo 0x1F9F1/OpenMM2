@@ -150,8 +150,6 @@ public:
 
     static void Manage();
 
-    static LRESULT CALLBACK gfxWindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
-
     static inline extern_var(0x6830F4, float, m_fWidth);
     static inline extern_var(0x683120, float, m_fHeight);
     static inline extern_var(0x683128, int, m_iWidth);
