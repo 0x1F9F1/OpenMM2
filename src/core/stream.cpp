@@ -443,6 +443,6 @@ int fscanf(Stream* stream, char const* format, ...)
 }
 
 run_once([] {
-    create_hook("Stream::AllocStream", "", 0x4C98D0, &Stream::AllocStream);
-    create_hook("Stream::DumpOpenFiles", "", 0x4C9970, &Stream::DumpOpenFiles);
+    auto_hook(0x4C98D0, Stream::AllocStream);
+    auto_hook(0x4C9970, Stream::DumpOpenFiles);
 });

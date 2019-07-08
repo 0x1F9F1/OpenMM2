@@ -103,7 +103,7 @@ void vglSetFormat(unsigned int format, unsigned int a2, unsigned int a3, unsigne
 }
 
 run_once([] {
-    create_hook("vgl_VERTEX_VCT1", "", 0x4A5370, &vgl_VERTEX_VCT1);
-    create_hook("vgl_VERTEX_VNT1", "", 0x4A5400, &vgl_VERTEX_VNT1);
-    create_hook("vglSetFormat", "", 0x4A5490, &vglSetFormat);
+    auto_hook(0x4A5370, vgl_VERTEX_VCT1);
+    auto_hook(0x4A5400, vgl_VERTEX_VNT1);
+    auto_hook(0x4A5490, vglSetFormat);
 });

@@ -364,8 +364,8 @@ zipFile::~zipFile()
 }
 
 run_once([] {
-    create_hook("inflateInit2_", "Update ZLIB", 0x573D00, &inflateInit2_);
-    create_hook("inflateReset", "Update ZLIB", 0x573C60, &inflateReset);
-    create_hook("inflateEnd", "Update ZLIB", 0x573CB0, &inflateEnd);
-    create_hook("inflate", "Update ZLIB", 0x573E40, &inflate);
+    auto_hook(0x573D00, inflateInit2_);
+    auto_hook(0x573C60, inflateReset);
+    auto_hook(0x573CB0, inflateEnd);
+    auto_hook(0x573E40, inflate);
 });

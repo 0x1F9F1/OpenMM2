@@ -40,10 +40,8 @@ void Matrix34::Dot(const Matrix34& lhs, const Matrix34& rhs) noexcept
 }
 
 run_once([] {
-    create_hook("Matrix34::Dot", "SSE Dot", 0x4BC580,
-        static_cast<void (Matrix34::*)(const Matrix34& lhs, const Matrix34& rhs)>(&Matrix34::Dot));
-    create_hook(
-        "Matrix34::Dot", "SSE Dot", 0x4BC400, static_cast<void (Matrix34::*)(const Matrix34& rhs)>(&Matrix34::Dot));
+    auto_hook_typed(0x4BC580, Matrix34::Dot, void (Matrix34::*)(const Matrix34& lhs, const Matrix34& rhs));
+    auto_hook_typed(0x4BC400, Matrix34::Dot, void (Matrix34::*)(const Matrix34& rhs));
 });
 
 define_dummy_symbol(Matrix34);

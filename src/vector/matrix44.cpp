@@ -88,8 +88,6 @@ Matrix44& Matrix44::Dot(const Matrix44& lhs, const Matrix44& rhs) noexcept
 }
 
 run_once([] {
-    create_hook("Matrix44::Dot", "SSE Dot", 0x4C0FC0,
-        static_cast<Matrix44& (Matrix44::*) (const Matrix44& lhs, const Matrix44& rhs)>(&Matrix44::Dot));
-    create_hook("Matrix44::Dot", "SSE Dot", 0x4C0D50,
-        static_cast<Matrix44& (Matrix44::*) (const Matrix44& rhs)>(&Matrix44::Dot));
+    auto_hook_typed(0x4C0FC0, Matrix44::Dot, Matrix44 & (Matrix44::*) (const Matrix44& lhs, const Matrix44& rhs));
+    auto_hook_typed(0x4C0D50, Matrix44::Dot, Matrix44 & (Matrix44::*) (const Matrix44& rhs));
 });

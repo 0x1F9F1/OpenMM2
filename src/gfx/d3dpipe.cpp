@@ -752,13 +752,10 @@ BOOL PASCAL AutoDetectCallback(GUID* lpGUID, LPSTR lpDriverDescription, LPSTR lp
 }
 
 run_once([] {
-    create_hook("AutoDetectCallback", "Replaces the default AutoDetect method with a much faster one", 0x4AC030,
-        &AutoDetectCallback);
+    auto_hook(0x4AC030, AutoDetectCallback);
 });
 
 run_once([] {
-    create_hook("gfxPipeline::SetRes", "Custom implementation allowing for more control of the window", 0x4A8CE0,
-        &gfxPipeline::SetRes);
-    create_hook("gfxPipeline::gfxWindowCreate", "Custom implementation allowing for more control of the window",
-        0x4A8A90, &gfxPipeline::gfxWindowCreate);
+    auto_hook(0x4A8CE0, gfxPipeline::SetRes);
+    auto_hook(0x4A8A90, gfxPipeline::gfxWindowCreate);
 });

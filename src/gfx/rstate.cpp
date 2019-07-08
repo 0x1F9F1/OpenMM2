@@ -69,9 +69,7 @@ void gfxRenderState::SetTexture(int index, gfxTexture* texture)
 }
 
 run_once([] {
-    create_hook("gfxRenderState::SetCamera", "Matrix34", 0x4B2970,
-        static_cast<void (*)(const Matrix34&)>(&gfxRenderState::SetCamera));
-    create_hook("gfxRenderState::SetCamera", "Matrix44", 0x4B2A20,
-        static_cast<void (*)(const Matrix44&)>(&gfxRenderState::SetCamera));
-    create_hook("gfxRenderState::DoFlush", "", 0x4B4C40, &gfxRenderState::DoFlush);
+    auto_hook_typed(0x4B2970, gfxRenderState::SetCamera, void (*)(const Matrix34&));
+    auto_hook_typed(0x4B2A20, gfxRenderState::SetCamera, void (*)(const Matrix44&));
+    auto_hook(0x4B4C40, gfxRenderState::DoFlush);
 });

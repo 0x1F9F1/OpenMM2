@@ -127,6 +127,5 @@ void vehCarAudioContainer::RegisterPoliceNames(Stream* stream, char* names)
 define_dummy_symbol(vehCarAudioContainer);
 
 run_once([] {
-    create_hook("vehCarAudioContainer::RegisterTypes", "Parse multiple vehtypes files", 0x4D0CB0,
-        &vehCarAudioContainer::RegisterTypes);
+    auto_hook(0x4D0CB0, vehCarAudioContainer::RegisterTypes);
 });
