@@ -61,7 +61,7 @@ static void LogSDL(void* /*userdata*/, int /*category*/, SDL_LogPriority priorit
 
 void sdlPipeline::InitSDL()
 {
-    SDL_Init(SDL_INIT_EVERYTHING);
+    SDL_ASSERT(SDL_Init(SDL_INIT_EVERYTHING));
 
     SDL_LogSetOutputFunction(&LogSDL, nullptr);
 }
