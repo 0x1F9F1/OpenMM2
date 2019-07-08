@@ -17,48 +17,12 @@
 */
 
 #include "timer.h"
-
-#include "minwin.h"
-
-#include <timeapi.h>
-#pragma comment(lib, "winmm.lib")
+#include "SDL_timer.h"
 
 inline extern_var(0x6A3D08, int, dword_6A3D08);
 
 Timer::Timer()
 {
-    LARGE_INTEGER frequency;
-    if (TicksToSeconds == 0.0)
-    {
-        dword_6A3D08 = QueryPerformanceFrequency(&frequency) + 1;
-
-        if (dword_6A3D08 == 1)
-        {
-            TicksToSeconds = 0.001f;
-        }
-        else
-        {
-            TicksToSeconds = 1.0f / frequency.QuadPart;
-        }
-
-        TicksToMilliseconds = TicksToSeconds * 1000.0f;
-
-        LARGE_INTEGER counterStart;
-        QueryPerformanceCounter(&counterStart);
-
-        int tickCount = GetTickCount();
-        Sleep(100);
-
-        LARGE_INTEGER counterEnd;
-        QueryPerformanceCounter(&counterEnd);
-
-        QuickTicksToMilliseconds =
-            (static_cast<float>(counterEnd.QuadPart) - static_cast<float>(counterStart.QuadPart)) /
-            static_cast<float>(frequency.QuadPart) * 1000.0f / static_cast<float>(GetTickCount() - tickCount);
-
-        CpuSpeed = 0.001f / QuickTicksToMilliseconds;
-    }
-
     StartTime = Ticks();
 }
 
@@ -84,12 +48,13 @@ float Timer::ElapsedMilliseconds() const
 
 uint32_t Timer::Ticks(void)
 {
-    if (dword_6A3D08 == 1)
-    {
-        return timeGetTime();
-    }
-
-    LARGE_INTEGER counter;
-    QueryPerformanceCounter(&counter);
-    return counter.LowPart;
+    return SDL_GetTicks();
 }
+
+run_once([] {
+    auto_hook_ctor(0x4C7840, Timer);
+    auto_hook(0x4C77E0, Timer::Ticks);
+
+    Timer::TicksToSeconds = 0.001f;
+    Timer::TicksToMilliseconds = 1.0f;
+});

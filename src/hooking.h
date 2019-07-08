@@ -51,3 +51,23 @@ void create_patch(const char* name, const char* description, mem::pointer dest, 
 
 #define auto_hook(ADDRESS, FUNC) create_hook(#FUNC, "", ADDRESS, &FUNC)
 #define auto_hook_typed(ADDRESS, FUNC, TYPE) create_hook(#FUNC, "", ADDRESS, static_cast<TYPE>(&FUNC))
+
+template <typename Class>
+struct class_proxy
+{
+    template <typename... Args>
+    Class* ctor(Args... args)
+    {
+        return new (this) Class(std::forward<Args>(args)...);
+    }
+
+    void dtor()
+    {
+        reinterpret_cast<Class*>(this)->~Class();
+    }
+};
+
+#define auto_hook_ctor(ADDRESS, TYPE, ...) \
+    create_hook(#TYPE "::" #TYPE, "", ADDRESS, &class_proxy<TYPE>::ctor<__VA_ARGS__>)
+
+#define auto_hook_dtor(ADDRESS, TYPE) create_hook(#TYPE "::~" #TYPE, "", ADDRESS, &class_proxy<TYPE>::dtor)
