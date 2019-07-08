@@ -45,6 +45,48 @@ void gfxRenderState::SetTransform(int index, const Matrix44& transform)
     m_Touched |= TouchMask_Regenerate;
 }
 
+void gfxRenderState::Init()
+{
+    DWORD state;
+
+    memset(this, 0, sizeof(gfxRenderState));
+    lpD3DDev->GetRenderState(D3DRENDERSTATE_CLIPPING, &state);
+    Clipping = state != 0;
+    lpD3DDev->GetRenderState(D3DRENDERSTATE_LIGHTING, &state);
+    Lighting = state != 0;
+    lpD3DDev->GetRenderState(D3DRENDERSTATE_TEXTUREPERSPECTIVE, &state);
+    TexturePerspective = state;
+    lpD3DDev->GetRenderState(D3DRENDERSTATE_ZENABLE, &state);
+    ZEnable = state;
+    lpD3DDev->GetRenderState(D3DRENDERSTATE_ZWRITEENABLE, &state);
+    ZWriteEnable = state;
+    lpD3DDev->GetRenderState(D3DRENDERSTATE_ZFUNC, &state);
+    ZFunc = state;
+    lpD3DDev->GetRenderState(D3DRENDERSTATE_FILLMODE, &state);
+    Fillmode = state;
+
+    gfxLight::Sun.dltType = D3DLIGHT_DIRECTIONAL;
+    gfxLight::Sun.dcvDiffuse.r = 1.0f;
+    gfxLight::Sun.dcvDiffuse.g = 1.0f;
+    gfxLight::Sun.dcvDiffuse.b = 1.0f;
+    gfxLight::Sun.dcvDiffuse.a = 1.0f;
+    gfxLight::Sun.dvDirection.y = -0.70709997f;
+    gfxLight::Sun.dvDirection.x = 0.49999037f;
+    gfxLight::Sun.dvDirection.z = 0.49999037f;
+    gfxLight::Sun.dvPosition.y = 0.0f;
+    gfxLight::Sun.dvRange = 15.0f;
+}
+
+void gfxRenderState::Default()
+{
+    stub<member_func_t<void, gfxRenderState>>(0x04B1DA0, this);
+}
+
+void gfxRenderStateData::CopyFrom(gfxRenderStateData& other)
+{
+    memcpy(this, &other, sizeof(gfxRenderStateData));
+}
+
 void gfxRenderState::Flush()
 {
     if (m_Touched & m_TouchedMask)

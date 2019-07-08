@@ -24,8 +24,6 @@
 
 #include <algorithm>
 
-inline extern_var(0x6844C4, bool, g_Tex565);
-
 DDPIXELFORMAT ddPixelFormat_8888 = {
     sizeof(DDPIXELFORMAT), DDPF_RGB | DDPF_ALPHAPIXELS, 0, 32, 0x00FF0000, 0x0000FF00, 0x000000FF, 0xFF000000};
 DDPIXELFORMAT ddPixelFormat_0888 = {
@@ -377,6 +375,11 @@ gfxTexture* gfxTexture::Create(
     texture->m_MaxLOD = (int8_t) mipMapCount;
 
     return texture;
+}
+
+void gfxTexture::InitCache()
+{
+    stub<cdecl_t<void>>(0x4AD880);
 }
 
 void gfxTexture::EnableCache(bool enabled)

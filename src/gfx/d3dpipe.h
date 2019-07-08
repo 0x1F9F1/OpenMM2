@@ -97,6 +97,8 @@
 #include <d3d.h>
 #include <ddraw.h>
 
+#include "vector/matrix44.h"
+
 #define DX_ASSERT(expression)                                                   \
     do                                                                          \
     {                                                                           \
@@ -119,6 +121,7 @@
     } while (false)
 
 class gfxBitmap;
+class gfxViewport;
 
 class gfxPipeline
 {
@@ -150,6 +153,14 @@ public:
 
     static void Manage();
 
+    static HRESULT __stdcall gfxEnumZ(LPDDPIXELFORMAT lpDDPixFmt, LPDDPIXELFORMAT lpContext);
+    static HRESULT __stdcall gfxEnumTexs(LPDDPIXELFORMAT lpDDPixFmt, LPVOID lpContext);
+
+    static gfxViewport* CreateViewport();
+    static void ForceSetViewport(gfxViewport *viewport);
+
+    static void BeginInternal();
+
     static inline extern_var(0x6830F4, float, m_fWidth);
     static inline extern_var(0x683120, float, m_fHeight);
     static inline extern_var(0x683128, int, m_iWidth);
@@ -165,6 +176,11 @@ public:
     // 0x8 | ...
     // 0x10 | Poll Events
     static inline extern_var(0x683114, uint32_t, m_EvtFlags);
+
+    static inline extern_var(0x6830FC, gfxViewport*, VP);
+    static inline extern_var(0x68310C, gfxViewport*, OrthoVP);
+
+    static inline extern_var(0x683124, gfxViewport*, m_Viewport);
 };
 
 enum gfxDeviceType
@@ -240,6 +256,12 @@ inline extern_var(0x684500, bool, sm_UseInternal);
 
 inline extern_var(0x6830E8, void (*)(void), gfxLostCallback);
 
+inline extern_var(0x6844F8, bool, useNativeVBs);
+inline extern_var(0x684501, bool, useHWTnL);
+
+inline extern_var(0x6844D0, bool, g_Tex555);
+inline extern_var(0x6844C4, bool, g_Tex565);
+
 unsigned int GetPixelFormatColor(DDPIXELFORMAT* lpDDPixelFormat, unsigned int color);
 
 bool gfxAutoDetect(bool* success);
@@ -263,3 +285,40 @@ inline gfxInterface* gfxInterface::Current()
 {
     return &gfxInterfaces[gfxInterfaceChoice];
 }
+
+class gfxViewport
+{
+public:
+    Matrix44 m_Projection;
+    Matrix44 UiMatrixThing;
+    Matrix44 Camera;
+    Matrix44 World;
+    int field_100;
+    int field_104;
+    int field_108;
+    int field_10C;
+    int field_110;
+    int field_114;
+    int field_118;
+    int field_11C;
+    int Flags;
+    float DefaultAspect;
+    int field_128;
+    float field_12C;
+    float field_130;
+    float field_134;
+    float field_138;
+    float field_13C;
+    float float140;
+    float float144;
+    float float148;
+    float float14C;
+    float float150;
+    float float154;
+    float float158;
+    D3DVIEWPORT7 m_Viewport;
+    float Fov;
+    float Aspect;
+
+    void Ortho(float a3, float a4, float a5, float a6, float a7, float a8);
+};

@@ -81,6 +81,8 @@ class gfxMaterial;
 #include "vector/matrix34.h"
 #include "vector/matrix44.h"
 
+#include <d3d.h>
+
 class gfxRenderStateData
 {
 public:
@@ -121,6 +123,8 @@ public:
     bool RangeFogEnable {false};
     gfxTexture* m_Texture[2] {nullptr};
     gfxMaterial* m_Material {nullptr};
+
+    void CopyFrom(gfxRenderStateData& other);
 };
 
 enum TransformStateType // D3DTRANSFORMSTATETYPE
@@ -160,6 +164,9 @@ public:
     static void SetCamera(const Matrix44& camera);
     static void SetTransform(int index, const Matrix44& transform);
 
+    void Init();
+    void Default();
+
     void Flush();
     void DoFlush(gfxRenderStateData* prevState);
 
@@ -174,7 +181,16 @@ public:
     static inline extern_var(0x685620, Matrix44, sm_FullComposite);
 
     static inline extern_var(0x685788, int, sm_MaxTextures);
+    static inline extern_var(0x68577C, int, sm_MaxBlendMatrices);
+    static inline extern_var(0x5CD600, int, sm_MaxActiveLights);
+    static inline extern_var(0x6854F0, bool, sm_SupportsBlendWithOne);
 };
 
 inline extern_var(0x6856A0, gfxRenderState, RSTATE);
 inline extern_var(0x6854A0, gfxRenderStateData, LASTRSTATE);
+
+class gfxLight : public D3DLIGHT7
+{
+public:
+    static inline extern_var(0x685578, gfxLight, Sun);
+};

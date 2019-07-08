@@ -42,3 +42,4 @@
 class gfxImage;
 
 inline extern_var(0x5CD38C, gfxImage* (*) (const char* fileName, bool createMipMaps), gfxLoadImage);
+inline extern_var(0x685450, bool, g_Allow8BitImages);

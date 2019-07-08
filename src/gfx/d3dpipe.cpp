@@ -24,18 +24,19 @@
 
 #include "data/args.h"
 
-#include "gfx/d3dpipe.h"
-#include "gfx/rstate.h"
-#include "gfx/texmovie.h"
-#include "gfx/texture.h"
-#include "gfx/winpriv.h"
+#include "d3dpipe.h"
+#include "font.h"
+#include "loadimg.h"
+#include "rstate.h"
+#include "sdlpipe.h"
+#include "texmovie.h"
+#include "texture.h"
+#include "winpriv.h"
 
 #include "input/input.h"
 #include "input/mouse.h"
 
 #include "localize/localize.h"
-
-#include "sdlpipe.h"
 
 inline extern_var(0x6844B4, bool, g_VisualizeZ);
 
@@ -48,6 +49,7 @@ void gfxPipeline::SetRes(int width, int height, int cdepth, int zdepth, bool par
     useBlade = false;
     useAgeSoftware = false;
     useSysMem = false;
+    allowHWTnL = true;
 
     if (datArgParser::Exists("triple"))
     {
@@ -61,10 +63,6 @@ void gfxPipeline::SetRes(int width, int height, int cdepth, int zdepth, bool par
     if (datArgParser::Exists("novblank") || datArgParser::Exists("novsync"))
     {
         novblank = 1;
-    }
-    if (datArgParser::Exists("nohwtnl"))
-    {
-        allowHWTnL = 0;
     }
 
     if (datArgParser::Exists("primary"))
@@ -231,12 +229,124 @@ void gfxPipeline::EndGfx2D(void)
 
 bool gfxPipeline::BeginGfx3D(void)
 {
-    return stub<cdecl_t<bool>>(0x4A96C0);
+    DDSURFACEDESC2 ddSurfaceDesc;
+    memset(&ddSurfaceDesc, 0, sizeof(ddSurfaceDesc));
+    ddSurfaceDesc.dwSize = sizeof(ddSurfaceDesc);
+
+    ddSurfaceDesc.dwWidth = gfxPipeline::m_iWidth;
+    ddSurfaceDesc.dwHeight = gfxPipeline::m_iHeight;
+    ddSurfaceDesc.ddsCaps.dwCaps = DDSCAPS_VIDEOMEMORY | DDSCAPS_3DDEVICE | DDSCAPS_OFFSCREENPLAIN;
+    ddSurfaceDesc.dwFlags = 7;
+
+    lpDD->CreateSurface(&ddSurfaceDesc, &lpdsBack, 0);
+
+    lpdsRend = lpdsBack;
+    lpdsBack->AddRef();
+
+    DDPIXELFORMAT ddPixelFormat;
+    ddPixelFormat.dwSize = sizeof(ddPixelFormat);
+    lpdsBack->GetPixelFormat(&ddPixelFormat);
+    gfxPipeline::m_ColorDepth = (ddPixelFormat.dwRGBBitCount + 1) & 248;
+
+    ddSurfaceDesc.dwFlags = 1;
+    ddSurfaceDesc.ddsCaps.dwCaps = 8704;
+    lpDD->CreateSurface(&ddSurfaceDesc, &lpdsFront, 0);
+    lpDD->CreateClipper(0, &lpClip, 0);
+    lpClip->SetHWnd(0, hwndMain);
+    lpdsFront->SetClipper(lpClip);
+    lpDD->QueryInterface(IID_IDirect3D7, (LPVOID*) &lpD3D);
+
+    memset(&ddSurfaceDesc.ddpfPixelFormat, 0, sizeof(ddSurfaceDesc.ddpfPixelFormat));
+
+    lpD3D->EnumZBufferFormats(
+        IID_IDirect3DHALDevice, (LPD3DENUMPIXELFORMATSCALLBACK) gfxPipeline::gfxEnumZ, &ddSurfaceDesc.ddpfPixelFormat);
+
+    ddSurfaceDesc.dwHeight = gfxPipeline::m_iHeight;
+    ddSurfaceDesc.dwWidth = gfxPipeline::m_iWidth;
+    ddSurfaceDesc.dwFlags = 4103;
+    ddSurfaceDesc.ddsCaps.dwCaps = DDSCAPS_VIDEOMEMORY | DDSCAPS2_D3DTEXTUREMANAGE;
+    lpDD->CreateSurface(&ddSurfaceDesc, &lpdsZ, 0);
+    lpdsRend->AddAttachedSurface(lpdsZ);
+
+    lpD3D->CreateDevice(IID_IDirect3DTnLHalDevice, lpdsRend, &lpD3DDev);
+
+    sm_UseInternal = false;
+    useNativeVBs = true;
+    useHWTnL = true;
+
+    g_Allow8BitImages = false;
+
+    g_Tex555 = false;
+    g_Tex565 = false;
+
+    // lpD3DDev->EnumTextureFormats(gfxPipeline::gfxEnumTexs, 0);
+
+    D3DDEVICEDESC7 d3dDeviceDesc7;
+    lpD3DDev->GetCaps(&d3dDeviceDesc7);
+
+    int maxTextures = 0;
+
+    if (d3dDeviceDesc7.dwDevCaps & 0x4000 || d3dDeviceDesc7.wMaxSimultaneousTextures <= 1u || !useMultiTexture)
+    {
+        maxTextures = 1;
+    }
+    else
+    {
+        maxTextures = d3dDeviceDesc7.wMaxSimultaneousTextures;
+    }
+    gfxRenderState::sm_MaxTextures = maxTextures;
+
+    ageDebug(gfxDebug, "D3D: Device supports %d texture(s) per primitive.", maxTextures);
+
+    gfxRenderState::sm_MaxBlendMatrices = d3dDeviceDesc7.wMaxVertexBlendMatrices - 1;
+
+    ageDebug(gfxDebug, "D3D: Device supports %d extra blend matrices per vertex.",
+        d3dDeviceDesc7.wMaxVertexBlendMatrices - 1);
+
+    int maxActiveLights = d3dDeviceDesc7.dwMaxActiveLights;
+    gfxRenderState::sm_MaxActiveLights = d3dDeviceDesc7.dwMaxActiveLights;
+    gfxRenderState::sm_SupportsBlendWithOne =
+        (d3dDeviceDesc7.dpcTriCaps.dwSrcBlendCaps & LOBYTE(d3dDeviceDesc7.dpcTriCaps.dwDestBlendCaps) & 2) != 0;
+    if (d3dDeviceDesc7.dwMaxActiveLights == -1)
+    {
+        maxActiveLights = 8;
+        gfxRenderState::sm_MaxActiveLights = 8;
+    }
+    ageDebug(gfxDebug, "D3D: Device supports %d active lights.", maxActiveLights);
+    ioInput::Begin(1);
+
+    RSTATE.Init();
+    LASTRSTATE.CopyFrom(RSTATE);
+
+    RSTATE.Default();
+
+    gfxViewport* viewport = gfxPipeline::CreateViewport();
+    gfxPipeline::OrthoVP = viewport;
+
+    viewport->Ortho(viewport->m_Viewport.dwX, viewport->m_Viewport.dwX + viewport->m_Viewport.dwWidth,
+        viewport->m_Viewport.dwY + viewport->m_Viewport.dwHeight, viewport->m_Viewport.dwY, -1.0f, 1.0f);
+
+    gfxViewport* v36 = gfxPipeline::CreateViewport();
+    gfxPipeline::VP = v36;
+
+    if (v36 != gfxPipeline::m_Viewport)
+    {
+        gfxPipeline::ForceSetViewport(v36);
+    }
+
+    gfxPipeline::BeginInternal();
+
+    return true;
 }
 
 void gfxPipeline::BeginFrame(void)
 {
-    return stub<cdecl_t<void>>(0x4AA130);
+    gfxCreateFont();
+    gfxTexture::InitCache();
+
+    lpD3DDev->BeginScene();
+
+    gfxPipeline::ForceSetViewport(gfxPipeline::m_Viewport);
 }
 
 void gfxPipeline::EndFrame(void)
@@ -523,8 +633,74 @@ BOOL PASCAL AutoDetectCallback(GUID* lpGUID, LPSTR lpDriverDescription, LPSTR lp
     return TRUE;
 }
 
+HRESULT __stdcall gfxPipeline::gfxEnumZ(LPDDPIXELFORMAT lpDDPixFmt, LPDDPIXELFORMAT lpContext)
+{
+    ageDebug(gfxDebug, "D3D: Z bit depth = %d", lpDDPixFmt->dwRGBBitCount);
+    if (!lpContext->dwSize || lpDDPixFmt->dwRGBBitCount == gfxPipeline::m_ZDepth)
+    {
+        memcpy(lpContext, lpDDPixFmt, sizeof(DDPIXELFORMAT));
+    }
+    return 1;
+}
+
+HRESULT __stdcall gfxPipeline::gfxEnumTexs(LPDDPIXELFORMAT lpDDPixFmt, LPVOID /*lpContext*/)
+{
+    DWORD greenBitMask; // esi
+    HRESULT result;     // eax
+
+    ageDebug(gfxDebug, "D3D: Texture: Size = %d; Flags = %x; FourCC=%x; BitCount=%d; R/G/B/A=%x/%x/%x/%x",
+        lpDDPixFmt->dwSize, lpDDPixFmt->dwFlags, lpDDPixFmt->dwFourCC, lpDDPixFmt->dwRGBBitCount,
+        lpDDPixFmt->dwRBitMask, lpDDPixFmt->dwGBitMask, lpDDPixFmt->dwBBitMask, lpDDPixFmt->dwRGBAlphaBitMask);
+
+    if (lpDDPixFmt->dwBBitMask != 0x1F)
+    {
+        return 1;
+    }
+
+    greenBitMask = lpDDPixFmt->dwGBitMask;
+    if (greenBitMask == 0x3E0)
+    {
+        result = 1;
+        g_Tex555 = 1;
+    }
+    else
+    {
+        result = 1;
+        if (greenBitMask == 0x7E0)
+        {
+            g_Tex565 = 1;
+        }
+    }
+    return result;
+}
+
+gfxViewport* gfxPipeline::CreateViewport()
+{
+    return stub<cdecl_t<gfxViewport*>>(0x4A90B0);
+}
+
+void gfxPipeline::ForceSetViewport(gfxViewport* viewport)
+{
+    stub<cdecl_t<void, gfxViewport*>>(0x4B2EE0, viewport);
+}
+
+inline extern_var(0x6A2A38, float, dword_6A2A38);
+inline extern_var(0x6A2A3C, float, dword_6A2A3C);
+
+void gfxPipeline::BeginInternal()
+{
+    dword_6A2A38 = gfxPipeline::m_fWidth;
+    dword_6A2A3C = gfxPipeline::m_fHeight;
+}
+
 run_once([] {
     auto_hook(0x4AC030, AutoDetectCallback);
     auto_hook(0x4A8CE0, gfxPipeline::SetRes);
     auto_hook(0x4A8A90, gfxPipeline::gfxWindowCreate);
 });
+
+void gfxViewport::Ortho(float a3, float a4, float a5, float a6, float a7, float a8)
+{
+    return stub<member_func_t<void, gfxViewport, float, float, float, float, float, float>>(
+        0x4B1800, this, a3, a4, a5, a6, a7, a8);
+}

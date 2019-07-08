@@ -131,6 +131,8 @@ public:
     static gfxTexture* Create(
         int width, int height, gfxImage::gfxImageFormat type, gfxImage::gfxImageFormat paletteType, int mipMapCount);
 
+    static void InitCache();
+
     static void EnableCache(bool enabled);
     static void ShutdownCache(void);
 

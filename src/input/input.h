@@ -35,6 +35,8 @@ class ioInput
 public:
     static inline extern_var(0x5CDDE4, bool, bUseJoystick);
 
+    static void Begin(bool use_window);
+
     static void Update();
     static void Poll(void);
 };

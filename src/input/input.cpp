@@ -20,6 +20,11 @@
 
 #include "joystick.h"
 
+void ioInput::Begin(bool use_window)
+{
+    return stub<cdecl_t<void, bool>>(0x4BA8B0, use_window);
+}
+
 void ioInput::Update()
 {
     return stub<cdecl_t<void>>(0x4BA910);
