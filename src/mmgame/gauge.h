@@ -43,7 +43,7 @@
     0x43F330 | public: void __thiscall mmSpeedIndicator::Draw(void) | ?Draw@mmSpeedIndicator@@QAEXXZ
     0x43F450 | public: virtual void * __thiscall RadialGauge::`scalar deleting destructor'(unsigned int) | ??_GRadialGauge@@UAEPAXI@Z
     public: virtual void * __thiscall RadialGauge::`vector deleting destructor'(unsigned int) | ??_ERadialGauge@@UAEPAXI@Z
-    public: __thiscall Vector3::Vector3(float,float,float) | ??0Vector3@@QAE@MMM@Z
+    0x43DD30 | public: __thiscall Vector3::Vector3(float,float,float) | ??0Vector3@@QAE@MMM@Z
     0x480AA0 | public: void __thiscall Vector3::Set(class Vector3 const &) | ?Set@Vector3@@QAEXABV1@@Z
     public: void __thiscall gfxRenderState::SetLighting(bool) | ?SetLighting@gfxRenderState@@QAEX_N@Z
     0x43F480 | private: void __thiscall gfxRenderState::CheckSet(unsigned char &,unsigned char) | ?CheckSet@gfxRenderState@@AAEXAAEE@Z

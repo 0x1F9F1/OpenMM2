@@ -38,4 +38,34 @@
     0x5CA2E4 | public: static void (__cdecl* datParser::sm_Errorf)(char const *,...) | ?sm_Errorf@datParser@@2P6AXPBDZZA
 */
 
-// #include "hooking.h"
+#include "data/callback.h"
+#include "hooking.h"
+
+struct datParserRecord
+{
+    uint32_t Type;
+    uint16_t ArrayCount;
+    uint16_t ValueSize;
+    char Name[64];
+    void* Data;
+    datCallback* Callback;
+    datParserRecord* Next;
+
+    ~datParserRecord();
+};
+
+struct datParser
+{
+    char Name[64] {};
+    uint32_t EntryCount {0};
+    uint32_t dword44 {0};
+    datParserRecord* FirstRecord {nullptr};
+    uint32_t dword4C {0};
+    uint32_t RefCount {0};
+
+    datParser(const char* name);
+    ~datParser();
+};
+
+check_size(datParser, 0x54);
+check_size(datParserRecord, 0x54);

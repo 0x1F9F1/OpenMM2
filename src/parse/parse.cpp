@@ -17,3 +17,26 @@
 */
 
 #include "parse.h"
+
+datParser::datParser(const char* name)
+{
+    strcpy_s(Name, name);
+}
+
+datParser::~datParser()
+{
+    delete FirstRecord;
+}
+
+datParserRecord::~datParserRecord()
+{
+    if (Type == 9)
+    {
+        delete static_cast<datParser*>(Data);
+    }
+
+    if (Next)
+    {
+        delete Next;
+    }
+}
