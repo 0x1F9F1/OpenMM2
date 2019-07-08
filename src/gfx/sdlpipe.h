@@ -31,5 +31,7 @@ public:
 
     static void EndGfx2D();
 
+    static void Manage();
+
     static SDL_Window* sm_Window;
 };

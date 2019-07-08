@@ -17,3 +17,8 @@
 */
 
 #include "eventq.h"
+
+void ioEventQueue::Queue(ioEvent::ioEventType type, int x, int y, int modifiers)
+{
+    return stub<cdecl_t<void, ioEvent::ioEventType, int, int, int>>(0x4BA9D0, type, x, y, modifiers);
+}

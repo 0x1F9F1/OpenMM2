@@ -43,6 +43,16 @@
 class ioMouse
 {
 public:
-    static inline extern_var(0x6A38EC, float, InvWidth);
-    static inline extern_var(0x6A38D4, float, InvHeight);
+    static inline extern_var(0x6A38B0, int, m_dX);
+    static inline extern_var(0x6A38B4, bool, m_HasWheel);
+    static inline extern_var(0x6A38D0, bool, m_UseWindow);
+    static inline extern_var(0x6A38D4, float, m_InvHeight);
+    static inline extern_var(0x6A38D8, int, m_Y);
+    static inline extern_var(0x6A38DC, int, m_X);
+    static inline extern_var(0x6A38E0, unsigned int, m_Buttons);
+    static inline extern_var(0x6A38E4, unsigned int, m_LastButtons);
+    static inline extern_var(0x6A38E8, int, m_dZ);
+    static inline extern_var(0x6A38EC, float, m_InvWidth);
+    static inline extern_var(0x6A38F0, int, m_dY);
+    static inline extern_var(0x6A38F4, unsigned int, m_WindowButtons);
 };

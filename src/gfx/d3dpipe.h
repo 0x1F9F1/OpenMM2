@@ -162,7 +162,10 @@ public:
     static inline extern_var(0x683110, int, m_Y);
 
     // 0x1 | Closing
-    // 0x2 | Focused
+    // 0x2 | Lost Focus
+    // 0x4 | ...
+    // 0x8 | ...
+    // 0x10 | Poll Events
     static inline extern_var(0x683114, uint32_t, m_EvtFlags);
 };
 

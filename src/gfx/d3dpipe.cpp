@@ -143,8 +143,8 @@ void gfxPipeline::SetRes(int width, int height, int cdepth, int zdepth, bool par
         }
     }
 
-    ioMouse::InvWidth = (1.0f / m_fWidth);
-    ioMouse::InvHeight = (1.0f / m_fHeight);
+    ioMouse::m_InvWidth = (1.0f / m_fWidth);
+    ioMouse::m_InvHeight = (1.0f / m_fHeight);
 }
 
 void gfxPipeline::gfxWindowCreate(const char* windowName)
@@ -307,25 +307,7 @@ void gfxPipeline::Clear(int flags, uint32_t color, float zValue, uint32_t stenci
 
 void gfxPipeline::Manage()
 {
-    tagMSG Msg;
-
-    while (true)
-    {
-        bool success =
-            (!(m_EvtFlags & 0xA) || m_EvtFlags & 0x10) ? PeekMessageA(&Msg, 0, 0, 0, 1u) : GetMessageA(&Msg, 0, 0, 0);
-
-        if (success)
-        {
-            TranslateMessage(&Msg);
-            DispatchMessageA(&Msg);
-        }
-        else
-        {
-            break;
-        }
-    }
-
-    ioInput::Update();
+    sdlPipeline::Manage();
 }
 
 LRESULT CALLBACK InputWindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)

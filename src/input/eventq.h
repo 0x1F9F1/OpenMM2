@@ -30,4 +30,36 @@
     0x6A3468 | private: static int ioEventQueue::m_Head | ?m_Head@ioEventQueue@@0HA
 */
 
-// #include "hooking.h"
+#include "hooking.h"
+
+struct ioEvent
+{
+    enum ioEventType
+    {
+        MouseMove = 0,
+
+        LButtonDown = 1,
+        LButtonUp = 2,
+
+        RButtonDown = 3,
+        RButtonUp = 4,
+
+        MButtonDown = 5,
+        MButtonUp = 6,
+
+        KeyDown = 7,
+        Char = 8,
+        KeyUp = 9,
+    };
+
+    ioEventType Type;
+    int X;
+    int Y;
+    int Modifiers;
+};
+
+class ioEventQueue
+{
+public:
+    static void Queue(ioEvent::ioEventType type, int x, int y, int modifiers);
+};
