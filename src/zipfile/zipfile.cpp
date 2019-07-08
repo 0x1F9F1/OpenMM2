@@ -175,7 +175,7 @@ bool zipFile::Init(char const* fileName)
 
                 if (dirEntry.CompressionMethod != 0 && dirEntry.CompressionMethod != 8)
                 {
-                    Warningf("%s: Compression method besides store or deflate encountered.", fileName);
+                    Errorf("%s: Compression method besides store or deflate encountered.", fileName);
 
                     goto FAILURE;
                 }

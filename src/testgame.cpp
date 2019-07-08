@@ -52,7 +52,6 @@
 #include "node/event.h"
 #include "node/root.h"
 #include "rgl/vgl.h"
-#include "x86/speed.h"
 #include "zipfile/autoinit.h"
 #include "zipfile/zipfile.h"
 
@@ -121,6 +120,7 @@ void BeginPhase(bool splashScreen)
     if (!loadingImage)
     {
         loadingImage = gfxLoadImage("loading", 0);
+
         if (!loadingImage)
         {
             MessageBoxA(0, LANG_STRING(0x263u), APPTITLE, 0x10u);
@@ -129,7 +129,6 @@ void BeginPhase(bool splashScreen)
         }
     }
 
-    // loadingImage->Scale(width, height);
     loadingImage->Scale(gfxPipeline::m_iWidth, gfxPipeline::m_iHeight);
 
     LoadingScreenBitmap = gfxBitmap::Create(loadingImage, 0);
@@ -181,10 +180,8 @@ void RestoreFocus(void)
     uint16_t width = RestoringScreenBitmap->Width;
     uint16_t height = RestoringScreenBitmap->Height;
 
-    RECT position = {0, 0, width, height};
-
-    lpdsFront->BltFast((gfxPipeline::m_iWidth - width) / 2, (gfxPipeline::m_iHeight - height) / 2,
-        RestoringScreenBitmap->Surface, &position, DDBLTFAST_WAIT);
+    gfxPipeline::CopyBitmap((gfxPipeline::m_iWidth - width) / 2, (gfxPipeline::m_iHeight - height) / 2,
+        RestoringScreenBitmap, 0, 0, width, height, false);
 
     if (mmGameManager::Instance && !ROOT.IsPaused() && !NETMGR.SessionOpen)
     {
@@ -192,15 +189,12 @@ void RestoreFocus(void)
     }
 }
 
-void GameLoop(bool update)
+void GameLoop(bool draw)
 {
     if (__VtResumeSampling)
     {
         __VtResumeSampling();
     }
-
-    memMemStats memoryStats;
-    memMemoryAllocator::Current->GetStats(&memoryStats, true);
 
     while (MMSTATE.GameState == -1)
     {
@@ -212,7 +206,7 @@ void GameLoop(bool update)
 
         ROOT.Update();
 
-        if (update)
+        if (draw)
         {
             asCullManager::Instance->Update();
         }
@@ -231,7 +225,7 @@ void GameLoop(bool update)
     }
 }
 
-void MainPhase(bool parsedStateArgs, int firstLoad)
+void MainPhase(bool draw, int firstLoad)
 {
     BeginPhase(MMSTATE.GameState == 0);
 
@@ -282,7 +276,7 @@ void MainPhase(bool parsedStateArgs, int firstLoad)
             uiInterface->Reset();
             uiInterface->ShowMain(firstLoad);
 
-            parsedStateArgs = true;
+            draw = true;
         }
         break;
 
@@ -318,7 +312,7 @@ void MainPhase(bool parsedStateArgs, int firstLoad)
                 gameManager->ForceReplayUI();
             }
 
-            parsedStateArgs = false;
+            draw = false;
         }
         break;
     }
@@ -330,7 +324,7 @@ void MainPhase(bool parsedStateArgs, int firstLoad)
     MMSTATE.GameState = -1;
     datDisplayUsed("Just before GameLoop");
 
-    GameLoop(parsedStateArgs);
+    GameLoop(draw);
 
     if (uiInterface)
     {
@@ -357,8 +351,6 @@ void MainPhase(bool parsedStateArgs, int firstLoad)
 
     EndPhase();
 }
-
-run_once([] { new (&ROOT) asRoot(); });
 
 inline extern_var(0x6614D4, char[256], ExecPath);
 
@@ -427,65 +419,17 @@ void CreateGameMutex(const char* name)
     }
 }
 
-void CheckGlobalMemory()
-{
-    MEMORYSTATUSEX status;
-    status.dwLength = sizeof(status);
-    GlobalMemoryStatusEx(&status);
-
-    Displayf("Avail Phys: %dM  Avail Page: %dM  Avail Virtual: %dM", status.ullAvailPhys >> 20,
-        status.ullAvailPageFile >> 20, status.ullAvailVirtual >> 20);
-
-    if (status.ullAvailPhys < (256 << 20)) // 256 MB
-    {
-        MessageBoxA(0, LANG_STRING(0xF8), APPTITLE, MB_ICONERROR);
-
-        exit(0);
-    }
-}
-
-void CheckDiskSpace()
-{
-    ULARGE_INTEGER FreeBytesAvailableToCaller;
-    ULARGE_INTEGER TotalNumberOfBytes;
-    ULARGE_INTEGER TotalNumberOfFreeBytes;
-
-    if (GetDiskFreeSpaceExA(0, &FreeBytesAvailableToCaller, &TotalNumberOfBytes, &TotalNumberOfFreeBytes))
-    {
-        if (FreeBytesAvailableToCaller.QuadPart < 0x20000)
-        {
-            MessageBoxA(0, LANG_STRING(0xF9), APPTITLE, MB_OK);
-        }
-    }
-}
-
 int Main(void)
 {
     ioInput::bUseJoystick = false;
-    mmCpuSpeed = ComputeCpuSpeed();
+    mmCpuSpeed = 1000;
     gfxIcon = 0x6F;
     MMSTATE.AudioFlags = 0xC73;
-
-    DEVMODEA device;
-    memset(&device, 0, sizeof(device));
-    device.dmSize = sizeof(device);
-
-    EnumDisplaySettingsA(0, 0xFFFFFFFF, &device);
-
-    if (device.dmBitsPerPel < 8)
-    {
-        MessageBoxA(0, LANG_STRING(0x292), APPTITLE, MB_ICONERROR);
-
-        exit(0);
-    }
 
     if (!datArgParser::Exists("nomutex"))
     {
         CreateGameMutex("MidtownMadness2Mutex");
     }
-
-    CheckGlobalMemory();
-    CheckDiskSpace();
 
     if (!FirstRunEula())
     {
@@ -495,8 +439,6 @@ int Main(void)
     }
 
     lvlProgress::SetCallback(&ProgressCB);
-
-    int firstLoad = 0;
 
     ROOT.Init(datArgParser::Exists("nan"));
 
@@ -510,25 +452,18 @@ int Main(void)
 
     MMSTATE.SetDefaults(currentCity, currentCar);
 
-    bool parseStateArgs = MMSTATE.ParseStateArgs();
-
     strcpy_s(ExecPath, ".");
 
     datAssetManager::SetPath(".");
     datAssetManager::sm_IgnorePrefix = false;
 
-    if (datArgParser::Exists("ime"))
-    {
-        MMSTATE.UseIME = 1;
-    }
-
-    inWindow = 0;
+    inWindow = true;
     gfxPipeline::SetTitle(APPTITLE);
 
-    gfxMinScreenWidth = atoi(LANG_STRING(612u));
-    gfxMinScreenHeight = atoi(LANG_STRING(613u));
+    gfxMinScreenWidth = 640;
+    gfxMinScreenHeight = 480;
 
-    bool success = 0;
+    bool success = false;
 
     if (!gfxAutoDetect(&success))
     {
@@ -537,58 +472,9 @@ int Main(void)
         exit(0);
     }
 
-    gfxPipeline::SetRes(640, 480, 16, 16, 0);
+    gfxPipeline::SetRes(640, 480, 32, 32, true);
 
     InitDirectDraw();
-
-    Displayf("Playing movie now...");
-    if (!datArgParser::Exists("nomovie") && !inWindow)
-    {
-        FILE* hLogos = nullptr;
-
-        if (fopen_s(&hLogos, "logos.avi", "r") == NO_ERROR)
-        {
-            fclose(hLogos);
-
-            ebolaPlayMovie("logos.avi");
-        }
-        else
-        {
-            Warningf("Logo movie not found in current working directory.");
-        }
-    }
-
-    Displayf("Done playing movie.");
-
-    if (!datArgParser::Exists("noime"))
-    {
-        if (ImmGetContext(hwndMain))
-        {
-            int systemLangID = GetSystemDefaultLangID();
-
-            if (systemLangID == MAKELANGID(LANG_JAPANESE, SUBLANG_JAPANESE_JAPAN) ||
-                systemLangID == MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL))
-            {
-                MMSTATE.UseIME = 1;
-
-                MMSTATE.IMEContext = ImmAssociateContext(hwndMain, 0);
-            }
-            else if (systemLangID == MAKELANGID(LANG_KOREAN, SUBLANG_KOREAN))
-            {
-                HIMC imm = ImmAssociateContext(hwndMain, 0);
-
-                if (imm)
-                {
-                    ImmDestroyContext(imm);
-                }
-            }
-        }
-    }
-
-    if (MMSTATE.UseIME)
-    {
-        gfxPipeline::EndGfx2D();
-    }
 
     if (datArgParser::Exists("archive"))
     {
@@ -602,9 +488,11 @@ int Main(void)
     InstallJPEGSupport();
     InstallTextureVariantHandler();
 
+    int firstLoad = 0;
+
     do
     {
-        MainPhase(parseStateArgs, firstLoad);
+        MainPhase(false, firstLoad);
 
         firstLoad = 1;
     } while (!MMSTATE.Shutdown);
@@ -614,11 +502,6 @@ int Main(void)
     NETMGR.Logout();
 
     gfxPipeline::EndGfx2D();
-
-    if (ZoneStartup)
-    {
-        ShellExecuteA(0, "open", LANG_STRING(74u), 0, 0, 1);
-    }
 
     return 0;
 }
@@ -644,3 +527,5 @@ int ExceptMain()
 include_dummy_symbol(sfPointer);
 include_dummy_symbol(vehCarAudioContainer);
 include_dummy_symbol(Matrix34);
+
+run_once([] { new (&ROOT) asRoot(); });

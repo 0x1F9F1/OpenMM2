@@ -45,7 +45,6 @@ add_subdirectory(phys)
 add_subdirectory(rgl)
 add_subdirectory(vector)
 add_subdirectory(vehicle)
-add_subdirectory(x86)
 add_subdirectory(zipfile)
 
 add_library(hooking STATIC
@@ -102,7 +101,6 @@ add_library(testgame STATIC
     $<TARGET_OBJECTS:rgl>
     $<TARGET_OBJECTS:vector>
     $<TARGET_OBJECTS:vehicle>
-    $<TARGET_OBJECTS:x86>
     $<TARGET_OBJECTS:zipfile>
 )
 

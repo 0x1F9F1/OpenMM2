@@ -126,6 +126,4 @@ void vehCarAudioContainer::RegisterPoliceNames(Stream* stream, char* names)
 
 define_dummy_symbol(vehCarAudioContainer);
 
-run_once([] {
-    auto_hook(0x4D0CB0, vehCarAudioContainer::RegisterTypes);
-});
+run_once([] { auto_hook(0x4D0CB0, vehCarAudioContainer::RegisterTypes); });

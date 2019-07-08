@@ -49,6 +49,5 @@ void create_hook(const char* name, const char* description, mem::pointer target,
     hook_type type = hook_type::jmp);
 void create_patch(const char* name, const char* description, mem::pointer dest, mem::pointer src, size_t size);
 
-#define auto_hook(ADDRESS, FUNC) create_hook(#FUNC, "Custom Implementation", ADDRESS, &FUNC)
-#define auto_hook_typed(ADDRESS, FUNC, TYPE) \
-    create_hook(#FUNC, "Custom Implementation", ADDRESS, static_cast<TYPE>(&FUNC))
+#define auto_hook(ADDRESS, FUNC) create_hook(#FUNC, "", ADDRESS, &FUNC)
+#define auto_hook_typed(ADDRESS, FUNC, TYPE) create_hook(#FUNC, "", ADDRESS, static_cast<TYPE>(&FUNC))

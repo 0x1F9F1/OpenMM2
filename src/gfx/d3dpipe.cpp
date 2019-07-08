@@ -43,30 +43,12 @@ void gfxPipeline::SetRes(int width, int height, int cdepth, int zdepth, bool par
 {
     (void) (parseArgs);
 
-    if (datArgParser::Exists("ref"))
-    {
-        useSoftware = 1;
-        useReference = 1;
-    }
-    else if (datArgParser::Exists("blade") || datArgParser::Exists("bladed"))
-    {
-        useSoftware = 1;
-        useBlade = 1;
-    }
-    else if (datArgParser::Exists("swage"))
-    {
-        useSoftware = 1;
-        useAgeSoftware = 1;
-    }
-    else if (datArgParser::Exists("sw"))
-    {
-        useSoftware = 1;
-    }
+    useSoftware = false;
+    useReference = false;
+    useBlade = false;
+    useAgeSoftware = false;
+    useSysMem = false;
 
-    if (datArgParser::Exists("sysmem"))
-    {
-        useSysMem = 1;
-    }
     if (datArgParser::Exists("triple"))
     {
         tripleBuffer = 1;
@@ -107,18 +89,6 @@ void gfxPipeline::SetRes(int width, int height, int cdepth, int zdepth, bool par
         inWindow = 0;
     }
 
-    int bitDepth = 0;
-    if (datArgParser::Get("bpp", 0, bitDepth) || datArgParser::Get("bitdepth", 0, bitDepth))
-    {
-        cdepth = bitDepth;
-        zdepth = bitDepth;
-    }
-    else
-    {
-        datArgParser::Get("cdepth", 0, cdepth);
-        datArgParser::Get("zdepth", 0, zdepth);
-    }
-
     // We don't want to set the width/height if we are in a menu, it just fucks it up
     if (MMSTATE.GameState != 0)
     {
@@ -137,8 +107,6 @@ void gfxPipeline::SetRes(int width, int height, int cdepth, int zdepth, bool par
             datArgParser::Get("height", 0, height);
         }
     }
-
-    useSysMem = useSoftware;
 
     m_iWidth = width;
     m_iHeight = height;
@@ -201,7 +169,7 @@ void gfxPipeline::SetTitle(const char* title)
 
 bool gfxPipeline::BeginGfx2D(void)
 {
-    const char* gfxLibName = useBlade ? "BLADE.DLL" : "DDRAW.DLL";
+    const char* gfxLibName = "ddraw.dll";
 
     HMODULE hGfxLib = LoadLibraryA(gfxLibName);
 
@@ -369,26 +337,6 @@ LRESULT CALLBACK gfxPipeline::gfxWindowProc(HWND hWnd, UINT message, WPARAM wPar
 {
     switch (message)
     {
-        case WM_POWERBROADCAST:
-        {
-            Displayf("gfxPipeline::gfxWindowProc -> WM_POWERBROADCAST recieved.");
-
-            switch (wParam)
-            {
-                case PBT_APMQUERYSUSPEND:
-                    Displayf("gfxPipeline::gfxWindowProc -> PBT_APMQUERYSUSPEND recieved.");
-                    return BROADCAST_QUERY_DENY;
-                case PBT_APMSUSPEND: Displayf("gfxPipeline::gfxWindowProc -> PBT_APMSUSPEND heard."); break;
-                case PBT_APMRESUMECRITICAL:
-                    Displayf("gfxPipeline::gfxWindowProc -> PBT_APMRESUMECRITICAL recieved.");
-                    break;
-                case PBT_APMRESUMESUSPEND:
-                    Displayf("gfxPipeline::gfxWindowProc -> PBT_APMRESUMESUSPEND recieved.");
-                    break;
-            }
-        }
-        break;
-
         case WM_CLOSE:
         {
             ageDebug(gfxDebug, "gfxWindowProc: WM_CLOSE received");
