@@ -174,6 +174,9 @@ void HandleWindowEvent(SDL_WindowEvent& e)
             gfxPipeline::m_EvtFlags &= ~2;
             gfxPipeline::m_EvtFlags |= 1;
             break;
+
+        case SDL_WINDOWEVENT_ENTER:
+        case SDL_WINDOWEVENT_LEAVE: ioMouse::m_WindowButtons = 0; break;
     }
 }
 
@@ -262,7 +265,6 @@ int ConvertSDLKeyCode(SDL_Keycode key)
         case SDLK_p: return 25;
         case SDLK_RETURN: return 28;
         case SDLK_LCTRL: return 29;
-        case SDLK_RCTRL: return 29;
         case SDLK_a: return 30;
         case SDLK_s: return 31;
         case SDLK_d: return 32;
@@ -273,7 +275,6 @@ int ConvertSDLKeyCode(SDL_Keycode key)
         case SDLK_k: return 37;
         case SDLK_l: return 38;
         case SDLK_LSHIFT: return 42;
-        case SDLK_RSHIFT: return 42;
         case SDLK_z: return 44;
         case SDLK_x: return 45;
         case SDLK_c: return 46;
@@ -281,6 +282,7 @@ int ConvertSDLKeyCode(SDL_Keycode key)
         case SDLK_b: return 48;
         case SDLK_n: return 49;
         case SDLK_m: return 50;
+        case SDLK_RSHIFT: return 54;
         case SDLK_KP_MULTIPLY: return 55;
         case SDLK_SPACE: return 57;
         case SDLK_CAPSLOCK: return 58;
@@ -312,6 +314,7 @@ int ConvertSDLKeyCode(SDL_Keycode key)
         case SDLK_F13: return 100;
         case SDLK_F14: return 101;
         case SDLK_F15: return 102;
+        case SDLK_RCTRL: return 157;
         case SDLK_KP_DIVIDE: return 181;
         case SDLK_HOME: return 199;
         case SDLK_UP: return 200;
@@ -384,9 +387,7 @@ void sdlPipeline::Manage()
     {
         bool poll = !(gfxPipeline::m_EvtFlags & 0xA) || (gfxPipeline::m_EvtFlags & 0x10);
 
-        bool success = (poll ? SDL_PollEvent(&e) : SDL_WaitEvent(&e)) == 1;
-
-        if (success)
+        if (poll ? SDL_PollEvent(&e) : SDL_WaitEvent(&e))
         {
             HandleEvent(e);
         }
