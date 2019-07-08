@@ -105,7 +105,7 @@ void sdlPipeline::gfxWindowUpdate(bool isOpen)
 
 void sdlPipeline::gfxWindowMove(bool isOpen)
 {
-    SDL_Rect bounds;
+    SDL_Rect bounds {};
     SDL_ASSERT(SDL_GetDisplayBounds(0, &bounds) == 0);
 
     gfxPipeline::m_X = bounds.x + (bounds.w - gfxPipeline::m_iWidth) / 2;
