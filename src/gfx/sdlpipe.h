@@ -23,6 +23,8 @@
 class sdlPipeline
 {
 public:
+    static void InitSDL();
+
     static void gfxWindowCreate(char const* title);
     static void gfxWindowUpdate(bool isOpen);
     static void gfxWindowMove(bool isOpen);

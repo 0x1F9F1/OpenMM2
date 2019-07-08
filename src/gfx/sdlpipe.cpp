@@ -43,14 +43,43 @@ SDL_Window* sdlPipeline::sm_Window = nullptr;
         }                                                               \
     } while (false)
 
+static void LogSDL_Impl(int level, const char* format, ...)
+{
+    va_list args;
+    va_start(args, format);
+    Printer(level, format, args);
+    va_end(args);
+}
+
+static void LogSDL(void* /*userdata*/, int /*category*/, SDL_LogPriority priority, const char* message)
+{
+    int level = OUTPUT_LEVEL_MESSAGE;
+
+    switch (priority)
+    {
+        case SDL_LOG_PRIORITY_INFO: level = OUTPUT_LEVEL_MESSAGE; break;
+        case SDL_LOG_PRIORITY_WARN: level = OUTPUT_LEVEL_WARNING; break;
+        case SDL_LOG_PRIORITY_ERROR: level = OUTPUT_LEVEL_ERROR; break;
+        case SDL_LOG_PRIORITY_CRITICAL: level = OUTPUT_LEVEL_FATAL; break;
+        default: return;
+    }
+
+    LogSDL_Impl(level, "%s", message);
+}
+
+void sdlPipeline::InitSDL()
+{
+    SDL_Init(SDL_INIT_EVERYTHING);
+
+    SDL_LogSetOutputFunction(&LogSDL, nullptr);
+}
+
 void sdlPipeline::gfxWindowCreate(char const* windowName)
 {
     if (sm_Window != nullptr)
     {
         return;
     }
-
-    SDL_Init(SDL_INIT_EVERYTHING);
 
     if (lpWindowTitle)
     {

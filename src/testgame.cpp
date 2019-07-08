@@ -30,6 +30,7 @@
 #include "gfx/font.h"
 #include "gfx/image.h"
 #include "gfx/loadimg.h"
+#include "gfx/sdlpipe.h"
 #include "gfx/texture.h"
 #include "gfx/winpipe.h"
 #include "gfx/winpriv.h"
@@ -421,6 +422,8 @@ void CreateGameMutex(const char* name)
 
 int Main(void)
 {
+    sdlPipeline::InitSDL();
+
     ioInput::bUseJoystick = false;
     mmCpuSpeed = 1000;
     gfxIcon = 0x6F;

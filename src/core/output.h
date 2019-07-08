@@ -53,6 +53,13 @@
 
 #include "hooking.h"
 
+#define OUTPUT_LEVEL_PRINT 0
+#define OUTPUT_LEVEL_MESSAGE 1
+#define OUTPUT_LEVEL_DISPLAY 2
+#define OUTPUT_LEVEL_WARNING 3
+#define OUTPUT_LEVEL_ERROR 4
+#define OUTPUT_LEVEL_FATAL 5
+
 void CustomPrinter(int level, const char* format, va_list args);
 void CustomPrintString(const char* string);
 
