@@ -3,4 +3,6 @@ build/
 
 GameDirectory.txt
 CommandLine.txt
-scripts/midtown2.idc
+
+midtown2.idc
+midtown2.bndb

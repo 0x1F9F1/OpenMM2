@@ -157,7 +157,7 @@ public:
     static HRESULT __stdcall gfxEnumTexs(LPDDPIXELFORMAT lpDDPixFmt, LPVOID lpContext);
 
     static gfxViewport* CreateViewport();
-    static void ForceSetViewport(gfxViewport *viewport);
+    static void ForceSetViewport(gfxViewport* viewport);
 
     static void BeginInternal();
 
