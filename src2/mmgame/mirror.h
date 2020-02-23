@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -83,13 +83,13 @@
 // 0x62751C | ?MIRROR@@3PAVmmMirror@@A
 inline extern_var(0x62751C, class mmMirror*, MIRROR);
 
-class dgPhysEntity
+class dgPhysEntity : Base
 {
 public:
     // dgPhysEntity::`vftable' @ 0x5B0BD8
 
     // 0x42CC60 | ??1dgPhysEntity@@UAE@XZ
-    virtual inline ~dgPhysEntity()
+    inline ~dgPhysEntity() override
     {
         stub<member_func_t<void, dgPhysEntity>>(0x42CC60, this);
     }
@@ -107,8 +107,16 @@ public:
     }
 
     // 0x582519 | __purecall
+    virtual inline void PostUpdate()
+    {
+        return stub<member_func_t<void, dgPhysEntity>>(0x582519, this);
+    }
 
     // 0x582519 | __purecall
+    virtual inline class phInertialCS* GetICS()
+    {
+        return stub<member_func_t<class phInertialCS*, dgPhysEntity>>(0x582519, this);
+    }
 
     // 0x42CBF0 | ?GetCollider@dgPhysEntity@@UAEPAVphCollider@@XZ
     virtual inline class phCollider* GetCollider()
@@ -117,6 +125,10 @@ public:
     }
 
     // 0x582519 | __purecall
+    virtual inline class lvlInstance* GetInst()
+    {
+        return stub<member_func_t<class lvlInstance*, dgPhysEntity>>(0x582519, this);
+    }
 
     // 0x42CC00 | ?DetachMe@dgPhysEntity@@UAEXXZ
     virtual inline void DetachMe()
@@ -137,30 +149,27 @@ public:
     }
 };
 
-class vehCar
-    : dgPhysEntity
-    , Base
+class vehCar : dgPhysEntity
 {
 public:
     // vehCar::`vftable' @ 0x5B0BB0
 
     // 0x42BAB0 | ??0vehCar@@QAE@H@Z
-    inline vehCar(int32_t arg1)
+    inline vehCar(i32 arg1)
     {
-        stub<member_func_t<void, vehCar, int32_t>>(0x42BAB0, this, arg1);
+        stub<member_func_t<void, vehCar, i32>>(0x42BAB0, this, arg1);
     }
 
     // 0x42BE10 | ?Init@vehCar@@QAEXPBDHH_N@Z
-    inline void Init(char const* arg1, int32_t arg2, int32_t arg3, bool arg4)
+    inline void Init(char const* arg1, i32 arg2, i32 arg3, bool arg4)
     {
-        return stub<member_func_t<void, vehCar, char const*, int32_t, int32_t, bool>>(
-            0x42BE10, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, vehCar, char const*, i32, i32, bool>>(0x42BE10, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x42C1D0 | ?SetColliderID@vehCar@@QAEXH@Z
-    inline void SetColliderID(int32_t arg1)
+    inline void SetColliderID(i32 arg1)
     {
-        return stub<member_func_t<void, vehCar, int32_t>>(0x42C1D0, this, arg1);
+        return stub<member_func_t<void, vehCar, i32>>(0x42C1D0, this, arg1);
     }
 
     // 0x42C1E0 | ?SetAudio@vehCar@@QAEXPAVvehCarAudioContainer@@@Z
@@ -170,9 +179,9 @@ public:
     }
 
     // 0x42C1F0 | ?InitAudio@vehCar@@QAEXPBDH@Z
-    inline void InitAudio(char const* arg1, int32_t arg2)
+    inline void InitAudio(char const* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, vehCar, char const*, int32_t>>(0x42C1F0, this, arg1, arg2);
+        return stub<member_func_t<void, vehCar, char const*, i32>>(0x42C1F0, this, arg1, arg2);
     }
 
     // 0x42C290 | ?SetInput@vehCar@@QAEXPAVvehInput@@@Z
@@ -194,9 +203,9 @@ public:
     }
 
     // 0x42C2C0 | ?SetDrivable@vehCar@@QAEXHH@Z
-    inline void SetDrivable(int32_t arg1, int32_t arg2)
+    inline void SetDrivable(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, vehCar, int32_t, int32_t>>(0x42C2C0, this, arg1, arg2);
+        return stub<member_func_t<void, vehCar, i32, i32>>(0x42C2C0, this, arg1, arg2);
     }
 
     // 0x42C330 | ?Reset@vehCar@@QAEXXZ
@@ -225,49 +234,49 @@ public:
     }
 
     // 0x42C890 | ?IsPlayer@vehCar@@QAEHXZ
-    inline int32_t IsPlayer()
+    inline i32 IsPlayer()
     {
-        return stub<member_func_t<int32_t, vehCar>>(0x42C890, this);
+        return stub<member_func_t<i32, vehCar>>(0x42C890, this);
     }
 
     // 0x42BCC0 | ??1vehCar@@UAE@XZ
-    virtual inline ~vehCar()
+    inline ~vehCar() override
     {
         stub<member_func_t<void, vehCar>>(0x42BCC0, this);
     }
 
     // 0x42C480 | ?PreUpdate@vehCar@@UAEXXZ
-    virtual inline void PreUpdate()
+    inline void PreUpdate() override
     {
         return stub<member_func_t<void, vehCar>>(0x42C480, this);
     }
 
     // 0x42C690 | ?Update@vehCar@@UAEXXZ
-    virtual inline void Update()
+    inline void Update() override
     {
         return stub<member_func_t<void, vehCar>>(0x42C690, this);
     }
 
     // 0x42C8B0 | ?PostUpdate@vehCar@@UAEXXZ
-    virtual inline void PostUpdate()
+    inline void PostUpdate() override
     {
         return stub<member_func_t<void, vehCar>>(0x42C8B0, this);
     }
 
     // 0x42CA70 | ?GetICS@vehCar@@UAEPAVphInertialCS@@XZ
-    virtual inline class phInertialCS* GetICS()
+    inline class phInertialCS* GetICS() override
     {
         return stub<member_func_t<class phInertialCS*, vehCar>>(0x42CA70, this);
     }
 
     // 0x42CA80 | ?GetInst@vehCar@@UAEPAVlvlInstance@@XZ
-    virtual inline class lvlInstance* GetInst()
+    inline class lvlInstance* GetInst() override
     {
         return stub<member_func_t<class lvlInstance*, vehCar>>(0x42CA80, this);
     }
 
     // 0x42CA90 | ?RequiresTerrainCollision@vehCar@@UAE_NXZ
-    virtual inline bool RequiresTerrainCollision()
+    inline bool RequiresTerrainCollision() override
     {
         return stub<member_func_t<bool, vehCar>>(0x42CA90, this);
     }

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -52,9 +52,9 @@ public:
     }
 
     // 0x53D060 | ?Init@aiRouteRacer@@QAEXHPAD@Z
-    inline void Init(int32_t arg1, char* arg2)
+    inline void Init(i32 arg1, char* arg2)
     {
-        return stub<member_func_t<void, aiRouteRacer, int32_t, char*>>(0x53D060, this, arg1, arg2);
+        return stub<member_func_t<void, aiRouteRacer, i32, char*>>(0x53D060, this, arg1, arg2);
     }
 
     // 0x53D390 | ?Reset@aiRouteRacer@@QAEXXZ
@@ -82,9 +82,9 @@ public:
     }
 
     // 0x53D6E0 | ?Finished@aiRouteRacer@@QAEHXZ
-    inline int32_t Finished()
+    inline i32 Finished()
     {
-        return stub<member_func_t<int32_t, aiRouteRacer>>(0x53D6E0, this);
+        return stub<member_func_t<i32, aiRouteRacer>>(0x53D6E0, this);
     }
 
     // 0x53D900 | ?DrawRouteThroughTraffic@aiRouteRacer@@QAEXXZ

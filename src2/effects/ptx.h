@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -42,9 +42,9 @@
 */
 
 // 0x461580 | ?cmpPtx@@YAHPBX0@Z
-inline int32_t cmpPtx(void const* arg1, void const* arg2)
+inline i32 cmpPtx(void const* arg1, void const* arg2)
 {
-    return stub<cdecl_t<int32_t, void const*, void const*>>(0x461580, arg1, arg2);
+    return stub<cdecl_t<i32, void const*, void const*>>(0x461580, arg1, arg2);
 }
 
 class asParticles : Base
@@ -59,9 +59,9 @@ public:
     }
 
     // 0x460FB0 | ?Init@asParticles@@QAEXHHHHPAUasMeshCardVertex@@@Z
-    inline void Init(int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, struct asMeshCardVertex* arg5)
+    inline void Init(i32 arg1, i32 arg2, i32 arg3, i32 arg4, struct asMeshCardVertex* arg5)
     {
-        return stub<member_func_t<void, asParticles, int32_t, int32_t, int32_t, int32_t, struct asMeshCardVertex*>>(
+        return stub<member_func_t<void, asParticles, i32, i32, i32, i32, struct asMeshCardVertex*>>(
             0x460FB0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
@@ -90,9 +90,9 @@ public:
     }
 
     // 0x461490 | ?Blast@asParticles@@QAEXHPAVasBirthRule@@@Z
-    inline void Blast(int32_t arg1, class asBirthRule* arg2)
+    inline void Blast(i32 arg1, class asBirthRule* arg2)
     {
-        return stub<member_func_t<void, asParticles, int32_t, class asBirthRule*>>(0x461490, this, arg1, arg2);
+        return stub<member_func_t<void, asParticles, i32, class asBirthRule*>>(0x461490, this, arg1, arg2);
     }
 
     // 0x460F20 | ??1asParticles@@UAE@XZ
@@ -112,21 +112,21 @@ struct asMeshCardInfo
 {
 public:
     // 0x461600 | ?Init@asMeshCardInfo@@QAEXHPAUasMeshCardVertex@@HHH@Z
-    inline void Init(int32_t arg1, struct asMeshCardVertex* arg2, int32_t arg3, int32_t arg4, int32_t arg5)
+    inline void Init(i32 arg1, struct asMeshCardVertex* arg2, i32 arg3, i32 arg4, i32 arg5)
     {
-        return stub<member_func_t<void, asMeshCardInfo, int32_t, struct asMeshCardVertex*, int32_t, int32_t, int32_t>>(
+        return stub<member_func_t<void, asMeshCardInfo, i32, struct asMeshCardVertex*, i32, i32, i32>>(
             0x461600, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x461770 | ?Draw@asMeshCardInfo@@QAEXPBUasSparkPos@@H@Z
-    inline void Draw(struct asSparkPos const* arg1, int32_t arg2)
+    inline void Draw(struct asSparkPos const* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, asMeshCardInfo, struct asSparkPos const*, int32_t>>(0x461770, this, arg1, arg2);
+        return stub<member_func_t<void, asMeshCardInfo, struct asSparkPos const*, i32>>(0x461770, this, arg1, arg2);
     }
 
     // 0x461890 | ?DrawShadows@asMeshCardInfo@@QAEXPBUasSparkPos@@H@Z
-    inline void DrawShadows(struct asSparkPos const* arg1, int32_t arg2)
+    inline void DrawShadows(struct asSparkPos const* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, asMeshCardInfo, struct asSparkPos const*, int32_t>>(0x461890, this, arg1, arg2);
+        return stub<member_func_t<void, asMeshCardInfo, struct asSparkPos const*, i32>>(0x461890, this, arg1, arg2);
     }
 };

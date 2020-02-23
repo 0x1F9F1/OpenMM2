@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -79,46 +79,46 @@ public:
     }
 
     // 0x4DF5F0 | ?SetPan@vehEngineSampleWrapper@@QAEXM@Z
-    inline void SetPan(float arg1)
+    inline void SetPan(f32 arg1)
     {
-        return stub<member_func_t<void, vehEngineSampleWrapper, float>>(0x4DF5F0, this, arg1);
+        return stub<member_func_t<void, vehEngineSampleWrapper, f32>>(0x4DF5F0, this, arg1);
     }
 
     // 0x4DF610 | ?UpdateRPM@vehEngineSampleWrapper@@QAEXMMMM@Z
-    inline void UpdateRPM(float arg1, float arg2, float arg3, float arg4)
+    inline void UpdateRPM(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
-        return stub<member_func_t<void, vehEngineSampleWrapper, float, float, float, float>>(
+        return stub<member_func_t<void, vehEngineSampleWrapper, f32, f32, f32, f32>>(
             0x4DF610, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4DF6E0 | ?UpdateRPM@vehEngineSampleWrapper@@QAEXM@Z
-    inline void UpdateRPM(float arg1)
+    inline void UpdateRPM(f32 arg1)
     {
-        return stub<member_func_t<void, vehEngineSampleWrapper, float>>(0x4DF6E0, this, arg1);
+        return stub<member_func_t<void, vehEngineSampleWrapper, f32>>(0x4DF6E0, this, arg1);
     }
 
     // 0x4DF790 | ?CalculateVolumeOld@vehEngineSampleWrapper@@QAEMM@Z
-    inline float CalculateVolumeOld(float arg1)
+    inline f32 CalculateVolumeOld(f32 arg1)
     {
-        return stub<member_func_t<float, vehEngineSampleWrapper, float>>(0x4DF790, this, arg1);
+        return stub<member_func_t<f32, vehEngineSampleWrapper, f32>>(0x4DF790, this, arg1);
     }
 
     // 0x4DF7F0 | ?CalculateVolume@vehEngineSampleWrapper@@QAEMM@Z
-    inline float CalculateVolume(float arg1)
+    inline f32 CalculateVolume(f32 arg1)
     {
-        return stub<member_func_t<float, vehEngineSampleWrapper, float>>(0x4DF7F0, this, arg1);
+        return stub<member_func_t<f32, vehEngineSampleWrapper, f32>>(0x4DF7F0, this, arg1);
     }
 
     // 0x4DF860 | ?CalculatePitch@vehEngineSampleWrapper@@QAEMM@Z
-    inline float CalculatePitch(float arg1)
+    inline f32 CalculatePitch(f32 arg1)
     {
-        return stub<member_func_t<float, vehEngineSampleWrapper, float>>(0x4DF860, this, arg1);
+        return stub<member_func_t<f32, vehEngineSampleWrapper, f32>>(0x4DF860, this, arg1);
     }
 
     // 0x4DF8A0 | ?EchoOn@vehEngineSampleWrapper@@QAEXM@Z
-    inline void EchoOn(float arg1)
+    inline void EchoOn(f32 arg1)
     {
-        return stub<member_func_t<void, vehEngineSampleWrapper, float>>(0x4DF8A0, this, arg1);
+        return stub<member_func_t<void, vehEngineSampleWrapper, f32>>(0x4DF8A0, this, arg1);
     }
 
     // 0x4DF8D0 | ?EchoOff@vehEngineSampleWrapper@@QAEXXZ
@@ -128,9 +128,9 @@ public:
     }
 
     // 0x4DF8F0 | ?Silence@vehEngineSampleWrapper@@QAEXH@Z
-    inline void Silence(int32_t arg1)
+    inline void Silence(i32 arg1)
     {
-        return stub<member_func_t<void, vehEngineSampleWrapper, int32_t>>(0x4DF8F0, this, arg1);
+        return stub<member_func_t<void, vehEngineSampleWrapper, i32>>(0x4DF8F0, this, arg1);
     }
 
     // 0x4DF920 | ?ParseCSVBufferOld@vehEngineSampleWrapper@@QAEXPAD@Z
@@ -146,8 +146,8 @@ public:
     }
 
     // 0x4DFC10 | ?SetMaxVolume@vehEngineSampleWrapper@@QAEXM@Z
-    inline void SetMaxVolume(float arg1)
+    inline void SetMaxVolume(f32 arg1)
     {
-        return stub<member_func_t<void, vehEngineSampleWrapper, float>>(0x4DFC10, this, arg1);
+        return stub<member_func_t<void, vehEngineSampleWrapper, f32>>(0x4DFC10, this, arg1);
     }
 };

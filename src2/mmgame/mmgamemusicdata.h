@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -41,15 +41,15 @@ public:
     }
 
     // 0x433FB0 | ?GetNumDMusicChoiceGroups@mmGameMusicData@@QAEFPAVStream@@@Z
-    inline int16_t GetNumDMusicChoiceGroups(class Stream* arg1)
+    inline i16 GetNumDMusicChoiceGroups(class Stream* arg1)
     {
-        return stub<member_func_t<int16_t, mmGameMusicData, class Stream*>>(0x433FB0, this, arg1);
+        return stub<member_func_t<i16, mmGameMusicData, class Stream*>>(0x433FB0, this, arg1);
     }
 
     // 0x434000 | ?RandomizeNumber@mmGameMusicData@@QAEFF@Z
-    inline int16_t RandomizeNumber(int16_t arg1)
+    inline i16 RandomizeNumber(i16 arg1)
     {
-        return stub<member_func_t<int16_t, mmGameMusicData, int16_t>>(0x434000, this, arg1);
+        return stub<member_func_t<i16, mmGameMusicData, i16>>(0x434000, this, arg1);
     }
 
     // 0x434060 | ?LoadAmbientSFX@mmGameMusicData@@AAE_NPAD@Z
@@ -59,9 +59,9 @@ public:
     }
 
     // 0x434190 | ?LoadAmbientSFXSegments@mmGameMusicData@@AAE_NPAVStream@@F@Z
-    inline bool LoadAmbientSFXSegments(class Stream* arg1, int16_t arg2)
+    inline bool LoadAmbientSFXSegments(class Stream* arg1, i16 arg2)
     {
-        return stub<member_func_t<bool, mmGameMusicData, class Stream*, int16_t>>(0x434190, this, arg1, arg2);
+        return stub<member_func_t<bool, mmGameMusicData, class Stream*, i16>>(0x434190, this, arg1, arg2);
     }
 
     // 0x434250 | ?LoadMusic@mmGameMusicData@@UAE_NPAD@Z

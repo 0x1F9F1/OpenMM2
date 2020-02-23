@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -52,9 +52,9 @@ public:
     }
 
     // 0x54A620 | ?Init@mcHookman@@QAEXHPAD@Z
-    inline void Init(int32_t arg1, char* arg2)
+    inline void Init(i32 arg1, char* arg2)
     {
-        return stub<member_func_t<void, mcHookman, int32_t, char*>>(0x54A620, this, arg1, arg2);
+        return stub<member_func_t<void, mcHookman, i32, char*>>(0x54A620, this, arg1, arg2);
     }
 
     // 0x54A9F0 | ?Reset@mcHookman@@QAEXXZ

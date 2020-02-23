@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -46,9 +46,9 @@ public:
     // mmVehInfo::`vftable' @ 0x5B5248
 
     // 0x4F7A90 | ?IsValid@mmVehInfo@@QAEHXZ
-    inline int32_t IsValid()
+    inline i32 IsValid()
     {
-        return stub<member_func_t<int32_t, mmVehInfo>>(0x4F7A90, this);
+        return stub<member_func_t<i32, mmVehInfo>>(0x4F7A90, this);
     }
 
     // 0x529720 | ??0mmVehInfo@@QAE@XZ
@@ -58,15 +58,15 @@ public:
     }
 
     // 0x5297B0 | ?Load@mmVehInfo@@QAEHPAD@Z
-    inline int32_t Load(char* arg1)
+    inline i32 Load(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmVehInfo, char*>>(0x5297B0, this, arg1);
+        return stub<member_func_t<i32, mmVehInfo, char*>>(0x5297B0, this, arg1);
     }
 
     // 0x529A00 | ?HasColorVariations@mmVehInfo@@QAEHXZ
-    inline int32_t HasColorVariations()
+    inline i32 HasColorVariations()
     {
-        return stub<member_func_t<int32_t, mmVehInfo>>(0x529A00, this);
+        return stub<member_func_t<i32, mmVehInfo>>(0x529A00, this);
     }
 
     // 0x529A20 | ?Print@mmVehInfo@@QAEXXZ
@@ -76,9 +76,9 @@ public:
     }
 
     // 0x529AA0 | ?GetTuningCRC@mmVehInfo@@QAEKXZ
-    inline uint32_t GetTuningCRC()
+    inline u32 GetTuningCRC()
     {
-        return stub<member_func_t<uint32_t, mmVehInfo>>(0x529AA0, this);
+        return stub<member_func_t<u32, mmVehInfo>>(0x529AA0, this);
     }
 
     // 0x529AB0 | ?ComputeTuningCRC@mmVehInfo@@QAEXXZ

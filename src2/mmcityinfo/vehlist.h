@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -64,15 +64,15 @@ public:
     }
 
     // 0x5245D0 | ?Init@mmVehList@@QAEXH@Z
-    inline void Init(int32_t arg1)
+    inline void Init(i32 arg1)
     {
-        return stub<member_func_t<void, mmVehList, int32_t>>(0x5245D0, this, arg1);
+        return stub<member_func_t<void, mmVehList, i32>>(0x5245D0, this, arg1);
     }
 
     // 0x5245E0 | ?GetVehicleInfo@mmVehList@@QAEPAVmmVehInfo@@H@Z
-    inline class mmVehInfo* GetVehicleInfo(int32_t arg1)
+    inline class mmVehInfo* GetVehicleInfo(i32 arg1)
     {
-        return stub<member_func_t<class mmVehInfo*, mmVehList, int32_t>>(0x5245E0, this, arg1);
+        return stub<member_func_t<class mmVehInfo*, mmVehList, i32>>(0x5245E0, this, arg1);
     }
 
     // 0x524610 | ?GetVehicleInfo@mmVehList@@QAEPAVmmVehInfo@@PAD@Z
@@ -88,9 +88,9 @@ public:
     }
 
     // 0x5246B0 | ?GetVehicleID@mmVehList@@QAEHPAD@Z
-    inline int32_t GetVehicleID(char* arg1)
+    inline i32 GetVehicleID(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmVehList, char*>>(0x5246B0, this, arg1);
+        return stub<member_func_t<i32, mmVehList, char*>>(0x5246B0, this, arg1);
     }
 
     // 0x524720 | ?Load@mmVehList@@QAEXPAD@Z

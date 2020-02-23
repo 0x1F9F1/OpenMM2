@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -128,9 +128,9 @@ public:
     }
 
     // 0x42D5E0 | ?Init@mmHUD@@QAEXPADPAVmmPlayer@@H@Z
-    inline void Init(char* arg1, class mmPlayer* arg2, int32_t arg3)
+    inline void Init(char* arg1, class mmPlayer* arg2, i32 arg3)
     {
-        return stub<member_func_t<void, mmHUD, char*, class mmPlayer*, int32_t>>(0x42D5E0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmHUD, char*, class mmPlayer*, i32>>(0x42D5E0, this, arg1, arg2, arg3);
     }
 
     // 0x42D910 | ?Enable@mmHUD@@QAEXXZ
@@ -140,9 +140,9 @@ public:
     }
 
     // 0x42D970 | ?Disable@mmHUD@@QAEXH@Z
-    inline void Disable(int32_t arg1)
+    inline void Disable(i32 arg1)
     {
-        return stub<member_func_t<void, mmHUD, int32_t>>(0x42D970, this, arg1);
+        return stub<member_func_t<void, mmHUD, i32>>(0x42D970, this, arg1);
     }
 
     // 0x42D9D0 | ?Toggle@mmHUD@@QAEXXZ
@@ -158,9 +158,9 @@ public:
     }
 
     // 0x42DA90 | ?SetDash@mmHUD@@QAEXH@Z
-    inline void SetDash(int32_t arg1)
+    inline void SetDash(i32 arg1)
     {
-        return stub<member_func_t<void, mmHUD, int32_t>>(0x42DA90, this, arg1);
+        return stub<member_func_t<void, mmHUD, i32>>(0x42DA90, this, arg1);
     }
 
     // 0x42DAB0 | ?ActivateDash@mmHUD@@QAEXXZ
@@ -176,9 +176,9 @@ public:
     }
 
     // 0x42DB10 | ?IsDashActive@mmHUD@@QAEHXZ
-    inline int32_t IsDashActive()
+    inline i32 IsDashActive()
     {
-        return stub<member_func_t<int32_t, mmHUD>>(0x42DB10, this);
+        return stub<member_func_t<i32, mmHUD>>(0x42DB10, this);
     }
 
     // 0x42DB60 | ?SetTransparency@mmHUD@@QAEX_N@Z
@@ -200,9 +200,9 @@ public:
     }
 
     // 0x42E0A0 | ?SetStandings@mmHUD@@QAEXHH@Z
-    inline void SetStandings(int32_t arg1, int32_t arg2)
+    inline void SetStandings(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, mmHUD, int32_t, int32_t>>(0x42E0A0, this, arg1, arg2);
+        return stub<member_func_t<void, mmHUD, i32, i32>>(0x42E0A0, this, arg1, arg2);
     }
 
     // 0x42E0E0 | ?PostLapTime@mmHUD@@QAEX_N@Z
@@ -212,15 +212,15 @@ public:
     }
 
     // 0x42E1D0 | ?SetWPCleared@mmHUD@@QAEXHH@Z
-    inline void SetWPCleared(int32_t arg1, int32_t arg2)
+    inline void SetWPCleared(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, mmHUD, int32_t, int32_t>>(0x42E1D0, this, arg1, arg2);
+        return stub<member_func_t<void, mmHUD, i32, i32>>(0x42E1D0, this, arg1, arg2);
     }
 
     // 0x42E1F0 | ?SetMessage@mmHUD@@QAEXPAULocString@@MH@Z
-    inline void SetMessage(struct LocString* arg1, float arg2, int32_t arg3)
+    inline void SetMessage(struct LocString* arg1, f32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, mmHUD, struct LocString*, float, int32_t>>(0x42E1F0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmHUD, struct LocString*, f32, i32>>(0x42E1F0, this, arg1, arg2, arg3);
     }
 
     // 0x42E240 | ?SetMessage2@mmHUD@@QAEXPAULocString@@@Z
@@ -236,22 +236,21 @@ public:
     }
 
     // 0x42E290 | ?AddPlayer@mmHUD@@QAEXPBDKHH@Z
-    inline void AddPlayer(char const* arg1, uint32_t arg2, int32_t arg3, int32_t arg4)
+    inline void AddPlayer(char const* arg1, u32 arg2, i32 arg3, i32 arg4)
     {
-        return stub<member_func_t<void, mmHUD, char const*, uint32_t, int32_t, int32_t>>(
-            0x42E290, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, mmHUD, char const*, u32, i32, i32>>(0x42E290, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x42E2C0 | ?SetScore@mmHUD@@QAEXKH@Z
-    inline void SetScore(uint32_t arg1, int32_t arg2)
+    inline void SetScore(u32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, mmHUD, uint32_t, int32_t>>(0x42E2C0, this, arg1, arg2);
+        return stub<member_func_t<void, mmHUD, u32, i32>>(0x42E2C0, this, arg1, arg2);
     }
 
     // 0x42E2E0 | ?RemovePlayer@mmHUD@@QAEXK@Z
-    inline void RemovePlayer(uint32_t arg1)
+    inline void RemovePlayer(u32 arg1)
     {
-        return stub<member_func_t<void, mmHUD, uint32_t>>(0x42E2E0, this, arg1);
+        return stub<member_func_t<void, mmHUD, u32>>(0x42E2E0, this, arg1);
     }
 
     // 0x42E300 | ?ActivateGold@mmHUD@@QAEXXZ
@@ -267,9 +266,9 @@ public:
     }
 
     // 0x42E320 | ?GetTime@mmHUD@@QAEXPADM@Z
-    inline void GetTime(char* arg1, float arg2)
+    inline void GetTime(char* arg1, f32 arg2)
     {
-        return stub<member_func_t<void, mmHUD, char*, float>>(0x42E320, this, arg1, arg2);
+        return stub<member_func_t<void, mmHUD, char*, f32>>(0x42E320, this, arg1, arg2);
     }
 
     // 0x42E340 | ?PlayNetAlert@mmHUD@@QAEXXZ
@@ -279,9 +278,9 @@ public:
     }
 
     // 0x42E360 | ?TogglePositionDisplay@mmHUD@@QAEXH@Z
-    inline void TogglePositionDisplay(int32_t arg1)
+    inline void TogglePositionDisplay(i32 arg1)
     {
-        return stub<member_func_t<void, mmHUD, int32_t>>(0x42E360, this, arg1);
+        return stub<member_func_t<void, mmHUD, i32>>(0x42E360, this, arg1);
     }
 
     // 0x42E3C0 | ?GetPosHdg@mmHUD@@QAEXAAVVector4@@@Z
@@ -315,9 +314,9 @@ public:
     }
 
     // 0x42D2E0 | ?ResChange@mmHUD@@UAEXHH@Z
-    inline void ResChange(int32_t arg1, int32_t arg2) override
+    inline void ResChange(i32 arg1, i32 arg2) override
     {
-        return stub<member_func_t<void, mmHUD, int32_t, int32_t>>(0x42D2E0, this, arg1, arg2);
+        return stub<member_func_t<void, mmHUD, i32, i32>>(0x42D2E0, this, arg1, arg2);
     }
 
     // 0x42DF10 | ?UpdatePaused@mmHUD@@UAEXXZ
@@ -339,15 +338,15 @@ public:
     }
 
     // 0x42E490 | ?Init@mmTimer@@QAEXHMH@Z
-    inline void Init(int32_t arg1, float arg2, int32_t arg3)
+    inline void Init(i32 arg1, f32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, mmTimer, int32_t, float, int32_t>>(0x42E490, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmTimer, i32, f32, i32>>(0x42E490, this, arg1, arg2, arg3);
     }
 
     // 0x42E4C0 | ?GetTime@mmTimer@@QAEMXZ
-    inline float GetTime()
+    inline f32 GetTime()
     {
-        return stub<member_func_t<float, mmTimer>>(0x42E4C0, this);
+        return stub<member_func_t<f32, mmTimer>>(0x42E4C0, this);
     }
 
     // 0x42E610 | ?Start@mmTimer@@QAEXXZ
@@ -411,9 +410,9 @@ public:
     }
 
     // 0x42E7A0 | ?ReColorArrow@mmArrow@@AAEXH@Z
-    inline void ReColorArrow(int32_t arg1)
+    inline void ReColorArrow(i32 arg1)
     {
-        return stub<member_func_t<void, mmArrow, int32_t>>(0x42E7A0, this, arg1);
+        return stub<member_func_t<void, mmArrow, i32>>(0x42E7A0, this, arg1);
     }
 
     // 0x42E710 | ??1mmArrow@@UAE@XZ

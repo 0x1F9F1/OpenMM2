@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -49,52 +49,52 @@ public:
     }
 
     // 0x52A0E0 | ?Init@mmPositions@@QAEXH@Z
-    inline void Init(int32_t arg1)
+    inline void Init(i32 arg1)
     {
-        return stub<member_func_t<void, mmPositions, int32_t>>(0x52A0E0, this, arg1);
+        return stub<member_func_t<void, mmPositions, i32>>(0x52A0E0, this, arg1);
     }
 
     // 0x52A110 | ?Load@mmPositions@@QAEHPAD@Z
-    inline int32_t Load(char* arg1)
+    inline i32 Load(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmPositions, char*>>(0x52A110, this, arg1);
+        return stub<member_func_t<i32, mmPositions, char*>>(0x52A110, this, arg1);
     }
 
     // 0x52A300 | ?GetCount@mmPositions@@QAEHXZ
-    inline int32_t GetCount()
+    inline i32 GetCount()
     {
-        return stub<member_func_t<int32_t, mmPositions>>(0x52A300, this);
+        return stub<member_func_t<i32, mmPositions>>(0x52A300, this);
     }
 
     // 0x52A310 | ?GetVector4@mmPositions@@QAEAAVVector4@@H@Z
-    inline class Vector4& GetVector4(int32_t arg1)
+    inline class Vector4& GetVector4(i32 arg1)
     {
-        return stub<member_func_t<class Vector4&, mmPositions, int32_t>>(0x52A310, this, arg1);
+        return stub<member_func_t<class Vector4&, mmPositions, i32>>(0x52A310, this, arg1);
     }
 
     // 0x52A340 | ?GetFrameRate@mmPositions@@QAEHH@Z
-    inline int32_t GetFrameRate(int32_t arg1)
+    inline i32 GetFrameRate(i32 arg1)
     {
-        return stub<member_func_t<int32_t, mmPositions, int32_t>>(0x52A340, this, arg1);
+        return stub<member_func_t<i32, mmPositions, i32>>(0x52A340, this, arg1);
     }
 
     // 0x52A370 | ?Dump@mmPositions@@QAEHPAD@Z
-    inline int32_t Dump(char* arg1)
+    inline i32 Dump(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmPositions, char*>>(0x52A370, this, arg1);
+        return stub<member_func_t<i32, mmPositions, char*>>(0x52A370, this, arg1);
     }
 
     // 0x52A380 | ?Recall@mmPositions@@QAEHHPAVMatrix34@@PAHPAD@Z
-    inline int32_t Recall(int32_t arg1, class Matrix34* arg2, int32_t* arg3, char* arg4)
+    inline i32 Recall(i32 arg1, class Matrix34* arg2, i32* arg3, char* arg4)
     {
-        return stub<member_func_t<int32_t, mmPositions, int32_t, class Matrix34*, int32_t*, char*>>(
+        return stub<member_func_t<i32, mmPositions, i32, class Matrix34*, i32*, char*>>(
             0x52A380, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x52A410 | ?Register@mmPositions@@QAEHAAVVector4@@HHHHPAD@Z
-    inline int32_t Register(class Vector4& arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5, char* arg6)
+    inline i32 Register(class Vector4& arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, char* arg6)
     {
-        return stub<member_func_t<int32_t, mmPositions, class Vector4&, int32_t, int32_t, int32_t, int32_t, char*>>(
+        return stub<member_func_t<i32, mmPositions, class Vector4&, i32, i32, i32, i32, char*>>(
             0x52A410, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 };

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -51,21 +51,21 @@ public:
     // MainMenu::`vftable' @ 0x5B45E0
 
     // 0x505C30 | ??0MainMenu@@QAE@H@Z
-    inline MainMenu(int32_t arg1)
+    inline MainMenu(i32 arg1)
     {
-        stub<member_func_t<void, MainMenu, int32_t>>(0x505C30, this, arg1);
+        stub<member_func_t<void, MainMenu, i32>>(0x505C30, this, arg1);
     }
 
     // 0x5060B0 | ?EnableReplay@MainMenu@@QAEXH@Z
-    inline void EnableReplay(int32_t arg1)
+    inline void EnableReplay(i32 arg1)
     {
-        return stub<member_func_t<void, MainMenu, int32_t>>(0x5060B0, this, arg1);
+        return stub<member_func_t<void, MainMenu, i32>>(0x5060B0, this, arg1);
     }
 
     // 0x5060D0 | ?IsReplayReadOnly@MainMenu@@QAEHXZ
-    inline int32_t IsReplayReadOnly()
+    inline i32 IsReplayReadOnly()
     {
-        return stub<member_func_t<int32_t, MainMenu>>(0x5060D0, this);
+        return stub<member_func_t<i32, MainMenu>>(0x5060D0, this);
     }
 
     // 0x5060E0 | ?InitDriver@MainMenu@@QAEXXZ
@@ -81,9 +81,9 @@ public:
     }
 
     // 0x5067C0 | ?SetPlayerPick@MainMenu@@QAEXH@Z
-    inline void SetPlayerPick(int32_t arg1)
+    inline void SetPlayerPick(i32 arg1)
     {
-        return stub<member_func_t<void, MainMenu, int32_t>>(0x5067C0, this, arg1);
+        return stub<member_func_t<void, MainMenu, i32>>(0x5067C0, this, arg1);
     }
 
     // 0x5067D0 | ?DecPlayer@MainMenu@@QAEXXZ
@@ -129,9 +129,9 @@ public:
     }
 
     // 0x506990 | ?DisplayDriverInfo@MainMenu@@QAEXPAD0000H@Z
-    inline void DisplayDriverInfo(char* arg1, char* arg2, char* arg3, char* arg4, char* arg5, int32_t arg6)
+    inline void DisplayDriverInfo(char* arg1, char* arg2, char* arg3, char* arg4, char* arg5, i32 arg6)
     {
-        return stub<member_func_t<void, MainMenu, char*, char*, char*, char*, char*, int32_t>>(
+        return stub<member_func_t<void, MainMenu, char*, char*, char*, char*, char*, i32>>(
             0x506990, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
@@ -148,9 +148,9 @@ public:
     }
 
     // 0x506A80 | ?FocusDescription@MainMenu@@QAEXHH@Z
-    inline void FocusDescription(int32_t arg1, int32_t arg2)
+    inline void FocusDescription(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, MainMenu, int32_t, int32_t>>(0x506A80, this, arg1, arg2);
+        return stub<member_func_t<void, MainMenu, i32, i32>>(0x506A80, this, arg1, arg2);
     }
 
     // 0x506020 | ??1MainMenu@@UAE@XZ

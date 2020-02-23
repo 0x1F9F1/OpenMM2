@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -38,15 +38,15 @@ public:
     // Vehicle::`vftable' @ 0x5B453C
 
     // 0x5056D0 | ??0Vehicle@@QAE@H@Z
-    inline Vehicle(int32_t arg1)
+    inline Vehicle(i32 arg1)
     {
-        stub<member_func_t<void, Vehicle, int32_t>>(0x5056D0, this, arg1);
+        stub<member_func_t<void, Vehicle, i32>>(0x5056D0, this, arg1);
     }
 
     // 0x5057C0 | ?SetSubMenu@Vehicle@@QAEXH@Z
-    inline void SetSubMenu(int32_t arg1)
+    inline void SetSubMenu(i32 arg1)
     {
-        return stub<member_func_t<void, Vehicle, int32_t>>(0x5057C0, this, arg1);
+        return stub<member_func_t<void, Vehicle, i32>>(0x5057C0, this, arg1);
     }
 
     // 0x5057E0 | ?SetSubMenuButtons@Vehicle@@QAEXXZ

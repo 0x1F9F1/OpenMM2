@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -41,22 +41,22 @@ public:
     // Dialog_DriverRec::`vftable' @ 0x5B404C
 
     // 0x4FC870 | ??0Dialog_DriverRec@@QAE@HMMMMPAD@Z
-    inline Dialog_DriverRec(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
+    inline Dialog_DriverRec(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
     {
-        stub<member_func_t<void, Dialog_DriverRec, int32_t, float, float, float, float, char*>>(
+        stub<member_func_t<void, Dialog_DriverRec, i32, f32, f32, f32, f32, char*>>(
             0x4FC870, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4FCD80 | ?InitDriverRecord@Dialog_DriverRec@@QAEXH@Z
-    inline void InitDriverRecord(int32_t arg1)
+    inline void InitDriverRecord(i32 arg1)
     {
-        return stub<member_func_t<void, Dialog_DriverRec, int32_t>>(0x4FCD80, this, arg1);
+        return stub<member_func_t<void, Dialog_DriverRec, i32>>(0x4FCD80, this, arg1);
     }
 
     // 0x4FCE50 | ?AddDriverRecord@Dialog_DriverRec@@QAEHHPADHM0H@Z
-    inline int32_t AddDriverRecord(int32_t arg1, char* arg2, int32_t arg3, float arg4, char* arg5, int32_t arg6)
+    inline i32 AddDriverRecord(i32 arg1, char* arg2, i32 arg3, f32 arg4, char* arg5, i32 arg6)
     {
-        return stub<member_func_t<int32_t, Dialog_DriverRec, int32_t, char*, int32_t, float, char*, int32_t>>(
+        return stub<member_func_t<i32, Dialog_DriverRec, i32, char*, i32, f32, char*, i32>>(
             0x4FCE50, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
@@ -67,9 +67,9 @@ public:
     }
 
     // 0x4FD300 | ?SetRecordPosition@Dialog_DriverRec@@QAEXH@Z
-    inline void SetRecordPosition(int32_t arg1)
+    inline void SetRecordPosition(i32 arg1)
     {
-        return stub<member_func_t<void, Dialog_DriverRec, int32_t>>(0x4FD300, this, arg1);
+        return stub<member_func_t<void, Dialog_DriverRec, i32>>(0x4FD300, this, arg1);
     }
 
     // 0x4FD320 | ?SetSortState@Dialog_DriverRec@@QAEXXZ

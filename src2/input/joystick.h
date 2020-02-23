@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -39,9 +39,9 @@ class ioJoystick
 {
 public:
     // 0x4BB7F0 | ?EnumDeviceProc@ioJoystick@@CGHPBUDIDEVICEINSTANCEA@@PAX@Z
-    static inline int32_t __stdcall EnumDeviceProc(struct DIDEVICEINSTANCEA const* arg1, void* arg2)
+    static inline i32 __stdcall EnumDeviceProc(struct DIDEVICEINSTANCEA const* arg1, void* arg2)
     {
-        return stub<stdcall_t<int32_t, struct DIDEVICEINSTANCEA const*, void*>>(0x4BB7F0, arg1, arg2);
+        return stub<stdcall_t<i32, struct DIDEVICEINSTANCEA const*, void*>>(0x4BB7F0, arg1, arg2);
     }
 
     // 0x4BBA00 | ?BeginAll@ioJoystick@@SAXXZ
@@ -69,9 +69,9 @@ public:
     }
 
     // 0x4BBAE0 | ?EnumObjectProc@ioJoystick@@CGHPBUDIDEVICEOBJECTINSTANCEA@@PAX@Z
-    static inline int32_t __stdcall EnumObjectProc(struct DIDEVICEOBJECTINSTANCEA const* arg1, void* arg2)
+    static inline i32 __stdcall EnumObjectProc(struct DIDEVICEOBJECTINSTANCEA const* arg1, void* arg2)
     {
-        return stub<stdcall_t<int32_t, struct DIDEVICEOBJECTINSTANCEA const*, void*>>(0x4BBAE0, arg1, arg2);
+        return stub<stdcall_t<i32, struct DIDEVICEOBJECTINSTANCEA const*, void*>>(0x4BBAE0, arg1, arg2);
     }
 
     // 0x4BBAF0 | ?Begin@ioJoystick@@AAEXXZ
@@ -99,8 +99,8 @@ public:
     }
 
     // 0x6A3968 | ?STICKS@ioJoystick@@0PAV1@A
-    static inline extern_var(0x6A3968, class ioJoystick*, STICKS);
+    inline extern_var(0x6A3968, class ioJoystick*, STICKS);
 
     // 0x6A3AAC | ?StickCount@ioJoystick@@0HA
-    static inline extern_var(0x6A3AAC, int32_t, StickCount);
+    inline extern_var(0x6A3AAC, int32_t, StickCount);
 };

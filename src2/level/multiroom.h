@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -45,15 +45,15 @@ public:
     // lvlMultiRoomInstance::`vftable' @ 0x5B1C48
 
     // 0x467C40 | ?Create@lvlMultiRoomInstance@@SAXPAVlvlInstance@@H@Z
-    static inline void Create(class lvlInstance* arg1, int32_t arg2)
+    static inline void Create(class lvlInstance* arg1, i32 arg2)
     {
-        return stub<cdecl_t<void, class lvlInstance*, int32_t>>(0x467C40, arg1, arg2);
+        return stub<cdecl_t<void, class lvlInstance*, i32>>(0x467C40, arg1, arg2);
     }
 
     // 0x467F70 | ??0lvlMultiRoomInstance@@AAE@PAVlvlInstance@@PAUlvlMultiRoomState@@H@Z
-    inline lvlMultiRoomInstance(class lvlInstance* arg1, struct lvlMultiRoomState* arg2, int32_t arg3)
+    inline lvlMultiRoomInstance(class lvlInstance* arg1, struct lvlMultiRoomState* arg2, i32 arg3)
     {
-        stub<member_func_t<void, lvlMultiRoomInstance, class lvlInstance*, struct lvlMultiRoomState*, int32_t>>(
+        stub<member_func_t<void, lvlMultiRoomInstance, class lvlInstance*, struct lvlMultiRoomState*, i32>>(
             0x467F70, this, arg1, arg2, arg3);
     }
 
@@ -94,15 +94,15 @@ public:
     }
 
     // 0x467BA0 | ?Draw@lvlMultiRoomInstance@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
+    inline void Draw(i32 arg1) override
     {
-        return stub<member_func_t<void, lvlMultiRoomInstance, int32_t>>(0x467BA0, this, arg1);
+        return stub<member_func_t<void, lvlMultiRoomInstance, i32>>(0x467BA0, this, arg1);
     }
 
     // 0x467C30 | ?SizeOf@lvlMultiRoomInstance@@UAEIXZ
-    inline uint32_t SizeOf() override
+    inline u32 SizeOf() override
     {
-        return stub<member_func_t<uint32_t, lvlMultiRoomInstance>>(0x467C30, this);
+        return stub<member_func_t<u32, lvlMultiRoomInstance>>(0x467C30, this);
     }
 
     // 0x467B60 | ?IsLandmark@lvlMultiRoomInstance@@UAE_NXZ
@@ -124,8 +124,8 @@ public:
     }
 
     // 0x467C20 | ?GetBound@lvlMultiRoomInstance@@UAEPBVphBound@@H@Z
-    inline class phBound const* GetBound(int32_t arg1) override
+    inline class phBound const* GetBound(i32 arg1) override
     {
-        return stub<member_func_t<class phBound const*, lvlMultiRoomInstance, int32_t>>(0x467C20, this, arg1);
+        return stub<member_func_t<class phBound const*, lvlMultiRoomInstance, i32>>(0x467C20, this, arg1);
     }
 };

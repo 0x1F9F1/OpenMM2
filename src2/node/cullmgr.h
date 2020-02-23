@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -43,9 +43,9 @@ public:
     // asCullManager::`vftable' @ 0x5B291C
 
     // 0x4A1290 | ??0asCullManager@@QAE@HH@Z
-    inline asCullManager(int32_t arg1, int32_t arg2)
+    inline asCullManager(i32 arg1, i32 arg2)
     {
-        stub<member_func_t<void, asCullManager, int32_t, int32_t>>(0x4A1290, this, arg1, arg2);
+        stub<member_func_t<void, asCullManager, i32, i32>>(0x4A1290, this, arg1, arg2);
     }
 
     // 0x4A1440 | ?DisplayVersionString@asCullManager@@IAEXXZ
@@ -62,7 +62,7 @@ public:
     }
 
     // 0x661784 | ?Instance@asCullManager@@1PAV1@A
-    static inline extern_var(0x661784, class asCullManager*, Instance);
+    inline extern_var(0x661784, class asCullManager*, Instance);
 
     // 0x4A1370 | ??1asCullManager@@UAE@XZ
     inline ~asCullManager() override

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -92,9 +92,9 @@ inline void RotateMatrix(class Matrix34* arg1, class Vector3 const& arg2)
 }
 
 // 0x4950E0 | ?ReOrderVerts@@YAXPAVVector3@@PAM@Z
-inline void ReOrderVerts(class Vector3* arg1, float* arg2)
+inline void ReOrderVerts(class Vector3* arg1, f32* arg2)
 {
-    return stub<cdecl_t<void, class Vector3*, float*>>(0x4950E0, arg1, arg2);
+    return stub<cdecl_t<void, class Vector3*, f32*>>(0x4950E0, arg1, arg2);
 }
 
 // 0x495170 | ?VertOrderIsOK@@YA_NPBVVector3@@@Z
@@ -104,74 +104,72 @@ inline bool VertOrderIsOK(class Vector3 const* arg1)
 }
 
 // 0x495220 | ?CubeRoot@@YAMM@Z
-inline float CubeRoot(float arg1)
+inline f32 CubeRoot(f32 arg1)
 {
-    return stub<cdecl_t<float, float>>(0x495220, arg1);
+    return stub<cdecl_t<f32, f32>>(0x495220, arg1);
 }
 
 // 0x495270 | ?ArcTangent@@YAMMM@Z
-inline float ArcTangent(float arg1, float arg2)
+inline f32 ArcTangent(f32 arg1, f32 arg2)
 {
-    return stub<cdecl_t<float, float, float>>(0x495270, arg1, arg2);
+    return stub<cdecl_t<f32, f32, f32>>(0x495270, arg1, arg2);
 }
 
 // 0x4952D0 | ?RealQuadratic@@YAHMMPAM0M@Z
-inline int32_t RealQuadratic(float arg1, float arg2, float* arg3, float* arg4, float arg5)
+inline i32 RealQuadratic(f32 arg1, f32 arg2, f32* arg3, f32* arg4, f32 arg5)
 {
-    return stub<cdecl_t<int32_t, float, float, float*, float*, float>>(0x4952D0, arg1, arg2, arg3, arg4, arg5);
+    return stub<cdecl_t<i32, f32, f32, f32*, f32*, f32>>(0x4952D0, arg1, arg2, arg3, arg4, arg5);
 }
 
 // 0x495350 | ?RealCubic@@YAHMMMPAM00M@Z
-inline int32_t RealCubic(float arg1, float arg2, float arg3, float* arg4, float* arg5, float* arg6, float arg7)
+inline i32 RealCubic(f32 arg1, f32 arg2, f32 arg3, f32* arg4, f32* arg5, f32* arg6, f32 arg7)
 {
-    return stub<cdecl_t<int32_t, float, float, float, float*, float*, float*, float>>(
-        0x495350, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+    return stub<cdecl_t<i32, f32, f32, f32, f32*, f32*, f32*, f32>>(0x495350, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 }
 
 // 0x495520 | ?RealQuartic@@YAHMMMMPAM000M@Z
-inline int32_t RealQuartic(
-    float arg1, float arg2, float arg3, float arg4, float* arg5, float* arg6, float* arg7, float* arg8, float arg9)
+inline i32 RealQuartic(f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32* arg5, f32* arg6, f32* arg7, f32* arg8, f32 arg9)
 {
-    return stub<cdecl_t<int32_t, float, float, float, float, float*, float*, float*, float*, float>>(
+    return stub<cdecl_t<i32, f32, f32, f32, f32, f32*, f32*, f32*, f32*, f32>>(
         0x495520, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 }
 
 // 0x495A40 | ?FindTValuesLineToCircle@@YAHABVVector3@@000MPAMPAV1@1121@Z
-inline int32_t FindTValuesLineToCircle(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
-    class Vector3 const& arg4, float arg5, float* arg6, class Vector3* arg7, float* arg8, float* arg9,
-    class Vector3* arg10, float* arg11)
+inline i32 FindTValuesLineToCircle(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
+    class Vector3 const& arg4, f32 arg5, f32* arg6, class Vector3* arg7, f32* arg8, f32* arg9, class Vector3* arg10,
+    f32* arg11)
 {
-    return stub<cdecl_t<int32_t, class Vector3 const&, class Vector3 const&, class Vector3 const&, class Vector3 const&,
-        float, float*, class Vector3*, float*, float*, class Vector3*, float*>>(
+    return stub<cdecl_t<i32, class Vector3 const&, class Vector3 const&, class Vector3 const&, class Vector3 const&,
+        f32, f32*, class Vector3*, f32*, f32*, class Vector3*, f32*>>(
         0x495A40, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 }
 
 // 0x495D60 | ?FindHomingAccel@@YAMMMMMM@Z
-inline float FindHomingAccel(float arg1, float arg2, float arg3, float arg4, float arg5)
+inline f32 FindHomingAccel(f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
 {
-    return stub<cdecl_t<float, float, float, float, float, float>>(0x495D60, arg1, arg2, arg3, arg4, arg5);
+    return stub<cdecl_t<f32, f32, f32, f32, f32, f32>>(0x495D60, arg1, arg2, arg3, arg4, arg5);
 }
 
 // 0x495DE0 | ?FindHomingAccel3D@@YA?AVVector3@@MABV1@000@Z
-inline class Vector3 FindHomingAccel3D(float arg1, class Vector3 const& arg2, class Vector3 const& arg3,
+inline class Vector3 FindHomingAccel3D(f32 arg1, class Vector3 const& arg2, class Vector3 const& arg3,
     class Vector3 const& arg4, class Vector3 const& arg5)
 {
-    return stub<cdecl_t<class Vector3, float, class Vector3 const&, class Vector3 const&, class Vector3 const&,
+    return stub<cdecl_t<class Vector3, f32, class Vector3 const&, class Vector3 const&, class Vector3 const&,
         class Vector3 const&>>(0x495DE0, arg1, arg2, arg3, arg4, arg5);
 }
 
 // 0x495E80 | ?FindHomingAngAccel@@YA?AVVector3@@ABV1@0MM@Z
-inline class Vector3 FindHomingAngAccel(class Vector3 const& arg1, class Vector3 const& arg2, float arg3, float arg4)
+inline class Vector3 FindHomingAngAccel(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, f32 arg4)
 {
-    return stub<cdecl_t<class Vector3, class Vector3 const&, class Vector3 const&, float, float>>(
+    return stub<cdecl_t<class Vector3, class Vector3 const&, class Vector3 const&, f32, f32>>(
         0x495E80, arg1, arg2, arg3, arg4);
 }
 
 // 0x495FF0 | ?FindHomingAngAccel3D@@YA?AVVector3@@MMABVMatrix34@@ABV1@01@Z
-inline class Vector3 FindHomingAngAccel3D(float arg1, float arg2, class Matrix34 const& arg3, class Vector3 const& arg4,
+inline class Vector3 FindHomingAngAccel3D(f32 arg1, f32 arg2, class Matrix34 const& arg3, class Vector3 const& arg4,
     class Matrix34 const& arg5, class Vector3 const& arg6)
 {
-    return stub<cdecl_t<class Vector3, float, float, class Matrix34 const&, class Vector3 const&, class Matrix34 const&,
+    return stub<cdecl_t<class Vector3, f32, f32, class Matrix34 const&, class Vector3 const&, class Matrix34 const&,
         class Vector3 const&>>(0x495FF0, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
@@ -316,9 +314,9 @@ public:
     }
 
     // 0x496790 | ?Diagonal@Matrix33@@QAEXM@Z
-    inline void Diagonal(float arg1)
+    inline void Diagonal(f32 arg1)
     {
-        return stub<member_func_t<void, Matrix33, float>>(0x496790, this, arg1);
+        return stub<member_func_t<void, Matrix33, f32>>(0x496790, this, arg1);
     }
 
     // 0x4967C0 | ?Diagonal@Matrix33@@QAEXABVVector3@@@Z

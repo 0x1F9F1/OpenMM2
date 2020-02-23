@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -63,11 +63,11 @@ public:
     }
 
     // 0x43E7A0 | ?Init@RadialGauge@@QAEXPAVmodStatic@@PAPAVmodShader@@VVector3@@PBM3M@Z
-    inline void Init(class modStatic* arg1, class modShader** arg2, class Vector3 arg3, float const* arg4,
-        float const* arg5, float arg6)
+    inline void Init(
+        class modStatic* arg1, class modShader** arg2, class Vector3 arg3, f32 const* arg4, f32 const* arg5, f32 arg6)
     {
-        return stub<member_func_t<void, RadialGauge, class modStatic*, class modShader**, class Vector3, float const*,
-            float const*, float>>(0x43E7A0, this, arg1, arg2, arg3, arg4, arg5, arg6);
+        return stub<member_func_t<void, RadialGauge, class modStatic*, class modShader**, class Vector3, f32 const*,
+            f32 const*, f32>>(0x43E7A0, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x43E9F0 | ?Cull@RadialGauge@@QAEXPBVMatrix34@@@Z
@@ -77,9 +77,9 @@ public:
     }
 
     // 0x43ED50 | ?GetArrowAngle@RadialGauge@@AAEMXZ
-    inline float GetArrowAngle()
+    inline f32 GetArrowAngle()
     {
-        return stub<member_func_t<float, RadialGauge>>(0x43ED50, this);
+        return stub<member_func_t<f32, RadialGauge>>(0x43ED50, this);
     }
 
     // 0x62762C | ?bDebugPivot@RadialGauge@@0_NA
@@ -114,10 +114,9 @@ public:
     }
 
     // 0x43EFB0 | ?Init@mmSlidingGauge@@QAEXPADPAM1HPAVmmExternalView@@H@Z
-    inline void Init(char* arg1, float* arg2, float* arg3, int32_t arg4, class mmExternalView* arg5, int32_t arg6)
+    inline void Init(char* arg1, f32* arg2, f32* arg3, i32 arg4, class mmExternalView* arg5, i32 arg6)
     {
-        return stub<
-            member_func_t<void, mmSlidingGauge, char*, float*, float*, int32_t, class mmExternalView*, int32_t>>(
+        return stub<member_func_t<void, mmSlidingGauge, char*, f32*, f32*, i32, class mmExternalView*, i32>>(
             0x43EFB0, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
@@ -144,9 +143,9 @@ public:
     }
 
     // 0x43EE70 | ?Init@mmLinearGauge@@QAEXPADPAM1HPAVmmExternalView@@@Z
-    inline void Init(char* arg1, float* arg2, float* arg3, int32_t arg4, class mmExternalView* arg5)
+    inline void Init(char* arg1, f32* arg2, f32* arg3, i32 arg4, class mmExternalView* arg5)
     {
-        return stub<member_func_t<void, mmLinearGauge, char*, float*, float*, int32_t, class mmExternalView*>>(
+        return stub<member_func_t<void, mmLinearGauge, char*, f32*, f32*, i32, class mmExternalView*>>(
             0x43EE70, this, arg1, arg2, arg3, arg4, arg5);
     }
 

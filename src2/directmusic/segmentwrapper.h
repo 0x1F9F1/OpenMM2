@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -112,15 +112,15 @@ public:
     }
 
     // 0x517A40 | ?Play@SegmentWrapper@@QAE_NKK@Z
-    inline bool Play(uint32_t arg1, uint32_t arg2)
+    inline bool Play(u32 arg1, u32 arg2)
     {
-        return stub<member_func_t<bool, SegmentWrapper, uint32_t, uint32_t>>(0x517A40, this, arg1, arg2);
+        return stub<member_func_t<bool, SegmentWrapper, u32, u32>>(0x517A40, this, arg1, arg2);
     }
 
     // 0x517AE0 | ?SetGrooveLevel@SegmentWrapper@@QAE_NEE@Z
-    inline bool SetGrooveLevel(uint8_t arg1, uint8_t arg2)
+    inline bool SetGrooveLevel(u8 arg1, u8 arg2)
     {
-        return stub<member_func_t<bool, SegmentWrapper, uint8_t, uint8_t>>(0x517AE0, this, arg1, arg2);
+        return stub<member_func_t<bool, SegmentWrapper, u8, u8>>(0x517AE0, this, arg1, arg2);
     }
 
     // 0x517B40 | ?CleanUp@SegmentWrapper@@QAEXXZ

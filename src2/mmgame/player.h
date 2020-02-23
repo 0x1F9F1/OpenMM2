@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -73,9 +73,9 @@
 */
 
 // 0x404C70 | ?playerFilterSteering@@YAMM@Z
-inline float playerFilterSteering(float arg1)
+inline f32 playerFilterSteering(f32 arg1)
 {
-    return stub<cdecl_t<float, float>>(0x404C70, arg1);
+    return stub<cdecl_t<f32, f32>>(0x404C70, arg1);
 }
 
 // 0x5E0D28 | ?XcamCheat@@3HA
@@ -141,57 +141,57 @@ public:
     }
 
     // 0x404460 | ?SetMPPostCam@mmPlayer@@QAEXPAVMatrix34@@M@Z
-    inline void SetMPPostCam(class Matrix34* arg1, float arg2)
+    inline void SetMPPostCam(class Matrix34* arg1, f32 arg2)
     {
-        return stub<member_func_t<void, mmPlayer, class Matrix34*, float>>(0x404460, this, arg1, arg2);
+        return stub<member_func_t<void, mmPlayer, class Matrix34*, f32>>(0x404460, this, arg1, arg2);
     }
 
     // 0x404550 | ?IsPOV@mmPlayer@@QAEHXZ
-    inline int32_t IsPOV()
+    inline i32 IsPOV()
     {
-        return stub<member_func_t<int32_t, mmPlayer>>(0x404550, this);
+        return stub<member_func_t<i32, mmPlayer>>(0x404550, this);
     }
 
     // 0x404580 | ?SetWideFOV@mmPlayer@@QAEXH@Z
-    inline void SetWideFOV(int32_t arg1)
+    inline void SetWideFOV(i32 arg1)
     {
-        return stub<member_func_t<void, mmPlayer, int32_t>>(0x404580, this, arg1);
+        return stub<member_func_t<void, mmPlayer, i32>>(0x404580, this, arg1);
     }
 
     // 0x4046B0 | ?GetNextCycleCamIndex@mmPlayer@@IAEHXZ
-    inline int32_t GetNextCycleCamIndex()
+    inline i32 GetNextCycleCamIndex()
     {
-        return stub<member_func_t<int32_t, mmPlayer>>(0x4046B0, this);
+        return stub<member_func_t<i32, mmPlayer>>(0x4046B0, this);
     }
 
     // 0x4046D0 | ?GetNextCycleXCamIndex@mmPlayer@@IAEHXZ
-    inline int32_t GetNextCycleXCamIndex()
+    inline i32 GetNextCycleXCamIndex()
     {
-        return stub<member_func_t<int32_t, mmPlayer>>(0x4046D0, this);
+        return stub<member_func_t<i32, mmPlayer>>(0x4046D0, this);
     }
 
     // 0x4046F0 | ?GetCurrentGameCamIndex@mmPlayer@@IAEHXZ
-    inline int32_t GetCurrentGameCamIndex()
+    inline i32 GetCurrentGameCamIndex()
     {
-        return stub<member_func_t<int32_t, mmPlayer>>(0x4046F0, this);
+        return stub<member_func_t<i32, mmPlayer>>(0x4046F0, this);
     }
 
     // 0x404700 | ?GetCurrentXCamIndex@mmPlayer@@IAEHXZ
-    inline int32_t GetCurrentXCamIndex()
+    inline i32 GetCurrentXCamIndex()
     {
-        return stub<member_func_t<int32_t, mmPlayer>>(0x404700, this);
+        return stub<member_func_t<i32, mmPlayer>>(0x404700, this);
     }
 
     // 0x404710 | ?SetCamera@mmPlayer@@IAEXHH@Z
-    inline void SetCamera(int32_t arg1, int32_t arg2)
+    inline void SetCamera(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, mmPlayer, int32_t, int32_t>>(0x404710, this, arg1, arg2);
+        return stub<member_func_t<void, mmPlayer, i32, i32>>(0x404710, this, arg1, arg2);
     }
 
     // 0x404890 | ?GetCamera@mmPlayer@@IAEXAAH0@Z
-    inline void GetCamera(int32_t& arg1, int32_t& arg2)
+    inline void GetCamera(i32& arg1, i32& arg2)
     {
-        return stub<member_func_t<void, mmPlayer, int32_t&, int32_t&>>(0x404890, this, arg1, arg2);
+        return stub<member_func_t<void, mmPlayer, i32&, i32&>>(0x404890, this, arg1, arg2);
     }
 
     // 0x4048E0 | ?GetCurrentCameraPtr@mmPlayer@@AAEPAVcamCarCS@@XZ
@@ -213,15 +213,15 @@ public:
     }
 
     // 0x404C50 | ?SetSteering@mmPlayer@@QAEXM@Z
-    inline void SetSteering(float arg1)
+    inline void SetSteering(f32 arg1)
     {
-        return stub<member_func_t<void, mmPlayer, float>>(0x404C50, this, arg1);
+        return stub<member_func_t<void, mmPlayer, f32>>(0x404C50, this, arg1);
     }
 
     // 0x404C90 | ?FilterSteering@mmPlayer@@QAEMM@Z
-    inline float FilterSteering(float arg1)
+    inline f32 FilterSteering(f32 arg1)
     {
-        return stub<member_func_t<float, mmPlayer, float>>(0x404C90, this, arg1);
+        return stub<member_func_t<f32, mmPlayer, f32>>(0x404C90, this, arg1);
     }
 
     // 0x405340 | ?UpdateFF@mmPlayer@@QAEXXZ
@@ -237,15 +237,15 @@ public:
     }
 
     // 0x406140 | ?IsMaxDamaged@mmPlayer@@QAEHXZ
-    inline int32_t IsMaxDamaged()
+    inline i32 IsMaxDamaged()
     {
-        return stub<member_func_t<int32_t, mmPlayer>>(0x406140, this);
+        return stub<member_func_t<i32, mmPlayer>>(0x406140, this);
     }
 
     // 0x406160 | ?EnableRegen@mmPlayer@@QAEXH@Z
-    inline void EnableRegen(int32_t arg1)
+    inline void EnableRegen(i32 arg1)
     {
-        return stub<member_func_t<void, mmPlayer, int32_t>>(0x406160, this, arg1);
+        return stub<member_func_t<void, mmPlayer, i32>>(0x406160, this, arg1);
     }
 
     // 0x406180 | ?ResetDamage@mmPlayer@@QAEXXZ
@@ -261,9 +261,9 @@ public:
     }
 
     // 0x406240 | ?FFImpactCallback@mmPlayer@@QAEXM@Z
-    inline void FFImpactCallback(float arg1)
+    inline void FFImpactCallback(f32 arg1)
     {
-        return stub<member_func_t<void, mmPlayer, float>>(0x406240, this, arg1);
+        return stub<member_func_t<void, mmPlayer, f32>>(0x406240, this, arg1);
     }
 
     // 0x403800 | ??1mmPlayer@@UAE@XZ

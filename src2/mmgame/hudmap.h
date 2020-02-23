@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -85,9 +85,9 @@ public:
     }
 
     // 0x42EEA0 | ?RegisterOpponents@mmHudMap@@QAEXPAUOppIconInfo@@H@Z
-    inline void RegisterOpponents(struct OppIconInfo* arg1, int32_t arg2)
+    inline void RegisterOpponents(struct OppIconInfo* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, mmHudMap, struct OppIconInfo*, int32_t>>(0x42EEA0, this, arg1, arg2);
+        return stub<member_func_t<void, mmHudMap, struct OppIconInfo*, i32>>(0x42EEA0, this, arg1, arg2);
     }
 
     // 0x42EEC0 | ?RegisterCopsnRobbers@mmHudMap@@QAEXPAPAVVector3@@@Z
@@ -109,21 +109,21 @@ public:
     }
 
     // 0x42EF00 | ?GetNextMapMode@mmHudMap@@IAEHXZ
-    inline int32_t GetNextMapMode()
+    inline i32 GetNextMapMode()
     {
-        return stub<member_func_t<int32_t, mmHudMap>>(0x42EF00, this);
+        return stub<member_func_t<i32, mmHudMap>>(0x42EF00, this);
     }
 
     // 0x42EF20 | ?GetCurrentMapMode@mmHudMap@@IAEHXZ
-    inline int32_t GetCurrentMapMode()
+    inline i32 GetCurrentMapMode()
     {
-        return stub<member_func_t<int32_t, mmHudMap>>(0x42EF20, this);
+        return stub<member_func_t<i32, mmHudMap>>(0x42EF20, this);
     }
 
     // 0x42EF30 | ?SetMapMode@mmHudMap@@IAEXH@Z
-    inline void SetMapMode(int32_t arg1)
+    inline void SetMapMode(i32 arg1)
     {
-        return stub<member_func_t<void, mmHudMap, int32_t>>(0x42EF30, this, arg1);
+        return stub<member_func_t<void, mmHudMap, i32>>(0x42EF30, this, arg1);
     }
 
     // 0x42F580 | ?DrawIcon@mmHudMap@@AAEXW4IconType@1@ABVMatrix34@@@Z

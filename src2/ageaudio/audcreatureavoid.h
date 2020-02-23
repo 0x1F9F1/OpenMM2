@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -63,15 +63,15 @@ public:
     }
 
     // 0x5149C0 | ?ParseCSVBuffer@AudCreatureAvoid@@QAEHPAVStream@@@Z
-    inline int32_t ParseCSVBuffer(class Stream* arg1)
+    inline i32 ParseCSVBuffer(class Stream* arg1)
     {
-        return stub<member_func_t<int32_t, AudCreatureAvoid, class Stream*>>(0x5149C0, this, arg1);
+        return stub<member_func_t<i32, AudCreatureAvoid, class Stream*>>(0x5149C0, this, arg1);
     }
 
     // 0x514BF0 | ?AssignSounds@AudCreatureAvoid@@QAEXH@Z
-    inline void AssignSounds(int32_t arg1)
+    inline void AssignSounds(i32 arg1)
     {
-        return stub<member_func_t<void, AudCreatureAvoid, int32_t>>(0x514BF0, this, arg1);
+        return stub<member_func_t<void, AudCreatureAvoid, i32>>(0x514BF0, this, arg1);
     }
 
     // 0x514C40 | ?UnAssignSounds@AudCreatureAvoid@@QAEXXZ
@@ -81,9 +81,9 @@ public:
     }
 
     // 0x514C70 | ?InSpeedRange@AudCreatureAvoid@@AAE_NM@Z
-    inline bool InSpeedRange(float arg1)
+    inline bool InSpeedRange(f32 arg1)
     {
-        return stub<member_func_t<bool, AudCreatureAvoid, float>>(0x514C70, this, arg1);
+        return stub<member_func_t<bool, AudCreatureAvoid, f32>>(0x514C70, this, arg1);
     }
 
     // 0x514CA0 | ?SetAud3DObjectPtr@AudCreatureAvoid@@QAEXPAVAud3DObject@@@Z
@@ -111,15 +111,15 @@ public:
     }
 
     // 0x514DA0 | ?UpdateAttenuation@AudCreatureAvoid@@QAEXMM@Z
-    inline void UpdateAttenuation(float arg1, float arg2)
+    inline void UpdateAttenuation(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, AudCreatureAvoid, float, float>>(0x514DA0, this, arg1, arg2);
+        return stub<member_func_t<void, AudCreatureAvoid, f32, f32>>(0x514DA0, this, arg1, arg2);
     }
 
     // 0x514E10 | ?EchoOn@AudCreatureAvoid@@QAEXM@Z
-    inline void EchoOn(float arg1)
+    inline void EchoOn(f32 arg1)
     {
-        return stub<member_func_t<void, AudCreatureAvoid, float>>(0x514E10, this, arg1);
+        return stub<member_func_t<void, AudCreatureAvoid, f32>>(0x514E10, this, arg1);
     }
 
     // 0x514E70 | ?EchoOff@AudCreatureAvoid@@QAEXXZ
@@ -135,9 +135,9 @@ public:
     }
 
     // 0x514ED0 | ?Update@AudCreatureAvoid@@QAEXM@Z
-    inline void Update(float arg1)
+    inline void Update(f32 arg1)
     {
-        return stub<member_func_t<void, AudCreatureAvoid, float>>(0x514ED0, this, arg1);
+        return stub<member_func_t<void, AudCreatureAvoid, f32>>(0x514ED0, this, arg1);
     }
 
     // 0x514F50 | ?IsEligible@AudCreatureAvoid@@QAE_NXZ

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -103,9 +103,9 @@ public:
     }
 
     // 0x466A40 | ?Lookup@lvlMaterialMgr@@QAEPAVlvlMaterial@@H@Z
-    inline class lvlMaterial* Lookup(int32_t arg1)
+    inline class lvlMaterial* Lookup(i32 arg1)
     {
-        return stub<member_func_t<class lvlMaterial*, lvlMaterialMgr, int32_t>>(0x466A40, this, arg1);
+        return stub<member_func_t<class lvlMaterial*, lvlMaterialMgr, i32>>(0x466A40, this, arg1);
     }
 
     // 0x466A50 | ?Load@lvlMaterialMgr@@UAEPAVphMaterial@@PAVdatAsciiTokenizer@@@Z

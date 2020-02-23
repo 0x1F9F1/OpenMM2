@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -46,9 +46,9 @@ public:
     }
 
     // 0x4C4C60 | ?Slerp@Quaternion@@QAEXMABV1@0@Z
-    inline void Slerp(float arg1, class Quaternion const& arg2, class Quaternion const& arg3)
+    inline void Slerp(f32 arg1, class Quaternion const& arg2, class Quaternion const& arg3)
     {
-        return stub<member_func_t<void, Quaternion, float, class Quaternion const&, class Quaternion const&>>(
+        return stub<member_func_t<void, Quaternion, f32, class Quaternion const&, class Quaternion const&>>(
             0x4C4C60, this, arg1, arg2, arg3);
     }
 

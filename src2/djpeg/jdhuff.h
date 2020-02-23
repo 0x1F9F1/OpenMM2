@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -28,25 +28,23 @@
 */
 
 // 0x49C6E0 | ?jpeg_make_d_derived_tbl@@YAXPAUjpeg_decompress_struct@@EHPAPAUd_derived_tbl@@@Z
-inline void jpeg_make_d_derived_tbl(
-    struct jpeg_decompress_struct* arg1, uint8_t arg2, int32_t arg3, struct d_derived_tbl** arg4)
+inline void jpeg_make_d_derived_tbl(struct jpeg_decompress_struct* arg1, u8 arg2, i32 arg3, struct d_derived_tbl** arg4)
 {
-    return stub<cdecl_t<void, struct jpeg_decompress_struct*, uint8_t, int32_t, struct d_derived_tbl**>>(
+    return stub<cdecl_t<void, struct jpeg_decompress_struct*, u8, i32, struct d_derived_tbl**>>(
         0x49C6E0, arg1, arg2, arg3, arg4);
 }
 
 // 0x49C9A0 | ?jpeg_fill_bit_buffer@@YAEPAUbitread_working_state@@JHH@Z
-inline uint8_t jpeg_fill_bit_buffer(struct bitread_working_state* arg1, int32_t arg2, int32_t arg3, int32_t arg4)
+inline u8 jpeg_fill_bit_buffer(struct bitread_working_state* arg1, i32 arg2, i32 arg3, i32 arg4)
 {
-    return stub<cdecl_t<uint8_t, struct bitread_working_state*, int32_t, int32_t, int32_t>>(
-        0x49C9A0, arg1, arg2, arg3, arg4);
+    return stub<cdecl_t<u8, struct bitread_working_state*, i32, i32, i32>>(0x49C9A0, arg1, arg2, arg3, arg4);
 }
 
 // 0x49CAC0 | ?jpeg_huff_decode@@YAHPAUbitread_working_state@@JHPAUd_derived_tbl@@H@Z
-inline int32_t jpeg_huff_decode(
-    struct bitread_working_state* arg1, int32_t arg2, int32_t arg3, struct d_derived_tbl* arg4, int32_t arg5)
+inline i32 jpeg_huff_decode(
+    struct bitread_working_state* arg1, i32 arg2, i32 arg3, struct d_derived_tbl* arg4, i32 arg5)
 {
-    return stub<cdecl_t<int32_t, struct bitread_working_state*, int32_t, int32_t, struct d_derived_tbl*, int32_t>>(
+    return stub<cdecl_t<i32, struct bitread_working_state*, i32, i32, struct d_derived_tbl*, i32>>(
         0x49CAC0, arg1, arg2, arg3, arg4, arg5);
 }
 

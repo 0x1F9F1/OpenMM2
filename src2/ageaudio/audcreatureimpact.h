@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -75,15 +75,15 @@ public:
     }
 
     // 0x5130C0 | ?ParseCSVBuffer@AudCreatureImpact@@QAEHPAVStream@@@Z
-    inline int32_t ParseCSVBuffer(class Stream* arg1)
+    inline i32 ParseCSVBuffer(class Stream* arg1)
     {
-        return stub<member_func_t<int32_t, AudCreatureImpact, class Stream*>>(0x5130C0, this, arg1);
+        return stub<member_func_t<i32, AudCreatureImpact, class Stream*>>(0x5130C0, this, arg1);
     }
 
     // 0x5132D0 | ?AssignSounds@AudCreatureImpact@@QAEXH@Z
-    inline void AssignSounds(int32_t arg1)
+    inline void AssignSounds(i32 arg1)
     {
-        return stub<member_func_t<void, AudCreatureImpact, int32_t>>(0x5132D0, this, arg1);
+        return stub<member_func_t<void, AudCreatureImpact, i32>>(0x5132D0, this, arg1);
     }
 
     // 0x513320 | ?UnAssignSounds@AudCreatureImpact@@QAEXXZ
@@ -93,9 +93,9 @@ public:
     }
 
     // 0x513350 | ?QueuePlay@AudCreatureImpact@@QAEXM@Z
-    inline void QueuePlay(float arg1)
+    inline void QueuePlay(f32 arg1)
     {
-        return stub<member_func_t<void, AudCreatureImpact, float>>(0x513350, this, arg1);
+        return stub<member_func_t<void, AudCreatureImpact, f32>>(0x513350, this, arg1);
     }
 
     // 0x5133D0 | ?Play@AudCreatureImpact@@AAEXXZ
@@ -105,15 +105,15 @@ public:
     }
 
     // 0x513460 | ?UpdateAttenuation@AudCreatureImpact@@QAEXMM@Z
-    inline void UpdateAttenuation(float arg1, float arg2)
+    inline void UpdateAttenuation(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, AudCreatureImpact, float, float>>(0x513460, this, arg1, arg2);
+        return stub<member_func_t<void, AudCreatureImpact, f32, f32>>(0x513460, this, arg1, arg2);
     }
 
     // 0x5134D0 | ?EchoOn@AudCreatureImpact@@QAEXM@Z
-    inline void EchoOn(float arg1)
+    inline void EchoOn(f32 arg1)
     {
-        return stub<member_func_t<void, AudCreatureImpact, float>>(0x5134D0, this, arg1);
+        return stub<member_func_t<void, AudCreatureImpact, f32>>(0x5134D0, this, arg1);
     }
 
     // 0x513530 | ?EchoOff@AudCreatureImpact@@QAEXXZ

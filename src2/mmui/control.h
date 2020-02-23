@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -58,9 +58,9 @@ public:
     // ControlSetup::`vftable' @ 0x5B429C
 
     // 0x501860 | ??0ControlSetup@@QAE@H@Z
-    inline ControlSetup(int32_t arg1)
+    inline ControlSetup(i32 arg1)
     {
-        stub<member_func_t<void, ControlSetup, int32_t>>(0x501860, this, arg1);
+        stub<member_func_t<void, ControlSetup, i32>>(0x501860, this, arg1);
     }
 
     // 0x501AE0 | ?CreateDeviceOptions@ControlSetup@@QAEXXZ
@@ -82,10 +82,9 @@ public:
     }
 
     // 0x502360 | ?SetControlPosition@ControlSetup@@QAEMPAVuiWidget@@MM@Z
-    inline float SetControlPosition(class uiWidget* arg1, float arg2, float arg3)
+    inline f32 SetControlPosition(class uiWidget* arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<float, ControlSetup, class uiWidget*, float, float>>(
-            0x502360, this, arg1, arg2, arg3);
+        return stub<member_func_t<f32, ControlSetup, class uiWidget*, f32, f32>>(0x502360, this, arg1, arg2, arg3);
     }
 
     // 0x502380 | ?POVCB@ControlSetup@@QAEXXZ

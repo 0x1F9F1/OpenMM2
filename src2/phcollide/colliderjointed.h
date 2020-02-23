@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -46,9 +46,9 @@ public:
     }
 
     // 0x46D410 | ?InitArray@phColliderJointed@@SAXQAV1@H@Z
-    static inline void InitArray(class phColliderJointed* const arg1, int32_t arg2)
+    static inline void InitArray(class phColliderJointed* const arg1, i32 arg2)
     {
-        return stub<cdecl_t<void, class phColliderJointed* const, int32_t>>(0x46D410, arg1, arg2);
+        return stub<cdecl_t<void, class phColliderJointed* const, i32>>(0x46D410, arg1, arg2);
     }
 
     // 0x46D4D0 | ?Attach@phColliderJointed@@QAEXPBVphJoint@@@Z
@@ -59,16 +59,17 @@ public:
 
     // 0x46D5F0 | ?GetInvMassMatrix@phColliderJointed@@UBEXABVVector3@@0AAVMatrix34@@H@Z
     inline void GetInvMassMatrix(
-        class Vector3 const& arg1, class Vector3 const& arg2, class Matrix34& arg3, int32_t arg4) override
+        class Vector3 const& arg1, class Vector3 const& arg2, class Matrix34& arg3, i32 arg4) override
     {
-        return stub<member_func_t<void, phColliderJointed, class Vector3 const&, class Vector3 const&, class Matrix34&,
-            int32_t>>(0x46D5F0, this, arg1, arg2, arg3, arg4);
+        return stub<
+            member_func_t<void, phColliderJointed, class Vector3 const&, class Vector3 const&, class Matrix34&, i32>>(
+            0x46D5F0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x46D580 | ?GetInvMassMatrix@phColliderJointed@@UBEXABVVector3@@AAVMatrix34@@H@Z
-    inline void GetInvMassMatrix(class Vector3 const& arg1, class Matrix34& arg2, int32_t arg3) override
+    inline void GetInvMassMatrix(class Vector3 const& arg1, class Matrix34& arg2, i32 arg3) override
     {
-        return stub<member_func_t<void, phColliderJointed, class Vector3 const&, class Matrix34&, int32_t>>(
+        return stub<member_func_t<void, phColliderJointed, class Vector3 const&, class Matrix34&, i32>>(
             0x46D580, this, arg1, arg2, arg3);
     }
 

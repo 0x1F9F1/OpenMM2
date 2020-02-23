@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -55,22 +55,22 @@ public:
     }
 
     // 0x464CB0 | ?AutoInit@lvlSky@@QAEXPBD0H@Z
-    inline void AutoInit(char const* arg1, char const* arg2, int32_t arg3)
+    inline void AutoInit(char const* arg1, char const* arg2, i32 arg3)
     {
-        return stub<member_func_t<void, lvlSky, char const*, char const*, int32_t>>(0x464CB0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, lvlSky, char const*, char const*, i32>>(0x464CB0, this, arg1, arg2, arg3);
     }
 
     // 0x464E90 | ?Init@lvlSky@@QAEXPBDMMMH@Z
-    inline void Init(char const* arg1, float arg2, float arg3, float arg4, int32_t arg5)
+    inline void Init(char const* arg1, f32 arg2, f32 arg3, f32 arg4, i32 arg5)
     {
-        return stub<member_func_t<void, lvlSky, char const*, float, float, float, int32_t>>(
+        return stub<member_func_t<void, lvlSky, char const*, f32, f32, f32, i32>>(
             0x464E90, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x465270 | ?SetupFog@lvlSky@@QAEXM@Z
-    inline void SetupFog(float arg1)
+    inline void SetupFog(f32 arg1)
     {
-        return stub<member_func_t<void, lvlSky, float>>(0x465270, this, arg1);
+        return stub<member_func_t<void, lvlSky, f32>>(0x465270, this, arg1);
     }
 
     // 0x464CA0 | ??1lvlSky@@UAE@XZ

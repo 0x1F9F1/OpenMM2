@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -53,9 +53,9 @@ public:
     // HostRaceMenu::`vftable' @ 0x5B424C
 
     // 0x5006A0 | ??0HostRaceMenu@@QAE@H@Z
-    inline HostRaceMenu(int32_t arg1)
+    inline HostRaceMenu(i32 arg1)
     {
-        stub<member_func_t<void, HostRaceMenu, int32_t>>(0x5006A0, this, arg1);
+        stub<member_func_t<void, HostRaceMenu, i32>>(0x5006A0, this, arg1);
     }
 
     // 0x501330 | ?SetLimitControl@HostRaceMenu@@QAEXXZ
@@ -65,51 +65,51 @@ public:
     }
 
     // 0x5014E0 | ?EncodeCRData@HostRaceMenu@@QAEHXZ
-    inline int32_t EncodeCRData()
+    inline i32 EncodeCRData()
     {
-        return stub<member_func_t<int32_t, HostRaceMenu>>(0x5014E0, this);
+        return stub<member_func_t<i32, HostRaceMenu>>(0x5014E0, this);
     }
 
     // 0x501530 | ?DecodeCRData@HostRaceMenu@@QAEXH@Z
-    inline void DecodeCRData(int32_t arg1)
+    inline void DecodeCRData(i32 arg1)
     {
-        return stub<member_func_t<void, HostRaceMenu, int32_t>>(0x501530, this, arg1);
+        return stub<member_func_t<void, HostRaceMenu, i32>>(0x501530, this, arg1);
     }
 
     // 0x5015A0 | ?GetLimit@HostRaceMenu@@QAEXAAH0@Z
-    inline void GetLimit(int32_t& arg1, int32_t& arg2)
+    inline void GetLimit(i32& arg1, i32& arg2)
     {
-        return stub<member_func_t<void, HostRaceMenu, int32_t&, int32_t&>>(0x5015A0, this, arg1, arg2);
+        return stub<member_func_t<void, HostRaceMenu, i32&, i32&>>(0x5015A0, this, arg1, arg2);
     }
 
     // 0x5015F0 | ?SetLimit@HostRaceMenu@@QAEXAAH0@Z
-    inline void SetLimit(int32_t& arg1, int32_t& arg2)
+    inline void SetLimit(i32& arg1, i32& arg2)
     {
-        return stub<member_func_t<void, HostRaceMenu, int32_t&, int32_t&>>(0x5015F0, this, arg1, arg2);
+        return stub<member_func_t<void, HostRaceMenu, i32&, i32&>>(0x5015F0, this, arg1, arg2);
     }
 
     // 0x501670 | ?SetGoldMass@HostRaceMenu@@QAEXH@Z
-    inline void SetGoldMass(int32_t arg1)
+    inline void SetGoldMass(i32 arg1)
     {
-        return stub<member_func_t<void, HostRaceMenu, int32_t>>(0x501670, this, arg1);
+        return stub<member_func_t<void, HostRaceMenu, i32>>(0x501670, this, arg1);
     }
 
     // 0x5016A0 | ?GetGoldMass@HostRaceMenu@@QAEHXZ
-    inline int32_t GetGoldMass()
+    inline i32 GetGoldMass()
     {
-        return stub<member_func_t<int32_t, HostRaceMenu>>(0x5016A0, this);
+        return stub<member_func_t<i32, HostRaceMenu>>(0x5016A0, this);
     }
 
     // 0x5016B0 | ?GetLimitVal@HostRaceMenu@@QAEHAAH@Z
-    inline int32_t GetLimitVal(int32_t& arg1)
+    inline i32 GetLimitVal(i32& arg1)
     {
-        return stub<member_func_t<int32_t, HostRaceMenu, int32_t&>>(0x5016B0, this, arg1);
+        return stub<member_func_t<i32, HostRaceMenu, i32&>>(0x5016B0, this, arg1);
     }
 
     // 0x501700 | ?GetGoldMassVal@HostRaceMenu@@QAEHXZ
-    inline int32_t GetGoldMassVal()
+    inline i32 GetGoldMassVal()
     {
-        return stub<member_func_t<int32_t, HostRaceMenu>>(0x501700, this);
+        return stub<member_func_t<i32, HostRaceMenu>>(0x501700, this);
     }
 
     // 0x501710 | ?SetGameClassCallback@HostRaceMenu@@QAEXXZ
@@ -155,9 +155,9 @@ public:
     }
 
     // 0x501230 | ?SetCRWidgets@HostRaceMenu@@UAEXH@Z
-    inline void SetCRWidgets(int32_t arg1) override
+    inline void SetCRWidgets(i32 arg1) override
     {
-        return stub<member_func_t<void, HostRaceMenu, int32_t>>(0x501230, this, arg1);
+        return stub<member_func_t<void, HostRaceMenu, i32>>(0x501230, this, arg1);
     }
 
     // 0x500890 | ?InitCRWidgets@HostRaceMenu@@UAEXXZ

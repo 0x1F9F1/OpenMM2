@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -68,27 +68,27 @@ public:
     }
 
     // 0x41BDC0 | ?RegisterFinish@mmSingleBlitz@@AAEHXZ
-    inline int32_t RegisterFinish()
+    inline i32 RegisterFinish()
     {
-        return stub<member_func_t<int32_t, mmSingleBlitz>>(0x41BDC0, this);
+        return stub<member_func_t<i32, mmSingleBlitz>>(0x41BDC0, this);
     }
 
     // 0x41BFA0 | ?FinishMessage@mmSingleBlitz@@AAEXH@Z
-    inline void FinishMessage(int32_t arg1)
+    inline void FinishMessage(i32 arg1)
     {
-        return stub<member_func_t<void, mmSingleBlitz, int32_t>>(0x41BFA0, this, arg1);
+        return stub<member_func_t<void, mmSingleBlitz, i32>>(0x41BFA0, this, arg1);
     }
 
     // 0x41BFD0 | ?ProgressCheck@mmSingleBlitz@@AAEHHH@Z
-    inline int32_t ProgressCheck(int32_t arg1, int32_t arg2)
+    inline i32 ProgressCheck(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<int32_t, mmSingleBlitz, int32_t, int32_t>>(0x41BFD0, this, arg1, arg2);
+        return stub<member_func_t<i32, mmSingleBlitz, i32, i32>>(0x41BFD0, this, arg1, arg2);
     }
 
     // 0x41C260 | ?PlayTimerWarning@mmSingleBlitz@@QAEXM@Z
-    inline void PlayTimerWarning(float arg1)
+    inline void PlayTimerWarning(f32 arg1)
     {
-        return stub<member_func_t<void, mmSingleBlitz, float>>(0x41C260, this, arg1);
+        return stub<member_func_t<void, mmSingleBlitz, f32>>(0x41C260, this, arg1);
     }
 
     // 0x41AC70 | ??1mmSingleBlitz@@UAE@XZ
@@ -110,9 +110,9 @@ public:
     }
 
     // 0x41AD30 | ?Init@mmSingleBlitz@@UAEHXZ
-    inline int32_t Init() override
+    inline i32 Init() override
     {
-        return stub<member_func_t<int32_t, mmSingleBlitz>>(0x41AD30, this);
+        return stub<member_func_t<i32, mmSingleBlitz>>(0x41AD30, this);
     }
 
     // 0x41AE50 | ?InitMyPlayer@mmSingleBlitz@@UAEXXZ
@@ -140,15 +140,15 @@ public:
     }
 
     // 0x41B590 | ?UpdateGameInput@mmSingleBlitz@@UAEXH@Z
-    inline void UpdateGameInput(int32_t arg1) override
+    inline void UpdateGameInput(i32 arg1) override
     {
-        return stub<member_func_t<void, mmSingleBlitz, int32_t>>(0x41B590, this, arg1);
+        return stub<member_func_t<void, mmSingleBlitz, i32>>(0x41B590, this, arg1);
     }
 
     // 0x41C480 | ?UpdateDebugKeyInput@mmSingleBlitz@@UAEXH@Z
-    inline void UpdateDebugKeyInput(int32_t arg1) override
+    inline void UpdateDebugKeyInput(i32 arg1) override
     {
-        return stub<member_func_t<void, mmSingleBlitz, int32_t>>(0x41C480, this, arg1);
+        return stub<member_func_t<void, mmSingleBlitz, i32>>(0x41C480, this, arg1);
     }
 
     // 0x41B5D0 | ?UpdateGame@mmSingleBlitz@@UAEXXZ
@@ -170,9 +170,9 @@ public:
     }
 
     // 0x41BDB0 | ?SwitchState@mmSingleBlitz@@UAEXH@Z
-    inline void SwitchState(int32_t arg1) override
+    inline void SwitchState(i32 arg1) override
     {
-        return stub<member_func_t<void, mmSingleBlitz, int32_t>>(0x41BDB0, this, arg1);
+        return stub<member_func_t<void, mmSingleBlitz, i32>>(0x41BDB0, this, arg1);
     }
 
     // 0x41C490 | ?GetWaypoints@mmSingleBlitz@@UAEPAVmmWaypoints@@XZ

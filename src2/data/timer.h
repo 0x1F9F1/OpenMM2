@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -36,15 +36,15 @@ class Timer
 {
 public:
     // 0x4C77E0 | ?Ticks@Timer@@SAIXZ
-    static inline uint32_t Ticks()
+    static inline u32 Ticks()
     {
-        return stub<cdecl_t<uint32_t>>(0x4C77E0);
+        return stub<cdecl_t<u32>>(0x4C77E0);
     }
 
     // 0x4C7810 | ?QuickTicks@Timer@@SAIXZ
-    static inline uint32_t QuickTicks()
+    static inline u32 QuickTicks()
     {
-        return stub<cdecl_t<uint32_t>>(0x4C7810);
+        return stub<cdecl_t<u32>>(0x4C7810);
     }
 
     // 0x4C7840 | ??0Timer@@QAE@XZ
@@ -66,14 +66,14 @@ public:
     }
 
     // 0x6A3CFC | ?CpuSpeed@Timer@@0MA
-    static inline extern_var(0x6A3CFC, float, CpuSpeed);
+    inline extern_var(0x6A3CFC, float, CpuSpeed);
 
     // 0x6A3CF0 | ?QuickTicksToMilliseconds@Timer@@0MA
-    static inline extern_var(0x6A3CF0, float, QuickTicksToMilliseconds);
+    inline extern_var(0x6A3CF0, float, QuickTicksToMilliseconds);
 
     // 0x6A3D00 | ?TicksToSeconds@Timer@@0MA
-    static inline extern_var(0x6A3D00, float, TicksToSeconds);
+    inline extern_var(0x6A3D00, float, TicksToSeconds);
 
     // 0x6A3D04 | ?TicksToMilliseconds@Timer@@0MA
-    static inline extern_var(0x6A3D04, float, TicksToMilliseconds);
+    inline extern_var(0x6A3D04, float, TicksToMilliseconds);
 };

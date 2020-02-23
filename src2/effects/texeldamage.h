@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -52,9 +52,9 @@ public:
     }
 
     // 0x591D10 | ?Init@fxTexelDamage@@QAE_NPAVmodStatic@@PAVmodShader@@H@Z
-    inline bool Init(class modStatic* arg1, class modShader* arg2, int32_t arg3)
+    inline bool Init(class modStatic* arg1, class modShader* arg2, i32 arg3)
     {
-        return stub<member_func_t<bool, fxTexelDamage, class modStatic*, class modShader*, int32_t>>(
+        return stub<member_func_t<bool, fxTexelDamage, class modStatic*, class modShader*, i32>>(
             0x591D10, this, arg1, arg2, arg3);
     }
 
@@ -65,8 +65,8 @@ public:
     }
 
     // 0x5921E0 | ?ApplyDamage@fxTexelDamage@@QAEXABVVector3@@M@Z
-    inline void ApplyDamage(class Vector3 const& arg1, float arg2)
+    inline void ApplyDamage(class Vector3 const& arg1, f32 arg2)
     {
-        return stub<member_func_t<void, fxTexelDamage, class Vector3 const&, float>>(0x5921E0, this, arg1, arg2);
+        return stub<member_func_t<void, fxTexelDamage, class Vector3 const&, f32>>(0x5921E0, this, arg1, arg2);
     }
 };

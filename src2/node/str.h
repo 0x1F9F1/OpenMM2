@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -63,9 +63,9 @@ class string
 {
 public:
     // 0x412500 | ?Init@string@@QAEXH@Z
-    inline void Init(int32_t arg1)
+    inline void Init(i32 arg1)
     {
-        return stub<member_func_t<void, string, int32_t>>(0x412500, this, arg1);
+        return stub<member_func_t<void, string, i32>>(0x412500, this, arg1);
     }
 
     // 0x49F150 | ??0string@@QAE@XZ
@@ -111,31 +111,29 @@ public:
     }
 
     // 0x49F8E0 | ?Contains@string@@QBEHAAV1@@Z
-    inline int32_t Contains(class string& arg1)
+    inline i32 Contains(class string& arg1)
     {
-        return stub<member_func_t<int32_t, string, class string&>>(0x49F8E0, this, arg1);
+        return stub<member_func_t<i32, string, class string&>>(0x49F8E0, this, arg1);
     }
 
     // 0x49F970 | ?SaveName@string@@QAEXABV1@H00@Z
-    inline void SaveName(class string const& arg1, int32_t arg2, class string const& arg3, class string const& arg4)
+    inline void SaveName(class string const& arg1, i32 arg2, class string const& arg3, class string const& arg4)
     {
-        return stub<
-            member_func_t<void, string, class string const&, int32_t, class string const&, class string const&>>(
+        return stub<member_func_t<void, string, class string const&, i32, class string const&, class string const&>>(
             0x49F970, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x49FB30 | ?FindFile@string@@QAEHABV1@H00@Z
-    inline int32_t FindFile(class string const& arg1, int32_t arg2, class string const& arg3, class string const& arg4)
+    inline i32 FindFile(class string const& arg1, i32 arg2, class string const& arg3, class string const& arg4)
     {
-        return stub<
-            member_func_t<int32_t, string, class string const&, int32_t, class string const&, class string const&>>(
+        return stub<member_func_t<i32, string, class string const&, i32, class string const&, class string const&>>(
             0x49FB30, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x49FEB0 | ?FileExists@string@@QBEHXZ
-    inline int32_t FileExists()
+    inline i32 FileExists()
     {
-        return stub<member_func_t<int32_t, string>>(0x49FEB0, this);
+        return stub<member_func_t<i32, string>>(0x49FEB0, this);
     }
 
     // 0x49FEE0 | ?DirFileExt@string@@QBEXAAV1@00@Z
@@ -146,9 +144,9 @@ public:
     }
 
     // 0x4A0100 | ?CommaFile@string@@QBEHXZ
-    inline int32_t CommaFile()
+    inline i32 CommaFile()
     {
-        return stub<member_func_t<int32_t, string>>(0x4A0100, this);
+        return stub<member_func_t<i32, string>>(0x4A0100, this);
     }
 
     // 0x4A02E0 | ?FileName@string@@QBE?AV1@XZ
@@ -182,21 +180,21 @@ public:
     }
 
     // 0x4A0910 | ?SubString@string@@QBE?AV1@H@Z
-    inline class string SubString(int32_t arg1)
+    inline class string SubString(i32 arg1)
     {
-        return stub<member_func_t<class string, string, int32_t>>(0x4A0910, this, arg1);
+        return stub<member_func_t<class string, string, i32>>(0x4A0910, this, arg1);
     }
 
     // 0x4A0A20 | ?NumSubStrings@string@@QBEHXZ
-    inline int32_t NumSubStrings()
+    inline i32 NumSubStrings()
     {
-        return stub<member_func_t<int32_t, string>>(0x4A0A20, this);
+        return stub<member_func_t<i32, string>>(0x4A0A20, this);
     }
 
     // 0x4A0A60 | ?IsNumeric@string@@QBEHXZ
-    inline int32_t IsNumeric()
+    inline i32 IsNumeric()
     {
-        return stub<member_func_t<int32_t, string>>(0x4A0A60, this);
+        return stub<member_func_t<i32, string>>(0x4A0A60, this);
     }
 
     // 0x4A0A90 | ??4string@@QAEXPBD@Z

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -42,9 +42,9 @@ public:
     // OptionsBase::`vftable' @ 0x5B4AD8
 
     // 0x50D230 | ??0OptionsBase@@QAE@H@Z
-    inline OptionsBase(int32_t arg1)
+    inline OptionsBase(i32 arg1)
     {
-        stub<member_func_t<void, OptionsBase, int32_t>>(0x50D230, this, arg1);
+        stub<member_func_t<void, OptionsBase, i32>>(0x50D230, this, arg1);
     }
 
     // 0x50D3C0 | ?CreateTitle@OptionsBase@@QAEXPAULocString@@@Z
@@ -60,9 +60,9 @@ public:
     }
 
     // 0x4F5460 | ?IsAnOptionMenu@OptionsBase@@UAEHXZ
-    inline int32_t IsAnOptionMenu() override
+    inline i32 IsAnOptionMenu() override
     {
-        return stub<member_func_t<int32_t, OptionsBase>>(0x4F5460, this);
+        return stub<member_func_t<i32, OptionsBase>>(0x4F5460, this);
     }
 
     // 0x582519 | __purecall

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -36,9 +36,9 @@ struct audRedbook
 {
 public:
     // 0x5A6C20 | ?Update@audRedbook@@QAE_NH@Z
-    inline bool Update(int32_t arg1)
+    inline bool Update(i32 arg1)
     {
-        return stub<member_func_t<bool, audRedbook, int32_t>>(0x5A6C20, this, arg1);
+        return stub<member_func_t<bool, audRedbook, i32>>(0x5A6C20, this, arg1);
     }
 
     // 0x5A6C30 | ?GetStatus@audRedbook@@QAE?AW4AUD_OBJECTSTATUS@audObject@@XZ
@@ -60,21 +60,21 @@ public:
     }
 
     // 0x5A6D30 | ?SetVolume@audRedbook@@QAE_NM@Z
-    inline bool SetVolume(float arg1)
+    inline bool SetVolume(f32 arg1)
     {
-        return stub<member_func_t<bool, audRedbook, float>>(0x5A6D30, this, arg1);
+        return stub<member_func_t<bool, audRedbook, f32>>(0x5A6D30, this, arg1);
     }
 
     // 0x5A6D40 | ?SetPitch@audRedbook@@QAE_NM@Z
-    inline bool SetPitch(float arg1)
+    inline bool SetPitch(f32 arg1)
     {
-        return stub<member_func_t<bool, audRedbook, float>>(0x5A6D40, this, arg1);
+        return stub<member_func_t<bool, audRedbook, f32>>(0x5A6D40, this, arg1);
     }
 
     // 0x5A6D50 | ?SetPan@audRedbook@@QAE_NM@Z
-    inline bool SetPan(float arg1)
+    inline bool SetPan(f32 arg1)
     {
-        return stub<member_func_t<bool, audRedbook, float>>(0x5A6D50, this, arg1);
+        return stub<member_func_t<bool, audRedbook, f32>>(0x5A6D50, this, arg1);
     }
 
     // 0x5A6D60 | ?PauseResume@audRedbook@@QAE_N_N@Z

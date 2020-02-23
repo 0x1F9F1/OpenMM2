@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -42,9 +42,9 @@ public:
     }
 
     // 0x494D90 | ?Set@phIntersectionPoint@@QAEXABVVector3@@0MME@Z
-    inline void Set(class Vector3 const& arg1, class Vector3 const& arg2, float arg3, float arg4, uint8_t arg5)
+    inline void Set(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, f32 arg4, u8 arg5)
     {
-        return stub<member_func_t<void, phIntersectionPoint, class Vector3 const&, class Vector3 const&, float, float,
-            uint8_t>>(0x494D90, this, arg1, arg2, arg3, arg4, arg5);
+        return stub<member_func_t<void, phIntersectionPoint, class Vector3 const&, class Vector3 const&, f32, f32, u8>>(
+            0x494D90, this, arg1, arg2, arg3, arg4, arg5);
     }
 };

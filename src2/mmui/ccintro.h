@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -36,9 +36,9 @@ public:
     // CrashCourseIntro::`vftable' @ 0x5B4394
 
     // 0x502D40 | ??0CrashCourseIntro@@QAE@H@Z
-    inline CrashCourseIntro(int32_t arg1)
+    inline CrashCourseIntro(i32 arg1)
     {
-        stub<member_func_t<void, CrashCourseIntro, int32_t>>(0x502D40, this, arg1);
+        stub<member_func_t<void, CrashCourseIntro, i32>>(0x502D40, this, arg1);
     }
 
     // 0x502E80 | ??1CrashCourseIntro@@UAE@XZ

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -117,9 +117,9 @@ public:
     }
 
     // 0x4E7380 | ?SetReadOnly@uiWidget@@UAEXH@Z
-    virtual inline void SetReadOnly(int32_t arg1)
+    virtual inline void SetReadOnly(i32 arg1)
     {
-        return stub<member_func_t<void, uiWidget, int32_t>>(0x4E7380, this, arg1);
+        return stub<member_func_t<void, uiWidget, i32>>(0x4E7380, this, arg1);
     }
 
     // 0x4E73A0 | ?Action@uiWidget@@UAEXTeqEvent@@@Z
@@ -135,15 +135,15 @@ public:
     }
 
     // 0x4E7480 | ?Switch@uiWidget@@UAEXH@Z
-    virtual inline void Switch(int32_t arg1)
+    virtual inline void Switch(i32 arg1)
     {
-        return stub<member_func_t<void, uiWidget, int32_t>>(0x4E7480, this, arg1);
+        return stub<member_func_t<void, uiWidget, i32>>(0x4E7480, this, arg1);
     }
 
     // 0x4E73C0 | ?EvalMouseX@uiWidget@@UAEXM@Z
-    virtual inline void EvalMouseX(float arg1)
+    virtual inline void EvalMouseX(f32 arg1)
     {
-        return stub<member_func_t<void, uiWidget, float>>(0x4E73C0, this, arg1);
+        return stub<member_func_t<void, uiWidget, f32>>(0x4E73C0, this, arg1);
     }
 
     // 0x4E73D0 | ?ReturnDescription@uiWidget@@UAEPADXZ
@@ -153,15 +153,15 @@ public:
     }
 
     // 0x4E73E0 | ?SetPosition@uiWidget@@UAEXMM@Z
-    virtual inline void SetPosition(float arg1, float arg2)
+    virtual inline void SetPosition(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, uiWidget, float, float>>(0x4E73E0, this, arg1, arg2);
+        return stub<member_func_t<void, uiWidget, f32, f32>>(0x4E73E0, this, arg1, arg2);
     }
 
     // 0x4E73F0 | ?GetScreenHeight@uiWidget@@UAEMXZ
-    virtual inline float GetScreenHeight()
+    virtual inline f32 GetScreenHeight()
     {
-        return stub<member_func_t<float, uiWidget>>(0x4E73F0, this);
+        return stub<member_func_t<f32, uiWidget>>(0x4E73F0, this);
     }
 };
 
@@ -177,11 +177,11 @@ public:
     }
 
     // 0x4E6820 | ?Init@UITextField@@QAEXPAULocString@@PADMMMMHHHHHVdatCallback@@PAVUIMenu@@@Z
-    inline void Init(struct LocString* arg1, char* arg2, float arg3, float arg4, float arg5, float arg6, int32_t arg7,
-        int32_t arg8, int32_t arg9, int32_t arg10, int32_t arg11, class datCallback arg12, class UIMenu* arg13)
+    inline void Init(struct LocString* arg1, char* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7, i32 arg8,
+        i32 arg9, i32 arg10, i32 arg11, class datCallback arg12, class UIMenu* arg13)
     {
-        return stub<member_func_t<void, UITextField, struct LocString*, char*, float, float, float, float, int32_t,
-            int32_t, int32_t, int32_t, int32_t, class datCallback, class UIMenu*>>(
+        return stub<member_func_t<void, UITextField, struct LocString*, char*, f32, f32, f32, f32, i32, i32, i32, i32,
+            i32, class datCallback, class UIMenu*>>(
             0x4E6820, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
     }
 
@@ -210,21 +210,21 @@ public:
     }
 
     // 0x4E6CB0 | ?ToggleField@UITextField@@QAEXH@Z
-    inline void ToggleField(int32_t arg1)
+    inline void ToggleField(i32 arg1)
     {
-        return stub<member_func_t<void, UITextField, int32_t>>(0x4E6CB0, this, arg1);
+        return stub<member_func_t<void, UITextField, i32>>(0x4E6CB0, this, arg1);
     }
 
     // 0x4E6EB0 | ?IsValidChar@UITextField@@QAEHG@Z
-    inline int32_t IsValidChar(uint16_t arg1)
+    inline i32 IsValidChar(u16 arg1)
     {
-        return stub<member_func_t<int32_t, UITextField, uint16_t>>(0x4E6EB0, this, arg1);
+        return stub<member_func_t<i32, UITextField, u16>>(0x4E6EB0, this, arg1);
     }
 
     // 0x4E6F70 | ?WmCharHandler@UITextField@@QAEXE@Z
-    inline void WmCharHandler(uint8_t arg1)
+    inline void WmCharHandler(u8 arg1)
     {
-        return stub<member_func_t<void, UITextField, uint8_t>>(0x4E6F70, this, arg1);
+        return stub<member_func_t<void, UITextField, u8>>(0x4E6F70, this, arg1);
     }
 
     // 0x4E70F0 | ?KeyAction@UITextField@@QAEXPATeqEvent@@@Z
@@ -264,8 +264,8 @@ public:
     }
 
     // 0x4E6E00 | ?Switch@UITextField@@UAEXH@Z
-    inline void Switch(int32_t arg1) override
+    inline void Switch(i32 arg1) override
     {
-        return stub<member_func_t<void, UITextField, int32_t>>(0x4E6E00, this, arg1);
+        return stub<member_func_t<void, UITextField, i32>>(0x4E6E00, this, arg1);
     }
 };

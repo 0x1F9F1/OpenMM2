@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -28,9 +28,9 @@
 */
 
 // 0x597A70 | ?modGetModel@@YAPAVmodModel@@PBDI_N1@Z
-inline class modModel* modGetModel(char const* arg1, uint32_t arg2, bool arg3, bool arg4)
+inline class modModel* modGetModel(char const* arg1, u32 arg2, bool arg3, bool arg4)
 {
-    return stub<cdecl_t<class modModel*, char const*, uint32_t, bool, bool>>(0x597A70, arg1, arg2, arg3, arg4);
+    return stub<cdecl_t<class modModel*, char const*, u32, bool, bool>>(0x597A70, arg1, arg2, arg3, arg4);
 }
 
 // 0x597BD0 | ?modConvertModel@@YAXPBD0_N@Z

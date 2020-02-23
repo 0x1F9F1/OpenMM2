@@ -684,6 +684,22 @@ def collect_classes(all_symbols, name_to_type, vtables, class_hiers, path_libs, 
                     symbol_string += '{\n'
                     symbol_string += '    {} {};\n'.format('return' if should_return else '', sym_to_stub(symbol))
                     symbol_string += '}\n'
+
+                    for a, b in [
+                        ('int8_t', 'i8'),
+                        ('int16_t', 'i16'),
+                        ('int32_t', 'i32'),
+                        ('int64_t', 'i64'),
+
+                        ('uint8_t', 'u8'),
+                        ('uint16_t', 'u16'),
+                        ('uint32_t', 'u32'),
+                        ('uint64_t', 'u64'),
+
+                        ('float', 'f32'),
+                        ('double', 'f64'),
+                    ]:
+                        symbol_string = re.sub('\\b' + a + '\\b', b, symbol_string)
             elif sym_type.type_class != TypeClass.VoidTypeClass:
                 symbol_string += '{}\n'.format(sym_to_extern_var(symbol))
             else:
@@ -743,6 +759,7 @@ class_hiers.update({
     'asCullable': ['Base'],
     'dgBangerInstance': ['asNode'],
     'lvlLevelBound': ['phBound'],
+    'dgPhysEntity': ['Base'],
 })
 
 class_hiers = dict(class_hiers)
@@ -761,7 +778,7 @@ all_files = {}
 
 LICENSE_TXT = '''/*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

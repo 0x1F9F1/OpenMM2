@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -90,15 +90,15 @@ public:
     }
 
     // 0x424640 | ?LoadSets@mmMultiCR@@QAEHPAD@Z
-    inline int32_t LoadSets(char* arg1)
+    inline i32 LoadSets(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmMultiCR, char*>>(0x424640, this, arg1);
+        return stub<member_func_t<i32, mmMultiCR, char*>>(0x424640, this, arg1);
     }
 
     // 0x424880 | ?LoadCSV@mmMultiCR@@QAEHPAD@Z
-    inline int32_t LoadCSV(char* arg1)
+    inline i32 LoadCSV(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmMultiCR, char*>>(0x424880, this, arg1);
+        return stub<member_func_t<i32, mmMultiCR, char*>>(0x424880, this, arg1);
     }
 
     // 0x424900 | ?ImpactCallback@mmMultiCR@@QAEXPAX0@Z
@@ -108,9 +108,9 @@ public:
     }
 
     // 0x424A00 | ?FondleCarMass@mmMultiCR@@QAEXPAVvehCar@@M@Z
-    inline void FondleCarMass(class vehCar* arg1, float arg2)
+    inline void FondleCarMass(class vehCar* arg1, f32 arg2)
     {
-        return stub<member_func_t<void, mmMultiCR, class vehCar*, float>>(0x424A00, this, arg1, arg2);
+        return stub<member_func_t<void, mmMultiCR, class vehCar*, f32>>(0x424A00, this, arg1, arg2);
     }
 
     // 0x424AD0 | ?GetNewSet@mmMultiCR@@AAEXXZ
@@ -127,21 +127,21 @@ public:
     }
 
     // 0x424E20 | ?GetRandomIndex@mmMultiCR@@AAEHXZ
-    inline int32_t GetRandomIndex()
+    inline i32 GetRandomIndex()
     {
-        return stub<member_func_t<int32_t, mmMultiCR>>(0x424E20, this);
+        return stub<member_func_t<i32, mmMultiCR>>(0x424E20, this);
     }
 
     // 0x424E40 | ?ResetPositions@mmMultiCR@@QAEXH@Z
-    inline void ResetPositions(int32_t arg1)
+    inline void ResetPositions(i32 arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x424E40, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, i32>>(0x424E40, this, arg1);
     }
 
     // 0x424F70 | ?SelectTeams@mmMultiCR@@AAEHXZ
-    inline int32_t SelectTeams()
+    inline i32 SelectTeams()
     {
-        return stub<member_func_t<int32_t, mmMultiCR>>(0x424F70, this);
+        return stub<member_func_t<i32, mmMultiCR>>(0x424F70, this);
     }
 
     // 0x425520 | ?StealGold@mmMultiCR@@AAEXPAVvehCar@@@Z
@@ -151,9 +151,9 @@ public:
     }
 
     // 0x425560 | ?OppStealGold@mmMultiCR@@AAEXH@Z
-    inline void OppStealGold(int32_t arg1)
+    inline void OppStealGold(i32 arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x425560, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, i32>>(0x425560, this, arg1);
     }
 
     // 0x4255D0 | ?FindGround@mmMultiCR@@AAEXVVector3@@AAV2@@Z
@@ -163,9 +163,9 @@ public:
     }
 
     // 0x4256A0 | ?DropGold@mmMultiCR@@AAEXVVector3@@HH@Z
-    inline void DropGold(class Vector3 arg1, int32_t arg2, int32_t arg3)
+    inline void DropGold(class Vector3 arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, mmMultiCR, class Vector3, int32_t, int32_t>>(0x4256A0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmMultiCR, class Vector3, i32, i32>>(0x4256A0, this, arg1, arg2, arg3);
     }
 
     // 0x425830 | ?UpdateGold@mmMultiCR@@AAEXXZ
@@ -205,21 +205,21 @@ public:
     }
 
     // 0x426E80 | ?DisplayTimeWarning@mmMultiCR@@AAEXH@Z
-    inline void DisplayTimeWarning(int32_t arg1)
+    inline void DisplayTimeWarning(i32 arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x426E80, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, i32>>(0x426E80, this, arg1);
     }
 
     // 0x426F10 | ?SendGameState@mmMultiCR@@AAEXK@Z
-    inline void SendGameState(uint32_t arg1)
+    inline void SendGameState(u32 arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, uint32_t>>(0x426F10, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, u32>>(0x426F10, this, arg1);
     }
 
     // 0x426FF0 | ?SendSetup@mmMultiCR@@AAEXK@Z
-    inline void SendSetup(uint32_t arg1)
+    inline void SendSetup(u32 arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, uint32_t>>(0x426FF0, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, u32>>(0x426FF0, this, arg1);
     }
 
     // 0x427000 | ?SendGoldDrop@mmMultiCR@@AAEXVVector3@@@Z
@@ -229,9 +229,9 @@ public:
     }
 
     // 0x427040 | ?SendGoldAck@mmMultiCR@@AAEXK@Z
-    inline void SendGoldAck(uint32_t arg1)
+    inline void SendGoldAck(u32 arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, uint32_t>>(0x427040, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, u32>>(0x427040, this, arg1);
     }
 
     // 0x427080 | ?SendGoldDeliver@mmMultiCR@@AAEXXZ
@@ -241,21 +241,21 @@ public:
     }
 
     // 0x4270A0 | ?SendChangeSet@mmMultiCR@@AAEXH@Z
-    inline void SendChangeSet(int32_t arg1)
+    inline void SendChangeSet(i32 arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x4270A0, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, i32>>(0x4270A0, this, arg1);
     }
 
     // 0x427120 | ?SendLimitReached@mmMultiCR@@AAEXH@Z
-    inline void SendLimitReached(int32_t arg1)
+    inline void SendLimitReached(i32 arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x427120, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, i32>>(0x427120, this, arg1);
     }
 
     // 0x427150 | ?SendTimeWarning@mmMultiCR@@AAEXH@Z
-    inline void SendTimeWarning(int32_t arg1)
+    inline void SendTimeWarning(i32 arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x427150, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, i32>>(0x427150, this, arg1);
     }
 
     // 0x427180 | ?UpdateHUD@mmMultiCR@@AAEXXZ
@@ -265,21 +265,21 @@ public:
     }
 
     // 0x4272A0 | ?Score@mmMultiCR@@AAEXH@Z
-    inline void Score(int32_t arg1)
+    inline void Score(i32 arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x4272A0, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, i32>>(0x4272A0, this, arg1);
     }
 
     // 0x4272E0 | ?CycleInterest@mmMultiCR@@AAEXH@Z
-    inline void CycleInterest(int32_t arg1)
+    inline void CycleInterest(i32 arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x4272E0, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, i32>>(0x4272E0, this, arg1);
     }
 
     // 0x427340 | ?SendLobbyResults@mmMultiCR@@QAEXKHH@Z
-    inline void SendLobbyResults(uint32_t arg1, int32_t arg2, int32_t arg3)
+    inline void SendLobbyResults(u32 arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, mmMultiCR, uint32_t, int32_t, int32_t>>(0x427340, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmMultiCR, u32, i32, i32>>(0x427340, this, arg1, arg2, arg3);
     }
 
     // 0x4237C0 | ??1mmMultiCR@@UAE@XZ
@@ -295,9 +295,9 @@ public:
     }
 
     // 0x423870 | ?Init@mmMultiCR@@UAEHXZ
-    inline int32_t Init() override
+    inline i32 Init() override
     {
-        return stub<member_func_t<int32_t, mmMultiCR>>(0x423870, this);
+        return stub<member_func_t<i32, mmMultiCR>>(0x423870, this);
     }
 
     // 0x4239F0 | ?InitMyPlayer@mmMultiCR@@UAEXXZ
@@ -319,15 +319,15 @@ public:
     }
 
     // 0x424F80 | ?UpdateGameInput@mmMultiCR@@UAEXH@Z
-    inline void UpdateGameInput(int32_t arg1) override
+    inline void UpdateGameInput(i32 arg1) override
     {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x424F80, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, i32>>(0x424F80, this, arg1);
     }
 
     // 0x4272D0 | ?UpdateDebugKeyInput@mmMultiCR@@UAEXH@Z
-    inline void UpdateDebugKeyInput(int32_t arg1) override
+    inline void UpdateDebugKeyInput(i32 arg1) override
     {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x4272D0, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, i32>>(0x4272D0, this, arg1);
     }
 
     // 0x424F90 | ?UpdateGame@mmMultiCR@@UAEXXZ
@@ -349,9 +349,9 @@ public:
     }
 
     // 0x425390 | ?SwitchState@mmMultiCR@@UAEXH@Z
-    inline void SwitchState(int32_t arg1) override
+    inline void SwitchState(i32 arg1) override
     {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x425390, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, i32>>(0x425390, this, arg1);
     }
 
     // 0x427510 | ?GetWaypoints@mmMultiCR@@UAEPAVmmWaypoints@@XZ

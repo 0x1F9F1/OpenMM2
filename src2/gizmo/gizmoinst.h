@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -49,9 +49,9 @@ public:
     }
 
     // 0x579E90 | ?Init@gizInstance@@QAEXPADH@Z
-    inline void Init(char* arg1, int32_t arg2)
+    inline void Init(char* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, gizInstance, char*, int32_t>>(0x579E90, this, arg1, arg2);
+        return stub<member_func_t<void, gizInstance, char*, i32>>(0x579E90, this, arg1, arg2);
     }
 
     // 0x579E30 | ?GetPosition@gizInstance@@UAEABVVector3@@XZ
@@ -73,8 +73,8 @@ public:
     }
 
     // 0x579F30 | ?Draw@gizInstance@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
+    inline void Draw(i32 arg1) override
     {
-        return stub<member_func_t<void, gizInstance, int32_t>>(0x579F30, this, arg1);
+        return stub<member_func_t<void, gizInstance, i32>>(0x579F30, this, arg1);
     }
 };

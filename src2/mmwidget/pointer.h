@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -53,9 +53,9 @@ public:
     }
 
     // 0x4F1350 | ?GetPointerHeight@sfPointer@@QAEMXZ
-    inline float GetPointerHeight()
+    inline f32 GetPointerHeight()
     {
-        return stub<member_func_t<float, sfPointer>>(0x4F1350, this);
+        return stub<member_func_t<f32, sfPointer>>(0x4F1350, this);
     }
 
     // 0x4F1560 | ?UpdateAttached@sfPointer@@AAEXXZ
@@ -89,8 +89,8 @@ public:
     }
 
     // 0x4F12F0 | ?ResChange@sfPointer@@UAEXHH@Z
-    inline void ResChange(int32_t arg1, int32_t arg2) override
+    inline void ResChange(i32 arg1, i32 arg2) override
     {
-        return stub<member_func_t<void, sfPointer, int32_t, int32_t>>(0x4F12F0, this, arg1, arg2);
+        return stub<member_func_t<void, sfPointer, i32, i32>>(0x4F12F0, this, arg1, arg2);
     }
 };

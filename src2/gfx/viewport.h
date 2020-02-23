@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -51,23 +51,22 @@ public:
     }
 
     // 0x4B14C0 | ?SetWindow@gfxViewport@@QAEXHHHHMM@Z
-    inline void SetWindow(int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, float arg5, float arg6)
+    inline void SetWindow(i32 arg1, i32 arg2, i32 arg3, i32 arg4, f32 arg5, f32 arg6)
     {
-        return stub<member_func_t<void, gfxViewport, int32_t, int32_t, int32_t, int32_t, float, float>>(
+        return stub<member_func_t<void, gfxViewport, i32, i32, i32, i32, f32, f32>>(
             0x4B14C0, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4B1640 | ?Perspective@gfxViewport@@QAEXMMMM@Z
-    inline void Perspective(float arg1, float arg2, float arg3, float arg4)
+    inline void Perspective(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
-        return stub<member_func_t<void, gfxViewport, float, float, float, float>>(
-            0x4B1640, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, gfxViewport, f32, f32, f32, f32>>(0x4B1640, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4B1800 | ?Ortho@gfxViewport@@QAEXMMMMMM@Z
-    inline void Ortho(float arg1, float arg2, float arg3, float arg4, float arg5, float arg6)
+    inline void Ortho(f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6)
     {
-        return stub<member_func_t<void, gfxViewport, float, float, float, float, float, float>>(
+        return stub<member_func_t<void, gfxViewport, f32, f32, f32, f32, f32, f32>>(
             0x4B1800, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
@@ -84,15 +83,15 @@ public:
     }
 
     // 0x4B19B0 | ?ComputeVFOV@gfxViewport@@QBEMM@Z
-    inline float ComputeVFOV(float arg1)
+    inline f32 ComputeVFOV(f32 arg1)
     {
-        return stub<member_func_t<float, gfxViewport, float>>(0x4B19B0, this, arg1);
+        return stub<member_func_t<f32, gfxViewport, f32>>(0x4B19B0, this, arg1);
     }
 
     // 0x4B19D0 | ?IsSphereVisible@gfxViewport@@QBE?AW4gfxCullStatus@@MMMMPAM@Z
-    inline enum gfxCullStatus IsSphereVisible(float arg1, float arg2, float arg3, float arg4, float* arg5)
+    inline enum gfxCullStatus IsSphereVisible(f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32* arg5)
     {
-        return stub<member_func_t<enum gfxCullStatus, gfxViewport, float, float, float, float, float*>>(
+        return stub<member_func_t<enum gfxCullStatus, gfxViewport, f32, f32, f32, f32, f32*>>(
             0x4B19D0, this, arg1, arg2, arg3, arg4, arg5);
     }
 

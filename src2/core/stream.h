@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -55,45 +55,45 @@
 // Skipped (Variable Arguments)
 
 // 0x4C9F20 | ?fseek@@YAHPAVStream@@HH@Z
-inline int32_t fseek(class Stream* arg1, int32_t arg2, int32_t arg3)
+inline i32 fseek(class Stream* arg1, i32 arg2, i32 arg3)
 {
-    return stub<cdecl_t<int32_t, class Stream*, int32_t, int32_t>>(0x4C9F20, arg1, arg2, arg3);
+    return stub<cdecl_t<i32, class Stream*, i32, i32>>(0x4C9F20, arg1, arg2, arg3);
 }
 
 // 0x4C9F80 | ?fgets@@YAHPADHPAVStream@@@Z
-inline int32_t fgets(char* arg1, int32_t arg2, class Stream* arg3)
+inline i32 fgets(char* arg1, i32 arg2, class Stream* arg3)
 {
-    return stub<cdecl_t<int32_t, char*, int32_t, class Stream*>>(0x4C9F80, arg1, arg2, arg3);
+    return stub<cdecl_t<i32, char*, i32, class Stream*>>(0x4C9F80, arg1, arg2, arg3);
 }
 
 // 0x4C9FF0 | ?fscanf@@YAHPAVStream@@PBDZZ
 // Skipped (Variable Arguments)
 
 // 0x4CA0A0 | ?memReadFile@@YAHHPAXH@Z
-inline int32_t memReadFile(int32_t arg1, void* arg2, int32_t arg3)
+inline i32 memReadFile(i32 arg1, void* arg2, i32 arg3)
 {
-    return stub<cdecl_t<int32_t, int32_t, void*, int32_t>>(0x4CA0A0, arg1, arg2, arg3);
+    return stub<cdecl_t<i32, i32, void*, i32>>(0x4CA0A0, arg1, arg2, arg3);
 }
 
 // 0x4CA0B0 | ?memCloseFile@@YAHH@Z
-inline int32_t memCloseFile(int32_t arg1)
+inline i32 memCloseFile(i32 arg1)
 {
-    return stub<cdecl_t<int32_t, int32_t>>(0x4CA0B0, arg1);
+    return stub<cdecl_t<i32, i32>>(0x4CA0B0, arg1);
 }
 
 // 0x4CA0D0 | ?memSizeFile@@YAHH@Z
-inline int32_t memSizeFile(int32_t arg1)
+inline i32 memSizeFile(i32 arg1)
 {
-    return stub<cdecl_t<int32_t, int32_t>>(0x4CA0D0, arg1);
+    return stub<cdecl_t<i32, i32>>(0x4CA0D0, arg1);
 }
 
 class Stream
 {
 public:
     // 0x4C98D0 | ?AllocStream@Stream@@CAPAV1@PBDHPBUcoreFileMethods@@@Z
-    static inline class Stream* AllocStream(char const* arg1, int32_t arg2, struct coreFileMethods const* arg3)
+    static inline class Stream* AllocStream(char const* arg1, i32 arg2, struct coreFileMethods const* arg3)
     {
-        return stub<cdecl_t<class Stream*, char const*, int32_t, struct coreFileMethods const*>>(
+        return stub<cdecl_t<class Stream*, char const*, i32, struct coreFileMethods const*>>(
             0x4C98D0, arg1, arg2, arg3);
     }
 
@@ -129,57 +129,57 @@ public:
     }
 
     // 0x4C9AA0 | ?Read@Stream@@QAEHPAXH@Z
-    inline int32_t Read(void* arg1, int32_t arg2)
+    inline i32 Read(void* arg1, i32 arg2)
     {
-        return stub<member_func_t<int32_t, Stream, void*, int32_t>>(0x4C9AA0, this, arg1, arg2);
+        return stub<member_func_t<i32, Stream, void*, i32>>(0x4C9AA0, this, arg1, arg2);
     }
 
     // 0x4C9BF0 | ?Write@Stream@@QAEHPBXH@Z
-    inline int32_t Write(void const* arg1, int32_t arg2)
+    inline i32 Write(void const* arg1, i32 arg2)
     {
-        return stub<member_func_t<int32_t, Stream, void const*, int32_t>>(0x4C9BF0, this, arg1, arg2);
+        return stub<member_func_t<i32, Stream, void const*, i32>>(0x4C9BF0, this, arg1, arg2);
     }
 
     // 0x4C9D00 | ?GetCh@Stream@@QAEHXZ
-    inline int32_t GetCh()
+    inline i32 GetCh()
     {
-        return stub<member_func_t<int32_t, Stream>>(0x4C9D00, this);
+        return stub<member_func_t<i32, Stream>>(0x4C9D00, this);
     }
 
     // 0x4C9D30 | ?PutCh@Stream@@QAEHE@Z
-    inline int32_t PutCh(uint8_t arg1)
+    inline i32 PutCh(u8 arg1)
     {
-        return stub<member_func_t<int32_t, Stream, uint8_t>>(0x4C9D30, this, arg1);
+        return stub<member_func_t<i32, Stream, u8>>(0x4C9D30, this, arg1);
     }
 
     // 0x4C9D60 | ?Seek@Stream@@QAEHH@Z
-    inline int32_t Seek(int32_t arg1)
+    inline i32 Seek(i32 arg1)
     {
-        return stub<member_func_t<int32_t, Stream, int32_t>>(0x4C9D60, this, arg1);
+        return stub<member_func_t<i32, Stream, i32>>(0x4C9D60, this, arg1);
     }
 
     // 0x4C9DB0 | ?Tell@Stream@@QAEHXZ
-    inline int32_t Tell()
+    inline i32 Tell()
     {
-        return stub<member_func_t<int32_t, Stream>>(0x4C9DB0, this);
+        return stub<member_func_t<i32, Stream>>(0x4C9DB0, this);
     }
 
     // 0x4C9DC0 | ?Close@Stream@@QAEHXZ
-    inline int32_t Close()
+    inline i32 Close()
     {
-        return stub<member_func_t<int32_t, Stream>>(0x4C9DC0, this);
+        return stub<member_func_t<i32, Stream>>(0x4C9DC0, this);
     }
 
     // 0x4C9E00 | ?Size@Stream@@QAEHXZ
-    inline int32_t Size()
+    inline i32 Size()
     {
-        return stub<member_func_t<int32_t, Stream>>(0x4C9E00, this);
+        return stub<member_func_t<i32, Stream>>(0x4C9E00, this);
     }
 
     // 0x4C9E60 | ?Flush@Stream@@QAEHXZ
-    inline int32_t Flush()
+    inline i32 Flush()
     {
-        return stub<member_func_t<int32_t, Stream>>(0x4C9E60, this);
+        return stub<member_func_t<i32, Stream>>(0x4C9E60, this);
     }
 
     // 0x4CA0E0 | ?PreLoad@Stream@@SAPAV1@PAV1@@Z
@@ -189,14 +189,14 @@ public:
     }
 
     // 0x5CED78 | ?sm_DefaultOpenMethods@Stream@@0PBUcoreFileMethods@@B
-    static inline extern_var(0x5CED78, struct coreFileMethods const* const, sm_DefaultOpenMethods);
+    inline extern_var(0x5CED78, struct coreFileMethods const* const, sm_DefaultOpenMethods);
 
     // 0x5CED7C | ?sm_DefaultCreateMethods@Stream@@0PBUcoreFileMethods@@B
-    static inline extern_var(0x5CED7C, struct coreFileMethods const* const, sm_DefaultCreateMethods);
+    inline extern_var(0x5CED7C, struct coreFileMethods const* const, sm_DefaultCreateMethods);
 
     // 0x6A3D68 | ?sm_Streams@Stream@@0PAV1@A
-    static inline extern_var(0x6A3D68, class Stream*, sm_Streams);
+    inline extern_var(0x6A3D68, class Stream*, sm_Streams);
 
     // 0x6A3EB8 | ?sm_Buffers@Stream@@0PAY0BAAA@DA
-    static inline extern_var(0x6A3EB8, char (*)[4096], sm_Buffers);
+    inline extern_var(0x6A3EB8, char (*)[4096], sm_Buffers);
 };

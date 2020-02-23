@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -88,9 +88,9 @@ public:
     }
 
     // 0x57E620 | ?SetIKBlend@crKinematics@@UAEXM@Z
-    inline void SetIKBlend(float arg1) override
+    inline void SetIKBlend(f32 arg1) override
     {
-        return stub<member_func_t<void, crKinematics, float>>(0x57E620, this, arg1);
+        return stub<member_func_t<void, crKinematics, f32>>(0x57E620, this, arg1);
     }
 
     // 0x57E680 | ?SetLimp@crKinematics@@UAEX_N@Z
@@ -143,9 +143,9 @@ public:
     }
 
     // 0x57E440 | ?SetIKBlend@crKinematicsBase@@UAEXM@Z
-    virtual inline void SetIKBlend(float arg1)
+    virtual inline void SetIKBlend(f32 arg1)
     {
-        return stub<member_func_t<void, crKinematicsBase, float>>(0x57E440, this, arg1);
+        return stub<member_func_t<void, crKinematicsBase, f32>>(0x57E440, this, arg1);
     }
 
     // 0x57E450 | ?SetLimp@crKinematicsBase@@UAEX_N@Z

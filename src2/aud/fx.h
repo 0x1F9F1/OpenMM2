@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -43,8 +43,8 @@ public:
     }
 
     // 0x5A38C0 | ?EnablePCEcho@audFX@@QAEPAVEchoEffect@@KH@Z
-    inline class EchoEffect* EnablePCEcho(uint32_t arg1, int32_t arg2)
+    inline class EchoEffect* EnablePCEcho(u32 arg1, i32 arg2)
     {
-        return stub<member_func_t<class EchoEffect*, audFX, uint32_t, int32_t>>(0x5A38C0, this, arg1, arg2);
+        return stub<member_func_t<class EchoEffect*, audFX, u32, i32>>(0x5A38C0, this, arg1, arg2);
     }
 };

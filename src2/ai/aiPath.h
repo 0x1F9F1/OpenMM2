@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -119,9 +119,9 @@ class aiPath
 {
 public:
     // 0x543E40 | ??0aiPath@@QAE@H@Z
-    inline aiPath(int32_t arg1)
+    inline aiPath(i32 arg1)
     {
-        stub<member_func_t<void, aiPath, int32_t>>(0x543E40, this, arg1);
+        stub<member_func_t<void, aiPath, i32>>(0x543E40, this, arg1);
     }
 
     // 0x543EE0 | ??1aiPath@@QAE@XZ
@@ -155,21 +155,21 @@ public:
     }
 
     // 0x544220 | ?ResetVehicleReactTicks@aiPath@@QAEXH@Z
-    inline void ResetVehicleReactTicks(int32_t arg1)
+    inline void ResetVehicleReactTicks(i32 arg1)
     {
-        return stub<member_func_t<void, aiPath, int32_t>>(0x544220, this, arg1);
+        return stub<member_func_t<void, aiPath, i32>>(0x544220, this, arg1);
     }
 
     // 0x544290 | ?SidewalkSubSectionLength@aiPath@@QAEMHHF@Z
-    inline float SidewalkSubSectionLength(int32_t arg1, int32_t arg2, int16_t arg3)
+    inline f32 SidewalkSubSectionLength(i32 arg1, i32 arg2, i16 arg3)
     {
-        return stub<member_func_t<float, aiPath, int32_t, int32_t, int16_t>>(0x544290, this, arg1, arg2, arg3);
+        return stub<member_func_t<f32, aiPath, i32, i32, i16>>(0x544290, this, arg1, arg2, arg3);
     }
 
     // 0x544300 | ?SidewalkVertice@aiPath@@QAEAAVVector3@@HF@Z
-    inline class Vector3& SidewalkVertice(int32_t arg1, int16_t arg2)
+    inline class Vector3& SidewalkVertice(i32 arg1, i16 arg2)
     {
-        return stub<member_func_t<class Vector3&, aiPath, int32_t, int16_t>>(0x544300, this, arg1, arg2);
+        return stub<member_func_t<class Vector3&, aiPath, i32, i16>>(0x544300, this, arg1, arg2);
     }
 
     // 0x544350 | ?SaveBinary@aiPath@@QAEXPAVStream@@@Z
@@ -185,9 +185,9 @@ public:
     }
 
     // 0x545230 | ?ReadShortcut@aiPath@@QAEXPAVStream@@H@Z
-    inline void ReadShortcut(class Stream* arg1, int32_t arg2)
+    inline void ReadShortcut(class Stream* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, aiPath, class Stream*, int32_t>>(0x545230, this, arg1, arg2);
+        return stub<member_func_t<void, aiPath, class Stream*, i32>>(0x545230, this, arg1, arg2);
     }
 
     // 0x545D00 | ?ReverseDirection@aiPath@@QAEXXZ
@@ -221,136 +221,135 @@ public:
     }
 
     // 0x547060 | ?AddVehicle@aiPath@@QAEXPAVaiObstacle@@HH@Z
-    inline void AddVehicle(class aiObstacle* arg1, int32_t arg2, int32_t arg3)
+    inline void AddVehicle(class aiObstacle* arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, aiPath, class aiObstacle*, int32_t, int32_t>>(0x547060, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, aiPath, class aiObstacle*, i32, i32>>(0x547060, this, arg1, arg2, arg3);
     }
 
     // 0x5470B0 | ?RemoveVehicle@aiPath@@QAEXPAVaiObstacle@@HH@Z
-    inline void RemoveVehicle(class aiObstacle* arg1, int32_t arg2, int32_t arg3)
+    inline void RemoveVehicle(class aiObstacle* arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, aiPath, class aiObstacle*, int32_t, int32_t>>(0x5470B0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, aiPath, class aiObstacle*, i32, i32>>(0x5470B0, this, arg1, arg2, arg3);
     }
 
     // 0x547140 | ?AddBanger@aiPath@@QAEXPAVaiObstacle@@HH@Z
-    inline void AddBanger(class aiObstacle* arg1, int32_t arg2, int32_t arg3)
+    inline void AddBanger(class aiObstacle* arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, aiPath, class aiObstacle*, int32_t, int32_t>>(0x547140, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, aiPath, class aiObstacle*, i32, i32>>(0x547140, this, arg1, arg2, arg3);
     }
 
     // 0x547190 | ?RemoveBanger@aiPath@@QAEXPAVaiObstacle@@HH@Z
-    inline void RemoveBanger(class aiObstacle* arg1, int32_t arg2, int32_t arg3)
+    inline void RemoveBanger(class aiObstacle* arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, aiPath, class aiObstacle*, int32_t, int32_t>>(0x547190, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, aiPath, class aiObstacle*, i32, i32>>(0x547190, this, arg1, arg2, arg3);
     }
 
     // 0x547220 | ?AddPedestrian@aiPath@@QAEXPAVaiObstacle@@HH@Z
-    inline void AddPedestrian(class aiObstacle* arg1, int32_t arg2, int32_t arg3)
+    inline void AddPedestrian(class aiObstacle* arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, aiPath, class aiObstacle*, int32_t, int32_t>>(0x547220, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, aiPath, class aiObstacle*, i32, i32>>(0x547220, this, arg1, arg2, arg3);
     }
 
     // 0x547270 | ?RemovePedestrian@aiPath@@QAEXPAVaiObstacle@@HH@Z
-    inline void RemovePedestrian(class aiObstacle* arg1, int32_t arg2, int32_t arg3)
+    inline void RemovePedestrian(class aiObstacle* arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, aiPath, class aiObstacle*, int32_t, int32_t>>(0x547270, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, aiPath, class aiObstacle*, i32, i32>>(0x547270, this, arg1, arg2, arg3);
     }
 
     // 0x547300 | ?AllwaysStop@aiPath@@QAEXH@Z
-    inline void AllwaysStop(int32_t arg1)
+    inline void AllwaysStop(i32 arg1)
     {
-        return stub<member_func_t<void, aiPath, int32_t>>(0x547300, this, arg1);
+        return stub<member_func_t<void, aiPath, i32>>(0x547300, this, arg1);
     }
 
     // 0x547320 | ?AllwaysGo@aiPath@@QAEXH@Z
-    inline void AllwaysGo(int32_t arg1)
+    inline void AllwaysGo(i32 arg1)
     {
-        return stub<member_func_t<void, aiPath, int32_t>>(0x547320, this, arg1);
+        return stub<member_func_t<void, aiPath, i32>>(0x547320, this, arg1);
     }
 
     // 0x547340 | ?CenterLength@aiPath@@QAEMHH@Z
-    inline float CenterLength(int32_t arg1, int32_t arg2)
+    inline f32 CenterLength(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<float, aiPath, int32_t, int32_t>>(0x547340, this, arg1, arg2);
+        return stub<member_func_t<f32, aiPath, i32, i32>>(0x547340, this, arg1, arg2);
     }
 
     // 0x547360 | ?SubSectionLength@aiPath@@QAEMHHH@Z
-    inline float SubSectionLength(int32_t arg1, int32_t arg2, int32_t arg3)
+    inline f32 SubSectionLength(i32 arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<float, aiPath, int32_t, int32_t, int32_t>>(0x547360, this, arg1, arg2, arg3);
+        return stub<member_func_t<f32, aiPath, i32, i32, i32>>(0x547360, this, arg1, arg2, arg3);
     }
 
     // 0x5473A0 | ?GetHeading@aiPath@@QAEMMHH@Z
-    inline float GetHeading(float arg1, int32_t arg2, int32_t arg3)
+    inline f32 GetHeading(f32 arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<float, aiPath, float, int32_t, int32_t>>(0x5473A0, this, arg1, arg2, arg3);
+        return stub<member_func_t<f32, aiPath, f32, i32, i32>>(0x5473A0, this, arg1, arg2, arg3);
     }
 
     // 0x5474E0 | ?SubSectionDist@aiPath@@QAEMMHH@Z
-    inline float SubSectionDist(float arg1, int32_t arg2, int32_t arg3)
+    inline f32 SubSectionDist(f32 arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<float, aiPath, float, int32_t, int32_t>>(0x5474E0, this, arg1, arg2, arg3);
+        return stub<member_func_t<f32, aiPath, f32, i32, i32>>(0x5474E0, this, arg1, arg2, arg3);
     }
 
     // 0x5475D0 | ?CenterIndex@aiPath@@QAEHM@Z
-    inline int32_t CenterIndex(float arg1)
+    inline i32 CenterIndex(f32 arg1)
     {
-        return stub<member_func_t<int32_t, aiPath, float>>(0x5475D0, this, arg1);
+        return stub<member_func_t<i32, aiPath, f32>>(0x5475D0, this, arg1);
     }
 
     // 0x547660 | ?Position@aiPath@@QAEXMAAVVector3@@HH@Z
-    inline void Position(float arg1, class Vector3& arg2, int32_t arg3, int32_t arg4)
+    inline void Position(f32 arg1, class Vector3& arg2, i32 arg3, i32 arg4)
     {
-        return stub<member_func_t<void, aiPath, float, class Vector3&, int32_t, int32_t>>(
-            0x547660, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, aiPath, f32, class Vector3&, i32, i32>>(0x547660, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x547670 | ?CenterPosition@aiPath@@QAEXMAAVVector3@@@Z
-    inline void CenterPosition(float arg1, class Vector3& arg2)
+    inline void CenterPosition(f32 arg1, class Vector3& arg2)
     {
-        return stub<member_func_t<void, aiPath, float, class Vector3&>>(0x547670, this, arg1, arg2);
+        return stub<member_func_t<void, aiPath, f32, class Vector3&>>(0x547670, this, arg1, arg2);
     }
 
     // 0x547740 | ?Index@aiPath@@QAEHMHH@Z
-    inline int32_t Index(float arg1, int32_t arg2, int32_t arg3)
+    inline i32 Index(f32 arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<int32_t, aiPath, float, int32_t, int32_t>>(0x547740, this, arg1, arg2, arg3);
+        return stub<member_func_t<i32, aiPath, f32, i32, i32>>(0x547740, this, arg1, arg2, arg3);
     }
 
     // 0x547820 | ?Index@aiPath@@QAEHABVVector3@@@Z
-    inline int32_t Index(class Vector3 const& arg1)
+    inline i32 Index(class Vector3 const& arg1)
     {
-        return stub<member_func_t<int32_t, aiPath, class Vector3 const&>>(0x547820, this, arg1);
+        return stub<member_func_t<i32, aiPath, class Vector3 const&>>(0x547820, this, arg1);
     }
 
     // 0x547900 | ?Lane@aiPath@@QAEHAAVVector3@@H@Z
-    inline int32_t Lane(class Vector3& arg1, int32_t arg2)
+    inline i32 Lane(class Vector3& arg1, i32 arg2)
     {
-        return stub<member_func_t<int32_t, aiPath, class Vector3&, int32_t>>(0x547900, this, arg1, arg2);
+        return stub<member_func_t<i32, aiPath, class Vector3&, i32>>(0x547900, this, arg1, arg2);
     }
 
     // 0x547A50 | ?RemAmbPlayer@aiPath@@QAEDH@Z
-    inline char RemAmbPlayer(int32_t arg1)
+    inline char RemAmbPlayer(i32 arg1)
     {
-        return stub<member_func_t<char, aiPath, int32_t>>(0x547A50, this, arg1);
+        return stub<member_func_t<char, aiPath, i32>>(0x547A50, this, arg1);
     }
 
     // 0x547AB0 | ?AddAmbPlayer@aiPath@@QAEDH@Z
-    inline char AddAmbPlayer(int32_t arg1)
+    inline char AddAmbPlayer(i32 arg1)
     {
-        return stub<member_func_t<char, aiPath, int32_t>>(0x547AB0, this, arg1);
+        return stub<member_func_t<char, aiPath, i32>>(0x547AB0, this, arg1);
     }
 
     // 0x547B10 | ?RemPedPlayer@aiPath@@QAEDH@Z
-    inline char RemPedPlayer(int32_t arg1)
+    inline char RemPedPlayer(i32 arg1)
     {
-        return stub<member_func_t<char, aiPath, int32_t>>(0x547B10, this, arg1);
+        return stub<member_func_t<char, aiPath, i32>>(0x547B10, this, arg1);
     }
 
     // 0x547B70 | ?AddPedPlayer@aiPath@@QAEDH@Z
-    inline char AddPedPlayer(int32_t arg1)
+    inline char AddPedPlayer(i32 arg1)
     {
-        return stub<member_func_t<char, aiPath, int32_t>>(0x547B70, this, arg1);
+        return stub<member_func_t<char, aiPath, i32>>(0x547B70, this, arg1);
     }
 
     // 0x547BD0 | ?ClearPeds@aiPath@@QAEXXZ
@@ -366,79 +365,77 @@ public:
     }
 
     // 0x547DC0 | ?DetermineRoadPosInfo@aiPath@@QAEXABVMatrix34@@PAFPAM121@Z
-    inline void DetermineRoadPosInfo(
-        class Matrix34 const& arg1, int16_t* arg2, float* arg3, int16_t* arg4, float* arg5, int16_t* arg6)
+    inline void DetermineRoadPosInfo(class Matrix34 const& arg1, i16* arg2, f32* arg3, i16* arg4, f32* arg5, i16* arg6)
     {
-        return stub<member_func_t<void, aiPath, class Matrix34 const&, int16_t*, float*, int16_t*, float*, int16_t*>>(
+        return stub<member_func_t<void, aiPath, class Matrix34 const&, i16*, f32*, i16*, f32*, i16*>>(
             0x547DC0, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x547FA0 | ?RoadDistance@aiPath@@QAEXABVVector3@@PAFPAMF2H@Z
-    inline void RoadDistance(
-        class Vector3 const& arg1, int16_t* arg2, float* arg3, int16_t arg4, float* arg5, int32_t arg6)
+    inline void RoadDistance(class Vector3 const& arg1, i16* arg2, f32* arg3, i16 arg4, f32* arg5, i32 arg6)
     {
-        return stub<member_func_t<void, aiPath, class Vector3 const&, int16_t*, float*, int16_t, float*, int32_t>>(
+        return stub<member_func_t<void, aiPath, class Vector3 const&, i16*, f32*, i16, f32*, i32>>(
             0x547FA0, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x548100 | ?IsSharpTurn@aiPath@@QAEHH_N@Z
-    inline int32_t IsSharpTurn(int32_t arg1, bool arg2)
+    inline i32 IsSharpTurn(i32 arg1, bool arg2)
     {
-        return stub<member_func_t<int32_t, aiPath, int32_t, bool>>(0x548100, this, arg1, arg2);
+        return stub<member_func_t<i32, aiPath, i32, bool>>(0x548100, this, arg1, arg2);
     }
 
     // 0x548160 | ?SharpTurnVertIndex@aiPath@@QAEHH_N@Z
-    inline int32_t SharpTurnVertIndex(int32_t arg1, bool arg2)
+    inline i32 SharpTurnVertIndex(i32 arg1, bool arg2)
     {
-        return stub<member_func_t<int32_t, aiPath, int32_t, bool>>(0x548160, this, arg1, arg2);
+        return stub<member_func_t<i32, aiPath, i32, bool>>(0x548160, this, arg1, arg2);
     }
 
     // 0x5481A0 | ?SharpTurnSetback@aiPath@@QAEMH_N@Z
-    inline float SharpTurnSetback(int32_t arg1, bool arg2)
+    inline f32 SharpTurnSetback(i32 arg1, bool arg2)
     {
-        return stub<member_func_t<float, aiPath, int32_t, bool>>(0x5481A0, this, arg1, arg2);
+        return stub<member_func_t<f32, aiPath, i32, bool>>(0x5481A0, this, arg1, arg2);
     }
 
     // 0x5481D0 | ?SharpTurnAngle@aiPath@@QAEMH_N@Z
-    inline float SharpTurnAngle(int32_t arg1, bool arg2)
+    inline f32 SharpTurnAngle(i32 arg1, bool arg2)
     {
-        return stub<member_func_t<float, aiPath, int32_t, bool>>(0x5481D0, this, arg1, arg2);
+        return stub<member_func_t<f32, aiPath, i32, bool>>(0x5481D0, this, arg1, arg2);
     }
 
     // 0x548200 | ?SharpTurnDir@aiPath@@QAEMH_N@Z
-    inline float SharpTurnDir(int32_t arg1, bool arg2)
+    inline f32 SharpTurnDir(i32 arg1, bool arg2)
     {
-        return stub<member_func_t<float, aiPath, int32_t, bool>>(0x548200, this, arg1, arg2);
+        return stub<member_func_t<f32, aiPath, i32, bool>>(0x548200, this, arg1, arg2);
     }
 
     // 0x548230 | ?SharpTurnRadius@aiPath@@QAEMH_N@Z
-    inline float SharpTurnRadius(int32_t arg1, bool arg2)
+    inline f32 SharpTurnRadius(i32 arg1, bool arg2)
     {
-        return stub<member_func_t<float, aiPath, int32_t, bool>>(0x548230, this, arg1, arg2);
+        return stub<member_func_t<f32, aiPath, i32, bool>>(0x548230, this, arg1, arg2);
     }
 
     // 0x548260 | ?SharpTurnCenter@aiPath@@QAEAAVVector3@@H_N@Z
-    inline class Vector3& SharpTurnCenter(int32_t arg1, bool arg2)
+    inline class Vector3& SharpTurnCenter(i32 arg1, bool arg2)
     {
-        return stub<member_func_t<class Vector3&, aiPath, int32_t, bool>>(0x548260, this, arg1, arg2);
+        return stub<member_func_t<class Vector3&, aiPath, i32, bool>>(0x548260, this, arg1, arg2);
     }
 
     // 0x548290 | ?SharpTurnIntersection@aiPath@@QAEAAVVector3@@H_N@Z
-    inline class Vector3& SharpTurnIntersection(int32_t arg1, bool arg2)
+    inline class Vector3& SharpTurnIntersection(i32 arg1, bool arg2)
     {
-        return stub<member_func_t<class Vector3&, aiPath, int32_t, bool>>(0x548290, this, arg1, arg2);
+        return stub<member_func_t<class Vector3&, aiPath, i32, bool>>(0x548290, this, arg1, arg2);
     }
 
     // 0x5482C0 | ?SharpTurnStartDir@aiPath@@QAEAAVVector3@@H_N@Z
-    inline class Vector3& SharpTurnStartDir(int32_t arg1, bool arg2)
+    inline class Vector3& SharpTurnStartDir(i32 arg1, bool arg2)
     {
-        return stub<member_func_t<class Vector3&, aiPath, int32_t, bool>>(0x5482C0, this, arg1, arg2);
+        return stub<member_func_t<class Vector3&, aiPath, i32, bool>>(0x5482C0, this, arg1, arg2);
     }
 
     // 0x5482F0 | ?SharpTurnEndDir@aiPath@@QAEAAVVector3@@H_N@Z
-    inline class Vector3& SharpTurnEndDir(int32_t arg1, bool arg2)
+    inline class Vector3& SharpTurnEndDir(i32 arg1, bool arg2)
     {
-        return stub<member_func_t<class Vector3&, aiPath, int32_t, bool>>(0x5482F0, this, arg1, arg2);
+        return stub<member_func_t<class Vector3&, aiPath, i32, bool>>(0x5482F0, this, arg1, arg2);
     }
 
     // 0x548320 | ?Direction@aiPath@@QAE_NABVMatrix34@@@Z
@@ -448,110 +445,102 @@ public:
     }
 
     // 0x548370 | ?IsPosOnRoad@aiPath@@QAEHABVVector3@@MPAM@Z
-    inline int32_t IsPosOnRoad(class Vector3 const& arg1, float arg2, float* arg3)
+    inline i32 IsPosOnRoad(class Vector3 const& arg1, f32 arg2, f32* arg3)
     {
-        return stub<member_func_t<int32_t, aiPath, class Vector3 const&, float, float*>>(
-            0x548370, this, arg1, arg2, arg3);
+        return stub<member_func_t<i32, aiPath, class Vector3 const&, f32, f32*>>(0x548370, this, arg1, arg2, arg3);
     }
 
     // 0x5485E0 | ?RoadVertice@aiPath@@QAEHABVVector3@@H@Z
-    inline int32_t RoadVertice(class Vector3 const& arg1, int32_t arg2)
+    inline i32 RoadVertice(class Vector3 const& arg1, i32 arg2)
     {
-        return stub<member_func_t<int32_t, aiPath, class Vector3 const&, int32_t>>(0x5485E0, this, arg1, arg2);
+        return stub<member_func_t<i32, aiPath, class Vector3 const&, i32>>(0x5485E0, this, arg1, arg2);
     }
 
     // 0x548780 | ?RoadVertice@aiPath@@QAEHABVVector3@@HH@Z
-    inline int32_t RoadVertice(class Vector3 const& arg1, int32_t arg2, int32_t arg3)
+    inline i32 RoadVertice(class Vector3 const& arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<int32_t, aiPath, class Vector3 const&, int32_t, int32_t>>(
-            0x548780, this, arg1, arg2, arg3);
+        return stub<member_func_t<i32, aiPath, class Vector3 const&, i32, i32>>(0x548780, this, arg1, arg2, arg3);
     }
 
     // 0x548850 | ?CenterDist@aiPath@@QAEMABVVector3@@@Z
-    inline float CenterDist(class Vector3 const& arg1)
+    inline f32 CenterDist(class Vector3 const& arg1)
     {
-        return stub<member_func_t<float, aiPath, class Vector3 const&>>(0x548850, this, arg1);
+        return stub<member_func_t<f32, aiPath, class Vector3 const&>>(0x548850, this, arg1);
     }
 
     // 0x548900 | ?CenterDistance@aiPath@@QAEHABVVector3@@PAFPAM2@Z
-    inline int32_t CenterDistance(class Vector3 const& arg1, int16_t* arg2, float* arg3, float* arg4)
+    inline i32 CenterDistance(class Vector3 const& arg1, i16* arg2, f32* arg3, f32* arg4)
     {
-        return stub<member_func_t<int32_t, aiPath, class Vector3 const&, int16_t*, float*, float*>>(
+        return stub<member_func_t<i32, aiPath, class Vector3 const&, i16*, f32*, f32*>>(
             0x548900, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x548A30 | ?SubSectionPt@aiPath@@QAEXAAVVector3@@HHMH@Z
-    inline void SubSectionPt(class Vector3& arg1, int32_t arg2, int32_t arg3, float arg4, int32_t arg5)
+    inline void SubSectionPt(class Vector3& arg1, i32 arg2, i32 arg3, f32 arg4, i32 arg5)
     {
-        return stub<member_func_t<void, aiPath, class Vector3&, int32_t, int32_t, float, int32_t>>(
+        return stub<member_func_t<void, aiPath, class Vector3&, i32, i32, f32, i32>>(
             0x548A30, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x548AD0 | ?SubSectionDir@aiPath@@QAEXAAVVector3@@HMH@Z
-    inline void SubSectionDir(class Vector3& arg1, int32_t arg2, float arg3, int32_t arg4)
+    inline void SubSectionDir(class Vector3& arg1, i32 arg2, f32 arg3, i32 arg4)
     {
-        return stub<member_func_t<void, aiPath, class Vector3&, int32_t, float, int32_t>>(
-            0x548AD0, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, aiPath, class Vector3&, i32, f32, i32>>(0x548AD0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x548B70 | ?IntersectionEntryPt@aiPath@@QAEXAAVVector3@@HMH@Z
-    inline void IntersectionEntryPt(class Vector3& arg1, int32_t arg2, float arg3, int32_t arg4)
+    inline void IntersectionEntryPt(class Vector3& arg1, i32 arg2, f32 arg3, i32 arg4)
     {
-        return stub<member_func_t<void, aiPath, class Vector3&, int32_t, float, int32_t>>(
-            0x548B70, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, aiPath, class Vector3&, i32, f32, i32>>(0x548B70, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x548CC0 | ?IntersectionEntryVector@aiPath@@QAEXAAVVector3@@MH@Z
-    inline void IntersectionEntryVector(class Vector3& arg1, float arg2, int32_t arg3)
+    inline void IntersectionEntryVector(class Vector3& arg1, f32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, aiPath, class Vector3&, float, int32_t>>(0x548CC0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, aiPath, class Vector3&, f32, i32>>(0x548CC0, this, arg1, arg2, arg3);
     }
 
     // 0x548D50 | ?IntersectionExitVector@aiPath@@QAEXAAVVector3@@MH@Z
-    inline void IntersectionExitVector(class Vector3& arg1, float arg2, int32_t arg3)
+    inline void IntersectionExitVector(class Vector3& arg1, f32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, aiPath, class Vector3&, float, int32_t>>(0x548D50, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, aiPath, class Vector3&, f32, i32>>(0x548D50, this, arg1, arg2, arg3);
     }
 
     // 0x548DE0 | ?NumVehiclesAfterDist@aiPath@@QAEHHMH@Z
-    inline int32_t NumVehiclesAfterDist(int32_t arg1, float arg2, int32_t arg3)
+    inline i32 NumVehiclesAfterDist(i32 arg1, f32 arg2, i32 arg3)
     {
-        return stub<member_func_t<int32_t, aiPath, int32_t, float, int32_t>>(0x548DE0, this, arg1, arg2, arg3);
+        return stub<member_func_t<i32, aiPath, i32, f32, i32>>(0x548DE0, this, arg1, arg2, arg3);
     }
 
     // 0x548E70 | ?PopAmbVehicle@aiPath@@QAEXPAVaiVehicleSpline@@HH@Z
-    inline void PopAmbVehicle(class aiVehicleSpline* arg1, int32_t arg2, int32_t arg3)
+    inline void PopAmbVehicle(class aiVehicleSpline* arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, aiPath, class aiVehicleSpline*, int32_t, int32_t>>(
-            0x548E70, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, aiPath, class aiVehicleSpline*, i32, i32>>(0x548E70, this, arg1, arg2, arg3);
     }
 
     // 0x549060 | ?PushAmbVehicle@aiPath@@QAEXPAVaiVehicleSpline@@HH@Z
-    inline void PushAmbVehicle(class aiVehicleSpline* arg1, int32_t arg2, int32_t arg3)
+    inline void PushAmbVehicle(class aiVehicleSpline* arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, aiPath, class aiVehicleSpline*, int32_t, int32_t>>(
-            0x549060, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, aiPath, class aiVehicleSpline*, i32, i32>>(0x549060, this, arg1, arg2, arg3);
     }
 
     // 0x5491C0 | ?AddAmbVehicle@aiPath@@QAEXPAVaiVehicleSpline@@HMH@Z
-    inline void AddAmbVehicle(class aiVehicleSpline* arg1, int32_t arg2, float arg3, int32_t arg4)
+    inline void AddAmbVehicle(class aiVehicleSpline* arg1, i32 arg2, f32 arg3, i32 arg4)
     {
-        return stub<member_func_t<void, aiPath, class aiVehicleSpline*, int32_t, float, int32_t>>(
+        return stub<member_func_t<void, aiPath, class aiVehicleSpline*, i32, f32, i32>>(
             0x5491C0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x549540 | ?RemoveAmbVehicle@aiPath@@QAEHPAVaiVehicleSpline@@HH@Z
-    inline int32_t RemoveAmbVehicle(class aiVehicleSpline* arg1, int32_t arg2, int32_t arg3)
+    inline i32 RemoveAmbVehicle(class aiVehicleSpline* arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<int32_t, aiPath, class aiVehicleSpline*, int32_t, int32_t>>(
-            0x549540, this, arg1, arg2, arg3);
+        return stub<member_func_t<i32, aiPath, class aiVehicleSpline*, i32, i32>>(0x549540, this, arg1, arg2, arg3);
     }
 
     // 0x549770 | ?RoadCapacity@aiPath@@QAEHPAVaiVehicleSpline@@HH@Z
-    inline int32_t RoadCapacity(class aiVehicleSpline* arg1, int32_t arg2, int32_t arg3)
+    inline i32 RoadCapacity(class aiVehicleSpline* arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<int32_t, aiPath, class aiVehicleSpline*, int32_t, int32_t>>(
-            0x549770, this, arg1, arg2, arg3);
+        return stub<member_func_t<i32, aiPath, class aiVehicleSpline*, i32, i32>>(0x549770, this, arg1, arg2, arg3);
     }
 
     // 0x5498D0 | ?AddPedestrian@aiPath@@QAEXPAVaiPedestrian@@@Z
@@ -567,14 +556,14 @@ public:
     }
 
     // 0x549980 | ?HasCableCarLine@aiPath@@QAE_NH@Z
-    inline bool HasCableCarLine(int32_t arg1)
+    inline bool HasCableCarLine(i32 arg1)
     {
-        return stub<member_func_t<bool, aiPath, int32_t>>(0x549980, this, arg1);
+        return stub<member_func_t<bool, aiPath, i32>>(0x549980, this, arg1);
     }
 
     // 0x5499B0 | ?HasSubwayLine@aiPath@@QAE_NH@Z
-    inline bool HasSubwayLine(int32_t arg1)
+    inline bool HasSubwayLine(i32 arg1)
     {
-        return stub<member_func_t<bool, aiPath, int32_t>>(0x5499B0, this, arg1);
+        return stub<member_func_t<bool, aiPath, i32>>(0x5499B0, this, arg1);
     }
 };

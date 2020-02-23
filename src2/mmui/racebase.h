@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -60,27 +60,27 @@ public:
     // RaceMenuBase::`vftable' @ 0x5B4630
 
     // 0x506BD0 | ??0RaceMenuBase@@QAE@H@Z
-    inline RaceMenuBase(int32_t arg1)
+    inline RaceMenuBase(i32 arg1)
     {
-        stub<member_func_t<void, RaceMenuBase, int32_t>>(0x506BD0, this, arg1);
+        stub<member_func_t<void, RaceMenuBase, i32>>(0x506BD0, this, arg1);
     }
 
     // 0x506CC0 | ?Init@RaceMenuBase@@QAEXH@Z
-    inline void Init(int32_t arg1)
+    inline void Init(i32 arg1)
     {
-        return stub<member_func_t<void, RaceMenuBase, int32_t>>(0x506CC0, this, arg1);
+        return stub<member_func_t<void, RaceMenuBase, i32>>(0x506CC0, this, arg1);
     }
 
     // 0x507DF0 | ?FocusDescription@RaceMenuBase@@QAEXHH@Z
-    inline void FocusDescription(int32_t arg1, int32_t arg2)
+    inline void FocusDescription(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, RaceMenuBase, int32_t, int32_t>>(0x507DF0, this, arg1, arg2);
+        return stub<member_func_t<void, RaceMenuBase, i32, i32>>(0x507DF0, this, arg1, arg2);
     }
 
     // 0x507E40 | ?WidgetOnOff@RaceMenuBase@@QAEXHPAVuiWidget@@@Z
-    inline void WidgetOnOff(int32_t arg1, class uiWidget* arg2)
+    inline void WidgetOnOff(i32 arg1, class uiWidget* arg2)
     {
-        return stub<member_func_t<void, RaceMenuBase, int32_t, class uiWidget*>>(0x507E40, this, arg1, arg2);
+        return stub<member_func_t<void, RaceMenuBase, i32, class uiWidget*>>(0x507E40, this, arg1, arg2);
     }
 
     // 0x507EB0 | ?SetRW@RaceMenuBase@@QAEXXZ
@@ -219,9 +219,9 @@ public:
     }
 
     // 0x505450 | ?SetCRWidgets@RaceMenuBase@@UAEXH@Z
-    virtual inline void SetCRWidgets(int32_t arg1)
+    virtual inline void SetCRWidgets(i32 arg1)
     {
-        return stub<member_func_t<void, RaceMenuBase, int32_t>>(0x505450, this, arg1);
+        return stub<member_func_t<void, RaceMenuBase, i32>>(0x505450, this, arg1);
     }
 
     // 0x505460 | ?InitCRWidgets@RaceMenuBase@@UAEXXZ

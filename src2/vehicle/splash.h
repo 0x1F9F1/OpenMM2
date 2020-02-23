@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -53,9 +53,9 @@ public:
     }
 
     // 0x4D6BD0 | ?Activate@vehSplash@@QAEXM@Z
-    inline void Activate(float arg1)
+    inline void Activate(f32 arg1)
     {
-        return stub<member_func_t<void, vehSplash, float>>(0x4D6BD0, this, arg1);
+        return stub<member_func_t<void, vehSplash, f32>>(0x4D6BD0, this, arg1);
     }
 
     // 0x4D6F30 | ??1vehSplash@@UAE@XZ

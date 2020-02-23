@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -44,15 +44,15 @@ inline bool gfxSaveTargaImage(char const* arg1, class gfxImage* arg2)
 }
 
 // 0x4AF8F0 | ?gfxOpenRawBmpStream@@YAPAVStream@@PBDHH@Z
-inline class Stream* gfxOpenRawBmpStream(char const* arg1, int32_t arg2, int32_t arg3)
+inline class Stream* gfxOpenRawBmpStream(char const* arg1, i32 arg2, i32 arg3)
 {
-    return stub<cdecl_t<class Stream*, char const*, int32_t, int32_t>>(0x4AF8F0, arg1, arg2, arg3);
+    return stub<cdecl_t<class Stream*, char const*, i32, i32>>(0x4AF8F0, arg1, arg2, arg3);
 }
 
 // 0x4AFA60 | ?gfxWriteRawBmpStream@@YAXPAVStream@@PAXH@Z
-inline void gfxWriteRawBmpStream(class Stream* arg1, void* arg2, int32_t arg3)
+inline void gfxWriteRawBmpStream(class Stream* arg1, void* arg2, i32 arg3)
 {
-    return stub<cdecl_t<void, class Stream*, void*, int32_t>>(0x4AFA60, arg1, arg2, arg3);
+    return stub<cdecl_t<void, class Stream*, void*, i32>>(0x4AFA60, arg1, arg2, arg3);
 }
 
 // 0x4AFA90 | ?gfxCloseRawBmpStream@@YAXPAVStream@@@Z

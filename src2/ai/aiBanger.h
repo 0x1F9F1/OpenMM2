@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -42,9 +42,9 @@ public:
     // aiBanger::`vftable' @ 0x5B5B84
 
     // 0x56A710 | ??0aiBanger@@QAE@PAVlvlInstance@@HH@Z
-    inline aiBanger(class lvlInstance* arg1, int32_t arg2, int32_t arg3)
+    inline aiBanger(class lvlInstance* arg1, i32 arg2, i32 arg3)
     {
-        stub<member_func_t<void, aiBanger, class lvlInstance*, int32_t, int32_t>>(0x56A710, this, arg1, arg2, arg3);
+        stub<member_func_t<void, aiBanger, class lvlInstance*, i32, i32>>(0x56A710, this, arg1, arg2, arg3);
     }
 
     // 0x56A740 | ??1aiBanger@@QAE@XZ
@@ -54,9 +54,9 @@ public:
     }
 
     // 0x56A750 | ?Radius@aiBanger@@QAEMXZ
-    inline float Radius()
+    inline f32 Radius()
     {
-        return stub<member_func_t<float, aiBanger>>(0x56A750, this);
+        return stub<member_func_t<f32, aiBanger>>(0x56A750, this);
     }
 
     // 0x56ACE0 | ?Draw@aiBanger@@QAEXXZ
@@ -72,48 +72,47 @@ public:
     }
 
     // 0x56ACF0 | ?Speed@aiBanger@@UAEMXZ
-    inline float Speed() override
+    inline f32 Speed() override
     {
-        return stub<member_func_t<float, aiBanger>>(0x56ACF0, this);
+        return stub<member_func_t<f32, aiBanger>>(0x56ACF0, this);
     }
 
     // 0x56A780 | ?BreakThreshold@aiBanger@@UAEMXZ
-    inline float BreakThreshold() override
+    inline f32 BreakThreshold() override
     {
-        return stub<member_func_t<float, aiBanger>>(0x56A780, this);
+        return stub<member_func_t<f32, aiBanger>>(0x56A780, this);
     }
 
     // 0x56A790 | ?Drivable@aiBanger@@UAEHXZ
-    inline int32_t Drivable() override
+    inline i32 Drivable() override
     {
-        return stub<member_func_t<int32_t, aiBanger>>(0x56A790, this);
+        return stub<member_func_t<i32, aiBanger>>(0x56A790, this);
     }
 
     // 0x56A880 | ?CurrentRoadIdx@aiBanger@@UAEHPAPAVaiPath@@QA_NPAH@Z
-    inline int32_t CurrentRoadIdx(class aiPath** arg1, bool* const arg2, int32_t* arg3) override
+    inline i32 CurrentRoadIdx(class aiPath** arg1, bool* const arg2, i32* arg3) override
     {
-        return stub<member_func_t<int32_t, aiBanger, class aiPath**, bool* const, int32_t*>>(
-            0x56A880, this, arg1, arg2, arg3);
+        return stub<member_func_t<i32, aiBanger, class aiPath**, bool* const, i32*>>(0x56A880, this, arg1, arg2, arg3);
     }
 
     // 0x56A9D0 | ?CurrentRdVert@aiBanger@@UAEHXZ
-    inline int32_t CurrentRdVert() override
+    inline i32 CurrentRdVert() override
     {
-        return stub<member_func_t<int32_t, aiBanger>>(0x56A9D0, this);
+        return stub<member_func_t<i32, aiBanger>>(0x56A9D0, this);
     }
 
     // 0x56AA30 | ?PreAvoid@aiBanger@@UAEXABVVector3@@0MAAV2@1@Z
-    inline void PreAvoid(class Vector3 const& arg1, class Vector3 const& arg2, float arg3, class Vector3& arg4,
+    inline void PreAvoid(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, class Vector3& arg4,
         class Vector3& arg5) override
     {
-        return stub<member_func_t<void, aiBanger, class Vector3 const&, class Vector3 const&, float, class Vector3&,
+        return stub<member_func_t<void, aiBanger, class Vector3 const&, class Vector3 const&, f32, class Vector3&,
             class Vector3&>>(0x56AA30, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x56AB60 | ?IsBlockingTarget@aiBanger@@UAEMABVVector3@@0MM@Z
-    inline float IsBlockingTarget(class Vector3 const& arg1, class Vector3 const& arg2, float arg3, float arg4) override
+    inline f32 IsBlockingTarget(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, f32 arg4) override
     {
-        return stub<member_func_t<float, aiBanger, class Vector3 const&, class Vector3 const&, float, float>>(
+        return stub<member_func_t<f32, aiBanger, class Vector3 const&, class Vector3 const&, f32, f32>>(
             0x56AB60, this, arg1, arg2, arg3, arg4);
     }
 };

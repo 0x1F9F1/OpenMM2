@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -34,15 +34,15 @@ class Aud3DSampleWrapper
 {
 public:
     // 0x5139A0 | ??0Aud3DSampleWrapper@@QAE@PADHK@Z
-    inline Aud3DSampleWrapper(char* arg1, int32_t arg2, uint32_t arg3)
+    inline Aud3DSampleWrapper(char* arg1, i32 arg2, u32 arg3)
     {
-        stub<member_func_t<void, Aud3DSampleWrapper, char*, int32_t, uint32_t>>(0x5139A0, this, arg1, arg2, arg3);
+        stub<member_func_t<void, Aud3DSampleWrapper, char*, i32, u32>>(0x5139A0, this, arg1, arg2, arg3);
     }
 
     // 0x513AE0 | ??0Aud3DSampleWrapper@@QAE@HHK@Z
-    inline Aud3DSampleWrapper(int32_t arg1, int32_t arg2, uint32_t arg3)
+    inline Aud3DSampleWrapper(i32 arg1, i32 arg2, u32 arg3)
     {
-        stub<member_func_t<void, Aud3DSampleWrapper, int32_t, int32_t, uint32_t>>(0x513AE0, this, arg1, arg2, arg3);
+        stub<member_func_t<void, Aud3DSampleWrapper, i32, i32, u32>>(0x513AE0, this, arg1, arg2, arg3);
     }
 
     // 0x513BB0 | ??1Aud3DSampleWrapper@@QAE@XZ
@@ -58,15 +58,15 @@ public:
     }
 
     // 0x513C40 | ?Load@Aud3DSampleWrapper@@QAEXPADH@Z
-    inline void Load(char* arg1, int32_t arg2)
+    inline void Load(char* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, Aud3DSampleWrapper, char*, int32_t>>(0x513C40, this, arg1, arg2);
+        return stub<member_func_t<void, Aud3DSampleWrapper, char*, i32>>(0x513C40, this, arg1, arg2);
     }
 
     // 0x513CA0 | ?GetSoundPtr@Aud3DSampleWrapper@@QAEPAVAudSoundBase@@F@Z
-    inline class AudSoundBase* GetSoundPtr(int16_t arg1)
+    inline class AudSoundBase* GetSoundPtr(i16 arg1)
     {
-        return stub<member_func_t<class AudSoundBase*, Aud3DSampleWrapper, int16_t>>(0x513CA0, this, arg1);
+        return stub<member_func_t<class AudSoundBase*, Aud3DSampleWrapper, i16>>(0x513CA0, this, arg1);
     }
 
     // 0x513CC0 | ?Update@Aud3DSampleWrapper@@QAEXXZ

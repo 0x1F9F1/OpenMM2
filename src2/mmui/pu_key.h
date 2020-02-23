@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -36,10 +36,9 @@ public:
     // PUKey::`vftable' @ 0x5B4840
 
     // 0x50B5A0 | ??0PUKey@@QAE@HMMMM@Z
-    inline PUKey(int32_t arg1, float arg2, float arg3, float arg4, float arg5)
+    inline PUKey(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
     {
-        stub<member_func_t<void, PUKey, int32_t, float, float, float, float>>(
-            0x50B5A0, this, arg1, arg2, arg3, arg4, arg5);
+        stub<member_func_t<void, PUKey, i32, f32, f32, f32, f32>>(0x50B5A0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x50B640 | ??1PUKey@@UAE@XZ

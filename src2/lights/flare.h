@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -58,9 +58,9 @@ struct ltLensFlare
 {
 public:
     // 0x59BE80 | ??0ltLensFlare@@QAE@H@Z
-    inline ltLensFlare(int32_t arg1)
+    inline ltLensFlare(i32 arg1)
     {
-        stub<member_func_t<void, ltLensFlare, int32_t>>(0x59BE80, this, arg1);
+        stub<member_func_t<void, ltLensFlare, i32>>(0x59BE80, this, arg1);
     }
 
     // 0x59BF80 | ??1ltLensFlare@@QAE@XZ
@@ -82,9 +82,9 @@ public:
     }
 
     // 0x59C1C0 | ?Draw@ltLensFlare@@QAEXAAVVector3@@0M@Z
-    inline void Draw(class Vector3& arg1, class Vector3& arg2, float arg3)
+    inline void Draw(class Vector3& arg1, class Vector3& arg2, f32 arg3)
     {
-        return stub<member_func_t<void, ltLensFlare, class Vector3&, class Vector3&, float>>(
+        return stub<member_func_t<void, ltLensFlare, class Vector3&, class Vector3&, f32>>(
             0x59C1C0, this, arg1, arg2, arg3);
     }
 };

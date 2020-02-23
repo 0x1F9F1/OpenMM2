@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -63,9 +63,9 @@ public:
     }
 
     // 0x5A8270 | ?SetMode@dgLink@@QAEXH@Z
-    inline void SetMode(int32_t arg1)
+    inline void SetMode(i32 arg1)
     {
-        return stub<member_func_t<void, dgLink, int32_t>>(0x5A8270, this, arg1);
+        return stub<member_func_t<void, dgLink, i32>>(0x5A8270, this, arg1);
     }
 
     // 0x5A82A0 | ?Update@dgLink@@QAEXXZ

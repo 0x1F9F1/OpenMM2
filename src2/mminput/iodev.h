@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -40,9 +40,9 @@
 */
 
 // 0x52F5D0 | ?ConvertDItoString@@YAHHPADH@Z
-inline int32_t ConvertDItoString(int32_t arg1, char* arg2, int32_t arg3)
+inline i32 ConvertDItoString(i32 arg1, char* arg2, i32 arg3)
 {
-    return stub<cdecl_t<int32_t, int32_t, char*, int32_t>>(0x52F5D0, arg1, arg2, arg3);
+    return stub<cdecl_t<i32, i32, char*, i32>>(0x52F5D0, arg1, arg2, arg3);
 }
 
 class mmIODev : mmInfoBase
@@ -57,21 +57,21 @@ public:
     }
 
     // 0x52F410 | ?Init@mmIODev@@QAEXH_J@Z
-    inline void Init(int32_t arg1, int64_t arg2)
+    inline void Init(i32 arg1, i64 arg2)
     {
-        return stub<member_func_t<void, mmIODev, int32_t, int64_t>>(0x52F410, this, arg1, arg2);
+        return stub<member_func_t<void, mmIODev, i32, i64>>(0x52F410, this, arg1, arg2);
     }
 
     // 0x52F440 | ?Assign@mmIODev@@QAEXHHH@Z
-    inline void Assign(int32_t arg1, int32_t arg2, int32_t arg3)
+    inline void Assign(i32 arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, mmIODev, int32_t, int32_t, int32_t>>(0x52F440, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmIODev, i32, i32, i32>>(0x52F440, this, arg1, arg2, arg3);
     }
 
     // 0x52F570 | ??8mmIODev@@QAEHPATeqEvent@@@Z
-    inline int32_t operator==(union eqEvent* arg1)
+    inline i32 operator==(union eqEvent* arg1)
     {
-        return stub<member_func_t<int32_t, mmIODev, union eqEvent*>>(0x52F570, this, arg1);
+        return stub<member_func_t<i32, mmIODev, union eqEvent*>>(0x52F570, this, arg1);
     }
 
     // 0x52F630 | ?GetDescription@mmIODev@@QAEXPAD@Z
@@ -81,45 +81,45 @@ public:
     }
 
     // 0x52F8F0 | ?GetComponentType@mmIODev@@QAEHHH@Z
-    inline int32_t GetComponentType(int32_t arg1, int32_t arg2)
+    inline i32 GetComponentType(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<int32_t, mmIODev, int32_t, int32_t>>(0x52F8F0, this, arg1, arg2);
+        return stub<member_func_t<i32, mmIODev, i32, i32>>(0x52F8F0, this, arg1, arg2);
     }
 
     // 0x52F950 | ?SanityCheckioType@mmIODev@@QAEHHHH@Z
-    inline int32_t SanityCheckioType(int32_t arg1, int32_t arg2, int32_t arg3)
+    inline i32 SanityCheckioType(i32 arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<int32_t, mmIODev, int32_t, int32_t, int32_t>>(0x52F950, this, arg1, arg2, arg3);
+        return stub<member_func_t<i32, mmIODev, i32, i32, i32>>(0x52F950, this, arg1, arg2, arg3);
     }
 
     // 0x52F9D0 | ?Print@mmIODev@@QAEXH@Z
-    inline void Print(int32_t arg1)
+    inline void Print(i32 arg1)
     {
-        return stub<member_func_t<void, mmIODev, int32_t>>(0x52F9D0, this, arg1);
+        return stub<member_func_t<void, mmIODev, i32>>(0x52F9D0, this, arg1);
     }
 
     // 0x52FAA0 | ?Write@mmIODev@@QAEHPAVStream@@@Z
-    inline int32_t Write(class Stream* arg1)
+    inline i32 Write(class Stream* arg1)
     {
-        return stub<member_func_t<int32_t, mmIODev, class Stream*>>(0x52FAA0, this, arg1);
+        return stub<member_func_t<i32, mmIODev, class Stream*>>(0x52FAA0, this, arg1);
     }
 
     // 0x52FAF0 | ?WriteBinary@mmIODev@@QAEHPAVStream@@@Z
-    inline int32_t WriteBinary(class Stream* arg1)
+    inline i32 WriteBinary(class Stream* arg1)
     {
-        return stub<member_func_t<int32_t, mmIODev, class Stream*>>(0x52FAF0, this, arg1);
+        return stub<member_func_t<i32, mmIODev, class Stream*>>(0x52FAF0, this, arg1);
     }
 
     // 0x52FB40 | ?Read@mmIODev@@QAEHPAVStream@@@Z
-    inline int32_t Read(class Stream* arg1)
+    inline i32 Read(class Stream* arg1)
     {
-        return stub<member_func_t<int32_t, mmIODev, class Stream*>>(0x52FB40, this, arg1);
+        return stub<member_func_t<i32, mmIODev, class Stream*>>(0x52FB40, this, arg1);
     }
 
     // 0x52FB90 | ?ReadBinary@mmIODev@@QAEHPAVStream@@@Z
-    inline int32_t ReadBinary(class Stream* arg1)
+    inline i32 ReadBinary(class Stream* arg1)
     {
-        return stub<member_func_t<int32_t, mmIODev, class Stream*>>(0x52FB90, this, arg1);
+        return stub<member_func_t<i32, mmIODev, class Stream*>>(0x52FB90, this, arg1);
     }
 
     // 0x52F400 | ??1mmIODev@@UAE@XZ

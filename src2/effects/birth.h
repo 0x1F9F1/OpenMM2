@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -50,9 +50,9 @@ public:
     }
 
     // 0x45EDC0 | ?InitSpark@asBirthRule@@QAEXPAUasSparkInfo@@AAVasParticles@@H@Z
-    inline void InitSpark(struct asSparkInfo* arg1, class asParticles& arg2, int32_t arg3)
+    inline void InitSpark(struct asSparkInfo* arg1, class asParticles& arg2, i32 arg3)
     {
-        return stub<member_func_t<void, asBirthRule, struct asSparkInfo*, class asParticles&, int32_t>>(
+        return stub<member_func_t<void, asBirthRule, struct asSparkInfo*, class asParticles&, i32>>(
             0x45EDC0, this, arg1, arg2, arg3);
     }
 
@@ -63,15 +63,15 @@ public:
     }
 
     // 0x45F210 | ?Indent@asBirthRule@@QAEXPAVdatBaseTokenizer@@H@Z
-    inline void Indent(class datBaseTokenizer* arg1, int32_t arg2)
+    inline void Indent(class datBaseTokenizer* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, asBirthRule, class datBaseTokenizer*, int32_t>>(0x45F210, this, arg1, arg2);
+        return stub<member_func_t<void, asBirthRule, class datBaseTokenizer*, i32>>(0x45F210, this, arg1, arg2);
     }
 
     // 0x45F240 | ?Save@asBirthRule@@QAEXPAVdatBaseTokenizer@@H@Z
-    inline void Save(class datBaseTokenizer* arg1, int32_t arg2)
+    inline void Save(class datBaseTokenizer* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, asBirthRule, class datBaseTokenizer*, int32_t>>(0x45F240, this, arg1, arg2);
+        return stub<member_func_t<void, asBirthRule, class datBaseTokenizer*, i32>>(0x45F240, this, arg1, arg2);
     }
 
     // 0x45F720 | ?Load@asBirthRule@@QAEXPAVdatBaseTokenizer@@@Z

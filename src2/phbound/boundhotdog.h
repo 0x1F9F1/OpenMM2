@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -60,15 +60,15 @@ public:
     }
 
     // 0x480B20 | ??0phBoundHotdog@@QAE@MM@Z
-    inline phBoundHotdog(float arg1, float arg2)
+    inline phBoundHotdog(f32 arg1, f32 arg2)
     {
-        stub<member_func_t<void, phBoundHotdog, float, float>>(0x480B20, this, arg1, arg2);
+        stub<member_func_t<void, phBoundHotdog, f32, f32>>(0x480B20, this, arg1, arg2);
     }
 
     // 0x480B60 | ?SetSize@phBoundHotdog@@QAEXMM@Z
-    inline void SetSize(float arg1, float arg2)
+    inline void SetSize(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, phBoundHotdog, float, float>>(0x480B60, this, arg1, arg2);
+        return stub<member_func_t<void, phBoundHotdog, f32, f32>>(0x480B60, this, arg1, arg2);
     }
 
     // 0x480BD0 | ??1phBoundHotdog@@QAE@XZ
@@ -78,15 +78,15 @@ public:
     }
 
     // 0x480BE0 | ?SetBoundingBox@phBoundHotdog@@QAEXMM@Z
-    inline void SetBoundingBox(float arg1, float arg2)
+    inline void SetBoundingBox(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, phBoundHotdog, float, float>>(0x480BE0, this, arg1, arg2);
+        return stub<member_func_t<void, phBoundHotdog, f32, f32>>(0x480BE0, this, arg1, arg2);
     }
 
     // 0x480C20 | ?ScaleBoundingBox@phBoundHotdog@@QAEXMM@Z
-    inline void ScaleBoundingBox(float arg1, float arg2)
+    inline void ScaleBoundingBox(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, phBoundHotdog, float, float>>(0x480C20, this, arg1, arg2);
+        return stub<member_func_t<void, phBoundHotdog, f32, f32>>(0x480C20, this, arg1, arg2);
     }
 
     // 0x480C60 | ?CalculateBoundingBox@phBoundHotdog@@QAEXXZ
@@ -114,18 +114,17 @@ public:
     }
 
     // 0x481900 | ?SegmentToHotdogIntersections@phBoundHotdog@@QBEHABVVector3@@0PAM111PAH2@Z
-    inline int32_t SegmentToHotdogIntersections(class Vector3 const& arg1, class Vector3 const& arg2, float* arg3,
-        float* arg4, float* arg5, float* arg6, int32_t* arg7, int32_t* arg8)
+    inline i32 SegmentToHotdogIntersections(class Vector3 const& arg1, class Vector3 const& arg2, f32* arg3, f32* arg4,
+        f32* arg5, f32* arg6, i32* arg7, i32* arg8)
     {
-        return stub<member_func_t<int32_t, phBoundHotdog, class Vector3 const&, class Vector3 const&, float*, float*,
-            float*, float*, int32_t*, int32_t*>>(0x481900, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+        return stub<member_func_t<i32, phBoundHotdog, class Vector3 const&, class Vector3 const&, f32*, f32*, f32*,
+            f32*, i32*, i32*>>(0x481900, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
     // 0x481E70 | ?FindHotdogIsectNormal@phBoundHotdog@@QBE?AVVector3@@ABV2@H@Z
-    inline class Vector3 FindHotdogIsectNormal(class Vector3 const& arg1, int32_t arg2)
+    inline class Vector3 FindHotdogIsectNormal(class Vector3 const& arg1, i32 arg2)
     {
-        return stub<member_func_t<class Vector3, phBoundHotdog, class Vector3 const&, int32_t>>(
-            0x481E70, this, arg1, arg2);
+        return stub<member_func_t<class Vector3, phBoundHotdog, class Vector3 const&, i32>>(0x481E70, this, arg1, arg2);
     }
 
     // 0x481F40 | ?FindImpactSphereToHotdog@phBoundHotdog@@QBE_NPBVphBoundSphere@@PBVMatrix34@@1PAVphColliderBase@@2PAVphImpactBase@@ABVVector3@@@Z
@@ -140,23 +139,23 @@ public:
     }
 
     // 0x482440 | ?FindImpactsHotdogToPoly@phBoundHotdog@@QBEHPBVphBoundPolygonal@@PBVMatrix34@@1PAVphColliderBase@@2PAVphImpactBase@@HABVVector3@@4@Z
-    inline int32_t FindImpactsHotdogToPoly(class phBoundPolygonal const* arg1, class Matrix34 const* arg2,
+    inline i32 FindImpactsHotdogToPoly(class phBoundPolygonal const* arg1, class Matrix34 const* arg2,
         class Matrix34 const* arg3, class phColliderBase* arg4, class phColliderBase* arg5, class phImpactBase* arg6,
-        int32_t arg7, class Vector3 const& arg8, class Vector3 const& arg9)
+        i32 arg7, class Vector3 const& arg8, class Vector3 const& arg9)
     {
-        return stub<member_func_t<int32_t, phBoundHotdog, class phBoundPolygonal const*, class Matrix34 const*,
-            class Matrix34 const*, class phColliderBase*, class phColliderBase*, class phImpactBase*, int32_t,
+        return stub<member_func_t<i32, phBoundHotdog, class phBoundPolygonal const*, class Matrix34 const*,
+            class Matrix34 const*, class phColliderBase*, class phColliderBase*, class phImpactBase*, i32,
             class Vector3 const&, class Vector3 const&>>(
             0x482440, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
     }
 
     // 0x483880 | ?FindImpactsHotdogToHotdog@phBoundHotdog@@QBEHPBV1@PBVMatrix34@@1PAVphColliderBase@@2PAVphImpactBase@@H@Z
-    inline int32_t FindImpactsHotdogToHotdog(class phBoundHotdog const* arg1, class Matrix34 const* arg2,
+    inline i32 FindImpactsHotdogToHotdog(class phBoundHotdog const* arg1, class Matrix34 const* arg2,
         class Matrix34 const* arg3, class phColliderBase* arg4, class phColliderBase* arg5, class phImpactBase* arg6,
-        int32_t arg7)
+        i32 arg7)
     {
-        return stub<member_func_t<int32_t, phBoundHotdog, class phBoundHotdog const*, class Matrix34 const*,
-            class Matrix34 const*, class phColliderBase*, class phColliderBase*, class phImpactBase*, int32_t>>(
+        return stub<member_func_t<i32, phBoundHotdog, class phBoundHotdog const*, class Matrix34 const*,
+            class Matrix34 const*, class phColliderBase*, class phColliderBase*, class phImpactBase*, i32>>(
             0x483880, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
@@ -167,15 +166,15 @@ public:
     }
 
     // 0x484450 | ?GetMaterial@phBoundHotdog@@UBEPBVphMaterial@@H@Z
-    inline class phMaterial const* GetMaterial(int32_t arg1) override
+    inline class phMaterial const* GetMaterial(i32 arg1) override
     {
-        return stub<member_func_t<class phMaterial const*, phBoundHotdog, int32_t>>(0x484450, this, arg1);
+        return stub<member_func_t<class phMaterial const*, phBoundHotdog, i32>>(0x484450, this, arg1);
     }
 
     // 0x480D50 | ?TestProbePoint@phBoundHotdog@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@M@Z
-    inline bool TestProbePoint(class phSegment& arg1, class phIntersectionPoint* arg2, float arg3) override
+    inline bool TestProbePoint(class phSegment& arg1, class phIntersectionPoint* arg2, f32 arg3) override
     {
-        return stub<member_func_t<bool, phBoundHotdog, class phSegment&, class phIntersectionPoint*, float>>(
+        return stub<member_func_t<bool, phBoundHotdog, class phSegment&, class phIntersectionPoint*, f32>>(
             0x480D50, this, arg1, arg2, arg3);
     }
 
@@ -187,25 +186,25 @@ public:
     }
 
     // 0x4810A0 | ?TestEdge@phBoundHotdog@@UBEHAAVphSegment@@PAVphIntersection@@H@Z
-    inline int32_t TestEdge(class phSegment& arg1, class phIntersection* arg2, int32_t arg3) override
+    inline i32 TestEdge(class phSegment& arg1, class phIntersection* arg2, i32 arg3) override
     {
-        return stub<member_func_t<int32_t, phBoundHotdog, class phSegment&, class phIntersection*, int32_t>>(
+        return stub<member_func_t<i32, phBoundHotdog, class phSegment&, class phIntersection*, i32>>(
             0x4810A0, this, arg1, arg2, arg3);
     }
 
     // 0x4813A0 | ?TestProbe@phBoundHotdog@@UBE_NAAVphSegment@@PAVphIntersection@@M@Z
-    inline bool TestProbe(class phSegment& arg1, class phIntersection* arg2, float arg3) override
+    inline bool TestProbe(class phSegment& arg1, class phIntersection* arg2, f32 arg3) override
     {
-        return stub<member_func_t<bool, phBoundHotdog, class phSegment&, class phIntersection*, float>>(
+        return stub<member_func_t<bool, phBoundHotdog, class phSegment&, class phIntersection*, f32>>(
             0x4813A0, this, arg1, arg2, arg3);
     }
 
     // 0x481570 | ?TestSphere@phBoundHotdog@@UBE_NABVVector3@@MAAV2@1AAM@Z
     inline bool TestSphere(
-        class Vector3 const& arg1, float arg2, class Vector3& arg3, class Vector3& arg4, float& arg5) override
+        class Vector3 const& arg1, f32 arg2, class Vector3& arg3, class Vector3& arg4, f32& arg5) override
     {
         return stub<
-            member_func_t<bool, phBoundHotdog, class Vector3 const&, float, class Vector3&, class Vector3&, float&>>(
+            member_func_t<bool, phBoundHotdog, class Vector3 const&, f32, class Vector3&, class Vector3&, f32&>>(
             0x481570, this, arg1, arg2, arg3, arg4, arg5);
     }
 };

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -117,33 +117,33 @@ public:
     }
 
     // 0x593040 | ?SetFrictionLean@dgTrailerJoint@@QAEXMMM@Z
-    inline void SetFrictionLean(float arg1, float arg2, float arg3)
+    inline void SetFrictionLean(f32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, dgTrailerJoint, float, float, float>>(0x593040, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, dgTrailerJoint, f32, f32, f32>>(0x593040, this, arg1, arg2, arg3);
     }
 
     // 0x593070 | ?SetFrictionRoll@dgTrailerJoint@@QAEXMMM@Z
-    inline void SetFrictionRoll(float arg1, float arg2, float arg3)
+    inline void SetFrictionRoll(f32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, dgTrailerJoint, float, float, float>>(0x593070, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, dgTrailerJoint, f32, f32, f32>>(0x593070, this, arg1, arg2, arg3);
     }
 
     // 0x5930A0 | ?SetLeanLimit@dgTrailerJoint@@QAEXMM@Z
-    inline void SetLeanLimit(float arg1, float arg2)
+    inline void SetLeanLimit(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, dgTrailerJoint, float, float>>(0x5930A0, this, arg1, arg2);
+        return stub<member_func_t<void, dgTrailerJoint, f32, f32>>(0x5930A0, this, arg1, arg2);
     }
 
     // 0x5930C0 | ?SetRollLimit@dgTrailerJoint@@QAEXMM@Z
-    inline void SetRollLimit(float arg1, float arg2)
+    inline void SetRollLimit(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, dgTrailerJoint, float, float>>(0x5930C0, this, arg1, arg2);
+        return stub<member_func_t<void, dgTrailerJoint, f32, f32>>(0x5930C0, this, arg1, arg2);
     }
 
     // 0x5930E0 | ?SetRollLimit@dgTrailerJoint@@QAEXMMM@Z
-    inline void SetRollLimit(float arg1, float arg2, float arg3)
+    inline void SetRollLimit(f32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, dgTrailerJoint, float, float, float>>(0x5930E0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, dgTrailerJoint, f32, f32, f32>>(0x5930E0, this, arg1, arg2, arg3);
     }
 
     // 0x593110 | ?SetRestOrientation@dgTrailerJoint@@QAEXXZ
@@ -166,9 +166,9 @@ public:
     }
 
     // 0x593200 | ?SetForceLimit@dgTrailerJoint@@QAEXM@Z
-    inline void SetForceLimit(float arg1)
+    inline void SetForceLimit(f32 arg1)
     {
-        return stub<member_func_t<void, dgTrailerJoint, float>>(0x593200, this, arg1);
+        return stub<member_func_t<void, dgTrailerJoint, f32>>(0x593200, this, arg1);
     }
 
     // 0x593210 | ?SetJointForceFlag@dgTrailerJoint@@QAEXXZ
@@ -203,19 +203,19 @@ public:
 
     // 0x5942F0 | ?DoJointTorque@dgTrailerJoint@@QAEXABVMatrix34@@000AAM1AAVVector3@@11@Z
     inline void DoJointTorque(class Matrix34 const& arg1, class Matrix34 const& arg2, class Matrix34 const& arg3,
-        class Matrix34 const& arg4, float& arg5, float& arg6, class Vector3& arg7, float& arg8, float& arg9)
+        class Matrix34 const& arg4, f32& arg5, f32& arg6, class Vector3& arg7, f32& arg8, f32& arg9)
     {
         return stub<member_func_t<void, dgTrailerJoint, class Matrix34 const&, class Matrix34 const&,
-            class Matrix34 const&, class Matrix34 const&, float&, float&, class Vector3&, float&, float&>>(
+            class Matrix34 const&, class Matrix34 const&, f32&, f32&, class Vector3&, f32&, f32&>>(
             0x5942F0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
     }
 
     // 0x5949B0 | ?DoJointLimits@dgTrailerJoint@@QAEXMABVVector3@@M0AAV2@ABVMatrix34@@2222@Z
-    inline void DoJointLimits(float arg1, class Vector3 const& arg2, float arg3, class Vector3 const& arg4,
+    inline void DoJointLimits(f32 arg1, class Vector3 const& arg2, f32 arg3, class Vector3 const& arg4,
         class Vector3& arg5, class Matrix34 const& arg6, class Matrix34 const& arg7, class Matrix34 const& arg8,
         class Matrix34 const& arg9, class Matrix34 const& arg10)
     {
-        return stub<member_func_t<void, dgTrailerJoint, float, class Vector3 const&, float, class Vector3 const&,
+        return stub<member_func_t<void, dgTrailerJoint, f32, class Vector3 const&, f32, class Vector3 const&,
             class Vector3&, class Matrix34 const&, class Matrix34 const&, class Matrix34 const&, class Matrix34 const&,
             class Matrix34 const&>>(0x5949B0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
     }

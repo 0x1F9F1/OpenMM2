@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -50,9 +50,9 @@ public:
     }
 
     // 0x431D10 | ?SetViewSetting@mmViewMgr@@QAEXH@Z
-    inline void SetViewSetting(int32_t arg1)
+    inline void SetViewSetting(i32 arg1)
     {
-        return stub<member_func_t<void, mmViewMgr, int32_t>>(0x431D10, this, arg1);
+        return stub<member_func_t<void, mmViewMgr, i32>>(0x431D10, this, arg1);
     }
 
     // 0x431C60 | ??1mmViewMgr@@UAE@XZ

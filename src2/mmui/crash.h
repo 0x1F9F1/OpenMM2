@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -62,16 +62,15 @@ public:
     }
 
     // 0x502F80 | ?LoadBitmap@ccStatus@@QAEXPADHHH@Z
-    inline void LoadBitmap(char* arg1, int32_t arg2, int32_t arg3, int32_t arg4)
+    inline void LoadBitmap(char* arg1, i32 arg2, i32 arg3, i32 arg4)
     {
-        return stub<member_func_t<void, ccStatus, char*, int32_t, int32_t, int32_t>>(
-            0x502F80, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, ccStatus, char*, i32, i32, i32>>(0x502F80, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x503060 | ?SetStatus@ccStatus@@QAEXF@Z
-    inline void SetStatus(int16_t arg1)
+    inline void SetStatus(i16 arg1)
     {
-        return stub<member_func_t<void, ccStatus, int16_t>>(0x503060, this, arg1);
+        return stub<member_func_t<void, ccStatus, i16>>(0x503060, this, arg1);
     }
 
     // 0x502F20 | ??1ccStatus@@UAE@XZ
@@ -99,15 +98,15 @@ public:
     // CrashCourse::`vftable' @ 0x5B4410
 
     // 0x503070 | ??0CrashCourse@@QAE@H@Z
-    inline CrashCourse(int32_t arg1)
+    inline CrashCourse(i32 arg1)
     {
-        stub<member_func_t<void, CrashCourse, int32_t>>(0x503070, this, arg1);
+        stub<member_func_t<void, CrashCourse, i32>>(0x503070, this, arg1);
     }
 
     // 0x503790 | ?SetRaceGrade@CrashCourse@@QAEXHH@Z
-    inline void SetRaceGrade(int32_t arg1, int32_t arg2)
+    inline void SetRaceGrade(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, CrashCourse, int32_t, int32_t>>(0x503790, this, arg1, arg2);
+        return stub<member_func_t<void, CrashCourse, i32, i32>>(0x503790, this, arg1, arg2);
     }
 
     // 0x503960 | ?GameCallback@CrashCourse@@QAEXXZ
@@ -135,27 +134,27 @@ public:
     }
 
     // 0x503F00 | ?FocusDescription@CrashCourse@@QAEXHH@Z
-    inline void FocusDescription(int32_t arg1, int32_t arg2)
+    inline void FocusDescription(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, CrashCourse, int32_t, int32_t>>(0x503F00, this, arg1, arg2);
+        return stub<member_func_t<void, CrashCourse, i32, i32>>(0x503F00, this, arg1, arg2);
     }
 
     // 0x503F10 | ?SetProgressMask@CrashCourse@@QAEXH@Z
-    inline void SetProgressMask(int32_t arg1)
+    inline void SetProgressMask(i32 arg1)
     {
-        return stub<member_func_t<void, CrashCourse, int32_t>>(0x503F10, this, arg1);
+        return stub<member_func_t<void, CrashCourse, i32>>(0x503F10, this, arg1);
     }
 
     // 0x503F30 | ?SetBlitzMask@CrashCourse@@QAEXH@Z
-    inline void SetBlitzMask(int32_t arg1)
+    inline void SetBlitzMask(i32 arg1)
     {
-        return stub<member_func_t<void, CrashCourse, int32_t>>(0x503F30, this, arg1);
+        return stub<member_func_t<void, CrashCourse, i32>>(0x503F30, this, arg1);
     }
 
     // 0x503F50 | ?SetCheckpointMask@CrashCourse@@QAEXH@Z
-    inline void SetCheckpointMask(int32_t arg1)
+    inline void SetCheckpointMask(i32 arg1)
     {
-        return stub<member_func_t<void, CrashCourse, int32_t>>(0x503F50, this, arg1);
+        return stub<member_func_t<void, CrashCourse, i32>>(0x503F50, this, arg1);
     }
 
     // 0x503F70 | ?IncRaceName@CrashCourse@@QAEXXZ

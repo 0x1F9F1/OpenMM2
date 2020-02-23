@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -41,9 +41,9 @@ public:
     // ControlCustom::`vftable' @ 0x5B42F4
 
     // 0x502780 | ??0ControlCustom@@QAE@H@Z
-    inline ControlCustom(int32_t arg1)
+    inline ControlCustom(i32 arg1)
     {
-        stub<member_func_t<void, ControlCustom, int32_t>>(0x502780, this, arg1);
+        stub<member_func_t<void, ControlCustom, i32>>(0x502780, this, arg1);
     }
 
     // 0x502830 | ?BadAssignCB@ControlCustom@@QAEXXZ

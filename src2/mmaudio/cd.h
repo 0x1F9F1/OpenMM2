@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -49,53 +49,51 @@ public:
     }
 
     // 0x51CF00 | ?Init@CDMan@@QAEKF@Z
-    inline uint32_t Init(int16_t arg1)
+    inline u32 Init(i16 arg1)
     {
-        return stub<member_func_t<uint32_t, CDMan, int16_t>>(0x51CF00, this, arg1);
+        return stub<member_func_t<u32, CDMan, i16>>(0x51CF00, this, arg1);
     }
 
     // 0x51CFC0 | ?PlayTrack@CDMan@@QAEKEE@Z
-    inline uint32_t PlayTrack(uint8_t arg1, uint8_t arg2)
+    inline u32 PlayTrack(u8 arg1, u8 arg2)
     {
-        return stub<member_func_t<uint32_t, CDMan, uint8_t, uint8_t>>(0x51CFC0, this, arg1, arg2);
+        return stub<member_func_t<u32, CDMan, u8, u8>>(0x51CFC0, this, arg1, arg2);
     }
 
     // 0x51D0B0 | ?ResumePlay@CDMan@@QAEKXZ
-    inline uint32_t ResumePlay()
+    inline u32 ResumePlay()
     {
-        return stub<member_func_t<uint32_t, CDMan>>(0x51D0B0, this);
+        return stub<member_func_t<u32, CDMan>>(0x51D0B0, this);
     }
 
     // 0x51D0D0 | ?PlayTrack@CDMan@@QAEKEEEEE@Z
-    inline uint32_t PlayTrack(uint8_t arg1, uint8_t arg2, uint8_t arg3, uint8_t arg4, uint8_t arg5)
+    inline u32 PlayTrack(u8 arg1, u8 arg2, u8 arg3, u8 arg4, u8 arg5)
     {
-        return stub<member_func_t<uint32_t, CDMan, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t>>(
-            0x51D0D0, this, arg1, arg2, arg3, arg4, arg5);
+        return stub<member_func_t<u32, CDMan, u8, u8, u8, u8, u8>>(0x51D0D0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x51D1E0 | ?Stop@CDMan@@QAEKXZ
-    inline uint32_t Stop()
+    inline u32 Stop()
     {
-        return stub<member_func_t<uint32_t, CDMan>>(0x51D1E0, this);
+        return stub<member_func_t<u32, CDMan>>(0x51D1E0, this);
     }
 
     // 0x51D220 | ?SeekTrack@CDMan@@QAEKE@Z
-    inline uint32_t SeekTrack(uint8_t arg1)
+    inline u32 SeekTrack(u8 arg1)
     {
-        return stub<member_func_t<uint32_t, CDMan, uint8_t>>(0x51D220, this, arg1);
+        return stub<member_func_t<u32, CDMan, u8>>(0x51D220, this, arg1);
     }
 
     // 0x51D290 | ?GetPosition@CDMan@@QAEKPAE000@Z
-    inline uint32_t GetPosition(uint8_t* arg1, uint8_t* arg2, uint8_t* arg3, uint8_t* arg4)
+    inline u32 GetPosition(u8* arg1, u8* arg2, u8* arg3, u8* arg4)
     {
-        return stub<member_func_t<uint32_t, CDMan, uint8_t*, uint8_t*, uint8_t*, uint8_t*>>(
-            0x51D290, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<u32, CDMan, u8*, u8*, u8*, u8*>>(0x51D290, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x51D380 | ?GetNumTracks@CDMan@@QAEFXZ
-    inline int16_t GetNumTracks()
+    inline i16 GetNumTracks()
     {
-        return stub<member_func_t<int16_t, CDMan>>(0x51D380, this);
+        return stub<member_func_t<i16, CDMan>>(0x51D380, this);
     }
 
     // 0x51CEC0 | ??1CDMan@@UAE@XZ
@@ -105,9 +103,8 @@ public:
     }
 
     // 0x51D310 | ?WindowProc@CDMan@@EAEJPAUHWND__@@IIJ@Z
-    inline int32_t WindowProc(struct HWND__* arg1, uint32_t arg2, uint32_t arg3, int32_t arg4) override
+    inline i32 WindowProc(struct HWND__* arg1, u32 arg2, u32 arg3, i32 arg4) override
     {
-        return stub<member_func_t<int32_t, CDMan, struct HWND__*, uint32_t, uint32_t, int32_t>>(
-            0x51D310, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<i32, CDMan, struct HWND__*, u32, u32, i32>>(0x51D310, this, arg1, arg2, arg3, arg4);
     }
 };

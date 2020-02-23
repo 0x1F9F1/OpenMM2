@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -45,9 +45,9 @@ public:
     }
 
     // 0x4F3A60 | ?Init@mmToggle@@QAEXPADMMMM@Z
-    inline void Init(char* arg1, float arg2, float arg3, float arg4, float arg5)
+    inline void Init(char* arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
     {
-        return stub<member_func_t<void, mmToggle, char*, float, float, float, float>>(
+        return stub<member_func_t<void, mmToggle, char*, f32, f32, f32, f32>>(
             0x4F3A60, this, arg1, arg2, arg3, arg4, arg5);
     }
 
@@ -58,9 +58,9 @@ public:
     }
 
     // 0x4F3B40 | ?SetSize@mmToggle@@AAEXMM@Z
-    inline void SetSize(float arg1, float arg2)
+    inline void SetSize(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, mmToggle, float, float>>(0x4F3B40, this, arg1, arg2);
+        return stub<member_func_t<void, mmToggle, f32, f32>>(0x4F3B40, this, arg1, arg2);
     }
 
     // 0x4F3A00 | ??1mmToggle@@UAE@XZ

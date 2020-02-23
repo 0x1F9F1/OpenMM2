@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -63,9 +63,9 @@ public:
     // dgBangerData::`vftable' @ 0x5B1460
 
     // 0x4405D0 | ?LoadEntry@dgBangerData@@QAEHPAD@Z
-    inline int32_t LoadEntry(char* arg1)
+    inline i32 LoadEntry(char* arg1)
     {
-        return stub<member_func_t<int32_t, dgBangerData, char*>>(0x4405D0, this, arg1);
+        return stub<member_func_t<i32, dgBangerData, char*>>(0x4405D0, this, arg1);
     }
 
     // 0x440610 | ?AdjustPrim@dgBangerData@@QAEXXZ
@@ -135,9 +135,9 @@ public:
     }
 
     // 0x440940 | ?AddBangerDataEntry@dgBangerDataManager@@QAEHPBD0@Z
-    inline int32_t AddBangerDataEntry(char const* arg1, char const* arg2)
+    inline i32 AddBangerDataEntry(char const* arg1, char const* arg2)
     {
-        return stub<member_func_t<int32_t, dgBangerDataManager, char const*, char const*>>(0x440940, this, arg1, arg2);
+        return stub<member_func_t<i32, dgBangerDataManager, char const*, char const*>>(0x440940, this, arg1, arg2);
     }
 
     // 0x440A60 | ?ChangeData@dgBangerDataManager@@QAEXXZ
@@ -147,7 +147,7 @@ public:
     }
 
     // 0x627670 | ?Instance@dgBangerDataManager@@1PAV1@A
-    static inline extern_var(0x627670, class dgBangerDataManager*, Instance);
+    inline extern_var(0x627670, class dgBangerDataManager*, Instance);
 
     // 0x440860 | ??1dgBangerDataManager@@UAE@XZ
     inline ~dgBangerDataManager() override

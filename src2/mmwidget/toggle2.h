@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -45,10 +45,9 @@ public:
     }
 
     // 0x4F3D30 | ?Init@mmToggle2@@QAEXPADMMPAH@Z
-    inline void Init(char* arg1, float arg2, float arg3, int32_t* arg4)
+    inline void Init(char* arg1, f32 arg2, f32 arg3, i32* arg4)
     {
-        return stub<member_func_t<void, mmToggle2, char*, float, float, int32_t*>>(
-            0x4F3D30, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, mmToggle2, char*, f32, f32, i32*>>(0x4F3D30, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4F3D60 | ?LoadBitmap@mmToggle2@@AAEXPAD@Z
@@ -58,9 +57,9 @@ public:
     }
 
     // 0x4F3DC0 | ?SetPosition@mmToggle2@@QAEXMM@Z
-    inline void SetPosition(float arg1, float arg2)
+    inline void SetPosition(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, mmToggle2, float, float>>(0x4F3DC0, this, arg1, arg2);
+        return stub<member_func_t<void, mmToggle2, f32, f32>>(0x4F3DC0, this, arg1, arg2);
     }
 
     // 0x4F3CD0 | ??1mmToggle2@@UAE@XZ

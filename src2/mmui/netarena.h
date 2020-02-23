@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -62,9 +62,9 @@ public:
     // NetArena::`vftable' @ 0x5B4200
 
     // 0x4FE880 | ??0NetArena@@QAE@H@Z
-    inline NetArena(int32_t arg1)
+    inline NetArena(i32 arg1)
     {
-        stub<member_func_t<void, NetArena, int32_t>>(0x4FE880, this, arg1);
+        stub<member_func_t<void, NetArena, i32>>(0x4FE880, this, arg1);
     }
 
     // 0x4FF240 | ?EnablePlayButton@NetArena@@QAEXXZ
@@ -104,15 +104,15 @@ public:
     }
 
     // 0x4FF560 | ?RetrieveChatLine@NetArena@@QAEHPAD@Z
-    inline int32_t RetrieveChatLine(char* arg1)
+    inline i32 RetrieveChatLine(char* arg1)
     {
-        return stub<member_func_t<int32_t, NetArena, char*>>(0x4FF560, this, arg1);
+        return stub<member_func_t<i32, NetArena, char*>>(0x4FF560, this, arg1);
     }
 
     // 0x4FF5B0 | ?FindRosterName@NetArena@@QAEHPAD@Z
-    inline int32_t FindRosterName(char* arg1)
+    inline i32 FindRosterName(char* arg1)
     {
-        return stub<member_func_t<int32_t, NetArena, char*>>(0x4FF5B0, this, arg1);
+        return stub<member_func_t<i32, NetArena, char*>>(0x4FF5B0, this, arg1);
     }
 
     // 0x4FF620 | ?AddRosterName@NetArena@@QAEXPAD@Z
@@ -122,17 +122,18 @@ public:
     }
 
     // 0x4FF640 | ?AddRosterName@NetArena@@QAEXPAULocString@@00KHH@Z
-    inline void AddRosterName(struct LocString* arg1, struct LocString* arg2, struct LocString* arg3, uint32_t arg4,
-        int32_t arg5, int32_t arg6)
+    inline void AddRosterName(
+        struct LocString* arg1, struct LocString* arg2, struct LocString* arg3, u32 arg4, i32 arg5, i32 arg6)
     {
-        return stub<member_func_t<void, NetArena, struct LocString*, struct LocString*, struct LocString*, uint32_t,
-            int32_t, int32_t>>(0x4FF640, this, arg1, arg2, arg3, arg4, arg5, arg6);
+        return stub<
+            member_func_t<void, NetArena, struct LocString*, struct LocString*, struct LocString*, u32, i32, i32>>(
+            0x4FF640, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4FF840 | ?RemoveRosterEntry@NetArena@@QAEXH@Z
-    inline void RemoveRosterEntry(int32_t arg1)
+    inline void RemoveRosterEntry(i32 arg1)
     {
-        return stub<member_func_t<void, NetArena, int32_t>>(0x4FF840, this, arg1);
+        return stub<member_func_t<void, NetArena, i32>>(0x4FF840, this, arg1);
     }
 
     // 0x4FF910 | ?ResetRoster@NetArena@@QAEXXZ
@@ -148,15 +149,15 @@ public:
     }
 
     // 0x4FF9E0 | ?SetStatus@NetArena@@QAEXKHH@Z
-    inline void SetStatus(uint32_t arg1, int32_t arg2, int32_t arg3)
+    inline void SetStatus(u32 arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, NetArena, uint32_t, int32_t, int32_t>>(0x4FF9E0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, NetArena, u32, i32, i32>>(0x4FF9E0, this, arg1, arg2, arg3);
     }
 
     // 0x4FFA40 | ?GetStatus@NetArena@@QAE_NK@Z
-    inline bool GetStatus(uint32_t arg1)
+    inline bool GetStatus(u32 arg1)
     {
-        return stub<member_func_t<bool, NetArena, uint32_t>>(0x4FFA40, this, arg1);
+        return stub<member_func_t<bool, NetArena, u32>>(0x4FFA40, this, arg1);
     }
 
     // 0x4FFA90 | ?GetRaceName@NetArena@@QAEPADXZ
@@ -166,9 +167,9 @@ public:
     }
 
     // 0x4FFD00 | ?PostHostSettings@NetArena@@QAEXH@Z
-    inline void PostHostSettings(int32_t arg1)
+    inline void PostHostSettings(i32 arg1)
     {
-        return stub<member_func_t<void, NetArena, int32_t>>(0x4FFD00, this, arg1);
+        return stub<member_func_t<void, NetArena, i32>>(0x4FFD00, this, arg1);
     }
 
     // 0x5002B0 | ?PostPlayerInfo@NetArena@@QAEXPAULocString@@00@Z
@@ -191,9 +192,9 @@ public:
     }
 
     // 0x5003A0 | ?SetHost@NetArena@@QAEXH@Z
-    inline void SetHost(int32_t arg1)
+    inline void SetHost(i32 arg1)
     {
-        return stub<member_func_t<void, NetArena, int32_t>>(0x5003A0, this, arg1);
+        return stub<member_func_t<void, NetArena, i32>>(0x5003A0, this, arg1);
     }
 
     // 0x500430 | ?TeamCallback@NetArena@@QAEXXZ
@@ -215,22 +216,22 @@ public:
     }
 
     // 0x500570 | ?ChangeRosterData@NetArena@@QAEXPAULocString@@KHH@Z
-    inline void ChangeRosterData(struct LocString* arg1, uint32_t arg2, int32_t arg3, int32_t arg4)
+    inline void ChangeRosterData(struct LocString* arg1, u32 arg2, i32 arg3, i32 arg4)
     {
-        return stub<member_func_t<void, NetArena, struct LocString*, uint32_t, int32_t, int32_t>>(
+        return stub<member_func_t<void, NetArena, struct LocString*, u32, i32, i32>>(
             0x500570, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x5005E0 | ?ShowRosterTeam@NetArena@@QAEXH@Z
-    inline void ShowRosterTeam(int32_t arg1)
+    inline void ShowRosterTeam(i32 arg1)
     {
-        return stub<member_func_t<void, NetArena, int32_t>>(0x5005E0, this, arg1);
+        return stub<member_func_t<void, NetArena, i32>>(0x5005E0, this, arg1);
     }
 
     // 0x500620 | ?SetMyStatus@NetArena@@QAEXH@Z
-    inline void SetMyStatus(int32_t arg1)
+    inline void SetMyStatus(i32 arg1)
     {
-        return stub<member_func_t<void, NetArena, int32_t>>(0x500620, this, arg1);
+        return stub<member_func_t<void, NetArena, i32>>(0x500620, this, arg1);
     }
 
     // 0x4FF140 | ??1NetArena@@UAE@XZ

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -81,11 +81,11 @@ public:
     }
 
     // 0x541A80 | ?Init@aiSubway@@QAEXPADHHHHHPAV1@1@Z
-    inline void Init(char* arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5, int32_t arg6,
-        class aiSubway* arg7, class aiSubway* arg8)
+    inline void Init(
+        char* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6, class aiSubway* arg7, class aiSubway* arg8)
     {
-        return stub<member_func_t<void, aiSubway, char*, int32_t, int32_t, int32_t, int32_t, int32_t, class aiSubway*,
-            class aiSubway*>>(0x541A80, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+        return stub<member_func_t<void, aiSubway, char*, i32, i32, i32, i32, i32, class aiSubway*, class aiSubway*>>(
+            0x541A80, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
     // 0x542060 | ?DetermineNextLink@aiSubway@@AAE_NPAVaiPath@@PAPAV2@@Z
@@ -113,15 +113,15 @@ public:
     }
 
     // 0x542A20 | ?OkayToEnterIntersection@aiSubway@@AAE_NM@Z
-    inline bool OkayToEnterIntersection(float arg1)
+    inline bool OkayToEnterIntersection(f32 arg1)
     {
-        return stub<member_func_t<bool, aiSubway, float>>(0x542A20, this, arg1);
+        return stub<member_func_t<bool, aiSubway, f32>>(0x542A20, this, arg1);
     }
 
     // 0x542AF0 | ?DistanceToIntersection@aiSubway@@AAEMXZ
-    inline float DistanceToIntersection()
+    inline f32 DistanceToIntersection()
     {
-        return stub<member_func_t<float, aiSubway>>(0x542AF0, this);
+        return stub<member_func_t<f32, aiSubway>>(0x542AF0, this);
     }
 
     // 0x542B90 | ?SolveRailType@aiSubway@@AAEXXZ
@@ -144,9 +144,9 @@ public:
     }
 
     // 0x543A20 | ?SolveXZCurve@aiSubway@@AAEXAAVVector3@@0M@Z
-    inline void SolveXZCurve(class Vector3& arg1, class Vector3& arg2, float arg3)
+    inline void SolveXZCurve(class Vector3& arg1, class Vector3& arg2, f32 arg3)
     {
-        return stub<member_func_t<void, aiSubway, class Vector3&, class Vector3&, float>>(
+        return stub<member_func_t<void, aiSubway, class Vector3&, class Vector3&, f32>>(
             0x543A20, this, arg1, arg2, arg3);
     }
 
@@ -157,22 +157,21 @@ public:
     }
 
     // 0x543CA0 | ?Speed@aiSubway@@UAEMXZ
-    inline float Speed() override
+    inline f32 Speed() override
     {
-        return stub<member_func_t<float, aiSubway>>(0x543CA0, this);
+        return stub<member_func_t<f32, aiSubway>>(0x543CA0, this);
     }
 
     // 0x5434F0 | ?CurrentRoadIdx@aiSubway@@UAEHPAPAVaiPath@@QA_NPAH@Z
-    inline int32_t CurrentRoadIdx(class aiPath** arg1, bool* const arg2, int32_t* arg3) override
+    inline i32 CurrentRoadIdx(class aiPath** arg1, bool* const arg2, i32* arg3) override
     {
-        return stub<member_func_t<int32_t, aiSubway, class aiPath**, bool* const, int32_t*>>(
-            0x5434F0, this, arg1, arg2, arg3);
+        return stub<member_func_t<i32, aiSubway, class aiPath**, bool* const, i32*>>(0x5434F0, this, arg1, arg2, arg3);
     }
 
     // 0x543600 | ?CurrentRdVert@aiSubway@@UAEHXZ
-    inline int32_t CurrentRdVert() override
+    inline i32 CurrentRdVert() override
     {
-        return stub<member_func_t<int32_t, aiSubway>>(0x543600, this);
+        return stub<member_func_t<i32, aiSubway>>(0x543600, this);
     }
 
     // 0x541F60 | ?Update@aiSubway@@UAEXXZ
@@ -188,9 +187,9 @@ public:
     }
 
     // 0x543C90 | ?Type@aiSubway@@UAEHXZ
-    inline int32_t Type() override
+    inline i32 Type() override
     {
-        return stub<member_func_t<int32_t, aiSubway>>(0x543C90, this);
+        return stub<member_func_t<i32, aiSubway>>(0x543C90, this);
     }
 
     // 0x543D20 | ?GetMatrix@aiSubway@@UAEAAVMatrix34@@XZ
@@ -200,39 +199,39 @@ public:
     }
 
     // 0x543CC0 | ?FrontBumperDistance@aiSubway@@UAEMXZ
-    inline float FrontBumperDistance() override
+    inline f32 FrontBumperDistance() override
     {
-        return stub<member_func_t<float, aiSubway>>(0x543CC0, this);
+        return stub<member_func_t<f32, aiSubway>>(0x543CC0, this);
     }
 
     // 0x543CD0 | ?BackBumperDistance@aiSubway@@UAEMXZ
-    inline float BackBumperDistance() override
+    inline f32 BackBumperDistance() override
     {
-        return stub<member_func_t<float, aiSubway>>(0x543CD0, this);
+        return stub<member_func_t<f32, aiSubway>>(0x543CD0, this);
     }
 
     // 0x543CE0 | ?LSideDistance@aiSubway@@UAEMXZ
-    inline float LSideDistance() override
+    inline f32 LSideDistance() override
     {
-        return stub<member_func_t<float, aiSubway>>(0x543CE0, this);
+        return stub<member_func_t<f32, aiSubway>>(0x543CE0, this);
     }
 
     // 0x543CF0 | ?RSideDistance@aiSubway@@UAEMXZ
-    inline float RSideDistance() override
+    inline f32 RSideDistance() override
     {
-        return stub<member_func_t<float, aiSubway>>(0x543CF0, this);
+        return stub<member_func_t<f32, aiSubway>>(0x543CF0, this);
     }
 
     // 0x543CB0 | ?CurrentLane@aiSubway@@UAEHXZ
-    inline int32_t CurrentLane() override
+    inline i32 CurrentLane() override
     {
-        return stub<member_func_t<int32_t, aiSubway>>(0x543CB0, this);
+        return stub<member_func_t<i32, aiSubway>>(0x543CB0, this);
     }
 
     // 0x543D30 | ?CurrentRoadId@aiSubway@@UAEHXZ
-    inline int32_t CurrentRoadId() override
+    inline i32 CurrentRoadId() override
     {
-        return stub<member_func_t<int32_t, aiSubway>>(0x543D30, this);
+        return stub<member_func_t<i32, aiSubway>>(0x543D30, this);
     }
 
     // 0x543AD0 | ?DrawId@aiSubway@@UAEXXZ
@@ -272,15 +271,15 @@ public:
     }
 
     // 0x543BA0 | ?Draw@aiSubwayInstance@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
+    inline void Draw(i32 arg1) override
     {
-        return stub<member_func_t<void, aiSubwayInstance, int32_t>>(0x543BA0, this, arg1);
+        return stub<member_func_t<void, aiSubwayInstance, i32>>(0x543BA0, this, arg1);
     }
 
     // 0x543B80 | ?SizeOf@aiSubwayInstance@@UAEIXZ
-    inline uint32_t SizeOf() override
+    inline u32 SizeOf() override
     {
-        return stub<member_func_t<uint32_t, aiSubwayInstance>>(0x543B80, this);
+        return stub<member_func_t<u32, aiSubwayInstance>>(0x543B80, this);
     }
 
     // 0x543B90 | ?ImpactCB@aiSubwayInstance@@UAEXPAVdgHitBangerInstance@@@Z

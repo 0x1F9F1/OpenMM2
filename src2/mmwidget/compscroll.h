@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -61,18 +61,18 @@ public:
     }
 
     // 0x4EB1E0 | ?Init@UICompositeScroll@@QAEXMMMMMHPAHHHVdatCallback@@@Z
-    inline void Init(float arg1, float arg2, float arg3, float arg4, float arg5, int32_t arg6, int32_t* arg7,
-        int32_t arg8, int32_t arg9, class datCallback arg10)
+    inline void Init(f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, i32 arg6, i32* arg7, i32 arg8, i32 arg9,
+        class datCallback arg10)
     {
-        return stub<member_func_t<void, UICompositeScroll, float, float, float, float, float, int32_t, int32_t*,
-            int32_t, int32_t, class datCallback>>(
+        return stub<
+            member_func_t<void, UICompositeScroll, f32, f32, f32, f32, f32, i32, i32*, i32, i32, class datCallback>>(
             0x4EB1E0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
     }
 
     // 0x4EB410 | ?InitVScroll@UICompositeScroll@@QAEXMMM@Z
-    inline void InitVScroll(float arg1, float arg2, float arg3)
+    inline void InitVScroll(f32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, UICompositeScroll, float, float, float>>(0x4EB410, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, UICompositeScroll, f32, f32, f32>>(0x4EB410, this, arg1, arg2, arg3);
     }
 
     // 0x4EB490 | ?RemoveAllComponentChildren@UICompositeScroll@@QAEXXZ
@@ -94,9 +94,9 @@ public:
     }
 
     // 0x4EB5E0 | ?GetSelectedCount@UICompositeScroll@@QAEHXZ
-    inline int32_t GetSelectedCount()
+    inline i32 GetSelectedCount()
     {
-        return stub<member_func_t<int32_t, UICompositeScroll>>(0x4EB5E0, this);
+        return stub<member_func_t<i32, UICompositeScroll>>(0x4EB5E0, this);
     }
 
     // 0x4EB630 | ?Redraw@UICompositeScroll@@QAEXXZ
@@ -124,9 +124,9 @@ public:
     }
 
     // 0x4EB880 | ?GetHit@UICompositeScroll@@QAEHMM@Z
-    inline int32_t GetHit(float arg1, float arg2)
+    inline i32 GetHit(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<int32_t, UICompositeScroll, float, float>>(0x4EB880, this, arg1, arg2);
+        return stub<member_func_t<i32, UICompositeScroll, f32, f32>>(0x4EB880, this, arg1, arg2);
     }
 
     // 0x4EBDC0 | ?Clear@UICompositeScroll@@QAEXXZ
@@ -136,9 +136,9 @@ public:
     }
 
     // 0x4EBDD0 | ?SetHighlight@UICompositeScroll@@QAEXH@Z
-    inline void SetHighlight(int32_t arg1)
+    inline void SetHighlight(i32 arg1)
     {
-        return stub<member_func_t<void, UICompositeScroll, int32_t>>(0x4EBDD0, this, arg1);
+        return stub<member_func_t<void, UICompositeScroll, i32>>(0x4EBDD0, this, arg1);
     }
 
     // 0x4EBDF0 | ?SetHighlightComp@UICompositeScroll@@QAEXXZ
@@ -148,15 +148,15 @@ public:
     }
 
     // 0x4EBE90 | ?GetHeight@UICompositeScroll@@QAEMXZ
-    inline float GetHeight()
+    inline f32 GetHeight()
     {
-        return stub<member_func_t<float, UICompositeScroll>>(0x4EBE90, this);
+        return stub<member_func_t<f32, UICompositeScroll>>(0x4EBE90, this);
     }
 
     // 0x4EBEB0 | ?SetPosition@UICompositeScroll@@QAEXH@Z
-    inline void SetPosition(int32_t arg1)
+    inline void SetPosition(i32 arg1)
     {
-        return stub<member_func_t<void, UICompositeScroll, int32_t>>(0x4EBEB0, this, arg1);
+        return stub<member_func_t<void, UICompositeScroll, i32>>(0x4EBEB0, this, arg1);
     }
 
     // 0x4EB140 | ??1UICompositeScroll@@UAE@XZ
@@ -190,8 +190,8 @@ public:
     }
 
     // 0x4EBD80 | ?Switch@UICompositeScroll@@UAEXH@Z
-    inline void Switch(int32_t arg1) override
+    inline void Switch(i32 arg1) override
     {
-        return stub<member_func_t<void, UICompositeScroll, int32_t>>(0x4EBD80, this, arg1);
+        return stub<member_func_t<void, UICompositeScroll, i32>>(0x4EBD80, this, arg1);
     }
 };

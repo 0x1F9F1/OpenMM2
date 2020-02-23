@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -58,10 +58,9 @@ public:
     }
 
     // 0x5A30A0 | ?Enable@EchoEffect@@QAEHKPAUIDirectSoundBuffer@@@Z
-    inline int32_t Enable(uint32_t arg1, struct IDirectSoundBuffer* arg2)
+    inline i32 Enable(u32 arg1, struct IDirectSoundBuffer* arg2)
     {
-        return stub<member_func_t<int32_t, EchoEffect, uint32_t, struct IDirectSoundBuffer*>>(
-            0x5A30A0, this, arg1, arg2);
+        return stub<member_func_t<i32, EchoEffect, u32, struct IDirectSoundBuffer*>>(0x5A30A0, this, arg1, arg2);
     }
 
     // 0x5A3120 | ?Disable@EchoEffect@@QAEXXZ
@@ -71,9 +70,9 @@ public:
     }
 
     // 0x5A3150 | ?SetDelayTime@EchoEffect@@QAEXM@Z
-    inline void SetDelayTime(float arg1)
+    inline void SetDelayTime(f32 arg1)
     {
-        return stub<member_func_t<void, EchoEffect, float>>(0x5A3150, this, arg1);
+        return stub<member_func_t<void, EchoEffect, f32>>(0x5A3150, this, arg1);
     }
 
     // 0x5A3280 | ?Update@EchoEffect@@QAEXXZ
@@ -107,9 +106,9 @@ public:
     }
 
     // 0x5A35C0 | ?QueuePlay@EchoEffect@@QAEXK@Z
-    inline void QueuePlay(uint32_t arg1)
+    inline void QueuePlay(u32 arg1)
     {
-        return stub<member_func_t<void, EchoEffect, uint32_t>>(0x5A35C0, this, arg1);
+        return stub<member_func_t<void, EchoEffect, u32>>(0x5A35C0, this, arg1);
     }
 
     // 0x5A3620 | ?QueueStop@EchoEffect@@QAEXXZ
@@ -125,32 +124,32 @@ public:
     }
 
     // 0x5A3660 | ?SetFrequency@EchoEffect@@QAEXM@Z
-    inline void SetFrequency(float arg1)
+    inline void SetFrequency(f32 arg1)
     {
-        return stub<member_func_t<void, EchoEffect, float>>(0x5A3660, this, arg1);
+        return stub<member_func_t<void, EchoEffect, f32>>(0x5A3660, this, arg1);
     }
 
     // 0x5A3730 | ?CalculatePan@EchoEffect@@QAEXM@Z
-    inline void CalculatePan(float arg1)
+    inline void CalculatePan(f32 arg1)
     {
-        return stub<member_func_t<void, EchoEffect, float>>(0x5A3730, this, arg1);
+        return stub<member_func_t<void, EchoEffect, f32>>(0x5A3730, this, arg1);
     }
 
     // 0x5A3790 | ?SetVolume@EchoEffect@@QAEXM@Z
-    inline void SetVolume(float arg1)
+    inline void SetVolume(f32 arg1)
     {
-        return stub<member_func_t<void, EchoEffect, float>>(0x5A3790, this, arg1);
+        return stub<member_func_t<void, EchoEffect, f32>>(0x5A3790, this, arg1);
     }
 
     // 0x5A37C0 | ?QueueVolume@EchoEffect@@QAEXM@Z
-    inline void QueueVolume(float arg1)
+    inline void QueueVolume(f32 arg1)
     {
-        return stub<member_func_t<void, EchoEffect, float>>(0x5A37C0, this, arg1);
+        return stub<member_func_t<void, EchoEffect, f32>>(0x5A37C0, this, arg1);
     }
 
     // 0x5A3810 | ?QueueFrequency@EchoEffect@@QAEXK@Z
-    inline void QueueFrequency(uint32_t arg1)
+    inline void QueueFrequency(u32 arg1)
     {
-        return stub<member_func_t<void, EchoEffect, uint32_t>>(0x5A3810, this, arg1);
+        return stub<member_func_t<void, EchoEffect, u32>>(0x5A3810, this, arg1);
     }
 };

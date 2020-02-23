@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -43,9 +43,9 @@ public:
     // PUMenuBase::`vftable' @ 0x5B4A8C
 
     // 0x50CC90 | ??0PUMenuBase@@QAE@HMMMMPAD_N@Z
-    inline PUMenuBase(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6, bool arg7)
+    inline PUMenuBase(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6, bool arg7)
     {
-        stub<member_func_t<void, PUMenuBase, int32_t, float, float, float, float, char*, bool>>(
+        stub<member_func_t<void, PUMenuBase, i32, f32, f32, f32, f32, char*, bool>>(
             0x50CC90, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
@@ -56,16 +56,15 @@ public:
     }
 
     // 0x50CF90 | ?CreateTitle@PUMenuBase@@QAEMH@Z
-    inline float CreateTitle(int32_t arg1)
+    inline f32 CreateTitle(i32 arg1)
     {
-        return stub<member_func_t<float, PUMenuBase, int32_t>>(0x50CF90, this, arg1);
+        return stub<member_func_t<f32, PUMenuBase, i32>>(0x50CF90, this, arg1);
     }
 
     // 0x50CFD0 | ?AddPrevious@PUMenuBase@@QAEMMMMM@Z
-    inline float AddPrevious(float arg1, float arg2, float arg3, float arg4)
+    inline f32 AddPrevious(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
-        return stub<member_func_t<float, PUMenuBase, float, float, float, float>>(
-            0x50CFD0, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<f32, PUMenuBase, f32, f32, f32, f32>>(0x50CFD0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x50D050 | ?AddOKCancel@PUMenuBase@@QAEXVdatCallback@@0@Z
@@ -75,10 +74,9 @@ public:
     }
 
     // 0x50D0F0 | ?AddExit@PUMenuBase@@QAEMMMMM@Z
-    inline float AddExit(float arg1, float arg2, float arg3, float arg4)
+    inline f32 AddExit(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
-        return stub<member_func_t<float, PUMenuBase, float, float, float, float>>(
-            0x50D0F0, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<f32, PUMenuBase, f32, f32, f32, f32>>(0x50D0F0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x50D1E0 | ?DisableExit@PUMenuBase@@QAEXXZ

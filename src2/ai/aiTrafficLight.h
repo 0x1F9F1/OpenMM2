@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -55,7 +55,7 @@ public:
     }
 
     // 0x6B2FFC | ?ObjCount@aiTrafficLightSet@@0FA
-    static inline extern_var(0x6B2FFC, int16_t, ObjCount);
+    inline extern_var(0x6B2FFC, int16_t, ObjCount);
 
     // 0x53C440 | ??1aiTrafficLightSet@@UAE@XZ
     inline ~aiTrafficLightSet() override
@@ -82,9 +82,9 @@ public:
     // aiTrafficLightInstance::`vftable' @ 0x5B54AC
 
     // 0x53C960 | ?Draw@aiTrafficLightInstance@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
+    inline void Draw(i32 arg1) override
     {
-        return stub<member_func_t<void, aiTrafficLightInstance, int32_t>>(0x53C960, this, arg1);
+        return stub<member_func_t<void, aiTrafficLightInstance, i32>>(0x53C960, this, arg1);
     }
 
     // 0x53CA70 | ?DrawGlow@aiTrafficLightInstance@@UAEXXZ
@@ -94,16 +94,15 @@ public:
     }
 
     // 0x53CD50 | ?SizeOf@aiTrafficLightInstance@@UAEIXZ
-    inline uint32_t SizeOf() override
+    inline u32 SizeOf() override
     {
-        return stub<member_func_t<uint32_t, aiTrafficLightInstance>>(0x53CD50, this);
+        return stub<member_func_t<u32, aiTrafficLightInstance>>(0x53CD50, this);
     }
 
     // 0x53C6F0 | ?Init@aiTrafficLightInstance@@UAEHPADAAVVector3@@1H0@Z
-    virtual inline int32_t Init(char* arg1, class Vector3& arg2, class Vector3& arg3, int32_t arg4, char* arg5)
+    virtual inline i32 Init(char* arg1, class Vector3& arg2, class Vector3& arg3, i32 arg4, char* arg5)
     {
-        return stub<
-            member_func_t<int32_t, aiTrafficLightInstance, char*, class Vector3&, class Vector3&, int32_t, char*>>(
+        return stub<member_func_t<i32, aiTrafficLightInstance, char*, class Vector3&, class Vector3&, i32, char*>>(
             0x53C6F0, this, arg1, arg2, arg3, arg4, arg5);
     }
 };

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -42,15 +42,15 @@ public:
     }
 
     // 0x59AAF0 | ?IncRef@datRefCount@@QBEHXZ
-    inline int32_t IncRef()
+    inline i32 IncRef()
     {
-        return stub<member_func_t<int32_t, datRefCount>>(0x59AAF0, this);
+        return stub<member_func_t<i32, datRefCount>>(0x59AAF0, this);
     }
 
     // 0x59AB00 | ?DecRef@datRefCount@@QBEHXZ
-    inline int32_t DecRef()
+    inline i32 DecRef()
     {
-        return stub<member_func_t<int32_t, datRefCount>>(0x59AB00, this);
+        return stub<member_func_t<i32, datRefCount>>(0x59AB00, this);
     }
 
     // 0x59AAE0 | ??1datRefCount@@MAE@XZ

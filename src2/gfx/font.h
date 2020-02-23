@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -40,10 +40,9 @@ inline void gfxDrawFont(class Vector4 const& arg1, char const* arg2, struct gfxF
 }
 
 // 0x4B11C0 | ?gfxDrawFont@@YAXHHPBDABUgfxFontInfo@@@Z
-inline void gfxDrawFont(int32_t arg1, int32_t arg2, char const* arg3, struct gfxFontInfo const& arg4)
+inline void gfxDrawFont(i32 arg1, i32 arg2, char const* arg3, struct gfxFontInfo const& arg4)
 {
-    return stub<cdecl_t<void, int32_t, int32_t, char const*, struct gfxFontInfo const&>>(
-        0x4B11C0, arg1, arg2, arg3, arg4);
+    return stub<cdecl_t<void, i32, i32, char const*, struct gfxFontInfo const&>>(0x4B11C0, arg1, arg2, arg3, arg4);
 }
 
 // 0x4B1200 | ?gfxCreateFont@@YAXXZ
@@ -53,21 +52,21 @@ inline void gfxCreateFont()
 }
 
 // 0x4B1260 | ?gfxFontGetWidth@@YAHXZ
-inline int32_t gfxFontGetWidth()
+inline i32 gfxFontGetWidth()
 {
-    return stub<cdecl_t<int32_t>>(0x4B1260);
+    return stub<cdecl_t<i32>>(0x4B1260);
 }
 
 // 0x4B1270 | ?gfxFontGetHeight@@YAHXZ
-inline int32_t gfxFontGetHeight()
+inline i32 gfxFontGetHeight()
 {
-    return stub<cdecl_t<int32_t>>(0x4B1270);
+    return stub<cdecl_t<i32>>(0x4B1270);
 }
 
 // 0x4B1280 | ?gfxDrawFont@@YAXHHPBD@Z
-inline void gfxDrawFont(int32_t arg1, int32_t arg2, char const* arg3)
+inline void gfxDrawFont(i32 arg1, i32 arg2, char const* arg3)
 {
-    return stub<cdecl_t<void, int32_t, int32_t, char const*>>(0x4B1280, arg1, arg2, arg3);
+    return stub<cdecl_t<void, i32, i32, char const*>>(0x4B1280, arg1, arg2, arg3);
 }
 
 // 0x4B12D0 | ?gfxReleaseFont@@YAXXZ
@@ -77,10 +76,9 @@ inline void gfxReleaseFont()
 }
 
 // 0x4B1330 | ?gfxComputeFontExtents@@YAXAAH0PBDABUgfxFontInfo@@@Z
-inline void gfxComputeFontExtents(int32_t& arg1, int32_t& arg2, char const* arg3, struct gfxFontInfo const& arg4)
+inline void gfxComputeFontExtents(i32& arg1, i32& arg2, char const* arg3, struct gfxFontInfo const& arg4)
 {
-    return stub<cdecl_t<void, int32_t&, int32_t&, char const*, struct gfxFontInfo const&>>(
-        0x4B1330, arg1, arg2, arg3, arg4);
+    return stub<cdecl_t<void, i32&, i32&, char const*, struct gfxFontInfo const&>>(0x4B1330, arg1, arg2, arg3, arg4);
 }
 
 // 0x5CD530 | ?SYSFONT@@3UgfxFontInfo@@A

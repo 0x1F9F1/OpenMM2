@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -78,11 +78,11 @@ public:
     }
 
     // 0x6B3004 | ?s_iFemaleFileNum@aiPedAudio@@0HA
-    static inline extern_var(0x6B3004, int32_t, s_iFemaleFileNum);
+    inline extern_var(0x6B3004, int32_t, s_iFemaleFileNum);
 
     // 0x6B3014 | ?s_CSVCatString@aiPedAudio@@0PADA
-    static inline extern_var(0x6B3014, char*, s_CSVCatString);
+    inline extern_var(0x6B3014, char*, s_CSVCatString);
 
     // 0x6B3020 | ?s_iMaleFileNum@aiPedAudio@@0HA
-    static inline extern_var(0x6B3020, int32_t, s_iMaleFileNum);
+    inline extern_var(0x6B3020, int32_t, s_iMaleFileNum);
 };

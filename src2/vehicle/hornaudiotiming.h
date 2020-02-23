@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -59,9 +59,9 @@ public:
     }
 
     // 0x4DF340 | ?AllocPlayPause@vehHornAudioTiming@@QAEXMM@Z
-    inline void AllocPlayPause(float arg1, float arg2)
+    inline void AllocPlayPause(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, vehHornAudioTiming, float, float>>(0x4DF340, this, arg1, arg2);
+        return stub<member_func_t<void, vehHornAudioTiming, f32, f32>>(0x4DF340, this, arg1, arg2);
     }
 
     // 0x4DF3D0 | ?Stop@vehHornAudioTiming@@QAEXPAVAudSoundBase@@@Z

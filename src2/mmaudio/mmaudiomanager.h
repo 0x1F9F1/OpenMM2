@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -120,9 +120,9 @@ public:
     }
 
     // 0x5194F0 | ?InitSpeech@AudManager@@QAEXHHPAD@Z
-    inline void InitSpeech(int32_t arg1, int32_t arg2, char* arg3)
+    inline void InitSpeech(i32 arg1, i32 arg2, char* arg3)
     {
-        return stub<member_func_t<void, AudManager, int32_t, int32_t, char*>>(0x5194F0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, AudManager, i32, i32, char*>>(0x5194F0, this, arg1, arg2, arg3);
     }
 
     // 0x519570 | ?GetSpeechContainerPtr@AudManager@@QAEPAVmmSpeechContainer@@XZ
@@ -144,33 +144,33 @@ public:
     }
 
     // 0x5195E0 | ?SharingSamples@AudManager@@QAEFXZ
-    inline int16_t SharingSamples()
+    inline i16 SharingSamples()
     {
-        return stub<member_func_t<int16_t, AudManager>>(0x5195E0, this);
+        return stub<member_func_t<i16, AudManager>>(0x5195E0, this);
     }
 
     // 0x5195F0 | ?SetSampleSharing@AudManager@@QAEXF@Z
-    inline void SetSampleSharing(int16_t arg1)
+    inline void SetSampleSharing(i16 arg1)
     {
-        return stub<member_func_t<void, AudManager, int16_t>>(0x5195F0, this, arg1);
+        return stub<member_func_t<void, AudManager, i16>>(0x5195F0, this, arg1);
     }
 
     // 0x519610 | ?AssignWaveBalance@AudManager@@QAEXM@Z
-    inline void AssignWaveBalance(float arg1)
+    inline void AssignWaveBalance(f32 arg1)
     {
-        return stub<member_func_t<void, AudManager, float>>(0x519610, this, arg1);
+        return stub<member_func_t<void, AudManager, f32>>(0x519610, this, arg1);
     }
 
     // 0x519630 | ?GetSamplesPerSecond@AudManager@@QAEKXZ
-    inline uint32_t GetSamplesPerSecond()
+    inline u32 GetSamplesPerSecond()
     {
-        return stub<member_func_t<uint32_t, AudManager>>(0x519630, this);
+        return stub<member_func_t<u32, AudManager>>(0x519630, this);
     }
 
     // 0x519640 | ?SetBitDepthAndSampleRate@AudManager@@QAEXHK@Z
-    inline void SetBitDepthAndSampleRate(int32_t arg1, uint32_t arg2)
+    inline void SetBitDepthAndSampleRate(i32 arg1, u32 arg2)
     {
-        return stub<member_func_t<void, AudManager, int32_t, uint32_t>>(0x519640, this, arg1, arg2);
+        return stub<member_func_t<void, AudManager, i32, u32>>(0x519640, this, arg1, arg2);
     }
 
     // 0x5196D0 | ?DeviceValid@AudManager@@QAE_NXZ
@@ -186,9 +186,9 @@ public:
     }
 
     // 0x519710 | ?GetNumDevices@AudManager@@QAEHXZ
-    inline int32_t GetNumDevices()
+    inline i32 GetNumDevices()
     {
-        return stub<member_func_t<int32_t, AudManager>>(0x519710, this);
+        return stub<member_func_t<i32, AudManager>>(0x519710, this);
     }
 
     // 0x519730 | ?GetActiveDeviceName@AudManager@@QAEPADXZ
@@ -198,15 +198,15 @@ public:
     }
 
     // 0x519750 | ?Supports16Bit@AudManager@@QAEFXZ
-    inline int16_t Supports16Bit()
+    inline i16 Supports16Bit()
     {
-        return stub<member_func_t<int16_t, AudManager>>(0x519750, this);
+        return stub<member_func_t<i16, AudManager>>(0x519750, this);
     }
 
     // 0x519780 | ?GetNum3DHalBufs@AudManager@@QAEKXZ
-    inline uint32_t GetNum3DHalBufs()
+    inline u32 GetNum3DHalBufs()
     {
-        return stub<member_func_t<uint32_t, AudManager>>(0x519780, this);
+        return stub<member_func_t<u32, AudManager>>(0x519780, this);
     }
 
     // 0x519790 | ?GetMixerPtr@AudManager@@QAEPAVMixerCTL@@XZ
@@ -216,9 +216,9 @@ public:
     }
 
     // 0x5197D0 | ?AssignWaveVolume@AudManager@@QAEXM@Z
-    inline void AssignWaveVolume(float arg1)
+    inline void AssignWaveVolume(f32 arg1)
     {
-        return stub<member_func_t<void, AudManager, float>>(0x5197D0, this, arg1);
+        return stub<member_func_t<void, AudManager, f32>>(0x5197D0, this, arg1);
     }
 
     // 0x519830 | ?SetAudHeadPtr@AudManager@@QAEXPAVAudHead@@@Z
@@ -228,27 +228,27 @@ public:
     }
 
     // 0x519850 | ?Enable@AudManager@@QAEXPADFF@Z
-    inline void Enable(char* arg1, int16_t arg2, int16_t arg3)
+    inline void Enable(char* arg1, i16 arg2, i16 arg3)
     {
-        return stub<member_func_t<void, AudManager, char*, int16_t, int16_t>>(0x519850, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, AudManager, char*, i16, i16>>(0x519850, this, arg1, arg2, arg3);
     }
 
     // 0x519860 | ?Disable@AudManager@@QAEXFF@Z
-    inline void Disable(int16_t arg1, int16_t arg2)
+    inline void Disable(i16 arg1, i16 arg2)
     {
-        return stub<member_func_t<void, AudManager, int16_t, int16_t>>(0x519860, this, arg1, arg2);
+        return stub<member_func_t<void, AudManager, i16, i16>>(0x519860, this, arg1, arg2);
     }
 
     // 0x519870 | ?SetNumChannels@AudManager@@QAEXH@Z
-    inline void SetNumChannels(int32_t arg1)
+    inline void SetNumChannels(i32 arg1)
     {
-        return stub<member_func_t<void, AudManager, int32_t>>(0x519870, this, arg1);
+        return stub<member_func_t<void, AudManager, i32>>(0x519870, this, arg1);
     }
 
     // 0x519880 | ?AssignCDBalance@AudManager@@QAEXM@Z
-    inline void AssignCDBalance(float arg1)
+    inline void AssignCDBalance(f32 arg1)
     {
-        return stub<member_func_t<void, AudManager, float>>(0x519880, this, arg1);
+        return stub<member_func_t<void, AudManager, f32>>(0x519880, this, arg1);
     }
 
     // 0x5198A0 | ?CDIsEnabled@AudManager@@QAE_NXZ
@@ -276,9 +276,9 @@ public:
     }
 
     // 0x519920 | ?GetCDTrackNum@AudManager@@QAEHXZ
-    inline int32_t GetCDTrackNum()
+    inline i32 GetCDTrackNum()
     {
-        return stub<member_func_t<int32_t, AudManager>>(0x519920, this);
+        return stub<member_func_t<i32, AudManager>>(0x519920, this);
     }
 
     // 0x519940 | ?StopCD@AudManager@@QAEXXZ
@@ -288,47 +288,45 @@ public:
     }
 
     // 0x519960 | ?PlayCDTrack@AudManager@@QAEHHH@Z
-    inline int32_t PlayCDTrack(int32_t arg1, int32_t arg2)
+    inline i32 PlayCDTrack(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<int32_t, AudManager, int32_t, int32_t>>(0x519960, this, arg1, arg2);
+        return stub<member_func_t<i32, AudManager, i32, i32>>(0x519960, this, arg1, arg2);
     }
 
     // 0x519990 | ?PlayCDTrack@AudManager@@QAEHHEEEH@Z
-    inline int32_t PlayCDTrack(int32_t arg1, uint8_t arg2, uint8_t arg3, uint8_t arg4, int32_t arg5)
+    inline i32 PlayCDTrack(i32 arg1, u8 arg2, u8 arg3, u8 arg4, i32 arg5)
     {
-        return stub<member_func_t<int32_t, AudManager, int32_t, uint8_t, uint8_t, uint8_t, int32_t>>(
-            0x519990, this, arg1, arg2, arg3, arg4, arg5);
+        return stub<member_func_t<i32, AudManager, i32, u8, u8, u8, i32>>(0x519990, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x5199D0 | ?GetCDPosition@AudManager@@QAEKPAE000@Z
-    inline uint32_t GetCDPosition(uint8_t* arg1, uint8_t* arg2, uint8_t* arg3, uint8_t* arg4)
+    inline u32 GetCDPosition(u8* arg1, u8* arg2, u8* arg3, u8* arg4)
     {
-        return stub<member_func_t<uint32_t, AudManager, uint8_t*, uint8_t*, uint8_t*, uint8_t*>>(
-            0x5199D0, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<u32, AudManager, u8*, u8*, u8*, u8*>>(0x5199D0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x519A10 | ?GetNumCDTracks@AudManager@@QAEHXZ
-    inline int32_t GetNumCDTracks()
+    inline i32 GetNumCDTracks()
     {
-        return stub<member_func_t<int32_t, AudManager>>(0x519A10, this);
+        return stub<member_func_t<i32, AudManager>>(0x519A10, this);
     }
 
     // 0x519A30 | ?AssignCDVolume@AudManager@@QAEXM@Z
-    inline void AssignCDVolume(float arg1)
+    inline void AssignCDVolume(f32 arg1)
     {
-        return stub<member_func_t<void, AudManager, float>>(0x519A30, this, arg1);
+        return stub<member_func_t<void, AudManager, f32>>(0x519A30, this, arg1);
     }
 
     // 0x519A50 | ?CheckCDFile@AudManager@@QAEEPAD@Z
-    inline uint8_t CheckCDFile(char* arg1)
+    inline u8 CheckCDFile(char* arg1)
     {
-        return stub<member_func_t<uint8_t, AudManager, char*>>(0x519A50, this, arg1);
+        return stub<member_func_t<u8, AudManager, char*>>(0x519A50, this, arg1);
     }
 
     // 0x519B10 | ?SetCDPlayMode@AudManager@@QAEXE@Z
-    inline void SetCDPlayMode(uint8_t arg1)
+    inline void SetCDPlayMode(u8 arg1)
     {
-        return stub<member_func_t<void, AudManager, uint8_t>>(0x519B10, this, arg1);
+        return stub<member_func_t<void, AudManager, u8>>(0x519B10, this, arg1);
     }
 
     // 0x519B30 | ?SetHwnd@AudManager@@QAEXPAUHWND__@@@Z
@@ -338,21 +336,21 @@ public:
     }
 
     // 0x519BD0 | ?EAXEnabled@AudManager@@QAEIXZ
-    inline uint32_t EAXEnabled()
+    inline u32 EAXEnabled()
     {
-        return stub<member_func_t<uint32_t, AudManager>>(0x519BD0, this);
+        return stub<member_func_t<u32, AudManager>>(0x519BD0, this);
     }
 
     // 0x519BE0 | ?DSound3DEnabled@AudManager@@QAEIXZ
-    inline uint32_t DSound3DEnabled()
+    inline u32 DSound3DEnabled()
     {
-        return stub<member_func_t<uint32_t, AudManager>>(0x519BE0, this);
+        return stub<member_func_t<u32, AudManager>>(0x519BE0, this);
     }
 
     // 0x519BF0 | ?CreateListenerSoundObj@AudManager@@AAEIXZ
-    inline uint32_t CreateListenerSoundObj()
+    inline u32 CreateListenerSoundObj()
     {
-        return stub<member_func_t<uint32_t, AudManager>>(0x519BF0, this);
+        return stub<member_func_t<u32, AudManager>>(0x519BF0, this);
     }
 
     // 0x519C00 | ?GetListenerEAXObj@AudManager@@AAEPAVCReverb@@XZ
@@ -362,16 +360,15 @@ public:
     }
 
     // 0x519C10 | ?SetEAXPreset@AudManager@@QAEHKMMM@Z
-    inline int32_t SetEAXPreset(uint32_t arg1, float arg2, float arg3, float arg4)
+    inline i32 SetEAXPreset(u32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
-        return stub<member_func_t<int32_t, AudManager, uint32_t, float, float, float>>(
-            0x519C10, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<i32, AudManager, u32, f32, f32, f32>>(0x519C10, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x519C20 | ?SetEAXPreset@AudManager@@QAEHPAUEAX_REVERBPROPERTIES@@@Z
-    inline int32_t SetEAXPreset(struct EAX_REVERBPROPERTIES* arg1)
+    inline i32 SetEAXPreset(struct EAX_REVERBPROPERTIES* arg1)
     {
-        return stub<member_func_t<int32_t, AudManager, struct EAX_REVERBPROPERTIES*>>(0x519C20, this, arg1);
+        return stub<member_func_t<i32, AudManager, struct EAX_REVERBPROPERTIES*>>(0x519C20, this, arg1);
     }
 
     // 0x519C30 | ?GetEAXAll@AudManager@@QAEXPAUEAX_REVERBPROPERTIES@@@Z
@@ -381,51 +378,51 @@ public:
     }
 
     // 0x519C40 | ?SetEAXEnvironmet@AudManager@@QAEHK@Z
-    inline int32_t SetEAXEnvironmet(uint32_t arg1)
+    inline i32 SetEAXEnvironmet(u32 arg1)
     {
-        return stub<member_func_t<int32_t, AudManager, uint32_t>>(0x519C40, this, arg1);
+        return stub<member_func_t<i32, AudManager, u32>>(0x519C40, this, arg1);
     }
 
     // 0x519C50 | ?GetEAXEnvironmet@AudManager@@QAEKXZ
-    inline uint32_t GetEAXEnvironmet()
+    inline u32 GetEAXEnvironmet()
     {
-        return stub<member_func_t<uint32_t, AudManager>>(0x519C50, this);
+        return stub<member_func_t<u32, AudManager>>(0x519C50, this);
     }
 
     // 0x519C60 | ?SetEAXReverbVolume@AudManager@@QAEHM@Z
-    inline int32_t SetEAXReverbVolume(float arg1)
+    inline i32 SetEAXReverbVolume(f32 arg1)
     {
-        return stub<member_func_t<int32_t, AudManager, float>>(0x519C60, this, arg1);
+        return stub<member_func_t<i32, AudManager, f32>>(0x519C60, this, arg1);
     }
 
     // 0x519C70 | ?GetEAXReverbVolume@AudManager@@QAEMXZ
-    inline float GetEAXReverbVolume()
+    inline f32 GetEAXReverbVolume()
     {
-        return stub<member_func_t<float, AudManager>>(0x519C70, this);
+        return stub<member_func_t<f32, AudManager>>(0x519C70, this);
     }
 
     // 0x519C80 | ?SetEAXDecayTime@AudManager@@QAEHM@Z
-    inline int32_t SetEAXDecayTime(float arg1)
+    inline i32 SetEAXDecayTime(f32 arg1)
     {
-        return stub<member_func_t<int32_t, AudManager, float>>(0x519C80, this, arg1);
+        return stub<member_func_t<i32, AudManager, f32>>(0x519C80, this, arg1);
     }
 
     // 0x519C90 | ?GetEAXDecayTime@AudManager@@QAEMXZ
-    inline float GetEAXDecayTime()
+    inline f32 GetEAXDecayTime()
     {
-        return stub<member_func_t<float, AudManager>>(0x519C90, this);
+        return stub<member_func_t<f32, AudManager>>(0x519C90, this);
     }
 
     // 0x519CA0 | ?SetEAXDamping@AudManager@@QAEHM@Z
-    inline int32_t SetEAXDamping(float arg1)
+    inline i32 SetEAXDamping(f32 arg1)
     {
-        return stub<member_func_t<int32_t, AudManager, float>>(0x519CA0, this, arg1);
+        return stub<member_func_t<i32, AudManager, f32>>(0x519CA0, this, arg1);
     }
 
     // 0x519CB0 | ?GetEAXDamping@AudManager@@QAEMXZ
-    inline float GetEAXDamping()
+    inline f32 GetEAXDamping()
     {
-        return stub<member_func_t<float, AudManager>>(0x519CB0, this);
+        return stub<member_func_t<f32, AudManager>>(0x519CB0, this);
     }
 
     // 0x519CC0 | ?GetIDirectSoundInterfacePtr@AudManager@@QAEPAUIDirectSound@@XZ
@@ -435,9 +432,9 @@ public:
     }
 
     // 0x519CE0 | ?Log@AudManager@@QAEMMM@Z
-    inline float Log(float arg1, float arg2)
+    inline f32 Log(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<float, AudManager, float, float>>(0x519CE0, this, arg1, arg2);
+        return stub<member_func_t<f32, AudManager, f32, f32>>(0x519CE0, this, arg1, arg2);
     }
 
     // 0x5192D0 | ??1AudManager@@UAE@XZ

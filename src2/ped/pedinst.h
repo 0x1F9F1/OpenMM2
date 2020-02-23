@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -93,9 +93,9 @@ public:
     }
 
     // 0x57B5F0 | ?Draw@aiPedestrianInstance@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
+    inline void Draw(i32 arg1) override
     {
-        return stub<member_func_t<void, aiPedestrianInstance, int32_t>>(0x57B5F0, this, arg1);
+        return stub<member_func_t<void, aiPedestrianInstance, i32>>(0x57B5F0, this, arg1);
     }
 
     // 0x57B700 | ?DrawShadow@aiPedestrianInstance@@UAEXXZ
@@ -111,9 +111,9 @@ public:
     }
 
     // 0x57B5E0 | ?SizeOf@aiPedestrianInstance@@UAEIXZ
-    inline uint32_t SizeOf() override
+    inline u32 SizeOf() override
     {
-        return stub<member_func_t<uint32_t, aiPedestrianInstance>>(0x57B5E0, this);
+        return stub<member_func_t<u32, aiPedestrianInstance>>(0x57B5E0, this);
     }
 
     // 0x57B780 | ?IsCollidable@aiPedestrianInstance@@UAE_NXZ
@@ -123,14 +123,14 @@ public:
     }
 
     // 0x57B770 | ?GetBound@aiPedestrianInstance@@UAEPBVphBound@@H@Z
-    inline class phBound const* GetBound(int32_t arg1) override
+    inline class phBound const* GetBound(i32 arg1) override
     {
-        return stub<member_func_t<class phBound const*, aiPedestrianInstance, int32_t>>(0x57B770, this, arg1);
+        return stub<member_func_t<class phBound const*, aiPedestrianInstance, i32>>(0x57B770, this, arg1);
     }
 
     // 0x57B5D0 | ?ComputeLod@aiPedestrianInstance@@UAEHMM@Z
-    virtual inline int32_t ComputeLod(float arg1, float arg2)
+    virtual inline i32 ComputeLod(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<int32_t, aiPedestrianInstance, float, float>>(0x57B5D0, this, arg1, arg2);
+        return stub<member_func_t<i32, aiPedestrianInstance, f32, f32>>(0x57B5D0, this, arg1, arg2);
     }
 };

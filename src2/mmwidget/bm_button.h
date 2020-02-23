@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -63,11 +63,11 @@ public:
     }
 
     // 0x4EE810 | ?Init@UIBMButton@@QAEXPADMMHHPAHHHPAULocString@@VdatCallback@@3@Z
-    inline void Init(char* arg1, float arg2, float arg3, int32_t arg4, int32_t arg5, int32_t* arg6, int32_t arg7,
-        int32_t arg8, struct LocString* arg9, class datCallback arg10, class datCallback arg11)
+    inline void Init(char* arg1, f32 arg2, f32 arg3, i32 arg4, i32 arg5, i32* arg6, i32 arg7, i32 arg8,
+        struct LocString* arg9, class datCallback arg10, class datCallback arg11)
     {
-        return stub<member_func_t<void, UIBMButton, char*, float, float, int32_t, int32_t, int32_t*, int32_t, int32_t,
-            struct LocString*, class datCallback, class datCallback>>(
+        return stub<member_func_t<void, UIBMButton, char*, f32, f32, i32, i32, i32*, i32, i32, struct LocString*,
+            class datCallback, class datCallback>>(
             0x4EE810, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
     }
 
@@ -78,9 +78,9 @@ public:
     }
 
     // 0x4EEAD0 | ?GetDiv@UIBMButton@@QAEHXZ
-    inline int32_t GetDiv()
+    inline i32 GetDiv()
     {
-        return stub<member_func_t<int32_t, UIBMButton>>(0x4EEAD0, this);
+        return stub<member_func_t<i32, UIBMButton>>(0x4EEAD0, this);
     }
 
     // 0x4EEB00 | ?GetSize@UIBMButton@@AAEXXZ
@@ -90,9 +90,9 @@ public:
     }
 
     // 0x4EEC80 | ?GetHitArea@UIBMButton@@QAEXAAM0@Z
-    inline void GetHitArea(float& arg1, float& arg2)
+    inline void GetHitArea(f32& arg1, f32& arg2)
     {
-        return stub<member_func_t<void, UIBMButton, float&, float&>>(0x4EEC80, this, arg1, arg2);
+        return stub<member_func_t<void, UIBMButton, f32&, f32&>>(0x4EEC80, this, arg1, arg2);
     }
 
     // 0x4EECD0 | ?DoToggle@UIBMButton@@QAEXXZ
@@ -144,7 +144,7 @@ public:
     }
 
     // 0x6B0418 | ?s_pSound@UIBMButton@@0PAVAudSoundBase@@A
-    static inline extern_var(0x6B0418, class AudSoundBase*, s_pSound);
+    inline extern_var(0x6B0418, class AudSoundBase*, s_pSound);
 
     // 0x4EE790 | ??1UIBMButton@@UAE@XZ
     inline ~UIBMButton() override
@@ -183,9 +183,9 @@ public:
     }
 
     // 0x4EEDF0 | ?Switch@UIBMButton@@UAEXH@Z
-    inline void Switch(int32_t arg1) override
+    inline void Switch(i32 arg1) override
     {
-        return stub<member_func_t<void, UIBMButton, int32_t>>(0x4EEDF0, this, arg1);
+        return stub<member_func_t<void, UIBMButton, i32>>(0x4EEDF0, this, arg1);
     }
 
     // 0x4EF1F0 | ?ReturnDescription@UIBMButton@@UAEPADXZ
@@ -195,14 +195,14 @@ public:
     }
 
     // 0x4EEB30 | ?SetPosition@UIBMButton@@UAEXMM@Z
-    inline void SetPosition(float arg1, float arg2) override
+    inline void SetPosition(f32 arg1, f32 arg2) override
     {
-        return stub<member_func_t<void, UIBMButton, float, float>>(0x4EEB30, this, arg1, arg2);
+        return stub<member_func_t<void, UIBMButton, f32, f32>>(0x4EEB30, this, arg1, arg2);
     }
 
     // 0x4EF2A0 | ?GetScreenHeight@UIBMButton@@UAEMXZ
-    inline float GetScreenHeight() override
+    inline f32 GetScreenHeight() override
     {
-        return stub<member_func_t<float, UIBMButton>>(0x4EF2A0, this);
+        return stub<member_func_t<f32, UIBMButton>>(0x4EF2A0, this);
     }
 };

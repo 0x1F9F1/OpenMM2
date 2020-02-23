@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -73,27 +73,27 @@ public:
     }
 
     // 0x46A5F0 | ?GetMaterial@dgBoundGeometry@@UBEPBVphMaterial@@H@Z
-    inline class phMaterial const* GetMaterial(int32_t arg1) override
+    inline class phMaterial const* GetMaterial(i32 arg1) override
     {
-        return stub<member_func_t<class phMaterial const*, dgBoundGeometry, int32_t>>(0x46A5F0, this, arg1);
+        return stub<member_func_t<class phMaterial const*, dgBoundGeometry, i32>>(0x46A5F0, this, arg1);
     }
 
     // 0x46A600 | ?GetNumMaterials@dgBoundGeometry@@UBEHXZ
-    inline int32_t GetNumMaterials() override
+    inline i32 GetNumMaterials() override
     {
-        return stub<member_func_t<int32_t, dgBoundGeometry>>(0x46A600, this);
+        return stub<member_func_t<i32, dgBoundGeometry>>(0x46A600, this);
     }
 
     // 0x46A250 | ?SetFriction@dgBoundGeometry@@UAEXM@Z
-    inline void SetFriction(float arg1) override
+    inline void SetFriction(f32 arg1) override
     {
-        return stub<member_func_t<void, dgBoundGeometry, float>>(0x46A250, this, arg1);
+        return stub<member_func_t<void, dgBoundGeometry, f32>>(0x46A250, this, arg1);
     }
 
     // 0x46A260 | ?SetElasticity@dgBoundGeometry@@UAEXM@Z
-    inline void SetElasticity(float arg1) override
+    inline void SetElasticity(f32 arg1) override
     {
-        return stub<member_func_t<void, dgBoundGeometry, float>>(0x46A260, this, arg1);
+        return stub<member_func_t<void, dgBoundGeometry, f32>>(0x46A260, this, arg1);
     }
 };
 
@@ -115,27 +115,27 @@ public:
     }
 
     // 0x46A620 | ?GetMaterial@dgBoundBox@@UBEPBVphMaterial@@H@Z
-    inline class phMaterial const* GetMaterial(int32_t arg1) override
+    inline class phMaterial const* GetMaterial(i32 arg1) override
     {
-        return stub<member_func_t<class phMaterial const*, dgBoundBox, int32_t>>(0x46A620, this, arg1);
+        return stub<member_func_t<class phMaterial const*, dgBoundBox, i32>>(0x46A620, this, arg1);
     }
 
     // 0x46A630 | ?GetNumMaterials@dgBoundBox@@UBEHXZ
-    inline int32_t GetNumMaterials() override
+    inline i32 GetNumMaterials() override
     {
-        return stub<member_func_t<int32_t, dgBoundBox>>(0x46A630, this);
+        return stub<member_func_t<i32, dgBoundBox>>(0x46A630, this);
     }
 
     // 0x46A340 | ?SetFriction@dgBoundBox@@UAEXM@Z
-    inline void SetFriction(float arg1) override
+    inline void SetFriction(f32 arg1) override
     {
-        return stub<member_func_t<void, dgBoundBox, float>>(0x46A340, this, arg1);
+        return stub<member_func_t<void, dgBoundBox, f32>>(0x46A340, this, arg1);
     }
 
     // 0x46A360 | ?SetElasticity@dgBoundBox@@UAEXM@Z
-    inline void SetElasticity(float arg1) override
+    inline void SetElasticity(f32 arg1) override
     {
-        return stub<member_func_t<void, dgBoundBox, float>>(0x46A360, this, arg1);
+        return stub<member_func_t<void, dgBoundBox, f32>>(0x46A360, this, arg1);
     }
 };
 
@@ -157,27 +157,27 @@ public:
     }
 
     // 0x46A640 | ?GetMaterial@dgBoundHotdog@@UBEPBVphMaterial@@H@Z
-    inline class phMaterial const* GetMaterial(int32_t arg1) override
+    inline class phMaterial const* GetMaterial(i32 arg1) override
     {
-        return stub<member_func_t<class phMaterial const*, dgBoundHotdog, int32_t>>(0x46A640, this, arg1);
+        return stub<member_func_t<class phMaterial const*, dgBoundHotdog, i32>>(0x46A640, this, arg1);
     }
 
     // 0x46A650 | ?GetNumMaterials@dgBoundHotdog@@UBEHXZ
-    inline int32_t GetNumMaterials() override
+    inline i32 GetNumMaterials() override
     {
-        return stub<member_func_t<int32_t, dgBoundHotdog>>(0x46A650, this);
+        return stub<member_func_t<i32, dgBoundHotdog>>(0x46A650, this);
     }
 
     // 0x46A450 | ?SetFriction@dgBoundHotdog@@UAEXM@Z
-    inline void SetFriction(float arg1) override
+    inline void SetFriction(f32 arg1) override
     {
-        return stub<member_func_t<void, dgBoundHotdog, float>>(0x46A450, this, arg1);
+        return stub<member_func_t<void, dgBoundHotdog, f32>>(0x46A450, this, arg1);
     }
 
     // 0x46A470 | ?SetElasticity@dgBoundHotdog@@UAEXM@Z
-    inline void SetElasticity(float arg1) override
+    inline void SetElasticity(f32 arg1) override
     {
-        return stub<member_func_t<void, dgBoundHotdog, float>>(0x46A470, this, arg1);
+        return stub<member_func_t<void, dgBoundHotdog, f32>>(0x46A470, this, arg1);
     }
 };
 
@@ -199,26 +199,26 @@ public:
     }
 
     // 0x46A660 | ?GetMaterial@dgBoundSphere@@UBEPBVphMaterial@@H@Z
-    inline class phMaterial const* GetMaterial(int32_t arg1) override
+    inline class phMaterial const* GetMaterial(i32 arg1) override
     {
-        return stub<member_func_t<class phMaterial const*, dgBoundSphere, int32_t>>(0x46A660, this, arg1);
+        return stub<member_func_t<class phMaterial const*, dgBoundSphere, i32>>(0x46A660, this, arg1);
     }
 
     // 0x46A670 | ?GetNumMaterials@dgBoundSphere@@UBEHXZ
-    inline int32_t GetNumMaterials() override
+    inline i32 GetNumMaterials() override
     {
-        return stub<member_func_t<int32_t, dgBoundSphere>>(0x46A670, this);
+        return stub<member_func_t<i32, dgBoundSphere>>(0x46A670, this);
     }
 
     // 0x46A560 | ?SetFriction@dgBoundSphere@@UAEXM@Z
-    inline void SetFriction(float arg1) override
+    inline void SetFriction(f32 arg1) override
     {
-        return stub<member_func_t<void, dgBoundSphere, float>>(0x46A560, this, arg1);
+        return stub<member_func_t<void, dgBoundSphere, f32>>(0x46A560, this, arg1);
     }
 
     // 0x46A580 | ?SetElasticity@dgBoundSphere@@UAEXM@Z
-    inline void SetElasticity(float arg1) override
+    inline void SetElasticity(f32 arg1) override
     {
-        return stub<member_func_t<void, dgBoundSphere, float>>(0x46A580, this, arg1);
+        return stub<member_func_t<void, dgBoundSphere, f32>>(0x46A580, this, arg1);
     }
 };

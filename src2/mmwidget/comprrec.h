@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -50,21 +50,18 @@ public:
     }
 
     // 0x59EF70 | ?Init@mmCompRaceRecord@@QAEXHPAD0000HH@Z
-    inline void Init(
-        int32_t arg1, char* arg2, char* arg3, char* arg4, char* arg5, char* arg6, int32_t arg7, int32_t arg8)
+    inline void Init(i32 arg1, char* arg2, char* arg3, char* arg4, char* arg5, char* arg6, i32 arg7, i32 arg8)
     {
-        return stub<
-            member_func_t<void, mmCompRaceRecord, int32_t, char*, char*, char*, char*, char*, int32_t, int32_t>>(
+        return stub<member_func_t<void, mmCompRaceRecord, i32, char*, char*, char*, char*, char*, i32, i32>>(
             0x59EF70, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
     // 0x59EFF0 | ?InitTitle@mmCompRaceRecord@@QAEXMMMMPAULocString@@00000H@Z
-    inline void InitTitle(float arg1, float arg2, float arg3, float arg4, struct LocString* arg5,
-        struct LocString* arg6, struct LocString* arg7, struct LocString* arg8, struct LocString* arg9,
-        struct LocString* arg10, int32_t arg11)
+    inline void InitTitle(f32 arg1, f32 arg2, f32 arg3, f32 arg4, struct LocString* arg5, struct LocString* arg6,
+        struct LocString* arg7, struct LocString* arg8, struct LocString* arg9, struct LocString* arg10, i32 arg11)
     {
-        return stub<member_func_t<void, mmCompRaceRecord, float, float, float, float, struct LocString*,
-            struct LocString*, struct LocString*, struct LocString*, struct LocString*, struct LocString*, int32_t>>(
+        return stub<member_func_t<void, mmCompRaceRecord, f32, f32, f32, f32, struct LocString*, struct LocString*,
+            struct LocString*, struct LocString*, struct LocString*, struct LocString*, i32>>(
             0x59EFF0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
     }
 
@@ -81,9 +78,9 @@ public:
     }
 
     // 0x59F1E0 | ?SelectIfRaceType@mmCompRaceRecord@@QAEXHH@Z
-    inline void SelectIfRaceType(int32_t arg1, int32_t arg2)
+    inline void SelectIfRaceType(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, mmCompRaceRecord, int32_t, int32_t>>(0x59F1E0, this, arg1, arg2);
+        return stub<member_func_t<void, mmCompRaceRecord, i32, i32>>(0x59F1E0, this, arg1, arg2);
     }
 
     // 0x59EED0 | ??1mmCompRaceRecord@@UAE@XZ
@@ -111,16 +108,15 @@ public:
     }
 
     // 0x59F1B0 | ?SetGeometry@mmCompRaceRecord@@UAEXMMMM@Z
-    inline void SetGeometry(float arg1, float arg2, float arg3, float arg4) override
+    inline void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4) override
     {
-        return stub<member_func_t<void, mmCompRaceRecord, float, float, float, float>>(
-            0x59F1B0, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, mmCompRaceRecord, f32, f32, f32, f32>>(0x59F1B0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x59F220 | ?SetPosition@mmCompRaceRecord@@UAEXPAVmmTextNode@@HM@Z
-    inline void SetPosition(class mmTextNode* arg1, int32_t arg2, float arg3) override
+    inline void SetPosition(class mmTextNode* arg1, i32 arg2, f32 arg3) override
     {
-        return stub<member_func_t<void, mmCompRaceRecord, class mmTextNode*, int32_t, float>>(
+        return stub<member_func_t<void, mmCompRaceRecord, class mmTextNode*, i32, f32>>(
             0x59F220, this, arg1, arg2, arg3);
     }
 };

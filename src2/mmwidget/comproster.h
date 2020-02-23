@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -57,18 +57,18 @@ public:
     }
 
     // 0x59FA00 | ?Init@mmCompRoster@@QAEXPAD00KHH@Z
-    inline void Init(char* arg1, char* arg2, char* arg3, uint32_t arg4, int32_t arg5, int32_t arg6)
+    inline void Init(char* arg1, char* arg2, char* arg3, u32 arg4, i32 arg5, i32 arg6)
     {
-        return stub<member_func_t<void, mmCompRoster, char*, char*, char*, uint32_t, int32_t, int32_t>>(
+        return stub<member_func_t<void, mmCompRoster, char*, char*, char*, u32, i32, i32>>(
             0x59FA00, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x59FAE0 | ?InitTitle@mmCompRoster@@QAEXMMMMPAULocString@@000H@Z
-    inline void InitTitle(float arg1, float arg2, float arg3, float arg4, struct LocString* arg5,
-        struct LocString* arg6, struct LocString* arg7, struct LocString* arg8, int32_t arg9)
+    inline void InitTitle(f32 arg1, f32 arg2, f32 arg3, f32 arg4, struct LocString* arg5, struct LocString* arg6,
+        struct LocString* arg7, struct LocString* arg8, i32 arg9)
     {
-        return stub<member_func_t<void, mmCompRoster, float, float, float, float, struct LocString*, struct LocString*,
-            struct LocString*, struct LocString*, int32_t>>(
+        return stub<member_func_t<void, mmCompRoster, f32, f32, f32, f32, struct LocString*, struct LocString*,
+            struct LocString*, struct LocString*, i32>>(
             0x59FAE0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
     }
 
@@ -91,9 +91,9 @@ public:
     }
 
     // 0x59FC10 | ?SetReady@mmCompRoster@@QAEXH@Z
-    inline void SetReady(int32_t arg1)
+    inline void SetReady(i32 arg1)
     {
-        return stub<member_func_t<void, mmCompRoster, int32_t>>(0x59FC10, this, arg1);
+        return stub<member_func_t<void, mmCompRoster, i32>>(0x59FC10, this, arg1);
     }
 
     // 0x59FC50 | ?SetSubwidgetGeometry@mmCompRoster@@QAEXXZ
@@ -121,9 +121,9 @@ public:
     }
 
     // 0x59FEB0 | ?SetTeam@mmCompRoster@@QAEXH@Z
-    inline void SetTeam(int32_t arg1)
+    inline void SetTeam(i32 arg1)
     {
-        return stub<member_func_t<void, mmCompRoster, int32_t>>(0x59FEB0, this, arg1);
+        return stub<member_func_t<void, mmCompRoster, i32>>(0x59FEB0, this, arg1);
     }
 
     // 0x59F940 | ??1mmCompRoster@@UAE@XZ
@@ -151,22 +151,20 @@ public:
     }
 
     // 0x59FD60 | ?SetBltXY@mmCompRoster@@UAEXMM@Z
-    inline void SetBltXY(float arg1, float arg2) override
+    inline void SetBltXY(f32 arg1, f32 arg2) override
     {
-        return stub<member_func_t<void, mmCompRoster, float, float>>(0x59FD60, this, arg1, arg2);
+        return stub<member_func_t<void, mmCompRoster, f32, f32>>(0x59FD60, this, arg1, arg2);
     }
 
     // 0x59FD30 | ?SetGeometry@mmCompRoster@@UAEXMMMM@Z
-    inline void SetGeometry(float arg1, float arg2, float arg3, float arg4) override
+    inline void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4) override
     {
-        return stub<member_func_t<void, mmCompRoster, float, float, float, float>>(
-            0x59FD30, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, mmCompRoster, f32, f32, f32, f32>>(0x59FD30, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x59FCB0 | ?SetPosition@mmCompRoster@@UAEXPAVmmTextNode@@HM@Z
-    inline void SetPosition(class mmTextNode* arg1, int32_t arg2, float arg3) override
+    inline void SetPosition(class mmTextNode* arg1, i32 arg2, f32 arg3) override
     {
-        return stub<member_func_t<void, mmCompRoster, class mmTextNode*, int32_t, float>>(
-            0x59FCB0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmCompRoster, class mmTextNode*, i32, f32>>(0x59FCB0, this, arg1, arg2, arg3);
     }
 };

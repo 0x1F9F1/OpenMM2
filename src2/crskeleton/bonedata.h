@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -44,9 +44,9 @@ public:
     }
 
     // 0x57CC40 | ?Load@crBoneData@@QAE_NAAVdatTokenizer@@PAPAV1@AAH@Z
-    inline bool Load(class datTokenizer& arg1, class crBoneData** arg2, int32_t& arg3)
+    inline bool Load(class datTokenizer& arg1, class crBoneData** arg2, i32& arg3)
     {
-        return stub<member_func_t<bool, crBoneData, class datTokenizer&, class crBoneData**, int32_t&>>(
+        return stub<member_func_t<bool, crBoneData, class datTokenizer&, class crBoneData**, i32&>>(
             0x57CC40, this, arg1, arg2, arg3);
     }
 

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -69,21 +69,21 @@
 */
 
 // 0x4D0B00 | ?DeallocateAudioData@@YAXPAPAPAVaiEngineAudio@@PAH@Z
-inline void DeallocateAudioData(class aiEngineAudio*** arg1, int32_t* arg2)
+inline void DeallocateAudioData(class aiEngineAudio*** arg1, i32* arg2)
 {
-    return stub<cdecl_t<void, class aiEngineAudio***, int32_t*>>(0x4D0B00, arg1, arg2);
+    return stub<cdecl_t<void, class aiEngineAudio***, i32*>>(0x4D0B00, arg1, arg2);
 }
 
 // 0x4D0B70 | ?DeallocateAudioData@@YAXPAPAPAVAudCreature@@PAH@Z
-inline void DeallocateAudioData(class AudCreature*** arg1, int32_t* arg2)
+inline void DeallocateAudioData(class AudCreature*** arg1, i32* arg2)
 {
-    return stub<cdecl_t<void, class AudCreature***, int32_t*>>(0x4D0B70, arg1, arg2);
+    return stub<cdecl_t<void, class AudCreature***, i32*>>(0x4D0B70, arg1, arg2);
 }
 
 // 0x4D0BE0 | ?DeallocateAudioData@@YAXPAPAPAVAudImpact@@PAH@Z
-inline void DeallocateAudioData(class AudImpact*** arg1, int32_t* arg2)
+inline void DeallocateAudioData(class AudImpact*** arg1, i32* arg2)
 {
-    return stub<cdecl_t<void, class AudImpact***, int32_t*>>(0x4D0BE0, arg1, arg2);
+    return stub<cdecl_t<void, class AudImpact***, i32*>>(0x4D0BE0, arg1, arg2);
 }
 
 struct aiAmbientVehicleAudio : Aud3DObject
@@ -116,9 +116,9 @@ public:
     }
 
     // 0x4CFAD0 | ?PlayImpactHorn@aiAmbientVehicleAudio@@QAEXM@Z
-    inline void PlayImpactHorn(float arg1)
+    inline void PlayImpactHorn(f32 arg1)
     {
-        return stub<member_func_t<void, aiAmbientVehicleAudio, float>>(0x4CFAD0, this, arg1);
+        return stub<member_func_t<void, aiAmbientVehicleAudio, f32>>(0x4CFAD0, this, arg1);
     }
 
     // 0x4CFAF0 | ?UpdateHorn@aiAmbientVehicleAudio@@QAEXXZ
@@ -134,9 +134,9 @@ public:
     }
 
     // 0x4CFB90 | ?UpdateAudio@aiAmbientVehicleAudio@@QAEHM@Z
-    inline int32_t UpdateAudio(float arg1)
+    inline i32 UpdateAudio(f32 arg1)
     {
-        return stub<member_func_t<int32_t, aiAmbientVehicleAudio, float>>(0x4CFB90, this, arg1);
+        return stub<member_func_t<i32, aiAmbientVehicleAudio, f32>>(0x4CFB90, this, arg1);
     }
 
     // 0x4CFCC0 | ?InitStatics@aiAmbientVehicleAudio@@SAXXZ
@@ -152,15 +152,15 @@ public:
     }
 
     // 0x4CFF00 | ?UpdateStatics@aiAmbientVehicleAudio@@SAXM@Z
-    static inline void UpdateStatics(float arg1)
+    static inline void UpdateStatics(f32 arg1)
     {
-        return stub<cdecl_t<void, float>>(0x4CFF00, arg1);
+        return stub<cdecl_t<void, f32>>(0x4CFF00, arg1);
     }
 
     // 0x4CFF30 | ?UpdateVoices@aiAmbientVehicleAudio@@CAXHM@Z
-    static inline void UpdateVoices(int32_t arg1, float arg2)
+    static inline void UpdateVoices(i32 arg1, f32 arg2)
     {
-        return stub<cdecl_t<void, int32_t, float>>(0x4CFF30, arg1, arg2);
+        return stub<cdecl_t<void, i32, f32>>(0x4CFF30, arg1, arg2);
     }
 
     // 0x4CFF70 | ?SetCSVCatString@aiAmbientVehicleAudio@@SAXPAD@Z
@@ -194,15 +194,15 @@ public:
     }
 
     // 0x4D0090 | ?PlayImpactReaction@aiAmbientVehicleAudio@@QAEXM@Z
-    inline void PlayImpactReaction(float arg1)
+    inline void PlayImpactReaction(f32 arg1)
     {
-        return stub<member_func_t<void, aiAmbientVehicleAudio, float>>(0x4D0090, this, arg1);
+        return stub<member_func_t<void, aiAmbientVehicleAudio, f32>>(0x4D0090, this, arg1);
     }
 
     // 0x4D00B0 | ?PlayAvoidanceReaction@aiAmbientVehicleAudio@@QAEXM@Z
-    inline void PlayAvoidanceReaction(float arg1)
+    inline void PlayAvoidanceReaction(f32 arg1)
     {
-        return stub<member_func_t<void, aiAmbientVehicleAudio, float>>(0x4D00B0, this, arg1);
+        return stub<member_func_t<void, aiAmbientVehicleAudio, f32>>(0x4D00B0, this, arg1);
     }
 
     // 0x4D00D0 | ?LoadEngine@aiAmbientVehicleAudio@@QAE_NPAD0@Z
@@ -230,34 +230,34 @@ public:
     }
 
     // 0x6AFEF4 | ?s_CSVCatString@aiAmbientVehicleAudio@@0PADA
-    static inline extern_var(0x6AFEF4, char*, s_CSVCatString);
+    inline extern_var(0x6AFEF4, char*, s_CSVCatString);
 
     // 0x6AFF08 | ?s_ppHornAudioContainer@aiAmbientVehicleAudio@@0PAPAV?$Aud3DManagerData@VvehHornAudio@@@@A
-    static inline extern_var(0x6AFF08, class Aud3DManagerData<class vehHornAudio>**, s_ppHornAudioContainer);
+    inline extern_var(0x6AFF08, class Aud3DManagerData<class vehHornAudio>**, s_ppHornAudioContainer);
 
     // 0x6AFF0C | ?s_ppAudCreatureContainer@aiAmbientVehicleAudio@@0PAPAV?$Aud3DManagerData@VAudCreature@@@@A
-    static inline extern_var(0x6AFF0C, class Aud3DManagerData<class AudCreature>**, s_ppAudCreatureContainer);
+    inline extern_var(0x6AFF0C, class Aud3DManagerData<class AudCreature>**, s_ppAudCreatureContainer);
 
     // 0x6AFF10 | ?s_ppEngineAudioContainer@aiAmbientVehicleAudio@@0PAPAV?$Aud3DManagerData@VaiEngineAudio@@@@A
-    static inline extern_var(0x6AFF10, class Aud3DManagerData<class aiEngineAudio>**, s_ppEngineAudioContainer);
+    inline extern_var(0x6AFF10, class Aud3DManagerData<class aiEngineAudio>**, s_ppEngineAudioContainer);
 
     // 0x6AFF14 | ?s_ppAudImpactContainer@aiAmbientVehicleAudio@@0PAPAV?$Aud3DManagerData@VAudImpact@@@@A
-    static inline extern_var(0x6AFF14, class Aud3DManagerData<class AudImpact>**, s_ppAudImpactContainer);
+    inline extern_var(0x6AFF14, class Aud3DManagerData<class AudImpact>**, s_ppAudImpactContainer);
 
     // 0x6AFF18 | ?s_iNumHornAudioContainers@aiAmbientVehicleAudio@@0HA
-    static inline extern_var(0x6AFF18, int32_t, s_iNumHornAudioContainers);
+    inline extern_var(0x6AFF18, int32_t, s_iNumHornAudioContainers);
 
     // 0x6AFF1C | ?s_iNumEngineAudioContainers@aiAmbientVehicleAudio@@0HA
-    static inline extern_var(0x6AFF1C, int32_t, s_iNumEngineAudioContainers);
+    inline extern_var(0x6AFF1C, int32_t, s_iNumEngineAudioContainers);
 
     // 0x6AFF20 | ?s_iNumAudCreatureContainers@aiAmbientVehicleAudio@@0HA
-    static inline extern_var(0x6AFF20, int32_t, s_iNumAudCreatureContainers);
+    inline extern_var(0x6AFF20, int32_t, s_iNumAudCreatureContainers);
 
     // 0x6AFF24 | ?s_iNumAudImpactContainers@aiAmbientVehicleAudio@@0HA
-    static inline extern_var(0x6AFF24, int32_t, s_iNumAudImpactContainers);
+    inline extern_var(0x6AFF24, int32_t, s_iNumAudImpactContainers);
 
     // 0x6AFF28 | ?s_iVoiceFileNum@aiAmbientVehicleAudio@@0HA
-    static inline extern_var(0x6AFF28, int32_t, s_iVoiceFileNum);
+    inline extern_var(0x6AFF28, int32_t, s_iVoiceFileNum);
 
     // 0x4CF9D0 | ?AssignSounds@aiAmbientVehicleAudio@@UAEXXZ
     inline void AssignSounds() override
@@ -266,9 +266,9 @@ public:
     }
 
     // 0x4CFA50 | ?UnAssignSounds@aiAmbientVehicleAudio@@UAEXH@Z
-    inline void UnAssignSounds(int32_t arg1) override
+    inline void UnAssignSounds(i32 arg1) override
     {
-        return stub<member_func_t<void, aiAmbientVehicleAudio, int32_t>>(0x4CFA50, this, arg1);
+        return stub<member_func_t<void, aiAmbientVehicleAudio, i32>>(0x4CFA50, this, arg1);
     }
 
     // 0x4CFB20 | ?UpdateAudio@aiAmbientVehicleAudio@@UAEXXZ

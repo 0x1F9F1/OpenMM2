@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -47,9 +47,9 @@ public:
     }
 
     // 0x4ED8E0 | ?Init@UIIcon@@QAEXPADMM@Z
-    inline void Init(char* arg1, float arg2, float arg3)
+    inline void Init(char* arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, UIIcon, char*, float, float>>(0x4ED8E0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, UIIcon, char*, f32, f32>>(0x4ED8E0, this, arg1, arg2, arg3);
     }
 
     // 0x4ED920 | ?LoadBitchmap@UIIcon@@QAEXPAD@Z
@@ -65,9 +65,9 @@ public:
     }
 
     // 0x4ED970 | ?GetHitArea@UIIcon@@QAEXAAM0@Z
-    inline void GetHitArea(float& arg1, float& arg2)
+    inline void GetHitArea(f32& arg1, f32& arg2)
     {
-        return stub<member_func_t<void, UIIcon, float&, float&>>(0x4ED970, this, arg1, arg2);
+        return stub<member_func_t<void, UIIcon, f32&, f32&>>(0x4ED970, this, arg1, arg2);
     }
 
     // 0x4ED8D0 | ??1UIIcon@@UAE@XZ
@@ -89,8 +89,8 @@ public:
     }
 
     // 0x4ED9B0 | ?Switch@UIIcon@@UAEXH@Z
-    inline void Switch(int32_t arg1) override
+    inline void Switch(i32 arg1) override
     {
-        return stub<member_func_t<void, UIIcon, int32_t>>(0x4ED9B0, this, arg1);
+        return stub<member_func_t<void, UIIcon, i32>>(0x4ED9B0, this, arg1);
     }
 };

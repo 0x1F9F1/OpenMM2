@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -63,9 +63,9 @@ public:
     }
 
     // 0x51FF30 | ?NewCam@camViewCS@@QAEHPAVcamCarCS@@HMVdatCallback@@@Z
-    inline int32_t NewCam(class camCarCS* arg1, int32_t arg2, float arg3, class datCallback arg4)
+    inline i32 NewCam(class camCarCS* arg1, i32 arg2, f32 arg3, class datCallback arg4)
     {
-        return stub<member_func_t<int32_t, camViewCS, class camCarCS*, int32_t, float, class datCallback>>(
+        return stub<member_func_t<i32, camViewCS, class camCarCS*, i32, f32, class datCallback>>(
             0x51FF30, this, arg1, arg2, arg3, arg4);
     }
 

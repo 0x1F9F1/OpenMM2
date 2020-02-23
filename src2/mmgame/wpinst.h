@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -101,9 +101,9 @@ public:
     }
 
     // 0x43FC60 | ?SetVariant@mmWaypointInstance@@UAEXH@Z
-    inline void SetVariant(int32_t arg1) override
+    inline void SetVariant(i32 arg1) override
     {
-        return stub<member_func_t<void, mmWaypointInstance, int32_t>>(0x43FC60, this, arg1);
+        return stub<member_func_t<void, mmWaypointInstance, i32>>(0x43FC60, this, arg1);
     }
 
     // 0x582519 | __purecall
@@ -131,15 +131,15 @@ public:
     }
 
     // 0x43F650 | ?Draw@mmCheckpointInstance@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
+    inline void Draw(i32 arg1) override
     {
-        return stub<member_func_t<void, mmCheckpointInstance, int32_t>>(0x43F650, this, arg1);
+        return stub<member_func_t<void, mmCheckpointInstance, i32>>(0x43F650, this, arg1);
     }
 
     // 0x43F7A0 | ?SizeOf@mmCheckpointInstance@@UAEIXZ
-    inline uint32_t SizeOf() override
+    inline u32 SizeOf() override
     {
-        return stub<member_func_t<uint32_t, mmCheckpointInstance>>(0x43F7A0, this);
+        return stub<member_func_t<u32, mmCheckpointInstance>>(0x43F7A0, this);
     }
 
     // 0x43F600 | ?Init@mmCheckpointInstance@@UAEXPADVVector3@@@Z
@@ -167,15 +167,15 @@ public:
     }
 
     // 0x43F860 | ?Draw@mmBillInstance@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
+    inline void Draw(i32 arg1) override
     {
-        return stub<member_func_t<void, mmBillInstance, int32_t>>(0x43F860, this, arg1);
+        return stub<member_func_t<void, mmBillInstance, i32>>(0x43F860, this, arg1);
     }
 
     // 0x43FA10 | ?SizeOf@mmBillInstance@@UAEIXZ
-    inline uint32_t SizeOf() override
+    inline u32 SizeOf() override
     {
-        return stub<member_func_t<uint32_t, mmBillInstance>>(0x43FA10, this);
+        return stub<member_func_t<u32, mmBillInstance>>(0x43FA10, this);
     }
 
     // 0x43F820 | ?Init@mmBillInstance@@UAEXPADVVector3@@@Z
@@ -203,15 +203,15 @@ public:
     }
 
     // 0x43FAD0 | ?Draw@mmPowerupInstance@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
+    inline void Draw(i32 arg1) override
     {
-        return stub<member_func_t<void, mmPowerupInstance, int32_t>>(0x43FAD0, this, arg1);
+        return stub<member_func_t<void, mmPowerupInstance, i32>>(0x43FAD0, this, arg1);
     }
 
     // 0x43FC20 | ?SizeOf@mmPowerupInstance@@UAEIXZ
-    inline uint32_t SizeOf() override
+    inline u32 SizeOf() override
     {
-        return stub<member_func_t<uint32_t, mmPowerupInstance>>(0x43FC20, this);
+        return stub<member_func_t<u32, mmPowerupInstance>>(0x43FC20, this);
     }
 
     // 0x43FA90 | ?Init@mmPowerupInstance@@UAEXPADVVector3@@@Z

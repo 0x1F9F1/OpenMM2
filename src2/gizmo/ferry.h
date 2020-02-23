@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -123,15 +123,15 @@ public:
     }
 
     // 0x579520 | ?SetSpeed@gizFerry@@QAEXM@Z
-    inline void SetSpeed(float arg1)
+    inline void SetSpeed(f32 arg1)
     {
-        return stub<member_func_t<void, gizFerry, float>>(0x579520, this, arg1);
+        return stub<member_func_t<void, gizFerry, f32>>(0x579520, this, arg1);
     }
 
     // 0x579540 | ?Cull@gizFerry@@QAEXH@Z
-    inline void Cull(int32_t arg1)
+    inline void Cull(i32 arg1)
     {
-        return stub<member_func_t<void, gizFerry, int32_t>>(0x579540, this, arg1);
+        return stub<member_func_t<void, gizFerry, i32>>(0x579540, this, arg1);
     }
 
     // 0x5799A0 | ??_EgizFerry@@QAEPAXI@Z
@@ -144,14 +144,14 @@ public:
     }
 
     // 0x579A00 | ?Draw@gizFerry@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
+    inline void Draw(i32 arg1) override
     {
-        return stub<member_func_t<void, gizFerry, int32_t>>(0x579A00, this, arg1);
+        return stub<member_func_t<void, gizFerry, i32>>(0x579A00, this, arg1);
     }
 
     // 0x579A10 | ?SizeOf@gizFerry@@UAEIXZ
-    inline uint32_t SizeOf() override
+    inline u32 SizeOf() override
     {
-        return stub<member_func_t<uint32_t, gizFerry>>(0x579A10, this);
+        return stub<member_func_t<u32, gizFerry>>(0x579A10, this);
     }
 };

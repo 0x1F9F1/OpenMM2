@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -62,9 +62,9 @@ public:
     // Dialog_Replay::`vftable' @ 0x5B3EDC
 
     // 0x4FA2B0 | ??0Dialog_Replay@@QAE@HMMMMPAD@Z
-    inline Dialog_Replay(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
+    inline Dialog_Replay(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
     {
-        stub<member_func_t<void, Dialog_Replay, int32_t, float, float, float, float, char*>>(
+        stub<member_func_t<void, Dialog_Replay, i32, f32, f32, f32, f32, char*>>(
             0x4FA2B0, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
@@ -111,9 +111,9 @@ public:
     }
 
     // 0x4FAA60 | ?SetCurrentReplay@Dialog_Replay@@QAEXH@Z
-    inline void SetCurrentReplay(int32_t arg1)
+    inline void SetCurrentReplay(i32 arg1)
     {
-        return stub<member_func_t<void, Dialog_Replay, int32_t>>(0x4FAA60, this, arg1);
+        return stub<member_func_t<void, Dialog_Replay, i32>>(0x4FAA60, this, arg1);
     }
 
     // 0x4FAAB0 | ?GetSelectedReplay@Dialog_Replay@@QAEPADXZ

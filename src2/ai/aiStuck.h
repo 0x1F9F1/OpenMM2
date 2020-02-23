@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -57,9 +57,9 @@ public:
     }
 
     // 0x56FA30 | ?Pegged@aiStuck@@QAEHXZ
-    inline int32_t Pegged()
+    inline i32 Pegged()
     {
-        return stub<member_func_t<int32_t, aiStuck>>(0x56FA30, this);
+        return stub<member_func_t<i32, aiStuck>>(0x56FA30, this);
     }
 
     // 0x567B80 | ??1aiStuck@@UAE@XZ

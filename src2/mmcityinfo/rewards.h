@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -68,9 +68,9 @@ public:
     }
 
     // 0x523930 | ?Init@mmRewardList@@QAEXH@Z
-    inline void Init(int32_t arg1)
+    inline void Init(i32 arg1)
     {
-        return stub<member_func_t<void, mmRewardList, int32_t>>(0x523930, this, arg1);
+        return stub<member_func_t<void, mmRewardList, i32>>(0x523930, this, arg1);
     }
 
     // 0x5239B0 | ?Load@mmRewardList@@QAE_NPAD00@Z
@@ -80,9 +80,9 @@ public:
     }
 
     // 0x523C90 | ?GetRecord@mmRewardList@@QAEPAVmmRewardRecord@@H@Z
-    inline class mmRewardRecord* GetRecord(int32_t arg1)
+    inline class mmRewardRecord* GetRecord(i32 arg1)
     {
-        return stub<member_func_t<class mmRewardRecord*, mmRewardList, int32_t>>(0x523C90, this, arg1);
+        return stub<member_func_t<class mmRewardRecord*, mmRewardList, i32>>(0x523C90, this, arg1);
     }
 
     // 0x523CA0 | ?UnlockPlayerRewards@mmRewardList@@SAXPAD@Z
@@ -92,8 +92,8 @@ public:
     }
 
     // 0x523E70 | ?CheckReward@mmRewardList@@SA_NPADHPAVmmRewardRecord@@@Z
-    static inline bool CheckReward(char* arg1, int32_t arg2, class mmRewardRecord* arg3)
+    static inline bool CheckReward(char* arg1, i32 arg2, class mmRewardRecord* arg3)
     {
-        return stub<cdecl_t<bool, char*, int32_t, class mmRewardRecord*>>(0x523E70, arg1, arg2, arg3);
+        return stub<cdecl_t<bool, char*, i32, class mmRewardRecord*>>(0x523E70, arg1, arg2, arg3);
     }
 };

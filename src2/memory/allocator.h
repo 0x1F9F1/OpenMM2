@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -48,9 +48,9 @@ class memMemoryAllocator
 {
 public:
     // 0x5766A0 | ?LogAllocations@memMemoryAllocator@@SAXH@Z
-    static inline void LogAllocations(int32_t arg1)
+    static inline void LogAllocations(i32 arg1)
     {
-        return stub<cdecl_t<void, int32_t>>(0x5766A0, arg1);
+        return stub<cdecl_t<void, i32>>(0x5766A0, arg1);
     }
 
     // 0x5766B0 | ?FindHeap@memMemoryAllocator@@SAPAV1@PAX@Z
@@ -72,9 +72,9 @@ public:
     }
 
     // 0x576730 | ?Init@memMemoryAllocator@@QAEXPAXI_N1@Z
-    inline void Init(void* arg1, uint32_t arg2, bool arg3, bool arg4)
+    inline void Init(void* arg1, u32 arg2, bool arg3, bool arg4)
     {
-        return stub<member_func_t<void, memMemoryAllocator, void*, uint32_t, bool, bool>>(
+        return stub<member_func_t<void, memMemoryAllocator, void*, u32, bool, bool>>(
             0x576730, this, arg1, arg2, arg3, arg4);
     }
 
@@ -85,9 +85,9 @@ public:
     }
 
     // 0x5767A0 | ?Allocate@memMemoryAllocator@@QAEPAXI_N@Z
-    inline void* Allocate(uint32_t arg1, bool arg2)
+    inline void* Allocate(u32 arg1, bool arg2)
     {
-        return stub<member_func_t<void*, memMemoryAllocator, uint32_t, bool>>(0x5767A0, this, arg1, arg2);
+        return stub<member_func_t<void*, memMemoryAllocator, u32, bool>>(0x5767A0, this, arg1, arg2);
     }
 
     // 0x576A20 | ?CheckPointer@memMemoryAllocator@@QAEXPAX@Z
@@ -115,9 +115,9 @@ public:
     }
 
     // 0x576C80 | ?Reallocate@memMemoryAllocator@@QAEPAXPAXI@Z
-    inline void* Reallocate(void* arg1, uint32_t arg2)
+    inline void* Reallocate(void* arg1, u32 arg2)
     {
-        return stub<member_func_t<void*, memMemoryAllocator, void*, uint32_t>>(0x576C80, this, arg1, arg2);
+        return stub<member_func_t<void*, memMemoryAllocator, void*, u32>>(0x576C80, this, arg1, arg2);
     }
 
     // 0x576CE0 | ?VerifyBlock@memMemoryAllocator@@AAEXPAX@Z
@@ -145,9 +145,9 @@ public:
     }
 
     // 0x577070 | ?CompareHeap@memMemoryAllocator@@QAEIPAV1@@Z
-    inline uint32_t CompareHeap(class memMemoryAllocator* arg1)
+    inline u32 CompareHeap(class memMemoryAllocator* arg1)
     {
-        return stub<member_func_t<uint32_t, memMemoryAllocator, class memMemoryAllocator*>>(0x577070, this, arg1);
+        return stub<member_func_t<u32, memMemoryAllocator, class memMemoryAllocator*>>(0x577070, this, arg1);
     }
 
     // 0x577170 | ?DisplayUsed@memMemoryAllocator@@SAXPBD@Z
@@ -157,8 +157,8 @@ public:
     }
 
     // 0x6B46A8 | ?Current@memMemoryAllocator@@0PAV1@A
-    static inline extern_var(0x6B46A8, class memMemoryAllocator*, Current);
+    inline extern_var(0x6B46A8, class memMemoryAllocator*, Current);
 
     // 0x6B46AC | ?First@memMemoryAllocator@@0PAV1@A
-    static inline extern_var(0x6B46AC, class memMemoryAllocator*, First);
+    inline extern_var(0x6B46AC, class memMemoryAllocator*, First);
 };

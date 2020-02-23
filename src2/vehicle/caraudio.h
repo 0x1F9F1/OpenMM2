@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -82,9 +82,9 @@ public:
     }
 
     // 0x4DBB50 | ?GetCurrentGear@vehCarAudio@@QAEHXZ
-    inline int32_t GetCurrentGear()
+    inline i32 GetCurrentGear()
     {
-        return stub<member_func_t<int32_t, vehCarAudio>>(0x4DBB50, this);
+        return stub<member_func_t<i32, vehCarAudio>>(0x4DBB50, this);
     }
 
     // 0x4DBB60 | ?UpdateGear@vehCarAudio@@QAEXXZ
@@ -94,9 +94,9 @@ public:
     }
 
     // 0x4DBC10 | ?UpdateAudio3D@vehCarAudio@@QAEHXZ
-    inline int32_t UpdateAudio3D()
+    inline i32 UpdateAudio3D()
     {
-        return stub<member_func_t<int32_t, vehCarAudio>>(0x4DBC10, this);
+        return stub<member_func_t<i32, vehCarAudio>>(0x4DBC10, this);
     }
 
     // 0x4DBCB0 | ?UpdateAudioNon3D@vehCarAudio@@QAEXXZ
@@ -106,9 +106,9 @@ public:
     }
 
     // 0x4DBD00 | ?UpdateAudio3D@vehCarAudio@@QAEHM@Z
-    inline int32_t UpdateAudio3D(float arg1)
+    inline i32 UpdateAudio3D(f32 arg1)
     {
-        return stub<member_func_t<int32_t, vehCarAudio, float>>(0x4DBD00, this, arg1);
+        return stub<member_func_t<i32, vehCarAudio, f32>>(0x4DBD00, this, arg1);
     }
 
     // 0x4DBE30 | ?Reset@vehCarAudio@@QAEXXZ
@@ -118,15 +118,15 @@ public:
     }
 
     // 0x4DC000 | ?SetMinAmpSpeed@vehCarAudio@@QAEXM@Z
-    inline void SetMinAmpSpeed(float arg1)
+    inline void SetMinAmpSpeed(f32 arg1)
     {
-        return stub<member_func_t<void, vehCarAudio, float>>(0x4DC000, this, arg1);
+        return stub<member_func_t<void, vehCarAudio, f32>>(0x4DC000, this, arg1);
     }
 
     // 0x4DC020 | ?Load@vehCarAudio@@QAEHPBD_N@Z
-    inline int32_t Load(char const* arg1, bool arg2)
+    inline i32 Load(char const* arg1, bool arg2)
     {
-        return stub<member_func_t<int32_t, vehCarAudio, char const*, bool>>(0x4DC020, this, arg1, arg2);
+        return stub<member_func_t<i32, vehCarAudio, char const*, bool>>(0x4DC020, this, arg1, arg2);
     }
 
     // 0x4DC1C0 | ?RemoveFromManager@vehCarAudio@@QAEXXZ
@@ -166,9 +166,9 @@ public:
     }
 
     // 0x4DC450 | ?Set2DPan@vehCarAudio@@QAEXM@Z
-    inline void Set2DPan(float arg1)
+    inline void Set2DPan(f32 arg1)
     {
-        return stub<member_func_t<void, vehCarAudio, float>>(0x4DC450, this, arg1);
+        return stub<member_func_t<void, vehCarAudio, f32>>(0x4DC450, this, arg1);
     }
 
     // 0x4DC4C0 | ?UpdateEcho@vehCarAudio@@QAEXXZ
@@ -184,9 +184,9 @@ public:
     }
 
     // 0x4DC500 | ?GetSpeed@vehCarAudio@@QAEMXZ
-    inline float GetSpeed()
+    inline f32 GetSpeed()
     {
-        return stub<member_func_t<float, vehCarAudio>>(0x4DC500, this);
+        return stub<member_func_t<f32, vehCarAudio>>(0x4DC500, this);
     }
 
     // 0x4DC510 | ?LoadImpacts@vehCarAudio@@AAE_NPAD0@Z
@@ -220,9 +220,9 @@ public:
     }
 
     // 0x4DBF80 | ?UnAssignSounds@vehCarAudio@@UAEXH@Z
-    inline void UnAssignSounds(int32_t arg1) override
+    inline void UnAssignSounds(i32 arg1) override
     {
-        return stub<member_func_t<void, vehCarAudio, int32_t>>(0x4DBF80, this, arg1);
+        return stub<member_func_t<void, vehCarAudio, i32>>(0x4DBF80, this, arg1);
     }
 
     // 0x4DBBB0 | ?UpdateAudio@vehCarAudio@@UAEXXZ

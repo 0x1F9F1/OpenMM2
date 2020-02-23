@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -67,15 +67,15 @@ public:
     }
 
     // 0x4D5770 | ?GetPadID@vehFeedback@@QAEHXZ
-    inline int32_t GetPadID()
+    inline i32 GetPadID()
     {
-        return stub<member_func_t<int32_t, vehFeedback>>(0x4D5770, this);
+        return stub<member_func_t<i32, vehFeedback>>(0x4D5770, this);
     }
 
     // 0x4D5780 | ?SetPadID@vehFeedback@@QAEXH@Z
-    inline void SetPadID(int32_t arg1)
+    inline void SetPadID(i32 arg1)
     {
-        return stub<member_func_t<void, vehFeedback, int32_t>>(0x4D5780, this, arg1);
+        return stub<member_func_t<void, vehFeedback, i32>>(0x4D5780, this, arg1);
     }
 
     // 0x4D5740 | ??1vehFeedback@@UAE@XZ
@@ -85,57 +85,56 @@ public:
     }
 
     // 0x4D57A0 | ?SetFeedback@vehFeedback@@UAEH_N@Z
-    virtual inline int32_t SetFeedback(bool arg1)
+    virtual inline i32 SetFeedback(bool arg1)
     {
-        return stub<member_func_t<int32_t, vehFeedback, bool>>(0x4D57A0, this, arg1);
+        return stub<member_func_t<i32, vehFeedback, bool>>(0x4D57A0, this, arg1);
     }
 
     // 0x4D57B0 | ?SetTimingUnit@vehFeedback@@UAEHM@Z
-    virtual inline int32_t SetTimingUnit(float arg1)
+    virtual inline i32 SetTimingUnit(f32 arg1)
     {
-        return stub<member_func_t<int32_t, vehFeedback, float>>(0x4D57B0, this, arg1);
+        return stub<member_func_t<i32, vehFeedback, f32>>(0x4D57B0, this, arg1);
     }
 
     // 0x4D57E0 | ?GetNumActuators@vehFeedback@@UAEHXZ
-    virtual inline int32_t GetNumActuators()
+    virtual inline i32 GetNumActuators()
     {
-        return stub<member_func_t<int32_t, vehFeedback>>(0x4D57E0, this);
+        return stub<member_func_t<i32, vehFeedback>>(0x4D57E0, this);
     }
 
     // 0x4D57F0 | ?SetActuatorValue@vehFeedback@@UAEHHM@Z
-    virtual inline int32_t SetActuatorValue(int32_t arg1, float arg2)
+    virtual inline i32 SetActuatorValue(i32 arg1, f32 arg2)
     {
-        return stub<member_func_t<int32_t, vehFeedback, int32_t, float>>(0x4D57F0, this, arg1, arg2);
+        return stub<member_func_t<i32, vehFeedback, i32, f32>>(0x4D57F0, this, arg1, arg2);
     }
 
     // 0x4D5830 | ?PlayFeedbackSample@vehFeedback@@UAEHHHPAMPAH@Z
-    virtual inline int32_t PlayFeedbackSample(int32_t arg1, int32_t arg2, float* arg3, int32_t* arg4)
+    virtual inline i32 PlayFeedbackSample(i32 arg1, i32 arg2, f32* arg3, i32* arg4)
     {
-        return stub<member_func_t<int32_t, vehFeedback, int32_t, int32_t, float*, int32_t*>>(
-            0x4D5830, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<i32, vehFeedback, i32, i32, f32*, i32*>>(0x4D5830, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4D58B0 | ?PlayFeedbackSampleID@vehFeedback@@UAEHH@Z
-    virtual inline int32_t PlayFeedbackSampleID(int32_t arg1)
+    virtual inline i32 PlayFeedbackSampleID(i32 arg1)
     {
-        return stub<member_func_t<int32_t, vehFeedback, int32_t>>(0x4D58B0, this, arg1);
+        return stub<member_func_t<i32, vehFeedback, i32>>(0x4D58B0, this, arg1);
     }
 
     // 0x4D5980 | ?GetNextUnit@vehFeedback@@UAEMH@Z
-    virtual inline float GetNextUnit(int32_t arg1)
+    virtual inline f32 GetNextUnit(i32 arg1)
     {
-        return stub<member_func_t<float, vehFeedback, int32_t>>(0x4D5980, this, arg1);
+        return stub<member_func_t<f32, vehFeedback, i32>>(0x4D5980, this, arg1);
     }
 
     // 0x4D5A80 | ?Update@vehFeedback@@UAEHXZ
-    virtual inline int32_t Update()
+    virtual inline i32 Update()
     {
-        return stub<member_func_t<int32_t, vehFeedback>>(0x4D5A80, this);
+        return stub<member_func_t<i32, vehFeedback>>(0x4D5A80, this);
     }
 
     // 0x4D5910 | ?ClearAllSamples@vehFeedback@@UAEH_N@Z
-    virtual inline int32_t ClearAllSamples(bool arg1)
+    virtual inline i32 ClearAllSamples(bool arg1)
     {
-        return stub<member_func_t<int32_t, vehFeedback, bool>>(0x4D5910, this, arg1);
+        return stub<member_func_t<i32, vehFeedback, bool>>(0x4D5910, this, arg1);
     }
 };

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -68,9 +68,9 @@ public:
     // NetSelectMenu::`vftable' @ 0x5B445C
 
     // 0x504130 | ??0NetSelectMenu@@QAE@H@Z
-    inline NetSelectMenu(int32_t arg1)
+    inline NetSelectMenu(i32 arg1)
     {
-        stub<member_func_t<void, NetSelectMenu, int32_t>>(0x504130, this, arg1);
+        stub<member_func_t<void, NetSelectMenu, i32>>(0x504130, this, arg1);
     }
 
     // 0x5049D0 | ?HostCB@NetSelectMenu@@QAEXXZ
@@ -86,15 +86,15 @@ public:
     }
 
     // 0x5049F0 | ?GetHostJoin@NetSelectMenu@@QAEHXZ
-    inline int32_t GetHostJoin()
+    inline i32 GetHostJoin()
     {
-        return stub<member_func_t<int32_t, NetSelectMenu>>(0x5049F0, this);
+        return stub<member_func_t<i32, NetSelectMenu>>(0x5049F0, this);
     }
 
     // 0x504A00 | ?FocusDescription@NetSelectMenu@@QAEXHH@Z
-    inline void FocusDescription(int32_t arg1, int32_t arg2)
+    inline void FocusDescription(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, NetSelectMenu, int32_t, int32_t>>(0x504A00, this, arg1, arg2);
+        return stub<member_func_t<void, NetSelectMenu, i32, i32>>(0x504A00, this, arg1, arg2);
     }
 
     // 0x504AA0 | ?SetDescription@NetSelectMenu@@QAEXPAULocString@@@Z
@@ -152,15 +152,15 @@ public:
     }
 
     // 0x504B90 | ?GetSessionID@NetSelectMenu@@QAEHXZ
-    inline int32_t GetSessionID()
+    inline i32 GetSessionID()
     {
-        return stub<member_func_t<int32_t, NetSelectMenu>>(0x504B90, this);
+        return stub<member_func_t<i32, NetSelectMenu>>(0x504B90, this);
     }
 
     // 0x504BA0 | ?SetSession@NetSelectMenu@@QAEXPADH@Z
-    inline void SetSession(char* arg1, int32_t arg2)
+    inline void SetSession(char* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, NetSelectMenu, char*, int32_t>>(0x504BA0, this, arg1, arg2);
+        return stub<member_func_t<void, NetSelectMenu, char*, i32>>(0x504BA0, this, arg1, arg2);
     }
 
     // 0x504BD0 | ?IPAddressCallback@NetSelectMenu@@QAEXXZ
@@ -182,27 +182,27 @@ public:
     }
 
     // 0x504DE0 | ?ReparentWidgets@NetSelectMenu@@QAEXH@Z
-    inline void ReparentWidgets(int32_t arg1)
+    inline void ReparentWidgets(i32 arg1)
     {
-        return stub<member_func_t<void, NetSelectMenu, int32_t>>(0x504DE0, this, arg1);
+        return stub<member_func_t<void, NetSelectMenu, i32>>(0x504DE0, this, arg1);
     }
 
     // 0x504DF0 | ?WidgetSwitch@NetSelectMenu@@QAEXHH@Z
-    inline void WidgetSwitch(int32_t arg1, int32_t arg2)
+    inline void WidgetSwitch(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, NetSelectMenu, int32_t, int32_t>>(0x504DF0, this, arg1, arg2);
+        return stub<member_func_t<void, NetSelectMenu, i32, i32>>(0x504DF0, this, arg1, arg2);
     }
 
     // 0x504E00 | ?AddWidgetToList@NetSelectMenu@@QAEXHPAVuiWidget@@@Z
-    inline void AddWidgetToList(int32_t arg1, class uiWidget* arg2)
+    inline void AddWidgetToList(i32 arg1, class uiWidget* arg2)
     {
-        return stub<member_func_t<void, NetSelectMenu, int32_t, class uiWidget*>>(0x504E00, this, arg1, arg2);
+        return stub<member_func_t<void, NetSelectMenu, i32, class uiWidget*>>(0x504E00, this, arg1, arg2);
     }
 
     // 0x504E10 | ?AddModem@NetSelectMenu@@QAEXPADH@Z
-    inline void AddModem(char* arg1, int32_t arg2)
+    inline void AddModem(char* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, NetSelectMenu, char*, int32_t>>(0x504E10, this, arg1, arg2);
+        return stub<member_func_t<void, NetSelectMenu, char*, i32>>(0x504E10, this, arg1, arg2);
     }
 
     // 0x504F20 | ?ClearProtocol@NetSelectMenu@@QAEXXZ
@@ -212,33 +212,33 @@ public:
     }
 
     // 0x504F30 | ?SetIPXButton@NetSelectMenu@@QAEXH@Z
-    inline void SetIPXButton(int32_t arg1)
+    inline void SetIPXButton(i32 arg1)
     {
-        return stub<member_func_t<void, NetSelectMenu, int32_t>>(0x504F30, this, arg1);
+        return stub<member_func_t<void, NetSelectMenu, i32>>(0x504F30, this, arg1);
     }
 
     // 0x504F60 | ?SetTCPLocalButton@NetSelectMenu@@QAEXH@Z
-    inline void SetTCPLocalButton(int32_t arg1)
+    inline void SetTCPLocalButton(i32 arg1)
     {
-        return stub<member_func_t<void, NetSelectMenu, int32_t>>(0x504F60, this, arg1);
+        return stub<member_func_t<void, NetSelectMenu, i32>>(0x504F60, this, arg1);
     }
 
     // 0x504F70 | ?SetTCPNetButton@NetSelectMenu@@QAEXH@Z
-    inline void SetTCPNetButton(int32_t arg1)
+    inline void SetTCPNetButton(i32 arg1)
     {
-        return stub<member_func_t<void, NetSelectMenu, int32_t>>(0x504F70, this, arg1);
+        return stub<member_func_t<void, NetSelectMenu, i32>>(0x504F70, this, arg1);
     }
 
     // 0x504FA0 | ?SetModemButton@NetSelectMenu@@QAEXH@Z
-    inline void SetModemButton(int32_t arg1)
+    inline void SetModemButton(i32 arg1)
     {
-        return stub<member_func_t<void, NetSelectMenu, int32_t>>(0x504FA0, this, arg1);
+        return stub<member_func_t<void, NetSelectMenu, i32>>(0x504FA0, this, arg1);
     }
 
     // 0x504FD0 | ?SetSerialButton@NetSelectMenu@@QAEXH@Z
-    inline void SetSerialButton(int32_t arg1)
+    inline void SetSerialButton(i32 arg1)
     {
-        return stub<member_func_t<void, NetSelectMenu, int32_t>>(0x504FD0, this, arg1);
+        return stub<member_func_t<void, NetSelectMenu, i32>>(0x504FD0, this, arg1);
     }
 
     // 0x505000 | ?GetCommPack@NetSelectMenu@@QAEPAUNETCOMMPACK@@XZ

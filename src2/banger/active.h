@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -79,7 +79,7 @@ public:
     }
 
     // 0x627630 | ?Instance@dgBangerActiveManager@@1PAV1@A
-    static inline extern_var(0x627630, class dgBangerActiveManager*, Instance);
+    inline extern_var(0x627630, class dgBangerActiveManager*, Instance);
 
     // 0x440220 | ??1dgBangerActiveManager@@UAE@XZ
     inline ~dgBangerActiveManager() override
@@ -100,9 +100,7 @@ public:
     }
 };
 
-class dgBangerActive
-    : dgPhysEntity
-    , Base
+class dgBangerActive : dgPhysEntity
 {
 public:
     // dgBangerActive::`vftable' @ 0x5B1398
@@ -126,37 +124,37 @@ public:
     }
 
     // 0x43FD40 | ??1dgBangerActive@@UAE@XZ
-    virtual inline ~dgBangerActive()
+    inline ~dgBangerActive() override
     {
         stub<member_func_t<void, dgBangerActive>>(0x43FD40, this);
     }
 
     // 0x440050 | ?Update@dgBangerActive@@UAEXXZ
-    virtual inline void Update()
+    inline void Update() override
     {
         return stub<member_func_t<void, dgBangerActive>>(0x440050, this);
     }
 
     // 0x4400E0 | ?PostUpdate@dgBangerActive@@UAEXXZ
-    virtual inline void PostUpdate()
+    inline void PostUpdate() override
     {
         return stub<member_func_t<void, dgBangerActive>>(0x4400E0, this);
     }
 
     // 0x4405C0 | ?GetICS@dgBangerActive@@UAEPAVphInertialCS@@XZ
-    virtual inline class phInertialCS* GetICS()
+    inline class phInertialCS* GetICS() override
     {
         return stub<member_func_t<class phInertialCS*, dgBangerActive>>(0x4405C0, this);
     }
 
     // 0x43FDB0 | ?GetInst@dgBangerActive@@UAEPAVlvlInstance@@XZ
-    virtual inline class lvlInstance* GetInst()
+    inline class lvlInstance* GetInst() override
     {
         return stub<member_func_t<class lvlInstance*, dgBangerActive>>(0x43FDB0, this);
     }
 
     // 0x440030 | ?DetachMe@dgBangerActive@@UAEXXZ
-    virtual inline void DetachMe()
+    inline void DetachMe() override
     {
         return stub<member_func_t<void, dgBangerActive>>(0x440030, this);
     }

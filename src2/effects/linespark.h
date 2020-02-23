@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -60,7 +60,7 @@ public:
     }
 
     // 0x5C6404 | ?BuiltinClut@asSparkLut@@0PAIA
-    static inline extern_var(0x5C6404, uint32_t*, BuiltinClut);
+    inline extern_var(0x5C6404, uint32_t*, BuiltinClut);
 };
 
 struct asLineSparks : asCullable
@@ -75,15 +75,15 @@ public:
     }
 
     // 0x460740 | ?Init@asLineSparks@@QAEXHPAD@Z
-    inline void Init(int32_t arg1, char* arg2)
+    inline void Init(i32 arg1, char* arg2)
     {
-        return stub<member_func_t<void, asLineSparks, int32_t, char*>>(0x460740, this, arg1, arg2);
+        return stub<member_func_t<void, asLineSparks, i32, char*>>(0x460740, this, arg1, arg2);
     }
 
     // 0x460830 | ?RadialBlast@asLineSparks@@QAEXHAAVVector3@@0@Z
-    inline void RadialBlast(int32_t arg1, class Vector3& arg2, class Vector3& arg3)
+    inline void RadialBlast(i32 arg1, class Vector3& arg2, class Vector3& arg3)
     {
-        return stub<member_func_t<void, asLineSparks, int32_t, class Vector3&, class Vector3&>>(
+        return stub<member_func_t<void, asLineSparks, i32, class Vector3&, class Vector3&>>(
             0x460830, this, arg1, arg2, arg3);
     }
 
@@ -94,9 +94,9 @@ public:
     }
 
     // 0x460C20 | ?Update@asLineSparks@@QAEXM@Z
-    inline void Update(float arg1)
+    inline void Update(f32 arg1)
     {
-        return stub<member_func_t<void, asLineSparks, float>>(0x460C20, this, arg1);
+        return stub<member_func_t<void, asLineSparks, f32>>(0x460C20, this, arg1);
     }
 
     // 0x460DE0 | ?Draw@asLineSparks@@QAEXXZ
@@ -109,7 +109,7 @@ public:
     static inline extern_var(0x5C6400, bool, bEnabled);
 
     // 0x631650 | ?RefCount@asLineSparks@@0HA
-    static inline extern_var(0x631650, int32_t, RefCount);
+    inline extern_var(0x631650, int32_t, RefCount);
 
     // 0x4606B0 | ??1asLineSparks@@UAE@XZ
     virtual inline ~asLineSparks()

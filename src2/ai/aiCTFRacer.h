@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -49,9 +49,9 @@ public:
     }
 
     // 0x554470 | ?Init@aiCTFRacer@@QAEXHPAD@Z
-    inline void Init(int32_t arg1, char* arg2)
+    inline void Init(i32 arg1, char* arg2)
     {
-        return stub<member_func_t<void, aiCTFRacer, int32_t, char*>>(0x554470, this, arg1, arg2);
+        return stub<member_func_t<void, aiCTFRacer, i32, char*>>(0x554470, this, arg1, arg2);
     }
 
     // 0x554510 | ?Reset@aiCTFRacer@@QAEXXZ
@@ -61,9 +61,9 @@ public:
     }
 
     // 0x554550 | ?DropFlag@aiCTFRacer@@QAEXHPBM@Z
-    inline void DropFlag(int32_t arg1, float const* arg2)
+    inline void DropFlag(i32 arg1, f32 const* arg2)
     {
-        return stub<member_func_t<void, aiCTFRacer, int32_t, float const*>>(0x554550, this, arg1, arg2);
+        return stub<member_func_t<void, aiCTFRacer, i32, f32 const*>>(0x554550, this, arg1, arg2);
     }
 
     // 0x554580 | ?Update@aiCTFRacer@@QAEXXZ

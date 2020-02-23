@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -102,8 +102,8 @@ public:
     }
 
     // 0x572B50 | ?InitResults@netZoneScore@@QAEXH_N@Z
-    inline void InitResults(int32_t arg1, bool arg2)
+    inline void InitResults(i32 arg1, bool arg2)
     {
-        return stub<member_func_t<void, netZoneScore, int32_t, bool>>(0x572B50, this, arg1, arg2);
+        return stub<member_func_t<void, netZoneScore, i32, bool>>(0x572B50, this, arg1, arg2);
     }
 };

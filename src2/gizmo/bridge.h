@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -104,15 +104,15 @@ public:
     }
 
     // 0x578240 | ?Draw@gizBridge@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
+    inline void Draw(i32 arg1) override
     {
-        return stub<member_func_t<void, gizBridge, int32_t>>(0x578240, this, arg1);
+        return stub<member_func_t<void, gizBridge, i32>>(0x578240, this, arg1);
     }
 
     // 0x578250 | ?SizeOf@gizBridge@@UAEIXZ
-    inline uint32_t SizeOf() override
+    inline u32 SizeOf() override
     {
-        return stub<member_func_t<uint32_t, gizBridge>>(0x578250, this);
+        return stub<member_func_t<u32, gizBridge>>(0x578250, this);
     }
 };
 
@@ -140,9 +140,9 @@ public:
     }
 
     // 0x578160 | ?GetBridges@gizBridgeMgr@@QAEPAVgizBridge@@H@Z
-    inline class gizBridge* GetBridges(int32_t arg1)
+    inline class gizBridge* GetBridges(i32 arg1)
     {
-        return stub<member_func_t<class gizBridge*, gizBridgeMgr, int32_t>>(0x578160, this, arg1);
+        return stub<member_func_t<class gizBridge*, gizBridgeMgr, i32>>(0x578160, this, arg1);
     }
 
     // 0x578180 | ?AddProximityTrigger@gizBridgeMgr@@QAEXPAVVector3@@@Z

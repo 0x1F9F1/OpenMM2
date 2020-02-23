@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -80,9 +80,9 @@ public:
     }
 
     // 0x510A80 | ?UpdateAudio@AudCreatureContainer@@QAEHM@Z
-    inline int32_t UpdateAudio(float arg1)
+    inline i32 UpdateAudio(f32 arg1)
     {
-        return stub<member_func_t<int32_t, AudCreatureContainer, float>>(0x510A80, this, arg1);
+        return stub<member_func_t<i32, AudCreatureContainer, f32>>(0x510A80, this, arg1);
     }
 
     // 0x510B10 | ?InitStatics@AudCreatureContainer@@SAXXZ
@@ -98,15 +98,15 @@ public:
     }
 
     // 0x510BF0 | ?UpdateStatics@AudCreatureContainer@@SAXM@Z
-    static inline void UpdateStatics(float arg1)
+    static inline void UpdateStatics(f32 arg1)
     {
-        return stub<cdecl_t<void, float>>(0x510BF0, arg1);
+        return stub<cdecl_t<void, f32>>(0x510BF0, arg1);
     }
 
     // 0x510C20 | ?UpdateVoices@AudCreatureContainer@@CAXHM@Z
-    static inline void UpdateVoices(int32_t arg1, float arg2)
+    static inline void UpdateVoices(i32 arg1, f32 arg2)
     {
-        return stub<cdecl_t<void, int32_t, float>>(0x510C20, arg1, arg2);
+        return stub<cdecl_t<void, i32, f32>>(0x510C20, arg1, arg2);
     }
 
     // 0x510C60 | ?EchoOn@AudCreatureContainer@@QAEXXZ
@@ -128,15 +128,15 @@ public:
     }
 
     // 0x510CC0 | ?PlayImpactReaction@AudCreatureContainer@@QAEXM@Z
-    inline void PlayImpactReaction(float arg1)
+    inline void PlayImpactReaction(f32 arg1)
     {
-        return stub<member_func_t<void, AudCreatureContainer, float>>(0x510CC0, this, arg1);
+        return stub<member_func_t<void, AudCreatureContainer, f32>>(0x510CC0, this, arg1);
     }
 
     // 0x510CF0 | ?PlayAvoidanceReaction@AudCreatureContainer@@QAEXM@Z
-    inline void PlayAvoidanceReaction(float arg1)
+    inline void PlayAvoidanceReaction(f32 arg1)
     {
-        return stub<member_func_t<void, AudCreatureContainer, float>>(0x510CF0, this, arg1);
+        return stub<member_func_t<void, AudCreatureContainer, f32>>(0x510CF0, this, arg1);
     }
 
     // 0x510D20 | ?LoadVoices@AudCreatureContainer@@QAE_NPAD0@Z
@@ -146,9 +146,9 @@ public:
     }
 
     // 0x510F50 | ?LoadNumFileChoices@AudCreatureContainer@@SAXPADPAH@Z
-    static inline void LoadNumFileChoices(char* arg1, int32_t* arg2)
+    static inline void LoadNumFileChoices(char* arg1, i32* arg2)
     {
-        return stub<cdecl_t<void, char*, int32_t*>>(0x510F50, arg1, arg2);
+        return stub<cdecl_t<void, char*, i32*>>(0x510F50, arg1, arg2);
     }
 
     // 0x5109A0 | ?AssignSounds@AudCreatureContainer@@UAEXXZ
@@ -158,9 +158,9 @@ public:
     }
 
     // 0x5109E0 | ?UnAssignSounds@AudCreatureContainer@@UAEXH@Z
-    inline void UnAssignSounds(int32_t arg1) override
+    inline void UnAssignSounds(i32 arg1) override
     {
-        return stub<member_func_t<void, AudCreatureContainer, int32_t>>(0x5109E0, this, arg1);
+        return stub<member_func_t<void, AudCreatureContainer, i32>>(0x5109E0, this, arg1);
     }
 
     // 0x510A20 | ?UpdateAudio@AudCreatureContainer@@UAEXXZ

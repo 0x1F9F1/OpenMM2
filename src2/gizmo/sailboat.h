@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -118,9 +118,9 @@ public:
     }
 
     // 0x578490 | ?SetSpeed@gizSailboat@@QAEXM@Z
-    inline void SetSpeed(float arg1)
+    inline void SetSpeed(f32 arg1)
     {
-        return stub<member_func_t<void, gizSailboat, float>>(0x578490, this, arg1);
+        return stub<member_func_t<void, gizSailboat, f32>>(0x578490, this, arg1);
     }
 
     // 0x578830 | ??_EgizSailboat@@QAEPAXI@Z
@@ -133,8 +133,8 @@ public:
     }
 
     // 0x578890 | ?SizeOf@gizSailboat@@UAEIXZ
-    inline uint32_t SizeOf() override
+    inline u32 SizeOf() override
     {
-        return stub<member_func_t<uint32_t, gizSailboat>>(0x578890, this);
+        return stub<member_func_t<u32, gizSailboat>>(0x578890, this);
     }
 };

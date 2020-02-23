@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -49,9 +49,9 @@ public:
     }
 
     // 0x57B9B0 | ?Init@pedRagdollMgr@@QAEXHPAPAD@Z
-    inline void Init(int32_t arg1, char** arg2)
+    inline void Init(i32 arg1, char** arg2)
     {
-        return stub<member_func_t<void, pedRagdollMgr, int32_t, char**>>(0x57B9B0, this, arg1, arg2);
+        return stub<member_func_t<void, pedRagdollMgr, i32, char**>>(0x57B9B0, this, arg1, arg2);
     }
 
     // 0x57BAF0 | ?Attach@pedRagdollMgr@@QAEPAVpedActive@@PAVaiPedestrianInstance@@@Z
@@ -73,7 +73,7 @@ public:
     }
 
     // 0x6B4740 | ?Instance@pedRagdollMgr@@2PAV1@A
-    static inline extern_var(0x6B4740, class pedRagdollMgr*, Instance);
+    inline extern_var(0x6B4740, class pedRagdollMgr*, Instance);
 
     // 0x57B910 | ??1pedRagdollMgr@@UAE@XZ
     inline ~pedRagdollMgr() override

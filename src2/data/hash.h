@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -54,9 +54,9 @@ class HashTable
 {
 public:
     // 0x4C6630 | ??0HashTable@@QAE@H_NH@Z
-    inline HashTable(int32_t arg1, bool arg2, int32_t arg3)
+    inline HashTable(i32 arg1, bool arg2, i32 arg3)
     {
-        stub<member_func_t<void, HashTable, int32_t, bool, int32_t>>(0x4C6630, this, arg1, arg2, arg3);
+        stub<member_func_t<void, HashTable, i32, bool, i32>>(0x4C6630, this, arg1, arg2, arg3);
     }
 
     // 0x4C6680 | ??1HashTable@@QAE@XZ
@@ -66,15 +66,15 @@ public:
     }
 
     // 0x4C66B0 | ?InitFixed@HashTable@@AAEXHH@Z
-    inline void InitFixed(int32_t arg1, int32_t arg2)
+    inline void InitFixed(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, HashTable, int32_t, int32_t>>(0x4C66B0, this, arg1, arg2);
+        return stub<member_func_t<void, HashTable, i32, i32>>(0x4C66B0, this, arg1, arg2);
     }
 
     // 0x4C6770 | ?InitCommon@HashTable@@AAEXH@Z
-    inline void InitCommon(int32_t arg1)
+    inline void InitCommon(i32 arg1)
     {
-        return stub<member_func_t<void, HashTable, int32_t>>(0x4C6770, this, arg1);
+        return stub<member_func_t<void, HashTable, i32>>(0x4C6770, this, arg1);
     }
 
     // 0x4C67B0 | ?Kill@HashTable@@QAEXXZ
@@ -145,39 +145,39 @@ public:
     }
 
     // 0x4C6D80 | ?AccessName@HashTable@@QAEPBDH@Z
-    inline char const* AccessName(int32_t arg1)
+    inline char const* AccessName(i32 arg1)
     {
-        return stub<member_func_t<char const*, HashTable, int32_t>>(0x4C6D80, this, arg1);
+        return stub<member_func_t<char const*, HashTable, i32>>(0x4C6D80, this, arg1);
     }
 
     // 0x4C6DA0 | ?AccessData@HashTable@@QAEPAXH@Z
-    inline void* AccessData(int32_t arg1)
+    inline void* AccessData(i32 arg1)
     {
-        return stub<member_func_t<void*, HashTable, int32_t>>(0x4C6DA0, this, arg1);
+        return stub<member_func_t<void*, HashTable, i32>>(0x4C6DA0, this, arg1);
     }
 
     // 0x4C6DC0 | ?Hash@HashTable@@AAEHPBD@Z
-    inline int32_t Hash(char const* arg1)
+    inline i32 Hash(char const* arg1)
     {
-        return stub<member_func_t<int32_t, HashTable, char const*>>(0x4C6DC0, this, arg1);
+        return stub<member_func_t<i32, HashTable, char const*>>(0x4C6DC0, this, arg1);
     }
 
     // 0x4C6E40 | ?ComputePrime@HashTable@@AAEHH@Z
-    inline int32_t ComputePrime(int32_t arg1)
+    inline i32 ComputePrime(i32 arg1)
     {
-        return stub<member_func_t<int32_t, HashTable, int32_t>>(0x4C6E40, this, arg1);
+        return stub<member_func_t<i32, HashTable, i32>>(0x4C6E40, this, arg1);
     }
 
     // 0x4C6E90 | ?Recompute@HashTable@@AAEXH@Z
-    inline void Recompute(int32_t arg1)
+    inline void Recompute(i32 arg1)
     {
-        return stub<member_func_t<void, HashTable, int32_t>>(0x4C6E90, this, arg1);
+        return stub<member_func_t<void, HashTable, i32>>(0x4C6E90, this, arg1);
     }
 
     // 0x4C6F80 | ?GetEntry@HashTable@@AAEPAVHashEntry@@H@Z
-    inline class HashEntry* GetEntry(int32_t arg1)
+    inline class HashEntry* GetEntry(i32 arg1)
     {
-        return stub<member_func_t<class HashEntry*, HashTable, int32_t>>(0x4C6F80, this, arg1);
+        return stub<member_func_t<class HashEntry*, HashTable, i32>>(0x4C6F80, this, arg1);
     }
 
     // 0x4C7000 | ?GetFirstEntry@HashTable@@QAE_NAAVHashPosition@@@Z
@@ -193,7 +193,7 @@ public:
     }
 
     // 0x6A3C60 | ?First@HashTable@@0PAV1@A
-    static inline extern_var(0x6A3C60, class HashTable*, First);
+    inline extern_var(0x6A3C60, class HashTable*, First);
 };
 
 struct FixedHashEntry

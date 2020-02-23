@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -54,9 +54,9 @@ public:
     }
 
     // 0x421930 | ?PlayTimerWarning@mmMultiBlitz@@QAEXM@Z
-    inline void PlayTimerWarning(float arg1)
+    inline void PlayTimerWarning(f32 arg1)
     {
-        return stub<member_func_t<void, mmMultiBlitz, float>>(0x421930, this, arg1);
+        return stub<member_func_t<void, mmMultiBlitz, f32>>(0x421930, this, arg1);
     }
 
     // 0x41FF60 | ??1mmMultiBlitz@@UAE@XZ
@@ -72,9 +72,9 @@ public:
     }
 
     // 0x420000 | ?Init@mmMultiBlitz@@UAEHXZ
-    inline int32_t Init() override
+    inline i32 Init() override
     {
-        return stub<member_func_t<int32_t, mmMultiBlitz>>(0x420000, this);
+        return stub<member_func_t<i32, mmMultiBlitz>>(0x420000, this);
     }
 
     // 0x420130 | ?InitMyPlayer@mmMultiBlitz@@UAEXXZ
@@ -96,9 +96,9 @@ public:
     }
 
     // 0x420940 | ?UpdateGameInput@mmMultiBlitz@@UAEXH@Z
-    inline void UpdateGameInput(int32_t arg1) override
+    inline void UpdateGameInput(i32 arg1) override
     {
-        return stub<member_func_t<void, mmMultiBlitz, int32_t>>(0x420940, this, arg1);
+        return stub<member_func_t<void, mmMultiBlitz, i32>>(0x420940, this, arg1);
     }
 
     // 0x420980 | ?UpdateGame@mmMultiBlitz@@UAEXXZ
@@ -108,9 +108,9 @@ public:
     }
 
     // 0x421250 | ?SwitchState@mmMultiBlitz@@UAEXH@Z
-    inline void SwitchState(int32_t arg1) override
+    inline void SwitchState(i32 arg1) override
     {
-        return stub<member_func_t<void, mmMultiBlitz, int32_t>>(0x421250, this, arg1);
+        return stub<member_func_t<void, mmMultiBlitz, i32>>(0x421250, this, arg1);
     }
 
     // 0x421B80 | ?GetWaypoints@mmMultiBlitz@@UAEPAVmmWaypoints@@XZ

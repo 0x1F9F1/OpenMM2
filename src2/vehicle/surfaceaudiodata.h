@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -61,9 +61,9 @@ public:
     }
 
     // 0x4DFDA0 | ?AllocateSkidSamples@vehSurfaceAudioData@@QAEXH@Z
-    inline void AllocateSkidSamples(int32_t arg1)
+    inline void AllocateSkidSamples(i32 arg1)
     {
-        return stub<member_func_t<void, vehSurfaceAudioData, int32_t>>(0x4DFDA0, this, arg1);
+        return stub<member_func_t<void, vehSurfaceAudioData, i32>>(0x4DFDA0, this, arg1);
     }
 
     // 0x4DFDD0 | ?StopSkid@vehSurfaceAudioData@@QAEXXZ
@@ -73,27 +73,27 @@ public:
     }
 
     // 0x4DFE10 | ?UpdateSkid@vehSurfaceAudioData@@QAEXMMM@Z
-    inline void UpdateSkid(float arg1, float arg2, float arg3)
+    inline void UpdateSkid(f32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, vehSurfaceAudioData, float, float, float>>(0x4DFE10, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, vehSurfaceAudioData, f32, f32, f32>>(0x4DFE10, this, arg1, arg2, arg3);
     }
 
     // 0x4E0010 | ?UpdateSkid@vehSurfaceAudioData@@QAEXM@Z
-    inline void UpdateSkid(float arg1)
+    inline void UpdateSkid(f32 arg1)
     {
-        return stub<member_func_t<void, vehSurfaceAudioData, float>>(0x4E0010, this, arg1);
+        return stub<member_func_t<void, vehSurfaceAudioData, f32>>(0x4E0010, this, arg1);
     }
 
     // 0x4E00C0 | ?UpdateSurface@vehSurfaceAudioData@@QAEXMMM@Z
-    inline void UpdateSurface(float arg1, float arg2, float arg3)
+    inline void UpdateSurface(f32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, vehSurfaceAudioData, float, float, float>>(0x4E00C0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, vehSurfaceAudioData, f32, f32, f32>>(0x4E00C0, this, arg1, arg2, arg3);
     }
 
     // 0x4E0160 | ?UpdateSurface@vehSurfaceAudioData@@QAEXM@Z
-    inline void UpdateSurface(float arg1)
+    inline void UpdateSurface(f32 arg1)
     {
-        return stub<member_func_t<void, vehSurfaceAudioData, float>>(0x4E0160, this, arg1);
+        return stub<member_func_t<void, vehSurfaceAudioData, f32>>(0x4E0160, this, arg1);
     }
 
     // 0x4E01E0 | ?StopSurface@vehSurfaceAudioData@@QAEXXZ
@@ -109,15 +109,15 @@ public:
     }
 
     // 0x4E04E0 | ?SkidPlaying@vehSurfaceAudioData@@QAEHXZ
-    inline int32_t SkidPlaying()
+    inline i32 SkidPlaying()
     {
-        return stub<member_func_t<int32_t, vehSurfaceAudioData>>(0x4E04E0, this);
+        return stub<member_func_t<i32, vehSurfaceAudioData>>(0x4E04E0, this);
     }
 
     // 0x4E0520 | ?SurfacePlaying@vehSurfaceAudioData@@QAEHXZ
-    inline int32_t SurfacePlaying()
+    inline i32 SurfacePlaying()
     {
-        return stub<member_func_t<int32_t, vehSurfaceAudioData>>(0x4E0520, this);
+        return stub<member_func_t<i32, vehSurfaceAudioData>>(0x4E0520, this);
     }
 
     // 0x4E0540 | ?GetSurfaceSoundPtr@vehSurfaceAudioData@@QAEPAVAudSoundBase@@XZ
@@ -127,9 +127,9 @@ public:
     }
 
     // 0x4E0550 | ?AssignSounds@vehSurfaceAudioData@@QAEXH@Z
-    inline void AssignSounds(int32_t arg1)
+    inline void AssignSounds(i32 arg1)
     {
-        return stub<member_func_t<void, vehSurfaceAudioData, int32_t>>(0x4E0550, this, arg1);
+        return stub<member_func_t<void, vehSurfaceAudioData, i32>>(0x4E0550, this, arg1);
     }
 
     // 0x4E05B0 | ?UnAssignSounds@vehSurfaceAudioData@@QAEXXZ
@@ -139,15 +139,15 @@ public:
     }
 
     // 0x4E05E0 | ?SetPan@vehSurfaceAudioData@@QAEXM@Z
-    inline void SetPan(float arg1)
+    inline void SetPan(f32 arg1)
     {
-        return stub<member_func_t<void, vehSurfaceAudioData, float>>(0x4E05E0, this, arg1);
+        return stub<member_func_t<void, vehSurfaceAudioData, f32>>(0x4E05E0, this, arg1);
     }
 
     // 0x4E0640 | ?EchoOn@vehSurfaceAudioData@@QAEXM@Z
-    inline void EchoOn(float arg1)
+    inline void EchoOn(f32 arg1)
     {
-        return stub<member_func_t<void, vehSurfaceAudioData, float>>(0x4E0640, this, arg1);
+        return stub<member_func_t<void, vehSurfaceAudioData, f32>>(0x4E0640, this, arg1);
     }
 
     // 0x4E06C0 | ?EchoOff@vehSurfaceAudioData@@QAEXXZ

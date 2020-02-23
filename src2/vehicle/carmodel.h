@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -75,9 +75,9 @@ public:
     }
 
     // 0x4CCFE0 | ?Init@vehCarModel@@QAEXPAVvehCar@@PBDH@Z
-    inline void Init(class vehCar* arg1, char const* arg2, int32_t arg3)
+    inline void Init(class vehCar* arg1, char const* arg2, i32 arg3)
     {
-        return stub<member_func_t<void, vehCarModel, class vehCar*, char const*, int32_t>>(
+        return stub<member_func_t<void, vehCarModel, class vehCar*, char const*, i32>>(
             0x4CCFE0, this, arg1, arg2, arg3);
     }
 
@@ -94,11 +94,9 @@ public:
     }
 
     // 0x4CDC50 | ?InitBreakable@vehCarModel@@IAE_NPAVvehBreakableMgr@@PBD1HH@Z
-    inline bool InitBreakable(
-        class vehBreakableMgr* arg1, char const* arg2, char const* arg3, int32_t arg4, int32_t arg5)
+    inline bool InitBreakable(class vehBreakableMgr* arg1, char const* arg2, char const* arg3, i32 arg4, i32 arg5)
     {
-        return stub<
-            member_func_t<bool, vehCarModel, class vehBreakableMgr*, char const*, char const*, int32_t, int32_t>>(
+        return stub<member_func_t<bool, vehCarModel, class vehBreakableMgr*, char const*, char const*, i32, i32>>(
             0x4CDC50, this, arg1, arg2, arg3, arg4, arg5);
     }
 
@@ -115,10 +113,9 @@ public:
     }
 
     // 0x4CDF60 | ?InitSirenLight@vehCarModel@@IAEXPBD0H@Z
-    inline void InitSirenLight(char const* arg1, char const* arg2, int32_t arg3)
+    inline void InitSirenLight(char const* arg1, char const* arg2, i32 arg3)
     {
-        return stub<member_func_t<void, vehCarModel, char const*, char const*, int32_t>>(
-            0x4CDF60, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, vehCarModel, char const*, char const*, i32>>(0x4CDF60, this, arg1, arg2, arg3);
     }
 
     // 0x4CDFF0 | ?ClearDamage@vehCarModel@@QAEXXZ
@@ -128,9 +125,9 @@ public:
     }
 
     // 0x4CE840 | ?DrawPart@vehCarModel@@QAEXHHABVMatrix34@@PAVmodShader@@@Z
-    inline void DrawPart(int32_t arg1, int32_t arg2, class Matrix34 const& arg3, class modShader* arg4)
+    inline void DrawPart(i32 arg1, i32 arg2, class Matrix34 const& arg3, class modShader* arg4)
     {
-        return stub<member_func_t<void, vehCarModel, int32_t, int32_t, class Matrix34 const&, class modShader*>>(
+        return stub<member_func_t<void, vehCarModel, i32, i32, class Matrix34 const&, class modShader*>>(
             0x4CE840, this, arg1, arg2, arg3, arg4);
     }
 
@@ -208,9 +205,9 @@ public:
     }
 
     // 0x4CE040 | ?Draw@vehCarModel@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
+    inline void Draw(i32 arg1) override
     {
-        return stub<member_func_t<void, vehCarModel, int32_t>>(0x4CE040, this, arg1);
+        return stub<member_func_t<void, vehCarModel, i32>>(0x4CE040, this, arg1);
     }
 
     // 0x4CE940 | ?DrawShadow@vehCarModel@@UAEXXZ
@@ -232,14 +229,14 @@ public:
     }
 
     // 0x4CF080 | ?DrawReflected@vehCarModel@@UAEXM@Z
-    inline void DrawReflected(float arg1) override
+    inline void DrawReflected(f32 arg1) override
     {
-        return stub<member_func_t<void, vehCarModel, float>>(0x4CF080, this, arg1);
+        return stub<member_func_t<void, vehCarModel, f32>>(0x4CF080, this, arg1);
     }
 
     // 0x4CDFE0 | ?SizeOf@vehCarModel@@UAEIXZ
-    inline uint32_t SizeOf() override
+    inline u32 SizeOf() override
     {
-        return stub<member_func_t<uint32_t, vehCarModel>>(0x4CDFE0, this);
+        return stub<member_func_t<u32, vehCarModel>>(0x4CDFE0, this);
     }
 };

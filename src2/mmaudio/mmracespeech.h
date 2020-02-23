@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -108,9 +108,9 @@ public:
     }
 
     // 0x51A800 | ?PlayResults@mmRaceSpeech@@QAEXHH@Z
-    inline void PlayResults(int32_t arg1, int32_t arg2)
+    inline void PlayResults(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, mmRaceSpeech, int32_t, int32_t>>(0x51A800, this, arg1, arg2);
+        return stub<member_func_t<void, mmRaceSpeech, i32, i32>>(0x51A800, this, arg1, arg2);
     }
 
     // 0x51A840 | ?PlayResultsPoor@mmRaceSpeech@@QAEXXZ
@@ -162,26 +162,26 @@ public:
     }
 
     // 0x51AC80 | ?LoadGroup@mmRaceSpeech@@QAE_NPADH@Z
-    inline bool LoadGroup(char* arg1, int32_t arg2)
+    inline bool LoadGroup(char* arg1, i32 arg2)
     {
-        return stub<member_func_t<bool, mmRaceSpeech, char*, int32_t>>(0x51AC80, this, arg1, arg2);
+        return stub<member_func_t<bool, mmRaceSpeech, char*, i32>>(0x51AC80, this, arg1, arg2);
     }
 
     // 0x51AF10 | ?CheckRaceLoadSanity@mmRaceSpeech@@AAEXMH@Z
-    inline void CheckRaceLoadSanity(float arg1, int32_t arg2)
+    inline void CheckRaceLoadSanity(f32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, mmRaceSpeech, float, int32_t>>(0x51AF10, this, arg1, arg2);
+        return stub<member_func_t<void, mmRaceSpeech, f32, i32>>(0x51AF10, this, arg1, arg2);
     }
 
     // 0x51AF20 | ?SetReadState@mmRaceSpeech@@AAE_NPADMPAH@Z
-    inline bool SetReadState(char* arg1, float arg2, int32_t* arg3)
+    inline bool SetReadState(char* arg1, f32 arg2, i32* arg3)
     {
-        return stub<member_func_t<bool, mmRaceSpeech, char*, float, int32_t*>>(0x51AF20, this, arg1, arg2, arg3);
+        return stub<member_func_t<bool, mmRaceSpeech, char*, f32, i32*>>(0x51AF20, this, arg1, arg2, arg3);
     }
 
     // 0x51B300 | ?locstrnicmp@mmRaceSpeech@@AAEHPAD0@Z
-    inline int32_t locstrnicmp(char* arg1, char* arg2)
+    inline i32 locstrnicmp(char* arg1, char* arg2)
     {
-        return stub<member_func_t<int32_t, mmRaceSpeech, char*, char*>>(0x51B300, this, arg1, arg2);
+        return stub<member_func_t<i32, mmRaceSpeech, char*, char*>>(0x51B300, this, arg1, arg2);
     }
 };

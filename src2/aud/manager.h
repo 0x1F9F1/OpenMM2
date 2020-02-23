@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -68,18 +68,18 @@ class audManager
 {
 public:
     // 0x5A0D60 | ?Create@audManager@@QAEPAV1@HHHHHHHHHHHW4SOUNDFLAG@1@@Z
-    inline class audManager* Create(int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5, int32_t arg6,
-        int32_t arg7, int32_t arg8, int32_t arg9, int32_t arg10, int32_t arg11, enum audManager::SOUNDFLAG arg12)
+    inline class audManager* Create(i32 arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6, i32 arg7, i32 arg8,
+        i32 arg9, i32 arg10, i32 arg11, enum audManager::SOUNDFLAG arg12)
     {
-        return stub<member_func_t<class audManager*, audManager, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t,
-            int32_t, int32_t, int32_t, int32_t, int32_t, enum audManager::SOUNDFLAG>>(
+        return stub<member_func_t<class audManager*, audManager, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32,
+            enum audManager::SOUNDFLAG>>(
             0x5A0D60, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
     }
 
     // 0x5A0F80 | ?RestartAudio@audManager@@QAEXHHH@Z
-    inline void RestartAudio(int32_t arg1, int32_t arg2, int32_t arg3)
+    inline void RestartAudio(i32 arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, audManager, int32_t, int32_t, int32_t>>(0x5A0F80, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, audManager, i32, i32, i32>>(0x5A0F80, this, arg1, arg2, arg3);
     }
 
     // 0x5A0F90 | ?ShutDownAudio@audManager@@QAEXXZ
@@ -95,9 +95,9 @@ public:
     }
 
     // 0x5A0FF0 | ?InitControlStruct@audManager@@AAE_NPAVaudSoundHeap@@PAU_controlptrs_@@H@Z
-    inline bool InitControlStruct(class audSoundHeap* arg1, struct _controlptrs_* arg2, int32_t arg3)
+    inline bool InitControlStruct(class audSoundHeap* arg1, struct _controlptrs_* arg2, i32 arg3)
     {
-        return stub<member_func_t<bool, audManager, class audSoundHeap*, struct _controlptrs_*, int32_t>>(
+        return stub<member_func_t<bool, audManager, class audSoundHeap*, struct _controlptrs_*, i32>>(
             0x5A0FF0, this, arg1, arg2, arg3);
     }
 
@@ -114,15 +114,15 @@ public:
     }
 
     // 0x5A10B0 | ?Update@audManager@@QAEXH@Z
-    inline void Update(int32_t arg1)
+    inline void Update(i32 arg1)
     {
-        return stub<member_func_t<void, audManager, int32_t>>(0x5A10B0, this, arg1);
+        return stub<member_func_t<void, audManager, i32>>(0x5A10B0, this, arg1);
     }
 
     // 0x5A1160 | ?AddHead@audManager@@QAEHPAVaudHead@@@Z
-    inline int32_t AddHead(class audHead* arg1)
+    inline i32 AddHead(class audHead* arg1)
     {
-        return stub<member_func_t<int32_t, audManager, class audHead*>>(0x5A1160, this, arg1);
+        return stub<member_func_t<i32, audManager, class audHead*>>(0x5A1160, this, arg1);
     }
 
     // 0x5A11B0 | ?RemoveHead@audManager@@QAE_NPAVaudHead@@@Z
@@ -132,15 +132,15 @@ public:
     }
 
     // 0x5A1270 | ?GetActiveHead@audManager@@QAEPAVaudHead@@H@Z
-    inline class audHead* GetActiveHead(int32_t arg1)
+    inline class audHead* GetActiveHead(i32 arg1)
     {
-        return stub<member_func_t<class audHead*, audManager, int32_t>>(0x5A1270, this, arg1);
+        return stub<member_func_t<class audHead*, audManager, i32>>(0x5A1270, this, arg1);
     }
 
     // 0x5A12E0 | ?AddControl@audManager@@QAEHW4AUDTYPE@1@PAVaudControl@@@Z
-    inline int32_t AddControl(enum audManager::AUDTYPE arg1, class audControl* arg2)
+    inline i32 AddControl(enum audManager::AUDTYPE arg1, class audControl* arg2)
     {
-        return stub<member_func_t<int32_t, audManager, enum audManager::AUDTYPE, class audControl*>>(
+        return stub<member_func_t<i32, audManager, enum audManager::AUDTYPE, class audControl*>>(
             0x5A12E0, this, arg1, arg2);
     }
 
@@ -192,27 +192,27 @@ public:
     }
 
     // 0x5A18E0 | ?CountSounds@audManager@@QAEHW4AUDTYPE@1@@Z
-    inline int32_t CountSounds(enum audManager::AUDTYPE arg1)
+    inline i32 CountSounds(enum audManager::AUDTYPE arg1)
     {
-        return stub<member_func_t<int32_t, audManager, enum audManager::AUDTYPE>>(0x5A18E0, this, arg1);
+        return stub<member_func_t<i32, audManager, enum audManager::AUDTYPE>>(0x5A18E0, this, arg1);
     }
 
     // 0x5A1950 | ?CountActiveSounds@audManager@@QAEHW4AUDTYPE@1@@Z
-    inline int32_t CountActiveSounds(enum audManager::AUDTYPE arg1)
+    inline i32 CountActiveSounds(enum audManager::AUDTYPE arg1)
     {
-        return stub<member_func_t<int32_t, audManager, enum audManager::AUDTYPE>>(0x5A1950, this, arg1);
+        return stub<member_func_t<i32, audManager, enum audManager::AUDTYPE>>(0x5A1950, this, arg1);
     }
 
     // 0x5A19C0 | ?SetVolAllSounds@audManager@@QAEXW4AUDTYPE@1@M@Z
-    inline void SetVolAllSounds(enum audManager::AUDTYPE arg1, float arg2)
+    inline void SetVolAllSounds(enum audManager::AUDTYPE arg1, f32 arg2)
     {
-        return stub<member_func_t<void, audManager, enum audManager::AUDTYPE, float>>(0x5A19C0, this, arg1, arg2);
+        return stub<member_func_t<void, audManager, enum audManager::AUDTYPE, f32>>(0x5A19C0, this, arg1, arg2);
     }
 
     // 0x5A1AB0 | ?GetMasterVolume@audManager@@QAEMW4AUDTYPE@1@@Z
-    inline float GetMasterVolume(enum audManager::AUDTYPE arg1)
+    inline f32 GetMasterVolume(enum audManager::AUDTYPE arg1)
     {
-        return stub<member_func_t<float, audManager, enum audManager::AUDTYPE>>(0x5A1AB0, this, arg1);
+        return stub<member_func_t<f32, audManager, enum audManager::AUDTYPE>>(0x5A1AB0, this, arg1);
     }
 
     // 0x5A1B10 | ?SetSoundFlags@audManager@@QAEXW4SOUNDFLAG@1@0@Z
@@ -229,9 +229,9 @@ public:
     }
 
     // 0x5A1B60 | ?SetMaxConcurrent@audManager@@QAEXW4AUDTYPE@1@H@Z
-    inline void SetMaxConcurrent(enum audManager::AUDTYPE arg1, int32_t arg2)
+    inline void SetMaxConcurrent(enum audManager::AUDTYPE arg1, i32 arg2)
     {
-        return stub<member_func_t<void, audManager, enum audManager::AUDTYPE, int32_t>>(0x5A1B60, this, arg1, arg2);
+        return stub<member_func_t<void, audManager, enum audManager::AUDTYPE, i32>>(0x5A1B60, this, arg1, arg2);
     }
 
     // 0x5A1BC0 | ?GetControlListPtr@audManager@@QAEPAVaudControl@@W4AUDTYPE@1@@Z

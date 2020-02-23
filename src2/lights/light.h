@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -101,9 +101,9 @@ public:
     }
 
     // 0x59ACB0 | ?Draw@ltLight@@QAEXM@Z
-    inline void Draw(float arg1)
+    inline void Draw(f32 arg1)
     {
-        return stub<member_func_t<void, ltLight, float>>(0x59ACB0, this, arg1);
+        return stub<member_func_t<void, ltLight, f32>>(0x59ACB0, this, arg1);
     }
 
     // 0x59AD90 | ?DrawGlow@ltLight@@QAEXABVVector3@@@Z
@@ -138,15 +138,15 @@ public:
     }
 
     // 0x59B3E0 | ?GetNumPointLights@ltLight@@SAHXZ
-    static inline int32_t GetNumPointLights()
+    static inline i32 GetNumPointLights()
     {
-        return stub<cdecl_t<int32_t>>(0x59B3E0);
+        return stub<cdecl_t<i32>>(0x59B3E0);
     }
 
     // 0x59B3F0 | ?GetPointLight@ltLight@@SAPAV1@H@Z
-    static inline class ltLight* GetPointLight(int32_t arg1)
+    static inline class ltLight* GetPointLight(i32 arg1)
     {
-        return stub<cdecl_t<class ltLight*, int32_t>>(0x59B3F0, arg1);
+        return stub<cdecl_t<class ltLight*, i32>>(0x59B3F0, arg1);
     }
 
     // 0x59B410 | ?GetClosestLight@ltLight@@SAPAV1@XZ
@@ -181,15 +181,15 @@ public:
     }
 
     // 0x59BA50 | ?ComputeIntensity@ltLight@@QAEMABVVector3@@M@Z
-    inline float ComputeIntensity(class Vector3 const& arg1, float arg2)
+    inline f32 ComputeIntensity(class Vector3 const& arg1, f32 arg2)
     {
-        return stub<member_func_t<float, ltLight, class Vector3 const&, float>>(0x59BA50, this, arg1, arg2);
+        return stub<member_func_t<f32, ltLight, class Vector3 const&, f32>>(0x59BA50, this, arg1, arg2);
     }
 
     // 0x59BB70 | ?ComputeDistance@ltLight@@QAEMABVVector3@@@Z
-    inline float ComputeDistance(class Vector3 const& arg1)
+    inline f32 ComputeDistance(class Vector3 const& arg1)
     {
-        return stub<member_func_t<float, ltLight, class Vector3 const&>>(0x59BB70, this, arg1);
+        return stub<member_func_t<f32, ltLight, class Vector3 const&>>(0x59BB70, this, arg1);
     }
 
     // 0x59BBB0 | ?SetUpProjection@ltLight@@QAEXAAVltProjection@@@Z
@@ -205,20 +205,20 @@ public:
     }
 
     // 0x5DDEA4 | ?GlowScale@ltLight@@0MA
-    static inline extern_var(0x5DDEA4, float, GlowScale);
+    inline extern_var(0x5DDEA4, float, GlowScale);
 
     // 0x5DDEA8 | ?GlowIntensity@ltLight@@0MA
-    static inline extern_var(0x5DDEA8, float, GlowIntensity);
+    inline extern_var(0x5DDEA8, float, GlowIntensity);
 
     // 0x5DDEAC | ?AmbientScale@ltLight@@0MA
-    static inline extern_var(0x5DDEAC, float, AmbientScale);
+    inline extern_var(0x5DDEAC, float, AmbientScale);
 
     // 0x5DDEB4 | ?DiffuseMinIntensity@ltLight@@0MA
-    static inline extern_var(0x5DDEB4, float, DiffuseMinIntensity);
+    inline extern_var(0x5DDEB4, float, DiffuseMinIntensity);
 
     // 0x5DDEB8 | ?DiffuseMaxIntensity@ltLight@@0MA
-    static inline extern_var(0x5DDEB8, float, DiffuseMaxIntensity);
+    inline extern_var(0x5DDEB8, float, DiffuseMaxIntensity);
 
     // 0x5DDEC0 | ?NumGfxLights@ltLight@@0HA
-    static inline extern_var(0x5DDEC0, int32_t, NumGfxLights);
+    inline extern_var(0x5DDEC0, int32_t, NumGfxLights);
 };

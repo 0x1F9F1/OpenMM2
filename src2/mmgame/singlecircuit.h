@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -73,27 +73,27 @@ public:
     }
 
     // 0x41D6A0 | ?FinishMessage@mmSingleCircuit@@AAEXHH@Z
-    inline void FinishMessage(int32_t arg1, int32_t arg2)
+    inline void FinishMessage(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, mmSingleCircuit, int32_t, int32_t>>(0x41D6A0, this, arg1, arg2);
+        return stub<member_func_t<void, mmSingleCircuit, i32, i32>>(0x41D6A0, this, arg1, arg2);
     }
 
     // 0x41D840 | ?RegisterLap@mmSingleCircuit@@AAEHXZ
-    inline int32_t RegisterLap()
+    inline i32 RegisterLap()
     {
-        return stub<member_func_t<int32_t, mmSingleCircuit>>(0x41D840, this);
+        return stub<member_func_t<i32, mmSingleCircuit>>(0x41D840, this);
     }
 
     // 0x41D8A0 | ?RegisterFinish@mmSingleCircuit@@AAEHXZ
-    inline int32_t RegisterFinish()
+    inline i32 RegisterFinish()
     {
-        return stub<member_func_t<int32_t, mmSingleCircuit>>(0x41D8A0, this);
+        return stub<member_func_t<i32, mmSingleCircuit>>(0x41D8A0, this);
     }
 
     // 0x41DB80 | ?ProgressCheck@mmSingleCircuit@@AAEHHH@Z
-    inline int32_t ProgressCheck(int32_t arg1, int32_t arg2)
+    inline i32 ProgressCheck(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<int32_t, mmSingleCircuit, int32_t, int32_t>>(0x41DB80, this, arg1, arg2);
+        return stub<member_func_t<i32, mmSingleCircuit, i32, i32>>(0x41DB80, this, arg1, arg2);
     }
 
     // 0x41C4E0 | ??1mmSingleCircuit@@UAE@XZ
@@ -115,9 +115,9 @@ public:
     }
 
     // 0x41C590 | ?Init@mmSingleCircuit@@UAEHXZ
-    inline int32_t Init() override
+    inline i32 Init() override
     {
-        return stub<member_func_t<int32_t, mmSingleCircuit>>(0x41C590, this);
+        return stub<member_func_t<i32, mmSingleCircuit>>(0x41C590, this);
     }
 
     // 0x41C6B0 | ?InitMyPlayer@mmSingleCircuit@@UAEXXZ
@@ -145,15 +145,15 @@ public:
     }
 
     // 0x41CB90 | ?UpdateGameInput@mmSingleCircuit@@UAEXH@Z
-    inline void UpdateGameInput(int32_t arg1) override
+    inline void UpdateGameInput(i32 arg1) override
     {
-        return stub<member_func_t<void, mmSingleCircuit, int32_t>>(0x41CB90, this, arg1);
+        return stub<member_func_t<void, mmSingleCircuit, i32>>(0x41CB90, this, arg1);
     }
 
     // 0x41DF10 | ?UpdateDebugKeyInput@mmSingleCircuit@@UAEXH@Z
-    inline void UpdateDebugKeyInput(int32_t arg1) override
+    inline void UpdateDebugKeyInput(i32 arg1) override
     {
-        return stub<member_func_t<void, mmSingleCircuit, int32_t>>(0x41DF10, this, arg1);
+        return stub<member_func_t<void, mmSingleCircuit, i32>>(0x41DF10, this, arg1);
     }
 
     // 0x41CEE0 | ?UpdateGame@mmSingleCircuit@@UAEXXZ
@@ -175,9 +175,9 @@ public:
     }
 
     // 0x41D690 | ?SwitchState@mmSingleCircuit@@UAEXH@Z
-    inline void SwitchState(int32_t arg1) override
+    inline void SwitchState(i32 arg1) override
     {
-        return stub<member_func_t<void, mmSingleCircuit, int32_t>>(0x41D690, this, arg1);
+        return stub<member_func_t<void, mmSingleCircuit, i32>>(0x41D690, this, arg1);
     }
 
     // 0x41DF20 | ?GetWaypoints@mmSingleCircuit@@UAEPAVmmWaypoints@@XZ

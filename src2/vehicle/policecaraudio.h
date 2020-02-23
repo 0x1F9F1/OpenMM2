@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -131,15 +131,15 @@ public:
     }
 
     // 0x4D4B00 | ?ExplosionIsPlaying@vehPoliceCarAudio@@QAEHXZ
-    inline int32_t ExplosionIsPlaying()
+    inline i32 ExplosionIsPlaying()
     {
-        return stub<member_func_t<int32_t, vehPoliceCarAudio>>(0x4D4B00, this);
+        return stub<member_func_t<i32, vehPoliceCarAudio>>(0x4D4B00, this);
     }
 
     // 0x4D4B20 | ?StartSiren@vehPoliceCarAudio@@QAEXH@Z
-    inline void StartSiren(int32_t arg1)
+    inline void StartSiren(i32 arg1)
     {
-        return stub<member_func_t<void, vehPoliceCarAudio, int32_t>>(0x4D4B20, this, arg1);
+        return stub<member_func_t<void, vehPoliceCarAudio, i32>>(0x4D4B20, this, arg1);
     }
 
     // 0x4D4C20 | ?StopSiren@vehPoliceCarAudio@@QAEXXZ
@@ -161,9 +161,9 @@ public:
     }
 
     // 0x4D4E40 | ?UpdateSiren@vehPoliceCarAudio@@QAEHMMM@Z
-    inline int32_t UpdateSiren(float arg1, float arg2, float arg3)
+    inline i32 UpdateSiren(f32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<int32_t, vehPoliceCarAudio, float, float, float>>(0x4D4E40, this, arg1, arg2, arg3);
+        return stub<member_func_t<i32, vehPoliceCarAudio, f32, f32, f32>>(0x4D4E40, this, arg1, arg2, arg3);
     }
 
     // 0x4D4F60 | ?UpdateSiren@vehPoliceCarAudio@@QAEXXZ
@@ -179,15 +179,15 @@ public:
     }
 
     // 0x4D5060 | ?UpdateAudio3D@vehPoliceCarAudio@@QAEHM@Z
-    inline int32_t UpdateAudio3D(float arg1)
+    inline i32 UpdateAudio3D(f32 arg1)
     {
-        return stub<member_func_t<int32_t, vehPoliceCarAudio, float>>(0x4D5060, this, arg1);
+        return stub<member_func_t<i32, vehPoliceCarAudio, f32>>(0x4D5060, this, arg1);
     }
 
     // 0x4D50B0 | ?UpdateExplosion@vehPoliceCarAudio@@QAEXMM@Z
-    inline void UpdateExplosion(float arg1, float arg2)
+    inline void UpdateExplosion(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, vehPoliceCarAudio, float, float>>(0x4D50B0, this, arg1, arg2);
+        return stub<member_func_t<void, vehPoliceCarAudio, f32, f32>>(0x4D50B0, this, arg1, arg2);
     }
 
     // 0x4D5120 | ?PlayVoice@vehPoliceCarAudio@@QAEXXZ
@@ -215,21 +215,21 @@ public:
     }
 
     // 0x4D5400 | ?RandomizeNumber@vehPoliceCarAudio@@QAEFXZ
-    inline int16_t RandomizeNumber()
+    inline i16 RandomizeNumber()
     {
-        return stub<member_func_t<int16_t, vehPoliceCarAudio>>(0x4D5400, this);
+        return stub<member_func_t<i16, vehPoliceCarAudio>>(0x4D5400, this);
     }
 
     // 0x4D5440 | ?GetNumCopsPursuingPlayer@vehPoliceCarAudio@@SAHXZ
-    static inline int32_t GetNumCopsPursuingPlayer()
+    static inline i32 GetNumCopsPursuingPlayer()
     {
-        return stub<cdecl_t<int32_t>>(0x4D5440);
+        return stub<cdecl_t<i32>>(0x4D5440);
     }
 
     // 0x4D54F0 | ?Set2DPan@vehPoliceCarAudio@@QAEXM@Z
-    inline void Set2DPan(float arg1)
+    inline void Set2DPan(f32 arg1)
     {
-        return stub<member_func_t<void, vehPoliceCarAudio, float>>(0x4D54F0, this, arg1);
+        return stub<member_func_t<void, vehPoliceCarAudio, f32>>(0x4D54F0, this, arg1);
     }
 
     // 0x4D5580 | ?RemoveFromManager@vehPoliceCarAudio@@QAEXXZ
@@ -239,7 +239,7 @@ public:
     }
 
     // 0x6AFFE4 | ?s_iNumCopsPursuingPlayer@vehPoliceCarAudio@@0HA
-    static inline extern_var(0x6AFFE4, int32_t, s_iNumCopsPursuingPlayer);
+    inline extern_var(0x6AFFE4, int32_t, s_iNumCopsPursuingPlayer);
 
     // 0x4D5130 | ?AssignSounds@vehPoliceCarAudio@@UAEXXZ
     inline void AssignSounds() override
@@ -248,9 +248,9 @@ public:
     }
 
     // 0x4D5220 | ?UnAssignSounds@vehPoliceCarAudio@@UAEXH@Z
-    inline void UnAssignSounds(int32_t arg1) override
+    inline void UnAssignSounds(i32 arg1) override
     {
-        return stub<member_func_t<void, vehPoliceCarAudio, int32_t>>(0x4D5220, this, arg1);
+        return stub<member_func_t<void, vehPoliceCarAudio, i32>>(0x4D5220, this, arg1);
     }
 
     // 0x4D52A0 | ?UpdateAudio@vehPoliceCarAudio@@UAEXXZ

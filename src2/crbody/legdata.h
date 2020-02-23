@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -42,9 +42,9 @@ public:
     }
 
     // 0x57EF00 | ?Acosf@crLegData@@IBEMM@Z
-    inline float Acosf(float arg1)
+    inline f32 Acosf(f32 arg1)
     {
-        return stub<member_func_t<float, crLegData, float>>(0x57EF00, this, arg1);
+        return stub<member_func_t<f32, crLegData, f32>>(0x57EF00, this, arg1);
     }
 
     // 0x57ED20 | ?Init@crLegData@@UAEXAAVcrSkeletonData@@D@Z

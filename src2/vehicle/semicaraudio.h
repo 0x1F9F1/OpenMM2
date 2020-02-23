@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -121,9 +121,9 @@ public:
     }
 
     // 0x4DD000 | ?Set2DPan@vehSemiCarAudio@@QAEXM@Z
-    inline void Set2DPan(float arg1)
+    inline void Set2DPan(f32 arg1)
     {
-        return stub<member_func_t<void, vehSemiCarAudio, float>>(0x4DD000, this, arg1);
+        return stub<member_func_t<void, vehSemiCarAudio, f32>>(0x4DD000, this, arg1);
     }
 
     // 0x4DD050 | ?UpdateEcho@vehSemiCarAudio@@QAEXXZ
@@ -139,9 +139,9 @@ public:
     }
 
     // 0x4DCCF0 | ?UnAssignSounds@vehSemiCarAudio@@UAEXH@Z
-    inline void UnAssignSounds(int32_t arg1) override
+    inline void UnAssignSounds(i32 arg1) override
     {
-        return stub<member_func_t<void, vehSemiCarAudio, int32_t>>(0x4DCCF0, this, arg1);
+        return stub<member_func_t<void, vehSemiCarAudio, i32>>(0x4DCCF0, this, arg1);
     }
 
     // 0x4DCA40 | ?UpdateAudio@vehSemiCarAudio@@UAEXXZ

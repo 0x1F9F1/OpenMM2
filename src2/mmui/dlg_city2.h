@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -41,9 +41,9 @@ public:
     // Dialog_City2::`vftable' @ 0x5B3E40
 
     // 0x4F9AE0 | ??0Dialog_City2@@QAE@HMMMMPAD@Z
-    inline Dialog_City2(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
+    inline Dialog_City2(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
     {
-        stub<member_func_t<void, Dialog_City2, int32_t, float, float, float, float, char*>>(
+        stub<member_func_t<void, Dialog_City2, i32, f32, f32, f32, f32, char*>>(
             0x4F9AE0, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
@@ -66,9 +66,9 @@ public:
     }
 
     // 0x4F9F80 | ?SetCurrentCity@Dialog_City2@@QAEXH@Z
-    inline void SetCurrentCity(int32_t arg1)
+    inline void SetCurrentCity(i32 arg1)
     {
-        return stub<member_func_t<void, Dialog_City2, int32_t>>(0x4F9F80, this, arg1);
+        return stub<member_func_t<void, Dialog_City2, i32>>(0x4F9F80, this, arg1);
     }
 
     // 0x4F9E10 | ??1Dialog_City2@@UAE@XZ

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -51,9 +51,9 @@
 */
 
 // 0x4F3F50 | ?AutoDetect@@YAXH@Z
-inline void AutoDetect(int32_t arg1)
+inline void AutoDetect(i32 arg1)
 {
-    return stub<cdecl_t<void, int32_t>>(0x4F3F50, arg1);
+    return stub<cdecl_t<void, i32>>(0x4F3F50, arg1);
 }
 
 // 0x6B0454 | ?mmCpuSpeed@@3IA
@@ -65,9 +65,9 @@ public:
     // GraphicsOptions::`vftable' @ 0x5B3CD4
 
     // 0x4F4280 | ??0GraphicsOptions@@QAE@H@Z
-    inline GraphicsOptions(int32_t arg1)
+    inline GraphicsOptions(i32 arg1)
     {
-        stub<member_func_t<void, GraphicsOptions, int32_t>>(0x4F4280, this, arg1);
+        stub<member_func_t<void, GraphicsOptions, i32>>(0x4F4280, this, arg1);
     }
 
     // 0x4F5140 | ?SetResolution@GraphicsOptions@@QAEXXZ

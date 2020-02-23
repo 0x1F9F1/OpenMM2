@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -34,32 +34,32 @@ public:
     // mmFrictionFF::`vftable' @ 0x5B529C
 
     // 0x531D60 | ?Assign@mmFrictionFF@@QAEHJ@Z
-    inline int32_t Assign(int32_t arg1)
+    inline i32 Assign(i32 arg1)
     {
-        return stub<member_func_t<int32_t, mmFrictionFF, int32_t>>(0x531D60, this, arg1);
+        return stub<member_func_t<i32, mmFrictionFF, i32>>(0x531D60, this, arg1);
     }
 
     // 0x531C20 | ?Init@mmFrictionFF@@UAEHPAUIDirectInputDevice2A@@@Z
-    virtual inline int32_t Init(struct IDirectInputDevice2A* arg1)
+    virtual inline i32 Init(struct IDirectInputDevice2A* arg1)
     {
-        return stub<member_func_t<int32_t, mmFrictionFF, struct IDirectInputDevice2A*>>(0x531C20, this, arg1);
+        return stub<member_func_t<i32, mmFrictionFF, struct IDirectInputDevice2A*>>(0x531C20, this, arg1);
     }
 
     // 0x531E20 | ?Play@mmFrictionFF@@UAEHXZ
-    virtual inline int32_t Play()
+    virtual inline i32 Play()
     {
-        return stub<member_func_t<int32_t, mmFrictionFF>>(0x531E20, this);
+        return stub<member_func_t<i32, mmFrictionFF>>(0x531E20, this);
     }
 
     // 0x531E80 | ?Stop@mmFrictionFF@@UAEHXZ
-    virtual inline int32_t Stop()
+    virtual inline i32 Stop()
     {
-        return stub<member_func_t<int32_t, mmFrictionFF>>(0x531E80, this);
+        return stub<member_func_t<i32, mmFrictionFF>>(0x531E80, this);
     }
 
     // 0x531D30 | ?SetValues@mmFrictionFF@@UAEHMM@Z
-    virtual inline int32_t SetValues(float arg1, float arg2)
+    virtual inline i32 SetValues(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<int32_t, mmFrictionFF, float, float>>(0x531D30, this, arg1, arg2);
+        return stub<member_func_t<i32, mmFrictionFF, f32, f32>>(0x531D30, this, arg1, arg2);
     }
 };

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -83,18 +83,18 @@
 */
 
 // 0x4AC8C0 | ?ilog2@@YAHH@Z
-inline int32_t ilog2(int32_t arg1)
+inline i32 ilog2(i32 arg1)
 {
-    return stub<cdecl_t<int32_t, int32_t>>(0x4AC8C0, arg1);
+    return stub<cdecl_t<i32, i32>>(0x4AC8C0, arg1);
 }
 
 class gfxTexture
 {
 public:
     // 0x45D180 | ?GetColor@gfxTexture@@QBEIXZ
-    inline uint32_t GetColor()
+    inline u32 GetColor()
     {
-        return stub<member_func_t<uint32_t, gfxTexture>>(0x45D180, this);
+        return stub<member_func_t<u32, gfxTexture>>(0x45D180, this);
     }
 
     // 0x4AC8E0 | ??0gfxTexture@@AAE@XZ
@@ -134,11 +134,12 @@ public:
     }
 
     // 0x4ACA90 | ?Create@gfxTexture@@SAPAV1@HHW4gfxImageFormat@gfxImage@@0H@Z
-    static inline class gfxTexture* Create(int32_t arg1, int32_t arg2, enum gfxImage::gfxImageFormat arg3,
-        enum gfxImage::gfxImageFormat arg4, int32_t arg5)
+    static inline class gfxTexture* Create(
+        i32 arg1, i32 arg2, enum gfxImage::gfxImageFormat arg3, enum gfxImage::gfxImageFormat arg4, i32 arg5)
     {
-        return stub<cdecl_t<class gfxTexture*, int32_t, int32_t, enum gfxImage::gfxImageFormat,
-            enum gfxImage::gfxImageFormat, int32_t>>(0x4ACA90, arg1, arg2, arg3, arg4, arg5);
+        return stub<
+            cdecl_t<class gfxTexture*, i32, i32, enum gfxImage::gfxImageFormat, enum gfxImage::gfxImageFormat, i32>>(
+            0x4ACA90, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x4AD090 | ?Create@gfxTexture@@SAPAV1@PAVgfxImage@@_N@Z
@@ -154,40 +155,40 @@ public:
     }
 
     // 0x4AD720 | ?CreateFromTexture@gfxTexture@@QAEPAV1@PBDHHHH@Z
-    inline class gfxTexture* CreateFromTexture(char const* arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5)
+    inline class gfxTexture* CreateFromTexture(char const* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5)
     {
-        return stub<member_func_t<class gfxTexture*, gfxTexture, char const*, int32_t, int32_t, int32_t, int32_t>>(
+        return stub<member_func_t<class gfxTexture*, gfxTexture, char const*, i32, i32, i32, i32>>(
             0x4AD720, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x4AD730 | ?SetDefaultMIPMapEnv@gfxTexture@@SAXIM@Z
-    static inline void SetDefaultMIPMapEnv(uint32_t arg1, float arg2)
+    static inline void SetDefaultMIPMapEnv(u32 arg1, f32 arg2)
     {
-        return stub<cdecl_t<void, uint32_t, float>>(0x4AD730, arg1, arg2);
+        return stub<cdecl_t<void, u32, f32>>(0x4AD730, arg1, arg2);
     }
 
     // 0x4AD740 | ?GetDefaultMIPMapEnv@gfxTexture@@SAXAAIAAM@Z
-    static inline void GetDefaultMIPMapEnv(uint32_t& arg1, float& arg2)
+    static inline void GetDefaultMIPMapEnv(u32& arg1, f32& arg2)
     {
-        return stub<cdecl_t<void, uint32_t&, float&>>(0x4AD740, arg1, arg2);
+        return stub<cdecl_t<void, u32&, f32&>>(0x4AD740, arg1, arg2);
     }
 
     // 0x4AD750 | ?SetMIPMapEnv@gfxTexture@@QAEXIM@Z
-    inline void SetMIPMapEnv(uint32_t arg1, float arg2)
+    inline void SetMIPMapEnv(u32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, gfxTexture, uint32_t, float>>(0x4AD750, this, arg1, arg2);
+        return stub<member_func_t<void, gfxTexture, u32, f32>>(0x4AD750, this, arg1, arg2);
     }
 
     // 0x4AD760 | ?GetMIPMapEnv@gfxTexture@@QAEXAAIAAM@Z
-    inline void GetMIPMapEnv(uint32_t& arg1, float& arg2)
+    inline void GetMIPMapEnv(u32& arg1, f32& arg2)
     {
-        return stub<member_func_t<void, gfxTexture, uint32_t&, float&>>(0x4AD760, this, arg1, arg2);
+        return stub<member_func_t<void, gfxTexture, u32&, f32&>>(0x4AD760, this, arg1, arg2);
     }
 
     // 0x4AD770 | ?CalcMIPMapEnv@gfxTexture@@SAXHHAAG0@Z
-    static inline void CalcMIPMapEnv(int32_t arg1, int32_t arg2, uint16_t& arg3, uint16_t& arg4)
+    static inline void CalcMIPMapEnv(i32 arg1, i32 arg2, u16& arg3, u16& arg4)
     {
-        return stub<cdecl_t<void, int32_t, int32_t, uint16_t&, uint16_t&>>(0x4AD770, arg1, arg2, arg3, arg4);
+        return stub<cdecl_t<void, i32, i32, u16&, u16&>>(0x4AD770, arg1, arg2, arg3, arg4);
     }
 
     // 0x4AD780 | ?EnableTrilinearMipMaping@gfxTexture@@SAX_N@Z
@@ -245,21 +246,21 @@ public:
     }
 
     // 0x4ADF00 | ?CreateRenderTarget@gfxTexture@@SAPAV1@HHII@Z
-    static inline class gfxTexture* CreateRenderTarget(int32_t arg1, int32_t arg2, uint32_t arg3, uint32_t arg4)
+    static inline class gfxTexture* CreateRenderTarget(i32 arg1, i32 arg2, u32 arg3, u32 arg4)
     {
-        return stub<cdecl_t<class gfxTexture*, int32_t, int32_t, uint32_t, uint32_t>>(0x4ADF00, arg1, arg2, arg3, arg4);
+        return stub<cdecl_t<class gfxTexture*, i32, i32, u32, u32>>(0x4ADF00, arg1, arg2, arg3, arg4);
     }
 
     // 0x4ADFD0 | ?CreateCubeMap@gfxTexture@@SAPAV1@HHQAPAV1@@Z
-    static inline class gfxTexture* CreateCubeMap(int32_t arg1, int32_t arg2, class gfxTexture** const arg3)
+    static inline class gfxTexture* CreateCubeMap(i32 arg1, i32 arg2, class gfxTexture** const arg3)
     {
-        return stub<cdecl_t<class gfxTexture*, int32_t, int32_t, class gfxTexture** const>>(0x4ADFD0, arg1, arg2, arg3);
+        return stub<cdecl_t<class gfxTexture*, i32, i32, class gfxTexture** const>>(0x4ADFD0, arg1, arg2, arg3);
     }
 
     // 0x4AE1A0 | ?SetTexEnv@gfxTexture@@QAEXI@Z
-    inline void SetTexEnv(uint32_t arg1)
+    inline void SetTexEnv(u32 arg1)
     {
-        return stub<member_func_t<void, gfxTexture, uint32_t>>(0x4AE1A0, this, arg1);
+        return stub<member_func_t<void, gfxTexture, u32>>(0x4AE1A0, this, arg1);
     }
 
     // 0x4AE1B0 | ?SetName@gfxTexture@@QAEXPBD@Z
@@ -269,11 +270,9 @@ public:
     }
 
     // 0x4AE1E0 | ?Blit@gfxTexture@@QAEXHHPAV1@HHHH@Z
-    inline void Blit(
-        int32_t arg1, int32_t arg2, class gfxTexture* arg3, int32_t arg4, int32_t arg5, int32_t arg6, int32_t arg7)
+    inline void Blit(i32 arg1, i32 arg2, class gfxTexture* arg3, i32 arg4, i32 arg5, i32 arg6, i32 arg7)
     {
-        return stub<
-            member_func_t<void, gfxTexture, int32_t, int32_t, class gfxTexture*, int32_t, int32_t, int32_t, int32_t>>(
+        return stub<member_func_t<void, gfxTexture, i32, i32, class gfxTexture*, i32, i32, i32, i32>>(
             0x4AE1E0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
@@ -287,31 +286,31 @@ public:
     static inline extern_var(0x684524, bool, sm_UseInternalCache);
 
     // 0x68452C | ?sm_FirstPool@gfxTexture@@0PAVgfxTextureCachePool@@A
-    static inline extern_var(0x68452C, class gfxTextureCachePool*, sm_FirstPool);
+    inline extern_var(0x68452C, class gfxTextureCachePool*, sm_FirstPool);
 
     // 0x684D34 | ?sm_EnableSetLOD@gfxTexture@@2_NA
     static inline extern_var(0x684D34, bool, sm_EnableSetLOD);
 
     // 0x684D35 | ?sm_LOD@gfxTexture@@0EA
-    static inline extern_var(0x684D35, uint8_t, sm_LOD);
+    inline extern_var(0x684D35, uint8_t, sm_LOD);
 
     // 0x684D36 | ?sm_Allow32@gfxTexture@@2_NA
     static inline extern_var(0x684D36, bool, sm_Allow32);
 
     // 0x684D38 | ?sm_First@gfxTexture@@0PAV1@A
-    static inline extern_var(0x684D38, class gfxTexture*, sm_First);
+    inline extern_var(0x684D38, class gfxTexture*, sm_First);
 
     // 0x684D3C | ?sm_FirstActive@gfxTexture@@0PAV1@A
-    static inline extern_var(0x684D3C, class gfxTexture*, sm_FirstActive);
+    inline extern_var(0x684D3C, class gfxTexture*, sm_FirstActive);
 };
 
 class gfxBitmap
 {
 public:
     // 0x4AE370 | ??0gfxBitmap@@AAE@HH@Z
-    inline gfxBitmap(int32_t arg1, int32_t arg2)
+    inline gfxBitmap(i32 arg1, i32 arg2)
     {
-        stub<member_func_t<void, gfxBitmap, int32_t, int32_t>>(0x4AE370, this, arg1, arg2);
+        stub<member_func_t<void, gfxBitmap, i32, i32>>(0x4AE370, this, arg1, arg2);
     }
 
     // 0x4AE3B0 | ?SetName@gfxBitmap@@QAEXPBD@Z
@@ -339,15 +338,15 @@ public:
     }
 
     // 0x4AE4D0 | ?Create@gfxBitmap@@SAPAV1@HH_N@Z
-    static inline class gfxBitmap* Create(int32_t arg1, int32_t arg2, bool arg3)
+    static inline class gfxBitmap* Create(i32 arg1, i32 arg2, bool arg3)
     {
-        return stub<cdecl_t<class gfxBitmap*, int32_t, int32_t, bool>>(0x4AE4D0, arg1, arg2, arg3);
+        return stub<cdecl_t<class gfxBitmap*, i32, i32, bool>>(0x4AE4D0, arg1, arg2, arg3);
     }
 
     // 0x4AE580 | ?Clear@gfxBitmap@@QAEXI@Z
-    inline void Clear(uint32_t arg1)
+    inline void Clear(u32 arg1)
     {
-        return stub<member_func_t<void, gfxBitmap, uint32_t>>(0x4AE580, this, arg1);
+        return stub<member_func_t<void, gfxBitmap, u32>>(0x4AE580, this, arg1);
     }
 
     // 0x4AE5C0 | ?Load@gfxBitmap@@QAE_NPAVgfxImage@@@Z
@@ -357,7 +356,7 @@ public:
     }
 
     // 0x684D40 | ?sm_First@gfxBitmap@@0PAV1@A
-    static inline extern_var(0x684D40, class gfxBitmap*, sm_First);
+    inline extern_var(0x684D40, class gfxBitmap*, sm_First);
 };
 
 class gfxTextureCachePool
@@ -429,5 +428,5 @@ public:
     }
 
     // 0x684528 | ?sm_CurrentTime@gfxTextureCacheEntry@@0IA
-    static inline extern_var(0x684528, uint32_t, sm_CurrentTime);
+    inline extern_var(0x684528, uint32_t, sm_CurrentTime);
 };

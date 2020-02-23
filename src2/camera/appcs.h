@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -65,9 +65,9 @@ public:
     }
 
     // 0x522880 | ?DApproach@camAppCS@@AAEHAAMMMM0M@Z
-    inline int32_t DApproach(float& arg1, float arg2, float arg3, float arg4, float& arg5, float arg6)
+    inline i32 DApproach(f32& arg1, f32 arg2, f32 arg3, f32 arg4, f32& arg5, f32 arg6)
     {
-        return stub<member_func_t<int32_t, camAppCS, float&, float, float, float, float&, float>>(
+        return stub<member_func_t<i32, camAppCS, f32&, f32, f32, f32, f32&, f32>>(
             0x522880, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 

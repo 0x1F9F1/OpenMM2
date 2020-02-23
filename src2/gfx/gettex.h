@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -38,9 +38,9 @@
 */
 
 // 0x4B3020 | ?gfxSetTexReduceSize@@YAHH@Z
-inline int32_t gfxSetTexReduceSize(int32_t arg1)
+inline i32 gfxSetTexReduceSize(i32 arg1)
 {
-    return stub<cdecl_t<int32_t, int32_t>>(0x4B3020, arg1);
+    return stub<cdecl_t<i32, i32>>(0x4B3020, arg1);
 }
 
 // 0x4B3040 | ?gfxDefaultPrepareImage@@YAPAVgfxImage@@PAV1@PBD_N@Z

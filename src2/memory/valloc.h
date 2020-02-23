@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -46,9 +46,9 @@ public:
     }
 
     // 0x577210 | ?Init@memSafeHeap@@QAEXPAVmemMemoryAllocator@@I_N11@Z
-    inline void Init(class memMemoryAllocator* arg1, uint32_t arg2, bool arg3, bool arg4, bool arg5)
+    inline void Init(class memMemoryAllocator* arg1, u32 arg2, bool arg3, bool arg4, bool arg5)
     {
-        return stub<member_func_t<void, memSafeHeap, class memMemoryAllocator*, uint32_t, bool, bool, bool>>(
+        return stub<member_func_t<void, memSafeHeap, class memMemoryAllocator*, u32, bool, bool, bool>>(
             0x577210, this, arg1, arg2, arg3, arg4, arg5);
     }
 

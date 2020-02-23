@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -53,9 +53,9 @@ public:
     }
 
     // 0x4F1EA0 | ?Init@mmDropDown@@QAEXPAXMMMMVstring@@H@Z
-    inline void Init(void* arg1, float arg2, float arg3, float arg4, float arg5, class string arg6, int32_t arg7)
+    inline void Init(void* arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, class string arg6, i32 arg7)
     {
-        return stub<member_func_t<void, mmDropDown, void*, float, float, float, float, class string, int32_t>>(
+        return stub<member_func_t<void, mmDropDown, void*, f32, f32, f32, f32, class string, i32>>(
             0x4F1EA0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
@@ -72,9 +72,9 @@ public:
     }
 
     // 0x4F2510 | ?GetCurrentString@mmDropDown@@QAEXPADH@Z
-    inline void GetCurrentString(char* arg1, int32_t arg2)
+    inline void GetCurrentString(char* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, mmDropDown, char*, int32_t>>(0x4F2510, this, arg1, arg2);
+        return stub<member_func_t<void, mmDropDown, char*, i32>>(0x4F2510, this, arg1, arg2);
     }
 
     // 0x4F2560 | ?SetDisabledColors@mmDropDown@@QAEXXZ
@@ -84,45 +84,45 @@ public:
     }
 
     // 0x4F25E0 | ?FindFirstEnabled@mmDropDown@@QAEHXZ
-    inline int32_t FindFirstEnabled()
+    inline i32 FindFirstEnabled()
     {
-        return stub<member_func_t<int32_t, mmDropDown>>(0x4F25E0, this);
+        return stub<member_func_t<i32, mmDropDown>>(0x4F25E0, this);
     }
 
     // 0x4F2610 | ?SetHighlight@mmDropDown@@QAEXH@Z
-    inline void SetHighlight(int32_t arg1)
+    inline void SetHighlight(i32 arg1)
     {
-        return stub<member_func_t<void, mmDropDown, int32_t>>(0x4F2610, this, arg1);
+        return stub<member_func_t<void, mmDropDown, i32>>(0x4F2610, this, arg1);
     }
 
     // 0x4F2680 | ?GetHit@mmDropDown@@QAEHMM@Z
-    inline int32_t GetHit(float arg1, float arg2)
+    inline i32 GetHit(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<int32_t, mmDropDown, float, float>>(0x4F2680, this, arg1, arg2);
+        return stub<member_func_t<i32, mmDropDown, f32, f32>>(0x4F2680, this, arg1, arg2);
     }
 
     // 0x4F2760 | ?GetXmin@mmDropDown@@QAEMXZ
-    inline float GetXmin()
+    inline f32 GetXmin()
     {
-        return stub<member_func_t<float, mmDropDown>>(0x4F2760, this);
+        return stub<member_func_t<f32, mmDropDown>>(0x4F2760, this);
     }
 
     // 0x4F2770 | ?GetYmin@mmDropDown@@QAEMXZ
-    inline float GetYmin()
+    inline f32 GetYmin()
     {
-        return stub<member_func_t<float, mmDropDown>>(0x4F2770, this);
+        return stub<member_func_t<f32, mmDropDown>>(0x4F2770, this);
     }
 
     // 0x4F2780 | ?GetW@mmDropDown@@QAEMXZ
-    inline float GetW()
+    inline f32 GetW()
     {
-        return stub<member_func_t<float, mmDropDown>>(0x4F2780, this);
+        return stub<member_func_t<f32, mmDropDown>>(0x4F2780, this);
     }
 
     // 0x4F2790 | ?GetH@mmDropDown@@QAEMXZ
-    inline float GetH()
+    inline f32 GetH()
     {
-        return stub<member_func_t<float, mmDropDown>>(0x4F2790, this);
+        return stub<member_func_t<f32, mmDropDown>>(0x4F2790, this);
     }
 
     // 0x4F1E20 | ??1mmDropDown@@UAE@XZ

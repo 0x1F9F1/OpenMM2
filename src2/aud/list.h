@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -87,15 +87,15 @@ public:
     }
 
     // 0x5A5D60 | ?Count@audList@@QAEHXZ
-    inline int32_t Count()
+    inline i32 Count()
     {
-        return stub<member_func_t<int32_t, audList>>(0x5A5D60, this);
+        return stub<member_func_t<i32, audList>>(0x5A5D60, this);
     }
 
     // 0x5A5D80 | ?FindObjectAt@audList@@QAEPAXH@Z
-    inline void* FindObjectAt(int32_t arg1)
+    inline void* FindObjectAt(i32 arg1)
     {
-        return stub<member_func_t<void*, audList, int32_t>>(0x5A5D80, this, arg1);
+        return stub<member_func_t<void*, audList, i32>>(0x5A5D80, this, arg1);
     }
 
     // 0x5A5DA0 | ?FindObject@audList@@QAEPAV1@PAX@Z
@@ -105,8 +105,8 @@ public:
     }
 
     // 0x5A5DE0 | ?FindObjectPos@audList@@QAEHPAX@Z
-    inline int32_t FindObjectPos(void* arg1)
+    inline i32 FindObjectPos(void* arg1)
     {
-        return stub<member_func_t<int32_t, audList, void*>>(0x5A5DE0, this, arg1);
+        return stub<member_func_t<i32, audList, void*>>(0x5A5DE0, this, arg1);
     }
 };

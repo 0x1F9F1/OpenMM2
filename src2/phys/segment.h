@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -40,10 +40,11 @@ class lvlSegment
 {
 public:
     // 0x469F90 | ?Set@lvlSegment@@QAEXABVVector3@@0HPAVlvlSegmentInfo@@@Z
-    inline void Set(class Vector3 const& arg1, class Vector3 const& arg2, int32_t arg3, class lvlSegmentInfo* arg4)
+    inline void Set(class Vector3 const& arg1, class Vector3 const& arg2, i32 arg3, class lvlSegmentInfo* arg4)
     {
-        return stub<member_func_t<void, lvlSegment, class Vector3 const&, class Vector3 const&, int32_t,
-            class lvlSegmentInfo*>>(0x469F90, this, arg1, arg2, arg3, arg4);
+        return stub<
+            member_func_t<void, lvlSegment, class Vector3 const&, class Vector3 const&, i32, class lvlSegmentInfo*>>(
+            0x469F90, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x46A060 | ?CalculateInfo@lvlSegment@@QAEXXZ

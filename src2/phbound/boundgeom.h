@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -69,10 +69,9 @@ public:
     }
 
     // 0x485670 | ?Init@phBoundGeometry@@QAEXHHHH@Z
-    inline void Init(int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4)
+    inline void Init(i32 arg1, i32 arg2, i32 arg3, i32 arg4)
     {
-        return stub<member_func_t<void, phBoundGeometry, int32_t, int32_t, int32_t, int32_t>>(
-            0x485670, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, phBoundGeometry, i32, i32, i32, i32>>(0x485670, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4857AB | ?Load@phBoundGeometry@@QAE_NPBDPBVVector3@@@Z
@@ -89,9 +88,9 @@ public:
     }
 
     // 0x4862C9 | ?ScaleSize@phBoundGeometry@@QAEXMMM@Z
-    inline void ScaleSize(float arg1, float arg2, float arg3)
+    inline void ScaleSize(f32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, phBoundGeometry, float, float, float>>(0x4862C9, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, phBoundGeometry, f32, f32, f32>>(0x4862C9, this, arg1, arg2, arg3);
     }
 
     // 0x4863A9 | ?ShiftCentroid@phBoundGeometry@@QAEXABVVector3@@@Z
@@ -107,9 +106,9 @@ public:
     }
 
     // 0x486609 | ?EdgeInList@phBoundGeometry@@KAJHHJPAVphHotEdge@@@Z
-    static inline int32_t EdgeInList(int32_t arg1, int32_t arg2, int32_t arg3, class phHotEdge* arg4)
+    static inline i32 EdgeInList(i32 arg1, i32 arg2, i32 arg3, class phHotEdge* arg4)
     {
-        return stub<cdecl_t<int32_t, int32_t, int32_t, int32_t, class phHotEdge*>>(0x486609, arg1, arg2, arg3, arg4);
+        return stub<cdecl_t<i32, i32, i32, i32, class phHotEdge*>>(0x486609, arg1, arg2, arg3, arg4);
     }
 
     // 0x486659 | ?ComputeEdgeNums@phBoundGeometry@@QAEXXZ
@@ -143,36 +142,36 @@ public:
     }
 
     // 0x486C69 | ?OverlapRegion@phBoundGeometry@@QAE_NPBVVector3@@HMM@Z
-    inline bool OverlapRegion(class Vector3 const* arg1, int32_t arg2, float arg3, float arg4)
+    inline bool OverlapRegion(class Vector3 const* arg1, i32 arg2, f32 arg3, f32 arg4)
     {
-        return stub<member_func_t<bool, phBoundGeometry, class Vector3 const*, int32_t, float, float>>(
+        return stub<member_func_t<bool, phBoundGeometry, class Vector3 const*, i32, f32, f32>>(
             0x486C69, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x486D39 | ?GhostSection@phBoundGeometry@@QAE_NPBV1@PBVVector3@@HMM@Z
-    inline bool GhostSection(
-        class phBoundGeometry const* arg1, class Vector3 const* arg2, int32_t arg3, float arg4, float arg5)
+    inline bool GhostSection(class phBoundGeometry const* arg1, class Vector3 const* arg2, i32 arg3, f32 arg4, f32 arg5)
     {
-        return stub<member_func_t<bool, phBoundGeometry, class phBoundGeometry const*, class Vector3 const*, int32_t,
-            float, float>>(0x486D39, this, arg1, arg2, arg3, arg4, arg5);
+        return stub<
+            member_func_t<bool, phBoundGeometry, class phBoundGeometry const*, class Vector3 const*, i32, f32, f32>>(
+            0x486D39, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x4871A0 | ?GetMaterial@phBoundGeometry@@UBEPBVphMaterial@@H@Z
-    inline class phMaterial const* GetMaterial(int32_t arg1) override
+    inline class phMaterial const* GetMaterial(i32 arg1) override
     {
-        return stub<member_func_t<class phMaterial const*, phBoundGeometry, int32_t>>(0x4871A0, this, arg1);
+        return stub<member_func_t<class phMaterial const*, phBoundGeometry, i32>>(0x4871A0, this, arg1);
     }
 
     // 0x46A5C0 | ?GetEdgeCosine@phBoundGeometry@@UBEMH@Z
-    inline float GetEdgeCosine(int32_t arg1) override
+    inline f32 GetEdgeCosine(i32 arg1) override
     {
-        return stub<member_func_t<float, phBoundGeometry, int32_t>>(0x46A5C0, this, arg1);
+        return stub<member_func_t<f32, phBoundGeometry, i32>>(0x46A5C0, this, arg1);
     }
 
     // 0x46A5D0 | ?GetEdgeNormal@phBoundGeometry@@UBEABVVector3@@HAAV2@@Z
-    inline class Vector3 const& GetEdgeNormal(int32_t arg1, class Vector3& arg2) override
+    inline class Vector3 const& GetEdgeNormal(i32 arg1, class Vector3& arg2) override
     {
-        return stub<member_func_t<class Vector3 const&, phBoundGeometry, int32_t, class Vector3&>>(
+        return stub<member_func_t<class Vector3 const&, phBoundGeometry, i32, class Vector3&>>(
             0x46A5D0, this, arg1, arg2);
     }
 

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -51,10 +51,9 @@ public:
     // PUResults::`vftable' @ 0x5B4680
 
     // 0x508FC0 | ??0PUResults@@QAE@HMMMMPADHH@Z
-    inline PUResults(
-        int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6, int32_t arg7, int32_t arg8)
+    inline PUResults(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6, i32 arg7, i32 arg8)
     {
-        stub<member_func_t<void, PUResults, int32_t, float, float, float, float, char*, int32_t, int32_t>>(
+        stub<member_func_t<void, PUResults, i32, f32, f32, f32, f32, char*, i32, i32>>(
             0x508FC0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
@@ -77,58 +76,57 @@ public:
     }
 
     // 0x509B60 | ?RosterRO@PUResults@@QAEXH@Z
-    inline void RosterRO(int32_t arg1)
+    inline void RosterRO(i32 arg1)
     {
-        return stub<member_func_t<void, PUResults, int32_t>>(0x509B60, this, arg1);
+        return stub<member_func_t<void, PUResults, i32>>(0x509B60, this, arg1);
     }
 
     // 0x509B80 | ?RestartRO@PUResults@@QAEXH@Z
-    inline void RestartRO(int32_t arg1)
+    inline void RestartRO(i32 arg1)
     {
-        return stub<member_func_t<void, PUResults, int32_t>>(0x509B80, this, arg1);
+        return stub<member_func_t<void, PUResults, i32>>(0x509B80, this, arg1);
     }
 
     // 0x509BA0 | ?IsRosterReadOnly@PUResults@@QAEHXZ
-    inline int32_t IsRosterReadOnly()
+    inline i32 IsRosterReadOnly()
     {
-        return stub<member_func_t<int32_t, PUResults>>(0x509BA0, this);
+        return stub<member_func_t<i32, PUResults>>(0x509BA0, this);
     }
 
     // 0x509BB0 | ?IsRaceMenuReadOnly@PUResults@@QAEHXZ
-    inline int32_t IsRaceMenuReadOnly()
+    inline i32 IsRaceMenuReadOnly()
     {
-        return stub<member_func_t<int32_t, PUResults>>(0x509BB0, this);
+        return stub<member_func_t<i32, PUResults>>(0x509BB0, this);
     }
 
     // 0x509BC0 | ?RaceMenuRO@PUResults@@QAEXH@Z
-    inline void RaceMenuRO(int32_t arg1)
+    inline void RaceMenuRO(i32 arg1)
     {
-        return stub<member_func_t<void, PUResults, int32_t>>(0x509BC0, this, arg1);
+        return stub<member_func_t<void, PUResults, i32>>(0x509BC0, this, arg1);
     }
 
     // 0x509BE0 | ?AddName@PUResults@@QAEXHPBDM@Z
-    inline void AddName(int32_t arg1, char const* arg2, float arg3)
+    inline void AddName(i32 arg1, char const* arg2, f32 arg3)
     {
-        return stub<member_func_t<void, PUResults, int32_t, char const*, float>>(0x509BE0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, PUResults, i32, char const*, f32>>(0x509BE0, this, arg1, arg2, arg3);
     }
 
     // 0x509CA0 | ?AddName@PUResults@@QAEXHPBD0@Z
-    inline void AddName(int32_t arg1, char const* arg2, char const* arg3)
+    inline void AddName(i32 arg1, char const* arg2, char const* arg3)
     {
-        return stub<member_func_t<void, PUResults, int32_t, char const*, char const*>>(
-            0x509CA0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, PUResults, i32, char const*, char const*>>(0x509CA0, this, arg1, arg2, arg3);
     }
 
     // 0x509D40 | ?AddName@PUResults@@QAEXHPBDH@Z
-    inline void AddName(int32_t arg1, char const* arg2, int32_t arg3)
+    inline void AddName(i32 arg1, char const* arg2, i32 arg3)
     {
-        return stub<member_func_t<void, PUResults, int32_t, char const*, int32_t>>(0x509D40, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, PUResults, i32, char const*, i32>>(0x509D40, this, arg1, arg2, arg3);
     }
 
     // 0x509E10 | ?AddLoser@PUResults@@QAEXHPBD@Z
-    inline void AddLoser(int32_t arg1, char const* arg2)
+    inline void AddLoser(i32 arg1, char const* arg2)
     {
-        return stub<member_func_t<void, PUResults, int32_t, char const*>>(0x509E10, this, arg1, arg2);
+        return stub<member_func_t<void, PUResults, i32, char const*>>(0x509E10, this, arg1, arg2);
     }
 
     // 0x509E70 | ?ClearNames@PUResults@@QAEXXZ

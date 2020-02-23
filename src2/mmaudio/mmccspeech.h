@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -66,15 +66,15 @@ public:
     }
 
     // 0x51B970 | ?PlayCheckPoint@mmCCSpeech@@QAEXHM@Z
-    inline void PlayCheckPoint(int32_t arg1, float arg2)
+    inline void PlayCheckPoint(i32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, mmCCSpeech, int32_t, float>>(0x51B970, this, arg1, arg2);
+        return stub<member_func_t<void, mmCCSpeech, i32, f32>>(0x51B970, this, arg1, arg2);
     }
 
     // 0x51B9B0 | ?PlayResults@mmCCSpeech@@QAEXH@Z
-    inline void PlayResults(int32_t arg1)
+    inline void PlayResults(i32 arg1)
     {
-        return stub<member_func_t<void, mmCCSpeech, int32_t>>(0x51B9B0, this, arg1);
+        return stub<member_func_t<void, mmCCSpeech, i32>>(0x51B9B0, this, arg1);
     }
 
     // 0x51B9D0 | ?PlayResultsPoor@mmCCSpeech@@QAEXXZ
@@ -114,9 +114,9 @@ public:
     }
 
     // 0x51BB80 | ?LoadGroup@mmCCSpeech@@QAE_NPADH@Z
-    inline bool LoadGroup(char* arg1, int32_t arg2)
+    inline bool LoadGroup(char* arg1, i32 arg2)
     {
-        return stub<member_func_t<bool, mmCCSpeech, char*, int32_t>>(0x51BB80, this, arg1, arg2);
+        return stub<member_func_t<bool, mmCCSpeech, char*, i32>>(0x51BB80, this, arg1, arg2);
     }
 
     // 0x51BDB0 | ?LoadCheckPointIndexInfo@mmCCSpeech@@QAE_NPAD@Z
@@ -126,20 +126,20 @@ public:
     }
 
     // 0x51BF40 | ?CheckRaceLoadSanity@mmCCSpeech@@AAEXMH@Z
-    inline void CheckRaceLoadSanity(float arg1, int32_t arg2)
+    inline void CheckRaceLoadSanity(f32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, mmCCSpeech, float, int32_t>>(0x51BF40, this, arg1, arg2);
+        return stub<member_func_t<void, mmCCSpeech, f32, i32>>(0x51BF40, this, arg1, arg2);
     }
 
     // 0x51BF50 | ?SetReadState@mmCCSpeech@@AAE_NPADMPAH@Z
-    inline bool SetReadState(char* arg1, float arg2, int32_t* arg3)
+    inline bool SetReadState(char* arg1, f32 arg2, i32* arg3)
     {
-        return stub<member_func_t<bool, mmCCSpeech, char*, float, int32_t*>>(0x51BF50, this, arg1, arg2, arg3);
+        return stub<member_func_t<bool, mmCCSpeech, char*, f32, i32*>>(0x51BF50, this, arg1, arg2, arg3);
     }
 
     // 0x51C0D0 | ?locstrnicmp@mmCCSpeech@@AAEHPAD0@Z
-    inline int32_t locstrnicmp(char* arg1, char* arg2)
+    inline i32 locstrnicmp(char* arg1, char* arg2)
     {
-        return stub<member_func_t<int32_t, mmCCSpeech, char*, char*>>(0x51C0D0, this, arg1, arg2);
+        return stub<member_func_t<i32, mmCCSpeech, char*, char*>>(0x51C0D0, this, arg1, arg2);
     }
 };

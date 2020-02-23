@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -49,10 +49,10 @@ public:
     static inline extern_var(0x6617A8, class asLinearCS, RootFrame);
 
     // 0x661828 | ?FrameStack@asLinearCS@@0PAPAV1@A
-    static inline extern_var(0x661828, class asLinearCS**, FrameStack);
+    inline extern_var(0x661828, class asLinearCS**, FrameStack);
 
     // 0x6618AC | ?CurrentMatrix@asLinearCS@@0PAVMatrix34@@A
-    static inline extern_var(0x6618AC, class Matrix34*, CurrentMatrix);
+    inline extern_var(0x6618AC, class Matrix34*, CurrentMatrix);
 
     // 0x431B80 | ??1asLinearCS@@UAE@XZ
     inline ~asLinearCS() override

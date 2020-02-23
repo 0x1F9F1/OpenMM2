@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -87,21 +87,21 @@ public:
     }
 
     // 0x59E3D0 | ?UpdatePlay@aiCableCarAudioData@@QAEXMMM@Z
-    inline void UpdatePlay(float arg1, float arg2, float arg3)
+    inline void UpdatePlay(f32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, aiCableCarAudioData, float, float, float>>(0x59E3D0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, aiCableCarAudioData, f32, f32, f32>>(0x59E3D0, this, arg1, arg2, arg3);
     }
 
     // 0x59E580 | ?UpdateState@aiCableCarAudioData@@QAEXMM@Z
-    inline void UpdateState(float arg1, float arg2)
+    inline void UpdateState(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, aiCableCarAudioData, float, float>>(0x59E580, this, arg1, arg2);
+        return stub<member_func_t<void, aiCableCarAudioData, f32, f32>>(0x59E580, this, arg1, arg2);
     }
 
     // 0x59E630 | ?AssignSounds@aiCableCarAudioData@@QAEXH@Z
-    inline void AssignSounds(int32_t arg1)
+    inline void AssignSounds(i32 arg1)
     {
-        return stub<member_func_t<void, aiCableCarAudioData, int32_t>>(0x59E630, this, arg1);
+        return stub<member_func_t<void, aiCableCarAudioData, i32>>(0x59E630, this, arg1);
     }
 
     // 0x59E6A0 | ?UnAssignSounds@aiCableCarAudioData@@QAEXXZ

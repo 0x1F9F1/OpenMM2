@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -60,15 +60,15 @@ public:
     }
 
     // 0x5A65B0 | ?SetHandle@audHead@@QAEXH@Z
-    inline void SetHandle(int32_t arg1)
+    inline void SetHandle(i32 arg1)
     {
-        return stub<member_func_t<void, audHead, int32_t>>(0x5A65B0, this, arg1);
+        return stub<member_func_t<void, audHead, i32>>(0x5A65B0, this, arg1);
     }
 
     // 0x5A65C0 | ?GetHandle@audHead@@QAEHXZ
-    inline int32_t GetHandle()
+    inline i32 GetHandle()
     {
-        return stub<member_func_t<int32_t, audHead>>(0x5A65C0, this);
+        return stub<member_func_t<i32, audHead>>(0x5A65C0, this);
     }
 
     // 0x5A65D0 | ?SetHeadPosition@audHead@@QAEXPAU_audvector3_@@@Z
@@ -122,16 +122,16 @@ public:
     }
 
     // 0x5A6740 | ?SetHeadMinLimit@audHead@@QAEXM@Z
-    inline void SetHeadMinLimit(float arg1)
+    inline void SetHeadMinLimit(f32 arg1)
     {
-        return stub<member_func_t<void, audHead, float>>(0x5A6740, this, arg1);
+        return stub<member_func_t<void, audHead, f32>>(0x5A6740, this, arg1);
     }
 
     // 0x5A6750 | ?GetHeadVolumePanPitch@audHead@@QAE_NPAU_audvector3_@@0PAM11@Z
     inline bool GetHeadVolumePanPitch(
-        struct _audvector3_* arg1, struct _audvector3_* arg2, float* arg3, float* arg4, float* arg5)
+        struct _audvector3_* arg1, struct _audvector3_* arg2, f32* arg3, f32* arg4, f32* arg5)
     {
-        return stub<member_func_t<bool, audHead, struct _audvector3_*, struct _audvector3_*, float*, float*, float*>>(
+        return stub<member_func_t<bool, audHead, struct _audvector3_*, struct _audvector3_*, f32*, f32*, f32*>>(
             0x5A6750, this, arg1, arg2, arg3, arg4, arg5);
     }
 };

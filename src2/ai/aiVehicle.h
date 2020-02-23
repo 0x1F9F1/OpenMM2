@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -51,23 +51,23 @@ public:
     }
 
     // 0x556200 | ?Init@aiVehicle@@QAEXH@Z
-    inline void Init(int32_t arg1)
+    inline void Init(i32 arg1)
     {
-        return stub<member_func_t<void, aiVehicle, int32_t>>(0x556200, this, arg1);
+        return stub<member_func_t<void, aiVehicle, i32>>(0x556200, this, arg1);
     }
 
     // 0x556250 | ?PreAvoid@aiVehicle@@UAEXABVVector3@@0MAAV2@1@Z
-    inline void PreAvoid(class Vector3 const& arg1, class Vector3 const& arg2, float arg3, class Vector3& arg4,
+    inline void PreAvoid(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, class Vector3& arg4,
         class Vector3& arg5) override
     {
-        return stub<member_func_t<void, aiVehicle, class Vector3 const&, class Vector3 const&, float, class Vector3&,
+        return stub<member_func_t<void, aiVehicle, class Vector3 const&, class Vector3 const&, f32, class Vector3&,
             class Vector3&>>(0x556250, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x556850 | ?IsBlockingTarget@aiVehicle@@UAEMABVVector3@@0MM@Z
-    inline float IsBlockingTarget(class Vector3 const& arg1, class Vector3 const& arg2, float arg3, float arg4) override
+    inline f32 IsBlockingTarget(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, f32 arg4) override
     {
-        return stub<member_func_t<float, aiVehicle, class Vector3 const&, class Vector3 const&, float, float>>(
+        return stub<member_func_t<f32, aiVehicle, class Vector3 const&, class Vector3 const&, f32, f32>>(
             0x556850, this, arg1, arg2, arg3, arg4);
     }
 
@@ -84,9 +84,9 @@ public:
     }
 
     // 0x582519 | __purecall
-    virtual inline int32_t Type()
+    virtual inline i32 Type()
     {
-        return stub<member_func_t<int32_t, aiVehicle>>(0x582519, this);
+        return stub<member_func_t<i32, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
@@ -96,39 +96,39 @@ public:
     }
 
     // 0x582519 | __purecall
-    virtual inline float FrontBumperDistance()
+    virtual inline f32 FrontBumperDistance()
     {
-        return stub<member_func_t<float, aiVehicle>>(0x582519, this);
+        return stub<member_func_t<f32, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline float BackBumperDistance()
+    virtual inline f32 BackBumperDistance()
     {
-        return stub<member_func_t<float, aiVehicle>>(0x582519, this);
+        return stub<member_func_t<f32, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline float LSideDistance()
+    virtual inline f32 LSideDistance()
     {
-        return stub<member_func_t<float, aiVehicle>>(0x582519, this);
+        return stub<member_func_t<f32, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline float RSideDistance()
+    virtual inline f32 RSideDistance()
     {
-        return stub<member_func_t<float, aiVehicle>>(0x582519, this);
+        return stub<member_func_t<f32, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline int32_t CurrentLane()
+    virtual inline i32 CurrentLane()
     {
-        return stub<member_func_t<int32_t, aiVehicle>>(0x582519, this);
+        return stub<member_func_t<i32, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline int32_t CurrentRoadId()
+    virtual inline i32 CurrentRoadId()
     {
-        return stub<member_func_t<int32_t, aiVehicle>>(0x582519, this);
+        return stub<member_func_t<i32, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall

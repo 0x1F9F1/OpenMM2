@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -70,22 +70,21 @@ public:
     }
 
     // 0x5A5080 | ?Init@DirSnd@@SAPAV1@KE_NPAD@Z
-    static inline class DirSnd* Init(uint32_t arg1, uint8_t arg2, bool arg3, char* arg4)
+    static inline class DirSnd* Init(u32 arg1, u8 arg2, bool arg3, char* arg4)
     {
-        return stub<cdecl_t<class DirSnd*, uint32_t, uint8_t, bool, char*>>(0x5A5080, arg1, arg2, arg3, arg4);
+        return stub<cdecl_t<class DirSnd*, u32, u8, bool, char*>>(0x5A5080, arg1, arg2, arg3, arg4);
     }
 
     // 0x5A5160 | ?Init3DListener@DirSnd@@QAEHMMMMM@Z
-    inline int32_t Init3DListener(float arg1, float arg2, float arg3, float arg4, float arg5)
+    inline i32 Init3DListener(f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
     {
-        return stub<member_func_t<int32_t, DirSnd, float, float, float, float, float>>(
-            0x5A5160, this, arg1, arg2, arg3, arg4, arg5);
+        return stub<member_func_t<i32, DirSnd, f32, f32, f32, f32, f32>>(0x5A5160, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x5A51C0 | ?IsDSDeviceInList@DirSnd@@QAEHPAU_GUID@@@Z
-    inline int32_t IsDSDeviceInList(struct _GUID* arg1)
+    inline i32 IsDSDeviceInList(struct _GUID* arg1)
     {
-        return stub<member_func_t<int32_t, DirSnd, struct _GUID*>>(0x5A51C0, this, arg1);
+        return stub<member_func_t<i32, DirSnd, struct _GUID*>>(0x5A51C0, this, arg1);
     }
 
     // 0x5A5390 | ?SetDeviceRating@DirSnd@@QAEXPAUtag_dsdevdesc@@@Z
@@ -95,15 +94,15 @@ public:
     }
 
     // 0x5A5510 | ?EnumDSDevices@DirSnd@@QAEHXZ
-    inline int32_t EnumDSDevices()
+    inline i32 EnumDSDevices()
     {
-        return stub<member_func_t<int32_t, DirSnd>>(0x5A5510, this);
+        return stub<member_func_t<i32, DirSnd>>(0x5A5510, this);
     }
 
     // 0x5A5630 | ?CreatePrimaryInterfaceAndBuffer@DirSnd@@IAEHPAU_DSBUFFERDESC@@@Z
-    inline int32_t CreatePrimaryInterfaceAndBuffer(struct _DSBUFFERDESC* arg1)
+    inline i32 CreatePrimaryInterfaceAndBuffer(struct _DSBUFFERDESC* arg1)
     {
-        return stub<member_func_t<int32_t, DirSnd, struct _DSBUFFERDESC*>>(0x5A5630, this, arg1);
+        return stub<member_func_t<i32, DirSnd, struct _DSBUFFERDESC*>>(0x5A5630, this, arg1);
     }
 
     // 0x5A5770 | ?ClearDSDeviceList@DirSnd@@QAEXXZ
@@ -113,9 +112,9 @@ public:
     }
 
     // 0x5A5860 | ?SetPrimaryBufferFormat@DirSnd@@QAEXKE@Z
-    inline void SetPrimaryBufferFormat(uint32_t arg1, uint8_t arg2)
+    inline void SetPrimaryBufferFormat(u32 arg1, u8 arg2)
     {
-        return stub<member_func_t<void, DirSnd, uint32_t, uint8_t>>(0x5A5860, this, arg1, arg2);
+        return stub<member_func_t<void, DirSnd, u32, u8>>(0x5A5860, this, arg1, arg2);
     }
 
     // 0x5A5950 | ?ScanAvailableDSFormats@DirSnd@@QAEXXZ
@@ -125,15 +124,15 @@ public:
     }
 
     // 0x5A5A30 | ?TranslateDSError@DirSnd@@QAEPADJ@Z
-    inline char* TranslateDSError(int32_t arg1)
+    inline char* TranslateDSError(i32 arg1)
     {
-        return stub<member_func_t<char*, DirSnd, int32_t>>(0x5A5A30, this, arg1);
+        return stub<member_func_t<char*, DirSnd, i32>>(0x5A5A30, this, arg1);
     }
 
     // 0x5A5BB0 | ?SetBitDepth@DirSnd@@QAEXH@Z
-    inline void SetBitDepth(int32_t arg1)
+    inline void SetBitDepth(i32 arg1)
     {
-        return stub<member_func_t<void, DirSnd, int32_t>>(0x5A5BB0, this, arg1);
+        return stub<member_func_t<void, DirSnd, i32>>(0x5A5BB0, this, arg1);
     }
 
     // 0x5A5BD0 | ?GetDeviceNames@DirSnd@@QAEPAPADXZ
@@ -143,15 +142,15 @@ public:
     }
 
     // 0x5A5C00 | ?GetNum3DHallBufs@DirSnd@@QAEIXZ
-    inline uint32_t GetNum3DHallBufs()
+    inline u32 GetNum3DHallBufs()
     {
-        return stub<member_func_t<uint32_t, DirSnd>>(0x5A5C00, this);
+        return stub<member_func_t<u32, DirSnd>>(0x5A5C00, this);
     }
 
     // 0x5A5530 | ?InitPrimarySoundBuffer@DirSnd@@UAEHKEPAD@Z
-    virtual inline int32_t InitPrimarySoundBuffer(uint32_t arg1, uint8_t arg2, char* arg3)
+    virtual inline i32 InitPrimarySoundBuffer(u32 arg1, u8 arg2, char* arg3)
     {
-        return stub<member_func_t<int32_t, DirSnd, uint32_t, uint8_t, char*>>(0x5A5530, this, arg1, arg2, arg3);
+        return stub<member_func_t<i32, DirSnd, u32, u8, char*>>(0x5A5530, this, arg1, arg2, arg3);
     }
 };
 
@@ -162,15 +161,15 @@ inline void UpperCase(char* arg1)
 }
 
 // 0x5A5210 | ?DSEnumProc@@YGHPAU_GUID@@PAD1PAX@Z
-inline int32_t __stdcall DSEnumProc(struct _GUID* arg1, char* arg2, char* arg3, void* arg4)
+inline i32 __stdcall DSEnumProc(struct _GUID* arg1, char* arg2, char* arg3, void* arg4)
 {
-    return stub<stdcall_t<int32_t, struct _GUID*, char*, char*, void*>>(0x5A5210, arg1, arg2, arg3, arg4);
+    return stub<stdcall_t<i32, struct _GUID*, char*, char*, void*>>(0x5A5210, arg1, arg2, arg3, arg4);
 }
 
 // 0x5A57B0 | ?FormatCodeToWFX@@YAHKPAUtWAVEFORMATEX@@@Z
-inline int32_t FormatCodeToWFX(uint32_t arg1, struct tWAVEFORMATEX* arg2)
+inline i32 FormatCodeToWFX(u32 arg1, struct tWAVEFORMATEX* arg2)
 {
-    return stub<cdecl_t<int32_t, uint32_t, struct tWAVEFORMATEX*>>(0x5A57B0, arg1, arg2);
+    return stub<cdecl_t<i32, u32, struct tWAVEFORMATEX*>>(0x5A57B0, arg1, arg2);
 }
 
 // 0x6B4C2C | ?DSGlobalPtr@@3PAVDirSnd@@A

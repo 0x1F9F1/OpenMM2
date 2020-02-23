@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -64,27 +64,27 @@ public:
     }
 
     // 0x4D8E20 | ?CalcTorqueAtFullThrottle@vehEngine@@QAEMM@Z
-    inline float CalcTorqueAtFullThrottle(float arg1)
+    inline f32 CalcTorqueAtFullThrottle(f32 arg1)
     {
-        return stub<member_func_t<float, vehEngine, float>>(0x4D8E20, this, arg1);
+        return stub<member_func_t<f32, vehEngine, f32>>(0x4D8E20, this, arg1);
     }
 
     // 0x4D8EA0 | ?CalcTorqueAtZeroThrottle@vehEngine@@QAEMXZ
-    inline float CalcTorqueAtZeroThrottle()
+    inline f32 CalcTorqueAtZeroThrottle()
     {
-        return stub<member_func_t<float, vehEngine>>(0x4D8EA0, this);
+        return stub<member_func_t<f32, vehEngine>>(0x4D8EA0, this);
     }
 
     // 0x4D8ED0 | ?CalcTorque@vehEngine@@QAEMM@Z
-    inline float CalcTorque(float arg1)
+    inline f32 CalcTorque(f32 arg1)
     {
-        return stub<member_func_t<float, vehEngine, float>>(0x4D8ED0, this, arg1);
+        return stub<member_func_t<f32, vehEngine, f32>>(0x4D8ED0, this, arg1);
     }
 
     // 0x4D8F10 | ?CalcHPAtFullThrottle@vehEngine@@QAEMM@Z
-    inline float CalcHPAtFullThrottle(float arg1)
+    inline f32 CalcHPAtFullThrottle(f32 arg1)
     {
-        return stub<member_func_t<float, vehEngine, float>>(0x4D8F10, this, arg1);
+        return stub<member_func_t<f32, vehEngine, f32>>(0x4D8F10, this, arg1);
     }
 
     // 0x4D8CD0 | ??1vehEngine@@UAE@XZ

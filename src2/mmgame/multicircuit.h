@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -67,9 +67,9 @@ public:
     }
 
     // 0x421C60 | ?Init@mmMultiCircuit@@UAEHXZ
-    inline int32_t Init() override
+    inline i32 Init() override
     {
-        return stub<member_func_t<int32_t, mmMultiCircuit>>(0x421C60, this);
+        return stub<member_func_t<i32, mmMultiCircuit>>(0x421C60, this);
     }
 
     // 0x421DD0 | ?InitMyPlayer@mmMultiCircuit@@UAEXXZ
@@ -91,15 +91,15 @@ public:
     }
 
     // 0x422530 | ?UpdateGameInput@mmMultiCircuit@@UAEXH@Z
-    inline void UpdateGameInput(int32_t arg1) override
+    inline void UpdateGameInput(i32 arg1) override
     {
-        return stub<member_func_t<void, mmMultiCircuit, int32_t>>(0x422530, this, arg1);
+        return stub<member_func_t<void, mmMultiCircuit, i32>>(0x422530, this, arg1);
     }
 
     // 0x422DA0 | ?UpdateDebugKeyInput@mmMultiCircuit@@UAEXH@Z
-    inline void UpdateDebugKeyInput(int32_t arg1) override
+    inline void UpdateDebugKeyInput(i32 arg1) override
     {
-        return stub<member_func_t<void, mmMultiCircuit, int32_t>>(0x422DA0, this, arg1);
+        return stub<member_func_t<void, mmMultiCircuit, i32>>(0x422DA0, this, arg1);
     }
 
     // 0x422570 | ?UpdateGame@mmMultiCircuit@@UAEXXZ
@@ -109,9 +109,9 @@ public:
     }
 
     // 0x422D90 | ?SwitchState@mmMultiCircuit@@UAEXH@Z
-    inline void SwitchState(int32_t arg1) override
+    inline void SwitchState(i32 arg1) override
     {
-        return stub<member_func_t<void, mmMultiCircuit, int32_t>>(0x422D90, this, arg1);
+        return stub<member_func_t<void, mmMultiCircuit, i32>>(0x422D90, this, arg1);
     }
 
     // 0x4236A0 | ?GetWaypoints@mmMultiCircuit@@UAEPAVmmWaypoints@@XZ

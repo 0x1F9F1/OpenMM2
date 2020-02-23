@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -59,10 +59,9 @@ public:
     }
 
     // 0x4A3F60 | ?LoadShaderSet@modShader@@SAPAPAV1@PAVStream@@PAH1_N@Z
-    static inline class modShader** LoadShaderSet(class Stream* arg1, int32_t* arg2, int32_t* arg3, bool arg4)
+    static inline class modShader** LoadShaderSet(class Stream* arg1, i32* arg2, i32* arg3, bool arg4)
     {
-        return stub<cdecl_t<class modShader**, class Stream*, int32_t*, int32_t*, bool>>(
-            0x4A3F60, arg1, arg2, arg3, arg4);
+        return stub<cdecl_t<class modShader**, class Stream*, i32*, i32*, bool>>(0x4A3F60, arg1, arg2, arg3, arg4);
     }
 
     // 0x4A40C0 | ?PreLoad@modShader@@QAEXXZ

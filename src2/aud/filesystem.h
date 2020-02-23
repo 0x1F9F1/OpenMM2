@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -76,21 +76,21 @@ public:
     }
 
     // 0x5A6B40 | ?FileSeek@audFileSystem@@QAEXHH@Z
-    inline void FileSeek(int32_t arg1, int32_t arg2)
+    inline void FileSeek(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, audFileSystem, int32_t, int32_t>>(0x5A6B40, this, arg1, arg2);
+        return stub<member_func_t<void, audFileSystem, i32, i32>>(0x5A6B40, this, arg1, arg2);
     }
 
     // 0x5A6B90 | ?GetFileSize@audFileSystem@@QAEHXZ
-    inline int32_t GetFileSize()
+    inline i32 GetFileSize()
     {
-        return stub<member_func_t<int32_t, audFileSystem>>(0x5A6B90, this);
+        return stub<member_func_t<i32, audFileSystem>>(0x5A6B90, this);
     }
 
     // 0x5A6BB0 | ?FileRead@audFileSystem@@QAEHPAXH@Z
-    inline int32_t FileRead(void* arg1, int32_t arg2)
+    inline i32 FileRead(void* arg1, i32 arg2)
     {
-        return stub<member_func_t<int32_t, audFileSystem, void*, int32_t>>(0x5A6BB0, this, arg1, arg2);
+        return stub<member_func_t<i32, audFileSystem, void*, i32>>(0x5A6BB0, this, arg1, arg2);
     }
 
     // 0x5A6BE0 | ?IsOpen@audFileSystem@@QAE_NXZ

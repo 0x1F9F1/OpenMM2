@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -56,11 +56,11 @@ public:
     }
 
     // 0x4F0430 | ?Init@UIVScrollBar@@QAEXMMMMHMMPAHVdatCallback@@H@Z
-    inline void Init(float arg1, float arg2, float arg3, float arg4, int32_t arg5, float arg6, float arg7,
-        int32_t* arg8, class datCallback arg9, int32_t arg10)
+    inline void Init(f32 arg1, f32 arg2, f32 arg3, f32 arg4, i32 arg5, f32 arg6, f32 arg7, i32* arg8,
+        class datCallback arg9, i32 arg10)
     {
-        return stub<member_func_t<void, UIVScrollBar, float, float, float, float, int32_t, float, float, int32_t*,
-            class datCallback, int32_t>>(0x4F0430, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
+        return stub<member_func_t<void, UIVScrollBar, f32, f32, f32, f32, i32, f32, f32, i32*, class datCallback, i32>>(
+            0x4F0430, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
     }
 
     // 0x4F04A0 | ?LoadBitmap@UIVScrollBar@@QAEXXZ
@@ -76,39 +76,39 @@ public:
     }
 
     // 0x4F0650 | ?Inc@UIVScrollBar@@QAEMXZ
-    inline float Inc()
+    inline f32 Inc()
     {
-        return stub<member_func_t<float, UIVScrollBar>>(0x4F0650, this);
+        return stub<member_func_t<f32, UIVScrollBar>>(0x4F0650, this);
     }
 
     // 0x4F06B0 | ?Dec@UIVScrollBar@@QAEMXZ
-    inline float Dec()
+    inline f32 Dec()
     {
-        return stub<member_func_t<float, UIVScrollBar>>(0x4F06B0, this);
+        return stub<member_func_t<f32, UIVScrollBar>>(0x4F06B0, this);
     }
 
     // 0x4F0710 | ?SetStep@UIVScrollBar@@QAEXHM@Z
-    inline void SetStep(int32_t arg1, float arg2)
+    inline void SetStep(i32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, UIVScrollBar, int32_t, float>>(0x4F0710, this, arg1, arg2);
+        return stub<member_func_t<void, UIVScrollBar, i32, f32>>(0x4F0710, this, arg1, arg2);
     }
 
     // 0x4F0770 | ?SetRange@UIVScrollBar@@QAEXMM@Z
-    inline void SetRange(float arg1, float arg2)
+    inline void SetRange(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, UIVScrollBar, float, float>>(0x4F0770, this, arg1, arg2);
+        return stub<member_func_t<void, UIVScrollBar, f32, f32>>(0x4F0770, this, arg1, arg2);
     }
 
     // 0x4F07D0 | ?SetTrough@UIVScrollBar@@QAEXMM@Z
-    inline void SetTrough(float arg1, float arg2)
+    inline void SetTrough(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, UIVScrollBar, float, float>>(0x4F07D0, this, arg1, arg2);
+        return stub<member_func_t<void, UIVScrollBar, f32, f32>>(0x4F07D0, this, arg1, arg2);
     }
 
     // 0x4F0990 | ?EvalMouseXY@UIVScrollBar@@QAEXMM@Z
-    inline void EvalMouseXY(float arg1, float arg2)
+    inline void EvalMouseXY(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, UIVScrollBar, float, float>>(0x4F0990, this, arg1, arg2);
+        return stub<member_func_t<void, UIVScrollBar, f32, f32>>(0x4F0990, this, arg1, arg2);
     }
 
     // 0x4F03A0 | ??1UIVScrollBar@@UAE@XZ
@@ -148,14 +148,14 @@ public:
     }
 
     // 0x4F0870 | ?Switch@UIVScrollBar@@UAEXH@Z
-    inline void Switch(int32_t arg1) override
+    inline void Switch(i32 arg1) override
     {
-        return stub<member_func_t<void, UIVScrollBar, int32_t>>(0x4F0870, this, arg1);
+        return stub<member_func_t<void, UIVScrollBar, i32>>(0x4F0870, this, arg1);
     }
 
     // 0x4F0CC0 | ?SetPosition@UIVScrollBar@@UAEXMM@Z
-    inline void SetPosition(float arg1, float arg2) override
+    inline void SetPosition(f32 arg1, f32 arg2) override
     {
-        return stub<member_func_t<void, UIVScrollBar, float, float>>(0x4F0CC0, this, arg1, arg2);
+        return stub<member_func_t<void, UIVScrollBar, f32, f32>>(0x4F0CC0, this, arg1, arg2);
     }
 };

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -49,34 +49,33 @@ public:
     }
 
     // 0x51CC10 | ?DeInit@mmDirSnd@@QAEXFF@Z
-    inline void DeInit(int16_t arg1, int16_t arg2)
+    inline void DeInit(i16 arg1, i16 arg2)
     {
-        return stub<member_func_t<void, mmDirSnd, int16_t, int16_t>>(0x51CC10, this, arg1, arg2);
+        return stub<member_func_t<void, mmDirSnd, i16, i16>>(0x51CC10, this, arg1, arg2);
     }
 
     // 0x51CC50 | ?Init@mmDirSnd@@SAPAV1@KEHHPADFF@Z
-    static inline class mmDirSnd* Init(
-        uint32_t arg1, uint8_t arg2, int32_t arg3, int32_t arg4, char* arg5, int16_t arg6, int16_t arg7)
+    static inline class mmDirSnd* Init(u32 arg1, u8 arg2, i32 arg3, i32 arg4, char* arg5, i16 arg6, i16 arg7)
     {
-        return stub<cdecl_t<class mmDirSnd*, uint32_t, uint8_t, int32_t, int32_t, char*, int16_t, int16_t>>(
+        return stub<cdecl_t<class mmDirSnd*, u32, u8, i32, i32, char*, i16, i16>>(
             0x51CC50, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x51CE60 | ?EAXEnabled@mmDirSnd@@QAEIXZ
-    inline uint32_t EAXEnabled()
+    inline u32 EAXEnabled()
     {
-        return stub<member_func_t<uint32_t, mmDirSnd>>(0x51CE60, this);
+        return stub<member_func_t<u32, mmDirSnd>>(0x51CE60, this);
     }
 
     // 0x51CE70 | ?DSound3DEnabled@mmDirSnd@@QAEIXZ
-    inline uint32_t DSound3DEnabled()
+    inline u32 DSound3DEnabled()
     {
-        return stub<member_func_t<uint32_t, mmDirSnd>>(0x51CE70, this);
+        return stub<member_func_t<u32, mmDirSnd>>(0x51CE70, this);
     }
 
     // 0x51CD90 | ?InitPrimarySoundBuffer@mmDirSnd@@UAEHKEPAD@Z
-    inline int32_t InitPrimarySoundBuffer(uint32_t arg1, uint8_t arg2, char* arg3) override
+    inline i32 InitPrimarySoundBuffer(u32 arg1, u8 arg2, char* arg3) override
     {
-        return stub<member_func_t<int32_t, mmDirSnd, uint32_t, uint8_t, char*>>(0x51CD90, this, arg1, arg2, arg3);
+        return stub<member_func_t<i32, mmDirSnd, u32, u8, char*>>(0x51CD90, this, arg1, arg2, arg3);
     }
 };

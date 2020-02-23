@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -48,9 +48,9 @@ struct pedAnimation
 {
 public:
     // 0x57A7A0 | ?LookupSequence@pedAnimation@@QAEHPAD@Z
-    inline int32_t LookupSequence(char* arg1)
+    inline i32 LookupSequence(char* arg1)
     {
-        return stub<member_func_t<int32_t, pedAnimation, char*>>(0x57A7A0, this, arg1);
+        return stub<member_func_t<i32, pedAnimation, char*>>(0x57A7A0, this, arg1);
     }
 
     // 0x57A800 | ?Load@pedAnimation@@QAEXPADPAVStream@@@Z
@@ -66,9 +66,9 @@ public:
     }
 
     // 0x57AB60 | ?DrawSkeleton@pedAnimation@@QAEXHPAVcrSkeleton@@@Z
-    inline void DrawSkeleton(int32_t arg1, class crSkeleton* arg2)
+    inline void DrawSkeleton(i32 arg1, class crSkeleton* arg2)
     {
-        return stub<member_func_t<void, pedAnimation, int32_t, class crSkeleton*>>(0x57AB60, this, arg1, arg2);
+        return stub<member_func_t<void, pedAnimation, i32, class crSkeleton*>>(0x57AB60, this, arg1, arg2);
     }
 };
 
@@ -82,9 +82,9 @@ public:
     }
 
     // 0x57B270 | ?PreUpdate@pedAnimationInstance@@QAEXM@Z
-    inline void PreUpdate(float arg1)
+    inline void PreUpdate(f32 arg1)
     {
-        return stub<member_func_t<void, pedAnimationInstance, float>>(0x57B270, this, arg1);
+        return stub<member_func_t<void, pedAnimationInstance, f32>>(0x57B270, this, arg1);
     }
 
     // 0x57B2C0 | ?Reset@pedAnimationInstance@@QAEXXZ
@@ -112,20 +112,20 @@ public:
     }
 
     // 0x57B520 | ?VerifySeq@pedAnimationInstance@@QAEXH@Z
-    inline void VerifySeq(int32_t arg1)
+    inline void VerifySeq(i32 arg1)
     {
-        return stub<member_func_t<void, pedAnimationInstance, int32_t>>(0x57B520, this, arg1);
+        return stub<member_func_t<void, pedAnimationInstance, i32>>(0x57B520, this, arg1);
     }
 
     // 0x57B550 | ?Start@pedAnimationInstance@@QAEXH@Z
-    inline void Start(int32_t arg1)
+    inline void Start(i32 arg1)
     {
-        return stub<member_func_t<void, pedAnimationInstance, int32_t>>(0x57B550, this, arg1);
+        return stub<member_func_t<void, pedAnimationInstance, i32>>(0x57B550, this, arg1);
     }
 
     // 0x6B4720 | ?FrameDelta@pedAnimationInstance@@0HA
-    static inline extern_var(0x6B4720, int32_t, FrameDelta);
+    inline extern_var(0x6B4720, int32_t, FrameDelta);
 
     // 0x6B4724 | ?FrameFraction@pedAnimationInstance@@0MA
-    static inline extern_var(0x6B4724, float, FrameFraction);
+    inline extern_var(0x6B4724, float, FrameFraction);
 };

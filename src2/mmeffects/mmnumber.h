@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -53,15 +53,15 @@ public:
     }
 
     // 0x533340 | ?LoadFont@mmNumberFont@@QAEXPADHI@Z
-    inline void LoadFont(char* arg1, int32_t arg2, uint32_t arg3)
+    inline void LoadFont(char* arg1, i32 arg2, u32 arg3)
     {
-        return stub<member_func_t<void, mmNumberFont, char*, int32_t, uint32_t>>(0x533340, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmNumberFont, char*, i32, u32>>(0x533340, this, arg1, arg2, arg3);
     }
 
     // 0x5333B0 | ?LoadLocFont@mmNumberFont@@QAEXPADPAULocString@@HI@Z
-    inline void LoadLocFont(char* arg1, struct LocString* arg2, int32_t arg3, uint32_t arg4)
+    inline void LoadLocFont(char* arg1, struct LocString* arg2, i32 arg3, u32 arg4)
     {
-        return stub<member_func_t<void, mmNumberFont, char*, struct LocString*, int32_t, uint32_t>>(
+        return stub<member_func_t<void, mmNumberFont, char*, struct LocString*, i32, u32>>(
             0x5333B0, this, arg1, arg2, arg3, arg4);
     }
 };
@@ -78,9 +78,9 @@ public:
     }
 
     // 0x533450 | ?Init@mmNumber@@QAEXPAVmmNumberFont@@MM@Z
-    inline void Init(class mmNumberFont* arg1, float arg2, float arg3)
+    inline void Init(class mmNumberFont* arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, mmNumber, class mmNumberFont*, float, float>>(0x533450, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmNumber, class mmNumberFont*, f32, f32>>(0x533450, this, arg1, arg2, arg3);
     }
 
     // 0x533470 | ?SetString@mmNumber@@QAEXPAD@Z

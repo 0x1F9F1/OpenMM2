@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -77,7 +77,7 @@ public:
     }
 
     // 0x5E0D08 | ?Instance@mmGameManager@@0PAV1@A
-    static inline extern_var(0x5E0D08, class mmGameManager*, Instance);
+    inline extern_var(0x5E0D08, class mmGameManager*, Instance);
 
     // 0x402E40 | ??1mmGameManager@@UAE@XZ
     inline ~mmGameManager() override

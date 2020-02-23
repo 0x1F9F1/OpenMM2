@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -79,8 +79,8 @@
 */
 
 class dgHitBangerInstance
-    : dgBangerInstance
-    , lvlInstance
+    : lvlInstance
+    , dgBangerInstance
 {
 public:
     // dgHitBangerInstance::`vftable' @ 0x5B15B8
@@ -125,9 +125,9 @@ public:
     }
 
     // 0x442AB0 | ?SizeOf@dgHitBangerInstance@@UAEIXZ
-    virtual inline uint32_t SizeOf()
+    virtual inline u32 SizeOf()
     {
-        return stub<member_func_t<uint32_t, dgHitBangerInstance>>(0x442AB0, this);
+        return stub<member_func_t<u32, dgHitBangerInstance>>(0x442AB0, this);
     }
 };
 
@@ -135,9 +135,9 @@ class dgBangerInstance : asNode
 {
 public:
     // 0x4417C0 | ?DrawTree@dgBangerInstance@@QAEXH@Z
-    inline void DrawTree(int32_t arg1)
+    inline void DrawTree(i32 arg1)
     {
-        return stub<member_func_t<void, dgBangerInstance, int32_t>>(0x4417C0, this, arg1);
+        return stub<member_func_t<void, dgBangerInstance, i32>>(0x4417C0, this, arg1);
     }
 
     // 0x441AB0 | ?GetData@dgBangerInstance@@QAEPAVdgBangerData@@XZ
@@ -165,9 +165,9 @@ public:
     }
 
     // 0x4427E0 | ?Init@dgBangerManager@@QAEXH@Z
-    inline void Init(int32_t arg1)
+    inline void Init(i32 arg1)
     {
-        return stub<member_func_t<void, dgBangerManager, int32_t>>(0x4427E0, this, arg1);
+        return stub<member_func_t<void, dgBangerManager, i32>>(0x4427E0, this, arg1);
     }
 
     // 0x442870 | ?InitGlow@dgBangerManager@@QAEXPBD@Z
@@ -177,7 +177,7 @@ public:
     }
 
     // 0x627678 | ?Instance@dgBangerManager@@1PAV1@A
-    static inline extern_var(0x627678, class dgBangerManager*, Instance);
+    inline extern_var(0x627678, class dgBangerManager*, Instance);
 
     // 0x4426E0 | ??1dgBangerManager@@UAE@XZ
     inline ~dgBangerManager() override
@@ -193,8 +193,8 @@ public:
 };
 
 class dgUnhitBangerInstance
-    : dgBangerInstance
-    , lvlInstance
+    : lvlInstance
+    , dgBangerInstance
 {
 public:
     // dgUnhitBangerInstance::`vftable' @ 0x5B56D4
@@ -207,15 +207,15 @@ public:
     }
 
     // 0x441D80 | ?RequestBanger@dgUnhitBangerInstance@@SAPAV1@PBDH@Z
-    static inline class dgUnhitBangerInstance* RequestBanger(char const* arg1, int32_t arg2)
+    static inline class dgUnhitBangerInstance* RequestBanger(char const* arg1, i32 arg2)
     {
-        return stub<cdecl_t<class dgUnhitBangerInstance*, char const*, int32_t>>(0x441D80, arg1, arg2);
+        return stub<cdecl_t<class dgUnhitBangerInstance*, char const*, i32>>(0x441D80, arg1, arg2);
     }
 
     // 0x442570 | ?InitBound@dgUnhitBangerInstance@@QAE_NPBD0PAVdgBangerData@@H@Z
-    inline bool InitBound(char const* arg1, char const* arg2, class dgBangerData* arg3, int32_t arg4)
+    inline bool InitBound(char const* arg1, char const* arg2, class dgBangerData* arg3, i32 arg4)
     {
-        return stub<member_func_t<bool, dgUnhitBangerInstance, char const*, char const*, class dgBangerData*, int32_t>>(
+        return stub<member_func_t<bool, dgUnhitBangerInstance, char const*, char const*, class dgBangerData*, i32>>(
             0x442570, this, arg1, arg2, arg3, arg4);
     }
 
@@ -244,9 +244,9 @@ public:
     }
 
     // 0x582519 | __purecall
-    virtual inline uint32_t SizeOf()
+    virtual inline u32 SizeOf()
     {
-        return stub<member_func_t<uint32_t, dgUnhitBangerInstance>>(0x582519, this);
+        return stub<member_func_t<u32, dgUnhitBangerInstance>>(0x582519, this);
     }
 };
 
@@ -281,9 +281,9 @@ public:
     }
 
     // 0x442AE0 | ?SizeOf@dgUnhitYBangerInstance@@UAEIXZ
-    inline uint32_t SizeOf() override
+    inline u32 SizeOf() override
     {
-        return stub<member_func_t<uint32_t, dgUnhitYBangerInstance>>(0x442AE0, this);
+        return stub<member_func_t<u32, dgUnhitYBangerInstance>>(0x442AE0, this);
     }
 };
 
@@ -312,8 +312,8 @@ public:
     }
 
     // 0x442AF0 | ?SizeOf@dgUnhitMtxBangerInstance@@UAEIXZ
-    inline uint32_t SizeOf() override
+    inline u32 SizeOf() override
     {
-        return stub<member_func_t<uint32_t, dgUnhitMtxBangerInstance>>(0x442AF0, this);
+        return stub<member_func_t<u32, dgUnhitMtxBangerInstance>>(0x442AF0, this);
     }
 };

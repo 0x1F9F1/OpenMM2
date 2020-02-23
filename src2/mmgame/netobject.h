@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -99,16 +99,16 @@ public:
     }
 
     // 0x43C4E0 | ?Init@mmNetObject@@QAEXPAVvehCar@@PADMHK1_N@Z
-    inline void Init(class vehCar* arg1, char* arg2, float arg3, int32_t arg4, uint32_t arg5, char* arg6, bool arg7)
+    inline void Init(class vehCar* arg1, char* arg2, f32 arg3, i32 arg4, u32 arg5, char* arg6, bool arg7)
     {
-        return stub<member_func_t<void, mmNetObject, class vehCar*, char*, float, int32_t, uint32_t, char*, bool>>(
+        return stub<member_func_t<void, mmNetObject, class vehCar*, char*, f32, i32, u32, char*, bool>>(
             0x43C4E0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x43C5D0 | ?ReInit@mmNetObject@@QAEXPAVvehCar@@PADMHK1_N@Z
-    inline void ReInit(class vehCar* arg1, char* arg2, float arg3, int32_t arg4, uint32_t arg5, char* arg6, bool arg7)
+    inline void ReInit(class vehCar* arg1, char* arg2, f32 arg3, i32 arg4, u32 arg5, char* arg6, bool arg7)
     {
-        return stub<member_func_t<void, mmNetObject, class vehCar*, char*, float, int32_t, uint32_t, char*, bool>>(
+        return stub<member_func_t<void, mmNetObject, class vehCar*, char*, f32, i32, u32, char*, bool>>(
             0x43C5D0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
@@ -119,21 +119,21 @@ public:
     }
 
     // 0x43C750 | ?Set@mmNetObject@@QAEXH@Z
-    inline void Set(int32_t arg1)
+    inline void Set(i32 arg1)
     {
-        return stub<member_func_t<void, mmNetObject, int32_t>>(0x43C750, this, arg1);
+        return stub<member_func_t<void, mmNetObject, i32>>(0x43C750, this, arg1);
     }
 
     // 0x43C760 | ?SetActive@mmNetObject@@QAEXH@Z
-    inline void SetActive(int32_t arg1)
+    inline void SetActive(i32 arg1)
     {
-        return stub<member_func_t<void, mmNetObject, int32_t>>(0x43C760, this, arg1);
+        return stub<member_func_t<void, mmNetObject, i32>>(0x43C760, this, arg1);
     }
 
     // 0x43C780 | ?SetScore@mmNetObject@@QAEXH@Z
-    inline void SetScore(int32_t arg1)
+    inline void SetScore(i32 arg1)
     {
-        return stub<member_func_t<void, mmNetObject, int32_t>>(0x43C780, this, arg1);
+        return stub<member_func_t<void, mmNetObject, i32>>(0x43C780, this, arg1);
     }
 
     // 0x43C790 | ?SetInputData@mmNetObject@@QAEXXZ
@@ -143,34 +143,34 @@ public:
     }
 
     // 0x43C820 | ?SetPositionData@mmNetObject@@QAEHK@Z
-    inline int32_t SetPositionData(uint32_t arg1)
+    inline i32 SetPositionData(u32 arg1)
     {
-        return stub<member_func_t<int32_t, mmNetObject, uint32_t>>(0x43C820, this, arg1);
+        return stub<member_func_t<i32, mmNetObject, u32>>(0x43C820, this, arg1);
     }
 
     // 0x43CC90 | ?InputUpdate@mmNetObject@@QAEXPAUNET_INPUTDATA@@M@Z
-    inline void InputUpdate(struct NET_INPUTDATA* arg1, float arg2)
+    inline void InputUpdate(struct NET_INPUTDATA* arg1, f32 arg2)
     {
-        return stub<member_func_t<void, mmNetObject, struct NET_INPUTDATA*, float>>(0x43CC90, this, arg1, arg2);
+        return stub<member_func_t<void, mmNetObject, struct NET_INPUTDATA*, f32>>(0x43CC90, this, arg1, arg2);
     }
 
     // 0x43CD10 | ?PositionUpdate@mmNetObject@@QAEXPAUNET_POSDATA@@M@Z
-    inline void PositionUpdate(struct NET_POSDATA* arg1, float arg2)
+    inline void PositionUpdate(struct NET_POSDATA* arg1, f32 arg2)
     {
-        return stub<member_func_t<void, mmNetObject, struct NET_POSDATA*, float>>(0x43CD10, this, arg1, arg2);
+        return stub<member_func_t<void, mmNetObject, struct NET_POSDATA*, f32>>(0x43CD10, this, arg1, arg2);
     }
 
     // 0x43D700 | ?GetPositionApproach@mmNetObject@@QAEMABVVector3@@0@Z
-    inline float GetPositionApproach(class Vector3 const& arg1, class Vector3 const& arg2)
+    inline f32 GetPositionApproach(class Vector3 const& arg1, class Vector3 const& arg2)
     {
-        return stub<member_func_t<float, mmNetObject, class Vector3 const&, class Vector3 const&>>(
+        return stub<member_func_t<f32, mmNetObject, class Vector3 const&, class Vector3 const&>>(
             0x43D700, this, arg1, arg2);
     }
 
     // 0x43D750 | ?GetAngleApproach@mmNetObject@@QAEMMM@Z
-    inline float GetAngleApproach(float arg1, float arg2)
+    inline f32 GetAngleApproach(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<float, mmNetObject, float, float>>(0x43D750, this, arg1, arg2);
+        return stub<member_func_t<f32, mmNetObject, f32, f32>>(0x43D750, this, arg1, arg2);
     }
 
     // 0x43D760 | ?Predict@mmNetObject@@QAEXXZ
@@ -202,15 +202,15 @@ struct mmAccelCompute
 {
 public:
     // 0x43BC10 | ?Init@mmAccelCompute@@QAEHVVector3@@0@Z
-    inline int32_t Init(class Vector3 arg1, class Vector3 arg2)
+    inline i32 Init(class Vector3 arg1, class Vector3 arg2)
     {
-        return stub<member_func_t<int32_t, mmAccelCompute, class Vector3, class Vector3>>(0x43BC10, this, arg1, arg2);
+        return stub<member_func_t<i32, mmAccelCompute, class Vector3, class Vector3>>(0x43BC10, this, arg1, arg2);
     }
 
     // 0x43BC60 | ?SetLatest@mmAccelCompute@@QAEXVVector3@@M@Z
-    inline void SetLatest(class Vector3 arg1, float arg2)
+    inline void SetLatest(class Vector3 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, mmAccelCompute, class Vector3, float>>(0x43BC60, this, arg1, arg2);
+        return stub<member_func_t<void, mmAccelCompute, class Vector3, f32>>(0x43BC60, this, arg1, arg2);
     }
 };
 
@@ -243,9 +243,9 @@ public:
     }
 
     // 0x43BFE0 | ?Solve@mmNetPath@@QAEXAAVVector3@@0M@Z
-    inline void Solve(class Vector3& arg1, class Vector3& arg2, float arg3)
+    inline void Solve(class Vector3& arg1, class Vector3& arg2, f32 arg3)
     {
-        return stub<member_func_t<void, mmNetPath, class Vector3&, class Vector3&, float>>(
+        return stub<member_func_t<void, mmNetPath, class Vector3&, class Vector3&, f32>>(
             0x43BFE0, this, arg1, arg2, arg3);
     }
 };

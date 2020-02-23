@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -31,9 +31,9 @@ public:
     // mmSingleRaceMusicData::`vftable' @ 0x5B0610
 
     // 0x433890 | ?LoadMusicSegments@mmSingleRaceMusicData@@AAE_NPAVStream@@F@Z
-    inline bool LoadMusicSegments(class Stream* arg1, int16_t arg2)
+    inline bool LoadMusicSegments(class Stream* arg1, i16 arg2)
     {
-        return stub<member_func_t<bool, mmSingleRaceMusicData, class Stream*, int16_t>>(0x433890, this, arg1, arg2);
+        return stub<member_func_t<bool, mmSingleRaceMusicData, class Stream*, i16>>(0x433890, this, arg1, arg2);
     }
 
     // 0x4336D0 | ?LoadMusic@mmSingleRaceMusicData@@UAE_NPAD@Z

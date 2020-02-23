@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -42,16 +42,16 @@ class datParser
 {
 public:
     // 0x406850 | ?AddValue@datParser@@QAEXPBDPAMPAVdatCallback@@@Z
-    inline void AddValue(char const* arg1, float* arg2, class datCallback* arg3)
+    inline void AddValue(char const* arg1, f32* arg2, class datCallback* arg3)
     {
-        return stub<member_func_t<void, datParser, char const*, float*, class datCallback*>>(
+        return stub<member_func_t<void, datParser, char const*, f32*, class datCallback*>>(
             0x406850, this, arg1, arg2, arg3);
     }
 
     // 0x45FC00 | ?AddValue@datParser@@QAEXPBDPAHPAVdatCallback@@@Z
-    inline void AddValue(char const* arg1, int32_t* arg2, class datCallback* arg3)
+    inline void AddValue(char const* arg1, i32* arg2, class datCallback* arg3)
     {
-        return stub<member_func_t<void, datParser, char const*, int32_t*, class datCallback*>>(
+        return stub<member_func_t<void, datParser, char const*, i32*, class datCallback*>>(
             0x45FC00, this, arg1, arg2, arg3);
     }
 
@@ -75,11 +75,10 @@ public:
     }
 
     // 0x4A79D0 | ?AddRecord@datParser@@AAEAAVdatParserRecord@@HPBDPAXGPAVdatCallback@@@Z
-    inline class datParserRecord& AddRecord(
-        int32_t arg1, char const* arg2, void* arg3, uint16_t arg4, class datCallback* arg5)
+    inline class datParserRecord& AddRecord(i32 arg1, char const* arg2, void* arg3, u16 arg4, class datCallback* arg5)
     {
-        return stub<member_func_t<class datParserRecord&, datParser, int32_t, char const*, void*, uint16_t,
-            class datCallback*>>(0x4A79D0, this, arg1, arg2, arg3, arg4, arg5);
+        return stub<member_func_t<class datParserRecord&, datParser, i32, char const*, void*, u16, class datCallback*>>(
+            0x4A79D0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x4A7A90 | ?Load@datParser@@QAE_NPAVStream@@PBD@Z
@@ -139,7 +138,7 @@ public:
     }
 
     // 0x5CA2E4 | ?sm_Errorf@datParser@@2P6AXPBDZZA
-    static inline extern_var(0x5CA2E4, void(__cdecl*)(char const*, ...), sm_Errorf);
+    inline extern_var(0x5CA2E4, void(__cdecl*)(char const*, ...), sm_Errorf);
 };
 
 class datParserRecord

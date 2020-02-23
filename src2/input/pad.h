@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -36,18 +36,18 @@
 */
 
 // 0x4BB710 | ?AddDeadZone@@YAMMM@Z
-inline float AddDeadZone(float arg1, float arg2)
+inline f32 AddDeadZone(f32 arg1, f32 arg2)
 {
-    return stub<cdecl_t<float, float, float>>(0x4BB710, arg1, arg2);
+    return stub<cdecl_t<f32, f32, f32>>(0x4BB710, arg1, arg2);
 }
 
 class ioPad
 {
 public:
     // 0x4BB4E0 | ?Begin@ioPad@@AAEXH@Z
-    inline void Begin(int32_t arg1)
+    inline void Begin(i32 arg1)
     {
-        return stub<member_func_t<void, ioPad, int32_t>>(0x4BB4E0, this, arg1);
+        return stub<member_func_t<void, ioPad, i32>>(0x4BB4E0, this, arg1);
     }
 
     // 0x4BB520 | ?End@ioPad@@AAEXXZ
@@ -93,7 +93,7 @@ public:
     }
 
     // 0x6A3900 | ?PADS@ioPad@@0PAV1@A
-    static inline extern_var(0x6A3900, class ioPad*, PADS);
+    inline extern_var(0x6A3900, class ioPad*, PADS);
 
     // 0x6A3961 | ?sm_UseKeymap@ioPad@@0_NA
     static inline extern_var(0x6A3961, bool, sm_UseKeymap);

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -139,54 +139,54 @@ public:
     }
 
     // 0x47A6D0 | ?FindImpactSphereToBox@phBoundBox@@QBEHPBVphBoundSphere@@ABVMatrix34@@1PAVphColliderBase@@2PAVphImpactBase@@ABVVector3@@4@Z
-    inline int32_t FindImpactSphereToBox(class phBoundSphere const* arg1, class Matrix34 const& arg2,
+    inline i32 FindImpactSphereToBox(class phBoundSphere const* arg1, class Matrix34 const& arg2,
         class Matrix34 const& arg3, class phColliderBase* arg4, class phColliderBase* arg5, class phImpactBase* arg6,
         class Vector3 const& arg7, class Vector3 const& arg8)
     {
-        return stub<member_func_t<int32_t, phBoundBox, class phBoundSphere const*, class Matrix34 const&,
+        return stub<member_func_t<i32, phBoundBox, class phBoundSphere const*, class Matrix34 const&,
             class Matrix34 const&, class phColliderBase*, class phColliderBase*, class phImpactBase*,
             class Vector3 const&, class Vector3 const&>>(
             0x47A6D0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
     // 0x47AFE0 | ?FindImpactsBoxToBox@phBoundBox@@QBEHPBV1@PBVMatrix34@@111PAVphColliderBase@@2PAVphImpactBase@@HABVVector3@@@Z
-    inline int32_t FindImpactsBoxToBox(class phBoundBox const* arg1, class Matrix34 const* arg2,
-        class Matrix34 const* arg3, class Matrix34 const* arg4, class Matrix34 const* arg5, class phColliderBase* arg6,
-        class phColliderBase* arg7, class phImpactBase* arg8, int32_t arg9, class Vector3 const& arg10)
+    inline i32 FindImpactsBoxToBox(class phBoundBox const* arg1, class Matrix34 const* arg2, class Matrix34 const* arg3,
+        class Matrix34 const* arg4, class Matrix34 const* arg5, class phColliderBase* arg6, class phColliderBase* arg7,
+        class phImpactBase* arg8, i32 arg9, class Vector3 const& arg10)
     {
-        return stub<member_func_t<int32_t, phBoundBox, class phBoundBox const*, class Matrix34 const*,
+        return stub<member_func_t<i32, phBoundBox, class phBoundBox const*, class Matrix34 const*,
             class Matrix34 const*, class Matrix34 const*, class Matrix34 const*, class phColliderBase*,
-            class phColliderBase*, class phImpactBase*, int32_t, class Vector3 const&>>(
+            class phColliderBase*, class phImpactBase*, i32, class Vector3 const&>>(
             0x47AFE0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
     }
 
     // 0x47BA90 | ?FindImpactsBoxToBoxOffset@phBoundBox@@QBEHPBV1@PBVMatrix34@@111PAVphColliderBase@@2PAVphImpactBase@@HABVVector3@@@Z
-    inline int32_t FindImpactsBoxToBoxOffset(class phBoundBox const* arg1, class Matrix34 const* arg2,
+    inline i32 FindImpactsBoxToBoxOffset(class phBoundBox const* arg1, class Matrix34 const* arg2,
         class Matrix34 const* arg3, class Matrix34 const* arg4, class Matrix34 const* arg5, class phColliderBase* arg6,
-        class phColliderBase* arg7, class phImpactBase* arg8, int32_t arg9, class Vector3 const& arg10)
+        class phColliderBase* arg7, class phImpactBase* arg8, i32 arg9, class Vector3 const& arg10)
     {
-        return stub<member_func_t<int32_t, phBoundBox, class phBoundBox const*, class Matrix34 const*,
+        return stub<member_func_t<i32, phBoundBox, class phBoundBox const*, class Matrix34 const*,
             class Matrix34 const*, class Matrix34 const*, class Matrix34 const*, class phColliderBase*,
-            class phColliderBase*, class phImpactBase*, int32_t, class Vector3 const&>>(
+            class phColliderBase*, class phImpactBase*, i32, class Vector3 const&>>(
             0x47BA90, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
     }
 
     // 0x47C5D0 | ?AddEdgeChecks@phBoundBox@@CAXHH_N@Z
-    static inline void AddEdgeChecks(int32_t arg1, int32_t arg2, bool arg3)
+    static inline void AddEdgeChecks(i32 arg1, i32 arg2, bool arg3)
     {
-        return stub<cdecl_t<void, int32_t, int32_t, bool>>(0x47C5D0, arg1, arg2, arg3);
+        return stub<cdecl_t<void, i32, i32, bool>>(0x47C5D0, arg1, arg2, arg3);
     }
 
     // 0x47C690 | ?AvoidEdgeChecks@phBoundBox@@CAXHH_N@Z
-    static inline void AvoidEdgeChecks(int32_t arg1, int32_t arg2, bool arg3)
+    static inline void AvoidEdgeChecks(i32 arg1, i32 arg2, bool arg3)
     {
-        return stub<cdecl_t<void, int32_t, int32_t, bool>>(0x47C690, arg1, arg2, arg3);
+        return stub<cdecl_t<void, i32, i32, bool>>(0x47C690, arg1, arg2, arg3);
     }
 
     // 0x47C710 | ?AvoidEdgeChecks@phBoundBox@@CAXHH@Z
-    static inline void AvoidEdgeChecks(int32_t arg1, int32_t arg2)
+    static inline void AvoidEdgeChecks(i32 arg1, i32 arg2)
     {
-        return stub<cdecl_t<void, int32_t, int32_t>>(0x47C710, arg1, arg2);
+        return stub<cdecl_t<void, i32, i32>>(0x47C710, arg1, arg2);
     }
 
     // 0x47C790 | ?MakeTransformedCorners@phBoundBox@@CAXABVVector3@@0_N@Z
@@ -196,9 +196,9 @@ public:
     }
 
     // 0x47CAA0 | ?FindFaceDots@phBoundBox@@CAXMPAH0@Z
-    static inline void FindFaceDots(float arg1, int32_t* arg2, int32_t* arg3)
+    static inline void FindFaceDots(f32 arg1, i32* arg2, i32* arg3)
     {
-        return stub<cdecl_t<void, float, int32_t*, int32_t*>>(0x47CAA0, arg1, arg2, arg3);
+        return stub<cdecl_t<void, f32, i32*, i32*>>(0x47CAA0, arg1, arg2, arg3);
     }
 
     // 0x47CB50 | ?RemoveFaceDotZero@phBoundBox@@CAXXZ
@@ -226,71 +226,71 @@ public:
     }
 
     // 0x47CD30 | ?UseThisImpact@phBoundBox@@CA_NABVVector3@@0MPBVMatrix34@@111@Z
-    static inline bool UseThisImpact(class Vector3 const& arg1, class Vector3 const& arg2, float arg3,
+    static inline bool UseThisImpact(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3,
         class Matrix34 const* arg4, class Matrix34 const* arg5, class Matrix34 const* arg6, class Matrix34 const* arg7)
     {
-        return stub<cdecl_t<bool, class Vector3 const&, class Vector3 const&, float, class Matrix34 const*,
+        return stub<cdecl_t<bool, class Vector3 const&, class Vector3 const&, f32, class Matrix34 const*,
             class Matrix34 const*, class Matrix34 const*, class Matrix34 const*>>(
             0x47CD30, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x47CE40 | ?BoxToBoxFaceImpactsOffset@phBoundBox@@CAXABVVector3@@00PAVphImpactBase@@H_NPBVMatrix34@@333PAVphColliderBase@@4@Z
     static inline void BoxToBoxFaceImpactsOffset(class Vector3 const& arg1, class Vector3 const& arg2,
-        class Vector3 const& arg3, class phImpactBase* arg4, int32_t arg5, bool arg6, class Matrix34 const* arg7,
+        class Vector3 const& arg3, class phImpactBase* arg4, i32 arg5, bool arg6, class Matrix34 const* arg7,
         class Matrix34 const* arg8, class Matrix34 const* arg9, class Matrix34 const* arg10,
         class phColliderBase* arg11, class phColliderBase* arg12)
     {
         return stub<cdecl_t<void, class Vector3 const&, class Vector3 const&, class Vector3 const&, class phImpactBase*,
-            int32_t, bool, class Matrix34 const*, class Matrix34 const*, class Matrix34 const*, class Matrix34 const*,
+            i32, bool, class Matrix34 const*, class Matrix34 const*, class Matrix34 const*, class Matrix34 const*,
             class phColliderBase*, class phColliderBase*>>(
             0x47CE40, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
     }
 
     // 0x47E4A0 | ?BoxToBoxFaceImpacts@phBoundBox@@IBEXABVVector3@@PAVphImpactBase@@H_NPBVMatrix34@@333PAVphColliderBase@@4@Z
-    inline void BoxToBoxFaceImpacts(class Vector3 const& arg1, class phImpactBase* arg2, int32_t arg3, bool arg4,
+    inline void BoxToBoxFaceImpacts(class Vector3 const& arg1, class phImpactBase* arg2, i32 arg3, bool arg4,
         class Matrix34 const* arg5, class Matrix34 const* arg6, class Matrix34 const* arg7, class Matrix34 const* arg8,
         class phColliderBase* arg9, class phColliderBase* arg10)
     {
-        return stub<member_func_t<void, phBoundBox, class Vector3 const&, class phImpactBase*, int32_t, bool,
+        return stub<member_func_t<void, phBoundBox, class Vector3 const&, class phImpactBase*, i32, bool,
             class Matrix34 const*, class Matrix34 const*, class Matrix34 const*, class Matrix34 const*,
             class phColliderBase*, class phColliderBase*>>(
             0x47E4A0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
     }
 
     // 0x4800A0 | ?TestProbeSlave@phBoundBox@@IBE_NAAVphSegment@@PAVphIntersectionPoint@@PAJM@Z
-    inline bool TestProbeSlave(class phSegment& arg1, class phIntersectionPoint* arg2, int32_t* arg3, float arg4)
+    inline bool TestProbeSlave(class phSegment& arg1, class phIntersectionPoint* arg2, i32* arg3, f32 arg4)
     {
-        return stub<member_func_t<bool, phBoundBox, class phSegment&, class phIntersectionPoint*, int32_t*, float>>(
+        return stub<member_func_t<bool, phBoundBox, class phSegment&, class phIntersectionPoint*, i32*, f32>>(
             0x4800A0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4805B0 | ?ProbeVsBox@phBoundBox@@SA_NABVVector3@@AAVphSegment@@PAVphIntersectionPoint@@PAJM@Z
     static inline bool ProbeVsBox(
-        class Vector3 const& arg1, class phSegment& arg2, class phIntersectionPoint* arg3, int32_t* arg4, float arg5)
+        class Vector3 const& arg1, class phSegment& arg2, class phIntersectionPoint* arg3, i32* arg4, f32 arg5)
     {
-        return stub<cdecl_t<bool, class Vector3 const&, class phSegment&, class phIntersectionPoint*, int32_t*, float>>(
+        return stub<cdecl_t<bool, class Vector3 const&, class phSegment&, class phIntersectionPoint*, i32*, f32>>(
             0x4805B0, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x5B1F00 | ?EdgeFromFace@phBoundBox@@2QAY03$$CBHA
-    static inline extern_var(0x5B1F00, int32_t const (*)[4], EdgeFromFace);
+    inline extern_var(0x5B1F00, int32_t const (*)[4], EdgeFromFace);
 
     // 0x6611B0 | ?EdgeNormals@phBoundBox@@2QBVVector3@@B
-    static inline extern_var(0x6611B0, class Vector3 const* const, EdgeNormals);
+    inline extern_var(0x6611B0, class Vector3 const* const, EdgeNormals);
 
     // 0x661288 | ?EdgeChecks@phBoundBox@@0PAY0M@DA
-    static inline extern_var(0x661288, char (*)[12], EdgeChecks);
+    inline extern_var(0x661288, char (*)[12], EdgeChecks);
 
     // 0x47A180 | ?GetMaterial@phBoundBox@@UBEPBVphMaterial@@H@Z
-    inline class phMaterial const* GetMaterial(int32_t arg1) override
+    inline class phMaterial const* GetMaterial(i32 arg1) override
     {
-        return stub<member_func_t<class phMaterial const*, phBoundBox, int32_t>>(0x47A180, this, arg1);
+        return stub<member_func_t<class phMaterial const*, phBoundBox, i32>>(0x47A180, this, arg1);
     }
 
     // 0x480060 | ?TestProbePoint@phBoundBox@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@M@Z
-    inline bool TestProbePoint(class phSegment& arg1, class phIntersectionPoint* arg2, float arg3) override
+    inline bool TestProbePoint(class phSegment& arg1, class phIntersectionPoint* arg2, f32 arg3) override
     {
-        return stub<member_func_t<bool, phBoundBox, class phSegment&, class phIntersectionPoint*, float>>(
+        return stub<member_func_t<bool, phBoundBox, class phSegment&, class phIntersectionPoint*, f32>>(
             0x480060, this, arg1, arg2, arg3);
     }
 
@@ -302,29 +302,28 @@ public:
     }
 
     // 0x47F9B0 | ?TestEdge@phBoundBox@@UBEHAAVphSegment@@PAVphIntersection@@H@Z
-    inline int32_t TestEdge(class phSegment& arg1, class phIntersection* arg2, int32_t arg3) override
+    inline i32 TestEdge(class phSegment& arg1, class phIntersection* arg2, i32 arg3) override
     {
-        return stub<member_func_t<int32_t, phBoundBox, class phSegment&, class phIntersection*, int32_t>>(
+        return stub<member_func_t<i32, phBoundBox, class phSegment&, class phIntersection*, i32>>(
             0x47F9B0, this, arg1, arg2, arg3);
     }
 
     // 0x480010 | ?TestProbe@phBoundBox@@UBE_NAAVphSegment@@PAVphIntersection@@M@Z
-    inline bool TestProbe(class phSegment& arg1, class phIntersection* arg2, float arg3) override
+    inline bool TestProbe(class phSegment& arg1, class phIntersection* arg2, f32 arg3) override
     {
-        return stub<member_func_t<bool, phBoundBox, class phSegment&, class phIntersection*, float>>(
+        return stub<member_func_t<bool, phBoundBox, class phSegment&, class phIntersection*, f32>>(
             0x480010, this, arg1, arg2, arg3);
     }
 
     // 0x46A610 | ?GetEdgeCosine@phBoundBox@@UBEMH@Z
-    inline float GetEdgeCosine(int32_t arg1) override
+    inline f32 GetEdgeCosine(i32 arg1) override
     {
-        return stub<member_func_t<float, phBoundBox, int32_t>>(0x46A610, this, arg1);
+        return stub<member_func_t<f32, phBoundBox, i32>>(0x46A610, this, arg1);
     }
 
     // 0x47A6B0 | ?GetEdgeNormal@phBoundBox@@UBEABVVector3@@HAAV2@@Z
-    inline class Vector3 const& GetEdgeNormal(int32_t arg1, class Vector3& arg2) override
+    inline class Vector3 const& GetEdgeNormal(i32 arg1, class Vector3& arg2) override
     {
-        return stub<member_func_t<class Vector3 const&, phBoundBox, int32_t, class Vector3&>>(
-            0x47A6B0, this, arg1, arg2);
+        return stub<member_func_t<class Vector3 const&, phBoundBox, i32, class Vector3&>>(0x47A6B0, this, arg1, arg2);
     }
 };

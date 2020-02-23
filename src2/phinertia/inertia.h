@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -89,9 +89,9 @@ class phInertialCS
 {
 public:
     // 0x475CB0 | ?InitArray@phInertialCS@@SAXQAV1@H@Z
-    static inline void InitArray(class phInertialCS* const arg1, int32_t arg2)
+    static inline void InitArray(class phInertialCS* const arg1, i32 arg2)
     {
-        return stub<cdecl_t<void, class phInertialCS* const, int32_t>>(0x475CB0, arg1, arg2);
+        return stub<cdecl_t<void, class phInertialCS* const, i32>>(0x475CB0, arg1, arg2);
     }
 
     // 0x475D40 | ??0phInertialCS@@QAE@XZ
@@ -125,86 +125,80 @@ public:
     }
 
     // 0x475FC0 | ?Init@phInertialCS@@QAEXMMMM@Z
-    inline void Init(float arg1, float arg2, float arg3, float arg4)
+    inline void Init(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
-        return stub<member_func_t<void, phInertialCS, float, float, float, float>>(
-            0x475FC0, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, phInertialCS, f32, f32, f32, f32>>(0x475FC0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x476080 | ?InitFromValues@phInertialCS@@QAEXMMABVVector3@@0@Z
-    inline void InitFromValues(float arg1, float arg2, class Vector3 const& arg3, class Vector3 const& arg4)
+    inline void InitFromValues(f32 arg1, f32 arg2, class Vector3 const& arg3, class Vector3 const& arg4)
     {
-        return stub<member_func_t<void, phInertialCS, float, float, class Vector3 const&, class Vector3 const&>>(
+        return stub<member_func_t<void, phInertialCS, f32, f32, class Vector3 const&, class Vector3 const&>>(
             0x476080, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4760D0 | ?InitBoxMass@phInertialCS@@QAEXMMMM@Z
-    inline void InitBoxMass(float arg1, float arg2, float arg3, float arg4)
+    inline void InitBoxMass(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
-        return stub<member_func_t<void, phInertialCS, float, float, float, float>>(
-            0x4760D0, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, phInertialCS, f32, f32, f32, f32>>(0x4760D0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x476140 | ?InitBoxDensity@phInertialCS@@QAEXMMMM@Z
-    inline void InitBoxDensity(float arg1, float arg2, float arg3, float arg4)
+    inline void InitBoxDensity(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
-        return stub<member_func_t<void, phInertialCS, float, float, float, float>>(
-            0x476140, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, phInertialCS, f32, f32, f32, f32>>(0x476140, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x476170 | ?InitSphereMass@phInertialCS@@QAEXMM@Z
-    inline void InitSphereMass(float arg1, float arg2)
+    inline void InitSphereMass(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, phInertialCS, float, float>>(0x476170, this, arg1, arg2);
+        return stub<member_func_t<void, phInertialCS, f32, f32>>(0x476170, this, arg1, arg2);
     }
 
     // 0x4761A0 | ?InitSphereDensity@phInertialCS@@QAEXMM@Z
-    inline void InitSphereDensity(float arg1, float arg2)
+    inline void InitSphereDensity(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, phInertialCS, float, float>>(0x4761A0, this, arg1, arg2);
+        return stub<member_func_t<void, phInertialCS, f32, f32>>(0x4761A0, this, arg1, arg2);
     }
 
     // 0x4761D0 | ?InitCylinderMass@phInertialCS@@QAEXMMMD@Z
-    inline void InitCylinderMass(float arg1, float arg2, float arg3, char arg4)
+    inline void InitCylinderMass(f32 arg1, f32 arg2, f32 arg3, char arg4)
     {
-        return stub<member_func_t<void, phInertialCS, float, float, float, char>>(
-            0x4761D0, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, phInertialCS, f32, f32, f32, char>>(0x4761D0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x476260 | ?InitCylinderDensity@phInertialCS@@QAEXMMMD@Z
-    inline void InitCylinderDensity(float arg1, float arg2, float arg3, char arg4)
+    inline void InitCylinderDensity(f32 arg1, f32 arg2, f32 arg3, char arg4)
     {
-        return stub<member_func_t<void, phInertialCS, float, float, float, char>>(
-            0x476260, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, phInertialCS, f32, f32, f32, char>>(0x476260, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x476290 | ?InitHotdogMass@phInertialCS@@QAEXMMMD@Z
-    inline void InitHotdogMass(float arg1, float arg2, float arg3, char arg4)
+    inline void InitHotdogMass(f32 arg1, f32 arg2, f32 arg3, char arg4)
     {
-        return stub<member_func_t<void, phInertialCS, float, float, float, char>>(
-            0x476290, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, phInertialCS, f32, f32, f32, char>>(0x476290, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x476400 | ?InitHotdogDensity@phInertialCS@@QAEXMMMD@Z
-    inline void InitHotdogDensity(float arg1, float arg2, float arg3, char arg4)
+    inline void InitHotdogDensity(f32 arg1, f32 arg2, f32 arg3, char arg4)
     {
-        return stub<member_func_t<void, phInertialCS, float, float, float, char>>(
-            0x476400, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, phInertialCS, f32, f32, f32, char>>(0x476400, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x476440 | ?InitFromGeometry@phInertialCS@@QAEXMPBVVector3@@PBVphPolygon@@HPAVMatrix34@@@Z
     inline void InitFromGeometry(
-        float arg1, class Vector3 const* arg2, class phPolygon const* arg3, int32_t arg4, class Matrix34* arg5)
+        f32 arg1, class Vector3 const* arg2, class phPolygon const* arg3, i32 arg4, class Matrix34* arg5)
     {
-        return stub<member_func_t<void, phInertialCS, float, class Vector3 const*, class phPolygon const*, int32_t,
-            class Matrix34*>>(0x476440, this, arg1, arg2, arg3, arg4, arg5);
+        return stub<
+            member_func_t<void, phInertialCS, f32, class Vector3 const*, class phPolygon const*, i32, class Matrix34*>>(
+            0x476440, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x476780 | ?TetrahedronAngInertia@phInertialCS@@QAEXPAVVector3@@PAM11111@Z
     inline void TetrahedronAngInertia(
-        class Vector3* arg1, float* arg2, float* arg3, float* arg4, float* arg5, float* arg6, float* arg7)
+        class Vector3* arg1, f32* arg2, f32* arg3, f32* arg4, f32* arg5, f32* arg6, f32* arg7)
     {
-        return stub<member_func_t<void, phInertialCS, class Vector3*, float*, float*, float*, float*, float*, float*>>(
+        return stub<member_func_t<void, phInertialCS, class Vector3*, f32*, f32*, f32*, f32*, f32*, f32*>>(
             0x476780, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
@@ -215,15 +209,15 @@ public:
     }
 
     // 0x476A80 | ?GetForce@phInertialCS@@QAEXMPAVVector3@@@Z
-    inline void GetForce(float arg1, class Vector3* arg2)
+    inline void GetForce(f32 arg1, class Vector3* arg2)
     {
-        return stub<member_func_t<void, phInertialCS, float, class Vector3*>>(0x476A80, this, arg1, arg2);
+        return stub<member_func_t<void, phInertialCS, f32, class Vector3*>>(0x476A80, this, arg1, arg2);
     }
 
     // 0x476AD0 | ?GetTorque@phInertialCS@@QAEXMPAVVector3@@@Z
-    inline void GetTorque(float arg1, class Vector3* arg2)
+    inline void GetTorque(f32 arg1, class Vector3* arg2)
     {
-        return stub<member_func_t<void, phInertialCS, float, class Vector3*>>(0x476AD0, this, arg1, arg2);
+        return stub<member_func_t<void, phInertialCS, f32, class Vector3*>>(0x476AD0, this, arg1, arg2);
     }
 
     // 0x476B20 | ?ClearInertialValues@phInertialCS@@QAEXXZ
@@ -233,59 +227,59 @@ public:
     }
 
     // 0x476B40 | ?AddInertia@phInertialCS@@QAE?AVMatrix34@@MABVVector3@@0@Z
-    inline class Matrix34 AddInertia(float arg1, class Vector3 const& arg2, class Vector3 const& arg3)
+    inline class Matrix34 AddInertia(f32 arg1, class Vector3 const& arg2, class Vector3 const& arg3)
     {
-        return stub<member_func_t<class Matrix34, phInertialCS, float, class Vector3 const&, class Vector3 const&>>(
+        return stub<member_func_t<class Matrix34, phInertialCS, f32, class Vector3 const&, class Vector3 const&>>(
             0x476B40, this, arg1, arg2, arg3);
     }
 
     // 0x476DD0 | ?AddInertia@phInertialCS@@QAE?AVMatrix34@@MABVVector3@@ABV2@@Z
-    inline class Matrix34 AddInertia(float arg1, class Vector3 const& arg2, class Matrix34 const& arg3)
+    inline class Matrix34 AddInertia(f32 arg1, class Vector3 const& arg2, class Matrix34 const& arg3)
     {
-        return stub<member_func_t<class Matrix34, phInertialCS, float, class Vector3 const&, class Matrix34 const&>>(
+        return stub<member_func_t<class Matrix34, phInertialCS, f32, class Vector3 const&, class Matrix34 const&>>(
             0x476DD0, this, arg1, arg2, arg3);
     }
 
     // 0x4770C0 | ?SubtractInertia@phInertialCS@@QAE?AVMatrix34@@MABVVector3@@0@Z
-    inline class Matrix34 SubtractInertia(float arg1, class Vector3 const& arg2, class Vector3 const& arg3)
+    inline class Matrix34 SubtractInertia(f32 arg1, class Vector3 const& arg2, class Vector3 const& arg3)
     {
-        return stub<member_func_t<class Matrix34, phInertialCS, float, class Vector3 const&, class Vector3 const&>>(
+        return stub<member_func_t<class Matrix34, phInertialCS, f32, class Vector3 const&, class Vector3 const&>>(
             0x4770C0, this, arg1, arg2, arg3);
     }
 
     // 0x477120 | ?SubtractInertia@phInertialCS@@QAE?AVMatrix34@@MABVVector3@@ABV2@@Z
-    inline class Matrix34 SubtractInertia(float arg1, class Vector3 const& arg2, class Matrix34 const& arg3)
+    inline class Matrix34 SubtractInertia(f32 arg1, class Vector3 const& arg2, class Matrix34 const& arg3)
     {
-        return stub<member_func_t<class Matrix34, phInertialCS, float, class Vector3 const&, class Matrix34 const&>>(
+        return stub<member_func_t<class Matrix34, phInertialCS, f32, class Vector3 const&, class Matrix34 const&>>(
             0x477120, this, arg1, arg2, arg3);
     }
 
     // 0x477180 | ?SubtractInertia@phInertialCS@@QAE?AVMatrix34@@MABVVector3@@0PAV1@@Z
     inline class Matrix34 SubtractInertia(
-        float arg1, class Vector3 const& arg2, class Vector3 const& arg3, class phInertialCS* arg4)
+        f32 arg1, class Vector3 const& arg2, class Vector3 const& arg3, class phInertialCS* arg4)
     {
-        return stub<member_func_t<class Matrix34, phInertialCS, float, class Vector3 const&, class Vector3 const&,
+        return stub<member_func_t<class Matrix34, phInertialCS, f32, class Vector3 const&, class Vector3 const&,
             class phInertialCS*>>(0x477180, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4772B0 | ?SubtractInertia@phInertialCS@@QAE?AVMatrix34@@MABVVector3@@ABV2@PAV1@@Z
     inline class Matrix34 SubtractInertia(
-        float arg1, class Vector3 const& arg2, class Matrix34 const& arg3, class phInertialCS* arg4)
+        f32 arg1, class Vector3 const& arg2, class Matrix34 const& arg3, class phInertialCS* arg4)
     {
-        return stub<member_func_t<class Matrix34, phInertialCS, float, class Vector3 const&, class Matrix34 const&,
+        return stub<member_func_t<class Matrix34, phInertialCS, f32, class Vector3 const&, class Matrix34 const&,
             class phInertialCS*>>(0x4772B0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4773E0 | ?FindPrincipalAxes@phInertialCS@@QAE?AVMatrix34@@MMM@Z
-    inline class Matrix34 FindPrincipalAxes(float arg1, float arg2, float arg3)
+    inline class Matrix34 FindPrincipalAxes(f32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<class Matrix34, phInertialCS, float, float, float>>(0x4773E0, this, arg1, arg2, arg3);
+        return stub<member_func_t<class Matrix34, phInertialCS, f32, f32, f32>>(0x4773E0, this, arg1, arg2, arg3);
     }
 
     // 0x477D60 | ?PrincipalAxis@phInertialCS@@QAE?AVVector3@@MMMM@Z
-    inline class Vector3 PrincipalAxis(float arg1, float arg2, float arg3, float arg4)
+    inline class Vector3 PrincipalAxis(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
-        return stub<member_func_t<class Vector3, phInertialCS, float, float, float, float>>(
+        return stub<member_func_t<class Vector3, phInertialCS, f32, f32, f32, f32>>(
             0x477D60, this, arg1, arg2, arg3, arg4);
     }
 
@@ -296,9 +290,9 @@ public:
     }
 
     // 0x477F40 | ?UpdateOversample@phInertialCS@@QAEXM@Z
-    inline void UpdateOversample(float arg1)
+    inline void UpdateOversample(f32 arg1)
     {
-        return stub<member_func_t<void, phInertialCS, float>>(0x477F40, this, arg1);
+        return stub<member_func_t<void, phInertialCS, f32>>(0x477F40, this, arg1);
     }
 
     // 0x478040 | ?UpdateOversampleDone@phInertialCS@@QAEXXZ
@@ -308,9 +302,9 @@ public:
     }
 
     // 0x478060 | ?Update@phInertialCS@@AAEXM@Z
-    inline void Update(float arg1)
+    inline void Update(f32 arg1)
     {
-        return stub<member_func_t<void, phInertialCS, float>>(0x478060, this, arg1);
+        return stub<member_func_t<void, phInertialCS, f32>>(0x478060, this, arg1);
     }
 
     // 0x478680 | ?MoveICS@phInertialCS@@QAEXXZ

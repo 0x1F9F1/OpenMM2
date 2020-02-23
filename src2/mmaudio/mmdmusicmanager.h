@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -57,9 +57,9 @@ public:
     }
 
     // 0x519F60 | ?Init@MMDMusicManager@@QAEXHK@Z
-    inline void Init(int32_t arg1, uint32_t arg2)
+    inline void Init(i32 arg1, u32 arg2)
     {
-        return stub<member_func_t<void, MMDMusicManager, int32_t, uint32_t>>(0x519F60, this, arg1, arg2);
+        return stub<member_func_t<void, MMDMusicManager, i32, u32>>(0x519F60, this, arg1, arg2);
     }
 
     // 0x519FE0 | ?Update@MMDMusicManager@@QAEXXZ
@@ -81,9 +81,9 @@ public:
     }
 
     // 0x51A070 | ?UpdateMusic@MMDMusicManager@@QAEXMH_N@Z
-    inline void UpdateMusic(float arg1, int32_t arg2, bool arg3)
+    inline void UpdateMusic(f32 arg1, i32 arg2, bool arg3)
     {
-        return stub<member_func_t<void, MMDMusicManager, float, int32_t, bool>>(0x51A070, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, MMDMusicManager, f32, i32, bool>>(0x51A070, this, arg1, arg2, arg3);
     }
 
     // 0x51A0F0 | ?UpdateSpeedEvents@MMDMusicManager@@QAEXXZ
@@ -93,22 +93,21 @@ public:
     }
 
     // 0x51A170 | ?CreateSpeedRanges@MMDMusicManager@@QAEXH@Z
-    inline void CreateSpeedRanges(int32_t arg1)
+    inline void CreateSpeedRanges(i32 arg1)
     {
-        return stub<member_func_t<void, MMDMusicManager, int32_t>>(0x51A170, this, arg1);
+        return stub<member_func_t<void, MMDMusicManager, i32>>(0x51A170, this, arg1);
     }
 
     // 0x51A1A0 | ?SetSpeedEventRange@MMDMusicManager@@QAEXMMEH@Z
-    inline void SetSpeedEventRange(float arg1, float arg2, uint8_t arg3, int32_t arg4)
+    inline void SetSpeedEventRange(f32 arg1, f32 arg2, u8 arg3, i32 arg4)
     {
-        return stub<member_func_t<void, MMDMusicManager, float, float, uint8_t, int32_t>>(
-            0x51A1A0, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, MMDMusicManager, f32, f32, u8, i32>>(0x51A1A0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x51A1D0 | ?MatchMusicToPlayerSpeed@MMDMusicManager@@QAEXM@Z
-    inline void MatchMusicToPlayerSpeed(float arg1)
+    inline void MatchMusicToPlayerSpeed(f32 arg1)
     {
-        return stub<member_func_t<void, MMDMusicManager, float>>(0x51A1D0, this, arg1);
+        return stub<member_func_t<void, MMDMusicManager, f32>>(0x51A1D0, this, arg1);
     }
 
     // 0x51A2C0 | ?Reset@MMDMusicManager@@QAEXXZ
@@ -118,9 +117,9 @@ public:
     }
 
     // 0x51A2D0 | ?EchoOn@MMDMusicManager@@QAEXMM@Z
-    inline void EchoOn(float arg1, float arg2)
+    inline void EchoOn(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, MMDMusicManager, float, float>>(0x51A2D0, this, arg1, arg2);
+        return stub<member_func_t<void, MMDMusicManager, f32, f32>>(0x51A2D0, this, arg1, arg2);
     }
 
     // 0x51A3A0 | ?EchoOff@MMDMusicManager@@QAEXXZ

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -53,9 +53,9 @@ public:
     }
 
     // 0x484490 | ??0phBoundSphere@@QAE@M@Z
-    inline phBoundSphere(float arg1)
+    inline phBoundSphere(f32 arg1)
     {
-        stub<member_func_t<void, phBoundSphere, float>>(0x484490, this, arg1);
+        stub<member_func_t<void, phBoundSphere, f32>>(0x484490, this, arg1);
     }
 
     // 0x484500 | ??1phBoundSphere@@QAE@XZ
@@ -65,15 +65,15 @@ public:
     }
 
     // 0x484510 | ?SetRadius@phBoundSphere@@QAEXM@Z
-    inline void SetRadius(float arg1)
+    inline void SetRadius(f32 arg1)
     {
-        return stub<member_func_t<void, phBoundSphere, float>>(0x484510, this, arg1);
+        return stub<member_func_t<void, phBoundSphere, f32>>(0x484510, this, arg1);
     }
 
     // 0x484550 | ?ScaleRadius@phBoundSphere@@QAEXM@Z
-    inline void ScaleRadius(float arg1)
+    inline void ScaleRadius(f32 arg1)
     {
-        return stub<member_func_t<void, phBoundSphere, float>>(0x484550, this, arg1);
+        return stub<member_func_t<void, phBoundSphere, f32>>(0x484550, this, arg1);
     }
 
     // 0x484590 | ?CreateOffset@phBoundSphere@@QAEXABVVector3@@@Z
@@ -106,15 +106,15 @@ public:
     }
 
     // 0x4855D0 | ?GetMaterial@phBoundSphere@@UBEPBVphMaterial@@H@Z
-    inline class phMaterial const* GetMaterial(int32_t arg1) override
+    inline class phMaterial const* GetMaterial(i32 arg1) override
     {
-        return stub<member_func_t<class phMaterial const*, phBoundSphere, int32_t>>(0x4855D0, this, arg1);
+        return stub<member_func_t<class phMaterial const*, phBoundSphere, i32>>(0x4855D0, this, arg1);
     }
 
     // 0x484BC0 | ?TestProbePoint@phBoundSphere@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@M@Z
-    inline bool TestProbePoint(class phSegment& arg1, class phIntersectionPoint* arg2, float arg3) override
+    inline bool TestProbePoint(class phSegment& arg1, class phIntersectionPoint* arg2, f32 arg3) override
     {
-        return stub<member_func_t<bool, phBoundSphere, class phSegment&, class phIntersectionPoint*, float>>(
+        return stub<member_func_t<bool, phBoundSphere, class phSegment&, class phIntersectionPoint*, f32>>(
             0x484BC0, this, arg1, arg2, arg3);
     }
 
@@ -126,32 +126,32 @@ public:
     }
 
     // 0x484F10 | ?TestEdge@phBoundSphere@@UBEHAAVphSegment@@PAVphIntersection@@H@Z
-    inline int32_t TestEdge(class phSegment& arg1, class phIntersection* arg2, int32_t arg3) override
+    inline i32 TestEdge(class phSegment& arg1, class phIntersection* arg2, i32 arg3) override
     {
-        return stub<member_func_t<int32_t, phBoundSphere, class phSegment&, class phIntersection*, int32_t>>(
+        return stub<member_func_t<i32, phBoundSphere, class phSegment&, class phIntersection*, i32>>(
             0x484F10, this, arg1, arg2, arg3);
     }
 
     // 0x485210 | ?TestProbe@phBoundSphere@@UBE_NAAVphSegment@@PAVphIntersection@@M@Z
-    inline bool TestProbe(class phSegment& arg1, class phIntersection* arg2, float arg3) override
+    inline bool TestProbe(class phSegment& arg1, class phIntersection* arg2, f32 arg3) override
     {
-        return stub<member_func_t<bool, phBoundSphere, class phSegment&, class phIntersection*, float>>(
+        return stub<member_func_t<bool, phBoundSphere, class phSegment&, class phIntersection*, f32>>(
             0x485210, this, arg1, arg2, arg3);
     }
 
     // 0x4854B0 | ?TestSphere@phBoundSphere@@UBE_NABVVector3@@MAAVphImpactBase@@@Z
-    inline bool TestSphere(class Vector3 const& arg1, float arg2, class phImpactBase& arg3) override
+    inline bool TestSphere(class Vector3 const& arg1, f32 arg2, class phImpactBase& arg3) override
     {
-        return stub<member_func_t<bool, phBoundSphere, class Vector3 const&, float, class phImpactBase&>>(
+        return stub<member_func_t<bool, phBoundSphere, class Vector3 const&, f32, class phImpactBase&>>(
             0x4854B0, this, arg1, arg2, arg3);
     }
 
     // 0x4853E0 | ?TestSphere@phBoundSphere@@UBE_NABVVector3@@MAAV2@1AAM@Z
     inline bool TestSphere(
-        class Vector3 const& arg1, float arg2, class Vector3& arg3, class Vector3& arg4, float& arg5) override
+        class Vector3 const& arg1, f32 arg2, class Vector3& arg3, class Vector3& arg4, f32& arg5) override
     {
         return stub<
-            member_func_t<bool, phBoundSphere, class Vector3 const&, float, class Vector3&, class Vector3&, float&>>(
+            member_func_t<bool, phBoundSphere, class Vector3 const&, f32, class Vector3&, class Vector3&, f32&>>(
             0x4853E0, this, arg1, arg2, arg3, arg4, arg5);
     }
 };

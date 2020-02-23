@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -63,32 +63,32 @@ public:
     }
 
     // 0x518F20 | ?Open@CMemStream@@QAEJPAE_J@Z
-    inline int32_t Open(uint8_t* arg1, int64_t arg2)
+    inline i32 Open(u8* arg1, i64 arg2)
     {
-        return stub<member_func_t<int32_t, CMemStream, uint8_t*, int64_t>>(0x518F20, this, arg1, arg2);
+        return stub<member_func_t<i32, CMemStream, u8*, i64>>(0x518F20, this, arg1, arg2);
     }
 
     // 0x518F80 | ?Close@CMemStream@@QAEJXZ
-    inline int32_t Close()
+    inline i32 Close()
     {
-        return stub<member_func_t<int32_t, CMemStream>>(0x518F80, this);
+        return stub<member_func_t<i32, CMemStream>>(0x518F80, this);
     }
 
     // 0x519260 | ?QueryInterface@CMemStream@@W3AGJABU_GUID@@PAPAX@Z
-    inline int32_t __stdcall QueryInterface(struct _GUID const& arg1, void** arg2)
+    inline i32 __stdcall QueryInterface(struct _GUID const& arg1, void** arg2)
     {
-        return stub<member_func_t<int32_t, CMemStream, struct _GUID const&, void**>>(0x519260, this, arg1, arg2);
+        return stub<member_func_t<i32, CMemStream, struct _GUID const&, void**>>(0x519260, this, arg1, arg2);
     }
 
     // 0x519270 | ?AddRef@CMemStream@@W3AGKXZ
-    inline uint32_t __stdcall AddRef()
+    inline u32 __stdcall AddRef()
     {
-        return stub<member_func_t<uint32_t, CMemStream>>(0x519270, this);
+        return stub<member_func_t<u32, CMemStream>>(0x519270, this);
     }
 
     // 0x519280 | ?Release@CMemStream@@W3AGKXZ
-    inline uint32_t __stdcall Release()
+    inline u32 __stdcall Release()
     {
-        return stub<member_func_t<uint32_t, CMemStream>>(0x519280, this);
+        return stub<member_func_t<u32, CMemStream>>(0x519280, this);
     }
 };

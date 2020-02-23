@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -68,15 +68,15 @@ public:
     }
 
     // 0x551380 | ?Init@aiVehicleAmbient@@QAEXPADH@Z
-    inline void Init(char* arg1, int32_t arg2)
+    inline void Init(char* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, aiVehicleAmbient, char*, int32_t>>(0x551380, this, arg1, arg2);
+        return stub<member_func_t<void, aiVehicleAmbient, char*, i32>>(0x551380, this, arg1, arg2);
     }
 
     // 0x551A70 | ?DrawBBox@aiVehicleAmbient@@QAEXF@Z
-    inline void DrawBBox(int16_t arg1)
+    inline void DrawBBox(i16 arg1)
     {
-        return stub<member_func_t<void, aiVehicleAmbient, int16_t>>(0x551A70, this, arg1);
+        return stub<member_func_t<void, aiVehicleAmbient, i16>>(0x551A70, this, arg1);
     }
 
     // 0x551A80 | ?Dump@aiVehicleAmbient@@QAEXXZ
@@ -98,9 +98,9 @@ public:
     }
 
     // 0x551CC0 | ?Type@aiVehicleAmbient@@UAEHXZ
-    inline int32_t Type() override
+    inline i32 Type() override
     {
-        return stub<member_func_t<int32_t, aiVehicleAmbient>>(0x551CC0, this);
+        return stub<member_func_t<i32, aiVehicleAmbient>>(0x551CC0, this);
     }
 
     // 0x551A60 | ?DrawId@aiVehicleAmbient@@UAEXXZ
@@ -116,8 +116,8 @@ public:
     }
 
     // 0x5519C0 | ?Impact@aiVehicleAmbient@@UAEXH@Z
-    inline void Impact(int32_t arg1) override
+    inline void Impact(i32 arg1) override
     {
-        return stub<member_func_t<void, aiVehicleAmbient, int32_t>>(0x5519C0, this, arg1);
+        return stub<member_func_t<void, aiVehicleAmbient, i32>>(0x5519C0, this, arg1);
     }
 };

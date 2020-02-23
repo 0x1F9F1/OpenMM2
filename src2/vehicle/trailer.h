@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -66,9 +66,7 @@
     public: static int vehTrailer::sm_MaxSamples | ?sm_MaxSamples@vehTrailer@@2HA
 */
 
-struct vehTrailer
-    : dgPhysEntity
-    , Base
+struct vehTrailer : dgPhysEntity
 {
 public:
     // 0x4D6F40 | ??0vehTrailer@@QAE@XZ
@@ -78,16 +76,16 @@ public:
     }
 
     // 0x4D72F0 | ?Init@vehTrailer@@QAEXPBDABVVector3@@PAVvehCarSim@@H@Z
-    inline void Init(char const* arg1, class Vector3 const& arg2, class vehCarSim* arg3, int32_t arg4)
+    inline void Init(char const* arg1, class Vector3 const& arg2, class vehCarSim* arg3, i32 arg4)
     {
-        return stub<member_func_t<void, vehTrailer, char const*, class Vector3 const&, class vehCarSim*, int32_t>>(
+        return stub<member_func_t<void, vehTrailer, char const*, class Vector3 const&, class vehCarSim*, i32>>(
             0x4D72F0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4D7980 | ?BottomedOut@vehTrailer@@QAEHXZ
-    inline int32_t BottomedOut()
+    inline i32 BottomedOut()
     {
-        return stub<member_func_t<int32_t, vehTrailer>>(0x4D7980, this);
+        return stub<member_func_t<i32, vehTrailer>>(0x4D7980, this);
     }
 
     // 0x4D7C50 | ?SetCarHitchOffset@vehTrailer@@QAEXXZ
@@ -118,9 +116,9 @@ public:
     // vehTrailerInstance::`vftable' @ 0x5B2F84
 
     // 0x4D7DF0 | ?Init@vehTrailerInstance@@QAEXPBDABVVector3@@H@Z
-    inline void Init(char const* arg1, class Vector3 const& arg2, int32_t arg3)
+    inline void Init(char const* arg1, class Vector3 const& arg2, i32 arg3)
     {
-        return stub<member_func_t<void, vehTrailerInstance, char const*, class Vector3 const&, int32_t>>(
+        return stub<member_func_t<void, vehTrailerInstance, char const*, class Vector3 const&, i32>>(
             0x4D7DF0, this, arg1, arg2, arg3);
     }
 
@@ -167,9 +165,9 @@ public:
     }
 
     // 0x4D7F20 | ?Draw@vehTrailerInstance@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
+    inline void Draw(i32 arg1) override
     {
-        return stub<member_func_t<void, vehTrailerInstance, int32_t>>(0x4D7F20, this, arg1);
+        return stub<member_func_t<void, vehTrailerInstance, i32>>(0x4D7F20, this, arg1);
     }
 
     // 0x4D81F0 | ?DrawShadow@vehTrailerInstance@@UAEXXZ
@@ -185,8 +183,8 @@ public:
     }
 
     // 0x4D7850 | ?SizeOf@vehTrailerInstance@@UAEIXZ
-    inline uint32_t SizeOf() override
+    inline u32 SizeOf() override
     {
-        return stub<member_func_t<uint32_t, vehTrailerInstance>>(0x4D7850, this);
+        return stub<member_func_t<u32, vehTrailerInstance>>(0x4D7850, this);
     }
 };

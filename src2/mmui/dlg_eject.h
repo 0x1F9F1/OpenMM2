@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -45,9 +45,9 @@ public:
     // Dialog_Eject::`vftable' @ 0x5B3DF8
 
     // 0x4F9340 | ??0Dialog_Eject@@QAE@HMMMMPAD@Z
-    inline Dialog_Eject(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
+    inline Dialog_Eject(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
     {
-        stub<member_func_t<void, Dialog_Eject, int32_t, float, float, float, float, char*>>(
+        stub<member_func_t<void, Dialog_Eject, i32, f32, f32, f32, f32, char*>>(
             0x4F9340, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
@@ -58,22 +58,21 @@ public:
     }
 
     // 0x4F9610 | ?AddName@Dialog_Eject@@QAEXPBDKH@Z
-    inline void AddName(char const* arg1, uint32_t arg2, int32_t arg3)
+    inline void AddName(char const* arg1, u32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, Dialog_Eject, char const*, uint32_t, int32_t>>(
-            0x4F9610, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, Dialog_Eject, char const*, u32, i32>>(0x4F9610, this, arg1, arg2, arg3);
     }
 
     // 0x4F96B0 | ?RemoveName@Dialog_Eject@@QAEXPBDK@Z
-    inline void RemoveName(char const* arg1, uint32_t arg2)
+    inline void RemoveName(char const* arg1, u32 arg2)
     {
-        return stub<member_func_t<void, Dialog_Eject, char const*, uint32_t>>(0x4F96B0, this, arg1, arg2);
+        return stub<member_func_t<void, Dialog_Eject, char const*, u32>>(0x4F96B0, this, arg1, arg2);
     }
 
     // 0x4F9800 | ?RemoveName@Dialog_Eject@@QAEXK@Z
-    inline void RemoveName(uint32_t arg1)
+    inline void RemoveName(u32 arg1)
     {
-        return stub<member_func_t<void, Dialog_Eject, uint32_t>>(0x4F9800, this, arg1);
+        return stub<member_func_t<void, Dialog_Eject, u32>>(0x4F9800, this, arg1);
     }
 
     // 0x4F9940 | ?ClearNames@Dialog_Eject@@QAEXXZ
@@ -95,15 +94,15 @@ public:
     }
 
     // 0x4F9A10 | ?FindRosterName@Dialog_Eject@@QAEHPBD@Z
-    inline int32_t FindRosterName(char const* arg1)
+    inline i32 FindRosterName(char const* arg1)
     {
-        return stub<member_func_t<int32_t, Dialog_Eject, char const*>>(0x4F9A10, this, arg1);
+        return stub<member_func_t<i32, Dialog_Eject, char const*>>(0x4F9A10, this, arg1);
     }
 
     // 0x4F9A80 | ?FindRosterName@Dialog_Eject@@QAEHK@Z
-    inline int32_t FindRosterName(uint32_t arg1)
+    inline i32 FindRosterName(u32 arg1)
     {
-        return stub<member_func_t<int32_t, Dialog_Eject, uint32_t>>(0x4F9A80, this, arg1);
+        return stub<member_func_t<i32, Dialog_Eject, u32>>(0x4F9A80, this, arg1);
     }
 
     // 0x4F9520 | ??1Dialog_Eject@@UAE@XZ

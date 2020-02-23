@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -52,9 +52,9 @@ public:
     }
 
     // 0x42EB40 | ?Scale@Vector3@@QAEXM@Z
-    inline void Scale(float arg1)
+    inline void Scale(f32 arg1)
     {
-        return stub<member_func_t<void, Vector3, float>>(0x42EB40, this, arg1);
+        return stub<member_func_t<void, Vector3, f32>>(0x42EB40, this, arg1);
     }
 
     // 0x43BBB0 | ?Dot@Vector3@@QAEXABV1@ABVMatrix34@@@Z
@@ -65,15 +65,15 @@ public:
     }
 
     // 0x45CE40 | ?Scale@Vector3@@QAEXABV1@M@Z
-    inline void Scale(class Vector3 const& arg1, float arg2)
+    inline void Scale(class Vector3 const& arg1, f32 arg2)
     {
-        return stub<member_func_t<void, Vector3, class Vector3 const&, float>>(0x45CE40, this, arg1, arg2);
+        return stub<member_func_t<void, Vector3, class Vector3 const&, f32>>(0x45CE40, this, arg1, arg2);
     }
 
     // 0x43DD30 | ??0Vector3@@QAE@MMM@Z
-    inline Vector3(float arg1, float arg2, float arg3)
+    inline Vector3(f32 arg1, f32 arg2, f32 arg3)
     {
-        stub<member_func_t<void, Vector3, float, float, float>>(0x43DD30, this, arg1, arg2, arg3);
+        stub<member_func_t<void, Vector3, f32, f32, f32>>(0x43DD30, this, arg1, arg2, arg3);
     }
 
     // 0x480AA0 | ?Set@Vector3@@QAEXABV1@@Z
@@ -96,9 +96,9 @@ public:
     }
 
     // 0x45CCB0 | ?Set@Vector3@@QAEXMMM@Z
-    inline void Set(float arg1, float arg2, float arg3)
+    inline void Set(f32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, Vector3, float, float, float>>(0x45CCB0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, Vector3, f32, f32, f32>>(0x45CCB0, this, arg1, arg2, arg3);
     }
 
     // 0x45CD30 | ?Subtract@Vector3@@QAEXABV1@@Z
@@ -114,9 +114,9 @@ public:
     }
 
     // 0x45CDC0 | ?InvMag@Vector3@@QBEMXZ
-    inline float InvMag()
+    inline f32 InvMag()
     {
-        return stub<member_func_t<float, Vector3>>(0x45CDC0, this);
+        return stub<member_func_t<f32, Vector3>>(0x45CDC0, this);
     }
 
     // 0x45CE80 | ?Cross@Vector3@@QAEXABV1@@Z
@@ -126,27 +126,27 @@ public:
     }
 
     // 0x45CEC0 | ?Dist@Vector3@@QBEMABV1@@Z
-    inline float Dist(class Vector3 const& arg1)
+    inline f32 Dist(class Vector3 const& arg1)
     {
-        return stub<member_func_t<float, Vector3, class Vector3 const&>>(0x45CEC0, this, arg1);
+        return stub<member_func_t<f32, Vector3, class Vector3 const&>>(0x45CEC0, this, arg1);
     }
 
     // 0x45CF00 | ?FlatDist@Vector3@@QBEMABV1@@Z
-    inline float FlatDist(class Vector3 const& arg1)
+    inline f32 FlatDist(class Vector3 const& arg1)
     {
-        return stub<member_func_t<float, Vector3, class Vector3 const&>>(0x45CF00, this, arg1);
+        return stub<member_func_t<f32, Vector3, class Vector3 const&>>(0x45CF00, this, arg1);
     }
 
     // 0x466470 | ?Dot@Vector3@@QBEMABV1@@Z
-    inline float Dot(class Vector3 const& arg1)
+    inline f32 Dot(class Vector3 const& arg1)
     {
-        return stub<member_func_t<float, Vector3, class Vector3 const&>>(0x466470, this, arg1);
+        return stub<member_func_t<f32, Vector3, class Vector3 const&>>(0x466470, this, arg1);
     }
 
     // 0x466490 | ?Mag@Vector3@@QBEMXZ
-    inline float Mag()
+    inline f32 Mag()
     {
-        return stub<member_func_t<float, Vector3>>(0x466490, this);
+        return stub<member_func_t<f32, Vector3>>(0x466490, this);
     }
 
     // 0x45CCD0 | ??YVector3@@QAEXABV0@@Z
@@ -156,9 +156,9 @@ public:
     }
 
     // 0x46C990 | ?Mag2@Vector3@@QBEMXZ
-    inline float Mag2()
+    inline f32 Mag2()
     {
-        return stub<member_func_t<float, Vector3>>(0x46C990, this);
+        return stub<member_func_t<f32, Vector3>>(0x46C990, this);
     }
 
     // 0x45CD00 | ??ZVector3@@QAEXABV0@@Z
@@ -168,9 +168,9 @@ public:
     }
 
     // 0x474000 | ?SubtractScaled@Vector3@@QAEXABV1@M@Z
-    inline void SubtractScaled(class Vector3 const& arg1, float arg2)
+    inline void SubtractScaled(class Vector3 const& arg1, f32 arg2)
     {
-        return stub<member_func_t<void, Vector3, class Vector3 const&, float>>(0x474000, this, arg1, arg2);
+        return stub<member_func_t<void, Vector3, class Vector3 const&, f32>>(0x474000, this, arg1, arg2);
     }
 
     // 0x479560 | ?Dot3x3@Vector3@@QAEXABVMatrix34@@@Z
@@ -192,9 +192,9 @@ public:
     }
 
     // 0x484420 | ?AddScaled@Vector3@@QAEXABV1@0M@Z
-    inline void AddScaled(class Vector3 const& arg1, class Vector3 const& arg2, float arg3)
+    inline void AddScaled(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3)
     {
-        return stub<member_func_t<void, Vector3, class Vector3 const&, class Vector3 const&, float>>(
+        return stub<member_func_t<void, Vector3, class Vector3 const&, class Vector3 const&, f32>>(
             0x484420, this, arg1, arg2, arg3);
     }
 
@@ -205,15 +205,15 @@ public:
     }
 
     // 0x4918A0 | ??KVector3@@QBE?AV0@M@Z
-    inline class Vector3 operator/(float arg1)
+    inline class Vector3 operator/(f32 arg1)
     {
-        return stub<member_func_t<class Vector3, Vector3, float>>(0x4918A0, this, arg1);
+        return stub<member_func_t<class Vector3, Vector3, f32>>(0x4918A0, this, arg1);
     }
 
     // 0x494C00 | ?Lerp@Vector3@@QAEXMABV1@0@Z
-    inline void Lerp(float arg1, class Vector3 const& arg2, class Vector3 const& arg3)
+    inline void Lerp(f32 arg1, class Vector3 const& arg2, class Vector3 const& arg3)
     {
-        return stub<member_func_t<void, Vector3, float, class Vector3 const&, class Vector3 const&>>(
+        return stub<member_func_t<void, Vector3, f32, class Vector3 const&, class Vector3 const&>>(
             0x494C00, this, arg1, arg2, arg3);
     }
 
@@ -230,21 +230,21 @@ public:
     }
 
     // 0x4BFF20 | ?Approach@Vector3@@QAE_NABV1@MM@Z
-    inline bool Approach(class Vector3 const& arg1, float arg2, float arg3)
+    inline bool Approach(class Vector3 const& arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<bool, Vector3, class Vector3 const&, float, float>>(0x4BFF20, this, arg1, arg2, arg3);
+        return stub<member_func_t<bool, Vector3, class Vector3 const&, f32, f32>>(0x4BFF20, this, arg1, arg2, arg3);
     }
 
     // 0x4C0020 | ?RotateAboutAxis@Vector3@@QAEXMH@Z
-    inline void RotateAboutAxis(float arg1, int32_t arg2)
+    inline void RotateAboutAxis(f32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, Vector3, float, int32_t>>(0x4C0020, this, arg1, arg2);
+        return stub<member_func_t<void, Vector3, f32, i32>>(0x4C0020, this, arg1, arg2);
     }
 
     // 0x4C00C0 | ?GetVector2@Vector3@@QBEXHAAVVector2@@@Z
-    inline void GetVector2(int32_t arg1, class Vector2& arg2)
+    inline void GetVector2(i32 arg1, class Vector2& arg2)
     {
-        return stub<member_func_t<void, Vector3, int32_t, class Vector2&>>(0x4C00C0, this, arg1, arg2);
+        return stub<member_func_t<void, Vector3, i32, class Vector2&>>(0x4C00C0, this, arg1, arg2);
     }
 
     // 0x4C0160 | ?RGBtoHSV@Vector3@@QAEXXZ
@@ -260,33 +260,33 @@ public:
     }
 
     // 0x4C0390 | ?RotateX@Vector3@@QAEXM@Z
-    inline void RotateX(float arg1)
+    inline void RotateX(f32 arg1)
     {
-        return stub<member_func_t<void, Vector3, float>>(0x4C0390, this, arg1);
+        return stub<member_func_t<void, Vector3, f32>>(0x4C0390, this, arg1);
     }
 
     // 0x4C03D0 | ?RotateY@Vector3@@QAEXM@Z
-    inline void RotateY(float arg1)
+    inline void RotateY(f32 arg1)
     {
-        return stub<member_func_t<void, Vector3, float>>(0x4C03D0, this, arg1);
+        return stub<member_func_t<void, Vector3, f32>>(0x4C03D0, this, arg1);
     }
 
     // 0x4C0400 | ?RotateZ@Vector3@@QAEXM@Z
-    inline void RotateZ(float arg1)
+    inline void RotateZ(f32 arg1)
     {
-        return stub<member_func_t<void, Vector3, float>>(0x4C0400, this, arg1);
+        return stub<member_func_t<void, Vector3, f32>>(0x4C0400, this, arg1);
     }
 
     // 0x4C0430 | ?Angle@Vector3@@QBEMABV1@@Z
-    inline float Angle(class Vector3 const& arg1)
+    inline f32 Angle(class Vector3 const& arg1)
     {
-        return stub<member_func_t<float, Vector3, class Vector3 const&>>(0x4C0430, this, arg1);
+        return stub<member_func_t<f32, Vector3, class Vector3 const&>>(0x4C0430, this, arg1);
     }
 
     // 0x4C0500 | ?FastAngle@Vector3@@QBEMABV1@@Z
-    inline float FastAngle(class Vector3 const& arg1)
+    inline f32 FastAngle(class Vector3 const& arg1)
     {
-        return stub<member_func_t<float, Vector3, class Vector3 const&>>(0x4C0500, this, arg1);
+        return stub<member_func_t<f32, Vector3, class Vector3 const&>>(0x4C0500, this, arg1);
     }
 
     // 0x4C0530 | ?GetPolar@Vector3@@QBEXABV1@PAVVector4@@PAV1@@Z
@@ -297,15 +297,15 @@ public:
     }
 
     // 0x4C05D0 | ?Extend@Vector3@@QAEXM@Z
-    inline void Extend(float arg1)
+    inline void Extend(f32 arg1)
     {
-        return stub<member_func_t<void, Vector3, float>>(0x4C05D0, this, arg1);
+        return stub<member_func_t<void, Vector3, f32>>(0x4C05D0, this, arg1);
     }
 
     // 0x4C0620 | ?Extend@Vector3@@QAEXABV1@M@Z
-    inline void Extend(class Vector3 const& arg1, float arg2)
+    inline void Extend(class Vector3 const& arg1, f32 arg2)
     {
-        return stub<member_func_t<void, Vector3, class Vector3 const&, float>>(0x4C0620, this, arg1, arg2);
+        return stub<member_func_t<void, Vector3, class Vector3 const&, f32>>(0x4C0620, this, arg1, arg2);
     }
 
     // 0x522B80 | ?IsEqual@Vector3@@QBE_NABV1@@Z
@@ -321,8 +321,8 @@ public:
     }
 
     // 0x595B70 | ?InvScale@Vector3@@QAEXM@Z
-    inline void InvScale(float arg1)
+    inline void InvScale(f32 arg1)
     {
-        return stub<member_func_t<void, Vector3, float>>(0x595B70, this, arg1);
+        return stub<member_func_t<void, Vector3, f32>>(0x595B70, this, arg1);
     }
 };

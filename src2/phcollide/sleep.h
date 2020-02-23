@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -106,8 +106,8 @@ public:
     }
 
     // 0x46C8E0 | ?SmoothAngInertia@phSleep@@SAXAAVphInertialCS@@M@Z
-    static inline void SmoothAngInertia(class phInertialCS& arg1, float arg2)
+    static inline void SmoothAngInertia(class phInertialCS& arg1, f32 arg2)
     {
-        return stub<cdecl_t<void, class phInertialCS&, float>>(0x46C8E0, arg1, arg2);
+        return stub<cdecl_t<void, class phInertialCS&, f32>>(0x46C8E0, arg1, arg2);
     }
 };

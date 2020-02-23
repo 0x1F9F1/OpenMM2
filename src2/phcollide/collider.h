@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -37,9 +37,9 @@ public:
     // phCollider::`vftable' @ 0x5B1CB0
 
     // 0x46D610 | ?InitArray@phCollider@@SAXQAV1@H@Z
-    static inline void InitArray(class phCollider* const arg1, int32_t arg2)
+    static inline void InitArray(class phCollider* const arg1, i32 arg2)
     {
-        return stub<cdecl_t<void, class phCollider* const, int32_t>>(0x46D610, arg1, arg2);
+        return stub<cdecl_t<void, class phCollider* const, i32>>(0x46D610, arg1, arg2);
     }
 
     // 0x46D6E0 | ?Init@phCollider@@QAEXPBVphBound@@PAVInstanceData@@PAVphInertialCS@@PAVphSleep@@@Z

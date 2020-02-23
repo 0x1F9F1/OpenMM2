@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -147,9 +147,9 @@ public:
     // cityLevel::`vftable' @ 0x5B16A0
 
     // 0x443610 | ?IsInRoomCheckWarps@cityLevel@@IAE_NABVVector3@@H@Z
-    inline bool IsInRoomCheckWarps(class Vector3 const& arg1, int32_t arg2)
+    inline bool IsInRoomCheckWarps(class Vector3 const& arg1, i32 arg2)
     {
-        return stub<member_func_t<bool, cityLevel, class Vector3 const&, int32_t>>(0x443610, this, arg1, arg2);
+        return stub<member_func_t<bool, cityLevel, class Vector3 const&, i32>>(0x443610, this, arg1, arg2);
     }
 
     // 0x4436A0 | ?SetupLighting@cityLevel@@SAXABVVector3@@@Z
@@ -165,49 +165,47 @@ public:
     }
 
     // 0x445340 | ?DecompressPvs@cityLevel@@IAEXH@Z
-    inline void DecompressPvs(int32_t arg1)
+    inline void DecompressPvs(i32 arg1)
     {
-        return stub<member_func_t<void, cityLevel, int32_t>>(0x445340, this, arg1);
+        return stub<member_func_t<void, cityLevel, i32>>(0x445340, this, arg1);
     }
 
     // 0x4457B0 | ?SetupPerRoomLighting@cityLevel@@IAEXH@Z
-    inline void SetupPerRoomLighting(int32_t arg1)
+    inline void SetupPerRoomLighting(i32 arg1)
     {
-        return stub<member_func_t<void, cityLevel, int32_t>>(0x4457B0, this, arg1);
+        return stub<member_func_t<void, cityLevel, i32>>(0x4457B0, this, arg1);
     }
 
     // 0x445820 | ?DrawRooms@cityLevel@@IAEXABVgfxViewport@@IPBUcityRoomRec@@H@Z
-    inline void DrawRooms(class gfxViewport const& arg1, uint32_t arg2, struct cityRoomRec const* arg3, int32_t arg4)
+    inline void DrawRooms(class gfxViewport const& arg1, u32 arg2, struct cityRoomRec const* arg3, i32 arg4)
     {
-        return stub<
-            member_func_t<void, cityLevel, class gfxViewport const&, uint32_t, struct cityRoomRec const*, int32_t>>(
+        return stub<member_func_t<void, cityLevel, class gfxViewport const&, u32, struct cityRoomRec const*, i32>>(
             0x445820, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x446370 | ?InitFullProbe@cityLevel@@IAEXHH@Z
-    inline void InitFullProbe(int32_t arg1, int32_t arg2)
+    inline void InitFullProbe(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, cityLevel, int32_t, int32_t>>(0x446370, this, arg1, arg2);
+        return stub<member_func_t<void, cityLevel, i32, i32>>(0x446370, this, arg1, arg2);
     }
 
     // 0x446920 | ?FullProbe@cityLevel@@IAEHABVVector3@@@Z
-    inline int32_t FullProbe(class Vector3 const& arg1)
+    inline i32 FullProbe(class Vector3 const& arg1)
     {
-        return stub<member_func_t<int32_t, cityLevel, class Vector3 const&>>(0x446920, this, arg1);
+        return stub<member_func_t<i32, cityLevel, class Vector3 const&>>(0x446920, this, arg1);
     }
 
     // 0x446D10 | ?GetTouchedNeighborsR@cityLevel@@QAEHPAHHHABVVector4@@H@Z
-    inline int32_t GetTouchedNeighborsR(
-        int32_t* arg1, int32_t arg2, int32_t arg3, class Vector4 const& arg4, int32_t arg5)
+    inline i32 GetTouchedNeighborsR(i32* arg1, i32 arg2, i32 arg3, class Vector4 const& arg4, i32 arg5)
     {
-        return stub<member_func_t<int32_t, cityLevel, int32_t*, int32_t, int32_t, class Vector4 const&, int32_t>>(
+        return stub<member_func_t<i32, cityLevel, i32*, i32, i32, class Vector4 const&, i32>>(
             0x446D10, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x447010 | ?GetLastStartRoom@cityLevel@@QAEHXZ
-    inline int32_t GetLastStartRoom()
+    inline i32 GetLastStartRoom()
     {
-        return stub<member_func_t<int32_t, cityLevel>>(0x447010, this);
+        return stub<member_func_t<i32, cityLevel>>(0x447010, this);
     }
 
     // 0x447290 | ?EnableSky@cityLevel@@QAEX_N@Z
@@ -223,16 +221,16 @@ public:
     }
 
     // 0x5C5728 | ?sm_LightQuality@cityLevel@@2HA
-    static inline extern_var(0x5C5728, int32_t, sm_LightQuality);
+    inline extern_var(0x5C5728, int32_t, sm_LightQuality);
 
     // 0x629920 | ?sm_LastPvsRoom@cityLevel@@0HA
-    static inline extern_var(0x629920, int32_t, sm_LastPvsRoom);
+    inline extern_var(0x629920, int32_t, sm_LastPvsRoom);
 
     // 0x629928 | ?SDL@cityLevel@@0VlvlSDL@@A
     static inline extern_var(0x629928, class lvlSDL, SDL);
 
     // 0x62AE68 | ?sm_PvsBuffer@cityLevel@@0PAEA
-    static inline extern_var(0x62AE68, uint8_t*, sm_PvsBuffer);
+    inline extern_var(0x62AE68, uint8_t*, sm_PvsBuffer);
 
     // 0x443910 | ??1cityLevel@@UAE@XZ
     inline ~cityLevel() override
@@ -265,62 +263,61 @@ public:
     }
 
     // 0x445400 | ?Draw@cityLevel@@UAEXABVgfxViewport@@I@Z
-    inline void Draw(class gfxViewport const& arg1, uint32_t arg2) override
+    inline void Draw(class gfxViewport const& arg1, u32 arg2) override
     {
-        return stub<member_func_t<void, cityLevel, class gfxViewport const&, uint32_t>>(0x445400, this, arg1, arg2);
+        return stub<member_func_t<void, cityLevel, class gfxViewport const&, u32>>(0x445400, this, arg1, arg2);
     }
 
     // 0x446A60 | ?FindRoomId@cityLevel@@UAEHABVVector3@@H@Z
-    inline int32_t FindRoomId(class Vector3 const& arg1, int32_t arg2) override
+    inline i32 FindRoomId(class Vector3 const& arg1, i32 arg2) override
     {
-        return stub<member_func_t<int32_t, cityLevel, class Vector3 const&, int32_t>>(0x446A60, this, arg1, arg2);
+        return stub<member_func_t<i32, cityLevel, class Vector3 const&, i32>>(0x446A60, this, arg1, arg2);
     }
 
     // 0x446C20 | ?GetNeighborCount@cityLevel@@UAEHH@Z
-    inline int32_t GetNeighborCount(int32_t arg1) override
+    inline i32 GetNeighborCount(i32 arg1) override
     {
-        return stub<member_func_t<int32_t, cityLevel, int32_t>>(0x446C20, this, arg1);
+        return stub<member_func_t<i32, cityLevel, i32>>(0x446C20, this, arg1);
     }
 
     // 0x446C40 | ?GetNeighbors@cityLevel@@UAEHPAHH@Z
-    inline int32_t GetNeighbors(int32_t* arg1, int32_t arg2) override
+    inline i32 GetNeighbors(i32* arg1, i32 arg2) override
     {
-        return stub<member_func_t<int32_t, cityLevel, int32_t*, int32_t>>(0x446C40, this, arg1, arg2);
+        return stub<member_func_t<i32, cityLevel, i32*, i32>>(0x446C40, this, arg1, arg2);
     }
 
     // 0x446CD0 | ?GetTouchedNeighbors@cityLevel@@UAEHPAHHHABVVector4@@@Z
-    inline int32_t GetTouchedNeighbors(int32_t* arg1, int32_t arg2, int32_t arg3, class Vector4 const& arg4) override
+    inline i32 GetTouchedNeighbors(i32* arg1, i32 arg2, i32 arg3, class Vector4 const& arg4) override
     {
-        return stub<member_func_t<int32_t, cityLevel, int32_t*, int32_t, int32_t, class Vector4 const&>>(
+        return stub<member_func_t<i32, cityLevel, i32*, i32, i32, class Vector4 const&>>(
             0x446CD0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x446FA0 | ?GetRoomPerimeter@cityLevel@@UAEHHQAVVector3@@H@Z
-    inline int32_t GetRoomPerimeter(int32_t arg1, class Vector3* const arg2, int32_t arg3) override
+    inline i32 GetRoomPerimeter(i32 arg1, class Vector3* const arg2, i32 arg3) override
     {
-        return stub<member_func_t<int32_t, cityLevel, int32_t, class Vector3* const, int32_t>>(
-            0x446FA0, this, arg1, arg2, arg3);
+        return stub<member_func_t<i32, cityLevel, i32, class Vector3* const, i32>>(0x446FA0, this, arg1, arg2, arg3);
     }
 
     // 0x447030 | ?GetVisitList@cityLevel@@UAEHPAHHABVVector3@@1HH@Z
-    inline int32_t GetVisitList(int32_t* arg1, int32_t arg2, class Vector3 const& arg3, class Vector3 const& arg4,
-        int32_t arg5, int32_t arg6) override
+    inline i32 GetVisitList(
+        i32* arg1, i32 arg2, class Vector3 const& arg3, class Vector3 const& arg4, i32 arg5, i32 arg6) override
     {
-        return stub<member_func_t<int32_t, cityLevel, int32_t*, int32_t, class Vector3 const&, class Vector3 const&,
-            int32_t, int32_t>>(0x447030, this, arg1, arg2, arg3, arg4, arg5, arg6);
+        return stub<member_func_t<i32, cityLevel, i32*, i32, class Vector3 const&, class Vector3 const&, i32, i32>>(
+            0x447030, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x447020 | ?Collide@cityLevel@@UAE_NHAAVlvlSegment@@PAVlvlIntersection@@@Z
-    inline bool Collide(int32_t arg1, class lvlSegment& arg2, class lvlIntersection* arg3) override
+    inline bool Collide(i32 arg1, class lvlSegment& arg2, class lvlIntersection* arg3) override
     {
-        return stub<member_func_t<bool, cityLevel, int32_t, class lvlSegment&, class lvlIntersection*>>(
+        return stub<member_func_t<bool, cityLevel, i32, class lvlSegment&, class lvlIntersection*>>(
             0x447020, this, arg1, arg2, arg3);
     }
 
     // 0x445310 | ?GetBoundSphere@cityLevel@@UAE_NAAVVector4@@H@Z
-    inline bool GetBoundSphere(class Vector4& arg1, int32_t arg2) override
+    inline bool GetBoundSphere(class Vector4& arg1, i32 arg2) override
     {
-        return stub<member_func_t<bool, cityLevel, class Vector4&, int32_t>>(0x445310, this, arg1, arg2);
+        return stub<member_func_t<bool, cityLevel, class Vector4&, i32>>(0x445310, this, arg1, arg2);
     }
 
     // 0x443930 | ?GetBound@cityLevel@@UAEPBVlvlLevelBound@@XZ
@@ -330,21 +327,21 @@ public:
     }
 
     // 0x443E50 | ?SetObjectDetail@cityLevel@@UAEXH@Z
-    inline void SetObjectDetail(int32_t arg1) override
+    inline void SetObjectDetail(i32 arg1) override
     {
-        return stub<member_func_t<void, cityLevel, int32_t>>(0x443E50, this, arg1);
+        return stub<member_func_t<void, cityLevel, i32>>(0x443E50, this, arg1);
     }
 
     // 0x445280 | ?GetWaterLevel@cityLevel@@UBEMH@Z
-    inline float GetWaterLevel(int32_t arg1) override
+    inline f32 GetWaterLevel(i32 arg1) override
     {
-        return stub<member_func_t<float, cityLevel, int32_t>>(0x445280, this, arg1);
+        return stub<member_func_t<f32, cityLevel, i32>>(0x445280, this, arg1);
     }
 
     // 0x445290 | ?GetLightingIntensity@cityLevel@@UBEMABVVector3@@@Z
-    inline float GetLightingIntensity(class Vector3 const& arg1) override
+    inline f32 GetLightingIntensity(class Vector3 const& arg1) override
     {
-        return stub<member_func_t<float, cityLevel, class Vector3 const&>>(0x445290, this, arg1);
+        return stub<member_func_t<f32, cityLevel, class Vector3 const&>>(0x445290, this, arg1);
     }
 
     // 0x4452A0 | ?SetPtxHeight@cityLevel@@UAEXAAVasParticles@@@Z
@@ -354,9 +351,9 @@ public:
     }
 
     // 0x443940 | ?GetEnvMap@cityLevel@@UAEPAVgfxTexture@@HABVVector3@@AAM@Z
-    inline class gfxTexture* GetEnvMap(int32_t arg1, class Vector3 const& arg2, float& arg3) override
+    inline class gfxTexture* GetEnvMap(i32 arg1, class Vector3 const& arg2, f32& arg3) override
     {
-        return stub<member_func_t<class gfxTexture*, cityLevel, int32_t, class Vector3 const&, float&>>(
+        return stub<member_func_t<class gfxTexture*, cityLevel, i32, class Vector3 const&, f32&>>(
             0x443940, this, arg1, arg2, arg3);
     }
 };
@@ -397,9 +394,9 @@ public:
     }
 
     // 0x443E00 | ?Draw@dgRoadDecalInstance@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
+    inline void Draw(i32 arg1) override
     {
-        return stub<member_func_t<void, dgRoadDecalInstance, int32_t>>(0x443E00, this, arg1);
+        return stub<member_func_t<void, dgRoadDecalInstance, i32>>(0x443E00, this, arg1);
     }
 
     // 0x443B60 | ?DrawShadow@dgRoadDecalInstance@@UAEXXZ
@@ -409,8 +406,8 @@ public:
     }
 
     // 0x443E20 | ?SizeOf@dgRoadDecalInstance@@UAEIXZ
-    inline uint32_t SizeOf() override
+    inline u32 SizeOf() override
     {
-        return stub<member_func_t<uint32_t, dgRoadDecalInstance>>(0x443E20, this);
+        return stub<member_func_t<u32, dgRoadDecalInstance>>(0x443E20, this);
     }
 };

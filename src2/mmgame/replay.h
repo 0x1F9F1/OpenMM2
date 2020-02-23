@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -82,9 +82,9 @@ public:
     }
 
     // 0x406F30 | ?LoadReplayDesc@mmReplayManager@@QAEHPAD@Z
-    inline int32_t LoadReplayDesc(char* arg1)
+    inline i32 LoadReplayDesc(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmReplayManager, char*>>(0x406F30, this, arg1);
+        return stub<member_func_t<i32, mmReplayManager, char*>>(0x406F30, this, arg1);
     }
 
     // 0x407000 | ?LoadReplay@mmReplayManager@@QAEXPAD@Z
@@ -112,39 +112,39 @@ public:
     }
 
     // 0x4072D0 | ?GetBrakes@mmReplayManager@@QAEMXZ
-    inline float GetBrakes()
+    inline f32 GetBrakes()
     {
-        return stub<member_func_t<float, mmReplayManager>>(0x4072D0, this);
+        return stub<member_func_t<f32, mmReplayManager>>(0x4072D0, this);
     }
 
     // 0x407300 | ?GetHandBrakes@mmReplayManager@@QAEMXZ
-    inline float GetHandBrakes()
+    inline f32 GetHandBrakes()
     {
-        return stub<member_func_t<float, mmReplayManager>>(0x407300, this);
+        return stub<member_func_t<f32, mmReplayManager>>(0x407300, this);
     }
 
     // 0x407330 | ?GetSteering@mmReplayManager@@QAEMXZ
-    inline float GetSteering()
+    inline f32 GetSteering()
     {
-        return stub<member_func_t<float, mmReplayManager>>(0x407330, this);
+        return stub<member_func_t<f32, mmReplayManager>>(0x407330, this);
     }
 
     // 0x407360 | ?GetThrottle@mmReplayManager@@QAEMXZ
-    inline float GetThrottle()
+    inline f32 GetThrottle()
     {
-        return stub<member_func_t<float, mmReplayManager>>(0x407360, this);
+        return stub<member_func_t<f32, mmReplayManager>>(0x407360, this);
     }
 
     // 0x407390 | ?GetData@mmReplayManager@@QAEXPAHPA_N@Z
-    inline void GetData(int32_t* arg1, bool* arg2)
+    inline void GetData(i32* arg1, bool* arg2)
     {
-        return stub<member_func_t<void, mmReplayManager, int32_t*, bool*>>(0x407390, this, arg1, arg2);
+        return stub<member_func_t<void, mmReplayManager, i32*, bool*>>(0x407390, this, arg1, arg2);
     }
 
     // 0x4073D0 | ?SetData@mmReplayManager@@QAEXH_N@Z
-    inline void SetData(int32_t arg1, bool arg2)
+    inline void SetData(i32 arg1, bool arg2)
     {
-        return stub<member_func_t<void, mmReplayManager, int32_t, bool>>(0x4073D0, this, arg1, arg2);
+        return stub<member_func_t<void, mmReplayManager, i32, bool>>(0x4073D0, this, arg1, arg2);
     }
 
     // 0x407410 | ?GetReplayInfo@mmReplayManager@@AAEXXZ
@@ -172,7 +172,7 @@ public:
     }
 
     // 0x627248 | ?Instance@mmReplayManager@@0PAV1@A
-    static inline extern_var(0x627248, class mmReplayManager*, Instance);
+    inline extern_var(0x627248, class mmReplayManager*, Instance);
 
     // 0x406930 | ??1mmReplayManager@@UAE@XZ
     inline ~mmReplayManager() override

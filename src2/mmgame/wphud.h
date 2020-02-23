@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -104,16 +104,15 @@ public:
     }
 
     // 0x4365C0 | ?SetStandings@mmWPHUD@@QAEXHH@Z
-    inline void SetStandings(int32_t arg1, int32_t arg2)
+    inline void SetStandings(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, mmWPHUD, int32_t, int32_t>>(0x4365C0, this, arg1, arg2);
+        return stub<member_func_t<void, mmWPHUD, i32, i32>>(0x4365C0, this, arg1, arg2);
     }
 
     // 0x436600 | ?Init@mmWPHUD@@QAEXHPAH0H@Z
-    inline void Init(int32_t arg1, int32_t* arg2, int32_t* arg3, int32_t arg4)
+    inline void Init(i32 arg1, i32* arg2, i32* arg3, i32 arg4)
     {
-        return stub<member_func_t<void, mmWPHUD, int32_t, int32_t*, int32_t*, int32_t>>(
-            0x436600, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, mmWPHUD, i32, i32*, i32*, i32>>(0x436600, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4364D0 | ??1mmWPHUD@@UAE@XZ
@@ -165,22 +164,21 @@ public:
     }
 
     // 0x4370E0 | ?SetStandings@mmCircuitHUD@@QAEXHH@Z
-    inline void SetStandings(int32_t arg1, int32_t arg2)
+    inline void SetStandings(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, mmCircuitHUD, int32_t, int32_t>>(0x4370E0, this, arg1, arg2);
+        return stub<member_func_t<void, mmCircuitHUD, i32, i32>>(0x4370E0, this, arg1, arg2);
     }
 
     // 0x437120 | ?SetLapTime@mmCircuitHUD@@QAEXHMPADH@Z
-    inline void SetLapTime(int32_t arg1, float arg2, char* arg3, int32_t arg4)
+    inline void SetLapTime(i32 arg1, f32 arg2, char* arg3, i32 arg4)
     {
-        return stub<member_func_t<void, mmCircuitHUD, int32_t, float, char*, int32_t>>(
-            0x437120, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, mmCircuitHUD, i32, f32, char*, i32>>(0x437120, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4371C0 | ?SetWPCleared@mmCircuitHUD@@QAEXHH@Z
-    inline void SetWPCleared(int32_t arg1, int32_t arg2)
+    inline void SetWPCleared(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, mmCircuitHUD, int32_t, int32_t>>(0x4371C0, this, arg1, arg2);
+        return stub<member_func_t<void, mmCircuitHUD, i32, i32>>(0x4371C0, this, arg1, arg2);
     }
 
     // 0x436A60 | ??1mmCircuitHUD@@UAE@XZ
@@ -233,16 +231,15 @@ public:
     }
 
     // 0x437D70 | ?AddPlayer@mmCRHUD@@QAEXPBDKHI@Z
-    inline void AddPlayer(char const* arg1, uint32_t arg2, int32_t arg3, uint32_t arg4)
+    inline void AddPlayer(char const* arg1, u32 arg2, i32 arg3, u32 arg4)
     {
-        return stub<member_func_t<void, mmCRHUD, char const*, uint32_t, int32_t, uint32_t>>(
-            0x437D70, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, mmCRHUD, char const*, u32, i32, u32>>(0x437D70, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x437EC0 | ?UnPackColor@mmCRHUD@@QAEXIAAVVector4@@@Z
-    inline void UnPackColor(uint32_t arg1, class Vector4& arg2)
+    inline void UnPackColor(u32 arg1, class Vector4& arg2)
     {
-        return stub<member_func_t<void, mmCRHUD, uint32_t, class Vector4&>>(0x437EC0, this, arg1, arg2);
+        return stub<member_func_t<void, mmCRHUD, u32, class Vector4&>>(0x437EC0, this, arg1, arg2);
     }
 
     // 0x437F40 | ?SetScore@mmCRHUD@@QAEXPAD@Z
@@ -252,21 +249,21 @@ public:
     }
 
     // 0x437F60 | ?SetName@mmCRHUD@@QAEXPADH@Z
-    inline void SetName(char* arg1, int32_t arg2)
+    inline void SetName(char* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, mmCRHUD, char*, int32_t>>(0x437F60, this, arg1, arg2);
+        return stub<member_func_t<void, mmCRHUD, char*, i32>>(0x437F60, this, arg1, arg2);
     }
 
     // 0x437FE0 | ?SetScore@mmCRHUD@@QAEXKH@Z
-    inline void SetScore(uint32_t arg1, int32_t arg2)
+    inline void SetScore(u32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, mmCRHUD, uint32_t, int32_t>>(0x437FE0, this, arg1, arg2);
+        return stub<member_func_t<void, mmCRHUD, u32, i32>>(0x437FE0, this, arg1, arg2);
     }
 
     // 0x438050 | ?RemovePlayer@mmCRHUD@@QAEXK@Z
-    inline void RemovePlayer(uint32_t arg1)
+    inline void RemovePlayer(u32 arg1)
     {
-        return stub<member_func_t<void, mmCRHUD, uint32_t>>(0x438050, this, arg1);
+        return stub<member_func_t<void, mmCRHUD, u32>>(0x438050, this, arg1);
     }
 
     // 0x4381E0 | ?ActivateGold@mmCRHUD@@QAEXXZ
@@ -282,9 +279,9 @@ public:
     }
 
     // 0x438200 | ?ActivateRosterGold@mmCRHUD@@QAEXK@Z
-    inline void ActivateRosterGold(uint32_t arg1)
+    inline void ActivateRosterGold(u32 arg1)
     {
-        return stub<member_func_t<void, mmCRHUD, uint32_t>>(0x438200, this, arg1);
+        return stub<member_func_t<void, mmCRHUD, u32>>(0x438200, this, arg1);
     }
 
     // 0x438240 | ?DeactivateRosterGold@mmCRHUD@@QAEXXZ
@@ -300,15 +297,15 @@ public:
     }
 
     // 0x438320 | ?SetBlueScore@mmCRHUD@@QAEXH@Z
-    inline void SetBlueScore(int32_t arg1)
+    inline void SetBlueScore(i32 arg1)
     {
-        return stub<member_func_t<void, mmCRHUD, int32_t>>(0x438320, this, arg1);
+        return stub<member_func_t<void, mmCRHUD, i32>>(0x438320, this, arg1);
     }
 
     // 0x438360 | ?SetRedScore@mmCRHUD@@QAEXH@Z
-    inline void SetRedScore(int32_t arg1)
+    inline void SetRedScore(i32 arg1)
     {
-        return stub<member_func_t<void, mmCRHUD, int32_t>>(0x438360, this, arg1);
+        return stub<member_func_t<void, mmCRHUD, i32>>(0x438360, this, arg1);
     }
 
     // 0x437430 | ??1mmCRHUD@@UAE@XZ
@@ -348,22 +345,21 @@ public:
     }
 
     // 0x438460 | ?Init@mmCollideHUD@@QAEXHPAH0H@Z
-    inline void Init(int32_t arg1, int32_t* arg2, int32_t* arg3, int32_t arg4)
+    inline void Init(i32 arg1, i32* arg2, i32* arg3, i32 arg4)
     {
-        return stub<member_func_t<void, mmCollideHUD, int32_t, int32_t*, int32_t*, int32_t>>(
-            0x438460, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, mmCollideHUD, i32, i32*, i32*, i32>>(0x438460, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x438720 | ?SetBangerCount@mmCollideHUD@@QAEXH@Z
-    inline void SetBangerCount(int32_t arg1)
+    inline void SetBangerCount(i32 arg1)
     {
-        return stub<member_func_t<void, mmCollideHUD, int32_t>>(0x438720, this, arg1);
+        return stub<member_func_t<void, mmCollideHUD, i32>>(0x438720, this, arg1);
     }
 
     // 0x438760 | ?SetVehicleCount@mmCollideHUD@@QAEXH@Z
-    inline void SetVehicleCount(int32_t arg1)
+    inline void SetVehicleCount(i32 arg1)
     {
-        return stub<member_func_t<void, mmCollideHUD, int32_t>>(0x438760, this, arg1);
+        return stub<member_func_t<void, mmCollideHUD, i32>>(0x438760, this, arg1);
     }
 
     // 0x4383D0 | ??1mmCollideHUD@@UAE@XZ

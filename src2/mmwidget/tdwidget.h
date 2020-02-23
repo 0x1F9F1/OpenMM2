@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -56,18 +56,16 @@ public:
     }
 
     // 0x4F1940 | ?Init@TextDropWidget@@QAEXPAXMMMMMVstring@@H@Z
-    inline void Init(
-        void* arg1, float arg2, float arg3, float arg4, float arg5, float arg6, class string arg7, int32_t arg8)
+    inline void Init(void* arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, class string arg7, i32 arg8)
     {
-        return stub<
-            member_func_t<void, TextDropWidget, void*, float, float, float, float, float, class string, int32_t>>(
+        return stub<member_func_t<void, TextDropWidget, void*, f32, f32, f32, f32, f32, class string, i32>>(
             0x4F1940, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
     // 0x4F1A50 | ?GetCount@TextDropWidget@@QAEHXZ
-    inline int32_t GetCount()
+    inline i32 GetCount()
     {
-        return stub<member_func_t<int32_t, TextDropWidget>>(0x4F1A50, this);
+        return stub<member_func_t<i32, TextDropWidget>>(0x4F1A50, this);
     }
 
     // 0x4F1A60 | ?SetString@TextDropWidget@@QAEXVstring@@@Z
@@ -77,75 +75,75 @@ public:
     }
 
     // 0x4F1B20 | ?SetValue@TextDropWidget@@QAEHH@Z
-    inline int32_t SetValue(int32_t arg1)
+    inline i32 SetValue(i32 arg1)
     {
-        return stub<member_func_t<int32_t, TextDropWidget, int32_t>>(0x4F1B20, this, arg1);
+        return stub<member_func_t<i32, TextDropWidget, i32>>(0x4F1B20, this, arg1);
     }
 
     // 0x4F1BC0 | ?SetHighlight@TextDropWidget@@QAEHH@Z
-    inline int32_t SetHighlight(int32_t arg1)
+    inline i32 SetHighlight(i32 arg1)
     {
-        return stub<member_func_t<int32_t, TextDropWidget, int32_t>>(0x4F1BC0, this, arg1);
+        return stub<member_func_t<i32, TextDropWidget, i32>>(0x4F1BC0, this, arg1);
     }
 
     // 0x4F1C30 | ?Inc@TextDropWidget@@QAEHXZ
-    inline int32_t Inc()
+    inline i32 Inc()
     {
-        return stub<member_func_t<int32_t, TextDropWidget>>(0x4F1C30, this);
+        return stub<member_func_t<i32, TextDropWidget>>(0x4F1C30, this);
     }
 
     // 0x4F1C40 | ?Dec@TextDropWidget@@QAEHXZ
-    inline int32_t Dec()
+    inline i32 Dec()
     {
-        return stub<member_func_t<int32_t, TextDropWidget>>(0x4F1C40, this);
+        return stub<member_func_t<i32, TextDropWidget>>(0x4F1C40, this);
     }
 
     // 0x4F1C50 | ?IncDrop@TextDropWidget@@QAEHXZ
-    inline int32_t IncDrop()
+    inline i32 IncDrop()
     {
-        return stub<member_func_t<int32_t, TextDropWidget>>(0x4F1C50, this);
+        return stub<member_func_t<i32, TextDropWidget>>(0x4F1C50, this);
     }
 
     // 0x4F1C80 | ?DecDrop@TextDropWidget@@QAEHXZ
-    inline int32_t DecDrop()
+    inline i32 DecDrop()
     {
-        return stub<member_func_t<int32_t, TextDropWidget>>(0x4F1C80, this);
+        return stub<member_func_t<i32, TextDropWidget>>(0x4F1C80, this);
     }
 
     // 0x4F1CB0 | ?Capture@TextDropWidget@@QAEHMM@Z
-    inline int32_t Capture(float arg1, float arg2)
+    inline i32 Capture(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<int32_t, TextDropWidget, float, float>>(0x4F1CB0, this, arg1, arg2);
+        return stub<member_func_t<i32, TextDropWidget, f32, f32>>(0x4F1CB0, this, arg1, arg2);
     }
 
     // 0x4F1CF0 | ?Switch@TextDropWidget@@QAEXHAAVVector4@@@Z
-    inline void Switch(int32_t arg1, class Vector4& arg2)
+    inline void Switch(i32 arg1, class Vector4& arg2)
     {
-        return stub<member_func_t<void, TextDropWidget, int32_t, class Vector4&>>(0x4F1CF0, this, arg1, arg2);
+        return stub<member_func_t<void, TextDropWidget, i32, class Vector4&>>(0x4F1CF0, this, arg1, arg2);
     }
 
     // 0x4F1D20 | ?IsActive@TextDropWidget@@QAEHXZ
-    inline int32_t IsActive()
+    inline i32 IsActive()
     {
-        return stub<member_func_t<int32_t, TextDropWidget>>(0x4F1D20, this);
+        return stub<member_func_t<i32, TextDropWidget>>(0x4F1D20, this);
     }
 
     // 0x4F1D30 | ?SetActive@TextDropWidget@@QAEXH@Z
-    inline void SetActive(int32_t arg1)
+    inline void SetActive(i32 arg1)
     {
-        return stub<member_func_t<void, TextDropWidget, int32_t>>(0x4F1D30, this, arg1);
+        return stub<member_func_t<void, TextDropWidget, i32>>(0x4F1D30, this, arg1);
     }
 
     // 0x4F1D40 | ?SetDisabledMask@TextDropWidget@@QAEXJ@Z
-    inline void SetDisabledMask(int32_t arg1)
+    inline void SetDisabledMask(i32 arg1)
     {
-        return stub<member_func_t<void, TextDropWidget, int32_t>>(0x4F1D40, this, arg1);
+        return stub<member_func_t<void, TextDropWidget, i32>>(0x4F1D40, this, arg1);
     }
 
     // 0x4F1D60 | ?GetDisabledMask@TextDropWidget@@QAEJXZ
-    inline int32_t GetDisabledMask()
+    inline i32 GetDisabledMask()
     {
-        return stub<member_func_t<int32_t, TextDropWidget>>(0x4F1D60, this);
+        return stub<member_func_t<i32, TextDropWidget>>(0x4F1D60, this);
     }
 
     // 0x4F18D0 | ??1TextDropWidget@@UAE@XZ

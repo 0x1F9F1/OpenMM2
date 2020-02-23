@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -57,9 +57,9 @@ public:
     // crAnimation::`vftable' @ 0x5B63D0
 
     // 0x57CE60 | ??0crAnimation@@QAE@HH@Z
-    inline crAnimation(int32_t arg1, int32_t arg2)
+    inline crAnimation(i32 arg1, i32 arg2)
     {
-        stub<member_func_t<void, crAnimation, int32_t, int32_t>>(0x57CE60, this, arg1, arg2);
+        stub<member_func_t<void, crAnimation, i32, i32>>(0x57CE60, this, arg1, arg2);
     }
 
     // 0x57CF20 | ??0crAnimation@@AAE@XZ
@@ -161,9 +161,9 @@ public:
     }
 
     // 0x57D920 | ?ZeroYSeg@crAnimation@@QAEXHH@Z
-    inline void ZeroYSeg(int32_t arg1, int32_t arg2)
+    inline void ZeroYSeg(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, crAnimation, int32_t, int32_t>>(0x57D920, this, arg1, arg2);
+        return stub<member_func_t<void, crAnimation, i32, i32>>(0x57D920, this, arg1, arg2);
     }
 
     // 0x57D960 | ?Subtract@crAnimation@@QAEXAAVcrAnimFrame@@@Z
@@ -173,10 +173,9 @@ public:
     }
 
     // 0x57D9A0 | ?CopyAnim@crAnimation@@QAEXPAV1@HH@Z
-    inline void CopyAnim(class crAnimation* arg1, int32_t arg2, int32_t arg3)
+    inline void CopyAnim(class crAnimation* arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, crAnimation, class crAnimation*, int32_t, int32_t>>(
-            0x57D9A0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, crAnimation, class crAnimation*, i32, i32>>(0x57D9A0, this, arg1, arg2, arg3);
     }
 
     // 0x57DA90 | ?Flip@crAnimation@@QAEXXZ
@@ -186,9 +185,9 @@ public:
     }
 
     // 0x57DAC0 | ?GetBlendFrame@crAnimation@@QBEXAAVcrAnimFrame@@M@Z
-    inline void GetBlendFrame(class crAnimFrame& arg1, float arg2)
+    inline void GetBlendFrame(class crAnimFrame& arg1, f32 arg2)
     {
-        return stub<member_func_t<void, crAnimation, class crAnimFrame&, float>>(0x57DAC0, this, arg1, arg2);
+        return stub<member_func_t<void, crAnimation, class crAnimFrame&, f32>>(0x57DAC0, this, arg1, arg2);
     }
 
     // 0x57CF50 | ??1crAnimation@@UAE@XZ

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -34,26 +34,26 @@ class dgImpact
 {
 public:
     // 0x46B620 | ?CalcImpact@dgImpact@@SAHPAV1@MM@Z
-    static inline int32_t CalcImpact(class dgImpact* arg1, float arg2, float arg3)
+    static inline i32 CalcImpact(class dgImpact* arg1, f32 arg2, f32 arg3)
     {
-        return stub<cdecl_t<int32_t, class dgImpact*, float, float>>(0x46B620, arg1, arg2, arg3);
+        return stub<cdecl_t<i32, class dgImpact*, f32, f32>>(0x46B620, arg1, arg2, arg3);
     }
 
     // 0x46B7D0 | ?CalcCollision@dgImpact@@QAEHABVVector3@@MPAV2@111M@Z
-    inline int32_t CalcCollision(class Vector3 const& arg1, float arg2, class Vector3* arg3, class Vector3* arg4,
-        class Vector3* arg5, class Vector3* arg6, float arg7)
+    inline i32 CalcCollision(class Vector3 const& arg1, f32 arg2, class Vector3* arg3, class Vector3* arg4,
+        class Vector3* arg5, class Vector3* arg6, f32 arg7)
     {
-        return stub<member_func_t<int32_t, dgImpact, class Vector3 const&, float, class Vector3*, class Vector3*,
-            class Vector3*, class Vector3*, float>>(0x46B7D0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+        return stub<member_func_t<i32, dgImpact, class Vector3 const&, f32, class Vector3*, class Vector3*,
+            class Vector3*, class Vector3*, f32>>(0x46B7D0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x46BE80 | ?CalcCollision@dgImpact@@QAEHABVVector3@@MPAV2@11111_N2HHM@Z
-    inline int32_t CalcCollision(class Vector3 const& arg1, float arg2, class Vector3* arg3, class Vector3* arg4,
+    inline i32 CalcCollision(class Vector3 const& arg1, f32 arg2, class Vector3* arg3, class Vector3* arg4,
         class Vector3* arg5, class Vector3* arg6, class Vector3* arg7, class Vector3* arg8, bool arg9, bool arg10,
-        int32_t arg11, int32_t arg12, float arg13)
+        i32 arg11, i32 arg12, f32 arg13)
     {
-        return stub<member_func_t<int32_t, dgImpact, class Vector3 const&, float, class Vector3*, class Vector3*,
-            class Vector3*, class Vector3*, class Vector3*, class Vector3*, bool, bool, int32_t, int32_t, float>>(
+        return stub<member_func_t<i32, dgImpact, class Vector3 const&, f32, class Vector3*, class Vector3*,
+            class Vector3*, class Vector3*, class Vector3*, class Vector3*, bool, bool, i32, i32, f32>>(
             0x46BE80, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
     }
 };

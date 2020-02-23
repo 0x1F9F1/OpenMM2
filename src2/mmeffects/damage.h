@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -50,14 +50,14 @@ public:
     }
 
     // 0x5345E0 | ?Reset@mmDamage@@QAEXH@Z
-    inline void Reset(int32_t arg1)
+    inline void Reset(i32 arg1)
     {
-        return stub<member_func_t<void, mmDamage, int32_t>>(0x5345E0, this, arg1);
+        return stub<member_func_t<void, mmDamage, i32>>(0x5345E0, this, arg1);
     }
 
     // 0x5345F0 | ?Apply@mmDamage@@QAEXAAVVector3@@M@Z
-    inline void Apply(class Vector3& arg1, float arg2)
+    inline void Apply(class Vector3& arg1, f32 arg2)
     {
-        return stub<member_func_t<void, mmDamage, class Vector3&, float>>(0x5345F0, this, arg1, arg2);
+        return stub<member_func_t<void, mmDamage, class Vector3&, f32>>(0x5345F0, this, arg1, arg2);
     }
 };

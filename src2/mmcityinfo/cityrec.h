@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -48,8 +48,8 @@
 */
 
 class mmPlayerRecord
-    : mmInfoBase
-    , Base
+    : Base
+    , mmInfoBase
 {
 public:
     // mmPlayerRecord::`vftable' @ 0x5B062C
@@ -79,31 +79,31 @@ public:
     }
 
     // 0x528830 | ??8mmPlayerRecord@@QAEHABV0@@Z
-    inline int32_t operator==(class mmPlayerRecord const& arg1)
+    inline i32 operator==(class mmPlayerRecord const& arg1)
     {
-        return stub<member_func_t<int32_t, mmPlayerRecord, class mmPlayerRecord const&>>(0x528830, this, arg1);
+        return stub<member_func_t<i32, mmPlayerRecord, class mmPlayerRecord const&>>(0x528830, this, arg1);
     }
 
     // 0x5288C0 | ?ComputeCRC@mmPlayerRecord@@QAEIXZ
-    inline uint32_t ComputeCRC()
+    inline u32 ComputeCRC()
     {
-        return stub<member_func_t<uint32_t, mmPlayerRecord>>(0x5288C0, this);
+        return stub<member_func_t<u32, mmPlayerRecord>>(0x5288C0, this);
     }
 
     // 0x528910 | ?SaveBinary@mmPlayerRecord@@QAEHPAVStream@@@Z
-    inline int32_t SaveBinary(class Stream* arg1)
+    inline i32 SaveBinary(class Stream* arg1)
     {
-        return stub<member_func_t<int32_t, mmPlayerRecord, class Stream*>>(0x528910, this, arg1);
+        return stub<member_func_t<i32, mmPlayerRecord, class Stream*>>(0x528910, this, arg1);
     }
 
     // 0x528990 | ?LoadBinary@mmPlayerRecord@@QAEHPAVStream@@@Z
-    inline int32_t LoadBinary(class Stream* arg1)
+    inline i32 LoadBinary(class Stream* arg1)
     {
-        return stub<member_func_t<int32_t, mmPlayerRecord, class Stream*>>(0x528990, this, arg1);
+        return stub<member_func_t<i32, mmPlayerRecord, class Stream*>>(0x528990, this, arg1);
     }
 
     // 0x6B1CD4 | ?SizeOf@mmPlayerRecord@@2HA
-    static inline extern_var(0x6B1CD4, int32_t, SizeOf);
+    inline extern_var(0x6B1CD4, int32_t, SizeOf);
 
     // 0x5287A0 | ??1mmPlayerRecord@@UAE@XZ
     virtual inline ~mmPlayerRecord()
@@ -130,66 +130,66 @@ public:
     }
 
     // 0x528A70 | ?ComputeCRC@mmPlayerCityRecord@@QAEIXZ
-    inline uint32_t ComputeCRC()
+    inline u32 ComputeCRC()
     {
-        return stub<member_func_t<uint32_t, mmPlayerCityRecord>>(0x528A70, this);
+        return stub<member_func_t<u32, mmPlayerCityRecord>>(0x528A70, this);
     }
 
     // 0x528B10 | ?InitCityRecord@mmPlayerCityRecord@@QAEXPADMHHHH@Z
-    inline void InitCityRecord(char* arg1, float arg2, int32_t arg3, int32_t arg4, int32_t arg5, int32_t arg6)
+    inline void InitCityRecord(char* arg1, f32 arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6)
     {
-        return stub<member_func_t<void, mmPlayerCityRecord, char*, float, int32_t, int32_t, int32_t, int32_t>>(
+        return stub<member_func_t<void, mmPlayerCityRecord, char*, f32, i32, i32, i32, i32>>(
             0x528B10, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x528DB0 | ?Open@mmPlayerCityRecord@@QAEHPADM@Z
-    inline int32_t Open(char* arg1, float arg2)
+    inline i32 Open(char* arg1, f32 arg2)
     {
-        return stub<member_func_t<int32_t, mmPlayerCityRecord, char*, float>>(0x528DB0, this, arg1, arg2);
+        return stub<member_func_t<i32, mmPlayerCityRecord, char*, f32>>(0x528DB0, this, arg1, arg2);
     }
 
     // 0x528FA0 | ?GetRecord@mmPlayerCityRecord@@QAEHAAVmmPlayerRecord@@HH@Z
-    inline int32_t GetRecord(class mmPlayerRecord& arg1, int32_t arg2, int32_t arg3)
+    inline i32 GetRecord(class mmPlayerRecord& arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<int32_t, mmPlayerCityRecord, class mmPlayerRecord&, int32_t, int32_t>>(
+        return stub<member_func_t<i32, mmPlayerCityRecord, class mmPlayerRecord&, i32, i32>>(
             0x528FA0, this, arg1, arg2, arg3);
     }
 
     // 0x5290C0 | ?NewRecord@mmPlayerCityRecord@@QAEHVmmPlayerRecord@@HH@Z
-    inline int32_t NewRecord(class mmPlayerRecord arg1, int32_t arg2, int32_t arg3)
+    inline i32 NewRecord(class mmPlayerRecord arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<int32_t, mmPlayerCityRecord, class mmPlayerRecord, int32_t, int32_t>>(
+        return stub<member_func_t<i32, mmPlayerCityRecord, class mmPlayerRecord, i32, i32>>(
             0x5290C0, this, arg1, arg2, arg3);
     }
 
     // 0x529360 | ?Close@mmPlayerCityRecord@@QAEHXZ
-    inline int32_t Close()
+    inline i32 Close()
     {
-        return stub<member_func_t<int32_t, mmPlayerCityRecord>>(0x529360, this);
+        return stub<member_func_t<i32, mmPlayerCityRecord>>(0x529360, this);
     }
 
     // 0x529490 | ?GetNumPassed@mmPlayerCityRecord@@QAEHH@Z
-    inline int32_t GetNumPassed(int32_t arg1)
+    inline i32 GetNumPassed(i32 arg1)
     {
-        return stub<member_func_t<int32_t, mmPlayerCityRecord, int32_t>>(0x529490, this, arg1);
+        return stub<member_func_t<i32, mmPlayerCityRecord, i32>>(0x529490, this, arg1);
     }
 
     // 0x529580 | ?GetNumRaces@mmPlayerCityRecord@@QAEHH@Z
-    inline int32_t GetNumRaces(int32_t arg1)
+    inline i32 GetNumRaces(i32 arg1)
     {
-        return stub<member_func_t<int32_t, mmPlayerCityRecord, int32_t>>(0x529580, this, arg1);
+        return stub<member_func_t<i32, mmPlayerCityRecord, i32>>(0x529580, this, arg1);
     }
 
     // 0x5295E0 | ?GetPassedMask@mmPlayerCityRecord@@QAEKH@Z
-    inline uint32_t GetPassedMask(int32_t arg1)
+    inline u32 GetPassedMask(i32 arg1)
     {
-        return stub<member_func_t<uint32_t, mmPlayerCityRecord, int32_t>>(0x5295E0, this, arg1);
+        return stub<member_func_t<u32, mmPlayerCityRecord, i32>>(0x5295E0, this, arg1);
     }
 
     // 0x529640 | ?GetFileOffset@mmPlayerCityRecord@@AAEJHH@Z
-    inline int32_t GetFileOffset(int32_t arg1, int32_t arg2)
+    inline i32 GetFileOffset(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<int32_t, mmPlayerCityRecord, int32_t, int32_t>>(0x529640, this, arg1, arg2);
+        return stub<member_func_t<i32, mmPlayerCityRecord, i32, i32>>(0x529640, this, arg1, arg2);
     }
 
     // 0x528220 | ??1mmPlayerCityRecord@@UAE@XZ

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -86,16 +86,15 @@ public:
     }
 
     // 0x53F7E0 | ?Init@aiCableCar@@QAEXPADHHF@Z
-    inline void Init(char* arg1, int32_t arg2, int32_t arg3, int16_t arg4)
+    inline void Init(char* arg1, i32 arg2, i32 arg3, i16 arg4)
     {
-        return stub<member_func_t<void, aiCableCar, char*, int32_t, int32_t, int16_t>>(
-            0x53F7E0, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, aiCableCar, char*, i32, i32, i16>>(0x53F7E0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x53FCD0 | ?DetermineNextLink@aiCableCar@@AAE_NPAVaiPath@@PAPAV2@FPAF@Z
-    inline bool DetermineNextLink(class aiPath* arg1, class aiPath** arg2, int16_t arg3, int16_t* arg4)
+    inline bool DetermineNextLink(class aiPath* arg1, class aiPath** arg2, i16 arg3, i16* arg4)
     {
-        return stub<member_func_t<bool, aiCableCar, class aiPath*, class aiPath**, int16_t, int16_t*>>(
+        return stub<member_func_t<bool, aiCableCar, class aiPath*, class aiPath**, i16, i16*>>(
             0x53FCD0, this, arg1, arg2, arg3, arg4);
     }
 
@@ -112,21 +111,21 @@ public:
     }
 
     // 0x5407B0 | ?CheckForObstacles@aiCableCar@@AAE_NPAM@Z
-    inline bool CheckForObstacles(float* arg1)
+    inline bool CheckForObstacles(f32* arg1)
     {
-        return stub<member_func_t<bool, aiCableCar, float*>>(0x5407B0, this, arg1);
+        return stub<member_func_t<bool, aiCableCar, f32*>>(0x5407B0, this, arg1);
     }
 
     // 0x540A20 | ?OkayToEnterIntersection@aiCableCar@@AAE_NM@Z
-    inline bool OkayToEnterIntersection(float arg1)
+    inline bool OkayToEnterIntersection(f32 arg1)
     {
-        return stub<member_func_t<bool, aiCableCar, float>>(0x540A20, this, arg1);
+        return stub<member_func_t<bool, aiCableCar, f32>>(0x540A20, this, arg1);
     }
 
     // 0x540B90 | ?DistanceToIntersection@aiCableCar@@AAEMXZ
-    inline float DistanceToIntersection()
+    inline f32 DistanceToIntersection()
     {
-        return stub<member_func_t<float, aiCableCar>>(0x540B90, this);
+        return stub<member_func_t<f32, aiCableCar>>(0x540B90, this);
     }
 
     // 0x540BF0 | ?SolveRailType@aiCableCar@@AAEXXZ
@@ -154,22 +153,22 @@ public:
     }
 
     // 0x5417E0 | ?Speed@aiCableCar@@UAEMXZ
-    inline float Speed() override
+    inline f32 Speed() override
     {
-        return stub<member_func_t<float, aiCableCar>>(0x5417E0, this);
+        return stub<member_func_t<f32, aiCableCar>>(0x5417E0, this);
     }
 
     // 0x5410E0 | ?CurrentRoadIdx@aiCableCar@@UAEHPAPAVaiPath@@QA_NPAH@Z
-    inline int32_t CurrentRoadIdx(class aiPath** arg1, bool* const arg2, int32_t* arg3) override
+    inline i32 CurrentRoadIdx(class aiPath** arg1, bool* const arg2, i32* arg3) override
     {
-        return stub<member_func_t<int32_t, aiCableCar, class aiPath**, bool* const, int32_t*>>(
+        return stub<member_func_t<i32, aiCableCar, class aiPath**, bool* const, i32*>>(
             0x5410E0, this, arg1, arg2, arg3);
     }
 
     // 0x5411F0 | ?CurrentRdVert@aiCableCar@@UAEHXZ
-    inline int32_t CurrentRdVert() override
+    inline i32 CurrentRdVert() override
     {
-        return stub<member_func_t<int32_t, aiCableCar>>(0x5411F0, this);
+        return stub<member_func_t<i32, aiCableCar>>(0x5411F0, this);
     }
 
     // 0x53FBD0 | ?Update@aiCableCar@@UAEXXZ
@@ -185,9 +184,9 @@ public:
     }
 
     // 0x5417D0 | ?Type@aiCableCar@@UAEHXZ
-    inline int32_t Type() override
+    inline i32 Type() override
     {
-        return stub<member_func_t<int32_t, aiCableCar>>(0x5417D0, this);
+        return stub<member_func_t<i32, aiCableCar>>(0x5417D0, this);
     }
 
     // 0x541860 | ?GetMatrix@aiCableCar@@UAEAAVMatrix34@@XZ
@@ -197,39 +196,39 @@ public:
     }
 
     // 0x541800 | ?FrontBumperDistance@aiCableCar@@UAEMXZ
-    inline float FrontBumperDistance() override
+    inline f32 FrontBumperDistance() override
     {
-        return stub<member_func_t<float, aiCableCar>>(0x541800, this);
+        return stub<member_func_t<f32, aiCableCar>>(0x541800, this);
     }
 
     // 0x541810 | ?BackBumperDistance@aiCableCar@@UAEMXZ
-    inline float BackBumperDistance() override
+    inline f32 BackBumperDistance() override
     {
-        return stub<member_func_t<float, aiCableCar>>(0x541810, this);
+        return stub<member_func_t<f32, aiCableCar>>(0x541810, this);
     }
 
     // 0x541820 | ?LSideDistance@aiCableCar@@UAEMXZ
-    inline float LSideDistance() override
+    inline f32 LSideDistance() override
     {
-        return stub<member_func_t<float, aiCableCar>>(0x541820, this);
+        return stub<member_func_t<f32, aiCableCar>>(0x541820, this);
     }
 
     // 0x541830 | ?RSideDistance@aiCableCar@@UAEMXZ
-    inline float RSideDistance() override
+    inline f32 RSideDistance() override
     {
-        return stub<member_func_t<float, aiCableCar>>(0x541830, this);
+        return stub<member_func_t<f32, aiCableCar>>(0x541830, this);
     }
 
     // 0x5417F0 | ?CurrentLane@aiCableCar@@UAEHXZ
-    inline int32_t CurrentLane() override
+    inline i32 CurrentLane() override
     {
-        return stub<member_func_t<int32_t, aiCableCar>>(0x5417F0, this);
+        return stub<member_func_t<i32, aiCableCar>>(0x5417F0, this);
     }
 
     // 0x541870 | ?CurrentRoadId@aiCableCar@@UAEHXZ
-    inline int32_t CurrentRoadId() override
+    inline i32 CurrentRoadId() override
     {
-        return stub<member_func_t<int32_t, aiCableCar>>(0x541870, this);
+        return stub<member_func_t<i32, aiCableCar>>(0x541870, this);
     }
 
     // 0x5415A0 | ?DrawId@aiCableCar@@UAEXXZ
@@ -269,15 +268,15 @@ public:
     }
 
     // 0x541680 | ?Draw@aiCableCarInstance@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
+    inline void Draw(i32 arg1) override
     {
-        return stub<member_func_t<void, aiCableCarInstance, int32_t>>(0x541680, this, arg1);
+        return stub<member_func_t<void, aiCableCarInstance, i32>>(0x541680, this, arg1);
     }
 
     // 0x541660 | ?SizeOf@aiCableCarInstance@@UAEIXZ
-    inline uint32_t SizeOf() override
+    inline u32 SizeOf() override
     {
-        return stub<member_func_t<uint32_t, aiCableCarInstance>>(0x541660, this);
+        return stub<member_func_t<u32, aiCableCarInstance>>(0x541660, this);
     }
 
     // 0x541670 | ?ImpactCB@aiCableCarInstance@@UAEXPAVdgHitBangerInstance@@@Z

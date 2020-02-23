@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -51,11 +51,11 @@ public:
     }
 
     // 0x4EE150 | ?Init@UIToggleButton2@@QAEXPAULocString@@PAHMMMMHHVdatCallback@@@Z
-    inline void Init(struct LocString* arg1, int32_t* arg2, float arg3, float arg4, float arg5, float arg6,
-        int32_t arg7, int32_t arg8, class datCallback arg9)
+    inline void Init(struct LocString* arg1, i32* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7, i32 arg8,
+        class datCallback arg9)
     {
-        return stub<member_func_t<void, UIToggleButton2, struct LocString*, int32_t*, float, float, float, float,
-            int32_t, int32_t, class datCallback>>(0x4EE150, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
+        return stub<member_func_t<void, UIToggleButton2, struct LocString*, i32*, f32, f32, f32, f32, i32, i32,
+            class datCallback>>(0x4EE150, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
     }
 
     // 0x4EE2A0 | ?Unkill@UIToggleButton2@@QAEXXZ
@@ -95,9 +95,9 @@ public:
     }
 
     // 0x4EE370 | ?Switch@UIToggleButton2@@UAEXH@Z
-    inline void Switch(int32_t arg1) override
+    inline void Switch(i32 arg1) override
     {
-        return stub<member_func_t<void, UIToggleButton2, int32_t>>(0x4EE370, this, arg1);
+        return stub<member_func_t<void, UIToggleButton2, i32>>(0x4EE370, this, arg1);
     }
 
     // 0x4EE2D0 | ?DoToggle@UIToggleButton2@@UAEXXZ

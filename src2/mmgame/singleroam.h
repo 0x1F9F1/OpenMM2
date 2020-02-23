@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -74,9 +74,9 @@ public:
     }
 
     // 0x41FA30 | ?Init@mmSingleRoam@@UAEHXZ
-    inline int32_t Init() override
+    inline i32 Init() override
     {
-        return stub<member_func_t<int32_t, mmSingleRoam>>(0x41FA30, this);
+        return stub<member_func_t<i32, mmSingleRoam>>(0x41FA30, this);
     }
 
     // 0x41FAA0 | ?InitMyPlayer@mmSingleRoam@@UAEXXZ
@@ -104,15 +104,15 @@ public:
     }
 
     // 0x41FCF0 | ?UpdateGameInput@mmSingleRoam@@UAEXH@Z
-    inline void UpdateGameInput(int32_t arg1) override
+    inline void UpdateGameInput(i32 arg1) override
     {
-        return stub<member_func_t<void, mmSingleRoam, int32_t>>(0x41FCF0, this, arg1);
+        return stub<member_func_t<void, mmSingleRoam, i32>>(0x41FCF0, this, arg1);
     }
 
     // 0x41FF20 | ?UpdateDebugKeyInput@mmSingleRoam@@UAEXH@Z
-    inline void UpdateDebugKeyInput(int32_t arg1) override
+    inline void UpdateDebugKeyInput(i32 arg1) override
     {
-        return stub<member_func_t<void, mmSingleRoam, int32_t>>(0x41FF20, this, arg1);
+        return stub<member_func_t<void, mmSingleRoam, i32>>(0x41FF20, this, arg1);
     }
 
     // 0x41FD00 | ?UpdateGame@mmSingleRoam@@UAEXXZ
@@ -134,8 +134,8 @@ public:
     }
 
     // 0x41FD90 | ?SwitchState@mmSingleRoam@@UAEXH@Z
-    inline void SwitchState(int32_t arg1) override
+    inline void SwitchState(i32 arg1) override
     {
-        return stub<member_func_t<void, mmSingleRoam, int32_t>>(0x41FD90, this, arg1);
+        return stub<member_func_t<void, mmSingleRoam, i32>>(0x41FD90, this, arg1);
     }
 };

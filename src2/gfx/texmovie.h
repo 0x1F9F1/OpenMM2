@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -44,9 +44,9 @@ class gfxTextureMovie
 {
 public:
     // 0x4B4AF0 | ?UpdateAll@gfxTextureMovie@@SAXM@Z
-    static inline void UpdateAll(float arg1)
+    static inline void UpdateAll(f32 arg1)
     {
-        return stub<cdecl_t<void, float>>(0x4B4AF0, arg1);
+        return stub<cdecl_t<void, f32>>(0x4B4AF0, arg1);
     }
 
     // 0x4B4B20 | ?KillAll@gfxTextureMovie@@SAXXZ
@@ -56,15 +56,15 @@ public:
     }
 
     // 0x4B4B30 | ?Update@gfxTextureMovie@@QAEXM@Z
-    inline void Update(float arg1)
+    inline void Update(f32 arg1)
     {
-        return stub<member_func_t<void, gfxTextureMovie, float>>(0x4B4B30, this, arg1);
+        return stub<member_func_t<void, gfxTextureMovie, f32>>(0x4B4B30, this, arg1);
     }
 
     // 0x4B4BA0 | ??0gfxTextureMovie@@AAE@PBDH@Z
-    inline gfxTextureMovie(char const* arg1, int32_t arg2)
+    inline gfxTextureMovie(char const* arg1, i32 arg2)
     {
-        stub<member_func_t<void, gfxTextureMovie, char const*, int32_t>>(0x4B4BA0, this, arg1, arg2);
+        stub<member_func_t<void, gfxTextureMovie, char const*, i32>>(0x4B4BA0, this, arg1, arg2);
     }
 
     // 0x4B4C00 | ?AddClient@gfxTextureMovie@@QAEXPAPAVgfxTexture@@@Z
@@ -74,5 +74,5 @@ public:
     }
 
     // 0x6A2110 | ?sm_First@gfxTextureMovie@@1PAV1@A
-    static inline extern_var(0x6A2110, class gfxTextureMovie*, sm_First);
+    inline extern_var(0x6A2110, class gfxTextureMovie*, sm_First);
 };

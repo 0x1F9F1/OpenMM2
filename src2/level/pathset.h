@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -65,10 +65,9 @@ public:
     }
 
     // 0x466D40 | ?Enumerate@dgPath@@QBEXP6AXPBDABVMatrix34@@_N@ZMM@Z
-    inline void Enumerate(void(__cdecl* arg1)(char const*, class Matrix34 const&, bool), float arg2, float arg3)
+    inline void Enumerate(void(__cdecl* arg1)(char const*, class Matrix34 const&, bool), f32 arg2, f32 arg3)
     {
-        return stub<
-            member_func_t<void, dgPath, void(__cdecl*)(char const*, class Matrix34 const&, bool), float, float>>(
+        return stub<member_func_t<void, dgPath, void(__cdecl*)(char const*, class Matrix34 const&, bool), f32, f32>>(
             0x466D40, this, arg1, arg2, arg3);
     }
 };

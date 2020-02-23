@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -33,22 +33,22 @@ public:
     // lvlLandmark::`vftable' @ 0x5B1A88
 
     // 0x468030 | ?IsVisible@lvlLandmark@@UAEHABVgfxViewport@@@Z
-    inline int32_t IsVisible(class gfxViewport const& arg1) override
+    inline i32 IsVisible(class gfxViewport const& arg1) override
     {
-        return stub<member_func_t<int32_t, lvlLandmark, class gfxViewport const&>>(0x468030, this, arg1);
+        return stub<member_func_t<i32, lvlLandmark, class gfxViewport const&>>(0x468030, this, arg1);
     }
 
     // 0x468010 | ?Init@lvlLandmark@@UAEHPBDABVMatrix34@@H@Z
-    inline int32_t Init(char const* arg1, class Matrix34 const& arg2, int32_t arg3) override
+    inline i32 Init(char const* arg1, class Matrix34 const& arg2, i32 arg3) override
     {
-        return stub<member_func_t<int32_t, lvlLandmark, char const*, class Matrix34 const&, int32_t>>(
+        return stub<member_func_t<i32, lvlLandmark, char const*, class Matrix34 const&, i32>>(
             0x468010, this, arg1, arg2, arg3);
     }
 
     // 0x468000 | ?SizeOf@lvlLandmark@@UAEIXZ
-    inline uint32_t SizeOf() override
+    inline u32 SizeOf() override
     {
-        return stub<member_func_t<uint32_t, lvlLandmark>>(0x468000, this);
+        return stub<member_func_t<u32, lvlLandmark>>(0x468000, this);
     }
 
     // 0x467FF0 | ?IsLandmark@lvlLandmark@@UAE_NXZ

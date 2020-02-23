@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -88,10 +88,9 @@ public:
     }
 
     // 0x468370 | ?DeclareMover@dgPhysManager@@QAEXPAVlvlInstance@@HH@Z
-    inline void DeclareMover(class lvlInstance* arg1, int32_t arg2, int32_t arg3)
+    inline void DeclareMover(class lvlInstance* arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, dgPhysManager, class lvlInstance*, int32_t, int32_t>>(
-            0x468370, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, dgPhysManager, class lvlInstance*, i32, i32>>(0x468370, this, arg1, arg2, arg3);
     }
 
     // 0x468550 | ?NewMover@dgPhysManager@@QAEXPAVlvlInstance@@0@Z
@@ -133,11 +132,11 @@ public:
     }
 
     // 0x468E40 | ?Collide@dgPhysManager@@QAE_NAAVlvlSegment@@PAVlvlIntersection@@HPAVlvlInstance@@HH@Z
-    inline bool Collide(class lvlSegment& arg1, class lvlIntersection* arg2, int32_t arg3, class lvlInstance* arg4,
-        int32_t arg5, int32_t arg6)
+    inline bool Collide(
+        class lvlSegment& arg1, class lvlIntersection* arg2, i32 arg3, class lvlInstance* arg4, i32 arg5, i32 arg6)
     {
-        return stub<member_func_t<bool, dgPhysManager, class lvlSegment&, class lvlIntersection*, int32_t,
-            class lvlInstance*, int32_t, int32_t>>(0x468E40, this, arg1, arg2, arg3, arg4, arg5, arg6);
+        return stub<member_func_t<bool, dgPhysManager, class lvlSegment&, class lvlIntersection*, i32,
+            class lvlInstance*, i32, i32>>(0x468E40, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x469110 | ?CollideProbe@dgPhysManager@@QAE_NAAVlvlSegment@@PAVlvlIntersection@@PAVlvlInstance@@@Z
@@ -182,8 +181,8 @@ public:
     }
 
     // 0x65D9DC | ?m_pInst@dgPhysManager@@2PAV1@A
-    static inline extern_var(0x65D9DC, class dgPhysManager*, m_pInst);
+    inline extern_var(0x65D9DC, class dgPhysManager*, m_pInst);
 
     // 0x65D9E0 | ?PlayerInst@dgPhysManager@@2PAVlvlInstance@@A
-    static inline extern_var(0x65D9E0, class lvlInstance*, PlayerInst);
+    inline extern_var(0x65D9E0, class lvlInstance*, PlayerInst);
 };

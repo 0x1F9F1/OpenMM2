@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -47,17 +47,18 @@ public:
     }
 
     // 0x4AE920 | ?Create@gfxImage@@SAPAV1@HHW4gfxImageFormat@1@0H@Z
-    static inline class gfxImage* Create(int32_t arg1, int32_t arg2, enum gfxImage::gfxImageFormat arg3,
-        enum gfxImage::gfxImageFormat arg4, int32_t arg5)
+    static inline class gfxImage* Create(
+        i32 arg1, i32 arg2, enum gfxImage::gfxImageFormat arg3, enum gfxImage::gfxImageFormat arg4, i32 arg5)
     {
-        return stub<cdecl_t<class gfxImage*, int32_t, int32_t, enum gfxImage::gfxImageFormat,
-            enum gfxImage::gfxImageFormat, int32_t>>(0x4AE920, arg1, arg2, arg3, arg4, arg5);
+        return stub<
+            cdecl_t<class gfxImage*, i32, i32, enum gfxImage::gfxImageFormat, enum gfxImage::gfxImageFormat, i32>>(
+            0x4AE920, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x4AEA30 | ?GetFont@gfxImage@@SAPAV1@AAH0@Z
-    static inline class gfxImage* GetFont(int32_t& arg1, int32_t& arg2)
+    static inline class gfxImage* GetFont(i32& arg1, i32& arg2)
     {
-        return stub<cdecl_t<class gfxImage*, int32_t&, int32_t&>>(0x4AEA30, arg1, arg2);
+        return stub<cdecl_t<class gfxImage*, i32&, i32&>>(0x4AEA30, arg1, arg2);
     }
 
     // 0x4AEB60 | ?FreeFont@gfxImage@@SAXXZ
@@ -79,9 +80,9 @@ public:
     }
 
     // 0x4AEDC0 | ?Scale@gfxImage@@QAEXHH@Z
-    inline void Scale(int32_t arg1, int32_t arg2)
+    inline void Scale(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, gfxImage, int32_t, int32_t>>(0x4AEDC0, this, arg1, arg2);
+        return stub<member_func_t<void, gfxImage, i32, i32>>(0x4AEDC0, this, arg1, arg2);
     }
 
     // 0x4AF1A0 | ?Reformat@gfxImage@@QAEXW4gfxImageFormat@1@0@Z
@@ -92,9 +93,9 @@ public:
     }
 
     // 0x4AF2D0 | ?GetDominantColor@gfxImage@@QBEIXZ
-    inline uint32_t GetDominantColor()
+    inline u32 GetDominantColor()
     {
-        return stub<member_func_t<uint32_t, gfxImage>>(0x4AF2D0, this);
+        return stub<member_func_t<u32, gfxImage>>(0x4AF2D0, this);
     }
 
     // 0x4AF470 | ?Flip@gfxImage@@QAEXXZ
@@ -104,11 +105,11 @@ public:
     }
 
     // 0x5CCF9C | ?sm_bppByType@gfxImage@@2PAEA
-    static inline extern_var(0x5CCF9C, uint8_t*, sm_bppByType);
+    inline extern_var(0x5CCF9C, uint8_t*, sm_bppByType);
 
     // 0x684D44 | ?sm_Use565@gfxImage@@2_NA
     static inline extern_var(0x684D44, bool, sm_Use565);
 
     // 0x684D48 | ?sm_Font@gfxImage@@2PAV1@A
-    static inline extern_var(0x684D48, class gfxImage*, sm_Font);
+    inline extern_var(0x684D48, class gfxImage*, sm_Font);
 };

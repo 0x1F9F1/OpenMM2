@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -66,9 +66,9 @@ public:
     }
 
     // 0x4CA8D0 | ?SpewSmoke@vehCarDamage@@AAEXPAVasParticles@@PAMAAVVector3@@M@Z
-    inline void SpewSmoke(class asParticles* arg1, float* arg2, class Vector3& arg3, float arg4)
+    inline void SpewSmoke(class asParticles* arg1, f32* arg2, class Vector3& arg3, f32 arg4)
     {
-        return stub<member_func_t<void, vehCarDamage, class asParticles*, float*, class Vector3&, float>>(
+        return stub<member_func_t<void, vehCarDamage, class asParticles*, f32*, class Vector3&, f32>>(
             0x4CA8D0, this, arg1, arg2, arg3, arg4);
     }
 
@@ -79,9 +79,9 @@ public:
     }
 
     // 0x4CAEC0 | ?AddDamage@vehCarDamage@@QAEXM@Z
-    inline void AddDamage(float arg1)
+    inline void AddDamage(f32 arg1)
     {
-        return stub<member_func_t<void, vehCarDamage, float>>(0x4CAEC0, this, arg1);
+        return stub<member_func_t<void, vehCarDamage, f32>>(0x4CAEC0, this, arg1);
     }
 
     // 0x4CAEF0 | ?InsertImpact@vehCarDamage@@AAEXPAUImpactCBData@@PAVphCollider@@@Z
@@ -110,10 +110,10 @@ public:
     }
 
     // 0x6AFED4 | ?EngineSmokeRule@vehCarDamage@@0PAVasBirthRule@@A
-    static inline extern_var(0x6AFED4, class asBirthRule*, EngineSmokeRule);
+    inline extern_var(0x6AFED4, class asBirthRule*, EngineSmokeRule);
 
     // 0x6AFED8 | ?EngineSmokeRuleRef@vehCarDamage@@0HA
-    static inline extern_var(0x6AFED8, int32_t, EngineSmokeRuleRef);
+    inline extern_var(0x6AFED8, int32_t, EngineSmokeRuleRef);
 
     // 0x4CA530 | ??1vehCarDamage@@UAE@XZ
     inline ~vehCarDamage() override
@@ -152,8 +152,8 @@ public:
     }
 
     // 0x4CB650 | ?GetDamageModifier@vehCarDamage@@UAEMPAVphCollider@@@Z
-    virtual inline float GetDamageModifier(class phCollider* arg1)
+    virtual inline f32 GetDamageModifier(class phCollider* arg1)
     {
-        return stub<member_func_t<float, vehCarDamage, class phCollider*>>(0x4CB650, this, arg1);
+        return stub<member_func_t<f32, vehCarDamage, class phCollider*>>(0x4CB650, this, arg1);
     }
 };

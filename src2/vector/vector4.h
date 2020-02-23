@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -34,15 +34,15 @@ class Vector4
 {
 public:
     // 0x43DD80 | ?Set@Vector4@@QAEXMMMM@Z
-    inline void Set(float arg1, float arg2, float arg3, float arg4)
+    inline void Set(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
-        return stub<member_func_t<void, Vector4, float, float, float, float>>(0x43DD80, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, Vector4, f32, f32, f32, f32>>(0x43DD80, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x43DDA0 | ?Dot@Vector4@@QBEMABV1@@Z
-    inline float Dot(class Vector4 const& arg1)
+    inline f32 Dot(class Vector4 const& arg1)
     {
-        return stub<member_func_t<float, Vector4, class Vector4 const&>>(0x43DDA0, this, arg1);
+        return stub<member_func_t<f32, Vector4, class Vector4 const&>>(0x43DDA0, this, arg1);
     }
 
     // 0x494C40 | ?Subtract@Vector4@@QAEXABVVector3@@0@Z
@@ -53,9 +53,9 @@ public:
     }
 
     // 0x494C70 | ?Dot3@Vector4@@QBEMABV1@@Z
-    inline float Dot3(class Vector4 const& arg1)
+    inline f32 Dot3(class Vector4 const& arg1)
     {
-        return stub<member_func_t<float, Vector4, class Vector4 const&>>(0x494C70, this, arg1);
+        return stub<member_func_t<f32, Vector4, class Vector4 const&>>(0x494C70, this, arg1);
     }
 
     // 0x494C90 | ?Cross@Vector4@@QAEXABV1@0@Z
@@ -120,8 +120,8 @@ public:
     }
 
     // 0x4C54D0 | ?Outcode@Vector4@@QBEHXZ
-    inline int32_t Outcode()
+    inline i32 Outcode()
     {
-        return stub<member_func_t<int32_t, Vector4>>(0x4C54D0, this);
+        return stub<member_func_t<i32, Vector4>>(0x4C54D0, this);
     }
 };

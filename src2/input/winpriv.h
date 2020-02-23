@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -33,9 +33,9 @@
 */
 
 // 0x4BAD20 | ?InputWindowProc@@YGJPAUHWND__@@IIJ@Z
-inline int32_t __stdcall InputWindowProc(struct HWND__* arg1, uint32_t arg2, uint32_t arg3, int32_t arg4)
+inline i32 __stdcall InputWindowProc(struct HWND__* arg1, u32 arg2, u32 arg3, i32 arg4)
 {
-    return stub<stdcall_t<int32_t, struct HWND__*, uint32_t, uint32_t, int32_t>>(0x4BAD20, arg1, arg2, arg3, arg4);
+    return stub<stdcall_t<i32, struct HWND__*, u32, u32, i32>>(0x4BAD20, arg1, arg2, arg3, arg4);
 }
 
 // 0x4BB1A0 | ?diInit@@YAXXZ
@@ -53,9 +53,9 @@ public:
     // winDispatchable::`vftable' @ 0x5B2AFC
 
     // 0x4BACD0 | ??0winDispatchable@@QAE@I@Z
-    inline winDispatchable(uint32_t arg1)
+    inline winDispatchable(u32 arg1)
     {
-        stub<member_func_t<void, winDispatchable, uint32_t>>(0x4BACD0, this, arg1);
+        stub<member_func_t<void, winDispatchable, u32>>(0x4BACD0, this, arg1);
     }
 
     // 0x4BAD00 | ??1winDispatchable@@UAE@XZ
@@ -65,9 +65,9 @@ public:
     }
 
     // 0x582519 | __purecall
-    virtual inline int32_t WindowProc(struct HWND__* arg1, uint32_t arg2, uint32_t arg3, int32_t arg4)
+    virtual inline i32 WindowProc(struct HWND__* arg1, u32 arg2, u32 arg3, i32 arg4)
     {
-        return stub<member_func_t<int32_t, winDispatchable, struct HWND__*, uint32_t, uint32_t, int32_t>>(
+        return stub<member_func_t<i32, winDispatchable, struct HWND__*, u32, u32, i32>>(
             0x582519, this, arg1, arg2, arg3, arg4);
     }
 };

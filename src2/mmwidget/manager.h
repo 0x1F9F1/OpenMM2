@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -98,17 +98,15 @@ public:
     }
 
     // 0x4E36F0 | ?GetScale@MenuManager@@QAEXAAM000@Z
-    inline void GetScale(float& arg1, float& arg2, float& arg3, float& arg4)
+    inline void GetScale(f32& arg1, f32& arg2, f32& arg3, f32& arg4)
     {
-        return stub<member_func_t<void, MenuManager, float&, float&, float&, float&>>(
-            0x4E36F0, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, MenuManager, f32&, f32&, f32&, f32&>>(0x4E36F0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4E3760 | ?MouseAction@MenuManager@@QAEPAVuiWidget@@HMM@Z
-    inline class uiWidget* MouseAction(int32_t arg1, float arg2, float arg3)
+    inline class uiWidget* MouseAction(i32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<class uiWidget*, MenuManager, int32_t, float, float>>(
-            0x4E3760, this, arg1, arg2, arg3);
+        return stub<member_func_t<class uiWidget*, MenuManager, i32, f32, f32>>(0x4E3760, this, arg1, arg2, arg3);
     }
 
     // 0x4E37E0 | ?ClearAllWidgets@MenuManager@@QAEXXZ
@@ -118,22 +116,22 @@ public:
     }
 
     // 0x4E3820 | ?Init@MenuManager@@QAEXHHPAD@Z
-    inline void Init(int32_t arg1, int32_t arg2, char* arg3)
+    inline void Init(i32 arg1, i32 arg2, char* arg3)
     {
-        return stub<member_func_t<void, MenuManager, int32_t, int32_t, char*>>(0x4E3820, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, MenuManager, i32, i32, char*>>(0x4E3820, this, arg1, arg2, arg3);
     }
 
     // 0x4E3B10 | ?Init@MenuManager@@QAEXPAVasCamera@@HHMMMM@Z
-    inline void Init(class asCamera* arg1, int32_t arg2, int32_t arg3, float arg4, float arg5, float arg6, float arg7)
+    inline void Init(class asCamera* arg1, i32 arg2, i32 arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7)
     {
-        return stub<member_func_t<void, MenuManager, class asCamera*, int32_t, int32_t, float, float, float, float>>(
+        return stub<member_func_t<void, MenuManager, class asCamera*, i32, i32, f32, f32, f32, f32>>(
             0x4E3B10, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x4E3D30 | ?InitCommonStuff@MenuManager@@QAEXHH@Z
-    inline void InitCommonStuff(int32_t arg1, int32_t arg2)
+    inline void InitCommonStuff(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, MenuManager, int32_t, int32_t>>(0x4E3D30, this, arg1, arg2);
+        return stub<member_func_t<void, MenuManager, i32, i32>>(0x4E3D30, this, arg1, arg2);
     }
 
     // 0x4E4030 | ?AddPointer@MenuManager@@QAEXXZ
@@ -155,21 +153,21 @@ public:
     }
 
     // 0x4E4C30 | ?GetControllerName@MenuManager@@QAEPADH@Z
-    inline char* GetControllerName(int32_t arg1)
+    inline char* GetControllerName(i32 arg1)
     {
-        return stub<member_func_t<char*, MenuManager, int32_t>>(0x4E4C30, this, arg1);
+        return stub<member_func_t<char*, MenuManager, i32>>(0x4E4C30, this, arg1);
     }
 
     // 0x4E4CD0 | ?GetFont@MenuManager@@QAEPAXH@Z
-    inline void* GetFont(int32_t arg1)
+    inline void* GetFont(i32 arg1)
     {
-        return stub<member_func_t<void*, MenuManager, int32_t>>(0x4E4CD0, this, arg1);
+        return stub<member_func_t<void*, MenuManager, i32>>(0x4E4CD0, this, arg1);
     }
 
     // 0x4E4DA0 | ?GetFGColor@MenuManager@@QAEAAVVector4@@H@Z
-    inline class Vector4& GetFGColor(int32_t arg1)
+    inline class Vector4& GetFGColor(i32 arg1)
     {
-        return stub<member_func_t<class Vector4&, MenuManager, int32_t>>(0x4E4DA0, this, arg1);
+        return stub<member_func_t<class Vector4&, MenuManager, i32>>(0x4E4DA0, this, arg1);
     }
 
     // 0x4E4F20 | ?CheckBG@MenuManager@@QAEXPAVUIMenu@@@Z
@@ -215,9 +213,9 @@ public:
     }
 
     // 0x4E5110 | ?OpenDialog@MenuManager@@QAEXH@Z
-    inline void OpenDialog(int32_t arg1)
+    inline void OpenDialog(i32 arg1)
     {
-        return stub<member_func_t<void, MenuManager, int32_t>>(0x4E5110, this, arg1);
+        return stub<member_func_t<void, MenuManager, i32>>(0x4E5110, this, arg1);
     }
 
     // 0x4E5190 | ?CloseDialog@MenuManager@@QAEXXZ
@@ -227,15 +225,15 @@ public:
     }
 
     // 0x4E51C0 | ?Enable@MenuManager@@QAEXH@Z
-    inline void Enable(int32_t arg1)
+    inline void Enable(i32 arg1)
     {
-        return stub<member_func_t<void, MenuManager, int32_t>>(0x4E51C0, this, arg1);
+        return stub<member_func_t<void, MenuManager, i32>>(0x4E51C0, this, arg1);
     }
 
     // 0x4E5230 | ?Disable@MenuManager@@QAEXH@Z
-    inline void Disable(int32_t arg1)
+    inline void Disable(i32 arg1)
     {
-        return stub<member_func_t<void, MenuManager, int32_t>>(0x4E5230, this, arg1);
+        return stub<member_func_t<void, MenuManager, i32>>(0x4E5230, this, arg1);
     }
 
     // 0x4E5270 | ?EnableNavBar@MenuManager@@QAEXXZ
@@ -257,9 +255,9 @@ public:
     }
 
     // 0x4E5320 | ?PlaySound@MenuManager@@QAEXH@Z
-    inline void PlaySound(int32_t arg1)
+    inline void PlaySound(i32 arg1)
     {
-        return stub<member_func_t<void, MenuManager, int32_t>>(0x4E5320, this, arg1);
+        return stub<member_func_t<void, MenuManager, i32>>(0x4E5320, this, arg1);
     }
 
     // 0x4E53D0 | ?DeclareLastDrawn@MenuManager@@QAEXPAVasNode@@@Z
@@ -281,22 +279,22 @@ public:
     }
 
     // 0x4E54F0 | ?ToggleFocus@MenuManager@@QAEXH@Z
-    inline void ToggleFocus(int32_t arg1)
+    inline void ToggleFocus(i32 arg1)
     {
-        return stub<member_func_t<void, MenuManager, int32_t>>(0x4E54F0, this, arg1);
+        return stub<member_func_t<void, MenuManager, i32>>(0x4E54F0, this, arg1);
     }
 
     // 0x4E5570 | ?RegisterWidgetFocus@MenuManager@@QAEXHMMMMPAVuiWidget@@@Z
-    inline void RegisterWidgetFocus(int32_t arg1, float arg2, float arg3, float arg4, float arg5, class uiWidget* arg6)
+    inline void RegisterWidgetFocus(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, class uiWidget* arg6)
     {
-        return stub<member_func_t<void, MenuManager, int32_t, float, float, float, float, class uiWidget*>>(
+        return stub<member_func_t<void, MenuManager, i32, f32, f32, f32, f32, class uiWidget*>>(
             0x4E5570, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4E55D0 | ?ScanGlobalKeys@MenuManager@@QAEHH@Z
-    inline int32_t ScanGlobalKeys(int32_t arg1)
+    inline i32 ScanGlobalKeys(i32 arg1)
     {
-        return stub<member_func_t<int32_t, MenuManager, int32_t>>(0x4E55D0, this, arg1);
+        return stub<member_func_t<i32, MenuManager, i32>>(0x4E55D0, this, arg1);
     }
 
     // 0x4E5840 | ?SwitchFocus@MenuManager@@QAEXPAVUIMenu@@@Z
@@ -318,27 +316,27 @@ public:
     }
 
     // 0x4E5900 | ?FindMenu@MenuManager@@QAEHH@Z
-    inline int32_t FindMenu(int32_t arg1)
+    inline i32 FindMenu(i32 arg1)
     {
-        return stub<member_func_t<int32_t, MenuManager, int32_t>>(0x4E5900, this, arg1);
+        return stub<member_func_t<i32, MenuManager, i32>>(0x4E5900, this, arg1);
     }
 
     // 0x4E5940 | ?CurrentMenuSelected@MenuManager@@QAEHXZ
-    inline int32_t CurrentMenuSelected()
+    inline i32 CurrentMenuSelected()
     {
-        return stub<member_func_t<int32_t, MenuManager>>(0x4E5940, this);
+        return stub<member_func_t<i32, MenuManager>>(0x4E5940, this);
     }
 
     // 0x4E5960 | ?MenuState@MenuManager@@QAEHH@Z
-    inline int32_t MenuState(int32_t arg1)
+    inline i32 MenuState(i32 arg1)
     {
-        return stub<member_func_t<int32_t, MenuManager, int32_t>>(0x4E5960, this, arg1);
+        return stub<member_func_t<i32, MenuManager, i32>>(0x4E5960, this, arg1);
     }
 
     // 0x4E59B0 | ?ActionID@MenuManager@@QAEHH@Z
-    inline int32_t ActionID(int32_t arg1)
+    inline i32 ActionID(i32 arg1)
     {
-        return stub<member_func_t<int32_t, MenuManager, int32_t>>(0x4E59B0, this, arg1);
+        return stub<member_func_t<i32, MenuManager, i32>>(0x4E59B0, this, arg1);
     }
 
     // 0x4E59F0 | ?ForceCurrentFocus@MenuManager@@QAEXXZ
@@ -354,27 +352,27 @@ public:
     }
 
     // 0x4E5A30 | ?Switch@MenuManager@@QAEHH@Z
-    inline int32_t Switch(int32_t arg1)
+    inline i32 Switch(i32 arg1)
     {
-        return stub<member_func_t<int32_t, MenuManager, int32_t>>(0x4E5A30, this, arg1);
+        return stub<member_func_t<i32, MenuManager, i32>>(0x4E5A30, this, arg1);
     }
 
     // 0x4E5AD0 | ?SetPreviousMenu@MenuManager@@QAEXH@Z
-    inline void SetPreviousMenu(int32_t arg1)
+    inline void SetPreviousMenu(i32 arg1)
     {
-        return stub<member_func_t<void, MenuManager, int32_t>>(0x4E5AD0, this, arg1);
+        return stub<member_func_t<void, MenuManager, i32>>(0x4E5AD0, this, arg1);
     }
 
     // 0x4E5B00 | ?GetPreviousMenu@MenuManager@@QAEHXZ
-    inline int32_t GetPreviousMenu()
+    inline i32 GetPreviousMenu()
     {
-        return stub<member_func_t<int32_t, MenuManager>>(0x4E5B00, this);
+        return stub<member_func_t<i32, MenuManager>>(0x4E5B00, this);
     }
 
     // 0x4E5B20 | ?AddMenu2@MenuManager@@QAEHPAVUIMenu@@@Z
-    inline int32_t AddMenu2(class UIMenu* arg1)
+    inline i32 AddMenu2(class UIMenu* arg1)
     {
-        return stub<member_func_t<int32_t, MenuManager, class UIMenu*>>(0x4E5B20, this, arg1);
+        return stub<member_func_t<i32, MenuManager, class UIMenu*>>(0x4E5B20, this, arg1);
     }
 
     // 0x4E5B80 | ?DeleteMenu@MenuManager@@QAEXPAVUIMenu@@@Z
@@ -408,9 +406,9 @@ public:
     }
 
     // 0x4E5E90 | ?AddBrackets@MenuManager@@QAEXPAVUIIcon@@0PAVuiWidget@@MM@Z
-    inline void AddBrackets(class UIIcon* arg1, class UIIcon* arg2, class uiWidget* arg3, float arg4, float arg5)
+    inline void AddBrackets(class UIIcon* arg1, class UIIcon* arg2, class uiWidget* arg3, f32 arg4, f32 arg5)
     {
-        return stub<member_func_t<void, MenuManager, class UIIcon*, class UIIcon*, class uiWidget*, float, float>>(
+        return stub<member_func_t<void, MenuManager, class UIIcon*, class UIIcon*, class uiWidget*, f32, f32>>(
             0x4E5E90, this, arg1, arg2, arg3, arg4, arg5);
     }
 
@@ -421,7 +419,7 @@ public:
     }
 
     // 0x6B012C | ?Instance@MenuManager@@2PAV1@A
-    static inline extern_var(0x6B012C, class MenuManager*, Instance);
+    inline extern_var(0x6B012C, class MenuManager*, Instance);
 
     // 0x4E3490 | ??1MenuManager@@UAE@XZ
     inline ~MenuManager() override
@@ -436,8 +434,8 @@ public:
     }
 
     // 0x4E53E0 | ?ResChange@MenuManager@@UAEXHH@Z
-    inline void ResChange(int32_t arg1, int32_t arg2) override
+    inline void ResChange(i32 arg1, i32 arg2) override
     {
-        return stub<member_func_t<void, MenuManager, int32_t, int32_t>>(0x4E53E0, this, arg1, arg2);
+        return stub<member_func_t<void, MenuManager, i32, i32>>(0x4E53E0, this, arg1, arg2);
     }
 };

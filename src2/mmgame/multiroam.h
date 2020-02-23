@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -64,9 +64,9 @@ public:
     }
 
     // 0x427600 | ?Init@mmMultiRoam@@UAEHXZ
-    inline int32_t Init() override
+    inline i32 Init() override
     {
-        return stub<member_func_t<int32_t, mmMultiRoam>>(0x427600, this);
+        return stub<member_func_t<i32, mmMultiRoam>>(0x427600, this);
     }
 
     // 0x427700 | ?InitMyPlayer@mmMultiRoam@@UAEXXZ
@@ -88,9 +88,9 @@ public:
     }
 
     // 0x427CC0 | ?UpdateGameInput@mmMultiRoam@@UAEXH@Z
-    inline void UpdateGameInput(int32_t arg1) override
+    inline void UpdateGameInput(i32 arg1) override
     {
-        return stub<member_func_t<void, mmMultiRoam, int32_t>>(0x427CC0, this, arg1);
+        return stub<member_func_t<void, mmMultiRoam, i32>>(0x427CC0, this, arg1);
     }
 
     // 0x427CD0 | ?UpdateGame@mmMultiRoam@@UAEXXZ
@@ -100,9 +100,9 @@ public:
     }
 
     // 0x427EB0 | ?SwitchState@mmMultiRoam@@UAEXH@Z
-    inline void SwitchState(int32_t arg1) override
+    inline void SwitchState(i32 arg1) override
     {
-        return stub<member_func_t<void, mmMultiRoam, int32_t>>(0x427EB0, this, arg1);
+        return stub<member_func_t<void, mmMultiRoam, i32>>(0x427EB0, this, arg1);
     }
 
     // 0x428250 | ?GetWaypoints@mmMultiRoam@@UAEPAVmmWaypoints@@XZ

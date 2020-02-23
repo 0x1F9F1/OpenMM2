@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -56,9 +56,9 @@ public:
     }
 
     // 0x4F17C0 | ?Switch@mmToolTip@@QAEXH@Z
-    inline void Switch(int32_t arg1)
+    inline void Switch(i32 arg1)
     {
-        return stub<member_func_t<void, mmToolTip, int32_t>>(0x4F17C0, this, arg1);
+        return stub<member_func_t<void, mmToolTip, i32>>(0x4F17C0, this, arg1);
     }
 
     // 0x4F1690 | ??1mmToolTip@@UAE@XZ

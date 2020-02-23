@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -191,9 +191,9 @@ public:
     }
 
     // 0x4BC380 | ?AddScaled@Matrix34@@QAEXABV1@M@Z
-    inline void AddScaled(class Matrix34 const& arg1, float arg2)
+    inline void AddScaled(class Matrix34 const& arg1, f32 arg2)
     {
-        return stub<member_func_t<void, Matrix34, class Matrix34 const&, float>>(0x4BC380, this, arg1, arg2);
+        return stub<member_func_t<void, Matrix34, class Matrix34 const&, f32>>(0x4BC380, this, arg1, arg2);
     }
 
     // 0x4BC400 | ?Dot@Matrix34@@QAEXABV1@@Z
@@ -249,93 +249,93 @@ public:
     }
 
     // 0x4BCD70 | ?Rotate@Matrix34@@QAEXABVVector3@@M@Z
-    inline void Rotate(class Vector3 const& arg1, float arg2)
+    inline void Rotate(class Vector3 const& arg1, f32 arg2)
     {
-        return stub<member_func_t<void, Matrix34, class Vector3 const&, float>>(0x4BCD70, this, arg1, arg2);
+        return stub<member_func_t<void, Matrix34, class Vector3 const&, f32>>(0x4BCD70, this, arg1, arg2);
     }
 
     // 0x4BCDA0 | ?RotateX@Matrix34@@QAEXM@Z
-    inline void RotateX(float arg1)
+    inline void RotateX(f32 arg1)
     {
-        return stub<member_func_t<void, Matrix34, float>>(0x4BCDA0, this, arg1);
+        return stub<member_func_t<void, Matrix34, f32>>(0x4BCDA0, this, arg1);
     }
 
     // 0x4BCDD0 | ?RotateY@Matrix34@@QAEXM@Z
-    inline void RotateY(float arg1)
+    inline void RotateY(f32 arg1)
     {
-        return stub<member_func_t<void, Matrix34, float>>(0x4BCDD0, this, arg1);
+        return stub<member_func_t<void, Matrix34, f32>>(0x4BCDD0, this, arg1);
     }
 
     // 0x4BCE00 | ?RotateZ@Matrix34@@QAEXM@Z
-    inline void RotateZ(float arg1)
+    inline void RotateZ(f32 arg1)
     {
-        return stub<member_func_t<void, Matrix34, float>>(0x4BCE00, this, arg1);
+        return stub<member_func_t<void, Matrix34, f32>>(0x4BCE00, this, arg1);
     }
 
     // 0x4BCE30 | ?RotateUnitAxis@Matrix34@@QAEXABVVector3@@M@Z
-    inline void RotateUnitAxis(class Vector3 const& arg1, float arg2)
+    inline void RotateUnitAxis(class Vector3 const& arg1, f32 arg2)
     {
-        return stub<member_func_t<void, Matrix34, class Vector3 const&, float>>(0x4BCE30, this, arg1, arg2);
+        return stub<member_func_t<void, Matrix34, class Vector3 const&, f32>>(0x4BCE30, this, arg1, arg2);
     }
 
     // 0x4BCE60 | ?RotateFull@Matrix34@@QAEXABVVector3@@M@Z
-    inline void RotateFull(class Vector3 const& arg1, float arg2)
+    inline void RotateFull(class Vector3 const& arg1, f32 arg2)
     {
-        return stub<member_func_t<void, Matrix34, class Vector3 const&, float>>(0x4BCE60, this, arg1, arg2);
+        return stub<member_func_t<void, Matrix34, class Vector3 const&, f32>>(0x4BCE60, this, arg1, arg2);
     }
 
     // 0x4BCEA0 | ?RotateFullX@Matrix34@@QAEXM@Z
-    inline void RotateFullX(float arg1)
+    inline void RotateFullX(f32 arg1)
     {
-        return stub<member_func_t<void, Matrix34, float>>(0x4BCEA0, this, arg1);
+        return stub<member_func_t<void, Matrix34, f32>>(0x4BCEA0, this, arg1);
     }
 
     // 0x4BCEE0 | ?RotateFullY@Matrix34@@QAEXM@Z
-    inline void RotateFullY(float arg1)
+    inline void RotateFullY(f32 arg1)
     {
-        return stub<member_func_t<void, Matrix34, float>>(0x4BCEE0, this, arg1);
+        return stub<member_func_t<void, Matrix34, f32>>(0x4BCEE0, this, arg1);
     }
 
     // 0x4BCF20 | ?RotateFullZ@Matrix34@@QAEXM@Z
-    inline void RotateFullZ(float arg1)
+    inline void RotateFullZ(f32 arg1)
     {
-        return stub<member_func_t<void, Matrix34, float>>(0x4BCF20, this, arg1);
+        return stub<member_func_t<void, Matrix34, f32>>(0x4BCF20, this, arg1);
     }
 
     // 0x4BCF60 | ?RotateFullUnitAxis@Matrix34@@QAEXABVVector3@@M@Z
-    inline void RotateFullUnitAxis(class Vector3 const& arg1, float arg2)
+    inline void RotateFullUnitAxis(class Vector3 const& arg1, f32 arg2)
     {
-        return stub<member_func_t<void, Matrix34, class Vector3 const&, float>>(0x4BCF60, this, arg1, arg2);
+        return stub<member_func_t<void, Matrix34, class Vector3 const&, f32>>(0x4BCF60, this, arg1, arg2);
     }
 
     // 0x4BCFA0 | ?MakeRotate@Matrix34@@QAEXABVVector3@@M@Z
-    inline void MakeRotate(class Vector3 const& arg1, float arg2)
+    inline void MakeRotate(class Vector3 const& arg1, f32 arg2)
     {
-        return stub<member_func_t<void, Matrix34, class Vector3 const&, float>>(0x4BCFA0, this, arg1, arg2);
+        return stub<member_func_t<void, Matrix34, class Vector3 const&, f32>>(0x4BCFA0, this, arg1, arg2);
     }
 
     // 0x4BD100 | ?MakeRotateX@Matrix34@@QAEXM@Z
-    inline void MakeRotateX(float arg1)
+    inline void MakeRotateX(f32 arg1)
     {
-        return stub<member_func_t<void, Matrix34, float>>(0x4BD100, this, arg1);
+        return stub<member_func_t<void, Matrix34, f32>>(0x4BD100, this, arg1);
     }
 
     // 0x4BD140 | ?MakeRotateY@Matrix34@@QAEXM@Z
-    inline void MakeRotateY(float arg1)
+    inline void MakeRotateY(f32 arg1)
     {
-        return stub<member_func_t<void, Matrix34, float>>(0x4BD140, this, arg1);
+        return stub<member_func_t<void, Matrix34, f32>>(0x4BD140, this, arg1);
     }
 
     // 0x4BD180 | ?MakeRotateZ@Matrix34@@QAEXM@Z
-    inline void MakeRotateZ(float arg1)
+    inline void MakeRotateZ(f32 arg1)
     {
-        return stub<member_func_t<void, Matrix34, float>>(0x4BD180, this, arg1);
+        return stub<member_func_t<void, Matrix34, f32>>(0x4BD180, this, arg1);
     }
 
     // 0x4BD1C0 | ?MakeRotateUnitAxis@Matrix34@@QAEXABVVector3@@M@Z
-    inline void MakeRotateUnitAxis(class Vector3 const& arg1, float arg2)
+    inline void MakeRotateUnitAxis(class Vector3 const& arg1, f32 arg2)
     {
-        return stub<member_func_t<void, Matrix34, class Vector3 const&, float>>(0x4BD1C0, this, arg1, arg2);
+        return stub<member_func_t<void, Matrix34, class Vector3 const&, f32>>(0x4BD1C0, this, arg1, arg2);
     }
 
     // 0x4BD290 | ?RotateTo@Matrix34@@QAEXABVVector3@@0@Z
@@ -346,9 +346,9 @@ public:
     }
 
     // 0x4BD380 | ?RotateTo@Matrix34@@QAEXABVVector3@@0M@Z
-    inline void RotateTo(class Vector3 const& arg1, class Vector3 const& arg2, float arg3)
+    inline void RotateTo(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3)
     {
-        return stub<member_func_t<void, Matrix34, class Vector3 const&, class Vector3 const&, float>>(
+        return stub<member_func_t<void, Matrix34, class Vector3 const&, class Vector3 const&, f32>>(
             0x4BD380, this, arg1, arg2, arg3);
     }
 
@@ -455,39 +455,39 @@ public:
     }
 
     // 0x4BE500 | ?Scale@Matrix34@@QAEXM@Z
-    inline void Scale(float arg1)
+    inline void Scale(f32 arg1)
     {
-        return stub<member_func_t<void, Matrix34, float>>(0x4BE500, this, arg1);
+        return stub<member_func_t<void, Matrix34, f32>>(0x4BE500, this, arg1);
     }
 
     // 0x4BE560 | ?Scale@Matrix34@@QAEXMMM@Z
-    inline void Scale(float arg1, float arg2, float arg3)
+    inline void Scale(f32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, Matrix34, float, float, float>>(0x4BE560, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, Matrix34, f32, f32, f32>>(0x4BE560, this, arg1, arg2, arg3);
     }
 
     // 0x4BE5C0 | ?ScaleFull@Matrix34@@QAEXM@Z
-    inline void ScaleFull(float arg1)
+    inline void ScaleFull(f32 arg1)
     {
-        return stub<member_func_t<void, Matrix34, float>>(0x4BE5C0, this, arg1);
+        return stub<member_func_t<void, Matrix34, f32>>(0x4BE5C0, this, arg1);
     }
 
     // 0x4BE640 | ?ScaleFull@Matrix34@@QAEXMMM@Z
-    inline void ScaleFull(float arg1, float arg2, float arg3)
+    inline void ScaleFull(f32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, Matrix34, float, float, float>>(0x4BE640, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, Matrix34, f32, f32, f32>>(0x4BE640, this, arg1, arg2, arg3);
     }
 
     // 0x4BE6C0 | ?MakeScale@Matrix34@@QAEXM@Z
-    inline void MakeScale(float arg1)
+    inline void MakeScale(f32 arg1)
     {
-        return stub<member_func_t<void, Matrix34, float>>(0x4BE6C0, this, arg1);
+        return stub<member_func_t<void, Matrix34, f32>>(0x4BE6C0, this, arg1);
     }
 
     // 0x4BE6F0 | ?MakeScale@Matrix34@@QAEXMMM@Z
-    inline void MakeScale(float arg1, float arg2, float arg3)
+    inline void MakeScale(f32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, Matrix34, float, float, float>>(0x4BE6F0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, Matrix34, f32, f32, f32>>(0x4BE6F0, this, arg1, arg2, arg3);
     }
 
     // 0x4BE720 | ?Inverse@Matrix34@@QAEXXZ
@@ -546,22 +546,22 @@ public:
     }
 
     // 0x4BEC50 | ?PolarView@Matrix34@@QAEXMMMM@Z
-    inline void PolarView(float arg1, float arg2, float arg3, float arg4)
+    inline void PolarView(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
-        return stub<member_func_t<void, Matrix34, float, float, float, float>>(0x4BEC50, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, Matrix34, f32, f32, f32, f32>>(0x4BEC50, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4BECA0 | ?GetPolar@Matrix34@@QBEXPAVVector4@@PAVVector3@@M@Z
-    inline void GetPolar(class Vector4* arg1, class Vector3* arg2, float arg3)
+    inline void GetPolar(class Vector4* arg1, class Vector3* arg2, f32 arg3)
     {
-        return stub<member_func_t<void, Matrix34, class Vector4*, class Vector3*, float>>(
+        return stub<member_func_t<void, Matrix34, class Vector4*, class Vector3*, f32>>(
             0x4BECA0, this, arg1, arg2, arg3);
     }
 
     // 0x4BECE0 | ?GetLookAt@Matrix34@@QBEXPAVVector3@@0M@Z
-    inline void GetLookAt(class Vector3* arg1, class Vector3* arg2, float arg3)
+    inline void GetLookAt(class Vector3* arg1, class Vector3* arg2, f32 arg3)
     {
-        return stub<member_func_t<void, Matrix34, class Vector3*, class Vector3*, float>>(
+        return stub<member_func_t<void, Matrix34, class Vector3*, class Vector3*, f32>>(
             0x4BECE0, this, arg1, arg2, arg3);
     }
 
@@ -584,15 +584,15 @@ public:
     }
 
     // 0x4BF010 | ?Determinant3x3@Matrix34@@QBEMXZ
-    inline float Determinant3x3()
+    inline f32 Determinant3x3()
     {
-        return stub<member_func_t<float, Matrix34>>(0x4BF010, this);
+        return stub<member_func_t<f32, Matrix34>>(0x4BF010, this);
     }
 
     // 0x4BF080 | ?Interpolate@Matrix34@@QAEXABV1@0M@Z
-    inline void Interpolate(class Matrix34 const& arg1, class Matrix34 const& arg2, float arg3)
+    inline void Interpolate(class Matrix34 const& arg1, class Matrix34 const& arg2, f32 arg3)
     {
-        return stub<member_func_t<void, Matrix34, class Matrix34 const&, class Matrix34 const&, float>>(
+        return stub<member_func_t<void, Matrix34, class Matrix34 const&, class Matrix34 const&, f32>>(
             0x4BF080, this, arg1, arg2, arg3);
     }
 
@@ -609,9 +609,9 @@ public:
     }
 
     // 0x4BFD60 | ?Transform4@Matrix34@@QBEXPBVVector3@@PAVVector4@@H@Z
-    inline void Transform4(class Vector3 const* arg1, class Vector4* arg2, int32_t arg3)
+    inline void Transform4(class Vector3 const* arg1, class Vector4* arg2, i32 arg3)
     {
-        return stub<member_func_t<void, Matrix34, class Vector3 const*, class Vector4*, int32_t>>(
+        return stub<member_func_t<void, Matrix34, class Vector3 const*, class Vector4*, i32>>(
             0x4BFD60, this, arg1, arg2, arg3);
     }
 };

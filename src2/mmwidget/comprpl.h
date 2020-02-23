@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -56,9 +56,9 @@ public:
     }
 
     // 0x59ECF0 | ?InitTitle@mmCompReplay@@QAEXMMMMPAULocString@@@Z
-    inline void InitTitle(float arg1, float arg2, float arg3, float arg4, struct LocString* arg5)
+    inline void InitTitle(f32 arg1, f32 arg2, f32 arg3, f32 arg4, struct LocString* arg5)
     {
-        return stub<member_func_t<void, mmCompReplay, float, float, float, float, struct LocString*>>(
+        return stub<member_func_t<void, mmCompReplay, f32, f32, f32, f32, struct LocString*>>(
             0x59ECF0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
@@ -99,29 +99,26 @@ public:
     }
 
     // 0x59EDD0 | ?Highlight@mmCompReplay@@UAEXPAVmmTextNode@@H@Z
-    inline void Highlight(class mmTextNode* arg1, int32_t arg2) override
+    inline void Highlight(class mmTextNode* arg1, i32 arg2) override
     {
-        return stub<member_func_t<void, mmCompReplay, class mmTextNode*, int32_t>>(0x59EDD0, this, arg1, arg2);
+        return stub<member_func_t<void, mmCompReplay, class mmTextNode*, i32>>(0x59EDD0, this, arg1, arg2);
     }
 
     // 0x59EDF0 | ?Box@mmCompReplay@@UAEXHPAVmmTextNode@@H@Z
-    inline void Box(int32_t arg1, class mmTextNode* arg2, int32_t arg3) override
+    inline void Box(i32 arg1, class mmTextNode* arg2, i32 arg3) override
     {
-        return stub<member_func_t<void, mmCompReplay, int32_t, class mmTextNode*, int32_t>>(
-            0x59EDF0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmCompReplay, i32, class mmTextNode*, i32>>(0x59EDF0, this, arg1, arg2, arg3);
     }
 
     // 0x59EE20 | ?SetGeometry@mmCompReplay@@UAEXMMMM@Z
-    inline void SetGeometry(float arg1, float arg2, float arg3, float arg4) override
+    inline void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4) override
     {
-        return stub<member_func_t<void, mmCompReplay, float, float, float, float>>(
-            0x59EE20, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, mmCompReplay, f32, f32, f32, f32>>(0x59EE20, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x59ED90 | ?SetPosition@mmCompReplay@@UAEXPAVmmTextNode@@HM@Z
-    inline void SetPosition(class mmTextNode* arg1, int32_t arg2, float arg3) override
+    inline void SetPosition(class mmTextNode* arg1, i32 arg2, f32 arg3) override
     {
-        return stub<member_func_t<void, mmCompReplay, class mmTextNode*, int32_t, float>>(
-            0x59ED90, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmCompReplay, class mmTextNode*, i32, f32>>(0x59ED90, this, arg1, arg2, arg3);
     }
 };

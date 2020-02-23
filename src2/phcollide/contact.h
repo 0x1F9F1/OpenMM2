@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -54,9 +54,9 @@ public:
     }
 
     // 0x46EEB0 | ?SetContactPenetrationScale@phContact@@SAXM@Z
-    static inline void SetContactPenetrationScale(float arg1)
+    static inline void SetContactPenetrationScale(f32 arg1)
     {
-        return stub<cdecl_t<void, float>>(0x46EEB0, arg1);
+        return stub<cdecl_t<void, f32>>(0x46EEB0, arg1);
     }
 
     // 0x46EED0 | ?SetContactPenetration@phContact@@SAXXZ
@@ -92,10 +92,10 @@ public:
 
     // 0x46F410 | ?CalcContactForce@phContact@@QAE_NPBVphImpact@@ABVVector3@@11PAV3@PAVMatrix34@@PAMMM@Z
     inline bool CalcContactForce(class phImpact const* arg1, class Vector3 const& arg2, class Vector3 const& arg3,
-        class Vector3 const& arg4, class Vector3* arg5, class Matrix34* arg6, float* arg7, float arg8, float arg9)
+        class Vector3 const& arg4, class Vector3* arg5, class Matrix34* arg6, f32* arg7, f32 arg8, f32 arg9)
     {
         return stub<member_func_t<bool, phContact, class phImpact const*, class Vector3 const&, class Vector3 const&,
-            class Vector3 const&, class Vector3*, class Matrix34*, float*, float, float>>(
+            class Vector3 const&, class Vector3*, class Matrix34*, f32*, f32, f32>>(
             0x46F410, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
     }
 

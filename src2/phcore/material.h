@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -101,9 +101,9 @@ public:
     // phMaterialMgr::`vftable' @ 0x5B2410
 
     // 0x493420 | ?CreateInstance@phMaterialMgr@@SAAAV1@H@Z
-    static inline class phMaterialMgr& CreateInstance(int32_t arg1)
+    static inline class phMaterialMgr& CreateInstance(i32 arg1)
     {
-        return stub<cdecl_t<class phMaterialMgr&, int32_t>>(0x493420, arg1);
+        return stub<cdecl_t<class phMaterialMgr&, i32>>(0x493420, arg1);
     }
 
     // 0x4934A0 | ??0phMaterialMgr@@IAE@XZ
@@ -113,9 +113,9 @@ public:
     }
 
     // 0x4934E0 | ??0phMaterialMgr@@IAE@PAVphMaterial@@H@Z
-    inline phMaterialMgr(class phMaterial* arg1, int32_t arg2)
+    inline phMaterialMgr(class phMaterial* arg1, i32 arg2)
     {
-        stub<member_func_t<void, phMaterialMgr, class phMaterial*, int32_t>>(0x4934E0, this, arg1, arg2);
+        stub<member_func_t<void, phMaterialMgr, class phMaterial*, i32>>(0x4934E0, this, arg1, arg2);
     }
 
     // 0x4935C0 | ??1phMaterialMgr@@QAE@XZ
@@ -150,25 +150,25 @@ public:
     }
 
     // 0x493840 | ?FindNameOfIndex@phMaterialMgr@@QAEPBDH@Z
-    inline char const* FindNameOfIndex(int32_t arg1)
+    inline char const* FindNameOfIndex(i32 arg1)
     {
-        return stub<member_func_t<char const*, phMaterialMgr, int32_t>>(0x493840, this, arg1);
+        return stub<member_func_t<char const*, phMaterialMgr, i32>>(0x493840, this, arg1);
     }
 
     // 0x493870 | ?FindIndexOfName@phMaterialMgr@@QAEHPBD@Z
-    inline int32_t FindIndexOfName(char const* arg1)
+    inline i32 FindIndexOfName(char const* arg1)
     {
-        return stub<member_func_t<int32_t, phMaterialMgr, char const*>>(0x493870, this, arg1);
+        return stub<member_func_t<i32, phMaterialMgr, char const*>>(0x493870, this, arg1);
     }
 
     // 0x66134C | ?RefCount@phMaterialMgr@@1HA
-    static inline extern_var(0x66134C, int32_t, RefCount);
+    inline extern_var(0x66134C, int32_t, RefCount);
 
     // 0x661350 | ?Instance@phMaterialMgr@@1PAV1@A
-    static inline extern_var(0x661350, class phMaterialMgr*, Instance);
+    inline extern_var(0x661350, class phMaterialMgr*, Instance);
 
     // 0x661354 | ?DefaultPhysMaterial@phMaterialMgr@@1PAVphMaterial@@A
-    static inline extern_var(0x661354, class phMaterial*, DefaultPhysMaterial);
+    inline extern_var(0x661354, class phMaterial*, DefaultPhysMaterial);
 
     // 0x493780 | ?Load@phMaterialMgr@@UAEPAVphMaterial@@PAVStream@@@Z
     virtual inline class phMaterial* Load(class Stream* arg1)

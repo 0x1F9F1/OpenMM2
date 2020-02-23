@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -40,16 +40,16 @@ public:
     // Dialog_HallOfFame::`vftable' @ 0x5B4000
 
     // 0x4FBA70 | ??0Dialog_HallOfFame@@QAE@HMMMMPAD@Z
-    inline Dialog_HallOfFame(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
+    inline Dialog_HallOfFame(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
     {
-        stub<member_func_t<void, Dialog_HallOfFame, int32_t, float, float, float, float, char*>>(
+        stub<member_func_t<void, Dialog_HallOfFame, i32, f32, f32, f32, f32, char*>>(
             0x4FBA70, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4FC040 | ?AddRaceRecord@Dialog_HallOfFame@@QAEXHPAD00H00@Z
-    inline void AddRaceRecord(int32_t arg1, char* arg2, char* arg3, char* arg4, int32_t arg5, char* arg6, char* arg7)
+    inline void AddRaceRecord(i32 arg1, char* arg2, char* arg3, char* arg4, i32 arg5, char* arg6, char* arg7)
     {
-        return stub<member_func_t<void, Dialog_HallOfFame, int32_t, char*, char*, char*, int32_t, char*, char*>>(
+        return stub<member_func_t<void, Dialog_HallOfFame, i32, char*, char*, char*, i32, char*, char*>>(
             0x4FC040, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 

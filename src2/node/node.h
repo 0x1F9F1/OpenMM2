@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -68,27 +68,27 @@ public:
     }
 
     // 0x4A0E60 | ?AddChild@asNode@@QAEHPAV1@@Z
-    inline int32_t AddChild(class asNode* arg1)
+    inline i32 AddChild(class asNode* arg1)
     {
-        return stub<member_func_t<int32_t, asNode, class asNode*>>(0x4A0E60, this, arg1);
+        return stub<member_func_t<i32, asNode, class asNode*>>(0x4A0E60, this, arg1);
     }
 
     // 0x4A0EE0 | ?InsertChild@asNode@@QAEHHPAV1@@Z
-    inline int32_t InsertChild(int32_t arg1, class asNode* arg2)
+    inline i32 InsertChild(i32 arg1, class asNode* arg2)
     {
-        return stub<member_func_t<int32_t, asNode, int32_t, class asNode*>>(0x4A0EE0, this, arg1, arg2);
+        return stub<member_func_t<i32, asNode, i32, class asNode*>>(0x4A0EE0, this, arg1, arg2);
     }
 
     // 0x4A0F50 | ?RemoveChild@asNode@@QAEHH@Z
-    inline int32_t RemoveChild(int32_t arg1)
+    inline i32 RemoveChild(i32 arg1)
     {
-        return stub<member_func_t<int32_t, asNode, int32_t>>(0x4A0F50, this, arg1);
+        return stub<member_func_t<i32, asNode, i32>>(0x4A0F50, this, arg1);
     }
 
     // 0x4A0FD0 | ?RemoveChild@asNode@@QAEHPAV1@@Z
-    inline int32_t RemoveChild(class asNode* arg1)
+    inline i32 RemoveChild(class asNode* arg1)
     {
-        return stub<member_func_t<int32_t, asNode, class asNode*>>(0x4A0FD0, this, arg1);
+        return stub<member_func_t<i32, asNode, class asNode*>>(0x4A0FD0, this, arg1);
     }
 
     // 0x4A1010 | ?RemoveAllChildren@asNode@@QAEXXZ
@@ -98,9 +98,9 @@ public:
     }
 
     // 0x4A1030 | ?GetChild@asNode@@QAEPAV1@H@Z
-    inline class asNode* GetChild(int32_t arg1)
+    inline class asNode* GetChild(i32 arg1)
     {
-        return stub<member_func_t<class asNode*, asNode, int32_t>>(0x4A1030, this, arg1);
+        return stub<member_func_t<class asNode*, asNode, i32>>(0x4A1030, this, arg1);
     }
 
     // 0x4A1060 | ?GetNext@asNode@@QAEPAV1@XZ
@@ -116,15 +116,15 @@ public:
     }
 
     // 0x4A10A0 | ?NumChildren@asNode@@QAEHXZ
-    inline int32_t NumChildren()
+    inline i32 NumChildren()
     {
-        return stub<member_func_t<int32_t, asNode>>(0x4A10A0, this);
+        return stub<member_func_t<i32, asNode>>(0x4A10A0, this);
     }
 
     // 0x4A10C0 | ?SwitchTo@asNode@@QAEXH@Z
-    inline void SwitchTo(int32_t arg1)
+    inline void SwitchTo(i32 arg1)
     {
-        return stub<member_func_t<void, asNode, int32_t>>(0x4A10C0, this, arg1);
+        return stub<member_func_t<void, asNode, i32>>(0x4A10C0, this, arg1);
     }
 
     // 0x4A0D00 | ??1asNode@@UAE@XZ
@@ -146,9 +146,9 @@ public:
     }
 
     // 0x4A0E30 | ?ResChange@asNode@@UAEXHH@Z
-    virtual inline void ResChange(int32_t arg1, int32_t arg2)
+    virtual inline void ResChange(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, asNode, int32_t, int32_t>>(0x4A0E30, this, arg1, arg2);
+        return stub<member_func_t<void, asNode, i32, i32>>(0x4A0E30, this, arg1, arg2);
     }
 
     // 0x4A0DD0 | ?UpdatePaused@asNode@@UAEXXZ

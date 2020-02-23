@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -45,10 +45,9 @@ public:
     // PURoster::`vftable' @ 0x5B4768
 
     // 0x50A8B0 | ??0PURoster@@QAE@HMMMM@Z
-    inline PURoster(int32_t arg1, float arg2, float arg3, float arg4, float arg5)
+    inline PURoster(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
     {
-        stub<member_func_t<void, PURoster, int32_t, float, float, float, float>>(
-            0x50A8B0, this, arg1, arg2, arg3, arg4, arg5);
+        stub<member_func_t<void, PURoster, i32, f32, f32, f32, f32>>(0x50A8B0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x50AA80 | ?BootButtonCB@PURoster@@QAEXXZ
@@ -58,27 +57,27 @@ public:
     }
 
     // 0x50AAE0 | ?SetHost@PURoster@@QAEXH@Z
-    inline void SetHost(int32_t arg1)
+    inline void SetHost(i32 arg1)
     {
-        return stub<member_func_t<void, PURoster, int32_t>>(0x50AAE0, this, arg1);
+        return stub<member_func_t<void, PURoster, i32>>(0x50AAE0, this, arg1);
     }
 
     // 0x50AB50 | ?AddName@PURoster@@QAEXPBDKH@Z
-    inline void AddName(char const* arg1, uint32_t arg2, int32_t arg3)
+    inline void AddName(char const* arg1, u32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, PURoster, char const*, uint32_t, int32_t>>(0x50AB50, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, PURoster, char const*, u32, i32>>(0x50AB50, this, arg1, arg2, arg3);
     }
 
     // 0x50AC30 | ?RemoveName@PURoster@@QAEXPBDK@Z
-    inline void RemoveName(char const* arg1, uint32_t arg2)
+    inline void RemoveName(char const* arg1, u32 arg2)
     {
-        return stub<member_func_t<void, PURoster, char const*, uint32_t>>(0x50AC30, this, arg1, arg2);
+        return stub<member_func_t<void, PURoster, char const*, u32>>(0x50AC30, this, arg1, arg2);
     }
 
     // 0x50AD70 | ?RemoveName@PURoster@@QAEXK@Z
-    inline void RemoveName(uint32_t arg1)
+    inline void RemoveName(u32 arg1)
     {
-        return stub<member_func_t<void, PURoster, uint32_t>>(0x50AD70, this, arg1);
+        return stub<member_func_t<void, PURoster, u32>>(0x50AD70, this, arg1);
     }
 
     // 0x50AEA0 | ?ClearNames@PURoster@@QAEXXZ
@@ -100,15 +99,15 @@ public:
     }
 
     // 0x50AF70 | ?FindRosterName@PURoster@@QAEHPBD@Z
-    inline int32_t FindRosterName(char const* arg1)
+    inline i32 FindRosterName(char const* arg1)
     {
-        return stub<member_func_t<int32_t, PURoster, char const*>>(0x50AF70, this, arg1);
+        return stub<member_func_t<i32, PURoster, char const*>>(0x50AF70, this, arg1);
     }
 
     // 0x50AFE0 | ?FindRosterName@PURoster@@QAEHK@Z
-    inline int32_t FindRosterName(uint32_t arg1)
+    inline i32 FindRosterName(u32 arg1)
     {
-        return stub<member_func_t<int32_t, PURoster, uint32_t>>(0x50AFE0, this, arg1);
+        return stub<member_func_t<i32, PURoster, u32>>(0x50AFE0, this, arg1);
     }
 
     // 0x50AA60 | ??1PURoster@@UAE@XZ

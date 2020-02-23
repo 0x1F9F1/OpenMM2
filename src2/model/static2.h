@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -64,16 +64,16 @@ public:
     }
 
     // 0x4A4A50 | ?DrawEnvMapped@modStatic@@QBEXPAVmodShader@@PAVgfxTexture@@M@Z
-    inline void DrawEnvMapped(class modShader* arg1, class gfxTexture* arg2, float arg3)
+    inline void DrawEnvMapped(class modShader* arg1, class gfxTexture* arg2, f32 arg3)
     {
-        return stub<member_func_t<void, modStatic, class modShader*, class gfxTexture*, float>>(
+        return stub<member_func_t<void, modStatic, class modShader*, class gfxTexture*, f32>>(
             0x4A4A50, this, arg1, arg2, arg3);
     }
 
     // 0x4A4B30 | ?DrawOrthoMapped@modStatic@@QBEXPAVmodShader@@PAVgfxTexture@@MI@Z
-    inline void DrawOrthoMapped(class modShader* arg1, class gfxTexture* arg2, float arg3, uint32_t arg4)
+    inline void DrawOrthoMapped(class modShader* arg1, class gfxTexture* arg2, f32 arg3, u32 arg4)
     {
-        return stub<member_func_t<void, modStatic, class modShader*, class gfxTexture*, float, uint32_t>>(
+        return stub<member_func_t<void, modStatic, class modShader*, class gfxTexture*, f32, u32>>(
             0x4A4B30, this, arg1, arg2, arg3, arg4);
     }
 
@@ -96,14 +96,14 @@ public:
     }
 
     // 0x4A4DB0 | ?GetAdjunctCount@modStatic@@QBEHXZ
-    inline int32_t GetAdjunctCount()
+    inline i32 GetAdjunctCount()
     {
-        return stub<member_func_t<int32_t, modStatic>>(0x4A4DB0, this);
+        return stub<member_func_t<i32, modStatic>>(0x4A4DB0, this);
     }
 
     // 0x4A4DE0 | ?GetTriCount@modStatic@@QBEHXZ
-    inline int32_t GetTriCount()
+    inline i32 GetTriCount()
     {
-        return stub<member_func_t<int32_t, modStatic>>(0x4A4DE0, this);
+        return stub<member_func_t<i32, modStatic>>(0x4A4DE0, this);
     }
 };

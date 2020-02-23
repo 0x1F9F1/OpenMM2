@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -31,9 +31,9 @@
 */
 
 // 0x5314E0 | ?inputEnumEffectTypeProc@@YGHPBUDIEFFECTINFOA@@PAX@Z
-inline int32_t __stdcall inputEnumEffectTypeProc(struct DIEFFECTINFOA const* arg1, void* arg2)
+inline i32 __stdcall inputEnumEffectTypeProc(struct DIEFFECTINFOA const* arg1, void* arg2)
 {
-    return stub<stdcall_t<int32_t, struct DIEFFECTINFOA const*, void*>>(0x5314E0, arg1, arg2);
+    return stub<stdcall_t<i32, struct DIEFFECTINFOA const*, void*>>(0x5314E0, arg1, arg2);
 }
 
 class mmEffectFF
@@ -56,20 +56,20 @@ public:
     // 0x582519 | __purecall
 
     // 0x5315D0 | ?Play@mmEffectFF@@UAEHXZ
-    virtual inline int32_t Play()
+    virtual inline i32 Play()
     {
-        return stub<member_func_t<int32_t, mmEffectFF>>(0x5315D0, this);
+        return stub<member_func_t<i32, mmEffectFF>>(0x5315D0, this);
     }
 
     // 0x5315E0 | ?Stop@mmEffectFF@@UAEHXZ
-    virtual inline int32_t Stop()
+    virtual inline i32 Stop()
     {
-        return stub<member_func_t<int32_t, mmEffectFF>>(0x5315E0, this);
+        return stub<member_func_t<i32, mmEffectFF>>(0x5315E0, this);
     }
 
     // 0x5315F0 | ?SetValues@mmEffectFF@@UAEHMM@Z
-    virtual inline int32_t SetValues(float arg1, float arg2)
+    virtual inline i32 SetValues(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<int32_t, mmEffectFF, float, float>>(0x5315F0, this, arg1, arg2);
+        return stub<member_func_t<i32, mmEffectFF, f32, f32>>(0x5315F0, this, arg1, arg2);
     }
 };

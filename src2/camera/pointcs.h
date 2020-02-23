@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -55,21 +55,21 @@ public:
     }
 
     // 0x5206F0 | ?SetMaxDist@camPointCS@@QAEXM@Z
-    inline void SetMaxDist(float arg1)
+    inline void SetMaxDist(f32 arg1)
     {
-        return stub<member_func_t<void, camPointCS, float>>(0x5206F0, this, arg1);
+        return stub<member_func_t<void, camPointCS, f32>>(0x5206F0, this, arg1);
     }
 
     // 0x520710 | ?SetMinDist@camPointCS@@QAEXM@Z
-    inline void SetMinDist(float arg1)
+    inline void SetMinDist(f32 arg1)
     {
-        return stub<member_func_t<void, camPointCS, float>>(0x520710, this, arg1);
+        return stub<member_func_t<void, camPointCS, f32>>(0x520710, this, arg1);
     }
 
     // 0x520730 | ?SetAppRate@camPointCS@@QAEXM@Z
-    inline void SetAppRate(float arg1)
+    inline void SetAppRate(f32 arg1)
     {
-        return stub<member_func_t<void, camPointCS, float>>(0x520730, this, arg1);
+        return stub<member_func_t<void, camPointCS, f32>>(0x520730, this, arg1);
     }
 
     // 0x520740 | ?SetVel@camPointCS@@QAEXAAVVector3@@@Z

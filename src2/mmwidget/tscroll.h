@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -59,17 +59,18 @@ public:
     }
 
     // 0x4EA3D0 | ?Init@UITextScroll@@QAEXPAXMMMMVstring@@HPAHVdatCallback@@@Z
-    inline void Init(void* arg1, float arg2, float arg3, float arg4, float arg5, class string arg6, int32_t arg7,
-        int32_t* arg8, class datCallback arg9)
+    inline void Init(void* arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, class string arg6, i32 arg7, i32* arg8,
+        class datCallback arg9)
     {
-        return stub<member_func_t<void, UITextScroll, void*, float, float, float, float, class string, int32_t,
-            int32_t*, class datCallback>>(0x4EA3D0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
+        return stub<
+            member_func_t<void, UITextScroll, void*, f32, f32, f32, f32, class string, i32, i32*, class datCallback>>(
+            0x4EA3D0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
     }
 
     // 0x4EA730 | ?InitVScroll@UITextScroll@@QAEXMMM@Z
-    inline void InitVScroll(float arg1, float arg2, float arg3)
+    inline void InitVScroll(f32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, UITextScroll, float, float, float>>(0x4EA730, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, UITextScroll, f32, f32, f32>>(0x4EA730, this, arg1, arg2, arg3);
     }
 
     // 0x4EA740 | ?VScrollCB@UITextScroll@@QAEXXZ
@@ -103,21 +104,21 @@ public:
     }
 
     // 0x4EAA30 | ?GetCurrentString@UITextScroll@@QAEXPADH@Z
-    inline void GetCurrentString(char* arg1, int32_t arg2)
+    inline void GetCurrentString(char* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, UITextScroll, char*, int32_t>>(0x4EAA30, this, arg1, arg2);
+        return stub<member_func_t<void, UITextScroll, char*, i32>>(0x4EAA30, this, arg1, arg2);
     }
 
     // 0x4EAA80 | ?SetHighlight@UITextScroll@@QAEXH@Z
-    inline void SetHighlight(int32_t arg1)
+    inline void SetHighlight(i32 arg1)
     {
-        return stub<member_func_t<void, UITextScroll, int32_t>>(0x4EAA80, this, arg1);
+        return stub<member_func_t<void, UITextScroll, i32>>(0x4EAA80, this, arg1);
     }
 
     // 0x4EAAD0 | ?GetHit@UITextScroll@@QAEHMM@Z
-    inline int32_t GetHit(float arg1, float arg2)
+    inline i32 GetHit(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<int32_t, UITextScroll, float, float>>(0x4EAAD0, this, arg1, arg2);
+        return stub<member_func_t<i32, UITextScroll, f32, f32>>(0x4EAAD0, this, arg1, arg2);
     }
 
     // 0x4EAB50 | ?KeyAction@UITextScroll@@AAEXXZ
@@ -133,9 +134,9 @@ public:
     }
 
     // 0x4EAD10 | ?SetText@UITextScroll@@QAEXHPAULocString@@@Z
-    inline void SetText(int32_t arg1, struct LocString* arg2)
+    inline void SetText(i32 arg1, struct LocString* arg2)
     {
-        return stub<member_func_t<void, UITextScroll, int32_t, struct LocString*>>(0x4EAD10, this, arg1, arg2);
+        return stub<member_func_t<void, UITextScroll, i32, struct LocString*>>(0x4EAD10, this, arg1, arg2);
     }
 
     // 0x4EAD50 | ?ResetTextScroll@UITextScroll@@AAEXXZ
@@ -151,9 +152,9 @@ public:
     }
 
     // 0x4EAF00 | ?AddTextScrollLine@UITextScroll@@AAEXPADH@Z
-    inline void AddTextScrollLine(char* arg1, int32_t arg2)
+    inline void AddTextScrollLine(char* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, UITextScroll, char*, int32_t>>(0x4EAF00, this, arg1, arg2);
+        return stub<member_func_t<void, UITextScroll, char*, i32>>(0x4EAF00, this, arg1, arg2);
     }
 
     // 0x4EAF80 | ?AddTextScrollLine@UITextScroll@@AAEXPAD@Z
@@ -175,8 +176,8 @@ public:
     }
 
     // 0x4EAC70 | ?Switch@UITextScroll@@UAEXH@Z
-    inline void Switch(int32_t arg1) override
+    inline void Switch(i32 arg1) override
     {
-        return stub<member_func_t<void, UITextScroll, int32_t>>(0x4EAC70, this, arg1);
+        return stub<member_func_t<void, UITextScroll, i32>>(0x4EAC70, this, arg1);
     }
 };

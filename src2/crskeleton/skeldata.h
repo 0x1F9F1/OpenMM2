@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -51,16 +51,16 @@ public:
     }
 
     // 0x57C8C0 | ?FindBone@crSkeletonData@@QBEPAVcrBoneData@@PBDHD@Z
-    inline class crBoneData* FindBone(char const* arg1, int32_t arg2, char arg3)
+    inline class crBoneData* FindBone(char const* arg1, i32 arg2, char arg3)
     {
-        return stub<member_func_t<class crBoneData*, crSkeletonData, char const*, int32_t, char>>(
+        return stub<member_func_t<class crBoneData*, crSkeletonData, char const*, i32, char>>(
             0x57C8C0, this, arg1, arg2, arg3);
     }
 
     // 0x57C9C0 | ?HowMany@crSkeletonData@@QBEHPBDD@Z
-    inline int32_t HowMany(char const* arg1, char arg2)
+    inline i32 HowMany(char const* arg1, char arg2)
     {
-        return stub<member_func_t<int32_t, crSkeletonData, char const*, char>>(0x57C9C0, this, arg1, arg2);
+        return stub<member_func_t<i32, crSkeletonData, char const*, char>>(0x57C9C0, this, arg1, arg2);
     }
 
     // 0x57CA00 | ?InitMirror@crSkeletonData@@AAEXXZ

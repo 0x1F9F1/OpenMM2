@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -73,27 +73,27 @@ public:
     }
 
     // 0x41F100 | ?NextRaceAvailable@mmSingleRace@@AAEHXZ
-    inline int32_t NextRaceAvailable()
+    inline i32 NextRaceAvailable()
     {
-        return stub<member_func_t<int32_t, mmSingleRace>>(0x41F100, this);
+        return stub<member_func_t<i32, mmSingleRace>>(0x41F100, this);
     }
 
     // 0x41F170 | ?FinishMessage@mmSingleRace@@AAEXHH@Z
-    inline void FinishMessage(int32_t arg1, int32_t arg2)
+    inline void FinishMessage(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, mmSingleRace, int32_t, int32_t>>(0x41F170, this, arg1, arg2);
+        return stub<member_func_t<void, mmSingleRace, i32, i32>>(0x41F170, this, arg1, arg2);
     }
 
     // 0x41F310 | ?RegisterFinish@mmSingleRace@@AAEHXZ
-    inline int32_t RegisterFinish()
+    inline i32 RegisterFinish()
     {
-        return stub<member_func_t<int32_t, mmSingleRace>>(0x41F310, this);
+        return stub<member_func_t<i32, mmSingleRace>>(0x41F310, this);
     }
 
     // 0x41F590 | ?ProgressCheck@mmSingleRace@@AAEHHH@Z
-    inline int32_t ProgressCheck(int32_t arg1, int32_t arg2)
+    inline i32 ProgressCheck(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<int32_t, mmSingleRace, int32_t, int32_t>>(0x41F590, this, arg1, arg2);
+        return stub<member_func_t<i32, mmSingleRace, i32, i32>>(0x41F590, this, arg1, arg2);
     }
 
     // 0x41DF60 | ??1mmSingleRace@@UAE@XZ
@@ -115,9 +115,9 @@ public:
     }
 
     // 0x41E010 | ?Init@mmSingleRace@@UAEHXZ
-    inline int32_t Init() override
+    inline i32 Init() override
     {
-        return stub<member_func_t<int32_t, mmSingleRace>>(0x41E010, this);
+        return stub<member_func_t<i32, mmSingleRace>>(0x41E010, this);
     }
 
     // 0x41E130 | ?InitMyPlayer@mmSingleRace@@UAEXXZ
@@ -145,15 +145,15 @@ public:
     }
 
     // 0x41E5B0 | ?UpdateGameInput@mmSingleRace@@UAEXH@Z
-    inline void UpdateGameInput(int32_t arg1) override
+    inline void UpdateGameInput(i32 arg1) override
     {
-        return stub<member_func_t<void, mmSingleRace, int32_t>>(0x41E5B0, this, arg1);
+        return stub<member_func_t<void, mmSingleRace, i32>>(0x41E5B0, this, arg1);
     }
 
     // 0x41F970 | ?UpdateDebugKeyInput@mmSingleRace@@UAEXH@Z
-    inline void UpdateDebugKeyInput(int32_t arg1) override
+    inline void UpdateDebugKeyInput(i32 arg1) override
     {
-        return stub<member_func_t<void, mmSingleRace, int32_t>>(0x41F970, this, arg1);
+        return stub<member_func_t<void, mmSingleRace, i32>>(0x41F970, this, arg1);
     }
 
     // 0x41E5F0 | ?UpdateGame@mmSingleRace@@UAEXXZ
@@ -175,9 +175,9 @@ public:
     }
 
     // 0x41EDB0 | ?SwitchState@mmSingleRace@@UAEXH@Z
-    inline void SwitchState(int32_t arg1) override
+    inline void SwitchState(i32 arg1) override
     {
-        return stub<member_func_t<void, mmSingleRace, int32_t>>(0x41EDB0, this, arg1);
+        return stub<member_func_t<void, mmSingleRace, i32>>(0x41EDB0, this, arg1);
     }
 
     // 0x41F980 | ?GetWaypoints@mmSingleRace@@UAEPAVmmWaypoints@@XZ

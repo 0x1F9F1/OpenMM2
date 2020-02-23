@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -50,9 +50,9 @@ public:
     }
 
     // 0x597080 | ?SetTime@asDofCS@@QAEXMMH@Z
-    inline void SetTime(float arg1, float arg2, int32_t arg3)
+    inline void SetTime(f32 arg1, f32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, asDofCS, float, float, int32_t>>(0x597080, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, asDofCS, f32, f32, i32>>(0x597080, this, arg1, arg2, arg3);
     }
 
     // 0x597750 | ?AddWidgets@asDofCS@@QAEXPAVBank@@@Z

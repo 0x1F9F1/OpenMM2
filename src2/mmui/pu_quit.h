@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -35,9 +35,9 @@ public:
     // PUQuit::`vftable' @ 0x5B47B0
 
     // 0x50B040 | ??0PUQuit@@QAE@HMMMMPAD@Z
-    inline PUQuit(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
+    inline PUQuit(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
     {
-        stub<member_func_t<void, PUQuit, int32_t, float, float, float, float, char*>>(
+        stub<member_func_t<void, PUQuit, i32, f32, f32, f32, f32, char*>>(
             0x50B040, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 

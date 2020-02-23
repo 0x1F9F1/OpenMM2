@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -60,15 +60,15 @@ public:
     }
 
     // 0x5141A0 | ?ReadCSV@AudImpactData@@QAE_NPAVStream@@H@Z
-    inline bool ReadCSV(class Stream* arg1, int32_t arg2)
+    inline bool ReadCSV(class Stream* arg1, i32 arg2)
     {
-        return stub<member_func_t<bool, AudImpactData, class Stream*, int32_t>>(0x5141A0, this, arg1, arg2);
+        return stub<member_func_t<bool, AudImpactData, class Stream*, i32>>(0x5141A0, this, arg1, arg2);
     }
 
     // 0x5143A0 | ?AssignSounds@AudImpactData@@QAEXH@Z
-    inline void AssignSounds(int32_t arg1)
+    inline void AssignSounds(i32 arg1)
     {
-        return stub<member_func_t<void, AudImpactData, int32_t>>(0x5143A0, this, arg1);
+        return stub<member_func_t<void, AudImpactData, i32>>(0x5143A0, this, arg1);
     }
 
     // 0x514410 | ?UnAssignSounds@AudImpactData@@QAEXXZ
@@ -78,47 +78,47 @@ public:
     }
 
     // 0x514430 | ?UpdateAttenuation@AudImpactData@@QAEXMM@Z
-    inline void UpdateAttenuation(float arg1, float arg2)
+    inline void UpdateAttenuation(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, AudImpactData, float, float>>(0x514430, this, arg1, arg2);
+        return stub<member_func_t<void, AudImpactData, f32, f32>>(0x514430, this, arg1, arg2);
     }
 
     // 0x514470 | ?UpdateAttenuation@AudImpactData@@AAEXPAUtagImpactSampleWrapper@@MM@Z
-    inline void UpdateAttenuation(struct tagImpactSampleWrapper* arg1, float arg2, float arg3)
+    inline void UpdateAttenuation(struct tagImpactSampleWrapper* arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, AudImpactData, struct tagImpactSampleWrapper*, float, float>>(
+        return stub<member_func_t<void, AudImpactData, struct tagImpactSampleWrapper*, f32, f32>>(
             0x514470, this, arg1, arg2, arg3);
     }
 
     // 0x5144C0 | ?Play@AudImpactData@@QAEXM@Z
-    inline void Play(float arg1)
+    inline void Play(f32 arg1)
     {
-        return stub<member_func_t<void, AudImpactData, float>>(0x5144C0, this, arg1);
+        return stub<member_func_t<void, AudImpactData, f32>>(0x5144C0, this, arg1);
     }
 
     // 0x514520 | ?PlaySample@AudImpactData@@AAEXPAUtagImpactSampleWrapper@@M@Z
-    inline void PlaySample(struct tagImpactSampleWrapper* arg1, float arg2)
+    inline void PlaySample(struct tagImpactSampleWrapper* arg1, f32 arg2)
     {
-        return stub<member_func_t<void, AudImpactData, struct tagImpactSampleWrapper*, float>>(
+        return stub<member_func_t<void, AudImpactData, struct tagImpactSampleWrapper*, f32>>(
             0x514520, this, arg1, arg2);
     }
 
     // 0x5145A0 | ?Play@AudImpactData@@QAEXMMM@Z
-    inline void Play(float arg1, float arg2, float arg3)
+    inline void Play(f32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, AudImpactData, float, float, float>>(0x5145A0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, AudImpactData, f32, f32, f32>>(0x5145A0, this, arg1, arg2, arg3);
     }
 
     // 0x514610 | ?PlaySample@AudImpactData@@AAEXPAUtagImpactSampleWrapper@@MMM@Z
-    inline void PlaySample(struct tagImpactSampleWrapper* arg1, float arg2, float arg3, float arg4)
+    inline void PlaySample(struct tagImpactSampleWrapper* arg1, f32 arg2, f32 arg3, f32 arg4)
     {
-        return stub<member_func_t<void, AudImpactData, struct tagImpactSampleWrapper*, float, float, float>>(
+        return stub<member_func_t<void, AudImpactData, struct tagImpactSampleWrapper*, f32, f32, f32>>(
             0x514610, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x5146B0 | ?SetPan@AudImpactData@@QAEXM@Z
-    inline void SetPan(float arg1)
+    inline void SetPan(f32 arg1)
     {
-        return stub<member_func_t<void, AudImpactData, float>>(0x5146B0, this, arg1);
+        return stub<member_func_t<void, AudImpactData, f32>>(0x5146B0, this, arg1);
     }
 };

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -61,23 +61,23 @@ public:
     }
 
     // 0x5A3AC0 | ?OpenSoundFile@audSound@@QAEHH@Z
-    inline int32_t OpenSoundFile(int32_t arg1)
+    inline i32 OpenSoundFile(i32 arg1)
     {
-        return stub<member_func_t<int32_t, audSound, int32_t>>(0x5A3AC0, this, arg1);
+        return stub<member_func_t<i32, audSound, i32>>(0x5A3AC0, this, arg1);
     }
 
     // 0x5A3B20 | ?CreateSoundBufferFromFile@audSound@@QAEPAVaudSoundBuffer@@PAD0W4SOUNDBUFFERTYPE@2@HK@Z
     inline class audSoundBuffer* CreateSoundBufferFromFile(
-        char* arg1, char* arg2, enum audSoundBuffer::SOUNDBUFFERTYPE arg3, int32_t arg4, uint32_t arg5)
+        char* arg1, char* arg2, enum audSoundBuffer::SOUNDBUFFERTYPE arg3, i32 arg4, u32 arg5)
     {
         return stub<member_func_t<class audSoundBuffer*, audSound, char*, char*, enum audSoundBuffer::SOUNDBUFFERTYPE,
-            int32_t, uint32_t>>(0x5A3B20, this, arg1, arg2, arg3, arg4, arg5);
+            i32, u32>>(0x5A3B20, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x5A3F10 | ?WriteWaveDataToBuffer@audSound@@QAEHHPAH@Z
-    inline int32_t WriteWaveDataToBuffer(int32_t arg1, int32_t* arg2)
+    inline i32 WriteWaveDataToBuffer(i32 arg1, i32* arg2)
     {
-        return stub<member_func_t<int32_t, audSound, int32_t, int32_t*>>(0x5A3F10, this, arg1, arg2);
+        return stub<member_func_t<i32, audSound, i32, i32*>>(0x5A3F10, this, arg1, arg2);
     }
 
     // 0x5A4210 | ?CreateSoundBufferFromMemory@audSound@@QAEPAVaudSoundBuffer@@PAXW4SOUNDBUFFERTYPE@2@PAPAX@Z
@@ -90,9 +90,9 @@ public:
     }
 
     // 0x5A4220 | ?Update@audSound@@QAE_NH@Z
-    inline bool Update(int32_t arg1)
+    inline bool Update(i32 arg1)
     {
-        return stub<member_func_t<bool, audSound, int32_t>>(0x5A4220, this, arg1);
+        return stub<member_func_t<bool, audSound, i32>>(0x5A4220, this, arg1);
     }
 
     // 0x5A4310 | ?Play@audSound@@QAE_NXZ
@@ -114,21 +114,21 @@ public:
     }
 
     // 0x5A44E0 | ?SetVolume@audSound@@QAE_NM@Z
-    inline bool SetVolume(float arg1)
+    inline bool SetVolume(f32 arg1)
     {
-        return stub<member_func_t<bool, audSound, float>>(0x5A44E0, this, arg1);
+        return stub<member_func_t<bool, audSound, f32>>(0x5A44E0, this, arg1);
     }
 
     // 0x5A4530 | ?SetPitch@audSound@@QAE_NM@Z
-    inline bool SetPitch(float arg1)
+    inline bool SetPitch(f32 arg1)
     {
-        return stub<member_func_t<bool, audSound, float>>(0x5A4530, this, arg1);
+        return stub<member_func_t<bool, audSound, f32>>(0x5A4530, this, arg1);
     }
 
     // 0x5A45A0 | ?SetPan@audSound@@QAE_NM@Z
-    inline bool SetPan(float arg1)
+    inline bool SetPan(f32 arg1)
     {
-        return stub<member_func_t<bool, audSound, float>>(0x5A45A0, this, arg1);
+        return stub<member_func_t<bool, audSound, f32>>(0x5A45A0, this, arg1);
     }
 
     // 0x5A45F0 | ?PauseResume@audSound@@QAE_N_N@Z

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -48,9 +48,9 @@ public:
     }
 
     // 0x521E10 | ?IsViewCSInTransition@camBaseCS@@QAEHXZ
-    inline int32_t IsViewCSInTransition()
+    inline i32 IsViewCSInTransition()
     {
-        return stub<member_func_t<int32_t, camBaseCS>>(0x521E10, this);
+        return stub<member_func_t<i32, camBaseCS>>(0x521E10, this);
     }
 
     // 0x521E30 | ?UpdateView@camBaseCS@@QAEXXZ
@@ -102,8 +102,8 @@ public:
     }
 
     // 0x51D750 | ?SetST@camBaseCS@@UAEXPAM@Z
-    virtual inline void SetST(float* arg1)
+    virtual inline void SetST(f32* arg1)
     {
-        return stub<member_func_t<void, camBaseCS, float*>>(0x51D750, this, arg1);
+        return stub<member_func_t<void, camBaseCS, f32*>>(0x51D750, this, arg1);
     }
 };

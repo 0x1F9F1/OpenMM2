@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -135,16 +135,15 @@ public:
     }
 
     // 0x52ACB0 | ?AttachToPipe@mmInput@@QAEHXZ
-    inline int32_t AttachToPipe()
+    inline i32 AttachToPipe()
     {
-        return stub<member_func_t<int32_t, mmInput>>(0x52ACB0, this);
+        return stub<member_func_t<i32, mmInput>>(0x52ACB0, this);
     }
 
     // 0x52B1B0 | ?IOInit@mmInput@@QAEXHPAULocString@@J@Z
-    inline void IOInit(int32_t arg1, struct LocString* arg2, int32_t arg3)
+    inline void IOInit(i32 arg1, struct LocString* arg2, i32 arg3)
     {
-        return stub<member_func_t<void, mmInput, int32_t, struct LocString*, int32_t>>(
-            0x52B1B0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmInput, i32, struct LocString*, i32>>(0x52B1B0, this, arg1, arg2, arg3);
     }
 
     // 0x52B1E0 | ?AutoSetup@mmInput@@QAEXXZ
@@ -160,21 +159,21 @@ public:
     }
 
     // 0x52B240 | ?RestoreDefaultConfig@mmInput@@QAEXH@Z
-    inline void RestoreDefaultConfig(int32_t arg1)
+    inline void RestoreDefaultConfig(i32 arg1)
     {
-        return stub<member_func_t<void, mmInput, int32_t>>(0x52B240, this, arg1);
+        return stub<member_func_t<void, mmInput, i32>>(0x52B240, this, arg1);
     }
 
     // 0x52B290 | ?SetDefaultConfig@mmInput@@QAEXH@Z
-    inline void SetDefaultConfig(int32_t arg1)
+    inline void SetDefaultConfig(i32 arg1)
     {
-        return stub<member_func_t<void, mmInput, int32_t>>(0x52B290, this, arg1);
+        return stub<member_func_t<void, mmInput, i32>>(0x52B290, this, arg1);
     }
 
     // 0x52C380 | ?Init@mmInput@@QAEXH@Z
-    inline void Init(int32_t arg1)
+    inline void Init(i32 arg1)
     {
-        return stub<member_func_t<void, mmInput, int32_t>>(0x52C380, this, arg1);
+        return stub<member_func_t<void, mmInput, i32>>(0x52C380, this, arg1);
     }
 
     // 0x52C570 | ?FlagIODevChanged@mmInput@@QAEXXZ
@@ -184,22 +183,21 @@ public:
     }
 
     // 0x52C590 | ?ReturnStateCaptured@mmInput@@QAEHXZ
-    inline int32_t ReturnStateCaptured()
+    inline i32 ReturnStateCaptured()
     {
-        return stub<member_func_t<int32_t, mmInput>>(0x52C590, this);
+        return stub<member_func_t<i32, mmInput>>(0x52C590, this);
     }
 
     // 0x52C5B0 | ?CaptureState@mmInput@@QAEXH@Z
-    inline void CaptureState(int32_t arg1)
+    inline void CaptureState(i32 arg1)
     {
-        return stub<member_func_t<void, mmInput, int32_t>>(0x52C5B0, this, arg1);
+        return stub<member_func_t<void, mmInput, i32>>(0x52C5B0, this, arg1);
     }
 
     // 0x52C5E0 | ?BuildCaptureIO@mmInput@@QAEHHPAVmmIO@@TeqEvent@@@Z
-    inline int32_t BuildCaptureIO(int32_t arg1, class mmIO* arg2, union eqEvent arg3)
+    inline i32 BuildCaptureIO(i32 arg1, class mmIO* arg2, union eqEvent arg3)
     {
-        return stub<member_func_t<int32_t, mmInput, int32_t, class mmIO*, union eqEvent>>(
-            0x52C5E0, this, arg1, arg2, arg3);
+        return stub<member_func_t<i32, mmInput, i32, class mmIO*, union eqEvent>>(0x52C5E0, this, arg1, arg2, arg3);
     }
 
     // 0x52C7A0 | ?ForceAssignment@mmInput@@QAEXPAVmmIO@@@Z
@@ -209,34 +207,33 @@ public:
     }
 
     // 0x52C7C0 | ?SanityCheck@mmInput@@QAEHPAVmmIO@@HH@Z
-    inline int32_t SanityCheck(class mmIO* arg1, int32_t arg2, int32_t arg3)
+    inline i32 SanityCheck(class mmIO* arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<int32_t, mmInput, class mmIO*, int32_t, int32_t>>(0x52C7C0, this, arg1, arg2, arg3);
+        return stub<member_func_t<i32, mmInput, class mmIO*, i32, i32>>(0x52C7C0, this, arg1, arg2, arg3);
     }
 
     // 0x52C830 | ?IsAlreadyAssigned@mmInput@@QAEHPAVmmIO@@HHH@Z
-    inline int32_t IsAlreadyAssigned(class mmIO* arg1, int32_t arg2, int32_t arg3, int32_t arg4)
+    inline i32 IsAlreadyAssigned(class mmIO* arg1, i32 arg2, i32 arg3, i32 arg4)
     {
-        return stub<member_func_t<int32_t, mmInput, class mmIO*, int32_t, int32_t, int32_t>>(
-            0x52C830, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<i32, mmInput, class mmIO*, i32, i32, i32>>(0x52C830, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x52C920 | ?AssignIO@mmInput@@QAEXPAVmmIO@@HH@Z
-    inline void AssignIO(class mmIO* arg1, int32_t arg2, int32_t arg3)
+    inline void AssignIO(class mmIO* arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, mmInput, class mmIO*, int32_t, int32_t>>(0x52C920, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmInput, class mmIO*, i32, i32>>(0x52C920, this, arg1, arg2, arg3);
     }
 
     // 0x52CA80 | ?PollStates@mmInput@@QAEHXZ
-    inline int32_t PollStates()
+    inline i32 PollStates()
     {
-        return stub<member_func_t<int32_t, mmInput>>(0x52CA80, this);
+        return stub<member_func_t<i32, mmInput>>(0x52CA80, this);
     }
 
     // 0x52CB40 | ?PollSuperQ@mmInput@@QAEHXZ
-    inline int32_t PollSuperQ()
+    inline i32 PollSuperQ()
     {
-        return stub<member_func_t<int32_t, mmInput>>(0x52CB40, this);
+        return stub<member_func_t<i32, mmInput>>(0x52CB40, this);
     }
 
     // 0x52CB90 | ?Flush@mmInput@@QAEXXZ
@@ -270,9 +267,9 @@ public:
     }
 
     // 0x52CCE0 | ?GetNextKeyboardEvent@mmInput@@AAEHPATeqEvent@@@Z
-    inline int32_t GetNextKeyboardEvent(union eqEvent* arg1)
+    inline i32 GetNextKeyboardEvent(union eqEvent* arg1)
     {
-        return stub<member_func_t<int32_t, mmInput, union eqEvent*>>(0x52CCE0, this, arg1);
+        return stub<member_func_t<i32, mmInput, union eqEvent*>>(0x52CCE0, this, arg1);
     }
 
     // 0x52CD30 | ?ProcessEvents@mmInput@@AAEXXZ
@@ -282,21 +279,21 @@ public:
     }
 
     // 0x52CD50 | ?ProcessStates@mmInput@@AAE_JXZ
-    inline int64_t ProcessStates()
+    inline i64 ProcessStates()
     {
-        return stub<member_func_t<int64_t, mmInput>>(0x52CD50, this);
+        return stub<member_func_t<i64, mmInput>>(0x52CD50, this);
     }
 
     // 0x52CE30 | ?ScanState@mmInput@@AAE_JPAVmmIO@@@Z
-    inline int64_t ScanState(class mmIO* arg1)
+    inline i64 ScanState(class mmIO* arg1)
     {
-        return stub<member_func_t<int64_t, mmInput, class mmIO*>>(0x52CE30, this, arg1);
+        return stub<member_func_t<i64, mmInput, class mmIO*>>(0x52CE30, this, arg1);
     }
 
     // 0x52CFE0 | ?EventToButton@mmInput@@AAEHH@Z
-    inline int32_t EventToButton(int32_t arg1)
+    inline i32 EventToButton(i32 arg1)
     {
-        return stub<member_func_t<int32_t, mmInput, int32_t>>(0x52CFE0, this, arg1);
+        return stub<member_func_t<i32, mmInput, i32>>(0x52CFE0, this, arg1);
     }
 
     // 0x52D010 | ?ProcessJoyEvents@mmInput@@AAEXXZ
@@ -306,15 +303,15 @@ public:
     }
 
     // 0x52D520 | ?ScanForEvent@mmInput@@AAE_JPATeqEvent@@@Z
-    inline int64_t ScanForEvent(union eqEvent* arg1)
+    inline i64 ScanForEvent(union eqEvent* arg1)
     {
-        return stub<member_func_t<int64_t, mmInput, union eqEvent*>>(0x52D520, this, arg1);
+        return stub<member_func_t<i64, mmInput, union eqEvent*>>(0x52D520, this, arg1);
     }
 
     // 0x52D5E0 | ?PutEventInQueue@mmInput@@AAEX_J@Z
-    inline void PutEventInQueue(int64_t arg1)
+    inline void PutEventInQueue(i64 arg1)
     {
-        return stub<member_func_t<void, mmInput, int64_t>>(0x52D5E0, this, arg1);
+        return stub<member_func_t<void, mmInput, i64>>(0x52D5E0, this, arg1);
     }
 
     // 0x52D610 | ?PollContinuous@mmInput@@AAEXPAVmmIO@@@Z
@@ -324,111 +321,111 @@ public:
     }
 
     // 0x52D950 | ?GetThrottle@mmInput@@QAEMXZ
-    inline float GetThrottle()
+    inline f32 GetThrottle()
     {
-        return stub<member_func_t<float, mmInput>>(0x52D950, this);
+        return stub<member_func_t<f32, mmInput>>(0x52D950, this);
     }
 
     // 0x52D970 | ?GetThrottleVal@mmInput@@QAEMXZ
-    inline float GetThrottleVal()
+    inline f32 GetThrottleVal()
     {
-        return stub<member_func_t<float, mmInput>>(0x52D970, this);
+        return stub<member_func_t<f32, mmInput>>(0x52D970, this);
     }
 
     // 0x52D9E0 | ?GetBrakes@mmInput@@QAEMXZ
-    inline float GetBrakes()
+    inline f32 GetBrakes()
     {
-        return stub<member_func_t<float, mmInput>>(0x52D9E0, this);
+        return stub<member_func_t<f32, mmInput>>(0x52D9E0, this);
     }
 
     // 0x52DA00 | ?GetBrakesVal@mmInput@@QAEMXZ
-    inline float GetBrakesVal()
+    inline f32 GetBrakesVal()
     {
-        return stub<member_func_t<float, mmInput>>(0x52DA00, this);
+        return stub<member_func_t<f32, mmInput>>(0x52DA00, this);
     }
 
     // 0x52DA70 | ?GetHandBrake@mmInput@@QAEMXZ
-    inline float GetHandBrake()
+    inline f32 GetHandBrake()
     {
-        return stub<member_func_t<float, mmInput>>(0x52DA70, this);
+        return stub<member_func_t<f32, mmInput>>(0x52DA70, this);
     }
 
     // 0x52DAF0 | ?FilterDiscreteSteering@mmInput@@AAEMM@Z
-    inline float FilterDiscreteSteering(float arg1)
+    inline f32 FilterDiscreteSteering(f32 arg1)
     {
-        return stub<member_func_t<float, mmInput, float>>(0x52DAF0, this, arg1);
+        return stub<member_func_t<f32, mmInput, f32>>(0x52DAF0, this, arg1);
     }
 
     // 0x52DC80 | ?FilterGamepadSteering@mmInput@@QAEMXZ
-    inline float FilterGamepadSteering()
+    inline f32 FilterGamepadSteering()
     {
-        return stub<member_func_t<float, mmInput>>(0x52DC80, this);
+        return stub<member_func_t<f32, mmInput>>(0x52DC80, this);
     }
 
     // 0x52DE90 | ?GetSteering@mmInput@@QAEMP6AMM@Z@Z
-    inline float GetSteering(float(__cdecl* arg1)(float))
+    inline f32 GetSteering(f32(__cdecl* arg1)(f32))
     {
-        return stub<member_func_t<float, mmInput, float(__cdecl*)(float)>>(0x52DE90, this, arg1);
+        return stub<member_func_t<f32, mmInput, f32(__cdecl*)(f32)>>(0x52DE90, this, arg1);
     }
 
     // 0x52DF60 | ?GetCamPan@mmInput@@QAEMXZ
-    inline float GetCamPan()
+    inline f32 GetCamPan()
     {
-        return stub<member_func_t<float, mmInput>>(0x52DF60, this);
+        return stub<member_func_t<f32, mmInput>>(0x52DF60, this);
     }
 
     // 0x52E0A0 | ?DeviceConnected@mmInput@@QAEHXZ
-    inline int32_t DeviceConnected()
+    inline i32 DeviceConnected()
     {
-        return stub<member_func_t<int32_t, mmInput>>(0x52E0A0, this);
+        return stub<member_func_t<i32, mmInput>>(0x52E0A0, this);
     }
 
     // 0x52E0C0 | ?JoystickConnected@mmInput@@QAEHXZ
-    inline int32_t JoystickConnected()
+    inline i32 JoystickConnected()
     {
-        return stub<member_func_t<int32_t, mmInput>>(0x52E0C0, this);
+        return stub<member_func_t<i32, mmInput>>(0x52E0C0, this);
     }
 
     // 0x52E0D0 | ?GamepadConnected@mmInput@@QAEHXZ
-    inline int32_t GamepadConnected()
+    inline i32 GamepadConnected()
     {
-        return stub<member_func_t<int32_t, mmInput>>(0x52E0D0, this);
+        return stub<member_func_t<i32, mmInput>>(0x52E0D0, this);
     }
 
     // 0x52E0E0 | ?WheelConnected@mmInput@@QAEHXZ
-    inline int32_t WheelConnected()
+    inline i32 WheelConnected()
     {
-        return stub<member_func_t<int32_t, mmInput>>(0x52E0E0, this);
+        return stub<member_func_t<i32, mmInput>>(0x52E0E0, this);
     }
 
     // 0x52E0F0 | ?SetDeadZone@mmInput@@QAEXM@Z
-    inline void SetDeadZone(float arg1)
+    inline void SetDeadZone(f32 arg1)
     {
-        return stub<member_func_t<void, mmInput, float>>(0x52E0F0, this, arg1);
+        return stub<member_func_t<void, mmInput, f32>>(0x52E0F0, this, arg1);
     }
 
     // 0x52E120 | ?JoystickHasCoolie@mmInput@@QAEHXZ
-    inline int32_t JoystickHasCoolie()
+    inline i32 JoystickHasCoolie()
     {
-        return stub<member_func_t<int32_t, mmInput>>(0x52E120, this);
+        return stub<member_func_t<i32, mmInput>>(0x52E120, this);
     }
 
     // 0x52E140 | ?JoystickHasThrottle@mmInput@@QAEHXZ
-    inline int32_t JoystickHasThrottle()
+    inline i32 JoystickHasThrottle()
     {
-        return stub<member_func_t<int32_t, mmInput>>(0x52E140, this);
+        return stub<member_func_t<i32, mmInput>>(0x52E140, this);
     }
 
     // 0x52E160 | ?WheelHas3Axis@mmInput@@QAEHXZ
-    inline int32_t WheelHas3Axis()
+    inline i32 WheelHas3Axis()
     {
-        return stub<member_func_t<int32_t, mmInput>>(0x52E160, this);
+        return stub<member_func_t<i32, mmInput>>(0x52E160, this);
     }
 
     // 0x52E1A0 | ?DoingFF@mmInput@@QAEHXZ
-    inline int32_t DoingFF()
+    inline i32 DoingFF()
     {
-        return stub<member_func_t<int32_t, mmInput>>(0x52E1A0, this);
+        return stub<member_func_t<i32, mmInput>>(0x52E1A0, this);
     }
 
     // 0x52E1D0 | ?StopAllFF@mmInput@@QAEXXZ
@@ -438,75 +435,75 @@ public:
     }
 
     // 0x52E1E0 | ?SetForceFeedbackScale@mmInput@@QAEXM@Z
-    inline void SetForceFeedbackScale(float arg1)
+    inline void SetForceFeedbackScale(f32 arg1)
     {
-        return stub<member_func_t<void, mmInput, float>>(0x52E1E0, this, arg1);
+        return stub<member_func_t<void, mmInput, f32>>(0x52E1E0, this, arg1);
     }
 
     // 0x52E230 | ?SetRoadForceScale@mmInput@@QAEXM@Z
-    inline void SetRoadForceScale(float arg1)
+    inline void SetRoadForceScale(f32 arg1)
     {
-        return stub<member_func_t<void, mmInput, float>>(0x52E230, this, arg1);
+        return stub<member_func_t<void, mmInput, f32>>(0x52E230, this, arg1);
     }
 
     // 0x52E280 | ?ToggleFFEnabled@mmInput@@QAEHH@Z
-    inline int32_t ToggleFFEnabled(int32_t arg1)
+    inline i32 ToggleFFEnabled(i32 arg1)
     {
-        return stub<member_func_t<int32_t, mmInput, int32_t>>(0x52E280, this, arg1);
+        return stub<member_func_t<i32, mmInput, i32>>(0x52E280, this, arg1);
     }
 
     // 0x52E2B0 | ?FFPlay@mmInput@@QAEHH@Z
-    inline int32_t FFPlay(int32_t arg1)
+    inline i32 FFPlay(i32 arg1)
     {
-        return stub<member_func_t<int32_t, mmInput, int32_t>>(0x52E2B0, this, arg1);
+        return stub<member_func_t<i32, mmInput, i32>>(0x52E2B0, this, arg1);
     }
 
     // 0x52E2E0 | ?FFStop@mmInput@@QAEHH@Z
-    inline int32_t FFStop(int32_t arg1)
+    inline i32 FFStop(i32 arg1)
     {
-        return stub<member_func_t<int32_t, mmInput, int32_t>>(0x52E2E0, this, arg1);
+        return stub<member_func_t<i32, mmInput, i32>>(0x52E2E0, this, arg1);
     }
 
     // 0x52E310 | ?FFIsPlaying@mmInput@@QAEHH@Z
-    inline int32_t FFIsPlaying(int32_t arg1)
+    inline i32 FFIsPlaying(i32 arg1)
     {
-        return stub<member_func_t<int32_t, mmInput, int32_t>>(0x52E310, this, arg1);
+        return stub<member_func_t<i32, mmInput, i32>>(0x52E310, this, arg1);
     }
 
     // 0x52E340 | ?FFSetValues@mmInput@@QAEHHMM@Z
-    inline int32_t FFSetValues(int32_t arg1, float arg2, float arg3)
+    inline i32 FFSetValues(i32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<int32_t, mmInput, int32_t, float, float>>(0x52E340, this, arg1, arg2, arg3);
+        return stub<member_func_t<i32, mmInput, i32, f32, f32>>(0x52E340, this, arg1, arg2, arg3);
     }
 
     // 0x52E380 | ?PopEvent@mmInput@@QAEHPAH@Z
-    inline int32_t PopEvent(int32_t* arg1)
+    inline i32 PopEvent(i32* arg1)
     {
-        return stub<member_func_t<int32_t, mmInput, int32_t*>>(0x52E380, this, arg1);
+        return stub<member_func_t<i32, mmInput, i32*>>(0x52E380, this, arg1);
     }
 
     // 0x52E3B0 | ?LoadConfig@mmInput@@QAEHPAVStream@@@Z
-    inline int32_t LoadConfig(class Stream* arg1)
+    inline i32 LoadConfig(class Stream* arg1)
     {
-        return stub<member_func_t<int32_t, mmInput, class Stream*>>(0x52E3B0, this, arg1);
+        return stub<member_func_t<i32, mmInput, class Stream*>>(0x52E3B0, this, arg1);
     }
 
     // 0x52E440 | ?BinaryLoadConfig@mmInput@@QAEHPAVStream@@@Z
-    inline int32_t BinaryLoadConfig(class Stream* arg1)
+    inline i32 BinaryLoadConfig(class Stream* arg1)
     {
-        return stub<member_func_t<int32_t, mmInput, class Stream*>>(0x52E440, this, arg1);
+        return stub<member_func_t<i32, mmInput, class Stream*>>(0x52E440, this, arg1);
     }
 
     // 0x52E500 | ?SaveConfig@mmInput@@QAEHPAVStream@@@Z
-    inline int32_t SaveConfig(class Stream* arg1)
+    inline i32 SaveConfig(class Stream* arg1)
     {
-        return stub<member_func_t<int32_t, mmInput, class Stream*>>(0x52E500, this, arg1);
+        return stub<member_func_t<i32, mmInput, class Stream*>>(0x52E500, this, arg1);
     }
 
     // 0x52E580 | ?BinarySaveConfig@mmInput@@QAEHPAVStream@@@Z
-    inline int32_t BinarySaveConfig(class Stream* arg1)
+    inline i32 BinarySaveConfig(class Stream* arg1)
     {
-        return stub<member_func_t<int32_t, mmInput, class Stream*>>(0x52E580, this, arg1);
+        return stub<member_func_t<i32, mmInput, class Stream*>>(0x52E580, this, arg1);
     }
 
     // 0x52E610 | ?PrintIODev@mmInput@@QAEXXZ
@@ -516,9 +513,9 @@ public:
     }
 
     // 0x52E6E0 | ?SaveCodeConfig@mmInput@@QAEHPAVStream@@@Z
-    inline int32_t SaveCodeConfig(class Stream* arg1)
+    inline i32 SaveCodeConfig(class Stream* arg1)
     {
-        return stub<member_func_t<int32_t, mmInput, class Stream*>>(0x52E6E0, this, arg1);
+        return stub<member_func_t<i32, mmInput, class Stream*>>(0x52E6E0, this, arg1);
     }
 
     // 0x52AB90 | ??1mmInput@@UAE@XZ

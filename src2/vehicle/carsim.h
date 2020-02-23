@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -67,15 +67,15 @@ public:
     }
 
     // 0x4CBB00 | ?OnGround@vehCarSim@@QAEHXZ
-    inline int32_t OnGround()
+    inline i32 OnGround()
     {
-        return stub<member_func_t<int32_t, vehCarSim>>(0x4CBB00, this);
+        return stub<member_func_t<i32, vehCarSim>>(0x4CBB00, this);
     }
 
     // 0x4CBB40 | ?BottomedOut@vehCarSim@@QAEHXZ
-    inline int32_t BottomedOut()
+    inline i32 BottomedOut()
     {
-        return stub<member_func_t<int32_t, vehCarSim>>(0x4CBB40, this);
+        return stub<member_func_t<i32, vehCarSim>>(0x4CBB40, this);
     }
 
     // 0x4CBB80 | ?Init@vehCarSim@@QAEXPBDPAVphColliderJointed@@PAVlvlInstance@@@Z
@@ -134,9 +134,9 @@ public:
     }
 
     // 0x4CC890 | ?GetSSSFactor@vehCarSim@@QAEMM@Z
-    inline float GetSSSFactor(float arg1)
+    inline f32 GetSSSFactor(f32 arg1)
     {
-        return stub<member_func_t<float, vehCarSim, float>>(0x4CC890, this, arg1);
+        return stub<member_func_t<f32, vehCarSim, f32>>(0x4CC890, this, arg1);
     }
 
     // 0x4CCAB0 | ?PlaybackReplay@vehCarSim@@QAEXXZ

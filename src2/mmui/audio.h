@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -62,9 +62,9 @@ public:
     // AudioOptions::`vftable' @ 0x5B3D9C
 
     // 0x4F7AA0 | ??0AudioOptions@@QAE@H@Z
-    inline AudioOptions(int32_t arg1)
+    inline AudioOptions(i32 arg1)
     {
-        stub<member_func_t<void, AudioOptions, int32_t>>(0x4F7AA0, this, arg1);
+        stub<member_func_t<void, AudioOptions, i32>>(0x4F7AA0, this, arg1);
     }
 
     // 0x4F87A0 | ?SetSFXVolume@AudioOptions@@QAEXXZ
@@ -128,9 +128,9 @@ public:
     }
 
     // 0x4F8D50 | ?FindDevice@AudioOptions@@QAEHPAD@Z
-    inline int32_t FindDevice(char* arg1)
+    inline i32 FindDevice(char* arg1)
     {
-        return stub<member_func_t<int32_t, AudioOptions, char*>>(0x4F8D50, this, arg1);
+        return stub<member_func_t<i32, AudioOptions, char*>>(0x4F8D50, this, arg1);
     }
 
     // 0x4F8DD0 | ?GetCurrentDeviceName@AudioOptions@@QAEPADXZ
@@ -176,9 +176,9 @@ public:
     }
 
     // 0x4F8F00 | ?SetDevice@AudioOptions@@QAEXH@Z
-    inline void SetDevice(int32_t arg1)
+    inline void SetDevice(i32 arg1)
     {
-        return stub<member_func_t<void, AudioOptions, int32_t>>(0x4F8F00, this, arg1);
+        return stub<member_func_t<void, AudioOptions, i32>>(0x4F8F00, this, arg1);
     }
 
     // 0x4F8FA0 | ?ToggleMusic@AudioOptions@@QAEXXZ
@@ -200,9 +200,9 @@ public:
     }
 
     // 0x4F91C0 | ?FocusDescription@AudioOptions@@QAEXHH@Z
-    inline void FocusDescription(int32_t arg1, int32_t arg2)
+    inline void FocusDescription(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, AudioOptions, int32_t, int32_t>>(0x4F91C0, this, arg1, arg2);
+        return stub<member_func_t<void, AudioOptions, i32, i32>>(0x4F91C0, this, arg1, arg2);
     }
 
     // 0x4F86D0 | ??1AudioOptions@@UAE@XZ

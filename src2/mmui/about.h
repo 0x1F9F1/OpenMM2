@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -33,9 +33,9 @@
 */
 
 // 0x505850 | ?GetMidtownRegString@@YAXPADH00@Z
-inline void GetMidtownRegString(char* arg1, int32_t arg2, char* arg3, char* arg4)
+inline void GetMidtownRegString(char* arg1, i32 arg2, char* arg3, char* arg4)
 {
-    return stub<cdecl_t<void, char*, int32_t, char*, char*>>(0x505850, arg1, arg2, arg3, arg4);
+    return stub<cdecl_t<void, char*, i32, char*, char*>>(0x505850, arg1, arg2, arg3, arg4);
 }
 
 struct AboutMenu : UIMenu
@@ -44,9 +44,9 @@ public:
     // AboutMenu::`vftable' @ 0x5B4584
 
     // 0x5058D0 | ??0AboutMenu@@QAE@H@Z
-    inline AboutMenu(int32_t arg1)
+    inline AboutMenu(i32 arg1)
     {
-        stub<member_func_t<void, AboutMenu, int32_t>>(0x5058D0, this, arg1);
+        stub<member_func_t<void, AboutMenu, i32>>(0x5058D0, this, arg1);
     }
 
     // 0x505AB0 | ??1AboutMenu@@UAE@XZ

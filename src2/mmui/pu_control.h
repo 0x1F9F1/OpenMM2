@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -39,10 +39,9 @@ public:
     // PUControl::`vftable' @ 0x5B4918
 
     // 0x50BD00 | ??0PUControl@@QAE@HMMMM@Z
-    inline PUControl(int32_t arg1, float arg2, float arg3, float arg4, float arg5)
+    inline PUControl(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
     {
-        stub<member_func_t<void, PUControl, int32_t, float, float, float, float>>(
-            0x50BD00, this, arg1, arg2, arg3, arg4, arg5);
+        stub<member_func_t<void, PUControl, i32, f32, f32, f32, f32>>(0x50BD00, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x50C110 | ?CancelAction@PUControl@@QAEXXZ

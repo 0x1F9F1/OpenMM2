@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -111,41 +111,37 @@ public:
     }
 
     // 0x4D1110 | ??0vehCarAudioContainer@@QAE@PBDPAVvehCarSim@@PAVvehCarDamage@@H@Z
-    inline vehCarAudioContainer(char const* arg1, class vehCarSim* arg2, class vehCarDamage* arg3, int32_t arg4)
+    inline vehCarAudioContainer(char const* arg1, class vehCarSim* arg2, class vehCarDamage* arg3, i32 arg4)
     {
-        stub<member_func_t<void, vehCarAudioContainer, char const*, class vehCarSim*, class vehCarDamage*, int32_t>>(
+        stub<member_func_t<void, vehCarAudioContainer, char const*, class vehCarSim*, class vehCarDamage*, i32>>(
             0x4D1110, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4D11D0 | ?Init@vehCarAudioContainer@@QAEXPBDPAVvehCarSim@@PAVvehCarDamage@@H@Z
-    inline void Init(char const* arg1, class vehCarSim* arg2, class vehCarDamage* arg3, int32_t arg4)
+    inline void Init(char const* arg1, class vehCarSim* arg2, class vehCarDamage* arg3, i32 arg4)
     {
-        return stub<
-            member_func_t<void, vehCarAudioContainer, char const*, class vehCarSim*, class vehCarDamage*, int32_t>>(
+        return stub<member_func_t<void, vehCarAudioContainer, char const*, class vehCarSim*, class vehCarDamage*, i32>>(
             0x4D11D0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4D12E0 | ?InitPolice@vehCarAudioContainer@@QAEXPBDPAVvehCarSim@@PAVvehCarDamage@@H@Z
-    inline void InitPolice(char const* arg1, class vehCarSim* arg2, class vehCarDamage* arg3, int32_t arg4)
+    inline void InitPolice(char const* arg1, class vehCarSim* arg2, class vehCarDamage* arg3, i32 arg4)
     {
-        return stub<
-            member_func_t<void, vehCarAudioContainer, char const*, class vehCarSim*, class vehCarDamage*, int32_t>>(
+        return stub<member_func_t<void, vehCarAudioContainer, char const*, class vehCarSim*, class vehCarDamage*, i32>>(
             0x4D12E0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4D13D0 | ?InitSemi@vehCarAudioContainer@@QAEXPBDPAVvehCarSim@@PAVvehCarDamage@@H@Z
-    inline void InitSemi(char const* arg1, class vehCarSim* arg2, class vehCarDamage* arg3, int32_t arg4)
+    inline void InitSemi(char const* arg1, class vehCarSim* arg2, class vehCarDamage* arg3, i32 arg4)
     {
-        return stub<
-            member_func_t<void, vehCarAudioContainer, char const*, class vehCarSim*, class vehCarDamage*, int32_t>>(
+        return stub<member_func_t<void, vehCarAudioContainer, char const*, class vehCarSim*, class vehCarDamage*, i32>>(
             0x4D13D0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4D14E0 | ?InitNitro@vehCarAudioContainer@@QAEXPBDPAVvehCarSim@@PAVvehCarDamage@@H@Z
-    inline void InitNitro(char const* arg1, class vehCarSim* arg2, class vehCarDamage* arg3, int32_t arg4)
+    inline void InitNitro(char const* arg1, class vehCarSim* arg2, class vehCarDamage* arg3, i32 arg4)
     {
-        return stub<
-            member_func_t<void, vehCarAudioContainer, char const*, class vehCarSim*, class vehCarDamage*, int32_t>>(
+        return stub<member_func_t<void, vehCarAudioContainer, char const*, class vehCarSim*, class vehCarDamage*, i32>>(
             0x4D14E0, this, arg1, arg2, arg3, arg4);
     }
 
@@ -156,9 +152,9 @@ public:
     }
 
     // 0x4D1660 | ?Set2DPan@vehCarAudioContainer@@QAEXM@Z
-    inline void Set2DPan(float arg1)
+    inline void Set2DPan(f32 arg1)
     {
-        return stub<member_func_t<void, vehCarAudioContainer, float>>(0x4D1660, this, arg1);
+        return stub<member_func_t<void, vehCarAudioContainer, f32>>(0x4D1660, this, arg1);
     }
 
     // 0x4D16C0 | ?Is3D@vehCarAudioContainer@@QAE_NXZ
@@ -258,9 +254,9 @@ public:
     }
 
     // 0x4D1910 | ?SilenceEngine@vehCarAudioContainer@@QAEXH@Z
-    inline void SilenceEngine(int32_t arg1)
+    inline void SilenceEngine(i32 arg1)
     {
-        return stub<member_func_t<void, vehCarAudioContainer, int32_t>>(0x4D1910, this, arg1);
+        return stub<member_func_t<void, vehCarAudioContainer, i32>>(0x4D1910, this, arg1);
     }
 
     // 0x4D1980 | ?Update@vehCarAudioContainer@@QAEXXZ
@@ -288,13 +284,13 @@ public:
     }
 
     // 0x6AFF34 | ?s_iNumPoliceNames@vehCarAudioContainer@@0HA
-    static inline extern_var(0x6AFF34, int32_t, s_iNumPoliceNames);
+    inline extern_var(0x6AFF34, int32_t, s_iNumPoliceNames);
 
     // 0x6AFF38 | ?s_iNumSemiNames@vehCarAudioContainer@@0HA
-    static inline extern_var(0x6AFF38, int32_t, s_iNumSemiNames);
+    inline extern_var(0x6AFF38, int32_t, s_iNumSemiNames);
 
     // 0x6AFF40 | ?s_acSirenCSVName@vehCarAudioContainer@@0PADA
-    static inline extern_var(0x6AFF40, char*, s_acSirenCSVName);
+    inline extern_var(0x6AFF40, char*, s_acSirenCSVName);
 
     // 0x6AFFA0 | ?s_bTypesRegistered@vehCarAudioContainer@@0_NA
     static inline extern_var(0x6AFFA0, bool, s_bTypesRegistered);
@@ -303,8 +299,8 @@ public:
     static inline extern_var(0x6AFFA1, bool, s_bAlwaysNitro);
 
     // 0x6AFFA4 | ?s_ppSemiName@vehCarAudioContainer@@0PAPADA
-    static inline extern_var(0x6AFFA4, char**, s_ppSemiName);
+    inline extern_var(0x6AFFA4, char**, s_ppSemiName);
 
     // 0x6AFFA8 | ?s_ppPoliceName@vehCarAudioContainer@@0PAPADA
-    static inline extern_var(0x6AFFA8, char**, s_ppPoliceName);
+    inline extern_var(0x6AFFA8, char**, s_ppPoliceName);
 };

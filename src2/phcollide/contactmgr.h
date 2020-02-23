@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -98,27 +98,27 @@ public:
     }
 
     // 0x470460 | ?AllocNewContact@phContactMgr@@QAEJJ@Z
-    inline int32_t AllocNewContact(int32_t arg1)
+    inline i32 AllocNewContact(i32 arg1)
     {
-        return stub<member_func_t<int32_t, phContactMgr, int32_t>>(0x470460, this, arg1);
+        return stub<member_func_t<i32, phContactMgr, i32>>(0x470460, this, arg1);
     }
 
     // 0x470500 | ?RemoveContact@phContactMgr@@QAEXJ@Z
-    inline void RemoveContact(int32_t arg1)
+    inline void RemoveContact(i32 arg1)
     {
-        return stub<member_func_t<void, phContactMgr, int32_t>>(0x470500, this, arg1);
+        return stub<member_func_t<void, phContactMgr, i32>>(0x470500, this, arg1);
     }
 
     // 0x470630 | ?SeekContact@phContactMgr@@QAEJJABVphImpact@@@Z
-    inline int32_t SeekContact(int32_t arg1, class phImpact const& arg2)
+    inline i32 SeekContact(i32 arg1, class phImpact const& arg2)
     {
-        return stub<member_func_t<int32_t, phContactMgr, int32_t, class phImpact const&>>(0x470630, this, arg1, arg2);
+        return stub<member_func_t<i32, phContactMgr, i32, class phImpact const&>>(0x470630, this, arg1, arg2);
     }
 
     // 0x4706A0 | ?CalcHeldContacts@phContactMgr@@QAEXPAVphColliderBase@@0H@Z
-    inline void CalcHeldContacts(class phColliderBase* arg1, class phColliderBase* arg2, int32_t arg3)
+    inline void CalcHeldContacts(class phColliderBase* arg1, class phColliderBase* arg2, i32 arg3)
     {
-        return stub<member_func_t<void, phContactMgr, class phColliderBase*, class phColliderBase*, int32_t>>(
+        return stub<member_func_t<void, phContactMgr, class phColliderBase*, class phColliderBase*, i32>>(
             0x4706A0, this, arg1, arg2, arg3);
     }
 
@@ -144,25 +144,24 @@ public:
     }
 
     // 0x470D20 | ?TestHeldContact@phContactMgr@@QAE_NPBVphColliderBase@@0PAH@Z
-    inline bool TestHeldContact(class phColliderBase const* arg1, class phColliderBase const* arg2, int32_t* arg3)
+    inline bool TestHeldContact(class phColliderBase const* arg1, class phColliderBase const* arg2, i32* arg3)
     {
-        return stub<
-            member_func_t<bool, phContactMgr, class phColliderBase const*, class phColliderBase const*, int32_t*>>(
+        return stub<member_func_t<bool, phContactMgr, class phColliderBase const*, class phColliderBase const*, i32*>>(
             0x470D20, this, arg1, arg2, arg3);
     }
 
     // 0x470E50 | ?EstMaxMoved@phContactMgr@@CAMABVMatrix34@@PBVphColliderBase@@1@Z
-    static inline float EstMaxMoved(
+    static inline f32 EstMaxMoved(
         class Matrix34 const& arg1, class phColliderBase const* arg2, class phColliderBase const* arg3)
     {
-        return stub<cdecl_t<float, class Matrix34 const&, class phColliderBase const*, class phColliderBase const*>>(
+        return stub<cdecl_t<f32, class Matrix34 const&, class phColliderBase const*, class phColliderBase const*>>(
             0x470E50, arg1, arg2, arg3);
     }
 
     // 0x470F20 | ?SeekHeldContact@phContactMgr@@QAEHJJH@Z
-    inline int32_t SeekHeldContact(int32_t arg1, int32_t arg2, int32_t arg3)
+    inline i32 SeekHeldContact(i32 arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<int32_t, phContactMgr, int32_t, int32_t, int32_t>>(0x470F20, this, arg1, arg2, arg3);
+        return stub<member_func_t<i32, phContactMgr, i32, i32, i32>>(0x470F20, this, arg1, arg2, arg3);
     }
 
     // 0x470F70 | ?ClearHeldContactTable@phContactMgr@@AAEXXZ
@@ -172,22 +171,22 @@ public:
     }
 
     // 0x470FA0 | ?RemoveHeldContact@phContactMgr@@AAEXH@Z
-    inline void RemoveHeldContact(int32_t arg1)
+    inline void RemoveHeldContact(i32 arg1)
     {
-        return stub<member_func_t<void, phContactMgr, int32_t>>(0x470FA0, this, arg1);
+        return stub<member_func_t<void, phContactMgr, i32>>(0x470FA0, this, arg1);
     }
 
     // 0x4710B0 | ?AddHeldContact@phContactMgr@@AAEHPBVphColliderBase@@0@Z
-    inline int32_t AddHeldContact(class phColliderBase const* arg1, class phColliderBase const* arg2)
+    inline i32 AddHeldContact(class phColliderBase const* arg1, class phColliderBase const* arg2)
     {
-        return stub<member_func_t<int32_t, phContactMgr, class phColliderBase const*, class phColliderBase const*>>(
+        return stub<member_func_t<i32, phContactMgr, class phColliderBase const*, class phColliderBase const*>>(
             0x4710B0, this, arg1, arg2);
     }
 
     // 0x4711A0 | ?AddHCEntry@phContactMgr@@AAE_NHJ@Z
-    inline bool AddHCEntry(int32_t arg1, int32_t arg2)
+    inline bool AddHCEntry(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<bool, phContactMgr, int32_t, int32_t>>(0x4711A0, this, arg1, arg2);
+        return stub<member_func_t<bool, phContactMgr, i32, i32>>(0x4711A0, this, arg1, arg2);
     }
 
     // 0x471210 | ?HCContactGone@phContactMgr@@AAE_NPAVphHeldContact@@@Z
@@ -197,10 +196,10 @@ public:
     }
 
     // 0x471240 | ?CalcHeldContact@phContactMgr@@QAEXHAAJABVVector3@@11PAV2@PAVMatrix34@@@Z
-    inline void CalcHeldContact(int32_t arg1, int32_t& arg2, class Vector3 const& arg3, class Vector3 const& arg4,
+    inline void CalcHeldContact(i32 arg1, i32& arg2, class Vector3 const& arg3, class Vector3 const& arg4,
         class Vector3 const& arg5, class Vector3* arg6, class Matrix34* arg7)
     {
-        return stub<member_func_t<void, phContactMgr, int32_t, int32_t&, class Vector3 const&, class Vector3 const&,
+        return stub<member_func_t<void, phContactMgr, i32, i32&, class Vector3 const&, class Vector3 const&,
             class Vector3 const&, class Vector3*, class Matrix34*>>(
             0x471240, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
@@ -212,34 +211,33 @@ public:
     }
 
     // 0x4713D0 | ?GetNextHeldContact@phContactMgr@@AAE_NHPAHPAJPA_N@Z
-    inline bool GetNextHeldContact(int32_t arg1, int32_t* arg2, int32_t* arg3, bool* arg4)
+    inline bool GetNextHeldContact(i32 arg1, i32* arg2, i32* arg3, bool* arg4)
     {
-        return stub<member_func_t<bool, phContactMgr, int32_t, int32_t*, int32_t*, bool*>>(
-            0x4713D0, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<bool, phContactMgr, i32, i32*, i32*, bool*>>(0x4713D0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x471420 | ?SearchContact@phContactMgr@@QAE_NJPAJ@Z
-    inline bool SearchContact(int32_t arg1, int32_t* arg2)
+    inline bool SearchContact(i32 arg1, i32* arg2)
     {
-        return stub<member_func_t<bool, phContactMgr, int32_t, int32_t*>>(0x471420, this, arg1, arg2);
+        return stub<member_func_t<bool, phContactMgr, i32, i32*>>(0x471420, this, arg1, arg2);
     }
 
     // 0x471470 | ?FindNextContact@phContactMgr@@QAE_NJPAJ0@Z
-    inline bool FindNextContact(int32_t arg1, int32_t* arg2, int32_t* arg3)
+    inline bool FindNextContact(i32 arg1, i32* arg2, i32* arg3)
     {
-        return stub<member_func_t<bool, phContactMgr, int32_t, int32_t*, int32_t*>>(0x471470, this, arg1, arg2, arg3);
+        return stub<member_func_t<bool, phContactMgr, i32, i32*, i32*>>(0x471470, this, arg1, arg2, arg3);
     }
 
     // 0x4714E0 | ?CalcImpact@phContactMgr@@QAEXPAVphImpact@@M@Z
-    inline void CalcImpact(class phImpact* arg1, float arg2)
+    inline void CalcImpact(class phImpact* arg1, f32 arg2)
     {
-        return stub<member_func_t<void, phContactMgr, class phImpact*, float>>(0x4714E0, this, arg1, arg2);
+        return stub<member_func_t<void, phContactMgr, class phImpact*, f32>>(0x4714E0, this, arg1, arg2);
     }
 
     // 0x471620 | ?CullImpactList@phContactMgr@@QAEXPAHPAVphImpact@@@Z
-    inline void CullImpactList(int32_t* arg1, class phImpact* arg2)
+    inline void CullImpactList(i32* arg1, class phImpact* arg2)
     {
-        return stub<member_func_t<void, phContactMgr, int32_t*, class phImpact*>>(0x471620, this, arg1, arg2);
+        return stub<member_func_t<void, phContactMgr, i32*, class phImpact*>>(0x471620, this, arg1, arg2);
     }
 
     // 0x471AB0 | ?Calc2Impacts@phContactMgr@@QAEXPAVphImpact@@@Z
@@ -255,24 +253,23 @@ public:
     }
 
     // 0x472E20 | ?Calc3Impacts@phContactMgr@@QAEXHPAVphImpact@@@Z
-    inline void Calc3Impacts(int32_t arg1, class phImpact* arg2)
+    inline void Calc3Impacts(i32 arg1, class phImpact* arg2)
     {
-        return stub<member_func_t<void, phContactMgr, int32_t, class phImpact*>>(0x472E20, this, arg1, arg2);
+        return stub<member_func_t<void, phContactMgr, i32, class phImpact*>>(0x472E20, this, arg1, arg2);
     }
 
     // 0x473310 | ?ResolveThreePlusImpacts@phContactMgr@@QAEXHPAVphImpact@@ABVVector3@@11_N@Z
-    inline void ResolveThreePlusImpacts(int32_t arg1, class phImpact* arg2, class Vector3 const& arg3,
+    inline void ResolveThreePlusImpacts(i32 arg1, class phImpact* arg2, class Vector3 const& arg3,
         class Vector3 const& arg4, class Vector3 const& arg5, bool arg6)
     {
-        return stub<member_func_t<void, phContactMgr, int32_t, class phImpact*, class Vector3 const&,
-            class Vector3 const&, class Vector3 const&, bool>>(0x473310, this, arg1, arg2, arg3, arg4, arg5, arg6);
+        return stub<member_func_t<void, phContactMgr, i32, class phImpact*, class Vector3 const&, class Vector3 const&,
+            class Vector3 const&, bool>>(0x473310, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4737B0 | ?Calc3ImpactsFixed@phContactMgr@@QAEXHPAVphImpact@@_N@Z
-    inline void Calc3ImpactsFixed(int32_t arg1, class phImpact* arg2, bool arg3)
+    inline void Calc3ImpactsFixed(i32 arg1, class phImpact* arg2, bool arg3)
     {
-        return stub<member_func_t<void, phContactMgr, int32_t, class phImpact*, bool>>(
-            0x4737B0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, phContactMgr, i32, class phImpact*, bool>>(0x4737B0, this, arg1, arg2, arg3);
     }
 
     // 0x4738D0 | ?ApplyImpact@phContactMgr@@QAEXPAVphImpact@@ABVVector3@@@Z
@@ -283,27 +280,27 @@ public:
     }
 
     // 0x473EA0 | ?GetCMSeconds@phContactMgr@@QBEMXZ
-    inline float GetCMSeconds()
+    inline f32 GetCMSeconds()
     {
-        return stub<member_func_t<float, phContactMgr>>(0x473EA0, this);
+        return stub<member_func_t<f32, phContactMgr>>(0x473EA0, this);
     }
 
     // 0x473ED0 | ?GetCMInvSeconds@phContactMgr@@QBEMXZ
-    inline float GetCMInvSeconds()
+    inline f32 GetCMInvSeconds()
     {
-        return stub<member_func_t<float, phContactMgr>>(0x473ED0, this);
+        return stub<member_func_t<f32, phContactMgr>>(0x473ED0, this);
     }
 
     // 0x473F00 | ?SetCMOversampleTime@phContactMgr@@QAEXM@Z
-    inline void SetCMOversampleTime(float arg1)
+    inline void SetCMOversampleTime(f32 arg1)
     {
-        return stub<member_func_t<void, phContactMgr, float>>(0x473F00, this, arg1);
+        return stub<member_func_t<void, phContactMgr, f32>>(0x473F00, this, arg1);
     }
 
     // 0x473F20 | ?CalcContactHash@phContactMgr@@QAEJHHHJJ@Z
-    inline int32_t CalcContactHash(int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5)
+    inline i32 CalcContactHash(i32 arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5)
     {
-        return stub<member_func_t<int32_t, phContactMgr, int32_t, int32_t, int32_t, int32_t, int32_t>>(
+        return stub<member_func_t<i32, phContactMgr, i32, i32, i32, i32, i32>>(
             0x473F20, this, arg1, arg2, arg3, arg4, arg5);
     }
 };

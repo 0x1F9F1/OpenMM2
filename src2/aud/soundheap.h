@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -39,23 +39,23 @@ class audSoundHeap
 {
 public:
     // 0x5A5E90 | ?Create@audSoundHeap@@QAEPAV1@PAV1@H@Z
-    inline class audSoundHeap* Create(class audSoundHeap* arg1, int32_t arg2)
+    inline class audSoundHeap* Create(class audSoundHeap* arg1, i32 arg2)
     {
-        return stub<member_func_t<class audSoundHeap*, audSoundHeap, class audSoundHeap*, int32_t>>(
+        return stub<member_func_t<class audSoundHeap*, audSoundHeap, class audSoundHeap*, i32>>(
             0x5A5E90, this, arg1, arg2);
     }
 
     // 0x5A5EB0 | ?CreateNodeList@audSoundHeap@@QAEPAV1@PAV1@HH@Z
-    inline class audSoundHeap* CreateNodeList(class audSoundHeap* arg1, int32_t arg2, int32_t arg3)
+    inline class audSoundHeap* CreateNodeList(class audSoundHeap* arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<class audSoundHeap*, audSoundHeap, class audSoundHeap*, int32_t, int32_t>>(
+        return stub<member_func_t<class audSoundHeap*, audSoundHeap, class audSoundHeap*, i32, i32>>(
             0x5A5EB0, this, arg1, arg2, arg3);
     }
 
     // 0x5A5F90 | ?ReserveBuffer@audSoundHeap@@QAEPAVaudSoundBuffer@@H@Z
-    inline class audSoundBuffer* ReserveBuffer(int32_t arg1)
+    inline class audSoundBuffer* ReserveBuffer(i32 arg1)
     {
-        return stub<member_func_t<class audSoundBuffer*, audSoundHeap, int32_t>>(0x5A5F90, this, arg1);
+        return stub<member_func_t<class audSoundBuffer*, audSoundHeap, i32>>(0x5A5F90, this, arg1);
     }
 
     // 0x5A6010 | ?ReleaseBuffer@audSoundHeap@@QAE_NPAVaudSoundBuffer@@@Z

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -42,14 +42,14 @@ public:
     }
 
     // 0x579D30 | ?Activate@mmBridgeAudio@@QAEXH@Z
-    inline void Activate(int32_t arg1)
+    inline void Activate(i32 arg1)
     {
-        return stub<member_func_t<void, mmBridgeAudio, int32_t>>(0x579D30, this, arg1);
+        return stub<member_func_t<void, mmBridgeAudio, i32>>(0x579D30, this, arg1);
     }
 
     // 0x579D70 | ?Deactivate@mmBridgeAudio@@QAEXH@Z
-    inline void Deactivate(int32_t arg1)
+    inline void Deactivate(i32 arg1)
     {
-        return stub<member_func_t<void, mmBridgeAudio, int32_t>>(0x579D70, this, arg1);
+        return stub<member_func_t<void, mmBridgeAudio, i32>>(0x579D70, this, arg1);
     }
 };

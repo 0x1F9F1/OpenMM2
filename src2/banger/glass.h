@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -53,13 +53,13 @@ public:
     }
 
     // 0x627688 | ?sm_ActiveGlassInstance@dgGlassInstance@@0PAPAV1@A
-    static inline extern_var(0x627688, class dgGlassInstance**, sm_ActiveGlassInstance);
+    inline extern_var(0x627688, class dgGlassInstance**, sm_ActiveGlassInstance);
 
     // 0x6276D4 | ?sm_GlassParticles@dgGlassInstance@@0PAVptxGlass@@A
-    static inline extern_var(0x6276D4, class ptxGlass*, sm_GlassParticles);
+    inline extern_var(0x6276D4, class ptxGlass*, sm_GlassParticles);
 
     // 0x6276E8 | ?sm_Texture@dgGlassInstance@@0PAVgfxTexture@@A
-    static inline extern_var(0x6276E8, class gfxTexture*, sm_Texture);
+    inline extern_var(0x6276E8, class gfxTexture*, sm_Texture);
 
     // 0x442C90 | ?Reset@dgGlassInstance@@UAEXXZ
     inline void Reset() override
@@ -68,9 +68,9 @@ public:
     }
 
     // 0x442E90 | ?Draw@dgGlassInstance@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
+    inline void Draw(i32 arg1) override
     {
-        return stub<member_func_t<void, dgGlassInstance, int32_t>>(0x442E90, this, arg1);
+        return stub<member_func_t<void, dgGlassInstance, i32>>(0x442E90, this, arg1);
     }
 
     // 0x442EF0 | ?DrawGlow@dgGlassInstance@@UAEXXZ
@@ -80,9 +80,9 @@ public:
     }
 
     // 0x442F00 | ?SizeOf@dgGlassInstance@@UAEIXZ
-    inline uint32_t SizeOf() override
+    inline u32 SizeOf() override
     {
-        return stub<member_func_t<uint32_t, dgGlassInstance>>(0x442F00, this);
+        return stub<member_func_t<u32, dgGlassInstance>>(0x442F00, this);
     }
 
     // 0x442CD0 | ?Impact@dgGlassInstance@@UAEXPAVlvlInstance@@PAVVector3@@@Z

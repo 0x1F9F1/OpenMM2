@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -55,8 +55,8 @@
 */
 
 class mmPlayerConfig
-    : mmInfoBase
-    , Base
+    : Base
+    , mmInfoBase
 {
 public:
     // mmPlayerConfig::`vftable' @ 0x5B5224
@@ -74,21 +74,21 @@ public:
     }
 
     // 0x525750 | ?Load@mmPlayerConfig@@QAEHPAD@Z
-    inline int32_t Load(char* arg1)
+    inline i32 Load(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmPlayerConfig, char*>>(0x525750, this, arg1);
+        return stub<member_func_t<i32, mmPlayerConfig, char*>>(0x525750, this, arg1);
     }
 
     // 0x5257B0 | ?LoadBinary@mmPlayerConfig@@QAEHPAD@Z
-    inline int32_t LoadBinary(char* arg1)
+    inline i32 LoadBinary(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmPlayerConfig, char*>>(0x5257B0, this, arg1);
+        return stub<member_func_t<i32, mmPlayerConfig, char*>>(0x5257B0, this, arg1);
     }
 
     // 0x525A30 | ?SaveBinary@mmPlayerConfig@@QAEHPAD@Z
-    inline int32_t SaveBinary(char* arg1)
+    inline i32 SaveBinary(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmPlayerConfig, char*>>(0x525A30, this, arg1);
+        return stub<member_func_t<i32, mmPlayerConfig, char*>>(0x525A30, this, arg1);
     }
 
     // 0x525C70 | ?SetDefaults@mmPlayerConfig@@QAEXXZ
@@ -98,9 +98,9 @@ public:
     }
 
     // 0x525C80 | ?Save@mmPlayerConfig@@QAEHPADH@Z
-    inline int32_t Save(char* arg1, int32_t arg2)
+    inline i32 Save(char* arg1, i32 arg2)
     {
-        return stub<member_func_t<int32_t, mmPlayerConfig, char*, int32_t>>(0x525C80, this, arg1, arg2);
+        return stub<member_func_t<i32, mmPlayerConfig, char*, i32>>(0x525C80, this, arg1, arg2);
     }
 
     // 0x525D20 | ?SetAudio@mmPlayerConfig@@QAEXXZ

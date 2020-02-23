@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -27,9 +27,9 @@
 */
 
 // 0x498E10 | ?jpeg_resync_to_restart@@YAEPAUjpeg_decompress_struct@@H@Z
-inline uint8_t jpeg_resync_to_restart(struct jpeg_decompress_struct* arg1, int32_t arg2)
+inline u8 jpeg_resync_to_restart(struct jpeg_decompress_struct* arg1, i32 arg2)
 {
-    return stub<cdecl_t<uint8_t, struct jpeg_decompress_struct*, int32_t>>(0x498E10, arg1, arg2);
+    return stub<cdecl_t<u8, struct jpeg_decompress_struct*, i32>>(0x498E10, arg1, arg2);
 }
 
 // 0x499030 | ?jinit_marker_reader@@YAXPAUjpeg_decompress_struct@@@Z
@@ -40,9 +40,8 @@ inline void jinit_marker_reader(struct jpeg_decompress_struct* arg1)
 
 // 0x49A900 | ?jpeg_set_marker_processor@@YAXPAUjpeg_decompress_struct@@HP6AE0@Z@Z
 inline void jpeg_set_marker_processor(
-    struct jpeg_decompress_struct* arg1, int32_t arg2, uint8_t(__cdecl* arg3)(struct jpeg_decompress_struct*))
+    struct jpeg_decompress_struct* arg1, i32 arg2, u8(__cdecl* arg3)(struct jpeg_decompress_struct*))
 {
-    return stub<
-        cdecl_t<void, struct jpeg_decompress_struct*, int32_t, uint8_t(__cdecl*)(struct jpeg_decompress_struct*)>>(
+    return stub<cdecl_t<void, struct jpeg_decompress_struct*, i32, u8(__cdecl*)(struct jpeg_decompress_struct*)>>(
         0x49A900, arg1, arg2, arg3);
 }

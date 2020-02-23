@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -76,9 +76,9 @@ public:
     }
 
     // 0x4D9E50 | ?AddWheel@vehDrivetrain@@QAEHPAVvehWheel@@@Z
-    inline int32_t AddWheel(class vehWheel* arg1)
+    inline i32 AddWheel(class vehWheel* arg1)
     {
-        return stub<member_func_t<int32_t, vehDrivetrain, class vehWheel*>>(0x4D9E50, this, arg1);
+        return stub<member_func_t<i32, vehDrivetrain, class vehWheel*>>(0x4D9E50, this, arg1);
     }
 
     // 0x4CCEC0 | ??1vehDrivetrain@@UAE@XZ

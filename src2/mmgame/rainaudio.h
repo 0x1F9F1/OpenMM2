@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -45,9 +45,9 @@ public:
     }
 
     // 0x430260 | ?SetInterior@mmRainAudio@@QAEXE@Z
-    inline void SetInterior(uint8_t arg1)
+    inline void SetInterior(u8 arg1)
     {
-        return stub<member_func_t<void, mmRainAudio, uint8_t>>(0x430260, this, arg1);
+        return stub<member_func_t<void, mmRainAudio, u8>>(0x430260, this, arg1);
     }
 
     // 0x4302F0 | ?ShelterOn@mmRainAudio@@QAEXXZ

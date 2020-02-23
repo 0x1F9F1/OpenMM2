@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -49,15 +49,15 @@ public:
     }
 
     // 0x522BF0 | ?Init@Spline@@QAEXPAMH@Z
-    inline void Init(float* arg1, int32_t arg2)
+    inline void Init(f32* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, Spline, float*, int32_t>>(0x522BF0, this, arg1, arg2);
+        return stub<member_func_t<void, Spline, f32*, i32>>(0x522BF0, this, arg1, arg2);
     }
 
     // 0x522D00 | ?InRange@Spline@@QAEHXZ
-    inline int32_t InRange()
+    inline i32 InRange()
     {
-        return stub<member_func_t<int32_t, Spline>>(0x522D00, this);
+        return stub<member_func_t<i32, Spline>>(0x522D00, this);
     }
 
     // 0x522D50 | ?CalcCoeff@Spline@@QAEXXZ
@@ -67,27 +67,27 @@ public:
     }
 
     // 0x522E60 | ?SetValue@Spline@@QAEXPAM@Z
-    inline void SetValue(float* arg1)
+    inline void SetValue(f32* arg1)
     {
-        return stub<member_func_t<void, Spline, float*>>(0x522E60, this, arg1);
+        return stub<member_func_t<void, Spline, f32*>>(0x522E60, this, arg1);
     }
 
     // 0x522ED0 | ?SetGoal@Spline@@QAEXPAMM@Z
-    inline void SetGoal(float* arg1, float arg2)
+    inline void SetGoal(f32* arg1, f32 arg2)
     {
-        return stub<member_func_t<void, Spline, float*, float>>(0x522ED0, this, arg1, arg2);
+        return stub<member_func_t<void, Spline, f32*, f32>>(0x522ED0, this, arg1, arg2);
     }
 
     // 0x522FB0 | ?Solve@Spline@@QAEXM@Z
-    inline void Solve(float arg1)
+    inline void Solve(f32 arg1)
     {
-        return stub<member_func_t<void, Spline, float>>(0x522FB0, this, arg1);
+        return stub<member_func_t<void, Spline, f32>>(0x522FB0, this, arg1);
     }
 
     // 0x5230E0 | ?Print@Spline@@QAEXH@Z
-    inline void Print(int32_t arg1)
+    inline void Print(i32 arg1)
     {
-        return stub<member_func_t<void, Spline, int32_t>>(0x5230E0, this, arg1);
+        return stub<member_func_t<void, Spline, i32>>(0x5230E0, this, arg1);
     }
 
     // 0x5231E0 | ?FixTimeStop@Spline@@QAEXXZ

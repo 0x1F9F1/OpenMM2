@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -57,9 +57,9 @@ public:
     }
 
     // 0x5A4CF0 | ?Update@audStream@@QAE_NH@Z
-    inline bool Update(int32_t arg1)
+    inline bool Update(i32 arg1)
     {
-        return stub<member_func_t<bool, audStream, int32_t>>(0x5A4CF0, this, arg1);
+        return stub<member_func_t<bool, audStream, i32>>(0x5A4CF0, this, arg1);
     }
 
     // 0x5A4E00 | ?CloseStream@audStream@@QAE_NXZ
@@ -69,21 +69,21 @@ public:
     }
 
     // 0x5A4E60 | ?GetCurrentCursor@audStream@@QAEHXZ
-    inline int32_t GetCurrentCursor()
+    inline i32 GetCurrentCursor()
     {
-        return stub<member_func_t<int32_t, audStream>>(0x5A4E60, this);
+        return stub<member_func_t<i32, audStream>>(0x5A4E60, this);
     }
 
     // 0x5A4E70 | ?SetBufferSize@audStream@@QAEXH@Z
-    inline void SetBufferSize(int32_t arg1)
+    inline void SetBufferSize(i32 arg1)
     {
-        return stub<member_func_t<void, audStream, int32_t>>(0x5A4E70, this, arg1);
+        return stub<member_func_t<void, audStream, i32>>(0x5A4E70, this, arg1);
     }
 
     // 0x5A4E80 | ?GetBufferSize@audStream@@QAEHXZ
-    inline int32_t GetBufferSize()
+    inline i32 GetBufferSize()
     {
-        return stub<member_func_t<int32_t, audStream>>(0x5A4E80, this);
+        return stub<member_func_t<i32, audStream>>(0x5A4E80, this);
     }
 
     // 0x5A4E90 | ?SetFileInfo@audStream@@QAEXPAX@Z
@@ -99,9 +99,9 @@ public:
     }
 
     // 0x5A4EB0 | ?SetVolume@audStream@@QAEXM@Z
-    inline void SetVolume(float arg1)
+    inline void SetVolume(f32 arg1)
     {
-        return stub<member_func_t<void, audStream, float>>(0x5A4EB0, this, arg1);
+        return stub<member_func_t<void, audStream, f32>>(0x5A4EB0, this, arg1);
     }
 
     // 0x5A4EC0 | ?SetLooping@audStream@@QAEX_N@Z

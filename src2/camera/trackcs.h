@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -107,15 +107,15 @@ public:
     }
 
     // 0x51F980 | ?Front@camTrackCS@@AAEXM@Z
-    inline void Front(float arg1)
+    inline void Front(f32 arg1)
     {
-        return stub<member_func_t<void, camTrackCS, float>>(0x51F980, this, arg1);
+        return stub<member_func_t<void, camTrackCS, f32>>(0x51F980, this, arg1);
     }
 
     // 0x51FA00 | ?Rear@camTrackCS@@AAEXM@Z
-    inline void Rear(float arg1)
+    inline void Rear(f32 arg1)
     {
-        return stub<member_func_t<void, camTrackCS, float>>(0x51FA00, this, arg1);
+        return stub<member_func_t<void, camTrackCS, f32>>(0x51FA00, this, arg1);
     }
 
     // 0x51DA80 | ??1camTrackCS@@UAE@XZ

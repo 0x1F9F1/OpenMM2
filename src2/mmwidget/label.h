@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -48,9 +48,9 @@ public:
     }
 
     // 0x4ED2E0 | ?Init@UILabel@@QAEXPAULocString@@HMMMMH@Z
-    inline void Init(struct LocString* arg1, int32_t arg2, float arg3, float arg4, float arg5, float arg6, int32_t arg7)
+    inline void Init(struct LocString* arg1, i32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7)
     {
-        return stub<member_func_t<void, UILabel, struct LocString*, int32_t, float, float, float, float, int32_t>>(
+        return stub<member_func_t<void, UILabel, struct LocString*, i32, f32, f32, f32, f32, i32>>(
             0x4ED2E0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
@@ -61,19 +61,19 @@ public:
     }
 
     // 0x4ED400 | ?SetBlink@UILabel@@QAEXH@Z
-    inline void SetBlink(int32_t arg1)
+    inline void SetBlink(i32 arg1)
     {
-        return stub<member_func_t<void, UILabel, int32_t>>(0x4ED400, this, arg1);
+        return stub<member_func_t<void, UILabel, i32>>(0x4ED400, this, arg1);
     }
 
     // 0x4ED440 | ?SwitchState@UILabel@@QAEXH@Z
-    inline void SwitchState(int32_t arg1)
+    inline void SwitchState(i32 arg1)
     {
-        return stub<member_func_t<void, UILabel, int32_t>>(0x4ED440, this, arg1);
+        return stub<member_func_t<void, UILabel, i32>>(0x4ED440, this, arg1);
     }
 
     // 0x6B03F4 | ?TextHeight@UILabel@@2MA
-    static inline extern_var(0x6B03F4, float, TextHeight);
+    inline extern_var(0x6B03F4, float, TextHeight);
 
     // 0x4ED280 | ??1UILabel@@UAE@XZ
     inline ~UILabel() override
@@ -94,8 +94,8 @@ public:
     }
 
     // 0x4ED430 | ?Switch@UILabel@@UAEXH@Z
-    inline void Switch(int32_t arg1) override
+    inline void Switch(i32 arg1) override
     {
-        return stub<member_func_t<void, UILabel, int32_t>>(0x4ED430, this, arg1);
+        return stub<member_func_t<void, UILabel, i32>>(0x4ED430, this, arg1);
     }
 };

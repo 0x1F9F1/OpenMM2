@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -53,5 +53,5 @@ public:
     }
 
     // 0x6276F8 | ?Instance@dgStatePack@@2PAU1@A
-    static inline extern_var(0x6276F8, struct dgStatePack*, Instance);
+    inline extern_var(0x6276F8, struct dgStatePack*, Instance);
 };

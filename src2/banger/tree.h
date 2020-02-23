@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -37,9 +37,9 @@ public:
     }
 
     // 0x442B20 | ?AddTree@dgTreeRenderer@@QAEXPAVdgBangerInstance@@H@Z
-    inline void AddTree(class dgBangerInstance* arg1, int32_t arg2)
+    inline void AddTree(class dgBangerInstance* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, dgTreeRenderer, class dgBangerInstance*, int32_t>>(0x442B20, this, arg1, arg2);
+        return stub<member_func_t<void, dgTreeRenderer, class dgBangerInstance*, i32>>(0x442B20, this, arg1, arg2);
     }
 
     // 0x442B50 | ?RenderTrees@dgTreeRenderer@@QAEXXZ
@@ -49,5 +49,5 @@ public:
     }
 
     // 0x627680 | ?sm_Instance@dgTreeRenderer@@0PAV1@A
-    static inline extern_var(0x627680, class dgTreeRenderer*, sm_Instance);
+    inline extern_var(0x627680, class dgTreeRenderer*, sm_Instance);
 };

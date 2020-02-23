@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -116,21 +116,21 @@ public:
     }
 
     // 0x578930 | ?Reset@gizTrainCar@@QAEXH@Z
-    inline void Reset(int32_t arg1)
+    inline void Reset(i32 arg1)
     {
-        return stub<member_func_t<void, gizTrainCar, int32_t>>(0x578930, this, arg1);
+        return stub<member_func_t<void, gizTrainCar, i32>>(0x578930, this, arg1);
     }
 
     // 0x578970 | ?Init@gizTrainCar@@QAEXPADPAVdgPath@@M@Z
-    inline void Init(char* arg1, class dgPath* arg2, float arg3)
+    inline void Init(char* arg1, class dgPath* arg2, f32 arg3)
     {
-        return stub<member_func_t<void, gizTrainCar, char*, class dgPath*, float>>(0x578970, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, gizTrainCar, char*, class dgPath*, f32>>(0x578970, this, arg1, arg2, arg3);
     }
 
     // 0x578A30 | ?Update@gizTrainCar@@QAEXM@Z
-    inline void Update(float arg1)
+    inline void Update(f32 arg1)
     {
-        return stub<member_func_t<void, gizTrainCar, float>>(0x578A30, this, arg1);
+        return stub<member_func_t<void, gizTrainCar, f32>>(0x578A30, this, arg1);
     }
 
     // 0x578B20 | ?IsFirstStop@gizTrainCar@@QAE_NXZ
@@ -146,9 +146,9 @@ public:
     }
 
     // 0x579250 | ?SizeOf@gizTrainCar@@UAEIXZ
-    inline uint32_t SizeOf() override
+    inline u32 SizeOf() override
     {
-        return stub<member_func_t<uint32_t, gizTrainCar>>(0x579250, this);
+        return stub<member_func_t<u32, gizTrainCar>>(0x579250, this);
     }
 };
 

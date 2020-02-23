@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -43,9 +43,9 @@
 */
 
 // 0x4A6970 | ?rglOpenPipe@@YAXHH_N@Z
-inline void rglOpenPipe(int32_t arg1, int32_t arg2, bool arg3)
+inline void rglOpenPipe(i32 arg1, i32 arg2, bool arg3)
 {
-    return stub<cdecl_t<void, int32_t, int32_t, bool>>(0x4A6970, arg1, arg2, arg3);
+    return stub<cdecl_t<void, i32, i32, bool>>(0x4A6970, arg1, arg2, arg3);
 }
 
 // 0x4A6A00 | ?rglClosePipe@@YAXXZ
@@ -55,9 +55,9 @@ inline void rglClosePipe()
 }
 
 // 0x4A6A10 | ?rglBeginFrame@@YAXI@Z
-inline void rglBeginFrame(uint32_t arg1)
+inline void rglBeginFrame(u32 arg1)
 {
-    return stub<cdecl_t<void, uint32_t>>(0x4A6A10, arg1);
+    return stub<cdecl_t<void, u32>>(0x4A6A10, arg1);
 }
 
 // 0x4A6A40 | ?rglEndFrame@@YAXXZ
@@ -73,9 +73,9 @@ inline void rglCameraMatrix(class Matrix34 const& arg1)
 }
 
 // 0x4A6A70 | ?rglAlive@@YAHXZ
-inline int32_t rglAlive()
+inline i32 rglAlive()
 {
-    return stub<cdecl_t<int32_t>>(0x4A6A70);
+    return stub<cdecl_t<i32>>(0x4A6A70);
 }
 
 // 0x4A6AB0 | ?rglDrawBox@@YAXABVVector3@@ABVMatrix34@@@Z
@@ -92,33 +92,33 @@ inline void rglDrawSolidBox(class Vector3 const& arg1, class Matrix34 const& arg
 }
 
 // 0x4A7050 | ?rglDrawAxis@@YAXMABVMatrix34@@@Z
-inline void rglDrawAxis(float arg1, class Matrix34 const& arg2)
+inline void rglDrawAxis(f32 arg1, class Matrix34 const& arg2)
 {
-    return stub<cdecl_t<void, float, class Matrix34 const&>>(0x4A7050, arg1, arg2);
+    return stub<cdecl_t<void, f32, class Matrix34 const&>>(0x4A7050, arg1, arg2);
 }
 
 // 0x4A70F0 | ?rglDrawSphere@@YAXMH@Z
-inline void rglDrawSphere(float arg1, int32_t arg2)
+inline void rglDrawSphere(f32 arg1, i32 arg2)
 {
-    return stub<cdecl_t<void, float, int32_t>>(0x4A70F0, arg1, arg2);
+    return stub<cdecl_t<void, f32, i32>>(0x4A70F0, arg1, arg2);
 }
 
 // 0x4A7200 | ?rglDrawSphere@@YAXMABVMatrix34@@H@Z
-inline void rglDrawSphere(float arg1, class Matrix34 const& arg2, int32_t arg3)
+inline void rglDrawSphere(f32 arg1, class Matrix34 const& arg2, i32 arg3)
 {
-    return stub<cdecl_t<void, float, class Matrix34 const&, int32_t>>(0x4A7200, arg1, arg2, arg3);
+    return stub<cdecl_t<void, f32, class Matrix34 const&, i32>>(0x4A7200, arg1, arg2, arg3);
 }
 
 // 0x4A7230 | ?rglDrawEllipsoid@@YAXABVVector3@@ABVMatrix34@@H@Z
-inline void rglDrawEllipsoid(class Vector3 const& arg1, class Matrix34 const& arg2, int32_t arg3)
+inline void rglDrawEllipsoid(class Vector3 const& arg1, class Matrix34 const& arg2, i32 arg3)
 {
-    return stub<cdecl_t<void, class Vector3 const&, class Matrix34 const&, int32_t>>(0x4A7230, arg1, arg2, arg3);
+    return stub<cdecl_t<void, class Vector3 const&, class Matrix34 const&, i32>>(0x4A7230, arg1, arg2, arg3);
 }
 
 // 0x4A7310 | ?rglDrawParticle@@YAXABVVector3@@MABVVector4@@@Z
-inline void rglDrawParticle(class Vector3 const& arg1, float arg2, class Vector4 const& arg3)
+inline void rglDrawParticle(class Vector3 const& arg1, f32 arg2, class Vector4 const& arg3)
 {
-    return stub<cdecl_t<void, class Vector3 const&, float, class Vector4 const&>>(0x4A7310, arg1, arg2, arg3);
+    return stub<cdecl_t<void, class Vector3 const&, f32, class Vector4 const&>>(0x4A7310, arg1, arg2, arg3);
 }
 
 // 0x4A7540 | ?rglResetDrawTexture@@YAXXZ

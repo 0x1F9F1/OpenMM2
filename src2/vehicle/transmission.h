@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -60,9 +60,9 @@ public:
     }
 
     // 0x4CF530 | ?GearRatioFromMPH@vehTransmission@@AAEMM@Z
-    inline float GearRatioFromMPH(float arg1)
+    inline f32 GearRatioFromMPH(f32 arg1)
     {
-        return stub<member_func_t<float, vehTransmission, float>>(0x4CF530, this, arg1);
+        return stub<member_func_t<f32, vehTransmission, f32>>(0x4CF530, this, arg1);
     }
 
     // 0x4CF560 | ?Init@vehTransmission@@QAEXPAVvehCarSim@@@Z
@@ -72,21 +72,21 @@ public:
     }
 
     // 0x4CF570 | ?Upshift@vehTransmission@@QAEHXZ
-    inline int32_t Upshift()
+    inline i32 Upshift()
     {
-        return stub<member_func_t<int32_t, vehTransmission>>(0x4CF570, this);
+        return stub<member_func_t<i32, vehTransmission>>(0x4CF570, this);
     }
 
     // 0x4CF5B0 | ?Downshift@vehTransmission@@QAEHXZ
-    inline int32_t Downshift()
+    inline i32 Downshift()
     {
-        return stub<member_func_t<int32_t, vehTransmission>>(0x4CF5B0, this);
+        return stub<member_func_t<i32, vehTransmission>>(0x4CF5B0, this);
     }
 
     // 0x4CF6B0 | ?Automatic@vehTransmission@@QAEXH@Z
-    inline void Automatic(int32_t arg1)
+    inline void Automatic(i32 arg1)
     {
-        return stub<member_func_t<void, vehTransmission, int32_t>>(0x4CF6B0, this, arg1);
+        return stub<member_func_t<void, vehTransmission, i32>>(0x4CF6B0, this, arg1);
     }
 
     // 0x4CF6C0 | ?SetReverse@vehTransmission@@QAEXXZ
@@ -108,9 +108,9 @@ public:
     }
 
     // 0x4CF700 | ?SetCurrentGear@vehTransmission@@QAEHH@Z
-    inline int32_t SetCurrentGear(int32_t arg1)
+    inline i32 SetCurrentGear(i32 arg1)
     {
-        return stub<member_func_t<int32_t, vehTransmission, int32_t>>(0x4CF700, this, arg1);
+        return stub<member_func_t<i32, vehTransmission, i32>>(0x4CF700, this, arg1);
     }
 
     // 0x4CCEB0 | ??1vehTransmission@@UAE@XZ

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -48,15 +48,15 @@ public:
     }
 
     // 0x42FE10 | ?AssignProperties@mmCarRoadFF@@QAEXMH@Z
-    inline void AssignProperties(float arg1, int32_t arg2)
+    inline void AssignProperties(f32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, mmCarRoadFF, float, int32_t>>(0x42FE10, this, arg1, arg2);
+        return stub<member_func_t<void, mmCarRoadFF, f32, i32>>(0x42FE10, this, arg1, arg2);
     }
 
     // 0x42FE20 | ?SetFGVals@mmCarRoadFF@@QAEXMMM@Z
-    inline void SetFGVals(float arg1, float arg2, float arg3)
+    inline void SetFGVals(f32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, mmCarRoadFF, float, float, float>>(0x42FE20, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmCarRoadFF, f32, f32, f32>>(0x42FE20, this, arg1, arg2, arg3);
     }
 
     // 0x42FF10 | ?Start@mmCarRoadFF@@QAEXXZ
@@ -72,9 +72,9 @@ public:
     }
 
     // 0x42FF70 | ?IsPlaying@mmCarRoadFF@@QAEHXZ
-    inline int32_t IsPlaying()
+    inline i32 IsPlaying()
     {
-        return stub<member_func_t<int32_t, mmCarRoadFF>>(0x42FF70, this);
+        return stub<member_func_t<i32, mmCarRoadFF>>(0x42FF70, this);
     }
 
     // 0x42FFD0 | ?UpdateVals@mmCarRoadFF@@QAEXXZ

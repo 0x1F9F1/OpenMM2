@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -73,16 +73,16 @@ public:
     }
 
     // 0x532750 | ?Init@mmTextNode@@QAEXHHHHHH@Z
-    inline void Init(int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5, int32_t arg6)
+    inline void Init(i32 arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6)
     {
-        return stub<member_func_t<void, mmTextNode, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t>>(
+        return stub<member_func_t<void, mmTextNode, i32, i32, i32, i32, i32, i32>>(
             0x532750, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x532840 | ?Init@mmTextNode@@QAEXMMMMHH@Z
-    inline void Init(float arg1, float arg2, float arg3, float arg4, int32_t arg5, int32_t arg6)
+    inline void Init(f32 arg1, f32 arg2, f32 arg3, f32 arg4, i32 arg5, i32 arg6)
     {
-        return stub<member_func_t<void, mmTextNode, float, float, float, float, int32_t, int32_t>>(
+        return stub<member_func_t<void, mmTextNode, f32, f32, f32, f32, i32, i32>>(
             0x532840, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
@@ -105,62 +105,62 @@ public:
     }
 
     // 0x532AA0 | ?GetFGColor@mmTextNode@@QAEIXZ
-    inline uint32_t GetFGColor()
+    inline u32 GetFGColor()
     {
-        return stub<member_func_t<uint32_t, mmTextNode>>(0x532AA0, this);
+        return stub<member_func_t<u32, mmTextNode>>(0x532AA0, this);
     }
 
     // 0x532AB0 | ?SetEffects@mmTextNode@@QAEXHH@Z
-    inline void SetEffects(int32_t arg1, int32_t arg2)
+    inline void SetEffects(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, mmTextNode, int32_t, int32_t>>(0x532AB0, this, arg1, arg2);
+        return stub<member_func_t<void, mmTextNode, i32, i32>>(0x532AB0, this, arg1, arg2);
     }
 
     // 0x532AE0 | ?GetEffects@mmTextNode@@QAEHH@Z
-    inline int32_t GetEffects(int32_t arg1)
+    inline i32 GetEffects(i32 arg1)
     {
-        return stub<member_func_t<int32_t, mmTextNode, int32_t>>(0x532AE0, this, arg1);
+        return stub<member_func_t<i32, mmTextNode, i32>>(0x532AE0, this, arg1);
     }
 
     // 0x532B10 | ?GetTextDimensions@mmTextNode@@QAEXPBXPBULocString@@AAM2@Z
-    inline void GetTextDimensions(void const* arg1, struct LocString const* arg2, float& arg3, float& arg4)
+    inline void GetTextDimensions(void const* arg1, struct LocString const* arg2, f32& arg3, f32& arg4)
     {
-        return stub<member_func_t<void, mmTextNode, void const*, struct LocString const*, float&, float&>>(
+        return stub<member_func_t<void, mmTextNode, void const*, struct LocString const*, f32&, f32&>>(
             0x532B10, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x532C20 | ?SetTextPosition@mmTextNode@@QAEXHMM@Z
-    inline void SetTextPosition(int32_t arg1, float arg2, float arg3)
+    inline void SetTextPosition(i32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, mmTextNode, int32_t, float, float>>(0x532C20, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmTextNode, i32, f32, f32>>(0x532C20, this, arg1, arg2, arg3);
     }
 
     // 0x532C70 | ?AddText@mmTextNode@@QAEHPBXPBULocString@@HMM@Z
-    inline int32_t AddText(void const* arg1, struct LocString const* arg2, int32_t arg3, float arg4, float arg5)
+    inline i32 AddText(void const* arg1, struct LocString const* arg2, i32 arg3, f32 arg4, f32 arg5)
     {
-        return stub<member_func_t<int32_t, mmTextNode, void const*, struct LocString const*, int32_t, float, float>>(
+        return stub<member_func_t<i32, mmTextNode, void const*, struct LocString const*, i32, f32, f32>>(
             0x532C70, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x532D50 | ?SetString@mmTextNode@@QAEXHPBULocString@@@Z
-    inline void SetString(int32_t arg1, struct LocString const* arg2)
+    inline void SetString(i32 arg1, struct LocString const* arg2)
     {
-        return stub<member_func_t<void, mmTextNode, int32_t, struct LocString const*>>(0x532D50, this, arg1, arg2);
+        return stub<member_func_t<void, mmTextNode, i32, struct LocString const*>>(0x532D50, this, arg1, arg2);
     }
 
     // 0x532DB0 | ?SetPosition@mmTextNode@@QAEXHMM@Z
-    inline void SetPosition(int32_t arg1, float arg2, float arg3)
+    inline void SetPosition(i32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, mmTextNode, int32_t, float, float>>(0x532DB0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmTextNode, i32, f32, f32>>(0x532DB0, this, arg1, arg2, arg3);
     }
 
     // 0x532E20 | ?Printf@mmTextNode@@QAAXPBDZZ
     // Skipped (Variable Arguments)
 
     // 0x532E80 | ?RenderText@mmTextNode@@QAEXPAVgfxBitmap@@PAUmmTextData@@HI@Z
-    inline void RenderText(class gfxBitmap* arg1, struct mmTextData* arg2, int32_t arg3, uint32_t arg4)
+    inline void RenderText(class gfxBitmap* arg1, struct mmTextData* arg2, i32 arg3, u32 arg4)
     {
-        return stub<member_func_t<void, mmTextNode, class gfxBitmap*, struct mmTextData*, int32_t, uint32_t>>(
+        return stub<member_func_t<void, mmTextNode, class gfxBitmap*, struct mmTextData*, i32, u32>>(
             0x532E80, this, arg1, arg2, arg3, arg4);
     }
 
@@ -199,15 +199,15 @@ public:
     }
 
     // 0x5321C0 | ?CreateLocFont@mmText@@SAPAXPBULocString@@H@Z
-    static inline void* CreateLocFont(struct LocString const* arg1, int32_t arg2)
+    static inline void* CreateLocFont(struct LocString const* arg1, i32 arg2)
     {
-        return stub<cdecl_t<void*, struct LocString const*, int32_t>>(0x5321C0, arg1, arg2);
+        return stub<cdecl_t<void*, struct LocString const*, i32>>(0x5321C0, arg1, arg2);
     }
 
     // 0x532280 | ?CreateFont@mmText@@SAPAXPBDH@Z
-    static inline void* CreateFont(char const* arg1, int32_t arg2)
+    static inline void* CreateFont(char const* arg1, i32 arg2)
     {
-        return stub<cdecl_t<void*, char const*, int32_t>>(0x532280, arg1, arg2);
+        return stub<cdecl_t<void*, char const*, i32>>(0x532280, arg1, arg2);
     }
 
     // 0x5322B0 | ?DeleteFont@mmText@@SAXPAX@Z
@@ -229,23 +229,22 @@ public:
     }
 
     // 0x532310 | ?CreateFitBitmap@mmText@@SAPAVgfxBitmap@@PBDPBXHH@Z
-    static inline class gfxBitmap* CreateFitBitmap(char const* arg1, void const* arg2, int32_t arg3, int32_t arg4)
+    static inline class gfxBitmap* CreateFitBitmap(char const* arg1, void const* arg2, i32 arg3, i32 arg4)
     {
-        return stub<cdecl_t<class gfxBitmap*, char const*, void const*, int32_t, int32_t>>(
-            0x532310, arg1, arg2, arg3, arg4);
+        return stub<cdecl_t<class gfxBitmap*, char const*, void const*, i32, i32>>(0x532310, arg1, arg2, arg3, arg4);
     }
 
     // 0x5324F0 | ?Draw@mmText@@QAEXPAVgfxBitmap@@MMPBDPBX@Z
-    inline void Draw(class gfxBitmap* arg1, float arg2, float arg3, char const* arg4, void const* arg5)
+    inline void Draw(class gfxBitmap* arg1, f32 arg2, f32 arg3, char const* arg4, void const* arg5)
     {
-        return stub<member_func_t<void, mmText, class gfxBitmap*, float, float, char const*, void const*>>(
+        return stub<member_func_t<void, mmText, class gfxBitmap*, f32, f32, char const*, void const*>>(
             0x5324F0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x532580 | ?Draw2@mmText@@QAEXPAVgfxBitmap@@MMPBDPBXI@Z
-    inline void Draw2(class gfxBitmap* arg1, float arg2, float arg3, char const* arg4, void const* arg5, uint32_t arg6)
+    inline void Draw2(class gfxBitmap* arg1, f32 arg2, f32 arg3, char const* arg4, void const* arg5, u32 arg6)
     {
-        return stub<member_func_t<void, mmText, class gfxBitmap*, float, float, char const*, void const*, uint32_t>>(
+        return stub<member_func_t<void, mmText, class gfxBitmap*, f32, f32, char const*, void const*, u32>>(
             0x532580, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 };

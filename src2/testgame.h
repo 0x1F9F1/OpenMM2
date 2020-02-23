@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -46,33 +46,33 @@
 */
 
 // 0x401010 | ?ProgressRect@@YAXHHHHI@Z
-inline void ProgressRect(int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, uint32_t arg5)
+inline void ProgressRect(i32 arg1, i32 arg2, i32 arg3, i32 arg4, u32 arg5)
 {
-    return stub<cdecl_t<void, int32_t, int32_t, int32_t, int32_t, uint32_t>>(0x401010, arg1, arg2, arg3, arg4, arg5);
+    return stub<cdecl_t<void, i32, i32, i32, i32, u32>>(0x401010, arg1, arg2, arg3, arg4, arg5);
 }
 
 // 0x4010F0 | ?ProgressCB@@YAXPBDH@Z
-inline void ProgressCB(char const* arg1, int32_t arg2)
+inline void ProgressCB(char const* arg1, i32 arg2)
 {
-    return stub<cdecl_t<void, char const*, int32_t>>(0x4010F0, arg1, arg2);
+    return stub<cdecl_t<void, char const*, i32>>(0x4010F0, arg1, arg2);
 }
 
 // 0x4011E0 | ?Main@@YAHXZ
-inline int32_t Main()
+inline i32 Main()
 {
-    return stub<cdecl_t<int32_t>>(0x4011E0);
+    return stub<cdecl_t<i32>>(0x4011E0);
 }
 
 // 0x4022B0 | ?ExceptMain@@YAHXZ
-inline int32_t ExceptMain()
+inline i32 ExceptMain()
 {
-    return stub<cdecl_t<int32_t>>(0x4022B0);
+    return stub<cdecl_t<i32>>(0x4022B0);
 }
 
 // 0x402340 | ?ArchInit@@YAXHPAPAD@Z
-inline void ArchInit(int32_t arg1, char** arg2)
+inline void ArchInit(i32 arg1, char** arg2)
 {
-    return stub<cdecl_t<void, int32_t, char**>>(0x402340, arg1, arg2);
+    return stub<cdecl_t<void, i32, char**>>(0x402340, arg1, arg2);
 }
 
 // 0x402350 | ?ageProcessEvents@@YAXXZ

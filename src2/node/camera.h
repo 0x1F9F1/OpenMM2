@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -76,15 +76,15 @@ public:
     }
 
     // 0x4A2650 | ?SetClipArea@asCamera@@QAEXMMMM@Z
-    inline void SetClipArea(float arg1, float arg2, float arg3, float arg4)
+    inline void SetClipArea(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
-        return stub<member_func_t<void, asCamera, float, float, float, float>>(0x4A2650, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, asCamera, f32, f32, f32, f32>>(0x4A2650, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4A2790 | ?SetLighting@asCamera@@QAEXH@Z
-    inline void SetLighting(int32_t arg1)
+    inline void SetLighting(i32 arg1)
     {
-        return stub<member_func_t<void, asCamera, int32_t>>(0x4A2790, this, arg1);
+        return stub<member_func_t<void, asCamera, i32>>(0x4A2790, this, arg1);
     }
 
     // 0x4A27E0 | ?SetWorld@asCamera@@QAEXAAVMatrix34@@@Z
@@ -113,22 +113,22 @@ public:
     }
 
     // 0x4A2DD0 | ?SetViewport@asCamera@@QAEXMMMMH@Z
-    inline void SetViewport(float arg1, float arg2, float arg3, float arg4, int32_t arg5)
+    inline void SetViewport(f32 arg1, f32 arg2, f32 arg3, f32 arg4, i32 arg5)
     {
-        return stub<member_func_t<void, asCamera, float, float, float, float, int32_t>>(
+        return stub<member_func_t<void, asCamera, f32, f32, f32, f32, i32>>(
             0x4A2DD0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x4A2E50 | ?SetView@asCamera@@QAEXMMMM@Z
-    inline void SetView(float arg1, float arg2, float arg3, float arg4)
+    inline void SetView(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
-        return stub<member_func_t<void, asCamera, float, float, float, float>>(0x4A2E50, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, asCamera, f32, f32, f32, f32>>(0x4A2E50, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4A2EC0 | ?SetFog@asCamera@@QAEXMMMM@Z
-    inline void SetFog(float arg1, float arg2, float arg3, float arg4)
+    inline void SetFog(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
-        return stub<member_func_t<void, asCamera, float, float, float, float>>(0x4A2EC0, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, asCamera, f32, f32, f32, f32>>(0x4A2EC0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4A2EF0 | ?SetUnderlay@asCamera@@QAEXPAD@Z
@@ -144,34 +144,33 @@ public:
     }
 
     // 0x4A2F60 | ?GetViewportWidth@asCamera@@QAEHXZ
-    inline int32_t GetViewportWidth()
+    inline i32 GetViewportWidth()
     {
-        return stub<member_func_t<int32_t, asCamera>>(0x4A2F60, this);
+        return stub<member_func_t<i32, asCamera>>(0x4A2F60, this);
     }
 
     // 0x4A2F70 | ?GetViewportHeight@asCamera@@QAEHXZ
-    inline int32_t GetViewportHeight()
+    inline i32 GetViewportHeight()
     {
-        return stub<member_func_t<int32_t, asCamera>>(0x4A2F70, this);
+        return stub<member_func_t<i32, asCamera>>(0x4A2F70, this);
     }
 
     // 0x4A2F80 | ?FadeOut@asCamera@@QAEXMH@Z
-    inline void FadeOut(float arg1, int32_t arg2)
+    inline void FadeOut(f32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, asCamera, float, int32_t>>(0x4A2F80, this, arg1, arg2);
+        return stub<member_func_t<void, asCamera, f32, i32>>(0x4A2F80, this, arg1, arg2);
     }
 
     // 0x4A2FE0 | ?FadeIn@asCamera@@QAEXMH@Z
-    inline void FadeIn(float arg1, int32_t arg2)
+    inline void FadeIn(f32 arg1, i32 arg2)
     {
-        return stub<member_func_t<void, asCamera, float, int32_t>>(0x4A2FE0, this, arg1, arg2);
+        return stub<member_func_t<void, asCamera, f32, i32>>(0x4A2FE0, this, arg1, arg2);
     }
 
     // 0x4A3040 | ?SphereVisible@asCamera@@QAEMABVVector3@@MPAM@Z
-    inline float SphereVisible(class Vector3 const& arg1, float arg2, float* arg3)
+    inline f32 SphereVisible(class Vector3 const& arg1, f32 arg2, f32* arg3)
     {
-        return stub<member_func_t<float, asCamera, class Vector3 const&, float, float*>>(
-            0x4A3040, this, arg1, arg2, arg3);
+        return stub<member_func_t<f32, asCamera, class Vector3 const&, f32, f32*>>(0x4A3040, this, arg1, arg2, arg3);
     }
 
     // 0x4A3210 | ?SetAmbient@asCamera@@QAEXABVVector3@@@Z
@@ -181,9 +180,9 @@ public:
     }
 
     // 0x4A3220 | ?SetMonochrome@asCamera@@QAEXH@Z
-    inline void SetMonochrome(int32_t arg1)
+    inline void SetMonochrome(i32 arg1)
     {
-        return stub<member_func_t<void, asCamera, int32_t>>(0x4A3220, this, arg1);
+        return stub<member_func_t<void, asCamera, i32>>(0x4A3220, this, arg1);
     }
 
     // 0x4A3230 | ?Regen@asCamera@@AAEXXZ

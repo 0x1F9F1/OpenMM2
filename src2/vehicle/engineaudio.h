@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -57,9 +57,9 @@ public:
     }
 
     // 0x4DD930 | ?GetSoundIndex@vehEngineAudio@@QAEHH@Z
-    inline int32_t GetSoundIndex(int32_t arg1)
+    inline i32 GetSoundIndex(i32 arg1)
     {
-        return stub<member_func_t<int32_t, vehEngineAudio, int32_t>>(0x4DD930, this, arg1);
+        return stub<member_func_t<i32, vehEngineAudio, i32>>(0x4DD930, this, arg1);
     }
 
     // 0x4DD950 | ?Stop@vehEngineAudio@@QAEXXZ
@@ -69,22 +69,21 @@ public:
     }
 
     // 0x4DD980 | ?UpdateRPM@vehEngineAudio@@QAEXMMMM@Z
-    inline void UpdateRPM(float arg1, float arg2, float arg3, float arg4)
+    inline void UpdateRPM(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
-        return stub<member_func_t<void, vehEngineAudio, float, float, float, float>>(
-            0x4DD980, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, vehEngineAudio, f32, f32, f32, f32>>(0x4DD980, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4DD9C0 | ?UpdateRPM@vehEngineAudio@@QAEXM@Z
-    inline void UpdateRPM(float arg1)
+    inline void UpdateRPM(f32 arg1)
     {
-        return stub<member_func_t<void, vehEngineAudio, float>>(0x4DD9C0, this, arg1);
+        return stub<member_func_t<void, vehEngineAudio, f32>>(0x4DD9C0, this, arg1);
     }
 
     // 0x4DD9F0 | ?EchoOn@vehEngineAudio@@QAEXM@Z
-    inline void EchoOn(float arg1)
+    inline void EchoOn(f32 arg1)
     {
-        return stub<member_func_t<void, vehEngineAudio, float>>(0x4DD9F0, this, arg1);
+        return stub<member_func_t<void, vehEngineAudio, f32>>(0x4DD9F0, this, arg1);
     }
 
     // 0x4DDA20 | ?EchoOff@vehEngineAudio@@QAEXXZ
@@ -106,9 +105,9 @@ public:
     }
 
     // 0x4DDA70 | ?AssignSounds@vehEngineAudio@@QAEXH@Z
-    inline void AssignSounds(int32_t arg1)
+    inline void AssignSounds(i32 arg1)
     {
-        return stub<member_func_t<void, vehEngineAudio, int32_t>>(0x4DDA70, this, arg1);
+        return stub<member_func_t<void, vehEngineAudio, i32>>(0x4DDA70, this, arg1);
     }
 
     // 0x4DDAC0 | ?UnAssignSounds@vehEngineAudio@@QAEXXZ
@@ -118,20 +117,20 @@ public:
     }
 
     // 0x4DDAF0 | ?Load@vehEngineAudio@@QAEHPAVStream@@@Z
-    inline int32_t Load(class Stream* arg1)
+    inline i32 Load(class Stream* arg1)
     {
-        return stub<member_func_t<int32_t, vehEngineAudio, class Stream*>>(0x4DDAF0, this, arg1);
+        return stub<member_func_t<i32, vehEngineAudio, class Stream*>>(0x4DDAF0, this, arg1);
     }
 
     // 0x4DDCD0 | ?Silence@vehEngineAudio@@QAEXH@Z
-    inline void Silence(int32_t arg1)
+    inline void Silence(i32 arg1)
     {
-        return stub<member_func_t<void, vehEngineAudio, int32_t>>(0x4DDCD0, this, arg1);
+        return stub<member_func_t<void, vehEngineAudio, i32>>(0x4DDCD0, this, arg1);
     }
 
     // 0x4DDD00 | ?SetPan@vehEngineAudio@@QAEXM@Z
-    inline void SetPan(float arg1)
+    inline void SetPan(f32 arg1)
     {
-        return stub<member_func_t<void, vehEngineAudio, float>>(0x4DDD00, this, arg1);
+        return stub<member_func_t<void, vehEngineAudio, f32>>(0x4DDD00, this, arg1);
     }
 };

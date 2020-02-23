@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -55,8 +55,8 @@
 */
 
 class mmPlayerData
-    : mmInfoBase
-    , Base
+    : Base
+    , mmInfoBase
 {
 public:
     // mmPlayerData::`vftable' @ 0x5B51F8
@@ -74,88 +74,87 @@ public:
     }
 
     // 0x5271B0 | ?OpenCityRecord@mmPlayerData@@QAEHPAD@Z
-    inline int32_t OpenCityRecord(char* arg1)
+    inline i32 OpenCityRecord(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmPlayerData, char*>>(0x5271B0, this, arg1);
+        return stub<member_func_t<i32, mmPlayerData, char*>>(0x5271B0, this, arg1);
     }
 
     // 0x527220 | ?CloseCityRecord@mmPlayerData@@QAEHXZ
-    inline int32_t CloseCityRecord()
+    inline i32 CloseCityRecord()
     {
-        return stub<member_func_t<int32_t, mmPlayerData>>(0x527220, this);
+        return stub<member_func_t<i32, mmPlayerData>>(0x527220, this);
     }
 
     // 0x527230 | ?GetCheckpointProgress@mmPlayerData@@QAEHPADH@Z
-    inline int32_t GetCheckpointProgress(char* arg1, int32_t arg2)
+    inline i32 GetCheckpointProgress(char* arg1, i32 arg2)
     {
-        return stub<member_func_t<int32_t, mmPlayerData, char*, int32_t>>(0x527230, this, arg1, arg2);
+        return stub<member_func_t<i32, mmPlayerData, char*, i32>>(0x527230, this, arg1, arg2);
     }
 
     // 0x527250 | ?GetTagID@mmPlayerData@@QAEMXZ
-    inline float GetTagID()
+    inline f32 GetTagID()
     {
-        return stub<member_func_t<float, mmPlayerData>>(0x527250, this);
+        return stub<member_func_t<f32, mmPlayerData>>(0x527250, this);
     }
 
     // 0x527260 | ?SetTagID@mmPlayerData@@QAEXM@Z
-    inline void SetTagID(float arg1)
+    inline void SetTagID(f32 arg1)
     {
-        return stub<member_func_t<void, mmPlayerData, float>>(0x527260, this, arg1);
+        return stub<member_func_t<void, mmPlayerData, f32>>(0x527260, this, arg1);
     }
 
     // 0x527270 | ?GetProgress@mmPlayerData@@QAEHPADH@Z
-    inline int32_t GetProgress(char* arg1, int32_t arg2)
+    inline i32 GetProgress(char* arg1, i32 arg2)
     {
-        return stub<member_func_t<int32_t, mmPlayerData, char*, int32_t>>(0x527270, this, arg1, arg2);
+        return stub<member_func_t<i32, mmPlayerData, char*, i32>>(0x527270, this, arg1, arg2);
     }
 
     // 0x5272A0 | ?GetPassedMask@mmPlayerData@@QAEHPADH@Z
-    inline int32_t GetPassedMask(char* arg1, int32_t arg2)
+    inline i32 GetPassedMask(char* arg1, i32 arg2)
     {
-        return stub<member_func_t<int32_t, mmPlayerData, char*, int32_t>>(0x5272A0, this, arg1, arg2);
+        return stub<member_func_t<i32, mmPlayerData, char*, i32>>(0x5272A0, this, arg1, arg2);
     }
 
     // 0x527370 | ?GetNumPassed@mmPlayerData@@QAEHPADH@Z
-    inline int32_t GetNumPassed(char* arg1, int32_t arg2)
+    inline i32 GetNumPassed(char* arg1, i32 arg2)
     {
-        return stub<member_func_t<int32_t, mmPlayerData, char*, int32_t>>(0x527370, this, arg1, arg2);
+        return stub<member_func_t<i32, mmPlayerData, char*, i32>>(0x527370, this, arg1, arg2);
     }
 
     // 0x527440 | ?GetTotalPassed@mmPlayerData@@QAEHPAD@Z
-    inline int32_t GetTotalPassed(char* arg1)
+    inline i32 GetTotalPassed(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmPlayerData, char*>>(0x527440, this, arg1);
+        return stub<member_func_t<i32, mmPlayerData, char*>>(0x527440, this, arg1);
     }
 
     // 0x527530 | ?GetScore@mmPlayerData@@QAEHPADH@Z
-    inline int32_t GetScore(char* arg1, int32_t arg2)
+    inline i32 GetScore(char* arg1, i32 arg2)
     {
-        return stub<member_func_t<int32_t, mmPlayerData, char*, int32_t>>(0x527530, this, arg1, arg2);
+        return stub<member_func_t<i32, mmPlayerData, char*, i32>>(0x527530, this, arg1, arg2);
     }
 
     // 0x527710 | ?GetTotalScore@mmPlayerData@@QAEHPAD@Z
-    inline int32_t GetTotalScore(char* arg1)
+    inline i32 GetTotalScore(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmPlayerData, char*>>(0x527710, this, arg1);
+        return stub<member_func_t<i32, mmPlayerData, char*>>(0x527710, this, arg1);
     }
 
     // 0x527890 | ?ResolveCheckpointProgress@mmPlayerData@@QAEHPAD@Z
-    inline int32_t ResolveCheckpointProgress(char* arg1)
+    inline i32 ResolveCheckpointProgress(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmPlayerData, char*>>(0x527890, this, arg1);
+        return stub<member_func_t<i32, mmPlayerData, char*>>(0x527890, this, arg1);
     }
 
     // 0x5279D0 | ?ResolveCrashProgress@mmPlayerData@@QAEHPAD@Z
-    inline int32_t ResolveCrashProgress(char* arg1)
+    inline i32 ResolveCrashProgress(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmPlayerData, char*>>(0x5279D0, this, arg1);
+        return stub<member_func_t<i32, mmPlayerData, char*>>(0x5279D0, this, arg1);
     }
 
     // 0x527B30 | ?RegisterFinish@mmPlayerData@@QAEHVmmPlayerRecord@@HH@Z
-    inline int32_t RegisterFinish(class mmPlayerRecord arg1, int32_t arg2, int32_t arg3)
+    inline i32 RegisterFinish(class mmPlayerRecord arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<int32_t, mmPlayerData, class mmPlayerRecord, int32_t, int32_t>>(
-            0x527B30, this, arg1, arg2, arg3);
+        return stub<member_func_t<i32, mmPlayerData, class mmPlayerRecord, i32, i32>>(0x527B30, this, arg1, arg2, arg3);
     }
 
     // 0x527BB0 | ?Reset@mmPlayerData@@QAEXXZ
@@ -213,33 +212,33 @@ public:
     }
 
     // 0x527D70 | ?Load@mmPlayerData@@QAEHPAD@Z
-    inline int32_t Load(char* arg1)
+    inline i32 Load(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmPlayerData, char*>>(0x527D70, this, arg1);
+        return stub<member_func_t<i32, mmPlayerData, char*>>(0x527D70, this, arg1);
     }
 
     // 0x527DA0 | ?Save@mmPlayerData@@QAEHPADH@Z
-    inline int32_t Save(char* arg1, int32_t arg2)
+    inline i32 Save(char* arg1, i32 arg2)
     {
-        return stub<member_func_t<int32_t, mmPlayerData, char*, int32_t>>(0x527DA0, this, arg1, arg2);
+        return stub<member_func_t<i32, mmPlayerData, char*, i32>>(0x527DA0, this, arg1, arg2);
     }
 
     // 0x527E40 | ?ComputeCRC@mmPlayerData@@QAEIXZ
-    inline uint32_t ComputeCRC()
+    inline u32 ComputeCRC()
     {
-        return stub<member_func_t<uint32_t, mmPlayerData>>(0x527E40, this);
+        return stub<member_func_t<u32, mmPlayerData>>(0x527E40, this);
     }
 
     // 0x527EF0 | ?LoadBinary@mmPlayerData@@QAEHPAD@Z
-    inline int32_t LoadBinary(char* arg1)
+    inline i32 LoadBinary(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmPlayerData, char*>>(0x527EF0, this, arg1);
+        return stub<member_func_t<i32, mmPlayerData, char*>>(0x527EF0, this, arg1);
     }
 
     // 0x5280B0 | ?SaveBinary@mmPlayerData@@QAEHPAD@Z
-    inline int32_t SaveBinary(char* arg1)
+    inline i32 SaveBinary(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmPlayerData, char*>>(0x5280B0, this, arg1);
+        return stub<member_func_t<i32, mmPlayerData, char*>>(0x5280B0, this, arg1);
     }
 
     // 0x523850 | ??1mmPlayerData@@UAE@XZ

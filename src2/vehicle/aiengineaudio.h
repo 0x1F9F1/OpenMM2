@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -58,27 +58,27 @@ public:
     }
 
     // 0x4DA8D0 | ?Load@aiEngineAudio@@SAHPAPAV1@PAD1PAH@Z
-    static inline int32_t Load(class aiEngineAudio** arg1, char* arg2, char* arg3, int32_t* arg4)
+    static inline i32 Load(class aiEngineAudio** arg1, char* arg2, char* arg3, i32* arg4)
     {
-        return stub<cdecl_t<int32_t, class aiEngineAudio**, char*, char*, int32_t*>>(0x4DA8D0, arg1, arg2, arg3, arg4);
+        return stub<cdecl_t<i32, class aiEngineAudio**, char*, char*, i32*>>(0x4DA8D0, arg1, arg2, arg3, arg4);
     }
 
     // 0x4DA990 | ?AddToHash@aiEngineAudio@@SAXPADH@Z
-    static inline void AddToHash(char* arg1, int32_t arg2)
+    static inline void AddToHash(char* arg1, i32 arg2)
     {
-        return stub<cdecl_t<void, char*, int32_t>>(0x4DA990, arg1, arg2);
+        return stub<cdecl_t<void, char*, i32>>(0x4DA990, arg1, arg2);
     }
 
     // 0x4DA9D0 | ?ReadCSV@aiEngineAudio@@AAEHPAVStream@@@Z
-    inline int32_t ReadCSV(class Stream* arg1)
+    inline i32 ReadCSV(class Stream* arg1)
     {
-        return stub<member_func_t<int32_t, aiEngineAudio, class Stream*>>(0x4DA9D0, this, arg1);
+        return stub<member_func_t<i32, aiEngineAudio, class Stream*>>(0x4DA9D0, this, arg1);
     }
 
     // 0x4DAC10 | ?EchoOn@aiEngineAudio@@QAEXM@Z
-    inline void EchoOn(float arg1)
+    inline void EchoOn(f32 arg1)
     {
-        return stub<member_func_t<void, aiEngineAudio, float>>(0x4DAC10, this, arg1);
+        return stub<member_func_t<void, aiEngineAudio, f32>>(0x4DAC10, this, arg1);
     }
 
     // 0x4DAC40 | ?EchoOff@aiEngineAudio@@QAEXXZ
@@ -94,9 +94,9 @@ public:
     }
 
     // 0x4DAC60 | ?AssignSounds@aiEngineAudio@@QAEXH@Z
-    inline void AssignSounds(int32_t arg1)
+    inline void AssignSounds(i32 arg1)
     {
-        return stub<member_func_t<void, aiEngineAudio, int32_t>>(0x4DAC60, this, arg1);
+        return stub<member_func_t<void, aiEngineAudio, i32>>(0x4DAC60, this, arg1);
     }
 
     // 0x4DAC80 | ?UnAssignSounds@aiEngineAudio@@QAEXXZ
@@ -106,14 +106,14 @@ public:
     }
 
     // 0x4DACA0 | ?CalculatePitch@aiEngineAudio@@QAEXMMH@Z
-    inline void CalculatePitch(float arg1, float arg2, int32_t arg3)
+    inline void CalculatePitch(f32 arg1, f32 arg2, i32 arg3)
     {
-        return stub<member_func_t<void, aiEngineAudio, float, float, int32_t>>(0x4DACA0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, aiEngineAudio, f32, f32, i32>>(0x4DACA0, this, arg1, arg2, arg3);
     }
 
     // 0x4DAD30 | ?UpdateDoppler@aiEngineAudio@@QAEXMMM@Z
-    inline void UpdateDoppler(float arg1, float arg2, float arg3)
+    inline void UpdateDoppler(f32 arg1, f32 arg2, f32 arg3)
     {
-        return stub<member_func_t<void, aiEngineAudio, float, float, float>>(0x4DAD30, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, aiEngineAudio, f32, f32, f32>>(0x4DAD30, this, arg1, arg2, arg3);
     }
 };

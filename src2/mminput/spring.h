@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -34,32 +34,32 @@ public:
     // mmSpringFF::`vftable' @ 0x5B52BC
 
     // 0x531FF0 | ?Assign@mmSpringFF@@QAEHJ@Z
-    inline int32_t Assign(int32_t arg1)
+    inline i32 Assign(i32 arg1)
     {
-        return stub<member_func_t<int32_t, mmSpringFF, int32_t>>(0x531FF0, this, arg1);
+        return stub<member_func_t<i32, mmSpringFF, i32>>(0x531FF0, this, arg1);
     }
 
     // 0x531EC0 | ?Init@mmSpringFF@@UAEHPAUIDirectInputDevice2A@@@Z
-    virtual inline int32_t Init(struct IDirectInputDevice2A* arg1)
+    virtual inline i32 Init(struct IDirectInputDevice2A* arg1)
     {
-        return stub<member_func_t<int32_t, mmSpringFF, struct IDirectInputDevice2A*>>(0x531EC0, this, arg1);
+        return stub<member_func_t<i32, mmSpringFF, struct IDirectInputDevice2A*>>(0x531EC0, this, arg1);
     }
 
     // 0x5320E0 | ?Play@mmSpringFF@@UAEHXZ
-    virtual inline int32_t Play()
+    virtual inline i32 Play()
     {
-        return stub<member_func_t<int32_t, mmSpringFF>>(0x5320E0, this);
+        return stub<member_func_t<i32, mmSpringFF>>(0x5320E0, this);
     }
 
     // 0x532150 | ?Stop@mmSpringFF@@UAEHXZ
-    virtual inline int32_t Stop()
+    virtual inline i32 Stop()
     {
-        return stub<member_func_t<int32_t, mmSpringFF>>(0x532150, this);
+        return stub<member_func_t<i32, mmSpringFF>>(0x532150, this);
     }
 
     // 0x531FC0 | ?SetValues@mmSpringFF@@UAEHMM@Z
-    virtual inline int32_t SetValues(float arg1, float arg2)
+    virtual inline i32 SetValues(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<int32_t, mmSpringFF, float, float>>(0x531FC0, this, arg1, arg2);
+        return stub<member_func_t<i32, mmSpringFF, f32, f32>>(0x531FC0, this, arg1, arg2);
     }
 };

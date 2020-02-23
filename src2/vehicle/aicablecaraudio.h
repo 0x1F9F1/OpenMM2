@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -47,9 +47,9 @@ public:
     }
 
     // 0x59D400 | ?Init@aiCableCarAudio@@QAEXPAVVector3@@PAM@Z
-    inline void Init(class Vector3* arg1, float* arg2)
+    inline void Init(class Vector3* arg1, f32* arg2)
     {
-        return stub<member_func_t<void, aiCableCarAudio, class Vector3*, float*>>(0x59D400, this, arg1, arg2);
+        return stub<member_func_t<void, aiCableCarAudio, class Vector3*, f32*>>(0x59D400, this, arg1, arg2);
     }
 
     // 0x59D440 | ?Reset@aiCableCarAudio@@QAEXXZ
@@ -59,9 +59,9 @@ public:
     }
 
     // 0x59D490 | ?UpdateAudio@aiCableCarAudio@@QAEHM@Z
-    inline int32_t UpdateAudio(float arg1)
+    inline i32 UpdateAudio(f32 arg1)
     {
-        return stub<member_func_t<int32_t, aiCableCarAudio, float>>(0x59D490, this, arg1);
+        return stub<member_func_t<i32, aiCableCarAudio, f32>>(0x59D490, this, arg1);
     }
 
     // 0x59D530 | ?AssignSounds@aiCableCarAudio@@UAEXXZ
@@ -71,9 +71,9 @@ public:
     }
 
     // 0x59D450 | ?UnAssignSounds@aiCableCarAudio@@UAEXH@Z
-    inline void UnAssignSounds(int32_t arg1) override
+    inline void UnAssignSounds(i32 arg1) override
     {
-        return stub<member_func_t<void, aiCableCarAudio, int32_t>>(0x59D450, this, arg1);
+        return stub<member_func_t<void, aiCableCarAudio, i32>>(0x59D450, this, arg1);
     }
 
     // 0x59D460 | ?UpdateAudio@aiCableCarAudio@@UAEXXZ

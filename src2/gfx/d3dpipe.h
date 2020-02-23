@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -91,10 +91,9 @@
 */
 
 // 0x4A9270 | ?MultiMonCallback@@YGHPAU_GUID@@PAD1PAXPAUHMONITOR__@@@Z
-inline int32_t __stdcall MultiMonCallback(
-    struct _GUID* arg1, char* arg2, char* arg3, void* arg4, struct HMONITOR__* arg5)
+inline i32 __stdcall MultiMonCallback(struct _GUID* arg1, char* arg2, char* arg3, void* arg4, struct HMONITOR__* arg5)
 {
-    return stub<stdcall_t<int32_t, struct _GUID*, char*, char*, void*, struct HMONITOR__*>>(
+    return stub<stdcall_t<i32, struct _GUID*, char*, char*, void*, struct HMONITOR__*>>(
         0x4A9270, arg1, arg2, arg3, arg4, arg5);
 }
 
@@ -170,9 +169,9 @@ public:
     }
 
     // 0x4AB690 | ??0gfxVertexBuffer@@QAE@II@Z
-    inline gfxVertexBuffer(uint32_t arg1, uint32_t arg2)
+    inline gfxVertexBuffer(u32 arg1, u32 arg2)
     {
-        stub<member_func_t<void, gfxVertexBuffer, uint32_t, uint32_t>>(0x4AB690, this, arg1, arg2);
+        stub<member_func_t<void, gfxVertexBuffer, u32, u32>>(0x4AB690, this, arg1, arg2);
     }
 
     // 0x4AB6E0 | ??1gfxVertexBuffer@@QAE@XZ
@@ -194,5 +193,5 @@ public:
     }
 
     // 0x684520 | ?sm_First@gfxVertexBuffer@@2PAU1@A
-    static inline extern_var(0x684520, struct gfxVertexBuffer*, sm_First);
+    inline extern_var(0x684520, struct gfxVertexBuffer*, sm_First);
 };

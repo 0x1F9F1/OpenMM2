@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -107,9 +107,9 @@ public:
     }
 
     // 0x416900 | ?GetOpponentIndex@mmSingleStunt@@AAEHXZ
-    inline int32_t GetOpponentIndex()
+    inline i32 GetOpponentIndex()
     {
-        return stub<member_func_t<int32_t, mmSingleStunt>>(0x416900, this);
+        return stub<member_func_t<i32, mmSingleStunt>>(0x416900, this);
     }
 
     // 0x416A50 | ?UpdateEvade@mmSingleStunt@@AAEXXZ
@@ -179,21 +179,21 @@ public:
     }
 
     // 0x41A310 | ?HUDMessage@mmSingleStunt@@AAEXH@Z
-    inline void HUDMessage(int32_t arg1)
+    inline void HUDMessage(i32 arg1)
     {
-        return stub<member_func_t<void, mmSingleStunt, int32_t>>(0x41A310, this, arg1);
+        return stub<member_func_t<void, mmSingleStunt, i32>>(0x41A310, this, arg1);
     }
 
     // 0x41A340 | ?EventSoundCtrl@mmSingleStunt@@QAEX_NH@Z
-    inline void EventSoundCtrl(bool arg1, int32_t arg2)
+    inline void EventSoundCtrl(bool arg1, i32 arg2)
     {
-        return stub<member_func_t<void, mmSingleStunt, bool, int32_t>>(0x41A340, this, arg1, arg2);
+        return stub<member_func_t<void, mmSingleStunt, bool, i32>>(0x41A340, this, arg1, arg2);
     }
 
     // 0x41A390 | ?PlayTimerWarning@mmSingleStunt@@AAEXM@Z
-    inline void PlayTimerWarning(float arg1)
+    inline void PlayTimerWarning(f32 arg1)
     {
-        return stub<member_func_t<void, mmSingleStunt, float>>(0x41A390, this, arg1);
+        return stub<member_func_t<void, mmSingleStunt, f32>>(0x41A390, this, arg1);
     }
 
     // 0x41A470 | ?NextRaceAvailable@mmSingleStunt@@AAE_NXZ
@@ -203,9 +203,9 @@ public:
     }
 
     // 0x41A6F0 | ?RegisterFinish@mmSingleStunt@@QAEHH@Z
-    inline int32_t RegisterFinish(int32_t arg1)
+    inline i32 RegisterFinish(i32 arg1)
     {
-        return stub<member_func_t<int32_t, mmSingleStunt, int32_t>>(0x41A6F0, this, arg1);
+        return stub<member_func_t<i32, mmSingleStunt, i32>>(0x41A6F0, this, arg1);
     }
 
     // 0x415BC0 | ??1mmSingleStunt@@UAE@XZ
@@ -227,9 +227,9 @@ public:
     }
 
     // 0x415C40 | ?Init@mmSingleStunt@@UAEHXZ
-    inline int32_t Init() override
+    inline i32 Init() override
     {
-        return stub<member_func_t<int32_t, mmSingleStunt>>(0x415C40, this);
+        return stub<member_func_t<i32, mmSingleStunt>>(0x415C40, this);
     }
 
     // 0x415D40 | ?InitMyPlayer@mmSingleStunt@@UAEXXZ
@@ -257,15 +257,15 @@ public:
     }
 
     // 0x416980 | ?UpdateGameInput@mmSingleStunt@@UAEXH@Z
-    inline void UpdateGameInput(int32_t arg1) override
+    inline void UpdateGameInput(i32 arg1) override
     {
-        return stub<member_func_t<void, mmSingleStunt, int32_t>>(0x416980, this, arg1);
+        return stub<member_func_t<void, mmSingleStunt, i32>>(0x416980, this, arg1);
     }
 
     // 0x41ABF0 | ?UpdateDebugKeyInput@mmSingleStunt@@UAEXH@Z
-    inline void UpdateDebugKeyInput(int32_t arg1) override
+    inline void UpdateDebugKeyInput(i32 arg1) override
     {
-        return stub<member_func_t<void, mmSingleStunt, int32_t>>(0x41ABF0, this, arg1);
+        return stub<member_func_t<void, mmSingleStunt, i32>>(0x41ABF0, this, arg1);
     }
 
     // 0x416990 | ?UpdateGame@mmSingleStunt@@UAEXXZ
@@ -287,9 +287,9 @@ public:
     }
 
     // 0x41A460 | ?SwitchState@mmSingleStunt@@UAEXH@Z
-    inline void SwitchState(int32_t arg1) override
+    inline void SwitchState(i32 arg1) override
     {
-        return stub<member_func_t<void, mmSingleStunt, int32_t>>(0x41A460, this, arg1);
+        return stub<member_func_t<void, mmSingleStunt, i32>>(0x41A460, this, arg1);
     }
 };
 
@@ -305,15 +305,15 @@ public:
     }
 
     // 0x528260 | ?Load@mmInfoBase@@QAEHPAD@Z
-    inline int32_t Load(char* arg1)
+    inline i32 Load(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmInfoBase, char*>>(0x528260, this, arg1);
+        return stub<member_func_t<i32, mmInfoBase, char*>>(0x528260, this, arg1);
     }
 
     // 0x528310 | ?Save@mmInfoBase@@QAEHPAD@Z
-    inline int32_t Save(char* arg1)
+    inline i32 Save(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmInfoBase, char*>>(0x528310, this, arg1);
+        return stub<member_func_t<i32, mmInfoBase, char*>>(0x528310, this, arg1);
     }
 
     // 0x5283C0 | ?SetIOPath@mmInfoBase@@QAEXPAD@Z

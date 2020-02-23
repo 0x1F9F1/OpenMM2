@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -27,19 +27,19 @@
 */
 
 // 0x534600 | ?GetLocTime@@YAPADM@Z
-inline char* GetLocTime(float arg1)
+inline char* GetLocTime(f32 arg1)
 {
-    return stub<cdecl_t<char*, float>>(0x534600, arg1);
+    return stub<cdecl_t<char*, f32>>(0x534600, arg1);
 }
 
 // 0x5346B0 | ?MyLoadStringA@@YGHPAUHINSTANCE__@@IPADH@Z
-inline int32_t __stdcall MyLoadStringA(struct HINSTANCE__* arg1, uint32_t arg2, char* arg3, int32_t arg4)
+inline i32 __stdcall MyLoadStringA(struct HINSTANCE__* arg1, u32 arg2, char* arg3, i32 arg4)
 {
-    return stub<stdcall_t<int32_t, struct HINSTANCE__*, uint32_t, char*, int32_t>>(0x5346B0, arg1, arg2, arg3, arg4);
+    return stub<stdcall_t<i32, struct HINSTANCE__*, u32, char*, i32>>(0x5346B0, arg1, arg2, arg3, arg4);
 }
 
 // 0x534790 | ?AngelReadString@@YAPAULocString@@I@Z
-inline struct LocString* AngelReadString(uint32_t arg1)
+inline struct LocString* AngelReadString(u32 arg1)
 {
-    return stub<cdecl_t<struct LocString*, uint32_t>>(0x534790, arg1);
+    return stub<cdecl_t<struct LocString*, u32>>(0x534790, arg1);
 }

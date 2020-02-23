@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -141,9 +141,9 @@ public:
     }
 
     // 0x4C0CB0 | ?AddScaled@Matrix44@@QAEXABV1@M@Z
-    inline void AddScaled(class Matrix44 const& arg1, float arg2)
+    inline void AddScaled(class Matrix44 const& arg1, f32 arg2)
     {
-        return stub<member_func_t<void, Matrix44, class Matrix44 const&, float>>(0x4C0CB0, this, arg1, arg2);
+        return stub<member_func_t<void, Matrix44, class Matrix44 const&, f32>>(0x4C0CB0, this, arg1, arg2);
     }
 
     // 0x4C0D50 | ?Dot@Matrix44@@QAEAAV1@ABV1@@Z
@@ -166,9 +166,9 @@ public:
     }
 
     // 0x4C1320 | ?Determinant@Matrix44@@QBEMXZ
-    inline float Determinant()
+    inline f32 Determinant()
     {
-        return stub<member_func_t<float, Matrix44>>(0x4C1320, this);
+        return stub<member_func_t<f32, Matrix44>>(0x4C1320, this);
     }
 
     // 0x4C1510 | ?InvertTo@Matrix44@@QBEXAAV1@@Z
@@ -178,21 +178,21 @@ public:
     }
 
     // 0x4C1C00 | ?MakeRotX@Matrix44@@QAEAAV1@M@Z
-    inline class Matrix44& MakeRotX(float arg1)
+    inline class Matrix44& MakeRotX(f32 arg1)
     {
-        return stub<member_func_t<class Matrix44&, Matrix44, float>>(0x4C1C00, this, arg1);
+        return stub<member_func_t<class Matrix44&, Matrix44, f32>>(0x4C1C00, this, arg1);
     }
 
     // 0x4C1C50 | ?MakeRotY@Matrix44@@QAEAAV1@M@Z
-    inline class Matrix44& MakeRotY(float arg1)
+    inline class Matrix44& MakeRotY(f32 arg1)
     {
-        return stub<member_func_t<class Matrix44&, Matrix44, float>>(0x4C1C50, this, arg1);
+        return stub<member_func_t<class Matrix44&, Matrix44, f32>>(0x4C1C50, this, arg1);
     }
 
     // 0x4C1CA0 | ?MakeRotZ@Matrix44@@QAEAAV1@M@Z
-    inline class Matrix44& MakeRotZ(float arg1)
+    inline class Matrix44& MakeRotZ(f32 arg1)
     {
-        return stub<member_func_t<class Matrix44&, Matrix44, float>>(0x4C1CA0, this, arg1);
+        return stub<member_func_t<class Matrix44&, Matrix44, f32>>(0x4C1CA0, this, arg1);
     }
 
     // 0x4C1CF0 | ?Print@Matrix44@@QBEXPBD@Z
@@ -202,9 +202,9 @@ public:
     }
 
     // 0x4C1D60 | ?Transform4@Matrix44@@QBEXPBVVector3@@PAVVector4@@H@Z
-    inline void Transform4(class Vector3 const* arg1, class Vector4* arg2, int32_t arg3)
+    inline void Transform4(class Vector3 const* arg1, class Vector4* arg2, i32 arg3)
     {
-        return stub<member_func_t<void, Matrix44, class Vector3 const*, class Vector4*, int32_t>>(
+        return stub<member_func_t<void, Matrix44, class Vector3 const*, class Vector4*, i32>>(
             0x4C1D60, this, arg1, arg2, arg3);
     }
 

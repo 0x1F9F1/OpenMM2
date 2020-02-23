@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -61,9 +61,9 @@ public:
     }
 
     // 0x4EF840 | ?Init@UICWArray@@QAEXMMMMHVdatCallback@@@Z
-    inline void Init(float arg1, float arg2, float arg3, float arg4, int32_t arg5, class datCallback arg6)
+    inline void Init(f32 arg1, f32 arg2, f32 arg3, f32 arg4, i32 arg5, class datCallback arg6)
     {
-        return stub<member_func_t<void, UICWArray, float, float, float, float, int32_t, class datCallback>>(
+        return stub<member_func_t<void, UICWArray, f32, f32, f32, f32, i32, class datCallback>>(
             0x4EF840, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
@@ -86,9 +86,9 @@ public:
     }
 
     // 0x4EFBA0 | ?SetStartOffset@UICWArray@@QAEXH@Z
-    inline void SetStartOffset(int32_t arg1)
+    inline void SetStartOffset(i32 arg1)
     {
-        return stub<member_func_t<void, UICWArray, int32_t>>(0x4EFBA0, this, arg1);
+        return stub<member_func_t<void, UICWArray, i32>>(0x4EFBA0, this, arg1);
     }
 
     // 0x4EFBE0 | ?Redraw@UICWArray@@QAEXXZ
@@ -98,9 +98,9 @@ public:
     }
 
     // 0x4EFFC0 | ?EnterCapture@UICWArray@@QAEXH@Z
-    inline void EnterCapture(int32_t arg1)
+    inline void EnterCapture(i32 arg1)
     {
-        return stub<member_func_t<void, UICWArray, int32_t>>(0x4EFFC0, this, arg1);
+        return stub<member_func_t<void, UICWArray, i32>>(0x4EFFC0, this, arg1);
     }
 
     // 0x4F0030 | ?ForceCapture@UICWArray@@QAEXXZ
@@ -182,8 +182,8 @@ public:
     }
 
     // 0x4EFD40 | ?Switch@UICWArray@@UAEXH@Z
-    inline void Switch(int32_t arg1) override
+    inline void Switch(i32 arg1) override
     {
-        return stub<member_func_t<void, UICWArray, int32_t>>(0x4EFD40, this, arg1);
+        return stub<member_func_t<void, UICWArray, i32>>(0x4EFD40, this, arg1);
     }
 };

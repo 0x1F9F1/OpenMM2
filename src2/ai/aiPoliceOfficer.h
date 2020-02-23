@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -67,9 +67,9 @@ public:
     }
 
     // 0x53D930 | ?Init@aiPoliceOfficer@@QAEXH@Z
-    inline void Init(int32_t arg1)
+    inline void Init(i32 arg1)
     {
-        return stub<member_func_t<void, aiPoliceOfficer, int32_t>>(0x53D930, this, arg1);
+        return stub<member_func_t<void, aiPoliceOfficer, i32>>(0x53D930, this, arg1);
     }
 
     // 0x53DAA0 | ?Reset@aiPoliceOfficer@@QAEXXZ
@@ -103,51 +103,51 @@ public:
     }
 
     // 0x53E2A0 | ?Fov@aiPoliceOfficer@@AAEHPAVvehCar@@@Z
-    inline int32_t Fov(class vehCar* arg1)
+    inline i32 Fov(class vehCar* arg1)
     {
-        return stub<member_func_t<int32_t, aiPoliceOfficer, class vehCar*>>(0x53E2A0, this, arg1);
+        return stub<member_func_t<i32, aiPoliceOfficer, class vehCar*>>(0x53E2A0, this, arg1);
     }
 
     // 0x53E360 | ?Speeding@aiPoliceOfficer@@AAEHPAVvehCar@@@Z
-    inline int32_t Speeding(class vehCar* arg1)
+    inline i32 Speeding(class vehCar* arg1)
     {
-        return stub<member_func_t<int32_t, aiPoliceOfficer, class vehCar*>>(0x53E360, this, arg1);
+        return stub<member_func_t<i32, aiPoliceOfficer, class vehCar*>>(0x53E360, this, arg1);
     }
 
     // 0x53E370 | ?Collision@aiPoliceOfficer@@AAEHPAVvehCar@@@Z
-    inline int32_t Collision(class vehCar* arg1)
+    inline i32 Collision(class vehCar* arg1)
     {
-        return stub<member_func_t<int32_t, aiPoliceOfficer, class vehCar*>>(0x53E370, this, arg1);
+        return stub<member_func_t<i32, aiPoliceOfficer, class vehCar*>>(0x53E370, this, arg1);
     }
 
     // 0x53E390 | ?HitMe@aiPoliceOfficer@@AAEHPAVvehCar@@@Z
-    inline int32_t HitMe(class vehCar* arg1)
+    inline i32 HitMe(class vehCar* arg1)
     {
-        return stub<member_func_t<int32_t, aiPoliceOfficer, class vehCar*>>(0x53E390, this, arg1);
+        return stub<member_func_t<i32, aiPoliceOfficer, class vehCar*>>(0x53E390, this, arg1);
     }
 
     // 0x53E3B0 | ?Stopped@aiPoliceOfficer@@AAEHPAVvehCar@@@Z
-    inline int32_t Stopped(class vehCar* arg1)
+    inline i32 Stopped(class vehCar* arg1)
     {
-        return stub<member_func_t<int32_t, aiPoliceOfficer, class vehCar*>>(0x53E3B0, this, arg1);
+        return stub<member_func_t<i32, aiPoliceOfficer, class vehCar*>>(0x53E3B0, this, arg1);
     }
 
     // 0x53E3E0 | ?IsPerpACop@aiPoliceOfficer@@AAEHPAVvehCar@@@Z
-    inline int32_t IsPerpACop(class vehCar* arg1)
+    inline i32 IsPerpACop(class vehCar* arg1)
     {
-        return stub<member_func_t<int32_t, aiPoliceOfficer, class vehCar*>>(0x53E3E0, this, arg1);
+        return stub<member_func_t<i32, aiPoliceOfficer, class vehCar*>>(0x53E3E0, this, arg1);
     }
 
     // 0x53E3F0 | ?OffRoad@aiPoliceOfficer@@AAEHPAVvehCar@@@Z
-    inline int32_t OffRoad(class vehCar* arg1)
+    inline i32 OffRoad(class vehCar* arg1)
     {
-        return stub<member_func_t<int32_t, aiPoliceOfficer, class vehCar*>>(0x53E3F0, this, arg1);
+        return stub<member_func_t<i32, aiPoliceOfficer, class vehCar*>>(0x53E3F0, this, arg1);
     }
 
     // 0x53E400 | ?InPersuit@aiPoliceOfficer@@QAEHXZ
-    inline int32_t InPersuit()
+    inline i32 InPersuit()
     {
-        return stub<member_func_t<int32_t, aiPoliceOfficer>>(0x53E400, this);
+        return stub<member_func_t<i32, aiPoliceOfficer>>(0x53E400, this);
     }
 
     // 0x53E410 | ?FollowPerpetrator@aiPoliceOfficer@@AAEXXZ

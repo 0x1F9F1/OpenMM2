@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -47,28 +47,28 @@ public:
     }
 
     // 0x5928D0 | ?Init@Card2D@@QAEXPAVasCamera@@MMMMM@Z
-    inline void Init(class asCamera* arg1, float arg2, float arg3, float arg4, float arg5, float arg6)
+    inline void Init(class asCamera* arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6)
     {
-        return stub<member_func_t<void, Card2D, class asCamera*, float, float, float, float, float>>(
+        return stub<member_func_t<void, Card2D, class asCamera*, f32, f32, f32, f32, f32>>(
             0x5928D0, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x592910 | ?SetDimensions@Card2D@@QAEXMMMM@Z
-    inline void SetDimensions(float arg1, float arg2, float arg3, float arg4)
+    inline void SetDimensions(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
-        return stub<member_func_t<void, Card2D, float, float, float, float>>(0x592910, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, Card2D, f32, f32, f32, f32>>(0x592910, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x592A00 | ?SetPosition@Card2D@@QAEXMM@Z
-    inline void SetPosition(float arg1, float arg2)
+    inline void SetPosition(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, Card2D, float, float>>(0x592A00, this, arg1, arg2);
+        return stub<member_func_t<void, Card2D, f32, f32>>(0x592A00, this, arg1, arg2);
     }
 
     // 0x592A20 | ?SetAlpha@Card2D@@QAEXM@Z
-    inline void SetAlpha(float arg1)
+    inline void SetAlpha(f32 arg1)
     {
-        return stub<member_func_t<void, Card2D, float>>(0x592A20, this, arg1);
+        return stub<member_func_t<void, Card2D, f32>>(0x592A20, this, arg1);
     }
 
     // 0x592C80 | ??1Card2D@@UAE@XZ

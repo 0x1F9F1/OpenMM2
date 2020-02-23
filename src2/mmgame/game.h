@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -146,16 +146,16 @@ public:
     }
 
     // 0x413B70 | ?RespawnXYZ@mmGame@@IAEXAAVVector3@@AAM_N22@Z
-    inline void RespawnXYZ(class Vector3& arg1, float& arg2, bool arg3, bool arg4, bool arg5)
+    inline void RespawnXYZ(class Vector3& arg1, f32& arg2, bool arg3, bool arg4, bool arg5)
     {
-        return stub<member_func_t<void, mmGame, class Vector3&, float&, bool, bool, bool>>(
+        return stub<member_func_t<void, mmGame, class Vector3&, f32&, bool, bool, bool>>(
             0x413B70, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x413D30 | ?IsPopupEnabled@mmGame@@QAEHXZ
-    inline int32_t IsPopupEnabled()
+    inline i32 IsPopupEnabled()
     {
-        return stub<member_func_t<int32_t, mmGame>>(0x413D30, this);
+        return stub<member_func_t<i32, mmGame>>(0x413D30, this);
     }
 
     // 0x413DF0 | ?StartMusic@mmGame@@QAEXXZ
@@ -207,9 +207,9 @@ public:
     }
 
     // 0x414E00 | ?CalculateRaceScore@mmGame@@IAEHHH@Z
-    inline int32_t CalculateRaceScore(int32_t arg1, int32_t arg2)
+    inline i32 CalculateRaceScore(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<int32_t, mmGame, int32_t, int32_t>>(0x414E00, this, arg1, arg2);
+        return stub<member_func_t<i32, mmGame, i32, i32>>(0x414E00, this, arg1, arg2);
     }
 
     // 0x414EC0 | ?FarClipCB@mmGame@@QAEXXZ
@@ -231,9 +231,9 @@ public:
     }
 
     // 0x414F80 | ?NetHost@mmGame@@QAEHXZ
-    inline int32_t NetHost()
+    inline i32 NetHost()
     {
-        return stub<member_func_t<int32_t, mmGame>>(0x414F80, this);
+        return stub<member_func_t<i32, mmGame>>(0x414F80, this);
     }
 
     // 0x414FA0 | ?FindGroundPos@mmGame@@QAEXAAVVector3@@0@Z
@@ -267,9 +267,9 @@ public:
     }
 
     // 0x412710 | ?Init@mmGame@@UAEHXZ
-    virtual inline int32_t Init()
+    virtual inline i32 Init()
     {
-        return stub<member_func_t<int32_t, mmGame>>(0x412710, this);
+        return stub<member_func_t<i32, mmGame>>(0x412710, this);
     }
 
     // 0x413650 | ?InitGameStrings@mmGame@@UAEXXZ
@@ -303,15 +303,15 @@ public:
     }
 
     // 0x582519 | __purecall
-    virtual inline void UpdateGameInput(int32_t arg1)
+    virtual inline void UpdateGameInput(i32 arg1)
     {
-        return stub<member_func_t<void, mmGame, int32_t>>(0x582519, this, arg1);
+        return stub<member_func_t<void, mmGame, i32>>(0x582519, this, arg1);
     }
 
     // 0x582519 | __purecall
-    virtual inline void UpdateDebugKeyInput(int32_t arg1)
+    virtual inline void UpdateDebugKeyInput(i32 arg1)
     {
-        return stub<member_func_t<void, mmGame, int32_t>>(0x582519, this, arg1);
+        return stub<member_func_t<void, mmGame, i32>>(0x582519, this, arg1);
     }
 
     // 0x582519 | __purecall
@@ -345,15 +345,15 @@ public:
     }
 
     // 0x582519 | __purecall
-    virtual inline void SwitchState(int32_t arg1)
+    virtual inline void SwitchState(i32 arg1)
     {
-        return stub<member_func_t<void, mmGame, int32_t>>(0x582519, this, arg1);
+        return stub<member_func_t<void, mmGame, i32>>(0x582519, this, arg1);
     }
 
     // 0x414D30 | ?BeDone@mmGame@@UAEXH@Z
-    virtual inline void BeDone(int32_t arg1)
+    virtual inline void BeDone(i32 arg1)
     {
-        return stub<member_func_t<void, mmGame, int32_t>>(0x414D30, this, arg1);
+        return stub<member_func_t<void, mmGame, i32>>(0x414D30, this, arg1);
     }
 
     // 0x582519 | __purecall

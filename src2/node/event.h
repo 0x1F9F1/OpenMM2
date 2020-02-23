@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -59,10 +59,9 @@ public:
     }
 
     // 0x4A1730 | ?BeginGfx@eqEventHandler@@QAEHHHH@Z
-    inline int32_t BeginGfx(int32_t arg1, int32_t arg2, int32_t arg3)
+    inline i32 BeginGfx(i32 arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<int32_t, eqEventHandler, int32_t, int32_t, int32_t>>(
-            0x4A1730, this, arg1, arg2, arg3);
+        return stub<member_func_t<i32, eqEventHandler, i32, i32, i32>>(0x4A1730, this, arg1, arg2, arg3);
     }
 
     // 0x4A1740 | ?EndGfx@eqEventHandler@@QAEXXZ
@@ -78,21 +77,21 @@ public:
     }
 
     // 0x4A1760 | ?MinimizeApp@eqEventHandler@@QAEXH@Z
-    inline void MinimizeApp(int32_t arg1)
+    inline void MinimizeApp(i32 arg1)
     {
-        return stub<member_func_t<void, eqEventHandler, int32_t>>(0x4A1760, this, arg1);
+        return stub<member_func_t<void, eqEventHandler, i32>>(0x4A1760, this, arg1);
     }
 
     // 0x4A1770 | ?SetActive@eqEventHandler@@QAEXH@Z
-    inline void SetActive(int32_t arg1)
+    inline void SetActive(i32 arg1)
     {
-        return stub<member_func_t<void, eqEventHandler, int32_t>>(0x4A1770, this, arg1);
+        return stub<member_func_t<void, eqEventHandler, i32>>(0x4A1770, this, arg1);
     }
 
     // 0x4A1780 | ?ClearActive@eqEventHandler@@QAEXH@Z
-    inline void ClearActive(int32_t arg1)
+    inline void ClearActive(i32 arg1)
     {
-        return stub<member_func_t<void, eqEventHandler, int32_t>>(0x4A1780, this, arg1);
+        return stub<member_func_t<void, eqEventHandler, i32>>(0x4A1780, this, arg1);
     }
 
     // 0x4A1790 | ?Update@eqEventHandler@@QAEXXZ
@@ -102,9 +101,9 @@ public:
     }
 
     // 0x4A1D60 | ?EKeyName@eqEventHandler@@SAPADH@Z
-    static inline char* EKeyName(int32_t arg1)
+    static inline char* EKeyName(i32 arg1)
     {
-        return stub<cdecl_t<char*, int32_t>>(0x4A1D60, arg1);
+        return stub<cdecl_t<char*, i32>>(0x4A1D60, arg1);
     }
 
     // 0x4A2030 | ?AddClient@eqEventHandler@@QAEXPAVeqEventMonitor@@@Z
@@ -120,7 +119,7 @@ public:
     }
 
     // 0x661788 | ?SuperQ@eqEventHandler@@2PAV1@A
-    static inline extern_var(0x661788, class eqEventHandler*, SuperQ);
+    inline extern_var(0x661788, class eqEventHandler*, SuperQ);
 
     // 0x4A1700 | ??1eqEventHandler@@UAE@XZ
     virtual inline ~eqEventHandler()
@@ -147,18 +146,16 @@ public:
     }
 
     // 0x4A2110 | ?Mouse@eqEventMonitor@@UAEXPAXHHHHHHH@Z
-    virtual inline void Mouse(
-        void* arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5, int32_t arg6, int32_t arg7, int32_t arg8)
+    virtual inline void Mouse(void* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6, i32 arg7, i32 arg8)
     {
-        return stub<
-            member_func_t<void, eqEventMonitor, void*, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t>>(
+        return stub<member_func_t<void, eqEventMonitor, void*, i32, i32, i32, i32, i32, i32, i32>>(
             0x4A2110, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
     // 0x4A2190 | ?Keyboard@eqEventMonitor@@UAEXPAXHHHH@Z
-    virtual inline void Keyboard(void* arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5)
+    virtual inline void Keyboard(void* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5)
     {
-        return stub<member_func_t<void, eqEventMonitor, void*, int32_t, int32_t, int32_t, int32_t>>(
+        return stub<member_func_t<void, eqEventMonitor, void*, i32, i32, i32, i32>>(
             0x4A2190, this, arg1, arg2, arg3, arg4, arg5);
     }
 };

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -61,15 +61,15 @@ public:
     }
 
     // 0x56B4F0 | ?Context@aiGoalAvoidPlayer@@QAEHXZ
-    inline int32_t Context()
+    inline i32 Context()
     {
-        return stub<member_func_t<int32_t, aiGoalAvoidPlayer>>(0x56B4F0, this);
+        return stub<member_func_t<i32, aiGoalAvoidPlayer>>(0x56B4F0, this);
     }
 
     // 0x56B510 | ?Priority@aiGoalAvoidPlayer@@QAEHXZ
-    inline int32_t Priority()
+    inline i32 Priority()
     {
-        return stub<member_func_t<int32_t, aiGoalAvoidPlayer>>(0x56B510, this);
+        return stub<member_func_t<i32, aiGoalAvoidPlayer>>(0x56B510, this);
     }
 
     // 0x56B520 | ?Dump@aiGoalAvoidPlayer@@QAEXXZ

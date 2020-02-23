@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -76,14 +76,14 @@ public:
     }
 
     // 0x4D1EF0 | ?Blast@vehWheelPtx@@QAEXPAVvehWheel@@MHH@Z
-    inline void Blast(class vehWheel* arg1, float arg2, int32_t arg3, int32_t arg4)
+    inline void Blast(class vehWheel* arg1, f32 arg2, i32 arg3, i32 arg4)
     {
-        return stub<member_func_t<void, vehWheelPtx, class vehWheel*, float, int32_t, int32_t>>(
+        return stub<member_func_t<void, vehWheelPtx, class vehWheel*, f32, i32, i32>>(
             0x4D1EF0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x6AFFAC | ?Rule@vehWheelPtx@@2PAPAVasBirthRule@@A
-    static inline extern_var(0x6AFFAC, class asBirthRule**, Rule);
+    inline extern_var(0x6AFFAC, class asBirthRule**, Rule);
 
     // 0x4D1C60 | ??1vehWheelPtx@@UAE@XZ
     inline ~vehWheelPtx() override

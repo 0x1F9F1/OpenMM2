@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -45,9 +45,9 @@ public:
     // uiNavBar::`vftable' @ 0x5B32C8
 
     // 0x4E6230 | ??0uiNavBar@@QAE@H@Z
-    inline uiNavBar(int32_t arg1)
+    inline uiNavBar(i32 arg1)
     {
-        stub<member_func_t<void, uiNavBar, int32_t>>(0x4E6230, this, arg1);
+        stub<member_func_t<void, uiNavBar, i32>>(0x4E6230, this, arg1);
     }
 
     // 0x4E6460 | ?Help@uiNavBar@@QAEXXZ
@@ -81,9 +81,9 @@ public:
     }
 
     // 0x4E65A0 | ?SetPrevPos@uiNavBar@@QAEXMM@Z
-    inline void SetPrevPos(float arg1, float arg2)
+    inline void SetPrevPos(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, uiNavBar, float, float>>(0x4E65A0, this, arg1, arg2);
+        return stub<member_func_t<void, uiNavBar, f32, f32>>(0x4E65A0, this, arg1, arg2);
     }
 
     // 0x4E65F0 | ?TurnOnPrev@uiNavBar@@QAEXXZ

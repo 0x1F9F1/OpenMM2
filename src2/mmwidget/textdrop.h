@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -47,9 +47,9 @@
 */
 
 // 0x4E8570 | ?inRange@@YAHMMM@Z
-inline int32_t inRange(float arg1, float arg2, float arg3)
+inline i32 inRange(f32 arg1, f32 arg2, f32 arg3)
 {
-    return stub<cdecl_t<int32_t, float, float, float>>(0x4E8570, arg1, arg2, arg3);
+    return stub<cdecl_t<i32, f32, f32, f32>>(0x4E8570, arg1, arg2, arg3);
 }
 
 class UITextDropdown : uiWidget
@@ -64,19 +64,18 @@ public:
     }
 
     // 0x4E7DB0 | ?Init@UITextDropdown@@QAEXPAULocString@@PAHMMMMVstring@@HHHVdatCallback@@PAD3@Z
-    inline void Init(struct LocString* arg1, int32_t* arg2, float arg3, float arg4, float arg5, float arg6,
-        class string arg7, int32_t arg8, int32_t arg9, int32_t arg10, class datCallback arg11, char* arg12,
-        class datCallback arg13)
+    inline void Init(struct LocString* arg1, i32* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, class string arg7,
+        i32 arg8, i32 arg9, i32 arg10, class datCallback arg11, char* arg12, class datCallback arg13)
     {
-        return stub<member_func_t<void, UITextDropdown, struct LocString*, int32_t*, float, float, float, float,
-            class string, int32_t, int32_t, int32_t, class datCallback, char*, class datCallback>>(
+        return stub<member_func_t<void, UITextDropdown, struct LocString*, i32*, f32, f32, f32, f32, class string, i32,
+            i32, i32, class datCallback, char*, class datCallback>>(
             0x4E7DB0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
     }
 
     // 0x4E8190 | ?SetPos@UITextDropdown@@QAEXMM@Z
-    inline void SetPos(float arg1, float arg2)
+    inline void SetPos(f32 arg1, f32 arg2)
     {
-        return stub<member_func_t<void, UITextDropdown, float, float>>(0x4E8190, this, arg1, arg2);
+        return stub<member_func_t<void, UITextDropdown, f32, f32>>(0x4E8190, this, arg1, arg2);
     }
 
     // 0x4E81A0 | ?AssignString@UITextDropdown@@QAEXVstring@@@Z
@@ -86,9 +85,9 @@ public:
     }
 
     // 0x4E8250 | ?SetData@UITextDropdown@@QAEXPAH@Z
-    inline void SetData(int32_t* arg1)
+    inline void SetData(i32* arg1)
     {
-        return stub<member_func_t<void, UITextDropdown, int32_t*>>(0x4E8250, this, arg1);
+        return stub<member_func_t<void, UITextDropdown, i32*>>(0x4E8250, this, arg1);
     }
 
     // 0x4E82F0 | ?SetText@UITextDropdown@@QAEXPAULocString@@@Z
@@ -98,33 +97,33 @@ public:
     }
 
     // 0x4E8710 | ?SetSliderFocus@UITextDropdown@@QAEXH@Z
-    inline void SetSliderFocus(int32_t arg1)
+    inline void SetSliderFocus(i32 arg1)
     {
-        return stub<member_func_t<void, UITextDropdown, int32_t>>(0x4E8710, this, arg1);
+        return stub<member_func_t<void, UITextDropdown, i32>>(0x4E8710, this, arg1);
     }
 
     // 0x4E87C0 | ?GetValue@UITextDropdown@@QAEHXZ
-    inline int32_t GetValue()
+    inline i32 GetValue()
     {
-        return stub<member_func_t<int32_t, UITextDropdown>>(0x4E87C0, this);
+        return stub<member_func_t<i32, UITextDropdown>>(0x4E87C0, this);
     }
 
     // 0x4E87D0 | ?SetValue@UITextDropdown@@QAEHH@Z
-    inline int32_t SetValue(int32_t arg1)
+    inline i32 SetValue(i32 arg1)
     {
-        return stub<member_func_t<int32_t, UITextDropdown, int32_t>>(0x4E87D0, this, arg1);
+        return stub<member_func_t<i32, UITextDropdown, i32>>(0x4E87D0, this, arg1);
     }
 
     // 0x4E8800 | ?SetDisabledMask@UITextDropdown@@QAEXJ@Z
-    inline void SetDisabledMask(int32_t arg1)
+    inline void SetDisabledMask(i32 arg1)
     {
-        return stub<member_func_t<void, UITextDropdown, int32_t>>(0x4E8800, this, arg1);
+        return stub<member_func_t<void, UITextDropdown, i32>>(0x4E8800, this, arg1);
     }
 
     // 0x4E8820 | ?AnyEnabled@UITextDropdown@@QAEHXZ
-    inline int32_t AnyEnabled()
+    inline i32 AnyEnabled()
     {
-        return stub<member_func_t<int32_t, UITextDropdown>>(0x4E8820, this);
+        return stub<member_func_t<i32, UITextDropdown>>(0x4E8820, this);
     }
 
     // 0x4E7D20 | ??1UITextDropdown@@UAE@XZ
@@ -158,14 +157,14 @@ public:
     }
 
     // 0x4E8680 | ?Switch@UITextDropdown@@UAEXH@Z
-    inline void Switch(int32_t arg1) override
+    inline void Switch(i32 arg1) override
     {
-        return stub<member_func_t<void, UITextDropdown, int32_t>>(0x4E8680, this, arg1);
+        return stub<member_func_t<void, UITextDropdown, i32>>(0x4E8680, this, arg1);
     }
 
     // 0x4E8180 | ?GetScreenHeight@UITextDropdown@@UAEMXZ
-    inline float GetScreenHeight() override
+    inline f32 GetScreenHeight() override
     {
-        return stub<member_func_t<float, UITextDropdown>>(0x4E8180, this);
+        return stub<member_func_t<f32, UITextDropdown>>(0x4E8180, this);
     }
 };

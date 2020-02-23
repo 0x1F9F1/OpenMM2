@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -68,9 +68,7 @@ public:
     }
 };
 
-class pedActive
-    : dgPhysEntity
-    , Base
+class pedActive : dgPhysEntity
 {
 public:
     // pedActive::`vftable' @ 0x5B639C
@@ -82,15 +80,15 @@ public:
     }
 
     // 0x57C090 | ?IsAsleep@pedActive@@QAEHXZ
-    inline int32_t IsAsleep()
+    inline i32 IsAsleep()
     {
-        return stub<member_func_t<int32_t, pedActive>>(0x57C090, this);
+        return stub<member_func_t<i32, pedActive>>(0x57C090, this);
     }
 
     // 0x57C2B0 | ?SetRagdollBlend@pedActive@@QAEXM@Z
-    inline void SetRagdollBlend(float arg1)
+    inline void SetRagdollBlend(f32 arg1)
     {
-        return stub<member_func_t<void, pedActive, float>>(0x57C2B0, this, arg1);
+        return stub<member_func_t<void, pedActive, f32>>(0x57C2B0, this, arg1);
     }
 
     // 0x57C2C0 | ?StartRagdoll@pedActive@@QAEXXZ
@@ -106,37 +104,37 @@ public:
     }
 
     // 0x57BF80 | ??1pedActive@@UAE@XZ
-    virtual inline ~pedActive()
+    inline ~pedActive() override
     {
         stub<member_func_t<void, pedActive>>(0x57BF80, this);
     }
 
     // 0x57C0F0 | ?Update@pedActive@@UAEXXZ
-    virtual inline void Update()
+    inline void Update() override
     {
         return stub<member_func_t<void, pedActive>>(0x57C0F0, this);
     }
 
     // 0x57C500 | ?PostUpdate@pedActive@@UAEXXZ
-    virtual inline void PostUpdate()
+    inline void PostUpdate() override
     {
         return stub<member_func_t<void, pedActive>>(0x57C500, this);
     }
 
     // 0x57C290 | ?GetICS@pedActive@@UAEPAVphInertialCS@@XZ
-    virtual inline class phInertialCS* GetICS()
+    inline class phInertialCS* GetICS() override
     {
         return stub<member_func_t<class phInertialCS*, pedActive>>(0x57C290, this);
     }
 
     // 0x57C2A0 | ?GetInst@pedActive@@UAEPAVlvlInstance@@XZ
-    virtual inline class lvlInstance* GetInst()
+    inline class lvlInstance* GetInst() override
     {
         return stub<member_func_t<class lvlInstance*, pedActive>>(0x57C2A0, this);
     }
 
     // 0x57C2E0 | ?FirstImpactCallback@pedActive@@UAEXXZ
-    virtual inline void FirstImpactCallback()
+    inline void FirstImpactCallback() override
     {
         return stub<member_func_t<void, pedActive>>(0x57C2E0, this);
     }

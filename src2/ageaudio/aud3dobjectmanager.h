@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -63,9 +63,9 @@ public:
     // Aud3DObjectManager::`vftable' @ 0x5B4C58
 
     // 0x50F360 | ??0Aud3DObjectManager@@QAE@H@Z
-    inline Aud3DObjectManager(int32_t arg1)
+    inline Aud3DObjectManager(i32 arg1)
     {
-        stub<member_func_t<void, Aud3DObjectManager, int32_t>>(0x50F360, this, arg1);
+        stub<member_func_t<void, Aud3DObjectManager, i32>>(0x50F360, this, arg1);
     }
 
     // 0x50F650 | ?InitAmbObjContainer@Aud3DObjectManager@@QAEXPAD@Z
@@ -75,27 +75,27 @@ public:
     }
 
     // 0x50F6E0 | ?Add@Aud3DObjectManager@@QAEHPAVAud3DObject@@@Z
-    inline int32_t Add(class Aud3DObject* arg1)
+    inline i32 Add(class Aud3DObject* arg1)
     {
-        return stub<member_func_t<int32_t, Aud3DObjectManager, class Aud3DObject*>>(0x50F6E0, this, arg1);
+        return stub<member_func_t<i32, Aud3DObjectManager, class Aud3DObject*>>(0x50F6E0, this, arg1);
     }
 
     // 0x50F760 | ?Remove@Aud3DObjectManager@@QAEXPAVAud3DObject@@H@Z
-    inline void Remove(class Aud3DObject* arg1, int32_t arg2)
+    inline void Remove(class Aud3DObject* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, Aud3DObjectManager, class Aud3DObject*, int32_t>>(0x50F760, this, arg1, arg2);
+        return stub<member_func_t<void, Aud3DObjectManager, class Aud3DObject*, i32>>(0x50F760, this, arg1, arg2);
     }
 
     // 0x50F790 | ?FindGreatestDistance@Aud3DObjectManager@@QAEHPAVAud3DObject@@@Z
-    inline int32_t FindGreatestDistance(class Aud3DObject* arg1)
+    inline i32 FindGreatestDistance(class Aud3DObject* arg1)
     {
-        return stub<member_func_t<int32_t, Aud3DObjectManager, class Aud3DObject*>>(0x50F790, this, arg1);
+        return stub<member_func_t<i32, Aud3DObjectManager, class Aud3DObject*>>(0x50F790, this, arg1);
     }
 
     // 0x50F8A0 | ?FindUnusedSlot@Aud3DObjectManager@@QAEHXZ
-    inline int32_t FindUnusedSlot()
+    inline i32 FindUnusedSlot()
     {
-        return stub<member_func_t<int32_t, Aud3DObjectManager>>(0x50F8A0, this);
+        return stub<member_func_t<i32, Aud3DObjectManager>>(0x50F8A0, this);
     }
 
     // 0x50F8D0 | ?Process3D@Aud3DObjectManager@@QAEX_N@Z
@@ -105,15 +105,15 @@ public:
     }
 
     // 0x50F910 | ?Update@Aud3DObjectManager@@QAEXM@Z
-    inline void Update(float arg1)
+    inline void Update(f32 arg1)
     {
-        return stub<member_func_t<void, Aud3DObjectManager, float>>(0x50F910, this, arg1);
+        return stub<member_func_t<void, Aud3DObjectManager, f32>>(0x50F910, this, arg1);
     }
 
     // 0x50F9C0 | ?EchoOn@Aud3DObjectManager@@QAEXM@Z
-    inline void EchoOn(float arg1)
+    inline void EchoOn(f32 arg1)
     {
-        return stub<member_func_t<void, Aud3DObjectManager, float>>(0x50F9C0, this, arg1);
+        return stub<member_func_t<void, Aud3DObjectManager, f32>>(0x50F9C0, this, arg1);
     }
 
     // 0x50F9E0 | ?EchoOff@Aud3DObjectManager@@QAEXXZ
@@ -123,60 +123,57 @@ public:
     }
 
     // 0x50F9F0 | ?GetSample@Aud3DObjectManager@@QAEPAVAudSoundBase@@HH@Z
-    inline class AudSoundBase* GetSample(int32_t arg1, int32_t arg2)
+    inline class AudSoundBase* GetSample(i32 arg1, i32 arg2)
     {
-        return stub<member_func_t<class AudSoundBase*, Aud3DObjectManager, int32_t, int32_t>>(
-            0x50F9F0, this, arg1, arg2);
+        return stub<member_func_t<class AudSoundBase*, Aud3DObjectManager, i32, i32>>(0x50F9F0, this, arg1, arg2);
     }
 
     // 0x50FA20 | ?SetNumScreenSplits@Aud3DObjectManager@@QAEXH@Z
-    inline void SetNumScreenSplits(int32_t arg1)
+    inline void SetNumScreenSplits(i32 arg1)
     {
-        return stub<member_func_t<void, Aud3DObjectManager, int32_t>>(0x50FA20, this, arg1);
+        return stub<member_func_t<void, Aud3DObjectManager, i32>>(0x50FA20, this, arg1);
     }
 
     // 0x50FAB0 | ?CatName@Aud3DObjectManager@@AAEPADPADHH@Z
-    inline char* CatName(char* arg1, int32_t arg2, int32_t arg3)
+    inline char* CatName(char* arg1, i32 arg2, i32 arg3)
     {
-        return stub<member_func_t<char*, Aud3DObjectManager, char*, int32_t, int32_t>>(
-            0x50FAB0, this, arg1, arg2, arg3);
+        return stub<member_func_t<char*, Aud3DObjectManager, char*, i32, i32>>(0x50FAB0, this, arg1, arg2, arg3);
     }
 
     // 0x50FCB0 | ?AllocateSample@Aud3DObjectManager@@QAEHPADK@Z
-    inline int32_t AllocateSample(char* arg1, uint32_t arg2)
+    inline i32 AllocateSample(char* arg1, u32 arg2)
     {
-        return stub<member_func_t<int32_t, Aud3DObjectManager, char*, uint32_t>>(0x50FCB0, this, arg1, arg2);
+        return stub<member_func_t<i32, Aud3DObjectManager, char*, u32>>(0x50FCB0, this, arg1, arg2);
     }
 
     // 0x50FE20 | ?AllocateSample@Aud3DObjectManager@@QAEHPADHK@Z
-    inline int32_t AllocateSample(char* arg1, int32_t arg2, uint32_t arg3)
+    inline i32 AllocateSample(char* arg1, i32 arg2, u32 arg3)
     {
-        return stub<member_func_t<int32_t, Aud3DObjectManager, char*, int32_t, uint32_t>>(
-            0x50FE20, this, arg1, arg2, arg3);
+        return stub<member_func_t<i32, Aud3DObjectManager, char*, i32, u32>>(0x50FE20, this, arg1, arg2, arg3);
     }
 
     // 0x50FF90 | ?GetSampleWrapper@Aud3DObjectManager@@QAEPAVAud3DSampleWrapper@@H@Z
-    inline class Aud3DSampleWrapper* GetSampleWrapper(int32_t arg1)
+    inline class Aud3DSampleWrapper* GetSampleWrapper(i32 arg1)
     {
-        return stub<member_func_t<class Aud3DSampleWrapper*, Aud3DObjectManager, int32_t>>(0x50FF90, this, arg1);
+        return stub<member_func_t<class Aud3DSampleWrapper*, Aud3DObjectManager, i32>>(0x50FF90, this, arg1);
     }
 
     // 0x50FFB0 | ?QueueInCopVoice@Aud3DObjectManager@@QAEHM@Z
-    inline int32_t QueueInCopVoice(float arg1)
+    inline i32 QueueInCopVoice(f32 arg1)
     {
-        return stub<member_func_t<int32_t, Aud3DObjectManager, float>>(0x50FFB0, this, arg1);
+        return stub<member_func_t<i32, Aud3DObjectManager, f32>>(0x50FFB0, this, arg1);
     }
 
     // 0x50FFC0 | ?PlayCopVoice@Aud3DObjectManager@@QAEHXZ
-    inline int32_t PlayCopVoice()
+    inline i32 PlayCopVoice()
     {
-        return stub<member_func_t<int32_t, Aud3DObjectManager>>(0x50FFC0, this);
+        return stub<member_func_t<i32, Aud3DObjectManager>>(0x50FFC0, this);
     }
 
     // 0x50FFD0 | ?GetClosestCop@Aud3DObjectManager@@QAEHXZ
-    inline int32_t GetClosestCop()
+    inline i32 GetClosestCop()
     {
-        return stub<member_func_t<int32_t, Aud3DObjectManager>>(0x50FFD0, this);
+        return stub<member_func_t<i32, Aud3DObjectManager>>(0x50FFD0, this);
     }
 
     // 0x50FFE0 | ?GetLeftHeadPtrPtr@Aud3DObjectManager@@QAEPAPAVMatrix34@@XZ
@@ -192,15 +189,15 @@ public:
     }
 
     // 0x510020 | ?SetLeftHeadPtr@Aud3DObjectManager@@QAEXPAVMatrix34@@H@Z
-    inline void SetLeftHeadPtr(class Matrix34* arg1, int32_t arg2)
+    inline void SetLeftHeadPtr(class Matrix34* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, Aud3DObjectManager, class Matrix34*, int32_t>>(0x510020, this, arg1, arg2);
+        return stub<member_func_t<void, Aud3DObjectManager, class Matrix34*, i32>>(0x510020, this, arg1, arg2);
     }
 
     // 0x510040 | ?SetRightHeadPtr@Aud3DObjectManager@@QAEXPAVMatrix34@@H@Z
-    inline void SetRightHeadPtr(class Matrix34* arg1, int32_t arg2)
+    inline void SetRightHeadPtr(class Matrix34* arg1, i32 arg2)
     {
-        return stub<member_func_t<void, Aud3DObjectManager, class Matrix34*, int32_t>>(0x510040, this, arg1, arg2);
+        return stub<member_func_t<void, Aud3DObjectManager, class Matrix34*, i32>>(0x510040, this, arg1, arg2);
     }
 
     // 0x50F440 | ??1Aud3DObjectManager@@UAE@XZ

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -43,9 +43,9 @@ public:
     }
 
     // 0x4ED5C0 | ?Init@UIBMLabel@@QAEXPAVstring@@MMPAH@Z
-    inline void Init(class string* arg1, float arg2, float arg3, int32_t* arg4)
+    inline void Init(class string* arg1, f32 arg2, f32 arg3, i32* arg4)
     {
-        return stub<member_func_t<void, UIBMLabel, class string*, float, float, int32_t*>>(
+        return stub<member_func_t<void, UIBMLabel, class string*, f32, f32, i32*>>(
             0x4ED5C0, this, arg1, arg2, arg3, arg4);
     }
 

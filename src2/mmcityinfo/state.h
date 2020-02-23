@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -93,26 +93,26 @@ public:
     }
 
     // 0x5235D0 | ?GetIndex@NetStartArray@@QAEHK@Z
-    inline int32_t GetIndex(uint32_t arg1)
+    inline i32 GetIndex(u32 arg1)
     {
-        return stub<member_func_t<int32_t, NetStartArray, uint32_t>>(0x5235D0, this, arg1);
+        return stub<member_func_t<i32, NetStartArray, u32>>(0x5235D0, this, arg1);
     }
 
     // 0x5235F0 | ?ClearIndex@NetStartArray@@QAEXK@Z
-    inline void ClearIndex(uint32_t arg1)
+    inline void ClearIndex(u32 arg1)
     {
-        return stub<member_func_t<void, NetStartArray, uint32_t>>(0x5235F0, this, arg1);
+        return stub<member_func_t<void, NetStartArray, u32>>(0x5235F0, this, arg1);
     }
 
     // 0x523610 | ?AssignOpenIndex@NetStartArray@@QAEHK@Z
-    inline int32_t AssignOpenIndex(uint32_t arg1)
+    inline i32 AssignOpenIndex(u32 arg1)
     {
-        return stub<member_func_t<int32_t, NetStartArray, uint32_t>>(0x523610, this, arg1);
+        return stub<member_func_t<i32, NetStartArray, u32>>(0x523610, this, arg1);
     }
 
     // 0x523650 | ?Init@NetStartArray@@QAEXPAK@Z
-    inline void Init(uint32_t* arg1)
+    inline void Init(u32* arg1)
     {
-        return stub<member_func_t<void, NetStartArray, uint32_t*>>(0x523650, this, arg1);
+        return stub<member_func_t<void, NetStartArray, u32*>>(0x523650, this, arg1);
     }
 };

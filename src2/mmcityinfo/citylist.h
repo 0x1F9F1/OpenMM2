@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -62,15 +62,15 @@ public:
     }
 
     // 0x5241E0 | ?Init@mmCityList@@QAEXH@Z
-    inline void Init(int32_t arg1)
+    inline void Init(i32 arg1)
     {
-        return stub<member_func_t<void, mmCityList, int32_t>>(0x5241E0, this, arg1);
+        return stub<member_func_t<void, mmCityList, i32>>(0x5241E0, this, arg1);
     }
 
     // 0x5241F0 | ?GetCityInfo@mmCityList@@QAEPAVmmCityInfo@@H@Z
-    inline class mmCityInfo* GetCityInfo(int32_t arg1)
+    inline class mmCityInfo* GetCityInfo(i32 arg1)
     {
-        return stub<member_func_t<class mmCityInfo*, mmCityList, int32_t>>(0x5241F0, this, arg1);
+        return stub<member_func_t<class mmCityInfo*, mmCityList, i32>>(0x5241F0, this, arg1);
     }
 
     // 0x524220 | ?GetCityInfo@mmCityList@@QAEPAVmmCityInfo@@PAD@Z
@@ -80,9 +80,9 @@ public:
     }
 
     // 0x524270 | ?GetCityID@mmCityList@@QAEHPAD@Z
-    inline int32_t GetCityID(char* arg1)
+    inline i32 GetCityID(char* arg1)
     {
-        return stub<member_func_t<int32_t, mmCityList, char*>>(0x524270, this, arg1);
+        return stub<member_func_t<i32, mmCityList, char*>>(0x524270, this, arg1);
     }
 
     // 0x5242C0 | ?SetCurrentCity@mmCityList@@QAEXPAD@Z
@@ -92,9 +92,9 @@ public:
     }
 
     // 0x5242F0 | ?SetCurrentCity@mmCityList@@QAEXH@Z
-    inline void SetCurrentCity(int32_t arg1)
+    inline void SetCurrentCity(i32 arg1)
     {
-        return stub<member_func_t<void, mmCityList, int32_t>>(0x5242F0, this, arg1);
+        return stub<member_func_t<void, mmCityList, i32>>(0x5242F0, this, arg1);
     }
 
     // 0x524320 | ?GetCurrentCity@mmCityList@@QAEPAVmmCityInfo@@XZ

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -59,27 +59,27 @@ public:
     }
 
     // 0x550F40 | ?Find@aiPoliceForce@@QAEHPAVvehCar@@0@Z
-    inline int32_t Find(class vehCar* arg1, class vehCar* arg2)
+    inline i32 Find(class vehCar* arg1, class vehCar* arg2)
     {
-        return stub<member_func_t<int32_t, aiPoliceForce, class vehCar*, class vehCar*>>(0x550F40, this, arg1, arg2);
+        return stub<member_func_t<i32, aiPoliceForce, class vehCar*, class vehCar*>>(0x550F40, this, arg1, arg2);
     }
 
     // 0x550FA0 | ?RegisterPerp@aiPoliceForce@@QAEHPAVvehCar@@0@Z
-    inline int32_t RegisterPerp(class vehCar* arg1, class vehCar* arg2)
+    inline i32 RegisterPerp(class vehCar* arg1, class vehCar* arg2)
     {
-        return stub<member_func_t<int32_t, aiPoliceForce, class vehCar*, class vehCar*>>(0x550FA0, this, arg1, arg2);
+        return stub<member_func_t<i32, aiPoliceForce, class vehCar*, class vehCar*>>(0x550FA0, this, arg1, arg2);
     }
 
     // 0x551040 | ?UnRegisterCop@aiPoliceForce@@QAEHPAVvehCar@@0@Z
-    inline int32_t UnRegisterCop(class vehCar* arg1, class vehCar* arg2)
+    inline i32 UnRegisterCop(class vehCar* arg1, class vehCar* arg2)
     {
-        return stub<member_func_t<int32_t, aiPoliceForce, class vehCar*, class vehCar*>>(0x551040, this, arg1, arg2);
+        return stub<member_func_t<i32, aiPoliceForce, class vehCar*, class vehCar*>>(0x551040, this, arg1, arg2);
     }
 
     // 0x551120 | ?State@aiPoliceForce@@QAEHPAVvehCar@@0M@Z
-    inline int32_t State(class vehCar* arg1, class vehCar* arg2, float arg3)
+    inline i32 State(class vehCar* arg1, class vehCar* arg2, f32 arg3)
     {
-        return stub<member_func_t<int32_t, aiPoliceForce, class vehCar*, class vehCar*, float>>(
+        return stub<member_func_t<i32, aiPoliceForce, class vehCar*, class vehCar*, f32>>(
             0x551120, this, arg1, arg2, arg3);
     }
 };

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -48,17 +48,16 @@ public:
     }
 
     // 0x517420 | ?Init@DMusicManager@@QAEHPAUIDirectSound@@HKHKK@Z
-    inline int32_t Init(
-        struct IDirectSound* arg1, int32_t arg2, uint32_t arg3, int32_t arg4, uint32_t arg5, uint32_t arg6)
+    inline i32 Init(struct IDirectSound* arg1, i32 arg2, u32 arg3, i32 arg4, u32 arg5, u32 arg6)
     {
-        return stub<member_func_t<int32_t, DMusicManager, struct IDirectSound*, int32_t, uint32_t, int32_t, uint32_t,
-            uint32_t>>(0x517420, this, arg1, arg2, arg3, arg4, arg5, arg6);
+        return stub<member_func_t<i32, DMusicManager, struct IDirectSound*, i32, u32, i32, u32, u32>>(
+            0x517420, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x5174B0 | ?Activate@DMusicManager@@QAEXH@Z
-    inline void Activate(int32_t arg1)
+    inline void Activate(i32 arg1)
     {
-        return stub<member_func_t<void, DMusicManager, int32_t>>(0x5174B0, this, arg1);
+        return stub<member_func_t<void, DMusicManager, i32>>(0x5174B0, this, arg1);
     }
 
     // 0x5174D0 | ?GetDMusicObjectPtr@DMusicManager@@QAEPAVDMusicObject@@XZ
@@ -74,20 +73,20 @@ public:
     }
 
     // 0x5174F0 | ?SetVolume@DMusicManager@@QAEXM@Z
-    inline void SetVolume(float arg1)
+    inline void SetVolume(f32 arg1)
     {
-        return stub<member_func_t<void, DMusicManager, float>>(0x5174F0, this, arg1);
+        return stub<member_func_t<void, DMusicManager, f32>>(0x5174F0, this, arg1);
     }
 
     // 0x517520 | ?GetVolume@DMusicManager@@QAEMXZ
-    inline float GetVolume()
+    inline f32 GetVolume()
     {
-        return stub<member_func_t<float, DMusicManager>>(0x517520, this);
+        return stub<member_func_t<f32, DMusicManager>>(0x517520, this);
     }
 
     // 0x517540 | ?SetPan@DMusicManager@@QAEXM@Z
-    inline void SetPan(float arg1)
+    inline void SetPan(f32 arg1)
     {
-        return stub<member_func_t<void, DMusicManager, float>>(0x517540, this, arg1);
+        return stub<member_func_t<void, DMusicManager, f32>>(0x517540, this, arg1);
     }
 };

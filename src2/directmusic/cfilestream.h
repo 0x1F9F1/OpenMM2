@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -66,15 +66,15 @@ public:
     }
 
     // 0x518AB0 | ?Open@CFileStream@@QAEJPAGK@Z
-    inline int32_t Open(uint16_t* arg1, uint32_t arg2)
+    inline i32 Open(u16* arg1, u32 arg2)
     {
-        return stub<member_func_t<int32_t, CFileStream, uint16_t*, uint32_t>>(0x518AB0, this, arg1, arg2);
+        return stub<member_func_t<i32, CFileStream, u16*, u32>>(0x518AB0, this, arg1, arg2);
     }
 
     // 0x518B80 | ?Close@CFileStream@@QAEJXZ
-    inline int32_t Close()
+    inline i32 Close()
     {
-        return stub<member_func_t<int32_t, CFileStream>>(0x518B80, this);
+        return stub<member_func_t<i32, CFileStream>>(0x518B80, this);
     }
 
     // 0x518E50 | ?GetNextPtr@CFileStream@@QAEPAV1@XZ
@@ -90,20 +90,20 @@ public:
     }
 
     // 0x518E70 | ?QueryInterface@CFileStream@@W3AGJABU_GUID@@PAPAX@Z
-    inline int32_t __stdcall QueryInterface(struct _GUID const& arg1, void** arg2)
+    inline i32 __stdcall QueryInterface(struct _GUID const& arg1, void** arg2)
     {
-        return stub<member_func_t<int32_t, CFileStream, struct _GUID const&, void**>>(0x518E70, this, arg1, arg2);
+        return stub<member_func_t<i32, CFileStream, struct _GUID const&, void**>>(0x518E70, this, arg1, arg2);
     }
 
     // 0x518E80 | ?AddRef@CFileStream@@W3AGKXZ
-    inline uint32_t __stdcall AddRef()
+    inline u32 __stdcall AddRef()
     {
-        return stub<member_func_t<uint32_t, CFileStream>>(0x518E80, this);
+        return stub<member_func_t<u32, CFileStream>>(0x518E80, this);
     }
 
     // 0x518E90 | ?Release@CFileStream@@W3AGKXZ
-    inline uint32_t __stdcall Release()
+    inline u32 __stdcall Release()
     {
-        return stub<member_func_t<uint32_t, CFileStream>>(0x518E90, this);
+        return stub<member_func_t<u32, CFileStream>>(0x518E90, this);
     }
 };

@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -54,28 +54,28 @@ public:
     // mmPopup::`vftable' @ 0x5B0B44
 
     // 0x429D90 | ??0mmPopup@@QAE@PAVmmGame@@MMMM@Z
-    inline mmPopup(class mmGame* arg1, float arg2, float arg3, float arg4, float arg5)
+    inline mmPopup(class mmGame* arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
     {
-        stub<member_func_t<void, mmPopup, class mmGame*, float, float, float, float>>(
+        stub<member_func_t<void, mmPopup, class mmGame*, f32, f32, f32, f32>>(
             0x429D90, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x42A280 | ?IsEnabled@mmPopup@@QAEHXZ
-    inline int32_t IsEnabled()
+    inline i32 IsEnabled()
     {
-        return stub<member_func_t<int32_t, mmPopup>>(0x42A280, this);
+        return stub<member_func_t<i32, mmPopup>>(0x42A280, this);
     }
 
     // 0x42A290 | ?DisablePU@mmPopup@@QAEXH@Z
-    inline void DisablePU(int32_t arg1)
+    inline void DisablePU(i32 arg1)
     {
-        return stub<member_func_t<void, mmPopup, int32_t>>(0x42A290, this, arg1);
+        return stub<member_func_t<void, mmPopup, i32>>(0x42A290, this, arg1);
     }
 
     // 0x42A320 | ?ProcessEscape@mmPopup@@QAEXH@Z
-    inline void ProcessEscape(int32_t arg1)
+    inline void ProcessEscape(i32 arg1)
     {
-        return stub<member_func_t<void, mmPopup, int32_t>>(0x42A320, this, arg1);
+        return stub<member_func_t<void, mmPopup, i32>>(0x42A320, this, arg1);
     }
 
     // 0x42A400 | ?ProcessChat@mmPopup@@QAEXXZ
@@ -85,15 +85,15 @@ public:
     }
 
     // 0x42A4B0 | ?ProcessKeymap@mmPopup@@QAEXH@Z
-    inline void ProcessKeymap(int32_t arg1)
+    inline void ProcessKeymap(i32 arg1)
     {
-        return stub<member_func_t<void, mmPopup, int32_t>>(0x42A4B0, this, arg1);
+        return stub<member_func_t<void, mmPopup, i32>>(0x42A4B0, this, arg1);
     }
 
     // 0x42A5E0 | ?ShowResults@mmPopup@@QAEXH@Z
-    inline void ShowResults(int32_t arg1)
+    inline void ShowResults(i32 arg1)
     {
-        return stub<member_func_t<void, mmPopup, int32_t>>(0x42A5E0, this, arg1);
+        return stub<member_func_t<void, mmPopup, i32>>(0x42A5E0, this, arg1);
     }
 
     // 0x42A6D0 | ?ShowRoster@mmPopup@@QAEXXZ

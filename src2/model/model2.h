@@ -1,6 +1,6 @@
 /*
     OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2019 Brick
+    Copyright (C) 2020 0x1F9F1
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -37,9 +37,9 @@
 */
 
 // 0x59A1E0 | ?UnderscoreSpaces@@YAXPADH@Z
-inline void UnderscoreSpaces(char* arg1, int32_t arg2)
+inline void UnderscoreSpaces(char* arg1, i32 arg2)
 {
-    return stub<cdecl_t<void, char*, int32_t>>(0x59A1E0, arg1, arg2);
+    return stub<cdecl_t<void, char*, i32>>(0x59A1E0, arg1, arg2);
 }
 
 class modModel
@@ -58,23 +58,23 @@ public:
     }
 
     // 0x597D00 | ?Draw@modModel@@QBEXPBVMatrix44@@PAVmodShader@@I@Z
-    inline void Draw(class Matrix44 const* arg1, class modShader* arg2, uint32_t arg3)
+    inline void Draw(class Matrix44 const* arg1, class modShader* arg2, u32 arg3)
     {
-        return stub<member_func_t<void, modModel, class Matrix44 const*, class modShader*, uint32_t>>(
+        return stub<member_func_t<void, modModel, class Matrix44 const*, class modShader*, u32>>(
             0x597D00, this, arg1, arg2, arg3);
     }
 
     // 0x597EA0 | ?DrawWithTexGenCoords@modModel@@QBEXPBVMatrix44@@AAVgfxTexture@@I@Z
-    inline void DrawWithTexGenCoords(class Matrix44 const* arg1, class gfxTexture& arg2, uint32_t arg3)
+    inline void DrawWithTexGenCoords(class Matrix44 const* arg1, class gfxTexture& arg2, u32 arg3)
     {
-        return stub<member_func_t<void, modModel, class Matrix44 const*, class gfxTexture&, uint32_t>>(
+        return stub<member_func_t<void, modModel, class Matrix44 const*, class gfxTexture&, u32>>(
             0x597EA0, this, arg1, arg2, arg3);
     }
 
     // 0x597F00 | ?DrawPlain@modModel@@QBEXPBVMatrix44@@I@Z
-    inline void DrawPlain(class Matrix44 const* arg1, uint32_t arg2)
+    inline void DrawPlain(class Matrix44 const* arg1, u32 arg2)
     {
-        return stub<member_func_t<void, modModel, class Matrix44 const*, uint32_t>>(0x597F00, this, arg1, arg2);
+        return stub<member_func_t<void, modModel, class Matrix44 const*, u32>>(0x597F00, this, arg1, arg2);
     }
 
     // 0x597FB0 | ?GetBoundingBox@modModel@@QBEXAAVVector3@@0PAVMatrix34@@@Z
@@ -85,9 +85,9 @@ public:
     }
 
     // 0x598190 | ?GetAdjunctCount@modModel@@QBEHXZ
-    inline int32_t GetAdjunctCount()
+    inline i32 GetAdjunctCount()
     {
-        return stub<member_func_t<int32_t, modModel>>(0x598190, this);
+        return stub<member_func_t<i32, modModel>>(0x598190, this);
     }
 
     // 0x5981C0 | ?CopyShaders@modModel@@QBEPAVmodShader@@XZ
@@ -97,15 +97,15 @@ public:
     }
 
     // 0x598230 | ?GetPosition@modModel@@QBEAAVVector3@@AAV2@H@Z
-    inline class Vector3& GetPosition(class Vector3& arg1, int32_t arg2)
+    inline class Vector3& GetPosition(class Vector3& arg1, i32 arg2)
     {
-        return stub<member_func_t<class Vector3&, modModel, class Vector3&, int32_t>>(0x598230, this, arg1, arg2);
+        return stub<member_func_t<class Vector3&, modModel, class Vector3&, i32>>(0x598230, this, arg1, arg2);
     }
 
     // 0x598290 | ?SetPosition@modModel@@QBEXABVVector3@@H@Z
-    inline void SetPosition(class Vector3 const& arg1, int32_t arg2)
+    inline void SetPosition(class Vector3 const& arg1, i32 arg2)
     {
-        return stub<member_func_t<void, modModel, class Vector3 const&, int32_t>>(0x598290, this, arg1, arg2);
+        return stub<member_func_t<void, modModel, class Vector3 const&, i32>>(0x598290, this, arg1, arg2);
     }
 
     // 0x5982F0 | ?LoadAscii@modModel@@AAE_NAAVdatTokenizer@@@Z
