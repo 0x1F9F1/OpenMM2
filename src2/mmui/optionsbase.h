@@ -42,49 +42,49 @@ public:
     // OptionsBase::`vftable' @ 0x5B4AD8
 
     // 0x50D230 | ??0OptionsBase@@QAE@H@Z
-    inline OptionsBase(i32 arg1)
+    OptionsBase(i32 arg1)
     {
         stub<member_func_t<void, OptionsBase, i32>>(0x50D230, this, arg1);
     }
 
     // 0x50D3C0 | ?CreateTitle@OptionsBase@@QAEXPAULocString@@@Z
-    inline void CreateTitle(struct LocString* arg1)
+    void CreateTitle(struct LocString* arg1)
     {
         return stub<member_func_t<void, OptionsBase, struct LocString*>>(0x50D3C0, this, arg1);
     }
 
     // 0x50D3F0 | ??1OptionsBase@@UAE@XZ
-    inline ~OptionsBase() override
+    ~OptionsBase() override
     {
         stub<member_func_t<void, OptionsBase>>(0x50D3F0, this);
     }
 
     // 0x4F5460 | ?IsAnOptionMenu@OptionsBase@@UAEHXZ
-    inline i32 IsAnOptionMenu() override
+    i32 IsAnOptionMenu() override
     {
         return stub<member_func_t<i32, OptionsBase>>(0x4F5460, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline void CancelAction()
+    virtual void CancelAction()
     {
         return stub<member_func_t<void, OptionsBase>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline void DoneAction()
+    virtual void DoneAction()
     {
         return stub<member_func_t<void, OptionsBase>>(0x582519, this);
     }
 
     // 0x50D4B0 | ?ResetDefaultAction@OptionsBase@@UAEXXZ
-    virtual inline void ResetDefaultAction()
+    virtual void ResetDefaultAction()
     {
         return stub<member_func_t<void, OptionsBase>>(0x50D4B0, this);
     }
 
     // 0x4F5450 | ?StoreCurrentSetup@OptionsBase@@UAEXXZ
-    virtual inline void StoreCurrentSetup()
+    virtual void StoreCurrentSetup()
     {
         return stub<member_func_t<void, OptionsBase>>(0x4F5450, this);
     }

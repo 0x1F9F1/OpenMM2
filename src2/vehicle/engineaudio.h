@@ -51,85 +51,85 @@ struct vehEngineAudio
 {
 public:
     // 0x4DD8B0 | ??0vehEngineAudio@@QAE@XZ
-    inline vehEngineAudio()
+    vehEngineAudio()
     {
         stub<member_func_t<void, vehEngineAudio>>(0x4DD8B0, this);
     }
 
     // 0x4DD930 | ?GetSoundIndex@vehEngineAudio@@QAEHH@Z
-    inline i32 GetSoundIndex(i32 arg1)
+    i32 GetSoundIndex(i32 arg1)
     {
         return stub<member_func_t<i32, vehEngineAudio, i32>>(0x4DD930, this, arg1);
     }
 
     // 0x4DD950 | ?Stop@vehEngineAudio@@QAEXXZ
-    inline void Stop()
+    void Stop()
     {
         return stub<member_func_t<void, vehEngineAudio>>(0x4DD950, this);
     }
 
     // 0x4DD980 | ?UpdateRPM@vehEngineAudio@@QAEXMMMM@Z
-    inline void UpdateRPM(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
+    void UpdateRPM(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
         return stub<member_func_t<void, vehEngineAudio, f32, f32, f32, f32>>(0x4DD980, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4DD9C0 | ?UpdateRPM@vehEngineAudio@@QAEXM@Z
-    inline void UpdateRPM(f32 arg1)
+    void UpdateRPM(f32 arg1)
     {
         return stub<member_func_t<void, vehEngineAudio, f32>>(0x4DD9C0, this, arg1);
     }
 
     // 0x4DD9F0 | ?EchoOn@vehEngineAudio@@QAEXM@Z
-    inline void EchoOn(f32 arg1)
+    void EchoOn(f32 arg1)
     {
         return stub<member_func_t<void, vehEngineAudio, f32>>(0x4DD9F0, this, arg1);
     }
 
     // 0x4DDA20 | ?EchoOff@vehEngineAudio@@QAEXXZ
-    inline void EchoOff()
+    void EchoOff()
     {
         return stub<member_func_t<void, vehEngineAudio>>(0x4DDA20, this);
     }
 
     // 0x4DDA50 | ?Enable3DMode@vehEngineAudio@@QAEXPAVVector3@@@Z
-    inline void Enable3DMode(class Vector3* arg1)
+    void Enable3DMode(class Vector3* arg1)
     {
         return stub<member_func_t<void, vehEngineAudio, class Vector3*>>(0x4DDA50, this, arg1);
     }
 
     // 0x4DDA60 | ?Disable3DMode@vehEngineAudio@@QAEXXZ
-    inline void Disable3DMode()
+    void Disable3DMode()
     {
         return stub<member_func_t<void, vehEngineAudio>>(0x4DDA60, this);
     }
 
     // 0x4DDA70 | ?AssignSounds@vehEngineAudio@@QAEXH@Z
-    inline void AssignSounds(i32 arg1)
+    void AssignSounds(i32 arg1)
     {
         return stub<member_func_t<void, vehEngineAudio, i32>>(0x4DDA70, this, arg1);
     }
 
     // 0x4DDAC0 | ?UnAssignSounds@vehEngineAudio@@QAEXXZ
-    inline void UnAssignSounds()
+    void UnAssignSounds()
     {
         return stub<member_func_t<void, vehEngineAudio>>(0x4DDAC0, this);
     }
 
     // 0x4DDAF0 | ?Load@vehEngineAudio@@QAEHPAVStream@@@Z
-    inline i32 Load(class Stream* arg1)
+    i32 Load(class Stream* arg1)
     {
         return stub<member_func_t<i32, vehEngineAudio, class Stream*>>(0x4DDAF0, this, arg1);
     }
 
     // 0x4DDCD0 | ?Silence@vehEngineAudio@@QAEXH@Z
-    inline void Silence(i32 arg1)
+    void Silence(i32 arg1)
     {
         return stub<member_func_t<void, vehEngineAudio, i32>>(0x4DDCD0, this, arg1);
     }
 
     // 0x4DDD00 | ?SetPan@vehEngineAudio@@QAEXM@Z
-    inline void SetPan(f32 arg1)
+    void SetPan(f32 arg1)
     {
         return stub<member_func_t<void, vehEngineAudio, f32>>(0x4DDD00, this, arg1);
     }

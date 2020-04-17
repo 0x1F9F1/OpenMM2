@@ -60,139 +60,139 @@ public:
     // RaceMenuBase::`vftable' @ 0x5B4630
 
     // 0x506BD0 | ??0RaceMenuBase@@QAE@H@Z
-    inline RaceMenuBase(i32 arg1)
+    RaceMenuBase(i32 arg1)
     {
         stub<member_func_t<void, RaceMenuBase, i32>>(0x506BD0, this, arg1);
     }
 
     // 0x506CC0 | ?Init@RaceMenuBase@@QAEXH@Z
-    inline void Init(i32 arg1)
+    void Init(i32 arg1)
     {
         return stub<member_func_t<void, RaceMenuBase, i32>>(0x506CC0, this, arg1);
     }
 
     // 0x507DF0 | ?FocusDescription@RaceMenuBase@@QAEXHH@Z
-    inline void FocusDescription(i32 arg1, i32 arg2)
+    void FocusDescription(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, RaceMenuBase, i32, i32>>(0x507DF0, this, arg1, arg2);
     }
 
     // 0x507E40 | ?WidgetOnOff@RaceMenuBase@@QAEXHPAVuiWidget@@@Z
-    inline void WidgetOnOff(i32 arg1, class uiWidget* arg2)
+    void WidgetOnOff(i32 arg1, class uiWidget* arg2)
     {
         return stub<member_func_t<void, RaceMenuBase, i32, class uiWidget*>>(0x507E40, this, arg1, arg2);
     }
 
     // 0x507EB0 | ?SetRW@RaceMenuBase@@QAEXXZ
-    inline void SetRW()
+    void SetRW()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x507EB0, this);
     }
 
     // 0x5082C0 | ?CheatCallback@RaceMenuBase@@QAEXXZ
-    inline void CheatCallback()
+    void CheatCallback()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x5082C0, this);
     }
 
     // 0x5082D0 | ?SyncRaceState@RaceMenuBase@@QAEXXZ
-    inline void SyncRaceState()
+    void SyncRaceState()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x5082D0, this);
     }
 
     // 0x508350 | ?CityChange@RaceMenuBase@@QAEXXZ
-    inline void CityChange()
+    void CityChange()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508350, this);
     }
 
     // 0x5084C0 | ?AnotherCityChangeCB@RaceMenuBase@@QAEXXZ
-    inline void AnotherCityChangeCB()
+    void AnotherCityChangeCB()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x5084C0, this);
     }
 
     // 0x508540 | ?GameCallback@RaceMenuBase@@QAEXXZ
-    inline void GameCallback()
+    void GameCallback()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508540, this);
     }
 
     // 0x5085C0 | ?LapsCallback@RaceMenuBase@@QAEXXZ
-    inline void LapsCallback()
+    void LapsCallback()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x5085C0, this);
     }
 
     // 0x5085D0 | ?AICallback@RaceMenuBase@@QAEXXZ
-    inline void AICallback()
+    void AICallback()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x5085D0, this);
     }
 
     // 0x508620 | ?ChangeLocalVals@RaceMenuBase@@QAEXXZ
-    inline void ChangeLocalVals()
+    void ChangeLocalVals()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508620, this);
     }
 
     // 0x5088C0 | ?SetStateRace@RaceMenuBase@@QAEXXZ
-    inline void SetStateRace()
+    void SetStateRace()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x5088C0, this);
     }
 
     // 0x508C90 | ?LoadRaceMap@RaceMenuBase@@QAEXXZ
-    inline void LoadRaceMap()
+    void LoadRaceMap()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508C90, this);
     }
 
     // 0x508D20 | ?DecRaceName@RaceMenuBase@@QAEXXZ
-    inline void DecRaceName()
+    void DecRaceName()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508D20, this);
     }
 
     // 0x508DD0 | ?IncRaceName@RaceMenuBase@@QAEXXZ
-    inline void IncRaceName()
+    void IncRaceName()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508DD0, this);
     }
 
     // 0x508E80 | ?IncLocale@RaceMenuBase@@QAEXXZ
-    inline void IncLocale()
+    void IncLocale()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508E80, this);
     }
 
     // 0x508EB0 | ?DecLocale@RaceMenuBase@@QAEXXZ
-    inline void DecLocale()
+    void DecLocale()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508EB0, this);
     }
 
     // 0x508ED0 | ?IncTime@RaceMenuBase@@QAEXXZ
-    inline void IncTime()
+    void IncTime()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508ED0, this);
     }
 
     // 0x508F00 | ?DecTime@RaceMenuBase@@QAEXXZ
-    inline void DecTime()
+    void DecTime()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508F00, this);
     }
 
     // 0x508F30 | ?IncWeather@RaceMenuBase@@QAEXXZ
-    inline void IncWeather()
+    void IncWeather()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508F30, this);
     }
 
     // 0x508F60 | ?DecWeather@RaceMenuBase@@QAEXXZ
-    inline void DecWeather()
+    void DecWeather()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508F60, this);
     }
@@ -207,25 +207,25 @@ public:
     static inline extern_var(0x6B0F30, class mmRaceData, BlitzData);
 
     // 0x507D30 | ??1RaceMenuBase@@UAE@XZ
-    inline ~RaceMenuBase() override
+    ~RaceMenuBase() override
     {
         stub<member_func_t<void, RaceMenuBase>>(0x507D30, this);
     }
 
     // 0x507DC0 | ?PreSetup@RaceMenuBase@@UAEXXZ
-    inline void PreSetup() override
+    void PreSetup() override
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x507DC0, this);
     }
 
     // 0x505450 | ?SetCRWidgets@RaceMenuBase@@UAEXH@Z
-    virtual inline void SetCRWidgets(i32 arg1)
+    virtual void SetCRWidgets(i32 arg1)
     {
         return stub<member_func_t<void, RaceMenuBase, i32>>(0x505450, this, arg1);
     }
 
     // 0x505460 | ?InitCRWidgets@RaceMenuBase@@UAEXXZ
-    virtual inline void InitCRWidgets()
+    virtual void InitCRWidgets()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x505460, this);
     }

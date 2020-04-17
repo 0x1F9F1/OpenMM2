@@ -39,73 +39,73 @@ struct aiCableCarAudioData
 {
 public:
     // 0x59E2B0 | ??0aiCableCarAudioData@@QAE@XZ
-    inline aiCableCarAudioData()
+    aiCableCarAudioData()
     {
         stub<member_func_t<void, aiCableCarAudioData>>(0x59E2B0, this);
     }
 
     // 0x59E340 | ??1aiCableCarAudioData@@QAE@XZ
-    inline ~aiCableCarAudioData()
+    ~aiCableCarAudioData()
     {
         stub<member_func_t<void, aiCableCarAudioData>>(0x59E340, this);
     }
 
     // 0x59E350 | ?Stop@aiCableCarAudioData@@QAEXXZ
-    inline void Stop()
+    void Stop()
     {
         return stub<member_func_t<void, aiCableCarAudioData>>(0x59E350, this);
     }
 
     // 0x59E380 | ?GetGoPtr@aiCableCarAudioData@@QAEPAVAudSoundBase@@XZ
-    inline class AudSoundBase* GetGoPtr()
+    class AudSoundBase* GetGoPtr()
     {
         return stub<member_func_t<class AudSoundBase*, aiCableCarAudioData>>(0x59E380, this);
     }
 
     // 0x59E390 | ?GetStopPtr@aiCableCarAudioData@@QAEPAVAudSoundBase@@XZ
-    inline class AudSoundBase* GetStopPtr()
+    class AudSoundBase* GetStopPtr()
     {
         return stub<member_func_t<class AudSoundBase*, aiCableCarAudioData>>(0x59E390, this);
     }
 
     // 0x59E3A0 | ?GetLoopPtr@aiCableCarAudioData@@QAEPAVAudSoundBase@@XZ
-    inline class AudSoundBase* GetLoopPtr()
+    class AudSoundBase* GetLoopPtr()
     {
         return stub<member_func_t<class AudSoundBase*, aiCableCarAudioData>>(0x59E3A0, this);
     }
 
     // 0x59E3B0 | ?GetGetSpeedPtr@aiCableCarAudioData@@QAEPAVAudSoundBase@@XZ
-    inline class AudSoundBase* GetGetSpeedPtr()
+    class AudSoundBase* GetGetSpeedPtr()
     {
         return stub<member_func_t<class AudSoundBase*, aiCableCarAudioData>>(0x59E3B0, this);
     }
 
     // 0x59E3C0 | ?GetCrossIntersectionPtr@aiCableCarAudioData@@QAEPAVAudSoundBase@@XZ
-    inline class AudSoundBase* GetCrossIntersectionPtr()
+    class AudSoundBase* GetCrossIntersectionPtr()
     {
         return stub<member_func_t<class AudSoundBase*, aiCableCarAudioData>>(0x59E3C0, this);
     }
 
     // 0x59E3D0 | ?UpdatePlay@aiCableCarAudioData@@QAEXMMM@Z
-    inline void UpdatePlay(f32 arg1, f32 arg2, f32 arg3)
+    void UpdatePlay(f32 arg1, f32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, aiCableCarAudioData, f32, f32, f32>>(0x59E3D0, this, arg1, arg2, arg3);
     }
 
     // 0x59E580 | ?UpdateState@aiCableCarAudioData@@QAEXMM@Z
-    inline void UpdateState(f32 arg1, f32 arg2)
+    void UpdateState(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, aiCableCarAudioData, f32, f32>>(0x59E580, this, arg1, arg2);
     }
 
     // 0x59E630 | ?AssignSounds@aiCableCarAudioData@@QAEXH@Z
-    inline void AssignSounds(i32 arg1)
+    void AssignSounds(i32 arg1)
     {
         return stub<member_func_t<void, aiCableCarAudioData, i32>>(0x59E630, this, arg1);
     }
 
     // 0x59E6A0 | ?UnAssignSounds@aiCableCarAudioData@@QAEXXZ
-    inline void UnAssignSounds()
+    void UnAssignSounds()
     {
         return stub<member_func_t<void, aiCableCarAudioData>>(0x59E6A0, this);
     }

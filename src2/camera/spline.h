@@ -43,67 +43,67 @@ public:
     // Spline::`vftable' @ 0x5B51B8
 
     // 0x522BC0 | ??0Spline@@QAE@XZ
-    inline Spline()
+    Spline()
     {
         stub<member_func_t<void, Spline>>(0x522BC0, this);
     }
 
     // 0x522BF0 | ?Init@Spline@@QAEXPAMH@Z
-    inline void Init(f32* arg1, i32 arg2)
+    void Init(f32* arg1, i32 arg2)
     {
         return stub<member_func_t<void, Spline, f32*, i32>>(0x522BF0, this, arg1, arg2);
     }
 
     // 0x522D00 | ?InRange@Spline@@QAEHXZ
-    inline i32 InRange()
+    i32 InRange()
     {
         return stub<member_func_t<i32, Spline>>(0x522D00, this);
     }
 
     // 0x522D50 | ?CalcCoeff@Spline@@QAEXXZ
-    inline void CalcCoeff()
+    void CalcCoeff()
     {
         return stub<member_func_t<void, Spline>>(0x522D50, this);
     }
 
     // 0x522E60 | ?SetValue@Spline@@QAEXPAM@Z
-    inline void SetValue(f32* arg1)
+    void SetValue(f32* arg1)
     {
         return stub<member_func_t<void, Spline, f32*>>(0x522E60, this, arg1);
     }
 
     // 0x522ED0 | ?SetGoal@Spline@@QAEXPAMM@Z
-    inline void SetGoal(f32* arg1, f32 arg2)
+    void SetGoal(f32* arg1, f32 arg2)
     {
         return stub<member_func_t<void, Spline, f32*, f32>>(0x522ED0, this, arg1, arg2);
     }
 
     // 0x522FB0 | ?Solve@Spline@@QAEXM@Z
-    inline void Solve(f32 arg1)
+    void Solve(f32 arg1)
     {
         return stub<member_func_t<void, Spline, f32>>(0x522FB0, this, arg1);
     }
 
     // 0x5230E0 | ?Print@Spline@@QAEXH@Z
-    inline void Print(i32 arg1)
+    void Print(i32 arg1)
     {
         return stub<member_func_t<void, Spline, i32>>(0x5230E0, this, arg1);
     }
 
     // 0x5231E0 | ?FixTimeStop@Spline@@QAEXXZ
-    inline void FixTimeStop()
+    void FixTimeStop()
     {
         return stub<member_func_t<void, Spline>>(0x5231E0, this);
     }
 
     // 0x51FD50 | ??1Spline@@UAE@XZ
-    inline ~Spline() override
+    ~Spline() override
     {
         stub<member_func_t<void, Spline>>(0x51FD50, this);
     }
 
     // 0x523210 | ?Update@Spline@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, Spline>>(0x523210, this);
     }

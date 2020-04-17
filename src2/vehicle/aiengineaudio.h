@@ -40,19 +40,19 @@ class aiEngineAudio
 {
 public:
     // 0x4DA720 | ??0aiEngineAudio@@QAE@XZ
-    inline aiEngineAudio()
+    aiEngineAudio()
     {
         stub<member_func_t<void, aiEngineAudio>>(0x4DA720, this);
     }
 
     // 0x4DA740 | ??0aiEngineAudio@@QAE@PAV0@@Z
-    inline aiEngineAudio(class aiEngineAudio* arg1)
+    aiEngineAudio(class aiEngineAudio* arg1)
     {
         stub<member_func_t<void, aiEngineAudio, class aiEngineAudio*>>(0x4DA740, this, arg1);
     }
 
     // 0x4DA820 | ??1aiEngineAudio@@QAE@XZ
-    inline ~aiEngineAudio()
+    ~aiEngineAudio()
     {
         stub<member_func_t<void, aiEngineAudio>>(0x4DA820, this);
     }
@@ -70,49 +70,49 @@ public:
     }
 
     // 0x4DA9D0 | ?ReadCSV@aiEngineAudio@@AAEHPAVStream@@@Z
-    inline i32 ReadCSV(class Stream* arg1)
+    i32 ReadCSV(class Stream* arg1)
     {
         return stub<member_func_t<i32, aiEngineAudio, class Stream*>>(0x4DA9D0, this, arg1);
     }
 
     // 0x4DAC10 | ?EchoOn@aiEngineAudio@@QAEXM@Z
-    inline void EchoOn(f32 arg1)
+    void EchoOn(f32 arg1)
     {
         return stub<member_func_t<void, aiEngineAudio, f32>>(0x4DAC10, this, arg1);
     }
 
     // 0x4DAC40 | ?EchoOff@aiEngineAudio@@QAEXXZ
-    inline void EchoOff()
+    void EchoOff()
     {
         return stub<member_func_t<void, aiEngineAudio>>(0x4DAC40, this);
     }
 
     // 0x4DAC50 | ?UpdateEcho@aiEngineAudio@@QAEXXZ
-    inline void UpdateEcho()
+    void UpdateEcho()
     {
         return stub<member_func_t<void, aiEngineAudio>>(0x4DAC50, this);
     }
 
     // 0x4DAC60 | ?AssignSounds@aiEngineAudio@@QAEXH@Z
-    inline void AssignSounds(i32 arg1)
+    void AssignSounds(i32 arg1)
     {
         return stub<member_func_t<void, aiEngineAudio, i32>>(0x4DAC60, this, arg1);
     }
 
     // 0x4DAC80 | ?UnAssignSounds@aiEngineAudio@@QAEXXZ
-    inline void UnAssignSounds()
+    void UnAssignSounds()
     {
         return stub<member_func_t<void, aiEngineAudio>>(0x4DAC80, this);
     }
 
     // 0x4DACA0 | ?CalculatePitch@aiEngineAudio@@QAEXMMH@Z
-    inline void CalculatePitch(f32 arg1, f32 arg2, i32 arg3)
+    void CalculatePitch(f32 arg1, f32 arg2, i32 arg3)
     {
         return stub<member_func_t<void, aiEngineAudio, f32, f32, i32>>(0x4DACA0, this, arg1, arg2, arg3);
     }
 
     // 0x4DAD30 | ?UpdateDoppler@aiEngineAudio@@QAEXMMM@Z
-    inline void UpdateDoppler(f32 arg1, f32 arg2, f32 arg3)
+    void UpdateDoppler(f32 arg1, f32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, aiEngineAudio, f32, f32, f32>>(0x4DAD30, this, arg1, arg2, arg3);
     }

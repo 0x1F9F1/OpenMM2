@@ -50,112 +50,112 @@ public:
     // mmSlider::`vftable' @ 0x5B3C38
 
     // 0x4F31C0 | ??0mmSlider@@QAE@XZ
-    inline mmSlider()
+    mmSlider()
     {
         stub<member_func_t<void, mmSlider>>(0x4F31C0, this);
     }
 
     // 0x4F3310 | ?Init@mmSlider@@QAEXPADPAVuiWidget@@MMMMHMMHH@Z
-    inline void Init(char* arg1, class uiWidget* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7, f32 arg8,
-        f32 arg9, i32 arg10, i32 arg11)
+    void Init(char* arg1, class uiWidget* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7, f32 arg8, f32 arg9,
+        i32 arg10, i32 arg11)
     {
         return stub<member_func_t<void, mmSlider, char*, class uiWidget*, f32, f32, f32, f32, i32, f32, f32, i32, i32>>(
             0x4F3310, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
     }
 
     // 0x4F3370 | ?LoadBitmap@mmSlider@@QAEXPAD@Z
-    inline void LoadBitmap(char* arg1)
+    void LoadBitmap(char* arg1)
     {
         return stub<member_func_t<void, mmSlider, char*>>(0x4F3370, this, arg1);
     }
 
     // 0x4F3510 | ?SetReadWrite@mmSlider@@QAEXH@Z
-    inline void SetReadWrite(i32 arg1)
+    void SetReadWrite(i32 arg1)
     {
         return stub<member_func_t<void, mmSlider, i32>>(0x4F3510, this, arg1);
     }
 
     // 0x4F3530 | ?IsReadWrite@mmSlider@@QAEHXZ
-    inline i32 IsReadWrite()
+    i32 IsReadWrite()
     {
         return stub<member_func_t<i32, mmSlider>>(0x4F3530, this);
     }
 
     // 0x4F3540 | ?SetValue@mmSlider@@QAEMM@Z
-    inline f32 SetValue(f32 arg1)
+    f32 SetValue(f32 arg1)
     {
         return stub<member_func_t<f32, mmSlider, f32>>(0x4F3540, this, arg1);
     }
 
     // 0x4F35A0 | ?GetScreenHeight@mmSlider@@QAEMXZ
-    inline f32 GetScreenHeight()
+    f32 GetScreenHeight()
     {
         return stub<member_func_t<f32, mmSlider>>(0x4F35A0, this);
     }
 
     // 0x4F35C0 | ?FudgeWidth@mmSlider@@QAEMXZ
-    inline f32 FudgeWidth()
+    f32 FudgeWidth()
     {
         return stub<member_func_t<f32, mmSlider>>(0x4F35C0, this);
     }
 
     // 0x4F35F0 | ?SetPosition@mmSlider@@QAEXMM@Z
-    inline void SetPosition(f32 arg1, f32 arg2)
+    void SetPosition(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, mmSlider, f32, f32>>(0x4F35F0, this, arg1, arg2);
     }
 
     // 0x4F3610 | ?GetSliderHotSpots@mmSlider@@QAEXAAM00000@Z
-    inline void GetSliderHotSpots(f32& arg1, f32& arg2, f32& arg3, f32& arg4, f32& arg5, f32& arg6)
+    void GetSliderHotSpots(f32& arg1, f32& arg2, f32& arg3, f32& arg4, f32& arg5, f32& arg6)
     {
         return stub<member_func_t<void, mmSlider, f32&, f32&, f32&, f32&, f32&, f32&>>(
             0x4F3610, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4F36C0 | ?UpdatePosition@mmSlider@@QAEXXZ
-    inline void UpdatePosition()
+    void UpdatePosition()
     {
         return stub<member_func_t<void, mmSlider>>(0x4F36C0, this);
     }
 
     // 0x4F36F0 | ?Inc@mmSlider@@QAEMXZ
-    inline f32 Inc()
+    f32 Inc()
     {
         return stub<member_func_t<f32, mmSlider>>(0x4F36F0, this);
     }
 
     // 0x4F3710 | ?Dec@mmSlider@@QAEMXZ
-    inline f32 Dec()
+    f32 Dec()
     {
         return stub<member_func_t<f32, mmSlider>>(0x4F3710, this);
     }
 
     // 0x4F3730 | ?SetStep@mmSlider@@QAEXM@Z
-    inline void SetStep(f32 arg1)
+    void SetStep(f32 arg1)
     {
         return stub<member_func_t<void, mmSlider, f32>>(0x4F3730, this, arg1);
     }
 
     // 0x4F37A0 | ?SetRange@mmSlider@@QAEXMM@Z
-    inline void SetRange(f32 arg1, f32 arg2)
+    void SetRange(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, mmSlider, f32, f32>>(0x4F37A0, this, arg1, arg2);
     }
 
     // 0x4F3250 | ??1mmSlider@@UAE@XZ
-    inline ~mmSlider() override
+    ~mmSlider() override
     {
         stub<member_func_t<void, mmSlider>>(0x4F3250, this);
     }
 
     // 0x4F3820 | ?Cull@mmSlider@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, mmSlider>>(0x4F3820, this);
     }
 
     // 0x4F3800 | ?Update@mmSlider@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmSlider>>(0x4F3800, this);
     }

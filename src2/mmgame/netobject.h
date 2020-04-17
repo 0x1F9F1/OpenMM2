@@ -69,130 +69,130 @@ public:
     // mmNetObject::`vftable' @ 0x5B1138
 
     // 0x43C080 | ??0mmNetObject@@QAE@XZ
-    inline mmNetObject()
+    mmNetObject()
     {
         stub<member_func_t<void, mmNetObject>>(0x43C080, this);
     }
 
     // 0x43C260 | ?ResetValues@mmNetObject@@QAEXXZ
-    inline void ResetValues()
+    void ResetValues()
     {
         return stub<member_func_t<void, mmNetObject>>(0x43C260, this);
     }
 
     // 0x43C370 | ?Clear@mmNetObject@@QAEXXZ
-    inline void Clear()
+    void Clear()
     {
         return stub<member_func_t<void, mmNetObject>>(0x43C370, this);
     }
 
     // 0x43C480 | ?Activate@mmNetObject@@QAEXXZ
-    inline void Activate()
+    void Activate()
     {
         return stub<member_func_t<void, mmNetObject>>(0x43C480, this);
     }
 
     // 0x43C4B0 | ?Deactivate@mmNetObject@@QAEXXZ
-    inline void Deactivate()
+    void Deactivate()
     {
         return stub<member_func_t<void, mmNetObject>>(0x43C4B0, this);
     }
 
     // 0x43C4E0 | ?Init@mmNetObject@@QAEXPAVvehCar@@PADMHK1_N@Z
-    inline void Init(class vehCar* arg1, char* arg2, f32 arg3, i32 arg4, u32 arg5, char* arg6, bool arg7)
+    void Init(class vehCar* arg1, char* arg2, f32 arg3, i32 arg4, u32 arg5, char* arg6, bool arg7)
     {
         return stub<member_func_t<void, mmNetObject, class vehCar*, char*, f32, i32, u32, char*, bool>>(
             0x43C4E0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x43C5D0 | ?ReInit@mmNetObject@@QAEXPAVvehCar@@PADMHK1_N@Z
-    inline void ReInit(class vehCar* arg1, char* arg2, f32 arg3, i32 arg4, u32 arg5, char* arg6, bool arg7)
+    void ReInit(class vehCar* arg1, char* arg2, f32 arg3, i32 arg4, u32 arg5, char* arg6, bool arg7)
     {
         return stub<member_func_t<void, mmNetObject, class vehCar*, char*, f32, i32, u32, char*, bool>>(
             0x43C5D0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x43C740 | ?SetCar@mmNetObject@@QAEXPAVvehCar@@@Z
-    inline void SetCar(class vehCar* arg1)
+    void SetCar(class vehCar* arg1)
     {
         return stub<member_func_t<void, mmNetObject, class vehCar*>>(0x43C740, this, arg1);
     }
 
     // 0x43C750 | ?Set@mmNetObject@@QAEXH@Z
-    inline void Set(i32 arg1)
+    void Set(i32 arg1)
     {
         return stub<member_func_t<void, mmNetObject, i32>>(0x43C750, this, arg1);
     }
 
     // 0x43C760 | ?SetActive@mmNetObject@@QAEXH@Z
-    inline void SetActive(i32 arg1)
+    void SetActive(i32 arg1)
     {
         return stub<member_func_t<void, mmNetObject, i32>>(0x43C760, this, arg1);
     }
 
     // 0x43C780 | ?SetScore@mmNetObject@@QAEXH@Z
-    inline void SetScore(i32 arg1)
+    void SetScore(i32 arg1)
     {
         return stub<member_func_t<void, mmNetObject, i32>>(0x43C780, this, arg1);
     }
 
     // 0x43C790 | ?SetInputData@mmNetObject@@QAEXXZ
-    inline void SetInputData()
+    void SetInputData()
     {
         return stub<member_func_t<void, mmNetObject>>(0x43C790, this);
     }
 
     // 0x43C820 | ?SetPositionData@mmNetObject@@QAEHK@Z
-    inline i32 SetPositionData(u32 arg1)
+    i32 SetPositionData(u32 arg1)
     {
         return stub<member_func_t<i32, mmNetObject, u32>>(0x43C820, this, arg1);
     }
 
     // 0x43CC90 | ?InputUpdate@mmNetObject@@QAEXPAUNET_INPUTDATA@@M@Z
-    inline void InputUpdate(struct NET_INPUTDATA* arg1, f32 arg2)
+    void InputUpdate(struct NET_INPUTDATA* arg1, f32 arg2)
     {
         return stub<member_func_t<void, mmNetObject, struct NET_INPUTDATA*, f32>>(0x43CC90, this, arg1, arg2);
     }
 
     // 0x43CD10 | ?PositionUpdate@mmNetObject@@QAEXPAUNET_POSDATA@@M@Z
-    inline void PositionUpdate(struct NET_POSDATA* arg1, f32 arg2)
+    void PositionUpdate(struct NET_POSDATA* arg1, f32 arg2)
     {
         return stub<member_func_t<void, mmNetObject, struct NET_POSDATA*, f32>>(0x43CD10, this, arg1, arg2);
     }
 
     // 0x43D700 | ?GetPositionApproach@mmNetObject@@QAEMABVVector3@@0@Z
-    inline f32 GetPositionApproach(class Vector3 const& arg1, class Vector3 const& arg2)
+    f32 GetPositionApproach(class Vector3 const& arg1, class Vector3 const& arg2)
     {
         return stub<member_func_t<f32, mmNetObject, class Vector3 const&, class Vector3 const&>>(
             0x43D700, this, arg1, arg2);
     }
 
     // 0x43D750 | ?GetAngleApproach@mmNetObject@@QAEMMM@Z
-    inline f32 GetAngleApproach(f32 arg1, f32 arg2)
+    f32 GetAngleApproach(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<f32, mmNetObject, f32, f32>>(0x43D750, this, arg1, arg2);
     }
 
     // 0x43D760 | ?Predict@mmNetObject@@QAEXXZ
-    inline void Predict()
+    void Predict()
     {
         return stub<member_func_t<void, mmNetObject>>(0x43D760, this);
     }
 
     // 0x43C240 | ??1mmNetObject@@UAE@XZ
-    inline ~mmNetObject() override
+    ~mmNetObject() override
     {
         stub<member_func_t<void, mmNetObject>>(0x43C240, this);
     }
 
     // 0x43D980 | ?Cull@mmNetObject@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, mmNetObject>>(0x43D980, this);
     }
 
     // 0x43D850 | ?Update@mmNetObject@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmNetObject>>(0x43D850, this);
     }
@@ -202,13 +202,13 @@ struct mmAccelCompute
 {
 public:
     // 0x43BC10 | ?Init@mmAccelCompute@@QAEHVVector3@@0@Z
-    inline i32 Init(class Vector3 arg1, class Vector3 arg2)
+    i32 Init(class Vector3 arg1, class Vector3 arg2)
     {
         return stub<member_func_t<i32, mmAccelCompute, class Vector3, class Vector3>>(0x43BC10, this, arg1, arg2);
     }
 
     // 0x43BC60 | ?SetLatest@mmAccelCompute@@QAEXVVector3@@M@Z
-    inline void SetLatest(class Vector3 arg1, f32 arg2)
+    void SetLatest(class Vector3 arg1, f32 arg2)
     {
         return stub<member_func_t<void, mmAccelCompute, class Vector3, f32>>(0x43BC60, this, arg1, arg2);
     }
@@ -218,32 +218,32 @@ struct mmNetPath
 {
 public:
     // 0x43BD70 | ??0mmNetPath@@QAE@XZ
-    inline mmNetPath()
+    mmNetPath()
     {
         stub<member_func_t<void, mmNetPath>>(0x43BD70, this);
     }
 
     // 0x43BDB0 | ??1mmNetPath@@QAE@XZ
-    inline ~mmNetPath()
+    ~mmNetPath()
     {
         stub<member_func_t<void, mmNetPath>>(0x43BDB0, this);
     }
 
     // 0x43BDC0 | ?Reset@mmNetPath@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, mmNetPath>>(0x43BDC0, this);
     }
 
     // 0x43BDF0 | ?Compute@mmNetPath@@QAEXAAVVector3@@000@Z
-    inline void Compute(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3, class Vector3& arg4)
+    void Compute(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3, class Vector3& arg4)
     {
         return stub<member_func_t<void, mmNetPath, class Vector3&, class Vector3&, class Vector3&, class Vector3&>>(
             0x43BDF0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x43BFE0 | ?Solve@mmNetPath@@QAEXAAVVector3@@0M@Z
-    inline void Solve(class Vector3& arg1, class Vector3& arg2, f32 arg3)
+    void Solve(class Vector3& arg1, class Vector3& arg2, f32 arg3)
     {
         return stub<member_func_t<void, mmNetPath, class Vector3&, class Vector3&, f32>>(
             0x43BFE0, this, arg1, arg2, arg3);

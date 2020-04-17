@@ -45,14 +45,14 @@ public:
     // UITextRoller::`vftable' @ 0x5B344C
 
     // 0x4E88D0 | ??0UITextRoller@@QAE@XZ
-    inline UITextRoller()
+    UITextRoller()
     {
         stub<member_func_t<void, UITextRoller>>(0x4E88D0, this);
     }
 
     // 0x4E8A10 | ?Init@UITextRoller@@QAEXPAULocString@@PAHMMMMVstring@@HHHHVdatCallback@@PAVUIMenu@@@Z
-    inline void Init(struct LocString* arg1, i32* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, class string arg7,
-        i32 arg8, i32 arg9, i32 arg10, i32 arg11, class datCallback arg12, class UIMenu* arg13)
+    void Init(struct LocString* arg1, i32* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, class string arg7, i32 arg8,
+        i32 arg9, i32 arg10, i32 arg11, class datCallback arg12, class UIMenu* arg13)
     {
         return stub<member_func_t<void, UITextRoller, struct LocString*, i32*, f32, f32, f32, f32, class string, i32,
             i32, i32, i32, class datCallback, class UIMenu*>>(
@@ -60,67 +60,67 @@ public:
     }
 
     // 0x4E9020 | ?EvalMouseXY@UITextRoller@@QAEXMM@Z
-    inline void EvalMouseXY(f32 arg1, f32 arg2)
+    void EvalMouseXY(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, UITextRoller, f32, f32>>(0x4E9020, this, arg1, arg2);
     }
 
     // 0x4E9100 | ?SetValue@UITextRoller@@QAEHH@Z
-    inline i32 SetValue(i32 arg1)
+    i32 SetValue(i32 arg1)
     {
         return stub<member_func_t<i32, UITextRoller, i32>>(0x4E9100, this, arg1);
     }
 
     // 0x4E91A0 | ?SetString@UITextRoller@@QAEXVstring@@@Z
-    inline void SetString(class string arg1)
+    void SetString(class string arg1)
     {
         return stub<member_func_t<void, UITextRoller, class string>>(0x4E91A0, this, arg1);
     }
 
     // 0x4E9270 | ?SetText@UITextRoller@@QAEXXZ
-    inline void SetText()
+    void SetText()
     {
         return stub<member_func_t<void, UITextRoller>>(0x4E9270, this);
     }
 
     // 0x4E92E0 | ?Inc@UITextRoller@@QAEHXZ
-    inline i32 Inc()
+    i32 Inc()
     {
         return stub<member_func_t<i32, UITextRoller>>(0x4E92E0, this);
     }
 
     // 0x4E9300 | ?Dec@UITextRoller@@QAEHXZ
-    inline i32 Dec()
+    i32 Dec()
     {
         return stub<member_func_t<i32, UITextRoller>>(0x4E9300, this);
     }
 
     // 0x4E89A0 | ??1UITextRoller@@UAE@XZ
-    inline ~UITextRoller() override
+    ~UITextRoller() override
     {
         stub<member_func_t<void, UITextRoller>>(0x4E89A0, this);
     }
 
     // 0x4E9320 | ?Cull@UITextRoller@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, UITextRoller>>(0x4E9320, this);
     }
 
     // 0x4E8EA0 | ?Update@UITextRoller@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, UITextRoller>>(0x4E8EA0, this);
     }
 
     // 0x4E8F30 | ?Action@UITextRoller@@UAEXTeqEvent@@@Z
-    inline void Action(union eqEvent arg1) override
+    void Action(union eqEvent arg1) override
     {
         return stub<member_func_t<void, UITextRoller, union eqEvent>>(0x4E8F30, this, arg1);
     }
 
     // 0x4E8F00 | ?Switch@UITextRoller@@UAEXH@Z
-    inline void Switch(i32 arg1) override
+    void Switch(i32 arg1) override
     {
         return stub<member_func_t<void, UITextRoller, i32>>(0x4E8F00, this, arg1);
     }

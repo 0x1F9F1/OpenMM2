@@ -58,61 +58,61 @@ public:
     // mmVehList::`vftable' @ 0x5B5204
 
     // 0x524550 | ??0mmVehList@@QAE@XZ
-    inline mmVehList()
+    mmVehList()
     {
         stub<member_func_t<void, mmVehList>>(0x524550, this);
     }
 
     // 0x5245D0 | ?Init@mmVehList@@QAEXH@Z
-    inline void Init(i32 arg1)
+    void Init(i32 arg1)
     {
         return stub<member_func_t<void, mmVehList, i32>>(0x5245D0, this, arg1);
     }
 
     // 0x5245E0 | ?GetVehicleInfo@mmVehList@@QAEPAVmmVehInfo@@H@Z
-    inline class mmVehInfo* GetVehicleInfo(i32 arg1)
+    class mmVehInfo* GetVehicleInfo(i32 arg1)
     {
         return stub<member_func_t<class mmVehInfo*, mmVehList, i32>>(0x5245E0, this, arg1);
     }
 
     // 0x524610 | ?GetVehicleInfo@mmVehList@@QAEPAVmmVehInfo@@PAD@Z
-    inline class mmVehInfo* GetVehicleInfo(char* arg1)
+    class mmVehInfo* GetVehicleInfo(char* arg1)
     {
         return stub<member_func_t<class mmVehInfo*, mmVehList, char*>>(0x524610, this, arg1);
     }
 
     // 0x524690 | ?SetDefaultVehicle@mmVehList@@QAEXPAD@Z
-    inline void SetDefaultVehicle(char* arg1)
+    void SetDefaultVehicle(char* arg1)
     {
         return stub<member_func_t<void, mmVehList, char*>>(0x524690, this, arg1);
     }
 
     // 0x5246B0 | ?GetVehicleID@mmVehList@@QAEHPAD@Z
-    inline i32 GetVehicleID(char* arg1)
+    i32 GetVehicleID(char* arg1)
     {
         return stub<member_func_t<i32, mmVehList, char*>>(0x5246B0, this, arg1);
     }
 
     // 0x524720 | ?Load@mmVehList@@QAEXPAD@Z
-    inline void Load(char* arg1)
+    void Load(char* arg1)
     {
         return stub<member_func_t<void, mmVehList, char*>>(0x524720, this, arg1);
     }
 
     // 0x524810 | ?Print@mmVehList@@QAEXXZ
-    inline void Print()
+    void Print()
     {
         return stub<member_func_t<void, mmVehList>>(0x524810, this);
     }
 
     // 0x524950 | ?LoadAll@mmVehList@@QAEXXZ
-    inline void LoadAll()
+    void LoadAll()
     {
         return stub<member_func_t<void, mmVehList>>(0x524950, this);
     }
 
     // 0x524570 | ??1mmVehList@@UAE@XZ
-    virtual inline ~mmVehList()
+    virtual ~mmVehList()
     {
         stub<member_func_t<void, mmVehList>>(0x524570, this);
     }

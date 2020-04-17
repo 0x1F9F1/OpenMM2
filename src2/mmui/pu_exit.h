@@ -34,14 +34,14 @@ public:
     // PUExit::`vftable' @ 0x5B4A44
 
     // 0x50CAF0 | ??0PUExit@@QAE@HMMMMPAD@Z
-    inline PUExit(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    PUExit(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
     {
         stub<member_func_t<void, PUExit, i32, f32, f32, f32, f32, char*>>(
             0x50CAF0, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x50CC50 | ??1PUExit@@UAE@XZ
-    inline ~PUExit() override
+    ~PUExit() override
     {
         stub<member_func_t<void, PUExit>>(0x50CC50, this);
     }

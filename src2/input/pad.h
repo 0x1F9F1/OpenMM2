@@ -45,19 +45,19 @@ class ioPad
 {
 public:
     // 0x4BB4E0 | ?Begin@ioPad@@AAEXH@Z
-    inline void Begin(i32 arg1)
+    void Begin(i32 arg1)
     {
         return stub<member_func_t<void, ioPad, i32>>(0x4BB4E0, this, arg1);
     }
 
     // 0x4BB520 | ?End@ioPad@@AAEXXZ
-    inline void End()
+    void End()
     {
         return stub<member_func_t<void, ioPad>>(0x4BB520, this);
     }
 
     // 0x4BB530 | ?Update@ioPad@@AAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, ioPad>>(0x4BB530, this);
     }
@@ -81,13 +81,13 @@ public:
     }
 
     // 0x4BB7C0 | ??0ioPad@@QAE@XZ
-    inline ioPad()
+    ioPad()
     {
         stub<member_func_t<void, ioPad>>(0x4BB7C0, this);
     }
 
     // 0x4BB7E0 | ??1ioPad@@QAE@XZ
-    inline ~ioPad()
+    ~ioPad()
     {
         stub<member_func_t<void, ioPad>>(0x4BB7E0, this);
     }

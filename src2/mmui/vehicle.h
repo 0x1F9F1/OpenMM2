@@ -38,37 +38,37 @@ public:
     // Vehicle::`vftable' @ 0x5B453C
 
     // 0x5056D0 | ??0Vehicle@@QAE@H@Z
-    inline Vehicle(i32 arg1)
+    Vehicle(i32 arg1)
     {
         stub<member_func_t<void, Vehicle, i32>>(0x5056D0, this, arg1);
     }
 
     // 0x5057C0 | ?SetSubMenu@Vehicle@@QAEXH@Z
-    inline void SetSubMenu(i32 arg1)
+    void SetSubMenu(i32 arg1)
     {
         return stub<member_func_t<void, Vehicle, i32>>(0x5057C0, this, arg1);
     }
 
     // 0x5057E0 | ?SetSubMenuButtons@Vehicle@@QAEXXZ
-    inline void SetSubMenuButtons()
+    void SetSubMenuButtons()
     {
         return stub<member_func_t<void, Vehicle>>(0x5057E0, this);
     }
 
     // 0x5057B0 | ??1Vehicle@@UAE@XZ
-    inline ~Vehicle() override
+    ~Vehicle() override
     {
         stub<member_func_t<void, Vehicle>>(0x5057B0, this);
     }
 
     // 0x505800 | ?PreSetup@Vehicle@@UAEXXZ
-    inline void PreSetup() override
+    void PreSetup() override
     {
         return stub<member_func_t<void, Vehicle>>(0x505800, this);
     }
 
     // 0x505810 | ?PostSetup@Vehicle@@UAEXXZ
-    inline void PostSetup() override
+    void PostSetup() override
     {
         return stub<member_func_t<void, Vehicle>>(0x505810, this);
     }

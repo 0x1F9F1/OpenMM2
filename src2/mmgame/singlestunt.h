@@ -83,211 +83,211 @@ public:
     // mmSingleStunt::`vftable' @ 0x5B059C
 
     // 0x415B00 | ??0mmSingleStunt@@QAE@XZ
-    inline mmSingleStunt()
+    mmSingleStunt()
     {
         stub<member_func_t<void, mmSingleStunt>>(0x415B00, this);
     }
 
     // 0x416070 | ?LoadEventFile@mmSingleStunt@@AAE_NPAD@Z
-    inline bool LoadEventFile(char* arg1)
+    bool LoadEventFile(char* arg1)
     {
         return stub<member_func_t<bool, mmSingleStunt, char*>>(0x416070, this, arg1);
     }
 
     // 0x416310 | ?InitNewEvent@mmSingleStunt@@QAEXXZ
-    inline void InitNewEvent()
+    void InitNewEvent()
     {
         return stub<member_func_t<void, mmSingleStunt>>(0x416310, this);
     }
 
     // 0x416820 | ?EnableRacers@mmSingleStunt@@QAEXXZ
-    inline void EnableRacers()
+    void EnableRacers()
     {
         return stub<member_func_t<void, mmSingleStunt>>(0x416820, this);
     }
 
     // 0x416900 | ?GetOpponentIndex@mmSingleStunt@@AAEHXZ
-    inline i32 GetOpponentIndex()
+    i32 GetOpponentIndex()
     {
         return stub<member_func_t<i32, mmSingleStunt>>(0x416900, this);
     }
 
     // 0x416A50 | ?UpdateEvade@mmSingleStunt@@AAEXXZ
-    inline void UpdateEvade()
+    void UpdateEvade()
     {
         return stub<member_func_t<void, mmSingleStunt>>(0x416A50, this);
     }
 
     // 0x417030 | ?UpdateAccel@mmSingleStunt@@AAEXXZ
-    inline void UpdateAccel()
+    void UpdateAccel()
     {
         return stub<member_func_t<void, mmSingleStunt>>(0x417030, this);
     }
 
     // 0x4174C0 | ?UpdateJump@mmSingleStunt@@AAEXXZ
-    inline void UpdateJump()
+    void UpdateJump()
     {
         return stub<member_func_t<void, mmSingleStunt>>(0x4174C0, this);
     }
 
     // 0x417B10 | ?UpdateChase@mmSingleStunt@@AAEXXZ
-    inline void UpdateChase()
+    void UpdateChase()
     {
         return stub<member_func_t<void, mmSingleStunt>>(0x417B10, this);
     }
 
     // 0x4180F0 | ?UpdateFrogger@mmSingleStunt@@AAEXXZ
-    inline void UpdateFrogger()
+    void UpdateFrogger()
     {
         return stub<member_func_t<void, mmSingleStunt>>(0x4180F0, this);
     }
 
     // 0x4187A0 | ?UpdateCorner@mmSingleStunt@@AAEXXZ
-    inline void UpdateCorner()
+    void UpdateCorner()
     {
         return stub<member_func_t<void, mmSingleStunt>>(0x4187A0, this);
     }
 
     // 0x419010 | ?UpdateBlitz@mmSingleStunt@@AAEXXZ
-    inline void UpdateBlitz()
+    void UpdateBlitz()
     {
         return stub<member_func_t<void, mmSingleStunt>>(0x419010, this);
     }
 
     // 0x4195F0 | ?UpdateStop@mmSingleStunt@@AAEXXZ
-    inline void UpdateStop()
+    void UpdateStop()
     {
         return stub<member_func_t<void, mmSingleStunt>>(0x4195F0, this);
     }
 
     // 0x419C90 | ?UpdateCollide@mmSingleStunt@@AAEXXZ
-    inline void UpdateCollide()
+    void UpdateCollide()
     {
         return stub<member_func_t<void, mmSingleStunt>>(0x419C90, this);
     }
 
     // 0x41A130 | ?CheckTimeUp@mmSingleStunt@@AAE_NXZ
-    inline bool CheckTimeUp()
+    bool CheckTimeUp()
     {
         return stub<member_func_t<bool, mmSingleStunt>>(0x41A130, this);
     }
 
     // 0x41A1B0 | ?CheckCopPursuit@mmSingleStunt@@AAE_NXZ
-    inline bool CheckCopPursuit()
+    bool CheckCopPursuit()
     {
         return stub<member_func_t<bool, mmSingleStunt>>(0x41A1B0, this);
     }
 
     // 0x41A310 | ?HUDMessage@mmSingleStunt@@AAEXH@Z
-    inline void HUDMessage(i32 arg1)
+    void HUDMessage(i32 arg1)
     {
         return stub<member_func_t<void, mmSingleStunt, i32>>(0x41A310, this, arg1);
     }
 
     // 0x41A340 | ?EventSoundCtrl@mmSingleStunt@@QAEX_NH@Z
-    inline void EventSoundCtrl(bool arg1, i32 arg2)
+    void EventSoundCtrl(bool arg1, i32 arg2)
     {
         return stub<member_func_t<void, mmSingleStunt, bool, i32>>(0x41A340, this, arg1, arg2);
     }
 
     // 0x41A390 | ?PlayTimerWarning@mmSingleStunt@@AAEXM@Z
-    inline void PlayTimerWarning(f32 arg1)
+    void PlayTimerWarning(f32 arg1)
     {
         return stub<member_func_t<void, mmSingleStunt, f32>>(0x41A390, this, arg1);
     }
 
     // 0x41A470 | ?NextRaceAvailable@mmSingleStunt@@AAE_NXZ
-    inline bool NextRaceAvailable()
+    bool NextRaceAvailable()
     {
         return stub<member_func_t<bool, mmSingleStunt>>(0x41A470, this);
     }
 
     // 0x41A6F0 | ?RegisterFinish@mmSingleStunt@@QAEHH@Z
-    inline i32 RegisterFinish(i32 arg1)
+    i32 RegisterFinish(i32 arg1)
     {
         return stub<member_func_t<i32, mmSingleStunt, i32>>(0x41A6F0, this, arg1);
     }
 
     // 0x415BC0 | ??1mmSingleStunt@@UAE@XZ
-    inline ~mmSingleStunt() override
+    ~mmSingleStunt() override
     {
         stub<member_func_t<void, mmSingleStunt>>(0x415BC0, this);
     }
 
     // 0x416970 | ?Update@mmSingleStunt@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmSingleStunt>>(0x416970, this);
     }
 
     // 0x416760 | ?Reset@mmSingleStunt@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, mmSingleStunt>>(0x416760, this);
     }
 
     // 0x415C40 | ?Init@mmSingleStunt@@UAEHXZ
-    inline i32 Init() override
+    i32 Init() override
     {
         return stub<member_func_t<i32, mmSingleStunt>>(0x415C40, this);
     }
 
     // 0x415D40 | ?InitMyPlayer@mmSingleStunt@@UAEXXZ
-    inline void InitMyPlayer() override
+    void InitMyPlayer() override
     {
         return stub<member_func_t<void, mmSingleStunt>>(0x415D40, this);
     }
 
     // 0x416720 | ?InitOtherPlayers@mmSingleStunt@@UAEXXZ
-    inline void InitOtherPlayers() override
+    void InitOtherPlayers() override
     {
         return stub<member_func_t<void, mmSingleStunt>>(0x416720, this);
     }
 
     // 0x416450 | ?InitGameObjects@mmSingleStunt@@UAEXXZ
-    inline void InitGameObjects() override
+    void InitGameObjects() override
     {
         return stub<member_func_t<void, mmSingleStunt>>(0x416450, this);
     }
 
     // 0x415DB0 | ?InitHUD@mmSingleStunt@@UAEXXZ
-    inline void InitHUD() override
+    void InitHUD() override
     {
         return stub<member_func_t<void, mmSingleStunt>>(0x415DB0, this);
     }
 
     // 0x416980 | ?UpdateGameInput@mmSingleStunt@@UAEXH@Z
-    inline void UpdateGameInput(i32 arg1) override
+    void UpdateGameInput(i32 arg1) override
     {
         return stub<member_func_t<void, mmSingleStunt, i32>>(0x416980, this, arg1);
     }
 
     // 0x41ABF0 | ?UpdateDebugKeyInput@mmSingleStunt@@UAEXH@Z
-    inline void UpdateDebugKeyInput(i32 arg1) override
+    void UpdateDebugKeyInput(i32 arg1) override
     {
         return stub<member_func_t<void, mmSingleStunt, i32>>(0x41ABF0, this, arg1);
     }
 
     // 0x416990 | ?UpdateGame@mmSingleStunt@@UAEXXZ
-    inline void UpdateGame() override
+    void UpdateGame() override
     {
         return stub<member_func_t<void, mmSingleStunt>>(0x416990, this);
     }
 
     // 0x41A490 | ?NextRace@mmSingleStunt@@UAEXXZ
-    inline void NextRace() override
+    void NextRace() override
     {
         return stub<member_func_t<void, mmSingleStunt>>(0x41A490, this);
     }
 
     // 0x416920 | ?HitWaterHandler@mmSingleStunt@@UAEXXZ
-    inline void HitWaterHandler() override
+    void HitWaterHandler() override
     {
         return stub<member_func_t<void, mmSingleStunt>>(0x416920, this);
     }
 
     // 0x41A460 | ?SwitchState@mmSingleStunt@@UAEXH@Z
-    inline void SwitchState(i32 arg1) override
+    void SwitchState(i32 arg1) override
     {
         return stub<member_func_t<void, mmSingleStunt, i32>>(0x41A460, this, arg1);
     }
@@ -299,37 +299,37 @@ public:
     // mmInfoBase::`vftable' @ 0x5B0634
 
     // 0x528230 | ??0mmInfoBase@@QAE@XZ
-    inline mmInfoBase()
+    mmInfoBase()
     {
         stub<member_func_t<void, mmInfoBase>>(0x528230, this);
     }
 
     // 0x528260 | ?Load@mmInfoBase@@QAEHPAD@Z
-    inline i32 Load(char* arg1)
+    i32 Load(char* arg1)
     {
         return stub<member_func_t<i32, mmInfoBase, char*>>(0x528260, this, arg1);
     }
 
     // 0x528310 | ?Save@mmInfoBase@@QAEHPAD@Z
-    inline i32 Save(char* arg1)
+    i32 Save(char* arg1)
     {
         return stub<member_func_t<i32, mmInfoBase, char*>>(0x528310, this, arg1);
     }
 
     // 0x5283C0 | ?SetIOPath@mmInfoBase@@QAEXPAD@Z
-    inline void SetIOPath(char* arg1)
+    void SetIOPath(char* arg1)
     {
         return stub<member_func_t<void, mmInfoBase, char*>>(0x5283C0, this, arg1);
     }
 
     // 0x41AB90 | ??1mmInfoBase@@UAE@XZ
-    virtual inline ~mmInfoBase()
+    virtual ~mmInfoBase()
     {
         stub<member_func_t<void, mmInfoBase>>(0x41AB90, this);
     }
 
     // 0x41AB50 | ?FileIO@mmInfoBase@@UAEXAAVdatParser@@@Z
-    virtual inline void FileIO(class datParser& arg1)
+    virtual void FileIO(class datParser& arg1)
     {
         return stub<member_func_t<void, mmInfoBase, class datParser&>>(0x41AB50, this, arg1);
     }
@@ -339,13 +339,13 @@ struct mmCCData
 {
 public:
     // 0x41ABC0 | ??0mmCCData@@QAE@XZ
-    inline mmCCData()
+    mmCCData()
     {
         stub<member_func_t<void, mmCCData>>(0x41ABC0, this);
     }
 
     // 0x41ABE0 | ??1mmCCData@@QAE@XZ
-    inline ~mmCCData()
+    ~mmCCData()
     {
         stub<member_func_t<void, mmCCData>>(0x41ABE0, this);
     }

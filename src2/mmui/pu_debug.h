@@ -35,19 +35,19 @@ public:
     // PUDebug::`vftable' @ 0x5B4960
 
     // 0x50C230 | ??0PUDebug@@QAE@HMMMM@Z
-    inline PUDebug(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
+    PUDebug(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
     {
         stub<member_func_t<void, PUDebug, i32, f32, f32, f32, f32>>(0x50C230, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x50C400 | ?RecordCB@PUDebug@@QAEXXZ
-    inline void RecordCB()
+    void RecordCB()
     {
         return stub<member_func_t<void, PUDebug>>(0x50C400, this);
     }
 
     // 0x50C3F0 | ??1PUDebug@@UAE@XZ
-    inline ~PUDebug() override
+    ~PUDebug() override
     {
         stub<member_func_t<void, PUDebug>>(0x50C3F0, this);
     }

@@ -58,130 +58,130 @@ public:
     // CLoader::`vftable' @ 0x5B4D30
 
     // 0x517C40 | ??0CLoader@@QAE@XZ
-    inline CLoader()
+    CLoader()
     {
         stub<member_func_t<void, CLoader>>(0x517C40, this);
     }
 
     // 0x517C70 | ??1CLoader@@QAE@XZ
-    inline ~CLoader()
+    ~CLoader()
     {
         stub<member_func_t<void, CLoader>>(0x517C70, this);
     }
 
     // 0x517CC0 | ?Init@CLoader@@QAEJXZ
-    inline i32 Init()
+    i32 Init()
     {
         return stub<member_func_t<i32, CLoader>>(0x517CC0, this);
     }
 
     // 0x517E90 | ?AddRefP@CLoader@@QAEKXZ
-    inline u32 AddRefP()
+    u32 AddRefP()
     {
         return stub<member_func_t<u32, CLoader>>(0x517E90, this);
     }
 
     // 0x517F00 | ?ReleaseP@CLoader@@QAEKXZ
-    inline u32 ReleaseP()
+    u32 ReleaseP()
     {
         return stub<member_func_t<u32, CLoader>>(0x517F00, this);
     }
 
     // 0x5182A0 | ?LoadFromFile@CLoader@@AAEJPAU_DMUS_OBJECTDESC@@PAPAUIDirectMusicObject@@@Z
-    inline i32 LoadFromFile(struct _DMUS_OBJECTDESC* arg1, struct IDirectMusicObject** arg2)
+    i32 LoadFromFile(struct _DMUS_OBJECTDESC* arg1, struct IDirectMusicObject** arg2)
     {
         return stub<member_func_t<i32, CLoader, struct _DMUS_OBJECTDESC*, struct IDirectMusicObject**>>(
             0x5182A0, this, arg1, arg2);
     }
 
     // 0x5183F0 | ?LoadFromMemory@CLoader@@AAEJPAU_DMUS_OBJECTDESC@@PAPAUIDirectMusicObject@@@Z
-    inline i32 LoadFromMemory(struct _DMUS_OBJECTDESC* arg1, struct IDirectMusicObject** arg2)
+    i32 LoadFromMemory(struct _DMUS_OBJECTDESC* arg1, struct IDirectMusicObject** arg2)
     {
         return stub<member_func_t<i32, CLoader, struct _DMUS_OBJECTDESC*, struct IDirectMusicObject**>>(
             0x5183F0, this, arg1, arg2);
     }
 
     // 0x518590 | ?AddCFileStreamToList@CLoader@@QAEXPAVCFileStream@@@Z
-    inline void AddCFileStreamToList(class CFileStream* arg1)
+    void AddCFileStreamToList(class CFileStream* arg1)
     {
         return stub<member_func_t<void, CLoader, class CFileStream*>>(0x518590, this, arg1);
     }
 
     // 0x5185E0 | ?DestroyCFileStreamList@CLoader@@QAEXXZ
-    inline void DestroyCFileStreamList()
+    void DestroyCFileStreamList()
     {
         return stub<member_func_t<void, CLoader>>(0x5185E0, this);
     }
 
     // 0x517E10 | ?QueryInterface@CLoader@@UAGJABU_GUID@@PAPAX@Z
-    virtual inline i32 __stdcall QueryInterface(struct _GUID const& arg1, void** arg2)
+    virtual i32 __stdcall QueryInterface(struct _GUID const& arg1, void** arg2)
     {
         return stub<member_func_t<i32, CLoader, struct _GUID const&, void**>>(0x517E10, this, arg1, arg2);
     }
 
     // 0x517E70 | ?AddRef@CLoader@@UAGKXZ
-    virtual inline u32 __stdcall AddRef()
+    virtual u32 __stdcall AddRef()
     {
         return stub<member_func_t<u32, CLoader>>(0x517E70, this);
     }
 
     // 0x517EA0 | ?Release@CLoader@@UAGKXZ
-    virtual inline u32 __stdcall Release()
+    virtual u32 __stdcall Release()
     {
         return stub<member_func_t<u32, CLoader>>(0x517EA0, this);
     }
 
     // 0x517F40 | ?GetObjectA@CLoader@@UAGJPAU_DMUS_OBJECTDESC@@ABU_GUID@@PAPAX@Z
-    virtual inline i32 __stdcall GetObjectA(struct _DMUS_OBJECTDESC* arg1, struct _GUID const& arg2, void** arg3)
+    virtual i32 __stdcall GetObjectA(struct _DMUS_OBJECTDESC* arg1, struct _GUID const& arg2, void** arg3)
     {
         return stub<member_func_t<i32, CLoader, struct _DMUS_OBJECTDESC*, struct _GUID const&, void**>>(
             0x517F40, this, arg1, arg2, arg3);
     }
 
     // 0x5184E0 | ?SetObject@CLoader@@UAGJPAU_DMUS_OBJECTDESC@@@Z
-    virtual inline i32 __stdcall SetObject(struct _DMUS_OBJECTDESC* arg1)
+    virtual i32 __stdcall SetObject(struct _DMUS_OBJECTDESC* arg1)
     {
         return stub<member_func_t<i32, CLoader, struct _DMUS_OBJECTDESC*>>(0x5184E0, this, arg1);
     }
 
     // 0x518510 | ?SetSearchDirectory@CLoader@@UAGJABU_GUID@@PAGH@Z
-    virtual inline i32 __stdcall SetSearchDirectory(struct _GUID const& arg1, u16* arg2, i32 arg3)
+    virtual i32 __stdcall SetSearchDirectory(struct _GUID const& arg1, u16* arg2, i32 arg3)
     {
         return stub<member_func_t<i32, CLoader, struct _GUID const&, u16*, i32>>(0x518510, this, arg1, arg2, arg3);
     }
 
     // 0x518530 | ?ScanDirectory@CLoader@@UAGJABU_GUID@@PAG1@Z
-    virtual inline i32 __stdcall ScanDirectory(struct _GUID const& arg1, u16* arg2, u16* arg3)
+    virtual i32 __stdcall ScanDirectory(struct _GUID const& arg1, u16* arg2, u16* arg3)
     {
         return stub<member_func_t<i32, CLoader, struct _GUID const&, u16*, u16*>>(0x518530, this, arg1, arg2, arg3);
     }
 
     // 0x518540 | ?CacheObject@CLoader@@UAGJPAUIDirectMusicObject@@@Z
-    virtual inline i32 __stdcall CacheObject(struct IDirectMusicObject* arg1)
+    virtual i32 __stdcall CacheObject(struct IDirectMusicObject* arg1)
     {
         return stub<member_func_t<i32, CLoader, struct IDirectMusicObject*>>(0x518540, this, arg1);
     }
 
     // 0x518550 | ?ReleaseObject@CLoader@@UAGJPAUIDirectMusicObject@@@Z
-    virtual inline i32 __stdcall ReleaseObject(struct IDirectMusicObject* arg1)
+    virtual i32 __stdcall ReleaseObject(struct IDirectMusicObject* arg1)
     {
         return stub<member_func_t<i32, CLoader, struct IDirectMusicObject*>>(0x518550, this, arg1);
     }
 
     // 0x518560 | ?ClearCache@CLoader@@UAGJABU_GUID@@@Z
-    virtual inline i32 __stdcall ClearCache(struct _GUID const& arg1)
+    virtual i32 __stdcall ClearCache(struct _GUID const& arg1)
     {
         return stub<member_func_t<i32, CLoader, struct _GUID const&>>(0x518560, this, arg1);
     }
 
     // 0x518570 | ?EnableCache@CLoader@@UAGJABU_GUID@@H@Z
-    virtual inline i32 __stdcall EnableCache(struct _GUID const& arg1, i32 arg2)
+    virtual i32 __stdcall EnableCache(struct _GUID const& arg1, i32 arg2)
     {
         return stub<member_func_t<i32, CLoader, struct _GUID const&, i32>>(0x518570, this, arg1, arg2);
     }
 
     // 0x518580 | ?EnumObject@CLoader@@UAGJABU_GUID@@KPAU_DMUS_OBJECTDESC@@@Z
-    virtual inline i32 __stdcall EnumObject(struct _GUID const& arg1, u32 arg2, struct _DMUS_OBJECTDESC* arg3)
+    virtual i32 __stdcall EnumObject(struct _GUID const& arg1, u32 arg2, struct _DMUS_OBJECTDESC* arg3)
     {
         return stub<member_func_t<i32, CLoader, struct _GUID const&, u32, struct _DMUS_OBJECTDESC*>>(
             0x518580, this, arg1, arg2, arg3);

@@ -61,19 +61,19 @@ struct vehSurfaceAudio
 {
 public:
     // 0x4DDE50 | ??0vehSurfaceAudio@@QAE@XZ
-    inline vehSurfaceAudio()
+    vehSurfaceAudio()
     {
         stub<member_func_t<void, vehSurfaceAudio>>(0x4DDE50, this);
     }
 
     // 0x4DDF50 | ?SetDamagePtr@vehSurfaceAudio@@QAEXPAVvehCarDamage@@@Z
-    inline void SetDamagePtr(class vehCarDamage* arg1)
+    void SetDamagePtr(class vehCarDamage* arg1)
     {
         return stub<member_func_t<void, vehSurfaceAudio, class vehCarDamage*>>(0x4DDF50, this, arg1);
     }
 
     // 0x4DDF60 | ?SetWheelPointers@vehSurfaceAudio@@QAEXPAVvehWheel@@000@Z
-    inline void SetWheelPointers(class vehWheel* arg1, class vehWheel* arg2, class vehWheel* arg3, class vehWheel* arg4)
+    void SetWheelPointers(class vehWheel* arg1, class vehWheel* arg2, class vehWheel* arg3, class vehWheel* arg4)
     {
         return stub<
             member_func_t<void, vehSurfaceAudio, class vehWheel*, class vehWheel*, class vehWheel*, class vehWheel*>>(
@@ -81,151 +81,151 @@ public:
     }
 
     // 0x4DDFA0 | ?IsBrakeing@vehSurfaceAudio@@QAE_NXZ
-    inline bool IsBrakeing()
+    bool IsBrakeing()
     {
         return stub<member_func_t<bool, vehSurfaceAudio>>(0x4DDFA0, this);
     }
 
     // 0x4DDFD0 | ?Update@vehSurfaceAudio@@QAEXPAVvehCarSim@@MM@Z
-    inline void Update(class vehCarSim* arg1, f32 arg2, f32 arg3)
+    void Update(class vehCarSim* arg1, f32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, vehSurfaceAudio, class vehCarSim*, f32, f32>>(0x4DDFD0, this, arg1, arg2, arg3);
     }
 
     // 0x4DE030 | ?Update@vehSurfaceAudio@@QAEXPAVvehCarSim@@@Z
-    inline void Update(class vehCarSim* arg1)
+    void Update(class vehCarSim* arg1)
     {
         return stub<member_func_t<void, vehSurfaceAudio, class vehCarSim*>>(0x4DE030, this, arg1);
     }
 
     // 0x4DE080 | ?UpdateSurface@vehSurfaceAudio@@QAEXM@Z
-    inline void UpdateSurface(f32 arg1)
+    void UpdateSurface(f32 arg1)
     {
         return stub<member_func_t<void, vehSurfaceAudio, f32>>(0x4DE080, this, arg1);
     }
 
     // 0x4DE1A0 | ?UpdateSurface@vehSurfaceAudio@@QAEXMMM@Z
-    inline void UpdateSurface(f32 arg1, f32 arg2, f32 arg3)
+    void UpdateSurface(f32 arg1, f32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, vehSurfaceAudio, f32, f32, f32>>(0x4DE1A0, this, arg1, arg2, arg3);
     }
 
     // 0x4DE2C0 | ?UpdateSkid@vehSurfaceAudio@@QAEXM@Z
-    inline void UpdateSkid(f32 arg1)
+    void UpdateSkid(f32 arg1)
     {
         return stub<member_func_t<void, vehSurfaceAudio, f32>>(0x4DE2C0, this, arg1);
     }
 
     // 0x4DE3F0 | ?UpdateSkid@vehSurfaceAudio@@QAEXMMM@Z
-    inline void UpdateSkid(f32 arg1, f32 arg2, f32 arg3)
+    void UpdateSkid(f32 arg1, f32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, vehSurfaceAudio, f32, f32, f32>>(0x4DE3F0, this, arg1, arg2, arg3);
     }
 
     // 0x4DE530 | ?SurfaceChanged@vehSurfaceAudio@@QAEHXZ
-    inline i32 SurfaceChanged()
+    i32 SurfaceChanged()
     {
         return stub<member_func_t<i32, vehSurfaceAudio>>(0x4DE530, this);
     }
 
     // 0x4DE560 | ?LoadCSV@vehSurfaceAudio@@QAE_NPAD0@Z
-    inline bool LoadCSV(char* arg1, char* arg2)
+    bool LoadCSV(char* arg1, char* arg2)
     {
         return stub<member_func_t<bool, vehSurfaceAudio, char*, char*>>(0x4DE560, this, arg1, arg2);
     }
 
     // 0x4DE730 | ?LoadSuspension@vehSurfaceAudio@@QAEHPAD0@Z
-    inline i32 LoadSuspension(char* arg1, char* arg2)
+    i32 LoadSuspension(char* arg1, char* arg2)
     {
         return stub<member_func_t<i32, vehSurfaceAudio, char*, char*>>(0x4DE730, this, arg1, arg2);
     }
 
     // 0x4DE8C0 | ?EchoOn@vehSurfaceAudio@@QAEXM@Z
-    inline void EchoOn(f32 arg1)
+    void EchoOn(f32 arg1)
     {
         return stub<member_func_t<void, vehSurfaceAudio, f32>>(0x4DE8C0, this, arg1);
     }
 
     // 0x4DE8F0 | ?EchoOff@vehSurfaceAudio@@QAEXXZ
-    inline void EchoOff()
+    void EchoOff()
     {
         return stub<member_func_t<void, vehSurfaceAudio>>(0x4DE8F0, this);
     }
 
     // 0x4DE920 | ?SetPan@vehSurfaceAudio@@QAEXM@Z
-    inline void SetPan(f32 arg1)
+    void SetPan(f32 arg1)
     {
         return stub<member_func_t<void, vehSurfaceAudio, f32>>(0x4DE920, this, arg1);
     }
 
     // 0x4DE960 | ?StopSkid@vehSurfaceAudio@@QAEXXZ
-    inline void StopSkid()
+    void StopSkid()
     {
         return stub<member_func_t<void, vehSurfaceAudio>>(0x4DE960, this);
     }
 
     // 0x4DE970 | ?StopSurface@vehSurfaceAudio@@QAEXXZ
-    inline void StopSurface()
+    void StopSurface()
     {
         return stub<member_func_t<void, vehSurfaceAudio>>(0x4DE970, this);
     }
 
     // 0x4DE980 | ?AssignSounds@vehSurfaceAudio@@QAEXH@Z
-    inline void AssignSounds(i32 arg1)
+    void AssignSounds(i32 arg1)
     {
         return stub<member_func_t<void, vehSurfaceAudio, i32>>(0x4DE980, this, arg1);
     }
 
     // 0x4DE9F0 | ?UnAssignSounds@vehSurfaceAudio@@QAEXXZ
-    inline void UnAssignSounds()
+    void UnAssignSounds()
     {
         return stub<member_func_t<void, vehSurfaceAudio>>(0x4DE9F0, this);
     }
 
     // 0x4DEA30 | ?UpdateSuspension@vehSurfaceAudio@@QAEXXZ
-    inline void UpdateSuspension()
+    void UpdateSuspension()
     {
         return stub<member_func_t<void, vehSurfaceAudio>>(0x4DEA30, this);
     }
 
     // 0x4DEB10 | ?UpdateSuspension@vehSurfaceAudio@@QAEXMM@Z
-    inline void UpdateSuspension(f32 arg1, f32 arg2)
+    void UpdateSuspension(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, vehSurfaceAudio, f32, f32>>(0x4DEB10, this, arg1, arg2);
     }
 
     // 0x4DEC10 | ?LoadTireWobble@vehSurfaceAudio@@QAEHPAD0@Z
-    inline i32 LoadTireWobble(char* arg1, char* arg2)
+    i32 LoadTireWobble(char* arg1, char* arg2)
     {
         return stub<member_func_t<i32, vehSurfaceAudio, char*, char*>>(0x4DEC10, this, arg1, arg2);
     }
 
     // 0x4DED90 | ?UpdateTireWobble@vehSurfaceAudio@@QAEXPAVvehCarSim@@@Z
-    inline void UpdateTireWobble(class vehCarSim* arg1)
+    void UpdateTireWobble(class vehCarSim* arg1)
     {
         return stub<member_func_t<void, vehSurfaceAudio, class vehCarSim*>>(0x4DED90, this, arg1);
     }
 
     // 0x4DF020 | ?UpdateTireWobble@vehSurfaceAudio@@QAEXPAVvehCarSim@@MM@Z
-    inline void UpdateTireWobble(class vehCarSim* arg1, f32 arg2, f32 arg3)
+    void UpdateTireWobble(class vehCarSim* arg1, f32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, vehSurfaceAudio, class vehCarSim*, f32, f32>>(0x4DF020, this, arg1, arg2, arg3);
     }
 
     // 0x4DF170 | ?UpdateEcho@vehSurfaceAudio@@QAEXXZ
-    inline void UpdateEcho()
+    void UpdateEcho()
     {
         return stub<member_func_t<void, vehSurfaceAudio>>(0x4DF170, this);
     }
 
     // 0x4DF180 | ?UpdateAir@vehSurfaceAudio@@QAEXXZ
-    inline void UpdateAir()
+    void UpdateAir()
     {
         return stub<member_func_t<void, vehSurfaceAudio>>(0x4DF180, this);
     }
 
     // 0x4DF250 | ?SetPositionPtr@vehSurfaceAudio@@QAEXPAVVector3@@@Z
-    inline void SetPositionPtr(class Vector3* arg1)
+    void SetPositionPtr(class Vector3* arg1)
     {
         return stub<member_func_t<void, vehSurfaceAudio, class Vector3*>>(0x4DF250, this, arg1);
     }

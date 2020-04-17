@@ -58,86 +58,86 @@ public:
     // mmCompBase::`vftable' @ 0x5B8834
 
     // 0x59EB50 | ??1mmCompBase@@UAE@XZ
-    inline ~mmCompBase() override
+    ~mmCompBase() override
     {
         stub<member_func_t<void, mmCompBase>>(0x59EB50, this);
     }
 
     // 0x59FF30 | ?Update@mmCompBase@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmCompBase>>(0x59FF30, this);
     }
 
     // 0x59FF20 | ?Reset@mmCompBase@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, mmCompBase>>(0x59FF20, this);
     }
 
     // 0x59EB60 | ?DisableBlt@mmCompBase@@UAEXXZ
-    virtual inline void DisableBlt()
+    virtual void DisableBlt()
     {
         return stub<member_func_t<void, mmCompBase>>(0x59EB60, this);
     }
 
     // 0x59EB70 | ?SetBltXY@mmCompBase@@UAEXMM@Z
-    virtual inline void SetBltXY(f32 arg1, f32 arg2)
+    virtual void SetBltXY(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, mmCompBase, f32, f32>>(0x59EB70, this, arg1, arg2);
     }
 
     // 0x59EBC0 | ?Action@mmCompBase@@UAEXTeqEvent@@MMH@Z
-    virtual inline void Action(union eqEvent arg1, f32 arg2, f32 arg3, i32 arg4)
+    virtual void Action(union eqEvent arg1, f32 arg2, f32 arg3, i32 arg4)
     {
         return stub<member_func_t<void, mmCompBase, union eqEvent, f32, f32, i32>>(
             0x59EBC0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x59EB90 | ?Action@mmCompBase@@UAEXTeqEvent@@@Z
-    virtual inline void Action(union eqEvent arg1)
+    virtual void Action(union eqEvent arg1)
     {
         return stub<member_func_t<void, mmCompBase, union eqEvent>>(0x59EB90, this, arg1);
     }
 
     // 0x59EBA0 | ?CaptureAction@mmCompBase@@UAEXTeqEvent@@@Z
-    virtual inline void CaptureAction(union eqEvent arg1)
+    virtual void CaptureAction(union eqEvent arg1)
     {
         return stub<member_func_t<void, mmCompBase, union eqEvent>>(0x59EBA0, this, arg1);
     }
 
     // 0x59EBB0 | ?Switch@mmCompBase@@UAEXH@Z
-    virtual inline void Switch(i32 arg1)
+    virtual void Switch(i32 arg1)
     {
         return stub<member_func_t<void, mmCompBase, i32>>(0x59EBB0, this, arg1);
     }
 
     // 0x59EBD0 | ?EvalMouseXY@mmCompBase@@UAEXMM@Z
-    virtual inline void EvalMouseXY(f32 arg1, f32 arg2)
+    virtual void EvalMouseXY(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, mmCompBase, f32, f32>>(0x59EBD0, this, arg1, arg2);
     }
 
     // 0x59EBE0 | ?Highlight@mmCompBase@@UAEXPAVmmTextNode@@H@Z
-    virtual inline void Highlight(class mmTextNode* arg1, i32 arg2)
+    virtual void Highlight(class mmTextNode* arg1, i32 arg2)
     {
         return stub<member_func_t<void, mmCompBase, class mmTextNode*, i32>>(0x59EBE0, this, arg1, arg2);
     }
 
     // 0x59EBF0 | ?Box@mmCompBase@@UAEXHPAVmmTextNode@@H@Z
-    virtual inline void Box(i32 arg1, class mmTextNode* arg2, i32 arg3)
+    virtual void Box(i32 arg1, class mmTextNode* arg2, i32 arg3)
     {
         return stub<member_func_t<void, mmCompBase, i32, class mmTextNode*, i32>>(0x59EBF0, this, arg1, arg2, arg3);
     }
 
     // 0x59EC00 | ?SetGeometry@mmCompBase@@UAEXMMMM@Z
-    virtual inline void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
+    virtual void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
         return stub<member_func_t<void, mmCompBase, f32, f32, f32, f32>>(0x59EC00, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x582519 | __purecall
-    virtual inline void SetPosition(class mmTextNode* arg1, i32 arg2, f32 arg3)
+    virtual void SetPosition(class mmTextNode* arg1, i32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, mmCompBase, class mmTextNode*, i32, f32>>(0x582519, this, arg1, arg2, arg3);
     }
@@ -149,19 +149,19 @@ public:
     // mmCompCity::`vftable' @ 0x5B87D4
 
     // 0x59E7E0 | ??0mmCompCity@@QAE@XZ
-    inline mmCompCity()
+    mmCompCity()
     {
         stub<member_func_t<void, mmCompCity>>(0x59E7E0, this);
     }
 
     // 0x59E8A0 | ?Init@mmCompCity@@QAEXPADHHH@Z
-    inline void Init(char* arg1, i32 arg2, i32 arg3, i32 arg4)
+    void Init(char* arg1, i32 arg2, i32 arg3, i32 arg4)
     {
         return stub<member_func_t<void, mmCompCity, char*, i32, i32, i32>>(0x59E8A0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x59E910 | ?InitTitle@mmCompCity@@QAEXMMMMPAULocString@@000@Z
-    inline void InitTitle(f32 arg1, f32 arg2, f32 arg3, f32 arg4, struct LocString* arg5, struct LocString* arg6,
+    void InitTitle(f32 arg1, f32 arg2, f32 arg3, f32 arg4, struct LocString* arg5, struct LocString* arg6,
         struct LocString* arg7, struct LocString* arg8)
     {
         return stub<member_func_t<void, mmCompCity, f32, f32, f32, f32, struct LocString*, struct LocString*,
@@ -169,61 +169,61 @@ public:
     }
 
     // 0x59E9A0 | ?SetSubwidgetGeometry@mmCompCity@@QAEXXZ
-    inline void SetSubwidgetGeometry()
+    void SetSubwidgetGeometry()
     {
         return stub<member_func_t<void, mmCompCity>>(0x59E9A0, this);
     }
 
     // 0x59EA00 | ?SetTitleGeometry@mmCompCity@@QAEXXZ
-    inline void SetTitleGeometry()
+    void SetTitleGeometry()
     {
         return stub<member_func_t<void, mmCompCity>>(0x59EA00, this);
     }
 
     // 0x59E810 | ??1mmCompCity@@UAE@XZ
-    inline ~mmCompCity() override
+    ~mmCompCity() override
     {
         stub<member_func_t<void, mmCompCity>>(0x59E810, this);
     }
 
     // 0x59EB10 | ?Cull@mmCompCity@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, mmCompCity>>(0x59EB10, this);
     }
 
     // 0x59E990 | ?Update@mmCompCity@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmCompCity>>(0x59E990, this);
     }
 
     // 0x59E980 | ?Reset@mmCompCity@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, mmCompCity>>(0x59E980, this);
     }
 
     // 0x59EA60 | ?Highlight@mmCompCity@@UAEXPAVmmTextNode@@H@Z
-    inline void Highlight(class mmTextNode* arg1, i32 arg2) override
+    void Highlight(class mmTextNode* arg1, i32 arg2) override
     {
         return stub<member_func_t<void, mmCompCity, class mmTextNode*, i32>>(0x59EA60, this, arg1, arg2);
     }
 
     // 0x59EAB0 | ?Box@mmCompCity@@UAEXHPAVmmTextNode@@H@Z
-    inline void Box(i32 arg1, class mmTextNode* arg2, i32 arg3) override
+    void Box(i32 arg1, class mmTextNode* arg2, i32 arg3) override
     {
         return stub<member_func_t<void, mmCompCity, i32, class mmTextNode*, i32>>(0x59EAB0, this, arg1, arg2, arg3);
     }
 
     // 0x59EAE0 | ?SetGeometry@mmCompCity@@UAEXMMMM@Z
-    inline void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4) override
+    void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4) override
     {
         return stub<member_func_t<void, mmCompCity, f32, f32, f32, f32>>(0x59EAE0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x59EA20 | ?SetPosition@mmCompCity@@UAEXPAVmmTextNode@@HM@Z
-    inline void SetPosition(class mmTextNode* arg1, i32 arg2, f32 arg3) override
+    void SetPosition(class mmTextNode* arg1, i32 arg2, f32 arg3) override
     {
         return stub<member_func_t<void, mmCompCity, class mmTextNode*, i32, f32>>(0x59EA20, this, arg1, arg2, arg3);
     }

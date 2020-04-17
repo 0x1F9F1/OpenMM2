@@ -43,7 +43,7 @@ class phImpactBase
 {
 public:
     // 0x491920 | ?StartMakingNewImpact@phImpactBase@@QAEXMABVVector3@@0PAVphColliderBase@@1PBVMatrix34@@HHH@Z
-    inline void StartMakingNewImpact(f32 arg1, class Vector3 const& arg2, class Vector3 const& arg3,
+    void StartMakingNewImpact(f32 arg1, class Vector3 const& arg2, class Vector3 const& arg3,
         class phColliderBase* arg4, class phColliderBase* arg5, class Matrix34 const* arg6, i32 arg7, i32 arg8,
         i32 arg9)
     {
@@ -53,7 +53,7 @@ public:
     }
 
     // 0x491A30 | ?FinishMakingNewImpact@phImpactBase@@QAEXHHPAVphColliderBase@@0PBVphBound@@1H@Z
-    inline void FinishMakingNewImpact(i32 arg1, i32 arg2, class phColliderBase* arg3, class phColliderBase* arg4,
+    void FinishMakingNewImpact(i32 arg1, i32 arg2, class phColliderBase* arg3, class phColliderBase* arg4,
         class phBound const* arg5, class phBound const* arg6, i32 arg7)
     {
         return stub<member_func_t<void, phImpactBase, i32, i32, class phColliderBase*, class phColliderBase*,
@@ -61,7 +61,7 @@ public:
     }
 
     // 0x491AB0 | ?MakeNewImpact@phImpactBase@@QAEXPAVphColliderBase@@0ABVVector3@@1MPBVphBound@@2HHH@Z
-    inline void MakeNewImpact(class phColliderBase* arg1, class phColliderBase* arg2, class Vector3 const& arg3,
+    void MakeNewImpact(class phColliderBase* arg1, class phColliderBase* arg2, class Vector3 const& arg3,
         class Vector3 const& arg4, f32 arg5, class phBound const* arg6, class phBound const* arg7, i32 arg8, i32 arg9,
         i32 arg10)
     {
@@ -88,27 +88,27 @@ public:
     }
 
     // 0x492270 | ?SetColliders@phImpactBase@@QAEXPAVphColliderBase@@0@Z
-    inline void SetColliders(class phColliderBase* arg1, class phColliderBase* arg2)
+    void SetColliders(class phColliderBase* arg1, class phColliderBase* arg2)
     {
         return stub<member_func_t<void, phImpactBase, class phColliderBase*, class phColliderBase*>>(
             0x492270, this, arg1, arg2);
     }
 
     // 0x492290 | ?SetColliders@phImpactBase@@QAEXPAVphColliderBase@@0HH@Z
-    inline void SetColliders(class phColliderBase* arg1, class phColliderBase* arg2, i32 arg3, i32 arg4)
+    void SetColliders(class phColliderBase* arg1, class phColliderBase* arg2, i32 arg3, i32 arg4)
     {
         return stub<member_func_t<void, phImpactBase, class phColliderBase*, class phColliderBase*, i32, i32>>(
             0x492290, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4922B0 | ?SetComponentA@phImpactBase@@QAEXH@Z
-    inline void SetComponentA(i32 arg1)
+    void SetComponentA(i32 arg1)
     {
         return stub<member_func_t<void, phImpactBase, i32>>(0x4922B0, this, arg1);
     }
 
     // 0x4922C0 | ?SetComponentB@phImpactBase@@QAEXH@Z
-    inline void SetComponentB(i32 arg1)
+    void SetComponentB(i32 arg1)
     {
         return stub<member_func_t<void, phImpactBase, i32>>(0x4922C0, this, arg1);
     }
@@ -122,7 +122,7 @@ public:
     }
 
     // 0x492310 | ?SwapColliders@phImpactBase@@QAEXXZ
-    inline void SwapColliders()
+    void SwapColliders()
     {
         return stub<member_func_t<void, phImpactBase>>(0x492310, this);
     }
@@ -140,7 +140,7 @@ public:
     }
 
     // 0x4925A0 | ?Reset@phImpactBase@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, phImpactBase>>(0x4925A0, this);
     }

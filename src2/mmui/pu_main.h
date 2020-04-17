@@ -38,38 +38,38 @@ public:
     // PUMain::`vftable' @ 0x5B4720
 
     // 0x50A5C0 | ??0PUMain@@QAE@HMMMMPAD@Z
-    inline PUMain(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    PUMain(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
     {
         stub<member_func_t<void, PUMain, i32, f32, f32, f32, f32, char*>>(
             0x50A5C0, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x50A810 | ?RplRO@PUMain@@QAEXH@Z
-    inline void RplRO(i32 arg1)
+    void RplRO(i32 arg1)
     {
         return stub<member_func_t<void, PUMain, i32>>(0x50A810, this, arg1);
     }
 
     // 0x50A830 | ?RestartRO@PUMain@@QAEXH@Z
-    inline void RestartRO(i32 arg1)
+    void RestartRO(i32 arg1)
     {
         return stub<member_func_t<void, PUMain, i32>>(0x50A830, this, arg1);
     }
 
     // 0x50A850 | ?RaceMenuRO@PUMain@@QAEXH@Z
-    inline void RaceMenuRO(i32 arg1)
+    void RaceMenuRO(i32 arg1)
     {
         return stub<member_func_t<void, PUMain, i32>>(0x50A850, this, arg1);
     }
 
     // 0x50A870 | ?IsRaceMenuReadOnly@PUMain@@QAEHXZ
-    inline i32 IsRaceMenuReadOnly()
+    i32 IsRaceMenuReadOnly()
     {
         return stub<member_func_t<i32, PUMain>>(0x50A870, this);
     }
 
     // 0x50A800 | ??1PUMain@@UAE@XZ
-    inline ~PUMain() override
+    ~PUMain() override
     {
         stub<member_func_t<void, PUMain>>(0x50A800, this);
     }

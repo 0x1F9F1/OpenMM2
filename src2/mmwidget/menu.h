@@ -95,136 +95,135 @@ public:
     // UIMenu::`vftable' @ 0x5B3234
 
     // 0x4E0770 | ??0UIMenu@@QAE@H@Z
-    inline UIMenu(i32 arg1)
+    UIMenu(i32 arg1)
     {
         stub<member_func_t<void, UIMenu, i32>>(0x4E0770, this, arg1);
     }
 
     // 0x4E0930 | ?AssignName@UIMenu@@QAEXPAULocString@@@Z
-    inline void AssignName(struct LocString* arg1)
+    void AssignName(struct LocString* arg1)
     {
         return stub<member_func_t<void, UIMenu, struct LocString*>>(0x4E0930, this, arg1);
     }
 
     // 0x4E0980 | ?AssignBackground@UIMenu@@QAEXPAD@Z
-    inline void AssignBackground(char* arg1)
+    void AssignBackground(char* arg1)
     {
         return stub<member_func_t<void, UIMenu, char*>>(0x4E0980, this, arg1);
     }
 
     // 0x4E09D0 | ?Enable@UIMenu@@QAEXXZ
-    inline void Enable()
+    void Enable()
     {
         return stub<member_func_t<void, UIMenu>>(0x4E09D0, this);
     }
 
     // 0x4E0A40 | ?Disable@UIMenu@@QAEXXZ
-    inline void Disable()
+    void Disable()
     {
         return stub<member_func_t<void, UIMenu>>(0x4E0A40, this);
     }
 
     // 0x4E0A90 | ?SetAction@UIMenu@@QAEXW4eSource@1@@Z
-    inline void SetAction(enum UIMenu::eSource arg1)
+    void SetAction(enum UIMenu::eSource arg1)
     {
         return stub<member_func_t<void, UIMenu, enum UIMenu::eSource>>(0x4E0A90, this, arg1);
     }
 
     // 0x4E0AB0 | ?ForceWidgetAction@UIMenu@@QAEXH@Z
-    inline void ForceWidgetAction(i32 arg1)
+    void ForceWidgetAction(i32 arg1)
     {
         return stub<member_func_t<void, UIMenu, i32>>(0x4E0AB0, this, arg1);
     }
 
     // 0x4E0AD0 | ?ClearAction@UIMenu@@QAEXXZ
-    inline void ClearAction()
+    void ClearAction()
     {
         return stub<member_func_t<void, UIMenu>>(0x4E0AD0, this);
     }
 
     // 0x4E0AE0 | ?ClearToolTip@UIMenu@@QAEXXZ
-    inline void ClearToolTip()
+    void ClearToolTip()
     {
         return stub<member_func_t<void, UIMenu>>(0x4E0AE0, this);
     }
 
     // 0x4E0B20 | ?SetBstate@UIMenu@@QAEXH@Z
-    inline void SetBstate(i32 arg1)
+    void SetBstate(i32 arg1)
     {
         return stub<member_func_t<void, UIMenu, i32>>(0x4E0B20, this, arg1);
     }
 
     // 0x4E0B50 | ?SetFocusWidget@UIMenu@@QAEXH@Z
-    inline void SetFocusWidget(i32 arg1)
+    void SetFocusWidget(i32 arg1)
     {
         return stub<member_func_t<void, UIMenu, i32>>(0x4E0B50, this, arg1);
     }
 
     // 0x4E0B90 | ?GetWidgetID@UIMenu@@QAEHXZ
-    inline i32 GetWidgetID()
+    i32 GetWidgetID()
     {
         return stub<member_func_t<i32, UIMenu>>(0x4E0B90, this);
     }
 
     // 0x4E0BA0 | ?GetBstate@UIMenu@@QAEHXZ
-    inline i32 GetBstate()
+    i32 GetBstate()
     {
         return stub<member_func_t<i32, UIMenu>>(0x4E0BA0, this);
     }
 
     // 0x4E0BB0 | ?GetDimensions@UIMenu@@QAEXAAM000@Z
-    inline void GetDimensions(f32& arg1, f32& arg2, f32& arg3, f32& arg4)
+    void GetDimensions(f32& arg1, f32& arg2, f32& arg3, f32& arg4)
     {
         return stub<member_func_t<void, UIMenu, f32&, f32&, f32&, f32&>>(0x4E0BB0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4E0BE0 | ?DisableIME@UIMenu@@QAEXXZ
-    inline void DisableIME()
+    void DisableIME()
     {
         return stub<member_func_t<void, UIMenu>>(0x4E0BE0, this);
     }
 
     // 0x4E0C00 | ?FindTheFirstFocusWidget@UIMenu@@QAEHXZ
-    inline i32 FindTheFirstFocusWidget()
+    i32 FindTheFirstFocusWidget()
     {
         return stub<member_func_t<i32, UIMenu>>(0x4E0C00, this);
     }
 
     // 0x4E0C40 | ?Increment@UIMenu@@QAEHXZ
-    inline i32 Increment()
+    i32 Increment()
     {
         return stub<member_func_t<i32, UIMenu>>(0x4E0C40, this);
     }
 
     // 0x4E0CF0 | ?Decrement@UIMenu@@QAEHXZ
-    inline i32 Decrement()
+    i32 Decrement()
     {
         return stub<member_func_t<i32, UIMenu>>(0x4E0CF0, this);
     }
 
     // 0x4E0DA0 | ?ScanInput@UIMenu@@QAEHPATeqEvent@@@Z
-    inline i32 ScanInput(union eqEvent* arg1)
+    i32 ScanInput(union eqEvent* arg1)
     {
         return stub<member_func_t<i32, UIMenu, union eqEvent*>>(0x4E0DA0, this, arg1);
     }
 
     // 0x4E0E70 | ?ScaleWidget@UIMenu@@QAEXAAM000@Z
-    inline void ScaleWidget(f32& arg1, f32& arg2, f32& arg3, f32& arg4)
+    void ScaleWidget(f32& arg1, f32& arg2, f32& arg3, f32& arg4)
     {
         return stub<member_func_t<void, UIMenu, f32&, f32&, f32&, f32&>>(0x4E0E70, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4E0EB0 | ?AddHotSpot@UIMenu@@QAEPAVuiWidget@@HPADMMMMVdatCallback@@@Z
-    inline class uiWidget* AddHotSpot(
-        i32 arg1, char* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, class datCallback arg7)
+    class uiWidget* AddHotSpot(i32 arg1, char* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, class datCallback arg7)
     {
         return stub<member_func_t<class uiWidget*, UIMenu, i32, char*, f32, f32, f32, f32, class datCallback>>(
             0x4E0EB0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x4E0F90 | ?AddTextDropdown@UIMenu@@QAEPAVUITextDropdown@@HPAULocString@@PAHMMMMVstring@@HHHVdatCallback@@PAD3@Z
-    inline class UITextDropdown* AddTextDropdown(i32 arg1, struct LocString* arg2, i32* arg3, f32 arg4, f32 arg5,
-        f32 arg6, f32 arg7, class string arg8, i32 arg9, i32 arg10, i32 arg11, class datCallback arg12, char* arg13,
+    class UITextDropdown* AddTextDropdown(i32 arg1, struct LocString* arg2, i32* arg3, f32 arg4, f32 arg5, f32 arg6,
+        f32 arg7, class string arg8, i32 arg9, i32 arg10, i32 arg11, class datCallback arg12, char* arg13,
         class datCallback arg14)
     {
         return stub<member_func_t<class UITextDropdown*, UIMenu, i32, struct LocString*, i32*, f32, f32, f32, f32,
@@ -233,7 +232,7 @@ public:
     }
 
     // 0x4E1120 | ?AddTextRoller@UIMenu@@QAEPAVUITextRoller@@HPAULocString@@PAHMMMMVstring@@HHHHVdatCallback@@@Z
-    inline class UITextRoller* AddTextRoller(i32 arg1, struct LocString* arg2, i32* arg3, f32 arg4, f32 arg5, f32 arg6,
+    class UITextRoller* AddTextRoller(i32 arg1, struct LocString* arg2, i32* arg3, f32 arg4, f32 arg5, f32 arg6,
         f32 arg7, class string arg8, i32 arg9, i32 arg10, i32 arg11, i32 arg12, class datCallback arg13)
     {
         return stub<member_func_t<class UITextRoller*, UIMenu, i32, struct LocString*, i32*, f32, f32, f32, f32,
@@ -242,8 +241,8 @@ public:
     }
 
     // 0x4E1270 | ?AddTextRoller2@UIMenu@@QAEPAVUITextRoller2@@HPAULocString@@PAHMMMMVstring@@HHHHVdatCallback@@@Z
-    inline class UITextRoller2* AddTextRoller2(i32 arg1, struct LocString* arg2, i32* arg3, f32 arg4, f32 arg5,
-        f32 arg6, f32 arg7, class string arg8, i32 arg9, i32 arg10, i32 arg11, i32 arg12, class datCallback arg13)
+    class UITextRoller2* AddTextRoller2(i32 arg1, struct LocString* arg2, i32* arg3, f32 arg4, f32 arg5, f32 arg6,
+        f32 arg7, class string arg8, i32 arg9, i32 arg10, i32 arg11, i32 arg12, class datCallback arg13)
     {
         return stub<member_func_t<class UITextRoller2*, UIMenu, i32, struct LocString*, i32*, f32, f32, f32, f32,
             class string, i32, i32, i32, i32, class datCallback>>(
@@ -251,15 +250,15 @@ public:
     }
 
     // 0x4E13E0 | ?AddTextScroll@UIMenu@@QAEPAVUITextScroll@@HPAXMMMMVstring@@HPAHVdatCallback@@@Z
-    inline class UITextScroll* AddTextScroll(i32 arg1, void* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6,
-        class string arg7, i32 arg8, i32* arg9, class datCallback arg10)
+    class UITextScroll* AddTextScroll(i32 arg1, void* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, class string arg7,
+        i32 arg8, i32* arg9, class datCallback arg10)
     {
         return stub<member_func_t<class UITextScroll*, UIMenu, i32, void*, f32, f32, f32, f32, class string, i32, i32*,
             class datCallback>>(0x4E13E0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
     }
 
     // 0x4E1580 | ?AddCompScroll@UIMenu@@QAEPAVUICompositeScroll@@HMMMMMHPAHHHVdatCallback@@@Z
-    inline class UICompositeScroll* AddCompScroll(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7,
+    class UICompositeScroll* AddCompScroll(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7,
         i32* arg8, i32 arg9, i32 arg10, class datCallback arg11)
     {
         return stub<member_func_t<class UICompositeScroll*, UIMenu, i32, f32, f32, f32, f32, f32, i32, i32*, i32, i32,
@@ -267,7 +266,7 @@ public:
     }
 
     // 0x4E1700 | ?AddTextField@UIMenu@@QAEPAVUITextField@@HPAULocString@@PADMMMMHHHHHVdatCallback@@@Z
-    inline class UITextField* AddTextField(i32 arg1, struct LocString* arg2, char* arg3, f32 arg4, f32 arg5, f32 arg6,
+    class UITextField* AddTextField(i32 arg1, struct LocString* arg2, char* arg3, f32 arg4, f32 arg5, f32 arg6,
         f32 arg7, i32 arg8, i32 arg9, i32 arg10, i32 arg11, i32 arg12, class datCallback arg13)
     {
         return stub<member_func_t<class UITextField*, UIMenu, i32, struct LocString*, char*, f32, f32, f32, f32, i32,
@@ -276,7 +275,7 @@ public:
     }
 
     // 0x4E1860 | ?AddUIControl@UIMenu@@QAEPAVUIControlWidget@@HMMMMMPAVmmIO@@VdatCallback@@@Z
-    inline class UIControlWidget* AddUIControl(
+    class UIControlWidget* AddUIControl(
         i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, class mmIO* arg7, class datCallback arg8)
     {
         return stub<member_func_t<class UIControlWidget*, UIMenu, i32, f32, f32, f32, f32, f32, class mmIO*,
@@ -284,8 +283,8 @@ public:
     }
 
     // 0x4E1940 | ?AddSlider@UIMenu@@QAEPAVUISlider@@HPAULocString@@PAMMMMMMMHHHHVdatCallback@@2@Z
-    inline class UISlider* AddSlider(i32 arg1, struct LocString* arg2, f32* arg3, f32 arg4, f32 arg5, f32 arg6,
-        f32 arg7, f32 arg8, f32 arg9, i32 arg10, i32 arg11, i32 arg12, i32 arg13, class datCallback arg14,
+    class UISlider* AddSlider(i32 arg1, struct LocString* arg2, f32* arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7,
+        f32 arg8, f32 arg9, i32 arg10, i32 arg11, i32 arg12, i32 arg13, class datCallback arg14,
         class datCallback arg15)
     {
         return stub<member_func_t<class UISlider*, UIMenu, i32, struct LocString*, f32*, f32, f32, f32, f32, f32, f32,
@@ -294,7 +293,7 @@ public:
     }
 
     // 0x4E1A90 | ?AddButton@UIMenu@@QAEPAVUIButton@@HPAULocString@@MMMMHHVdatCallback@@H@Z
-    inline class UIButton* AddButton(i32 arg1, struct LocString* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7,
+    class UIButton* AddButton(i32 arg1, struct LocString* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7,
         i32 arg8, class datCallback arg9, i32 arg10)
     {
         return stub<member_func_t<class UIButton*, UIMenu, i32, struct LocString*, f32, f32, f32, f32, i32, i32,
@@ -302,7 +301,7 @@ public:
     }
 
     // 0x4E1BB0 | ?AddLabel@UIMenu@@QAEPAVUILabel@@HPAULocString@@MMMMHH@Z
-    inline class UILabel* AddLabel(
+    class UILabel* AddLabel(
         i32 arg1, struct LocString* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7, i32 arg8)
     {
         return stub<member_func_t<class UILabel*, UIMenu, i32, struct LocString*, f32, f32, f32, f32, i32, i32>>(
@@ -310,20 +309,20 @@ public:
     }
 
     // 0x4E1CB0 | ?AddBMLabel@UIMenu@@QAEPAVUIBMLabel@@HPADPAVstring@@MMPAH@Z
-    inline class UIBMLabel* AddBMLabel(i32 arg1, char* arg2, class string* arg3, f32 arg4, f32 arg5, i32* arg6)
+    class UIBMLabel* AddBMLabel(i32 arg1, char* arg2, class string* arg3, f32 arg4, f32 arg5, i32* arg6)
     {
         return stub<member_func_t<class UIBMLabel*, UIMenu, i32, char*, class string*, f32, f32, i32*>>(
             0x4E1CB0, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4E1DC0 | ?AddIcon@UIMenu@@QAEPAVUIIcon@@HPADMM@Z
-    inline class UIIcon* AddIcon(i32 arg1, char* arg2, f32 arg3, f32 arg4)
+    class UIIcon* AddIcon(i32 arg1, char* arg2, f32 arg3, f32 arg4)
     {
         return stub<member_func_t<class UIIcon*, UIMenu, i32, char*, f32, f32>>(0x4E1DC0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4E1ED0 | ?AddIconW@UIMenu@@QAEPAVUIIconW@@HPAULocString@@PADMMMMVdatCallback@@@Z
-    inline class UIIconW* AddIconW(
+    class UIIconW* AddIconW(
         i32 arg1, struct LocString* arg2, char* arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7, class datCallback arg8)
     {
         return stub<member_func_t<class UIIconW*, UIMenu, i32, struct LocString*, char*, f32, f32, f32, f32,
@@ -331,15 +330,15 @@ public:
     }
 
     // 0x4E1FE0 | ?AddToggle@UIMenu@@QAEPAVUIToggleButton@@HPAULocString@@PAHMMMMHHVdatCallback@@@Z
-    inline class UIToggleButton* AddToggle(i32 arg1, struct LocString* arg2, i32* arg3, f32 arg4, f32 arg5, f32 arg6,
-        f32 arg7, i32 arg8, i32 arg9, class datCallback arg10)
+    class UIToggleButton* AddToggle(i32 arg1, struct LocString* arg2, i32* arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7,
+        i32 arg8, i32 arg9, class datCallback arg10)
     {
         return stub<member_func_t<class UIToggleButton*, UIMenu, i32, struct LocString*, i32*, f32, f32, f32, f32, i32,
             i32, class datCallback>>(0x4E1FE0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
     }
 
     // 0x4E2100 | ?AddToggle2@UIMenu@@QAEPAVUIToggleButton2@@HPAULocString@@PAHMMMMHHVdatCallback@@@Z
-    inline class UIToggleButton2* AddToggle2(i32 arg1, struct LocString* arg2, i32* arg3, f32 arg4, f32 arg5, f32 arg6,
+    class UIToggleButton2* AddToggle2(i32 arg1, struct LocString* arg2, i32* arg3, f32 arg4, f32 arg5, f32 arg6,
         f32 arg7, i32 arg8, i32 arg9, class datCallback arg10)
     {
         return stub<member_func_t<class UIToggleButton2*, UIMenu, i32, struct LocString*, i32*, f32, f32, f32, f32, i32,
@@ -347,8 +346,8 @@ public:
     }
 
     // 0x4E2220 | ?AddMex@UIMenu@@QAEPAVUIMexButton@@HPAULocString@@PAHHMMMMHHVdatCallback@@@Z
-    inline class UIMexButton* AddMex(i32 arg1, struct LocString* arg2, i32* arg3, i32 arg4, f32 arg5, f32 arg6,
-        f32 arg7, f32 arg8, i32 arg9, i32 arg10, class datCallback arg11)
+    class UIMexButton* AddMex(i32 arg1, struct LocString* arg2, i32* arg3, i32 arg4, f32 arg5, f32 arg6, f32 arg7,
+        f32 arg8, i32 arg9, i32 arg10, class datCallback arg11)
     {
         return stub<member_func_t<class UIMexButton*, UIMenu, i32, struct LocString*, i32*, i32, f32, f32, f32, f32,
             i32, i32, class datCallback>>(
@@ -356,117 +355,115 @@ public:
     }
 
     // 0x4E2340 | ?AddBMButton@UIMenu@@QAEPAVUIBMButton@@HPADMMHVdatCallback@@PAHHH1@Z
-    inline class UIBMButton* AddBMButton(i32 arg1, char* arg2, f32 arg3, f32 arg4, i32 arg5, class datCallback arg6,
-        i32* arg7, i32 arg8, i32 arg9, class datCallback arg10)
+    class UIBMButton* AddBMButton(i32 arg1, char* arg2, f32 arg3, f32 arg4, i32 arg5, class datCallback arg6, i32* arg7,
+        i32 arg8, i32 arg9, class datCallback arg10)
     {
         return stub<member_func_t<class UIBMButton*, UIMenu, i32, char*, f32, f32, i32, class datCallback, i32*, i32,
             i32, class datCallback>>(0x4E2340, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
     }
 
     // 0x4E24D0 | ?AddCWArray@UIMenu@@QAEPAVUICWArray@@HMMMMHVdatCallback@@@Z
-    inline class UICWArray* AddCWArray(
-        i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, i32 arg6, class datCallback arg7)
+    class UICWArray* AddCWArray(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, i32 arg6, class datCallback arg7)
     {
         return stub<member_func_t<class UICWArray*, UIMenu, i32, f32, f32, f32, f32, i32, class datCallback>>(
             0x4E24D0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x4E2610 | ?AddVScrollBar@UIMenu@@QAEPAVUIVScrollBar@@HPAHMMMMMMHHVdatCallback@@@Z
-    inline class UIVScrollBar* AddVScrollBar(i32 arg1, i32* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7,
-        f32 arg8, i32 arg9, i32 arg10, class datCallback arg11)
+    class UIVScrollBar* AddVScrollBar(i32 arg1, i32* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7, f32 arg8,
+        i32 arg9, i32 arg10, class datCallback arg11)
     {
         return stub<member_func_t<class UIVScrollBar*, UIMenu, i32, i32*, f32, f32, f32, f32, f32, f32, i32, i32,
             class datCallback>>(0x4E2610, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
     }
 
     // 0x4E2760 | ?MouseAction@UIMenu@@QAEXTeqEvent@@@Z
-    inline void MouseAction(union eqEvent arg1)
+    void MouseAction(union eqEvent arg1)
     {
         return stub<member_func_t<void, UIMenu, union eqEvent>>(0x4E2760, this, arg1);
     }
 
     // 0x4E27D0 | ?KeyboardAction@UIMenu@@QAEXTeqEvent@@@Z
-    inline void KeyboardAction(union eqEvent arg1)
+    void KeyboardAction(union eqEvent arg1)
     {
         return stub<member_func_t<void, UIMenu, union eqEvent>>(0x4E27D0, this, arg1);
     }
 
     // 0x4E2860 | ?MouseHitCheck@UIMenu@@QAEPAVuiWidget@@HMM@Z
-    inline class uiWidget* MouseHitCheck(i32 arg1, f32 arg2, f32 arg3)
+    class uiWidget* MouseHitCheck(i32 arg1, f32 arg2, f32 arg3)
     {
         return stub<member_func_t<class uiWidget*, UIMenu, i32, f32, f32>>(0x4E2860, this, arg1, arg2, arg3);
     }
 
     // 0x4E2960 | ?SetSelected@UIMenu@@QAEXXZ
-    inline void SetSelected()
+    void SetSelected()
     {
         return stub<member_func_t<void, UIMenu>>(0x4E2960, this);
     }
 
     // 0x4E2990 | ?ClearSelected@UIMenu@@QAEXXZ
-    inline void ClearSelected()
+    void ClearSelected()
     {
         return stub<member_func_t<void, UIMenu>>(0x4E2990, this);
     }
 
     // 0x4E29C0 | ?ClearWidgets@UIMenu@@QAEXXZ
-    inline void ClearWidgets()
+    void ClearWidgets()
     {
         return stub<member_func_t<void, UIMenu>>(0x4E29C0, this);
     }
 
     // 0x4E29F0 | ?CheckMouseHits@UIMenu@@QAEXXZ
-    inline void CheckMouseHits()
+    void CheckMouseHits()
     {
         return stub<member_func_t<void, UIMenu>>(0x4E29F0, this);
     }
 
     // 0x4E2B40 | ?AddWidget@UIMenu@@QAEXPAVuiWidget@@PADMMMMH1@Z
-    inline void AddWidget(
-        class uiWidget* arg1, char* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7, char* arg8)
+    void AddWidget(class uiWidget* arg1, char* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7, char* arg8)
     {
         return stub<member_func_t<void, UIMenu, class uiWidget*, char*, f32, f32, f32, f32, i32, char*>>(
             0x4E2B40, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
     // 0x4E0870 | ??1UIMenu@@UAE@XZ
-    inline ~UIMenu() override
+    ~UIMenu() override
     {
         stub<member_func_t<void, UIMenu>>(0x4E0870, this);
     }
 
     // 0x4E0A80 | ?Update@UIMenu@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, UIMenu>>(0x4E0A80, this);
     }
 
     // 0x4E0A60 | ?PreSetup@UIMenu@@UAEXXZ
-    virtual inline void PreSetup()
+    virtual void PreSetup()
     {
         return stub<member_func_t<void, UIMenu>>(0x4E0A60, this);
     }
 
     // 0x4E0A70 | ?PostSetup@UIMenu@@UAEXXZ
-    virtual inline void PostSetup()
+    virtual void PostSetup()
     {
         return stub<member_func_t<void, UIMenu>>(0x4E0A70, this);
     }
 
     // 0x4E0B10 | ?BackUp@UIMenu@@UAEXXZ
-    virtual inline void BackUp()
+    virtual void BackUp()
     {
         return stub<member_func_t<void, UIMenu>>(0x4E0B10, this);
     }
 
     // 0x4E0DE0 | ?CheckInput@UIMenu@@UAEXXZ
-    virtual inline void CheckInput()
+    virtual void CheckInput()
     {
         return stub<member_func_t<void, UIMenu>>(0x4E0DE0, this);
     }
 
     // 0x4E2D70 | ?IsAnOptionMenu@UIMenu@@UAEHXZ
-    virtual inline i32 IsAnOptionMenu()
+    virtual i32 IsAnOptionMenu()
     {
         return stub<member_func_t<i32, UIMenu>>(0x4E2D70, this);
     }

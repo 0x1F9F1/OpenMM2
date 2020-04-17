@@ -43,14 +43,14 @@ class vehBreakable
 {
 public:
     // 0x4D8530 | ??0vehBreakable@@QAE@PAPAVmodStatic@@AAVMatrix34@@HHH@Z
-    inline vehBreakable(class modStatic** arg1, class Matrix34& arg2, i32 arg3, i32 arg4, i32 arg5)
+    vehBreakable(class modStatic** arg1, class Matrix34& arg2, i32 arg3, i32 arg4, i32 arg5)
     {
         stub<member_func_t<void, vehBreakable, class modStatic**, class Matrix34&, i32, i32, i32>>(
             0x4D8530, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x4D8BE0 | ?Add@vehBreakable@@QAEXPAV1@@Z
-    inline void Add(class vehBreakable* arg1)
+    void Add(class vehBreakable* arg1)
     {
         return stub<member_func_t<void, vehBreakable, class vehBreakable*>>(0x4D8BE0, this, arg1);
     }
@@ -60,25 +60,25 @@ class vehBreakableMgr
 {
 public:
     // 0x4D8580 | ??0vehBreakableMgr@@QAE@XZ
-    inline vehBreakableMgr()
+    vehBreakableMgr()
     {
         stub<member_func_t<void, vehBreakableMgr>>(0x4D8580, this);
     }
 
     // 0x4D85B0 | ??1vehBreakableMgr@@QAE@XZ
-    inline ~vehBreakableMgr()
+    ~vehBreakableMgr()
     {
         stub<member_func_t<void, vehBreakableMgr>>(0x4D85B0, this);
     }
 
     // 0x4D85E0 | ?Init@vehBreakableMgr@@QAE_NPAVMatrix34@@@Z
-    inline bool Init(class Matrix34* arg1)
+    bool Init(class Matrix34* arg1)
     {
         return stub<member_func_t<bool, vehBreakableMgr, class Matrix34*>>(0x4D85E0, this, arg1);
     }
 
     // 0x4D8600 | ?Create@vehBreakableMgr@@QAEPAVvehBreakable@@PBD0PAPAVmodStatic@@HH@Z
-    inline class vehBreakable* Create(char const* arg1, char const* arg2, class modStatic** arg3, i32 arg4, i32 arg5)
+    class vehBreakable* Create(char const* arg1, char const* arg2, class modStatic** arg3, i32 arg4, i32 arg5)
     {
         return stub<
             member_func_t<class vehBreakable*, vehBreakableMgr, char const*, char const*, class modStatic**, i32, i32>>(
@@ -86,59 +86,59 @@ public:
     }
 
     // 0x4D86A0 | ?Add@vehBreakableMgr@@QAEXPBD0PAPAVmodStatic@@HH@Z
-    inline void Add(char const* arg1, char const* arg2, class modStatic** arg3, i32 arg4, i32 arg5)
+    void Add(char const* arg1, char const* arg2, class modStatic** arg3, i32 arg4, i32 arg5)
     {
         return stub<member_func_t<void, vehBreakableMgr, char const*, char const*, class modStatic**, i32, i32>>(
             0x4D86A0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x4D86F0 | ?Get@vehBreakableMgr@@QAEPAVvehBreakable@@H@Z
-    inline class vehBreakable* Get(i32 arg1)
+    class vehBreakable* Get(i32 arg1)
     {
         return stub<member_func_t<class vehBreakable*, vehBreakableMgr, i32>>(0x4D86F0, this, arg1);
     }
 
     // 0x4D8710 | ?Reset@vehBreakableMgr@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, vehBreakableMgr>>(0x4D8710, this);
     }
 
     // 0x4D8770 | ?Update@vehBreakableMgr@@QAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, vehBreakableMgr>>(0x4D8770, this);
     }
 
     // 0x4D8780 | ?Draw@vehBreakableMgr@@QAEXABVMatrix34@@PAVmodShader@@H@Z
-    inline void Draw(class Matrix34 const& arg1, class modShader* arg2, i32 arg3)
+    void Draw(class Matrix34 const& arg1, class modShader* arg2, i32 arg3)
     {
         return stub<member_func_t<void, vehBreakableMgr, class Matrix34 const&, class modShader*, i32>>(
             0x4D8780, this, arg1, arg2, arg3);
     }
 
     // 0x4D8890 | ?DrawCityLit@vehBreakableMgr@@QAEXABVMatrix34@@PAVmodShader@@H@Z
-    inline void DrawCityLit(class Matrix34 const& arg1, class modShader* arg2, i32 arg3)
+    void DrawCityLit(class Matrix34 const& arg1, class modShader* arg2, i32 arg3)
     {
         return stub<member_func_t<void, vehBreakableMgr, class Matrix34 const&, class modShader*, i32>>(
             0x4D8890, this, arg1, arg2, arg3);
     }
 
     // 0x4D88A0 | ?Impact@vehBreakableMgr@@QAEXMABVVector3@@H@Z
-    inline void Impact(f32 arg1, class Vector3 const& arg2, i32 arg3)
+    void Impact(f32 arg1, class Vector3 const& arg2, i32 arg3)
     {
         return stub<member_func_t<void, vehBreakableMgr, f32, class Vector3 const&, i32>>(
             0x4D88A0, this, arg1, arg2, arg3);
     }
 
     // 0x4D8940 | ?Eject@vehBreakableMgr@@QAEXPAVvehBreakable@@H@Z
-    inline void Eject(class vehBreakable* arg1, i32 arg2)
+    void Eject(class vehBreakable* arg1, i32 arg2)
     {
         return stub<member_func_t<void, vehBreakableMgr, class vehBreakable*, i32>>(0x4D8940, this, arg1, arg2);
     }
 
     // 0x4D8BB0 | ?EjectAll@vehBreakableMgr@@QAEXH@Z
-    inline void EjectAll(i32 arg1)
+    void EjectAll(i32 arg1)
     {
         return stub<member_func_t<void, vehBreakableMgr, i32>>(0x4D8BB0, this, arg1);
     }

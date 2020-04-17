@@ -75,201 +75,201 @@ class DMusicObject
 {
 public:
     // 0x515D40 | ??0DMusicObject@@QAE@H@Z
-    inline DMusicObject(i32 arg1)
+    DMusicObject(i32 arg1)
     {
         stub<member_func_t<void, DMusicObject, i32>>(0x515D40, this, arg1);
     }
 
     // 0x515DF0 | ??1DMusicObject@@QAE@XZ
-    inline ~DMusicObject()
+    ~DMusicObject()
     {
         stub<member_func_t<void, DMusicObject>>(0x515DF0, this);
     }
 
     // 0x515F00 | ?CleanUpSegmentWrappers@DMusicObject@@QAEXXZ
-    inline void CleanUpSegmentWrappers()
+    void CleanUpSegmentWrappers()
     {
         return stub<member_func_t<void, DMusicObject>>(0x515F00, this);
     }
 
     // 0x515F60 | ?Init@DMusicObject@@QAEHPAUIDirectSound@@KHKK@Z
-    inline i32 Init(struct IDirectSound* arg1, u32 arg2, i32 arg3, u32 arg4, u32 arg5)
+    i32 Init(struct IDirectSound* arg1, u32 arg2, i32 arg3, u32 arg4, u32 arg5)
     {
         return stub<member_func_t<i32, DMusicObject, struct IDirectSound*, u32, i32, u32, u32>>(
             0x515F60, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x516050 | ?InitPerformance@DMusicObject@@AAEHPAUIDirectSound@@@Z
-    inline i32 InitPerformance(struct IDirectSound* arg1)
+    i32 InitPerformance(struct IDirectSound* arg1)
     {
         return stub<member_func_t<i32, DMusicObject, struct IDirectSound*>>(0x516050, this, arg1);
     }
 
     // 0x516120 | ?InitNotificationThread@DMusicObject@@AAEHXZ
-    inline i32 InitNotificationThread()
+    i32 InitNotificationThread()
     {
         return stub<member_func_t<i32, DMusicObject>>(0x516120, this);
     }
 
     // 0x516220 | ?InitLoader@DMusicObject@@AAEHXZ
-    inline i32 InitLoader()
+    i32 InitLoader()
     {
         return stub<member_func_t<i32, DMusicObject>>(0x516220, this);
     }
 
     // 0x5162B0 | ?IsPlaying@DMusicObject@@QAEHXZ
-    inline i32 IsPlaying()
+    i32 IsPlaying()
     {
         return stub<member_func_t<i32, DMusicObject>>(0x5162B0, this);
     }
 
     // 0x5162D0 | ?HandleNotifications@DMusicObject@@QAEXXZ
-    inline void HandleNotifications()
+    void HandleNotifications()
     {
         return stub<member_func_t<void, DMusicObject>>(0x5162D0, this);
     }
 
     // 0x516300 | ?InitPort@DMusicObject@@AAEHPAUIDirectSound@@KHKK@Z
-    inline i32 InitPort(struct IDirectSound* arg1, u32 arg2, i32 arg3, u32 arg4, u32 arg5)
+    i32 InitPort(struct IDirectSound* arg1, u32 arg2, i32 arg3, u32 arg4, u32 arg5)
     {
         return stub<member_func_t<i32, DMusicObject, struct IDirectSound*, u32, i32, u32, u32>>(
             0x516300, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x5164B0 | ?AssignPChannelBlocks@DMusicObject@@AAEHK@Z
-    inline i32 AssignPChannelBlocks(u32 arg1)
+    i32 AssignPChannelBlocks(u32 arg1)
     {
         return stub<member_func_t<i32, DMusicObject, u32>>(0x5164B0, this, arg1);
     }
 
     // 0x516510 | ?FindBestPort@DMusicObject@@QAEHAAU_DMUS_PORTCAPS@@@Z
-    inline i32 FindBestPort(struct _DMUS_PORTCAPS& arg1)
+    i32 FindBestPort(struct _DMUS_PORTCAPS& arg1)
     {
         return stub<member_func_t<i32, DMusicObject, struct _DMUS_PORTCAPS&>>(0x516510, this, arg1);
     }
 
     // 0x516520 | ?RatePort@DMusicObject@@AAEHAAU_DMUS_PORTCAPS@@@Z
-    inline i32 RatePort(struct _DMUS_PORTCAPS& arg1)
+    i32 RatePort(struct _DMUS_PORTCAPS& arg1)
     {
         return stub<member_func_t<i32, DMusicObject, struct _DMUS_PORTCAPS&>>(0x516520, this, arg1);
     }
 
     // 0x516530 | ?GetNumPorts@DMusicObject@@QAEHXZ
-    inline i32 GetNumPorts()
+    i32 GetNumPorts()
     {
         return stub<member_func_t<i32, DMusicObject>>(0x516530, this);
     }
 
     // 0x516540 | ?FindMSSoftWareSynth@DMusicObject@@QAEHAAU_DMUS_PORTCAPS@@@Z
-    inline i32 FindMSSoftWareSynth(struct _DMUS_PORTCAPS& arg1)
+    i32 FindMSSoftWareSynth(struct _DMUS_PORTCAPS& arg1)
     {
         return stub<member_func_t<i32, DMusicObject, struct _DMUS_PORTCAPS&>>(0x516540, this, arg1);
     }
 
     // 0x516610 | ?SetSearchDirectory@DMusicObject@@QAEHPAD@Z
-    inline i32 SetSearchDirectory(char* arg1)
+    i32 SetSearchDirectory(char* arg1)
     {
         return stub<member_func_t<i32, DMusicObject, char*>>(0x516610, this, arg1);
     }
 
     // 0x516680 | ?ScanDirectory@DMusicObject@@QAEHXZ
-    inline i32 ScanDirectory()
+    i32 ScanDirectory()
     {
         return stub<member_func_t<i32, DMusicObject>>(0x516680, this);
     }
 
     // 0x516750 | ?OpenSegmentFile@DMusicObject@@QAEHPADH_N@Z
-    inline i32 OpenSegmentFile(char* arg1, i32 arg2, bool arg3)
+    i32 OpenSegmentFile(char* arg1, i32 arg2, bool arg3)
     {
         return stub<member_func_t<i32, DMusicObject, char*, i32, bool>>(0x516750, this, arg1, arg2, arg3);
     }
 
     // 0x516860 | ?PlaySegment@DMusicObject@@QAEHK@Z
-    inline i32 PlaySegment(u32 arg1)
+    i32 PlaySegment(u32 arg1)
     {
         return stub<member_func_t<i32, DMusicObject, u32>>(0x516860, this, arg1);
     }
 
     // 0x5168A0 | ?PlayMotif@DMusicObject@@QAEHHK@Z
-    inline i32 PlayMotif(i32 arg1, u32 arg2)
+    i32 PlayMotif(i32 arg1, u32 arg2)
     {
         return stub<member_func_t<i32, DMusicObject, i32, u32>>(0x5168A0, this, arg1, arg2);
     }
 
     // 0x516900 | ?StopSegment@DMusicObject@@QAEHH@Z
-    inline i32 StopSegment(i32 arg1)
+    i32 StopSegment(i32 arg1)
     {
         return stub<member_func_t<i32, DMusicObject, i32>>(0x516900, this, arg1);
     }
 
     // 0x516970 | ?LoadMotif@DMusicObject@@QAEHPAD0H@Z
-    inline i32 LoadMotif(char* arg1, char* arg2, i32 arg3)
+    i32 LoadMotif(char* arg1, char* arg2, i32 arg3)
     {
         return stub<member_func_t<i32, DMusicObject, char*, char*, i32>>(0x516970, this, arg1, arg2, arg3);
     }
 
     // 0x516BB0 | ?LoadBand@DMusicObject@@QAEHPADHH@Z
-    inline i32 LoadBand(char* arg1, i32 arg2, i32 arg3)
+    i32 LoadBand(char* arg1, i32 arg2, i32 arg3)
     {
         return stub<member_func_t<i32, DMusicObject, char*, i32, i32>>(0x516BB0, this, arg1, arg2, arg3);
     }
 
     // 0x516CD0 | ?AllocateMotifs@DMusicObject@@QAEXH@Z
-    inline void AllocateMotifs(i32 arg1)
+    void AllocateMotifs(i32 arg1)
     {
         return stub<member_func_t<void, DMusicObject, i32>>(0x516CD0, this, arg1);
     }
 
     // 0x516D60 | ?PlayBand@DMusicObject@@QAEHHH@Z
-    inline i32 PlayBand(i32 arg1, i32 arg2)
+    i32 PlayBand(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<i32, DMusicObject, i32, i32>>(0x516D60, this, arg1, arg2);
     }
 
     // 0x516DE0 | ?CreateComposer@DMusicObject@@QAEHXZ
-    inline i32 CreateComposer()
+    i32 CreateComposer()
     {
         return stub<member_func_t<i32, DMusicObject>>(0x516DE0, this);
     }
 
     // 0x516E20 | ?SegmentSwitch@DMusicObject@@QAEHH@Z
-    inline i32 SegmentSwitch(i32 arg1)
+    i32 SegmentSwitch(i32 arg1)
     {
         return stub<member_func_t<i32, DMusicObject, i32>>(0x516E20, this, arg1);
     }
 
     // 0x516E90 | ?SegmentSwitch@DMusicObject@@QAEHHGK@Z
-    inline i32 SegmentSwitch(i32 arg1, u16 arg2, u32 arg3)
+    i32 SegmentSwitch(i32 arg1, u16 arg2, u32 arg3)
     {
         return stub<member_func_t<i32, DMusicObject, i32, u16, u32>>(0x516E90, this, arg1, arg2, arg3);
     }
 
     // 0x516FB0 | ?ScaleMasterVolume@DMusicObject@@QAEHJ@Z
-    inline i32 ScaleMasterVolume(i32 arg1)
+    i32 ScaleMasterVolume(i32 arg1)
     {
         return stub<member_func_t<i32, DMusicObject, i32>>(0x516FB0, this, arg1);
     }
 
     // 0x516FF0 | ?SetGrooveLevel@DMusicObject@@AAEHEE@Z
-    inline i32 SetGrooveLevel(u8 arg1, u8 arg2)
+    i32 SetGrooveLevel(u8 arg1, u8 arg2)
     {
         return stub<member_func_t<i32, DMusicObject, u8, u8>>(0x516FF0, this, arg1, arg2);
     }
 
     // 0x517020 | ?ScaleMasterTempo@DMusicObject@@QAEHM@Z
-    inline i32 ScaleMasterTempo(f32 arg1)
+    i32 ScaleMasterTempo(f32 arg1)
     {
         return stub<member_func_t<i32, DMusicObject, f32>>(0x517020, this, arg1);
     }
 
     // 0x5170A0 | ?Activate@DMusicObject@@QAEHH@Z
-    inline i32 Activate(i32 arg1)
+    i32 Activate(i32 arg1)
     {
         return stub<member_func_t<i32, DMusicObject, i32>>(0x5170A0, this, arg1);
     }
 
     // 0x5170E0 | ?GetDMusicWaveBuffer@DMusicObject@@QAEPAVDMusicWaveBuffer@@XZ
-    inline class DMusicWaveBuffer* GetDMusicWaveBuffer()
+    class DMusicWaveBuffer* GetDMusicWaveBuffer()
     {
         return stub<member_func_t<class DMusicWaveBuffer*, DMusicObject>>(0x5170E0, this);
     }

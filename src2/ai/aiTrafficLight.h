@@ -43,13 +43,13 @@ public:
     // aiTrafficLightSet::`vftable' @ 0x5B5528
 
     // 0x53C040 | ??0aiTrafficLightSet@@QAE@PAVaiIntersection@@@Z
-    inline aiTrafficLightSet(class aiIntersection* arg1)
+    aiTrafficLightSet(class aiIntersection* arg1)
     {
         stub<member_func_t<void, aiTrafficLightSet, class aiIntersection*>>(0x53C040, this, arg1);
     }
 
     // 0x53C180 | ?SetFourWay@aiTrafficLightSet@@QAEXXZ
-    inline void SetFourWay()
+    void SetFourWay()
     {
         return stub<member_func_t<void, aiTrafficLightSet>>(0x53C180, this);
     }
@@ -58,19 +58,19 @@ public:
     inline extern_var(0x6B2FFC, int16_t, ObjCount);
 
     // 0x53C440 | ??1aiTrafficLightSet@@UAE@XZ
-    inline ~aiTrafficLightSet() override
+    ~aiTrafficLightSet() override
     {
         stub<member_func_t<void, aiTrafficLightSet>>(0x53C440, this);
     }
 
     // 0x53C4B0 | ?Update@aiTrafficLightSet@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, aiTrafficLightSet>>(0x53C4B0, this);
     }
 
     // 0x53C460 | ?Reset@aiTrafficLightSet@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, aiTrafficLightSet>>(0x53C460, this);
     }
@@ -82,25 +82,25 @@ public:
     // aiTrafficLightInstance::`vftable' @ 0x5B54AC
 
     // 0x53C960 | ?Draw@aiTrafficLightInstance@@UAEXH@Z
-    inline void Draw(i32 arg1) override
+    void Draw(i32 arg1) override
     {
         return stub<member_func_t<void, aiTrafficLightInstance, i32>>(0x53C960, this, arg1);
     }
 
     // 0x53CA70 | ?DrawGlow@aiTrafficLightInstance@@UAEXXZ
-    inline void DrawGlow() override
+    void DrawGlow() override
     {
         return stub<member_func_t<void, aiTrafficLightInstance>>(0x53CA70, this);
     }
 
     // 0x53CD50 | ?SizeOf@aiTrafficLightInstance@@UAEIXZ
-    inline u32 SizeOf() override
+    u32 SizeOf() override
     {
         return stub<member_func_t<u32, aiTrafficLightInstance>>(0x53CD50, this);
     }
 
     // 0x53C6F0 | ?Init@aiTrafficLightInstance@@UAEHPADAAVVector3@@1H0@Z
-    virtual inline i32 Init(char* arg1, class Vector3& arg2, class Vector3& arg3, i32 arg4, char* arg5)
+    virtual i32 Init(char* arg1, class Vector3& arg2, class Vector3& arg3, i32 arg4, char* arg5)
     {
         return stub<member_func_t<i32, aiTrafficLightInstance, char*, class Vector3&, class Vector3&, i32, char*>>(
             0x53C6F0, this, arg1, arg2, arg3, arg4, arg5);

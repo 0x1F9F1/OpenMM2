@@ -89,61 +89,61 @@ public:
     // dgPhysEntity::`vftable' @ 0x5B0BD8
 
     // 0x42CC60 | ??1dgPhysEntity@@UAE@XZ
-    inline ~dgPhysEntity() override
+    ~dgPhysEntity() override
     {
         stub<member_func_t<void, dgPhysEntity>>(0x42CC60, this);
     }
 
     // 0x42CBE0 | ?PreUpdate@dgPhysEntity@@UAEXXZ
-    virtual inline void PreUpdate()
+    virtual void PreUpdate()
     {
         return stub<member_func_t<void, dgPhysEntity>>(0x42CBE0, this);
     }
 
     // 0x46A120 | ?Update@dgPhysEntity@@UAEXXZ
-    virtual inline void Update()
+    virtual void Update()
     {
         return stub<member_func_t<void, dgPhysEntity>>(0x46A120, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline void PostUpdate()
+    virtual void PostUpdate()
     {
         return stub<member_func_t<void, dgPhysEntity>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline class phInertialCS* GetICS()
+    virtual class phInertialCS* GetICS()
     {
         return stub<member_func_t<class phInertialCS*, dgPhysEntity>>(0x582519, this);
     }
 
     // 0x42CBF0 | ?GetCollider@dgPhysEntity@@UAEPAVphCollider@@XZ
-    virtual inline class phCollider* GetCollider()
+    virtual class phCollider* GetCollider()
     {
         return stub<member_func_t<class phCollider*, dgPhysEntity>>(0x42CBF0, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline class lvlInstance* GetInst()
+    virtual class lvlInstance* GetInst()
     {
         return stub<member_func_t<class lvlInstance*, dgPhysEntity>>(0x582519, this);
     }
 
     // 0x42CC00 | ?DetachMe@dgPhysEntity@@UAEXXZ
-    virtual inline void DetachMe()
+    virtual void DetachMe()
     {
         return stub<member_func_t<void, dgPhysEntity>>(0x42CC00, this);
     }
 
     // 0x42CC10 | ?RequiresTerrainCollision@dgPhysEntity@@UAE_NXZ
-    virtual inline bool RequiresTerrainCollision()
+    virtual bool RequiresTerrainCollision()
     {
         return stub<member_func_t<bool, dgPhysEntity>>(0x42CC10, this);
     }
 
     // 0x42CC20 | ?FirstImpactCallback@dgPhysEntity@@UAEXXZ
-    virtual inline void FirstImpactCallback()
+    virtual void FirstImpactCallback()
     {
         return stub<member_func_t<void, dgPhysEntity>>(0x42CC20, this);
     }
@@ -155,128 +155,128 @@ public:
     // vehCar::`vftable' @ 0x5B0BB0
 
     // 0x42BAB0 | ??0vehCar@@QAE@H@Z
-    inline vehCar(i32 arg1)
+    vehCar(i32 arg1)
     {
         stub<member_func_t<void, vehCar, i32>>(0x42BAB0, this, arg1);
     }
 
     // 0x42BE10 | ?Init@vehCar@@QAEXPBDHH_N@Z
-    inline void Init(char const* arg1, i32 arg2, i32 arg3, bool arg4)
+    void Init(char const* arg1, i32 arg2, i32 arg3, bool arg4)
     {
         return stub<member_func_t<void, vehCar, char const*, i32, i32, bool>>(0x42BE10, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x42C1D0 | ?SetColliderID@vehCar@@QAEXH@Z
-    inline void SetColliderID(i32 arg1)
+    void SetColliderID(i32 arg1)
     {
         return stub<member_func_t<void, vehCar, i32>>(0x42C1D0, this, arg1);
     }
 
     // 0x42C1E0 | ?SetAudio@vehCar@@QAEXPAVvehCarAudioContainer@@@Z
-    inline void SetAudio(class vehCarAudioContainer* arg1)
+    void SetAudio(class vehCarAudioContainer* arg1)
     {
         return stub<member_func_t<void, vehCar, class vehCarAudioContainer*>>(0x42C1E0, this, arg1);
     }
 
     // 0x42C1F0 | ?InitAudio@vehCar@@QAEXPBDH@Z
-    inline void InitAudio(char const* arg1, i32 arg2)
+    void InitAudio(char const* arg1, i32 arg2)
     {
         return stub<member_func_t<void, vehCar, char const*, i32>>(0x42C1F0, this, arg1, arg2);
     }
 
     // 0x42C290 | ?SetInput@vehCar@@QAEXPAVvehInput@@@Z
-    inline void SetInput(class vehInput* arg1)
+    void SetInput(class vehInput* arg1)
     {
         return stub<member_func_t<void, vehCar, class vehInput*>>(0x42C290, this, arg1);
     }
 
     // 0x42C2A0 | ?GetInput@vehCar@@QAEPAVvehInput@@XZ
-    inline class vehInput* GetInput()
+    class vehInput* GetInput()
     {
         return stub<member_func_t<class vehInput*, vehCar>>(0x42C2A0, this);
     }
 
     // 0x42C2B0 | ?SetDriver@vehCar@@QAEXPAVvehDriver@@@Z
-    inline void SetDriver(class vehDriver* arg1)
+    void SetDriver(class vehDriver* arg1)
     {
         return stub<member_func_t<void, vehCar, class vehDriver*>>(0x42C2B0, this, arg1);
     }
 
     // 0x42C2C0 | ?SetDrivable@vehCar@@QAEXHH@Z
-    inline void SetDrivable(i32 arg1, i32 arg2)
+    void SetDrivable(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, vehCar, i32, i32>>(0x42C2C0, this, arg1, arg2);
     }
 
     // 0x42C330 | ?Reset@vehCar@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, vehCar>>(0x42C330, this);
     }
 
     // 0x42C450 | ?ClearDamage@vehCar@@QAEXXZ
-    inline void ClearDamage()
+    void ClearDamage()
     {
         return stub<member_func_t<void, vehCar>>(0x42C450, this);
     }
 
     // 0x42C570 | ?UpdateTrack@vehCar@@AAEXAAVlvlTrackManager@@ABVvehWheel@@@Z
-    inline void UpdateTrack(class lvlTrackManager& arg1, class vehWheel const& arg2)
+    void UpdateTrack(class lvlTrackManager& arg1, class vehWheel const& arg2)
     {
         return stub<member_func_t<void, vehCar, class lvlTrackManager&, class vehWheel const&>>(
             0x42C570, this, arg1, arg2);
     }
 
     // 0x42C5E0 | ?DrawTracks@vehCar@@QAEXXZ
-    inline void DrawTracks()
+    void DrawTracks()
     {
         return stub<member_func_t<void, vehCar>>(0x42C5E0, this);
     }
 
     // 0x42C890 | ?IsPlayer@vehCar@@QAEHXZ
-    inline i32 IsPlayer()
+    i32 IsPlayer()
     {
         return stub<member_func_t<i32, vehCar>>(0x42C890, this);
     }
 
     // 0x42BCC0 | ??1vehCar@@UAE@XZ
-    inline ~vehCar() override
+    ~vehCar() override
     {
         stub<member_func_t<void, vehCar>>(0x42BCC0, this);
     }
 
     // 0x42C480 | ?PreUpdate@vehCar@@UAEXXZ
-    inline void PreUpdate() override
+    void PreUpdate() override
     {
         return stub<member_func_t<void, vehCar>>(0x42C480, this);
     }
 
     // 0x42C690 | ?Update@vehCar@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, vehCar>>(0x42C690, this);
     }
 
     // 0x42C8B0 | ?PostUpdate@vehCar@@UAEXXZ
-    inline void PostUpdate() override
+    void PostUpdate() override
     {
         return stub<member_func_t<void, vehCar>>(0x42C8B0, this);
     }
 
     // 0x42CA70 | ?GetICS@vehCar@@UAEPAVphInertialCS@@XZ
-    inline class phInertialCS* GetICS() override
+    class phInertialCS* GetICS() override
     {
         return stub<member_func_t<class phInertialCS*, vehCar>>(0x42CA70, this);
     }
 
     // 0x42CA80 | ?GetInst@vehCar@@UAEPAVlvlInstance@@XZ
-    inline class lvlInstance* GetInst() override
+    class lvlInstance* GetInst() override
     {
         return stub<member_func_t<class lvlInstance*, vehCar>>(0x42CA80, this);
     }
 
     // 0x42CA90 | ?RequiresTerrainCollision@vehCar@@UAE_NXZ
-    inline bool RequiresTerrainCollision() override
+    bool RequiresTerrainCollision() override
     {
         return stub<member_func_t<bool, vehCar>>(0x42CA90, this);
     }
@@ -288,49 +288,49 @@ public:
     // mmMirror::`vftable' @ 0x5B0B7C
 
     // 0x42B750 | ??0mmMirror@@QAE@XZ
-    inline mmMirror()
+    mmMirror()
     {
         stub<member_func_t<void, mmMirror>>(0x42B750, this);
     }
 
     // 0x42B7C0 | ?Init@mmMirror@@QAEXXZ
-    inline void Init()
+    void Init()
     {
         return stub<member_func_t<void, mmMirror>>(0x42B7C0, this);
     }
 
     // 0x42B7A0 | ??1mmMirror@@UAE@XZ
-    inline ~mmMirror() override
+    ~mmMirror() override
     {
         stub<member_func_t<void, mmMirror>>(0x42B7A0, this);
     }
 
     // 0x42B8C0 | ?Cull@mmMirror@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, mmMirror>>(0x42B8C0, this);
     }
 
     // 0x42B8B0 | ?Update@mmMirror@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmMirror>>(0x42B8B0, this);
     }
 
     // 0x42B840 | ?Reset@mmMirror@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, mmMirror>>(0x42B840, this);
     }
 
     // 0x42B9E0 | ?FileIO@mmMirror@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
+    void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, mmMirror, class datParser&>>(0x42B9E0, this, arg1);
     }
 
     // 0x42CBD0 | ?GetClassName@mmMirror@@UAEPADXZ
-    inline char* GetClassName() override
+    char* GetClassName() override
     {
         return stub<member_func_t<char*, mmMirror>>(0x42CBD0, this);
     }
@@ -342,7 +342,7 @@ public:
     // Base::`vftable' @ 0x5B063C
 
     // 0x4C8200 | ??1Base@@UAE@XZ
-    virtual inline ~Base()
+    virtual ~Base()
     {
         stub<member_func_t<void, Base>>(0x4C8200, this);
     }

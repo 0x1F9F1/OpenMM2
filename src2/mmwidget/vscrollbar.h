@@ -50,111 +50,111 @@ public:
     // UIVScrollBar::`vftable' @ 0x5B3ACC
 
     // 0x4F0300 | ??0UIVScrollBar@@QAE@XZ
-    inline UIVScrollBar()
+    UIVScrollBar()
     {
         stub<member_func_t<void, UIVScrollBar>>(0x4F0300, this);
     }
 
     // 0x4F0430 | ?Init@UIVScrollBar@@QAEXMMMMHMMPAHVdatCallback@@H@Z
-    inline void Init(f32 arg1, f32 arg2, f32 arg3, f32 arg4, i32 arg5, f32 arg6, f32 arg7, i32* arg8,
-        class datCallback arg9, i32 arg10)
+    void Init(f32 arg1, f32 arg2, f32 arg3, f32 arg4, i32 arg5, f32 arg6, f32 arg7, i32* arg8, class datCallback arg9,
+        i32 arg10)
     {
         return stub<member_func_t<void, UIVScrollBar, f32, f32, f32, f32, i32, f32, f32, i32*, class datCallback, i32>>(
             0x4F0430, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
     }
 
     // 0x4F04A0 | ?LoadBitmap@UIVScrollBar@@QAEXXZ
-    inline void LoadBitmap()
+    void LoadBitmap()
     {
         return stub<member_func_t<void, UIVScrollBar>>(0x4F04A0, this);
     }
 
     // 0x4F05C0 | ?SetHotSpots@UIVScrollBar@@QAEXXZ
-    inline void SetHotSpots()
+    void SetHotSpots()
     {
         return stub<member_func_t<void, UIVScrollBar>>(0x4F05C0, this);
     }
 
     // 0x4F0650 | ?Inc@UIVScrollBar@@QAEMXZ
-    inline f32 Inc()
+    f32 Inc()
     {
         return stub<member_func_t<f32, UIVScrollBar>>(0x4F0650, this);
     }
 
     // 0x4F06B0 | ?Dec@UIVScrollBar@@QAEMXZ
-    inline f32 Dec()
+    f32 Dec()
     {
         return stub<member_func_t<f32, UIVScrollBar>>(0x4F06B0, this);
     }
 
     // 0x4F0710 | ?SetStep@UIVScrollBar@@QAEXHM@Z
-    inline void SetStep(i32 arg1, f32 arg2)
+    void SetStep(i32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, UIVScrollBar, i32, f32>>(0x4F0710, this, arg1, arg2);
     }
 
     // 0x4F0770 | ?SetRange@UIVScrollBar@@QAEXMM@Z
-    inline void SetRange(f32 arg1, f32 arg2)
+    void SetRange(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, UIVScrollBar, f32, f32>>(0x4F0770, this, arg1, arg2);
     }
 
     // 0x4F07D0 | ?SetTrough@UIVScrollBar@@QAEXMM@Z
-    inline void SetTrough(f32 arg1, f32 arg2)
+    void SetTrough(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, UIVScrollBar, f32, f32>>(0x4F07D0, this, arg1, arg2);
     }
 
     // 0x4F0990 | ?EvalMouseXY@UIVScrollBar@@QAEXMM@Z
-    inline void EvalMouseXY(f32 arg1, f32 arg2)
+    void EvalMouseXY(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, UIVScrollBar, f32, f32>>(0x4F0990, this, arg1, arg2);
     }
 
     // 0x4F03A0 | ??1UIVScrollBar@@UAE@XZ
-    inline ~UIVScrollBar() override
+    ~UIVScrollBar() override
     {
         stub<member_func_t<void, UIVScrollBar>>(0x4F03A0, this);
     }
 
     // 0x4F0B20 | ?Cull@UIVScrollBar@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, UIVScrollBar>>(0x4F0B20, this);
     }
 
     // 0x4F0850 | ?Update@UIVScrollBar@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, UIVScrollBar>>(0x4F0850, this);
     }
 
     // 0x4F0D00 | ?Disable@UIVScrollBar@@UAEXXZ
-    inline void Disable() override
+    void Disable() override
     {
         return stub<member_func_t<void, UIVScrollBar>>(0x4F0D00, this);
     }
 
     // 0x4F0CE0 | ?Enable@UIVScrollBar@@UAEXXZ
-    inline void Enable() override
+    void Enable() override
     {
         return stub<member_func_t<void, UIVScrollBar>>(0x4F0CE0, this);
     }
 
     // 0x4F08C0 | ?Action@UIVScrollBar@@UAEXTeqEvent@@@Z
-    inline void Action(union eqEvent arg1) override
+    void Action(union eqEvent arg1) override
     {
         return stub<member_func_t<void, UIVScrollBar, union eqEvent>>(0x4F08C0, this, arg1);
     }
 
     // 0x4F0870 | ?Switch@UIVScrollBar@@UAEXH@Z
-    inline void Switch(i32 arg1) override
+    void Switch(i32 arg1) override
     {
         return stub<member_func_t<void, UIVScrollBar, i32>>(0x4F0870, this, arg1);
     }
 
     // 0x4F0CC0 | ?SetPosition@UIVScrollBar@@UAEXMM@Z
-    inline void SetPosition(f32 arg1, f32 arg2) override
+    void SetPosition(f32 arg1, f32 arg2) override
     {
         return stub<member_func_t<void, UIVScrollBar, f32, f32>>(0x4F0CC0, this, arg1, arg2);
     }

@@ -43,25 +43,25 @@ public:
     // lvlMaterial::`vftable' @ 0x5B1AF8
 
     // 0x4664C0 | ??0lvlMaterial@@QAE@XZ
-    inline lvlMaterial()
+    lvlMaterial()
     {
         stub<member_func_t<void, lvlMaterial>>(0x4664C0, this);
     }
 
     // 0x466510 | ?Load@lvlMaterial@@QAEXAAVdatAsciiTokenizer@@@Z
-    inline void Load(class datAsciiTokenizer& arg1)
+    void Load(class datAsciiTokenizer& arg1)
     {
         return stub<member_func_t<void, lvlMaterial, class datAsciiTokenizer&>>(0x466510, this, arg1);
     }
 
     // 0x4668E0 | ?Copy@lvlMaterial@@QAEXABV1@@Z
-    inline void Copy(class lvlMaterial const& arg1)
+    void Copy(class lvlMaterial const& arg1)
     {
         return stub<member_func_t<void, lvlMaterial, class lvlMaterial const&>>(0x4668E0, this, arg1);
     }
 
     // 0x4666F0 | ?Save@lvlMaterial@@UAEXAAVdatAsciiTokenizer@@@Z
-    inline void Save(class datAsciiTokenizer& arg1) override
+    void Save(class datAsciiTokenizer& arg1) override
     {
         return stub<member_func_t<void, lvlMaterial, class datAsciiTokenizer&>>(0x4666F0, this, arg1);
     }
@@ -85,7 +85,7 @@ public:
     }
 
     // 0x466990 | ??0lvlMaterialMgr@@IAE@XZ
-    inline lvlMaterialMgr()
+    lvlMaterialMgr()
     {
         stub<member_func_t<void, lvlMaterialMgr>>(0x466990, this);
     }
@@ -97,19 +97,19 @@ public:
     }
 
     // 0x466A30 | ?Find@lvlMaterialMgr@@QAEPAVlvlMaterial@@PBD@Z
-    inline class lvlMaterial* Find(char const* arg1)
+    class lvlMaterial* Find(char const* arg1)
     {
         return stub<member_func_t<class lvlMaterial*, lvlMaterialMgr, char const*>>(0x466A30, this, arg1);
     }
 
     // 0x466A40 | ?Lookup@lvlMaterialMgr@@QAEPAVlvlMaterial@@H@Z
-    inline class lvlMaterial* Lookup(i32 arg1)
+    class lvlMaterial* Lookup(i32 arg1)
     {
         return stub<member_func_t<class lvlMaterial*, lvlMaterialMgr, i32>>(0x466A40, this, arg1);
     }
 
     // 0x466A50 | ?Load@lvlMaterialMgr@@UAEPAVphMaterial@@PAVdatAsciiTokenizer@@@Z
-    inline class phMaterial* Load(class datAsciiTokenizer* arg1) override
+    class phMaterial* Load(class datAsciiTokenizer* arg1) override
     {
         return stub<member_func_t<class phMaterial*, lvlMaterialMgr, class datAsciiTokenizer*>>(0x466A50, this, arg1);
     }

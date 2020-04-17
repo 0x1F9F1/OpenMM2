@@ -34,25 +34,25 @@ public:
     // crArmData::`vftable' @ 0x5B6428
 
     // 0x5804C0 | ??0crArmData@@QAE@XZ
-    inline crArmData()
+    crArmData()
     {
         stub<member_func_t<void, crArmData>>(0x5804C0, this);
     }
 
     // 0x580500 | ?Init@crArmData@@UAEXAAVcrSkeletonData@@D@Z
-    virtual inline void Init(class crSkeletonData& arg1, char arg2)
+    virtual void Init(class crSkeletonData& arg1, char arg2)
     {
         return stub<member_func_t<void, crArmData, class crSkeletonData&, char>>(0x580500, this, arg1, arg2);
     }
 
     // 0x5806C0 | ?SolveIK@crArmData@@UBEXAAVcrSkeleton@@AAVcrIKGoal@@@Z
-    virtual inline void SolveIK(class crSkeleton& arg1, class crIKGoal& arg2)
+    virtual void SolveIK(class crSkeleton& arg1, class crIKGoal& arg2)
     {
         return stub<member_func_t<void, crArmData, class crSkeleton&, class crIKGoal&>>(0x5806C0, this, arg1, arg2);
     }
 
     // 0x580660 | ?MatchPose@crArmData@@UBEXAAVcrSkeleton@@AAVcrIKGoal@@@Z
-    virtual inline void MatchPose(class crSkeleton& arg1, class crIKGoal& arg2)
+    virtual void MatchPose(class crSkeleton& arg1, class crIKGoal& arg2)
     {
         return stub<member_func_t<void, crArmData, class crSkeleton&, class crIKGoal&>>(0x580660, this, arg1, arg2);
     }

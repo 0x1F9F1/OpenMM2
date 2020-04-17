@@ -143,382 +143,382 @@ class asNetwork
 {
 public:
     // 0x56FCD0 | ??0asNetwork@@QAE@XZ
-    inline asNetwork()
+    asNetwork()
     {
         stub<member_func_t<void, asNetwork>>(0x56FCD0, this);
     }
 
     // 0x56FD70 | ??1asNetwork@@QAE@XZ
-    inline ~asNetwork()
+    ~asNetwork()
     {
         stub<member_func_t<void, asNetwork>>(0x56FD70, this);
     }
 
     // 0x56FDC0 | ?Initialize@asNetwork@@QAEHHHH@Z
-    inline i32 Initialize(i32 arg1, i32 arg2, i32 arg3)
+    i32 Initialize(i32 arg1, i32 arg2, i32 arg3)
     {
         return stub<member_func_t<i32, asNetwork, i32, i32, i32>>(0x56FDC0, this, arg1, arg2, arg3);
     }
 
     // 0x56FE20 | ?InitializeLobby@asNetwork@@QAEHHH@Z
-    inline i32 InitializeLobby(i32 arg1, i32 arg2)
+    i32 InitializeLobby(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<i32, asNetwork, i32, i32>>(0x56FE20, this, arg1, arg2);
     }
 
     // 0x56FE90 | ?WaitForLobbyConnection@asNetwork@@QAEXH@Z
-    inline void WaitForLobbyConnection(i32 arg1)
+    void WaitForLobbyConnection(i32 arg1)
     {
         return stub<member_func_t<void, asNetwork, i32>>(0x56FE90, this, arg1);
     }
 
     // 0x56FEF0 | ?JoinLobbySession@asNetwork@@QAEHXZ
-    inline i32 JoinLobbySession()
+    i32 JoinLobbySession()
     {
         return stub<member_func_t<i32, asNetwork>>(0x56FEF0, this);
     }
 
     // 0x5700E0 | ?SendLobbyProperty@asNetwork@@QAEXPAXH@Z
-    inline void SendLobbyProperty(void* arg1, i32 arg2)
+    void SendLobbyProperty(void* arg1, i32 arg2)
     {
         return stub<member_func_t<void, asNetwork, void*, i32>>(0x5700E0, this, arg1, arg2);
     }
 
     // 0x5701C0 | ?Logout@asNetwork@@QAEXXZ
-    inline void Logout()
+    void Logout()
     {
         return stub<member_func_t<void, asNetwork>>(0x5701C0, this);
     }
 
     // 0x5702C0 | ?Deallocate@asNetwork@@QAEXXZ
-    inline void Deallocate()
+    void Deallocate()
     {
         return stub<member_func_t<void, asNetwork>>(0x5702C0, this);
     }
 
     // 0x570300 | ?CreateInterface@asNetwork@@QAEHXZ
-    inline i32 CreateInterface()
+    i32 CreateInterface()
     {
         return stub<member_func_t<i32, asNetwork>>(0x570300, this);
     }
 
     // 0x570320 | ?GetNetworkCaps@asNetwork@@QAEHXZ
-    inline i32 GetNetworkCaps()
+    i32 GetNetworkCaps()
     {
         return stub<member_func_t<i32, asNetwork>>(0x570320, this);
     }
 
     // 0x5703D0 | ?GetProtocols@asNetwork@@QAEXXZ
-    inline void GetProtocols()
+    void GetProtocols()
     {
         return stub<member_func_t<void, asNetwork>>(0x5703D0, this);
     }
 
     // 0x570400 | ?SetProtocol@asNetwork@@QAEHHPAUNETCOMMPACK@@@Z
-    inline i32 SetProtocol(i32 arg1, struct NETCOMMPACK* arg2)
+    i32 SetProtocol(i32 arg1, struct NETCOMMPACK* arg2)
     {
         return stub<member_func_t<i32, asNetwork, i32, struct NETCOMMPACK*>>(0x570400, this, arg1, arg2);
     }
 
     // 0x570760 | ?SetProtocol@asNetwork@@QAEHH@Z
-    inline i32 SetProtocol(i32 arg1)
+    i32 SetProtocol(i32 arg1)
     {
         return stub<member_func_t<i32, asNetwork, i32>>(0x570760, this, arg1);
     }
 
     // 0x570870 | ?Disconnect@asNetwork@@QAEXXZ
-    inline void Disconnect()
+    void Disconnect()
     {
         return stub<member_func_t<void, asNetwork>>(0x570870, this);
     }
 
     // 0x5708C0 | ?GetEnumProtocol@asNetwork@@QAEPADH@Z
-    inline char* GetEnumProtocol(i32 arg1)
+    char* GetEnumProtocol(i32 arg1)
     {
         return stub<member_func_t<char*, asNetwork, i32>>(0x5708C0, this, arg1);
     }
 
     // 0x5708F0 | ?GetNumProtocols@asNetwork@@QAEHXZ
-    inline i32 GetNumProtocols()
+    i32 GetNumProtocols()
     {
         return stub<member_func_t<i32, asNetwork>>(0x5708F0, this);
     }
 
     // 0x570900 | ?CreatePlayer@asNetwork@@QAEHPADPAXH@Z
-    inline i32 CreatePlayer(char* arg1, void* arg2, i32 arg3)
+    i32 CreatePlayer(char* arg1, void* arg2, i32 arg3)
     {
         return stub<member_func_t<i32, asNetwork, char*, void*, i32>>(0x570900, this, arg1, arg2, arg3);
     }
 
     // 0x5709C0 | ?DestroyPlayer@asNetwork@@QAEXXZ
-    inline void DestroyPlayer()
+    void DestroyPlayer()
     {
         return stub<member_func_t<void, asNetwork>>(0x5709C0, this);
     }
 
     // 0x570A30 | ?GetPlayers@asNetwork@@QAEHPAU_GUID@@@Z
-    inline i32 GetPlayers(struct _GUID* arg1)
+    i32 GetPlayers(struct _GUID* arg1)
     {
         return stub<member_func_t<i32, asNetwork, struct _GUID*>>(0x570A30, this, arg1);
     }
 
     // 0x570A60 | ?GetEnumPlayer@asNetwork@@QAEPADH@Z
-    inline char* GetEnumPlayer(i32 arg1)
+    char* GetEnumPlayer(i32 arg1)
     {
         return stub<member_func_t<char*, asNetwork, i32>>(0x570A60, this, arg1);
     }
 
     // 0x570A90 | ?GetPlayerID@asNetwork@@QAEKH@Z
-    inline u32 GetPlayerID(i32 arg1)
+    u32 GetPlayerID(i32 arg1)
     {
         return stub<member_func_t<u32, asNetwork, i32>>(0x570A90, this, arg1);
     }
 
     // 0x570AD0 | ?GetNumPlayers@asNetwork@@QAEHXZ
-    inline i32 GetNumPlayers()
+    i32 GetNumPlayers()
     {
         return stub<member_func_t<i32, asNetwork>>(0x570AD0, this);
     }
 
     // 0x570B90 | ?GetPlayerName@asNetwork@@QAEPADK@Z
-    inline char* GetPlayerName(u32 arg1)
+    char* GetPlayerName(u32 arg1)
     {
         return stub<member_func_t<char*, asNetwork, u32>>(0x570B90, this, arg1);
     }
 
     // 0x570C60 | ?GetPlayerName@asNetwork@@QAEHKPAD@Z
-    inline i32 GetPlayerName(u32 arg1, char* arg2)
+    i32 GetPlayerName(u32 arg1, char* arg2)
     {
         return stub<member_func_t<i32, asNetwork, u32, char*>>(0x570C60, this, arg1, arg2);
     }
 
     // 0x570D70 | ?SetPlayerData@asNetwork@@QAEXKPAXH@Z
-    inline void SetPlayerData(u32 arg1, void* arg2, i32 arg3)
+    void SetPlayerData(u32 arg1, void* arg2, i32 arg3)
     {
         return stub<member_func_t<void, asNetwork, u32, void*, i32>>(0x570D70, this, arg1, arg2, arg3);
     }
 
     // 0x570E10 | ?GetEnumPlayerData@asNetwork@@QAEHHPAXH@Z
-    inline i32 GetEnumPlayerData(i32 arg1, void* arg2, i32 arg3)
+    i32 GetEnumPlayerData(i32 arg1, void* arg2, i32 arg3)
     {
         return stub<member_func_t<i32, asNetwork, i32, void*, i32>>(0x570E10, this, arg1, arg2, arg3);
     }
 
     // 0x570EE0 | ?GetPlayerData@asNetwork@@QAEHKPAXH@Z
-    inline i32 GetPlayerData(u32 arg1, void* arg2, i32 arg3)
+    i32 GetPlayerData(u32 arg1, void* arg2, i32 arg3)
     {
         return stub<member_func_t<i32, asNetwork, u32, void*, i32>>(0x570EE0, this, arg1, arg2, arg3);
     }
 
     // 0x570F90 | ?Ping@asNetwork@@QAEKK@Z
-    inline u32 Ping(u32 arg1)
+    u32 Ping(u32 arg1)
     {
         return stub<member_func_t<u32, asNetwork, u32>>(0x570F90, this, arg1);
     }
 
     // 0x571070 | ?CreateSession@asNetwork@@QAEHPAD0HPAUNETSESSION_DESC@@@Z
-    inline i32 CreateSession(char* arg1, char* arg2, i32 arg3, struct NETSESSION_DESC* arg4)
+    i32 CreateSession(char* arg1, char* arg2, i32 arg3, struct NETSESSION_DESC* arg4)
     {
         return stub<member_func_t<i32, asNetwork, char*, char*, i32, struct NETSESSION_DESC*>>(
             0x571070, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x571170 | ?JoinSession@asNetwork@@QAEHPADPAU_GUID@@0@Z
-    inline i32 JoinSession(char* arg1, struct _GUID* arg2, char* arg3)
+    i32 JoinSession(char* arg1, struct _GUID* arg2, char* arg3)
     {
         return stub<member_func_t<i32, asNetwork, char*, struct _GUID*, char*>>(0x571170, this, arg1, arg2, arg3);
     }
 
     // 0x571550 | ?CloseSession@asNetwork@@QAEXXZ
-    inline void CloseSession()
+    void CloseSession()
     {
         return stub<member_func_t<void, asNetwork>>(0x571550, this);
     }
 
     // 0x571590 | ?GetEnumSession@asNetwork@@QAEPADH@Z
-    inline char* GetEnumSession(i32 arg1)
+    char* GetEnumSession(i32 arg1)
     {
         return stub<member_func_t<char*, asNetwork, i32>>(0x571590, this, arg1);
     }
 
     // 0x5715C0 | ?GetEnumSessionID@asNetwork@@QAEHH@Z
-    inline i32 GetEnumSessionID(i32 arg1)
+    i32 GetEnumSessionID(i32 arg1)
     {
         return stub<member_func_t<i32, asNetwork, i32>>(0x5715C0, this, arg1);
     }
 
     // 0x5715F0 | ?GetNumSessions@asNetwork@@QAEHXZ
-    inline i32 GetNumSessions()
+    i32 GetNumSessions()
     {
         return stub<member_func_t<i32, asNetwork>>(0x5715F0, this);
     }
 
     // 0x571600 | ?SealSession@asNetwork@@QAEXXZ
-    inline void SealSession()
+    void SealSession()
     {
         return stub<member_func_t<void, asNetwork>>(0x571600, this);
     }
 
     // 0x571700 | ?UnSealSession@asNetwork@@QAEXXZ
-    inline void UnSealSession()
+    void UnSealSession()
     {
         return stub<member_func_t<void, asNetwork>>(0x571700, this);
     }
 
     // 0x571800 | ?GetSessionData@asNetwork@@QAEXPAUNETSESSION_DESC@@@Z
-    inline void GetSessionData(struct NETSESSION_DESC* arg1)
+    void GetSessionData(struct NETSESSION_DESC* arg1)
     {
         return stub<member_func_t<void, asNetwork, struct NETSESSION_DESC*>>(0x571800, this, arg1);
     }
 
     // 0x5718E0 | ?SetSessionData@asNetwork@@QAEXPAUNETSESSION_DESC@@PAD@Z
-    inline void SetSessionData(struct NETSESSION_DESC* arg1, char* arg2)
+    void SetSessionData(struct NETSESSION_DESC* arg1, char* arg2)
     {
         return stub<member_func_t<void, asNetwork, struct NETSESSION_DESC*, char*>>(0x5718E0, this, arg1, arg2);
     }
 
     // 0x571A00 | ?GetSessionsSynch@asNetwork@@QAEHH@Z
-    inline i32 GetSessionsSynch(i32 arg1)
+    i32 GetSessionsSynch(i32 arg1)
     {
         return stub<member_func_t<i32, asNetwork, i32>>(0x571A00, this, arg1);
     }
 
     // 0x571AB0 | ?GetSessionsAsynch@asNetwork@@QAEXXZ
-    inline void GetSessionsAsynch()
+    void GetSessionsAsynch()
     {
         return stub<member_func_t<void, asNetwork>>(0x571AB0, this);
     }
 
     // 0x571B10 | ?StopSessionsAsynch@asNetwork@@QAEXXZ
-    inline void StopSessionsAsynch()
+    void StopSessionsAsynch()
     {
         return stub<member_func_t<void, asNetwork>>(0x571B10, this);
     }
 
     // 0x571B90 | ?PollLobby@asNetwork@@QAEHXZ
-    inline i32 PollLobby()
+    i32 PollLobby()
     {
         return stub<member_func_t<i32, asNetwork>>(0x571B90, this);
     }
 
     // 0x571C30 | ?Update@asNetwork@@QAEHXZ
-    inline i32 Update()
+    i32 Update()
     {
         return stub<member_func_t<i32, asNetwork>>(0x571C30, this);
     }
 
     // 0x571D50 | ?HandleAppMessage@asNetwork@@QAEXPAUNET_TXHEAD@@KK@Z
-    inline void HandleAppMessage(struct NET_TXHEAD* arg1, u32 arg2, u32 arg3)
+    void HandleAppMessage(struct NET_TXHEAD* arg1, u32 arg2, u32 arg3)
     {
         return stub<member_func_t<void, asNetwork, struct NET_TXHEAD*, u32, u32>>(0x571D50, this, arg1, arg2, arg3);
     }
 
     // 0x571D90 | ?HandleSysMessage@asNetwork@@QAEXPAUDPMSG_GENERIC@@@Z
-    inline void HandleSysMessage(struct DPMSG_GENERIC* arg1)
+    void HandleSysMessage(struct DPMSG_GENERIC* arg1)
     {
         return stub<member_func_t<void, asNetwork, struct DPMSG_GENERIC*>>(0x571D90, this, arg1);
     }
 
     // 0x572090 | ?GetMessageQueue@asNetwork@@QAEXKKAAI0H@Z
-    inline void GetMessageQueue(u32 arg1, u32 arg2, u32& arg3, u32& arg4, i32 arg5)
+    void GetMessageQueue(u32 arg1, u32 arg2, u32& arg3, u32& arg4, i32 arg5)
     {
         return stub<member_func_t<void, asNetwork, u32, u32, u32&, u32&, i32>>(
             0x572090, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x5720E0 | ?DumpRxQueueInfo@asNetwork@@QAEXXZ
-    inline void DumpRxQueueInfo()
+    void DumpRxQueueInfo()
     {
         return stub<member_func_t<void, asNetwork>>(0x5720E0, this);
     }
 
     // 0x572100 | ?DumpTxQueueInfo@asNetwork@@QAEXXZ
-    inline void DumpTxQueueInfo()
+    void DumpTxQueueInfo()
     {
         return stub<member_func_t<void, asNetwork>>(0x572100, this);
     }
 
     // 0x572120 | ?ChatMessage@asNetwork@@QAEXKPAD@Z
-    inline void ChatMessage(u32 arg1, char* arg2)
+    void ChatMessage(u32 arg1, char* arg2)
     {
         return stub<member_func_t<void, asNetwork, u32, char*>>(0x572120, this, arg1, arg2);
     }
 
     // 0x572200 | ?Send@asNetwork@@QAEHKHPAXKH@Z
-    inline i32 Send(u32 arg1, i32 arg2, void* arg3, u32 arg4, i32 arg5)
+    i32 Send(u32 arg1, i32 arg2, void* arg3, u32 arg4, i32 arg5)
     {
         return stub<member_func_t<i32, asNetwork, u32, i32, void*, u32, i32>>(
             0x572200, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x5723F0 | ?GetMyLogicalIndex@asNetwork@@QAEHXZ
-    inline i32 GetMyLogicalIndex()
+    i32 GetMyLogicalIndex()
     {
         return stub<member_func_t<i32, asNetwork>>(0x5723F0, this);
     }
 
     // 0x572430 | ?GetGameVersion@asNetwork@@QAEHH@Z
-    inline i32 GetGameVersion(i32 arg1)
+    i32 GetGameVersion(i32 arg1)
     {
         return stub<member_func_t<i32, asNetwork, i32>>(0x572430, this, arg1);
     }
 
     // 0x572460 | ?GetEnumSessionStatus@asNetwork@@QAEHH@Z
-    inline i32 GetEnumSessionStatus(i32 arg1)
+    i32 GetEnumSessionStatus(i32 arg1)
     {
         return stub<member_func_t<i32, asNetwork, i32>>(0x572460, this, arg1);
     }
 
     // 0x572490 | ?GetEnumSessionLock@asNetwork@@QAEHH@Z
-    inline i32 GetEnumSessionLock(i32 arg1)
+    i32 GetEnumSessionLock(i32 arg1)
     {
         return stub<member_func_t<i32, asNetwork, i32>>(0x572490, this, arg1);
     }
 
     // 0x5724C0 | ?SetEnumSessionLock@asNetwork@@QAEXHH@Z
-    inline void SetEnumSessionLock(i32 arg1, i32 arg2)
+    void SetEnumSessionLock(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, asNetwork, i32, i32>>(0x5724C0, this, arg1, arg2);
     }
 
     // 0x5724E0 | ?SetTime@asNetwork@@QAEXM@Z
-    inline void SetTime(f32 arg1)
+    void SetTime(f32 arg1)
     {
         return stub<member_func_t<void, asNetwork, f32>>(0x5724E0, this, arg1);
     }
 
     // 0x572500 | ?GetTime@asNetwork@@QAEMXZ
-    inline f32 GetTime()
+    f32 GetTime()
     {
         return stub<member_func_t<f32, asNetwork>>(0x572500, this);
     }
 
     // 0x572540 | ?GetTicks@asNetwork@@QAEMXZ
-    inline f32 GetTicks()
+    f32 GetTicks()
     {
         return stub<member_func_t<f32, asNetwork>>(0x572540, this);
     }
 
     // 0x572730 | ?JoinSession@asNetwork@@QAEHHPAD@Z
-    inline i32 JoinSession(i32 arg1, char* arg2)
+    i32 JoinSession(i32 arg1, char* arg2)
     {
         return stub<member_func_t<i32, asNetwork, i32, char*>>(0x572730, this, arg1, arg2);
     }
 
     // 0x5727B0 | ?GetNumModems@asNetwork@@QAEHXZ
-    inline i32 GetNumModems()
+    i32 GetNumModems()
     {
         return stub<member_func_t<i32, asNetwork>>(0x5727B0, this);
     }
 
     // 0x5727C0 | ?GetEnumModem@asNetwork@@QAEPADH@Z
-    inline char* GetEnumModem(i32 arg1)
+    char* GetEnumModem(i32 arg1)
     {
         return stub<member_func_t<char*, asNetwork, i32>>(0x5727C0, this, arg1);
     }
 
     // 0x5727F0 | ?QueryModems@asNetwork@@QAEHXZ
-    inline i32 QueryModems()
+    i32 QueryModems()
     {
         return stub<member_func_t<i32, asNetwork>>(0x5727F0, this);
     }

@@ -68,154 +68,153 @@ public:
     // vehPoliceCarAudio::`vftable' @ 0x5B2E18
 
     // 0x4D43D0 | ??0vehPoliceCarAudio@@QAE@PAVvehCarSim@@PAVvehCarDamage@@PBD2_N@Z
-    inline vehPoliceCarAudio(
-        class vehCarSim* arg1, class vehCarDamage* arg2, char const* arg3, char const* arg4, bool arg5)
+    vehPoliceCarAudio(class vehCarSim* arg1, class vehCarDamage* arg2, char const* arg3, char const* arg4, bool arg5)
     {
         stub<member_func_t<void, vehPoliceCarAudio, class vehCarSim*, class vehCarDamage*, char const*, char const*,
             bool>>(0x4D43D0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x4D4590 | ?DeallocateSirenPlayInfo@vehPoliceCarAudio@@AAEXPAUtagSirenData@@@Z
-    inline void DeallocateSirenPlayInfo(struct tagSirenData* arg1)
+    void DeallocateSirenPlayInfo(struct tagSirenData* arg1)
     {
         return stub<member_func_t<void, vehPoliceCarAudio, struct tagSirenData*>>(0x4D4590, this, arg1);
     }
 
     // 0x4D45F0 | ?EchoOn@vehPoliceCarAudio@@QAEXXZ
-    inline void EchoOn()
+    void EchoOn()
     {
         return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D45F0, this);
     }
 
     // 0x4D4670 | ?EchoOff@vehPoliceCarAudio@@QAEXXZ
-    inline void EchoOff()
+    void EchoOff()
     {
         return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D4670, this);
     }
 
     // 0x4D46B0 | ?UpdateEcho@vehPoliceCarAudio@@QAEXXZ
-    inline void UpdateEcho()
+    void UpdateEcho()
     {
         return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D46B0, this);
     }
 
     // 0x4D46F0 | ?Init@vehPoliceCarAudio@@QAEXPAVvehCarSim@@PAVvehCarDamage@@PBD2_N@Z
-    inline void Init(class vehCarSim* arg1, class vehCarDamage* arg2, char const* arg3, char const* arg4, bool arg5)
+    void Init(class vehCarSim* arg1, class vehCarDamage* arg2, char const* arg3, char const* arg4, bool arg5)
     {
         return stub<member_func_t<void, vehPoliceCarAudio, class vehCarSim*, class vehCarDamage*, char const*,
             char const*, bool>>(0x4D46F0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x4D4730 | ?Load@vehPoliceCarAudio@@AAEXPBD@Z
-    inline void Load(char const* arg1)
+    void Load(char const* arg1)
     {
         return stub<member_func_t<void, vehPoliceCarAudio, char const*>>(0x4D4730, this, arg1);
     }
 
     // 0x4D4800 | ?ReadSirenData@vehPoliceCarAudio@@AAEXPAVStream@@@Z
-    inline void ReadSirenData(class Stream* arg1)
+    void ReadSirenData(class Stream* arg1)
     {
         return stub<member_func_t<void, vehPoliceCarAudio, class Stream*>>(0x4D4800, this, arg1);
     }
 
     // 0x4D49E0 | ?ReadSirenData@vehPoliceCarAudio@@AAEXPAUtagSirenData@@PAD@Z
-    inline void ReadSirenData(struct tagSirenData* arg1, char* arg2)
+    void ReadSirenData(struct tagSirenData* arg1, char* arg2)
     {
         return stub<member_func_t<void, vehPoliceCarAudio, struct tagSirenData*, char*>>(0x4D49E0, this, arg1, arg2);
     }
 
     // 0x4D4A50 | ?ReadSirenPlayInfo@vehPoliceCarAudio@@AAEXPAUtagSirenData@@PAD@Z
-    inline void ReadSirenPlayInfo(struct tagSirenData* arg1, char* arg2)
+    void ReadSirenPlayInfo(struct tagSirenData* arg1, char* arg2)
     {
         return stub<member_func_t<void, vehPoliceCarAudio, struct tagSirenData*, char*>>(0x4D4A50, this, arg1, arg2);
     }
 
     // 0x4D4B00 | ?ExplosionIsPlaying@vehPoliceCarAudio@@QAEHXZ
-    inline i32 ExplosionIsPlaying()
+    i32 ExplosionIsPlaying()
     {
         return stub<member_func_t<i32, vehPoliceCarAudio>>(0x4D4B00, this);
     }
 
     // 0x4D4B20 | ?StartSiren@vehPoliceCarAudio@@QAEXH@Z
-    inline void StartSiren(i32 arg1)
+    void StartSiren(i32 arg1)
     {
         return stub<member_func_t<void, vehPoliceCarAudio, i32>>(0x4D4B20, this, arg1);
     }
 
     // 0x4D4C20 | ?StopSiren@vehPoliceCarAudio@@QAEXXZ
-    inline void StopSiren()
+    void StopSiren()
     {
         return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D4C20, this);
     }
 
     // 0x4D4C90 | ?PlayExplosion@vehPoliceCarAudio@@QAEXXZ
-    inline void PlayExplosion()
+    void PlayExplosion()
     {
         return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D4C90, this);
     }
 
     // 0x4D4D50 | ?DamageSiren@vehPoliceCarAudio@@QAEXXZ
-    inline void DamageSiren()
+    void DamageSiren()
     {
         return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D4D50, this);
     }
 
     // 0x4D4E40 | ?UpdateSiren@vehPoliceCarAudio@@QAEHMMM@Z
-    inline i32 UpdateSiren(f32 arg1, f32 arg2, f32 arg3)
+    i32 UpdateSiren(f32 arg1, f32 arg2, f32 arg3)
     {
         return stub<member_func_t<i32, vehPoliceCarAudio, f32, f32, f32>>(0x4D4E40, this, arg1, arg2, arg3);
     }
 
     // 0x4D4F60 | ?UpdateSiren@vehPoliceCarAudio@@QAEXXZ
-    inline void UpdateSiren()
+    void UpdateSiren()
     {
         return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D4F60, this);
     }
 
     // 0x4D4FB0 | ?FluctuateSiren@vehPoliceCarAudio@@AAEXXZ
-    inline void FluctuateSiren()
+    void FluctuateSiren()
     {
         return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D4FB0, this);
     }
 
     // 0x4D5060 | ?UpdateAudio3D@vehPoliceCarAudio@@QAEHM@Z
-    inline i32 UpdateAudio3D(f32 arg1)
+    i32 UpdateAudio3D(f32 arg1)
     {
         return stub<member_func_t<i32, vehPoliceCarAudio, f32>>(0x4D5060, this, arg1);
     }
 
     // 0x4D50B0 | ?UpdateExplosion@vehPoliceCarAudio@@QAEXMM@Z
-    inline void UpdateExplosion(f32 arg1, f32 arg2)
+    void UpdateExplosion(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, vehPoliceCarAudio, f32, f32>>(0x4D50B0, this, arg1, arg2);
     }
 
     // 0x4D5120 | ?PlayVoice@vehPoliceCarAudio@@QAEXXZ
-    inline void PlayVoice()
+    void PlayVoice()
     {
         return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D5120, this);
     }
 
     // 0x4D5290 | ?Reset@vehPoliceCarAudio@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D5290, this);
     }
 
     // 0x4D52F0 | ?UpdateAudio3D@vehPoliceCarAudio@@QAEXXZ
-    inline void UpdateAudio3D()
+    void UpdateAudio3D()
     {
         return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D52F0, this);
     }
 
     // 0x4D53B0 | ?UpdateAudioNon3D@vehPoliceCarAudio@@QAEXXZ
-    inline void UpdateAudioNon3D()
+    void UpdateAudioNon3D()
     {
         return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D53B0, this);
     }
 
     // 0x4D5400 | ?RandomizeNumber@vehPoliceCarAudio@@QAEFXZ
-    inline i16 RandomizeNumber()
+    i16 RandomizeNumber()
     {
         return stub<member_func_t<i16, vehPoliceCarAudio>>(0x4D5400, this);
     }
@@ -227,13 +226,13 @@ public:
     }
 
     // 0x4D54F0 | ?Set2DPan@vehPoliceCarAudio@@QAEXM@Z
-    inline void Set2DPan(f32 arg1)
+    void Set2DPan(f32 arg1)
     {
         return stub<member_func_t<void, vehPoliceCarAudio, f32>>(0x4D54F0, this, arg1);
     }
 
     // 0x4D5580 | ?RemoveFromManager@vehPoliceCarAudio@@QAEXXZ
-    inline void RemoveFromManager()
+    void RemoveFromManager()
     {
         return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D5580, this);
     }
@@ -242,37 +241,37 @@ public:
     inline extern_var(0x6AFFE4, int32_t, s_iNumCopsPursuingPlayer);
 
     // 0x4D5130 | ?AssignSounds@vehPoliceCarAudio@@UAEXXZ
-    inline void AssignSounds() override
+    void AssignSounds() override
     {
         return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D5130, this);
     }
 
     // 0x4D5220 | ?UnAssignSounds@vehPoliceCarAudio@@UAEXH@Z
-    inline void UnAssignSounds(i32 arg1) override
+    void UnAssignSounds(i32 arg1) override
     {
         return stub<member_func_t<void, vehPoliceCarAudio, i32>>(0x4D5220, this, arg1);
     }
 
     // 0x4D52A0 | ?UpdateAudio@vehPoliceCarAudio@@UAEXXZ
-    inline void UpdateAudio() override
+    void UpdateAudio() override
     {
         return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D52A0, this);
     }
 
     // 0x4D5590 | ?Update@vehPoliceCarAudio@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D5590, this);
     }
 
     // 0x4D5450 | ?SetNon3DParams@vehPoliceCarAudio@@UAEXXZ
-    inline void SetNon3DParams() override
+    void SetNon3DParams() override
     {
         return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D5450, this);
     }
 
     // 0x4D5570 | ?Set3DParams@vehPoliceCarAudio@@UAEXXZ
-    inline void Set3DParams() override
+    void Set3DParams() override
     {
         return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D5570, this);
     }

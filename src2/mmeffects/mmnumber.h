@@ -41,25 +41,25 @@ class mmNumberFont
 {
 public:
     // 0x5332B0 | ??0mmNumberFont@@QAE@PAD@Z
-    inline mmNumberFont(char* arg1)
+    mmNumberFont(char* arg1)
     {
         stub<member_func_t<void, mmNumberFont, char*>>(0x5332B0, this, arg1);
     }
 
     // 0x5332E0 | ??1mmNumberFont@@QAE@XZ
-    inline ~mmNumberFont()
+    ~mmNumberFont()
     {
         stub<member_func_t<void, mmNumberFont>>(0x5332E0, this);
     }
 
     // 0x533340 | ?LoadFont@mmNumberFont@@QAEXPADHI@Z
-    inline void LoadFont(char* arg1, i32 arg2, u32 arg3)
+    void LoadFont(char* arg1, i32 arg2, u32 arg3)
     {
         return stub<member_func_t<void, mmNumberFont, char*, i32, u32>>(0x533340, this, arg1, arg2, arg3);
     }
 
     // 0x5333B0 | ?LoadLocFont@mmNumberFont@@QAEXPADPAULocString@@HI@Z
-    inline void LoadLocFont(char* arg1, struct LocString* arg2, i32 arg3, u32 arg4)
+    void LoadLocFont(char* arg1, struct LocString* arg2, i32 arg3, u32 arg4)
     {
         return stub<member_func_t<void, mmNumberFont, char*, struct LocString*, i32, u32>>(
             0x5333B0, this, arg1, arg2, arg3, arg4);
@@ -72,19 +72,19 @@ public:
     // mmNumber::`vftable' @ 0x5B5324
 
     // 0x533420 | ??0mmNumber@@QAE@XZ
-    inline mmNumber()
+    mmNumber()
     {
         stub<member_func_t<void, mmNumber>>(0x533420, this);
     }
 
     // 0x533450 | ?Init@mmNumber@@QAEXPAVmmNumberFont@@MM@Z
-    inline void Init(class mmNumberFont* arg1, f32 arg2, f32 arg3)
+    void Init(class mmNumberFont* arg1, f32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, mmNumber, class mmNumberFont*, f32, f32>>(0x533450, this, arg1, arg2, arg3);
     }
 
     // 0x533470 | ?SetString@mmNumber@@QAEXPAD@Z
-    inline void SetString(char* arg1)
+    void SetString(char* arg1)
     {
         return stub<member_func_t<void, mmNumber, char*>>(0x533470, this, arg1);
     }
@@ -93,19 +93,19 @@ public:
     // Skipped (Variable Arguments)
 
     // 0x533440 | ??1mmNumber@@UAE@XZ
-    inline ~mmNumber() override
+    ~mmNumber() override
     {
         stub<member_func_t<void, mmNumber>>(0x533440, this);
     }
 
     // 0x5334E0 | ?Cull@mmNumber@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, mmNumber>>(0x5334E0, this);
     }
 
     // 0x5334C0 | ?Update@mmNumber@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmNumber>>(0x5334C0, this);
     }

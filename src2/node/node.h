@@ -56,145 +56,145 @@ public:
     // asNode::`vftable' @ 0x5B28E8
 
     // 0x4A0CE0 | ??0asNode@@QAE@XZ
-    inline asNode()
+    asNode()
     {
         stub<member_func_t<void, asNode>>(0x4A0CE0, this);
     }
 
     // 0x4A0D70 | ?SetName@asNode@@QAEXPBD@Z
-    inline void SetName(char const* arg1)
+    void SetName(char const* arg1)
     {
         return stub<member_func_t<void, asNode, char const*>>(0x4A0D70, this, arg1);
     }
 
     // 0x4A0E60 | ?AddChild@asNode@@QAEHPAV1@@Z
-    inline i32 AddChild(class asNode* arg1)
+    i32 AddChild(class asNode* arg1)
     {
         return stub<member_func_t<i32, asNode, class asNode*>>(0x4A0E60, this, arg1);
     }
 
     // 0x4A0EE0 | ?InsertChild@asNode@@QAEHHPAV1@@Z
-    inline i32 InsertChild(i32 arg1, class asNode* arg2)
+    i32 InsertChild(i32 arg1, class asNode* arg2)
     {
         return stub<member_func_t<i32, asNode, i32, class asNode*>>(0x4A0EE0, this, arg1, arg2);
     }
 
     // 0x4A0F50 | ?RemoveChild@asNode@@QAEHH@Z
-    inline i32 RemoveChild(i32 arg1)
+    i32 RemoveChild(i32 arg1)
     {
         return stub<member_func_t<i32, asNode, i32>>(0x4A0F50, this, arg1);
     }
 
     // 0x4A0FD0 | ?RemoveChild@asNode@@QAEHPAV1@@Z
-    inline i32 RemoveChild(class asNode* arg1)
+    i32 RemoveChild(class asNode* arg1)
     {
         return stub<member_func_t<i32, asNode, class asNode*>>(0x4A0FD0, this, arg1);
     }
 
     // 0x4A1010 | ?RemoveAllChildren@asNode@@QAEXXZ
-    inline void RemoveAllChildren()
+    void RemoveAllChildren()
     {
         return stub<member_func_t<void, asNode>>(0x4A1010, this);
     }
 
     // 0x4A1030 | ?GetChild@asNode@@QAEPAV1@H@Z
-    inline class asNode* GetChild(i32 arg1)
+    class asNode* GetChild(i32 arg1)
     {
         return stub<member_func_t<class asNode*, asNode, i32>>(0x4A1030, this, arg1);
     }
 
     // 0x4A1060 | ?GetNext@asNode@@QAEPAV1@XZ
-    inline class asNode* GetNext()
+    class asNode* GetNext()
     {
         return stub<member_func_t<class asNode*, asNode>>(0x4A1060, this);
     }
 
     // 0x4A1070 | ?GetLastChild@asNode@@QAEPAV1@XZ
-    inline class asNode* GetLastChild()
+    class asNode* GetLastChild()
     {
         return stub<member_func_t<class asNode*, asNode>>(0x4A1070, this);
     }
 
     // 0x4A10A0 | ?NumChildren@asNode@@QAEHXZ
-    inline i32 NumChildren()
+    i32 NumChildren()
     {
         return stub<member_func_t<i32, asNode>>(0x4A10A0, this);
     }
 
     // 0x4A10C0 | ?SwitchTo@asNode@@QAEXH@Z
-    inline void SwitchTo(i32 arg1)
+    void SwitchTo(i32 arg1)
     {
         return stub<member_func_t<void, asNode, i32>>(0x4A10C0, this, arg1);
     }
 
     // 0x4A0D00 | ??1asNode@@UAE@XZ
-    virtual inline ~asNode()
+    virtual ~asNode()
     {
         stub<member_func_t<void, asNode>>(0x4A0D00, this);
     }
 
     // 0x4A0DB0 | ?Update@asNode@@UAEXXZ
-    virtual inline void Update()
+    virtual void Update()
     {
         return stub<member_func_t<void, asNode>>(0x4A0DB0, this);
     }
 
     // 0x4A0E10 | ?Reset@asNode@@UAEXXZ
-    virtual inline void Reset()
+    virtual void Reset()
     {
         return stub<member_func_t<void, asNode>>(0x4A0E10, this);
     }
 
     // 0x4A0E30 | ?ResChange@asNode@@UAEXHH@Z
-    virtual inline void ResChange(i32 arg1, i32 arg2)
+    virtual void ResChange(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, asNode, i32, i32>>(0x4A0E30, this, arg1, arg2);
     }
 
     // 0x4A0DD0 | ?UpdatePaused@asNode@@UAEXXZ
-    virtual inline void UpdatePaused()
+    virtual void UpdatePaused()
     {
         return stub<member_func_t<void, asNode>>(0x4A0DD0, this);
     }
 
     // 0x403330 | ?FileIO@asNode@@UAEXAAVdatParser@@@Z
-    virtual inline void FileIO(class datParser& arg1)
+    virtual void FileIO(class datParser& arg1)
     {
         return stub<member_func_t<void, asNode, class datParser&>>(0x403330, this, arg1);
     }
 
     // 0x403340 | ?AfterLoad@asNode@@UAEXXZ
-    virtual inline void AfterLoad()
+    virtual void AfterLoad()
     {
         return stub<member_func_t<void, asNode>>(0x403340, this);
     }
 
     // 0x403350 | ?BeforeSave@asNode@@UAEXXZ
-    virtual inline void BeforeSave()
+    virtual void BeforeSave()
     {
         return stub<member_func_t<void, asNode>>(0x403350, this);
     }
 
     // 0x4A11D0 | ?Save@asNode@@UAE_NXZ
-    virtual inline bool Save()
+    virtual bool Save()
     {
         return stub<member_func_t<bool, asNode>>(0x4A11D0, this);
     }
 
     // 0x4A1120 | ?Load@asNode@@UAE_NXZ
-    virtual inline bool Load()
+    virtual bool Load()
     {
         return stub<member_func_t<bool, asNode>>(0x4A1120, this);
     }
 
     // 0x407B40 | ?GetClassName@asNode@@UAEPADXZ
-    virtual inline char* GetClassName()
+    virtual char* GetClassName()
     {
         return stub<member_func_t<char*, asNode>>(0x407B40, this);
     }
 
     // 0x4A0DA0 | ?GetDirName@asNode@@UAEPBDXZ
-    virtual inline char const* GetDirName()
+    virtual char const* GetDirName()
     {
         return stub<member_func_t<char const*, asNode>>(0x4A0DA0, this);
     }

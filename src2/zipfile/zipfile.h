@@ -99,13 +99,13 @@ public:
     }
 
     // 0x573300 | ??0zipFile@@QAE@XZ
-    inline zipFile()
+    zipFile()
     {
         stub<member_func_t<void, zipFile>>(0x573300, this);
     }
 
     // 0x573320 | ??1zipFile@@QAE@XZ
-    inline ~zipFile()
+    ~zipFile()
     {
         stub<member_func_t<void, zipFile>>(0x573320, this);
     }
@@ -117,31 +117,31 @@ public:
     }
 
     // 0x573390 | ?internalSeek@zipFile@@AAEHH@Z
-    inline i32 internalSeek(i32 arg1)
+    i32 internalSeek(i32 arg1)
     {
         return stub<member_func_t<i32, zipFile, i32>>(0x573390, this, arg1);
     }
 
     // 0x573410 | ?internalRead@zipFile@@AAEHPAXH_N@Z
-    inline i32 internalRead(void* arg1, i32 arg2, bool arg3)
+    i32 internalRead(void* arg1, i32 arg2, bool arg3)
     {
         return stub<member_func_t<i32, zipFile, void*, i32, bool>>(0x573410, this, arg1, arg2, arg3);
     }
 
     // 0x573480 | ?Init@zipFile@@QAE_NPBD@Z
-    inline bool Init(char const* arg1)
+    bool Init(char const* arg1)
     {
         return stub<member_func_t<bool, zipFile, char const*>>(0x573480, this, arg1);
     }
 
     // 0x573A80 | ?Open@zipFile@@QAEHPBD@Z
-    inline i32 Open(char const* arg1)
+    i32 Open(char const* arg1)
     {
         return stub<member_func_t<i32, zipFile, char const*>>(0x573A80, this, arg1);
     }
 
     // 0x573B60 | ?EnumFiles@zipFile@@QAEHPBDP6AX0_NPAX@Z2@Z
-    inline i32 EnumFiles(char const* arg1, void(__cdecl* arg2)(char const*, bool, void*), void* arg3)
+    i32 EnumFiles(char const* arg1, void(__cdecl* arg2)(char const*, bool, void*), void* arg3)
     {
         return stub<member_func_t<i32, zipFile, char const*, void(__cdecl*)(char const*, bool, void*), void*>>(
             0x573B60, this, arg1, arg2, arg3);
@@ -158,13 +158,13 @@ struct zipHandle
 {
 public:
     // 0x572F80 | ?Read@zipHandle@@QAEHPAXH@Z
-    inline i32 Read(void* arg1, i32 arg2)
+    i32 Read(void* arg1, i32 arg2)
     {
         return stub<member_func_t<i32, zipHandle, void*, i32>>(0x572F80, this, arg1, arg2);
     }
 
     // 0x573080 | ?Seek@zipHandle@@QAEHHW4seekWhence@@@Z
-    inline i32 Seek(i32 arg1, enum seekWhence arg2)
+    i32 Seek(i32 arg1, enum seekWhence arg2)
     {
         return stub<member_func_t<i32, zipHandle, i32, enum seekWhence>>(0x573080, this, arg1, arg2);
     }

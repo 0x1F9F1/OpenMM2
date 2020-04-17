@@ -40,38 +40,38 @@ public:
     // vehSplash::`vftable' @ 0x5B2EEC
 
     // 0x4D6A00 | ??0vehSplash@@QAE@XZ
-    inline vehSplash()
+    vehSplash()
     {
         stub<member_func_t<void, vehSplash>>(0x4D6A00, this);
     }
 
     // 0x4D6A80 | ?Init@vehSplash@@QAEXPAVphInertialCS@@ABVVector3@@1@Z
-    inline void Init(class phInertialCS* arg1, class Vector3 const& arg2, class Vector3 const& arg3)
+    void Init(class phInertialCS* arg1, class Vector3 const& arg2, class Vector3 const& arg3)
     {
         return stub<member_func_t<void, vehSplash, class phInertialCS*, class Vector3 const&, class Vector3 const&>>(
             0x4D6A80, this, arg1, arg2, arg3);
     }
 
     // 0x4D6BD0 | ?Activate@vehSplash@@QAEXM@Z
-    inline void Activate(f32 arg1)
+    void Activate(f32 arg1)
     {
         return stub<member_func_t<void, vehSplash, f32>>(0x4D6BD0, this, arg1);
     }
 
     // 0x4D6F30 | ??1vehSplash@@UAE@XZ
-    inline ~vehSplash() override
+    ~vehSplash() override
     {
         stub<member_func_t<void, vehSplash>>(0x4D6F30, this);
     }
 
     // 0x4D6BF0 | ?Update@vehSplash@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, vehSplash>>(0x4D6BF0, this);
     }
 
     // 0x4D6A70 | ?Reset@vehSplash@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, vehSplash>>(0x4D6A70, this);
     }

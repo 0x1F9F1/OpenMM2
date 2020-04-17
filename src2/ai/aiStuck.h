@@ -39,43 +39,43 @@ public:
     // aiStuck::`vftable' @ 0x5B5C54
 
     // 0x56F960 | ??0aiStuck@@QAE@XZ
-    inline aiStuck()
+    aiStuck()
     {
         stub<member_func_t<void, aiStuck>>(0x56F960, this);
     }
 
     // 0x56F9F0 | ?Init@aiStuck@@QAEXPAVvehCar@@@Z
-    inline void Init(class vehCar* arg1)
+    void Init(class vehCar* arg1)
     {
         return stub<member_func_t<void, aiStuck, class vehCar*>>(0x56F9F0, this, arg1);
     }
 
     // 0x56FA10 | ?Impact@aiStuck@@QAEXXZ
-    inline void Impact()
+    void Impact()
     {
         return stub<member_func_t<void, aiStuck>>(0x56FA10, this);
     }
 
     // 0x56FA30 | ?Pegged@aiStuck@@QAEHXZ
-    inline i32 Pegged()
+    i32 Pegged()
     {
         return stub<member_func_t<i32, aiStuck>>(0x56FA30, this);
     }
 
     // 0x567B80 | ??1aiStuck@@UAE@XZ
-    inline ~aiStuck() override
+    ~aiStuck() override
     {
         stub<member_func_t<void, aiStuck>>(0x567B80, this);
     }
 
     // 0x56FAA0 | ?Update@aiStuck@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, aiStuck>>(0x56FAA0, this);
     }
 
     // 0x56FA20 | ?Reset@aiStuck@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, aiStuck>>(0x56FA20, this);
     }

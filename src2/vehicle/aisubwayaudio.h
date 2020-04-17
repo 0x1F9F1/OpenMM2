@@ -37,25 +37,25 @@ public:
     // aiSubwayAudio::`vftable' @ 0x5B876C
 
     // 0x59D660 | ??0aiSubwayAudio@@QAE@XZ
-    inline aiSubwayAudio()
+    aiSubwayAudio()
     {
         stub<member_func_t<void, aiSubwayAudio>>(0x59D660, this);
     }
 
     // 0x59D690 | ?Activate@aiSubwayAudio@@QAEXH@Z
-    inline void Activate(i32 arg1)
+    void Activate(i32 arg1)
     {
         return stub<member_func_t<void, aiSubwayAudio, i32>>(0x59D690, this, arg1);
     }
 
     // 0x59D6D0 | ?Deactivate@aiSubwayAudio@@QAEXH@Z
-    inline void Deactivate(i32 arg1)
+    void Deactivate(i32 arg1)
     {
         return stub<member_func_t<void, aiSubwayAudio, i32>>(0x59D6D0, this, arg1);
     }
 
     // 0x59D710 | ?Update@aiSubwayAudio@@QAEXM@Z
-    inline void Update(f32 arg1)
+    void Update(f32 arg1)
     {
         return stub<member_func_t<void, aiSubwayAudio, f32>>(0x59D710, this, arg1);
     }

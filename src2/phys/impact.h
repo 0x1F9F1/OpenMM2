@@ -40,7 +40,7 @@ public:
     }
 
     // 0x46B7D0 | ?CalcCollision@dgImpact@@QAEHABVVector3@@MPAV2@111M@Z
-    inline i32 CalcCollision(class Vector3 const& arg1, f32 arg2, class Vector3* arg3, class Vector3* arg4,
+    i32 CalcCollision(class Vector3 const& arg1, f32 arg2, class Vector3* arg3, class Vector3* arg4,
         class Vector3* arg5, class Vector3* arg6, f32 arg7)
     {
         return stub<member_func_t<i32, dgImpact, class Vector3 const&, f32, class Vector3*, class Vector3*,
@@ -48,7 +48,7 @@ public:
     }
 
     // 0x46BE80 | ?CalcCollision@dgImpact@@QAEHABVVector3@@MPAV2@11111_N2HHM@Z
-    inline i32 CalcCollision(class Vector3 const& arg1, f32 arg2, class Vector3* arg3, class Vector3* arg4,
+    i32 CalcCollision(class Vector3 const& arg1, f32 arg2, class Vector3* arg3, class Vector3* arg4,
         class Vector3* arg5, class Vector3* arg6, class Vector3* arg7, class Vector3* arg8, bool arg9, bool arg10,
         i32 arg11, i32 arg12, f32 arg13)
     {

@@ -92,55 +92,55 @@ public:
     // mmWPHUD::`vftable' @ 0x5B0F74
 
     // 0x4363D0 | ??0mmWPHUD@@QAE@XZ
-    inline mmWPHUD()
+    mmWPHUD()
     {
         stub<member_func_t<void, mmWPHUD>>(0x4363D0, this);
     }
 
     // 0x436580 | ?SetWPCleared@mmWPHUD@@QAEXXZ
-    inline void SetWPCleared()
+    void SetWPCleared()
     {
         return stub<member_func_t<void, mmWPHUD>>(0x436580, this);
     }
 
     // 0x4365C0 | ?SetStandings@mmWPHUD@@QAEXHH@Z
-    inline void SetStandings(i32 arg1, i32 arg2)
+    void SetStandings(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, mmWPHUD, i32, i32>>(0x4365C0, this, arg1, arg2);
     }
 
     // 0x436600 | ?Init@mmWPHUD@@QAEXHPAH0H@Z
-    inline void Init(i32 arg1, i32* arg2, i32* arg3, i32 arg4)
+    void Init(i32 arg1, i32* arg2, i32* arg3, i32 arg4)
     {
         return stub<member_func_t<void, mmWPHUD, i32, i32*, i32*, i32>>(0x436600, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4364D0 | ??1mmWPHUD@@UAE@XZ
-    inline ~mmWPHUD() override
+    ~mmWPHUD() override
     {
         stub<member_func_t<void, mmWPHUD>>(0x4364D0, this);
     }
 
     // 0x436950 | ?Cull@mmWPHUD@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, mmWPHUD>>(0x436950, this);
     }
 
     // 0x436920 | ?Update@mmWPHUD@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmWPHUD>>(0x436920, this);
     }
 
     // 0x4368D0 | ?Reset@mmWPHUD@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, mmWPHUD>>(0x4368D0, this);
     }
 
     // 0x438960 | ?PostUpdate@mmWPHUD@@UAEXXZ
-    inline void PostUpdate() override
+    void PostUpdate() override
     {
         return stub<member_func_t<void, mmWPHUD>>(0x438960, this);
     }
@@ -152,55 +152,55 @@ public:
     // mmCircuitHUD::`vftable' @ 0x5B0FE4
 
     // 0x436960 | ??0mmCircuitHUD@@QAE@XZ
-    inline mmCircuitHUD()
+    mmCircuitHUD()
     {
         stub<member_func_t<void, mmCircuitHUD>>(0x436960, this);
     }
 
     // 0x436B50 | ?Init@mmCircuitHUD@@QAEXXZ
-    inline void Init()
+    void Init()
     {
         return stub<member_func_t<void, mmCircuitHUD>>(0x436B50, this);
     }
 
     // 0x4370E0 | ?SetStandings@mmCircuitHUD@@QAEXHH@Z
-    inline void SetStandings(i32 arg1, i32 arg2)
+    void SetStandings(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, mmCircuitHUD, i32, i32>>(0x4370E0, this, arg1, arg2);
     }
 
     // 0x437120 | ?SetLapTime@mmCircuitHUD@@QAEXHMPADH@Z
-    inline void SetLapTime(i32 arg1, f32 arg2, char* arg3, i32 arg4)
+    void SetLapTime(i32 arg1, f32 arg2, char* arg3, i32 arg4)
     {
         return stub<member_func_t<void, mmCircuitHUD, i32, f32, char*, i32>>(0x437120, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4371C0 | ?SetWPCleared@mmCircuitHUD@@QAEXHH@Z
-    inline void SetWPCleared(i32 arg1, i32 arg2)
+    void SetWPCleared(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, mmCircuitHUD, i32, i32>>(0x4371C0, this, arg1, arg2);
     }
 
     // 0x436A60 | ??1mmCircuitHUD@@UAE@XZ
-    inline ~mmCircuitHUD() override
+    ~mmCircuitHUD() override
     {
         stub<member_func_t<void, mmCircuitHUD>>(0x436A60, this);
     }
 
     // 0x4370D0 | ?Update@mmCircuitHUD@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmCircuitHUD>>(0x4370D0, this);
     }
 
     // 0x437200 | ?Reset@mmCircuitHUD@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, mmCircuitHUD>>(0x437200, this);
     }
 
     // 0x438970 | ?PostUpdate@mmCircuitHUD@@UAEXXZ
-    inline void PostUpdate() override
+    void PostUpdate() override
     {
         return stub<member_func_t<void, mmCircuitHUD>>(0x438970, this);
     }
@@ -212,122 +212,122 @@ public:
     // mmCRHUD::`vftable' @ 0x5B1020
 
     // 0x4372A0 | ??0mmCRHUD@@QAE@XZ
-    inline mmCRHUD()
+    mmCRHUD()
     {
         stub<member_func_t<void, mmCRHUD>>(0x4372A0, this);
     }
 
     // 0x437560 | ?Init@mmCRHUD@@QAEXPAVMatrix34@@PADW4mmCRGameClass@@@Z
-    inline void Init(class Matrix34* arg1, char* arg2, enum mmCRGameClass arg3)
+    void Init(class Matrix34* arg1, char* arg2, enum mmCRGameClass arg3)
     {
         return stub<member_func_t<void, mmCRHUD, class Matrix34*, char*, enum mmCRGameClass>>(
             0x437560, this, arg1, arg2, arg3);
     }
 
     // 0x437D40 | ?ToggleScores@mmCRHUD@@QAEXXZ
-    inline void ToggleScores()
+    void ToggleScores()
     {
         return stub<member_func_t<void, mmCRHUD>>(0x437D40, this);
     }
 
     // 0x437D70 | ?AddPlayer@mmCRHUD@@QAEXPBDKHI@Z
-    inline void AddPlayer(char const* arg1, u32 arg2, i32 arg3, u32 arg4)
+    void AddPlayer(char const* arg1, u32 arg2, i32 arg3, u32 arg4)
     {
         return stub<member_func_t<void, mmCRHUD, char const*, u32, i32, u32>>(0x437D70, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x437EC0 | ?UnPackColor@mmCRHUD@@QAEXIAAVVector4@@@Z
-    inline void UnPackColor(u32 arg1, class Vector4& arg2)
+    void UnPackColor(u32 arg1, class Vector4& arg2)
     {
         return stub<member_func_t<void, mmCRHUD, u32, class Vector4&>>(0x437EC0, this, arg1, arg2);
     }
 
     // 0x437F40 | ?SetScore@mmCRHUD@@QAEXPAD@Z
-    inline void SetScore(char* arg1)
+    void SetScore(char* arg1)
     {
         return stub<member_func_t<void, mmCRHUD, char*>>(0x437F40, this, arg1);
     }
 
     // 0x437F60 | ?SetName@mmCRHUD@@QAEXPADH@Z
-    inline void SetName(char* arg1, i32 arg2)
+    void SetName(char* arg1, i32 arg2)
     {
         return stub<member_func_t<void, mmCRHUD, char*, i32>>(0x437F60, this, arg1, arg2);
     }
 
     // 0x437FE0 | ?SetScore@mmCRHUD@@QAEXKH@Z
-    inline void SetScore(u32 arg1, i32 arg2)
+    void SetScore(u32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, mmCRHUD, u32, i32>>(0x437FE0, this, arg1, arg2);
     }
 
     // 0x438050 | ?RemovePlayer@mmCRHUD@@QAEXK@Z
-    inline void RemovePlayer(u32 arg1)
+    void RemovePlayer(u32 arg1)
     {
         return stub<member_func_t<void, mmCRHUD, u32>>(0x438050, this, arg1);
     }
 
     // 0x4381E0 | ?ActivateGold@mmCRHUD@@QAEXXZ
-    inline void ActivateGold()
+    void ActivateGold()
     {
         return stub<member_func_t<void, mmCRHUD>>(0x4381E0, this);
     }
 
     // 0x4381F0 | ?DeactivateGold@mmCRHUD@@QAEXXZ
-    inline void DeactivateGold()
+    void DeactivateGold()
     {
         return stub<member_func_t<void, mmCRHUD>>(0x4381F0, this);
     }
 
     // 0x438200 | ?ActivateRosterGold@mmCRHUD@@QAEXK@Z
-    inline void ActivateRosterGold(u32 arg1)
+    void ActivateRosterGold(u32 arg1)
     {
         return stub<member_func_t<void, mmCRHUD, u32>>(0x438200, this, arg1);
     }
 
     // 0x438240 | ?DeactivateRosterGold@mmCRHUD@@QAEXXZ
-    inline void DeactivateRosterGold()
+    void DeactivateRosterGold()
     {
         return stub<member_func_t<void, mmCRHUD>>(0x438240, this);
     }
 
     // 0x438270 | ?UpdateGold@mmCRHUD@@QAEXXZ
-    inline void UpdateGold()
+    void UpdateGold()
     {
         return stub<member_func_t<void, mmCRHUD>>(0x438270, this);
     }
 
     // 0x438320 | ?SetBlueScore@mmCRHUD@@QAEXH@Z
-    inline void SetBlueScore(i32 arg1)
+    void SetBlueScore(i32 arg1)
     {
         return stub<member_func_t<void, mmCRHUD, i32>>(0x438320, this, arg1);
     }
 
     // 0x438360 | ?SetRedScore@mmCRHUD@@QAEXH@Z
-    inline void SetRedScore(i32 arg1)
+    void SetRedScore(i32 arg1)
     {
         return stub<member_func_t<void, mmCRHUD, i32>>(0x438360, this, arg1);
     }
 
     // 0x437430 | ??1mmCRHUD@@UAE@XZ
-    inline ~mmCRHUD() override
+    ~mmCRHUD() override
     {
         stub<member_func_t<void, mmCRHUD>>(0x437430, this);
     }
 
     // 0x438300 | ?Update@mmCRHUD@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmCRHUD>>(0x438300, this);
     }
 
     // 0x438310 | ?Reset@mmCRHUD@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, mmCRHUD>>(0x438310, this);
     }
 
     // 0x4382E0 | ?PostUpdate@mmCRHUD@@UAEXXZ
-    inline void PostUpdate() override
+    void PostUpdate() override
     {
         return stub<member_func_t<void, mmCRHUD>>(0x4382E0, this);
     }
@@ -339,43 +339,43 @@ public:
     // mmCollideHUD::`vftable' @ 0x5B1064
 
     // 0x4383A0 | ??0mmCollideHUD@@QAE@XZ
-    inline mmCollideHUD()
+    mmCollideHUD()
     {
         stub<member_func_t<void, mmCollideHUD>>(0x4383A0, this);
     }
 
     // 0x438460 | ?Init@mmCollideHUD@@QAEXHPAH0H@Z
-    inline void Init(i32 arg1, i32* arg2, i32* arg3, i32 arg4)
+    void Init(i32 arg1, i32* arg2, i32* arg3, i32 arg4)
     {
         return stub<member_func_t<void, mmCollideHUD, i32, i32*, i32*, i32>>(0x438460, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x438720 | ?SetBangerCount@mmCollideHUD@@QAEXH@Z
-    inline void SetBangerCount(i32 arg1)
+    void SetBangerCount(i32 arg1)
     {
         return stub<member_func_t<void, mmCollideHUD, i32>>(0x438720, this, arg1);
     }
 
     // 0x438760 | ?SetVehicleCount@mmCollideHUD@@QAEXH@Z
-    inline void SetVehicleCount(i32 arg1)
+    void SetVehicleCount(i32 arg1)
     {
         return stub<member_func_t<void, mmCollideHUD, i32>>(0x438760, this, arg1);
     }
 
     // 0x4383D0 | ??1mmCollideHUD@@UAE@XZ
-    inline ~mmCollideHUD() override
+    ~mmCollideHUD() override
     {
         stub<member_func_t<void, mmCollideHUD>>(0x4383D0, this);
     }
 
     // 0x4386F0 | ?Update@mmCollideHUD@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmCollideHUD>>(0x4386F0, this);
     }
 
     // 0x438700 | ?Reset@mmCollideHUD@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, mmCollideHUD>>(0x438700, this);
     }
@@ -387,13 +387,13 @@ public:
     // mmGameHUD::`vftable' @ 0x5B0FAC
 
     // 0x438920 | ??1mmGameHUD@@UAE@XZ
-    inline ~mmGameHUD() override
+    ~mmGameHUD() override
     {
         stub<member_func_t<void, mmGameHUD>>(0x438920, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline void PostUpdate()
+    virtual void PostUpdate()
     {
         return stub<member_func_t<void, mmGameHUD>>(0x582519, this);
     }

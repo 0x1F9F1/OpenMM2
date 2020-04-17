@@ -38,37 +38,37 @@ public:
     // mmToolTip::`vftable' @ 0x5B3B64
 
     // 0x4F1620 | ??0mmToolTip@@QAE@XZ
-    inline mmToolTip()
+    mmToolTip()
     {
         stub<member_func_t<void, mmToolTip>>(0x4F1620, this);
     }
 
     // 0x4F16F0 | ?Init@mmToolTip@@QAEXPAVUIMenu@@PAULocString@@@Z
-    inline void Init(class UIMenu* arg1, struct LocString* arg2)
+    void Init(class UIMenu* arg1, struct LocString* arg2)
     {
         return stub<member_func_t<void, mmToolTip, class UIMenu*, struct LocString*>>(0x4F16F0, this, arg1, arg2);
     }
 
     // 0x4F17A0 | ?SetText@mmToolTip@@QAEXPAULocString@@@Z
-    inline void SetText(struct LocString* arg1)
+    void SetText(struct LocString* arg1)
     {
         return stub<member_func_t<void, mmToolTip, struct LocString*>>(0x4F17A0, this, arg1);
     }
 
     // 0x4F17C0 | ?Switch@mmToolTip@@QAEXH@Z
-    inline void Switch(i32 arg1)
+    void Switch(i32 arg1)
     {
         return stub<member_func_t<void, mmToolTip, i32>>(0x4F17C0, this, arg1);
     }
 
     // 0x4F1690 | ??1mmToolTip@@UAE@XZ
-    inline ~mmToolTip() override
+    ~mmToolTip() override
     {
         stub<member_func_t<void, mmToolTip>>(0x4F1690, this);
     }
 
     // 0x4F17D0 | ?Update@mmToolTip@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmToolTip>>(0x4F17D0, this);
     }

@@ -36,32 +36,32 @@ public:
     // vehWheelCheap::`vftable' @ 0x5B8790
 
     // 0x59D790 | ??0vehWheelCheap@@QAE@XZ
-    inline vehWheelCheap()
+    vehWheelCheap()
     {
         stub<member_func_t<void, vehWheelCheap>>(0x59D790, this);
     }
 
     // 0x59D890 | ?Init@vehWheelCheap@@QAEXPAVVector3@@PAVaiVehicleData@@PAVphInertialCS@@@Z
-    inline void Init(class Vector3* arg1, class aiVehicleData* arg2, class phInertialCS* arg3)
+    void Init(class Vector3* arg1, class aiVehicleData* arg2, class phInertialCS* arg3)
     {
         return stub<member_func_t<void, vehWheelCheap, class Vector3*, class aiVehicleData*, class phInertialCS*>>(
             0x59D890, this, arg1, arg2, arg3);
     }
 
     // 0x554360 | ??1vehWheelCheap@@UAE@XZ
-    inline ~vehWheelCheap() override
+    ~vehWheelCheap() override
     {
         stub<member_func_t<void, vehWheelCheap>>(0x554360, this);
     }
 
     // 0x59D970 | ?Update@vehWheelCheap@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, vehWheelCheap>>(0x59D970, this);
     }
 
     // 0x59D860 | ?Reset@vehWheelCheap@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, vehWheelCheap>>(0x59D860, this);
     }

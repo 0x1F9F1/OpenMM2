@@ -36,56 +36,56 @@ struct audCDObject
 {
 public:
     // 0x5A6F20 | ?Init@audCDObject@@QAEXXZ
-    inline void Init()
+    void Init()
     {
         return stub<member_func_t<void, audCDObject>>(0x5A6F20, this);
     }
 
     // 0x5A6FD0 | ?GetFramesBetween@audCDObject@@QAEHPAU_cd_position_@@0@Z
-    inline i32 GetFramesBetween(struct _cd_position_* arg1, struct _cd_position_* arg2)
+    i32 GetFramesBetween(struct _cd_position_* arg1, struct _cd_position_* arg2)
     {
         return stub<member_func_t<i32, audCDObject, struct _cd_position_*, struct _cd_position_*>>(
             0x5A6FD0, this, arg1, arg2);
     }
 
     // 0x5A7060 | ?GetTrackTime@audCDObject@@QAEHXZ
-    inline i32 GetTrackTime()
+    i32 GetTrackTime()
     {
         return stub<member_func_t<i32, audCDObject>>(0x5A7060, this);
     }
 
     // 0x5A70A0 | ?GetCDEndPosition@audCDObject@@QAEHPAU_cd_position_@@@Z
-    inline i32 GetCDEndPosition(struct _cd_position_* arg1)
+    i32 GetCDEndPosition(struct _cd_position_* arg1)
     {
         return stub<member_func_t<i32, audCDObject, struct _cd_position_*>>(0x5A70A0, this, arg1);
     }
 
     // 0x5A70F0 | ?GetCDStartPosition@audCDObject@@QAEHPAU_cd_position_@@@Z
-    inline i32 GetCDStartPosition(struct _cd_position_* arg1)
+    i32 GetCDStartPosition(struct _cd_position_* arg1)
     {
         return stub<member_func_t<i32, audCDObject, struct _cd_position_*>>(0x5A70F0, this, arg1);
     }
 
     // 0x5A7140 | ?GetTrackInfo@audCDObject@@QAE_NH@Z
-    inline bool GetTrackInfo(i32 arg1)
+    bool GetTrackInfo(i32 arg1)
     {
         return stub<member_func_t<bool, audCDObject, i32>>(0x5A7140, this, arg1);
     }
 
     // 0x5A7290 | ?GetNumCDTracks@audCDObject@@QAEHXZ
-    inline i32 GetNumCDTracks()
+    i32 GetNumCDTracks()
     {
         return stub<member_func_t<i32, audCDObject>>(0x5A7290, this);
     }
 
     // 0x5A72E0 | ?SetCDPosition@audCDObject@@QAE_NPAU_cd_position_@@@Z
-    inline bool SetCDPosition(struct _cd_position_* arg1)
+    bool SetCDPosition(struct _cd_position_* arg1)
     {
         return stub<member_func_t<bool, audCDObject, struct _cd_position_*>>(0x5A72E0, this, arg1);
     }
 
     // 0x5A7370 | ?GetCDPosition@audCDObject@@QAEHPAU_cd_position_@@@Z
-    inline i32 GetCDPosition(struct _cd_position_* arg1)
+    i32 GetCDPosition(struct _cd_position_* arg1)
     {
         return stub<member_func_t<i32, audCDObject, struct _cd_position_*>>(0x5A7370, this, arg1);
     }

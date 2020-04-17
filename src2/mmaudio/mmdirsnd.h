@@ -37,19 +37,19 @@ public:
     // mmDirSnd::`vftable' @ 0x5B4E74
 
     // 0x51CBE0 | ??0mmDirSnd@@QAE@XZ
-    inline mmDirSnd()
+    mmDirSnd()
     {
         stub<member_func_t<void, mmDirSnd>>(0x51CBE0, this);
     }
 
     // 0x51CC00 | ??1mmDirSnd@@QAE@XZ
-    inline ~mmDirSnd()
+    ~mmDirSnd()
     {
         stub<member_func_t<void, mmDirSnd>>(0x51CC00, this);
     }
 
     // 0x51CC10 | ?DeInit@mmDirSnd@@QAEXFF@Z
-    inline void DeInit(i16 arg1, i16 arg2)
+    void DeInit(i16 arg1, i16 arg2)
     {
         return stub<member_func_t<void, mmDirSnd, i16, i16>>(0x51CC10, this, arg1, arg2);
     }
@@ -62,19 +62,19 @@ public:
     }
 
     // 0x51CE60 | ?EAXEnabled@mmDirSnd@@QAEIXZ
-    inline u32 EAXEnabled()
+    u32 EAXEnabled()
     {
         return stub<member_func_t<u32, mmDirSnd>>(0x51CE60, this);
     }
 
     // 0x51CE70 | ?DSound3DEnabled@mmDirSnd@@QAEIXZ
-    inline u32 DSound3DEnabled()
+    u32 DSound3DEnabled()
     {
         return stub<member_func_t<u32, mmDirSnd>>(0x51CE70, this);
     }
 
     // 0x51CD90 | ?InitPrimarySoundBuffer@mmDirSnd@@UAEHKEPAD@Z
-    inline i32 InitPrimarySoundBuffer(u32 arg1, u8 arg2, char* arg3) override
+    i32 InitPrimarySoundBuffer(u32 arg1, u8 arg2, char* arg3) override
     {
         return stub<member_func_t<i32, mmDirSnd, u32, u8, char*>>(0x51CD90, this, arg1, arg2, arg3);
     }

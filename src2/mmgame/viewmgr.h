@@ -37,32 +37,32 @@ public:
     // mmViewMgr::`vftable' @ 0x5B0DE8
 
     // 0x431C40 | ??0mmViewMgr@@QAE@XZ
-    inline mmViewMgr()
+    mmViewMgr()
     {
         stub<member_func_t<void, mmViewMgr>>(0x431C40, this);
     }
 
     // 0x431C80 | ?Init@mmViewMgr@@QAEXPAVmmHUD@@PAVmmHudMap@@PAVmmPlayer@@@Z
-    inline void Init(class mmHUD* arg1, class mmHudMap* arg2, class mmPlayer* arg3)
+    void Init(class mmHUD* arg1, class mmHudMap* arg2, class mmPlayer* arg3)
     {
         return stub<member_func_t<void, mmViewMgr, class mmHUD*, class mmHudMap*, class mmPlayer*>>(
             0x431C80, this, arg1, arg2, arg3);
     }
 
     // 0x431D10 | ?SetViewSetting@mmViewMgr@@QAEXH@Z
-    inline void SetViewSetting(i32 arg1)
+    void SetViewSetting(i32 arg1)
     {
         return stub<member_func_t<void, mmViewMgr, i32>>(0x431D10, this, arg1);
     }
 
     // 0x431C60 | ??1mmViewMgr@@UAE@XZ
-    inline ~mmViewMgr() override
+    ~mmViewMgr() override
     {
         stub<member_func_t<void, mmViewMgr>>(0x431C60, this);
     }
 
     // 0x432100 | ?Update@mmViewMgr@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmViewMgr>>(0x432100, this);
     }

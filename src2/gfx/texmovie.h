@@ -56,19 +56,19 @@ public:
     }
 
     // 0x4B4B30 | ?Update@gfxTextureMovie@@QAEXM@Z
-    inline void Update(f32 arg1)
+    void Update(f32 arg1)
     {
         return stub<member_func_t<void, gfxTextureMovie, f32>>(0x4B4B30, this, arg1);
     }
 
     // 0x4B4BA0 | ??0gfxTextureMovie@@AAE@PBDH@Z
-    inline gfxTextureMovie(char const* arg1, i32 arg2)
+    gfxTextureMovie(char const* arg1, i32 arg2)
     {
         stub<member_func_t<void, gfxTextureMovie, char const*, i32>>(0x4B4BA0, this, arg1, arg2);
     }
 
     // 0x4B4C00 | ?AddClient@gfxTextureMovie@@QAEXPAPAVgfxTexture@@@Z
-    inline void AddClient(class gfxTexture** arg1)
+    void AddClient(class gfxTexture** arg1)
     {
         return stub<member_func_t<void, gfxTextureMovie, class gfxTexture**>>(0x4B4C00, this, arg1);
     }

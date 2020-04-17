@@ -42,67 +42,67 @@ public:
     // aiBanger::`vftable' @ 0x5B5B84
 
     // 0x56A710 | ??0aiBanger@@QAE@PAVlvlInstance@@HH@Z
-    inline aiBanger(class lvlInstance* arg1, i32 arg2, i32 arg3)
+    aiBanger(class lvlInstance* arg1, i32 arg2, i32 arg3)
     {
         stub<member_func_t<void, aiBanger, class lvlInstance*, i32, i32>>(0x56A710, this, arg1, arg2, arg3);
     }
 
     // 0x56A740 | ??1aiBanger@@QAE@XZ
-    inline ~aiBanger()
+    ~aiBanger()
     {
         stub<member_func_t<void, aiBanger>>(0x56A740, this);
     }
 
     // 0x56A750 | ?Radius@aiBanger@@QAEMXZ
-    inline f32 Radius()
+    f32 Radius()
     {
         return stub<member_func_t<f32, aiBanger>>(0x56A750, this);
     }
 
     // 0x56ACE0 | ?Draw@aiBanger@@QAEXXZ
-    inline void Draw()
+    void Draw()
     {
         return stub<member_func_t<void, aiBanger>>(0x56ACE0, this);
     }
 
     // 0x56A7B0 | ?Position@aiBanger@@UAEXAAVVector3@@@Z
-    inline void Position(class Vector3& arg1) override
+    void Position(class Vector3& arg1) override
     {
         return stub<member_func_t<void, aiBanger, class Vector3&>>(0x56A7B0, this, arg1);
     }
 
     // 0x56ACF0 | ?Speed@aiBanger@@UAEMXZ
-    inline f32 Speed() override
+    f32 Speed() override
     {
         return stub<member_func_t<f32, aiBanger>>(0x56ACF0, this);
     }
 
     // 0x56A780 | ?BreakThreshold@aiBanger@@UAEMXZ
-    inline f32 BreakThreshold() override
+    f32 BreakThreshold() override
     {
         return stub<member_func_t<f32, aiBanger>>(0x56A780, this);
     }
 
     // 0x56A790 | ?Drivable@aiBanger@@UAEHXZ
-    inline i32 Drivable() override
+    i32 Drivable() override
     {
         return stub<member_func_t<i32, aiBanger>>(0x56A790, this);
     }
 
     // 0x56A880 | ?CurrentRoadIdx@aiBanger@@UAEHPAPAVaiPath@@QA_NPAH@Z
-    inline i32 CurrentRoadIdx(class aiPath** arg1, bool* const arg2, i32* arg3) override
+    i32 CurrentRoadIdx(class aiPath** arg1, bool* const arg2, i32* arg3) override
     {
         return stub<member_func_t<i32, aiBanger, class aiPath**, bool* const, i32*>>(0x56A880, this, arg1, arg2, arg3);
     }
 
     // 0x56A9D0 | ?CurrentRdVert@aiBanger@@UAEHXZ
-    inline i32 CurrentRdVert() override
+    i32 CurrentRdVert() override
     {
         return stub<member_func_t<i32, aiBanger>>(0x56A9D0, this);
     }
 
     // 0x56AA30 | ?PreAvoid@aiBanger@@UAEXABVVector3@@0MAAV2@1@Z
-    inline void PreAvoid(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, class Vector3& arg4,
+    void PreAvoid(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, class Vector3& arg4,
         class Vector3& arg5) override
     {
         return stub<member_func_t<void, aiBanger, class Vector3 const&, class Vector3 const&, f32, class Vector3&,
@@ -110,7 +110,7 @@ public:
     }
 
     // 0x56AB60 | ?IsBlockingTarget@aiBanger@@UAEMABVVector3@@0MM@Z
-    inline f32 IsBlockingTarget(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, f32 arg4) override
+    f32 IsBlockingTarget(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, f32 arg4) override
     {
         return stub<member_func_t<f32, aiBanger, class Vector3 const&, class Vector3 const&, f32, f32>>(
             0x56AB60, this, arg1, arg2, arg3, arg4);

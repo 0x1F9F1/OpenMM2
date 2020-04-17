@@ -46,63 +46,63 @@ class modStatic
 {
 public:
     // 0x4A4550 | ?Draw@modStatic@@QBEXPAVmodShader@@@Z
-    inline void Draw(class modShader* arg1)
+    void Draw(class modShader* arg1)
     {
         return stub<member_func_t<void, modStatic, class modShader*>>(0x4A4550, this, arg1);
     }
 
     // 0x4A49A0 | ?Optimize@modStatic@@QAEXPAVmodShader@@@Z
-    inline void Optimize(class modShader* arg1)
+    void Optimize(class modShader* arg1)
     {
         return stub<member_func_t<void, modStatic, class modShader*>>(0x4A49A0, this, arg1);
     }
 
     // 0x4A4A20 | ?DrawNoAlpha@modStatic@@QBEXPAVmodShader@@@Z
-    inline void DrawNoAlpha(class modShader* arg1)
+    void DrawNoAlpha(class modShader* arg1)
     {
         return stub<member_func_t<void, modStatic, class modShader*>>(0x4A4A20, this, arg1);
     }
 
     // 0x4A4A50 | ?DrawEnvMapped@modStatic@@QBEXPAVmodShader@@PAVgfxTexture@@M@Z
-    inline void DrawEnvMapped(class modShader* arg1, class gfxTexture* arg2, f32 arg3)
+    void DrawEnvMapped(class modShader* arg1, class gfxTexture* arg2, f32 arg3)
     {
         return stub<member_func_t<void, modStatic, class modShader*, class gfxTexture*, f32>>(
             0x4A4A50, this, arg1, arg2, arg3);
     }
 
     // 0x4A4B30 | ?DrawOrthoMapped@modStatic@@QBEXPAVmodShader@@PAVgfxTexture@@MI@Z
-    inline void DrawOrthoMapped(class modShader* arg1, class gfxTexture* arg2, f32 arg3, u32 arg4)
+    void DrawOrthoMapped(class modShader* arg1, class gfxTexture* arg2, f32 arg3, u32 arg4)
     {
         return stub<member_func_t<void, modStatic, class modShader*, class gfxTexture*, f32, u32>>(
             0x4A4B30, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4A4C50 | ?DrawWithTexGenAndTexMatrix@modStatic@@QBEXXZ
-    inline void DrawWithTexGenAndTexMatrix()
+    void DrawWithTexGenAndTexMatrix()
     {
         return stub<member_func_t<void, modStatic>>(0x4A4C50, this);
     }
 
     // 0x4A4CA0 | ?Clone@modStatic@@QBEPAV1@XZ
-    inline class modStatic* Clone()
+    class modStatic* Clone()
     {
         return stub<member_func_t<class modStatic*, modStatic>>(0x4A4CA0, this);
     }
 
     // 0x4A4D60 | ?CopyFrom@modStatic@@QAEXPBV1@@Z
-    inline void CopyFrom(class modStatic const* arg1)
+    void CopyFrom(class modStatic const* arg1)
     {
         return stub<member_func_t<void, modStatic, class modStatic const*>>(0x4A4D60, this, arg1);
     }
 
     // 0x4A4DB0 | ?GetAdjunctCount@modStatic@@QBEHXZ
-    inline i32 GetAdjunctCount()
+    i32 GetAdjunctCount()
     {
         return stub<member_func_t<i32, modStatic>>(0x4A4DB0, this);
     }
 
     // 0x4A4DE0 | ?GetTriCount@modStatic@@QBEHXZ
-    inline i32 GetTriCount()
+    i32 GetTriCount()
     {
         return stub<member_func_t<i32, modStatic>>(0x4A4DE0, this);
     }

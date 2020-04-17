@@ -52,49 +52,49 @@ public:
     // crKinematics::`vftable' @ 0x5B63F0
 
     // 0x57E460 | ??0crKinematics@@QAE@XZ
-    inline crKinematics()
+    crKinematics()
     {
         stub<member_func_t<void, crKinematics>>(0x57E460, this);
     }
 
     // 0x57E790 | ?TestPose@crKinematics@@QAEXXZ
-    inline void TestPose()
+    void TestPose()
     {
         return stub<member_func_t<void, crKinematics>>(0x57E790, this);
     }
 
     // 0x57E590 | ??1crKinematics@@UAE@XZ
-    inline ~crKinematics() override
+    ~crKinematics() override
     {
         stub<member_func_t<void, crKinematics>>(0x57E590, this);
     }
 
     // 0x57E600 | ?Reset@crKinematics@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, crKinematics>>(0x57E600, this);
     }
 
     // 0x57E880 | ?Update@crKinematics@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, crKinematics>>(0x57E880, this);
     }
 
     // 0x57E6E0 | ?MatchPose@crKinematics@@UAEXXZ
-    inline void MatchPose() override
+    void MatchPose() override
     {
         return stub<member_func_t<void, crKinematics>>(0x57E6E0, this);
     }
 
     // 0x57E620 | ?SetIKBlend@crKinematics@@UAEXM@Z
-    inline void SetIKBlend(f32 arg1) override
+    void SetIKBlend(f32 arg1) override
     {
         return stub<member_func_t<void, crKinematics, f32>>(0x57E620, this, arg1);
     }
 
     // 0x57E680 | ?SetLimp@crKinematics@@UAEX_N@Z
-    inline void SetLimp(bool arg1) override
+    void SetLimp(bool arg1) override
     {
         return stub<member_func_t<void, crKinematics, bool>>(0x57E680, this, arg1);
     }
@@ -106,50 +106,50 @@ public:
     // crKinematicsBase::`vftable' @ 0x5B63D4
 
     // 0x57E3C0 | ??0crKinematicsBase@@QAE@XZ
-    inline crKinematicsBase()
+    crKinematicsBase()
     {
         stub<member_func_t<void, crKinematicsBase>>(0x57E3C0, this);
     }
 
     // 0x57E3E0 | ??1crKinematicsBase@@UAE@XZ
-    virtual inline ~crKinematicsBase()
+    virtual ~crKinematicsBase()
     {
         stub<member_func_t<void, crKinematicsBase>>(0x57E3E0, this);
     }
 
     // 0x57E3F0 | ?Init@crKinematicsBase@@UAEXAAVcrSkeleton@@ABVcrBodyDataBase@@@Z
-    virtual inline void Init(class crSkeleton& arg1, class crBodyDataBase const& arg2)
+    virtual void Init(class crSkeleton& arg1, class crBodyDataBase const& arg2)
     {
         return stub<member_func_t<void, crKinematicsBase, class crSkeleton&, class crBodyDataBase const&>>(
             0x57E3F0, this, arg1, arg2);
     }
 
     // 0x57E410 | ?Reset@crKinematicsBase@@UAEXXZ
-    virtual inline void Reset()
+    virtual void Reset()
     {
         return stub<member_func_t<void, crKinematicsBase>>(0x57E410, this);
     }
 
     // 0x57E420 | ?Update@crKinematicsBase@@UAEXXZ
-    virtual inline void Update()
+    virtual void Update()
     {
         return stub<member_func_t<void, crKinematicsBase>>(0x57E420, this);
     }
 
     // 0x57E430 | ?MatchPose@crKinematicsBase@@UAEXXZ
-    virtual inline void MatchPose()
+    virtual void MatchPose()
     {
         return stub<member_func_t<void, crKinematicsBase>>(0x57E430, this);
     }
 
     // 0x57E440 | ?SetIKBlend@crKinematicsBase@@UAEXM@Z
-    virtual inline void SetIKBlend(f32 arg1)
+    virtual void SetIKBlend(f32 arg1)
     {
         return stub<member_func_t<void, crKinematicsBase, f32>>(0x57E440, this, arg1);
     }
 
     // 0x57E450 | ?SetLimp@crKinematicsBase@@UAEX_N@Z
-    virtual inline void SetLimp(bool arg1)
+    virtual void SetLimp(bool arg1)
     {
         return stub<member_func_t<void, crKinematicsBase, bool>>(0x57E450, this, arg1);
     }

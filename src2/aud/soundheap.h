@@ -39,75 +39,75 @@ class audSoundHeap
 {
 public:
     // 0x5A5E90 | ?Create@audSoundHeap@@QAEPAV1@PAV1@H@Z
-    inline class audSoundHeap* Create(class audSoundHeap* arg1, i32 arg2)
+    class audSoundHeap* Create(class audSoundHeap* arg1, i32 arg2)
     {
         return stub<member_func_t<class audSoundHeap*, audSoundHeap, class audSoundHeap*, i32>>(
             0x5A5E90, this, arg1, arg2);
     }
 
     // 0x5A5EB0 | ?CreateNodeList@audSoundHeap@@QAEPAV1@PAV1@HH@Z
-    inline class audSoundHeap* CreateNodeList(class audSoundHeap* arg1, i32 arg2, i32 arg3)
+    class audSoundHeap* CreateNodeList(class audSoundHeap* arg1, i32 arg2, i32 arg3)
     {
         return stub<member_func_t<class audSoundHeap*, audSoundHeap, class audSoundHeap*, i32, i32>>(
             0x5A5EB0, this, arg1, arg2, arg3);
     }
 
     // 0x5A5F90 | ?ReserveBuffer@audSoundHeap@@QAEPAVaudSoundBuffer@@H@Z
-    inline class audSoundBuffer* ReserveBuffer(i32 arg1)
+    class audSoundBuffer* ReserveBuffer(i32 arg1)
     {
         return stub<member_func_t<class audSoundBuffer*, audSoundHeap, i32>>(0x5A5F90, this, arg1);
     }
 
     // 0x5A6010 | ?ReleaseBuffer@audSoundHeap@@QAE_NPAVaudSoundBuffer@@@Z
-    inline bool ReleaseBuffer(class audSoundBuffer* arg1)
+    bool ReleaseBuffer(class audSoundBuffer* arg1)
     {
         return stub<member_func_t<bool, audSoundHeap, class audSoundBuffer*>>(0x5A6010, this, arg1);
     }
 
     // 0x5A6080 | ?Destroy@audSoundHeap@@QAEXXZ
-    inline void Destroy()
+    void Destroy()
     {
         return stub<member_func_t<void, audSoundHeap>>(0x5A6080, this);
     }
 
     // 0x5A6090 | ?SetBottomOfTopStack@audSoundHeap@@QAE_NPAX@Z
-    inline bool SetBottomOfTopStack(void* arg1)
+    bool SetBottomOfTopStack(void* arg1)
     {
         return stub<member_func_t<bool, audSoundHeap, void*>>(0x5A6090, this, arg1);
     }
 
     // 0x5A60D0 | ?SetTopOfBottomStack@audSoundHeap@@QAE_NPAX@Z
-    inline bool SetTopOfBottomStack(void* arg1)
+    bool SetTopOfBottomStack(void* arg1)
     {
         return stub<member_func_t<bool, audSoundHeap, void*>>(0x5A60D0, this, arg1);
     }
 
     // 0x5A6110 | ?GetSoundBufferList@audSoundHeap@@QAEPAVaudSoundBuffer@@XZ
-    inline class audSoundBuffer* GetSoundBufferList()
+    class audSoundBuffer* GetSoundBufferList()
     {
         return stub<member_func_t<class audSoundBuffer*, audSoundHeap>>(0x5A6110, this);
     }
 
     // 0x5A6120 | ?GetTop@audSoundHeap@@QAEPAXXZ
-    inline void* GetTop()
+    void* GetTop()
     {
         return stub<member_func_t<void*, audSoundHeap>>(0x5A6120, this);
     }
 
     // 0x5A6130 | ?GetBotttomOfTopStack@audSoundHeap@@QAEPAXXZ
-    inline void* GetBotttomOfTopStack()
+    void* GetBotttomOfTopStack()
     {
         return stub<member_func_t<void*, audSoundHeap>>(0x5A6130, this);
     }
 
     // 0x5A6140 | ?GetTopOfBottomStack@audSoundHeap@@QAEPAXXZ
-    inline void* GetTopOfBottomStack()
+    void* GetTopOfBottomStack()
     {
         return stub<member_func_t<void*, audSoundHeap>>(0x5A6140, this);
     }
 
     // 0x5A6150 | ?GetBottom@audSoundHeap@@QAEPAXXZ
-    inline void* GetBottom()
+    void* GetBottom()
     {
         return stub<member_func_t<void*, audSoundHeap>>(0x5A6150, this);
     }

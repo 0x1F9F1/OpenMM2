@@ -62,92 +62,92 @@ public:
     // Dialog_Replay::`vftable' @ 0x5B3EDC
 
     // 0x4FA2B0 | ??0Dialog_Replay@@QAE@HMMMMPAD@Z
-    inline Dialog_Replay(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    Dialog_Replay(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
     {
         stub<member_func_t<void, Dialog_Replay, i32, f32, f32, f32, f32, char*>>(
             0x4FA2B0, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4FA7C0 | ?ScrollCB@Dialog_Replay@@QAEXXZ
-    inline void ScrollCB()
+    void ScrollCB()
     {
         return stub<member_func_t<void, Dialog_Replay>>(0x4FA7C0, this);
     }
 
     // 0x4FA7E0 | ?CancelCB@Dialog_Replay@@QAEXXZ
-    inline void CancelCB()
+    void CancelCB()
     {
         return stub<member_func_t<void, Dialog_Replay>>(0x4FA7E0, this);
     }
 
     // 0x4FA810 | ?DoneCB@Dialog_Replay@@QAEXXZ
-    inline void DoneCB()
+    void DoneCB()
     {
         return stub<member_func_t<void, Dialog_Replay>>(0x4FA810, this);
     }
 
     // 0x4FA830 | ?EditCB@Dialog_Replay@@QAEXXZ
-    inline void EditCB()
+    void EditCB()
     {
         return stub<member_func_t<void, Dialog_Replay>>(0x4FA830, this);
     }
 
     // 0x4FA840 | ?SetDescription@Dialog_Replay@@QAEXPAD@Z
-    inline void SetDescription(char* arg1)
+    void SetDescription(char* arg1)
     {
         return stub<member_func_t<void, Dialog_Replay, char*>>(0x4FA840, this, arg1);
     }
 
     // 0x4FA890 | ?GetDescription@Dialog_Replay@@QAEPADXZ
-    inline char* GetDescription()
+    char* GetDescription()
     {
         return stub<member_func_t<char*, Dialog_Replay>>(0x4FA890, this);
     }
 
     // 0x4FA9A0 | ?DeleteCB@Dialog_Replay@@QAEXXZ
-    inline void DeleteCB()
+    void DeleteCB()
     {
         return stub<member_func_t<void, Dialog_Replay>>(0x4FA9A0, this);
     }
 
     // 0x4FAA60 | ?SetCurrentReplay@Dialog_Replay@@QAEXH@Z
-    inline void SetCurrentReplay(i32 arg1)
+    void SetCurrentReplay(i32 arg1)
     {
         return stub<member_func_t<void, Dialog_Replay, i32>>(0x4FAA60, this, arg1);
     }
 
     // 0x4FAAB0 | ?GetSelectedReplay@Dialog_Replay@@QAEPADXZ
-    inline char* GetSelectedReplay()
+    char* GetSelectedReplay()
     {
         return stub<member_func_t<char*, Dialog_Replay>>(0x4FAAB0, this);
     }
 
     // 0x4FAAF0 | ?SetDriverStats@Dialog_Replay@@QAEXPAD00@Z
-    inline void SetDriverStats(char* arg1, char* arg2, char* arg3)
+    void SetDriverStats(char* arg1, char* arg2, char* arg3)
     {
         return stub<member_func_t<void, Dialog_Replay, char*, char*, char*>>(0x4FAAF0, this, arg1, arg2, arg3);
     }
 
     // 0x4FAC70 | ?LoadAll@Dialog_Replay@@QAEXXZ
-    inline void LoadAll()
+    void LoadAll()
     {
         return stub<member_func_t<void, Dialog_Replay>>(0x4FAC70, this);
     }
 
     // 0x4FA6F0 | ??1Dialog_Replay@@UAE@XZ
-    inline ~Dialog_Replay() override
+    ~Dialog_Replay() override
     {
         stub<member_func_t<void, Dialog_Replay>>(0x4FA6F0, this);
     }
 
     // 0x4FA7A0 | ?PreSetup@Dialog_Replay@@UAEXXZ
-    inline void PreSetup() override
+    void PreSetup() override
     {
         return stub<member_func_t<void, Dialog_Replay>>(0x4FA7A0, this);
     }
 
     // 0x4FA7B0 | ?PostSetup@Dialog_Replay@@UAEXXZ
-    inline void PostSetup() override
+    void PostSetup() override
     {
         return stub<member_func_t<void, Dialog_Replay>>(0x4FA7B0, this);
     }

@@ -42,13 +42,13 @@ struct ltFlare
 {
 public:
     // 0x59BD80 | ??0ltFlare@@QAE@XZ
-    inline ltFlare()
+    ltFlare()
     {
         stub<member_func_t<void, ltFlare>>(0x59BD80, this);
     }
 
     // 0x59BDB0 | ?Random@ltFlare@@QAEXXZ
-    inline void Random()
+    void Random()
     {
         return stub<member_func_t<void, ltFlare>>(0x59BDB0, this);
     }
@@ -58,31 +58,31 @@ struct ltLensFlare
 {
 public:
     // 0x59BE80 | ??0ltLensFlare@@QAE@H@Z
-    inline ltLensFlare(i32 arg1)
+    ltLensFlare(i32 arg1)
     {
         stub<member_func_t<void, ltLensFlare, i32>>(0x59BE80, this, arg1);
     }
 
     // 0x59BF80 | ??1ltLensFlare@@QAE@XZ
-    inline ~ltLensFlare()
+    ~ltLensFlare()
     {
         stub<member_func_t<void, ltLensFlare>>(0x59BF80, this);
     }
 
     // 0x59BFA0 | ?DrawBegin@ltLensFlare@@QAEXXZ
-    inline void DrawBegin()
+    void DrawBegin()
     {
         return stub<member_func_t<void, ltLensFlare>>(0x59BFA0, this);
     }
 
     // 0x59C0C0 | ?DrawEnd@ltLensFlare@@QAEXXZ
-    inline void DrawEnd()
+    void DrawEnd()
     {
         return stub<member_func_t<void, ltLensFlare>>(0x59C0C0, this);
     }
 
     // 0x59C1C0 | ?Draw@ltLensFlare@@QAEXAAVVector3@@0M@Z
-    inline void Draw(class Vector3& arg1, class Vector3& arg2, f32 arg3)
+    void Draw(class Vector3& arg1, class Vector3& arg2, f32 arg3)
     {
         return stub<member_func_t<void, ltLensFlare, class Vector3&, class Vector3&, f32>>(
             0x59C1C0, this, arg1, arg2, arg3);

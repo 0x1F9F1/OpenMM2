@@ -35,50 +35,50 @@ struct AudSpeechData
 {
 public:
     // 0x513CF0 | ??0AudSpeechData@@QAE@PADMM_N00@Z
-    inline AudSpeechData(char* arg1, f32 arg2, f32 arg3, bool arg4, char* arg5, char* arg6)
+    AudSpeechData(char* arg1, f32 arg2, f32 arg3, bool arg4, char* arg5, char* arg6)
     {
         stub<member_func_t<void, AudSpeechData, char*, f32, f32, bool, char*, char*>>(
             0x513CF0, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x513DB0 | ??1AudSpeechData@@QAE@XZ
-    inline ~AudSpeechData()
+    ~AudSpeechData()
     {
         stub<member_func_t<void, AudSpeechData>>(0x513DB0, this);
     }
 
     // 0x513E20 | ?LoadOneShots@AudSpeechData@@AAEXPAD0@Z
-    inline void LoadOneShots(char* arg1, char* arg2)
+    void LoadOneShots(char* arg1, char* arg2)
     {
         return stub<member_func_t<void, AudSpeechData, char*, char*>>(0x513E20, this, arg1, arg2);
     }
 
     // 0x513F70 | ?SetVolume@AudSpeechData@@QAEXM@Z
-    inline void SetVolume(f32 arg1)
+    void SetVolume(f32 arg1)
     {
         return stub<member_func_t<void, AudSpeechData, f32>>(0x513F70, this, arg1);
     }
 
     // 0x513FB0 | ?GetName@AudSpeechData@@QAEPADH@Z
-    inline char* GetName(i32 arg1)
+    char* GetName(i32 arg1)
     {
         return stub<member_func_t<char*, AudSpeechData, i32>>(0x513FB0, this, arg1);
     }
 
     // 0x513FF0 | ?GetOneShot@AudSpeechData@@QAEPAVAudSoundBase@@H@Z
-    inline class AudSoundBase* GetOneShot(i32 arg1)
+    class AudSoundBase* GetOneShot(i32 arg1)
     {
         return stub<member_func_t<class AudSoundBase*, AudSpeechData, i32>>(0x513FF0, this, arg1);
     }
 
     // 0x514010 | ?GetRandomName@AudSpeechData@@QAEPADXZ
-    inline char* GetRandomName()
+    char* GetRandomName()
     {
         return stub<member_func_t<char*, AudSpeechData>>(0x514010, this);
     }
 
     // 0x5140B0 | ?GetRandomOneShot@AudSpeechData@@QAEPAVAudSoundBase@@XZ
-    inline class AudSoundBase* GetRandomOneShot()
+    class AudSoundBase* GetRandomOneShot()
     {
         return stub<member_func_t<class AudSoundBase*, AudSpeechData>>(0x5140B0, this);
     }

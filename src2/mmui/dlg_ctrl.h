@@ -35,20 +35,20 @@ public:
     // Dialog_ControlAssign::`vftable' @ 0x5B416C
 
     // 0x4FE4C0 | ??0Dialog_ControlAssign@@QAE@HMMMMPAD@Z
-    inline Dialog_ControlAssign(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    Dialog_ControlAssign(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
     {
         stub<member_func_t<void, Dialog_ControlAssign, i32, f32, f32, f32, f32, char*>>(
             0x4FE4C0, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4FE5D0 | ??1Dialog_ControlAssign@@UAE@XZ
-    inline ~Dialog_ControlAssign() override
+    ~Dialog_ControlAssign() override
     {
         stub<member_func_t<void, Dialog_ControlAssign>>(0x4FE5D0, this);
     }
 
     // 0x4FE5E0 | ?PreSetup@Dialog_ControlAssign@@UAEXXZ
-    inline void PreSetup() override
+    void PreSetup() override
     {
         return stub<member_func_t<void, Dialog_ControlAssign>>(0x4FE5E0, this);
     }

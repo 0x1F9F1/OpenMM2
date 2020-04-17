@@ -35,49 +35,49 @@ class mmSpeechContainer
 {
 public:
     // 0x51B450 | ??0mmSpeechContainer@@QAE@HHPAD@Z
-    inline mmSpeechContainer(i32 arg1, i32 arg2, char* arg3)
+    mmSpeechContainer(i32 arg1, i32 arg2, char* arg3)
     {
         stub<member_func_t<void, mmSpeechContainer, i32, i32, char*>>(0x51B450, this, arg1, arg2, arg3);
     }
 
     // 0x51B4C0 | ??1mmSpeechContainer@@QAE@XZ
-    inline ~mmSpeechContainer()
+    ~mmSpeechContainer()
     {
         stub<member_func_t<void, mmSpeechContainer>>(0x51B4C0, this);
     }
 
     // 0x51B5C0 | ?InitRace@mmSpeechContainer@@AAEXHHPAD@Z
-    inline void InitRace(i32 arg1, i32 arg2, char* arg3)
+    void InitRace(i32 arg1, i32 arg2, char* arg3)
     {
         return stub<member_func_t<void, mmSpeechContainer, i32, i32, char*>>(0x51B5C0, this, arg1, arg2, arg3);
     }
 
     // 0x51B6A0 | ?InitCC@mmSpeechContainer@@AAEXHPAD@Z
-    inline void InitCC(i32 arg1, char* arg2)
+    void InitCC(i32 arg1, char* arg2)
     {
         return stub<member_func_t<void, mmSpeechContainer, i32, char*>>(0x51B6A0, this, arg1, arg2);
     }
 
     // 0x51B7A0 | ?Stop@mmSpeechContainer@@QAEXXZ
-    inline void Stop()
+    void Stop()
     {
         return stub<member_func_t<void, mmSpeechContainer>>(0x51B7A0, this);
     }
 
     // 0x51B7B0 | ?Update@mmSpeechContainer@@QAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, mmSpeechContainer>>(0x51B7B0, this);
     }
 
     // 0x51B7E0 | ?GetRaceSpeechPtr@mmSpeechContainer@@QAEPAVmmRaceSpeech@@XZ
-    inline class mmRaceSpeech* GetRaceSpeechPtr()
+    class mmRaceSpeech* GetRaceSpeechPtr()
     {
         return stub<member_func_t<class mmRaceSpeech*, mmSpeechContainer>>(0x51B7E0, this);
     }
 
     // 0x51B7F0 | ?GetCCSpeechPtr@mmSpeechContainer@@QAEPAVmmCCSpeech@@XZ
-    inline class mmCCSpeech* GetCCSpeechPtr()
+    class mmCCSpeech* GetCCSpeechPtr()
     {
         return stub<member_func_t<class mmCCSpeech*, mmSpeechContainer>>(0x51B7F0, this);
     }

@@ -41,50 +41,50 @@ public:
     // Card2D::`vftable' @ 0x5B8600
 
     // 0x5928B0 | ??0Card2D@@QAE@XZ
-    inline Card2D()
+    Card2D()
     {
         stub<member_func_t<void, Card2D>>(0x5928B0, this);
     }
 
     // 0x5928D0 | ?Init@Card2D@@QAEXPAVasCamera@@MMMMM@Z
-    inline void Init(class asCamera* arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6)
+    void Init(class asCamera* arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6)
     {
         return stub<member_func_t<void, Card2D, class asCamera*, f32, f32, f32, f32, f32>>(
             0x5928D0, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x592910 | ?SetDimensions@Card2D@@QAEXMMMM@Z
-    inline void SetDimensions(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
+    void SetDimensions(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
         return stub<member_func_t<void, Card2D, f32, f32, f32, f32>>(0x592910, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x592A00 | ?SetPosition@Card2D@@QAEXMM@Z
-    inline void SetPosition(f32 arg1, f32 arg2)
+    void SetPosition(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, Card2D, f32, f32>>(0x592A00, this, arg1, arg2);
     }
 
     // 0x592A20 | ?SetAlpha@Card2D@@QAEXM@Z
-    inline void SetAlpha(f32 arg1)
+    void SetAlpha(f32 arg1)
     {
         return stub<member_func_t<void, Card2D, f32>>(0x592A20, this, arg1);
     }
 
     // 0x592C80 | ??1Card2D@@UAE@XZ
-    inline ~Card2D() override
+    ~Card2D() override
     {
         stub<member_func_t<void, Card2D>>(0x592C80, this);
     }
 
     // 0x592A90 | ?Cull@Card2D@@EAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, Card2D>>(0x592A90, this);
     }
 
     // 0x592A80 | ?Update@Card2D@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, Card2D>>(0x592A80, this);
     }

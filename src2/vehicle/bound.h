@@ -35,31 +35,31 @@ public:
     // vehBound::`vftable' @ 0x5B3110
 
     // 0x4DA610 | ??0vehBound@@QAE@XZ
-    inline vehBound()
+    vehBound()
     {
         stub<member_func_t<void, vehBound>>(0x4DA610, this);
     }
 
     // 0x4DA680 | ??1vehBound@@QAE@XZ
-    inline ~vehBound()
+    ~vehBound()
     {
         stub<member_func_t<void, vehBound>>(0x4DA680, this);
     }
 
     // 0x4DA6E0 | ?Init@vehBound@@QAEXXZ
-    inline void Init()
+    void Init()
     {
         return stub<member_func_t<void, vehBound>>(0x4DA6E0, this);
     }
 
     // 0x4DA700 | ?SetFriction@vehBound@@UAEXM@Z
-    inline void SetFriction(f32 arg1) override
+    void SetFriction(f32 arg1) override
     {
         return stub<member_func_t<void, vehBound, f32>>(0x4DA700, this, arg1);
     }
 
     // 0x4DA710 | ?SetElasticity@vehBound@@UAEXM@Z
-    inline void SetElasticity(f32 arg1) override
+    void SetElasticity(f32 arg1) override
     {
         return stub<member_func_t<void, vehBound, f32>>(0x4DA710, this, arg1);
     }

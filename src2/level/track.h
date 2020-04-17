@@ -37,32 +37,32 @@ class lvlTrackManager
 {
 public:
     // 0x465EC0 | ??0lvlTrackManager@@QAE@XZ
-    inline lvlTrackManager()
+    lvlTrackManager()
     {
         stub<member_func_t<void, lvlTrackManager>>(0x465EC0, this);
     }
 
     // 0x465ED0 | ??1lvlTrackManager@@QAE@XZ
-    inline ~lvlTrackManager()
+    ~lvlTrackManager()
     {
         stub<member_func_t<void, lvlTrackManager>>(0x465ED0, this);
     }
 
     // 0x465EE0 | ?Init@lvlTrackManager@@QAEXABVMatrix34@@MH@Z
-    inline void Init(class Matrix34 const& arg1, f32 arg2, i32 arg3)
+    void Init(class Matrix34 const& arg1, f32 arg2, i32 arg3)
     {
         return stub<member_func_t<void, lvlTrackManager, class Matrix34 const&, f32, i32>>(
             0x465EE0, this, arg1, arg2, arg3);
     }
 
     // 0x465F50 | ?Reset@lvlTrackManager@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, lvlTrackManager>>(0x465F50, this);
     }
 
     // 0x465F60 | ?Update@lvlTrackManager@@QAEXABVVector3@@0PAVgfxTexture@@@Z
-    inline void Update(class Vector3 const& arg1, class Vector3 const& arg2, class gfxTexture* arg3)
+    void Update(class Vector3 const& arg1, class Vector3 const& arg2, class gfxTexture* arg3)
     {
         return stub<
             member_func_t<void, lvlTrackManager, class Vector3 const&, class Vector3 const&, class gfxTexture*>>(
@@ -70,13 +70,13 @@ public:
     }
 
     // 0x466320 | ?Draw@lvlTrackManager@@QAEXXZ
-    inline void Draw()
+    void Draw()
     {
         return stub<member_func_t<void, lvlTrackManager>>(0x466320, this);
     }
 
     // 0x4663E0 | ?AddVertex@lvlTrackManager@@AAEXPAVgfxTexture@@MABVVector3@@1@Z
-    inline void AddVertex(class gfxTexture* arg1, f32 arg2, class Vector3 const& arg3, class Vector3 const& arg4)
+    void AddVertex(class gfxTexture* arg1, f32 arg2, class Vector3 const& arg3, class Vector3 const& arg4)
     {
         return stub<
             member_func_t<void, lvlTrackManager, class gfxTexture*, f32, class Vector3 const&, class Vector3 const&>>(

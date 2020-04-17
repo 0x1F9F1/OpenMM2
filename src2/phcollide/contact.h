@@ -66,32 +66,32 @@ public:
     }
 
     // 0x46EF10 | ?Init@phContact@@QAEXABVphImpact@@@Z
-    inline void Init(class phImpact const& arg1)
+    void Init(class phImpact const& arg1)
     {
         return stub<member_func_t<void, phContact, class phImpact const&>>(0x46EF10, this, arg1);
     }
 
     // 0x46F000 | ?Set@phContact@@QAEXABV1@@Z
-    inline void Set(class phContact const& arg1)
+    void Set(class phContact const& arg1)
     {
         return stub<member_func_t<void, phContact, class phContact const&>>(0x46F000, this, arg1);
     }
 
     // 0x46F110 | ?IsEqual@phContact@@QAE_NABVphImpact@@@Z
-    inline bool IsEqual(class phImpact const& arg1)
+    bool IsEqual(class phImpact const& arg1)
     {
         return stub<member_func_t<bool, phContact, class phImpact const&>>(0x46F110, this, arg1);
     }
 
     // 0x46F1D0 | ?SetContactForceLimit@phContact@@QAEXABVphImpact@@ABVVector3@@@Z
-    inline void SetContactForceLimit(class phImpact const& arg1, class Vector3 const& arg2)
+    void SetContactForceLimit(class phImpact const& arg1, class Vector3 const& arg2)
     {
         return stub<member_func_t<void, phContact, class phImpact const&, class Vector3 const&>>(
             0x46F1D0, this, arg1, arg2);
     }
 
     // 0x46F410 | ?CalcContactForce@phContact@@QAE_NPBVphImpact@@ABVVector3@@11PAV3@PAVMatrix34@@PAMMM@Z
-    inline bool CalcContactForce(class phImpact const* arg1, class Vector3 const& arg2, class Vector3 const& arg3,
+    bool CalcContactForce(class phImpact const* arg1, class Vector3 const& arg2, class Vector3 const& arg3,
         class Vector3 const& arg4, class Vector3* arg5, class Matrix34* arg6, f32* arg7, f32 arg8, f32 arg9)
     {
         return stub<member_func_t<bool, phContact, class phImpact const*, class Vector3 const&, class Vector3 const&,
@@ -100,7 +100,7 @@ public:
     }
 
     // 0x4700C0 | ?SwapAB@phContact@@QAEXXZ
-    inline void SwapAB()
+    void SwapAB()
     {
         return stub<member_func_t<void, phContact>>(0x4700C0, this);
     }

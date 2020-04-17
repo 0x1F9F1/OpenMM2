@@ -62,181 +62,181 @@ public:
     // AudioOptions::`vftable' @ 0x5B3D9C
 
     // 0x4F7AA0 | ??0AudioOptions@@QAE@H@Z
-    inline AudioOptions(i32 arg1)
+    AudioOptions(i32 arg1)
     {
         stub<member_func_t<void, AudioOptions, i32>>(0x4F7AA0, this, arg1);
     }
 
     // 0x4F87A0 | ?SetSFXVolume@AudioOptions@@QAEXXZ
-    inline void SetSFXVolume()
+    void SetSFXVolume()
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F87A0, this);
     }
 
     // 0x4F8800 | ?SetMusicVolume@AudioOptions@@QAEXXZ
-    inline void SetMusicVolume()
+    void SetMusicVolume()
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F8800, this);
     }
 
     // 0x4F8860 | ?SetBalance@AudioOptions@@QAEXXZ
-    inline void SetBalance()
+    void SetBalance()
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F8860, this);
     }
 
     // 0x4F88D0 | ?SetQuality@AudioOptions@@QAEXXZ
-    inline void SetQuality()
+    void SetQuality()
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F88D0, this);
     }
 
     // 0x4F8950 | ?SetStereoFX@AudioOptions@@QAEXXZ
-    inline void SetStereoFX()
+    void SetStereoFX()
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F8950, this);
     }
 
     // 0x4F8B30 | ?SetAudioState@AudioOptions@@QAEXXZ
-    inline void SetAudioState()
+    void SetAudioState()
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F8B30, this);
     }
 
     // 0x4F8CB0 | ?SetMusic@AudioOptions@@QAEXXZ
-    inline void SetMusic()
+    void SetMusic()
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F8CB0, this);
     }
 
     // 0x4F8CD0 | ?SetAmbient@AudioOptions@@QAEXXZ
-    inline void SetAmbient()
+    void SetAmbient()
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F8CD0, this);
     }
 
     // 0x4F8D00 | ?SetSoundFX@AudioOptions@@QAEXXZ
-    inline void SetSoundFX()
+    void SetSoundFX()
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F8D00, this);
     }
 
     // 0x4F8D20 | ?SetCommentary@AudioOptions@@QAEXXZ
-    inline void SetCommentary()
+    void SetCommentary()
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F8D20, this);
     }
 
     // 0x4F8D50 | ?FindDevice@AudioOptions@@QAEHPAD@Z
-    inline i32 FindDevice(char* arg1)
+    i32 FindDevice(char* arg1)
     {
         return stub<member_func_t<i32, AudioOptions, char*>>(0x4F8D50, this, arg1);
     }
 
     // 0x4F8DD0 | ?GetCurrentDeviceName@AudioOptions@@QAEPADXZ
-    inline char* GetCurrentDeviceName()
+    char* GetCurrentDeviceName()
     {
         return stub<member_func_t<char*, AudioOptions>>(0x4F8DD0, this);
     }
 
     // 0x4F8DF0 | ?ResetStereo@AudioOptions@@QAEXXZ
-    inline void ResetStereo()
+    void ResetStereo()
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F8DF0, this);
     }
 
     // 0x4F8E10 | ?ResetSoundFX@AudioOptions@@QAEXXZ
-    inline void ResetSoundFX()
+    void ResetSoundFX()
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F8E10, this);
     }
 
     // 0x4F8E40 | ?ResetMusic@AudioOptions@@QAEXXZ
-    inline void ResetMusic()
+    void ResetMusic()
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F8E40, this);
     }
 
     // 0x4F8E70 | ?ResetAmbient@AudioOptions@@QAEXXZ
-    inline void ResetAmbient()
+    void ResetAmbient()
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F8E70, this);
     }
 
     // 0x4F8EA0 | ?ResetSoundQuality@AudioOptions@@QAEXXZ
-    inline void ResetSoundQuality()
+    void ResetSoundQuality()
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F8EA0, this);
     }
 
     // 0x4F8EE0 | ?ResetCommentary@AudioOptions@@QAEXXZ
-    inline void ResetCommentary()
+    void ResetCommentary()
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F8EE0, this);
     }
 
     // 0x4F8F00 | ?SetDevice@AudioOptions@@QAEXH@Z
-    inline void SetDevice(i32 arg1)
+    void SetDevice(i32 arg1)
     {
         return stub<member_func_t<void, AudioOptions, i32>>(0x4F8F00, this, arg1);
     }
 
     // 0x4F8FA0 | ?ToggleMusic@AudioOptions@@QAEXXZ
-    inline void ToggleMusic()
+    void ToggleMusic()
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F8FA0, this);
     }
 
     // 0x4F9090 | ?ToggleAmbient@AudioOptions@@QAEXXZ
-    inline void ToggleAmbient()
+    void ToggleAmbient()
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F9090, this);
     }
 
     // 0x4F90D0 | ?LoadUIMusicCSV@AudioOptions@@QAEXPAD@Z
-    inline void LoadUIMusicCSV(char* arg1)
+    void LoadUIMusicCSV(char* arg1)
     {
         return stub<member_func_t<void, AudioOptions, char*>>(0x4F90D0, this, arg1);
     }
 
     // 0x4F91C0 | ?FocusDescription@AudioOptions@@QAEXHH@Z
-    inline void FocusDescription(i32 arg1, i32 arg2)
+    void FocusDescription(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, AudioOptions, i32, i32>>(0x4F91C0, this, arg1, arg2);
     }
 
     // 0x4F86D0 | ??1AudioOptions@@UAE@XZ
-    inline ~AudioOptions() override
+    ~AudioOptions() override
     {
         stub<member_func_t<void, AudioOptions>>(0x4F86D0, this);
     }
 
     // 0x4F8750 | ?PreSetup@AudioOptions@@UAEXXZ
-    inline void PreSetup() override
+    void PreSetup() override
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F8750, this);
     }
 
     // 0x4F8A90 | ?CancelAction@AudioOptions@@UAEXXZ
-    inline void CancelAction() override
+    void CancelAction() override
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F8A90, this);
     }
 
     // 0x4F8B20 | ?DoneAction@AudioOptions@@UAEXXZ
-    inline void DoneAction() override
+    void DoneAction() override
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F8B20, this);
     }
 
     // 0x4F89B0 | ?ResetDefaultAction@AudioOptions@@UAEXXZ
-    inline void ResetDefaultAction() override
+    void ResetDefaultAction() override
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F89B0, this);
     }
 
     // 0x4F89A0 | ?StoreCurrentSetup@AudioOptions@@UAEXXZ
-    inline void StoreCurrentSetup() override
+    void StoreCurrentSetup() override
     {
         return stub<member_func_t<void, AudioOptions>>(0x4F89A0, this);
     }

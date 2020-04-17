@@ -51,80 +51,80 @@ public:
     }
 
     // 0x467F70 | ??0lvlMultiRoomInstance@@AAE@PAVlvlInstance@@PAUlvlMultiRoomState@@H@Z
-    inline lvlMultiRoomInstance(class lvlInstance* arg1, struct lvlMultiRoomState* arg2, i32 arg3)
+    lvlMultiRoomInstance(class lvlInstance* arg1, struct lvlMultiRoomState* arg2, i32 arg3)
     {
         stub<member_func_t<void, lvlMultiRoomInstance, class lvlInstance*, struct lvlMultiRoomState*, i32>>(
             0x467F70, this, arg1, arg2, arg3);
     }
 
     // 0x467AE0 | ?GetPosition@lvlMultiRoomInstance@@UAEABVVector3@@XZ
-    inline class Vector3 const& GetPosition() override
+    class Vector3 const& GetPosition() override
     {
         return stub<member_func_t<class Vector3 const&, lvlMultiRoomInstance>>(0x467AE0, this);
     }
 
     // 0x467AF0 | ?GetMatrix@lvlMultiRoomInstance@@UAEABVMatrix34@@AAV2@@Z
-    inline class Matrix34 const& GetMatrix(class Matrix34& arg1) override
+    class Matrix34 const& GetMatrix(class Matrix34& arg1) override
     {
         return stub<member_func_t<class Matrix34 const&, lvlMultiRoomInstance, class Matrix34&>>(0x467AF0, this, arg1);
     }
 
     // 0x467B10 | ?SetMatrix@lvlMultiRoomInstance@@UAEXABVMatrix34@@@Z
-    inline void SetMatrix(class Matrix34 const& arg1) override
+    void SetMatrix(class Matrix34 const& arg1) override
     {
         return stub<member_func_t<void, lvlMultiRoomInstance, class Matrix34 const&>>(0x467B10, this, arg1);
     }
 
     // 0x467B30 | ?GetEntity@lvlMultiRoomInstance@@UAEPAVdgPhysEntity@@XZ
-    inline class dgPhysEntity* GetEntity() override
+    class dgPhysEntity* GetEntity() override
     {
         return stub<member_func_t<class dgPhysEntity*, lvlMultiRoomInstance>>(0x467B30, this);
     }
 
     // 0x467B40 | ?AttachEntity@lvlMultiRoomInstance@@UAEPAVdgPhysEntity@@XZ
-    inline class dgPhysEntity* AttachEntity() override
+    class dgPhysEntity* AttachEntity() override
     {
         return stub<member_func_t<class dgPhysEntity*, lvlMultiRoomInstance>>(0x467B40, this);
     }
 
     // 0x467B50 | ?GetVelocity@lvlMultiRoomInstance@@UAEABVVector3@@XZ
-    inline class Vector3 const& GetVelocity() override
+    class Vector3 const& GetVelocity() override
     {
         return stub<member_func_t<class Vector3 const&, lvlMultiRoomInstance>>(0x467B50, this);
     }
 
     // 0x467BA0 | ?Draw@lvlMultiRoomInstance@@UAEXH@Z
-    inline void Draw(i32 arg1) override
+    void Draw(i32 arg1) override
     {
         return stub<member_func_t<void, lvlMultiRoomInstance, i32>>(0x467BA0, this, arg1);
     }
 
     // 0x467C30 | ?SizeOf@lvlMultiRoomInstance@@UAEIXZ
-    inline u32 SizeOf() override
+    u32 SizeOf() override
     {
         return stub<member_func_t<u32, lvlMultiRoomInstance>>(0x467C30, this);
     }
 
     // 0x467B60 | ?IsLandmark@lvlMultiRoomInstance@@UAE_NXZ
-    inline bool IsLandmark() override
+    bool IsLandmark() override
     {
         return stub<member_func_t<bool, lvlMultiRoomInstance>>(0x467B60, this);
     }
 
     // 0x467B70 | ?IsCollidable@lvlMultiRoomInstance@@UAE_NXZ
-    inline bool IsCollidable() override
+    bool IsCollidable() override
     {
         return stub<member_func_t<bool, lvlMultiRoomInstance>>(0x467B70, this);
     }
 
     // 0x467B80 | ?IsTerrainCollidable@lvlMultiRoomInstance@@UAE_NXZ
-    inline bool IsTerrainCollidable() override
+    bool IsTerrainCollidable() override
     {
         return stub<member_func_t<bool, lvlMultiRoomInstance>>(0x467B80, this);
     }
 
     // 0x467C20 | ?GetBound@lvlMultiRoomInstance@@UAEPBVphBound@@H@Z
-    inline class phBound const* GetBound(i32 arg1) override
+    class phBound const* GetBound(i32 arg1) override
     {
         return stub<member_func_t<class phBound const*, lvlMultiRoomInstance, i32>>(0x467C20, this, arg1);
     }

@@ -54,67 +54,67 @@ public:
     // phBoundHotdog::`vftable' @ 0x5B21B8
 
     // 0x480AE0 | ??0phBoundHotdog@@QAE@XZ
-    inline phBoundHotdog()
+    phBoundHotdog()
     {
         stub<member_func_t<void, phBoundHotdog>>(0x480AE0, this);
     }
 
     // 0x480B20 | ??0phBoundHotdog@@QAE@MM@Z
-    inline phBoundHotdog(f32 arg1, f32 arg2)
+    phBoundHotdog(f32 arg1, f32 arg2)
     {
         stub<member_func_t<void, phBoundHotdog, f32, f32>>(0x480B20, this, arg1, arg2);
     }
 
     // 0x480B60 | ?SetSize@phBoundHotdog@@QAEXMM@Z
-    inline void SetSize(f32 arg1, f32 arg2)
+    void SetSize(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, phBoundHotdog, f32, f32>>(0x480B60, this, arg1, arg2);
     }
 
     // 0x480BD0 | ??1phBoundHotdog@@QAE@XZ
-    inline ~phBoundHotdog()
+    ~phBoundHotdog()
     {
         stub<member_func_t<void, phBoundHotdog>>(0x480BD0, this);
     }
 
     // 0x480BE0 | ?SetBoundingBox@phBoundHotdog@@QAEXMM@Z
-    inline void SetBoundingBox(f32 arg1, f32 arg2)
+    void SetBoundingBox(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, phBoundHotdog, f32, f32>>(0x480BE0, this, arg1, arg2);
     }
 
     // 0x480C20 | ?ScaleBoundingBox@phBoundHotdog@@QAEXMM@Z
-    inline void ScaleBoundingBox(f32 arg1, f32 arg2)
+    void ScaleBoundingBox(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, phBoundHotdog, f32, f32>>(0x480C20, this, arg1, arg2);
     }
 
     // 0x480C60 | ?CalculateBoundingBox@phBoundHotdog@@QAEXXZ
-    inline void CalculateBoundingBox()
+    void CalculateBoundingBox()
     {
         return stub<member_func_t<void, phBoundHotdog>>(0x480C60, this);
     }
 
     // 0x480CE0 | ?CreateOffset@phBoundHotdog@@QAEXABVVector3@@@Z
-    inline void CreateOffset(class Vector3 const& arg1)
+    void CreateOffset(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, phBoundHotdog, class Vector3 const&>>(0x480CE0, this, arg1);
     }
 
     // 0x480D10 | ?ShiftCentroid@phBoundHotdog@@QAEXABVVector3@@@Z
-    inline void ShiftCentroid(class Vector3 const& arg1)
+    void ShiftCentroid(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, phBoundHotdog, class Vector3 const&>>(0x480D10, this, arg1);
     }
 
     // 0x481810 | ?IsInsideHotdog@phBoundHotdog@@QBE_NABVVector3@@@Z
-    inline bool IsInsideHotdog(class Vector3 const& arg1)
+    bool IsInsideHotdog(class Vector3 const& arg1)
     {
         return stub<member_func_t<bool, phBoundHotdog, class Vector3 const&>>(0x481810, this, arg1);
     }
 
     // 0x481900 | ?SegmentToHotdogIntersections@phBoundHotdog@@QBEHABVVector3@@0PAM111PAH2@Z
-    inline i32 SegmentToHotdogIntersections(class Vector3 const& arg1, class Vector3 const& arg2, f32* arg3, f32* arg4,
+    i32 SegmentToHotdogIntersections(class Vector3 const& arg1, class Vector3 const& arg2, f32* arg3, f32* arg4,
         f32* arg5, f32* arg6, i32* arg7, i32* arg8)
     {
         return stub<member_func_t<i32, phBoundHotdog, class Vector3 const&, class Vector3 const&, f32*, f32*, f32*,
@@ -122,13 +122,13 @@ public:
     }
 
     // 0x481E70 | ?FindHotdogIsectNormal@phBoundHotdog@@QBE?AVVector3@@ABV2@H@Z
-    inline class Vector3 FindHotdogIsectNormal(class Vector3 const& arg1, i32 arg2)
+    class Vector3 FindHotdogIsectNormal(class Vector3 const& arg1, i32 arg2)
     {
         return stub<member_func_t<class Vector3, phBoundHotdog, class Vector3 const&, i32>>(0x481E70, this, arg1, arg2);
     }
 
     // 0x481F40 | ?FindImpactSphereToHotdog@phBoundHotdog@@QBE_NPBVphBoundSphere@@PBVMatrix34@@1PAVphColliderBase@@2PAVphImpactBase@@ABVVector3@@@Z
-    inline bool FindImpactSphereToHotdog(class phBoundSphere const* arg1, class Matrix34 const* arg2,
+    bool FindImpactSphereToHotdog(class phBoundSphere const* arg1, class Matrix34 const* arg2,
         class Matrix34 const* arg3, class phColliderBase* arg4, class phColliderBase* arg5, class phImpactBase* arg6,
         class Vector3 const& arg7)
     {
@@ -139,7 +139,7 @@ public:
     }
 
     // 0x482440 | ?FindImpactsHotdogToPoly@phBoundHotdog@@QBEHPBVphBoundPolygonal@@PBVMatrix34@@1PAVphColliderBase@@2PAVphImpactBase@@HABVVector3@@4@Z
-    inline i32 FindImpactsHotdogToPoly(class phBoundPolygonal const* arg1, class Matrix34 const* arg2,
+    i32 FindImpactsHotdogToPoly(class phBoundPolygonal const* arg1, class Matrix34 const* arg2,
         class Matrix34 const* arg3, class phColliderBase* arg4, class phColliderBase* arg5, class phImpactBase* arg6,
         i32 arg7, class Vector3 const& arg8, class Vector3 const& arg9)
     {
@@ -150,7 +150,7 @@ public:
     }
 
     // 0x483880 | ?FindImpactsHotdogToHotdog@phBoundHotdog@@QBEHPBV1@PBVMatrix34@@1PAVphColliderBase@@2PAVphImpactBase@@H@Z
-    inline i32 FindImpactsHotdogToHotdog(class phBoundHotdog const* arg1, class Matrix34 const* arg2,
+    i32 FindImpactsHotdogToHotdog(class phBoundHotdog const* arg1, class Matrix34 const* arg2,
         class Matrix34 const* arg3, class phColliderBase* arg4, class phColliderBase* arg5, class phImpactBase* arg6,
         i32 arg7)
     {
@@ -160,48 +160,47 @@ public:
     }
 
     // 0x484080 | ?Load@phBoundHotdog@@QAE_NPBD@Z
-    inline bool Load(char const* arg1)
+    bool Load(char const* arg1)
     {
         return stub<member_func_t<bool, phBoundHotdog, char const*>>(0x484080, this, arg1);
     }
 
     // 0x484450 | ?GetMaterial@phBoundHotdog@@UBEPBVphMaterial@@H@Z
-    inline class phMaterial const* GetMaterial(i32 arg1) override
+    class phMaterial const* GetMaterial(i32 arg1) override
     {
         return stub<member_func_t<class phMaterial const*, phBoundHotdog, i32>>(0x484450, this, arg1);
     }
 
     // 0x480D50 | ?TestProbePoint@phBoundHotdog@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@M@Z
-    inline bool TestProbePoint(class phSegment& arg1, class phIntersectionPoint* arg2, f32 arg3) override
+    bool TestProbePoint(class phSegment& arg1, class phIntersectionPoint* arg2, f32 arg3) override
     {
         return stub<member_func_t<bool, phBoundHotdog, class phSegment&, class phIntersectionPoint*, f32>>(
             0x480D50, this, arg1, arg2, arg3);
     }
 
     // 0x480F10 | ?TestAIPoint@phBoundHotdog@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@@Z
-    inline bool TestAIPoint(class phSegment& arg1, class phIntersectionPoint* arg2) override
+    bool TestAIPoint(class phSegment& arg1, class phIntersectionPoint* arg2) override
     {
         return stub<member_func_t<bool, phBoundHotdog, class phSegment&, class phIntersectionPoint*>>(
             0x480F10, this, arg1, arg2);
     }
 
     // 0x4810A0 | ?TestEdge@phBoundHotdog@@UBEHAAVphSegment@@PAVphIntersection@@H@Z
-    inline i32 TestEdge(class phSegment& arg1, class phIntersection* arg2, i32 arg3) override
+    i32 TestEdge(class phSegment& arg1, class phIntersection* arg2, i32 arg3) override
     {
         return stub<member_func_t<i32, phBoundHotdog, class phSegment&, class phIntersection*, i32>>(
             0x4810A0, this, arg1, arg2, arg3);
     }
 
     // 0x4813A0 | ?TestProbe@phBoundHotdog@@UBE_NAAVphSegment@@PAVphIntersection@@M@Z
-    inline bool TestProbe(class phSegment& arg1, class phIntersection* arg2, f32 arg3) override
+    bool TestProbe(class phSegment& arg1, class phIntersection* arg2, f32 arg3) override
     {
         return stub<member_func_t<bool, phBoundHotdog, class phSegment&, class phIntersection*, f32>>(
             0x4813A0, this, arg1, arg2, arg3);
     }
 
     // 0x481570 | ?TestSphere@phBoundHotdog@@UBE_NABVVector3@@MAAV2@1AAM@Z
-    inline bool TestSphere(
-        class Vector3 const& arg1, f32 arg2, class Vector3& arg3, class Vector3& arg4, f32& arg5) override
+    bool TestSphere(class Vector3 const& arg1, f32 arg2, class Vector3& arg3, class Vector3& arg4, f32& arg5) override
     {
         return stub<
             member_func_t<bool, phBoundHotdog, class Vector3 const&, f32, class Vector3&, class Vector3&, f32&>>(

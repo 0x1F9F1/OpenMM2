@@ -45,91 +45,91 @@ public:
     // aiPedestrianInstance::`vftable' @ 0x5B62F0
 
     // 0x57B580 | ??0aiPedestrianInstance@@QAE@PAVaiPedestrian@@@Z
-    inline aiPedestrianInstance(class aiPedestrian* arg1)
+    aiPedestrianInstance(class aiPedestrian* arg1)
     {
         stub<member_func_t<void, aiPedestrianInstance, class aiPedestrian*>>(0x57B580, this, arg1);
     }
 
     // 0x57B5C0 | ?GetPosition@aiPedestrianInstance@@UAEABVVector3@@XZ
-    inline class Vector3 const& GetPosition() override
+    class Vector3 const& GetPosition() override
     {
         return stub<member_func_t<class Vector3 const&, aiPedestrianInstance>>(0x57B5C0, this);
     }
 
     // 0x57B5A0 | ?GetMatrix@aiPedestrianInstance@@UAEABVMatrix34@@AAV2@@Z
-    inline class Matrix34 const& GetMatrix(class Matrix34& arg1) override
+    class Matrix34 const& GetMatrix(class Matrix34& arg1) override
     {
         return stub<member_func_t<class Matrix34 const&, aiPedestrianInstance, class Matrix34&>>(0x57B5A0, this, arg1);
     }
 
     // 0x57B5B0 | ?SetMatrix@aiPedestrianInstance@@UAEXABVMatrix34@@@Z
-    inline void SetMatrix(class Matrix34 const& arg1) override
+    void SetMatrix(class Matrix34 const& arg1) override
     {
         return stub<member_func_t<void, aiPedestrianInstance, class Matrix34 const&>>(0x57B5B0, this, arg1);
     }
 
     // 0x57B720 | ?GetEntity@aiPedestrianInstance@@UAEPAVdgPhysEntity@@XZ
-    inline class dgPhysEntity* GetEntity() override
+    class dgPhysEntity* GetEntity() override
     {
         return stub<member_func_t<class dgPhysEntity*, aiPedestrianInstance>>(0x57B720, this);
     }
 
     // 0x57B730 | ?AttachEntity@aiPedestrianInstance@@UAEPAVdgPhysEntity@@XZ
-    inline class dgPhysEntity* AttachEntity() override
+    class dgPhysEntity* AttachEntity() override
     {
         return stub<member_func_t<class dgPhysEntity*, aiPedestrianInstance>>(0x57B730, this);
     }
 
     // 0x57B750 | ?GetVelocity@aiPedestrianInstance@@UAEABVVector3@@XZ
-    inline class Vector3 const& GetVelocity() override
+    class Vector3 const& GetVelocity() override
     {
         return stub<member_func_t<class Vector3 const&, aiPedestrianInstance>>(0x57B750, this);
     }
 
     // 0x57B760 | ?Detach@aiPedestrianInstance@@UAEXXZ
-    inline void Detach() override
+    void Detach() override
     {
         return stub<member_func_t<void, aiPedestrianInstance>>(0x57B760, this);
     }
 
     // 0x57B5F0 | ?Draw@aiPedestrianInstance@@UAEXH@Z
-    inline void Draw(i32 arg1) override
+    void Draw(i32 arg1) override
     {
         return stub<member_func_t<void, aiPedestrianInstance, i32>>(0x57B5F0, this, arg1);
     }
 
     // 0x57B700 | ?DrawShadow@aiPedestrianInstance@@UAEXXZ
-    inline void DrawShadow() override
+    void DrawShadow() override
     {
         return stub<member_func_t<void, aiPedestrianInstance>>(0x57B700, this);
     }
 
     // 0x57B710 | ?DrawShadowMap@aiPedestrianInstance@@UAEXXZ
-    inline void DrawShadowMap() override
+    void DrawShadowMap() override
     {
         return stub<member_func_t<void, aiPedestrianInstance>>(0x57B710, this);
     }
 
     // 0x57B5E0 | ?SizeOf@aiPedestrianInstance@@UAEIXZ
-    inline u32 SizeOf() override
+    u32 SizeOf() override
     {
         return stub<member_func_t<u32, aiPedestrianInstance>>(0x57B5E0, this);
     }
 
     // 0x57B780 | ?IsCollidable@aiPedestrianInstance@@UAE_NXZ
-    inline bool IsCollidable() override
+    bool IsCollidable() override
     {
         return stub<member_func_t<bool, aiPedestrianInstance>>(0x57B780, this);
     }
 
     // 0x57B770 | ?GetBound@aiPedestrianInstance@@UAEPBVphBound@@H@Z
-    inline class phBound const* GetBound(i32 arg1) override
+    class phBound const* GetBound(i32 arg1) override
     {
         return stub<member_func_t<class phBound const*, aiPedestrianInstance, i32>>(0x57B770, this, arg1);
     }
 
     // 0x57B5D0 | ?ComputeLod@aiPedestrianInstance@@UAEHMM@Z
-    virtual inline i32 ComputeLod(f32 arg1, f32 arg2)
+    virtual i32 ComputeLod(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<i32, aiPedestrianInstance, f32, f32>>(0x57B5D0, this, arg1, arg2);
     }

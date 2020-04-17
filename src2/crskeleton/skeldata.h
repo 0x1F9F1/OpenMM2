@@ -33,38 +33,38 @@ class crSkeletonData
 {
 public:
     // 0x57C730 | ??0crSkeletonData@@QAE@XZ
-    inline crSkeletonData()
+    crSkeletonData()
     {
         stub<member_func_t<void, crSkeletonData>>(0x57C730, this);
     }
 
     // 0x57C740 | ??1crSkeletonData@@QAE@XZ
-    inline ~crSkeletonData()
+    ~crSkeletonData()
     {
         stub<member_func_t<void, crSkeletonData>>(0x57C740, this);
     }
 
     // 0x57C750 | ?Load@crSkeletonData@@QAE_NPBD@Z
-    inline bool Load(char const* arg1)
+    bool Load(char const* arg1)
     {
         return stub<member_func_t<bool, crSkeletonData, char const*>>(0x57C750, this, arg1);
     }
 
     // 0x57C8C0 | ?FindBone@crSkeletonData@@QBEPAVcrBoneData@@PBDHD@Z
-    inline class crBoneData* FindBone(char const* arg1, i32 arg2, char arg3)
+    class crBoneData* FindBone(char const* arg1, i32 arg2, char arg3)
     {
         return stub<member_func_t<class crBoneData*, crSkeletonData, char const*, i32, char>>(
             0x57C8C0, this, arg1, arg2, arg3);
     }
 
     // 0x57C9C0 | ?HowMany@crSkeletonData@@QBEHPBDD@Z
-    inline i32 HowMany(char const* arg1, char arg2)
+    i32 HowMany(char const* arg1, char arg2)
     {
         return stub<member_func_t<i32, crSkeletonData, char const*, char>>(0x57C9C0, this, arg1, arg2);
     }
 
     // 0x57CA00 | ?InitMirror@crSkeletonData@@AAEXXZ
-    inline void InitMirror()
+    void InitMirror()
     {
         return stub<member_func_t<void, crSkeletonData>>(0x57CA00, this);
     }

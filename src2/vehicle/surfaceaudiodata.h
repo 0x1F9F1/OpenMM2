@@ -55,103 +55,103 @@ struct vehSurfaceAudioData
 {
 public:
     // 0x4DFD50 | ??0vehSurfaceAudioData@@QAE@XZ
-    inline vehSurfaceAudioData()
+    vehSurfaceAudioData()
     {
         stub<member_func_t<void, vehSurfaceAudioData>>(0x4DFD50, this);
     }
 
     // 0x4DFDA0 | ?AllocateSkidSamples@vehSurfaceAudioData@@QAEXH@Z
-    inline void AllocateSkidSamples(i32 arg1)
+    void AllocateSkidSamples(i32 arg1)
     {
         return stub<member_func_t<void, vehSurfaceAudioData, i32>>(0x4DFDA0, this, arg1);
     }
 
     // 0x4DFDD0 | ?StopSkid@vehSurfaceAudioData@@QAEXXZ
-    inline void StopSkid()
+    void StopSkid()
     {
         return stub<member_func_t<void, vehSurfaceAudioData>>(0x4DFDD0, this);
     }
 
     // 0x4DFE10 | ?UpdateSkid@vehSurfaceAudioData@@QAEXMMM@Z
-    inline void UpdateSkid(f32 arg1, f32 arg2, f32 arg3)
+    void UpdateSkid(f32 arg1, f32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, vehSurfaceAudioData, f32, f32, f32>>(0x4DFE10, this, arg1, arg2, arg3);
     }
 
     // 0x4E0010 | ?UpdateSkid@vehSurfaceAudioData@@QAEXM@Z
-    inline void UpdateSkid(f32 arg1)
+    void UpdateSkid(f32 arg1)
     {
         return stub<member_func_t<void, vehSurfaceAudioData, f32>>(0x4E0010, this, arg1);
     }
 
     // 0x4E00C0 | ?UpdateSurface@vehSurfaceAudioData@@QAEXMMM@Z
-    inline void UpdateSurface(f32 arg1, f32 arg2, f32 arg3)
+    void UpdateSurface(f32 arg1, f32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, vehSurfaceAudioData, f32, f32, f32>>(0x4E00C0, this, arg1, arg2, arg3);
     }
 
     // 0x4E0160 | ?UpdateSurface@vehSurfaceAudioData@@QAEXM@Z
-    inline void UpdateSurface(f32 arg1)
+    void UpdateSurface(f32 arg1)
     {
         return stub<member_func_t<void, vehSurfaceAudioData, f32>>(0x4E0160, this, arg1);
     }
 
     // 0x4E01E0 | ?StopSurface@vehSurfaceAudioData@@QAEXXZ
-    inline void StopSurface()
+    void StopSurface()
     {
         return stub<member_func_t<void, vehSurfaceAudioData>>(0x4E01E0, this);
     }
 
     // 0x4E0200 | ?ParseCSVBuffer@vehSurfaceAudioData@@QAE_NPAVStream@@@Z
-    inline bool ParseCSVBuffer(class Stream* arg1)
+    bool ParseCSVBuffer(class Stream* arg1)
     {
         return stub<member_func_t<bool, vehSurfaceAudioData, class Stream*>>(0x4E0200, this, arg1);
     }
 
     // 0x4E04E0 | ?SkidPlaying@vehSurfaceAudioData@@QAEHXZ
-    inline i32 SkidPlaying()
+    i32 SkidPlaying()
     {
         return stub<member_func_t<i32, vehSurfaceAudioData>>(0x4E04E0, this);
     }
 
     // 0x4E0520 | ?SurfacePlaying@vehSurfaceAudioData@@QAEHXZ
-    inline i32 SurfacePlaying()
+    i32 SurfacePlaying()
     {
         return stub<member_func_t<i32, vehSurfaceAudioData>>(0x4E0520, this);
     }
 
     // 0x4E0540 | ?GetSurfaceSoundPtr@vehSurfaceAudioData@@QAEPAVAudSoundBase@@XZ
-    inline class AudSoundBase* GetSurfaceSoundPtr()
+    class AudSoundBase* GetSurfaceSoundPtr()
     {
         return stub<member_func_t<class AudSoundBase*, vehSurfaceAudioData>>(0x4E0540, this);
     }
 
     // 0x4E0550 | ?AssignSounds@vehSurfaceAudioData@@QAEXH@Z
-    inline void AssignSounds(i32 arg1)
+    void AssignSounds(i32 arg1)
     {
         return stub<member_func_t<void, vehSurfaceAudioData, i32>>(0x4E0550, this, arg1);
     }
 
     // 0x4E05B0 | ?UnAssignSounds@vehSurfaceAudioData@@QAEXXZ
-    inline void UnAssignSounds()
+    void UnAssignSounds()
     {
         return stub<member_func_t<void, vehSurfaceAudioData>>(0x4E05B0, this);
     }
 
     // 0x4E05E0 | ?SetPan@vehSurfaceAudioData@@QAEXM@Z
-    inline void SetPan(f32 arg1)
+    void SetPan(f32 arg1)
     {
         return stub<member_func_t<void, vehSurfaceAudioData, f32>>(0x4E05E0, this, arg1);
     }
 
     // 0x4E0640 | ?EchoOn@vehSurfaceAudioData@@QAEXM@Z
-    inline void EchoOn(f32 arg1)
+    void EchoOn(f32 arg1)
     {
         return stub<member_func_t<void, vehSurfaceAudioData, f32>>(0x4E0640, this, arg1);
     }
 
     // 0x4E06C0 | ?EchoOff@vehSurfaceAudioData@@QAEXXZ
-    inline void EchoOff()
+    void EchoOff()
     {
         return stub<member_func_t<void, vehSurfaceAudioData>>(0x4E06C0, this);
     }

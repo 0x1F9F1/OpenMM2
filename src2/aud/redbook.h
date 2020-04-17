@@ -36,55 +36,55 @@ struct audRedbook
 {
 public:
     // 0x5A6C20 | ?Update@audRedbook@@QAE_NH@Z
-    inline bool Update(i32 arg1)
+    bool Update(i32 arg1)
     {
         return stub<member_func_t<bool, audRedbook, i32>>(0x5A6C20, this, arg1);
     }
 
     // 0x5A6C30 | ?GetStatus@audRedbook@@QAE?AW4AUD_OBJECTSTATUS@audObject@@XZ
-    inline enum audObject::AUD_OBJECTSTATUS GetStatus()
+    enum audObject::AUD_OBJECTSTATUS GetStatus()
     {
         return stub<member_func_t<enum audObject::AUD_OBJECTSTATUS, audRedbook>>(0x5A6C30, this);
     }
 
     // 0x5A6CB0 | ?Play@audRedbook@@QAE_NXZ
-    inline bool Play()
+    bool Play()
     {
         return stub<member_func_t<bool, audRedbook>>(0x5A6CB0, this);
     }
 
     // 0x5A6D00 | ?Stop@audRedbook@@QAE_NXZ
-    inline bool Stop()
+    bool Stop()
     {
         return stub<member_func_t<bool, audRedbook>>(0x5A6D00, this);
     }
 
     // 0x5A6D30 | ?SetVolume@audRedbook@@QAE_NM@Z
-    inline bool SetVolume(f32 arg1)
+    bool SetVolume(f32 arg1)
     {
         return stub<member_func_t<bool, audRedbook, f32>>(0x5A6D30, this, arg1);
     }
 
     // 0x5A6D40 | ?SetPitch@audRedbook@@QAE_NM@Z
-    inline bool SetPitch(f32 arg1)
+    bool SetPitch(f32 arg1)
     {
         return stub<member_func_t<bool, audRedbook, f32>>(0x5A6D40, this, arg1);
     }
 
     // 0x5A6D50 | ?SetPan@audRedbook@@QAE_NM@Z
-    inline bool SetPan(f32 arg1)
+    bool SetPan(f32 arg1)
     {
         return stub<member_func_t<bool, audRedbook, f32>>(0x5A6D50, this, arg1);
     }
 
     // 0x5A6D60 | ?PauseResume@audRedbook@@QAE_N_N@Z
-    inline bool PauseResume(bool arg1)
+    bool PauseResume(bool arg1)
     {
         return stub<member_func_t<bool, audRedbook, bool>>(0x5A6D60, this, arg1);
     }
 
     // 0x5A6DF0 | ?Destroy@audRedbook@@QAEXXZ
-    inline void Destroy()
+    void Destroy()
     {
         return stub<member_func_t<void, audRedbook>>(0x5A6DF0, this);
     }

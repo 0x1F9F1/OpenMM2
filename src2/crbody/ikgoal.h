@@ -31,19 +31,19 @@ class crIKGoal
 {
 public:
     // 0x57EC60 | ??0crIKGoal@@QAE@XZ
-    inline crIKGoal()
+    crIKGoal()
     {
         stub<member_func_t<void, crIKGoal>>(0x57EC60, this);
     }
 
     // 0x57EC90 | ?ToMatrix@crIKGoal@@QBEXAAVMatrix34@@@Z
-    inline void ToMatrix(class Matrix34& arg1)
+    void ToMatrix(class Matrix34& arg1)
     {
         return stub<member_func_t<void, crIKGoal, class Matrix34&>>(0x57EC90, this, arg1);
     }
 
     // 0x57ECC0 | ?FromMatrix@crIKGoal@@QAEXAAVMatrix34@@@Z
-    inline void FromMatrix(class Matrix34& arg1)
+    void FromMatrix(class Matrix34& arg1)
     {
         return stub<member_func_t<void, crIKGoal, class Matrix34&>>(0x57ECC0, this, arg1);
     }

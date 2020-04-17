@@ -138,517 +138,517 @@ public:
     // mmInterface::`vftable' @ 0x5B04B0
 
     // 0x407C80 | ??0mmInterface@@QAE@XZ
-    inline mmInterface()
+    mmInterface()
     {
         stub<member_func_t<void, mmInterface>>(0x407C80, this);
     }
 
     // 0x409030 | ?InitPlayerInfo@mmInterface@@QAEXXZ
-    inline void InitPlayerInfo()
+    void InitPlayerInfo()
     {
         return stub<member_func_t<void, mmInterface>>(0x409030, this);
     }
 
     // 0x4095E0 | ?MessageCallback@mmInterface@@QAEXPAX0@Z
-    inline void MessageCallback(void* arg1, void* arg2)
+    void MessageCallback(void* arg1, void* arg2)
     {
         return stub<member_func_t<void, mmInterface, void*, void*>>(0x4095E0, this, arg1, arg2);
     }
 
     // 0x409D30 | ?MessageCallback2@mmInterface@@QAEXPAX0@Z
-    inline void MessageCallback2(void* arg1, void* arg2)
+    void MessageCallback2(void* arg1, void* arg2)
     {
         return stub<member_func_t<void, mmInterface, void*, void*>>(0x409D30, this, arg1, arg2);
     }
 
     // 0x40A140 | ?ShowMain@mmInterface@@QAEXH@Z
-    inline void ShowMain(i32 arg1)
+    void ShowMain(i32 arg1)
     {
         return stub<member_func_t<void, mmInterface, i32>>(0x40A140, this, arg1);
     }
 
     // 0x40A4D0 | ?GetReplayDescCB@mmInterface@@AAEXXZ
-    inline void GetReplayDescCB()
+    void GetReplayDescCB()
     {
         return stub<member_func_t<void, mmInterface>>(0x40A4D0, this);
     }
 
     // 0x40A590 | ?ShowLockedVehicleMessage@mmInterface@@QAEXXZ
-    inline void ShowLockedVehicleMessage()
+    void ShowLockedVehicleMessage()
     {
         return stub<member_func_t<void, mmInterface>>(0x40A590, this);
     }
 
     // 0x40A5B0 | ?BeDone@mmInterface@@QAEXXZ
-    inline void BeDone()
+    void BeDone()
     {
         return stub<member_func_t<void, mmInterface>>(0x40A5B0, this);
     }
 
     // 0x40C0E0 | ?NetJoinCB@mmInterface@@AAEXXZ
-    inline void NetJoinCB()
+    void NetJoinCB()
     {
         return stub<member_func_t<void, mmInterface>>(0x40C0E0, this);
     }
 
     // 0x40C140 | ?NetNameCB@mmInterface@@AAEXXZ
-    inline void NetNameCB()
+    void NetNameCB()
     {
         return stub<member_func_t<void, mmInterface>>(0x40C140, this);
     }
 
     // 0x40C170 | ?JoinGame@mmInterface@@AAEXXZ
-    inline void JoinGame()
+    void JoinGame()
     {
         return stub<member_func_t<void, mmInterface>>(0x40C170, this);
     }
 
     // 0x40C1B0 | ?JoinLobbyGame@mmInterface@@AAEXXZ
-    inline void JoinLobbyGame()
+    void JoinLobbyGame()
     {
         return stub<member_func_t<void, mmInterface>>(0x40C1B0, this);
     }
 
     // 0x40C1D0 | ?JoinLAN@mmInterface@@AAEXXZ
-    inline void JoinLAN()
+    void JoinLAN()
     {
         return stub<member_func_t<void, mmInterface>>(0x40C1D0, this);
     }
 
     // 0x40C260 | ?JoinSerial@mmInterface@@AAEHXZ
-    inline i32 JoinSerial()
+    i32 JoinSerial()
     {
         return stub<member_func_t<i32, mmInterface>>(0x40C260, this);
     }
 
     // 0x40C320 | ?JoinModem@mmInterface@@AAEHXZ
-    inline i32 JoinModem()
+    i32 JoinModem()
     {
         return stub<member_func_t<i32, mmInterface>>(0x40C320, this);
     }
 
     // 0x40C430 | ?UpdateLobby@mmInterface@@QAEXXZ
-    inline void UpdateLobby()
+    void UpdateLobby()
     {
         return stub<member_func_t<void, mmInterface>>(0x40C430, this);
     }
 
     // 0x40CF90 | ?Switch@mmInterface@@QAEXHH@Z
-    inline void Switch(i32 arg1, i32 arg2)
+    void Switch(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, mmInterface, i32, i32>>(0x40CF90, this, arg1, arg2);
     }
 
     // 0x40D460 | ?LobbySwitch@mmInterface@@QAEXHH@Z
-    inline void LobbySwitch(i32 arg1, i32 arg2)
+    void LobbySwitch(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, mmInterface, i32, i32>>(0x40D460, this, arg1, arg2);
     }
 
     // 0x40D7E0 | ?GetUnlockedCar@mmInterface@@AAEXXZ
-    inline void GetUnlockedCar()
+    void GetUnlockedCar()
     {
         return stub<member_func_t<void, mmInterface>>(0x40D7E0, this);
     }
 
     // 0x40D830 | ?GetUnlockedColor@mmInterface@@AAEXXZ
-    inline void GetUnlockedColor()
+    void GetUnlockedColor()
     {
         return stub<member_func_t<void, mmInterface>>(0x40D830, this);
     }
 
     // 0x40D840 | ?RequestProverb@mmInterface@@AAEXXZ
-    inline void RequestProverb()
+    void RequestProverb()
     {
         return stub<member_func_t<void, mmInterface>>(0x40D840, this);
     }
 
     // 0x40D990 | ?LimitToHostCars@mmInterface@@AAEXVstring@@@Z
-    inline void LimitToHostCars(class string arg1)
+    void LimitToHostCars(class string arg1)
     {
         return stub<member_func_t<void, mmInterface, class string>>(0x40D990, this, arg1);
     }
 
     // 0x40DAE0 | ?PlayerRemoveCB@mmInterface@@AAEXXZ
-    inline void PlayerRemoveCB()
+    void PlayerRemoveCB()
     {
         return stub<member_func_t<void, mmInterface>>(0x40DAE0, this);
     }
 
     // 0x40DB10 | ?PlayerRemove@mmInterface@@AAEXPAD@Z
-    inline void PlayerRemove(char* arg1)
+    void PlayerRemove(char* arg1)
     {
         return stub<member_func_t<void, mmInterface, char*>>(0x40DB10, this, arg1);
     }
 
     // 0x40DD00 | ?PlayerCreateCB@mmInterface@@AAEXXZ
-    inline void PlayerCreateCB()
+    void PlayerCreateCB()
     {
         return stub<member_func_t<void, mmInterface>>(0x40DD00, this);
     }
 
     // 0x40DD50 | ?PlayerCreate@mmInterface@@AAEHPAD@Z
-    inline i32 PlayerCreate(char* arg1)
+    i32 PlayerCreate(char* arg1)
     {
         return stub<member_func_t<i32, mmInterface, char*>>(0x40DD50, this, arg1);
     }
 
     // 0x40DF30 | ?PlayerLoadCB@mmInterface@@AAEXXZ
-    inline void PlayerLoadCB()
+    void PlayerLoadCB()
     {
         return stub<member_func_t<void, mmInterface>>(0x40DF30, this);
     }
 
     // 0x40DF60 | ?PlayerGraphicsCB@mmInterface@@AAEXXZ
-    inline void PlayerGraphicsCB()
+    void PlayerGraphicsCB()
     {
         return stub<member_func_t<void, mmInterface>>(0x40DF60, this);
     }
 
     // 0x40DFE0 | ?PlayerLoad@mmInterface@@AAEXPAD@Z
-    inline void PlayerLoad(char* arg1)
+    void PlayerLoad(char* arg1)
     {
         return stub<member_func_t<void, mmInterface, char*>>(0x40DFE0, this, arg1);
     }
 
     // 0x40E120 | ?PlayerSwitchCityCB@mmInterface@@AAEXXZ
-    inline void PlayerSwitchCityCB()
+    void PlayerSwitchCityCB()
     {
         return stub<member_func_t<void, mmInterface>>(0x40E120, this);
     }
 
     // 0x40E150 | ?PlayerSetState@mmInterface@@AAEXXZ
-    inline void PlayerSetState()
+    void PlayerSetState()
     {
         return stub<member_func_t<void, mmInterface>>(0x40E150, this);
     }
 
     // 0x40E380 | ?CitySetupCB@mmInterface@@AAEXXZ
-    inline void CitySetupCB()
+    void CitySetupCB()
     {
         return stub<member_func_t<void, mmInterface>>(0x40E380, this);
     }
 
     // 0x40E580 | ?GetTimeString@mmInterface@@AAEXMPAD@Z
-    inline void GetTimeString(f32 arg1, char* arg2)
+    void GetTimeString(f32 arg1, char* arg2)
     {
         return stub<member_func_t<void, mmInterface, f32, char*>>(0x40E580, this, arg1, arg2);
     }
 
     // 0x40E5E0 | ?GetScoreString@mmInterface@@AAEXHPAD@Z
-    inline void GetScoreString(i32 arg1, char* arg2)
+    void GetScoreString(i32 arg1, char* arg2)
     {
         return stub<member_func_t<void, mmInterface, i32, char*>>(0x40E5E0, this, arg1, arg2);
     }
 
     // 0x40E620 | ?GetRaceString@mmInterface@@AAEXHPAD@Z
-    inline void GetRaceString(i32 arg1, char* arg2)
+    void GetRaceString(i32 arg1, char* arg2)
     {
         return stub<member_func_t<void, mmInterface, i32, char*>>(0x40E620, this, arg1, arg2);
     }
 
     // 0x40E680 | ?GetRaceName@mmInterface@@AAEPADW4dgGameMode@@HPAD@Z
-    inline char* GetRaceName(enum dgGameMode arg1, i32 arg2, char* arg3)
+    char* GetRaceName(enum dgGameMode arg1, i32 arg2, char* arg3)
     {
         return stub<member_func_t<char*, mmInterface, enum dgGameMode, i32, char*>>(0x40E680, this, arg1, arg2, arg3);
     }
 
     // 0x40E8F0 | ?HOFCB@mmInterface@@AAEXXZ
-    inline void HOFCB()
+    void HOFCB()
     {
         return stub<member_func_t<void, mmInterface>>(0x40E8F0, this);
     }
 
     // 0x40E920 | ?HOFFillRecords@mmInterface@@AAEXPAD@Z
-    inline void HOFFillRecords(char* arg1)
+    void HOFFillRecords(char* arg1)
     {
         return stub<member_func_t<void, mmInterface, char*>>(0x40E920, this, arg1);
     }
 
     // 0x40F3B0 | ?PlayerInitStats@mmInterface@@AAEXPAD@Z
-    inline void PlayerInitStats(char* arg1)
+    void PlayerInitStats(char* arg1)
     {
         return stub<member_func_t<void, mmInterface, char*>>(0x40F3B0, this, arg1);
     }
 
     // 0x40F460 | ?PlayerFillStats@mmInterface@@AAEXXZ
-    inline void PlayerFillStats()
+    void PlayerFillStats()
     {
         return stub<member_func_t<void, mmInterface>>(0x40F460, this);
     }
 
     // 0x40F620 | ?PlayerFillRecords@mmInterface@@AAEXPAD@Z
-    inline void PlayerFillRecords(char* arg1)
+    void PlayerFillRecords(char* arg1)
     {
         return stub<member_func_t<void, mmInterface, char*>>(0x40F620, this, arg1);
     }
 
     // 0x40FAD0 | ?PlayerFillCrashRecords@mmInterface@@AAEXPAD@Z
-    inline void PlayerFillCrashRecords(char* arg1)
+    void PlayerFillCrashRecords(char* arg1)
     {
         return stub<member_func_t<void, mmInterface, char*>>(0x40FAD0, this, arg1);
     }
 
     // 0x40FBA0 | ?PlayerResolveScore@mmInterface@@AAEXXZ
-    inline void PlayerResolveScore()
+    void PlayerResolveScore()
     {
         return stub<member_func_t<void, mmInterface>>(0x40FBA0, this);
     }
 
     // 0x40FE20 | ?PlayerResolveCars@mmInterface@@AAEXXZ
-    inline void PlayerResolveCars()
+    void PlayerResolveCars()
     {
         return stub<member_func_t<void, mmInterface>>(0x40FE20, this);
     }
 
     // 0x40FE80 | ?PlayerReadState@mmInterface@@AAEXXZ
-    inline void PlayerReadState()
+    void PlayerReadState()
     {
         return stub<member_func_t<void, mmInterface>>(0x40FE80, this);
     }
 
     // 0x40FEA0 | ?RefreshDriverList@mmInterface@@AAEXXZ
-    inline void RefreshDriverList()
+    void RefreshDriverList()
     {
         return stub<member_func_t<void, mmInterface>>(0x40FEA0, this);
     }
 
     // 0x40FF50 | ?SetStateRace@mmInterface@@AAEXH@Z
-    inline void SetStateRace(i32 arg1)
+    void SetStateRace(i32 arg1)
     {
         return stub<member_func_t<void, mmInterface, i32>>(0x40FF50, this, arg1);
     }
 
     // 0x40FF60 | ?SetStateDefaults@mmInterface@@AAEXXZ
-    inline void SetStateDefaults()
+    void SetStateDefaults()
     {
         return stub<member_func_t<void, mmInterface>>(0x40FF60, this);
     }
 
     // 0x40FF80 | ?InitNetwork@mmInterface@@AAEXXZ
-    inline void InitNetwork()
+    void InitNetwork()
     {
         return stub<member_func_t<void, mmInterface>>(0x40FF80, this);
     }
 
     // 0x410090 | ?InitLobby@mmInterface@@QAEXXZ
-    inline void InitLobby()
+    void InitLobby()
     {
         return stub<member_func_t<void, mmInterface>>(0x410090, this);
     }
 
     // 0x4101B0 | ?InitProtocols@mmInterface@@AAEXXZ
-    inline void InitProtocols()
+    void InitProtocols()
     {
         return stub<member_func_t<void, mmInterface>>(0x4101B0, this);
     }
 
     // 0x4101D0 | ?ShowSessions@mmInterface@@AAEXXZ
-    inline void ShowSessions()
+    void ShowSessions()
     {
         return stub<member_func_t<void, mmInterface>>(0x4101D0, this);
     }
 
     // 0x4103A0 | ?ClearSessions@mmInterface@@AAEXXZ
-    inline void ClearSessions()
+    void ClearSessions()
     {
         return stub<member_func_t<void, mmInterface>>(0x4103A0, this);
     }
 
     // 0x4103C0 | ?RefreshSessions@mmInterface@@AAEXXZ
-    inline void RefreshSessions()
+    void RefreshSessions()
     {
         return stub<member_func_t<void, mmInterface>>(0x4103C0, this);
     }
 
     // 0x4103F0 | ?JoinSession@mmInterface@@AAEHH@Z
-    inline i32 JoinSession(i32 arg1)
+    i32 JoinSession(i32 arg1)
     {
         return stub<member_func_t<i32, mmInterface, i32>>(0x4103F0, this, arg1);
     }
 
     // 0x4105D0 | ?JoinPasswordSession@mmInterface@@AAEHH@Z
-    inline i32 JoinPasswordSession(i32 arg1)
+    i32 JoinPasswordSession(i32 arg1)
     {
         return stub<member_func_t<i32, mmInterface, i32>>(0x4105D0, this, arg1);
     }
 
     // 0x410750 | ?MultiAllReady@mmInterface@@AAE_NXZ
-    inline bool MultiAllReady()
+    bool MultiAllReady()
     {
         return stub<member_func_t<bool, mmInterface>>(0x410750, this);
     }
 
     // 0x4107B0 | ?MultiStartGame@mmInterface@@AAEXXZ
-    inline void MultiStartGame()
+    void MultiStartGame()
     {
         return stub<member_func_t<void, mmInterface>>(0x4107B0, this);
     }
 
     // 0x4108B0 | ?MultiFillRoster@mmInterface@@AAEXXZ
-    inline void MultiFillRoster()
+    void MultiFillRoster()
     {
         return stub<member_func_t<void, mmInterface>>(0x4108B0, this);
     }
 
     // 0x410930 | ?SetHostProtocol@mmInterface@@AAEXXZ
-    inline void SetHostProtocol()
+    void SetHostProtocol()
     {
         return stub<member_func_t<void, mmInterface>>(0x410930, this);
     }
 
     // 0x4109D0 | ?SetProtocol@mmInterface@@AAEXXZ
-    inline void SetProtocol()
+    void SetProtocol()
     {
         return stub<member_func_t<void, mmInterface>>(0x4109D0, this);
     }
 
     // 0x410A90 | ?SetProtocol2@mmInterface@@AAEHXZ
-    inline i32 SetProtocol2()
+    i32 SetProtocol2()
     {
         return stub<member_func_t<i32, mmInterface>>(0x410A90, this);
     }
 
     // 0x410AE0 | ?CreatePlayer@mmInterface@@AAEHH@Z
-    inline i32 CreatePlayer(i32 arg1)
+    i32 CreatePlayer(i32 arg1)
     {
         return stub<member_func_t<i32, mmInterface, i32>>(0x410AE0, this, arg1);
     }
 
     // 0x410D60 | ?GetHostPlayerData@mmInterface@@AAEHAAUmmPlayerInfo@@@Z
-    inline i32 GetHostPlayerData(struct mmPlayerInfo& arg1)
+    i32 GetHostPlayerData(struct mmPlayerInfo& arg1)
     {
         return stub<member_func_t<i32, mmInterface, struct mmPlayerInfo&>>(0x410D60, this, arg1);
     }
 
     // 0x410DB0 | ?GetUniquePlayerName@mmInterface@@AAEXXZ
-    inline void GetUniquePlayerName()
+    void GetUniquePlayerName()
     {
         return stub<member_func_t<void, mmInterface>>(0x410DB0, this);
     }
 
     // 0x410E90 | ?ChangePlayerData@mmInterface@@AAEXH@Z
-    inline void ChangePlayerData(i32 arg1)
+    void ChangePlayerData(i32 arg1)
     {
         return stub<member_func_t<void, mmInterface, i32>>(0x410E90, this, arg1);
     }
 
     // 0x411160 | ?RefreshPlayers@mmInterface@@AAEXXZ
-    inline void RefreshPlayers()
+    void RefreshPlayers()
     {
         return stub<member_func_t<void, mmInterface>>(0x411160, this);
     }
 
     // 0x411420 | ?GetSessionData@mmInterface@@AAEXUNETSESSION_DESC@@@Z
-    inline void GetSessionData(struct NETSESSION_DESC arg1)
+    void GetSessionData(struct NETSESSION_DESC arg1)
     {
         return stub<member_func_t<void, mmInterface, struct NETSESSION_DESC>>(0x411420, this, arg1);
     }
 
     // 0x411670 | ?CreateSession@mmInterface@@AAEHXZ
-    inline i32 CreateSession()
+    i32 CreateSession()
     {
         return stub<member_func_t<i32, mmInterface>>(0x411670, this);
     }
 
     // 0x4117F0 | ?SetSessionData@mmInterface@@AAEXPAUNETSESSION_DESC@@@Z
-    inline void SetSessionData(struct NETSESSION_DESC* arg1)
+    void SetSessionData(struct NETSESSION_DESC* arg1)
     {
         return stub<member_func_t<void, mmInterface, struct NETSESSION_DESC*>>(0x4117F0, this, arg1);
     }
 
     // 0x4119A0 | ?SetCRStateData@mmInterface@@AAEXXZ
-    inline void SetCRStateData()
+    void SetCRStateData()
     {
         return stub<member_func_t<void, mmInterface>>(0x4119A0, this);
     }
 
     // 0x411A10 | ?LobbyCreate@mmInterface@@AAEHXZ
-    inline i32 LobbyCreate()
+    i32 LobbyCreate()
     {
         return stub<member_func_t<i32, mmInterface>>(0x411A10, this);
     }
 
     // 0x411D80 | ?SendChatMessage@mmInterface@@AAEXPAX@Z
-    inline void SendChatMessage(void* arg1)
+    void SendChatMessage(void* arg1)
     {
         return stub<member_func_t<void, mmInterface, void*>>(0x411D80, this, arg1);
     }
 
     // 0x411E60 | ?SendMsg@mmInterface@@AAEXHH@Z
-    inline void SendMsg(i32 arg1, i32 arg2)
+    void SendMsg(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, mmInterface, i32, i32>>(0x411E60, this, arg1, arg2);
     }
 
     // 0x411E80 | ?SendStartMsg@mmInterface@@AAEXXZ
-    inline void SendStartMsg()
+    void SendStartMsg()
     {
         return stub<member_func_t<void, mmInterface>>(0x411E80, this);
     }
 
     // 0x411EF0 | ?BootPlayerCB@mmInterface@@AAEXPAX0@Z
-    inline void BootPlayerCB(void* arg1, void* arg2)
+    void BootPlayerCB(void* arg1, void* arg2)
     {
         return stub<member_func_t<void, mmInterface, void*, void*>>(0x411EF0, this, arg1, arg2);
     }
 
     // 0x411F20 | ?SendBootMsg@mmInterface@@AAEXK@Z
-    inline void SendBootMsg(u32 arg1)
+    void SendBootMsg(u32 arg1)
     {
         return stub<member_func_t<void, mmInterface, u32>>(0x411F20, this, arg1);
     }
 
     // 0x411F40 | ?SendReadyStatus@mmInterface@@AAEXXZ
-    inline void SendReadyStatus()
+    void SendReadyStatus()
     {
         return stub<member_func_t<void, mmInterface>>(0x411F40, this);
     }
 
     // 0x411F70 | ?SendReadyReq@mmInterface@@AAEXXZ
-    inline void SendReadyReq()
+    void SendReadyReq()
     {
         return stub<member_func_t<void, mmInterface>>(0x411F70, this);
     }
 
     // 0x411F90 | ?SendHostCars@mmInterface@@AAEXK@Z
-    inline void SendHostCars(u32 arg1)
+    void SendHostCars(u32 arg1)
     {
         return stub<member_func_t<void, mmInterface, u32>>(0x411F90, this, arg1);
     }
 
     // 0x412010 | ?SetupArchiveTest@mmInterface@@QAEXAAH@Z
-    inline void SetupArchiveTest(i32& arg1)
+    void SetupArchiveTest(i32& arg1)
     {
         return stub<member_func_t<void, mmInterface, i32&>>(0x412010, this, arg1);
     }
 
     // 0x412280 | ?PlayUIMusic@mmInterface@@AAEXXZ
-    inline void PlayUIMusic()
+    void PlayUIMusic()
     {
         return stub<member_func_t<void, mmInterface>>(0x412280, this);
     }
 
     // 0x412340 | ?RefreshMe@mmInterface@@AAEXXZ
-    inline void RefreshMe()
+    void RefreshMe()
     {
         return stub<member_func_t<void, mmInterface>>(0x412340, this);
     }
 
     // 0x4094C0 | ??1mmInterface@@UAE@XZ
-    inline ~mmInterface() override
+    ~mmInterface() override
     {
         stub<member_func_t<void, mmInterface>>(0x4094C0, this);
     }
 
     // 0x40A6C0 | ?Update@mmInterface@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmInterface>>(0x40A6C0, this);
     }
 
     // 0x40A130 | ?Reset@mmInterface@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, mmInterface>>(0x40A130, this);
     }

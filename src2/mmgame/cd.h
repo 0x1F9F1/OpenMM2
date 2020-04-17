@@ -43,61 +43,61 @@ public:
     // mmCDPlayer::`vftable' @ 0x5B0E6C
 
     // 0x432F70 | ??0mmCDPlayer@@QAE@XZ
-    inline mmCDPlayer()
+    mmCDPlayer()
     {
         stub<member_func_t<void, mmCDPlayer>>(0x432F70, this);
     }
 
     // 0x433000 | ?Init@mmCDPlayer@@QAEXPAVmmHUD@@@Z
-    inline void Init(class mmHUD* arg1)
+    void Init(class mmHUD* arg1)
     {
         return stub<member_func_t<void, mmCDPlayer, class mmHUD*>>(0x433000, this, arg1);
     }
 
     // 0x433370 | ?PlayStop@mmCDPlayer@@QAEXXZ
-    inline void PlayStop()
+    void PlayStop()
     {
         return stub<member_func_t<void, mmCDPlayer>>(0x433370, this);
     }
 
     // 0x4333F0 | ?NextTrack@mmCDPlayer@@QAEXXZ
-    inline void NextTrack()
+    void NextTrack()
     {
         return stub<member_func_t<void, mmCDPlayer>>(0x4333F0, this);
     }
 
     // 0x433460 | ?PrevTrack@mmCDPlayer@@QAEXXZ
-    inline void PrevTrack()
+    void PrevTrack()
     {
         return stub<member_func_t<void, mmCDPlayer>>(0x433460, this);
     }
 
     // 0x4334D0 | ?Toggle@mmCDPlayer@@QAEXXZ
-    inline void Toggle()
+    void Toggle()
     {
         return stub<member_func_t<void, mmCDPlayer>>(0x4334D0, this);
     }
 
     // 0x433670 | ??1mmCDPlayer@@UAE@XZ
-    inline ~mmCDPlayer() override
+    ~mmCDPlayer() override
     {
         stub<member_func_t<void, mmCDPlayer>>(0x433670, this);
     }
 
     // 0x433170 | ?Cull@mmCDPlayer@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, mmCDPlayer>>(0x433170, this);
     }
 
     // 0x433100 | ?Update@mmCDPlayer@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmCDPlayer>>(0x433100, this);
     }
 
     // 0x4330F0 | ?Reset@mmCDPlayer@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, mmCDPlayer>>(0x4330F0, this);
     }

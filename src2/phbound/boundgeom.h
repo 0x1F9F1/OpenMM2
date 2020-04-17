@@ -57,50 +57,50 @@ public:
     // phBoundGeometry::`vftable' @ 0x5B2248
 
     // 0x4855E0 | ??0phBoundGeometry@@QAE@XZ
-    inline phBoundGeometry()
+    phBoundGeometry()
     {
         stub<member_func_t<void, phBoundGeometry>>(0x4855E0, this);
     }
 
     // 0x485620 | ??1phBoundGeometry@@QAE@XZ
-    inline ~phBoundGeometry()
+    ~phBoundGeometry()
     {
         stub<member_func_t<void, phBoundGeometry>>(0x485620, this);
     }
 
     // 0x485670 | ?Init@phBoundGeometry@@QAEXHHHH@Z
-    inline void Init(i32 arg1, i32 arg2, i32 arg3, i32 arg4)
+    void Init(i32 arg1, i32 arg2, i32 arg3, i32 arg4)
     {
         return stub<member_func_t<void, phBoundGeometry, i32, i32, i32, i32>>(0x485670, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4857AB | ?Load@phBoundGeometry@@QAE_NPBDPBVVector3@@@Z
-    inline bool Load(char const* arg1, class Vector3 const* arg2)
+    bool Load(char const* arg1, class Vector3 const* arg2)
     {
         return stub<member_func_t<bool, phBoundGeometry, char const*, class Vector3 const*>>(
             0x4857AB, this, arg1, arg2);
     }
 
     // 0x4860B9 | ?LoadBinary@phBoundGeometry@@QAE_NPBD@Z
-    inline bool LoadBinary(char const* arg1)
+    bool LoadBinary(char const* arg1)
     {
         return stub<member_func_t<bool, phBoundGeometry, char const*>>(0x4860B9, this, arg1);
     }
 
     // 0x4862C9 | ?ScaleSize@phBoundGeometry@@QAEXMMM@Z
-    inline void ScaleSize(f32 arg1, f32 arg2, f32 arg3)
+    void ScaleSize(f32 arg1, f32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, phBoundGeometry, f32, f32, f32>>(0x4862C9, this, arg1, arg2, arg3);
     }
 
     // 0x4863A9 | ?ShiftCentroid@phBoundGeometry@@QAEXABVVector3@@@Z
-    inline void ShiftCentroid(class Vector3 const& arg1)
+    void ShiftCentroid(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, phBoundGeometry, class Vector3 const&>>(0x4863A9, this, arg1);
     }
 
     // 0x4863F9 | ?ComputeEdges@phBoundGeometry@@QAEXXZ
-    inline void ComputeEdges()
+    void ComputeEdges()
     {
         return stub<member_func_t<void, phBoundGeometry>>(0x4863F9, this);
     }
@@ -112,44 +112,44 @@ public:
     }
 
     // 0x486659 | ?ComputeEdgeNums@phBoundGeometry@@QAEXXZ
-    inline void ComputeEdgeNums()
+    void ComputeEdgeNums()
     {
         return stub<member_func_t<void, phBoundGeometry>>(0x486659, this);
     }
 
     // 0x486739 | ?ComputeEdgeNormals@phBoundGeometry@@QAEXXZ
-    inline void ComputeEdgeNormals()
+    void ComputeEdgeNormals()
     {
         return stub<member_func_t<void, phBoundGeometry>>(0x486739, this);
     }
 
     // 0x4867A9 | ?ReComputeEdgeNormals@phBoundGeometry@@QAEXXZ
-    inline void ReComputeEdgeNormals()
+    void ReComputeEdgeNormals()
     {
         return stub<member_func_t<void, phBoundGeometry>>(0x4867A9, this);
     }
 
     // 0x486B89 | ?SetQuickTestInfo@phBoundGeometry@@QAEXXZ
-    inline void SetQuickTestInfo()
+    void SetQuickTestInfo()
     {
         return stub<member_func_t<void, phBoundGeometry>>(0x486B89, this);
     }
 
     // 0x486C39 | ?CalculatePolyNormals@phBoundGeometry@@QAEXXZ
-    inline void CalculatePolyNormals()
+    void CalculatePolyNormals()
     {
         return stub<member_func_t<void, phBoundGeometry>>(0x486C39, this);
     }
 
     // 0x486C69 | ?OverlapRegion@phBoundGeometry@@QAE_NPBVVector3@@HMM@Z
-    inline bool OverlapRegion(class Vector3 const* arg1, i32 arg2, f32 arg3, f32 arg4)
+    bool OverlapRegion(class Vector3 const* arg1, i32 arg2, f32 arg3, f32 arg4)
     {
         return stub<member_func_t<bool, phBoundGeometry, class Vector3 const*, i32, f32, f32>>(
             0x486C69, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x486D39 | ?GhostSection@phBoundGeometry@@QAE_NPBV1@PBVVector3@@HMM@Z
-    inline bool GhostSection(class phBoundGeometry const* arg1, class Vector3 const* arg2, i32 arg3, f32 arg4, f32 arg5)
+    bool GhostSection(class phBoundGeometry const* arg1, class Vector3 const* arg2, i32 arg3, f32 arg4, f32 arg5)
     {
         return stub<
             member_func_t<bool, phBoundGeometry, class phBoundGeometry const*, class Vector3 const*, i32, f32, f32>>(
@@ -157,26 +157,26 @@ public:
     }
 
     // 0x4871A0 | ?GetMaterial@phBoundGeometry@@UBEPBVphMaterial@@H@Z
-    inline class phMaterial const* GetMaterial(i32 arg1) override
+    class phMaterial const* GetMaterial(i32 arg1) override
     {
         return stub<member_func_t<class phMaterial const*, phBoundGeometry, i32>>(0x4871A0, this, arg1);
     }
 
     // 0x46A5C0 | ?GetEdgeCosine@phBoundGeometry@@UBEMH@Z
-    inline f32 GetEdgeCosine(i32 arg1) override
+    f32 GetEdgeCosine(i32 arg1) override
     {
         return stub<member_func_t<f32, phBoundGeometry, i32>>(0x46A5C0, this, arg1);
     }
 
     // 0x46A5D0 | ?GetEdgeNormal@phBoundGeometry@@UBEABVVector3@@HAAV2@@Z
-    inline class Vector3 const& GetEdgeNormal(i32 arg1, class Vector3& arg2) override
+    class Vector3 const& GetEdgeNormal(i32 arg1, class Vector3& arg2) override
     {
         return stub<member_func_t<class Vector3 const&, phBoundGeometry, i32, class Vector3&>>(
             0x46A5D0, this, arg1, arg2);
     }
 
     // 0x485780 | ?PostLoadCompute@phBoundGeometry@@UAEXXZ
-    virtual inline void PostLoadCompute()
+    virtual void PostLoadCompute()
     {
         return stub<member_func_t<void, phBoundGeometry>>(0x485780, this);
     }

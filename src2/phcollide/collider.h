@@ -43,40 +43,40 @@ public:
     }
 
     // 0x46D6E0 | ?Init@phCollider@@QAEXPBVphBound@@PAVInstanceData@@PAVphInertialCS@@PAVphSleep@@@Z
-    inline void Init(class phBound const* arg1, class InstanceData* arg2, class phInertialCS* arg3, class phSleep* arg4)
+    void Init(class phBound const* arg1, class InstanceData* arg2, class phInertialCS* arg3, class phSleep* arg4)
     {
         return stub<member_func_t<void, phCollider, class phBound const*, class InstanceData*, class phInertialCS*,
             class phSleep*>>(0x46D6E0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x46D740 | ?Init@phCollider@@QAEXPBVphBound@@PAVphInertialCS@@PAVphSleep@@@Z
-    inline void Init(class phBound const* arg1, class phInertialCS* arg2, class phSleep* arg3)
+    void Init(class phBound const* arg1, class phInertialCS* arg2, class phSleep* arg3)
     {
         return stub<member_func_t<void, phCollider, class phBound const*, class phInertialCS*, class phSleep*>>(
             0x46D740, this, arg1, arg2, arg3);
     }
 
     // 0x46D7A0 | ?Init@phCollider@@QAEXPBVphBound@@PAVMatrix34@@PAVphInertialCS@@PAVphSleep@@@Z
-    inline void Init(class phBound const* arg1, class Matrix34* arg2, class phInertialCS* arg3, class phSleep* arg4)
+    void Init(class phBound const* arg1, class Matrix34* arg2, class phInertialCS* arg3, class phSleep* arg4)
     {
         return stub<member_func_t<void, phCollider, class phBound const*, class Matrix34*, class phInertialCS*,
             class phSleep*>>(0x46D7A0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x46D800 | ?Init@phCollider@@QAEXPBVphBound@@PAVMatrix34@@@Z
-    inline void Init(class phBound const* arg1, class Matrix34* arg2)
+    void Init(class phBound const* arg1, class Matrix34* arg2)
     {
         return stub<member_func_t<void, phCollider, class phBound const*, class Matrix34*>>(0x46D800, this, arg1, arg2);
     }
 
     // 0x46D870 | ?Init@phCollider@@QAEXPAVMatrix34@@PBVphBound@@@Z
-    inline void Init(class Matrix34* arg1, class phBound const* arg2)
+    void Init(class Matrix34* arg1, class phBound const* arg2)
     {
         return stub<member_func_t<void, phCollider, class Matrix34*, class phBound const*>>(0x46D870, this, arg1, arg2);
     }
 
     // 0x46D8D0 | ?Reset@phCollider@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, phCollider>>(0x46D8D0, this);
     }

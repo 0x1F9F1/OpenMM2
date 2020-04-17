@@ -58,14 +58,14 @@ public:
     // UITextDropdown::`vftable' @ 0x5B33E0
 
     // 0x4E7C80 | ??0UITextDropdown@@QAE@XZ
-    inline UITextDropdown()
+    UITextDropdown()
     {
         stub<member_func_t<void, UITextDropdown>>(0x4E7C80, this);
     }
 
     // 0x4E7DB0 | ?Init@UITextDropdown@@QAEXPAULocString@@PAHMMMMVstring@@HHHVdatCallback@@PAD3@Z
-    inline void Init(struct LocString* arg1, i32* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, class string arg7,
-        i32 arg8, i32 arg9, i32 arg10, class datCallback arg11, char* arg12, class datCallback arg13)
+    void Init(struct LocString* arg1, i32* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, class string arg7, i32 arg8,
+        i32 arg9, i32 arg10, class datCallback arg11, char* arg12, class datCallback arg13)
     {
         return stub<member_func_t<void, UITextDropdown, struct LocString*, i32*, f32, f32, f32, f32, class string, i32,
             i32, i32, class datCallback, char*, class datCallback>>(
@@ -73,97 +73,97 @@ public:
     }
 
     // 0x4E8190 | ?SetPos@UITextDropdown@@QAEXMM@Z
-    inline void SetPos(f32 arg1, f32 arg2)
+    void SetPos(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, UITextDropdown, f32, f32>>(0x4E8190, this, arg1, arg2);
     }
 
     // 0x4E81A0 | ?AssignString@UITextDropdown@@QAEXVstring@@@Z
-    inline void AssignString(class string arg1)
+    void AssignString(class string arg1)
     {
         return stub<member_func_t<void, UITextDropdown, class string>>(0x4E81A0, this, arg1);
     }
 
     // 0x4E8250 | ?SetData@UITextDropdown@@QAEXPAH@Z
-    inline void SetData(i32* arg1)
+    void SetData(i32* arg1)
     {
         return stub<member_func_t<void, UITextDropdown, i32*>>(0x4E8250, this, arg1);
     }
 
     // 0x4E82F0 | ?SetText@UITextDropdown@@QAEXPAULocString@@@Z
-    inline void SetText(struct LocString* arg1)
+    void SetText(struct LocString* arg1)
     {
         return stub<member_func_t<void, UITextDropdown, struct LocString*>>(0x4E82F0, this, arg1);
     }
 
     // 0x4E8710 | ?SetSliderFocus@UITextDropdown@@QAEXH@Z
-    inline void SetSliderFocus(i32 arg1)
+    void SetSliderFocus(i32 arg1)
     {
         return stub<member_func_t<void, UITextDropdown, i32>>(0x4E8710, this, arg1);
     }
 
     // 0x4E87C0 | ?GetValue@UITextDropdown@@QAEHXZ
-    inline i32 GetValue()
+    i32 GetValue()
     {
         return stub<member_func_t<i32, UITextDropdown>>(0x4E87C0, this);
     }
 
     // 0x4E87D0 | ?SetValue@UITextDropdown@@QAEHH@Z
-    inline i32 SetValue(i32 arg1)
+    i32 SetValue(i32 arg1)
     {
         return stub<member_func_t<i32, UITextDropdown, i32>>(0x4E87D0, this, arg1);
     }
 
     // 0x4E8800 | ?SetDisabledMask@UITextDropdown@@QAEXJ@Z
-    inline void SetDisabledMask(i32 arg1)
+    void SetDisabledMask(i32 arg1)
     {
         return stub<member_func_t<void, UITextDropdown, i32>>(0x4E8800, this, arg1);
     }
 
     // 0x4E8820 | ?AnyEnabled@UITextDropdown@@QAEHXZ
-    inline i32 AnyEnabled()
+    i32 AnyEnabled()
     {
         return stub<member_func_t<i32, UITextDropdown>>(0x4E8820, this);
     }
 
     // 0x4E7D20 | ??1UITextDropdown@@UAE@XZ
-    inline ~UITextDropdown() override
+    ~UITextDropdown() override
     {
         stub<member_func_t<void, UITextDropdown>>(0x4E7D20, this);
     }
 
     // 0x4E8830 | ?Cull@UITextDropdown@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, UITextDropdown>>(0x4E8830, this);
     }
 
     // 0x4E8280 | ?Update@UITextDropdown@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, UITextDropdown>>(0x4E8280, this);
     }
 
     // 0x4E85D0 | ?Action@UITextDropdown@@UAEXTeqEvent@@@Z
-    inline void Action(union eqEvent arg1) override
+    void Action(union eqEvent arg1) override
     {
         return stub<member_func_t<void, UITextDropdown, union eqEvent>>(0x4E85D0, this, arg1);
     }
 
     // 0x4E8300 | ?CaptureAction@UITextDropdown@@UAEXTeqEvent@@@Z
-    inline void CaptureAction(union eqEvent arg1) override
+    void CaptureAction(union eqEvent arg1) override
     {
         return stub<member_func_t<void, UITextDropdown, union eqEvent>>(0x4E8300, this, arg1);
     }
 
     // 0x4E8680 | ?Switch@UITextDropdown@@UAEXH@Z
-    inline void Switch(i32 arg1) override
+    void Switch(i32 arg1) override
     {
         return stub<member_func_t<void, UITextDropdown, i32>>(0x4E8680, this, arg1);
     }
 
     // 0x4E8180 | ?GetScreenHeight@UITextDropdown@@UAEMXZ
-    inline f32 GetScreenHeight() override
+    f32 GetScreenHeight() override
     {
         return stub<member_func_t<f32, UITextDropdown>>(0x4E8180, this);
     }

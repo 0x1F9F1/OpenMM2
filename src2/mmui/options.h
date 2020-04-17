@@ -37,31 +37,31 @@ public:
     // OptionsMenu::`vftable' @ 0x5B434C
 
     // 0x502950 | ??0OptionsMenu@@QAE@H@Z
-    inline OptionsMenu(i32 arg1)
+    OptionsMenu(i32 arg1)
     {
         stub<member_func_t<void, OptionsMenu, i32>>(0x502950, this, arg1);
     }
 
     // 0x502CE0 | ?FocusDescription@OptionsMenu@@QAEXHH@Z
-    inline void FocusDescription(i32 arg1, i32 arg2)
+    void FocusDescription(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, OptionsMenu, i32, i32>>(0x502CE0, this, arg1, arg2);
     }
 
     // 0x502C70 | ??1OptionsMenu@@UAE@XZ
-    inline ~OptionsMenu() override
+    ~OptionsMenu() override
     {
         stub<member_func_t<void, OptionsMenu>>(0x502C70, this);
     }
 
     // 0x502C80 | ?PreSetup@OptionsMenu@@UAEXXZ
-    inline void PreSetup() override
+    void PreSetup() override
     {
         return stub<member_func_t<void, OptionsMenu>>(0x502C80, this);
     }
 
     // 0x502CC0 | ?PostSetup@OptionsMenu@@UAEXXZ
-    inline void PostSetup() override
+    void PostSetup() override
     {
         return stub<member_func_t<void, OptionsMenu>>(0x502CC0, this);
     }

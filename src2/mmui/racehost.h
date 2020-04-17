@@ -53,115 +53,115 @@ public:
     // HostRaceMenu::`vftable' @ 0x5B424C
 
     // 0x5006A0 | ??0HostRaceMenu@@QAE@H@Z
-    inline HostRaceMenu(i32 arg1)
+    HostRaceMenu(i32 arg1)
     {
         stub<member_func_t<void, HostRaceMenu, i32>>(0x5006A0, this, arg1);
     }
 
     // 0x501330 | ?SetLimitControl@HostRaceMenu@@QAEXXZ
-    inline void SetLimitControl()
+    void SetLimitControl()
     {
         return stub<member_func_t<void, HostRaceMenu>>(0x501330, this);
     }
 
     // 0x5014E0 | ?EncodeCRData@HostRaceMenu@@QAEHXZ
-    inline i32 EncodeCRData()
+    i32 EncodeCRData()
     {
         return stub<member_func_t<i32, HostRaceMenu>>(0x5014E0, this);
     }
 
     // 0x501530 | ?DecodeCRData@HostRaceMenu@@QAEXH@Z
-    inline void DecodeCRData(i32 arg1)
+    void DecodeCRData(i32 arg1)
     {
         return stub<member_func_t<void, HostRaceMenu, i32>>(0x501530, this, arg1);
     }
 
     // 0x5015A0 | ?GetLimit@HostRaceMenu@@QAEXAAH0@Z
-    inline void GetLimit(i32& arg1, i32& arg2)
+    void GetLimit(i32& arg1, i32& arg2)
     {
         return stub<member_func_t<void, HostRaceMenu, i32&, i32&>>(0x5015A0, this, arg1, arg2);
     }
 
     // 0x5015F0 | ?SetLimit@HostRaceMenu@@QAEXAAH0@Z
-    inline void SetLimit(i32& arg1, i32& arg2)
+    void SetLimit(i32& arg1, i32& arg2)
     {
         return stub<member_func_t<void, HostRaceMenu, i32&, i32&>>(0x5015F0, this, arg1, arg2);
     }
 
     // 0x501670 | ?SetGoldMass@HostRaceMenu@@QAEXH@Z
-    inline void SetGoldMass(i32 arg1)
+    void SetGoldMass(i32 arg1)
     {
         return stub<member_func_t<void, HostRaceMenu, i32>>(0x501670, this, arg1);
     }
 
     // 0x5016A0 | ?GetGoldMass@HostRaceMenu@@QAEHXZ
-    inline i32 GetGoldMass()
+    i32 GetGoldMass()
     {
         return stub<member_func_t<i32, HostRaceMenu>>(0x5016A0, this);
     }
 
     // 0x5016B0 | ?GetLimitVal@HostRaceMenu@@QAEHAAH@Z
-    inline i32 GetLimitVal(i32& arg1)
+    i32 GetLimitVal(i32& arg1)
     {
         return stub<member_func_t<i32, HostRaceMenu, i32&>>(0x5016B0, this, arg1);
     }
 
     // 0x501700 | ?GetGoldMassVal@HostRaceMenu@@QAEHXZ
-    inline i32 GetGoldMassVal()
+    i32 GetGoldMassVal()
     {
         return stub<member_func_t<i32, HostRaceMenu>>(0x501700, this);
     }
 
     // 0x501710 | ?SetGameClassCallback@HostRaceMenu@@QAEXXZ
-    inline void SetGameClassCallback()
+    void SetGameClassCallback()
     {
         return stub<member_func_t<void, HostRaceMenu>>(0x501710, this);
     }
 
     // 0x501720 | ?LimitInc@HostRaceMenu@@QAEXXZ
-    inline void LimitInc()
+    void LimitInc()
     {
         return stub<member_func_t<void, HostRaceMenu>>(0x501720, this);
     }
 
     // 0x501770 | ?LimitDec@HostRaceMenu@@QAEXXZ
-    inline void LimitDec()
+    void LimitDec()
     {
         return stub<member_func_t<void, HostRaceMenu>>(0x501770, this);
     }
 
     // 0x5017C0 | ?MassInc@HostRaceMenu@@QAEXXZ
-    inline void MassInc()
+    void MassInc()
     {
         return stub<member_func_t<void, HostRaceMenu>>(0x5017C0, this);
     }
 
     // 0x5017F0 | ?MassDec@HostRaceMenu@@QAEXXZ
-    inline void MassDec()
+    void MassDec()
     {
         return stub<member_func_t<void, HostRaceMenu>>(0x5017F0, this);
     }
 
     // 0x5007E0 | ??1HostRaceMenu@@UAE@XZ
-    inline ~HostRaceMenu() override
+    ~HostRaceMenu() override
     {
         stub<member_func_t<void, HostRaceMenu>>(0x5007E0, this);
     }
 
     // 0x500870 | ?PreSetup@HostRaceMenu@@UAEXXZ
-    inline void PreSetup() override
+    void PreSetup() override
     {
         return stub<member_func_t<void, HostRaceMenu>>(0x500870, this);
     }
 
     // 0x501230 | ?SetCRWidgets@HostRaceMenu@@UAEXH@Z
-    inline void SetCRWidgets(i32 arg1) override
+    void SetCRWidgets(i32 arg1) override
     {
         return stub<member_func_t<void, HostRaceMenu, i32>>(0x501230, this, arg1);
     }
 
     // 0x500890 | ?InitCRWidgets@HostRaceMenu@@UAEXXZ
-    inline void InitCRWidgets() override
+    void InitCRWidgets() override
     {
         return stub<member_func_t<void, HostRaceMenu>>(0x500890, this);
     }

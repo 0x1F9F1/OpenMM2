@@ -41,43 +41,43 @@ public:
     // PUGraphics::`vftable' @ 0x5B46D8
 
     // 0x50A000 | ??0PUGraphics@@QAE@HMMMM@Z
-    inline PUGraphics(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
+    PUGraphics(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
     {
         stub<member_func_t<void, PUGraphics, i32, f32, f32, f32, f32>>(0x50A000, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x50A500 | ?CancelAction@PUGraphics@@QAEXXZ
-    inline void CancelAction()
+    void CancelAction()
     {
         return stub<member_func_t<void, PUGraphics>>(0x50A500, this);
     }
 
     // 0x50A510 | ?SetFarClip@PUGraphics@@QAEXM@Z
-    inline void SetFarClip(f32 arg1)
+    void SetFarClip(f32 arg1)
     {
         return stub<member_func_t<void, PUGraphics, f32>>(0x50A510, this, arg1);
     }
 
     // 0x50A530 | ?FixClip@PUGraphics@@QAEXXZ
-    inline void FixClip()
+    void FixClip()
     {
         return stub<member_func_t<void, PUGraphics>>(0x50A530, this);
     }
 
     // 0x50A580 | ?RenderQualityCB@PUGraphics@@QAEXXZ
-    inline void RenderQualityCB()
+    void RenderQualityCB()
     {
         return stub<member_func_t<void, PUGraphics>>(0x50A580, this);
     }
 
     // 0x50A4A0 | ??1PUGraphics@@UAE@XZ
-    inline ~PUGraphics() override
+    ~PUGraphics() override
     {
         stub<member_func_t<void, PUGraphics>>(0x50A4A0, this);
     }
 
     // 0x50A4B0 | ?PreSetup@PUGraphics@@UAEXXZ
-    inline void PreSetup() override
+    void PreSetup() override
     {
         return stub<member_func_t<void, PUGraphics>>(0x50A4B0, this);
     }

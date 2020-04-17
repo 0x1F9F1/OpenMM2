@@ -30,19 +30,19 @@ class phIntersectionPoint
 {
 public:
     // 0x415220 | ??0phIntersectionPoint@@QAE@XZ
-    inline phIntersectionPoint()
+    phIntersectionPoint()
     {
         stub<member_func_t<void, phIntersectionPoint>>(0x415220, this);
     }
 
     // 0x494CE0 | ?Transform@phIntersectionPoint@@QAEXPBVMatrix34@@@Z
-    inline void Transform(class Matrix34 const* arg1)
+    void Transform(class Matrix34 const* arg1)
     {
         return stub<member_func_t<void, phIntersectionPoint, class Matrix34 const*>>(0x494CE0, this, arg1);
     }
 
     // 0x494D90 | ?Set@phIntersectionPoint@@QAEXABVVector3@@0MME@Z
-    inline void Set(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, f32 arg4, u8 arg5)
+    void Set(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, f32 arg4, u8 arg5)
     {
         return stub<member_func_t<void, phIntersectionPoint, class Vector3 const&, class Vector3 const&, f32, f32, u8>>(
             0x494D90, this, arg1, arg2, arg3, arg4, arg5);

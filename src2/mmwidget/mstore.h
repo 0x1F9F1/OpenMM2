@@ -35,49 +35,49 @@ struct MArray
 {
 public:
     // 0x4F0D20 | ??0MArray@@QAE@XZ
-    inline MArray()
+    MArray()
     {
         stub<member_func_t<void, MArray>>(0x4F0D20, this);
     }
 
     // 0x4F0D30 | ??1MArray@@QAE@XZ
-    inline ~MArray()
+    ~MArray()
     {
         stub<member_func_t<void, MArray>>(0x4F0D30, this);
     }
 
     // 0x4F0D40 | ?Init@MArray@@QAEXH@Z
-    inline void Init(i32 arg1)
+    void Init(i32 arg1)
     {
         return stub<member_func_t<void, MArray, i32>>(0x4F0D40, this, arg1);
     }
 
     // 0x4F0D80 | ?Write@MArray@@QAEXPAD@Z
-    inline void Write(char* arg1)
+    void Write(char* arg1)
     {
         return stub<member_func_t<void, MArray, char*>>(0x4F0D80, this, arg1);
     }
 
     // 0x4F0F30 | ?Flush@MArray@@QAEXXZ
-    inline void Flush()
+    void Flush()
     {
         return stub<member_func_t<void, MArray>>(0x4F0F30, this);
     }
 
     // 0x4F0F40 | ?Read@MArray@@QAEXPAD@Z
-    inline void Read(char* arg1)
+    void Read(char* arg1)
     {
         return stub<member_func_t<void, MArray, char*>>(0x4F0F40, this, arg1);
     }
 
     // 0x4F10E0 | ?AddMenuData@MArray@@QAEXHAAVVector4@@PAD@Z
-    inline void AddMenuData(i32 arg1, class Vector4& arg2, char* arg3)
+    void AddMenuData(i32 arg1, class Vector4& arg2, char* arg3)
     {
         return stub<member_func_t<void, MArray, i32, class Vector4&, char*>>(0x4F10E0, this, arg1, arg2, arg3);
     }
 
     // 0x4F1130 | ?RetrieveMenuData@MArray@@QAEHHAAM000@Z
-    inline i32 RetrieveMenuData(i32 arg1, f32& arg2, f32& arg3, f32& arg4, f32& arg5)
+    i32 RetrieveMenuData(i32 arg1, f32& arg2, f32& arg3, f32& arg4, f32& arg5)
     {
         return stub<member_func_t<i32, MArray, i32, f32&, f32&, f32&, f32&>>(
             0x4F1130, this, arg1, arg2, arg3, arg4, arg5);

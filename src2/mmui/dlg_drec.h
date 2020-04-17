@@ -41,57 +41,57 @@ public:
     // Dialog_DriverRec::`vftable' @ 0x5B404C
 
     // 0x4FC870 | ??0Dialog_DriverRec@@QAE@HMMMMPAD@Z
-    inline Dialog_DriverRec(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    Dialog_DriverRec(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
     {
         stub<member_func_t<void, Dialog_DriverRec, i32, f32, f32, f32, f32, char*>>(
             0x4FC870, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4FCD80 | ?InitDriverRecord@Dialog_DriverRec@@QAEXH@Z
-    inline void InitDriverRecord(i32 arg1)
+    void InitDriverRecord(i32 arg1)
     {
         return stub<member_func_t<void, Dialog_DriverRec, i32>>(0x4FCD80, this, arg1);
     }
 
     // 0x4FCE50 | ?AddDriverRecord@Dialog_DriverRec@@QAEHHPADHM0H@Z
-    inline i32 AddDriverRecord(i32 arg1, char* arg2, i32 arg3, f32 arg4, char* arg5, i32 arg6)
+    i32 AddDriverRecord(i32 arg1, char* arg2, i32 arg3, f32 arg4, char* arg5, i32 arg6)
     {
         return stub<member_func_t<i32, Dialog_DriverRec, i32, char*, i32, f32, char*, i32>>(
             0x4FCE50, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4FD270 | ?ResetDriverRecord@Dialog_DriverRec@@QAEXXZ
-    inline void ResetDriverRecord()
+    void ResetDriverRecord()
     {
         return stub<member_func_t<void, Dialog_DriverRec>>(0x4FD270, this);
     }
 
     // 0x4FD300 | ?SetRecordPosition@Dialog_DriverRec@@QAEXH@Z
-    inline void SetRecordPosition(i32 arg1)
+    void SetRecordPosition(i32 arg1)
     {
         return stub<member_func_t<void, Dialog_DriverRec, i32>>(0x4FD300, this, arg1);
     }
 
     // 0x4FD320 | ?SetSortState@Dialog_DriverRec@@QAEXXZ
-    inline void SetSortState()
+    void SetSortState()
     {
         return stub<member_func_t<void, Dialog_DriverRec>>(0x4FD320, this);
     }
 
     // 0x4FD380 | ?SetCityState@Dialog_DriverRec@@QAEXXZ
-    inline void SetCityState()
+    void SetCityState()
     {
         return stub<member_func_t<void, Dialog_DriverRec>>(0x4FD380, this);
     }
 
     // 0x4FCD00 | ??1Dialog_DriverRec@@UAE@XZ
-    inline ~Dialog_DriverRec() override
+    ~Dialog_DriverRec() override
     {
         stub<member_func_t<void, Dialog_DriverRec>>(0x4FCD00, this);
     }
 
     // 0x4FCD70 | ?PreSetup@Dialog_DriverRec@@UAEXXZ
-    inline void PreSetup() override
+    void PreSetup() override
     {
         return stub<member_func_t<void, Dialog_DriverRec>>(0x4FCD70, this);
     }

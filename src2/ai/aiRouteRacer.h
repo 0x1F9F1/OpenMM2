@@ -40,55 +40,55 @@ public:
     // Skipped (scalar/vector destructor)
 
     // 0x53D040 | ??0aiRouteRacer@@QAE@XZ
-    inline aiRouteRacer()
+    aiRouteRacer()
     {
         stub<member_func_t<void, aiRouteRacer>>(0x53D040, this);
     }
 
     // 0x53D050 | ??1aiRouteRacer@@QAE@XZ
-    inline ~aiRouteRacer()
+    ~aiRouteRacer()
     {
         stub<member_func_t<void, aiRouteRacer>>(0x53D050, this);
     }
 
     // 0x53D060 | ?Init@aiRouteRacer@@QAEXHPAD@Z
-    inline void Init(i32 arg1, char* arg2)
+    void Init(i32 arg1, char* arg2)
     {
         return stub<member_func_t<void, aiRouteRacer, i32, char*>>(0x53D060, this, arg1, arg2);
     }
 
     // 0x53D390 | ?Reset@aiRouteRacer@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, aiRouteRacer>>(0x53D390, this);
     }
 
     // 0x53D3B0 | ?Update@aiRouteRacer@@QAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, aiRouteRacer>>(0x53D3B0, this);
     }
 
     // 0x53D4B0 | ?DriveRoute@aiRouteRacer@@AAEXXZ
-    inline void DriveRoute()
+    void DriveRoute()
     {
         return stub<member_func_t<void, aiRouteRacer>>(0x53D4B0, this);
     }
 
     // 0x53D6B0 | ?Disabled@aiRouteRacer@@AAEXXZ
-    inline void Disabled()
+    void Disabled()
     {
         return stub<member_func_t<void, aiRouteRacer>>(0x53D6B0, this);
     }
 
     // 0x53D6E0 | ?Finished@aiRouteRacer@@QAEHXZ
-    inline i32 Finished()
+    i32 Finished()
     {
         return stub<member_func_t<i32, aiRouteRacer>>(0x53D6E0, this);
     }
 
     // 0x53D900 | ?DrawRouteThroughTraffic@aiRouteRacer@@QAEXXZ
-    inline void DrawRouteThroughTraffic()
+    void DrawRouteThroughTraffic()
     {
         return stub<member_func_t<void, aiRouteRacer>>(0x53D900, this);
     }

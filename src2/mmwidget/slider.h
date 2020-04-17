@@ -50,15 +50,14 @@ public:
     // UISlider::`vftable' @ 0x5B364C
 
     // 0x4EC520 | ??0UISlider@@QAE@XZ
-    inline UISlider()
+    UISlider()
     {
         stub<member_func_t<void, UISlider>>(0x4EC520, this);
     }
 
     // 0x4EC630 | ?Init@UISlider@@QAEXPAULocString@@PAMMMMMMMHHHHVdatCallback@@PAVUIMenu@@2@Z
-    inline void Init(struct LocString* arg1, f32* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7, f32 arg8,
-        i32 arg9, i32 arg10, i32 arg11, i32 arg12, class datCallback arg13, class UIMenu* arg14,
-        class datCallback arg15)
+    void Init(struct LocString* arg1, f32* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7, f32 arg8, i32 arg9,
+        i32 arg10, i32 arg11, i32 arg12, class datCallback arg13, class UIMenu* arg14, class datCallback arg15)
     {
         return stub<member_func_t<void, UISlider, struct LocString*, f32*, f32, f32, f32, f32, f32, f32, i32, i32, i32,
             i32, class datCallback, class UIMenu*, class datCallback>>(0x4EC630, this, arg1, arg2, arg3, arg4, arg5,
@@ -66,97 +65,97 @@ public:
     }
 
     // 0x4EC990 | ?SetText@UISlider@@QAEXPAULocString@@@Z
-    inline void SetText(struct LocString* arg1)
+    void SetText(struct LocString* arg1)
     {
         return stub<member_func_t<void, UISlider, struct LocString*>>(0x4EC990, this, arg1);
     }
 
     // 0x4ECB40 | ?TestHit@UISlider@@QAEHMM@Z
-    inline i32 TestHit(f32 arg1, f32 arg2)
+    i32 TestHit(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<i32, UISlider, f32, f32>>(0x4ECB40, this, arg1, arg2);
     }
 
     // 0x4ECB50 | ?SetReadWrite@UISlider@@QAEXH@Z
-    inline void SetReadWrite(i32 arg1)
+    void SetReadWrite(i32 arg1)
     {
         return stub<member_func_t<void, UISlider, i32>>(0x4ECB50, this, arg1);
     }
 
     // 0x4ECB90 | ?IsReadWrite@UISlider@@QAEHXZ
-    inline i32 IsReadWrite()
+    i32 IsReadWrite()
     {
         return stub<member_func_t<i32, UISlider>>(0x4ECB90, this);
     }
 
     // 0x4ECBA0 | ?GetValue@UISlider@@QAEMXZ
-    inline f32 GetValue()
+    f32 GetValue()
     {
         return stub<member_func_t<f32, UISlider>>(0x4ECBA0, this);
     }
 
     // 0x4ECBB0 | ?SetValue@UISlider@@QAEMM@Z
-    inline f32 SetValue(f32 arg1)
+    f32 SetValue(f32 arg1)
     {
         return stub<member_func_t<f32, UISlider, f32>>(0x4ECBB0, this, arg1);
     }
 
     // 0x4ECBE0 | ?SetMouseParams@UISlider@@QAEXM@Z
-    inline void SetMouseParams(f32 arg1)
+    void SetMouseParams(f32 arg1)
     {
         return stub<member_func_t<void, UISlider, f32>>(0x4ECBE0, this, arg1);
     }
 
     // 0x4ECC30 | ?EvalMouseXY@UISlider@@QAEXMM@Z
-    inline void EvalMouseXY(f32 arg1, f32 arg2)
+    void EvalMouseXY(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, UISlider, f32, f32>>(0x4ECC30, this, arg1, arg2);
     }
 
     // 0x4ECD40 | ?SetData@UISlider@@QAEXM@Z
-    inline void SetData(f32 arg1)
+    void SetData(f32 arg1)
     {
         return stub<member_func_t<void, UISlider, f32>>(0x4ECD40, this, arg1);
     }
 
     // 0x4ECD60 | ?GetFudgeWidth@UISlider@@QAEMXZ
-    inline f32 GetFudgeWidth()
+    f32 GetFudgeWidth()
     {
         return stub<member_func_t<f32, UISlider>>(0x4ECD60, this);
     }
 
     // 0x4EC5C0 | ??1UISlider@@UAE@XZ
-    inline ~UISlider() override
+    ~UISlider() override
     {
         stub<member_func_t<void, UISlider>>(0x4EC5C0, this);
     }
 
     // 0x4EC9A0 | ?Update@UISlider@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, UISlider>>(0x4EC9A0, this);
     }
 
     // 0x4ECA00 | ?Action@UISlider@@UAEXTeqEvent@@@Z
-    inline void Action(union eqEvent arg1) override
+    void Action(union eqEvent arg1) override
     {
         return stub<member_func_t<void, UISlider, union eqEvent>>(0x4ECA00, this, arg1);
     }
 
     // 0x4ECAC0 | ?Switch@UISlider@@UAEXH@Z
-    inline void Switch(i32 arg1) override
+    void Switch(i32 arg1) override
     {
         return stub<member_func_t<void, UISlider, i32>>(0x4ECAC0, this, arg1);
     }
 
     // 0x4EC860 | ?SetPosition@UISlider@@UAEXMM@Z
-    inline void SetPosition(f32 arg1, f32 arg2) override
+    void SetPosition(f32 arg1, f32 arg2) override
     {
         return stub<member_func_t<void, UISlider, f32, f32>>(0x4EC860, this, arg1, arg2);
     }
 
     // 0x4ECDA0 | ?GetScreenHeight@UISlider@@UAEMXZ
-    inline f32 GetScreenHeight() override
+    f32 GetScreenHeight() override
     {
         return stub<member_func_t<f32, UISlider>>(0x4ECDA0, this);
     }

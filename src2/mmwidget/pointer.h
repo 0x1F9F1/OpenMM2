@@ -41,55 +41,55 @@ public:
     // sfPointer::`vftable' @ 0x5B3B30
 
     // 0x4F1200 | ??0sfPointer@@QAE@XZ
-    inline sfPointer()
+    sfPointer()
     {
         stub<member_func_t<void, sfPointer>>(0x4F1200, this);
     }
 
     // 0x4F12D0 | ?Init@sfPointer@@QAEXXZ
-    inline void Init()
+    void Init()
     {
         return stub<member_func_t<void, sfPointer>>(0x4F12D0, this);
     }
 
     // 0x4F1350 | ?GetPointerHeight@sfPointer@@QAEMXZ
-    inline f32 GetPointerHeight()
+    f32 GetPointerHeight()
     {
         return stub<member_func_t<f32, sfPointer>>(0x4F1350, this);
     }
 
     // 0x4F1560 | ?UpdateAttached@sfPointer@@AAEXXZ
-    inline void UpdateAttached()
+    void UpdateAttached()
     {
         return stub<member_func_t<void, sfPointer>>(0x4F1560, this);
     }
 
     // 0x4F1570 | ?WaitForRelease@sfPointer@@QAEXXZ
-    inline void WaitForRelease()
+    void WaitForRelease()
     {
         return stub<member_func_t<void, sfPointer>>(0x4F1570, this);
     }
 
     // 0x4F1270 | ??1sfPointer@@UAE@XZ
-    inline ~sfPointer() override
+    ~sfPointer() override
     {
         stub<member_func_t<void, sfPointer>>(0x4F1270, this);
     }
 
     // 0x4F1580 | ?Cull@sfPointer@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, sfPointer>>(0x4F1580, this);
     }
 
     // 0x4F1360 | ?Update@sfPointer@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, sfPointer>>(0x4F1360, this);
     }
 
     // 0x4F12F0 | ?ResChange@sfPointer@@UAEXHH@Z
-    inline void ResChange(i32 arg1, i32 arg2) override
+    void ResChange(i32 arg1, i32 arg2) override
     {
         return stub<member_func_t<void, sfPointer, i32, i32>>(0x4F12F0, this, arg1, arg2);
     }

@@ -30,7 +30,7 @@ class audMemObj
 {
 public:
     // 0x5A5E20 | ?audMemObjFree@audMemObj@@QAEXXZ
-    inline void audMemObjFree()
+    void audMemObjFree()
     {
         return stub<member_func_t<void, audMemObj>>(0x5A5E20, this);
     }

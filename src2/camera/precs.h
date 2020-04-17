@@ -40,49 +40,49 @@ public:
     // camPreCS::`vftable' @ 0x5B4F94
 
     // 0x520430 | ??0camPreCS@@QAE@XZ
-    inline camPreCS()
+    camPreCS()
     {
         stub<member_func_t<void, camPreCS>>(0x520430, this);
     }
 
     // 0x520480 | ?Init@camPreCS@@QAEXPAVvehCar@@@Z
-    inline void Init(class vehCar* arg1)
+    void Init(class vehCar* arg1)
     {
         return stub<member_func_t<void, camPreCS, class vehCar*>>(0x520480, this, arg1);
     }
 
     // 0x406830 | ??1camPreCS@@UAE@XZ
-    inline ~camPreCS() override
+    ~camPreCS() override
     {
         stub<member_func_t<void, camPreCS>>(0x406830, this);
     }
 
     // 0x5204F0 | ?Update@camPreCS@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, camPreCS>>(0x5204F0, this);
     }
 
     // 0x5204C0 | ?Reset@camPreCS@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, camPreCS>>(0x5204C0, this);
     }
 
     // 0x520550 | ?FileIO@camPreCS@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
+    void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, camPreCS, class datParser&>>(0x520550, this, arg1);
     }
 
     // 0x520600 | ?GetClassName@camPreCS@@UAEPADXZ
-    inline char* GetClassName() override
+    char* GetClassName() override
     {
         return stub<member_func_t<char*, camPreCS>>(0x520600, this);
     }
 
     // 0x5204D0 | ?MakeActive@camPreCS@@UAEXXZ
-    inline void MakeActive() override
+    void MakeActive() override
     {
         return stub<member_func_t<void, camPreCS>>(0x5204D0, this);
     }

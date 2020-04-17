@@ -68,211 +68,211 @@ public:
     // NetSelectMenu::`vftable' @ 0x5B445C
 
     // 0x504130 | ??0NetSelectMenu@@QAE@H@Z
-    inline NetSelectMenu(i32 arg1)
+    NetSelectMenu(i32 arg1)
     {
         stub<member_func_t<void, NetSelectMenu, i32>>(0x504130, this, arg1);
     }
 
     // 0x5049D0 | ?HostCB@NetSelectMenu@@QAEXXZ
-    inline void HostCB()
+    void HostCB()
     {
         return stub<member_func_t<void, NetSelectMenu>>(0x5049D0, this);
     }
 
     // 0x5049E0 | ?JoinCB@NetSelectMenu@@QAEXXZ
-    inline void JoinCB()
+    void JoinCB()
     {
         return stub<member_func_t<void, NetSelectMenu>>(0x5049E0, this);
     }
 
     // 0x5049F0 | ?GetHostJoin@NetSelectMenu@@QAEHXZ
-    inline i32 GetHostJoin()
+    i32 GetHostJoin()
     {
         return stub<member_func_t<i32, NetSelectMenu>>(0x5049F0, this);
     }
 
     // 0x504A00 | ?FocusDescription@NetSelectMenu@@QAEXHH@Z
-    inline void FocusDescription(i32 arg1, i32 arg2)
+    void FocusDescription(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, NetSelectMenu, i32, i32>>(0x504A00, this, arg1, arg2);
     }
 
     // 0x504AA0 | ?SetDescription@NetSelectMenu@@QAEXPAULocString@@@Z
-    inline void SetDescription(struct LocString* arg1)
+    void SetDescription(struct LocString* arg1)
     {
         return stub<member_func_t<void, NetSelectMenu, struct LocString*>>(0x504AA0, this, arg1);
     }
 
     // 0x504AB0 | ?JoinCallback@NetSelectMenu@@QAEXXZ
-    inline void JoinCallback()
+    void JoinCallback()
     {
         return stub<member_func_t<void, NetSelectMenu>>(0x504AB0, this);
     }
 
     // 0x504AC0 | ?ShowTCPIPNetSessions@NetSelectMenu@@QAEXXZ
-    inline void ShowTCPIPNetSessions()
+    void ShowTCPIPNetSessions()
     {
         return stub<member_func_t<void, NetSelectMenu>>(0x504AC0, this);
     }
 
     // 0x504AD0 | ?DisableSessions@NetSelectMenu@@QAEXXZ
-    inline void DisableSessions()
+    void DisableSessions()
     {
         return stub<member_func_t<void, NetSelectMenu>>(0x504AD0, this);
     }
 
     // 0x504AE0 | ?ProtocolBack@NetSelectMenu@@QAEXXZ
-    inline void ProtocolBack()
+    void ProtocolBack()
     {
         return stub<member_func_t<void, NetSelectMenu>>(0x504AE0, this);
     }
 
     // 0x504B00 | ?SetNetname@NetSelectMenu@@QAEXPAD@Z
-    inline void SetNetname(char* arg1)
+    void SetNetname(char* arg1)
     {
         return stub<member_func_t<void, NetSelectMenu, char*>>(0x504B00, this, arg1);
     }
 
     // 0x504B40 | ?SetPhoneNumber@NetSelectMenu@@QAEXPAD@Z
-    inline void SetPhoneNumber(char* arg1)
+    void SetPhoneNumber(char* arg1)
     {
         return stub<member_func_t<void, NetSelectMenu, char*>>(0x504B40, this, arg1);
     }
 
     // 0x504B60 | ?SetIPAddress@NetSelectMenu@@QAEXPAD@Z
-    inline void SetIPAddress(char* arg1)
+    void SetIPAddress(char* arg1)
     {
         return stub<member_func_t<void, NetSelectMenu, char*>>(0x504B60, this, arg1);
     }
 
     // 0x504B80 | ?GetSessions@NetSelectMenu@@QAEPAVUITextScroll@@XZ
-    inline class UITextScroll* GetSessions()
+    class UITextScroll* GetSessions()
     {
         return stub<member_func_t<class UITextScroll*, NetSelectMenu>>(0x504B80, this);
     }
 
     // 0x504B90 | ?GetSessionID@NetSelectMenu@@QAEHXZ
-    inline i32 GetSessionID()
+    i32 GetSessionID()
     {
         return stub<member_func_t<i32, NetSelectMenu>>(0x504B90, this);
     }
 
     // 0x504BA0 | ?SetSession@NetSelectMenu@@QAEXPADH@Z
-    inline void SetSession(char* arg1, i32 arg2)
+    void SetSession(char* arg1, i32 arg2)
     {
         return stub<member_func_t<void, NetSelectMenu, char*, i32>>(0x504BA0, this, arg1, arg2);
     }
 
     // 0x504BD0 | ?IPAddressCallback@NetSelectMenu@@QAEXXZ
-    inline void IPAddressCallback()
+    void IPAddressCallback()
     {
         return stub<member_func_t<void, NetSelectMenu>>(0x504BD0, this);
     }
 
     // 0x504BF0 | ?BuildComs@NetSelectMenu@@QAEXXZ
-    inline void BuildComs()
+    void BuildComs()
     {
         return stub<member_func_t<void, NetSelectMenu>>(0x504BF0, this);
     }
 
     // 0x504CE0 | ?SetComs@NetSelectMenu@@QAEXXZ
-    inline void SetComs()
+    void SetComs()
     {
         return stub<member_func_t<void, NetSelectMenu>>(0x504CE0, this);
     }
 
     // 0x504DE0 | ?ReparentWidgets@NetSelectMenu@@QAEXH@Z
-    inline void ReparentWidgets(i32 arg1)
+    void ReparentWidgets(i32 arg1)
     {
         return stub<member_func_t<void, NetSelectMenu, i32>>(0x504DE0, this, arg1);
     }
 
     // 0x504DF0 | ?WidgetSwitch@NetSelectMenu@@QAEXHH@Z
-    inline void WidgetSwitch(i32 arg1, i32 arg2)
+    void WidgetSwitch(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, NetSelectMenu, i32, i32>>(0x504DF0, this, arg1, arg2);
     }
 
     // 0x504E00 | ?AddWidgetToList@NetSelectMenu@@QAEXHPAVuiWidget@@@Z
-    inline void AddWidgetToList(i32 arg1, class uiWidget* arg2)
+    void AddWidgetToList(i32 arg1, class uiWidget* arg2)
     {
         return stub<member_func_t<void, NetSelectMenu, i32, class uiWidget*>>(0x504E00, this, arg1, arg2);
     }
 
     // 0x504E10 | ?AddModem@NetSelectMenu@@QAEXPADH@Z
-    inline void AddModem(char* arg1, i32 arg2)
+    void AddModem(char* arg1, i32 arg2)
     {
         return stub<member_func_t<void, NetSelectMenu, char*, i32>>(0x504E10, this, arg1, arg2);
     }
 
     // 0x504F20 | ?ClearProtocol@NetSelectMenu@@QAEXXZ
-    inline void ClearProtocol()
+    void ClearProtocol()
     {
         return stub<member_func_t<void, NetSelectMenu>>(0x504F20, this);
     }
 
     // 0x504F30 | ?SetIPXButton@NetSelectMenu@@QAEXH@Z
-    inline void SetIPXButton(i32 arg1)
+    void SetIPXButton(i32 arg1)
     {
         return stub<member_func_t<void, NetSelectMenu, i32>>(0x504F30, this, arg1);
     }
 
     // 0x504F60 | ?SetTCPLocalButton@NetSelectMenu@@QAEXH@Z
-    inline void SetTCPLocalButton(i32 arg1)
+    void SetTCPLocalButton(i32 arg1)
     {
         return stub<member_func_t<void, NetSelectMenu, i32>>(0x504F60, this, arg1);
     }
 
     // 0x504F70 | ?SetTCPNetButton@NetSelectMenu@@QAEXH@Z
-    inline void SetTCPNetButton(i32 arg1)
+    void SetTCPNetButton(i32 arg1)
     {
         return stub<member_func_t<void, NetSelectMenu, i32>>(0x504F70, this, arg1);
     }
 
     // 0x504FA0 | ?SetModemButton@NetSelectMenu@@QAEXH@Z
-    inline void SetModemButton(i32 arg1)
+    void SetModemButton(i32 arg1)
     {
         return stub<member_func_t<void, NetSelectMenu, i32>>(0x504FA0, this, arg1);
     }
 
     // 0x504FD0 | ?SetSerialButton@NetSelectMenu@@QAEXH@Z
-    inline void SetSerialButton(i32 arg1)
+    void SetSerialButton(i32 arg1)
     {
         return stub<member_func_t<void, NetSelectMenu, i32>>(0x504FD0, this, arg1);
     }
 
     // 0x505000 | ?GetCommPack@NetSelectMenu@@QAEPAUNETCOMMPACK@@XZ
-    inline struct NETCOMMPACK* GetCommPack()
+    struct NETCOMMPACK* GetCommPack()
     {
         return stub<member_func_t<struct NETCOMMPACK*, NetSelectMenu>>(0x505000, this);
     }
 
     // 0x505010 | ?NetNameCB@NetSelectMenu@@QAEXXZ
-    inline void NetNameCB()
+    void NetNameCB()
     {
         return stub<member_func_t<void, NetSelectMenu>>(0x505010, this);
     }
 
     // 0x505040 | ?EnableSearchLabel@NetSelectMenu@@QAEX_N@Z
-    inline void EnableSearchLabel(bool arg1)
+    void EnableSearchLabel(bool arg1)
     {
         return stub<member_func_t<void, NetSelectMenu, bool>>(0x505040, this, arg1);
     }
 
     // 0x5048B0 | ??1NetSelectMenu@@UAE@XZ
-    inline ~NetSelectMenu() override
+    ~NetSelectMenu() override
     {
         stub<member_func_t<void, NetSelectMenu>>(0x5048B0, this);
     }
 
     // 0x504930 | ?PreSetup@NetSelectMenu@@UAEXXZ
-    inline void PreSetup() override
+    void PreSetup() override
     {
         return stub<member_func_t<void, NetSelectMenu>>(0x504930, this);
     }
 
     // 0x5049B0 | ?PostSetup@NetSelectMenu@@UAEXXZ
-    inline void PostSetup() override
+    void PostSetup() override
     {
         return stub<member_func_t<void, NetSelectMenu>>(0x5049B0, this);
     }

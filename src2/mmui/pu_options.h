@@ -34,13 +34,13 @@ public:
     // PUOptions::`vftable' @ 0x5B49A8
 
     // 0x50C440 | ??0PUOptions@@QAE@HMMMM@Z
-    inline PUOptions(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
+    PUOptions(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
     {
         stub<member_func_t<void, PUOptions, i32, f32, f32, f32, f32>>(0x50C440, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x50C5E0 | ??1PUOptions@@UAE@XZ
-    inline ~PUOptions() override
+    ~PUOptions() override
     {
         stub<member_func_t<void, PUOptions>>(0x50C5E0, this);
     }

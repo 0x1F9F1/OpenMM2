@@ -36,19 +36,19 @@ public:
     // mmBridgeAudio::`vftable' @ 0x5B6260
 
     // 0x579D00 | ??0mmBridgeAudio@@QAE@XZ
-    inline mmBridgeAudio()
+    mmBridgeAudio()
     {
         stub<member_func_t<void, mmBridgeAudio>>(0x579D00, this);
     }
 
     // 0x579D30 | ?Activate@mmBridgeAudio@@QAEXH@Z
-    inline void Activate(i32 arg1)
+    void Activate(i32 arg1)
     {
         return stub<member_func_t<void, mmBridgeAudio, i32>>(0x579D30, this, arg1);
     }
 
     // 0x579D70 | ?Deactivate@mmBridgeAudio@@QAEXH@Z
-    inline void Deactivate(i32 arg1)
+    void Deactivate(i32 arg1)
     {
         return stub<member_func_t<void, mmBridgeAudio, i32>>(0x579D70, this, arg1);
     }

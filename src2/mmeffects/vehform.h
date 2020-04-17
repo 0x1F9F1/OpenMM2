@@ -39,38 +39,38 @@ public:
     // mmVehicleForm::`vftable' @ 0x5B538C
 
     // 0x5339E0 | ??0mmVehicleForm@@QAE@XZ
-    inline mmVehicleForm()
+    mmVehicleForm()
     {
         stub<member_func_t<void, mmVehicleForm>>(0x5339E0, this);
     }
 
     // 0x533B50 | ?LoadAllModLOD@mmVehicleForm@@AAEXPAD@Z
-    inline void LoadAllModLOD(char* arg1)
+    void LoadAllModLOD(char* arg1)
     {
         return stub<member_func_t<void, mmVehicleForm, char*>>(0x533B50, this, arg1);
     }
 
     // 0x533BF0 | ?SetShape@mmVehicleForm@@QAEXPAD00PAVVector3@@@Z
-    inline void SetShape(char* arg1, char* arg2, char* arg3, class Vector3* arg4)
+    void SetShape(char* arg1, char* arg2, char* arg3, class Vector3* arg4)
     {
         return stub<member_func_t<void, mmVehicleForm, char*, char*, char*, class Vector3*>>(
             0x533BF0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x533AA0 | ??1mmVehicleForm@@UAE@XZ
-    inline ~mmVehicleForm() override
+    ~mmVehicleForm() override
     {
         stub<member_func_t<void, mmVehicleForm>>(0x533AA0, this);
     }
 
     // 0x534070 | ?Cull@mmVehicleForm@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, mmVehicleForm>>(0x534070, this);
     }
 
     // 0x534040 | ?Update@mmVehicleForm@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmVehicleForm>>(0x534040, this);
     }

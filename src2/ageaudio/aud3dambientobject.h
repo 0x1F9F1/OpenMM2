@@ -63,187 +63,187 @@ public:
     // Aud3DAmbientObject::`vftable' @ 0x5B4D18
 
     // 0x5150A0 | ??0Aud3DAmbientObject@@QAE@XZ
-    inline Aud3DAmbientObject()
+    Aud3DAmbientObject()
     {
         stub<member_func_t<void, Aud3DAmbientObject>>(0x5150A0, this);
     }
 
     // 0x515180 | ?Init@Aud3DAmbientObject@@QAEXPAVVector3@@PAD@Z
-    inline void Init(class Vector3* arg1, char* arg2)
+    void Init(class Vector3* arg1, char* arg2)
     {
         return stub<member_func_t<void, Aud3DAmbientObject, class Vector3*, char*>>(0x515180, this, arg1, arg2);
     }
 
     // 0x5151B0 | ?Reset@Aud3DAmbientObject@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, Aud3DAmbientObject>>(0x5151B0, this);
     }
 
     // 0x515250 | ?UpdateAudio@Aud3DAmbientObject@@QAEHM@Z
-    inline i32 UpdateAudio(f32 arg1)
+    i32 UpdateAudio(f32 arg1)
     {
         return stub<member_func_t<i32, Aud3DAmbientObject, f32>>(0x515250, this, arg1);
     }
 
     // 0x5152B0 | ?UpdateSoundData@Aud3DAmbientObject@@AAEXXZ
-    inline void UpdateSoundData()
+    void UpdateSoundData()
     {
         return stub<member_func_t<void, Aud3DAmbientObject>>(0x5152B0, this);
     }
 
     // 0x515350 | ?UpdateDoppler@Aud3DAmbientObject@@QAEXPAUtagAud3DAmbientSoundData@@@Z
-    inline void UpdateDoppler(struct tagAud3DAmbientSoundData* arg1)
+    void UpdateDoppler(struct tagAud3DAmbientSoundData* arg1)
     {
         return stub<member_func_t<void, Aud3DAmbientObject, struct tagAud3DAmbientSoundData*>>(0x515350, this, arg1);
     }
 
     // 0x5153B0 | ?UpdateLoop@Aud3DAmbientObject@@AAEXPAUtagAud3DAmbientSoundData@@@Z
-    inline void UpdateLoop(struct tagAud3DAmbientSoundData* arg1)
+    void UpdateLoop(struct tagAud3DAmbientSoundData* arg1)
     {
         return stub<member_func_t<void, Aud3DAmbientObject, struct tagAud3DAmbientSoundData*>>(0x5153B0, this, arg1);
     }
 
     // 0x515400 | ?UpdateOneShot@Aud3DAmbientObject@@AAEXPAUtagAud3DAmbientSoundData@@@Z
-    inline void UpdateOneShot(struct tagAud3DAmbientSoundData* arg1)
+    void UpdateOneShot(struct tagAud3DAmbientSoundData* arg1)
     {
         return stub<member_func_t<void, Aud3DAmbientObject, struct tagAud3DAmbientSoundData*>>(0x515400, this, arg1);
     }
 
     // 0x515460 | ?PendOneShot@Aud3DAmbientObject@@AAEXPAUtagAud3DAmbientSoundData@@@Z
-    inline void PendOneShot(struct tagAud3DAmbientSoundData* arg1)
+    void PendOneShot(struct tagAud3DAmbientSoundData* arg1)
     {
         return stub<member_func_t<void, Aud3DAmbientObject, struct tagAud3DAmbientSoundData*>>(0x515460, this, arg1);
     }
 
     // 0x5154B0 | ?PlayOneShot@Aud3DAmbientObject@@QAEXH@Z
-    inline void PlayOneShot(i32 arg1)
+    void PlayOneShot(i32 arg1)
     {
         return stub<member_func_t<void, Aud3DAmbientObject, i32>>(0x5154B0, this, arg1);
     }
 
     // 0x5154D0 | ?PlayOneShot@Aud3DAmbientObject@@AAEXPAUtagAud3DAmbientSoundData@@@Z
-    inline void PlayOneShot(struct tagAud3DAmbientSoundData* arg1)
+    void PlayOneShot(struct tagAud3DAmbientSoundData* arg1)
     {
         return stub<member_func_t<void, Aud3DAmbientObject, struct tagAud3DAmbientSoundData*>>(0x5154D0, this, arg1);
     }
 
     // 0x5155A0 | ?ActivateSound@Aud3DAmbientObject@@QAEXH@Z
-    inline void ActivateSound(i32 arg1)
+    void ActivateSound(i32 arg1)
     {
         return stub<member_func_t<void, Aud3DAmbientObject, i32>>(0x5155A0, this, arg1);
     }
 
     // 0x5155C0 | ?DeactivateSound@Aud3DAmbientObject@@QAEXH@Z
-    inline void DeactivateSound(i32 arg1)
+    void DeactivateSound(i32 arg1)
     {
         return stub<member_func_t<void, Aud3DAmbientObject, i32>>(0x5155C0, this, arg1);
     }
 
     // 0x515600 | ?GetSoundDataPtr@Aud3DAmbientObject@@QAEPAUtagAud3DAmbientSoundData@@H@Z
-    inline struct tagAud3DAmbientSoundData* GetSoundDataPtr(i32 arg1)
+    struct tagAud3DAmbientSoundData* GetSoundDataPtr(i32 arg1)
     {
         return stub<member_func_t<struct tagAud3DAmbientSoundData*, Aud3DAmbientObject, i32>>(0x515600, this, arg1);
     }
 
     // 0x515610 | ?GetSoundIndex@Aud3DAmbientObject@@QAEHPAD@Z
-    inline i32 GetSoundIndex(char* arg1)
+    i32 GetSoundIndex(char* arg1)
     {
         return stub<member_func_t<i32, Aud3DAmbientObject, char*>>(0x515610, this, arg1);
     }
 
     // 0x5156A0 | ?AssignSounds@Aud3DAmbientObject@@AAEXPAPAUtagAud3DAmbientSoundData@@H@Z
-    inline void AssignSounds(struct tagAud3DAmbientSoundData** arg1, i32 arg2)
+    void AssignSounds(struct tagAud3DAmbientSoundData** arg1, i32 arg2)
     {
         return stub<member_func_t<void, Aud3DAmbientObject, struct tagAud3DAmbientSoundData**, i32>>(
             0x5156A0, this, arg1, arg2);
     }
 
     // 0x515710 | ?UnAssignSounds@Aud3DAmbientObject@@AAEXPAPAUtagAud3DAmbientSoundData@@H@Z
-    inline void UnAssignSounds(struct tagAud3DAmbientSoundData** arg1, i32 arg2)
+    void UnAssignSounds(struct tagAud3DAmbientSoundData** arg1, i32 arg2)
     {
         return stub<member_func_t<void, Aud3DAmbientObject, struct tagAud3DAmbientSoundData**, i32>>(
             0x515710, this, arg1, arg2);
     }
 
     // 0x515750 | ?Load@Aud3DAmbientObject@@QAEXPAD@Z
-    inline void Load(char* arg1)
+    void Load(char* arg1)
     {
         return stub<member_func_t<void, Aud3DAmbientObject, char*>>(0x515750, this, arg1);
     }
 
     // 0x515870 | ?ReadSoundData@Aud3DAmbientObject@@AAE_NPAVStream@@@Z
-    inline bool ReadSoundData(class Stream* arg1)
+    bool ReadSoundData(class Stream* arg1)
     {
         return stub<member_func_t<bool, Aud3DAmbientObject, class Stream*>>(0x515870, this, arg1);
     }
 
     // 0x515A60 | ?SetSoundData@Aud3DAmbientObject@@AAEXPAUtagAud3DAmbientSoundData@@0PAD@Z
-    inline void SetSoundData(struct tagAud3DAmbientSoundData* arg1, struct tagAud3DAmbientSoundData* arg2, char* arg3)
+    void SetSoundData(struct tagAud3DAmbientSoundData* arg1, struct tagAud3DAmbientSoundData* arg2, char* arg3)
     {
         return stub<member_func_t<void, Aud3DAmbientObject, struct tagAud3DAmbientSoundData*,
             struct tagAud3DAmbientSoundData*, char*>>(0x515A60, this, arg1, arg2, arg3);
     }
 
     // 0x515AD0 | ?EchoOn@Aud3DAmbientObject@@AAEXXZ
-    inline void EchoOn()
+    void EchoOn()
     {
         return stub<member_func_t<void, Aud3DAmbientObject>>(0x515AD0, this);
     }
 
     // 0x515AF0 | ?EchoOn@Aud3DAmbientObject@@AAEXPAPAUtagAud3DAmbientSoundData@@H@Z
-    inline void EchoOn(struct tagAud3DAmbientSoundData** arg1, i32 arg2)
+    void EchoOn(struct tagAud3DAmbientSoundData** arg1, i32 arg2)
     {
         return stub<member_func_t<void, Aud3DAmbientObject, struct tagAud3DAmbientSoundData**, i32>>(
             0x515AF0, this, arg1, arg2);
     }
 
     // 0x515B50 | ?EchoOff@Aud3DAmbientObject@@AAEXXZ
-    inline void EchoOff()
+    void EchoOff()
     {
         return stub<member_func_t<void, Aud3DAmbientObject>>(0x515B50, this);
     }
 
     // 0x515B70 | ?EchoOff@Aud3DAmbientObject@@AAEXPAPAUtagAud3DAmbientSoundData@@H@Z
-    inline void EchoOff(struct tagAud3DAmbientSoundData** arg1, i32 arg2)
+    void EchoOff(struct tagAud3DAmbientSoundData** arg1, i32 arg2)
     {
         return stub<member_func_t<void, Aud3DAmbientObject, struct tagAud3DAmbientSoundData**, i32>>(
             0x515B70, this, arg1, arg2);
     }
 
     // 0x515BA0 | ?UpdateEcho@Aud3DAmbientObject@@AAEXXZ
-    inline void UpdateEcho()
+    void UpdateEcho()
     {
         return stub<member_func_t<void, Aud3DAmbientObject>>(0x515BA0, this);
     }
 
     // 0x515BB0 | ?UpdateEcho@Aud3DAmbientObject@@AAEXPAPAUtagAud3DAmbientSoundData@@H@Z
-    inline void UpdateEcho(struct tagAud3DAmbientSoundData** arg1, i32 arg2)
+    void UpdateEcho(struct tagAud3DAmbientSoundData** arg1, i32 arg2)
     {
         return stub<member_func_t<void, Aud3DAmbientObject, struct tagAud3DAmbientSoundData**, i32>>(
             0x515BB0, this, arg1, arg2);
     }
 
     // 0x515BE0 | ?Update@Aud3DAmbientObject@@QAEXM@Z
-    inline void Update(f32 arg1)
+    void Update(f32 arg1)
     {
         return stub<member_func_t<void, Aud3DAmbientObject, f32>>(0x515BE0, this, arg1);
     }
 
     // 0x515690 | ?AssignSounds@Aud3DAmbientObject@@UAEXXZ
-    inline void AssignSounds() override
+    void AssignSounds() override
     {
         return stub<member_func_t<void, Aud3DAmbientObject>>(0x515690, this);
     }
 
     // 0x5156E0 | ?UnAssignSounds@Aud3DAmbientObject@@UAEXH@Z
-    inline void UnAssignSounds(i32 arg1) override
+    void UnAssignSounds(i32 arg1) override
     {
         return stub<member_func_t<void, Aud3DAmbientObject, i32>>(0x5156E0, this, arg1);
     }
 
     // 0x5151C0 | ?UpdateAudio@Aud3DAmbientObject@@UAEXXZ
-    inline void UpdateAudio() override
+    void UpdateAudio() override
     {
         return stub<member_func_t<void, Aud3DAmbientObject>>(0x5151C0, this);
     }

@@ -68,23 +68,23 @@ public:
     }
 
     // 0x487840 | ?MaxDot@phBoundPolygonal@@QBEMABVVector3@@ABVMatrix34@@AAV2@@Z
-    inline f32 MaxDot(class Vector3 const& arg1, class Matrix34 const& arg2, class Vector3& arg3)
+    f32 MaxDot(class Vector3 const& arg1, class Matrix34 const& arg2, class Vector3& arg3)
     {
         return stub<member_func_t<f32, phBoundPolygonal, class Vector3 const&, class Matrix34 const&, class Vector3&>>(
             0x487840, this, arg1, arg2, arg3);
     }
 
     // 0x487910 | ?MinDot@phBoundPolygonal@@QBEMABVVector3@@ABVMatrix34@@AAV2@@Z
-    inline f32 MinDot(class Vector3 const& arg1, class Matrix34 const& arg2, class Vector3& arg3)
+    f32 MinDot(class Vector3 const& arg1, class Matrix34 const& arg2, class Vector3& arg3)
     {
         return stub<member_func_t<f32, phBoundPolygonal, class Vector3 const&, class Matrix34 const&, class Vector3&>>(
             0x487910, this, arg1, arg2, arg3);
     }
 
     // 0x4879D0 | ?FindImpactsSphereToPoly@phBoundPolygonal@@QBEHPBVphBoundSphere@@PBVMatrix34@@1PAVphColliderBase@@2PAVphImpactBase@@HABVVector3@@4@Z
-    inline i32 FindImpactsSphereToPoly(class phBoundSphere const* arg1, class Matrix34 const* arg2,
-        class Matrix34 const* arg3, class phColliderBase* arg4, class phColliderBase* arg5, class phImpactBase* arg6,
-        i32 arg7, class Vector3 const& arg8, class Vector3 const& arg9)
+    i32 FindImpactsSphereToPoly(class phBoundSphere const* arg1, class Matrix34 const* arg2, class Matrix34 const* arg3,
+        class phColliderBase* arg4, class phColliderBase* arg5, class phImpactBase* arg6, i32 arg7,
+        class Vector3 const& arg8, class Vector3 const& arg9)
     {
         return stub<member_func_t<i32, phBoundPolygonal, class phBoundSphere const*, class Matrix34 const*,
             class Matrix34 const*, class phColliderBase*, class phColliderBase*, class phImpactBase*, i32,
@@ -93,9 +93,8 @@ public:
     }
 
     // 0x488250 | ?RewindSegments@phBoundPolygonal@@QBEX_NPBVMatrix34@@111PAV2@2AAH3@Z
-    inline void RewindSegments(bool arg1, class Matrix34 const* arg2, class Matrix34 const* arg3,
-        class Matrix34 const* arg4, class Matrix34 const* arg5, class Matrix34* arg6, class Matrix34* arg7, i32& arg8,
-        i32& arg9)
+    void RewindSegments(bool arg1, class Matrix34 const* arg2, class Matrix34 const* arg3, class Matrix34 const* arg4,
+        class Matrix34 const* arg5, class Matrix34* arg6, class Matrix34* arg7, i32& arg8, i32& arg9)
     {
         return stub<member_func_t<void, phBoundPolygonal, bool, class Matrix34 const*, class Matrix34 const*,
             class Matrix34 const*, class Matrix34 const*, class Matrix34*, class Matrix34*, i32&, i32&>>(
@@ -103,7 +102,7 @@ public:
     }
 
     // 0x4882C0 | ?RewindSegments@phBoundPolygonal@@QBEX_NPBVMatrix34@@1PAV2@2AAH3@Z
-    inline void RewindSegments(bool arg1, class Matrix34 const* arg2, class Matrix34 const* arg3, class Matrix34* arg4,
+    void RewindSegments(bool arg1, class Matrix34 const* arg2, class Matrix34 const* arg3, class Matrix34* arg4,
         class Matrix34* arg5, i32& arg6, i32& arg7)
     {
         return stub<member_func_t<void, phBoundPolygonal, bool, class Matrix34 const*, class Matrix34 const*,
@@ -111,7 +110,7 @@ public:
     }
 
     // 0x488310 | ?GetNextSegment@phBoundPolygonal@@QBEHAAVphSegment@@PAJPBVMatrix34@@2AAH3@Z
-    inline i32 GetNextSegment(
+    i32 GetNextSegment(
         class phSegment& arg1, i32* arg2, class Matrix34 const* arg3, class Matrix34 const* arg4, i32& arg5, i32& arg6)
     {
         return stub<member_func_t<i32, phBoundPolygonal, class phSegment&, i32*, class Matrix34 const*,
@@ -119,7 +118,7 @@ public:
     }
 
     // 0x488500 | ?GetNextSegment@phBoundPolygonal@@QBEHAAVphSegment@@PAJPBVMatrix34@@2MPBVVector3@@PAEPAV4@AAH6@Z
-    inline i32 GetNextSegment(class phSegment& arg1, i32* arg2, class Matrix34 const* arg3, class Matrix34 const* arg4,
+    i32 GetNextSegment(class phSegment& arg1, i32* arg2, class Matrix34 const* arg3, class Matrix34 const* arg4,
         f32 arg5, class Vector3 const* arg6, u8* arg7, class Vector3* arg8, i32& arg9, i32& arg10)
     {
         return stub<member_func_t<i32, phBoundPolygonal, class phSegment&, i32*, class Matrix34 const*,
@@ -160,7 +159,7 @@ public:
     }
 
     // 0x4891D0 | ?AddInteriorEdges@phBoundPolygonal@@IBEHPAVphIntersection@@H0HH@Z
-    inline i32 AddInteriorEdges(class phIntersection* arg1, i32 arg2, class phIntersection* arg3, i32 arg4, i32 arg5)
+    i32 AddInteriorEdges(class phIntersection* arg1, i32 arg2, class phIntersection* arg3, i32 arg4, i32 arg5)
     {
         return stub<member_func_t<i32, phBoundPolygonal, class phIntersection*, i32, class phIntersection*, i32, i32>>(
             0x4891D0, this, arg1, arg2, arg3, arg4, arg5);
@@ -194,7 +193,7 @@ public:
     }
 
     // 0x489DD0 | ?FindImpactsPolyToPoly@phBoundPolygonal@@QBEHPBV1@PBVMatrix34@@111PAVphColliderBase@@2PAVphIntersection@@3PAVphImpactBase@@HHPAH5@Z
-    inline i32 FindImpactsPolyToPoly(class phBoundPolygonal const* arg1, class Matrix34 const* arg2,
+    i32 FindImpactsPolyToPoly(class phBoundPolygonal const* arg1, class Matrix34 const* arg2,
         class Matrix34 const* arg3, class Matrix34 const* arg4, class Matrix34 const* arg5, class phColliderBase* arg6,
         class phColliderBase* arg7, class phIntersection* arg8, class phIntersection* arg9, class phImpactBase* arg10,
         i32 arg11, i32 arg12, i32* arg13, i32* arg14)
@@ -207,7 +206,7 @@ public:
     }
 
     // 0x48A0C0 | ?FindImpacts@phBoundPolygonal@@IBEHPBVphBound@@PBVMatrix34@@111PAVphColliderBase@@2PAVphIntersection@@3HHPAVphImpactBase@@H@Z
-    inline i32 FindImpacts(class phBound const* arg1, class Matrix34 const* arg2, class Matrix34 const* arg3,
+    i32 FindImpacts(class phBound const* arg1, class Matrix34 const* arg2, class Matrix34 const* arg3,
         class Matrix34 const* arg4, class Matrix34 const* arg5, class phColliderBase* arg6, class phColliderBase* arg7,
         class phIntersection* arg8, class phIntersection* arg9, i32 arg10, i32 arg11, class phImpactBase* arg12,
         i32 arg13)
@@ -234,9 +233,9 @@ public:
     }
 
     // 0x48B590 | ?GetAllSegments@phBoundPolygonal@@QBEXMPAUDispSegment@1@PAUSegment@1@ABVMatrix34@@2MABVVector3@@PAEPAVVector4@@AAH6@Z
-    inline void GetAllSegments(f32 arg1, struct phBoundPolygonal::DispSegment* arg2,
-        struct phBoundPolygonal::Segment* arg3, class Matrix34 const& arg4, class Matrix34 const& arg5, f32 arg6,
-        class Vector3 const& arg7, u8* arg8, class Vector4* arg9, i32& arg10, i32& arg11)
+    void GetAllSegments(f32 arg1, struct phBoundPolygonal::DispSegment* arg2, struct phBoundPolygonal::Segment* arg3,
+        class Matrix34 const& arg4, class Matrix34 const& arg5, f32 arg6, class Vector3 const& arg7, u8* arg8,
+        class Vector4* arg9, i32& arg10, i32& arg11)
     {
         return stub<member_func_t<void, phBoundPolygonal, f32, struct phBoundPolygonal::DispSegment*,
             struct phBoundPolygonal::Segment*, class Matrix34 const&, class Matrix34 const&, f32, class Vector3 const&,
@@ -245,42 +244,41 @@ public:
     }
 
     // 0x487950 | ?CenterBound@phBoundPolygonal@@UAEXXZ
-    inline void CenterBound() override
+    void CenterBound() override
     {
         return stub<member_func_t<void, phBoundPolygonal>>(0x487950, this);
     }
 
     // 0x48B300 | ?TestProbePoint@phBoundPolygonal@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@M@Z
-    inline bool TestProbePoint(class phSegment& arg1, class phIntersectionPoint* arg2, f32 arg3) override
+    bool TestProbePoint(class phSegment& arg1, class phIntersectionPoint* arg2, f32 arg3) override
     {
         return stub<member_func_t<bool, phBoundPolygonal, class phSegment&, class phIntersectionPoint*, f32>>(
             0x48B300, this, arg1, arg2, arg3);
     }
 
     // 0x48B370 | ?TestAIPoint@phBoundPolygonal@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@@Z
-    inline bool TestAIPoint(class phSegment& arg1, class phIntersectionPoint* arg2) override
+    bool TestAIPoint(class phSegment& arg1, class phIntersectionPoint* arg2) override
     {
         return stub<member_func_t<bool, phBoundPolygonal, class phSegment&, class phIntersectionPoint*>>(
             0x48B370, this, arg1, arg2);
     }
 
     // 0x48B450 | ?TestEdge@phBoundPolygonal@@UBEHAAVphSegment@@PAVphIntersection@@H@Z
-    inline i32 TestEdge(class phSegment& arg1, class phIntersection* arg2, i32 arg3) override
+    i32 TestEdge(class phSegment& arg1, class phIntersection* arg2, i32 arg3) override
     {
         return stub<member_func_t<i32, phBoundPolygonal, class phSegment&, class phIntersection*, i32>>(
             0x48B450, this, arg1, arg2, arg3);
     }
 
     // 0x48B3E0 | ?TestProbe@phBoundPolygonal@@UBE_NAAVphSegment@@PAVphIntersection@@M@Z
-    inline bool TestProbe(class phSegment& arg1, class phIntersection* arg2, f32 arg3) override
+    bool TestProbe(class phSegment& arg1, class phIntersection* arg2, f32 arg3) override
     {
         return stub<member_func_t<bool, phBoundPolygonal, class phSegment&, class phIntersection*, f32>>(
             0x48B3E0, this, arg1, arg2, arg3);
     }
 
     // 0x4879A0 | ?TestSphere@phBoundPolygonal@@UBE_NABVVector3@@MAAV2@1AAM@Z
-    inline bool TestSphere(
-        class Vector3 const& arg1, f32 arg2, class Vector3& arg3, class Vector3& arg4, f32& arg5) override
+    bool TestSphere(class Vector3 const& arg1, f32 arg2, class Vector3& arg3, class Vector3& arg4, f32& arg5) override
     {
         return stub<
             member_func_t<bool, phBoundPolygonal, class Vector3 const&, f32, class Vector3&, class Vector3&, f32&>>(
@@ -288,26 +286,26 @@ public:
     }
 
     // 0x46A5A0 | ?GetVertex@phBoundPolygonal@@UBEABVVector3@@H@Z
-    inline class Vector3 const& GetVertex(i32 arg1) override
+    class Vector3 const& GetVertex(i32 arg1) override
     {
         return stub<member_func_t<class Vector3 const&, phBoundPolygonal, i32>>(0x46A5A0, this, arg1);
     }
 
     // 0x582519 | __purecall
-    virtual inline f32 GetEdgeCosine(i32 arg1)
+    virtual f32 GetEdgeCosine(i32 arg1)
     {
         return stub<member_func_t<f32, phBoundPolygonal, i32>>(0x582519, this, arg1);
     }
 
     // 0x582519 | __purecall
-    virtual inline class Vector3 const& GetEdgeNormal(i32 arg1, class Vector3& arg2)
+    virtual class Vector3 const& GetEdgeNormal(i32 arg1, class Vector3& arg2)
     {
         return stub<member_func_t<class Vector3 const&, phBoundPolygonal, i32, class Vector3&>>(
             0x582519, this, arg1, arg2);
     }
 
     // 0x487DF0 | ?TestBoundPolyPoly@phBoundPolygonal@@UBEHPBV1@PBVMatrix34@@111PAVphColliderBase@@2PAVphIntersection@@3HPAH4ABVVector3@@_N@Z
-    virtual inline i32 TestBoundPolyPoly(class phBoundPolygonal const* arg1, class Matrix34 const* arg2,
+    virtual i32 TestBoundPolyPoly(class phBoundPolygonal const* arg1, class Matrix34 const* arg2,
         class Matrix34 const* arg3, class Matrix34 const* arg4, class Matrix34 const* arg5, class phColliderBase* arg6,
         class phColliderBase* arg7, class phIntersection* arg8, class phIntersection* arg9, i32 arg10, i32* arg11,
         i32* arg12, class Vector3 const& arg13, bool arg14)
@@ -320,7 +318,7 @@ public:
     }
 
     // 0x487F00 | ?TestBoundPolyPolyUseDot@phBoundPolygonal@@UBEHPBV1@PAVphColliderBase@@PBVMatrix34@@222PAVphIntersection@@HPAHMPBVVector3@@_N@Z
-    virtual inline i32 TestBoundPolyPolyUseDot(class phBoundPolygonal const* arg1, class phColliderBase* arg2,
+    virtual i32 TestBoundPolyPolyUseDot(class phBoundPolygonal const* arg1, class phColliderBase* arg2,
         class Matrix34 const* arg3, class Matrix34 const* arg4, class Matrix34 const* arg5, class Matrix34 const* arg6,
         class phIntersection* arg7, i32 arg8, i32* arg9, f32 arg10, class Vector3 const* arg11, bool arg12)
     {
@@ -331,7 +329,7 @@ public:
     }
 
     // 0x48B7A0 | ?TestBoundPolyPolyUseDotSmall@phBoundPolygonal@@UBEHPBV1@PAVphColliderBase@@PBVMatrix34@@222PAVphIntersection@@PAHMABVVector3@@_N@Z
-    virtual inline i32 TestBoundPolyPolyUseDotSmall(class phBoundPolygonal const* arg1, class phColliderBase* arg2,
+    virtual i32 TestBoundPolyPolyUseDotSmall(class phBoundPolygonal const* arg1, class phColliderBase* arg2,
         class Matrix34 const* arg3, class Matrix34 const* arg4, class Matrix34 const* arg5, class Matrix34 const* arg6,
         class phIntersection* arg7, i32* arg8, f32 arg9, class Vector3 const& arg10, bool arg11)
     {

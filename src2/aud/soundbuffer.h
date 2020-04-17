@@ -51,147 +51,147 @@ class audSoundBuffer
 {
 public:
     // 0x5A6160 | ?Create@audSoundBuffer@@QAEPAV1@W4SOUNDBUFFERTYPE@1@H@Z
-    inline class audSoundBuffer* Create(enum audSoundBuffer::SOUNDBUFFERTYPE arg1, i32 arg2)
+    class audSoundBuffer* Create(enum audSoundBuffer::SOUNDBUFFERTYPE arg1, i32 arg2)
     {
         return stub<member_func_t<class audSoundBuffer*, audSoundBuffer, enum audSoundBuffer::SOUNDBUFFERTYPE, i32>>(
             0x5A6160, this, arg1, arg2);
     }
 
     // 0x5A61F0 | ?Init@audSoundBuffer@@QAEXW4SOUNDBUFFERTYPE@1@HPAX@Z
-    inline void Init(enum audSoundBuffer::SOUNDBUFFERTYPE arg1, i32 arg2, void* arg3)
+    void Init(enum audSoundBuffer::SOUNDBUFFERTYPE arg1, i32 arg2, void* arg3)
     {
         return stub<member_func_t<void, audSoundBuffer, enum audSoundBuffer::SOUNDBUFFERTYPE, i32, void*>>(
             0x5A61F0, this, arg1, arg2, arg3);
     }
 
     // 0x5A6240 | ?Destroy@audSoundBuffer@@QAEXXZ
-    inline void Destroy()
+    void Destroy()
     {
         return stub<member_func_t<void, audSoundBuffer>>(0x5A6240, this);
     }
 
     // 0x5A6260 | ?GetSize@audSoundBuffer@@QAEHXZ
-    inline i32 GetSize()
+    i32 GetSize()
     {
         return stub<member_func_t<i32, audSoundBuffer>>(0x5A6260, this);
     }
 
     // 0x5A6270 | ?GetType@audSoundBuffer@@QAE?AW4SOUNDBUFFERTYPE@1@XZ
-    inline enum audSoundBuffer::SOUNDBUFFERTYPE GetType()
+    enum audSoundBuffer::SOUNDBUFFERTYPE GetType()
     {
         return stub<member_func_t<enum audSoundBuffer::SOUNDBUFFERTYPE, audSoundBuffer>>(0x5A6270, this);
     }
 
     // 0x5A6280 | ?BytesAdded@audSoundBuffer@@QAE_NH@Z
-    inline bool BytesAdded(i32 arg1)
+    bool BytesAdded(i32 arg1)
     {
         return stub<member_func_t<bool, audSoundBuffer, i32>>(0x5A6280, this, arg1);
     }
 
     // 0x5A6300 | ?BytesRemoved@audSoundBuffer@@QAE_NH@Z
-    inline bool BytesRemoved(i32 arg1)
+    bool BytesRemoved(i32 arg1)
     {
         return stub<member_func_t<bool, audSoundBuffer, i32>>(0x5A6300, this, arg1);
     }
 
     // 0x5A6370 | ?SetIndex1@audSoundBuffer@@QAEXH@Z
-    inline void SetIndex1(i32 arg1)
+    void SetIndex1(i32 arg1)
     {
         return stub<member_func_t<void, audSoundBuffer, i32>>(0x5A6370, this, arg1);
     }
 
     // 0x5A63A0 | ?SetIndex2@audSoundBuffer@@QAEXH@Z
-    inline void SetIndex2(i32 arg1)
+    void SetIndex2(i32 arg1)
     {
         return stub<member_func_t<void, audSoundBuffer, i32>>(0x5A63A0, this, arg1);
     }
 
     // 0x5A63D0 | ?SetExtra@audSoundBuffer@@QAEXH@Z
-    inline void SetExtra(i32 arg1)
+    void SetExtra(i32 arg1)
     {
         return stub<member_func_t<void, audSoundBuffer, i32>>(0x5A63D0, this, arg1);
     }
 
     // 0x5A63E0 | ?SetSize@audSoundBuffer@@QAEXH@Z
-    inline void SetSize(i32 arg1)
+    void SetSize(i32 arg1)
     {
         return stub<member_func_t<void, audSoundBuffer, i32>>(0x5A63E0, this, arg1);
     }
 
     // 0x5A63F0 | ?SetType@audSoundBuffer@@QAEXW4SOUNDBUFFERTYPE@1@@Z
-    inline void SetType(enum audSoundBuffer::SOUNDBUFFERTYPE arg1)
+    void SetType(enum audSoundBuffer::SOUNDBUFFERTYPE arg1)
     {
         return stub<member_func_t<void, audSoundBuffer, enum audSoundBuffer::SOUNDBUFFERTYPE>>(0x5A63F0, this, arg1);
     }
 
     // 0x5A6400 | ?GetIndex1@audSoundBuffer@@QAEHXZ
-    inline i32 GetIndex1()
+    i32 GetIndex1()
     {
         return stub<member_func_t<i32, audSoundBuffer>>(0x5A6400, this);
     }
 
     // 0x5A6410 | ?GetIndex2@audSoundBuffer@@QAEHXZ
-    inline i32 GetIndex2()
+    i32 GetIndex2()
     {
         return stub<member_func_t<i32, audSoundBuffer>>(0x5A6410, this);
     }
 
     // 0x5A6420 | ?GetExtra@audSoundBuffer@@QAEHXZ
-    inline i32 GetExtra()
+    i32 GetExtra()
     {
         return stub<member_func_t<i32, audSoundBuffer>>(0x5A6420, this);
     }
 
     // 0x5A6430 | ?GetDataPtr@audSoundBuffer@@QAEPAXXZ
-    inline void* GetDataPtr()
+    void* GetDataPtr()
     {
         return stub<member_func_t<void*, audSoundBuffer>>(0x5A6430, this);
     }
 
     // 0x5A6440 | ?SetDataPtr@audSoundBuffer@@QAEXPAX@Z
-    inline void SetDataPtr(void* arg1)
+    void SetDataPtr(void* arg1)
     {
         return stub<member_func_t<void, audSoundBuffer, void*>>(0x5A6440, this, arg1);
     }
 
     // 0x5A6450 | ?GetAdpcmState@audSoundBuffer@@QAEPAUadpcm_state@@XZ
-    inline struct adpcm_state* GetAdpcmState()
+    struct adpcm_state* GetAdpcmState()
     {
         return stub<member_func_t<struct adpcm_state*, audSoundBuffer>>(0x5A6450, this);
     }
 
     // 0x5A6460 | ?SetAdpcmState@audSoundBuffer@@QAEXPAUadpcm_state@@@Z
-    inline void SetAdpcmState(struct adpcm_state* arg1)
+    void SetAdpcmState(struct adpcm_state* arg1)
     {
         return stub<member_func_t<void, audSoundBuffer, struct adpcm_state*>>(0x5A6460, this, arg1);
     }
 
     // 0x5A6470 | ?SetIndexes@audSoundBuffer@@QAEXHH@Z
-    inline void SetIndexes(i32 arg1, i32 arg2)
+    void SetIndexes(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, audSoundBuffer, i32, i32>>(0x5A6470, this, arg1, arg2);
     }
 
     // 0x5A64B0 | ?IsFull@audSoundBuffer@@QAE_NXZ
-    inline bool IsFull()
+    bool IsFull()
     {
         return stub<member_func_t<bool, audSoundBuffer>>(0x5A64B0, this);
     }
 
     // 0x5A64D0 | ?IsEmpty@audSoundBuffer@@QAE_NXZ
-    inline bool IsEmpty()
+    bool IsEmpty()
     {
         return stub<member_func_t<bool, audSoundBuffer>>(0x5A64D0, this);
     }
 
     // 0x5A64E0 | ?Used@audSoundBuffer@@QAEHXZ
-    inline i32 Used()
+    i32 Used()
     {
         return stub<member_func_t<i32, audSoundBuffer>>(0x5A64E0, this);
     }
 
     // 0x5A64F0 | ?Unused@audSoundBuffer@@QAEHXZ
-    inline i32 Unused()
+    i32 Unused()
     {
         return stub<member_func_t<i32, audSoundBuffer>>(0x5A64F0, this);
     }

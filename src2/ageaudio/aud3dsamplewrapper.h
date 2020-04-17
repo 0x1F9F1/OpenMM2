@@ -34,43 +34,43 @@ class Aud3DSampleWrapper
 {
 public:
     // 0x5139A0 | ??0Aud3DSampleWrapper@@QAE@PADHK@Z
-    inline Aud3DSampleWrapper(char* arg1, i32 arg2, u32 arg3)
+    Aud3DSampleWrapper(char* arg1, i32 arg2, u32 arg3)
     {
         stub<member_func_t<void, Aud3DSampleWrapper, char*, i32, u32>>(0x5139A0, this, arg1, arg2, arg3);
     }
 
     // 0x513AE0 | ??0Aud3DSampleWrapper@@QAE@HHK@Z
-    inline Aud3DSampleWrapper(i32 arg1, i32 arg2, u32 arg3)
+    Aud3DSampleWrapper(i32 arg1, i32 arg2, u32 arg3)
     {
         stub<member_func_t<void, Aud3DSampleWrapper, i32, i32, u32>>(0x513AE0, this, arg1, arg2, arg3);
     }
 
     // 0x513BB0 | ??1Aud3DSampleWrapper@@QAE@XZ
-    inline ~Aud3DSampleWrapper()
+    ~Aud3DSampleWrapper()
     {
         stub<member_func_t<void, Aud3DSampleWrapper>>(0x513BB0, this);
     }
 
     // 0x513C20 | ?SetSampleName@Aud3DSampleWrapper@@QAEXPAD@Z
-    inline void SetSampleName(char* arg1)
+    void SetSampleName(char* arg1)
     {
         return stub<member_func_t<void, Aud3DSampleWrapper, char*>>(0x513C20, this, arg1);
     }
 
     // 0x513C40 | ?Load@Aud3DSampleWrapper@@QAEXPADH@Z
-    inline void Load(char* arg1, i32 arg2)
+    void Load(char* arg1, i32 arg2)
     {
         return stub<member_func_t<void, Aud3DSampleWrapper, char*, i32>>(0x513C40, this, arg1, arg2);
     }
 
     // 0x513CA0 | ?GetSoundPtr@Aud3DSampleWrapper@@QAEPAVAudSoundBase@@F@Z
-    inline class AudSoundBase* GetSoundPtr(i16 arg1)
+    class AudSoundBase* GetSoundPtr(i16 arg1)
     {
         return stub<member_func_t<class AudSoundBase*, Aud3DSampleWrapper, i16>>(0x513CA0, this, arg1);
     }
 
     // 0x513CC0 | ?Update@Aud3DSampleWrapper@@QAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, Aud3DSampleWrapper>>(0x513CC0, this);
     }

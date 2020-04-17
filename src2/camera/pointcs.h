@@ -43,73 +43,73 @@ public:
     // camPointCS::`vftable' @ 0x5B4FD8
 
     // 0x520610 | ??0camPointCS@@QAE@XZ
-    inline camPointCS()
+    camPointCS()
     {
         stub<member_func_t<void, camPointCS>>(0x520610, this);
     }
 
     // 0x5206B0 | ?SetPos@camPointCS@@QAEXAAVVector3@@@Z
-    inline void SetPos(class Vector3& arg1)
+    void SetPos(class Vector3& arg1)
     {
         return stub<member_func_t<void, camPointCS, class Vector3&>>(0x5206B0, this, arg1);
     }
 
     // 0x5206F0 | ?SetMaxDist@camPointCS@@QAEXM@Z
-    inline void SetMaxDist(f32 arg1)
+    void SetMaxDist(f32 arg1)
     {
         return stub<member_func_t<void, camPointCS, f32>>(0x5206F0, this, arg1);
     }
 
     // 0x520710 | ?SetMinDist@camPointCS@@QAEXM@Z
-    inline void SetMinDist(f32 arg1)
+    void SetMinDist(f32 arg1)
     {
         return stub<member_func_t<void, camPointCS, f32>>(0x520710, this, arg1);
     }
 
     // 0x520730 | ?SetAppRate@camPointCS@@QAEXM@Z
-    inline void SetAppRate(f32 arg1)
+    void SetAppRate(f32 arg1)
     {
         return stub<member_func_t<void, camPointCS, f32>>(0x520730, this, arg1);
     }
 
     // 0x520740 | ?SetVel@camPointCS@@QAEXAAVVector3@@@Z
-    inline void SetVel(class Vector3& arg1)
+    void SetVel(class Vector3& arg1)
     {
         return stub<member_func_t<void, camPointCS, class Vector3&>>(0x520740, this, arg1);
     }
 
     // 0x520760 | ?GetPos@camPointCS@@QAE?AVVector3@@XZ
-    inline class Vector3 GetPos()
+    class Vector3 GetPos()
     {
         return stub<member_func_t<class Vector3, camPointCS>>(0x520760, this);
     }
 
     // 0x406820 | ??1camPointCS@@UAE@XZ
-    inline ~camPointCS() override
+    ~camPointCS() override
     {
         stub<member_func_t<void, camPointCS>>(0x406820, this);
     }
 
     // 0x520790 | ?Update@camPointCS@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, camPointCS>>(0x520790, this);
     }
 
     // 0x520690 | ?Reset@camPointCS@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, camPointCS>>(0x520690, this);
     }
 
     // 0x520A20 | ?GetClassName@camPointCS@@UAEPADXZ
-    inline char* GetClassName() override
+    char* GetClassName() override
     {
         return stub<member_func_t<char*, camPointCS>>(0x520A20, this);
     }
 
     // 0x5206A0 | ?MakeActive@camPointCS@@UAEXXZ
-    inline void MakeActive() override
+    void MakeActive() override
     {
         return stub<member_func_t<void, camPointCS>>(0x5206A0, this);
     }

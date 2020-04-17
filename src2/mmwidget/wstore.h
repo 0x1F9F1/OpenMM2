@@ -36,56 +36,56 @@ struct WArray
 {
 public:
     // 0x4E74D0 | ??0WArray@@QAE@XZ
-    inline WArray()
+    WArray()
     {
         stub<member_func_t<void, WArray>>(0x4E74D0, this);
     }
 
     // 0x4E74E0 | ??1WArray@@QAE@XZ
-    inline ~WArray()
+    ~WArray()
     {
         stub<member_func_t<void, WArray>>(0x4E74E0, this);
     }
 
     // 0x4E74F0 | ?Init@WArray@@QAEXH@Z
-    inline void Init(i32 arg1)
+    void Init(i32 arg1)
     {
         return stub<member_func_t<void, WArray, i32>>(0x4E74F0, this, arg1);
     }
 
     // 0x4E7530 | ?Write@WArray@@QAEXPAD@Z
-    inline void Write(char* arg1)
+    void Write(char* arg1)
     {
         return stub<member_func_t<void, WArray, char*>>(0x4E7530, this, arg1);
     }
 
     // 0x4E75F0 | ?DumpMenu@WArray@@QAEXPAVStream@@PAVUIMenu@@@Z
-    inline void DumpMenu(class Stream* arg1, class UIMenu* arg2)
+    void DumpMenu(class Stream* arg1, class UIMenu* arg2)
     {
         return stub<member_func_t<void, WArray, class Stream*, class UIMenu*>>(0x4E75F0, this, arg1, arg2);
     }
 
     // 0x4E7830 | ?Flush@WArray@@QAEXXZ
-    inline void Flush()
+    void Flush()
     {
         return stub<member_func_t<void, WArray>>(0x4E7830, this);
     }
 
     // 0x4E7840 | ?Read@WArray@@QAEXPAD@Z
-    inline void Read(char* arg1)
+    void Read(char* arg1)
     {
         return stub<member_func_t<void, WArray, char*>>(0x4E7840, this, arg1);
     }
 
     // 0x4E7A00 | ?AddWidgetData@WArray@@QAEXHHAAVVector4@@PAD@Z
-    inline void AddWidgetData(i32 arg1, i32 arg2, class Vector4& arg3, char* arg4)
+    void AddWidgetData(i32 arg1, i32 arg2, class Vector4& arg3, char* arg4)
     {
         return stub<member_func_t<void, WArray, i32, i32, class Vector4&, char*>>(
             0x4E7A00, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4E7A60 | ?RetrieveWidgetData@WArray@@QAEHHHAAM000@Z
-    inline i32 RetrieveWidgetData(i32 arg1, i32 arg2, f32& arg3, f32& arg4, f32& arg5, f32& arg6)
+    i32 RetrieveWidgetData(i32 arg1, i32 arg2, f32& arg3, f32& arg4, f32& arg5, f32& arg6)
     {
         return stub<member_func_t<i32, WArray, i32, i32, f32&, f32&, f32&, f32&>>(
             0x4E7A60, this, arg1, arg2, arg3, arg4, arg5, arg6);

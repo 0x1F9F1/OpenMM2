@@ -43,61 +43,61 @@ public:
     // vehStuck::`vftable' @ 0x5B2EB8
 
     // 0x4D5FB0 | ??0vehStuck@@QAE@XZ
-    inline vehStuck()
+    vehStuck()
     {
         stub<member_func_t<void, vehStuck>>(0x4D5FB0, this);
     }
 
     // 0x4D6090 | ?Init@vehStuck@@QAEXPAVvehCarSim@@PBD@Z
-    inline void Init(class vehCarSim* arg1, char const* arg2)
+    void Init(class vehCarSim* arg1, char const* arg2)
     {
         return stub<member_func_t<void, vehStuck, class vehCarSim*, char const*>>(0x4D6090, this, arg1, arg2);
     }
 
     // 0x4D60C0 | ?Impact@vehStuck@@QAEXXZ
-    inline void Impact()
+    void Impact()
     {
         return stub<member_func_t<void, vehStuck>>(0x4D60C0, this);
     }
 
     // 0x4D6100 | ?Pegged@vehStuck@@QAEHXZ
-    inline i32 Pegged()
+    i32 Pegged()
     {
         return stub<member_func_t<i32, vehStuck>>(0x4D6100, this);
     }
 
     // 0x4D65E0 | ??1vehStuck@@UAE@XZ
-    inline ~vehStuck() override
+    ~vehStuck() override
     {
         stub<member_func_t<void, vehStuck>>(0x4D65E0, this);
     }
 
     // 0x4D6140 | ?Update@vehStuck@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, vehStuck>>(0x4D6140, this);
     }
 
     // 0x4D6060 | ?Reset@vehStuck@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, vehStuck>>(0x4D6060, this);
     }
 
     // 0x4D6510 | ?FileIO@vehStuck@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
+    void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, vehStuck, class datParser&>>(0x4D6510, this, arg1);
     }
 
     // 0x4D65F0 | ?GetClassName@vehStuck@@UAEPADXZ
-    inline char* GetClassName() override
+    char* GetClassName() override
     {
         return stub<member_func_t<char*, vehStuck>>(0x4D65F0, this);
     }
 
     // 0x4D6080 | ?GetDirName@vehStuck@@UAEPBDXZ
-    inline char const* GetDirName() override
+    char const* GetDirName() override
     {
         return stub<member_func_t<char const*, vehStuck>>(0x4D6080, this);
     }

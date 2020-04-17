@@ -38,43 +38,43 @@ public:
     // asDofCS::`vftable' @ 0x5B86E8
 
     // 0x596E20 | ??0asDofCS@@QAE@XZ
-    inline asDofCS()
+    asDofCS()
     {
         stub<member_func_t<void, asDofCS>>(0x596E20, this);
     }
 
     // 0x596F10 | ??4asDofCS@@QAEXABV0@@Z
-    inline void operator=(class asDofCS const& arg1)
+    void operator=(class asDofCS const& arg1)
     {
         return stub<member_func_t<void, asDofCS, class asDofCS const&>>(0x596F10, this, arg1);
     }
 
     // 0x597080 | ?SetTime@asDofCS@@QAEXMMH@Z
-    inline void SetTime(f32 arg1, f32 arg2, i32 arg3)
+    void SetTime(f32 arg1, f32 arg2, i32 arg3)
     {
         return stub<member_func_t<void, asDofCS, f32, f32, i32>>(0x597080, this, arg1, arg2, arg3);
     }
 
     // 0x597750 | ?AddWidgets@asDofCS@@QAEXPAVBank@@@Z
-    inline void AddWidgets(class Bank* arg1)
+    void AddWidgets(class Bank* arg1)
     {
         return stub<member_func_t<void, asDofCS, class Bank*>>(0x597750, this, arg1);
     }
 
     // 0x4F79F0 | ??1asDofCS@@UAE@XZ
-    inline ~asDofCS() override
+    ~asDofCS() override
     {
         stub<member_func_t<void, asDofCS>>(0x4F79F0, this);
     }
 
     // 0x5970F0 | ?Update@asDofCS@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, asDofCS>>(0x5970F0, this);
     }
 
     // 0x597050 | ?Reset@asDofCS@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, asDofCS>>(0x597050, this);
     }

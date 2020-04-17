@@ -39,25 +39,25 @@ public:
     // aiVehicle::`vftable' @ 0x5B59E8
 
     // 0x5561E0 | ??0aiVehicle@@QAE@XZ
-    inline aiVehicle()
+    aiVehicle()
     {
         stub<member_func_t<void, aiVehicle>>(0x5561E0, this);
     }
 
     // 0x5561F0 | ??1aiVehicle@@QAE@XZ
-    inline ~aiVehicle()
+    ~aiVehicle()
     {
         stub<member_func_t<void, aiVehicle>>(0x5561F0, this);
     }
 
     // 0x556200 | ?Init@aiVehicle@@QAEXH@Z
-    inline void Init(i32 arg1)
+    void Init(i32 arg1)
     {
         return stub<member_func_t<void, aiVehicle, i32>>(0x556200, this, arg1);
     }
 
     // 0x556250 | ?PreAvoid@aiVehicle@@UAEXABVVector3@@0MAAV2@1@Z
-    inline void PreAvoid(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, class Vector3& arg4,
+    void PreAvoid(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, class Vector3& arg4,
         class Vector3& arg5) override
     {
         return stub<member_func_t<void, aiVehicle, class Vector3 const&, class Vector3 const&, f32, class Vector3&,
@@ -65,80 +65,80 @@ public:
     }
 
     // 0x556850 | ?IsBlockingTarget@aiVehicle@@UAEMABVVector3@@0MM@Z
-    inline f32 IsBlockingTarget(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, f32 arg4) override
+    f32 IsBlockingTarget(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, f32 arg4) override
     {
         return stub<member_func_t<f32, aiVehicle, class Vector3 const&, class Vector3 const&, f32, f32>>(
             0x556850, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x556230 | ?Update@aiVehicle@@UAEXXZ
-    virtual inline void Update()
+    virtual void Update()
     {
         return stub<member_func_t<void, aiVehicle>>(0x556230, this);
     }
 
     // 0x556210 | ?Reset@aiVehicle@@UAEXXZ
-    virtual inline void Reset()
+    virtual void Reset()
     {
         return stub<member_func_t<void, aiVehicle>>(0x556210, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline i32 Type()
+    virtual i32 Type()
     {
         return stub<member_func_t<i32, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline class Matrix34& GetMatrix()
+    virtual class Matrix34& GetMatrix()
     {
         return stub<member_func_t<class Matrix34&, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline f32 FrontBumperDistance()
+    virtual f32 FrontBumperDistance()
     {
         return stub<member_func_t<f32, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline f32 BackBumperDistance()
+    virtual f32 BackBumperDistance()
     {
         return stub<member_func_t<f32, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline f32 LSideDistance()
+    virtual f32 LSideDistance()
     {
         return stub<member_func_t<f32, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline f32 RSideDistance()
+    virtual f32 RSideDistance()
     {
         return stub<member_func_t<f32, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline i32 CurrentLane()
+    virtual i32 CurrentLane()
     {
         return stub<member_func_t<i32, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline i32 CurrentRoadId()
+    virtual i32 CurrentRoadId()
     {
         return stub<member_func_t<i32, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline void DrawId()
+    virtual void DrawId()
     {
         return stub<member_func_t<void, aiVehicle>>(0x582519, this);
     }
 
     // 0x556D00 | ?ReplayDebug@aiVehicle@@UAEXXZ
-    virtual inline void ReplayDebug()
+    virtual void ReplayDebug()
     {
         return stub<member_func_t<void, aiVehicle>>(0x556D00, this);
     }

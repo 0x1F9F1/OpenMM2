@@ -46,13 +46,13 @@ public:
     // UIButton::`vftable' @ 0x5B36B0
 
     // 0x4ECDB0 | ??0UIButton@@QAE@XZ
-    inline UIButton()
+    UIButton()
     {
         stub<member_func_t<void, UIButton>>(0x4ECDB0, this);
     }
 
     // 0x4ECEE0 | ?Init@UIButton@@QAEXPAULocString@@HMMMMHVdatCallback@@@Z
-    inline void Init(
+    void Init(
         struct LocString* arg1, i32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7, class datCallback arg8)
     {
         return stub<member_func_t<void, UIButton, struct LocString*, i32, f32, f32, f32, f32, i32, class datCallback>>(
@@ -60,73 +60,73 @@ public:
     }
 
     // 0x4ECFC0 | ?SetString@UIButton@@QAEXPAULocString@@@Z
-    inline void SetString(struct LocString* arg1)
+    void SetString(struct LocString* arg1)
     {
         return stub<member_func_t<void, UIButton, struct LocString*>>(0x4ECFC0, this, arg1);
     }
 
     // 0x4ECFE0 | ?DrawOff@UIButton@@AAEXXZ
-    inline void DrawOff()
+    void DrawOff()
     {
         return stub<member_func_t<void, UIButton>>(0x4ECFE0, this);
     }
 
     // 0x4ED010 | ?DrawOn@UIButton@@AAEXXZ
-    inline void DrawOn()
+    void DrawOn()
     {
         return stub<member_func_t<void, UIButton>>(0x4ED010, this);
     }
 
     // 0x4ED140 | ?SetType@UIButton@@QAEXH@Z
-    inline void SetType(i32 arg1)
+    void SetType(i32 arg1)
     {
         return stub<member_func_t<void, UIButton, i32>>(0x4ED140, this, arg1);
     }
 
     // 0x4ED190 | ?TestHit@UIButton@@QAEHMM@Z
-    inline i32 TestHit(f32 arg1, f32 arg2)
+    i32 TestHit(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<i32, UIButton, f32, f32>>(0x4ED190, this, arg1, arg2);
     }
 
     // 0x4ECE50 | ??1UIButton@@UAE@XZ
-    inline ~UIButton() override
+    ~UIButton() override
     {
         stub<member_func_t<void, UIButton>>(0x4ECE50, this);
     }
 
     // 0x4ECFB0 | ?Update@UIButton@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, UIButton>>(0x4ECFB0, this);
     }
 
     // 0x4ED1F0 | ?Disable@UIButton@@UAEXXZ
-    inline void Disable() override
+    void Disable() override
     {
         return stub<member_func_t<void, UIButton>>(0x4ED1F0, this);
     }
 
     // 0x4ED1D0 | ?Enable@UIButton@@UAEXXZ
-    inline void Enable() override
+    void Enable() override
     {
         return stub<member_func_t<void, UIButton>>(0x4ED1D0, this);
     }
 
     // 0x4ED090 | ?SetReadOnly@UIButton@@UAEXH@Z
-    inline void SetReadOnly(i32 arg1) override
+    void SetReadOnly(i32 arg1) override
     {
         return stub<member_func_t<void, UIButton, i32>>(0x4ED090, this, arg1);
     }
 
     // 0x4ED040 | ?Action@UIButton@@UAEXTeqEvent@@@Z
-    inline void Action(union eqEvent arg1) override
+    void Action(union eqEvent arg1) override
     {
         return stub<member_func_t<void, UIButton, union eqEvent>>(0x4ED040, this, arg1);
     }
 
     // 0x4ED0D0 | ?Switch@UIButton@@UAEXH@Z
-    inline void Switch(i32 arg1) override
+    void Switch(i32 arg1) override
     {
         return stub<member_func_t<void, UIButton, i32>>(0x4ED0D0, this, arg1);
     }

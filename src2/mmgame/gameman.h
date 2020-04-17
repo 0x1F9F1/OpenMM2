@@ -53,25 +53,25 @@ public:
     // mmGameManager::`vftable' @ 0x5B0368
 
     // 0x4029E0 | ??0mmGameManager@@QAE@XZ
-    inline mmGameManager()
+    mmGameManager()
     {
         stub<member_func_t<void, mmGameManager>>(0x4029E0, this);
     }
 
     // 0x402FA0 | ?BeDone@mmGameManager@@QAEXXZ
-    inline void BeDone()
+    void BeDone()
     {
         return stub<member_func_t<void, mmGameManager>>(0x402FA0, this);
     }
 
     // 0x402FB0 | ?ForcePopupUI@mmGameManager@@QAEXXZ
-    inline void ForcePopupUI()
+    void ForcePopupUI()
     {
         return stub<member_func_t<void, mmGameManager>>(0x402FB0, this);
     }
 
     // 0x402FE0 | ?ForceReplayUI@mmGameManager@@QAEXXZ
-    inline void ForceReplayUI()
+    void ForceReplayUI()
     {
         return stub<member_func_t<void, mmGameManager>>(0x402FE0, this);
     }
@@ -80,25 +80,25 @@ public:
     inline extern_var(0x5E0D08, class mmGameManager*, Instance);
 
     // 0x402E40 | ??1mmGameManager@@UAE@XZ
-    inline ~mmGameManager() override
+    ~mmGameManager() override
     {
         stub<member_func_t<void, mmGameManager>>(0x402E40, this);
     }
 
     // 0x4031D0 | ?Cull@mmGameManager@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, mmGameManager>>(0x4031D0, this);
     }
 
     // 0x403000 | ?Update@mmGameManager@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmGameManager>>(0x403000, this);
     }
 
     // 0x402E30 | ?Reset@mmGameManager@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, mmGameManager>>(0x402E30, this);
     }

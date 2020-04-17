@@ -72,172 +72,172 @@ public:
     // mmHudMap::`vftable' @ 0x5B0D00
 
     // 0x42EB60 | ??0mmHudMap@@QAE@XZ
-    inline mmHudMap()
+    mmHudMap()
     {
         stub<member_func_t<void, mmHudMap>>(0x42EB60, this);
     }
 
     // 0x42EC80 | ?Init@mmHudMap@@QAEXPAVMatrix34@@PAVmmGame@@PAD@Z
-    inline void Init(class Matrix34* arg1, class mmGame* arg2, char* arg3)
+    void Init(class Matrix34* arg1, class mmGame* arg2, char* arg3)
     {
         return stub<member_func_t<void, mmHudMap, class Matrix34*, class mmGame*, char*>>(
             0x42EC80, this, arg1, arg2, arg3);
     }
 
     // 0x42EEA0 | ?RegisterOpponents@mmHudMap@@QAEXPAUOppIconInfo@@H@Z
-    inline void RegisterOpponents(struct OppIconInfo* arg1, i32 arg2)
+    void RegisterOpponents(struct OppIconInfo* arg1, i32 arg2)
     {
         return stub<member_func_t<void, mmHudMap, struct OppIconInfo*, i32>>(0x42EEA0, this, arg1, arg2);
     }
 
     // 0x42EEC0 | ?RegisterCopsnRobbers@mmHudMap@@QAEXPAPAVVector3@@@Z
-    inline void RegisterCopsnRobbers(class Vector3** arg1)
+    void RegisterCopsnRobbers(class Vector3** arg1)
     {
         return stub<member_func_t<void, mmHudMap, class Vector3**>>(0x42EEC0, this, arg1);
     }
 
     // 0x42EEE0 | ?Activate@mmHudMap@@QAEXXZ
-    inline void Activate()
+    void Activate()
     {
         return stub<member_func_t<void, mmHudMap>>(0x42EEE0, this);
     }
 
     // 0x42EEF0 | ?Deactivate@mmHudMap@@QAEXXZ
-    inline void Deactivate()
+    void Deactivate()
     {
         return stub<member_func_t<void, mmHudMap>>(0x42EEF0, this);
     }
 
     // 0x42EF00 | ?GetNextMapMode@mmHudMap@@IAEHXZ
-    inline i32 GetNextMapMode()
+    i32 GetNextMapMode()
     {
         return stub<member_func_t<i32, mmHudMap>>(0x42EF00, this);
     }
 
     // 0x42EF20 | ?GetCurrentMapMode@mmHudMap@@IAEHXZ
-    inline i32 GetCurrentMapMode()
+    i32 GetCurrentMapMode()
     {
         return stub<member_func_t<i32, mmHudMap>>(0x42EF20, this);
     }
 
     // 0x42EF30 | ?SetMapMode@mmHudMap@@IAEXH@Z
-    inline void SetMapMode(i32 arg1)
+    void SetMapMode(i32 arg1)
     {
         return stub<member_func_t<void, mmHudMap, i32>>(0x42EF30, this, arg1);
     }
 
     // 0x42F580 | ?DrawIcon@mmHudMap@@AAEXW4IconType@1@ABVMatrix34@@@Z
-    inline void DrawIcon(enum mmHudMap::IconType arg1, class Matrix34 const& arg2)
+    void DrawIcon(enum mmHudMap::IconType arg1, class Matrix34 const& arg2)
     {
         return stub<member_func_t<void, mmHudMap, enum mmHudMap::IconType, class Matrix34 const&>>(
             0x42F580, this, arg1, arg2);
     }
 
     // 0x42F600 | ?DrawPlayer@mmHudMap@@AAEXXZ
-    inline void DrawPlayer()
+    void DrawPlayer()
     {
         return stub<member_func_t<void, mmHudMap>>(0x42F600, this);
     }
 
     // 0x42F690 | ?DrawIndicator@mmHudMap@@AAEXW4IndicatorType@1@ABVVector3@@@Z
-    inline void DrawIndicator(enum mmHudMap::IndicatorType arg1, class Vector3 const& arg2)
+    void DrawIndicator(enum mmHudMap::IndicatorType arg1, class Vector3 const& arg2)
     {
         return stub<member_func_t<void, mmHudMap, enum mmHudMap::IndicatorType, class Vector3 const&>>(
             0x42F690, this, arg1, arg2);
     }
 
     // 0x42F6F0 | ?DrawOpponents@mmHudMap@@AAEXXZ
-    inline void DrawOpponents()
+    void DrawOpponents()
     {
         return stub<member_func_t<void, mmHudMap>>(0x42F6F0, this);
     }
 
     // 0x42F7D0 | ?DrawCops@mmHudMap@@AAEXXZ
-    inline void DrawCops()
+    void DrawCops()
     {
         return stub<member_func_t<void, mmHudMap>>(0x42F7D0, this);
     }
 
     // 0x42F830 | ?DrawWaypoints@mmHudMap@@AAEXXZ
-    inline void DrawWaypoints()
+    void DrawWaypoints()
     {
         return stub<member_func_t<void, mmHudMap>>(0x42F830, this);
     }
 
     // 0x42F890 | ?DrawCopsnRobbers@mmHudMap@@AAEXXZ
-    inline void DrawCopsnRobbers()
+    void DrawCopsnRobbers()
     {
         return stub<member_func_t<void, mmHudMap>>(0x42F890, this);
     }
 
     // 0x42FA00 | ?ToggleMapRes@mmHudMap@@QAEXXZ
-    inline void ToggleMapRes()
+    void ToggleMapRes()
     {
         return stub<member_func_t<void, mmHudMap>>(0x42FA00, this);
     }
 
     // 0x42FA10 | ?ToggleMapOrient@mmHudMap@@QAEXXZ
-    inline void ToggleMapOrient()
+    void ToggleMapOrient()
     {
         return stub<member_func_t<void, mmHudMap>>(0x42FA10, this);
     }
 
     // 0x42FA20 | ?SetZoomIn@mmHudMap@@QAEX_N@Z
-    inline void SetZoomIn(bool arg1)
+    void SetZoomIn(bool arg1)
     {
         return stub<member_func_t<void, mmHudMap, bool>>(0x42FA20, this, arg1);
     }
 
     // 0x42FA30 | ?GetZoomIn@mmHudMap@@QAE_NXZ
-    inline bool GetZoomIn()
+    bool GetZoomIn()
     {
         return stub<member_func_t<bool, mmHudMap>>(0x42FA30, this);
     }
 
     // 0x42FA40 | ?SetOrient@mmHudMap@@QAEX_N@Z
-    inline void SetOrient(bool arg1)
+    void SetOrient(bool arg1)
     {
         return stub<member_func_t<void, mmHudMap, bool>>(0x42FA40, this, arg1);
     }
 
     // 0x42FA50 | ?GetOrient@mmHudMap@@QAE_NXZ
-    inline bool GetOrient()
+    bool GetOrient()
     {
         return stub<member_func_t<bool, mmHudMap>>(0x42FA50, this);
     }
 
     // 0x42EC70 | ??1mmHudMap@@UAE@XZ
-    inline ~mmHudMap() override
+    ~mmHudMap() override
     {
         stub<member_func_t<void, mmHudMap>>(0x42EC70, this);
     }
 
     // 0x42F1B0 | ?Cull@mmHudMap@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, mmHudMap>>(0x42F1B0, this);
     }
 
     // 0x42F1A0 | ?Update@mmHudMap@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmHudMap>>(0x42F1A0, this);
     }
 
     // 0x42EE90 | ?Reset@mmHudMap@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, mmHudMap>>(0x42EE90, this);
     }
 
     // 0x42FA60 | ?FileIO@mmHudMap@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
+    void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, mmHudMap, class datParser&>>(0x42FA60, this, arg1);
     }
 
     // 0x42FD60 | ?GetClassName@mmHudMap@@UAEPADXZ
-    inline char* GetClassName() override
+    char* GetClassName() override
     {
         return stub<member_func_t<char*, mmHudMap>>(0x42FD60, this);
     }

@@ -38,38 +38,38 @@ public:
     // Dialog_Serial::`vftable' @ 0x5B4124
 
     // 0x4FD990 | ??0Dialog_Serial@@QAE@HMMMMPAD@Z
-    inline Dialog_Serial(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    Dialog_Serial(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
     {
         stub<member_func_t<void, Dialog_Serial, i32, f32, f32, f32, f32, char*>>(
             0x4FD990, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4FE3B0 | ?IPAddressCallback@Dialog_Serial@@QAEXXZ
-    inline void IPAddressCallback()
+    void IPAddressCallback()
     {
         return stub<member_func_t<void, Dialog_Serial>>(0x4FE3B0, this);
     }
 
     // 0x4FE3C0 | ?BuildComs@Dialog_Serial@@QAEXXZ
-    inline void BuildComs()
+    void BuildComs()
     {
         return stub<member_func_t<void, Dialog_Serial>>(0x4FE3C0, this);
     }
 
     // 0x4FE480 | ?GetCommPack@Dialog_Serial@@QAEPAUNETCOMMPACK@@XZ
-    inline struct NETCOMMPACK* GetCommPack()
+    struct NETCOMMPACK* GetCommPack()
     {
         return stub<member_func_t<struct NETCOMMPACK*, Dialog_Serial>>(0x4FE480, this);
     }
 
     // 0x4FE340 | ??1Dialog_Serial@@UAE@XZ
-    inline ~Dialog_Serial() override
+    ~Dialog_Serial() override
     {
         stub<member_func_t<void, Dialog_Serial>>(0x4FE340, this);
     }
 
     // 0x4FE3A0 | ?PreSetup@Dialog_Serial@@UAEXXZ
-    inline void PreSetup() override
+    void PreSetup() override
     {
         return stub<member_func_t<void, Dialog_Serial>>(0x4FE3A0, this);
     }

@@ -37,32 +37,32 @@ public:
     // Dialog_Host::`vftable' @ 0x5B3F24
 
     // 0x4FAD20 | ??0Dialog_Host@@QAE@HMMMMPAD@Z
-    inline Dialog_Host(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    Dialog_Host(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
     {
         stub<member_func_t<void, Dialog_Host, i32, f32, f32, f32, f32, char*>>(
             0x4FAD20, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4FAF90 | ?PasswordCallback@Dialog_Host@@QAEXXZ
-    inline void PasswordCallback()
+    void PasswordCallback()
     {
         return stub<member_func_t<void, Dialog_Host>>(0x4FAF90, this);
     }
 
     // 0x4FAFA0 | ?Clear@Dialog_Host@@QAEXXZ
-    inline void Clear()
+    void Clear()
     {
         return stub<member_func_t<void, Dialog_Host>>(0x4FAFA0, this);
     }
 
     // 0x4FAF40 | ??1Dialog_Host@@UAE@XZ
-    inline ~Dialog_Host() override
+    ~Dialog_Host() override
     {
         stub<member_func_t<void, Dialog_Host>>(0x4FAF40, this);
     }
 
     // 0x4FAF50 | ?PreSetup@Dialog_Host@@UAEXXZ
-    inline void PreSetup() override
+    void PreSetup() override
     {
         return stub<member_func_t<void, Dialog_Host>>(0x4FAF50, this);
     }

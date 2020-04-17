@@ -92,49 +92,49 @@ public:
     // aiAmbientVehicleAudio::`vftable' @ 0x5B2D74
 
     // 0x4CF890 | ??0aiAmbientVehicleAudio@@QAE@XZ
-    inline aiAmbientVehicleAudio()
+    aiAmbientVehicleAudio()
     {
         stub<member_func_t<void, aiAmbientVehicleAudio>>(0x4CF890, this);
     }
 
     // 0x4CF8F0 | ?Init@aiAmbientVehicleAudio@@QAEXPADPAVVector3@@@Z
-    inline void Init(char* arg1, class Vector3* arg2)
+    void Init(char* arg1, class Vector3* arg2)
     {
         return stub<member_func_t<void, aiAmbientVehicleAudio, char*, class Vector3*>>(0x4CF8F0, this, arg1, arg2);
     }
 
     // 0x4CF9B0 | ?Reset@aiAmbientVehicleAudio@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, aiAmbientVehicleAudio>>(0x4CF9B0, this);
     }
 
     // 0x4CFAB0 | ?PlayAvoidanceHorn@aiAmbientVehicleAudio@@QAE_NXZ
-    inline bool PlayAvoidanceHorn()
+    bool PlayAvoidanceHorn()
     {
         return stub<member_func_t<bool, aiAmbientVehicleAudio>>(0x4CFAB0, this);
     }
 
     // 0x4CFAD0 | ?PlayImpactHorn@aiAmbientVehicleAudio@@QAEXM@Z
-    inline void PlayImpactHorn(f32 arg1)
+    void PlayImpactHorn(f32 arg1)
     {
         return stub<member_func_t<void, aiAmbientVehicleAudio, f32>>(0x4CFAD0, this, arg1);
     }
 
     // 0x4CFAF0 | ?UpdateHorn@aiAmbientVehicleAudio@@QAEXXZ
-    inline void UpdateHorn()
+    void UpdateHorn()
     {
         return stub<member_func_t<void, aiAmbientVehicleAudio>>(0x4CFAF0, this);
     }
 
     // 0x4CFB10 | ?GetAudImpactPtr@aiAmbientVehicleAudio@@QAEPAVAudImpact@@XZ
-    inline class AudImpact* GetAudImpactPtr()
+    class AudImpact* GetAudImpactPtr()
     {
         return stub<member_func_t<class AudImpact*, aiAmbientVehicleAudio>>(0x4CFB10, this);
     }
 
     // 0x4CFB90 | ?UpdateAudio@aiAmbientVehicleAudio@@QAEHM@Z
-    inline i32 UpdateAudio(f32 arg1)
+    i32 UpdateAudio(f32 arg1)
     {
         return stub<member_func_t<i32, aiAmbientVehicleAudio, f32>>(0x4CFB90, this, arg1);
     }
@@ -176,55 +176,55 @@ public:
     }
 
     // 0x4CFFE0 | ?EchoOn@aiAmbientVehicleAudio@@QAEXXZ
-    inline void EchoOn()
+    void EchoOn()
     {
         return stub<member_func_t<void, aiAmbientVehicleAudio>>(0x4CFFE0, this);
     }
 
     // 0x4D0030 | ?EchoOff@aiAmbientVehicleAudio@@QAEXXZ
-    inline void EchoOff()
+    void EchoOff()
     {
         return stub<member_func_t<void, aiAmbientVehicleAudio>>(0x4D0030, this);
     }
 
     // 0x4D0060 | ?UpdateEcho@aiAmbientVehicleAudio@@AAEXXZ
-    inline void UpdateEcho()
+    void UpdateEcho()
     {
         return stub<member_func_t<void, aiAmbientVehicleAudio>>(0x4D0060, this);
     }
 
     // 0x4D0090 | ?PlayImpactReaction@aiAmbientVehicleAudio@@QAEXM@Z
-    inline void PlayImpactReaction(f32 arg1)
+    void PlayImpactReaction(f32 arg1)
     {
         return stub<member_func_t<void, aiAmbientVehicleAudio, f32>>(0x4D0090, this, arg1);
     }
 
     // 0x4D00B0 | ?PlayAvoidanceReaction@aiAmbientVehicleAudio@@QAEXM@Z
-    inline void PlayAvoidanceReaction(f32 arg1)
+    void PlayAvoidanceReaction(f32 arg1)
     {
         return stub<member_func_t<void, aiAmbientVehicleAudio, f32>>(0x4D00B0, this, arg1);
     }
 
     // 0x4D00D0 | ?LoadEngine@aiAmbientVehicleAudio@@QAE_NPAD0@Z
-    inline bool LoadEngine(char* arg1, char* arg2)
+    bool LoadEngine(char* arg1, char* arg2)
     {
         return stub<member_func_t<bool, aiAmbientVehicleAudio, char*, char*>>(0x4D00D0, this, arg1, arg2);
     }
 
     // 0x4D0300 | ?LoadHorn@aiAmbientVehicleAudio@@QAE_NPAD0@Z
-    inline bool LoadHorn(char* arg1, char* arg2)
+    bool LoadHorn(char* arg1, char* arg2)
     {
         return stub<member_func_t<bool, aiAmbientVehicleAudio, char*, char*>>(0x4D0300, this, arg1, arg2);
     }
 
     // 0x4D0530 | ?LoadVoices@aiAmbientVehicleAudio@@QAE_NPAD0_N@Z
-    inline bool LoadVoices(char* arg1, char* arg2, bool arg3)
+    bool LoadVoices(char* arg1, char* arg2, bool arg3)
     {
         return stub<member_func_t<bool, aiAmbientVehicleAudio, char*, char*, bool>>(0x4D0530, this, arg1, arg2, arg3);
     }
 
     // 0x4D07B0 | ?LoadImpacts@aiAmbientVehicleAudio@@QAE_NPAD0@Z
-    inline bool LoadImpacts(char* arg1, char* arg2)
+    bool LoadImpacts(char* arg1, char* arg2)
     {
         return stub<member_func_t<bool, aiAmbientVehicleAudio, char*, char*>>(0x4D07B0, this, arg1, arg2);
     }
@@ -260,19 +260,19 @@ public:
     inline extern_var(0x6AFF28, int32_t, s_iVoiceFileNum);
 
     // 0x4CF9D0 | ?AssignSounds@aiAmbientVehicleAudio@@UAEXXZ
-    inline void AssignSounds() override
+    void AssignSounds() override
     {
         return stub<member_func_t<void, aiAmbientVehicleAudio>>(0x4CF9D0, this);
     }
 
     // 0x4CFA50 | ?UnAssignSounds@aiAmbientVehicleAudio@@UAEXH@Z
-    inline void UnAssignSounds(i32 arg1) override
+    void UnAssignSounds(i32 arg1) override
     {
         return stub<member_func_t<void, aiAmbientVehicleAudio, i32>>(0x4CFA50, this, arg1);
     }
 
     // 0x4CFB20 | ?UpdateAudio@aiAmbientVehicleAudio@@UAEXXZ
-    inline void UpdateAudio() override
+    void UpdateAudio() override
     {
         return stub<member_func_t<void, aiAmbientVehicleAudio>>(0x4CFB20, this);
     }

@@ -33,37 +33,37 @@ struct mmRainAudio
 {
 public:
     // 0x430050 | ??0mmRainAudio@@QAE@XZ
-    inline mmRainAudio()
+    mmRainAudio()
     {
         stub<member_func_t<void, mmRainAudio>>(0x430050, this);
     }
 
     // 0x430220 | ??1mmRainAudio@@QAE@XZ
-    inline ~mmRainAudio()
+    ~mmRainAudio()
     {
         stub<member_func_t<void, mmRainAudio>>(0x430220, this);
     }
 
     // 0x430260 | ?SetInterior@mmRainAudio@@QAEXE@Z
-    inline void SetInterior(u8 arg1)
+    void SetInterior(u8 arg1)
     {
         return stub<member_func_t<void, mmRainAudio, u8>>(0x430260, this, arg1);
     }
 
     // 0x4302F0 | ?ShelterOn@mmRainAudio@@QAEXXZ
-    inline void ShelterOn()
+    void ShelterOn()
     {
         return stub<member_func_t<void, mmRainAudio>>(0x4302F0, this);
     }
 
     // 0x430350 | ?ShelterOff@mmRainAudio@@QAEXXZ
-    inline void ShelterOff()
+    void ShelterOff()
     {
         return stub<member_func_t<void, mmRainAudio>>(0x430350, this);
     }
 
     // 0x4303C0 | ?Update@mmRainAudio@@QAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, mmRainAudio>>(0x4303C0, this);
     }

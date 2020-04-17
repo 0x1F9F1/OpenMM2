@@ -39,13 +39,13 @@ public:
     // crBodyDataBase::`vftable' @ 0x5B640C
 
     // 0x57E9D0 | ??0crBodyDataBase@@QAE@AAVcrSkeletonData@@@Z
-    inline crBodyDataBase(class crSkeletonData& arg1)
+    crBodyDataBase(class crSkeletonData& arg1)
     {
         stub<member_func_t<void, crBodyDataBase, class crSkeletonData&>>(0x57E9D0, this, arg1);
     }
 
     // 0x57E9F0 | ??1crBodyDataBase@@UAE@XZ
-    virtual inline ~crBodyDataBase()
+    virtual ~crBodyDataBase()
     {
         stub<member_func_t<void, crBodyDataBase>>(0x57E9F0, this);
     }
@@ -57,13 +57,13 @@ public:
     // crBodyData::`vftable' @ 0x5B6410
 
     // 0x57EA00 | ??0crBodyData@@QAE@AAVcrSkeletonData@@@Z
-    inline crBodyData(class crSkeletonData& arg1)
+    crBodyData(class crSkeletonData& arg1)
     {
         stub<member_func_t<void, crBodyData, class crSkeletonData&>>(0x57EA00, this, arg1);
     }
 
     // 0x57EB80 | ??1crBodyData@@UAE@XZ
-    inline ~crBodyData() override
+    ~crBodyData() override
     {
         stub<member_func_t<void, crBodyData>>(0x57EB80, this);
     }

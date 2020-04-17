@@ -42,94 +42,93 @@ class audHead
 {
 public:
     // 0x5A6500 | ?Create@audHead@@QAEPAV1@PAVaudManager@@@Z
-    inline class audHead* Create(class audManager* arg1)
+    class audHead* Create(class audManager* arg1)
     {
         return stub<member_func_t<class audHead*, audHead, class audManager*>>(0x5A6500, this, arg1);
     }
 
     // 0x5A6530 | ?Init@audHead@@QAEXXZ
-    inline void Init()
+    void Init()
     {
         return stub<member_func_t<void, audHead>>(0x5A6530, this);
     }
 
     // 0x5A65A0 | ?Destroy@audHead@@QAEXXZ
-    inline void Destroy()
+    void Destroy()
     {
         return stub<member_func_t<void, audHead>>(0x5A65A0, this);
     }
 
     // 0x5A65B0 | ?SetHandle@audHead@@QAEXH@Z
-    inline void SetHandle(i32 arg1)
+    void SetHandle(i32 arg1)
     {
         return stub<member_func_t<void, audHead, i32>>(0x5A65B0, this, arg1);
     }
 
     // 0x5A65C0 | ?GetHandle@audHead@@QAEHXZ
-    inline i32 GetHandle()
+    i32 GetHandle()
     {
         return stub<member_func_t<i32, audHead>>(0x5A65C0, this);
     }
 
     // 0x5A65D0 | ?SetHeadPosition@audHead@@QAEXPAU_audvector3_@@@Z
-    inline void SetHeadPosition(struct _audvector3_* arg1)
+    void SetHeadPosition(struct _audvector3_* arg1)
     {
         return stub<member_func_t<void, audHead, struct _audvector3_*>>(0x5A65D0, this, arg1);
     }
 
     // 0x5A65F0 | ?GetHeadPosition@audHead@@QAEPAU_audvector3_@@XZ
-    inline struct _audvector3_* GetHeadPosition()
+    struct _audvector3_* GetHeadPosition()
     {
         return stub<member_func_t<struct _audvector3_*, audHead>>(0x5A65F0, this);
     }
 
     // 0x5A6600 | ?SetHeadVelocity@audHead@@QAEXPAU_audvector3_@@@Z
-    inline void SetHeadVelocity(struct _audvector3_* arg1)
+    void SetHeadVelocity(struct _audvector3_* arg1)
     {
         return stub<member_func_t<void, audHead, struct _audvector3_*>>(0x5A6600, this, arg1);
     }
 
     // 0x5A6620 | ?GetHeadVelocity@audHead@@QAEPAU_audvector3_@@XZ
-    inline struct _audvector3_* GetHeadVelocity()
+    struct _audvector3_* GetHeadVelocity()
     {
         return stub<member_func_t<struct _audvector3_*, audHead>>(0x5A6620, this);
     }
 
     // 0x5A6630 | ?SetHeadFacingDir@audHead@@QAEXPAU_audvector3_@@_N@Z
-    inline void SetHeadFacingDir(struct _audvector3_* arg1, bool arg2)
+    void SetHeadFacingDir(struct _audvector3_* arg1, bool arg2)
     {
         return stub<member_func_t<void, audHead, struct _audvector3_*, bool>>(0x5A6630, this, arg1, arg2);
     }
 
     // 0x5A6660 | ?GetHeadFacingDir@audHead@@QAEPAU_audvector3_@@XZ
-    inline struct _audvector3_* GetHeadFacingDir()
+    struct _audvector3_* GetHeadFacingDir()
     {
         return stub<member_func_t<struct _audvector3_*, audHead>>(0x5A6660, this);
     }
 
     // 0x5A6670 | ?SetHeadTF@audHead@@QAEXPAU_audvector3_@@0@Z
-    inline void SetHeadTF(struct _audvector3_* arg1, struct _audvector3_* arg2)
+    void SetHeadTF(struct _audvector3_* arg1, struct _audvector3_* arg2)
     {
         return stub<member_func_t<void, audHead, struct _audvector3_*, struct _audvector3_*>>(
             0x5A6670, this, arg1, arg2);
     }
 
     // 0x5A66A0 | ?SetHeadLimits@audHead@@QAEXPAU_audvector3_@@0@Z
-    inline void SetHeadLimits(struct _audvector3_* arg1, struct _audvector3_* arg2)
+    void SetHeadLimits(struct _audvector3_* arg1, struct _audvector3_* arg2)
     {
         return stub<member_func_t<void, audHead, struct _audvector3_*, struct _audvector3_*>>(
             0x5A66A0, this, arg1, arg2);
     }
 
     // 0x5A6740 | ?SetHeadMinLimit@audHead@@QAEXM@Z
-    inline void SetHeadMinLimit(f32 arg1)
+    void SetHeadMinLimit(f32 arg1)
     {
         return stub<member_func_t<void, audHead, f32>>(0x5A6740, this, arg1);
     }
 
     // 0x5A6750 | ?GetHeadVolumePanPitch@audHead@@QAE_NPAU_audvector3_@@0PAM11@Z
-    inline bool GetHeadVolumePanPitch(
-        struct _audvector3_* arg1, struct _audvector3_* arg2, f32* arg3, f32* arg4, f32* arg5)
+    bool GetHeadVolumePanPitch(struct _audvector3_* arg1, struct _audvector3_* arg2, f32* arg3, f32* arg4, f32* arg5)
     {
         return stub<member_func_t<bool, audHead, struct _audvector3_*, struct _audvector3_*, f32*, f32*, f32*>>(
             0x5A6750, this, arg1, arg2, arg3, arg4, arg5);

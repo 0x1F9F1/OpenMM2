@@ -35,31 +35,31 @@ public:
     // crSpineData::`vftable' @ 0x5B6440
 
     // 0x580FE0 | ??0crSpineData@@QAE@XZ
-    inline crSpineData()
+    crSpineData()
     {
         stub<member_func_t<void, crSpineData>>(0x580FE0, this);
     }
 
     // 0x5810F0 | ??1crSpineData@@QAE@XZ
-    inline ~crSpineData()
+    ~crSpineData()
     {
         stub<member_func_t<void, crSpineData>>(0x5810F0, this);
     }
 
     // 0x581000 | ?Init@crSpineData@@UAEXAAVcrSkeletonData@@@Z
-    virtual inline void Init(class crSkeletonData& arg1)
+    virtual void Init(class crSkeletonData& arg1)
     {
         return stub<member_func_t<void, crSpineData, class crSkeletonData&>>(0x581000, this, arg1);
     }
 
     // 0x581170 | ?SolveIK@crSpineData@@UBEXAAVcrSkeleton@@AAVcrIKGoal@@@Z
-    virtual inline void SolveIK(class crSkeleton& arg1, class crIKGoal& arg2)
+    virtual void SolveIK(class crSkeleton& arg1, class crIKGoal& arg2)
     {
         return stub<member_func_t<void, crSpineData, class crSkeleton&, class crIKGoal&>>(0x581170, this, arg1, arg2);
     }
 
     // 0x581110 | ?MatchPose@crSpineData@@UBEXAAVcrSkeleton@@AAVcrIKGoal@@@Z
-    virtual inline void MatchPose(class crSkeleton& arg1, class crIKGoal& arg2)
+    virtual void MatchPose(class crSkeleton& arg1, class crIKGoal& arg2)
     {
         return stub<member_func_t<void, crSpineData, class crSkeleton&, class crIKGoal&>>(0x581110, this, arg1, arg2);
     }

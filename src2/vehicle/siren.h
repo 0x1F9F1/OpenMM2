@@ -35,44 +35,44 @@ struct vehSiren
 {
 public:
     // 0x4D6600 | ??0vehSiren@@QAE@XZ
-    inline vehSiren()
+    vehSiren()
     {
         stub<member_func_t<void, vehSiren>>(0x4D6600, this);
     }
 
     // 0x4D6630 | ??1vehSiren@@QAE@XZ
-    inline ~vehSiren()
+    ~vehSiren()
     {
         stub<member_func_t<void, vehSiren>>(0x4D6630, this);
     }
 
     // 0x4D6680 | ?Init@vehSiren@@QAE_NXZ
-    inline bool Init()
+    bool Init()
     {
         return stub<member_func_t<bool, vehSiren>>(0x4D6680, this);
     }
 
     // 0x4D6740 | ?AddLight@vehSiren@@QAE_NABVVector3@@0@Z
-    inline bool AddLight(class Vector3 const& arg1, class Vector3 const& arg2)
+    bool AddLight(class Vector3 const& arg1, class Vector3 const& arg2)
     {
         return stub<member_func_t<bool, vehSiren, class Vector3 const&, class Vector3 const&>>(
             0x4D6740, this, arg1, arg2);
     }
 
     // 0x4D6820 | ?Reset@vehSiren@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, vehSiren>>(0x4D6820, this);
     }
 
     // 0x4D6830 | ?Update@vehSiren@@QAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, vehSiren>>(0x4D6830, this);
     }
 
     // 0x4D6880 | ?Draw@vehSiren@@QAEXABVMatrix34@@@Z
-    inline void Draw(class Matrix34 const& arg1)
+    void Draw(class Matrix34 const& arg1)
     {
         return stub<member_func_t<void, vehSiren, class Matrix34 const&>>(0x4D6880, this, arg1);
     }

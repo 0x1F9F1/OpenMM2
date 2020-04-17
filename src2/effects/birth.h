@@ -44,62 +44,62 @@ public:
     // asBirthRule::`vftable' @ 0x5B18F8
 
     // 0x45ECE0 | ??0asBirthRule@@QAE@XZ
-    inline asBirthRule()
+    asBirthRule()
     {
         stub<member_func_t<void, asBirthRule>>(0x45ECE0, this);
     }
 
     // 0x45EDC0 | ?InitSpark@asBirthRule@@QAEXPAUasSparkInfo@@AAVasParticles@@H@Z
-    inline void InitSpark(struct asSparkInfo* arg1, class asParticles& arg2, i32 arg3)
+    void InitSpark(struct asSparkInfo* arg1, class asParticles& arg2, i32 arg3)
     {
         return stub<member_func_t<void, asBirthRule, struct asSparkInfo*, class asParticles&, i32>>(
             0x45EDC0, this, arg1, arg2, arg3);
     }
 
     // 0x45F0A0 | ?Copy@asBirthRule@@QAEXPAV1@@Z
-    inline void Copy(class asBirthRule* arg1)
+    void Copy(class asBirthRule* arg1)
     {
         return stub<member_func_t<void, asBirthRule, class asBirthRule*>>(0x45F0A0, this, arg1);
     }
 
     // 0x45F210 | ?Indent@asBirthRule@@QAEXPAVdatBaseTokenizer@@H@Z
-    inline void Indent(class datBaseTokenizer* arg1, i32 arg2)
+    void Indent(class datBaseTokenizer* arg1, i32 arg2)
     {
         return stub<member_func_t<void, asBirthRule, class datBaseTokenizer*, i32>>(0x45F210, this, arg1, arg2);
     }
 
     // 0x45F240 | ?Save@asBirthRule@@QAEXPAVdatBaseTokenizer@@H@Z
-    inline void Save(class datBaseTokenizer* arg1, i32 arg2)
+    void Save(class datBaseTokenizer* arg1, i32 arg2)
     {
         return stub<member_func_t<void, asBirthRule, class datBaseTokenizer*, i32>>(0x45F240, this, arg1, arg2);
     }
 
     // 0x45F720 | ?Load@asBirthRule@@QAEXPAVdatBaseTokenizer@@@Z
-    inline void Load(class datBaseTokenizer* arg1)
+    void Load(class datBaseTokenizer* arg1)
     {
         return stub<member_func_t<void, asBirthRule, class datBaseTokenizer*>>(0x45F720, this, arg1);
     }
 
     // 0x45FBF0 | ??1asBirthRule@@UAE@XZ
-    inline ~asBirthRule() override
+    ~asBirthRule() override
     {
         stub<member_func_t<void, asBirthRule>>(0x45FBF0, this);
     }
 
     // 0x45F900 | ?FileIO@asBirthRule@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
+    void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, asBirthRule, class datParser&>>(0x45F900, this, arg1);
     }
 
     // 0x45FC20 | ?GetClassName@asBirthRule@@UAEPADXZ
-    inline char* GetClassName() override
+    char* GetClassName() override
     {
         return stub<member_func_t<char*, asBirthRule>>(0x45FC20, this);
     }
 
     // 0x45EDB0 | ?GetDirName@asBirthRule@@UAEPBDXZ
-    inline char const* GetDirName() override
+    char const* GetDirName() override
     {
         return stub<member_func_t<char const*, asBirthRule>>(0x45EDB0, this);
     }

@@ -177,13 +177,13 @@ class Matrix66
 {
 public:
     // 0x496A00 | ?Set@Matrix66@@QAEXABV1@@Z
-    inline void Set(class Matrix66 const& arg1)
+    void Set(class Matrix66 const& arg1)
     {
         return stub<member_func_t<void, Matrix66, class Matrix66 const&>>(0x496A00, this, arg1);
     }
 
     // 0x496A20 | ?Set@Matrix66@@QAEXABVMatrix33@@000@Z
-    inline void Set(
+    void Set(
         class Matrix33 const& arg1, class Matrix33 const& arg2, class Matrix33 const& arg3, class Matrix33 const& arg4)
     {
         return stub<member_func_t<void, Matrix66, class Matrix33 const&, class Matrix33 const&, class Matrix33 const&,
@@ -191,57 +191,57 @@ public:
     }
 
     // 0x496A60 | ?Add@Matrix66@@QAEXABV1@@Z
-    inline void Add(class Matrix66 const& arg1)
+    void Add(class Matrix66 const& arg1)
     {
         return stub<member_func_t<void, Matrix66, class Matrix66 const&>>(0x496A60, this, arg1);
     }
 
     // 0x496AA0 | ?Add@Matrix66@@QAEXABV1@0@Z
-    inline void Add(class Matrix66 const& arg1, class Matrix66 const& arg2)
+    void Add(class Matrix66 const& arg1, class Matrix66 const& arg2)
     {
         return stub<member_func_t<void, Matrix66, class Matrix66 const&, class Matrix66 const&>>(
             0x496AA0, this, arg1, arg2);
     }
 
     // 0x496AF0 | ?Subtract@Matrix66@@QAEXABV1@@Z
-    inline void Subtract(class Matrix66 const& arg1)
+    void Subtract(class Matrix66 const& arg1)
     {
         return stub<member_func_t<void, Matrix66, class Matrix66 const&>>(0x496AF0, this, arg1);
     }
 
     // 0x496B30 | ?Subtract@Matrix66@@QAEXABV1@0@Z
-    inline void Subtract(class Matrix66 const& arg1, class Matrix66 const& arg2)
+    void Subtract(class Matrix66 const& arg1, class Matrix66 const& arg2)
     {
         return stub<member_func_t<void, Matrix66, class Matrix66 const&, class Matrix66 const&>>(
             0x496B30, this, arg1, arg2);
     }
 
     // 0x496B80 | ?Dot@Matrix66@@QAEXABV1@@Z
-    inline void Dot(class Matrix66 const& arg1)
+    void Dot(class Matrix66 const& arg1)
     {
         return stub<member_func_t<void, Matrix66, class Matrix66 const&>>(0x496B80, this, arg1);
     }
 
     // 0x496C70 | ?Transpose@Matrix66@@QAEXXZ
-    inline void Transpose()
+    void Transpose()
     {
         return stub<member_func_t<void, Matrix66>>(0x496C70, this);
     }
 
     // 0x496CC0 | ?Transpose@Matrix66@@QAEXABV1@@Z
-    inline void Transpose(class Matrix66 const& arg1)
+    void Transpose(class Matrix66 const& arg1)
     {
         return stub<member_func_t<void, Matrix66, class Matrix66 const&>>(0x496CC0, this, arg1);
     }
 
     // 0x496D00 | ?Inverse@Matrix66@@QAEXXZ
-    inline void Inverse()
+    void Inverse()
     {
         return stub<member_func_t<void, Matrix66>>(0x496D00, this);
     }
 
     // 0x496D30 | ?Inverse@Matrix66@@QAEXABV1@@Z
-    inline void Inverse(class Matrix66 const& arg1)
+    void Inverse(class Matrix66 const& arg1)
     {
         return stub<member_func_t<void, Matrix66, class Matrix66 const&>>(0x496D30, this, arg1);
     }
@@ -251,106 +251,106 @@ class Matrix33
 {
 public:
     // 0x496230 | ?Set@Matrix33@@QAEXABV1@@Z
-    inline void Set(class Matrix33 const& arg1)
+    void Set(class Matrix33 const& arg1)
     {
         return stub<member_func_t<void, Matrix33, class Matrix33 const&>>(0x496230, this, arg1);
     }
 
     // 0x496270 | ?Add@Matrix33@@QAEXABV1@@Z
-    inline void Add(class Matrix33 const& arg1)
+    void Add(class Matrix33 const& arg1)
     {
         return stub<member_func_t<void, Matrix33, class Matrix33 const&>>(0x496270, this, arg1);
     }
 
     // 0x4962D0 | ?Add@Matrix33@@QAEXABV1@0@Z
-    inline void Add(class Matrix33 const& arg1, class Matrix33 const& arg2)
+    void Add(class Matrix33 const& arg1, class Matrix33 const& arg2)
     {
         return stub<member_func_t<void, Matrix33, class Matrix33 const&, class Matrix33 const&>>(
             0x4962D0, this, arg1, arg2);
     }
 
     // 0x496330 | ?Subtract@Matrix33@@QAEXABV1@@Z
-    inline void Subtract(class Matrix33 const& arg1)
+    void Subtract(class Matrix33 const& arg1)
     {
         return stub<member_func_t<void, Matrix33, class Matrix33 const&>>(0x496330, this, arg1);
     }
 
     // 0x496390 | ?Subtract@Matrix33@@QAEXABV1@0@Z
-    inline void Subtract(class Matrix33 const& arg1, class Matrix33 const& arg2)
+    void Subtract(class Matrix33 const& arg1, class Matrix33 const& arg2)
     {
         return stub<member_func_t<void, Matrix33, class Matrix33 const&, class Matrix33 const&>>(
             0x496390, this, arg1, arg2);
     }
 
     // 0x4963F0 | ?IsZero@Matrix33@@QBE_NXZ
-    inline bool IsZero()
+    bool IsZero()
     {
         return stub<member_func_t<bool, Matrix33>>(0x4963F0, this);
     }
 
     // 0x496490 | ?Dot@Matrix33@@QAEXABV1@@Z
-    inline void Dot(class Matrix33 const& arg1)
+    void Dot(class Matrix33 const& arg1)
     {
         return stub<member_func_t<void, Matrix33, class Matrix33 const&>>(0x496490, this, arg1);
     }
 
     // 0x4965B0 | ?Dot@Matrix33@@QAEXABV1@0@Z
-    inline void Dot(class Matrix33 const& arg1, class Matrix33 const& arg2)
+    void Dot(class Matrix33 const& arg1, class Matrix33 const& arg2)
     {
         return stub<member_func_t<void, Matrix33, class Matrix33 const&, class Matrix33 const&>>(
             0x4965B0, this, arg1, arg2);
     }
 
     // 0x4966A0 | ?DotCrossProdMtx@Matrix33@@QAEXABVVector3@@@Z
-    inline void DotCrossProdMtx(class Vector3 const& arg1)
+    void DotCrossProdMtx(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, Matrix33, class Vector3 const&>>(0x4966A0, this, arg1);
     }
 
     // 0x496750 | ?CrossProduct@Matrix33@@QAEXABVVector3@@@Z
-    inline void CrossProduct(class Vector3 const& arg1)
+    void CrossProduct(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, Matrix33, class Vector3 const&>>(0x496750, this, arg1);
     }
 
     // 0x496790 | ?Diagonal@Matrix33@@QAEXM@Z
-    inline void Diagonal(f32 arg1)
+    void Diagonal(f32 arg1)
     {
         return stub<member_func_t<void, Matrix33, f32>>(0x496790, this, arg1);
     }
 
     // 0x4967C0 | ?Diagonal@Matrix33@@QAEXABVVector3@@@Z
-    inline void Diagonal(class Vector3 const& arg1)
+    void Diagonal(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, Matrix33, class Vector3 const&>>(0x4967C0, this, arg1);
     }
 
     // 0x4967F0 | ?Negate@Matrix33@@QAEXXZ
-    inline void Negate()
+    void Negate()
     {
         return stub<member_func_t<void, Matrix33>>(0x4967F0, this);
     }
 
     // 0x496840 | ?Transpose@Matrix33@@QAEXXZ
-    inline void Transpose()
+    void Transpose()
     {
         return stub<member_func_t<void, Matrix33>>(0x496840, this);
     }
 
     // 0x496870 | ?Transpose@Matrix33@@QAEXABV1@@Z
-    inline void Transpose(class Matrix33 const& arg1)
+    void Transpose(class Matrix33 const& arg1)
     {
         return stub<member_func_t<void, Matrix33, class Matrix33 const&>>(0x496870, this, arg1);
     }
 
     // 0x4968B0 | ?Inverse@Matrix33@@QAEXXZ
-    inline void Inverse()
+    void Inverse()
     {
         return stub<member_func_t<void, Matrix33>>(0x4968B0, this);
     }
 
     // 0x4969D0 | ?Inverse@Matrix33@@QAEXABV1@@Z
-    inline void Inverse(class Matrix33 const& arg1)
+    void Inverse(class Matrix33 const& arg1)
     {
         return stub<member_func_t<void, Matrix33, class Matrix33 const&>>(0x4969D0, this, arg1);
     }

@@ -34,38 +34,38 @@ struct fxTexelDamage
 {
 public:
     // 0x591CA0 | ??0fxTexelDamage@@QAE@XZ
-    inline fxTexelDamage()
+    fxTexelDamage()
     {
         stub<member_func_t<void, fxTexelDamage>>(0x591CA0, this);
     }
 
     // 0x591CC0 | ??1fxTexelDamage@@QAE@XZ
-    inline ~fxTexelDamage()
+    ~fxTexelDamage()
     {
         stub<member_func_t<void, fxTexelDamage>>(0x591CC0, this);
     }
 
     // 0x591CD0 | ?Kill@fxTexelDamage@@AAEXXZ
-    inline void Kill()
+    void Kill()
     {
         return stub<member_func_t<void, fxTexelDamage>>(0x591CD0, this);
     }
 
     // 0x591D10 | ?Init@fxTexelDamage@@QAE_NPAVmodStatic@@PAVmodShader@@H@Z
-    inline bool Init(class modStatic* arg1, class modShader* arg2, i32 arg3)
+    bool Init(class modStatic* arg1, class modShader* arg2, i32 arg3)
     {
         return stub<member_func_t<bool, fxTexelDamage, class modStatic*, class modShader*, i32>>(
             0x591D10, this, arg1, arg2, arg3);
     }
 
     // 0x592190 | ?Reset@fxTexelDamage@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, fxTexelDamage>>(0x592190, this);
     }
 
     // 0x5921E0 | ?ApplyDamage@fxTexelDamage@@QAEXABVVector3@@M@Z
-    inline void ApplyDamage(class Vector3 const& arg1, f32 arg2)
+    void ApplyDamage(class Vector3 const& arg1, f32 arg2)
     {
         return stub<member_func_t<void, fxTexelDamage, class Vector3 const&, f32>>(0x5921E0, this, arg1, arg2);
     }

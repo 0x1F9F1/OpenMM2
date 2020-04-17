@@ -38,7 +38,7 @@ public:
     // mmMouseSteerBar::`vftable' @ 0x5B53C0
 
     // 0x534450 | ?Init@mmMouseSteerBar@@QAEXMMPAM@Z
-    inline void Init(f32 arg1, f32 arg2, f32* arg3)
+    void Init(f32 arg1, f32 arg2, f32* arg3)
     {
         return stub<member_func_t<void, mmMouseSteerBar, f32, f32, f32*>>(0x534450, this, arg1, arg2, arg3);
     }
@@ -47,13 +47,13 @@ public:
     // Skipped (scalar/vector destructor)
 
     // 0x534500 | ?Cull@mmMouseSteerBar@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, mmMouseSteerBar>>(0x534500, this);
     }
 
     // 0x5344D0 | ?Update@mmMouseSteerBar@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmMouseSteerBar>>(0x5344D0, this);
     }

@@ -54,55 +54,55 @@ class CFileStream
 {
 public:
     // 0x518A40 | ??0CFileStream@@QAE@PAVCLoader@@@Z
-    inline CFileStream(class CLoader* arg1)
+    CFileStream(class CLoader* arg1)
     {
         stub<member_func_t<void, CFileStream, class CLoader*>>(0x518A40, this, arg1);
     }
 
     // 0x518A80 | ??1CFileStream@@QAE@XZ
-    inline ~CFileStream()
+    ~CFileStream()
     {
         stub<member_func_t<void, CFileStream>>(0x518A80, this);
     }
 
     // 0x518AB0 | ?Open@CFileStream@@QAEJPAGK@Z
-    inline i32 Open(u16* arg1, u32 arg2)
+    i32 Open(u16* arg1, u32 arg2)
     {
         return stub<member_func_t<i32, CFileStream, u16*, u32>>(0x518AB0, this, arg1, arg2);
     }
 
     // 0x518B80 | ?Close@CFileStream@@QAEJXZ
-    inline i32 Close()
+    i32 Close()
     {
         return stub<member_func_t<i32, CFileStream>>(0x518B80, this);
     }
 
     // 0x518E50 | ?GetNextPtr@CFileStream@@QAEPAV1@XZ
-    inline class CFileStream* GetNextPtr()
+    class CFileStream* GetNextPtr()
     {
         return stub<member_func_t<class CFileStream*, CFileStream>>(0x518E50, this);
     }
 
     // 0x518E60 | ?SetNextPtr@CFileStream@@QAEXPAV1@@Z
-    inline void SetNextPtr(class CFileStream* arg1)
+    void SetNextPtr(class CFileStream* arg1)
     {
         return stub<member_func_t<void, CFileStream, class CFileStream*>>(0x518E60, this, arg1);
     }
 
     // 0x518E70 | ?QueryInterface@CFileStream@@W3AGJABU_GUID@@PAPAX@Z
-    inline i32 __stdcall QueryInterface(struct _GUID const& arg1, void** arg2)
+    i32 __stdcall QueryInterface(struct _GUID const& arg1, void** arg2)
     {
         return stub<member_func_t<i32, CFileStream, struct _GUID const&, void**>>(0x518E70, this, arg1, arg2);
     }
 
     // 0x518E80 | ?AddRef@CFileStream@@W3AGKXZ
-    inline u32 __stdcall AddRef()
+    u32 __stdcall AddRef()
     {
         return stub<member_func_t<u32, CFileStream>>(0x518E80, this);
     }
 
     // 0x518E90 | ?Release@CFileStream@@W3AGKXZ
-    inline u32 __stdcall Release()
+    u32 __stdcall Release()
     {
         return stub<member_func_t<u32, CFileStream>>(0x518E90, this);
     }

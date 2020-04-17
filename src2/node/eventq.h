@@ -38,38 +38,38 @@ public:
     // eqEventQ::`vftable' @ 0x5B29E0
 
     // 0x4A3450 | ??0eqEventQ@@QAE@H@Z
-    inline eqEventQ(i32 arg1)
+    eqEventQ(i32 arg1)
     {
         stub<member_func_t<void, eqEventQ, i32>>(0x4A3450, this, arg1);
     }
 
     // 0x4A3630 | ?Queue@eqEventQ@@AAEXAATeqEvent@@@Z
-    inline void Queue(union eqEvent& arg1)
+    void Queue(union eqEvent& arg1)
     {
         return stub<member_func_t<void, eqEventQ, union eqEvent&>>(0x4A3630, this, arg1);
     }
 
     // 0x4A3670 | ?Pop@eqEventQ@@QAEHPATeqEvent@@@Z
-    inline i32 Pop(union eqEvent* arg1)
+    i32 Pop(union eqEvent* arg1)
     {
         return stub<member_func_t<i32, eqEventQ, union eqEvent*>>(0x4A3670, this, arg1);
     }
 
     // 0x4A34D0 | ??1eqEventQ@@UAE@XZ
-    inline ~eqEventQ() override
+    ~eqEventQ() override
     {
         stub<member_func_t<void, eqEventQ>>(0x4A34D0, this);
     }
 
     // 0x4A3540 | ?Mouse@eqEventQ@@UAEXPAXHHHHHHH@Z
-    inline void Mouse(void* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6, i32 arg7, i32 arg8) override
+    void Mouse(void* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6, i32 arg7, i32 arg8) override
     {
         return stub<member_func_t<void, eqEventQ, void*, i32, i32, i32, i32, i32, i32, i32>>(
             0x4A3540, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
     // 0x4A35D0 | ?Keyboard@eqEventQ@@UAEXPAXHHHH@Z
-    inline void Keyboard(void* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5) override
+    void Keyboard(void* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5) override
     {
         return stub<member_func_t<void, eqEventQ, void*, i32, i32, i32, i32>>(
             0x4A35D0, this, arg1, arg2, arg3, arg4, arg5);

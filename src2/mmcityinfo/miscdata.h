@@ -46,57 +46,57 @@ public:
     // mmMiscData::`vftable' @ 0x5B5208
 
     // 0x524A30 | ??0mmMiscData@@QAE@XZ
-    inline mmMiscData()
+    mmMiscData()
     {
         stub<member_func_t<void, mmMiscData>>(0x524A30, this);
     }
 
     // 0x524B00 | ?Reset@mmMiscData@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, mmMiscData>>(0x524B00, this);
     }
 
     // 0x524B20 | ?Open@mmMiscData@@QAEHPAD@Z
-    inline i32 Open(char* arg1)
+    i32 Open(char* arg1)
     {
         return stub<member_func_t<i32, mmMiscData, char*>>(0x524B20, this, arg1);
     }
 
     // 0x524C90 | ?Close@mmMiscData@@QAEHXZ
-    inline i32 Close()
+    i32 Close()
     {
         return stub<member_func_t<i32, mmMiscData>>(0x524C90, this);
     }
 
     // 0x524CC0 | ?Init@mmMiscData@@QAEHPADHHH@Z
-    inline i32 Init(char* arg1, i32 arg2, i32 arg3, i32 arg4)
+    i32 Init(char* arg1, i32 arg2, i32 arg3, i32 arg4)
     {
         return stub<member_func_t<i32, mmMiscData, char*, i32, i32, i32>>(0x524CC0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x524EF0 | ?GetFileOffset@mmMiscData@@AAEJHHHH@Z
-    inline i32 GetFileOffset(i32 arg1, i32 arg2, i32 arg3, i32 arg4)
+    i32 GetFileOffset(i32 arg1, i32 arg2, i32 arg3, i32 arg4)
     {
         return stub<member_func_t<i32, mmMiscData, i32, i32, i32, i32>>(0x524EF0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x524F90 | ?GetRecord@mmMiscData@@QAE?AVmmRecord@@HHHH@Z
-    inline class mmRecord GetRecord(i32 arg1, i32 arg2, i32 arg3, i32 arg4)
+    class mmRecord GetRecord(i32 arg1, i32 arg2, i32 arg3, i32 arg4)
     {
         return stub<member_func_t<class mmRecord, mmMiscData, i32, i32, i32, i32>>(
             0x524F90, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x525120 | ?NewRecord@mmMiscData@@QAEHHPADMH0HH@Z
-    inline i32 NewRecord(i32 arg1, char* arg2, f32 arg3, i32 arg4, char* arg5, i32 arg6, i32 arg7)
+    i32 NewRecord(i32 arg1, char* arg2, f32 arg3, i32 arg4, char* arg5, i32 arg6, i32 arg7)
     {
         return stub<member_func_t<i32, mmMiscData, i32, char*, f32, i32, char*, i32, i32>>(
             0x525120, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x524AA0 | ??1mmMiscData@@UAE@XZ
-    virtual inline ~mmMiscData()
+    virtual ~mmMiscData()
     {
         stub<member_func_t<void, mmMiscData>>(0x524AA0, this);
     }

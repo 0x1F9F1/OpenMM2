@@ -64,69 +64,69 @@ public:
     // mmWaypointObject::`vftable' @ 0x5B1180
 
     // 0x43DE30 | ??0mmWaypointObject@@QAE@AAVVector4@@PADHMHM@Z
-    inline mmWaypointObject(class Vector4& arg1, char* arg2, i32 arg3, f32 arg4, i32 arg5, f32 arg6)
+    mmWaypointObject(class Vector4& arg1, char* arg2, i32 arg3, f32 arg4, i32 arg5, f32 arg6)
     {
         stub<member_func_t<void, mmWaypointObject, class Vector4&, char*, i32, f32, i32, f32>>(
             0x43DE30, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x43E0C0 | ?Activate@mmWaypointObject@@QAEXXZ
-    inline void Activate()
+    void Activate()
     {
         return stub<member_func_t<void, mmWaypointObject>>(0x43E0C0, this);
     }
 
     // 0x43E0D0 | ?Deactivate@mmWaypointObject@@QAEXXZ
-    inline void Deactivate()
+    void Deactivate()
     {
         return stub<member_func_t<void, mmWaypointObject>>(0x43E0D0, this);
     }
 
     // 0x43E0E0 | ?SetHeading@mmWaypointObject@@QAEXM@Z
-    inline void SetHeading(f32 arg1)
+    void SetHeading(f32 arg1)
     {
         return stub<member_func_t<void, mmWaypointObject, f32>>(0x43E0E0, this, arg1);
     }
 
     // 0x43E140 | ?SetPos@mmWaypointObject@@QAEXVVector3@@@Z
-    inline void SetPos(class Vector3 arg1)
+    void SetPos(class Vector3 arg1)
     {
         return stub<member_func_t<void, mmWaypointObject, class Vector3>>(0x43E140, this, arg1);
     }
 
     // 0x43E160 | ?SetHeadingType@mmWaypointObject@@QAEXH@Z
-    inline void SetHeadingType(i32 arg1)
+    void SetHeadingType(i32 arg1)
     {
         return stub<member_func_t<void, mmWaypointObject, i32>>(0x43E160, this, arg1);
     }
 
     // 0x43E170 | ?SetRadius@mmWaypointObject@@QAEXM@Z
-    inline void SetRadius(f32 arg1)
+    void SetRadius(f32 arg1)
     {
         return stub<member_func_t<void, mmWaypointObject, f32>>(0x43E170, this, arg1);
     }
 
     // 0x43E190 | ?CalculateGatePoints@mmWaypointObject@@QAEXXZ
-    inline void CalculateGatePoints()
+    void CalculateGatePoints()
     {
         return stub<member_func_t<void, mmWaypointObject>>(0x43E190, this);
     }
 
     // 0x43E210 | ?PlaneHit@mmWaypointObject@@QAEHVMatrix34@@VVector2@@1VVector3@@@Z
-    inline i32 PlaneHit(class Matrix34 arg1, class Vector2 arg2, class Vector2 arg3, class Vector3 arg4)
+    i32 PlaneHit(class Matrix34 arg1, class Vector2 arg2, class Vector2 arg3, class Vector3 arg4)
     {
         return stub<member_func_t<i32, mmWaypointObject, class Matrix34, class Vector2, class Vector2, class Vector3>>(
             0x43E210, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x43E3B0 | ?RadiusHit@mmWaypointObject@@QAEHVVector3@@@Z
-    inline i32 RadiusHit(class Vector3 arg1)
+    i32 RadiusHit(class Vector3 arg1)
     {
         return stub<member_func_t<i32, mmWaypointObject, class Vector3>>(0x43E3B0, this, arg1);
     }
 
     // 0x43E400 | ?LineIntersect@mmWaypointObject@@QAEHVVector2@@000M@Z
-    inline i32 LineIntersect(class Vector2 arg1, class Vector2 arg2, class Vector2 arg3, class Vector2 arg4, f32 arg5)
+    i32 LineIntersect(class Vector2 arg1, class Vector2 arg2, class Vector2 arg3, class Vector2 arg4, f32 arg5)
     {
         return stub<
             member_func_t<i32, mmWaypointObject, class Vector2, class Vector2, class Vector2, class Vector2, f32>>(
@@ -134,43 +134,43 @@ public:
     }
 
     // 0x43E5E0 | ?GetDrawFlag@mmWaypointObject@@QAEHXZ
-    inline i32 GetDrawFlag()
+    i32 GetDrawFlag()
     {
         return stub<member_func_t<i32, mmWaypointObject>>(0x43E5E0, this);
     }
 
     // 0x43E5F0 | ?Move@mmWaypointObject@@QAEXXZ
-    inline void Move()
+    void Move()
     {
         return stub<member_func_t<void, mmWaypointObject>>(0x43E5F0, this);
     }
 
     // 0x43E6C0 | ?GetHitFlag@mmWaypointObject@@QAEHXZ
-    inline i32 GetHitFlag()
+    i32 GetHitFlag()
     {
         return stub<member_func_t<i32, mmWaypointObject>>(0x43E6C0, this);
     }
 
     // 0x43E6D0 | ?SetHitFlag@mmWaypointObject@@QAEXH@Z
-    inline void SetHitFlag(i32 arg1)
+    void SetHitFlag(i32 arg1)
     {
         return stub<member_func_t<void, mmWaypointObject, i32>>(0x43E6D0, this, arg1);
     }
 
     // 0x43E010 | ??1mmWaypointObject@@UAE@XZ
-    inline ~mmWaypointObject() override
+    ~mmWaypointObject() override
     {
         stub<member_func_t<void, mmWaypointObject>>(0x43E010, this);
     }
 
     // 0x43E060 | ?Update@mmWaypointObject@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmWaypointObject>>(0x43E060, this);
     }
 
     // 0x43E020 | ?Reset@mmWaypointObject@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, mmWaypointObject>>(0x43E020, this);
     }

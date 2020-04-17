@@ -138,13 +138,13 @@ public:
     }
 
     // 0x4631F0 | ??0lvlInstance@@QAE@XZ
-    inline lvlInstance()
+    lvlInstance()
     {
         stub<member_func_t<void, lvlInstance>>(0x4631F0, this);
     }
 
     // 0x463220 | ??1lvlInstance@@QAE@XZ
-    inline ~lvlInstance()
+    ~lvlInstance()
     {
         stub<member_func_t<void, lvlInstance>>(0x463220, this);
     }
@@ -162,31 +162,31 @@ public:
     }
 
     // 0x463940 | ?LoadBoundOnLastEntry@lvlInstance@@QAE_NPBD@Z
-    inline bool LoadBoundOnLastEntry(char const* arg1)
+    bool LoadBoundOnLastEntry(char const* arg1)
     {
         return stub<member_func_t<bool, lvlInstance, char const*>>(0x463940, this, arg1);
     }
 
     // 0x463A40 | ?GetBoundSphere@lvlInstance@@QAEAAVVector4@@AAV2@@Z
-    inline class Vector4& GetBoundSphere(class Vector4& arg1)
+    class Vector4& GetBoundSphere(class Vector4& arg1)
     {
         return stub<member_func_t<class Vector4&, lvlInstance, class Vector4&>>(0x463A40, this, arg1);
     }
 
     // 0x463A80 | ?BeginGeom@lvlInstance@@QAE_NPBD0H@Z
-    inline bool BeginGeom(char const* arg1, char const* arg2, i32 arg3)
+    bool BeginGeom(char const* arg1, char const* arg2, i32 arg3)
     {
         return stub<member_func_t<bool, lvlInstance, char const*, char const*, i32>>(0x463A80, this, arg1, arg2, arg3);
     }
 
     // 0x463BA0 | ?AddGeom@lvlInstance@@QAEHPBD0H@Z
-    inline i32 AddGeom(char const* arg1, char const* arg2, i32 arg3)
+    i32 AddGeom(char const* arg1, char const* arg2, i32 arg3)
     {
         return stub<member_func_t<i32, lvlInstance, char const*, char const*, i32>>(0x463BA0, this, arg1, arg2, arg3);
     }
 
     // 0x463BC0 | ?EndGeom@lvlInstance@@QAEXXZ
-    inline void EndGeom()
+    void EndGeom()
     {
         return stub<member_func_t<void, lvlInstance>>(0x463BC0, this);
     }
@@ -198,32 +198,32 @@ public:
     }
 
     // 0x463DA0 | ?InitBoundTerrain@lvlInstance@@QAE_NPBD@Z
-    inline bool InitBoundTerrain(char const* arg1)
+    bool InitBoundTerrain(char const* arg1)
     {
         return stub<member_func_t<bool, lvlInstance, char const*>>(0x463DA0, this, arg1);
     }
 
     // 0x463F50 | ?InitBoundTerrainLocal@lvlInstance@@QAE_NPBD@Z
-    inline bool InitBoundTerrainLocal(char const* arg1)
+    bool InitBoundTerrainLocal(char const* arg1)
     {
         return stub<member_func_t<bool, lvlInstance, char const*>>(0x463F50, this, arg1);
     }
 
     // 0x4641A0 | ?NeedGhostBound@lvlInstance@@QAE_NPBVVector3@@H@Z
-    inline bool NeedGhostBound(class Vector3 const* arg1, i32 arg2)
+    bool NeedGhostBound(class Vector3 const* arg1, i32 arg2)
     {
         return stub<member_func_t<bool, lvlInstance, class Vector3 const*, i32>>(0x4641A0, this, arg1, arg2);
     }
 
     // 0x464200 | ?InitGhostBound@lvlInstance@@QAE_NPAVphBound@@PBVVector3@@H@Z
-    inline bool InitGhostBound(class phBound* arg1, class Vector3 const* arg2, i32 arg3)
+    bool InitGhostBound(class phBound* arg1, class Vector3 const* arg2, i32 arg3)
     {
         return stub<member_func_t<bool, lvlInstance, class phBound*, class Vector3 const*, i32>>(
             0x464200, this, arg1, arg2, arg3);
     }
 
     // 0x464330 | ?InitGhost@lvlInstance@@QAEHPBDABVMatrix34@@@Z
-    inline i32 InitGhost(char const* arg1, class Matrix34 const& arg2)
+    i32 InitGhost(char const* arg1, class Matrix34 const& arg2)
     {
         return stub<member_func_t<i32, lvlInstance, char const*, class Matrix34 const&>>(0x464330, this, arg1, arg2);
     }
@@ -241,13 +241,13 @@ public:
     }
 
     // 0x464B00 | ?PreLoadShader@lvlInstance@@QAEXH@Z
-    inline void PreLoadShader(i32 arg1)
+    void PreLoadShader(i32 arg1)
     {
         return stub<member_func_t<void, lvlInstance, i32>>(0x464B00, this, arg1);
     }
 
     // 0x464B70 | ?Optimize@lvlInstance@@QAEXH@Z
-    inline void Optimize(i32 arg1)
+    void Optimize(i32 arg1)
     {
         return stub<member_func_t<void, lvlInstance, i32>>(0x464B70, this, arg1);
     }
@@ -286,158 +286,158 @@ public:
     inline extern_var(0x655760, uint32_t, sm_HeapTop);
 
     // 0x463280 | ?Reset@lvlInstance@@UAEXXZ
-    virtual inline void Reset()
+    virtual void Reset()
     {
         return stub<member_func_t<void, lvlInstance>>(0x463280, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline class Vector3 const& GetPosition()
+    virtual class Vector3 const& GetPosition()
     {
         return stub<member_func_t<class Vector3 const&, lvlInstance>>(0x582519, this);
     }
 
     // 0x4649F0 | ?IsVisible@lvlInstance@@UAEHABVgfxViewport@@@Z
-    virtual inline i32 IsVisible(class gfxViewport const& arg1)
+    virtual i32 IsVisible(class gfxViewport const& arg1)
     {
         return stub<member_func_t<i32, lvlInstance, class gfxViewport const&>>(0x4649F0, this, arg1);
     }
 
     // 0x582519 | __purecall
-    virtual inline class Matrix34 const& GetMatrix(class Matrix34& arg1)
+    virtual class Matrix34 const& GetMatrix(class Matrix34& arg1)
     {
         return stub<member_func_t<class Matrix34 const&, lvlInstance, class Matrix34&>>(0x582519, this, arg1);
     }
 
     // 0x582519 | __purecall
-    virtual inline void SetMatrix(class Matrix34 const& arg1)
+    virtual void SetMatrix(class Matrix34 const& arg1)
     {
         return stub<member_func_t<void, lvlInstance, class Matrix34 const&>>(0x582519, this, arg1);
     }
 
     // 0x4643D0 | ?SetVariant@lvlInstance@@UAEXH@Z
-    virtual inline void SetVariant(i32 arg1)
+    virtual void SetVariant(i32 arg1)
     {
         return stub<member_func_t<void, lvlInstance, i32>>(0x4643D0, this, arg1);
     }
 
     // 0x4643E0 | ?GetRadius@lvlInstance@@UAE?BMXZ
-    virtual inline f32 const GetRadius()
+    virtual f32 const GetRadius()
     {
         return stub<member_func_t<f32 const, lvlInstance>>(0x4643E0, this);
     }
 
     // 0x4643B0 | ?GetEntity@lvlInstance@@UAEPAVdgPhysEntity@@XZ
-    virtual inline class dgPhysEntity* GetEntity()
+    virtual class dgPhysEntity* GetEntity()
     {
         return stub<member_func_t<class dgPhysEntity*, lvlInstance>>(0x4643B0, this);
     }
 
     // 0x4643C0 | ?AttachEntity@lvlInstance@@UAEPAVdgPhysEntity@@XZ
-    virtual inline class dgPhysEntity* AttachEntity()
+    virtual class dgPhysEntity* AttachEntity()
     {
         return stub<member_func_t<class dgPhysEntity*, lvlInstance>>(0x4643C0, this);
     }
 
     // 0x4643A0 | ?GetVelocity@lvlInstance@@UAEABVVector3@@XZ
-    virtual inline class Vector3 const& GetVelocity()
+    virtual class Vector3 const& GetVelocity()
     {
         return stub<member_func_t<class Vector3 const&, lvlInstance>>(0x4643A0, this);
     }
 
     // 0x43FC30 | ?Detach@lvlInstance@@UAEXXZ
-    virtual inline void Detach()
+    virtual void Detach()
     {
         return stub<member_func_t<void, lvlInstance>>(0x43FC30, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline void Draw(i32 arg1)
+    virtual void Draw(i32 arg1)
     {
         return stub<member_func_t<void, lvlInstance, i32>>(0x582519, this, arg1);
     }
 
     // 0x4643F0 | ?DrawShadow@lvlInstance@@UAEXXZ
-    virtual inline void DrawShadow()
+    virtual void DrawShadow()
     {
         return stub<member_func_t<void, lvlInstance>>(0x4643F0, this);
     }
 
     // 0x464400 | ?DrawShadowMap@lvlInstance@@UAEXXZ
-    virtual inline void DrawShadowMap()
+    virtual void DrawShadowMap()
     {
         return stub<member_func_t<void, lvlInstance>>(0x464400, this);
     }
 
     // 0x464410 | ?DrawGlow@lvlInstance@@UAEXXZ
-    virtual inline void DrawGlow()
+    virtual void DrawGlow()
     {
         return stub<member_func_t<void, lvlInstance>>(0x464410, this);
     }
 
     // 0x464420 | ?DrawReflected@lvlInstance@@UAEXM@Z
-    virtual inline void DrawReflected(f32 arg1)
+    virtual void DrawReflected(f32 arg1)
     {
         return stub<member_func_t<void, lvlInstance, f32>>(0x464420, this, arg1);
     }
 
     // 0x4648B0 | ?DrawReflectedParts@lvlInstance@@UAEXH@Z
-    virtual inline void DrawReflectedParts(i32 arg1)
+    virtual void DrawReflectedParts(i32 arg1)
     {
         return stub<member_func_t<void, lvlInstance, i32>>(0x4648B0, this, arg1);
     }
 
     // 0x463D90 | ?Init@lvlInstance@@UAEHPBDABVMatrix34@@H@Z
-    virtual inline i32 Init(char const* arg1, class Matrix34 const& arg2, i32 arg3)
+    virtual i32 Init(char const* arg1, class Matrix34 const& arg2, i32 arg3)
     {
         return stub<member_func_t<i32, lvlInstance, char const*, class Matrix34 const&, i32>>(
             0x463D90, this, arg1, arg2, arg3);
     }
 
     // 0x582519 | __purecall
-    virtual inline u32 SizeOf()
+    virtual u32 SizeOf()
     {
         return stub<member_func_t<u32, lvlInstance>>(0x582519, this);
     }
 
     // 0x463180 | ?IsLandmark@lvlInstance@@UAE_NXZ
-    virtual inline bool IsLandmark()
+    virtual bool IsLandmark()
     {
         return stub<member_func_t<bool, lvlInstance>>(0x463180, this);
     }
 
     // 0x43FC40 | ?IsCollidable@lvlInstance@@UAE_NXZ
-    virtual inline bool IsCollidable()
+    virtual bool IsCollidable()
     {
         return stub<member_func_t<bool, lvlInstance>>(0x43FC40, this);
     }
 
     // 0x43FC50 | ?IsTerrainCollidable@lvlInstance@@UAE_NXZ
-    virtual inline bool IsTerrainCollidable()
+    virtual bool IsTerrainCollidable()
     {
         return stub<member_func_t<bool, lvlInstance>>(0x43FC50, this);
     }
 
     // 0x4632B0 | ?GetNumLightSources@lvlInstance@@UAEHXZ
-    virtual inline i32 GetNumLightSources()
+    virtual i32 GetNumLightSources()
     {
         return stub<member_func_t<i32, lvlInstance>>(0x4632B0, this);
     }
 
     // 0x4630B0 | ?GetLightInfo@lvlInstance@@UAEXHPAVcltLight@@@Z
-    virtual inline void GetLightInfo(i32 arg1, class cltLight* arg2)
+    virtual void GetLightInfo(i32 arg1, class cltLight* arg2)
     {
         return stub<member_func_t<void, lvlInstance, i32, class cltLight*>>(0x4630B0, this, arg1, arg2);
     }
 
     // 0x464670 | ?SetupGfxLights@lvlInstance@@UAEHABVMatrix34@@@Z
-    virtual inline i32 SetupGfxLights(class Matrix34 const& arg1)
+    virtual i32 SetupGfxLights(class Matrix34 const& arg1)
     {
         return stub<member_func_t<i32, lvlInstance, class Matrix34 const&>>(0x464670, this, arg1);
     }
 
     // 0x4648C0 | ?GetBound@lvlInstance@@UAEPBVphBound@@H@Z
-    virtual inline class phBound const* GetBound(i32 arg1)
+    virtual class phBound const* GetBound(i32 arg1)
     {
         return stub<member_func_t<class phBound const*, lvlInstance, i32>>(0x4648C0, this, arg1);
     }

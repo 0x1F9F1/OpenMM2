@@ -34,31 +34,31 @@ public:
     // mmCollideFF::`vftable' @ 0x5B52AC
 
     // 0x5317E0 | ?Assign@mmCollideFF@@QAEHJJ@Z
-    inline i32 Assign(i32 arg1, i32 arg2)
+    i32 Assign(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<i32, mmCollideFF, i32, i32>>(0x5317E0, this, arg1, arg2);
     }
 
     // 0x531600 | ?Init@mmCollideFF@@UAEHPAUIDirectInputDevice2A@@@Z
-    virtual inline i32 Init(struct IDirectInputDevice2A* arg1)
+    virtual i32 Init(struct IDirectInputDevice2A* arg1)
     {
         return stub<member_func_t<i32, mmCollideFF, struct IDirectInputDevice2A*>>(0x531600, this, arg1);
     }
 
     // 0x5318E0 | ?Play@mmCollideFF@@UAEHXZ
-    virtual inline i32 Play()
+    virtual i32 Play()
     {
         return stub<member_func_t<i32, mmCollideFF>>(0x5318E0, this);
     }
 
     // 0x531930 | ?Stop@mmCollideFF@@UAEHXZ
-    virtual inline i32 Stop()
+    virtual i32 Stop()
     {
         return stub<member_func_t<i32, mmCollideFF>>(0x531930, this);
     }
 
     // 0x5317B0 | ?SetValues@mmCollideFF@@UAEHMM@Z
-    virtual inline i32 SetValues(f32 arg1, f32 arg2)
+    virtual i32 SetValues(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<i32, mmCollideFF, f32, f32>>(0x5317B0, this, arg1, arg2);
     }

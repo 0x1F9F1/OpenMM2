@@ -50,79 +50,79 @@ public:
     // Skipped (scalar/vector destructor)
 
     // 0x4DAEC0 | ??0vehHornAudio@@QAE@XZ
-    inline vehHornAudio()
+    vehHornAudio()
     {
         stub<member_func_t<void, vehHornAudio>>(0x4DAEC0, this);
     }
 
     // 0x4DAEF0 | ??0vehHornAudio@@QAE@PAV0@@Z
-    inline vehHornAudio(class vehHornAudio* arg1)
+    vehHornAudio(class vehHornAudio* arg1)
     {
         stub<member_func_t<void, vehHornAudio, class vehHornAudio*>>(0x4DAEF0, this, arg1);
     }
 
     // 0x4DB020 | ??1vehHornAudio@@QAE@XZ
-    inline ~vehHornAudio()
+    ~vehHornAudio()
     {
         stub<member_func_t<void, vehHornAudio>>(0x4DB020, this);
     }
 
     // 0x4DB080 | ?AllocTiming@vehHornAudio@@QAEXXZ
-    inline void AllocTiming()
+    void AllocTiming()
     {
         return stub<member_func_t<void, vehHornAudio>>(0x4DB080, this);
     }
 
     // 0x4DB130 | ?GetHornAudioTimingPtr@vehHornAudio@@QAEPAVvehHornAudioTiming@@H@Z
-    inline class vehHornAudioTiming* GetHornAudioTimingPtr(i32 arg1)
+    class vehHornAudioTiming* GetHornAudioTimingPtr(i32 arg1)
     {
         return stub<member_func_t<class vehHornAudioTiming*, vehHornAudio, i32>>(0x4DB130, this, arg1);
     }
 
     // 0x4DB140 | ?GetNumTimings@vehHornAudio@@QAEHXZ
-    inline i32 GetNumTimings()
+    i32 GetNumTimings()
     {
         return stub<member_func_t<i32, vehHornAudio>>(0x4DB140, this);
     }
 
     // 0x4DB150 | ?UpdateDoppler@vehHornAudio@@QAEXMMM@Z
-    inline void UpdateDoppler(f32 arg1, f32 arg2, f32 arg3)
+    void UpdateDoppler(f32 arg1, f32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, vehHornAudio, f32, f32, f32>>(0x4DB150, this, arg1, arg2, arg3);
     }
 
     // 0x4DB1C0 | ?IsPlaying@vehHornAudio@@QAE_NXZ
-    inline bool IsPlaying()
+    bool IsPlaying()
     {
         return stub<member_func_t<bool, vehHornAudio>>(0x4DB1C0, this);
     }
 
     // 0x4DB1E0 | ?PlayAvoidance@vehHornAudio@@QAE_NXZ
-    inline bool PlayAvoidance()
+    bool PlayAvoidance()
     {
         return stub<member_func_t<bool, vehHornAudio>>(0x4DB1E0, this);
     }
 
     // 0x4DB280 | ?PlayImpact@vehHornAudio@@QAEXM@Z
-    inline void PlayImpact(f32 arg1)
+    void PlayImpact(f32 arg1)
     {
         return stub<member_func_t<void, vehHornAudio, f32>>(0x4DB280, this, arg1);
     }
 
     // 0x4DB310 | ?Reset@vehHornAudio@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, vehHornAudio>>(0x4DB310, this);
     }
 
     // 0x4DB320 | ?AssignSounds@vehHornAudio@@QAEXH@Z
-    inline void AssignSounds(i32 arg1)
+    void AssignSounds(i32 arg1)
     {
         return stub<member_func_t<void, vehHornAudio, i32>>(0x4DB320, this, arg1);
     }
 
     // 0x4DB350 | ?UnAssignSounds@vehHornAudio@@QAEXXZ
-    inline void UnAssignSounds()
+    void UnAssignSounds()
     {
         return stub<member_func_t<void, vehHornAudio>>(0x4DB350, this);
     }
@@ -140,31 +140,31 @@ public:
     }
 
     // 0x4DB4D0 | ?ReadCSV@vehHornAudio@@AAEHPAVStream@@@Z
-    inline i32 ReadCSV(class Stream* arg1)
+    i32 ReadCSV(class Stream* arg1)
     {
         return stub<member_func_t<i32, vehHornAudio, class Stream*>>(0x4DB4D0, this, arg1);
     }
 
     // 0x4DB680 | ?Update@vehHornAudio@@QAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, vehHornAudio>>(0x4DB680, this);
     }
 
     // 0x4DB6A0 | ?EchoOn@vehHornAudio@@QAEXM@Z
-    inline void EchoOn(f32 arg1)
+    void EchoOn(f32 arg1)
     {
         return stub<member_func_t<void, vehHornAudio, f32>>(0x4DB6A0, this, arg1);
     }
 
     // 0x4DB6D0 | ?EchoOff@vehHornAudio@@QAEXXZ
-    inline void EchoOff()
+    void EchoOff()
     {
         return stub<member_func_t<void, vehHornAudio>>(0x4DB6D0, this);
     }
 
     // 0x4DB6E0 | ?UpdateEcho@vehHornAudio@@QAEXXZ
-    inline void UpdateEcho()
+    void UpdateEcho()
     {
         return stub<member_func_t<void, vehHornAudio>>(0x4DB6E0, this);
     }

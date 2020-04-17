@@ -129,55 +129,55 @@ public:
     }
 
     // 0x4C9AA0 | ?Read@Stream@@QAEHPAXH@Z
-    inline i32 Read(void* arg1, i32 arg2)
+    i32 Read(void* arg1, i32 arg2)
     {
         return stub<member_func_t<i32, Stream, void*, i32>>(0x4C9AA0, this, arg1, arg2);
     }
 
     // 0x4C9BF0 | ?Write@Stream@@QAEHPBXH@Z
-    inline i32 Write(void const* arg1, i32 arg2)
+    i32 Write(void const* arg1, i32 arg2)
     {
         return stub<member_func_t<i32, Stream, void const*, i32>>(0x4C9BF0, this, arg1, arg2);
     }
 
     // 0x4C9D00 | ?GetCh@Stream@@QAEHXZ
-    inline i32 GetCh()
+    i32 GetCh()
     {
         return stub<member_func_t<i32, Stream>>(0x4C9D00, this);
     }
 
     // 0x4C9D30 | ?PutCh@Stream@@QAEHE@Z
-    inline i32 PutCh(u8 arg1)
+    i32 PutCh(u8 arg1)
     {
         return stub<member_func_t<i32, Stream, u8>>(0x4C9D30, this, arg1);
     }
 
     // 0x4C9D60 | ?Seek@Stream@@QAEHH@Z
-    inline i32 Seek(i32 arg1)
+    i32 Seek(i32 arg1)
     {
         return stub<member_func_t<i32, Stream, i32>>(0x4C9D60, this, arg1);
     }
 
     // 0x4C9DB0 | ?Tell@Stream@@QAEHXZ
-    inline i32 Tell()
+    i32 Tell()
     {
         return stub<member_func_t<i32, Stream>>(0x4C9DB0, this);
     }
 
     // 0x4C9DC0 | ?Close@Stream@@QAEHXZ
-    inline i32 Close()
+    i32 Close()
     {
         return stub<member_func_t<i32, Stream>>(0x4C9DC0, this);
     }
 
     // 0x4C9E00 | ?Size@Stream@@QAEHXZ
-    inline i32 Size()
+    i32 Size()
     {
         return stub<member_func_t<i32, Stream>>(0x4C9E00, this);
     }
 
     // 0x4C9E60 | ?Flush@Stream@@QAEHXZ
-    inline i32 Flush()
+    i32 Flush()
     {
         return stub<member_func_t<i32, Stream>>(0x4C9E60, this);
     }

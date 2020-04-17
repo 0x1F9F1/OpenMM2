@@ -34,31 +34,31 @@ public:
     // mmFrictionFF::`vftable' @ 0x5B529C
 
     // 0x531D60 | ?Assign@mmFrictionFF@@QAEHJ@Z
-    inline i32 Assign(i32 arg1)
+    i32 Assign(i32 arg1)
     {
         return stub<member_func_t<i32, mmFrictionFF, i32>>(0x531D60, this, arg1);
     }
 
     // 0x531C20 | ?Init@mmFrictionFF@@UAEHPAUIDirectInputDevice2A@@@Z
-    virtual inline i32 Init(struct IDirectInputDevice2A* arg1)
+    virtual i32 Init(struct IDirectInputDevice2A* arg1)
     {
         return stub<member_func_t<i32, mmFrictionFF, struct IDirectInputDevice2A*>>(0x531C20, this, arg1);
     }
 
     // 0x531E20 | ?Play@mmFrictionFF@@UAEHXZ
-    virtual inline i32 Play()
+    virtual i32 Play()
     {
         return stub<member_func_t<i32, mmFrictionFF>>(0x531E20, this);
     }
 
     // 0x531E80 | ?Stop@mmFrictionFF@@UAEHXZ
-    virtual inline i32 Stop()
+    virtual i32 Stop()
     {
         return stub<member_func_t<i32, mmFrictionFF>>(0x531E80, this);
     }
 
     // 0x531D30 | ?SetValues@mmFrictionFF@@UAEHMM@Z
-    virtual inline i32 SetValues(f32 arg1, f32 arg2)
+    virtual i32 SetValues(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<i32, mmFrictionFF, f32, f32>>(0x531D30, this, arg1, arg2);
     }

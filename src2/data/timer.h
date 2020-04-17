@@ -48,7 +48,7 @@ public:
     }
 
     // 0x4C7840 | ??0Timer@@QAE@XZ
-    inline Timer()
+    Timer()
     {
         stub<member_func_t<void, Timer>>(0x4C7840, this);
     }

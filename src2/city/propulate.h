@@ -32,32 +32,32 @@ struct cityPropulator
 {
 public:
     // 0x45D200 | ??0cityPropulator@@QAE@ABVlvlSDL@@@Z
-    inline cityPropulator(class lvlSDL const& arg1)
+    cityPropulator(class lvlSDL const& arg1)
     {
         stub<member_func_t<void, cityPropulator, class lvlSDL const&>>(0x45D200, this, arg1);
     }
 
     // 0x45D220 | ?Load@cityPropulator@@QAE_NPBD00@Z
-    inline bool Load(char const* arg1, char const* arg2, char const* arg3)
+    bool Load(char const* arg1, char const* arg2, char const* arg3)
     {
         return stub<member_func_t<bool, cityPropulator, char const*, char const*, char const*>>(
             0x45D220, this, arg1, arg2, arg3);
     }
 
     // 0x45D270 | ??1cityPropulator@@QAE@XZ
-    inline ~cityPropulator()
+    ~cityPropulator()
     {
         stub<member_func_t<void, cityPropulator>>(0x45D270, this);
     }
 
     // 0x45D290 | ?LookupRule@cityPropulator@@QAEHPBD@Z
-    inline i32 LookupRule(char const* arg1)
+    i32 LookupRule(char const* arg1)
     {
         return stub<member_func_t<i32, cityPropulator, char const*>>(0x45D290, this, arg1);
     }
 
     // 0x45D2C0 | ?Propulate@cityPropulator@@QAEXHHHP6AXHPBDABVMatrix34@@@Z@Z
-    inline void Propulate(i32 arg1, i32 arg2, i32 arg3, void(__cdecl* arg4)(i32, char const*, class Matrix34 const&))
+    void Propulate(i32 arg1, i32 arg2, i32 arg3, void(__cdecl* arg4)(i32, char const*, class Matrix34 const&))
     {
         return stub<member_func_t<void, cityPropulator, i32, i32, i32,
             void(__cdecl*)(i32, char const*, class Matrix34 const&)>>(0x45D2C0, this, arg1, arg2, arg3, arg4);

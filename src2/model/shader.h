@@ -53,7 +53,7 @@ public:
     }
 
     // 0x4A3B30 | ?Load@modShader@@QAEXPAVStream@@_N@Z
-    inline void Load(class Stream* arg1, bool arg2)
+    void Load(class Stream* arg1, bool arg2)
     {
         return stub<member_func_t<void, modShader, class Stream*, bool>>(0x4A3B30, this, arg1, arg2);
     }
@@ -65,7 +65,7 @@ public:
     }
 
     // 0x4A40C0 | ?PreLoad@modShader@@QAEXXZ
-    inline void PreLoad()
+    void PreLoad()
     {
         return stub<member_func_t<void, modShader>>(0x4A40C0, this);
     }

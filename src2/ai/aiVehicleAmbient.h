@@ -56,67 +56,67 @@ public:
     // Skipped (scalar/vector destructor)
 
     // 0x551340 | ??0aiVehicleAmbient@@QAE@XZ
-    inline aiVehicleAmbient()
+    aiVehicleAmbient()
     {
         stub<member_func_t<void, aiVehicleAmbient>>(0x551340, this);
     }
 
     // 0x551370 | ??1aiVehicleAmbient@@QAE@XZ
-    inline ~aiVehicleAmbient()
+    ~aiVehicleAmbient()
     {
         stub<member_func_t<void, aiVehicleAmbient>>(0x551370, this);
     }
 
     // 0x551380 | ?Init@aiVehicleAmbient@@QAEXPADH@Z
-    inline void Init(char* arg1, i32 arg2)
+    void Init(char* arg1, i32 arg2)
     {
         return stub<member_func_t<void, aiVehicleAmbient, char*, i32>>(0x551380, this, arg1, arg2);
     }
 
     // 0x551A70 | ?DrawBBox@aiVehicleAmbient@@QAEXF@Z
-    inline void DrawBBox(i16 arg1)
+    void DrawBBox(i16 arg1)
     {
         return stub<member_func_t<void, aiVehicleAmbient, i16>>(0x551A70, this, arg1);
     }
 
     // 0x551A80 | ?Dump@aiVehicleAmbient@@QAEXXZ
-    inline void Dump()
+    void Dump()
     {
         return stub<member_func_t<void, aiVehicleAmbient>>(0x551A80, this);
     }
 
     // 0x551600 | ?Update@aiVehicleAmbient@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, aiVehicleAmbient>>(0x551600, this);
     }
 
     // 0x551520 | ?Reset@aiVehicleAmbient@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, aiVehicleAmbient>>(0x551520, this);
     }
 
     // 0x551CC0 | ?Type@aiVehicleAmbient@@UAEHXZ
-    inline i32 Type() override
+    i32 Type() override
     {
         return stub<member_func_t<i32, aiVehicleAmbient>>(0x551CC0, this);
     }
 
     // 0x551A60 | ?DrawId@aiVehicleAmbient@@UAEXXZ
-    inline void DrawId() override
+    void DrawId() override
     {
         return stub<member_func_t<void, aiVehicleAmbient>>(0x551A60, this);
     }
 
     // 0x551950 | ?ReplayDebug@aiVehicleAmbient@@UAEXXZ
-    inline void ReplayDebug() override
+    void ReplayDebug() override
     {
         return stub<member_func_t<void, aiVehicleAmbient>>(0x551950, this);
     }
 
     // 0x5519C0 | ?Impact@aiVehicleAmbient@@UAEXH@Z
-    inline void Impact(i32 arg1) override
+    void Impact(i32 arg1) override
     {
         return stub<member_func_t<void, aiVehicleAmbient, i32>>(0x5519C0, this, arg1);
     }

@@ -41,19 +41,19 @@ class dgPath
 {
 public:
     // 0x466B40 | ??0dgPath@@QAE@PBD@Z
-    inline dgPath(char const* arg1)
+    dgPath(char const* arg1)
     {
         stub<member_func_t<void, dgPath, char const*>>(0x466B40, this, arg1);
     }
 
     // 0x466B80 | ?SetName@dgPath@@QAEXPBD@Z
-    inline void SetName(char const* arg1)
+    void SetName(char const* arg1)
     {
         return stub<member_func_t<void, dgPath, char const*>>(0x466B80, this, arg1);
     }
 
     // 0x466BC0 | ??1dgPath@@QAE@XZ
-    inline ~dgPath()
+    ~dgPath()
     {
         stub<member_func_t<void, dgPath>>(0x466BC0, this);
     }
@@ -65,7 +65,7 @@ public:
     }
 
     // 0x466D40 | ?Enumerate@dgPath@@QBEXP6AXPBDABVMatrix34@@_N@ZMM@Z
-    inline void Enumerate(void(__cdecl* arg1)(char const*, class Matrix34 const&, bool), f32 arg2, f32 arg3)
+    void Enumerate(void(__cdecl* arg1)(char const*, class Matrix34 const&, bool), f32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, dgPath, void(__cdecl*)(char const*, class Matrix34 const&, bool), f32, f32>>(
             0x466D40, this, arg1, arg2, arg3);
@@ -78,25 +78,25 @@ public:
     // dgPathSet::`vftable' @ 0x5B1B0C
 
     // 0x467150 | ??0dgPathSet@@QAE@XZ
-    inline dgPathSet()
+    dgPathSet()
     {
         stub<member_func_t<void, dgPathSet>>(0x467150, this);
     }
 
     // 0x4671C0 | ?Kill@dgPathSet@@QAEXXZ
-    inline void Kill()
+    void Kill()
     {
         return stub<member_func_t<void, dgPathSet>>(0x4671C0, this);
     }
 
     // 0x467210 | ?Load@dgPathSet@@QAE_NPBD0@Z
-    inline bool Load(char const* arg1, char const* arg2)
+    bool Load(char const* arg1, char const* arg2)
     {
         return stub<member_func_t<bool, dgPathSet, char const*, char const*>>(0x467210, this, arg1, arg2);
     }
 
     // 0x467170 | ??1dgPathSet@@UAE@XZ
-    inline ~dgPathSet() override
+    ~dgPathSet() override
     {
         stub<member_func_t<void, dgPathSet>>(0x467170, this);
     }

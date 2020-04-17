@@ -42,91 +42,91 @@ class mmRaceData
 {
 public:
     // 0x529B80 | ??0mmRaceData@@QAE@XZ
-    inline mmRaceData()
+    mmRaceData()
     {
         stub<member_func_t<void, mmRaceData>>(0x529B80, this);
     }
 
     // 0x529B90 | ??1mmRaceData@@QAE@XZ
-    inline ~mmRaceData()
+    ~mmRaceData()
     {
         stub<member_func_t<void, mmRaceData>>(0x529B90, this);
     }
 
     // 0x529BA0 | ?Load@mmRaceData@@QAEHPAD0@Z
-    inline i32 Load(char* arg1, char* arg2)
+    i32 Load(char* arg1, char* arg2)
     {
         return stub<member_func_t<i32, mmRaceData, char*, char*>>(0x529BA0, this, arg1, arg2);
     }
 
     // 0x529EB0 | ?GetNumRaces@mmRaceData@@QAEHXZ
-    inline i32 GetNumRaces()
+    i32 GetNumRaces()
     {
         return stub<member_func_t<i32, mmRaceData>>(0x529EB0, this);
     }
 
     // 0x529EC0 | ?GetRaceName@mmRaceData@@QAEPADH@Z
-    inline char* GetRaceName(i32 arg1)
+    char* GetRaceName(i32 arg1)
     {
         return stub<member_func_t<char*, mmRaceData, i32>>(0x529EC0, this, arg1);
     }
 
     // 0x529ED0 | ?GetCarType@mmRaceData@@QAEHHW4dgSkillLevel@@@Z
-    inline i32 GetCarType(i32 arg1, enum dgSkillLevel arg2)
+    i32 GetCarType(i32 arg1, enum dgSkillLevel arg2)
     {
         return stub<member_func_t<i32, mmRaceData, i32, enum dgSkillLevel>>(0x529ED0, this, arg1, arg2);
     }
 
     // 0x529F00 | ?GetNumLaps@mmRaceData@@QAEHHW4dgSkillLevel@@@Z
-    inline i32 GetNumLaps(i32 arg1, enum dgSkillLevel arg2)
+    i32 GetNumLaps(i32 arg1, enum dgSkillLevel arg2)
     {
         return stub<member_func_t<i32, mmRaceData, i32, enum dgSkillLevel>>(0x529F00, this, arg1, arg2);
     }
 
     // 0x529F30 | ?GetTimeLimit@mmRaceData@@QAEMHW4dgSkillLevel@@@Z
-    inline f32 GetTimeLimit(i32 arg1, enum dgSkillLevel arg2)
+    f32 GetTimeLimit(i32 arg1, enum dgSkillLevel arg2)
     {
         return stub<member_func_t<f32, mmRaceData, i32, enum dgSkillLevel>>(0x529F30, this, arg1, arg2);
     }
 
     // 0x529F60 | ?GetNumOpponents@mmRaceData@@QAEHHW4dgSkillLevel@@@Z
-    inline i32 GetNumOpponents(i32 arg1, enum dgSkillLevel arg2)
+    i32 GetNumOpponents(i32 arg1, enum dgSkillLevel arg2)
     {
         return stub<member_func_t<i32, mmRaceData, i32, enum dgSkillLevel>>(0x529F60, this, arg1, arg2);
     }
 
     // 0x529F90 | ?GetNumCops@mmRaceData@@QAEHHW4dgSkillLevel@@@Z
-    inline i32 GetNumCops(i32 arg1, enum dgSkillLevel arg2)
+    i32 GetNumCops(i32 arg1, enum dgSkillLevel arg2)
     {
         return stub<member_func_t<i32, mmRaceData, i32, enum dgSkillLevel>>(0x529F90, this, arg1, arg2);
     }
 
     // 0x529FC0 | ?GetTimeOfDay@mmRaceData@@QAEHHW4dgSkillLevel@@@Z
-    inline i32 GetTimeOfDay(i32 arg1, enum dgSkillLevel arg2)
+    i32 GetTimeOfDay(i32 arg1, enum dgSkillLevel arg2)
     {
         return stub<member_func_t<i32, mmRaceData, i32, enum dgSkillLevel>>(0x529FC0, this, arg1, arg2);
     }
 
     // 0x529FF0 | ?GetWeather@mmRaceData@@QAEHHW4dgSkillLevel@@@Z
-    inline i32 GetWeather(i32 arg1, enum dgSkillLevel arg2)
+    i32 GetWeather(i32 arg1, enum dgSkillLevel arg2)
     {
         return stub<member_func_t<i32, mmRaceData, i32, enum dgSkillLevel>>(0x529FF0, this, arg1, arg2);
     }
 
     // 0x52A020 | ?GetPedDensity@mmRaceData@@QAEMHW4dgSkillLevel@@@Z
-    inline f32 GetPedDensity(i32 arg1, enum dgSkillLevel arg2)
+    f32 GetPedDensity(i32 arg1, enum dgSkillLevel arg2)
     {
         return stub<member_func_t<f32, mmRaceData, i32, enum dgSkillLevel>>(0x52A020, this, arg1, arg2);
     }
 
     // 0x52A050 | ?GetAmbientDensity@mmRaceData@@QAEMHW4dgSkillLevel@@@Z
-    inline f32 GetAmbientDensity(i32 arg1, enum dgSkillLevel arg2)
+    f32 GetAmbientDensity(i32 arg1, enum dgSkillLevel arg2)
     {
         return stub<member_func_t<f32, mmRaceData, i32, enum dgSkillLevel>>(0x52A050, this, arg1, arg2);
     }
 
     // 0x52A080 | ?GetDifficulty@mmRaceData@@QAEMHW4dgSkillLevel@@@Z
-    inline f32 GetDifficulty(i32 arg1, enum dgSkillLevel arg2)
+    f32 GetDifficulty(i32 arg1, enum dgSkillLevel arg2)
     {
         return stub<member_func_t<f32, mmRaceData, i32, enum dgSkillLevel>>(0x52A080, this, arg1, arg2);
     }

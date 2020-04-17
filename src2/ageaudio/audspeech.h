@@ -52,127 +52,127 @@ struct AudSpeech
 {
 public:
     // 0x510090 | ??0AudSpeech@@QAE@_N@Z
-    inline AudSpeech(bool arg1)
+    AudSpeech(bool arg1)
     {
         stub<member_func_t<void, AudSpeech, bool>>(0x510090, this, arg1);
     }
 
     // 0x5101D0 | ?SetSubPath@AudSpeech@@QAEXPAD@Z
-    inline void SetSubPath(char* arg1)
+    void SetSubPath(char* arg1)
     {
         return stub<member_func_t<void, AudSpeech, char*>>(0x5101D0, this, arg1);
     }
 
     // 0x510220 | ?SetExtension@AudSpeech@@QAEXPAD@Z
-    inline void SetExtension(char* arg1)
+    void SetExtension(char* arg1)
     {
         return stub<member_func_t<void, AudSpeech, char*>>(0x510220, this, arg1);
     }
 
     // 0x510270 | ?AllocateSpeechData@AudSpeech@@QAEXPADMM@Z
-    inline void AllocateSpeechData(char* arg1, f32 arg2, f32 arg3)
+    void AllocateSpeechData(char* arg1, f32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, AudSpeech, char*, f32, f32>>(0x510270, this, arg1, arg2, arg3);
     }
 
     // 0x510350 | ?AllocateQueuePlayData@AudSpeech@@QAEXXZ
-    inline void AllocateQueuePlayData()
+    void AllocateQueuePlayData()
     {
         return stub<member_func_t<void, AudSpeech>>(0x510350, this);
     }
 
     // 0x5103F0 | ?PutInQueue@AudSpeech@@AAEXHHM@Z
-    inline void PutInQueue(i32 arg1, i32 arg2, f32 arg3)
+    void PutInQueue(i32 arg1, i32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, AudSpeech, i32, i32, f32>>(0x5103F0, this, arg1, arg2, arg3);
     }
 
     // 0x510450 | ?Play@AudSpeech@@QAEXHM@Z
-    inline void Play(i32 arg1, f32 arg2)
+    void Play(i32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, AudSpeech, i32, f32>>(0x510450, this, arg1, arg2);
     }
 
     // 0x510480 | ?SetVolume@AudSpeech@@QAEXM@Z
-    inline void SetVolume(f32 arg1)
+    void SetVolume(f32 arg1)
     {
         return stub<member_func_t<void, AudSpeech, f32>>(0x510480, this, arg1);
     }
 
     // 0x5104B0 | ?SetStreamVolume@AudSpeech@@AAEXM@Z
-    inline void SetStreamVolume(f32 arg1)
+    void SetStreamVolume(f32 arg1)
     {
         return stub<member_func_t<void, AudSpeech, f32>>(0x5104B0, this, arg1);
     }
 
     // 0x5104D0 | ?SetOneShotVolume@AudSpeech@@AAEXM@Z
-    inline void SetOneShotVolume(f32 arg1)
+    void SetOneShotVolume(f32 arg1)
     {
         return stub<member_func_t<void, AudSpeech, f32>>(0x5104D0, this, arg1);
     }
 
     // 0x510510 | ?PlayStream@AudSpeech@@AAEXHM@Z
-    inline void PlayStream(i32 arg1, f32 arg2)
+    void PlayStream(i32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, AudSpeech, i32, f32>>(0x510510, this, arg1, arg2);
     }
 
     // 0x510570 | ?PlayOneShot@AudSpeech@@AAEXHM@Z
-    inline void PlayOneShot(i32 arg1, f32 arg2)
+    void PlayOneShot(i32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, AudSpeech, i32, f32>>(0x510570, this, arg1, arg2);
     }
 
     // 0x5105E0 | ?IsPlaying@AudSpeech@@QAE_NXZ
-    inline bool IsPlaying()
+    bool IsPlaying()
     {
         return stub<member_func_t<bool, AudSpeech>>(0x5105E0, this);
     }
 
     // 0x510600 | ?Play@AudSpeech@@QAEXHHM@Z
-    inline void Play(i32 arg1, i32 arg2, f32 arg3)
+    void Play(i32 arg1, i32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, AudSpeech, i32, i32, f32>>(0x510600, this, arg1, arg2, arg3);
     }
 
     // 0x510640 | ?PlayStream@AudSpeech@@AAEXHHM@Z
-    inline void PlayStream(i32 arg1, i32 arg2, f32 arg3)
+    void PlayStream(i32 arg1, i32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, AudSpeech, i32, i32, f32>>(0x510640, this, arg1, arg2, arg3);
     }
 
     // 0x5106B0 | ?PlayOneShot@AudSpeech@@AAEXHHM@Z
-    inline void PlayOneShot(i32 arg1, i32 arg2, f32 arg3)
+    void PlayOneShot(i32 arg1, i32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, AudSpeech, i32, i32, f32>>(0x5106B0, this, arg1, arg2, arg3);
     }
 
     // 0x510720 | ?Update@AudSpeech@@QAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, AudSpeech>>(0x510720, this);
     }
 
     // 0x5107F0 | ?EmptyQueue@AudSpeech@@AAEXXZ
-    inline void EmptyQueue()
+    void EmptyQueue()
     {
         return stub<member_func_t<void, AudSpeech>>(0x5107F0, this);
     }
 
     // 0x510840 | ?Stop@AudSpeech@@QAEXXZ
-    inline void Stop()
+    void Stop()
     {
         return stub<member_func_t<void, AudSpeech>>(0x510840, this);
     }
 
     // 0x510890 | ?GetCatAddValue@AudSpeech@@QAEHH@Z
-    inline i32 GetCatAddValue(i32 arg1)
+    i32 GetCatAddValue(i32 arg1)
     {
         return stub<member_func_t<i32, AudSpeech, i32>>(0x510890, this, arg1);
     }
 
     // 0x5108B0 | ?GetEndSufixNumber@AudSpeech@@QAEHH@Z
-    inline i32 GetEndSufixNumber(i32 arg1)
+    i32 GetEndSufixNumber(i32 arg1)
     {
         return stub<member_func_t<i32, AudSpeech, i32>>(0x5108B0, this, arg1);
     }

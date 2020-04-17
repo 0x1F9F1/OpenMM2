@@ -57,13 +57,13 @@ public:
     // crAnimation::`vftable' @ 0x5B63D0
 
     // 0x57CE60 | ??0crAnimation@@QAE@HH@Z
-    inline crAnimation(i32 arg1, i32 arg2)
+    crAnimation(i32 arg1, i32 arg2)
     {
         stub<member_func_t<void, crAnimation, i32, i32>>(0x57CE60, this, arg1, arg2);
     }
 
     // 0x57CF20 | ??0crAnimation@@AAE@XZ
-    inline crAnimation()
+    crAnimation()
     {
         stub<member_func_t<void, crAnimation>>(0x57CF20, this);
     }
@@ -113,85 +113,85 @@ public:
     }
 
     // 0x57D3D0 | ?LoadAnim@crAnimation@@AAE_NPBD_N@Z
-    inline bool LoadAnim(char const* arg1, bool arg2)
+    bool LoadAnim(char const* arg1, bool arg2)
     {
         return stub<member_func_t<bool, crAnimation, char const*, bool>>(0x57D3D0, this, arg1, arg2);
     }
 
     // 0x57D590 | ?SaveAnim@crAnimation@@QAE_NPBD@Z
-    inline bool SaveAnim(char const* arg1)
+    bool SaveAnim(char const* arg1)
     {
         return stub<member_func_t<bool, crAnimation, char const*>>(0x57D590, this, arg1);
     }
 
     // 0x57D670 | ?LoadChanAnim@crAnimation@@AAE_NPBD@Z
-    inline bool LoadChanAnim(char const* arg1)
+    bool LoadChanAnim(char const* arg1)
     {
         return stub<member_func_t<bool, crAnimation, char const*>>(0x57D670, this, arg1);
     }
 
     // 0x57D7B0 | ?Normalize@crAnimation@@QAEX_N@Z
-    inline void Normalize(bool arg1)
+    void Normalize(bool arg1)
     {
         return stub<member_func_t<void, crAnimation, bool>>(0x57D7B0, this, arg1);
     }
 
     // 0x57D810 | ?NormalizeX@crAnimation@@QAEXXZ
-    inline void NormalizeX()
+    void NormalizeX()
     {
         return stub<member_func_t<void, crAnimation>>(0x57D810, this);
     }
 
     // 0x57D860 | ?NormalizeY@crAnimation@@QAEXXZ
-    inline void NormalizeY()
+    void NormalizeY()
     {
         return stub<member_func_t<void, crAnimation>>(0x57D860, this);
     }
 
     // 0x57D8C0 | ?ZeroX@crAnimation@@QAEXXZ
-    inline void ZeroX()
+    void ZeroX()
     {
         return stub<member_func_t<void, crAnimation>>(0x57D8C0, this);
     }
 
     // 0x57D8F0 | ?ZeroY@crAnimation@@QAEXXZ
-    inline void ZeroY()
+    void ZeroY()
     {
         return stub<member_func_t<void, crAnimation>>(0x57D8F0, this);
     }
 
     // 0x57D920 | ?ZeroYSeg@crAnimation@@QAEXHH@Z
-    inline void ZeroYSeg(i32 arg1, i32 arg2)
+    void ZeroYSeg(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, crAnimation, i32, i32>>(0x57D920, this, arg1, arg2);
     }
 
     // 0x57D960 | ?Subtract@crAnimation@@QAEXAAVcrAnimFrame@@@Z
-    inline void Subtract(class crAnimFrame& arg1)
+    void Subtract(class crAnimFrame& arg1)
     {
         return stub<member_func_t<void, crAnimation, class crAnimFrame&>>(0x57D960, this, arg1);
     }
 
     // 0x57D9A0 | ?CopyAnim@crAnimation@@QAEXPAV1@HH@Z
-    inline void CopyAnim(class crAnimation* arg1, i32 arg2, i32 arg3)
+    void CopyAnim(class crAnimation* arg1, i32 arg2, i32 arg3)
     {
         return stub<member_func_t<void, crAnimation, class crAnimation*, i32, i32>>(0x57D9A0, this, arg1, arg2, arg3);
     }
 
     // 0x57DA90 | ?Flip@crAnimation@@QAEXXZ
-    inline void Flip()
+    void Flip()
     {
         return stub<member_func_t<void, crAnimation>>(0x57DA90, this);
     }
 
     // 0x57DAC0 | ?GetBlendFrame@crAnimation@@QBEXAAVcrAnimFrame@@M@Z
-    inline void GetBlendFrame(class crAnimFrame& arg1, f32 arg2)
+    void GetBlendFrame(class crAnimFrame& arg1, f32 arg2)
     {
         return stub<member_func_t<void, crAnimation, class crAnimFrame&, f32>>(0x57DAC0, this, arg1, arg2);
     }
 
     // 0x57CF50 | ??1crAnimation@@UAE@XZ
-    inline ~crAnimation() override
+    ~crAnimation() override
     {
         stub<member_func_t<void, crAnimation>>(0x57CF50, this);
     }

@@ -39,44 +39,44 @@ public:
     // mmToggle::`vftable' @ 0x5B3C6C
 
     // 0x4F39E0 | ??0mmToggle@@QAE@XZ
-    inline mmToggle()
+    mmToggle()
     {
         stub<member_func_t<void, mmToggle>>(0x4F39E0, this);
     }
 
     // 0x4F3A60 | ?Init@mmToggle@@QAEXPADMMMM@Z
-    inline void Init(char* arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
+    void Init(char* arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
     {
         return stub<member_func_t<void, mmToggle, char*, f32, f32, f32, f32>>(
             0x4F3A60, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x4F3B00 | ?LoadBitmap@mmToggle@@AAEXPAD@Z
-    inline void LoadBitmap(char* arg1)
+    void LoadBitmap(char* arg1)
     {
         return stub<member_func_t<void, mmToggle, char*>>(0x4F3B00, this, arg1);
     }
 
     // 0x4F3B40 | ?SetSize@mmToggle@@AAEXMM@Z
-    inline void SetSize(f32 arg1, f32 arg2)
+    void SetSize(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, mmToggle, f32, f32>>(0x4F3B40, this, arg1, arg2);
     }
 
     // 0x4F3A00 | ??1mmToggle@@UAE@XZ
-    inline ~mmToggle() override
+    ~mmToggle() override
     {
         stub<member_func_t<void, mmToggle>>(0x4F3A00, this);
     }
 
     // 0x4F3C10 | ?Cull@mmToggle@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, mmToggle>>(0x4F3C10, this);
     }
 
     // 0x4F3BF0 | ?Update@mmToggle@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmToggle>>(0x4F3BF0, this);
     }

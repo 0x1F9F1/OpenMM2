@@ -37,32 +37,32 @@ public:
     // Dialog_TCPIP::`vftable' @ 0x5B41B4
 
     // 0x4FE620 | ??0Dialog_TCPIP@@QAE@HMMMMPAD@Z
-    inline Dialog_TCPIP(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    Dialog_TCPIP(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
     {
         stub<member_func_t<void, Dialog_TCPIP, i32, f32, f32, f32, f32, char*>>(
             0x4FE620, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4FE7D0 | ?IPAddressCallback@Dialog_TCPIP@@QAEXXZ
-    inline void IPAddressCallback()
+    void IPAddressCallback()
     {
         return stub<member_func_t<void, Dialog_TCPIP>>(0x4FE7D0, this);
     }
 
     // 0x4FE7E0 | ?SetIPAddress@Dialog_TCPIP@@QAEXPAD@Z
-    inline void SetIPAddress(char* arg1)
+    void SetIPAddress(char* arg1)
     {
         return stub<member_func_t<void, Dialog_TCPIP, char*>>(0x4FE7E0, this, arg1);
     }
 
     // 0x4FE7B0 | ??1Dialog_TCPIP@@UAE@XZ
-    inline ~Dialog_TCPIP() override
+    ~Dialog_TCPIP() override
     {
         stub<member_func_t<void, Dialog_TCPIP>>(0x4FE7B0, this);
     }
 
     // 0x4FE7C0 | ?PreSetup@Dialog_TCPIP@@UAEXXZ
-    inline void PreSetup() override
+    void PreSetup() override
     {
         return stub<member_func_t<void, Dialog_TCPIP>>(0x4FE7C0, this);
     }

@@ -58,76 +58,76 @@ public:
     }
 
     // 0x597D00 | ?Draw@modModel@@QBEXPBVMatrix44@@PAVmodShader@@I@Z
-    inline void Draw(class Matrix44 const* arg1, class modShader* arg2, u32 arg3)
+    void Draw(class Matrix44 const* arg1, class modShader* arg2, u32 arg3)
     {
         return stub<member_func_t<void, modModel, class Matrix44 const*, class modShader*, u32>>(
             0x597D00, this, arg1, arg2, arg3);
     }
 
     // 0x597EA0 | ?DrawWithTexGenCoords@modModel@@QBEXPBVMatrix44@@AAVgfxTexture@@I@Z
-    inline void DrawWithTexGenCoords(class Matrix44 const* arg1, class gfxTexture& arg2, u32 arg3)
+    void DrawWithTexGenCoords(class Matrix44 const* arg1, class gfxTexture& arg2, u32 arg3)
     {
         return stub<member_func_t<void, modModel, class Matrix44 const*, class gfxTexture&, u32>>(
             0x597EA0, this, arg1, arg2, arg3);
     }
 
     // 0x597F00 | ?DrawPlain@modModel@@QBEXPBVMatrix44@@I@Z
-    inline void DrawPlain(class Matrix44 const* arg1, u32 arg2)
+    void DrawPlain(class Matrix44 const* arg1, u32 arg2)
     {
         return stub<member_func_t<void, modModel, class Matrix44 const*, u32>>(0x597F00, this, arg1, arg2);
     }
 
     // 0x597FB0 | ?GetBoundingBox@modModel@@QBEXAAVVector3@@0PAVMatrix34@@@Z
-    inline void GetBoundingBox(class Vector3& arg1, class Vector3& arg2, class Matrix34* arg3)
+    void GetBoundingBox(class Vector3& arg1, class Vector3& arg2, class Matrix34* arg3)
     {
         return stub<member_func_t<void, modModel, class Vector3&, class Vector3&, class Matrix34*>>(
             0x597FB0, this, arg1, arg2, arg3);
     }
 
     // 0x598190 | ?GetAdjunctCount@modModel@@QBEHXZ
-    inline i32 GetAdjunctCount()
+    i32 GetAdjunctCount()
     {
         return stub<member_func_t<i32, modModel>>(0x598190, this);
     }
 
     // 0x5981C0 | ?CopyShaders@modModel@@QBEPAVmodShader@@XZ
-    inline class modShader* CopyShaders()
+    class modShader* CopyShaders()
     {
         return stub<member_func_t<class modShader*, modModel>>(0x5981C0, this);
     }
 
     // 0x598230 | ?GetPosition@modModel@@QBEAAVVector3@@AAV2@H@Z
-    inline class Vector3& GetPosition(class Vector3& arg1, i32 arg2)
+    class Vector3& GetPosition(class Vector3& arg1, i32 arg2)
     {
         return stub<member_func_t<class Vector3&, modModel, class Vector3&, i32>>(0x598230, this, arg1, arg2);
     }
 
     // 0x598290 | ?SetPosition@modModel@@QBEXABVVector3@@H@Z
-    inline void SetPosition(class Vector3 const& arg1, i32 arg2)
+    void SetPosition(class Vector3 const& arg1, i32 arg2)
     {
         return stub<member_func_t<void, modModel, class Vector3 const&, i32>>(0x598290, this, arg1, arg2);
     }
 
     // 0x5982F0 | ?LoadAscii@modModel@@AAE_NAAVdatTokenizer@@@Z
-    inline bool LoadAscii(class datTokenizer& arg1)
+    bool LoadAscii(class datTokenizer& arg1)
     {
         return stub<member_func_t<bool, modModel, class datTokenizer&>>(0x5982F0, this, arg1);
     }
 
     // 0x5990F0 | ?LoadBinary@modModel@@AAE_NAAVdatBinTokenizer@@@Z
-    inline bool LoadBinary(class datBinTokenizer& arg1)
+    bool LoadBinary(class datBinTokenizer& arg1)
     {
         return stub<member_func_t<bool, modModel, class datBinTokenizer&>>(0x5990F0, this, arg1);
     }
 
     // 0x5999C0 | ?SaveToBinary@modModel@@AAE_NAAVdatTokenizer@@PAVStream@@@Z
-    inline bool SaveToBinary(class datTokenizer& arg1, class Stream* arg2)
+    bool SaveToBinary(class datTokenizer& arg1, class Stream* arg2)
     {
         return stub<member_func_t<bool, modModel, class datTokenizer&, class Stream*>>(0x5999C0, this, arg1, arg2);
     }
 
     // 0x59A210 | ?SaveToAscii@modModel@@AAE_NAAVdatBinTokenizer@@PAVStream@@@Z
-    inline bool SaveToAscii(class datBinTokenizer& arg1, class Stream* arg2)
+    bool SaveToAscii(class datBinTokenizer& arg1, class Stream* arg2)
     {
         return stub<member_func_t<bool, modModel, class datBinTokenizer&, class Stream*>>(0x59A210, this, arg1, arg2);
     }

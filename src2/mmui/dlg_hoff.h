@@ -40,51 +40,51 @@ public:
     // Dialog_HallOfFame::`vftable' @ 0x5B4000
 
     // 0x4FBA70 | ??0Dialog_HallOfFame@@QAE@HMMMMPAD@Z
-    inline Dialog_HallOfFame(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    Dialog_HallOfFame(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
     {
         stub<member_func_t<void, Dialog_HallOfFame, i32, f32, f32, f32, f32, char*>>(
             0x4FBA70, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4FC040 | ?AddRaceRecord@Dialog_HallOfFame@@QAEXHPAD00H00@Z
-    inline void AddRaceRecord(i32 arg1, char* arg2, char* arg3, char* arg4, i32 arg5, char* arg6, char* arg7)
+    void AddRaceRecord(i32 arg1, char* arg2, char* arg3, char* arg4, i32 arg5, char* arg6, char* arg7)
     {
         return stub<member_func_t<void, Dialog_HallOfFame, i32, char*, char*, char*, i32, char*, char*>>(
             0x4FC040, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x4FC570 | ?ResetRaceRecord@Dialog_HallOfFame@@QAEXXZ
-    inline void ResetRaceRecord()
+    void ResetRaceRecord()
     {
         return stub<member_func_t<void, Dialog_HallOfFame>>(0x4FC570, this);
     }
 
     // 0x4FC600 | ?SortByCity@Dialog_HallOfFame@@QAEXXZ
-    inline void SortByCity()
+    void SortByCity()
     {
         return stub<member_func_t<void, Dialog_HallOfFame>>(0x4FC600, this);
     }
 
     // 0x4FC620 | ?SetSortState@Dialog_HallOfFame@@QAEXXZ
-    inline void SetSortState()
+    void SetSortState()
     {
         return stub<member_func_t<void, Dialog_HallOfFame>>(0x4FC620, this);
     }
 
     // 0x4FC6A0 | ?InitRaceRecord@Dialog_HallOfFame@@QAEXXZ
-    inline void InitRaceRecord()
+    void InitRaceRecord()
     {
         return stub<member_func_t<void, Dialog_HallOfFame>>(0x4FC6A0, this);
     }
 
     // 0x4FBFC0 | ??1Dialog_HallOfFame@@UAE@XZ
-    inline ~Dialog_HallOfFame() override
+    ~Dialog_HallOfFame() override
     {
         stub<member_func_t<void, Dialog_HallOfFame>>(0x4FBFC0, this);
     }
 
     // 0x4FC030 | ?PreSetup@Dialog_HallOfFame@@UAEXXZ
-    inline void PreSetup() override
+    void PreSetup() override
     {
         return stub<member_func_t<void, Dialog_HallOfFame>>(0x4FC030, this);
     }

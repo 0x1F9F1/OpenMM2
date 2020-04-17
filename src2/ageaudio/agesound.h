@@ -132,19 +132,19 @@ public:
     }
 
     // 0x50D580 | ??0AudSoundBase@@QAE@XZ
-    inline AudSoundBase()
+    AudSoundBase()
     {
         stub<member_func_t<void, AudSoundBase>>(0x50D580, this);
     }
 
     // 0x50D5B0 | ??0AudSoundBase@@QAE@PAV0@@Z
-    inline AudSoundBase(class AudSoundBase* arg1)
+    AudSoundBase(class AudSoundBase* arg1)
     {
         stub<member_func_t<void, AudSoundBase, class AudSoundBase*>>(0x50D5B0, this, arg1);
     }
 
     // 0x50D6D0 | ??0AudSoundBase@@QAE@IHF@Z
-    inline AudSoundBase(u32 arg1, i32 arg2, i16 arg3)
+    AudSoundBase(u32 arg1, i32 arg2, i16 arg3)
     {
         stub<member_func_t<void, AudSoundBase, u32, i32, i16>>(0x50D6D0, this, arg1, arg2, arg3);
     }
@@ -156,19 +156,19 @@ public:
     }
 
     // 0x50D8D0 | ?SetSubPath@AudSoundBase@@QAEXPAD@Z
-    inline void SetSubPath(char* arg1)
+    void SetSubPath(char* arg1)
     {
         return stub<member_func_t<void, AudSoundBase, char*>>(0x50D8D0, this, arg1);
     }
 
     // 0x50D900 | ?SetExtension@AudSoundBase@@QAEXPAD@Z
-    inline void SetExtension(char* arg1)
+    void SetExtension(char* arg1)
     {
         return stub<member_func_t<void, AudSoundBase, char*>>(0x50D900, this, arg1);
     }
 
     // 0x50D930 | ?GetSubPathAndExtension@AudSoundBase@@QAEXPAD0@Z
-    inline void GetSubPathAndExtension(char* arg1, char* arg2)
+    void GetSubPathAndExtension(char* arg1, char* arg2)
     {
         return stub<member_func_t<void, AudSoundBase, char*, char*>>(0x50D930, this, arg1, arg2);
     }
@@ -186,145 +186,145 @@ public:
     }
 
     // 0x50DA00 | ?CreateDuplicateObject@AudSoundBase@@AAEPAVaudObject@@H@Z
-    inline class audObject* CreateDuplicateObject(i32 arg1)
+    class audObject* CreateDuplicateObject(i32 arg1)
     {
         return stub<member_func_t<class audObject*, AudSoundBase, i32>>(0x50DA00, this, arg1);
     }
 
     // 0x50DA30 | ?SetVolume@AudSoundBase@@QAEXM@Z
-    inline void SetVolume(f32 arg1)
+    void SetVolume(f32 arg1)
     {
         return stub<member_func_t<void, AudSoundBase, f32>>(0x50DA30, this, arg1);
     }
 
     // 0x50DA90 | ?SetAllVolumes@AudSoundBase@@QAEXM@Z
-    inline void SetAllVolumes(f32 arg1)
+    void SetAllVolumes(f32 arg1)
     {
         return stub<member_func_t<void, AudSoundBase, f32>>(0x50DA90, this, arg1);
     }
 
     // 0x50DAB0 | ?SetFrequency@AudSoundBase@@QAEXM@Z
-    inline void SetFrequency(f32 arg1)
+    void SetFrequency(f32 arg1)
     {
         return stub<member_func_t<void, AudSoundBase, f32>>(0x50DAB0, this, arg1);
     }
 
     // 0x50DB10 | ?SetPriority@AudSoundBase@@QAEXH@Z
-    inline void SetPriority(i32 arg1)
+    void SetPriority(i32 arg1)
     {
         return stub<member_func_t<void, AudSoundBase, i32>>(0x50DB10, this, arg1);
     }
 
     // 0x50DB30 | ?SetPan@AudSoundBase@@QAEXMH@Z
-    inline void SetPan(f32 arg1, i32 arg2)
+    void SetPan(f32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, AudSoundBase, f32, i32>>(0x50DB30, this, arg1, arg2);
     }
 
     // 0x50DB80 | ?SetAllPanning@AudSoundBase@@QAEXM@Z
-    inline void SetAllPanning(f32 arg1)
+    void SetAllPanning(f32 arg1)
     {
         return stub<member_func_t<void, AudSoundBase, f32>>(0x50DB80, this, arg1);
     }
 
     // 0x50DBF0 | ?UpdateEcho@AudSoundBase@@QAEXXZ
-    inline void UpdateEcho()
+    void UpdateEcho()
     {
         return stub<member_func_t<void, AudSoundBase>>(0x50DBF0, this);
     }
 
     // 0x50DC20 | ?DisableEchoEffect@AudSoundBase@@QAEXXZ
-    inline void DisableEchoEffect()
+    void DisableEchoEffect()
     {
         return stub<member_func_t<void, AudSoundBase>>(0x50DC20, this);
     }
 
     // 0x50DC50 | ?SetEffect@AudSoundBase@@QAEXH@Z
-    inline void SetEffect(i32 arg1)
+    void SetEffect(i32 arg1)
     {
         return stub<member_func_t<void, AudSoundBase, i32>>(0x50DC50, this, arg1);
     }
 
     // 0x50DC70 | ?GetEffect@AudSoundBase@@QAEHXZ
-    inline i32 GetEffect()
+    i32 GetEffect()
     {
         return stub<member_func_t<i32, AudSoundBase>>(0x50DC70, this);
     }
 
     // 0x50DC80 | ?DisableEffect@AudSoundBase@@QAEXH@Z
-    inline void DisableEffect(i32 arg1)
+    void DisableEffect(i32 arg1)
     {
         return stub<member_func_t<void, AudSoundBase, i32>>(0x50DC80, this, arg1);
     }
 
     // 0x50DCA0 | ?SetEchoEffect@AudSoundBase@@QAEXXZ
-    inline void SetEchoEffect()
+    void SetEchoEffect()
     {
         return stub<member_func_t<void, AudSoundBase>>(0x50DCA0, this);
     }
 
     // 0x50DD10 | ?SetEchoEffect@AudSoundBase@@AAEXH@Z
-    inline void SetEchoEffect(i32 arg1)
+    void SetEchoEffect(i32 arg1)
     {
         return stub<member_func_t<void, AudSoundBase, i32>>(0x50DD10, this, arg1);
     }
 
     // 0x50DD70 | ?SetEchoAttenuation@AudSoundBase@@QAEXM@Z
-    inline void SetEchoAttenuation(f32 arg1)
+    void SetEchoAttenuation(f32 arg1)
     {
         return stub<member_func_t<void, AudSoundBase, f32>>(0x50DD70, this, arg1);
     }
 
     // 0x50DDB0 | ?SetDelayTime@AudSoundBase@@QAEXM@Z
-    inline void SetDelayTime(f32 arg1)
+    void SetDelayTime(f32 arg1)
     {
         return stub<member_func_t<void, AudSoundBase, f32>>(0x50DDB0, this, arg1);
     }
 
     // 0x50DDF0 | ?SetRamp@AudSoundBase@@QAEXMM@Z
-    inline void SetRamp(f32 arg1, f32 arg2)
+    void SetRamp(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, AudSoundBase, f32, f32>>(0x50DDF0, this, arg1, arg2);
     }
 
     // 0x50DE00 | ?SetEchoFrequency@AudSoundBase@@QAEXMH@Z
-    inline void SetEchoFrequency(f32 arg1, i32 arg2)
+    void SetEchoFrequency(f32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, AudSoundBase, f32, i32>>(0x50DE00, this, arg1, arg2);
     }
 
     // 0x50DE40 | ?SetPositionPtr@AudSoundBase@@QAEXPAVVector3@@@Z
-    inline void SetPositionPtr(class Vector3* arg1)
+    void SetPositionPtr(class Vector3* arg1)
     {
         return stub<member_func_t<void, AudSoundBase, class Vector3*>>(0x50DE40, this, arg1);
     }
 
     // 0x50DE90 | ?Load@AudSoundBase@@QAEHPADH_N@Z
-    inline i32 Load(char* arg1, i32 arg2, bool arg3)
+    i32 Load(char* arg1, i32 arg2, bool arg3)
     {
         return stub<member_func_t<i32, AudSoundBase, char*, i32, bool>>(0x50DE90, this, arg1, arg2, arg3);
     }
 
     // 0x50DFA0 | ?AutoUpdateParamsOff@AudSoundBase@@AAEXH@Z
-    inline void AutoUpdateParamsOff(i32 arg1)
+    void AutoUpdateParamsOff(i32 arg1)
     {
         return stub<member_func_t<void, AudSoundBase, i32>>(0x50DFA0, this, arg1);
     }
 
     // 0x50DFE0 | ?SetupOneShotLayerBuffers@AudSoundBase@@QAEXHMH@Z
-    inline void SetupOneShotLayerBuffers(i32 arg1, f32 arg2, i32 arg3)
+    void SetupOneShotLayerBuffers(i32 arg1, f32 arg2, i32 arg3)
     {
         return stub<member_func_t<void, AudSoundBase, i32, f32, i32>>(0x50DFE0, this, arg1, arg2, arg3);
     }
 
     // 0x50DFF0 | ?ReadyOneShotLayerBuf@AudSoundBase@@QAEHXZ
-    inline i32 ReadyOneShotLayerBuf()
+    i32 ReadyOneShotLayerBuf()
     {
         return stub<member_func_t<i32, AudSoundBase>>(0x50DFF0, this);
     }
 
     // 0x50E020 | ?AllOneShotLayersPlaying@AudSoundBase@@QAEHXZ
-    inline i32 AllOneShotLayersPlaying()
+    i32 AllOneShotLayersPlaying()
     {
         return stub<member_func_t<i32, AudSoundBase>>(0x50E020, this);
     }
@@ -366,67 +366,67 @@ public:
     }
 
     // 0x50E090 | ?PlayOnce@AudSoundBase@@QAEXMM@Z
-    inline void PlayOnce(f32 arg1, f32 arg2)
+    void PlayOnce(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, AudSoundBase, f32, f32>>(0x50E090, this, arg1, arg2);
     }
 
     // 0x50E150 | ?PlayLoop@AudSoundBase@@QAEXMM@Z
-    inline void PlayLoop(f32 arg1, f32 arg2)
+    void PlayLoop(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, AudSoundBase, f32, f32>>(0x50E150, this, arg1, arg2);
     }
 
     // 0x50E1F0 | ?Stop@AudSoundBase@@QAEXXZ
-    inline void Stop()
+    void Stop()
     {
         return stub<member_func_t<void, AudSoundBase>>(0x50E1F0, this);
     }
 
     // 0x50E230 | ?PauseResume@AudSoundBase@@QAEX_N@Z
-    inline void PauseResume(bool arg1)
+    void PauseResume(bool arg1)
     {
         return stub<member_func_t<void, AudSoundBase, bool>>(0x50E230, this, arg1);
     }
 
     // 0x50E250 | ?IsPlaying@AudSoundBase@@QAE_NXZ
-    inline bool IsPlaying()
+    bool IsPlaying()
     {
         return stub<member_func_t<bool, AudSoundBase>>(0x50E250, this);
     }
 
     // 0x50E2C0 | ?SetSoundHandleIndex@AudSoundBase@@QAEXH@Z
-    inline void SetSoundHandleIndex(i32 arg1)
+    void SetSoundHandleIndex(i32 arg1)
     {
         return stub<member_func_t<void, AudSoundBase, i32>>(0x50E2C0, this, arg1);
     }
 
     // 0x50E2D0 | ?GetSoundHandleIndex@AudSoundBase@@QAEHXZ
-    inline i32 GetSoundHandleIndex()
+    i32 GetSoundHandleIndex()
     {
         return stub<member_func_t<i32, AudSoundBase>>(0x50E2D0, this);
     }
 
     // 0x50E2E0 | ?SetPlayPosition@AudSoundBase@@QAEXI@Z
-    inline void SetPlayPosition(u32 arg1)
+    void SetPlayPosition(u32 arg1)
     {
         return stub<member_func_t<void, AudSoundBase, u32>>(0x50E2E0, this, arg1);
     }
 
     // 0x50E2F0 | ?Enable3DMode@AudSoundBase@@QAEXXZ
-    inline void Enable3DMode()
+    void Enable3DMode()
     {
         return stub<member_func_t<void, AudSoundBase>>(0x50E2F0, this);
     }
 
     // 0x50E300 | ?Disable3DMode@AudSoundBase@@QAEXXZ
-    inline void Disable3DMode()
+    void Disable3DMode()
     {
         return stub<member_func_t<void, AudSoundBase>>(0x50E300, this);
     }
 
     // 0x50E310 | ?GetNumSoundHandles@AudSoundBase@@QAEHXZ
-    inline i32 GetNumSoundHandles()
+    i32 GetNumSoundHandles()
     {
         return stub<member_func_t<i32, AudSoundBase>>(0x50E310, this);
     }
@@ -441,13 +441,13 @@ public:
     inline extern_var(0x6B146C, char*, s_pacDefExtension);
 
     // 0x50D7B0 | ??1AudSoundBase@@UAE@XZ
-    inline ~AudSoundBase() override
+    ~AudSoundBase() override
     {
         stub<member_func_t<void, AudSoundBase>>(0x50D7B0, this);
     }
 
     // 0x50DBE0 | ?Update@AudSoundBase@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, AudSoundBase>>(0x50DBE0, this);
     }
@@ -459,49 +459,49 @@ public:
     // AudStreamingMusic::`vftable' @ 0x5B4BE4
 
     // 0x50E810 | ??0AudStreamingMusic@@QAE@AAVAudManagerBase@@@Z
-    inline AudStreamingMusic(class AudManagerBase& arg1)
+    AudStreamingMusic(class AudManagerBase& arg1)
     {
         stub<member_func_t<void, AudStreamingMusic, class AudManagerBase&>>(0x50E810, this, arg1);
     }
 
     // 0x50E8A0 | ?StreamingMusicReleaseControl@AudStreamingMusic@@QAEXXZ
-    inline void StreamingMusicReleaseControl()
+    void StreamingMusicReleaseControl()
     {
         return stub<member_func_t<void, AudStreamingMusic>>(0x50E8A0, this);
     }
 
     // 0x50E910 | ?StreamingMusicInit@AudStreamingMusic@@QAEHPBD@Z
-    inline i32 StreamingMusicInit(char const* arg1)
+    i32 StreamingMusicInit(char const* arg1)
     {
         return stub<member_func_t<i32, AudStreamingMusic, char const*>>(0x50E910, this, arg1);
     }
 
     // 0x50EB40 | ?StreamingMusicPlay@AudStreamingMusic@@QAEHHH_N@Z
-    inline i32 StreamingMusicPlay(i32 arg1, i32 arg2, bool arg3)
+    i32 StreamingMusicPlay(i32 arg1, i32 arg2, bool arg3)
     {
         return stub<member_func_t<i32, AudStreamingMusic, i32, i32, bool>>(0x50EB40, this, arg1, arg2, arg3);
     }
 
     // 0x50EC50 | ?StreamingMusicStop@AudStreamingMusic@@QAEXXZ
-    inline void StreamingMusicStop()
+    void StreamingMusicStop()
     {
         return stub<member_func_t<void, AudStreamingMusic>>(0x50EC50, this);
     }
 
     // 0x50EC60 | ?StreamingMusicUpdate@AudStreamingMusic@@QAEXXZ
-    inline void StreamingMusicUpdate()
+    void StreamingMusicUpdate()
     {
         return stub<member_func_t<void, AudStreamingMusic>>(0x50EC60, this);
     }
 
     // 0x50EC70 | ?StreamingMusicSetVolume@AudStreamingMusic@@QAEXM@Z
-    inline void StreamingMusicSetVolume(f32 arg1)
+    void StreamingMusicSetVolume(f32 arg1)
     {
         return stub<member_func_t<void, AudStreamingMusic, f32>>(0x50EC70, this, arg1);
     }
 
     // 0x50E850 | ??1AudStreamingMusic@@UAE@XZ
-    inline ~AudStreamingMusic() override
+    ~AudStreamingMusic() override
     {
         stub<member_func_t<void, AudStreamingMusic>>(0x50E850, this);
     }
@@ -513,25 +513,25 @@ public:
     // AudStream::`vftable' @ 0x5B4B7C
 
     // 0x50E320 | ??0AudStream@@QAE@IHF@Z
-    inline AudStream(u32 arg1, i32 arg2, i16 arg3)
+    AudStream(u32 arg1, i32 arg2, i16 arg3)
     {
         stub<member_func_t<void, AudStream, u32, i32, i16>>(0x50E320, this, arg1, arg2, arg3);
     }
 
     // 0x50E3D0 | ?SetVolume@AudStream@@QAEXM@Z
-    inline void SetVolume(f32 arg1)
+    void SetVolume(f32 arg1)
     {
         return stub<member_func_t<void, AudStream, f32>>(0x50E3D0, this, arg1);
     }
 
     // 0x50E3F0 | ?PlayOnce@AudStream@@QAE_NPAD@Z
-    inline bool PlayOnce(char* arg1)
+    bool PlayOnce(char* arg1)
     {
         return stub<member_func_t<bool, AudStream, char*>>(0x50E3F0, this, arg1);
     }
 
     // 0x50E3C0 | ??1AudStream@@UAE@XZ
-    inline ~AudStream() override
+    ~AudStream() override
     {
         stub<member_func_t<void, AudStream>>(0x50E3C0, this);
     }
@@ -543,67 +543,67 @@ public:
     // AudMidi::`vftable' @ 0x5B4BB0
 
     // 0x50E4E0 | ??0AudMidi@@QAE@AAVAudManagerBase@@@Z
-    inline AudMidi(class AudManagerBase& arg1)
+    AudMidi(class AudManagerBase& arg1)
     {
         stub<member_func_t<void, AudMidi, class AudManagerBase&>>(0x50E4E0, this, arg1);
     }
 
     // 0x50E610 | ?MidiZeroPointers@AudMidi@@QAEXXZ
-    inline void MidiZeroPointers()
+    void MidiZeroPointers()
     {
         return stub<member_func_t<void, AudMidi>>(0x50E610, this);
     }
 
     // 0x50E620 | ?MidiLoad@AudMidi@@QAEHPAD0@Z
-    inline i32 MidiLoad(char* arg1, char* arg2)
+    i32 MidiLoad(char* arg1, char* arg2)
     {
         return stub<member_func_t<i32, AudMidi, char*, char*>>(0x50E620, this, arg1, arg2);
     }
 
     // 0x50E720 | ?MidiPlay@AudMidi@@QAEHMM@Z
-    inline i32 MidiPlay(f32 arg1, f32 arg2)
+    i32 MidiPlay(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<i32, AudMidi, f32, f32>>(0x50E720, this, arg1, arg2);
     }
 
     // 0x50E770 | ?MidiRewind@AudMidi@@QAEXXZ
-    inline void MidiRewind()
+    void MidiRewind()
     {
         return stub<member_func_t<void, AudMidi>>(0x50E770, this);
     }
 
     // 0x50E780 | ?MidiSetTempo@AudMidi@@QAEXM@Z
-    inline void MidiSetTempo(f32 arg1)
+    void MidiSetTempo(f32 arg1)
     {
         return stub<member_func_t<void, AudMidi, f32>>(0x50E780, this, arg1);
     }
 
     // 0x50E7A0 | ?MidiSetVolume@AudMidi@@QAEXM@Z
-    inline void MidiSetVolume(f32 arg1)
+    void MidiSetVolume(f32 arg1)
     {
         return stub<member_func_t<void, AudMidi, f32>>(0x50E7A0, this, arg1);
     }
 
     // 0x50E7C0 | ?MidiPauseResume@AudMidi@@QAEX_N@Z
-    inline void MidiPauseResume(bool arg1)
+    void MidiPauseResume(bool arg1)
     {
         return stub<member_func_t<void, AudMidi, bool>>(0x50E7C0, this, arg1);
     }
 
     // 0x50E7E0 | ?MidiStop@AudMidi@@QAEXXZ
-    inline void MidiStop()
+    void MidiStop()
     {
         return stub<member_func_t<void, AudMidi>>(0x50E7E0, this);
     }
 
     // 0x50E7F0 | ?MidiUpdate@AudMidi@@QAEXXZ
-    inline void MidiUpdate()
+    void MidiUpdate()
     {
         return stub<member_func_t<void, AudMidi>>(0x50E7F0, this);
     }
 
     // 0x50E590 | ??1AudMidi@@UAE@XZ
-    inline ~AudMidi() override
+    ~AudMidi() override
     {
         stub<member_func_t<void, AudMidi>>(0x50E590, this);
     }

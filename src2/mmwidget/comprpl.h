@@ -44,80 +44,80 @@ public:
     // mmCompReplay::`vftable' @ 0x5B8894
 
     // 0x59EC50 | ??0mmCompReplay@@QAE@XZ
-    inline mmCompReplay()
+    mmCompReplay()
     {
         stub<member_func_t<void, mmCompReplay>>(0x59EC50, this);
     }
 
     // 0x59ECD0 | ?Init@mmCompReplay@@QAEXPAD@Z
-    inline void Init(char* arg1)
+    void Init(char* arg1)
     {
         return stub<member_func_t<void, mmCompReplay, char*>>(0x59ECD0, this, arg1);
     }
 
     // 0x59ECF0 | ?InitTitle@mmCompReplay@@QAEXMMMMPAULocString@@@Z
-    inline void InitTitle(f32 arg1, f32 arg2, f32 arg3, f32 arg4, struct LocString* arg5)
+    void InitTitle(f32 arg1, f32 arg2, f32 arg3, f32 arg4, struct LocString* arg5)
     {
         return stub<member_func_t<void, mmCompReplay, f32, f32, f32, f32, struct LocString*>>(
             0x59ECF0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x59ED50 | ?SetSubwidgetGeometry@mmCompReplay@@QAEXXZ
-    inline void SetSubwidgetGeometry()
+    void SetSubwidgetGeometry()
     {
         return stub<member_func_t<void, mmCompReplay>>(0x59ED50, this);
     }
 
     // 0x59ED70 | ?SetTitleGeometry@mmCompReplay@@QAEXXZ
-    inline void SetTitleGeometry()
+    void SetTitleGeometry()
     {
         return stub<member_func_t<void, mmCompReplay>>(0x59ED70, this);
     }
 
     // 0x59EC70 | ??1mmCompReplay@@UAE@XZ
-    inline ~mmCompReplay() override
+    ~mmCompReplay() override
     {
         stub<member_func_t<void, mmCompReplay>>(0x59EC70, this);
     }
 
     // 0x59EE50 | ?Cull@mmCompReplay@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, mmCompReplay>>(0x59EE50, this);
     }
 
     // 0x59ED40 | ?Update@mmCompReplay@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmCompReplay>>(0x59ED40, this);
     }
 
     // 0x59ED30 | ?Reset@mmCompReplay@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, mmCompReplay>>(0x59ED30, this);
     }
 
     // 0x59EDD0 | ?Highlight@mmCompReplay@@UAEXPAVmmTextNode@@H@Z
-    inline void Highlight(class mmTextNode* arg1, i32 arg2) override
+    void Highlight(class mmTextNode* arg1, i32 arg2) override
     {
         return stub<member_func_t<void, mmCompReplay, class mmTextNode*, i32>>(0x59EDD0, this, arg1, arg2);
     }
 
     // 0x59EDF0 | ?Box@mmCompReplay@@UAEXHPAVmmTextNode@@H@Z
-    inline void Box(i32 arg1, class mmTextNode* arg2, i32 arg3) override
+    void Box(i32 arg1, class mmTextNode* arg2, i32 arg3) override
     {
         return stub<member_func_t<void, mmCompReplay, i32, class mmTextNode*, i32>>(0x59EDF0, this, arg1, arg2, arg3);
     }
 
     // 0x59EE20 | ?SetGeometry@mmCompReplay@@UAEXMMMM@Z
-    inline void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4) override
+    void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4) override
     {
         return stub<member_func_t<void, mmCompReplay, f32, f32, f32, f32>>(0x59EE20, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x59ED90 | ?SetPosition@mmCompReplay@@UAEXPAVmmTextNode@@HM@Z
-    inline void SetPosition(class mmTextNode* arg1, i32 arg2, f32 arg3) override
+    void SetPosition(class mmTextNode* arg1, i32 arg2, f32 arg3) override
     {
         return stub<member_func_t<void, mmCompReplay, class mmTextNode*, i32, f32>>(0x59ED90, this, arg1, arg2, arg3);
     }

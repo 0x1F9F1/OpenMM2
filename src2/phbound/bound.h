@@ -48,49 +48,49 @@ public:
     // phBound::`vftable' @ 0x5B22F0
 
     // 0x4871B0 | ??0phBound@@QAE@H@Z
-    inline phBound(i32 arg1)
+    phBound(i32 arg1)
     {
         stub<member_func_t<void, phBound, i32>>(0x4871B0, this, arg1);
     }
 
     // 0x487200 | ?CalculateSphereFromBoundingBox@phBound@@QAEXXZ
-    inline void CalculateSphereFromBoundingBox()
+    void CalculateSphereFromBoundingBox()
     {
         return stub<member_func_t<void, phBound>>(0x487200, this);
     }
 
     // 0x4872B0 | ?IsOffset@phBound@@QBE?B_NXZ
-    inline bool const IsOffset()
+    bool const IsOffset()
     {
         return stub<member_func_t<bool const, phBound>>(0x4872B0, this);
     }
 
     // 0x4872C0 | ?SetOffset@phBound@@QAEXABVVector3@@@Z
-    inline void SetOffset(class Vector3 const& arg1)
+    void SetOffset(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, phBound, class Vector3 const&>>(0x4872C0, this, arg1);
     }
 
     // 0x487320 | ?GetCenter@phBound@@QBEXPBVMatrix34@@PAVVector3@@@Z
-    inline void GetCenter(class Matrix34 const* arg1, class Vector3* arg2)
+    void GetCenter(class Matrix34 const* arg1, class Vector3* arg2)
     {
         return stub<member_func_t<void, phBound, class Matrix34 const*, class Vector3*>>(0x487320, this, arg1, arg2);
     }
 
     // 0x4873A0 | ?GetCenter@phBound@@QBE?AVVector3@@PBVMatrix34@@@Z
-    inline class Vector3 GetCenter(class Matrix34 const* arg1)
+    class Vector3 GetCenter(class Matrix34 const* arg1)
     {
         return stub<member_func_t<class Vector3, phBound, class Matrix34 const*>>(0x4873A0, this, arg1);
     }
 
     // 0x487450 | ?SetPenetration@phBound@@QAEXXZ
-    inline void SetPenetration()
+    void SetPenetration()
     {
         return stub<member_func_t<void, phBound>>(0x487450, this);
     }
 
     // 0x4874D0 | ?SetFlexibility@phBound@@QAEXM@Z
-    inline void SetFlexibility(f32 arg1)
+    void SetFlexibility(f32 arg1)
     {
         return stub<member_func_t<void, phBound, f32>>(0x4874D0, this, arg1);
     }
@@ -104,113 +104,112 @@ public:
     }
 
     // 0x487540 | ?GetFricElas@phBound@@QBEXPBVphIntersection@@PAM1@Z
-    inline void GetFricElas(class phIntersection const* arg1, f32* arg2, f32* arg3)
+    void GetFricElas(class phIntersection const* arg1, f32* arg2, f32* arg3)
     {
         return stub<member_func_t<void, phBound, class phIntersection const*, f32*, f32*>>(
             0x487540, this, arg1, arg2, arg3);
     }
 
     // 0x4875B0 | ?TestSegment@phBound@@QBEHAAVphSegment@@PAVphIntersection@@H@Z
-    inline i32 TestSegment(class phSegment& arg1, class phIntersection* arg2, i32 arg3)
+    i32 TestSegment(class phSegment& arg1, class phIntersection* arg2, i32 arg3)
     {
         return stub<member_func_t<i32, phBound, class phSegment&, class phIntersection*, i32>>(
             0x4875B0, this, arg1, arg2, arg3);
     }
 
     // 0x487630 | ?TestSegmentPoint@phBound@@QBEHAAVphSegment@@PAVphIntersectionPoint@@H@Z
-    inline i32 TestSegmentPoint(class phSegment& arg1, class phIntersectionPoint* arg2, i32 arg3)
+    i32 TestSegmentPoint(class phSegment& arg1, class phIntersectionPoint* arg2, i32 arg3)
     {
         return stub<member_func_t<i32, phBound, class phSegment&, class phIntersectionPoint*, i32>>(
             0x487630, this, arg1, arg2, arg3);
     }
 
     // 0x4872A0 | ?CenterBound@phBound@@UAEXXZ
-    virtual inline void CenterBound()
+    virtual void CenterBound()
     {
         return stub<member_func_t<void, phBound>>(0x4872A0, this);
     }
 
     // 0x582519 | __purecall
-    virtual inline class phMaterial const* GetMaterial(i32 arg1)
+    virtual class phMaterial const* GetMaterial(i32 arg1)
     {
         return stub<member_func_t<class phMaterial const*, phBound, i32>>(0x582519, this, arg1);
     }
 
     // 0x45CF30 | ?GetNumMaterials@phBound@@UBEHXZ
-    virtual inline i32 GetNumMaterials()
+    virtual i32 GetNumMaterials()
     {
         return stub<member_func_t<i32, phBound>>(0x45CF30, this);
     }
 
     // 0x45CF60 | ?SetFriction@phBound@@UAEMXZ
-    virtual inline f32 SetFriction()
+    virtual f32 SetFriction()
     {
         return stub<member_func_t<f32, phBound>>(0x45CF60, this);
     }
 
     // 0x45CF40 | ?SetFriction@phBound@@UAEXM@Z
-    virtual inline void SetFriction(f32 arg1)
+    virtual void SetFriction(f32 arg1)
     {
         return stub<member_func_t<void, phBound, f32>>(0x45CF40, this, arg1);
     }
 
     // 0x45CF70 | ?SetElasticity@phBound@@UAEMXZ
-    virtual inline f32 SetElasticity()
+    virtual f32 SetElasticity()
     {
         return stub<member_func_t<f32, phBound>>(0x45CF70, this);
     }
 
     // 0x45CF50 | ?SetElasticity@phBound@@UAEXM@Z
-    virtual inline void SetElasticity(f32 arg1)
+    virtual void SetElasticity(f32 arg1)
     {
         return stub<member_func_t<void, phBound, f32>>(0x45CF50, this, arg1);
     }
 
     // 0x582519 | __purecall
-    virtual inline bool TestProbePoint(class phSegment& arg1, class phIntersectionPoint* arg2, f32 arg3)
+    virtual bool TestProbePoint(class phSegment& arg1, class phIntersectionPoint* arg2, f32 arg3)
     {
         return stub<member_func_t<bool, phBound, class phSegment&, class phIntersectionPoint*, f32>>(
             0x582519, this, arg1, arg2, arg3);
     }
 
     // 0x582519 | __purecall
-    virtual inline bool TestAIPoint(class phSegment& arg1, class phIntersectionPoint* arg2)
+    virtual bool TestAIPoint(class phSegment& arg1, class phIntersectionPoint* arg2)
     {
         return stub<member_func_t<bool, phBound, class phSegment&, class phIntersectionPoint*>>(
             0x582519, this, arg1, arg2);
     }
 
     // 0x582519 | __purecall
-    virtual inline i32 TestEdge(class phSegment& arg1, class phIntersection* arg2, i32 arg3)
+    virtual i32 TestEdge(class phSegment& arg1, class phIntersection* arg2, i32 arg3)
     {
         return stub<member_func_t<i32, phBound, class phSegment&, class phIntersection*, i32>>(
             0x582519, this, arg1, arg2, arg3);
     }
 
     // 0x582519 | __purecall
-    virtual inline bool TestProbe(class phSegment& arg1, class phIntersection* arg2, f32 arg3)
+    virtual bool TestProbe(class phSegment& arg1, class phIntersection* arg2, f32 arg3)
     {
         return stub<member_func_t<bool, phBound, class phSegment&, class phIntersection*, f32>>(
             0x582519, this, arg1, arg2, arg3);
     }
 
     // 0x4876C0 | ?TestSphere@phBound@@UBE_NABVVector3@@MAAVphImpactBase@@@Z
-    virtual inline bool TestSphere(class Vector3 const& arg1, f32 arg2, class phImpactBase& arg3)
+    virtual bool TestSphere(class Vector3 const& arg1, f32 arg2, class phImpactBase& arg3)
     {
         return stub<member_func_t<bool, phBound, class Vector3 const&, f32, class phImpactBase&>>(
             0x4876C0, this, arg1, arg2, arg3);
     }
 
     // 0x4876B0 | ?TestSphere@phBound@@UBE_NABVVector3@@MAAV2@1AAM@Z
-    virtual inline bool TestSphere(
-        class Vector3 const& arg1, f32 arg2, class Vector3& arg3, class Vector3& arg4, f32& arg5)
+    virtual bool TestSphere(class Vector3 const& arg1, f32 arg2, class Vector3& arg3, class Vector3& arg4, f32& arg5)
     {
         return stub<member_func_t<bool, phBound, class Vector3 const&, f32, class Vector3&, class Vector3&, f32&>>(
             0x4876B0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x45CF90 | ?ModifyInvMassMatrix@phBound@@UBEXPAVMatrix34@@HABVVector3@@1@Z
-    virtual inline void ModifyInvMassMatrix(
+    virtual void ModifyInvMassMatrix(
         class Matrix34* arg1, i32 arg2, class Vector3 const& arg3, class Vector3 const& arg4)
     {
         return stub<member_func_t<void, phBound, class Matrix34*, i32, class Vector3 const&, class Vector3 const&>>(
@@ -218,21 +217,21 @@ public:
     }
 
     // 0x45CF80 | ?ModifyInvMassMatrix@phBound@@UBEXPAVMatrix34@@HABVVector3@@@Z
-    virtual inline void ModifyInvMassMatrix(class Matrix34* arg1, i32 arg2, class Vector3 const& arg3)
+    virtual void ModifyInvMassMatrix(class Matrix34* arg1, i32 arg2, class Vector3 const& arg3)
     {
         return stub<member_func_t<void, phBound, class Matrix34*, i32, class Vector3 const&>>(
             0x45CF80, this, arg1, arg2, arg3);
     }
 
     // 0x45CFA0 | ?EffectiveMass@phBound@@UBEMABVVector3@@0HM@Z
-    virtual inline f32 EffectiveMass(class Vector3 const& arg1, class Vector3 const& arg2, i32 arg3, f32 arg4)
+    virtual f32 EffectiveMass(class Vector3 const& arg1, class Vector3 const& arg2, i32 arg3, f32 arg4)
     {
         return stub<member_func_t<f32, phBound, class Vector3 const&, class Vector3 const&, i32, f32>>(
             0x45CFA0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x487730 | ?GetVertex@phBound@@UBEABVVector3@@H@Z
-    virtual inline class Vector3 const& GetVertex(i32 arg1)
+    virtual class Vector3 const& GetVertex(i32 arg1)
     {
         return stub<member_func_t<class Vector3 const&, phBound, i32>>(0x487730, this, arg1);
     }

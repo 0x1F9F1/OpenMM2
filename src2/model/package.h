@@ -41,55 +41,55 @@ class modPackage
 {
 public:
     // 0x4A46D0 | ??0modPackage@@QAE@XZ
-    inline modPackage()
+    modPackage()
     {
         stub<member_func_t<void, modPackage>>(0x4A46D0, this);
     }
 
     // 0x4A46F0 | ??1modPackage@@QAE@XZ
-    inline ~modPackage()
+    ~modPackage()
     {
         stub<member_func_t<void, modPackage>>(0x4A46F0, this);
     }
 
     // 0x4A4700 | ?Open@modPackage@@QAE_NPBD0@Z
-    inline bool Open(char const* arg1, char const* arg2)
+    bool Open(char const* arg1, char const* arg2)
     {
         return stub<member_func_t<bool, modPackage, char const*, char const*>>(0x4A4700, this, arg1, arg2);
     }
 
     // 0x4A4790 | ?Close@modPackage@@QAEXXZ
-    inline void Close()
+    void Close()
     {
         return stub<member_func_t<void, modPackage>>(0x4A4790, this);
     }
 
     // 0x4A47B0 | ?OpenFile@modPackage@@QAEPAVStream@@PBD@Z
-    inline class Stream* OpenFile(char const* arg1)
+    class Stream* OpenFile(char const* arg1)
     {
         return stub<member_func_t<class Stream*, modPackage, char const*>>(0x4A47B0, this, arg1);
     }
 
     // 0x4A4800 | ?CloseFile@modPackage@@QAEXXZ
-    inline void CloseFile()
+    void CloseFile()
     {
         return stub<member_func_t<void, modPackage>>(0x4A4800, this);
     }
 
     // 0x4A4820 | ?NextItem@modPackage@@AAEXXZ
-    inline void NextItem()
+    void NextItem()
     {
         return stub<member_func_t<void, modPackage>>(0x4A4820, this);
     }
 
     // 0x4A48D0 | ?SkipTo@modPackage@@QAEXPBD@Z
-    inline void SkipTo(char const* arg1)
+    void SkipTo(char const* arg1)
     {
         return stub<member_func_t<void, modPackage, char const*>>(0x4A48D0, this, arg1);
     }
 
     // 0x4A4970 | ?Skip@modPackage@@QAEXXZ
-    inline void Skip()
+    void Skip()
     {
         return stub<member_func_t<void, modPackage>>(0x4A4970, this);
     }

@@ -41,55 +41,55 @@ public:
     // UIIcon::`vftable' @ 0x5B37DC
 
     // 0x4ED880 | ??0UIIcon@@QAE@XZ
-    inline UIIcon()
+    UIIcon()
     {
         stub<member_func_t<void, UIIcon>>(0x4ED880, this);
     }
 
     // 0x4ED8E0 | ?Init@UIIcon@@QAEXPADMM@Z
-    inline void Init(char* arg1, f32 arg2, f32 arg3)
+    void Init(char* arg1, f32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, UIIcon, char*, f32, f32>>(0x4ED8E0, this, arg1, arg2, arg3);
     }
 
     // 0x4ED920 | ?LoadBitchmap@UIIcon@@QAEXPAD@Z
-    inline void LoadBitchmap(char* arg1)
+    void LoadBitchmap(char* arg1)
     {
         return stub<member_func_t<void, UIIcon, char*>>(0x4ED920, this, arg1);
     }
 
     // 0x4ED930 | ?LoadBitmap@UIIcon@@QAEXPAD@Z
-    inline void LoadBitmap(char* arg1)
+    void LoadBitmap(char* arg1)
     {
         return stub<member_func_t<void, UIIcon, char*>>(0x4ED930, this, arg1);
     }
 
     // 0x4ED970 | ?GetHitArea@UIIcon@@QAEXAAM0@Z
-    inline void GetHitArea(f32& arg1, f32& arg2)
+    void GetHitArea(f32& arg1, f32& arg2)
     {
         return stub<member_func_t<void, UIIcon, f32&, f32&>>(0x4ED970, this, arg1, arg2);
     }
 
     // 0x4ED8D0 | ??1UIIcon@@UAE@XZ
-    inline ~UIIcon() override
+    ~UIIcon() override
     {
         stub<member_func_t<void, UIIcon>>(0x4ED8D0, this);
     }
 
     // 0x4EDA10 | ?Cull@UIIcon@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, UIIcon>>(0x4EDA10, this);
     }
 
     // 0x4ED9F0 | ?Update@UIIcon@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, UIIcon>>(0x4ED9F0, this);
     }
 
     // 0x4ED9B0 | ?Switch@UIIcon@@UAEXH@Z
-    inline void Switch(i32 arg1) override
+    void Switch(i32 arg1) override
     {
         return stub<member_func_t<void, UIIcon, i32>>(0x4ED9B0, this, arg1);
     }

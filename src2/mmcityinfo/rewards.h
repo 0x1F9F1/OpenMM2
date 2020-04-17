@@ -37,7 +37,7 @@ class mmRewardRecord
 {
 public:
     // 0x433F30 | ??1mmRewardRecord@@QAE@XZ
-    inline ~mmRewardRecord()
+    ~mmRewardRecord()
     {
         stub<member_func_t<void, mmRewardRecord>>(0x433F30, this);
     }
@@ -46,7 +46,7 @@ public:
     // Skipped (scalar/vector destructor)
 
     // 0x524140 | ??0mmRewardRecord@@QAE@XZ
-    inline mmRewardRecord()
+    mmRewardRecord()
     {
         stub<member_func_t<void, mmRewardRecord>>(0x524140, this);
     }
@@ -56,31 +56,31 @@ struct mmRewardList
 {
 public:
     // 0x5238E0 | ??0mmRewardList@@QAE@XZ
-    inline mmRewardList()
+    mmRewardList()
     {
         stub<member_func_t<void, mmRewardList>>(0x5238E0, this);
     }
 
     // 0x5238F0 | ??1mmRewardList@@QAE@XZ
-    inline ~mmRewardList()
+    ~mmRewardList()
     {
         stub<member_func_t<void, mmRewardList>>(0x5238F0, this);
     }
 
     // 0x523930 | ?Init@mmRewardList@@QAEXH@Z
-    inline void Init(i32 arg1)
+    void Init(i32 arg1)
     {
         return stub<member_func_t<void, mmRewardList, i32>>(0x523930, this, arg1);
     }
 
     // 0x5239B0 | ?Load@mmRewardList@@QAE_NPAD00@Z
-    inline bool Load(char* arg1, char* arg2, char* arg3)
+    bool Load(char* arg1, char* arg2, char* arg3)
     {
         return stub<member_func_t<bool, mmRewardList, char*, char*, char*>>(0x5239B0, this, arg1, arg2, arg3);
     }
 
     // 0x523C90 | ?GetRecord@mmRewardList@@QAEPAVmmRewardRecord@@H@Z
-    inline class mmRewardRecord* GetRecord(i32 arg1)
+    class mmRewardRecord* GetRecord(i32 arg1)
     {
         return stub<member_func_t<class mmRewardRecord*, mmRewardList, i32>>(0x523C90, this, arg1);
     }

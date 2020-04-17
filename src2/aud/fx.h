@@ -30,20 +30,20 @@ class audFX
 {
 public:
     // 0x5A3860 | ?Create@audFX@@QAEPAV1@PAVaudManager@@PAVaudObject@@@Z
-    inline class audFX* Create(class audManager* arg1, class audObject* arg2)
+    class audFX* Create(class audManager* arg1, class audObject* arg2)
     {
         return stub<member_func_t<class audFX*, audFX, class audManager*, class audObject*>>(
             0x5A3860, this, arg1, arg2);
     }
 
     // 0x5A3890 | ?Destroy@audFX@@QAEXXZ
-    inline void Destroy()
+    void Destroy()
     {
         return stub<member_func_t<void, audFX>>(0x5A3890, this);
     }
 
     // 0x5A38C0 | ?EnablePCEcho@audFX@@QAEPAVEchoEffect@@KH@Z
-    inline class EchoEffect* EnablePCEcho(u32 arg1, i32 arg2)
+    class EchoEffect* EnablePCEcho(u32 arg1, i32 arg2)
     {
         return stub<member_func_t<class EchoEffect*, audFX, u32, i32>>(0x5A38C0, this, arg1, arg2);
     }

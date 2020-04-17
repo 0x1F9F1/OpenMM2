@@ -38,68 +38,68 @@ struct dgLink
 {
 public:
     // 0x5A81D0 | ??0dgLink@@QAE@XZ
-    inline dgLink()
+    dgLink()
     {
         stub<member_func_t<void, dgLink>>(0x5A81D0, this);
     }
 
     // 0x5A8200 | ?Init@dgLink@@QAEXAAVdgLinkData@@AAVcrIKGoal@@AAVVector3@@AAVdgRagdoll@@@Z
-    inline void Init(class dgLinkData& arg1, class crIKGoal& arg2, class Vector3& arg3, class dgRagdoll& arg4)
+    void Init(class dgLinkData& arg1, class crIKGoal& arg2, class Vector3& arg3, class dgRagdoll& arg4)
     {
         return stub<member_func_t<void, dgLink, class dgLinkData&, class crIKGoal&, class Vector3&, class dgRagdoll&>>(
             0x5A8200, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x5A8220 | ?Reset@dgLink@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, dgLink>>(0x5A8220, this);
     }
 
     // 0x5A8250 | ?ResetGoal@dgLink@@QAEXXZ
-    inline void ResetGoal()
+    void ResetGoal()
     {
         return stub<member_func_t<void, dgLink>>(0x5A8250, this);
     }
 
     // 0x5A8270 | ?SetMode@dgLink@@QAEXH@Z
-    inline void SetMode(i32 arg1)
+    void SetMode(i32 arg1)
     {
         return stub<member_func_t<void, dgLink, i32>>(0x5A8270, this, arg1);
     }
 
     // 0x5A82A0 | ?Update@dgLink@@QAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, dgLink>>(0x5A82A0, this);
     }
 
     // 0x5A82E0 | ?UpdateFree@dgLink@@QAEXXZ
-    inline void UpdateFree()
+    void UpdateFree()
     {
         return stub<member_func_t<void, dgLink>>(0x5A82E0, this);
     }
 
     // 0x5A8540 | ?Bounce@dgLink@@QAEXAAVVector3@@0@Z
-    inline void Bounce(class Vector3& arg1, class Vector3& arg2)
+    void Bounce(class Vector3& arg1, class Vector3& arg2)
     {
         return stub<member_func_t<void, dgLink, class Vector3&, class Vector3&>>(0x5A8540, this, arg1, arg2);
     }
 
     // 0x5A8620 | ?UpdateGrasp@dgLink@@QAEXXZ
-    inline void UpdateGrasp()
+    void UpdateGrasp()
     {
         return stub<member_func_t<void, dgLink>>(0x5A8620, this);
     }
 
     // 0x5A8630 | ?UpdateDamping@dgLink@@QAEXXZ
-    inline void UpdateDamping()
+    void UpdateDamping()
     {
         return stub<member_func_t<void, dgLink>>(0x5A8630, this);
     }
 
     // 0x5A87B0 | ?UpdateTendon@dgLink@@QAEXXZ
-    inline void UpdateTendon()
+    void UpdateTendon()
     {
         return stub<member_func_t<void, dgLink>>(0x5A87B0, this);
     }

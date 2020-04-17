@@ -42,73 +42,73 @@ public:
     // Skipped (scalar/vector destructor)
 
     // 0x52EEB0 | ??0mmIO@@QAE@XZ
-    inline mmIO()
+    mmIO()
     {
         stub<member_func_t<void, mmIO>>(0x52EEB0, this);
     }
 
     // 0x52EED0 | ??1mmIO@@QAE@XZ
-    inline ~mmIO()
+    ~mmIO()
     {
         stub<member_func_t<void, mmIO>>(0x52EED0, this);
     }
 
     // 0x52EEE0 | ?Clear@mmIO@@QAEXXZ
-    inline void Clear()
+    void Clear()
     {
         return stub<member_func_t<void, mmIO>>(0x52EEE0, this);
     }
 
     // 0x52EF00 | ?Init@mmIO@@QAEXPADHJ@Z
-    inline void Init(char* arg1, i32 arg2, i32 arg3)
+    void Init(char* arg1, i32 arg2, i32 arg3)
     {
         return stub<member_func_t<void, mmIO, char*, i32, i32>>(0x52EF00, this, arg1, arg2, arg3);
     }
 
     // 0x52EF60 | ?InitDev@mmIO@@QAEXH_JHHH@Z
-    inline void InitDev(i32 arg1, i64 arg2, i32 arg3, i32 arg4, i32 arg5)
+    void InitDev(i32 arg1, i64 arg2, i32 arg3, i32 arg4, i32 arg5)
     {
         return stub<member_func_t<void, mmIO, i32, i64, i32, i32, i32>>(0x52EF60, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x52F010 | ?Assign@mmIO@@QAEXHH@Z
-    inline void Assign(i32 arg1, i32 arg2)
+    void Assign(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, mmIO, i32, i32>>(0x52F010, this, arg1, arg2);
     }
 
     // 0x52F070 | ??8mmIO@@QAEHPATeqEvent@@@Z
-    inline i32 operator==(union eqEvent* arg1)
+    i32 operator==(union eqEvent* arg1)
     {
         return stub<member_func_t<i32, mmIO, union eqEvent*>>(0x52F070, this, arg1);
     }
 
     // 0x52F0C0 | ?GetDescription@mmIO@@QAEXPAD@Z
-    inline void GetDescription(char* arg1)
+    void GetDescription(char* arg1)
     {
         return stub<member_func_t<void, mmIO, char*>>(0x52F0C0, this, arg1);
     }
 
     // 0x52F110 | ?Write@mmIO@@QAEHPAVStream@@@Z
-    inline i32 Write(class Stream* arg1)
+    i32 Write(class Stream* arg1)
     {
         return stub<member_func_t<i32, mmIO, class Stream*>>(0x52F110, this, arg1);
     }
 
     // 0x52F150 | ?Read@mmIO@@QAEHPAVStream@@@Z
-    inline i32 Read(class Stream* arg1)
+    i32 Read(class Stream* arg1)
     {
         return stub<member_func_t<i32, mmIO, class Stream*>>(0x52F150, this, arg1);
     }
 
     // 0x52F220 | ?CompareComponent@mmIO@@QAEHH@Z
-    inline i32 CompareComponent(i32 arg1)
+    i32 CompareComponent(i32 arg1)
     {
         return stub<member_func_t<i32, mmIO, i32>>(0x52F220, this, arg1);
     }
 
     // 0x52F2F0 | ?ForceSettingAcrossConfigs@mmIO@@QAEXH@Z
-    inline void ForceSettingAcrossConfigs(i32 arg1)
+    void ForceSettingAcrossConfigs(i32 arg1)
     {
         return stub<member_func_t<void, mmIO, i32>>(0x52F2F0, this, arg1);
     }

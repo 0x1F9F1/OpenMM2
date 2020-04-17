@@ -71,13 +71,13 @@ public:
     // Skipped (scalar/vector destructor)
 
     // 0x59AB80 | ??0ltLight@@QAE@XZ
-    inline ltLight()
+    ltLight()
     {
         stub<member_func_t<void, ltLight>>(0x59AB80, this);
     }
 
     // 0x59ABC0 | ??1ltLight@@QAE@XZ
-    inline ~ltLight()
+    ~ltLight()
     {
         stub<member_func_t<void, ltLight>>(0x59ABC0, this);
     }
@@ -89,25 +89,25 @@ public:
     }
 
     // 0x59ABF0 | ?Default@ltLight@@QAEXXZ
-    inline void Default()
+    void Default()
     {
         return stub<member_func_t<void, ltLight>>(0x59ABF0, this);
     }
 
     // 0x59AC40 | ?Random@ltLight@@QAEXXZ
-    inline void Random()
+    void Random()
     {
         return stub<member_func_t<void, ltLight>>(0x59AC40, this);
     }
 
     // 0x59ACB0 | ?Draw@ltLight@@QAEXM@Z
-    inline void Draw(f32 arg1)
+    void Draw(f32 arg1)
     {
         return stub<member_func_t<void, ltLight, f32>>(0x59ACB0, this, arg1);
     }
 
     // 0x59AD90 | ?DrawGlow@ltLight@@QAEXABVVector3@@@Z
-    inline void DrawGlow(class Vector3 const& arg1)
+    void DrawGlow(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, ltLight, class Vector3 const&>>(0x59AD90, this, arg1);
     }
@@ -125,7 +125,7 @@ public:
     }
 
     // 0x59AFB0 | ?DrawHighlight@ltLight@@QAEXABVVector3@@ABVMatrix34@@@Z
-    inline void DrawHighlight(class Vector3 const& arg1, class Matrix34 const& arg2)
+    void DrawHighlight(class Vector3 const& arg1, class Matrix34 const& arg2)
     {
         return stub<member_func_t<void, ltLight, class Vector3 const&, class Matrix34 const&>>(
             0x59AFB0, this, arg1, arg2);
@@ -162,44 +162,44 @@ public:
     }
 
     // 0x59B5B0 | ?SetUpGfxLight@ltLight@@QAEXXZ
-    inline void SetUpGfxLight()
+    void SetUpGfxLight()
     {
         return stub<member_func_t<void, ltLight>>(0x59B5B0, this);
     }
 
     // 0x59B740 | ?SetGfxLight@ltLight@@QAE_NAAUgfxLight@@ABVVector3@@@Z
-    inline bool SetGfxLight(struct gfxLight& arg1, class Vector3 const& arg2)
+    bool SetGfxLight(struct gfxLight& arg1, class Vector3 const& arg2)
     {
         return stub<member_func_t<bool, ltLight, struct gfxLight&, class Vector3 const&>>(0x59B740, this, arg1, arg2);
     }
 
     // 0x59B990 | ?Illuminate@ltLight@@QAEXAAVVector3@@00@Z
-    inline void Illuminate(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3)
+    void Illuminate(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3)
     {
         return stub<member_func_t<void, ltLight, class Vector3&, class Vector3&, class Vector3&>>(
             0x59B990, this, arg1, arg2, arg3);
     }
 
     // 0x59BA50 | ?ComputeIntensity@ltLight@@QAEMABVVector3@@M@Z
-    inline f32 ComputeIntensity(class Vector3 const& arg1, f32 arg2)
+    f32 ComputeIntensity(class Vector3 const& arg1, f32 arg2)
     {
         return stub<member_func_t<f32, ltLight, class Vector3 const&, f32>>(0x59BA50, this, arg1, arg2);
     }
 
     // 0x59BB70 | ?ComputeDistance@ltLight@@QAEMABVVector3@@@Z
-    inline f32 ComputeDistance(class Vector3 const& arg1)
+    f32 ComputeDistance(class Vector3 const& arg1)
     {
         return stub<member_func_t<f32, ltLight, class Vector3 const&>>(0x59BB70, this, arg1);
     }
 
     // 0x59BBB0 | ?SetUpProjection@ltLight@@QAEXAAVltProjection@@@Z
-    inline void SetUpProjection(class ltProjection& arg1)
+    void SetUpProjection(class ltProjection& arg1)
     {
         return stub<member_func_t<void, ltLight, class ltProjection&>>(0x59BBB0, this, arg1);
     }
 
     // 0x59BCA0 | ?FileIO@ltLight@@QAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1)
+    void FileIO(class datParser& arg1)
     {
         return stub<member_func_t<void, ltLight, class datParser&>>(0x59BCA0, this, arg1);
     }

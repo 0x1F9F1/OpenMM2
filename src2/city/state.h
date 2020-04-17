@@ -35,19 +35,19 @@ struct dgStatePack
 {
 public:
     // 0x443110 | ??0dgStatePack@@QAE@XZ
-    inline dgStatePack()
+    dgStatePack()
     {
         stub<member_func_t<void, dgStatePack>>(0x443110, this);
     }
 
     // 0x443180 | ??1dgStatePack@@QAE@XZ
-    inline ~dgStatePack()
+    ~dgStatePack()
     {
         stub<member_func_t<void, dgStatePack>>(0x443180, this);
     }
 
     // 0x443190 | ?InitFromArgs@dgStatePack@@QAEXXZ
-    inline void InitFromArgs()
+    void InitFromArgs()
     {
         return stub<member_func_t<void, dgStatePack>>(0x443190, this);
     }

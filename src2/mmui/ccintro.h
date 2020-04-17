@@ -36,25 +36,25 @@ public:
     // CrashCourseIntro::`vftable' @ 0x5B4394
 
     // 0x502D40 | ??0CrashCourseIntro@@QAE@H@Z
-    inline CrashCourseIntro(i32 arg1)
+    CrashCourseIntro(i32 arg1)
     {
         stub<member_func_t<void, CrashCourseIntro, i32>>(0x502D40, this, arg1);
     }
 
     // 0x502E80 | ??1CrashCourseIntro@@UAE@XZ
-    inline ~CrashCourseIntro() override
+    ~CrashCourseIntro() override
     {
         stub<member_func_t<void, CrashCourseIntro>>(0x502E80, this);
     }
 
     // 0x502E90 | ?PreSetup@CrashCourseIntro@@UAEXXZ
-    inline void PreSetup() override
+    void PreSetup() override
     {
         return stub<member_func_t<void, CrashCourseIntro>>(0x502E90, this);
     }
 
     // 0x502EB0 | ?PostSetup@CrashCourseIntro@@UAEXXZ
-    inline void PostSetup() override
+    void PostSetup() override
     {
         return stub<member_func_t<void, CrashCourseIntro>>(0x502EB0, this);
     }

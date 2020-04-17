@@ -53,43 +53,43 @@ public:
     // phMaterial::`vftable' @ 0x5B2404
 
     // 0x492FF0 | ??0phMaterial@@QAE@XZ
-    inline phMaterial()
+    phMaterial()
     {
         stub<member_func_t<void, phMaterial>>(0x492FF0, this);
     }
 
     // 0x493050 | ?SetName@phMaterial@@QAEXPBD@Z
-    inline void SetName(char const* arg1)
+    void SetName(char const* arg1)
     {
         return stub<member_func_t<void, phMaterial, char const*>>(0x493050, this, arg1);
     }
 
     // 0x493070 | ?Load@phMaterial@@QAEXAAVdatAsciiTokenizer@@@Z
-    inline void Load(class datAsciiTokenizer& arg1)
+    void Load(class datAsciiTokenizer& arg1)
     {
         return stub<member_func_t<void, phMaterial, class datAsciiTokenizer&>>(0x493070, this, arg1);
     }
 
     // 0x4932A0 | ?LoadBinary@phMaterial@@QAEXPAVStream@@@Z
-    inline void LoadBinary(class Stream* arg1)
+    void LoadBinary(class Stream* arg1)
     {
         return stub<member_func_t<void, phMaterial, class Stream*>>(0x4932A0, this, arg1);
     }
 
     // 0x493270 | ?Copy@phMaterial@@UAEXABV1@@Z
-    virtual inline void Copy(class phMaterial const& arg1)
+    virtual void Copy(class phMaterial const& arg1)
     {
         return stub<member_func_t<void, phMaterial, class phMaterial const&>>(0x493270, this, arg1);
     }
 
     // 0x493160 | ?Save@phMaterial@@UAEXAAVdatAsciiTokenizer@@@Z
-    virtual inline void Save(class datAsciiTokenizer& arg1)
+    virtual void Save(class datAsciiTokenizer& arg1)
     {
         return stub<member_func_t<void, phMaterial, class datAsciiTokenizer&>>(0x493160, this, arg1);
     }
 
     // 0x493340 | ?SaveBinary@phMaterial@@UAEXPAVStream@@@Z
-    virtual inline void SaveBinary(class Stream* arg1)
+    virtual void SaveBinary(class Stream* arg1)
     {
         return stub<member_func_t<void, phMaterial, class Stream*>>(0x493340, this, arg1);
     }
@@ -107,56 +107,56 @@ public:
     }
 
     // 0x4934A0 | ??0phMaterialMgr@@IAE@XZ
-    inline phMaterialMgr()
+    phMaterialMgr()
     {
         stub<member_func_t<void, phMaterialMgr>>(0x4934A0, this);
     }
 
     // 0x4934E0 | ??0phMaterialMgr@@IAE@PAVphMaterial@@H@Z
-    inline phMaterialMgr(class phMaterial* arg1, i32 arg2)
+    phMaterialMgr(class phMaterial* arg1, i32 arg2)
     {
         stub<member_func_t<void, phMaterialMgr, class phMaterial*, i32>>(0x4934E0, this, arg1, arg2);
     }
 
     // 0x4935C0 | ??1phMaterialMgr@@QAE@XZ
-    inline ~phMaterialMgr()
+    ~phMaterialMgr()
     {
         stub<member_func_t<void, phMaterialMgr>>(0x4935C0, this);
     }
 
     // 0x493640 | ?Find@phMaterialMgr@@QAEPAVphMaterial@@PBD@Z
-    inline class phMaterial* Find(char const* arg1)
+    class phMaterial* Find(char const* arg1)
     {
         return stub<member_func_t<class phMaterial*, phMaterialMgr, char const*>>(0x493640, this, arg1);
     }
 
     // 0x493660 | ?AddToTable@phMaterialMgr@@QAEXPAVphMaterial@@@Z
-    inline void AddToTable(class phMaterial* arg1)
+    void AddToTable(class phMaterial* arg1)
     {
         return stub<member_func_t<void, phMaterialMgr, class phMaterial*>>(0x493660, this, arg1);
     }
 
     // 0x493680 | ?LoadTable@phMaterialMgr@@QAE_NPBD@Z
-    inline bool LoadTable(char const* arg1)
+    bool LoadTable(char const* arg1)
     {
         return stub<member_func_t<bool, phMaterialMgr, char const*>>(0x493680, this, arg1);
     }
 
     // 0x493800 | ?Save@phMaterialMgr@@QAEXPAVphMaterial@@PAVdatAsciiTokenizer@@@Z
-    inline void Save(class phMaterial* arg1, class datAsciiTokenizer* arg2)
+    void Save(class phMaterial* arg1, class datAsciiTokenizer* arg2)
     {
         return stub<member_func_t<void, phMaterialMgr, class phMaterial*, class datAsciiTokenizer*>>(
             0x493800, this, arg1, arg2);
     }
 
     // 0x493840 | ?FindNameOfIndex@phMaterialMgr@@QAEPBDH@Z
-    inline char const* FindNameOfIndex(i32 arg1)
+    char const* FindNameOfIndex(i32 arg1)
     {
         return stub<member_func_t<char const*, phMaterialMgr, i32>>(0x493840, this, arg1);
     }
 
     // 0x493870 | ?FindIndexOfName@phMaterialMgr@@QAEHPBD@Z
-    inline i32 FindIndexOfName(char const* arg1)
+    i32 FindIndexOfName(char const* arg1)
     {
         return stub<member_func_t<i32, phMaterialMgr, char const*>>(0x493870, this, arg1);
     }
@@ -171,13 +171,13 @@ public:
     inline extern_var(0x661354, class phMaterial*, DefaultPhysMaterial);
 
     // 0x493780 | ?Load@phMaterialMgr@@UAEPAVphMaterial@@PAVStream@@@Z
-    virtual inline class phMaterial* Load(class Stream* arg1)
+    virtual class phMaterial* Load(class Stream* arg1)
     {
         return stub<member_func_t<class phMaterial*, phMaterialMgr, class Stream*>>(0x493780, this, arg1);
     }
 
     // 0x493700 | ?Load@phMaterialMgr@@UAEPAVphMaterial@@PAVdatAsciiTokenizer@@@Z
-    virtual inline class phMaterial* Load(class datAsciiTokenizer* arg1)
+    virtual class phMaterial* Load(class datAsciiTokenizer* arg1)
     {
         return stub<member_func_t<class phMaterial*, phMaterialMgr, class datAsciiTokenizer*>>(0x493700, this, arg1);
     }

@@ -36,26 +36,26 @@ public:
     // PUReplay::`vftable' @ 0x5B47F8
 
     // 0x50B270 | ??0PUReplay@@QAE@HMMMMPAD@Z
-    inline PUReplay(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    PUReplay(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
     {
         stub<member_func_t<void, PUReplay, i32, f32, f32, f32, f32, char*>>(
             0x50B270, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x50B540 | ?SaveRO@PUReplay@@QAEXH@Z
-    inline void SaveRO(i32 arg1)
+    void SaveRO(i32 arg1)
     {
         return stub<member_func_t<void, PUReplay, i32>>(0x50B540, this, arg1);
     }
 
     // 0x50B560 | ?GetSaveRO@PUReplay@@QAEHXZ
-    inline i32 GetSaveRO()
+    i32 GetSaveRO()
     {
         return stub<member_func_t<i32, PUReplay>>(0x50B560, this);
     }
 
     // 0x50B530 | ??1PUReplay@@UAE@XZ
-    inline ~PUReplay() override
+    ~PUReplay() override
     {
         stub<member_func_t<void, PUReplay>>(0x50B530, this);
     }

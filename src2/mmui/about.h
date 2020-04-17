@@ -44,31 +44,31 @@ public:
     // AboutMenu::`vftable' @ 0x5B4584
 
     // 0x5058D0 | ??0AboutMenu@@QAE@H@Z
-    inline AboutMenu(i32 arg1)
+    AboutMenu(i32 arg1)
     {
         stub<member_func_t<void, AboutMenu, i32>>(0x5058D0, this, arg1);
     }
 
     // 0x505AB0 | ??1AboutMenu@@UAE@XZ
-    inline ~AboutMenu() override
+    ~AboutMenu() override
     {
         stub<member_func_t<void, AboutMenu>>(0x505AB0, this);
     }
 
     // 0x505B50 | ?Cull@AboutMenu@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, AboutMenu>>(0x505B50, this);
     }
 
     // 0x505AE0 | ?Update@AboutMenu@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, AboutMenu>>(0x505AE0, this);
     }
 
     // 0x505AC0 | ?PreSetup@AboutMenu@@UAEXXZ
-    inline void PreSetup() override
+    void PreSetup() override
     {
         return stub<member_func_t<void, AboutMenu>>(0x505AC0, this);
     }

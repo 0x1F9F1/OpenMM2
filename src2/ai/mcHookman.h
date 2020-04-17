@@ -40,55 +40,55 @@ public:
     // Skipped (scalar/vector destructor)
 
     // 0x54A600 | ??0mcHookman@@QAE@XZ
-    inline mcHookman()
+    mcHookman()
     {
         stub<member_func_t<void, mcHookman>>(0x54A600, this);
     }
 
     // 0x54A610 | ??1mcHookman@@QAE@XZ
-    inline ~mcHookman()
+    ~mcHookman()
     {
         stub<member_func_t<void, mcHookman>>(0x54A610, this);
     }
 
     // 0x54A620 | ?Init@mcHookman@@QAEXHPAD@Z
-    inline void Init(i32 arg1, char* arg2)
+    void Init(i32 arg1, char* arg2)
     {
         return stub<member_func_t<void, mcHookman, i32, char*>>(0x54A620, this, arg1, arg2);
     }
 
     // 0x54A9F0 | ?Reset@mcHookman@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, mcHookman>>(0x54A9F0, this);
     }
 
     // 0x54AA10 | ?Update@mcHookman@@QAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, mcHookman>>(0x54AA10, this);
     }
 
     // 0x54AB40 | ?DriveCircuit@mcHookman@@AAEXXZ
-    inline void DriveCircuit()
+    void DriveCircuit()
     {
         return stub<member_func_t<void, mcHookman>>(0x54AB40, this);
     }
 
     // 0x54AC80 | ?DriveToHideout@mcHookman@@AAEXXZ
-    inline void DriveToHideout()
+    void DriveToHideout()
     {
         return stub<member_func_t<void, mcHookman>>(0x54AC80, this);
     }
 
     // 0x54AE10 | ?ReturnToCircuit@mcHookman@@AAEXXZ
-    inline void ReturnToCircuit()
+    void ReturnToCircuit()
     {
         return stub<member_func_t<void, mcHookman>>(0x54AE10, this);
     }
 
     // 0x54AF70 | ?DrawRouteThroughTraffic@mcHookman@@QAEXXZ
-    inline void DrawRouteThroughTraffic()
+    void DrawRouteThroughTraffic()
     {
         return stub<member_func_t<void, mcHookman>>(0x54AF70, this);
     }

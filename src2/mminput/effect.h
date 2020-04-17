@@ -42,13 +42,13 @@ public:
     // mmEffectFF::`vftable' @ 0x5B52DC
 
     // 0x531540 | ??0mmEffectFF@@QAE@XZ
-    inline mmEffectFF()
+    mmEffectFF()
     {
         stub<member_func_t<void, mmEffectFF>>(0x531540, this);
     }
 
     // 0x5315B0 | ??1mmEffectFF@@QAE@XZ
-    inline ~mmEffectFF()
+    ~mmEffectFF()
     {
         stub<member_func_t<void, mmEffectFF>>(0x5315B0, this);
     }
@@ -56,19 +56,19 @@ public:
     // 0x582519 | __purecall
 
     // 0x5315D0 | ?Play@mmEffectFF@@UAEHXZ
-    virtual inline i32 Play()
+    virtual i32 Play()
     {
         return stub<member_func_t<i32, mmEffectFF>>(0x5315D0, this);
     }
 
     // 0x5315E0 | ?Stop@mmEffectFF@@UAEHXZ
-    virtual inline i32 Stop()
+    virtual i32 Stop()
     {
         return stub<member_func_t<i32, mmEffectFF>>(0x5315E0, this);
     }
 
     // 0x5315F0 | ?SetValues@mmEffectFF@@UAEHMM@Z
-    virtual inline i32 SetValues(f32 arg1, f32 arg2)
+    virtual i32 SetValues(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<i32, mmEffectFF, f32, f32>>(0x5315F0, this, arg1, arg2);
     }

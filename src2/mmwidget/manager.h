@@ -92,328 +92,328 @@ public:
     // MenuManager::`vftable' @ 0x5B3288
 
     // 0x4E2DF0 | ??0MenuManager@@QAE@XZ
-    inline MenuManager()
+    MenuManager()
     {
         stub<member_func_t<void, MenuManager>>(0x4E2DF0, this);
     }
 
     // 0x4E36F0 | ?GetScale@MenuManager@@QAEXAAM000@Z
-    inline void GetScale(f32& arg1, f32& arg2, f32& arg3, f32& arg4)
+    void GetScale(f32& arg1, f32& arg2, f32& arg3, f32& arg4)
     {
         return stub<member_func_t<void, MenuManager, f32&, f32&, f32&, f32&>>(0x4E36F0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4E3760 | ?MouseAction@MenuManager@@QAEPAVuiWidget@@HMM@Z
-    inline class uiWidget* MouseAction(i32 arg1, f32 arg2, f32 arg3)
+    class uiWidget* MouseAction(i32 arg1, f32 arg2, f32 arg3)
     {
         return stub<member_func_t<class uiWidget*, MenuManager, i32, f32, f32>>(0x4E3760, this, arg1, arg2, arg3);
     }
 
     // 0x4E37E0 | ?ClearAllWidgets@MenuManager@@QAEXXZ
-    inline void ClearAllWidgets()
+    void ClearAllWidgets()
     {
         return stub<member_func_t<void, MenuManager>>(0x4E37E0, this);
     }
 
     // 0x4E3820 | ?Init@MenuManager@@QAEXHHPAD@Z
-    inline void Init(i32 arg1, i32 arg2, char* arg3)
+    void Init(i32 arg1, i32 arg2, char* arg3)
     {
         return stub<member_func_t<void, MenuManager, i32, i32, char*>>(0x4E3820, this, arg1, arg2, arg3);
     }
 
     // 0x4E3B10 | ?Init@MenuManager@@QAEXPAVasCamera@@HHMMMM@Z
-    inline void Init(class asCamera* arg1, i32 arg2, i32 arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7)
+    void Init(class asCamera* arg1, i32 arg2, i32 arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7)
     {
         return stub<member_func_t<void, MenuManager, class asCamera*, i32, i32, f32, f32, f32, f32>>(
             0x4E3B10, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x4E3D30 | ?InitCommonStuff@MenuManager@@QAEXHH@Z
-    inline void InitCommonStuff(i32 arg1, i32 arg2)
+    void InitCommonStuff(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, MenuManager, i32, i32>>(0x4E3D30, this, arg1, arg2);
     }
 
     // 0x4E4030 | ?AddPointer@MenuManager@@QAEXXZ
-    inline void AddPointer()
+    void AddPointer()
     {
         return stub<member_func_t<void, MenuManager>>(0x4E4030, this);
     }
 
     // 0x4E4040 | ?InitGlobalStrings@MenuManager@@QAEXXZ
-    inline void InitGlobalStrings()
+    void InitGlobalStrings()
     {
         return stub<member_func_t<void, MenuManager>>(0x4E4040, this);
     }
 
     // 0x4E48A0 | ?LoadRaceNames@MenuManager@@QAEXXZ
-    inline void LoadRaceNames()
+    void LoadRaceNames()
     {
         return stub<member_func_t<void, MenuManager>>(0x4E48A0, this);
     }
 
     // 0x4E4C30 | ?GetControllerName@MenuManager@@QAEPADH@Z
-    inline char* GetControllerName(i32 arg1)
+    char* GetControllerName(i32 arg1)
     {
         return stub<member_func_t<char*, MenuManager, i32>>(0x4E4C30, this, arg1);
     }
 
     // 0x4E4CD0 | ?GetFont@MenuManager@@QAEPAXH@Z
-    inline void* GetFont(i32 arg1)
+    void* GetFont(i32 arg1)
     {
         return stub<member_func_t<void*, MenuManager, i32>>(0x4E4CD0, this, arg1);
     }
 
     // 0x4E4DA0 | ?GetFGColor@MenuManager@@QAEAAVVector4@@H@Z
-    inline class Vector4& GetFGColor(i32 arg1)
+    class Vector4& GetFGColor(i32 arg1)
     {
         return stub<member_func_t<class Vector4&, MenuManager, i32>>(0x4E4DA0, this, arg1);
     }
 
     // 0x4E4F20 | ?CheckBG@MenuManager@@QAEXPAVUIMenu@@@Z
-    inline void CheckBG(class UIMenu* arg1)
+    void CheckBG(class UIMenu* arg1)
     {
         return stub<member_func_t<void, MenuManager, class UIMenu*>>(0x4E4F20, this, arg1);
     }
 
     // 0x4E4F40 | ?SetDefaultBackgroundImage@MenuManager@@QAEXPAD@Z
-    inline void SetDefaultBackgroundImage(char* arg1)
+    void SetDefaultBackgroundImage(char* arg1)
     {
         return stub<member_func_t<void, MenuManager, char*>>(0x4E4F40, this, arg1);
     }
 
     // 0x4E4FA0 | ?SetBackgroundImage@MenuManager@@QAEXPAD@Z
-    inline void SetBackgroundImage(char* arg1)
+    void SetBackgroundImage(char* arg1)
     {
         return stub<member_func_t<void, MenuManager, char*>>(0x4E4FA0, this, arg1);
     }
 
     // 0x4E4FF0 | ?TogglePU@MenuManager@@QAEXXZ
-    inline void TogglePU()
+    void TogglePU()
     {
         return stub<member_func_t<void, MenuManager>>(0x4E4FF0, this);
     }
 
     // 0x4E5010 | ?EnablePU@MenuManager@@QAEXXZ
-    inline void EnablePU()
+    void EnablePU()
     {
         return stub<member_func_t<void, MenuManager>>(0x4E5010, this);
     }
 
     // 0x4E5080 | ?AdjustPopupCard@MenuManager@@QAEXPAVUIMenu@@@Z
-    inline void AdjustPopupCard(class UIMenu* arg1)
+    void AdjustPopupCard(class UIMenu* arg1)
     {
         return stub<member_func_t<void, MenuManager, class UIMenu*>>(0x4E5080, this, arg1);
     }
 
     // 0x4E50D0 | ?DisablePU@MenuManager@@QAEXXZ
-    inline void DisablePU()
+    void DisablePU()
     {
         return stub<member_func_t<void, MenuManager>>(0x4E50D0, this);
     }
 
     // 0x4E5110 | ?OpenDialog@MenuManager@@QAEXH@Z
-    inline void OpenDialog(i32 arg1)
+    void OpenDialog(i32 arg1)
     {
         return stub<member_func_t<void, MenuManager, i32>>(0x4E5110, this, arg1);
     }
 
     // 0x4E5190 | ?CloseDialog@MenuManager@@QAEXXZ
-    inline void CloseDialog()
+    void CloseDialog()
     {
         return stub<member_func_t<void, MenuManager>>(0x4E5190, this);
     }
 
     // 0x4E51C0 | ?Enable@MenuManager@@QAEXH@Z
-    inline void Enable(i32 arg1)
+    void Enable(i32 arg1)
     {
         return stub<member_func_t<void, MenuManager, i32>>(0x4E51C0, this, arg1);
     }
 
     // 0x4E5230 | ?Disable@MenuManager@@QAEXH@Z
-    inline void Disable(i32 arg1)
+    void Disable(i32 arg1)
     {
         return stub<member_func_t<void, MenuManager, i32>>(0x4E5230, this, arg1);
     }
 
     // 0x4E5270 | ?EnableNavBar@MenuManager@@QAEXXZ
-    inline void EnableNavBar()
+    void EnableNavBar()
     {
         return stub<member_func_t<void, MenuManager>>(0x4E5270, this);
     }
 
     // 0x4E5290 | ?DisableNavBar@MenuManager@@QAEXXZ
-    inline void DisableNavBar()
+    void DisableNavBar()
     {
         return stub<member_func_t<void, MenuManager>>(0x4E5290, this);
     }
 
     // 0x4E52A0 | ?Kill@MenuManager@@QAEXXZ
-    inline void Kill()
+    void Kill()
     {
         return stub<member_func_t<void, MenuManager>>(0x4E52A0, this);
     }
 
     // 0x4E5320 | ?PlaySound@MenuManager@@QAEXH@Z
-    inline void PlaySound(i32 arg1)
+    void PlaySound(i32 arg1)
     {
         return stub<member_func_t<void, MenuManager, i32>>(0x4E5320, this, arg1);
     }
 
     // 0x4E53D0 | ?DeclareLastDrawn@MenuManager@@QAEXPAVasNode@@@Z
-    inline void DeclareLastDrawn(class asNode* arg1)
+    void DeclareLastDrawn(class asNode* arg1)
     {
         return stub<member_func_t<void, MenuManager, class asNode*>>(0x4E53D0, this, arg1);
     }
 
     // 0x4E5440 | ?Flush@MenuManager@@QAEXXZ
-    inline void Flush()
+    void Flush()
     {
         return stub<member_func_t<void, MenuManager>>(0x4E5440, this);
     }
 
     // 0x4E5470 | ?CheckInput@MenuManager@@QAEXXZ
-    inline void CheckInput()
+    void CheckInput()
     {
         return stub<member_func_t<void, MenuManager>>(0x4E5470, this);
     }
 
     // 0x4E54F0 | ?ToggleFocus@MenuManager@@QAEXH@Z
-    inline void ToggleFocus(i32 arg1)
+    void ToggleFocus(i32 arg1)
     {
         return stub<member_func_t<void, MenuManager, i32>>(0x4E54F0, this, arg1);
     }
 
     // 0x4E5570 | ?RegisterWidgetFocus@MenuManager@@QAEXHMMMMPAVuiWidget@@@Z
-    inline void RegisterWidgetFocus(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, class uiWidget* arg6)
+    void RegisterWidgetFocus(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, class uiWidget* arg6)
     {
         return stub<member_func_t<void, MenuManager, i32, f32, f32, f32, f32, class uiWidget*>>(
             0x4E5570, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4E55D0 | ?ScanGlobalKeys@MenuManager@@QAEHH@Z
-    inline i32 ScanGlobalKeys(i32 arg1)
+    i32 ScanGlobalKeys(i32 arg1)
     {
         return stub<member_func_t<i32, MenuManager, i32>>(0x4E55D0, this, arg1);
     }
 
     // 0x4E5840 | ?SwitchFocus@MenuManager@@QAEXPAVUIMenu@@@Z
-    inline void SwitchFocus(class UIMenu* arg1)
+    void SwitchFocus(class UIMenu* arg1)
     {
         return stub<member_func_t<void, MenuManager, class UIMenu*>>(0x4E5840, this, arg1);
     }
 
     // 0x4E5890 | ?NotifyMouseSelect@MenuManager@@QAEXPAVUIMenu@@@Z
-    inline void NotifyMouseSelect(class UIMenu* arg1)
+    void NotifyMouseSelect(class UIMenu* arg1)
     {
         return stub<member_func_t<void, MenuManager, class UIMenu*>>(0x4E5890, this, arg1);
     }
 
     // 0x4E58D0 | ?GetCurrentMenu@MenuManager@@QAEPAVUIMenu@@XZ
-    inline class UIMenu* GetCurrentMenu()
+    class UIMenu* GetCurrentMenu()
     {
         return stub<member_func_t<class UIMenu*, MenuManager>>(0x4E58D0, this);
     }
 
     // 0x4E5900 | ?FindMenu@MenuManager@@QAEHH@Z
-    inline i32 FindMenu(i32 arg1)
+    i32 FindMenu(i32 arg1)
     {
         return stub<member_func_t<i32, MenuManager, i32>>(0x4E5900, this, arg1);
     }
 
     // 0x4E5940 | ?CurrentMenuSelected@MenuManager@@QAEHXZ
-    inline i32 CurrentMenuSelected()
+    i32 CurrentMenuSelected()
     {
         return stub<member_func_t<i32, MenuManager>>(0x4E5940, this);
     }
 
     // 0x4E5960 | ?MenuState@MenuManager@@QAEHH@Z
-    inline i32 MenuState(i32 arg1)
+    i32 MenuState(i32 arg1)
     {
         return stub<member_func_t<i32, MenuManager, i32>>(0x4E5960, this, arg1);
     }
 
     // 0x4E59B0 | ?ActionID@MenuManager@@QAEHH@Z
-    inline i32 ActionID(i32 arg1)
+    i32 ActionID(i32 arg1)
     {
         return stub<member_func_t<i32, MenuManager, i32>>(0x4E59B0, this, arg1);
     }
 
     // 0x4E59F0 | ?ForceCurrentFocus@MenuManager@@QAEXXZ
-    inline void ForceCurrentFocus()
+    void ForceCurrentFocus()
     {
         return stub<member_func_t<void, MenuManager>>(0x4E59F0, this);
     }
 
     // 0x4E5A20 | ?SetFocus@MenuManager@@QAEXPAVUIMenu@@@Z
-    inline void SetFocus(class UIMenu* arg1)
+    void SetFocus(class UIMenu* arg1)
     {
         return stub<member_func_t<void, MenuManager, class UIMenu*>>(0x4E5A20, this, arg1);
     }
 
     // 0x4E5A30 | ?Switch@MenuManager@@QAEHH@Z
-    inline i32 Switch(i32 arg1)
+    i32 Switch(i32 arg1)
     {
         return stub<member_func_t<i32, MenuManager, i32>>(0x4E5A30, this, arg1);
     }
 
     // 0x4E5AD0 | ?SetPreviousMenu@MenuManager@@QAEXH@Z
-    inline void SetPreviousMenu(i32 arg1)
+    void SetPreviousMenu(i32 arg1)
     {
         return stub<member_func_t<void, MenuManager, i32>>(0x4E5AD0, this, arg1);
     }
 
     // 0x4E5B00 | ?GetPreviousMenu@MenuManager@@QAEHXZ
-    inline i32 GetPreviousMenu()
+    i32 GetPreviousMenu()
     {
         return stub<member_func_t<i32, MenuManager>>(0x4E5B00, this);
     }
 
     // 0x4E5B20 | ?AddMenu2@MenuManager@@QAEHPAVUIMenu@@@Z
-    inline i32 AddMenu2(class UIMenu* arg1)
+    i32 AddMenu2(class UIMenu* arg1)
     {
         return stub<member_func_t<i32, MenuManager, class UIMenu*>>(0x4E5B20, this, arg1);
     }
 
     // 0x4E5B80 | ?DeleteMenu@MenuManager@@QAEXPAVUIMenu@@@Z
-    inline void DeleteMenu(class UIMenu* arg1)
+    void DeleteMenu(class UIMenu* arg1)
     {
         return stub<member_func_t<void, MenuManager, class UIMenu*>>(0x4E5B80, this, arg1);
     }
 
     // 0x4E5BE0 | ?PlayMenuSwitchSound@MenuManager@@AAEXXZ
-    inline void PlayMenuSwitchSound()
+    void PlayMenuSwitchSound()
     {
         return stub<member_func_t<void, MenuManager>>(0x4E5BE0, this);
     }
 
     // 0x4E5C90 | ?AllocateMenuSwitchAudio@MenuManager@@QAEXXZ
-    inline void AllocateMenuSwitchAudio()
+    void AllocateMenuSwitchAudio()
     {
         return stub<member_func_t<void, MenuManager>>(0x4E5C90, this);
     }
 
     // 0x4E5E30 | ?PlayRecordsSound@MenuManager@@QAEXXZ
-    inline void PlayRecordsSound()
+    void PlayRecordsSound()
     {
         return stub<member_func_t<void, MenuManager>>(0x4E5E30, this);
     }
 
     // 0x4E5E60 | ?PlayReplaySound@MenuManager@@QAEXXZ
-    inline void PlayReplaySound()
+    void PlayReplaySound()
     {
         return stub<member_func_t<void, MenuManager>>(0x4E5E60, this);
     }
 
     // 0x4E5E90 | ?AddBrackets@MenuManager@@QAEXPAVUIIcon@@0PAVuiWidget@@MM@Z
-    inline void AddBrackets(class UIIcon* arg1, class UIIcon* arg2, class uiWidget* arg3, f32 arg4, f32 arg5)
+    void AddBrackets(class UIIcon* arg1, class UIIcon* arg2, class uiWidget* arg3, f32 arg4, f32 arg5)
     {
         return stub<member_func_t<void, MenuManager, class UIIcon*, class UIIcon*, class uiWidget*, f32, f32>>(
             0x4E5E90, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x4E5F70 | ?Help@MenuManager@@QAEXXZ
-    inline void Help()
+    void Help()
     {
         return stub<member_func_t<void, MenuManager>>(0x4E5F70, this);
     }
@@ -422,19 +422,19 @@ public:
     inline extern_var(0x6B012C, class MenuManager*, Instance);
 
     // 0x4E3490 | ??1MenuManager@@UAE@XZ
-    inline ~MenuManager() override
+    ~MenuManager() override
     {
         stub<member_func_t<void, MenuManager>>(0x4E3490, this);
     }
 
     // 0x4E5410 | ?Update@MenuManager@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, MenuManager>>(0x4E5410, this);
     }
 
     // 0x4E53E0 | ?ResChange@MenuManager@@UAEXHH@Z
-    inline void ResChange(i32 arg1, i32 arg2) override
+    void ResChange(i32 arg1, i32 arg2) override
     {
         return stub<member_func_t<void, MenuManager, i32, i32>>(0x4E53E0, this, arg1, arg2);
     }

@@ -68,213 +68,213 @@ public:
     // Aud3DObject::`vftable' @ 0x5B4CCC
 
     // 0x511AB0 | ??0Aud3DObject@@QAE@XZ
-    inline Aud3DObject()
+    Aud3DObject()
     {
         stub<member_func_t<void, Aud3DObject>>(0x511AB0, this);
     }
 
     // 0x511B80 | ?SetPositionPtr@Aud3DObject@@QAEXPAVVector3@@@Z
-    inline void SetPositionPtr(class Vector3* arg1)
+    void SetPositionPtr(class Vector3* arg1)
     {
         return stub<member_func_t<void, Aud3DObject, class Vector3*>>(0x511B80, this, arg1);
     }
 
     // 0x511BB0 | ?Reset@Aud3DObject@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, Aud3DObject>>(0x511BB0, this);
     }
 
     // 0x511C10 | ?CalcDistToClosestHeads2@Aud3DObject@@QAEXXZ
-    inline void CalcDistToClosestHeads2()
+    void CalcDistToClosestHeads2()
     {
         return stub<member_func_t<void, Aud3DObject>>(0x511C10, this);
     }
 
     // 0x511E10 | ?CalcDistToClosestHead2@Aud3DObject@@AAEMPAPAVMatrix34@@PAVVector3@@H@Z
-    inline f32 CalcDistToClosestHead2(class Matrix34** arg1, class Vector3* arg2, i32 arg3)
+    f32 CalcDistToClosestHead2(class Matrix34** arg1, class Vector3* arg2, i32 arg3)
     {
         return stub<member_func_t<f32, Aud3DObject, class Matrix34**, class Vector3*, i32>>(
             0x511E10, this, arg1, arg2, arg3);
     }
 
     // 0x511E90 | ?CalcDistToHead2@Aud3DObject@@AAEMPAVMatrix34@@PAVVector3@@@Z
-    inline f32 CalcDistToHead2(class Matrix34* arg1, class Vector3* arg2)
+    f32 CalcDistToHead2(class Matrix34* arg1, class Vector3* arg2)
     {
         return stub<member_func_t<f32, Aud3DObject, class Matrix34*, class Vector3*>>(0x511E90, this, arg1, arg2);
     }
 
     // 0x511ED0 | ?CalcPercentToMaxDist2@Aud3DObject@@AAEMM@Z
-    inline f32 CalcPercentToMaxDist2(f32 arg1)
+    f32 CalcPercentToMaxDist2(f32 arg1)
     {
         return stub<member_func_t<f32, Aud3DObject, f32>>(0x511ED0, this, arg1);
     }
 
     // 0x511F30 | ?CalcMultiPlayerPan@Aud3DObject@@QAEXXZ
-    inline void CalcMultiPlayerPan()
+    void CalcMultiPlayerPan()
     {
         return stub<member_func_t<void, Aud3DObject>>(0x511F30, this);
     }
 
     // 0x511F40 | ?CalcSinglePlayerPan@Aud3DObject@@QAEXXZ
-    inline void CalcSinglePlayerPan()
+    void CalcSinglePlayerPan()
     {
         return stub<member_func_t<void, Aud3DObject>>(0x511F40, this);
     }
 
     // 0x512000 | ?CalculateDoppler@Aud3DObject@@QAEMM@Z
-    inline f32 CalculateDoppler(f32 arg1)
+    f32 CalculateDoppler(f32 arg1)
     {
         return stub<member_func_t<f32, Aud3DObject, f32>>(0x512000, this, arg1);
     }
 
     // 0x512040 | ?GetLeftPositionPtr@Aud3DObject@@QAEPAVVector3@@XZ
-    inline class Vector3* GetLeftPositionPtr()
+    class Vector3* GetLeftPositionPtr()
     {
         return stub<member_func_t<class Vector3*, Aud3DObject>>(0x512040, this);
     }
 
     // 0x512050 | ?GetRightPositionPtr@Aud3DObject@@QAEPAVVector3@@XZ
-    inline class Vector3* GetRightPositionPtr()
+    class Vector3* GetRightPositionPtr()
     {
         return stub<member_func_t<class Vector3*, Aud3DObject>>(0x512050, this);
     }
 
     // 0x512060 | ?SetDropOffs@Aud3DObject@@QAEXMM@Z
-    inline void SetDropOffs(f32 arg1, f32 arg2)
+    void SetDropOffs(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, Aud3DObject, f32, f32>>(0x512060, this, arg1, arg2);
     }
 
     // 0x512090 | ?PastMaxDistance@Aud3DObject@@QAE_NXZ
-    inline bool PastMaxDistance()
+    bool PastMaxDistance()
     {
         return stub<member_func_t<bool, Aud3DObject>>(0x512090, this);
     }
 
     // 0x512130 | ?WithinMaxDistance@Aud3DObject@@QAE_NXZ
-    inline bool WithinMaxDistance()
+    bool WithinMaxDistance()
     {
         return stub<member_func_t<bool, Aud3DObject>>(0x512130, this);
     }
 
     // 0x5121C0 | ?WithinMaxDistance@Aud3DObject@@QAE_NM@Z
-    inline bool WithinMaxDistance(f32 arg1)
+    bool WithinMaxDistance(f32 arg1)
     {
         return stub<member_func_t<bool, Aud3DObject, f32>>(0x5121C0, this, arg1);
     }
 
     // 0x512200 | ?GetDistToClosestHead2@Aud3DObject@@QAEMXZ
-    inline f32 GetDistToClosestHead2()
+    f32 GetDistToClosestHead2()
     {
         return stub<member_func_t<f32, Aud3DObject>>(0x512200, this);
     }
 
     // 0x512230 | ?AddTo3DMgr@Aud3DObject@@QAEXXZ
-    inline void AddTo3DMgr()
+    void AddTo3DMgr()
     {
         return stub<member_func_t<void, Aud3DObject>>(0x512230, this);
     }
 
     // 0x512250 | ?RemoveFrom3DMgr@Aud3DObject@@QAEXXZ
-    inline void RemoveFrom3DMgr()
+    void RemoveFrom3DMgr()
     {
         return stub<member_func_t<void, Aud3DObject>>(0x512250, this);
     }
 
     // 0x512280 | ?CalculateAttenuation@Aud3DObject@@QAEMXZ
-    inline f32 CalculateAttenuation()
+    f32 CalculateAttenuation()
     {
         return stub<member_func_t<f32, Aud3DObject>>(0x512280, this);
     }
 
     // 0x5122C0 | ?CalculatePan@Aud3DObject@@QAEMXZ
-    inline f32 CalculatePan()
+    f32 CalculatePan()
     {
         return stub<member_func_t<f32, Aud3DObject>>(0x5122C0, this);
     }
 
     // 0x512320 | ?Set3D@Aud3DObject@@QAEX_N@Z
-    inline void Set3D(bool arg1)
+    void Set3D(bool arg1)
     {
         return stub<member_func_t<void, Aud3DObject, bool>>(0x512320, this, arg1);
     }
 
     // 0x512380 | ?GetPriority@Aud3DObject@@QAEHXZ
-    inline i32 GetPriority()
+    i32 GetPriority()
     {
         return stub<member_func_t<i32, Aud3DObject>>(0x512380, this);
     }
 
     // 0x5123D0 | ?UpdateNonVirtual@Aud3DObject@@QAEXXZ
-    inline void UpdateNonVirtual()
+    void UpdateNonVirtual()
     {
         return stub<member_func_t<void, Aud3DObject>>(0x5123D0, this);
     }
 
     // 0x512400 | ?ReadVectorPoints@Aud3DObject@@QAE_NPAVStream@@@Z
-    inline bool ReadVectorPoints(class Stream* arg1)
+    bool ReadVectorPoints(class Stream* arg1)
     {
         return stub<member_func_t<bool, Aud3DObject, class Stream*>>(0x512400, this, arg1);
     }
 
     // 0x512550 | ?SetClosestPositionPtr@Aud3DObject@@AAEXXZ
-    inline void SetClosestPositionPtr()
+    void SetClosestPositionPtr()
     {
         return stub<member_func_t<void, Aud3DObject>>(0x512550, this);
     }
 
     // 0x5125A0 | ?GetClosestPositionPtr@Aud3DObject@@AAEPAVVector3@@PAPAVMatrix34@@H@Z
-    inline class Vector3* GetClosestPositionPtr(class Matrix34** arg1, i32 arg2)
+    class Vector3* GetClosestPositionPtr(class Matrix34** arg1, i32 arg2)
     {
         return stub<member_func_t<class Vector3*, Aud3DObject, class Matrix34**, i32>>(0x5125A0, this, arg1, arg2);
     }
 
     // 0x512620 | ?CalcPseudoDistToClosestHead@Aud3DObject@@AAEMPAPAVMatrix34@@PAVVector3@@H@Z
-    inline f32 CalcPseudoDistToClosestHead(class Matrix34** arg1, class Vector3* arg2, i32 arg3)
+    f32 CalcPseudoDistToClosestHead(class Matrix34** arg1, class Vector3* arg2, i32 arg3)
     {
         return stub<member_func_t<f32, Aud3DObject, class Matrix34**, class Vector3*, i32>>(
             0x512620, this, arg1, arg2, arg3);
     }
 
     // 0x5126A0 | ?CalcPseudoDistToHead@Aud3DObject@@AAEMPAVMatrix34@@PAVVector3@@@Z
-    inline f32 CalcPseudoDistToHead(class Matrix34* arg1, class Vector3* arg2)
+    f32 CalcPseudoDistToHead(class Matrix34* arg1, class Vector3* arg2)
     {
         return stub<member_func_t<f32, Aud3DObject, class Matrix34*, class Vector3*>>(0x5126A0, this, arg1, arg2);
     }
 
     // 0x5122F0 | ?AssignSounds@Aud3DObject@@UAEXXZ
-    virtual inline void AssignSounds()
+    virtual void AssignSounds()
     {
         return stub<member_func_t<void, Aud3DObject>>(0x5122F0, this);
     }
 
     // 0x512300 | ?UnAssignSounds@Aud3DObject@@UAEXH@Z
-    virtual inline void UnAssignSounds(i32 arg1)
+    virtual void UnAssignSounds(i32 arg1)
     {
         return stub<member_func_t<void, Aud3DObject, i32>>(0x512300, this, arg1);
     }
 
     // 0x512310 | ?UpdateAudio@Aud3DObject@@UAEXXZ
-    virtual inline void UpdateAudio()
+    virtual void UpdateAudio()
     {
         return stub<member_func_t<void, Aud3DObject>>(0x512310, this);
     }
 
     // 0x512390 | ?Update@Aud3DObject@@UAEXXZ
-    virtual inline void Update()
+    virtual void Update()
     {
         return stub<member_func_t<void, Aud3DObject>>(0x512390, this);
     }
 
     // 0x512360 | ?SetNon3DParams@Aud3DObject@@UAEXXZ
-    virtual inline void SetNon3DParams()
+    virtual void SetNon3DParams()
     {
         return stub<member_func_t<void, Aud3DObject>>(0x512360, this);
     }
 
     // 0x512370 | ?Set3DParams@Aud3DObject@@UAEXXZ
-    virtual inline void Set3DParams()
+    virtual void Set3DParams()
     {
         return stub<member_func_t<void, Aud3DObject>>(0x512370, this);
     }

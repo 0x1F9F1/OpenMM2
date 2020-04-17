@@ -33,37 +33,37 @@ class datMemStream
 {
 public:
     // 0x4C9280 | ?Read@datMemStream@@QAEHPAXH@Z
-    inline i32 Read(void* arg1, i32 arg2)
+    i32 Read(void* arg1, i32 arg2)
     {
         return stub<member_func_t<i32, datMemStream, void*, i32>>(0x4C9280, this, arg1, arg2);
     }
 
     // 0x4C92D0 | ?Write@datMemStream@@QAEHPBXH@Z
-    inline i32 Write(void const* arg1, i32 arg2)
+    i32 Write(void const* arg1, i32 arg2)
     {
         return stub<member_func_t<i32, datMemStream, void const*, i32>>(0x4C92D0, this, arg1, arg2);
     }
 
     // 0x4C9330 | ?GetCh@datMemStream@@QAEHXZ
-    inline i32 GetCh()
+    i32 GetCh()
     {
         return stub<member_func_t<i32, datMemStream>>(0x4C9330, this);
     }
 
     // 0x4C9360 | ?PutCh@datMemStream@@QAEHE@Z
-    inline i32 PutCh(u8 arg1)
+    i32 PutCh(u8 arg1)
     {
         return stub<member_func_t<i32, datMemStream, u8>>(0x4C9360, this, arg1);
     }
 
     // 0x4C9390 | ?Close@datMemStream@@QAEHXZ
-    inline i32 Close()
+    i32 Close()
     {
         return stub<member_func_t<i32, datMemStream>>(0x4C9390, this);
     }
 
     // 0x4C93A0 | ?Size@datMemStream@@QAEHXZ
-    inline i32 Size()
+    i32 Size()
     {
         return stub<member_func_t<i32, datMemStream>>(0x4C93A0, this);
     }

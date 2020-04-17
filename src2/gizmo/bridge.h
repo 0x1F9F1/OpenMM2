@@ -59,37 +59,37 @@ public:
     // gizBridge::`vftable' @ 0x5B5F8C
 
     // 0x577410 | ??0gizBridge@@QAE@XZ
-    inline gizBridge()
+    gizBridge()
     {
         stub<member_func_t<void, gizBridge>>(0x577410, this);
     }
 
     // 0x577490 | ??1gizBridge@@QAE@XZ
-    inline ~gizBridge()
+    ~gizBridge()
     {
         stub<member_func_t<void, gizBridge>>(0x577490, this);
     }
 
     // 0x577530 | ?Init@gizBridge@@QAEXPADABVMatrix34@@@Z
-    inline void Init(char* arg1, class Matrix34 const& arg2)
+    void Init(char* arg1, class Matrix34 const& arg2)
     {
         return stub<member_func_t<void, gizBridge, char*, class Matrix34 const&>>(0x577530, this, arg1, arg2);
     }
 
     // 0x577620 | ?Reposition@gizBridge@@AAEXXZ
-    inline void Reposition()
+    void Reposition()
     {
         return stub<member_func_t<void, gizBridge>>(0x577620, this);
     }
 
     // 0x5776D0 | ?Update@gizBridge@@QAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, gizBridge>>(0x5776D0, this);
     }
 
     // 0x577910 | ?Trigger@gizBridge@@QAE_NXZ
-    inline bool Trigger()
+    bool Trigger()
     {
         return stub<member_func_t<bool, gizBridge>>(0x577910, this);
     }
@@ -98,19 +98,19 @@ public:
     // Skipped (scalar/vector destructor)
 
     // 0x5774F0 | ?Reset@gizBridge@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, gizBridge>>(0x5774F0, this);
     }
 
     // 0x578240 | ?Draw@gizBridge@@UAEXH@Z
-    inline void Draw(i32 arg1) override
+    void Draw(i32 arg1) override
     {
         return stub<member_func_t<void, gizBridge, i32>>(0x578240, this, arg1);
     }
 
     // 0x578250 | ?SizeOf@gizBridge@@UAEIXZ
-    inline u32 SizeOf() override
+    u32 SizeOf() override
     {
         return stub<member_func_t<u32, gizBridge>>(0x578250, this);
     }
@@ -122,55 +122,55 @@ public:
     // gizBridgeMgr::`vftable' @ 0x5B6004
 
     // 0x577950 | ??0gizBridgeMgr@@QAE@XZ
-    inline gizBridgeMgr()
+    gizBridgeMgr()
     {
         stub<member_func_t<void, gizBridgeMgr>>(0x577950, this);
     }
 
     // 0x577A70 | ?Init@gizBridgeMgr@@QAE_NPAD00@Z
-    inline bool Init(char* arg1, char* arg2, char* arg3)
+    bool Init(char* arg1, char* arg2, char* arg3)
     {
         return stub<member_func_t<bool, gizBridgeMgr, char*, char*, char*>>(0x577A70, this, arg1, arg2, arg3);
     }
 
     // 0x5780E0 | ?CheckProximity@gizBridgeMgr@@AAE_NPAVgizBridge@@@Z
-    inline bool CheckProximity(class gizBridge* arg1)
+    bool CheckProximity(class gizBridge* arg1)
     {
         return stub<member_func_t<bool, gizBridgeMgr, class gizBridge*>>(0x5780E0, this, arg1);
     }
 
     // 0x578160 | ?GetBridges@gizBridgeMgr@@QAEPAVgizBridge@@H@Z
-    inline class gizBridge* GetBridges(i32 arg1)
+    class gizBridge* GetBridges(i32 arg1)
     {
         return stub<member_func_t<class gizBridge*, gizBridgeMgr, i32>>(0x578160, this, arg1);
     }
 
     // 0x578180 | ?AddProximityTrigger@gizBridgeMgr@@QAEXPAVVector3@@@Z
-    inline void AddProximityTrigger(class Vector3* arg1)
+    void AddProximityTrigger(class Vector3* arg1)
     {
         return stub<member_func_t<void, gizBridgeMgr, class Vector3*>>(0x578180, this, arg1);
     }
 
     // 0x5779B0 | ??1gizBridgeMgr@@UAE@XZ
-    inline ~gizBridgeMgr() override
+    ~gizBridgeMgr() override
     {
         stub<member_func_t<void, gizBridgeMgr>>(0x5779B0, this);
     }
 
     // 0x577FF0 | ?Cull@gizBridgeMgr@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, gizBridgeMgr>>(0x577FF0, this);
     }
 
     // 0x577F90 | ?Update@gizBridgeMgr@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, gizBridgeMgr>>(0x577F90, this);
     }
 
     // 0x577A40 | ?Reset@gizBridgeMgr@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, gizBridgeMgr>>(0x577A40, this);
     }

@@ -37,43 +37,43 @@ class audMixer
 {
 public:
     // 0x5A6E00 | ?Update@audMixer@@QAE_NH@Z
-    inline bool Update(i32 arg1)
+    bool Update(i32 arg1)
     {
         return stub<member_func_t<bool, audMixer, i32>>(0x5A6E00, this, arg1);
     }
 
     // 0x5A6E10 | ?GetStatus@audMixer@@QAE?AW4AUD_OBJECTSTATUS@audObject@@XZ
-    inline enum audObject::AUD_OBJECTSTATUS GetStatus()
+    enum audObject::AUD_OBJECTSTATUS GetStatus()
     {
         return stub<member_func_t<enum audObject::AUD_OBJECTSTATUS, audMixer>>(0x5A6E10, this);
     }
 
     // 0x5A6E20 | ?Play@audMixer@@QAE_NXZ
-    inline bool Play()
+    bool Play()
     {
         return stub<member_func_t<bool, audMixer>>(0x5A6E20, this);
     }
 
     // 0x5A6E30 | ?Stop@audMixer@@QAE_NXZ
-    inline bool Stop()
+    bool Stop()
     {
         return stub<member_func_t<bool, audMixer>>(0x5A6E30, this);
     }
 
     // 0x5A6E40 | ?SetVolume@audMixer@@QAE_NM@Z
-    inline bool SetVolume(f32 arg1)
+    bool SetVolume(f32 arg1)
     {
         return stub<member_func_t<bool, audMixer, f32>>(0x5A6E40, this, arg1);
     }
 
     // 0x5A6E50 | ?CreateDuplicateMixerBuffer@audMixer@@QAEPAVaudSoundBuffer@@PAV1@@Z
-    inline class audSoundBuffer* CreateDuplicateMixerBuffer(class audMixer* arg1)
+    class audSoundBuffer* CreateDuplicateMixerBuffer(class audMixer* arg1)
     {
         return stub<member_func_t<class audSoundBuffer*, audMixer, class audMixer*>>(0x5A6E50, this, arg1);
     }
 
     // 0x5A6E60 | ?CreateMixerBufferFromFile@audMixer@@QAEPAVaudSoundBuffer@@PAD0W4SOUNDBUFFERTYPE@2@H@Z
-    inline class audSoundBuffer* CreateMixerBufferFromFile(
+    class audSoundBuffer* CreateMixerBufferFromFile(
         char* arg1, char* arg2, enum audSoundBuffer::SOUNDBUFFERTYPE arg3, i32 arg4)
     {
         return stub<
@@ -82,19 +82,19 @@ public:
     }
 
     // 0x5A6E70 | ?SetPitch@audMixer@@QAE_NM@Z
-    inline bool SetPitch(f32 arg1)
+    bool SetPitch(f32 arg1)
     {
         return stub<member_func_t<bool, audMixer, f32>>(0x5A6E70, this, arg1);
     }
 
     // 0x5A6E80 | ?SetPan@audMixer@@QAE_NM@Z
-    inline bool SetPan(f32 arg1)
+    bool SetPan(f32 arg1)
     {
         return stub<member_func_t<bool, audMixer, f32>>(0x5A6E80, this, arg1);
     }
 
     // 0x5A6E90 | ?Set3D@audMixer@@QAE_NPAU_audvector3_@@@Z
-    inline bool Set3D(struct _audvector3_* arg1)
+    bool Set3D(struct _audvector3_* arg1)
     {
         return stub<member_func_t<bool, audMixer, struct _audvector3_*>>(0x5A6E90, this, arg1);
     }

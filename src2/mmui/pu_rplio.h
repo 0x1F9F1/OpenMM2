@@ -34,14 +34,14 @@ public:
     // PUReplaySave::`vftable' @ 0x5B4888
 
     // 0x50B980 | ??0PUReplaySave@@QAE@HMMMMPAD@Z
-    inline PUReplaySave(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    PUReplaySave(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
     {
         stub<member_func_t<void, PUReplaySave, i32, f32, f32, f32, f32, char*>>(
             0x50B980, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x50BAE0 | ??1PUReplaySave@@UAE@XZ
-    inline ~PUReplaySave() override
+    ~PUReplaySave() override
     {
         stub<member_func_t<void, PUReplaySave>>(0x50BAE0, this);
     }

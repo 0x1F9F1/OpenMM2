@@ -55,133 +55,133 @@ public:
     // mmSingleRace::`vftable' @ 0x5B074C
 
     // 0x41DF30 | ??0mmSingleRace@@QAE@XZ
-    inline mmSingleRace()
+    mmSingleRace()
     {
         stub<member_func_t<void, mmSingleRace>>(0x41DF30, this);
     }
 
     // 0x41EBA0 | ?UpdateOpponentStatus@mmSingleRace@@QAEXXZ
-    inline void UpdateOpponentStatus()
+    void UpdateOpponentStatus()
     {
         return stub<member_func_t<void, mmSingleRace>>(0x41EBA0, this);
     }
 
     // 0x41EDC0 | ?UpdateScore@mmSingleRace@@QAEXXZ
-    inline void UpdateScore()
+    void UpdateScore()
     {
         return stub<member_func_t<void, mmSingleRace>>(0x41EDC0, this);
     }
 
     // 0x41F100 | ?NextRaceAvailable@mmSingleRace@@AAEHXZ
-    inline i32 NextRaceAvailable()
+    i32 NextRaceAvailable()
     {
         return stub<member_func_t<i32, mmSingleRace>>(0x41F100, this);
     }
 
     // 0x41F170 | ?FinishMessage@mmSingleRace@@AAEXHH@Z
-    inline void FinishMessage(i32 arg1, i32 arg2)
+    void FinishMessage(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, mmSingleRace, i32, i32>>(0x41F170, this, arg1, arg2);
     }
 
     // 0x41F310 | ?RegisterFinish@mmSingleRace@@AAEHXZ
-    inline i32 RegisterFinish()
+    i32 RegisterFinish()
     {
         return stub<member_func_t<i32, mmSingleRace>>(0x41F310, this);
     }
 
     // 0x41F590 | ?ProgressCheck@mmSingleRace@@AAEHHH@Z
-    inline i32 ProgressCheck(i32 arg1, i32 arg2)
+    i32 ProgressCheck(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<i32, mmSingleRace, i32, i32>>(0x41F590, this, arg1, arg2);
     }
 
     // 0x41DF60 | ??1mmSingleRace@@UAE@XZ
-    inline ~mmSingleRace() override
+    ~mmSingleRace() override
     {
         stub<member_func_t<void, mmSingleRace>>(0x41DF60, this);
     }
 
     // 0x41E5A0 | ?Update@mmSingleRace@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmSingleRace>>(0x41E5A0, this);
     }
 
     // 0x41E4F0 | ?Reset@mmSingleRace@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, mmSingleRace>>(0x41E4F0, this);
     }
 
     // 0x41E010 | ?Init@mmSingleRace@@UAEHXZ
-    inline i32 Init() override
+    i32 Init() override
     {
         return stub<member_func_t<i32, mmSingleRace>>(0x41E010, this);
     }
 
     // 0x41E130 | ?InitMyPlayer@mmSingleRace@@UAEXXZ
-    inline void InitMyPlayer() override
+    void InitMyPlayer() override
     {
         return stub<member_func_t<void, mmSingleRace>>(0x41E130, this);
     }
 
     // 0x41E4E0 | ?InitOtherPlayers@mmSingleRace@@UAEXXZ
-    inline void InitOtherPlayers() override
+    void InitOtherPlayers() override
     {
         return stub<member_func_t<void, mmSingleRace>>(0x41E4E0, this);
     }
 
     // 0x41E200 | ?InitGameObjects@mmSingleRace@@UAEXXZ
-    inline void InitGameObjects() override
+    void InitGameObjects() override
     {
         return stub<member_func_t<void, mmSingleRace>>(0x41E200, this);
     }
 
     // 0x41E1A0 | ?InitHUD@mmSingleRace@@UAEXXZ
-    inline void InitHUD() override
+    void InitHUD() override
     {
         return stub<member_func_t<void, mmSingleRace>>(0x41E1A0, this);
     }
 
     // 0x41E5B0 | ?UpdateGameInput@mmSingleRace@@UAEXH@Z
-    inline void UpdateGameInput(i32 arg1) override
+    void UpdateGameInput(i32 arg1) override
     {
         return stub<member_func_t<void, mmSingleRace, i32>>(0x41E5B0, this, arg1);
     }
 
     // 0x41F970 | ?UpdateDebugKeyInput@mmSingleRace@@UAEXH@Z
-    inline void UpdateDebugKeyInput(i32 arg1) override
+    void UpdateDebugKeyInput(i32 arg1) override
     {
         return stub<member_func_t<void, mmSingleRace, i32>>(0x41F970, this, arg1);
     }
 
     // 0x41E5F0 | ?UpdateGame@mmSingleRace@@UAEXXZ
-    inline void UpdateGame() override
+    void UpdateGame() override
     {
         return stub<member_func_t<void, mmSingleRace>>(0x41E5F0, this);
     }
 
     // 0x41F600 | ?NextRace@mmSingleRace@@UAEXXZ
-    inline void NextRace() override
+    void NextRace() override
     {
         return stub<member_func_t<void, mmSingleRace>>(0x41F600, this);
     }
 
     // 0x41E530 | ?HitWaterHandler@mmSingleRace@@UAEXXZ
-    inline void HitWaterHandler() override
+    void HitWaterHandler() override
     {
         return stub<member_func_t<void, mmSingleRace>>(0x41E530, this);
     }
 
     // 0x41EDB0 | ?SwitchState@mmSingleRace@@UAEXH@Z
-    inline void SwitchState(i32 arg1) override
+    void SwitchState(i32 arg1) override
     {
         return stub<member_func_t<void, mmSingleRace, i32>>(0x41EDB0, this, arg1);
     }
 
     // 0x41F980 | ?GetWaypoints@mmSingleRace@@UAEPAVmmWaypoints@@XZ
-    inline class mmWaypoints* GetWaypoints() override
+    class mmWaypoints* GetWaypoints() override
     {
         return stub<member_func_t<class mmWaypoints*, mmSingleRace>>(0x41F980, this);
     }

@@ -41,55 +41,55 @@ public:
     // ControlCustom::`vftable' @ 0x5B42F4
 
     // 0x502780 | ??0ControlCustom@@QAE@H@Z
-    inline ControlCustom(i32 arg1)
+    ControlCustom(i32 arg1)
     {
         stub<member_func_t<void, ControlCustom, i32>>(0x502780, this, arg1);
     }
 
     // 0x502830 | ?BadAssignCB@ControlCustom@@QAEXXZ
-    inline void BadAssignCB()
+    void BadAssignCB()
     {
         return stub<member_func_t<void, ControlCustom>>(0x502830, this);
     }
 
     // 0x502880 | ?ClearBadAssignment@ControlCustom@@QAEXXZ
-    inline void ClearBadAssignment()
+    void ClearBadAssignment()
     {
         return stub<member_func_t<void, ControlCustom>>(0x502880, this);
     }
 
     // 0x502890 | ?CancelBadAssignment@ControlCustom@@QAEXXZ
-    inline void CancelBadAssignment()
+    void CancelBadAssignment()
     {
         return stub<member_func_t<void, ControlCustom>>(0x502890, this);
     }
 
     // 0x5028B0 | ?VerifyBadAssignment@ControlCustom@@QAEXXZ
-    inline void VerifyBadAssignment()
+    void VerifyBadAssignment()
     {
         return stub<member_func_t<void, ControlCustom>>(0x5028B0, this);
     }
 
     // 0x502820 | ??1ControlCustom@@UAE@XZ
-    inline ~ControlCustom() override
+    ~ControlCustom() override
     {
         stub<member_func_t<void, ControlCustom>>(0x502820, this);
     }
 
     // 0x502900 | ?CancelAction@ControlCustom@@UAEXXZ
-    inline void CancelAction() override
+    void CancelAction() override
     {
         return stub<member_func_t<void, ControlCustom>>(0x502900, this);
     }
 
     // 0x5028F0 | ?DoneAction@ControlCustom@@UAEXXZ
-    inline void DoneAction() override
+    void DoneAction() override
     {
         return stub<member_func_t<void, ControlCustom>>(0x5028F0, this);
     }
 
     // 0x5028D0 | ?ResetDefaultAction@ControlCustom@@UAEXXZ
-    inline void ResetDefaultAction() override
+    void ResetDefaultAction() override
     {
         return stub<member_func_t<void, ControlCustom>>(0x5028D0, this);
     }

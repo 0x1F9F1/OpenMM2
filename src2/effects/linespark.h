@@ -54,7 +54,7 @@ public:
     }
 
     // 0x4604B0 | ?Init@asSparkLut@@QAEXPAD@Z
-    inline void Init(char* arg1)
+    void Init(char* arg1)
     {
         return stub<member_func_t<void, asSparkLut, char*>>(0x4604B0, this, arg1);
     }
@@ -69,38 +69,38 @@ public:
     // asLineSparks::`vftable' @ 0x5B1968
 
     // 0x460690 | ??0asLineSparks@@QAE@XZ
-    inline asLineSparks()
+    asLineSparks()
     {
         stub<member_func_t<void, asLineSparks>>(0x460690, this);
     }
 
     // 0x460740 | ?Init@asLineSparks@@QAEXHPAD@Z
-    inline void Init(i32 arg1, char* arg2)
+    void Init(i32 arg1, char* arg2)
     {
         return stub<member_func_t<void, asLineSparks, i32, char*>>(0x460740, this, arg1, arg2);
     }
 
     // 0x460830 | ?RadialBlast@asLineSparks@@QAEXHAAVVector3@@0@Z
-    inline void RadialBlast(i32 arg1, class Vector3& arg2, class Vector3& arg3)
+    void RadialBlast(i32 arg1, class Vector3& arg2, class Vector3& arg3)
     {
         return stub<member_func_t<void, asLineSparks, i32, class Vector3&, class Vector3&>>(
             0x460830, this, arg1, arg2, arg3);
     }
 
     // 0x460BE0 | ?Update@asLineSparks@@QAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, asLineSparks>>(0x460BE0, this);
     }
 
     // 0x460C20 | ?Update@asLineSparks@@QAEXM@Z
-    inline void Update(f32 arg1)
+    void Update(f32 arg1)
     {
         return stub<member_func_t<void, asLineSparks, f32>>(0x460C20, this, arg1);
     }
 
     // 0x460DE0 | ?Draw@asLineSparks@@QAEXXZ
-    inline void Draw()
+    void Draw()
     {
         return stub<member_func_t<void, asLineSparks>>(0x460DE0, this);
     }
@@ -112,7 +112,7 @@ public:
     inline extern_var(0x631650, int32_t, RefCount);
 
     // 0x4606B0 | ??1asLineSparks@@UAE@XZ
-    virtual inline ~asLineSparks()
+    virtual ~asLineSparks()
     {
         stub<member_func_t<void, asLineSparks>>(0x4606B0, this);
     }

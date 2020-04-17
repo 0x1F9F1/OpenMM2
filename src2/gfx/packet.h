@@ -89,20 +89,20 @@ public:
     }
 
     // 0x4B3340 | ?Draw@gfxPacket@@QBEXI@Z
-    inline void Draw(u32 arg1)
+    void Draw(u32 arg1)
     {
         return stub<member_func_t<void, gfxPacket, u32>>(0x4B3340, this, arg1);
     }
 
     // 0x4B34E0 | ?Draw@gfxPacket@@QBEXPBVMatrix44@@I@Z
-    inline void Draw(class Matrix44 const* arg1, u32 arg2)
+    void Draw(class Matrix44 const* arg1, u32 arg2)
     {
         return stub<member_func_t<void, gfxPacket, class Matrix44 const*, u32>>(0x4B34E0, this, arg1, arg2);
     }
 
     // 0x4B38A0 | ??0gfxPacket@@QAE@IIIPBEIPBGIPAVgfxReskin@@IE00_N@Z
-    inline gfxPacket(u32 arg1, u32 arg2, u32 arg3, u8 const* arg4, u32 arg5, u16 const* arg6, u32 arg7,
-        class gfxReskin* arg8, u32 arg9, u8 arg10, u8 const* arg11, u8 const* arg12, bool arg13)
+    gfxPacket(u32 arg1, u32 arg2, u32 arg3, u8 const* arg4, u32 arg5, u16 const* arg6, u32 arg7, class gfxReskin* arg8,
+        u32 arg9, u8 arg10, u8 const* arg11, u8 const* arg12, bool arg13)
     {
         stub<member_func_t<void, gfxPacket, u32, u32, u32, u8 const*, u32, u16 const*, u32, class gfxReskin*, u32, u8,
             u8 const*, u8 const*, bool>>(
@@ -110,44 +110,44 @@ public:
     }
 
     // 0x4B3BE0 | ?GetSkinnedVert@gfxPacket@@QBEXPBVMatrix34@@AAVVector3@@H@Z
-    inline void GetSkinnedVert(class Matrix34 const* arg1, class Vector3& arg2, i32 arg3)
+    void GetSkinnedVert(class Matrix34 const* arg1, class Vector3& arg2, i32 arg3)
     {
         return stub<member_func_t<void, gfxPacket, class Matrix34 const*, class Vector3&, i32>>(
             0x4B3BE0, this, arg1, arg2, arg3);
     }
 
     // 0x4B3C10 | ?GetPosition@gfxPacket@@QBEXAAVVector3@@H@Z
-    inline void GetPosition(class Vector3& arg1, i32 arg2)
+    void GetPosition(class Vector3& arg1, i32 arg2)
     {
         return stub<member_func_t<void, gfxPacket, class Vector3&, i32>>(0x4B3C10, this, arg1, arg2);
     }
 
     // 0x4B3C70 | ?SetPosition@gfxPacket@@QBEXABVVector3@@H@Z
-    inline void SetPosition(class Vector3 const& arg1, i32 arg2)
+    void SetPosition(class Vector3 const& arg1, i32 arg2)
     {
         return stub<member_func_t<void, gfxPacket, class Vector3 const&, i32>>(0x4B3C70, this, arg1, arg2);
     }
 
     // 0x4B3CF0 | ?GetNormal@gfxPacket@@QBEXAAVVector3@@H@Z
-    inline void GetNormal(class Vector3& arg1, i32 arg2)
+    void GetNormal(class Vector3& arg1, i32 arg2)
     {
         return stub<member_func_t<void, gfxPacket, class Vector3&, i32>>(0x4B3CF0, this, arg1, arg2);
     }
 
     // 0x4B3D90 | ?SetNormal@gfxPacket@@QBEXABVVector3@@H@Z
-    inline void SetNormal(class Vector3 const& arg1, i32 arg2)
+    void SetNormal(class Vector3 const& arg1, i32 arg2)
     {
         return stub<member_func_t<void, gfxPacket, class Vector3 const&, i32>>(0x4B3D90, this, arg1, arg2);
     }
 
     // 0x4B3E20 | ?GetTexCoord@gfxPacket@@QBEXAAVVector2@@H@Z
-    inline void GetTexCoord(class Vector2& arg1, i32 arg2)
+    void GetTexCoord(class Vector2& arg1, i32 arg2)
     {
         return stub<member_func_t<void, gfxPacket, class Vector2&, i32>>(0x4B3E20, this, arg1, arg2);
     }
 
     // 0x4B3EC0 | ?GetTri@gfxPacket@@QBEXQAHH@Z
-    inline void GetTri(i32* const arg1, i32 arg2)
+    void GetTri(i32* const arg1, i32 arg2)
     {
         return stub<member_func_t<void, gfxPacket, i32* const, i32>>(0x4B3EC0, this, arg1, arg2);
     }
@@ -171,25 +171,25 @@ public:
     }
 
     // 0x4B40F0 | ?Clone@gfxPacket@@QBEPAV1@XZ
-    inline class gfxPacket* Clone()
+    class gfxPacket* Clone()
     {
         return stub<member_func_t<class gfxPacket*, gfxPacket>>(0x4B40F0, this);
     }
 
     // 0x4B4170 | ??0gfxPacket@@QAE@PBV0@@Z
-    inline gfxPacket(class gfxPacket const* arg1)
+    gfxPacket(class gfxPacket const* arg1)
     {
         stub<member_func_t<void, gfxPacket, class gfxPacket const*>>(0x4B4170, this, arg1);
     }
 
     // 0x4B4260 | ?CopyFrom@gfxPacket@@QAEXPBV1@@Z
-    inline void CopyFrom(class gfxPacket const* arg1)
+    void CopyFrom(class gfxPacket const* arg1)
     {
         return stub<member_func_t<void, gfxPacket, class gfxPacket const*>>(0x4B4260, this, arg1);
     }
 
     // 0x4B43E0 | ?AllocateVertexBuffer@gfxPacket@@IAEXXZ
-    inline void AllocateVertexBuffer()
+    void AllocateVertexBuffer()
     {
         return stub<member_func_t<void, gfxPacket>>(0x4B43E0, this);
     }
@@ -219,19 +219,19 @@ public:
     }
 
     // 0x4B4720 | ?DoLock@gfxPacket@@IAEXXZ
-    inline void DoLock()
+    void DoLock()
     {
         return stub<member_func_t<void, gfxPacket>>(0x4B4720, this);
     }
 
     // 0x4B4740 | ?DoUnlock@gfxPacket@@IAEXXZ
-    inline void DoUnlock()
+    void DoUnlock()
     {
         return stub<member_func_t<void, gfxPacket>>(0x4B4740, this);
     }
 
     // 0x4B4760 | ?OrthoMap@gfxPacket@@QAEXM@Z
-    inline void OrthoMap(f32 arg1)
+    void OrthoMap(f32 arg1)
     {
         return stub<member_func_t<void, gfxPacket, f32>>(0x4B4760, this, arg1);
     }

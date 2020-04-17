@@ -39,44 +39,44 @@ public:
     // Dialog_RaceEnvironment::`vftable' @ 0x5B3FB8
 
     // 0x4FB200 | ??0Dialog_RaceEnvironment@@QAE@HMMMMPAD@Z
-    inline Dialog_RaceEnvironment(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    Dialog_RaceEnvironment(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
     {
         stub<member_func_t<void, Dialog_RaceEnvironment, i32, f32, f32, f32, f32, char*>>(
             0x4FB200, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4FB980 | ?ControlPedSlider@Dialog_RaceEnvironment@@QAEXXZ
-    inline void ControlPedSlider()
+    void ControlPedSlider()
     {
         return stub<member_func_t<void, Dialog_RaceEnvironment>>(0x4FB980, this);
     }
 
     // 0x4FB9A0 | ?SetMultiRaceOptions@Dialog_RaceEnvironment@@QAEXH@Z
-    inline void SetMultiRaceOptions(i32 arg1)
+    void SetMultiRaceOptions(i32 arg1)
     {
         return stub<member_func_t<void, Dialog_RaceEnvironment, i32>>(0x4FB9A0, this, arg1);
     }
 
     // 0x4FB9E0 | ?DoneCallback@Dialog_RaceEnvironment@@QAEXXZ
-    inline void DoneCallback()
+    void DoneCallback()
     {
         return stub<member_func_t<void, Dialog_RaceEnvironment>>(0x4FB9E0, this);
     }
 
     // 0x4FBA30 | ?CancelCallback@Dialog_RaceEnvironment@@QAEXXZ
-    inline void CancelCallback()
+    void CancelCallback()
     {
         return stub<member_func_t<void, Dialog_RaceEnvironment>>(0x4FBA30, this);
     }
 
     // 0x4FB8D0 | ??1Dialog_RaceEnvironment@@UAE@XZ
-    inline ~Dialog_RaceEnvironment() override
+    ~Dialog_RaceEnvironment() override
     {
         stub<member_func_t<void, Dialog_RaceEnvironment>>(0x4FB8D0, this);
     }
 
     // 0x4FB930 | ?PreSetup@Dialog_RaceEnvironment@@UAEXXZ
-    inline void PreSetup() override
+    void PreSetup() override
     {
         return stub<member_func_t<void, Dialog_RaceEnvironment>>(0x4FB930, this);
     }

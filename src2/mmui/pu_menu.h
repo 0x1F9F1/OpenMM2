@@ -43,68 +43,68 @@ public:
     // PUMenuBase::`vftable' @ 0x5B4A8C
 
     // 0x50CC90 | ??0PUMenuBase@@QAE@HMMMMPAD_N@Z
-    inline PUMenuBase(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6, bool arg7)
+    PUMenuBase(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6, bool arg7)
     {
         stub<member_func_t<void, PUMenuBase, i32, f32, f32, f32, f32, char*, bool>>(
             0x50CC90, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x50CEF0 | ?CreateDummyBitmap@PUMenuBase@@QAEPAVgfxBitmap@@XZ
-    inline class gfxBitmap* CreateDummyBitmap()
+    class gfxBitmap* CreateDummyBitmap()
     {
         return stub<member_func_t<class gfxBitmap*, PUMenuBase>>(0x50CEF0, this);
     }
 
     // 0x50CF90 | ?CreateTitle@PUMenuBase@@QAEMH@Z
-    inline f32 CreateTitle(i32 arg1)
+    f32 CreateTitle(i32 arg1)
     {
         return stub<member_func_t<f32, PUMenuBase, i32>>(0x50CF90, this, arg1);
     }
 
     // 0x50CFD0 | ?AddPrevious@PUMenuBase@@QAEMMMMM@Z
-    inline f32 AddPrevious(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
+    f32 AddPrevious(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
         return stub<member_func_t<f32, PUMenuBase, f32, f32, f32, f32>>(0x50CFD0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x50D050 | ?AddOKCancel@PUMenuBase@@QAEXVdatCallback@@0@Z
-    inline void AddOKCancel(class datCallback arg1, class datCallback arg2)
+    void AddOKCancel(class datCallback arg1, class datCallback arg2)
     {
         return stub<member_func_t<void, PUMenuBase, class datCallback, class datCallback>>(0x50D050, this, arg1, arg2);
     }
 
     // 0x50D0F0 | ?AddExit@PUMenuBase@@QAEMMMMM@Z
-    inline f32 AddExit(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
+    f32 AddExit(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     {
         return stub<member_func_t<f32, PUMenuBase, f32, f32, f32, f32>>(0x50D0F0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x50D1E0 | ?DisableExit@PUMenuBase@@QAEXXZ
-    inline void DisableExit()
+    void DisableExit()
     {
         return stub<member_func_t<void, PUMenuBase>>(0x50D1E0, this);
     }
 
     // 0x50D1F0 | ?EnableExit@PUMenuBase@@QAEXXZ
-    inline void EnableExit()
+    void EnableExit()
     {
         return stub<member_func_t<void, PUMenuBase>>(0x50D1F0, this);
     }
 
     // 0x50CE70 | ??1PUMenuBase@@UAE@XZ
-    inline ~PUMenuBase() override
+    ~PUMenuBase() override
     {
         stub<member_func_t<void, PUMenuBase>>(0x50CE70, this);
     }
 
     // 0x50D1A0 | ?Cull@PUMenuBase@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, PUMenuBase>>(0x50D1A0, this);
     }
 
     // 0x50D170 | ?Update@PUMenuBase@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, PUMenuBase>>(0x50D170, this);
     }

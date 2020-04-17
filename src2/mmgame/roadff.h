@@ -42,61 +42,61 @@ public:
     // mmCarRoadFF::`vftable' @ 0x5B0D38
 
     // 0x42FD70 | ??0mmCarRoadFF@@QAE@XZ
-    inline mmCarRoadFF()
+    mmCarRoadFF()
     {
         stub<member_func_t<void, mmCarRoadFF>>(0x42FD70, this);
     }
 
     // 0x42FE10 | ?AssignProperties@mmCarRoadFF@@QAEXMH@Z
-    inline void AssignProperties(f32 arg1, i32 arg2)
+    void AssignProperties(f32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, mmCarRoadFF, f32, i32>>(0x42FE10, this, arg1, arg2);
     }
 
     // 0x42FE20 | ?SetFGVals@mmCarRoadFF@@QAEXMMM@Z
-    inline void SetFGVals(f32 arg1, f32 arg2, f32 arg3)
+    void SetFGVals(f32 arg1, f32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, mmCarRoadFF, f32, f32, f32>>(0x42FE20, this, arg1, arg2, arg3);
     }
 
     // 0x42FF10 | ?Start@mmCarRoadFF@@QAEXXZ
-    inline void Start()
+    void Start()
     {
         return stub<member_func_t<void, mmCarRoadFF>>(0x42FF10, this);
     }
 
     // 0x42FF30 | ?Stop@mmCarRoadFF@@QAEXXZ
-    inline void Stop()
+    void Stop()
     {
         return stub<member_func_t<void, mmCarRoadFF>>(0x42FF30, this);
     }
 
     // 0x42FF70 | ?IsPlaying@mmCarRoadFF@@QAEHXZ
-    inline i32 IsPlaying()
+    i32 IsPlaying()
     {
         return stub<member_func_t<i32, mmCarRoadFF>>(0x42FF70, this);
     }
 
     // 0x42FFD0 | ?UpdateVals@mmCarRoadFF@@QAEXXZ
-    inline void UpdateVals()
+    void UpdateVals()
     {
         return stub<member_func_t<void, mmCarRoadFF>>(0x42FFD0, this);
     }
 
     // 0x42FDB0 | ??1mmCarRoadFF@@UAE@XZ
-    inline ~mmCarRoadFF() override
+    ~mmCarRoadFF() override
     {
         stub<member_func_t<void, mmCarRoadFF>>(0x42FDB0, this);
     }
 
     // 0x42FF80 | ?Update@mmCarRoadFF@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmCarRoadFF>>(0x42FF80, this);
     }
 
     // 0x42FF40 | ?Reset@mmCarRoadFF@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, mmCarRoadFF>>(0x42FF40, this);
     }

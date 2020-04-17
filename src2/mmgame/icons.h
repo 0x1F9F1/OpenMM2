@@ -38,38 +38,38 @@ public:
     // mmIcons::`vftable' @ 0x5B0E1C
 
     // 0x432140 | ??0mmIcons@@QAE@XZ
-    inline mmIcons()
+    mmIcons()
     {
         stub<member_func_t<void, mmIcons>>(0x432140, this);
     }
 
     // 0x432290 | ?Init@mmIcons@@QAEXPAVMatrix34@@MMH@Z
-    inline void Init(class Matrix34* arg1, f32 arg2, f32 arg3, i32 arg4)
+    void Init(class Matrix34* arg1, f32 arg2, f32 arg3, i32 arg4)
     {
         return stub<member_func_t<void, mmIcons, class Matrix34*, f32, f32, i32>>(
             0x432290, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4322F0 | ?RegisterOpponents@mmIcons@@QAEXPAUOppIconInfo@@HPAX@Z
-    inline void RegisterOpponents(struct OppIconInfo* arg1, i32 arg2, void* arg3)
+    void RegisterOpponents(struct OppIconInfo* arg1, i32 arg2, void* arg3)
     {
         return stub<member_func_t<void, mmIcons, struct OppIconInfo*, i32, void*>>(0x4322F0, this, arg1, arg2, arg3);
     }
 
     // 0x432210 | ??1mmIcons@@UAE@XZ
-    inline ~mmIcons() override
+    ~mmIcons() override
     {
         stub<member_func_t<void, mmIcons>>(0x432210, this);
     }
 
     // 0x4323D0 | ?Cull@mmIcons@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, mmIcons>>(0x4323D0, this);
     }
 
     // 0x432390 | ?Update@mmIcons@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmIcons>>(0x432390, this);
     }

@@ -30,19 +30,19 @@ struct mmAmbientAudio
 {
 public:
     // 0x432C40 | ??0mmAmbientAudio@@QAE@PAVmmPlayer@@@Z
-    inline mmAmbientAudio(class mmPlayer* arg1)
+    mmAmbientAudio(class mmPlayer* arg1)
     {
         stub<member_func_t<void, mmAmbientAudio, class mmPlayer*>>(0x432C40, this, arg1);
     }
 
     // 0x432D00 | ??1mmAmbientAudio@@QAE@XZ
-    inline ~mmAmbientAudio()
+    ~mmAmbientAudio()
     {
         stub<member_func_t<void, mmAmbientAudio>>(0x432D00, this);
     }
 
     // 0x432D10 | ?Update@mmAmbientAudio@@QAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, mmAmbientAudio>>(0x432D10, this);
     }

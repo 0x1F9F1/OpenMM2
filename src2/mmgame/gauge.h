@@ -57,13 +57,13 @@ public:
     // RadialGauge::`vftable' @ 0x5B11B4
 
     // 0x43E710 | ??0RadialGauge@@QAE@XZ
-    inline RadialGauge()
+    RadialGauge()
     {
         stub<member_func_t<void, RadialGauge>>(0x43E710, this);
     }
 
     // 0x43E7A0 | ?Init@RadialGauge@@QAEXPAVmodStatic@@PAPAVmodShader@@VVector3@@PBM3M@Z
-    inline void Init(
+    void Init(
         class modStatic* arg1, class modShader** arg2, class Vector3 arg3, f32 const* arg4, f32 const* arg5, f32 arg6)
     {
         return stub<member_func_t<void, RadialGauge, class modStatic*, class modShader**, class Vector3, f32 const*,
@@ -71,13 +71,13 @@ public:
     }
 
     // 0x43E9F0 | ?Cull@RadialGauge@@QAEXPBVMatrix34@@@Z
-    inline void Cull(class Matrix34 const* arg1)
+    void Cull(class Matrix34 const* arg1)
     {
         return stub<member_func_t<void, RadialGauge, class Matrix34 const*>>(0x43E9F0, this, arg1);
     }
 
     // 0x43ED50 | ?GetArrowAngle@RadialGauge@@AAEMXZ
-    inline f32 GetArrowAngle()
+    f32 GetArrowAngle()
     {
         return stub<member_func_t<f32, RadialGauge>>(0x43ED50, this);
     }
@@ -86,19 +86,19 @@ public:
     static inline extern_var(0x62762C, bool, bDebugPivot);
 
     // 0x431B90 | ??1RadialGauge@@UAE@XZ
-    inline ~RadialGauge() override
+    ~RadialGauge() override
     {
         stub<member_func_t<void, RadialGauge>>(0x431B90, this);
     }
 
     // 0x43E940 | ?Cull@RadialGauge@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, RadialGauge>>(0x43E940, this);
     }
 
     // 0x43E820 | ?Update@RadialGauge@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, RadialGauge>>(0x43E820, this);
     }
@@ -108,20 +108,20 @@ struct mmSlidingGauge
 {
 public:
     // 0x431C10 | ??1mmSlidingGauge@@QAE@XZ
-    inline ~mmSlidingGauge()
+    ~mmSlidingGauge()
     {
         stub<member_func_t<void, mmSlidingGauge>>(0x431C10, this);
     }
 
     // 0x43EFB0 | ?Init@mmSlidingGauge@@QAEXPADPAM1HPAVmmExternalView@@H@Z
-    inline void Init(char* arg1, f32* arg2, f32* arg3, i32 arg4, class mmExternalView* arg5, i32 arg6)
+    void Init(char* arg1, f32* arg2, f32* arg3, i32 arg4, class mmExternalView* arg5, i32 arg6)
     {
         return stub<member_func_t<void, mmSlidingGauge, char*, f32*, f32*, i32, class mmExternalView*, i32>>(
             0x43EFB0, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x43EFE0 | ?Draw@mmSlidingGauge@@QAEXXZ
-    inline void Draw()
+    void Draw()
     {
         return stub<member_func_t<void, mmSlidingGauge>>(0x43EFE0, this);
     }
@@ -131,32 +131,32 @@ struct mmLinearGauge
 {
 public:
     // 0x43EE40 | ??0mmLinearGauge@@QAE@XZ
-    inline mmLinearGauge()
+    mmLinearGauge()
     {
         stub<member_func_t<void, mmLinearGauge>>(0x43EE40, this);
     }
 
     // 0x43EE60 | ??1mmLinearGauge@@QAE@XZ
-    inline ~mmLinearGauge()
+    ~mmLinearGauge()
     {
         stub<member_func_t<void, mmLinearGauge>>(0x43EE60, this);
     }
 
     // 0x43EE70 | ?Init@mmLinearGauge@@QAEXPADPAM1HPAVmmExternalView@@@Z
-    inline void Init(char* arg1, f32* arg2, f32* arg3, i32 arg4, class mmExternalView* arg5)
+    void Init(char* arg1, f32* arg2, f32* arg3, i32 arg4, class mmExternalView* arg5)
     {
         return stub<member_func_t<void, mmLinearGauge, char*, f32*, f32*, i32, class mmExternalView*>>(
             0x43EE70, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x43EED0 | ?InitOverlay@mmLinearGauge@@QAEXPAD@Z
-    inline void InitOverlay(char* arg1)
+    void InitOverlay(char* arg1)
     {
         return stub<member_func_t<void, mmLinearGauge, char*>>(0x43EED0, this, arg1);
     }
 
     // 0x43EEF0 | ?Draw@mmLinearGauge@@QAEXXZ
-    inline void Draw()
+    void Draw()
     {
         return stub<member_func_t<void, mmLinearGauge>>(0x43EEF0, this);
     }
@@ -166,20 +166,20 @@ struct mmGearIndicator
 {
 public:
     // 0x43F0A0 | ??0mmGearIndicator@@QAE@XZ
-    inline mmGearIndicator()
+    mmGearIndicator()
     {
         stub<member_func_t<void, mmGearIndicator>>(0x43F0A0, this);
     }
 
     // 0x43F0C0 | ?Init@mmGearIndicator@@QAEXPAVmmExternalView@@PAVmmPlayer@@@Z
-    inline void Init(class mmExternalView* arg1, class mmPlayer* arg2)
+    void Init(class mmExternalView* arg1, class mmPlayer* arg2)
     {
         return stub<member_func_t<void, mmGearIndicator, class mmExternalView*, class mmPlayer*>>(
             0x43F0C0, this, arg1, arg2);
     }
 
     // 0x43F1F0 | ?Draw@mmGearIndicator@@QAEXXZ
-    inline void Draw()
+    void Draw()
     {
         return stub<member_func_t<void, mmGearIndicator>>(0x43F1F0, this);
     }
@@ -189,20 +189,20 @@ struct mmSpeedIndicator
 {
 public:
     // 0x43F260 | ??0mmSpeedIndicator@@QAE@XZ
-    inline mmSpeedIndicator()
+    mmSpeedIndicator()
     {
         stub<member_func_t<void, mmSpeedIndicator>>(0x43F260, this);
     }
 
     // 0x43F280 | ?Init@mmSpeedIndicator@@QAEXPAVmmExternalView@@PAVvehCarSim@@@Z
-    inline void Init(class mmExternalView* arg1, class vehCarSim* arg2)
+    void Init(class mmExternalView* arg1, class vehCarSim* arg2)
     {
         return stub<member_func_t<void, mmSpeedIndicator, class mmExternalView*, class vehCarSim*>>(
             0x43F280, this, arg1, arg2);
     }
 
     // 0x43F330 | ?Draw@mmSpeedIndicator@@QAEXXZ
-    inline void Draw()
+    void Draw()
     {
         return stub<member_func_t<void, mmSpeedIndicator>>(0x43F330, this);
     }

@@ -36,26 +36,26 @@ public:
     // Dialog_Message::`vftable' @ 0x5B4094
 
     // 0x4FD3D0 | ??0Dialog_Message@@QAE@HMMMMPAD@Z
-    inline Dialog_Message(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    Dialog_Message(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
     {
         stub<member_func_t<void, Dialog_Message, i32, f32, f32, f32, f32, char*>>(
             0x4FD3D0, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4FD4F0 | ?Init@Dialog_Message@@QAEXHPAD0@Z
-    inline void Init(i32 arg1, char* arg2, char* arg3)
+    void Init(i32 arg1, char* arg2, char* arg3)
     {
         return stub<member_func_t<void, Dialog_Message, i32, char*, char*>>(0x4FD4F0, this, arg1, arg2, arg3);
     }
 
     // 0x4FD560 | ??1Dialog_Message@@UAE@XZ
-    inline ~Dialog_Message() override
+    ~Dialog_Message() override
     {
         stub<member_func_t<void, Dialog_Message>>(0x4FD560, this);
     }
 
     // 0x4FD570 | ?PreSetup@Dialog_Message@@UAEXXZ
-    inline void PreSetup() override
+    void PreSetup() override
     {
         return stub<member_func_t<void, Dialog_Message>>(0x4FD570, this);
     }

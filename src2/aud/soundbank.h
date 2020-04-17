@@ -36,38 +36,38 @@ class audSoundBankHdr
 {
 public:
     // 0x5A7430 | ?Init@audSoundBankHdr@@QAEXXZ
-    inline void Init()
+    void Init()
     {
         return stub<member_func_t<void, audSoundBankHdr>>(0x5A7430, this);
     }
 
     // 0x5A7460 | ?Destroy@audSoundBankHdr@@QAEXXZ
-    inline void Destroy()
+    void Destroy()
     {
         return stub<member_func_t<void, audSoundBankHdr>>(0x5A7460, this);
     }
 
     // 0x5A7470 | ?CreateEmptyBank@audSoundBankHdr@@QAEPAV1@PAPAX@Z
-    inline class audSoundBankHdr* CreateEmptyBank(void** arg1)
+    class audSoundBankHdr* CreateEmptyBank(void** arg1)
     {
         return stub<member_func_t<class audSoundBankHdr*, audSoundBankHdr, void**>>(0x5A7470, this, arg1);
     }
 
     // 0x5A7480 | ?AddFromMemory@audSoundBankHdr@@QAEHPAXPAV1@@Z
-    inline i32 AddFromMemory(void* arg1, class audSoundBankHdr* arg2)
+    i32 AddFromMemory(void* arg1, class audSoundBankHdr* arg2)
     {
         return stub<member_func_t<i32, audSoundBankHdr, void*, class audSoundBankHdr*>>(0x5A7480, this, arg1, arg2);
     }
 
     // 0x5A7490 | ?CreateFromFile@audSoundBankHdr@@QAEPAV1@PADPAPAX1@Z
-    inline class audSoundBankHdr* CreateFromFile(char* arg1, void** arg2, void** arg3)
+    class audSoundBankHdr* CreateFromFile(char* arg1, void** arg2, void** arg3)
     {
         return stub<member_func_t<class audSoundBankHdr*, audSoundBankHdr, char*, void**, void**>>(
             0x5A7490, this, arg1, arg2, arg3);
     }
 
     // 0x5A74A0 | ?CreateFromMemory@audSoundBankHdr@@QAEPAV1@PAXH0HPAU_bank_attrib@@HPAPAX@Z
-    inline class audSoundBankHdr* CreateFromMemory(
+    class audSoundBankHdr* CreateFromMemory(
         void* arg1, i32 arg2, void* arg3, i32 arg4, struct _bank_attrib* arg5, i32 arg6, void** arg7)
     {
         return stub<member_func_t<class audSoundBankHdr*, audSoundBankHdr, void*, i32, void*, i32, struct _bank_attrib*,
@@ -75,19 +75,19 @@ public:
     }
 
     // 0x5A74B0 | ?GetNumberOfAttribs@audSoundBankHdr@@QAEHXZ
-    inline i32 GetNumberOfAttribs()
+    i32 GetNumberOfAttribs()
     {
         return stub<member_func_t<i32, audSoundBankHdr>>(0x5A74B0, this);
     }
 
     // 0x5A74C0 | ?GetBankHandle@audSoundBankHdr@@QAEHXZ
-    inline i32 GetBankHandle()
+    i32 GetBankHandle()
     {
         return stub<member_func_t<i32, audSoundBankHdr>>(0x5A74C0, this);
     }
 
     // 0x5A74D0 | ?GetSoundIndex@audSoundBankHdr@@QAEHPAD@Z
-    inline i32 GetSoundIndex(char* arg1)
+    i32 GetSoundIndex(char* arg1)
     {
         return stub<member_func_t<i32, audSoundBankHdr, char*>>(0x5A74D0, this, arg1);
     }

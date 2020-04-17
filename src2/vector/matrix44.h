@@ -61,148 +61,148 @@ class Matrix44
 {
 public:
     // 0x4C0730 | ?Identity@Matrix44@@QAEXXZ
-    inline void Identity()
+    void Identity()
     {
         return stub<member_func_t<void, Matrix44>>(0x4C0730, this);
     }
 
     // 0x4C0770 | ?Zero@Matrix44@@QAEXXZ
-    inline void Zero()
+    void Zero()
     {
         return stub<member_func_t<void, Matrix44>>(0x4C0770, this);
     }
 
     // 0x4C07B0 | ?Set@Matrix44@@QAEXABV1@@Z
-    inline void Set(class Matrix44 const& arg1)
+    void Set(class Matrix44 const& arg1)
     {
         return stub<member_func_t<void, Matrix44, class Matrix44 const&>>(0x4C07B0, this, arg1);
     }
 
     // 0x4C0820 | ?Bezier@Matrix44@@QAEXXZ
-    inline void Bezier()
+    void Bezier()
     {
         return stub<member_func_t<void, Matrix44>>(0x4C0820, this);
     }
 
     // 0x4C0870 | ?Hermite@Matrix44@@QAEXXZ
-    inline void Hermite()
+    void Hermite()
     {
         return stub<member_func_t<void, Matrix44>>(0x4C0870, this);
     }
 
     // 0x4C08C0 | ?CatmullRom@Matrix44@@QAEXXZ
-    inline void CatmullRom()
+    void CatmullRom()
     {
         return stub<member_func_t<void, Matrix44>>(0x4C08C0, this);
     }
 
     // 0x4C0920 | ?Transpose@Matrix44@@QAEXXZ
-    inline void Transpose()
+    void Transpose()
     {
         return stub<member_func_t<void, Matrix44>>(0x4C0920, this);
     }
 
     // 0x4C0970 | ?FromMatrix34@Matrix44@@QAEXABVMatrix34@@@Z
-    inline void FromMatrix34(class Matrix34 const& arg1)
+    void FromMatrix34(class Matrix34 const& arg1)
     {
         return stub<member_func_t<void, Matrix44, class Matrix34 const&>>(0x4C0970, this, arg1);
     }
 
     // 0x4C09E0 | ?ToMatrix34@Matrix44@@QBEXAAVMatrix34@@@Z
-    inline void ToMatrix34(class Matrix34& arg1)
+    void ToMatrix34(class Matrix34& arg1)
     {
         return stub<member_func_t<void, Matrix44, class Matrix34&>>(0x4C09E0, this, arg1);
     }
 
     // 0x4C0A30 | ?Add@Matrix44@@QAEXABV1@@Z
-    inline void Add(class Matrix44 const& arg1)
+    void Add(class Matrix44 const& arg1)
     {
         return stub<member_func_t<void, Matrix44, class Matrix44 const&>>(0x4C0A30, this, arg1);
     }
 
     // 0x4C0AD0 | ?Add@Matrix44@@QAEXABV1@0@Z
-    inline void Add(class Matrix44 const& arg1, class Matrix44 const& arg2)
+    void Add(class Matrix44 const& arg1, class Matrix44 const& arg2)
     {
         return stub<member_func_t<void, Matrix44, class Matrix44 const&, class Matrix44 const&>>(
             0x4C0AD0, this, arg1, arg2);
     }
 
     // 0x4C0B70 | ?Subtract@Matrix44@@QAEXABV1@@Z
-    inline void Subtract(class Matrix44 const& arg1)
+    void Subtract(class Matrix44 const& arg1)
     {
         return stub<member_func_t<void, Matrix44, class Matrix44 const&>>(0x4C0B70, this, arg1);
     }
 
     // 0x4C0C10 | ?Subtract@Matrix44@@QAEXABV1@0@Z
-    inline void Subtract(class Matrix44 const& arg1, class Matrix44 const& arg2)
+    void Subtract(class Matrix44 const& arg1, class Matrix44 const& arg2)
     {
         return stub<member_func_t<void, Matrix44, class Matrix44 const&, class Matrix44 const&>>(
             0x4C0C10, this, arg1, arg2);
     }
 
     // 0x4C0CB0 | ?AddScaled@Matrix44@@QAEXABV1@M@Z
-    inline void AddScaled(class Matrix44 const& arg1, f32 arg2)
+    void AddScaled(class Matrix44 const& arg1, f32 arg2)
     {
         return stub<member_func_t<void, Matrix44, class Matrix44 const&, f32>>(0x4C0CB0, this, arg1, arg2);
     }
 
     // 0x4C0D50 | ?Dot@Matrix44@@QAEAAV1@ABV1@@Z
-    inline class Matrix44& Dot(class Matrix44 const& arg1)
+    class Matrix44& Dot(class Matrix44 const& arg1)
     {
         return stub<member_func_t<class Matrix44&, Matrix44, class Matrix44 const&>>(0x4C0D50, this, arg1);
     }
 
     // 0x4C0FC0 | ?Dot@Matrix44@@QAEAAV1@ABV1@0@Z
-    inline class Matrix44& Dot(class Matrix44 const& arg1, class Matrix44 const& arg2)
+    class Matrix44& Dot(class Matrix44 const& arg1, class Matrix44 const& arg2)
     {
         return stub<member_func_t<class Matrix44&, Matrix44, class Matrix44 const&, class Matrix44 const&>>(
             0x4C0FC0, this, arg1, arg2);
     }
 
     // 0x4C1260 | ?FastInverse@Matrix44@@QAEXABV1@@Z
-    inline void FastInverse(class Matrix44 const& arg1)
+    void FastInverse(class Matrix44 const& arg1)
     {
         return stub<member_func_t<void, Matrix44, class Matrix44 const&>>(0x4C1260, this, arg1);
     }
 
     // 0x4C1320 | ?Determinant@Matrix44@@QBEMXZ
-    inline f32 Determinant()
+    f32 Determinant()
     {
         return stub<member_func_t<f32, Matrix44>>(0x4C1320, this);
     }
 
     // 0x4C1510 | ?InvertTo@Matrix44@@QBEXAAV1@@Z
-    inline void InvertTo(class Matrix44& arg1)
+    void InvertTo(class Matrix44& arg1)
     {
         return stub<member_func_t<void, Matrix44, class Matrix44&>>(0x4C1510, this, arg1);
     }
 
     // 0x4C1C00 | ?MakeRotX@Matrix44@@QAEAAV1@M@Z
-    inline class Matrix44& MakeRotX(f32 arg1)
+    class Matrix44& MakeRotX(f32 arg1)
     {
         return stub<member_func_t<class Matrix44&, Matrix44, f32>>(0x4C1C00, this, arg1);
     }
 
     // 0x4C1C50 | ?MakeRotY@Matrix44@@QAEAAV1@M@Z
-    inline class Matrix44& MakeRotY(f32 arg1)
+    class Matrix44& MakeRotY(f32 arg1)
     {
         return stub<member_func_t<class Matrix44&, Matrix44, f32>>(0x4C1C50, this, arg1);
     }
 
     // 0x4C1CA0 | ?MakeRotZ@Matrix44@@QAEAAV1@M@Z
-    inline class Matrix44& MakeRotZ(f32 arg1)
+    class Matrix44& MakeRotZ(f32 arg1)
     {
         return stub<member_func_t<class Matrix44&, Matrix44, f32>>(0x4C1CA0, this, arg1);
     }
 
     // 0x4C1CF0 | ?Print@Matrix44@@QBEXPBD@Z
-    inline void Print(char const* arg1)
+    void Print(char const* arg1)
     {
         return stub<member_func_t<void, Matrix44, char const*>>(0x4C1CF0, this, arg1);
     }
 
     // 0x4C1D60 | ?Transform4@Matrix44@@QBEXPBVVector3@@PAVVector4@@H@Z
-    inline void Transform4(class Vector3 const* arg1, class Vector4* arg2, i32 arg3)
+    void Transform4(class Vector3 const* arg1, class Vector4* arg2, i32 arg3)
     {
         return stub<member_func_t<void, Matrix44, class Vector3 const*, class Vector4*, i32>>(
             0x4C1D60, this, arg1, arg2, arg3);

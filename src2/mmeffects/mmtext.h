@@ -67,89 +67,89 @@ public:
     // mmTextNode::`vftable' @ 0x5B52F0
 
     // 0x532670 | ??0mmTextNode@@QAE@XZ
-    inline mmTextNode()
+    mmTextNode()
     {
         stub<member_func_t<void, mmTextNode>>(0x532670, this);
     }
 
     // 0x532750 | ?Init@mmTextNode@@QAEXHHHHHH@Z
-    inline void Init(i32 arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6)
+    void Init(i32 arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6)
     {
         return stub<member_func_t<void, mmTextNode, i32, i32, i32, i32, i32, i32>>(
             0x532750, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x532840 | ?Init@mmTextNode@@QAEXMMMMHH@Z
-    inline void Init(f32 arg1, f32 arg2, f32 arg3, f32 arg4, i32 arg5, i32 arg6)
+    void Init(f32 arg1, f32 arg2, f32 arg3, f32 arg4, i32 arg5, i32 arg6)
     {
         return stub<member_func_t<void, mmTextNode, f32, f32, f32, f32, i32, i32>>(
             0x532840, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x532970 | ?SetBGColor@mmTextNode@@QAEXAAVVector4@@@Z
-    inline void SetBGColor(class Vector4& arg1)
+    void SetBGColor(class Vector4& arg1)
     {
         return stub<member_func_t<void, mmTextNode, class Vector4&>>(0x532970, this, arg1);
     }
 
     // 0x5329E0 | ?SetFGColor@mmTextNode@@QAEXAAVVector4@@@Z
-    inline void SetFGColor(class Vector4& arg1)
+    void SetFGColor(class Vector4& arg1)
     {
         return stub<member_func_t<void, mmTextNode, class Vector4&>>(0x5329E0, this, arg1);
     }
 
     // 0x532A40 | ?SetHlColor@mmTextNode@@QAEXAAVVector4@@@Z
-    inline void SetHlColor(class Vector4& arg1)
+    void SetHlColor(class Vector4& arg1)
     {
         return stub<member_func_t<void, mmTextNode, class Vector4&>>(0x532A40, this, arg1);
     }
 
     // 0x532AA0 | ?GetFGColor@mmTextNode@@QAEIXZ
-    inline u32 GetFGColor()
+    u32 GetFGColor()
     {
         return stub<member_func_t<u32, mmTextNode>>(0x532AA0, this);
     }
 
     // 0x532AB0 | ?SetEffects@mmTextNode@@QAEXHH@Z
-    inline void SetEffects(i32 arg1, i32 arg2)
+    void SetEffects(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, mmTextNode, i32, i32>>(0x532AB0, this, arg1, arg2);
     }
 
     // 0x532AE0 | ?GetEffects@mmTextNode@@QAEHH@Z
-    inline i32 GetEffects(i32 arg1)
+    i32 GetEffects(i32 arg1)
     {
         return stub<member_func_t<i32, mmTextNode, i32>>(0x532AE0, this, arg1);
     }
 
     // 0x532B10 | ?GetTextDimensions@mmTextNode@@QAEXPBXPBULocString@@AAM2@Z
-    inline void GetTextDimensions(void const* arg1, struct LocString const* arg2, f32& arg3, f32& arg4)
+    void GetTextDimensions(void const* arg1, struct LocString const* arg2, f32& arg3, f32& arg4)
     {
         return stub<member_func_t<void, mmTextNode, void const*, struct LocString const*, f32&, f32&>>(
             0x532B10, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x532C20 | ?SetTextPosition@mmTextNode@@QAEXHMM@Z
-    inline void SetTextPosition(i32 arg1, f32 arg2, f32 arg3)
+    void SetTextPosition(i32 arg1, f32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, mmTextNode, i32, f32, f32>>(0x532C20, this, arg1, arg2, arg3);
     }
 
     // 0x532C70 | ?AddText@mmTextNode@@QAEHPBXPBULocString@@HMM@Z
-    inline i32 AddText(void const* arg1, struct LocString const* arg2, i32 arg3, f32 arg4, f32 arg5)
+    i32 AddText(void const* arg1, struct LocString const* arg2, i32 arg3, f32 arg4, f32 arg5)
     {
         return stub<member_func_t<i32, mmTextNode, void const*, struct LocString const*, i32, f32, f32>>(
             0x532C70, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x532D50 | ?SetString@mmTextNode@@QAEXHPBULocString@@@Z
-    inline void SetString(i32 arg1, struct LocString const* arg2)
+    void SetString(i32 arg1, struct LocString const* arg2)
     {
         return stub<member_func_t<void, mmTextNode, i32, struct LocString const*>>(0x532D50, this, arg1, arg2);
     }
 
     // 0x532DB0 | ?SetPosition@mmTextNode@@QAEXHMM@Z
-    inline void SetPosition(i32 arg1, f32 arg2, f32 arg3)
+    void SetPosition(i32 arg1, f32 arg2, f32 arg3)
     {
         return stub<member_func_t<void, mmTextNode, i32, f32, f32>>(0x532DB0, this, arg1, arg2, arg3);
     }
@@ -158,26 +158,26 @@ public:
     // Skipped (Variable Arguments)
 
     // 0x532E80 | ?RenderText@mmTextNode@@QAEXPAVgfxBitmap@@PAUmmTextData@@HI@Z
-    inline void RenderText(class gfxBitmap* arg1, struct mmTextData* arg2, i32 arg3, u32 arg4)
+    void RenderText(class gfxBitmap* arg1, struct mmTextData* arg2, i32 arg3, u32 arg4)
     {
         return stub<member_func_t<void, mmTextNode, class gfxBitmap*, struct mmTextData*, i32, u32>>(
             0x532E80, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x5326C0 | ??1mmTextNode@@UAE@XZ
-    inline ~mmTextNode() override
+    ~mmTextNode() override
     {
         stub<member_func_t<void, mmTextNode>>(0x5326C0, this);
     }
 
     // 0x533170 | ?Cull@mmTextNode@@UAEXXZ
-    inline void Cull() override
+    void Cull() override
     {
         return stub<member_func_t<void, mmTextNode>>(0x533170, this);
     }
 
     // 0x532E50 | ?Update@mmTextNode@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmTextNode>>(0x532E50, this);
     }
@@ -187,13 +187,13 @@ struct mmText
 {
 public:
     // 0x5321A0 | ??0mmText@@QAE@XZ
-    inline mmText()
+    mmText()
     {
         stub<member_func_t<void, mmText>>(0x5321A0, this);
     }
 
     // 0x5321B0 | ??1mmText@@QAE@XZ
-    inline ~mmText()
+    ~mmText()
     {
         stub<member_func_t<void, mmText>>(0x5321B0, this);
     }
@@ -235,14 +235,14 @@ public:
     }
 
     // 0x5324F0 | ?Draw@mmText@@QAEXPAVgfxBitmap@@MMPBDPBX@Z
-    inline void Draw(class gfxBitmap* arg1, f32 arg2, f32 arg3, char const* arg4, void const* arg5)
+    void Draw(class gfxBitmap* arg1, f32 arg2, f32 arg3, char const* arg4, void const* arg5)
     {
         return stub<member_func_t<void, mmText, class gfxBitmap*, f32, f32, char const*, void const*>>(
             0x5324F0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x532580 | ?Draw2@mmText@@QAEXPAVgfxBitmap@@MMPBDPBXI@Z
-    inline void Draw2(class gfxBitmap* arg1, f32 arg2, f32 arg3, char const* arg4, void const* arg5, u32 arg6)
+    void Draw2(class gfxBitmap* arg1, f32 arg2, f32 arg3, char const* arg4, void const* arg5, u32 arg6)
     {
         return stub<member_func_t<void, mmText, class gfxBitmap*, f32, f32, char const*, void const*, u32>>(
             0x532580, this, arg1, arg2, arg3, arg4, arg5, arg6);

@@ -43,61 +43,61 @@ public:
     // asFileIO::`vftable' @ 0x5B871C
 
     // 0x597790 | ??0asFileIO@@QAE@XZ
-    inline asFileIO()
+    asFileIO()
     {
         stub<member_func_t<void, asFileIO>>(0x597790, this);
     }
 
     // 0x597940 | ?SetName@asFileIO@@QAEXPBD@Z
-    inline void SetName(char const* arg1)
+    void SetName(char const* arg1)
     {
         return stub<member_func_t<void, asFileIO, char const*>>(0x597940, this, arg1);
     }
 
     // 0x5977A0 | ??1asFileIO@@UAE@XZ
-    inline ~asFileIO() override
+    ~asFileIO() override
     {
         stub<member_func_t<void, asFileIO>>(0x5977A0, this);
     }
 
     // 0x5979B0 | ?FileIO@asFileIO@@MAEXAAVdatParser@@@Z
-    virtual inline void FileIO(class datParser& arg1)
+    virtual void FileIO(class datParser& arg1)
     {
         return stub<member_func_t<void, asFileIO, class datParser&>>(0x5979B0, this, arg1);
     }
 
     // 0x595AE0 | ?AfterLoad@asFileIO@@MAEXXZ
-    virtual inline void AfterLoad()
+    virtual void AfterLoad()
     {
         return stub<member_func_t<void, asFileIO>>(0x595AE0, this);
     }
 
     // 0x595AF0 | ?BeforeSave@asFileIO@@MAEXXZ
-    virtual inline void BeforeSave()
+    virtual void BeforeSave()
     {
         return stub<member_func_t<void, asFileIO>>(0x595AF0, this);
     }
 
     // 0x597800 | ?Save@asFileIO@@MAE_NXZ
-    virtual inline bool Save()
+    virtual bool Save()
     {
         return stub<member_func_t<bool, asFileIO>>(0x597800, this);
     }
 
     // 0x597890 | ?Load@asFileIO@@MAE_NXZ
-    virtual inline bool Load()
+    virtual bool Load()
     {
         return stub<member_func_t<bool, asFileIO>>(0x597890, this);
     }
 
     // 0x597970 | ?GetDirName@asFileIO@@MAEPBDXZ
-    virtual inline char const* GetDirName()
+    virtual char const* GetDirName()
     {
         return stub<member_func_t<char const*, asFileIO>>(0x597970, this);
     }
 
     // 0x5979C0 | ?GetClassName@asFileIO@@MAEPBDXZ
-    virtual inline char const* GetClassName()
+    virtual char const* GetClassName()
     {
         return stub<member_func_t<char const*, asFileIO>>(0x5979C0, this);
     }

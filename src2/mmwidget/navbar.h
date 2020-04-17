@@ -45,79 +45,79 @@ public:
     // uiNavBar::`vftable' @ 0x5B32C8
 
     // 0x4E6230 | ??0uiNavBar@@QAE@H@Z
-    inline uiNavBar(i32 arg1)
+    uiNavBar(i32 arg1)
     {
         stub<member_func_t<void, uiNavBar, i32>>(0x4E6230, this, arg1);
     }
 
     // 0x4E6460 | ?Help@uiNavBar@@QAEXXZ
-    inline void Help()
+    void Help()
     {
         return stub<member_func_t<void, uiNavBar>>(0x4E6460, this);
     }
 
     // 0x4E6470 | ?Minimize@uiNavBar@@QAEXXZ
-    inline void Minimize()
+    void Minimize()
     {
         return stub<member_func_t<void, uiNavBar>>(0x4E6470, this);
     }
 
     // 0x4E64B0 | ?ResetState@uiNavBar@@QAEXXZ
-    inline void ResetState()
+    void ResetState()
     {
         return stub<member_func_t<void, uiNavBar>>(0x4E64B0, this);
     }
 
     // 0x4E64C0 | ?OptionActive@uiNavBar@@QAEXXZ
-    inline void OptionActive()
+    void OptionActive()
     {
         return stub<member_func_t<void, uiNavBar>>(0x4E64C0, this);
     }
 
     // 0x4E64E0 | ?OptionInActive@uiNavBar@@QAEXXZ
-    inline void OptionInActive()
+    void OptionInActive()
     {
         return stub<member_func_t<void, uiNavBar>>(0x4E64E0, this);
     }
 
     // 0x4E65A0 | ?SetPrevPos@uiNavBar@@QAEXMM@Z
-    inline void SetPrevPos(f32 arg1, f32 arg2)
+    void SetPrevPos(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, uiNavBar, f32, f32>>(0x4E65A0, this, arg1, arg2);
     }
 
     // 0x4E65F0 | ?TurnOnPrev@uiNavBar@@QAEXXZ
-    inline void TurnOnPrev()
+    void TurnOnPrev()
     {
         return stub<member_func_t<void, uiNavBar>>(0x4E65F0, this);
     }
 
     // 0x4E6610 | ?TurnOffPrev@uiNavBar@@QAEXXZ
-    inline void TurnOffPrev()
+    void TurnOffPrev()
     {
         return stub<member_func_t<void, uiNavBar>>(0x4E6610, this);
     }
 
     // 0x4E6630 | ?SetPrevBitmap@uiNavBar@@QAEXPAD@Z
-    inline void SetPrevBitmap(char* arg1)
+    void SetPrevBitmap(char* arg1)
     {
         return stub<member_func_t<void, uiNavBar, char*>>(0x4E6630, this, arg1);
     }
 
     // 0x4E64A0 | ??1uiNavBar@@UAE@XZ
-    inline ~uiNavBar() override
+    ~uiNavBar() override
     {
         stub<member_func_t<void, uiNavBar>>(0x4E64A0, this);
     }
 
     // 0x4E6500 | ?Update@uiNavBar@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, uiNavBar>>(0x4E6500, this);
     }
 
     // 0x4E6680 | ?BackUp@uiNavBar@@UAEXXZ
-    inline void BackUp() override
+    void BackUp() override
     {
         return stub<member_func_t<void, uiNavBar>>(0x4E6680, this);
     }

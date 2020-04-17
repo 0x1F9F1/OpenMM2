@@ -51,104 +51,104 @@ public:
     // MixerCTL::`vftable' @ 0x5B4E70
 
     // 0x51C1F0 | ?Init@MixerCTL@@QAEKXZ
-    inline u32 Init()
+    u32 Init()
     {
         return stub<member_func_t<u32, MixerCTL>>(0x51C1F0, this);
     }
 
     // 0x51C240 | ?AssignWaveBalance@MixerCTL@@QAEXM@Z
-    inline void AssignWaveBalance(f32 arg1)
+    void AssignWaveBalance(f32 arg1)
     {
         return stub<member_func_t<void, MixerCTL, f32>>(0x51C240, this, arg1);
     }
 
     // 0x51C290 | ?AssignCDBalance@MixerCTL@@QAEXM@Z
-    inline void AssignCDBalance(f32 arg1)
+    void AssignCDBalance(f32 arg1)
     {
         return stub<member_func_t<void, MixerCTL, f32>>(0x51C290, this, arg1);
     }
 
     // 0x51C2E0 | ?RefreshAll@MixerCTL@@QAEXK@Z
-    inline void RefreshAll(u32 arg1)
+    void RefreshAll(u32 arg1)
     {
         return stub<member_func_t<void, MixerCTL, u32>>(0x51C2E0, this, arg1);
     }
 
     // 0x51C2F0 | ?GetWaveBalance@MixerCTL@@QAEMXZ
-    inline f32 GetWaveBalance()
+    f32 GetWaveBalance()
     {
         return stub<member_func_t<f32, MixerCTL>>(0x51C2F0, this);
     }
 
     // 0x51C300 | ?GetWaveVolume@MixerCTL@@QAEMXZ
-    inline f32 GetWaveVolume()
+    f32 GetWaveVolume()
     {
         return stub<member_func_t<f32, MixerCTL>>(0x51C300, this);
     }
 
     // 0x51C310 | ?AssignWaveVolume@MixerCTL@@QAEXM@Z
-    inline void AssignWaveVolume(f32 arg1)
+    void AssignWaveVolume(f32 arg1)
     {
         return stub<member_func_t<void, MixerCTL, f32>>(0x51C310, this, arg1);
     }
 
     // 0x51C330 | ?AssignCDVolume@MixerCTL@@QAEXM@Z
-    inline void AssignCDVolume(f32 arg1)
+    void AssignCDVolume(f32 arg1)
     {
         return stub<member_func_t<void, MixerCTL, f32>>(0x51C330, this, arg1);
     }
 
     // 0x51C350 | ?GetCDBalance@MixerCTL@@QAEMXZ
-    inline f32 GetCDBalance()
+    f32 GetCDBalance()
     {
         return stub<member_func_t<f32, MixerCTL>>(0x51C350, this);
     }
 
     // 0x51C360 | ?GetCDVolume@MixerCTL@@QAEMXZ
-    inline f32 GetCDVolume()
+    f32 GetCDVolume()
     {
         return stub<member_func_t<f32, MixerCTL>>(0x51C360, this);
     }
 
     // 0x51C370 | ?AssignMixerVolume@MixerCTL@@QAEKMK@Z
-    inline u32 AssignMixerVolume(f32 arg1, u32 arg2)
+    u32 AssignMixerVolume(f32 arg1, u32 arg2)
     {
         return stub<member_func_t<u32, MixerCTL, f32, u32>>(0x51C370, this, arg1, arg2);
     }
 
     // 0x51C5C0 | ?AssignMixerBalance@MixerCTL@@QAEKMK@Z
-    inline u32 AssignMixerBalance(f32 arg1, u32 arg2)
+    u32 AssignMixerBalance(f32 arg1, u32 arg2)
     {
         return stub<member_func_t<u32, MixerCTL, f32, u32>>(0x51C5C0, this, arg1, arg2);
     }
 
     // 0x51C870 | ?GetMixerBalance@MixerCTL@@QAEMK@Z
-    inline f32 GetMixerBalance(u32 arg1)
+    f32 GetMixerBalance(u32 arg1)
     {
         return stub<member_func_t<f32, MixerCTL, u32>>(0x51C870, this, arg1);
     }
 
     // 0x51CAE0 | ?SetDeviceNum@MixerCTL@@QAEXI@Z
-    inline void SetDeviceNum(u32 arg1)
+    void SetDeviceNum(u32 arg1)
     {
         return stub<member_func_t<void, MixerCTL, u32>>(0x51CAE0, this, arg1);
     }
 
     // 0x51CB00 | ?GetErrorMessage@MixerCTL@@AAEPADK@Z
-    inline char* GetErrorMessage(u32 arg1)
+    char* GetErrorMessage(u32 arg1)
     {
         return stub<member_func_t<char*, MixerCTL, u32>>(0x51CB00, this, arg1);
     }
 
     // 0x51CBA0 | ?WindowProc@MixerCTL@@AAEJPAUHWND__@@IIJ@Z
-    inline i32 WindowProc(struct HWND__* arg1, u32 arg2, u32 arg3, i32 arg4)
+    i32 WindowProc(struct HWND__* arg1, u32 arg2, u32 arg3, i32 arg4)
     {
         return stub<member_func_t<i32, MixerCTL, struct HWND__*, u32, u32, i32>>(
             0x51CBA0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x51C230 | ??1MixerCTL@@UAE@XZ
-    virtual inline ~MixerCTL()
+    virtual ~MixerCTL()
     {
         stub<member_func_t<void, MixerCTL>>(0x51C230, this);
     }
@@ -158,13 +158,13 @@ struct VolumeDW
 {
 public:
     // 0x51C100 | ?Set@VolumeDW@@QAEXMM@Z
-    inline void Set(f32 arg1, f32 arg2)
+    void Set(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, VolumeDW, f32, f32>>(0x51C100, this, arg1, arg2);
     }
 
     // 0x51C1C0 | ?Value@VolumeDW@@QAEKXZ
-    inline u32 Value()
+    u32 Value()
     {
         return stub<member_func_t<u32, VolumeDW>>(0x51C1C0, this);
     }

@@ -41,7 +41,7 @@ class gfxImage
 {
 public:
     // 0x4AE8C0 | ??1gfxImage@@AAE@XZ
-    inline ~gfxImage()
+    ~gfxImage()
     {
         stub<member_func_t<void, gfxImage>>(0x4AE8C0, this);
     }
@@ -68,38 +68,38 @@ public:
     }
 
     // 0x4AEBA0 | ?Halve@gfxImage@@QAEXXZ
-    inline void Halve()
+    void Halve()
     {
         return stub<member_func_t<void, gfxImage>>(0x4AEBA0, this);
     }
 
     // 0x4AEC90 | ?GenerateMipmaps@gfxImage@@QAEXXZ
-    inline void GenerateMipmaps()
+    void GenerateMipmaps()
     {
         return stub<member_func_t<void, gfxImage>>(0x4AEC90, this);
     }
 
     // 0x4AEDC0 | ?Scale@gfxImage@@QAEXHH@Z
-    inline void Scale(i32 arg1, i32 arg2)
+    void Scale(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, gfxImage, i32, i32>>(0x4AEDC0, this, arg1, arg2);
     }
 
     // 0x4AF1A0 | ?Reformat@gfxImage@@QAEXW4gfxImageFormat@1@0@Z
-    inline void Reformat(enum gfxImage::gfxImageFormat arg1, enum gfxImage::gfxImageFormat arg2)
+    void Reformat(enum gfxImage::gfxImageFormat arg1, enum gfxImage::gfxImageFormat arg2)
     {
         return stub<member_func_t<void, gfxImage, enum gfxImage::gfxImageFormat, enum gfxImage::gfxImageFormat>>(
             0x4AF1A0, this, arg1, arg2);
     }
 
     // 0x4AF2D0 | ?GetDominantColor@gfxImage@@QBEIXZ
-    inline u32 GetDominantColor()
+    u32 GetDominantColor()
     {
         return stub<member_func_t<u32, gfxImage>>(0x4AF2D0, this);
     }
 
     // 0x4AF470 | ?Flip@gfxImage@@QAEXXZ
-    inline void Flip()
+    void Flip()
     {
         return stub<member_func_t<void, gfxImage>>(0x4AF470, this);
     }

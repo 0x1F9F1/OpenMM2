@@ -37,19 +37,19 @@ struct Random
 {
 public:
     // 0x4A37D0 | ?Seed@Random@@QAEXH@Z
-    inline void Seed(i32 arg1)
+    void Seed(i32 arg1)
     {
         return stub<member_func_t<void, Random, i32>>(0x4A37D0, this, arg1);
     }
 
     // 0x4A3880 | ?Number@Random@@QAEMXZ
-    inline f32 Number()
+    f32 Number()
     {
         return stub<member_func_t<f32, Random>>(0x4A3880, this);
     }
 
     // 0x4A38E0 | ?Normal@Random@@QAEMMM@Z
-    inline f32 Normal(f32 arg1, f32 arg2)
+    f32 Normal(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<f32, Random, f32, f32>>(0x4A38E0, this, arg1, arg2);
     }

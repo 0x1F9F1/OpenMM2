@@ -44,61 +44,61 @@ public:
     // camPovCS::`vftable' @ 0x5B4E80
 
     // 0x51D410 | ??0camPovCS@@QAE@XZ
-    inline camPovCS()
+    camPovCS()
     {
         stub<member_func_t<void, camPovCS>>(0x51D410, this);
     }
 
     // 0x51D5A0 | ?UpdatePOV@camPovCS@@AAEXXZ
-    inline void UpdatePOV()
+    void UpdatePOV()
     {
         return stub<member_func_t<void, camPovCS>>(0x51D5A0, this);
     }
 
     // 0x51D520 | ??1camPovCS@@UAE@XZ
-    inline ~camPovCS() override
+    ~camPovCS() override
     {
         stub<member_func_t<void, camPovCS>>(0x51D520, this);
     }
 
     // 0x51D570 | ?Update@camPovCS@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, camPovCS>>(0x51D570, this);
     }
 
     // 0x51D540 | ?Reset@camPovCS@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, camPovCS>>(0x51D540, this);
     }
 
     // 0x51D690 | ?FileIO@camPovCS@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
+    void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, camPovCS, class datParser&>>(0x51D690, this, arg1);
     }
 
     // 0x51D710 | ?AfterLoad@camPovCS@@UAEXXZ
-    inline void AfterLoad() override
+    void AfterLoad() override
     {
         return stub<member_func_t<void, camPovCS>>(0x51D710, this);
     }
 
     // 0x51D760 | ?GetClassName@camPovCS@@UAEPADXZ
-    inline char* GetClassName() override
+    char* GetClassName() override
     {
         return stub<member_func_t<char*, camPovCS>>(0x51D760, this);
     }
 
     // 0x51D530 | ?MakeActive@camPovCS@@UAEXXZ
-    inline void MakeActive() override
+    void MakeActive() override
     {
         return stub<member_func_t<void, camPovCS>>(0x51D530, this);
     }
 
     // 0x51D590 | ?UpdateInput@camPovCS@@UAEXXZ
-    inline void UpdateInput() override
+    void UpdateInput() override
     {
         return stub<member_func_t<void, camPovCS>>(0x51D590, this);
     }

@@ -55,133 +55,133 @@ public:
     // mmSingleCircuit::`vftable' @ 0x5B06CC
 
     // 0x41C4A0 | ??0mmSingleCircuit@@QAE@XZ
-    inline mmSingleCircuit()
+    mmSingleCircuit()
     {
         stub<member_func_t<void, mmSingleCircuit>>(0x41C4A0, this);
     }
 
     // 0x41CBA0 | ?UpdateScore@mmSingleCircuit@@QAEXXZ
-    inline void UpdateScore()
+    void UpdateScore()
     {
         return stub<member_func_t<void, mmSingleCircuit>>(0x41CBA0, this);
     }
 
     // 0x41D480 | ?UpdateOpponentStatus@mmSingleCircuit@@QAEXXZ
-    inline void UpdateOpponentStatus()
+    void UpdateOpponentStatus()
     {
         return stub<member_func_t<void, mmSingleCircuit>>(0x41D480, this);
     }
 
     // 0x41D6A0 | ?FinishMessage@mmSingleCircuit@@AAEXHH@Z
-    inline void FinishMessage(i32 arg1, i32 arg2)
+    void FinishMessage(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, mmSingleCircuit, i32, i32>>(0x41D6A0, this, arg1, arg2);
     }
 
     // 0x41D840 | ?RegisterLap@mmSingleCircuit@@AAEHXZ
-    inline i32 RegisterLap()
+    i32 RegisterLap()
     {
         return stub<member_func_t<i32, mmSingleCircuit>>(0x41D840, this);
     }
 
     // 0x41D8A0 | ?RegisterFinish@mmSingleCircuit@@AAEHXZ
-    inline i32 RegisterFinish()
+    i32 RegisterFinish()
     {
         return stub<member_func_t<i32, mmSingleCircuit>>(0x41D8A0, this);
     }
 
     // 0x41DB80 | ?ProgressCheck@mmSingleCircuit@@AAEHHH@Z
-    inline i32 ProgressCheck(i32 arg1, i32 arg2)
+    i32 ProgressCheck(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<i32, mmSingleCircuit, i32, i32>>(0x41DB80, this, arg1, arg2);
     }
 
     // 0x41C4E0 | ??1mmSingleCircuit@@UAE@XZ
-    inline ~mmSingleCircuit() override
+    ~mmSingleCircuit() override
     {
         stub<member_func_t<void, mmSingleCircuit>>(0x41C4E0, this);
     }
 
     // 0x41CB80 | ?Update@mmSingleCircuit@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmSingleCircuit>>(0x41CB80, this);
     }
 
     // 0x41CA50 | ?Reset@mmSingleCircuit@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, mmSingleCircuit>>(0x41CA50, this);
     }
 
     // 0x41C590 | ?Init@mmSingleCircuit@@UAEHXZ
-    inline i32 Init() override
+    i32 Init() override
     {
         return stub<member_func_t<i32, mmSingleCircuit>>(0x41C590, this);
     }
 
     // 0x41C6B0 | ?InitMyPlayer@mmSingleCircuit@@UAEXXZ
-    inline void InitMyPlayer() override
+    void InitMyPlayer() override
     {
         return stub<member_func_t<void, mmSingleCircuit>>(0x41C6B0, this);
     }
 
     // 0x41CA40 | ?InitOtherPlayers@mmSingleCircuit@@UAEXXZ
-    inline void InitOtherPlayers() override
+    void InitOtherPlayers() override
     {
         return stub<member_func_t<void, mmSingleCircuit>>(0x41CA40, this);
     }
 
     // 0x41C770 | ?InitGameObjects@mmSingleCircuit@@UAEXXZ
-    inline void InitGameObjects() override
+    void InitGameObjects() override
     {
         return stub<member_func_t<void, mmSingleCircuit>>(0x41C770, this);
     }
 
     // 0x41C720 | ?InitHUD@mmSingleCircuit@@UAEXXZ
-    inline void InitHUD() override
+    void InitHUD() override
     {
         return stub<member_func_t<void, mmSingleCircuit>>(0x41C720, this);
     }
 
     // 0x41CB90 | ?UpdateGameInput@mmSingleCircuit@@UAEXH@Z
-    inline void UpdateGameInput(i32 arg1) override
+    void UpdateGameInput(i32 arg1) override
     {
         return stub<member_func_t<void, mmSingleCircuit, i32>>(0x41CB90, this, arg1);
     }
 
     // 0x41DF10 | ?UpdateDebugKeyInput@mmSingleCircuit@@UAEXH@Z
-    inline void UpdateDebugKeyInput(i32 arg1) override
+    void UpdateDebugKeyInput(i32 arg1) override
     {
         return stub<member_func_t<void, mmSingleCircuit, i32>>(0x41DF10, this, arg1);
     }
 
     // 0x41CEE0 | ?UpdateGame@mmSingleCircuit@@UAEXXZ
-    inline void UpdateGame() override
+    void UpdateGame() override
     {
         return stub<member_func_t<void, mmSingleCircuit>>(0x41CEE0, this);
     }
 
     // 0x41DBC0 | ?NextRace@mmSingleCircuit@@UAEXXZ
-    inline void NextRace() override
+    void NextRace() override
     {
         return stub<member_func_t<void, mmSingleCircuit>>(0x41DBC0, this);
     }
 
     // 0x41CAA0 | ?HitWaterHandler@mmSingleCircuit@@UAEXXZ
-    inline void HitWaterHandler() override
+    void HitWaterHandler() override
     {
         return stub<member_func_t<void, mmSingleCircuit>>(0x41CAA0, this);
     }
 
     // 0x41D690 | ?SwitchState@mmSingleCircuit@@UAEXH@Z
-    inline void SwitchState(i32 arg1) override
+    void SwitchState(i32 arg1) override
     {
         return stub<member_func_t<void, mmSingleCircuit, i32>>(0x41D690, this, arg1);
     }
 
     // 0x41DF20 | ?GetWaypoints@mmSingleCircuit@@UAEPAVmmWaypoints@@XZ
-    inline class mmWaypoints* GetWaypoints() override
+    class mmWaypoints* GetWaypoints() override
     {
         return stub<member_func_t<class mmWaypoints*, mmSingleCircuit>>(0x41DF20, this);
     }

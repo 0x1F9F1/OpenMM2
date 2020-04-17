@@ -37,62 +37,62 @@ struct mmPositions
 {
 public:
     // 0x52A0B0 | ??0mmPositions@@QAE@XZ
-    inline mmPositions()
+    mmPositions()
     {
         stub<member_func_t<void, mmPositions>>(0x52A0B0, this);
     }
 
     // 0x52A0C0 | ??1mmPositions@@QAE@XZ
-    inline ~mmPositions()
+    ~mmPositions()
     {
         stub<member_func_t<void, mmPositions>>(0x52A0C0, this);
     }
 
     // 0x52A0E0 | ?Init@mmPositions@@QAEXH@Z
-    inline void Init(i32 arg1)
+    void Init(i32 arg1)
     {
         return stub<member_func_t<void, mmPositions, i32>>(0x52A0E0, this, arg1);
     }
 
     // 0x52A110 | ?Load@mmPositions@@QAEHPAD@Z
-    inline i32 Load(char* arg1)
+    i32 Load(char* arg1)
     {
         return stub<member_func_t<i32, mmPositions, char*>>(0x52A110, this, arg1);
     }
 
     // 0x52A300 | ?GetCount@mmPositions@@QAEHXZ
-    inline i32 GetCount()
+    i32 GetCount()
     {
         return stub<member_func_t<i32, mmPositions>>(0x52A300, this);
     }
 
     // 0x52A310 | ?GetVector4@mmPositions@@QAEAAVVector4@@H@Z
-    inline class Vector4& GetVector4(i32 arg1)
+    class Vector4& GetVector4(i32 arg1)
     {
         return stub<member_func_t<class Vector4&, mmPositions, i32>>(0x52A310, this, arg1);
     }
 
     // 0x52A340 | ?GetFrameRate@mmPositions@@QAEHH@Z
-    inline i32 GetFrameRate(i32 arg1)
+    i32 GetFrameRate(i32 arg1)
     {
         return stub<member_func_t<i32, mmPositions, i32>>(0x52A340, this, arg1);
     }
 
     // 0x52A370 | ?Dump@mmPositions@@QAEHPAD@Z
-    inline i32 Dump(char* arg1)
+    i32 Dump(char* arg1)
     {
         return stub<member_func_t<i32, mmPositions, char*>>(0x52A370, this, arg1);
     }
 
     // 0x52A380 | ?Recall@mmPositions@@QAEHHPAVMatrix34@@PAHPAD@Z
-    inline i32 Recall(i32 arg1, class Matrix34* arg2, i32* arg3, char* arg4)
+    i32 Recall(i32 arg1, class Matrix34* arg2, i32* arg3, char* arg4)
     {
         return stub<member_func_t<i32, mmPositions, i32, class Matrix34*, i32*, char*>>(
             0x52A380, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x52A410 | ?Register@mmPositions@@QAEHAAVVector4@@HHHHPAD@Z
-    inline i32 Register(class Vector4& arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, char* arg6)
+    i32 Register(class Vector4& arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, char* arg6)
     {
         return stub<member_func_t<i32, mmPositions, class Vector4&, i32, i32, i32, i32, char*>>(
             0x52A410, this, arg1, arg2, arg3, arg4, arg5, arg6);

@@ -30,13 +30,13 @@ class dgRagdollData
 {
 public:
     // 0x5A80B0 | ??0dgRagdollData@@QAE@XZ
-    inline dgRagdollData()
+    dgRagdollData()
     {
         stub<member_func_t<void, dgRagdollData>>(0x5A80B0, this);
     }
 
     // 0x5A8170 | ?FileIO@dgRagdollData@@QAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1)
+    void FileIO(class datParser& arg1)
     {
         return stub<member_func_t<void, dgRagdollData, class datParser&>>(0x5A8170, this, arg1);
     }

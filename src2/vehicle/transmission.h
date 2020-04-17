@@ -48,97 +48,97 @@ public:
     // vehTransmission::`vftable' @ 0x5B2D2C
 
     // 0x4CF0F0 | ??0vehTransmission@@QAE@XZ
-    inline vehTransmission()
+    vehTransmission()
     {
         stub<member_func_t<void, vehTransmission>>(0x4CF0F0, this);
     }
 
     // 0x4CF220 | ?ComputeConstants@vehTransmission@@QAEXXZ
-    inline void ComputeConstants()
+    void ComputeConstants()
     {
         return stub<member_func_t<void, vehTransmission>>(0x4CF220, this);
     }
 
     // 0x4CF530 | ?GearRatioFromMPH@vehTransmission@@AAEMM@Z
-    inline f32 GearRatioFromMPH(f32 arg1)
+    f32 GearRatioFromMPH(f32 arg1)
     {
         return stub<member_func_t<f32, vehTransmission, f32>>(0x4CF530, this, arg1);
     }
 
     // 0x4CF560 | ?Init@vehTransmission@@QAEXPAVvehCarSim@@@Z
-    inline void Init(class vehCarSim* arg1)
+    void Init(class vehCarSim* arg1)
     {
         return stub<member_func_t<void, vehTransmission, class vehCarSim*>>(0x4CF560, this, arg1);
     }
 
     // 0x4CF570 | ?Upshift@vehTransmission@@QAEHXZ
-    inline i32 Upshift()
+    i32 Upshift()
     {
         return stub<member_func_t<i32, vehTransmission>>(0x4CF570, this);
     }
 
     // 0x4CF5B0 | ?Downshift@vehTransmission@@QAEHXZ
-    inline i32 Downshift()
+    i32 Downshift()
     {
         return stub<member_func_t<i32, vehTransmission>>(0x4CF5B0, this);
     }
 
     // 0x4CF6B0 | ?Automatic@vehTransmission@@QAEXH@Z
-    inline void Automatic(i32 arg1)
+    void Automatic(i32 arg1)
     {
         return stub<member_func_t<void, vehTransmission, i32>>(0x4CF6B0, this, arg1);
     }
 
     // 0x4CF6C0 | ?SetReverse@vehTransmission@@QAEXXZ
-    inline void SetReverse()
+    void SetReverse()
     {
         return stub<member_func_t<void, vehTransmission>>(0x4CF6C0, this);
     }
 
     // 0x4CF6D0 | ?SetNeutral@vehTransmission@@QAEXXZ
-    inline void SetNeutral()
+    void SetNeutral()
     {
         return stub<member_func_t<void, vehTransmission>>(0x4CF6D0, this);
     }
 
     // 0x4CF6E0 | ?SetForward@vehTransmission@@QAEXXZ
-    inline void SetForward()
+    void SetForward()
     {
         return stub<member_func_t<void, vehTransmission>>(0x4CF6E0, this);
     }
 
     // 0x4CF700 | ?SetCurrentGear@vehTransmission@@QAEHH@Z
-    inline i32 SetCurrentGear(i32 arg1)
+    i32 SetCurrentGear(i32 arg1)
     {
         return stub<member_func_t<i32, vehTransmission, i32>>(0x4CF700, this, arg1);
     }
 
     // 0x4CCEB0 | ??1vehTransmission@@UAE@XZ
-    inline ~vehTransmission() override
+    ~vehTransmission() override
     {
         stub<member_func_t<void, vehTransmission>>(0x4CCEB0, this);
     }
 
     // 0x4CF600 | ?Update@vehTransmission@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, vehTransmission>>(0x4CF600, this);
     }
 
     // 0x4CF200 | ?Reset@vehTransmission@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, vehTransmission>>(0x4CF200, this);
     }
 
     // 0x4CF740 | ?FileIO@vehTransmission@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
+    void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, vehTransmission, class datParser&>>(0x4CF740, this, arg1);
     }
 
     // 0x4CF880 | ?GetClassName@vehTransmission@@UAEPADXZ
-    inline char* GetClassName() override
+    char* GetClassName() override
     {
         return stub<member_func_t<char*, vehTransmission>>(0x4CF880, this);
     }

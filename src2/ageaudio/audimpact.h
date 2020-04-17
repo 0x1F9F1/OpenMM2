@@ -51,13 +51,13 @@ class AudImpact
 {
 public:
     // 0x511130 | ??0AudImpact@@QAE@XZ
-    inline AudImpact()
+    AudImpact()
     {
         stub<member_func_t<void, AudImpact>>(0x511130, this);
     }
 
     // 0x511160 | ??0AudImpact@@QAE@PAV0@@Z
-    inline AudImpact(class AudImpact* arg1)
+    AudImpact(class AudImpact* arg1)
     {
         stub<member_func_t<void, AudImpact, class AudImpact*>>(0x511160, this, arg1);
     }
@@ -75,7 +75,7 @@ public:
     }
 
     // 0x5112F0 | ?GetAudImpactDataPtr@AudImpact@@QAEPAVAudImpactData@@H@Z
-    inline class AudImpactData* GetAudImpactDataPtr(i32 arg1)
+    class AudImpactData* GetAudImpactDataPtr(i32 arg1)
     {
         return stub<member_func_t<class AudImpactData*, AudImpact, i32>>(0x5112F0, this, arg1);
     }
@@ -93,55 +93,55 @@ public:
     }
 
     // 0x5114A0 | ?ReadCSV@AudImpact@@AAEHPAVStream@@@Z
-    inline i32 ReadCSV(class Stream* arg1)
+    i32 ReadCSV(class Stream* arg1)
     {
         return stub<member_func_t<i32, AudImpact, class Stream*>>(0x5114A0, this, arg1);
     }
 
     // 0x5117F0 | ?AssignSounds@AudImpact@@QAEXH@Z
-    inline void AssignSounds(i32 arg1)
+    void AssignSounds(i32 arg1)
     {
         return stub<member_func_t<void, AudImpact, i32>>(0x5117F0, this, arg1);
     }
 
     // 0x511820 | ?UnAssignSounds@AudImpact@@QAEXXZ
-    inline void UnAssignSounds()
+    void UnAssignSounds()
     {
         return stub<member_func_t<void, AudImpact>>(0x511820, this);
     }
 
     // 0x511840 | ?Update@AudImpact@@QAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, AudImpact>>(0x511840, this);
     }
 
     // 0x511860 | ?Play@AudImpact@@QAEXMH@Z
-    inline void Play(f32 arg1, i32 arg2)
+    void Play(f32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, AudImpact, f32, i32>>(0x511860, this, arg1, arg2);
     }
 
     // 0x511880 | ?Play@AudImpact@@QAEXHM@Z
-    inline void Play(i32 arg1, f32 arg2)
+    void Play(i32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, AudImpact, i32, f32>>(0x511880, this, arg1, arg2);
     }
 
     // 0x5118D0 | ?Set3D@AudImpact@@QAEX_NM@Z
-    inline void Set3D(bool arg1, f32 arg2)
+    void Set3D(bool arg1, f32 arg2)
     {
         return stub<member_func_t<void, AudImpact, bool, f32>>(0x5118D0, this, arg1, arg2);
     }
 
     // 0x5118F0 | ?SetPan@AudImpact@@QAEXM@Z
-    inline void SetPan(f32 arg1)
+    void SetPan(f32 arg1)
     {
         return stub<member_func_t<void, AudImpact, f32>>(0x5118F0, this, arg1);
     }
 
     // 0x511950 | ?UpdateAttenuation@AudImpact@@QAEXMM@Z
-    inline void UpdateAttenuation(f32 arg1, f32 arg2)
+    void UpdateAttenuation(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, AudImpact, f32, f32>>(0x511950, this, arg1, arg2);
     }

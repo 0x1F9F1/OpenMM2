@@ -45,62 +45,62 @@ public:
     // Skipped (scalar/vector destructor)
 
     // 0x46C490 | ??0phSleep@@QAE@XZ
-    inline phSleep()
+    phSleep()
     {
         stub<member_func_t<void, phSleep>>(0x46C490, this);
     }
 
     // 0x46C4B0 | ??0phSleep@@QAE@PAVphInertialCS@@PAVphColliderBase@@@Z
-    inline phSleep(class phInertialCS* arg1, class phColliderBase* arg2)
+    phSleep(class phInertialCS* arg1, class phColliderBase* arg2)
     {
         stub<member_func_t<void, phSleep, class phInertialCS*, class phColliderBase*>>(0x46C4B0, this, arg1, arg2);
     }
 
     // 0x46C4E0 | ??1phSleep@@QAE@XZ
-    inline ~phSleep()
+    ~phSleep()
     {
         stub<member_func_t<void, phSleep>>(0x46C4E0, this);
     }
 
     // 0x46C4F0 | ?Init@phSleep@@QAEXPAVphInertialCS@@PAVphColliderBase@@@Z
-    inline void Init(class phInertialCS* arg1, class phColliderBase* arg2)
+    void Init(class phInertialCS* arg1, class phColliderBase* arg2)
     {
         return stub<member_func_t<void, phSleep, class phInertialCS*, class phColliderBase*>>(
             0x46C4F0, this, arg1, arg2);
     }
 
     // 0x46C550 | ?WakeUp@phSleep@@QAEXXZ
-    inline void WakeUp()
+    void WakeUp()
     {
         return stub<member_func_t<void, phSleep>>(0x46C550, this);
     }
 
     // 0x46C580 | ?WakeUpNextTime@phSleep@@QAEXXZ
-    inline void WakeUpNextTime()
+    void WakeUpNextTime()
     {
         return stub<member_func_t<void, phSleep>>(0x46C580, this);
     }
 
     // 0x46C590 | ?Reset@phSleep@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, phSleep>>(0x46C590, this);
     }
 
     // 0x46C5A0 | ?SendToSleep@phSleep@@QAEXXZ
-    inline void SendToSleep()
+    void SendToSleep()
     {
         return stub<member_func_t<void, phSleep>>(0x46C5A0, this);
     }
 
     // 0x46C5E0 | ?Update@phSleep@@QAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, phSleep>>(0x46C5E0, this);
     }
 
     // 0x46C8D0 | ?SetAsleepCB@phSleep@@QAEXPAVdatCallback@@@Z
-    inline void SetAsleepCB(class datCallback* arg1)
+    void SetAsleepCB(class datCallback* arg1)
     {
         return stub<member_func_t<void, phSleep, class datCallback*>>(0x46C8D0, this, arg1);
     }

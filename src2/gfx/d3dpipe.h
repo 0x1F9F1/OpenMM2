@@ -163,19 +163,19 @@ struct gfxVertexBuffer
 {
 public:
     // 0x4AB660 | ??0gfxVertexBuffer@@QAE@PAUIDirect3DVertexBuffer7@@@Z
-    inline gfxVertexBuffer(struct IDirect3DVertexBuffer7* arg1)
+    gfxVertexBuffer(struct IDirect3DVertexBuffer7* arg1)
     {
         stub<member_func_t<void, gfxVertexBuffer, struct IDirect3DVertexBuffer7*>>(0x4AB660, this, arg1);
     }
 
     // 0x4AB690 | ??0gfxVertexBuffer@@QAE@II@Z
-    inline gfxVertexBuffer(u32 arg1, u32 arg2)
+    gfxVertexBuffer(u32 arg1, u32 arg2)
     {
         stub<member_func_t<void, gfxVertexBuffer, u32, u32>>(0x4AB690, this, arg1, arg2);
     }
 
     // 0x4AB6E0 | ??1gfxVertexBuffer@@QAE@XZ
-    inline ~gfxVertexBuffer()
+    ~gfxVertexBuffer()
     {
         stub<member_func_t<void, gfxVertexBuffer>>(0x4AB6E0, this);
     }

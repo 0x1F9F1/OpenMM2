@@ -85,63 +85,63 @@ public:
     // phBoundBox::`vftable' @ 0x5B2100
 
     // 0x479ED0 | ??0phBoundBox@@QAE@XZ
-    inline phBoundBox()
+    phBoundBox()
     {
         stub<member_func_t<void, phBoundBox>>(0x479ED0, this);
     }
 
     // 0x47A020 | ??0phBoundBox@@QAE@ABVVector3@@@Z
-    inline phBoundBox(class Vector3 const& arg1)
+    phBoundBox(class Vector3 const& arg1)
     {
         stub<member_func_t<void, phBoundBox, class Vector3 const&>>(0x47A020, this, arg1);
     }
 
     // 0x47A160 | ??1phBoundBox@@QAE@XZ
-    inline ~phBoundBox()
+    ~phBoundBox()
     {
         stub<member_func_t<void, phBoundBox>>(0x47A160, this);
     }
 
     // 0x47A1A0 | ?SetSize@phBoundBox@@QAEXABVVector3@@@Z
-    inline void SetSize(class Vector3 const& arg1)
+    void SetSize(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, phBoundBox, class Vector3 const&>>(0x47A1A0, this, arg1);
     }
 
     // 0x47A240 | ?CreateOffset@phBoundBox@@QAEXABVVector3@@@Z
-    inline void CreateOffset(class Vector3 const& arg1)
+    void CreateOffset(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, phBoundBox, class Vector3 const&>>(0x47A240, this, arg1);
     }
 
     // 0x47A270 | ?ShiftCentroid@phBoundBox@@QAEXABVVector3@@@Z
-    inline void ShiftCentroid(class Vector3 const& arg1)
+    void ShiftCentroid(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, phBoundBox, class Vector3 const&>>(0x47A270, this, arg1);
     }
 
     // 0x47A2B0 | ?ScaleSize@phBoundBox@@QAEXABVVector3@@@Z
-    inline void ScaleSize(class Vector3 const& arg1)
+    void ScaleSize(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, phBoundBox, class Vector3 const&>>(0x47A2B0, this, arg1);
     }
 
     // 0x47A300 | ?SetQuickTestInfo@phBoundBox@@QAEXXZ
-    inline void SetQuickTestInfo()
+    void SetQuickTestInfo()
     {
         return stub<member_func_t<void, phBoundBox>>(0x47A300, this);
     }
 
     // 0x47A3A0 | ?Load@phBoundBox@@QAE_NPBD@Z
-    inline bool Load(char const* arg1)
+    bool Load(char const* arg1)
     {
         return stub<member_func_t<bool, phBoundBox, char const*>>(0x47A3A0, this, arg1);
     }
 
     // 0x47A6D0 | ?FindImpactSphereToBox@phBoundBox@@QBEHPBVphBoundSphere@@ABVMatrix34@@1PAVphColliderBase@@2PAVphImpactBase@@ABVVector3@@4@Z
-    inline i32 FindImpactSphereToBox(class phBoundSphere const* arg1, class Matrix34 const& arg2,
-        class Matrix34 const& arg3, class phColliderBase* arg4, class phColliderBase* arg5, class phImpactBase* arg6,
-        class Vector3 const& arg7, class Vector3 const& arg8)
+    i32 FindImpactSphereToBox(class phBoundSphere const* arg1, class Matrix34 const& arg2, class Matrix34 const& arg3,
+        class phColliderBase* arg4, class phColliderBase* arg5, class phImpactBase* arg6, class Vector3 const& arg7,
+        class Vector3 const& arg8)
     {
         return stub<member_func_t<i32, phBoundBox, class phBoundSphere const*, class Matrix34 const&,
             class Matrix34 const&, class phColliderBase*, class phColliderBase*, class phImpactBase*,
@@ -150,7 +150,7 @@ public:
     }
 
     // 0x47AFE0 | ?FindImpactsBoxToBox@phBoundBox@@QBEHPBV1@PBVMatrix34@@111PAVphColliderBase@@2PAVphImpactBase@@HABVVector3@@@Z
-    inline i32 FindImpactsBoxToBox(class phBoundBox const* arg1, class Matrix34 const* arg2, class Matrix34 const* arg3,
+    i32 FindImpactsBoxToBox(class phBoundBox const* arg1, class Matrix34 const* arg2, class Matrix34 const* arg3,
         class Matrix34 const* arg4, class Matrix34 const* arg5, class phColliderBase* arg6, class phColliderBase* arg7,
         class phImpactBase* arg8, i32 arg9, class Vector3 const& arg10)
     {
@@ -161,9 +161,9 @@ public:
     }
 
     // 0x47BA90 | ?FindImpactsBoxToBoxOffset@phBoundBox@@QBEHPBV1@PBVMatrix34@@111PAVphColliderBase@@2PAVphImpactBase@@HABVVector3@@@Z
-    inline i32 FindImpactsBoxToBoxOffset(class phBoundBox const* arg1, class Matrix34 const* arg2,
-        class Matrix34 const* arg3, class Matrix34 const* arg4, class Matrix34 const* arg5, class phColliderBase* arg6,
-        class phColliderBase* arg7, class phImpactBase* arg8, i32 arg9, class Vector3 const& arg10)
+    i32 FindImpactsBoxToBoxOffset(class phBoundBox const* arg1, class Matrix34 const* arg2, class Matrix34 const* arg3,
+        class Matrix34 const* arg4, class Matrix34 const* arg5, class phColliderBase* arg6, class phColliderBase* arg7,
+        class phImpactBase* arg8, i32 arg9, class Vector3 const& arg10)
     {
         return stub<member_func_t<i32, phBoundBox, class phBoundBox const*, class Matrix34 const*,
             class Matrix34 const*, class Matrix34 const*, class Matrix34 const*, class phColliderBase*,
@@ -247,7 +247,7 @@ public:
     }
 
     // 0x47E4A0 | ?BoxToBoxFaceImpacts@phBoundBox@@IBEXABVVector3@@PAVphImpactBase@@H_NPBVMatrix34@@333PAVphColliderBase@@4@Z
-    inline void BoxToBoxFaceImpacts(class Vector3 const& arg1, class phImpactBase* arg2, i32 arg3, bool arg4,
+    void BoxToBoxFaceImpacts(class Vector3 const& arg1, class phImpactBase* arg2, i32 arg3, bool arg4,
         class Matrix34 const* arg5, class Matrix34 const* arg6, class Matrix34 const* arg7, class Matrix34 const* arg8,
         class phColliderBase* arg9, class phColliderBase* arg10)
     {
@@ -258,7 +258,7 @@ public:
     }
 
     // 0x4800A0 | ?TestProbeSlave@phBoundBox@@IBE_NAAVphSegment@@PAVphIntersectionPoint@@PAJM@Z
-    inline bool TestProbeSlave(class phSegment& arg1, class phIntersectionPoint* arg2, i32* arg3, f32 arg4)
+    bool TestProbeSlave(class phSegment& arg1, class phIntersectionPoint* arg2, i32* arg3, f32 arg4)
     {
         return stub<member_func_t<bool, phBoundBox, class phSegment&, class phIntersectionPoint*, i32*, f32>>(
             0x4800A0, this, arg1, arg2, arg3, arg4);
@@ -282,47 +282,47 @@ public:
     inline extern_var(0x661288, char (*)[12], EdgeChecks);
 
     // 0x47A180 | ?GetMaterial@phBoundBox@@UBEPBVphMaterial@@H@Z
-    inline class phMaterial const* GetMaterial(i32 arg1) override
+    class phMaterial const* GetMaterial(i32 arg1) override
     {
         return stub<member_func_t<class phMaterial const*, phBoundBox, i32>>(0x47A180, this, arg1);
     }
 
     // 0x480060 | ?TestProbePoint@phBoundBox@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@M@Z
-    inline bool TestProbePoint(class phSegment& arg1, class phIntersectionPoint* arg2, f32 arg3) override
+    bool TestProbePoint(class phSegment& arg1, class phIntersectionPoint* arg2, f32 arg3) override
     {
         return stub<member_func_t<bool, phBoundBox, class phSegment&, class phIntersectionPoint*, f32>>(
             0x480060, this, arg1, arg2, arg3);
     }
 
     // 0x480080 | ?TestAIPoint@phBoundBox@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@@Z
-    inline bool TestAIPoint(class phSegment& arg1, class phIntersectionPoint* arg2) override
+    bool TestAIPoint(class phSegment& arg1, class phIntersectionPoint* arg2) override
     {
         return stub<member_func_t<bool, phBoundBox, class phSegment&, class phIntersectionPoint*>>(
             0x480080, this, arg1, arg2);
     }
 
     // 0x47F9B0 | ?TestEdge@phBoundBox@@UBEHAAVphSegment@@PAVphIntersection@@H@Z
-    inline i32 TestEdge(class phSegment& arg1, class phIntersection* arg2, i32 arg3) override
+    i32 TestEdge(class phSegment& arg1, class phIntersection* arg2, i32 arg3) override
     {
         return stub<member_func_t<i32, phBoundBox, class phSegment&, class phIntersection*, i32>>(
             0x47F9B0, this, arg1, arg2, arg3);
     }
 
     // 0x480010 | ?TestProbe@phBoundBox@@UBE_NAAVphSegment@@PAVphIntersection@@M@Z
-    inline bool TestProbe(class phSegment& arg1, class phIntersection* arg2, f32 arg3) override
+    bool TestProbe(class phSegment& arg1, class phIntersection* arg2, f32 arg3) override
     {
         return stub<member_func_t<bool, phBoundBox, class phSegment&, class phIntersection*, f32>>(
             0x480010, this, arg1, arg2, arg3);
     }
 
     // 0x46A610 | ?GetEdgeCosine@phBoundBox@@UBEMH@Z
-    inline f32 GetEdgeCosine(i32 arg1) override
+    f32 GetEdgeCosine(i32 arg1) override
     {
         return stub<member_func_t<f32, phBoundBox, i32>>(0x46A610, this, arg1);
     }
 
     // 0x47A6B0 | ?GetEdgeNormal@phBoundBox@@UBEABVVector3@@HAAV2@@Z
-    inline class Vector3 const& GetEdgeNormal(i32 arg1, class Vector3& arg2) override
+    class Vector3 const& GetEdgeNormal(i32 arg1, class Vector3& arg2) override
     {
         return stub<member_func_t<class Vector3 const&, phBoundBox, i32, class Vector3&>>(0x47A6B0, this, arg1, arg2);
     }

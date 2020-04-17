@@ -75,25 +75,25 @@ public:
     }
 
     // 0x4BBAF0 | ?Begin@ioJoystick@@AAEXXZ
-    inline void Begin()
+    void Begin()
     {
         return stub<member_func_t<void, ioJoystick>>(0x4BBAF0, this);
     }
 
     // 0x4BBC50 | ?Poll@ioJoystick@@AAEXXZ
-    inline void Poll()
+    void Poll()
     {
         return stub<member_func_t<void, ioJoystick>>(0x4BBC50, this);
     }
 
     // 0x4BBC60 | ?Update@ioJoystick@@AAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, ioJoystick>>(0x4BBC60, this);
     }
 
     // 0x4BBD20 | ?End@ioJoystick@@AAEXXZ
-    inline void End()
+    void End()
     {
         return stub<member_func_t<void, ioJoystick>>(0x4BBD20, this);
     }

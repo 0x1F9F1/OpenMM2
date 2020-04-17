@@ -39,38 +39,38 @@ public:
     // vehSuspension::`vftable' @ 0x5B3068
 
     // 0x4D97A0 | ??0vehSuspension@@QAE@XZ
-    inline vehSuspension()
+    vehSuspension()
     {
         stub<member_func_t<void, vehSuspension>>(0x4D97A0, this);
     }
 
     // 0x4D9810 | ?Init@vehSuspension@@QAEXPAVvehCarSim@@PBD1PAVvehWheel@@@Z
-    inline void Init(class vehCarSim* arg1, char const* arg2, char const* arg3, class vehWheel* arg4)
+    void Init(class vehCarSim* arg1, char const* arg2, char const* arg3, class vehWheel* arg4)
     {
         return stub<member_func_t<void, vehSuspension, class vehCarSim*, char const*, char const*, class vehWheel*>>(
             0x4D9810, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4CCEF0 | ??1vehSuspension@@UAE@XZ
-    inline ~vehSuspension() override
+    ~vehSuspension() override
     {
         stub<member_func_t<void, vehSuspension>>(0x4CCEF0, this);
     }
 
     // 0x4D98B0 | ?Update@vehSuspension@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, vehSuspension>>(0x4D98B0, this);
     }
 
     // 0x4D9920 | ?Copy@vehSuspension@@QAEXABV1@@Z
-    inline void Copy(class vehSuspension const& arg1) override
+    void Copy(class vehSuspension const& arg1) override
     {
         return stub<member_func_t<void, vehSuspension, class vehSuspension const&>>(0x4D9920, this, arg1);
     }
 
     // 0x4D9980 | ?GetClassName@vehSuspension@@UAEPADXZ
-    inline char* GetClassName() override
+    char* GetClassName() override
     {
         return stub<member_func_t<char*, vehSuspension>>(0x4D9980, this);
     }

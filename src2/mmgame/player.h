@@ -93,211 +93,211 @@ public:
     // mmPlayer::`vftable' @ 0x5B03B4
 
     // 0x4033D0 | ??0mmPlayer@@QAE@XZ
-    inline mmPlayer()
+    mmPlayer()
     {
         stub<member_func_t<void, mmPlayer>>(0x4033D0, this);
     }
 
     // 0x4039B0 | ?ReInit@mmPlayer@@QAEXPAD@Z
-    inline void ReInit(char* arg1)
+    void ReInit(char* arg1)
     {
         return stub<member_func_t<void, mmPlayer, char*>>(0x4039B0, this, arg1);
     }
 
     // 0x403B20 | ?Init@mmPlayer@@QAEXPAD0PAVmmGame@@@Z
-    inline void Init(char* arg1, char* arg2, class mmGame* arg3)
+    void Init(char* arg1, char* arg2, class mmGame* arg3)
     {
         return stub<member_func_t<void, mmPlayer, char*, char*, class mmGame*>>(0x403B20, this, arg1, arg2, arg3);
     }
 
     // 0x4040B0 | ?InitSpeechAudio@mmPlayer@@AAEXPAD@Z
-    inline void InitSpeechAudio(char* arg1)
+    void InitSpeechAudio(char* arg1)
     {
         return stub<member_func_t<void, mmPlayer, char*>>(0x4040B0, this, arg1);
     }
 
     // 0x404200 | ?SetGameCallback@mmPlayer@@QAEXVdatCallback@@@Z
-    inline void SetGameCallback(class datCallback arg1)
+    void SetGameCallback(class datCallback arg1)
     {
         return stub<member_func_t<void, mmPlayer, class datCallback>>(0x404200, this, arg1);
     }
 
     // 0x404220 | ?ImpactCallback@mmPlayer@@QAEXPAX0@Z
-    inline void ImpactCallback(void* arg1, void* arg2)
+    void ImpactCallback(void* arg1, void* arg2)
     {
         return stub<member_func_t<void, mmPlayer, void*, void*>>(0x404220, this, arg1, arg2);
     }
 
     // 0x404250 | ?SetPreRaceCam@mmPlayer@@QAEXXZ
-    inline void SetPreRaceCam()
+    void SetPreRaceCam()
     {
         return stub<member_func_t<void, mmPlayer>>(0x404250, this);
     }
 
     // 0x404350 | ?SetPostRaceCam@mmPlayer@@QAEXXZ
-    inline void SetPostRaceCam()
+    void SetPostRaceCam()
     {
         return stub<member_func_t<void, mmPlayer>>(0x404350, this);
     }
 
     // 0x404460 | ?SetMPPostCam@mmPlayer@@QAEXPAVMatrix34@@M@Z
-    inline void SetMPPostCam(class Matrix34* arg1, f32 arg2)
+    void SetMPPostCam(class Matrix34* arg1, f32 arg2)
     {
         return stub<member_func_t<void, mmPlayer, class Matrix34*, f32>>(0x404460, this, arg1, arg2);
     }
 
     // 0x404550 | ?IsPOV@mmPlayer@@QAEHXZ
-    inline i32 IsPOV()
+    i32 IsPOV()
     {
         return stub<member_func_t<i32, mmPlayer>>(0x404550, this);
     }
 
     // 0x404580 | ?SetWideFOV@mmPlayer@@QAEXH@Z
-    inline void SetWideFOV(i32 arg1)
+    void SetWideFOV(i32 arg1)
     {
         return stub<member_func_t<void, mmPlayer, i32>>(0x404580, this, arg1);
     }
 
     // 0x4046B0 | ?GetNextCycleCamIndex@mmPlayer@@IAEHXZ
-    inline i32 GetNextCycleCamIndex()
+    i32 GetNextCycleCamIndex()
     {
         return stub<member_func_t<i32, mmPlayer>>(0x4046B0, this);
     }
 
     // 0x4046D0 | ?GetNextCycleXCamIndex@mmPlayer@@IAEHXZ
-    inline i32 GetNextCycleXCamIndex()
+    i32 GetNextCycleXCamIndex()
     {
         return stub<member_func_t<i32, mmPlayer>>(0x4046D0, this);
     }
 
     // 0x4046F0 | ?GetCurrentGameCamIndex@mmPlayer@@IAEHXZ
-    inline i32 GetCurrentGameCamIndex()
+    i32 GetCurrentGameCamIndex()
     {
         return stub<member_func_t<i32, mmPlayer>>(0x4046F0, this);
     }
 
     // 0x404700 | ?GetCurrentXCamIndex@mmPlayer@@IAEHXZ
-    inline i32 GetCurrentXCamIndex()
+    i32 GetCurrentXCamIndex()
     {
         return stub<member_func_t<i32, mmPlayer>>(0x404700, this);
     }
 
     // 0x404710 | ?SetCamera@mmPlayer@@IAEXHH@Z
-    inline void SetCamera(i32 arg1, i32 arg2)
+    void SetCamera(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<void, mmPlayer, i32, i32>>(0x404710, this, arg1, arg2);
     }
 
     // 0x404890 | ?GetCamera@mmPlayer@@IAEXAAH0@Z
-    inline void GetCamera(i32& arg1, i32& arg2)
+    void GetCamera(i32& arg1, i32& arg2)
     {
         return stub<member_func_t<void, mmPlayer, i32&, i32&>>(0x404890, this, arg1, arg2);
     }
 
     // 0x4048E0 | ?GetCurrentCameraPtr@mmPlayer@@AAEPAVcamCarCS@@XZ
-    inline class camCarCS* GetCurrentCameraPtr()
+    class camCarCS* GetCurrentCameraPtr()
     {
         return stub<member_func_t<class camCarCS*, mmPlayer>>(0x4048E0, this);
     }
 
     // 0x404920 | ?UpdateHOG@mmPlayer@@QAEXXZ
-    inline void UpdateHOG()
+    void UpdateHOG()
     {
         return stub<member_func_t<void, mmPlayer>>(0x404920, this);
     }
 
     // 0x404BE0 | ?ResetFF@mmPlayer@@QAEXXZ
-    inline void ResetFF()
+    void ResetFF()
     {
         return stub<member_func_t<void, mmPlayer>>(0x404BE0, this);
     }
 
     // 0x404C50 | ?SetSteering@mmPlayer@@QAEXM@Z
-    inline void SetSteering(f32 arg1)
+    void SetSteering(f32 arg1)
     {
         return stub<member_func_t<void, mmPlayer, f32>>(0x404C50, this, arg1);
     }
 
     // 0x404C90 | ?FilterSteering@mmPlayer@@QAEMM@Z
-    inline f32 FilterSteering(f32 arg1)
+    f32 FilterSteering(f32 arg1)
     {
         return stub<member_func_t<f32, mmPlayer, f32>>(0x404C90, this, arg1);
     }
 
     // 0x405340 | ?UpdateFF@mmPlayer@@QAEXXZ
-    inline void UpdateFF()
+    void UpdateFF()
     {
         return stub<member_func_t<void, mmPlayer>>(0x405340, this);
     }
 
     // 0x4060D0 | ?SetCamInterest@mmPlayer@@QAEXPAVphInertialCS@@@Z
-    inline void SetCamInterest(class phInertialCS* arg1)
+    void SetCamInterest(class phInertialCS* arg1)
     {
         return stub<member_func_t<void, mmPlayer, class phInertialCS*>>(0x4060D0, this, arg1);
     }
 
     // 0x406140 | ?IsMaxDamaged@mmPlayer@@QAEHXZ
-    inline i32 IsMaxDamaged()
+    i32 IsMaxDamaged()
     {
         return stub<member_func_t<i32, mmPlayer>>(0x406140, this);
     }
 
     // 0x406160 | ?EnableRegen@mmPlayer@@QAEXH@Z
-    inline void EnableRegen(i32 arg1)
+    void EnableRegen(i32 arg1)
     {
         return stub<member_func_t<void, mmPlayer, i32>>(0x406160, this, arg1);
     }
 
     // 0x406180 | ?ResetDamage@mmPlayer@@QAEXXZ
-    inline void ResetDamage()
+    void ResetDamage()
     {
         return stub<member_func_t<void, mmPlayer>>(0x406180, this);
     }
 
     // 0x4061A0 | ?UpdateRegen@mmPlayer@@QAEXXZ
-    inline void UpdateRegen()
+    void UpdateRegen()
     {
         return stub<member_func_t<void, mmPlayer>>(0x4061A0, this);
     }
 
     // 0x406240 | ?FFImpactCallback@mmPlayer@@QAEXM@Z
-    inline void FFImpactCallback(f32 arg1)
+    void FFImpactCallback(f32 arg1)
     {
         return stub<member_func_t<void, mmPlayer, f32>>(0x406240, this, arg1);
     }
 
     // 0x403800 | ??1mmPlayer@@UAE@XZ
-    inline ~mmPlayer() override
+    ~mmPlayer() override
     {
         stub<member_func_t<void, mmPlayer>>(0x403800, this);
     }
 
     // 0x405760 | ?Update@mmPlayer@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, mmPlayer>>(0x405760, this);
     }
 
     // 0x404A60 | ?Reset@mmPlayer@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, mmPlayer>>(0x404A60, this);
     }
 
     // 0x406320 | ?FileIO@mmPlayer@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
+    void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, mmPlayer, class datParser&>>(0x406320, this, arg1);
     }
 
     // 0x4039A0 | ?AfterLoad@mmPlayer@@UAEXXZ
-    inline void AfterLoad() override
+    void AfterLoad() override
     {
         return stub<member_func_t<void, mmPlayer>>(0x4039A0, this);
     }
 
     // 0x403990 | ?BeforeSave@mmPlayer@@UAEXXZ
-    inline void BeforeSave() override
+    void BeforeSave() override
     {
         return stub<member_func_t<void, mmPlayer>>(0x403990, this);
     }

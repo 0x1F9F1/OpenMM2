@@ -42,97 +42,97 @@ class datParser
 {
 public:
     // 0x406850 | ?AddValue@datParser@@QAEXPBDPAMPAVdatCallback@@@Z
-    inline void AddValue(char const* arg1, f32* arg2, class datCallback* arg3)
+    void AddValue(char const* arg1, f32* arg2, class datCallback* arg3)
     {
         return stub<member_func_t<void, datParser, char const*, f32*, class datCallback*>>(
             0x406850, this, arg1, arg2, arg3);
     }
 
     // 0x45FC00 | ?AddValue@datParser@@QAEXPBDPAHPAVdatCallback@@@Z
-    inline void AddValue(char const* arg1, i32* arg2, class datCallback* arg3)
+    void AddValue(char const* arg1, i32* arg2, class datCallback* arg3)
     {
         return stub<member_func_t<void, datParser, char const*, i32*, class datCallback*>>(
             0x45FC00, this, arg1, arg2, arg3);
     }
 
     // 0x4A78E0 | ??0datParser@@QAE@PBD@Z
-    inline datParser(char const* arg1)
+    datParser(char const* arg1)
     {
         stub<member_func_t<void, datParser, char const*>>(0x4A78E0, this, arg1);
     }
 
     // 0x4A7920 | ??1datParser@@QAE@XZ
-    inline ~datParser()
+    ~datParser()
     {
         stub<member_func_t<void, datParser>>(0x4A7920, this);
     }
 
     // 0x4A7980 | ?AddParser@datParser@@QAEPAV1@PBDPAVdatCallback@@@Z
-    inline class datParser* AddParser(char const* arg1, class datCallback* arg2)
+    class datParser* AddParser(char const* arg1, class datCallback* arg2)
     {
         return stub<member_func_t<class datParser*, datParser, char const*, class datCallback*>>(
             0x4A7980, this, arg1, arg2);
     }
 
     // 0x4A79D0 | ?AddRecord@datParser@@AAEAAVdatParserRecord@@HPBDPAXGPAVdatCallback@@@Z
-    inline class datParserRecord& AddRecord(i32 arg1, char const* arg2, void* arg3, u16 arg4, class datCallback* arg5)
+    class datParserRecord& AddRecord(i32 arg1, char const* arg2, void* arg3, u16 arg4, class datCallback* arg5)
     {
         return stub<member_func_t<class datParserRecord&, datParser, i32, char const*, void*, u16, class datCallback*>>(
             0x4A79D0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x4A7A90 | ?Load@datParser@@QAE_NPAVStream@@PBD@Z
-    inline bool Load(class Stream* arg1, char const* arg2)
+    bool Load(class Stream* arg1, char const* arg2)
     {
         return stub<member_func_t<bool, datParser, class Stream*, char const*>>(0x4A7A90, this, arg1, arg2);
     }
 
     // 0x4A7AF0 | ?Load@datParser@@QAE_NPBD0@Z
-    inline bool Load(char const* arg1, char const* arg2)
+    bool Load(char const* arg1, char const* arg2)
     {
         return stub<member_func_t<bool, datParser, char const*, char const*>>(0x4A7AF0, this, arg1, arg2);
     }
 
     // 0x4A7B40 | ?Load@datParser@@QAE_NPBD00@Z
-    inline bool Load(char const* arg1, char const* arg2, char const* arg3)
+    bool Load(char const* arg1, char const* arg2, char const* arg3)
     {
         return stub<member_func_t<bool, datParser, char const*, char const*, char const*>>(
             0x4A7B40, this, arg1, arg2, arg3);
     }
 
     // 0x4A7B90 | ?Save@datParser@@QAE_NPAVStream@@PBD_N@Z
-    inline bool Save(class Stream* arg1, char const* arg2, bool arg3)
+    bool Save(class Stream* arg1, char const* arg2, bool arg3)
     {
         return stub<member_func_t<bool, datParser, class Stream*, char const*, bool>>(0x4A7B90, this, arg1, arg2, arg3);
     }
 
     // 0x4A7C00 | ?Save@datParser@@QAE_NPBD0_N@Z
-    inline bool Save(char const* arg1, char const* arg2, bool arg3)
+    bool Save(char const* arg1, char const* arg2, bool arg3)
     {
         return stub<member_func_t<bool, datParser, char const*, char const*, bool>>(0x4A7C00, this, arg1, arg2, arg3);
     }
 
     // 0x4A7C50 | ?Save@datParser@@QAE_NPBD00_N@Z
-    inline bool Save(char const* arg1, char const* arg2, char const* arg3, bool arg4)
+    bool Save(char const* arg1, char const* arg2, char const* arg3, bool arg4)
     {
         return stub<member_func_t<bool, datParser, char const*, char const*, char const*, bool>>(
             0x4A7C50, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4A7CA0 | ?Read@datParser@@AAEXAAVdatBaseTokenizer@@@Z
-    inline void Read(class datBaseTokenizer& arg1)
+    void Read(class datBaseTokenizer& arg1)
     {
         return stub<member_func_t<void, datParser, class datBaseTokenizer&>>(0x4A7CA0, this, arg1);
     }
 
     // 0x4A7F70 | ?Write@datParser@@AAEXAAVdatBaseTokenizer@@@Z
-    inline void Write(class datBaseTokenizer& arg1)
+    void Write(class datBaseTokenizer& arg1)
     {
         return stub<member_func_t<void, datParser, class datBaseTokenizer&>>(0x4A7F70, this, arg1);
     }
 
     // 0x4A81D0 | ?Indent@datParser@@AAEXAAVdatBaseTokenizer@@@Z
-    inline void Indent(class datBaseTokenizer& arg1)
+    void Indent(class datBaseTokenizer& arg1)
     {
         return stub<member_func_t<void, datParser, class datBaseTokenizer&>>(0x4A81D0, this, arg1);
     }
@@ -145,7 +145,7 @@ class datParserRecord
 {
 public:
     // 0x4A7940 | ??1datParserRecord@@QAE@XZ
-    inline ~datParserRecord()
+    ~datParserRecord()
     {
         stub<member_func_t<void, datParserRecord>>(0x4A7940, this);
     }

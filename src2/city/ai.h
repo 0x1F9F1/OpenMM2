@@ -72,7 +72,7 @@ class lvlAiRoad
 {
 public:
     // 0x45D870 | ?LoadBinary@lvlAiRoad@@QAEXPAVStream@@@Z
-    inline void LoadBinary(class Stream* arg1)
+    void LoadBinary(class Stream* arg1)
     {
         return stub<member_func_t<void, lvlAiRoad, class Stream*>>(0x45D870, this, arg1);
     }

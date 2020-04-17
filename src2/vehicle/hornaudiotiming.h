@@ -35,49 +35,49 @@ class vehHornAudioTiming
 {
 public:
     // 0x4DF260 | ??0vehHornAudioTiming@@QAE@XZ
-    inline vehHornAudioTiming()
+    vehHornAudioTiming()
     {
         stub<member_func_t<void, vehHornAudioTiming>>(0x4DF260, this);
     }
 
     // 0x4DF280 | ??0vehHornAudioTiming@@QAE@PAV0@@Z
-    inline vehHornAudioTiming(class vehHornAudioTiming* arg1)
+    vehHornAudioTiming(class vehHornAudioTiming* arg1)
     {
         stub<member_func_t<void, vehHornAudioTiming, class vehHornAudioTiming*>>(0x4DF280, this, arg1);
     }
 
     // 0x4DF2E0 | ??1vehHornAudioTiming@@QAE@XZ
-    inline ~vehHornAudioTiming()
+    ~vehHornAudioTiming()
     {
         stub<member_func_t<void, vehHornAudioTiming>>(0x4DF2E0, this);
     }
 
     // 0x4DF330 | ?Reset@vehHornAudioTiming@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, vehHornAudioTiming>>(0x4DF330, this);
     }
 
     // 0x4DF340 | ?AllocPlayPause@vehHornAudioTiming@@QAEXMM@Z
-    inline void AllocPlayPause(f32 arg1, f32 arg2)
+    void AllocPlayPause(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, vehHornAudioTiming, f32, f32>>(0x4DF340, this, arg1, arg2);
     }
 
     // 0x4DF3D0 | ?Stop@vehHornAudioTiming@@QAEXPAVAudSoundBase@@@Z
-    inline void Stop(class AudSoundBase* arg1)
+    void Stop(class AudSoundBase* arg1)
     {
         return stub<member_func_t<void, vehHornAudioTiming, class AudSoundBase*>>(0x4DF3D0, this, arg1);
     }
 
     // 0x4DF400 | ?Play@vehHornAudioTiming@@QAEXPAVAudSoundBase@@@Z
-    inline void Play(class AudSoundBase* arg1)
+    void Play(class AudSoundBase* arg1)
     {
         return stub<member_func_t<void, vehHornAudioTiming, class AudSoundBase*>>(0x4DF400, this, arg1);
     }
 
     // 0x4DF440 | ?Update@vehHornAudioTiming@@QAEXPAVAudSoundBase@@@Z
-    inline void Update(class AudSoundBase* arg1)
+    void Update(class AudSoundBase* arg1)
     {
         return stub<member_func_t<void, vehHornAudioTiming, class AudSoundBase*>>(0x4DF440, this, arg1);
     }

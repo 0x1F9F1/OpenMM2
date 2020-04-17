@@ -49,91 +49,91 @@ public:
     // vehFeedback::`vftable' @ 0x5B2E5C
 
     // 0x4D56C0 | ??0vehFeedback@@QAE@XZ
-    inline vehFeedback()
+    vehFeedback()
     {
         stub<member_func_t<void, vehFeedback>>(0x4D56C0, this);
     }
 
     // 0x4D5750 | ?GetPad@vehFeedback@@QAEPAVioPad@@XZ
-    inline class ioPad* GetPad()
+    class ioPad* GetPad()
     {
         return stub<member_func_t<class ioPad*, vehFeedback>>(0x4D5750, this);
     }
 
     // 0x4D5760 | ?SetPad@vehFeedback@@QAEXPAVioPad@@@Z
-    inline void SetPad(class ioPad* arg1)
+    void SetPad(class ioPad* arg1)
     {
         return stub<member_func_t<void, vehFeedback, class ioPad*>>(0x4D5760, this, arg1);
     }
 
     // 0x4D5770 | ?GetPadID@vehFeedback@@QAEHXZ
-    inline i32 GetPadID()
+    i32 GetPadID()
     {
         return stub<member_func_t<i32, vehFeedback>>(0x4D5770, this);
     }
 
     // 0x4D5780 | ?SetPadID@vehFeedback@@QAEXH@Z
-    inline void SetPadID(i32 arg1)
+    void SetPadID(i32 arg1)
     {
         return stub<member_func_t<void, vehFeedback, i32>>(0x4D5780, this, arg1);
     }
 
     // 0x4D5740 | ??1vehFeedback@@UAE@XZ
-    virtual inline ~vehFeedback()
+    virtual ~vehFeedback()
     {
         stub<member_func_t<void, vehFeedback>>(0x4D5740, this);
     }
 
     // 0x4D57A0 | ?SetFeedback@vehFeedback@@UAEH_N@Z
-    virtual inline i32 SetFeedback(bool arg1)
+    virtual i32 SetFeedback(bool arg1)
     {
         return stub<member_func_t<i32, vehFeedback, bool>>(0x4D57A0, this, arg1);
     }
 
     // 0x4D57B0 | ?SetTimingUnit@vehFeedback@@UAEHM@Z
-    virtual inline i32 SetTimingUnit(f32 arg1)
+    virtual i32 SetTimingUnit(f32 arg1)
     {
         return stub<member_func_t<i32, vehFeedback, f32>>(0x4D57B0, this, arg1);
     }
 
     // 0x4D57E0 | ?GetNumActuators@vehFeedback@@UAEHXZ
-    virtual inline i32 GetNumActuators()
+    virtual i32 GetNumActuators()
     {
         return stub<member_func_t<i32, vehFeedback>>(0x4D57E0, this);
     }
 
     // 0x4D57F0 | ?SetActuatorValue@vehFeedback@@UAEHHM@Z
-    virtual inline i32 SetActuatorValue(i32 arg1, f32 arg2)
+    virtual i32 SetActuatorValue(i32 arg1, f32 arg2)
     {
         return stub<member_func_t<i32, vehFeedback, i32, f32>>(0x4D57F0, this, arg1, arg2);
     }
 
     // 0x4D5830 | ?PlayFeedbackSample@vehFeedback@@UAEHHHPAMPAH@Z
-    virtual inline i32 PlayFeedbackSample(i32 arg1, i32 arg2, f32* arg3, i32* arg4)
+    virtual i32 PlayFeedbackSample(i32 arg1, i32 arg2, f32* arg3, i32* arg4)
     {
         return stub<member_func_t<i32, vehFeedback, i32, i32, f32*, i32*>>(0x4D5830, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4D58B0 | ?PlayFeedbackSampleID@vehFeedback@@UAEHH@Z
-    virtual inline i32 PlayFeedbackSampleID(i32 arg1)
+    virtual i32 PlayFeedbackSampleID(i32 arg1)
     {
         return stub<member_func_t<i32, vehFeedback, i32>>(0x4D58B0, this, arg1);
     }
 
     // 0x4D5980 | ?GetNextUnit@vehFeedback@@UAEMH@Z
-    virtual inline f32 GetNextUnit(i32 arg1)
+    virtual f32 GetNextUnit(i32 arg1)
     {
         return stub<member_func_t<f32, vehFeedback, i32>>(0x4D5980, this, arg1);
     }
 
     // 0x4D5A80 | ?Update@vehFeedback@@UAEHXZ
-    virtual inline i32 Update()
+    virtual i32 Update()
     {
         return stub<member_func_t<i32, vehFeedback>>(0x4D5A80, this);
     }
 
     // 0x4D5910 | ?ClearAllSamples@vehFeedback@@UAEH_N@Z
-    virtual inline i32 ClearAllSamples(bool arg1)
+    virtual i32 ClearAllSamples(bool arg1)
     {
         return stub<member_func_t<i32, vehFeedback, bool>>(0x4D5910, this, arg1);
     }

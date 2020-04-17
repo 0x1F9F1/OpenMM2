@@ -61,230 +61,230 @@ public:
     // aiVehicleSpline::`vftable' @ 0x5B5B1C
 
     // 0x567DF0 | ??0aiVehicleSpline@@QAE@XZ
-    inline aiVehicleSpline()
+    aiVehicleSpline()
     {
         stub<member_func_t<void, aiVehicleSpline>>(0x567DF0, this);
     }
 
     // 0x567EB0 | ??1aiVehicleSpline@@QAE@XZ
-    inline ~aiVehicleSpline()
+    ~aiVehicleSpline()
     {
         stub<member_func_t<void, aiVehicleSpline>>(0x567EB0, this);
     }
 
     // 0x567F30 | ?Init@aiVehicleSpline@@QAEXPADH@Z
-    inline void Init(char* arg1, i32 arg2)
+    void Init(char* arg1, i32 arg2)
     {
         return stub<member_func_t<void, aiVehicleSpline, char*, i32>>(0x567F30, this, arg1, arg2);
     }
 
     // 0x568180 | ?ResetReactTicks@aiVehicleSpline@@QAEXXZ
-    inline void ResetReactTicks()
+    void ResetReactTicks()
     {
         return stub<member_func_t<void, aiVehicleSpline>>(0x568180, this);
     }
 
     // 0x568410 | ?UpdateObstacleMap@aiVehicleSpline@@QAEXXZ
-    inline void UpdateObstacleMap()
+    void UpdateObstacleMap()
     {
         return stub<member_func_t<void, aiVehicleSpline>>(0x568410, this);
     }
 
     // 0x5696B0 | ?DetectPlayerForwardCollision@aiVehicleSpline@@QAEHH@Z
-    inline i32 DetectPlayerForwardCollision(i32 arg1)
+    i32 DetectPlayerForwardCollision(i32 arg1)
     {
         return stub<member_func_t<i32, aiVehicleSpline, i32>>(0x5696B0, this, arg1);
     }
 
     // 0x5697B0 | ?DetectPlayerTargetPtCollision@aiVehicleSpline@@QAEHH@Z
-    inline i32 DetectPlayerTargetPtCollision(i32 arg1)
+    i32 DetectPlayerTargetPtCollision(i32 arg1)
     {
         return stub<member_func_t<i32, aiVehicleSpline, i32>>(0x5697B0, this, arg1);
     }
 
     // 0x569930 | ?DetectPlayerCollision@aiVehicleSpline@@QAEHH@Z
-    inline i32 DetectPlayerCollision(i32 arg1)
+    i32 DetectPlayerCollision(i32 arg1)
     {
         return stub<member_func_t<i32, aiVehicleSpline, i32>>(0x569930, this, arg1);
     }
 
     // 0x569AC0 | ?DetectPlayerZoneCollision@aiVehicleSpline@@QAEHH@Z
-    inline i32 DetectPlayerZoneCollision(i32 arg1)
+    i32 DetectPlayerZoneCollision(i32 arg1)
     {
         return stub<member_func_t<i32, aiVehicleSpline, i32>>(0x569AC0, this, arg1);
     }
 
     // 0x569CB0 | ?IsThePlayerInFrontOfMe@aiVehicleSpline@@QAEHH@Z
-    inline i32 IsThePlayerInFrontOfMe(i32 arg1)
+    i32 IsThePlayerInFrontOfMe(i32 arg1)
     {
         return stub<member_func_t<i32, aiVehicleSpline, i32>>(0x569CB0, this, arg1);
     }
 
     // 0x569DD0 | ?IsAmbientBlockingPlayer@aiVehicleSpline@@QAEHH@Z
-    inline i32 IsAmbientBlockingPlayer(i32 arg1)
+    i32 IsAmbientBlockingPlayer(i32 arg1)
     {
         return stub<member_func_t<i32, aiVehicleSpline, i32>>(0x569DD0, this, arg1);
     }
 
     // 0x569EC0 | ?AvoidPlayerCollision@aiVehicleSpline@@QAEXH@Z
-    inline void AvoidPlayerCollision(i32 arg1)
+    void AvoidPlayerCollision(i32 arg1)
     {
         return stub<member_func_t<void, aiVehicleSpline, i32>>(0x569EC0, this, arg1);
     }
 
     // 0x569F80 | ?WaitTime@aiVehicleSpline@@QAEHXZ
-    inline i32 WaitTime()
+    i32 WaitTime()
     {
         return stub<member_func_t<i32, aiVehicleSpline>>(0x569F80, this);
     }
 
     // 0x569FA0 | ?TotLength@aiVehicleSpline@@QAEMXZ
-    inline f32 TotLength()
+    f32 TotLength()
     {
         return stub<member_func_t<f32, aiVehicleSpline>>(0x569FA0, this);
     }
 
     // 0x569FC0 | ?DistanceToVehicle@aiVehicleSpline@@QAEMPAV1@@Z
-    inline f32 DistanceToVehicle(class aiVehicleSpline* arg1)
+    f32 DistanceToVehicle(class aiVehicleSpline* arg1)
     {
         return stub<member_func_t<f32, aiVehicleSpline, class aiVehicleSpline*>>(0x569FC0, this, arg1);
     }
 
     // 0x56A2C0 | ?DistanceToIntersection@aiVehicleSpline@@QAEMXZ
-    inline f32 DistanceToIntersection()
+    f32 DistanceToIntersection()
     {
         return stub<member_func_t<f32, aiVehicleSpline>>(0x56A2C0, this);
     }
 
     // 0x56A360 | ?Dump@aiVehicleSpline@@QAEXXZ
-    inline void Dump()
+    void Dump()
     {
         return stub<member_func_t<void, aiVehicleSpline>>(0x56A360, this);
     }
 
     // 0x569F70 | ?InAccident@aiVehicleSpline@@UAEHXZ
-    inline i32 InAccident() override
+    i32 InAccident() override
     {
         return stub<member_func_t<i32, aiVehicleSpline>>(0x569F70, this);
     }
 
     // 0x551C40 | ?Position@aiVehicleSpline@@UAEXAAVVector3@@@Z
-    inline void Position(class Vector3& arg1) override
+    void Position(class Vector3& arg1) override
     {
         return stub<member_func_t<void, aiVehicleSpline, class Vector3&>>(0x551C40, this, arg1);
     }
 
     // 0x551C70 | ?Speed@aiVehicleSpline@@UAEMXZ
-    inline f32 Speed() override
+    f32 Speed() override
     {
         return stub<member_func_t<f32, aiVehicleSpline>>(0x551C70, this);
     }
 
     // 0x5681C0 | ?CurrentRoadIdx@aiVehicleSpline@@UAEHPAPAVaiPath@@QA_NPAH@Z
-    inline i32 CurrentRoadIdx(class aiPath** arg1, bool* const arg2, i32* arg3) override
+    i32 CurrentRoadIdx(class aiPath** arg1, bool* const arg2, i32* arg3) override
     {
         return stub<member_func_t<i32, aiVehicleSpline, class aiPath**, bool* const, i32*>>(
             0x5681C0, this, arg1, arg2, arg3);
     }
 
     // 0x5683F0 | ?CurrentRdVert@aiVehicleSpline@@UAEHXZ
-    inline i32 CurrentRdVert() override
+    i32 CurrentRdVert() override
     {
         return stub<member_func_t<i32, aiVehicleSpline>>(0x5683F0, this);
     }
 
     // 0x568100 | ?Update@aiVehicleSpline@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, aiVehicleSpline>>(0x568100, this);
     }
 
     // 0x568050 | ?Reset@aiVehicleSpline@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, aiVehicleSpline>>(0x568050, this);
     }
 
     // 0x56A700 | ?Type@aiVehicleSpline@@UAEHXZ
-    inline i32 Type() override
+    i32 Type() override
     {
         return stub<member_func_t<i32, aiVehicleSpline>>(0x56A700, this);
     }
 
     // 0x551C80 | ?GetMatrix@aiVehicleSpline@@UAEAAVMatrix34@@XZ
-    inline class Matrix34& GetMatrix() override
+    class Matrix34& GetMatrix() override
     {
         return stub<member_func_t<class Matrix34&, aiVehicleSpline>>(0x551C80, this);
     }
 
     // 0x551C00 | ?FrontBumperDistance@aiVehicleSpline@@UAEMXZ
-    inline f32 FrontBumperDistance() override
+    f32 FrontBumperDistance() override
     {
         return stub<member_func_t<f32, aiVehicleSpline>>(0x551C00, this);
     }
 
     // 0x551C10 | ?BackBumperDistance@aiVehicleSpline@@UAEMXZ
-    inline f32 BackBumperDistance() override
+    f32 BackBumperDistance() override
     {
         return stub<member_func_t<f32, aiVehicleSpline>>(0x551C10, this);
     }
 
     // 0x551C20 | ?LSideDistance@aiVehicleSpline@@UAEMXZ
-    inline f32 LSideDistance() override
+    f32 LSideDistance() override
     {
         return stub<member_func_t<f32, aiVehicleSpline>>(0x551C20, this);
     }
 
     // 0x551C30 | ?RSideDistance@aiVehicleSpline@@UAEMXZ
-    inline f32 RSideDistance() override
+    f32 RSideDistance() override
     {
         return stub<member_func_t<f32, aiVehicleSpline>>(0x551C30, this);
     }
 
     // 0x551BE0 | ?CurrentLane@aiVehicleSpline@@UAEHXZ
-    inline i32 CurrentLane() override
+    i32 CurrentLane() override
     {
         return stub<member_func_t<i32, aiVehicleSpline>>(0x551BE0, this);
     }
 
     // 0x551BF0 | ?CurrentRoadId@aiVehicleSpline@@UAEHXZ
-    inline i32 CurrentRoadId() override
+    i32 CurrentRoadId() override
     {
         return stub<member_func_t<i32, aiVehicleSpline>>(0x551BF0, this);
     }
 
     // 0x56A4F0 | ?DrawId@aiVehicleSpline@@UAEXXZ
-    inline void DrawId() override
+    void DrawId() override
     {
         return stub<member_func_t<void, aiVehicleSpline>>(0x56A4F0, this);
     }
 
     // 0x56A500 | ?ReplayDebug@aiVehicleSpline@@UAEXXZ
-    inline void ReplayDebug() override
+    void ReplayDebug() override
     {
         return stub<member_func_t<void, aiVehicleSpline>>(0x56A500, this);
     }
 
     // 0x569FB0 | ?Impact@aiVehicleSpline@@UAEXH@Z
-    virtual inline void Impact(i32 arg1)
+    virtual void Impact(i32 arg1)
     {
         return stub<member_func_t<void, aiVehicleSpline, i32>>(0x569FB0, this, arg1);
     }
 
     // 0x551C90 | ?GetAudImpactPtr@aiVehicleSpline@@UAEPAVAudImpact@@XZ
-    virtual inline class AudImpact* GetAudImpactPtr()
+    virtual class AudImpact* GetAudImpactPtr()
     {
         return stub<member_func_t<class AudImpact*, aiVehicleSpline>>(0x551C90, this);
     }
 
     // 0x551CA0 | ?PlayHorn@aiVehicleSpline@@UAEXMM@Z
-    virtual inline void PlayHorn(f32 arg1, f32 arg2)
+    virtual void PlayHorn(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, aiVehicleSpline, f32, f32>>(0x551CA0, this, arg1, arg2);
     }
 
     // 0x551CB0 | ?StopVoice@aiVehicleSpline@@UAEXXZ
-    virtual inline void StopVoice()
+    virtual void StopVoice()
     {
         return stub<member_func_t<void, aiVehicleSpline>>(0x551CB0, this);
     }

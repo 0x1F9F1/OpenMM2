@@ -34,31 +34,31 @@ public:
     // mmRoadFF::`vftable' @ 0x5B52CC
 
     // 0x531A70 | ?Assign@mmRoadFF@@QAEHJJ@Z
-    inline i32 Assign(i32 arg1, i32 arg2)
+    i32 Assign(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<i32, mmRoadFF, i32, i32>>(0x531A70, this, arg1, arg2);
     }
 
     // 0x531940 | ?Init@mmRoadFF@@UAEHPAUIDirectInputDevice2A@@@Z
-    virtual inline i32 Init(struct IDirectInputDevice2A* arg1)
+    virtual i32 Init(struct IDirectInputDevice2A* arg1)
     {
         return stub<member_func_t<i32, mmRoadFF, struct IDirectInputDevice2A*>>(0x531940, this, arg1);
     }
 
     // 0x531B60 | ?Play@mmRoadFF@@UAEHXZ
-    virtual inline i32 Play()
+    virtual i32 Play()
     {
         return stub<member_func_t<i32, mmRoadFF>>(0x531B60, this);
     }
 
     // 0x531BD0 | ?Stop@mmRoadFF@@UAEHXZ
-    virtual inline i32 Stop()
+    virtual i32 Stop()
     {
         return stub<member_func_t<i32, mmRoadFF>>(0x531BD0, this);
     }
 
     // 0x531A40 | ?SetValues@mmRoadFF@@UAEHMM@Z
-    virtual inline i32 SetValues(f32 arg1, f32 arg2)
+    virtual i32 SetValues(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<i32, mmRoadFF, f32, f32>>(0x531A40, this, arg1, arg2);
     }

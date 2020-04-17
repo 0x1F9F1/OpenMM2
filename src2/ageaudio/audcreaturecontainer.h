@@ -56,31 +56,31 @@ public:
     // AudCreatureContainer::`vftable' @ 0x5B4C9C
 
     // 0x5108D0 | ??0AudCreatureContainer@@QAE@XZ
-    inline AudCreatureContainer()
+    AudCreatureContainer()
     {
         stub<member_func_t<void, AudCreatureContainer>>(0x5108D0, this);
     }
 
     // 0x510910 | ?IsPlaying@AudCreatureContainer@@QAE_NXZ
-    inline bool IsPlaying()
+    bool IsPlaying()
     {
         return stub<member_func_t<bool, AudCreatureContainer>>(0x510910, this);
     }
 
     // 0x510920 | ?Init@AudCreatureContainer@@QAEXPADPAVVector3@@@Z
-    inline void Init(char* arg1, class Vector3* arg2)
+    void Init(char* arg1, class Vector3* arg2)
     {
         return stub<member_func_t<void, AudCreatureContainer, char*, class Vector3*>>(0x510920, this, arg1, arg2);
     }
 
     // 0x510980 | ?Reset@AudCreatureContainer@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, AudCreatureContainer>>(0x510980, this);
     }
 
     // 0x510A80 | ?UpdateAudio@AudCreatureContainer@@QAEHM@Z
-    inline i32 UpdateAudio(f32 arg1)
+    i32 UpdateAudio(f32 arg1)
     {
         return stub<member_func_t<i32, AudCreatureContainer, f32>>(0x510A80, this, arg1);
     }
@@ -110,37 +110,37 @@ public:
     }
 
     // 0x510C60 | ?EchoOn@AudCreatureContainer@@QAEXXZ
-    inline void EchoOn()
+    void EchoOn()
     {
         return stub<member_func_t<void, AudCreatureContainer>>(0x510C60, this);
     }
 
     // 0x510C90 | ?EchoOff@AudCreatureContainer@@QAEXXZ
-    inline void EchoOff()
+    void EchoOff()
     {
         return stub<member_func_t<void, AudCreatureContainer>>(0x510C90, this);
     }
 
     // 0x510CB0 | ?UpdateEcho@AudCreatureContainer@@AAEXXZ
-    inline void UpdateEcho()
+    void UpdateEcho()
     {
         return stub<member_func_t<void, AudCreatureContainer>>(0x510CB0, this);
     }
 
     // 0x510CC0 | ?PlayImpactReaction@AudCreatureContainer@@QAEXM@Z
-    inline void PlayImpactReaction(f32 arg1)
+    void PlayImpactReaction(f32 arg1)
     {
         return stub<member_func_t<void, AudCreatureContainer, f32>>(0x510CC0, this, arg1);
     }
 
     // 0x510CF0 | ?PlayAvoidanceReaction@AudCreatureContainer@@QAEXM@Z
-    inline void PlayAvoidanceReaction(f32 arg1)
+    void PlayAvoidanceReaction(f32 arg1)
     {
         return stub<member_func_t<void, AudCreatureContainer, f32>>(0x510CF0, this, arg1);
     }
 
     // 0x510D20 | ?LoadVoices@AudCreatureContainer@@QAE_NPAD0@Z
-    inline bool LoadVoices(char* arg1, char* arg2)
+    bool LoadVoices(char* arg1, char* arg2)
     {
         return stub<member_func_t<bool, AudCreatureContainer, char*, char*>>(0x510D20, this, arg1, arg2);
     }
@@ -152,25 +152,25 @@ public:
     }
 
     // 0x5109A0 | ?AssignSounds@AudCreatureContainer@@UAEXXZ
-    inline void AssignSounds() override
+    void AssignSounds() override
     {
         return stub<member_func_t<void, AudCreatureContainer>>(0x5109A0, this);
     }
 
     // 0x5109E0 | ?UnAssignSounds@AudCreatureContainer@@UAEXH@Z
-    inline void UnAssignSounds(i32 arg1) override
+    void UnAssignSounds(i32 arg1) override
     {
         return stub<member_func_t<void, AudCreatureContainer, i32>>(0x5109E0, this, arg1);
     }
 
     // 0x510A20 | ?UpdateAudio@AudCreatureContainer@@UAEXXZ
-    inline void UpdateAudio() override
+    void UpdateAudio() override
     {
         return stub<member_func_t<void, AudCreatureContainer>>(0x510A20, this);
     }
 
     // 0x510950 | ?Update@AudCreatureContainer@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, AudCreatureContainer>>(0x510950, this);
     }

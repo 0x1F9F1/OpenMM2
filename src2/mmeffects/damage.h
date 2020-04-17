@@ -32,31 +32,31 @@ struct mmDamage
 {
 public:
     // 0x5345B0 | ??0mmDamage@@QAE@XZ
-    inline mmDamage()
+    mmDamage()
     {
         stub<member_func_t<void, mmDamage>>(0x5345B0, this);
     }
 
     // 0x5345C0 | ??1mmDamage@@QAE@XZ
-    inline ~mmDamage()
+    ~mmDamage()
     {
         stub<member_func_t<void, mmDamage>>(0x5345C0, this);
     }
 
     // 0x5345D0 | ?Init@mmDamage@@QAEXPAVmodStatic@@@Z
-    inline void Init(class modStatic* arg1)
+    void Init(class modStatic* arg1)
     {
         return stub<member_func_t<void, mmDamage, class modStatic*>>(0x5345D0, this, arg1);
     }
 
     // 0x5345E0 | ?Reset@mmDamage@@QAEXH@Z
-    inline void Reset(i32 arg1)
+    void Reset(i32 arg1)
     {
         return stub<member_func_t<void, mmDamage, i32>>(0x5345E0, this, arg1);
     }
 
     // 0x5345F0 | ?Apply@mmDamage@@QAEXAAVVector3@@M@Z
-    inline void Apply(class Vector3& arg1, f32 arg2)
+    void Apply(class Vector3& arg1, f32 arg2)
     {
         return stub<member_func_t<void, mmDamage, class Vector3&, f32>>(0x5345F0, this, arg1, arg2);
     }

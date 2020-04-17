@@ -48,91 +48,91 @@ public:
     // mmMultiBlitz::`vftable' @ 0x5B0850
 
     // 0x41FF30 | ??0mmMultiBlitz@@QAE@XZ
-    inline mmMultiBlitz()
+    mmMultiBlitz()
     {
         stub<member_func_t<void, mmMultiBlitz>>(0x41FF30, this);
     }
 
     // 0x421930 | ?PlayTimerWarning@mmMultiBlitz@@QAEXM@Z
-    inline void PlayTimerWarning(f32 arg1)
+    void PlayTimerWarning(f32 arg1)
     {
         return stub<member_func_t<void, mmMultiBlitz, f32>>(0x421930, this, arg1);
     }
 
     // 0x41FF60 | ??1mmMultiBlitz@@UAE@XZ
-    inline ~mmMultiBlitz() override
+    ~mmMultiBlitz() override
     {
         stub<member_func_t<void, mmMultiBlitz>>(0x41FF60, this);
     }
 
     // 0x420880 | ?Reset@mmMultiBlitz@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, mmMultiBlitz>>(0x420880, this);
     }
 
     // 0x420000 | ?Init@mmMultiBlitz@@UAEHXZ
-    inline i32 Init() override
+    i32 Init() override
     {
         return stub<member_func_t<i32, mmMultiBlitz>>(0x420000, this);
     }
 
     // 0x420130 | ?InitMyPlayer@mmMultiBlitz@@UAEXXZ
-    inline void InitMyPlayer() override
+    void InitMyPlayer() override
     {
         return stub<member_func_t<void, mmMultiBlitz>>(0x420130, this);
     }
 
     // 0x420220 | ?InitGameObjects@mmMultiBlitz@@UAEXXZ
-    inline void InitGameObjects() override
+    void InitGameObjects() override
     {
         return stub<member_func_t<void, mmMultiBlitz>>(0x420220, this);
     }
 
     // 0x4201A0 | ?InitHUD@mmMultiBlitz@@UAEXXZ
-    inline void InitHUD() override
+    void InitHUD() override
     {
         return stub<member_func_t<void, mmMultiBlitz>>(0x4201A0, this);
     }
 
     // 0x420940 | ?UpdateGameInput@mmMultiBlitz@@UAEXH@Z
-    inline void UpdateGameInput(i32 arg1) override
+    void UpdateGameInput(i32 arg1) override
     {
         return stub<member_func_t<void, mmMultiBlitz, i32>>(0x420940, this, arg1);
     }
 
     // 0x420980 | ?UpdateGame@mmMultiBlitz@@UAEXXZ
-    inline void UpdateGame() override
+    void UpdateGame() override
     {
         return stub<member_func_t<void, mmMultiBlitz>>(0x420980, this);
     }
 
     // 0x421250 | ?SwitchState@mmMultiBlitz@@UAEXH@Z
-    inline void SwitchState(i32 arg1) override
+    void SwitchState(i32 arg1) override
     {
         return stub<member_func_t<void, mmMultiBlitz, i32>>(0x421250, this, arg1);
     }
 
     // 0x421B80 | ?GetWaypoints@mmMultiBlitz@@UAEPAVmmWaypoints@@XZ
-    inline class mmWaypoints* GetWaypoints() override
+    class mmWaypoints* GetWaypoints() override
     {
         return stub<member_func_t<class mmWaypoints*, mmMultiBlitz>>(0x421B80, this);
     }
 
     // 0x4204B0 | ?InitNetworkPlayers@mmMultiBlitz@@UAEXXZ
-    inline void InitNetworkPlayers() override
+    void InitNetworkPlayers() override
     {
         return stub<member_func_t<void, mmMultiBlitz>>(0x4204B0, this);
     }
 
     // 0x421260 | ?SystemMessage@mmMultiBlitz@@UAEXPAUNETSYS_MSG@@@Z
-    inline void SystemMessage(struct NETSYS_MSG* arg1) override
+    void SystemMessage(struct NETSYS_MSG* arg1) override
     {
         return stub<member_func_t<void, mmMultiBlitz, struct NETSYS_MSG*>>(0x421260, this, arg1);
     }
 
     // 0x421370 | ?GameMessage@mmMultiBlitz@@UAEXPAUNET_RCXHEAD@@@Z
-    inline void GameMessage(struct NET_RCXHEAD* arg1) override
+    void GameMessage(struct NET_RCXHEAD* arg1) override
     {
         return stub<member_func_t<void, mmMultiBlitz, struct NET_RCXHEAD*>>(0x421370, this, arg1);
     }

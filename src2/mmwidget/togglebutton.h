@@ -41,13 +41,13 @@ public:
     // UIToggleButton::`vftable' @ 0x5B38A4
 
     // 0x4EDE10 | ??0UIToggleButton@@QAE@XZ
-    inline UIToggleButton()
+    UIToggleButton()
     {
         stub<member_func_t<void, UIToggleButton>>(0x4EDE10, this);
     }
 
     // 0x4EDF00 | ?Init@UIToggleButton@@QAEXPAULocString@@PAHMMMMHHVdatCallback@@@Z
-    inline void Init(struct LocString* arg1, i32* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7, i32 arg8,
+    void Init(struct LocString* arg1, i32* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7, i32 arg8,
         class datCallback arg9)
     {
         return stub<member_func_t<void, UIToggleButton, struct LocString*, i32*, f32, f32, f32, f32, i32, i32,
@@ -55,37 +55,37 @@ public:
     }
 
     // 0x4EDE90 | ??1UIToggleButton@@UAE@XZ
-    inline ~UIToggleButton() override
+    ~UIToggleButton() override
     {
         stub<member_func_t<void, UIToggleButton>>(0x4EDE90, this);
     }
 
     // 0x4EE0B0 | ?Update@UIToggleButton@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, UIToggleButton>>(0x4EE0B0, this);
     }
 
     // 0x4EE000 | ?Action@UIToggleButton@@UAEXTeqEvent@@@Z
-    inline void Action(union eqEvent arg1) override
+    void Action(union eqEvent arg1) override
     {
         return stub<member_func_t<void, UIToggleButton, union eqEvent>>(0x4EE000, this, arg1);
     }
 
     // 0x4EDFE0 | ?DoToggle@UIToggleButton@@UAEXXZ
-    virtual inline void DoToggle()
+    virtual void DoToggle()
     {
         return stub<member_func_t<void, UIToggleButton>>(0x4EDFE0, this);
     }
 
     // 0x4EDFA0 | ?DrawOff@UIToggleButton@@MAEXXZ
-    virtual inline void DrawOff()
+    virtual void DrawOff()
     {
         return stub<member_func_t<void, UIToggleButton>>(0x4EDFA0, this);
     }
 
     // 0x4EDFC0 | ?DrawOn@UIToggleButton@@MAEXXZ
-    virtual inline void DrawOn()
+    virtual void DrawOn()
     {
         return stub<member_func_t<void, UIToggleButton>>(0x4EDFC0, this);
     }

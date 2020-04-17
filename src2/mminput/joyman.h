@@ -56,127 +56,127 @@ struct mmJoyMan
 {
 public:
     // 0x52FC40 | ??0mmJoyMan@@QAE@XZ
-    inline mmJoyMan()
+    mmJoyMan()
     {
         stub<member_func_t<void, mmJoyMan>>(0x52FC40, this);
     }
 
     // 0x52FC50 | ??1mmJoyMan@@QAE@XZ
-    inline ~mmJoyMan()
+    ~mmJoyMan()
     {
         stub<member_func_t<void, mmJoyMan>>(0x52FC50, this);
     }
 
     // 0x52FC90 | ?Init@mmJoyMan@@QAEHPAUHINSTANCE__@@PAUHWND__@@@Z
-    inline i32 Init(struct HINSTANCE__* arg1, struct HWND__* arg2)
+    i32 Init(struct HINSTANCE__* arg1, struct HWND__* arg2)
     {
         return stub<member_func_t<i32, mmJoyMan, struct HINSTANCE__*, struct HWND__*>>(0x52FC90, this, arg1, arg2);
     }
 
     // 0x52FDF0 | ?ButtonToBit@mmJoyMan@@QAEHH@Z
-    inline i32 ButtonToBit(i32 arg1)
+    i32 ButtonToBit(i32 arg1)
     {
         return stub<member_func_t<i32, mmJoyMan, i32>>(0x52FDF0, this, arg1);
     }
 
     // 0x52FE20 | ?QJoystick@mmJoyMan@@QAEHXZ
-    inline i32 QJoystick()
+    i32 QJoystick()
     {
         return stub<member_func_t<i32, mmJoyMan>>(0x52FE20, this);
     }
 
     // 0x52FE30 | ?Update@mmJoyMan@@QAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, mmJoyMan>>(0x52FE30, this);
     }
 
     // 0x52FE60 | ?GetJoyAxis@mmJoyMan@@QAEMHH@Z
-    inline f32 GetJoyAxis(i32 arg1, i32 arg2)
+    f32 GetJoyAxis(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<f32, mmJoyMan, i32, i32>>(0x52FE60, this, arg1, arg2);
     }
 
     // 0x52FEA0 | ?GetJoyButton@mmJoyMan@@QAEHHH@Z
-    inline i32 GetJoyButton(i32 arg1, i32 arg2)
+    i32 GetJoyButton(i32 arg1, i32 arg2)
     {
         return stub<member_func_t<i32, mmJoyMan, i32, i32>>(0x52FEA0, this, arg1, arg2);
     }
 
     // 0x52FEF0 | ?PollJoyButtons@mmJoyMan@@QAEHXZ
-    inline i32 PollJoyButtons()
+    i32 PollJoyButtons()
     {
         return stub<member_func_t<i32, mmJoyMan>>(0x52FEF0, this);
     }
 
     // 0x52FF50 | ?PollJoyAxes@mmJoyMan@@QAEHXZ
-    inline i32 PollJoyAxes()
+    i32 PollJoyAxes()
     {
         return stub<member_func_t<i32, mmJoyMan>>(0x52FF50, this);
     }
 
     // 0x52FF90 | ?SetCapture@mmJoyMan@@QAEXH@Z
-    inline void SetCapture(i32 arg1)
+    void SetCapture(i32 arg1)
     {
         return stub<member_func_t<void, mmJoyMan, i32>>(0x52FF90, this, arg1);
     }
 
     // 0x530000 | ?GetOneButton@mmJoyMan@@QAEHJ@Z
-    inline i32 GetOneButton(i32 arg1)
+    i32 GetOneButton(i32 arg1)
     {
         return stub<member_func_t<i32, mmJoyMan, i32>>(0x530000, this, arg1);
     }
 
     // 0x530030 | ?GetFFEffect@mmJoyMan@@QAEPAVmmEffectFF@@H@Z
-    inline class mmEffectFF* GetFFEffect(i32 arg1)
+    class mmEffectFF* GetFFEffect(i32 arg1)
     {
         return stub<member_func_t<class mmEffectFF*, mmJoyMan, i32>>(0x530030, this, arg1);
     }
 
     // 0x530060 | ?ToggleEnabled@mmJoyMan@@QAEHH@Z
-    inline i32 ToggleEnabled(i32 arg1)
+    i32 ToggleEnabled(i32 arg1)
     {
         return stub<member_func_t<i32, mmJoyMan, i32>>(0x530060, this, arg1);
     }
 
     // 0x5300A0 | ?FFPlay@mmJoyMan@@QAEHH@Z
-    inline i32 FFPlay(i32 arg1)
+    i32 FFPlay(i32 arg1)
     {
         return stub<member_func_t<i32, mmJoyMan, i32>>(0x5300A0, this, arg1);
     }
 
     // 0x5300D0 | ?FFStop@mmJoyMan@@QAEHH@Z
-    inline i32 FFStop(i32 arg1)
+    i32 FFStop(i32 arg1)
     {
         return stub<member_func_t<i32, mmJoyMan, i32>>(0x5300D0, this, arg1);
     }
 
     // 0x530100 | ?FFIsPlaying@mmJoyMan@@QAEHH@Z
-    inline i32 FFIsPlaying(i32 arg1)
+    i32 FFIsPlaying(i32 arg1)
     {
         return stub<member_func_t<i32, mmJoyMan, i32>>(0x530100, this, arg1);
     }
 
     // 0x530130 | ?FFSetValues@mmJoyMan@@QAEHHMM@Z
-    inline i32 FFSetValues(i32 arg1, f32 arg2, f32 arg3)
+    i32 FFSetValues(i32 arg1, f32 arg2, f32 arg3)
     {
         return stub<member_func_t<i32, mmJoyMan, i32, f32, f32>>(0x530130, this, arg1, arg2, arg3);
     }
 
     // 0x530170 | ?StopAllFF@mmJoyMan@@QAEXXZ
-    inline void StopAllFF()
+    void StopAllFF()
     {
         return stub<member_func_t<void, mmJoyMan>>(0x530170, this);
     }
 
     // 0x530190 | ?HasCoolie@mmJoyMan@@QAEHXZ
-    inline i32 HasCoolie()
+    i32 HasCoolie()
     {
         return stub<member_func_t<i32, mmJoyMan>>(0x530190, this);
     }
 
     // 0x5301B0 | ?HasThrottle@mmJoyMan@@QAEHXZ
-    inline i32 HasThrottle()
+    i32 HasThrottle()
     {
         return stub<member_func_t<i32, mmJoyMan>>(0x5301B0, this);
     }

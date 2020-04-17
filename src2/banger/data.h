@@ -63,61 +63,61 @@ public:
     // dgBangerData::`vftable' @ 0x5B1460
 
     // 0x4405D0 | ?LoadEntry@dgBangerData@@QAEHPAD@Z
-    inline i32 LoadEntry(char* arg1)
+    i32 LoadEntry(char* arg1)
     {
         return stub<member_func_t<i32, dgBangerData, char*>>(0x4405D0, this, arg1);
     }
 
     // 0x440610 | ?AdjustPrim@dgBangerData@@QAEXXZ
-    inline void AdjustPrim()
+    void AdjustPrim()
     {
         return stub<member_func_t<void, dgBangerData>>(0x440610, this);
     }
 
     // 0x441170 | ?AdjustBound@dgBangerData@@QAEXXZ
-    inline void AdjustBound()
+    void AdjustBound()
     {
         return stub<member_func_t<void, dgBangerData>>(0x441170, this);
     }
 
     // 0x4411C0 | ?InitBound@dgBangerData@@QAEXXZ
-    inline void InitBound()
+    void InitBound()
     {
         return stub<member_func_t<void, dgBangerData>>(0x4411C0, this);
     }
 
     // 0x441450 | ??0dgBangerData@@QAE@XZ
-    inline dgBangerData()
+    dgBangerData()
     {
         stub<member_func_t<void, dgBangerData>>(0x441450, this);
     }
 
     // 0x441560 | ??1dgBangerData@@UAE@XZ
-    inline ~dgBangerData() override
+    ~dgBangerData() override
     {
         stub<member_func_t<void, dgBangerData>>(0x441560, this);
     }
 
     // 0x440DB0 | ?Save@dgBangerData@@UAE_NXZ
-    inline bool Save() override
+    bool Save() override
     {
         return stub<member_func_t<bool, dgBangerData>>(0x440DB0, this);
     }
 
     // 0x440A90 | ?Load@dgBangerData@@UAE_NXZ
-    inline bool Load() override
+    bool Load() override
     {
         return stub<member_func_t<bool, dgBangerData>>(0x440A90, this);
     }
 
     // 0x441520 | ?GetClassName@dgBangerData@@UAEPADXZ
-    inline char* GetClassName() override
+    char* GetClassName() override
     {
         return stub<member_func_t<char*, dgBangerData>>(0x441520, this);
     }
 
     // 0x440600 | ?GetDirName@dgBangerData@@UAEPBDXZ
-    inline char const* GetDirName() override
+    char const* GetDirName() override
     {
         return stub<member_func_t<char const*, dgBangerData>>(0x440600, this);
     }
@@ -129,19 +129,19 @@ public:
     // dgBangerDataManager::`vftable' @ 0x5B13F8
 
     // 0x4406E0 | ??0dgBangerDataManager@@QAE@XZ
-    inline dgBangerDataManager()
+    dgBangerDataManager()
     {
         stub<member_func_t<void, dgBangerDataManager>>(0x4406E0, this);
     }
 
     // 0x440940 | ?AddBangerDataEntry@dgBangerDataManager@@QAEHPBD0@Z
-    inline i32 AddBangerDataEntry(char const* arg1, char const* arg2)
+    i32 AddBangerDataEntry(char const* arg1, char const* arg2)
     {
         return stub<member_func_t<i32, dgBangerDataManager, char const*, char const*>>(0x440940, this, arg1, arg2);
     }
 
     // 0x440A60 | ?ChangeData@dgBangerDataManager@@QAEXXZ
-    inline void ChangeData()
+    void ChangeData()
     {
         return stub<member_func_t<void, dgBangerDataManager>>(0x440A60, this);
     }
@@ -150,13 +150,13 @@ public:
     inline extern_var(0x627670, class dgBangerDataManager*, Instance);
 
     // 0x440860 | ??1dgBangerDataManager@@UAE@XZ
-    inline ~dgBangerDataManager() override
+    ~dgBangerDataManager() override
     {
         stub<member_func_t<void, dgBangerDataManager>>(0x440860, this);
     }
 
     // 0x4415B0 | ?GetClassName@dgBangerDataManager@@UAEPADXZ
-    inline char* GetClassName() override
+    char* GetClassName() override
     {
         return stub<member_func_t<char*, dgBangerDataManager>>(0x4415B0, this);
     }
@@ -168,19 +168,19 @@ public:
     // ptxGlassBirthRules::`vftable' @ 0x5B142C
 
     // 0x441400 | ??1ptxGlassBirthRules@@UAE@XZ
-    inline ~ptxGlassBirthRules() override
+    ~ptxGlassBirthRules() override
     {
         stub<member_func_t<void, ptxGlassBirthRules>>(0x441400, this);
     }
 
     // 0x462D90 | ?FileIO@ptxGlassBirthRules@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
+    void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, ptxGlassBirthRules, class datParser&>>(0x462D90, this, arg1);
     }
 
     // 0x441440 | ?GetClassName@ptxGlassBirthRules@@UAEPADXZ
-    inline char* GetClassName() override
+    char* GetClassName() override
     {
         return stub<member_func_t<char*, ptxGlassBirthRules>>(0x441440, this);
     }

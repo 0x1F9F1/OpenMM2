@@ -45,31 +45,31 @@ class datCallback
 {
 public:
     // 0x4C7A40 | ??0datCallback@@QAE@XZ
-    inline datCallback()
+    datCallback()
     {
         stub<member_func_t<void, datCallback>>(0x4C7A40, this);
     }
 
     // 0x4C7AC0 | ??0datCallback@@QAE@P6AXXZ@Z
-    inline datCallback(void(__cdecl* arg1)(void))
+    datCallback(void(__cdecl* arg1)(void))
     {
         stub<member_func_t<void, datCallback, void(__cdecl*)(void)>>(0x4C7AC0, this, arg1);
     }
 
     // 0x4C7AF0 | ??0datCallback@@QAE@P6AXPAX@Z0@Z
-    inline datCallback(void(__cdecl* arg1)(void*), void* arg2)
+    datCallback(void(__cdecl* arg1)(void*), void* arg2)
     {
         stub<member_func_t<void, datCallback, void(__cdecl*)(void*), void*>>(0x4C7AF0, this, arg1, arg2);
     }
 
     // 0x4C7B20 | ??0datCallback@@QAE@P6AXPAX0@Z0@Z
-    inline datCallback(void(__cdecl* arg1)(void*, void*), void* arg2)
+    datCallback(void(__cdecl* arg1)(void*, void*), void* arg2)
     {
         stub<member_func_t<void, datCallback, void(__cdecl*)(void*, void*), void*>>(0x4C7B20, this, arg1, arg2);
     }
 
     // 0x4C7B50 | ?Call@datCallback@@QAEXPAX@Z
-    inline void Call(void* arg1)
+    void Call(void* arg1)
     {
         return stub<member_func_t<void, datCallback, void*>>(0x4C7B50, this, arg1);
     }

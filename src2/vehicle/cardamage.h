@@ -54,45 +54,45 @@ public:
     // vehCarDamage::`vftable' @ 0x5B2C28
 
     // 0x4CA380 | ??0vehCarDamage@@QAE@XZ
-    inline vehCarDamage()
+    vehCarDamage()
     {
         stub<member_func_t<void, vehCarDamage>>(0x4CA380, this);
     }
 
     // 0x4CA600 | ?Init@vehCarDamage@@QAEXPAVvehCar@@PBD@Z
-    inline void Init(class vehCar* arg1, char const* arg2)
+    void Init(class vehCar* arg1, char const* arg2)
     {
         return stub<member_func_t<void, vehCarDamage, class vehCar*, char const*>>(0x4CA600, this, arg1, arg2);
     }
 
     // 0x4CA8D0 | ?SpewSmoke@vehCarDamage@@AAEXPAVasParticles@@PAMAAVVector3@@M@Z
-    inline void SpewSmoke(class asParticles* arg1, f32* arg2, class Vector3& arg3, f32 arg4)
+    void SpewSmoke(class asParticles* arg1, f32* arg2, class Vector3& arg3, f32 arg4)
     {
         return stub<member_func_t<void, vehCarDamage, class asParticles*, f32*, class Vector3&, f32>>(
             0x4CA8D0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4CAE80 | ?ClearDamage@vehCarDamage@@QAEXXZ
-    inline void ClearDamage()
+    void ClearDamage()
     {
         return stub<member_func_t<void, vehCarDamage>>(0x4CAE80, this);
     }
 
     // 0x4CAEC0 | ?AddDamage@vehCarDamage@@QAEXM@Z
-    inline void AddDamage(f32 arg1)
+    void AddDamage(f32 arg1)
     {
         return stub<member_func_t<void, vehCarDamage, f32>>(0x4CAEC0, this, arg1);
     }
 
     // 0x4CAEF0 | ?InsertImpact@vehCarDamage@@AAEXPAUImpactCBData@@PAVphCollider@@@Z
-    inline void InsertImpact(struct ImpactCBData* arg1, class phCollider* arg2)
+    void InsertImpact(struct ImpactCBData* arg1, class phCollider* arg2)
     {
         return stub<member_func_t<void, vehCarDamage, struct ImpactCBData*, class phCollider*>>(
             0x4CAEF0, this, arg1, arg2);
     }
 
     // 0x4CB140 | ?ApplyImpact@vehCarDamage@@AAEXPAUvehDamageImpactInfo@@@Z
-    inline void ApplyImpact(struct vehDamageImpactInfo* arg1)
+    void ApplyImpact(struct vehDamageImpactInfo* arg1)
     {
         return stub<member_func_t<void, vehCarDamage, struct vehDamageImpactInfo*>>(0x4CB140, this, arg1);
     }
@@ -104,7 +104,7 @@ public:
     }
 
     // 0x4CB3E0 | ?SetGameCallback@vehCarDamage@@QAEXVdatCallback@@@Z
-    inline void SetGameCallback(class datCallback arg1)
+    void SetGameCallback(class datCallback arg1)
     {
         return stub<member_func_t<void, vehCarDamage, class datCallback>>(0x4CB3E0, this, arg1);
     }
@@ -116,43 +116,43 @@ public:
     inline extern_var(0x6AFED8, int32_t, EngineSmokeRuleRef);
 
     // 0x4CA530 | ??1vehCarDamage@@UAE@XZ
-    inline ~vehCarDamage() override
+    ~vehCarDamage() override
     {
         stub<member_func_t<void, vehCarDamage>>(0x4CA530, this);
     }
 
     // 0x4CAA40 | ?Update@vehCarDamage@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, vehCarDamage>>(0x4CAA40, this);
     }
 
     // 0x4CAE60 | ?Reset@vehCarDamage@@UAEXXZ
-    inline void Reset() override
+    void Reset() override
     {
         return stub<member_func_t<void, vehCarDamage>>(0x4CAE60, this);
     }
 
     // 0x4CB400 | ?FileIO@vehCarDamage@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
+    void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, vehCarDamage, class datParser&>>(0x4CB400, this, arg1);
     }
 
     // 0x4CB640 | ?GetClassName@vehCarDamage@@UAEPADXZ
-    inline char* GetClassName() override
+    char* GetClassName() override
     {
         return stub<member_func_t<char*, vehCarDamage>>(0x4CB640, this);
     }
 
     // 0x4CA5F0 | ?GetDirName@vehCarDamage@@UAEPBDXZ
-    inline char const* GetDirName() override
+    char const* GetDirName() override
     {
         return stub<member_func_t<char const*, vehCarDamage>>(0x4CA5F0, this);
     }
 
     // 0x4CB650 | ?GetDamageModifier@vehCarDamage@@UAEMPAVphCollider@@@Z
-    virtual inline f32 GetDamageModifier(class phCollider* arg1)
+    virtual f32 GetDamageModifier(class phCollider* arg1)
     {
         return stub<member_func_t<f32, vehCarDamage, class phCollider*>>(0x4CB650, this, arg1);
     }

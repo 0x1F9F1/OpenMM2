@@ -37,32 +37,32 @@ public:
     // Dialog_ReplayEdit::`vftable' @ 0x5B3E88
 
     // 0x4FA050 | ??0Dialog_ReplayEdit@@QAE@HMMMMPAD@Z
-    inline Dialog_ReplayEdit(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    Dialog_ReplayEdit(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
     {
         stub<member_func_t<void, Dialog_ReplayEdit, i32, f32, f32, f32, f32, char*>>(
             0x4FA050, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4FA200 | ?ReplayDescCallback@Dialog_ReplayEdit@@QAEXXZ
-    inline void ReplayDescCallback()
+    void ReplayDescCallback()
     {
         return stub<member_func_t<void, Dialog_ReplayEdit>>(0x4FA200, this);
     }
 
     // 0x4FA210 | ?SetDesc@Dialog_ReplayEdit@@QAEXPAD@Z
-    inline void SetDesc(char* arg1)
+    void SetDesc(char* arg1)
     {
         return stub<member_func_t<void, Dialog_ReplayEdit, char*>>(0x4FA210, this, arg1);
     }
 
     // 0x4FA1E0 | ??1Dialog_ReplayEdit@@UAE@XZ
-    inline ~Dialog_ReplayEdit() override
+    ~Dialog_ReplayEdit() override
     {
         stub<member_func_t<void, Dialog_ReplayEdit>>(0x4FA1E0, this);
     }
 
     // 0x4FA1F0 | ?PreSetup@Dialog_ReplayEdit@@UAEXXZ
-    inline void PreSetup() override
+    void PreSetup() override
     {
         return stub<member_func_t<void, Dialog_ReplayEdit>>(0x4FA1F0, this);
     }

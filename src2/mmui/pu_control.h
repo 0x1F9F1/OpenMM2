@@ -39,43 +39,43 @@ public:
     // PUControl::`vftable' @ 0x5B4918
 
     // 0x50BD00 | ??0PUControl@@QAE@HMMMM@Z
-    inline PUControl(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
+    PUControl(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
     {
         stub<member_func_t<void, PUControl, i32, f32, f32, f32, f32>>(0x50BD00, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x50C110 | ?CancelAction@PUControl@@QAEXXZ
-    inline void CancelAction()
+    void CancelAction()
     {
         return stub<member_func_t<void, PUControl>>(0x50C110, this);
     }
 
     // 0x50C130 | ?SetRWStates@PUControl@@QAEXXZ
-    inline void SetRWStates()
+    void SetRWStates()
     {
         return stub<member_func_t<void, PUControl>>(0x50C130, this);
     }
 
     // 0x50C1C0 | ?ControlSelect@PUControl@@QAEXXZ
-    inline void ControlSelect()
+    void ControlSelect()
     {
         return stub<member_func_t<void, PUControl>>(0x50C1C0, this);
     }
 
     // 0x50C1F0 | ?SetSensitivityCB@PUControl@@QAEXXZ
-    inline void SetSensitivityCB()
+    void SetSensitivityCB()
     {
         return stub<member_func_t<void, PUControl>>(0x50C1F0, this);
     }
 
     // 0x50C090 | ??1PUControl@@UAE@XZ
-    inline ~PUControl() override
+    ~PUControl() override
     {
         stub<member_func_t<void, PUControl>>(0x50C090, this);
     }
 
     // 0x50C0F0 | ?PreSetup@PUControl@@UAEXXZ
-    inline void PreSetup() override
+    void PreSetup() override
     {
         return stub<member_func_t<void, PUControl>>(0x50C0F0, this);
     }

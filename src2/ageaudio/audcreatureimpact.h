@@ -45,91 +45,91 @@ class AudCreatureImpact
 {
 public:
     // 0x512F10 | ??0AudCreatureImpact@@QAE@XZ
-    inline AudCreatureImpact()
+    AudCreatureImpact()
     {
         stub<member_func_t<void, AudCreatureImpact>>(0x512F10, this);
     }
 
     // 0x512F40 | ??0AudCreatureImpact@@QAE@PAV0@@Z
-    inline AudCreatureImpact(class AudCreatureImpact* arg1)
+    AudCreatureImpact(class AudCreatureImpact* arg1)
     {
         stub<member_func_t<void, AudCreatureImpact, class AudCreatureImpact*>>(0x512F40, this, arg1);
     }
 
     // 0x513030 | ??1AudCreatureImpact@@QAE@XZ
-    inline ~AudCreatureImpact()
+    ~AudCreatureImpact()
     {
         stub<member_func_t<void, AudCreatureImpact>>(0x513030, this);
     }
 
     // 0x513090 | ?SetAud3DObjectPtr@AudCreatureImpact@@QAEXPAVAud3DObject@@@Z
-    inline void SetAud3DObjectPtr(class Aud3DObject* arg1)
+    void SetAud3DObjectPtr(class Aud3DObject* arg1)
     {
         return stub<member_func_t<void, AudCreatureImpact, class Aud3DObject*>>(0x513090, this, arg1);
     }
 
     // 0x5130A0 | ?SamplePlaying@AudCreatureImpact@@QAE_NXZ
-    inline bool SamplePlaying()
+    bool SamplePlaying()
     {
         return stub<member_func_t<bool, AudCreatureImpact>>(0x5130A0, this);
     }
 
     // 0x5130C0 | ?ParseCSVBuffer@AudCreatureImpact@@QAEHPAVStream@@@Z
-    inline i32 ParseCSVBuffer(class Stream* arg1)
+    i32 ParseCSVBuffer(class Stream* arg1)
     {
         return stub<member_func_t<i32, AudCreatureImpact, class Stream*>>(0x5130C0, this, arg1);
     }
 
     // 0x5132D0 | ?AssignSounds@AudCreatureImpact@@QAEXH@Z
-    inline void AssignSounds(i32 arg1)
+    void AssignSounds(i32 arg1)
     {
         return stub<member_func_t<void, AudCreatureImpact, i32>>(0x5132D0, this, arg1);
     }
 
     // 0x513320 | ?UnAssignSounds@AudCreatureImpact@@QAEXXZ
-    inline void UnAssignSounds()
+    void UnAssignSounds()
     {
         return stub<member_func_t<void, AudCreatureImpact>>(0x513320, this);
     }
 
     // 0x513350 | ?QueuePlay@AudCreatureImpact@@QAEXM@Z
-    inline void QueuePlay(f32 arg1)
+    void QueuePlay(f32 arg1)
     {
         return stub<member_func_t<void, AudCreatureImpact, f32>>(0x513350, this, arg1);
     }
 
     // 0x5133D0 | ?Play@AudCreatureImpact@@AAEXXZ
-    inline void Play()
+    void Play()
     {
         return stub<member_func_t<void, AudCreatureImpact>>(0x5133D0, this);
     }
 
     // 0x513460 | ?UpdateAttenuation@AudCreatureImpact@@QAEXMM@Z
-    inline void UpdateAttenuation(f32 arg1, f32 arg2)
+    void UpdateAttenuation(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, AudCreatureImpact, f32, f32>>(0x513460, this, arg1, arg2);
     }
 
     // 0x5134D0 | ?EchoOn@AudCreatureImpact@@QAEXM@Z
-    inline void EchoOn(f32 arg1)
+    void EchoOn(f32 arg1)
     {
         return stub<member_func_t<void, AudCreatureImpact, f32>>(0x5134D0, this, arg1);
     }
 
     // 0x513530 | ?EchoOff@AudCreatureImpact@@QAEXXZ
-    inline void EchoOff()
+    void EchoOff()
     {
         return stub<member_func_t<void, AudCreatureImpact>>(0x513530, this);
     }
 
     // 0x513560 | ?UpdateEcho@AudCreatureImpact@@QAEXXZ
-    inline void UpdateEcho()
+    void UpdateEcho()
     {
         return stub<member_func_t<void, AudCreatureImpact>>(0x513560, this);
     }
 
     // 0x513590 | ?Update@AudCreatureImpact@@QAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, AudCreatureImpact>>(0x513590, this);
     }

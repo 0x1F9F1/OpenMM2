@@ -45,85 +45,85 @@ class MMDMusicManager : DMusicManager
 {
 public:
     // 0x519EB0 | ??0MMDMusicManager@@QAE@XZ
-    inline MMDMusicManager()
+    MMDMusicManager()
     {
         stub<member_func_t<void, MMDMusicManager>>(0x519EB0, this);
     }
 
     // 0x519EE0 | ??1MMDMusicManager@@QAE@XZ
-    inline ~MMDMusicManager()
+    ~MMDMusicManager()
     {
         stub<member_func_t<void, MMDMusicManager>>(0x519EE0, this);
     }
 
     // 0x519F60 | ?Init@MMDMusicManager@@QAEXHK@Z
-    inline void Init(i32 arg1, u32 arg2)
+    void Init(i32 arg1, u32 arg2)
     {
         return stub<member_func_t<void, MMDMusicManager, i32, u32>>(0x519F60, this, arg1, arg2);
     }
 
     // 0x519FE0 | ?Update@MMDMusicManager@@QAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, MMDMusicManager>>(0x519FE0, this);
     }
 
     // 0x519FF0 | ?UpdateSeconds@MMDMusicManager@@QAEXXZ
-    inline void UpdateSeconds()
+    void UpdateSeconds()
     {
         return stub<member_func_t<void, MMDMusicManager>>(0x519FF0, this);
     }
 
     // 0x51A020 | ?UpdateAmbientSFX@MMDMusicManager@@QAEXXZ
-    inline void UpdateAmbientSFX()
+    void UpdateAmbientSFX()
     {
         return stub<member_func_t<void, MMDMusicManager>>(0x51A020, this);
     }
 
     // 0x51A070 | ?UpdateMusic@MMDMusicManager@@QAEXMH_N@Z
-    inline void UpdateMusic(f32 arg1, i32 arg2, bool arg3)
+    void UpdateMusic(f32 arg1, i32 arg2, bool arg3)
     {
         return stub<member_func_t<void, MMDMusicManager, f32, i32, bool>>(0x51A070, this, arg1, arg2, arg3);
     }
 
     // 0x51A0F0 | ?UpdateSpeedEvents@MMDMusicManager@@QAEXXZ
-    inline void UpdateSpeedEvents()
+    void UpdateSpeedEvents()
     {
         return stub<member_func_t<void, MMDMusicManager>>(0x51A0F0, this);
     }
 
     // 0x51A170 | ?CreateSpeedRanges@MMDMusicManager@@QAEXH@Z
-    inline void CreateSpeedRanges(i32 arg1)
+    void CreateSpeedRanges(i32 arg1)
     {
         return stub<member_func_t<void, MMDMusicManager, i32>>(0x51A170, this, arg1);
     }
 
     // 0x51A1A0 | ?SetSpeedEventRange@MMDMusicManager@@QAEXMMEH@Z
-    inline void SetSpeedEventRange(f32 arg1, f32 arg2, u8 arg3, i32 arg4)
+    void SetSpeedEventRange(f32 arg1, f32 arg2, u8 arg3, i32 arg4)
     {
         return stub<member_func_t<void, MMDMusicManager, f32, f32, u8, i32>>(0x51A1A0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x51A1D0 | ?MatchMusicToPlayerSpeed@MMDMusicManager@@QAEXM@Z
-    inline void MatchMusicToPlayerSpeed(f32 arg1)
+    void MatchMusicToPlayerSpeed(f32 arg1)
     {
         return stub<member_func_t<void, MMDMusicManager, f32>>(0x51A1D0, this, arg1);
     }
 
     // 0x51A2C0 | ?Reset@MMDMusicManager@@QAEXXZ
-    inline void Reset()
+    void Reset()
     {
         return stub<member_func_t<void, MMDMusicManager>>(0x51A2C0, this);
     }
 
     // 0x51A2D0 | ?EchoOn@MMDMusicManager@@QAEXMM@Z
-    inline void EchoOn(f32 arg1, f32 arg2)
+    void EchoOn(f32 arg1, f32 arg2)
     {
         return stub<member_func_t<void, MMDMusicManager, f32, f32>>(0x51A2D0, this, arg1, arg2);
     }
 
     // 0x51A3A0 | ?EchoOff@MMDMusicManager@@QAEXXZ
-    inline void EchoOff()
+    void EchoOff()
     {
         return stub<member_func_t<void, MMDMusicManager>>(0x51A3A0, this);
     }

@@ -52,19 +52,19 @@ public:
     // DirSnd::`vftable' @ 0x5B8A1C
 
     // 0x5A4ED0 | ??0DirSnd@@QAE@XZ
-    inline DirSnd()
+    DirSnd()
     {
         stub<member_func_t<void, DirSnd>>(0x5A4ED0, this);
     }
 
     // 0x5A4F30 | ??1DirSnd@@QAE@XZ
-    inline ~DirSnd()
+    ~DirSnd()
     {
         stub<member_func_t<void, DirSnd>>(0x5A4F30, this);
     }
 
     // 0x5A4FD0 | ?DeInit@DirSnd@@QAEXXZ
-    inline void DeInit()
+    void DeInit()
     {
         return stub<member_func_t<void, DirSnd>>(0x5A4FD0, this);
     }
@@ -76,79 +76,79 @@ public:
     }
 
     // 0x5A5160 | ?Init3DListener@DirSnd@@QAEHMMMMM@Z
-    inline i32 Init3DListener(f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
+    i32 Init3DListener(f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
     {
         return stub<member_func_t<i32, DirSnd, f32, f32, f32, f32, f32>>(0x5A5160, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x5A51C0 | ?IsDSDeviceInList@DirSnd@@QAEHPAU_GUID@@@Z
-    inline i32 IsDSDeviceInList(struct _GUID* arg1)
+    i32 IsDSDeviceInList(struct _GUID* arg1)
     {
         return stub<member_func_t<i32, DirSnd, struct _GUID*>>(0x5A51C0, this, arg1);
     }
 
     // 0x5A5390 | ?SetDeviceRating@DirSnd@@QAEXPAUtag_dsdevdesc@@@Z
-    inline void SetDeviceRating(struct tag_dsdevdesc* arg1)
+    void SetDeviceRating(struct tag_dsdevdesc* arg1)
     {
         return stub<member_func_t<void, DirSnd, struct tag_dsdevdesc*>>(0x5A5390, this, arg1);
     }
 
     // 0x5A5510 | ?EnumDSDevices@DirSnd@@QAEHXZ
-    inline i32 EnumDSDevices()
+    i32 EnumDSDevices()
     {
         return stub<member_func_t<i32, DirSnd>>(0x5A5510, this);
     }
 
     // 0x5A5630 | ?CreatePrimaryInterfaceAndBuffer@DirSnd@@IAEHPAU_DSBUFFERDESC@@@Z
-    inline i32 CreatePrimaryInterfaceAndBuffer(struct _DSBUFFERDESC* arg1)
+    i32 CreatePrimaryInterfaceAndBuffer(struct _DSBUFFERDESC* arg1)
     {
         return stub<member_func_t<i32, DirSnd, struct _DSBUFFERDESC*>>(0x5A5630, this, arg1);
     }
 
     // 0x5A5770 | ?ClearDSDeviceList@DirSnd@@QAEXXZ
-    inline void ClearDSDeviceList()
+    void ClearDSDeviceList()
     {
         return stub<member_func_t<void, DirSnd>>(0x5A5770, this);
     }
 
     // 0x5A5860 | ?SetPrimaryBufferFormat@DirSnd@@QAEXKE@Z
-    inline void SetPrimaryBufferFormat(u32 arg1, u8 arg2)
+    void SetPrimaryBufferFormat(u32 arg1, u8 arg2)
     {
         return stub<member_func_t<void, DirSnd, u32, u8>>(0x5A5860, this, arg1, arg2);
     }
 
     // 0x5A5950 | ?ScanAvailableDSFormats@DirSnd@@QAEXXZ
-    inline void ScanAvailableDSFormats()
+    void ScanAvailableDSFormats()
     {
         return stub<member_func_t<void, DirSnd>>(0x5A5950, this);
     }
 
     // 0x5A5A30 | ?TranslateDSError@DirSnd@@QAEPADJ@Z
-    inline char* TranslateDSError(i32 arg1)
+    char* TranslateDSError(i32 arg1)
     {
         return stub<member_func_t<char*, DirSnd, i32>>(0x5A5A30, this, arg1);
     }
 
     // 0x5A5BB0 | ?SetBitDepth@DirSnd@@QAEXH@Z
-    inline void SetBitDepth(i32 arg1)
+    void SetBitDepth(i32 arg1)
     {
         return stub<member_func_t<void, DirSnd, i32>>(0x5A5BB0, this, arg1);
     }
 
     // 0x5A5BD0 | ?GetDeviceNames@DirSnd@@QAEPAPADXZ
-    inline char** GetDeviceNames()
+    char** GetDeviceNames()
     {
         return stub<member_func_t<char**, DirSnd>>(0x5A5BD0, this);
     }
 
     // 0x5A5C00 | ?GetNum3DHallBufs@DirSnd@@QAEIXZ
-    inline u32 GetNum3DHallBufs()
+    u32 GetNum3DHallBufs()
     {
         return stub<member_func_t<u32, DirSnd>>(0x5A5C00, this);
     }
 
     // 0x5A5530 | ?InitPrimarySoundBuffer@DirSnd@@UAEHKEPAD@Z
-    virtual inline i32 InitPrimarySoundBuffer(u32 arg1, u8 arg2, char* arg3)
+    virtual i32 InitPrimarySoundBuffer(u32 arg1, u8 arg2, char* arg3)
     {
         return stub<member_func_t<i32, DirSnd, u32, u8, char*>>(0x5A5530, this, arg1, arg2, arg3);
     }

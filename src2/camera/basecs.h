@@ -42,67 +42,67 @@ public:
     // camBaseCS::`vftable' @ 0x5B5130
 
     // 0x521D60 | ??0camBaseCS@@QAE@XZ
-    inline camBaseCS()
+    camBaseCS()
     {
         stub<member_func_t<void, camBaseCS>>(0x521D60, this);
     }
 
     // 0x521E10 | ?IsViewCSInTransition@camBaseCS@@QAEHXZ
-    inline i32 IsViewCSInTransition()
+    i32 IsViewCSInTransition()
     {
         return stub<member_func_t<i32, camBaseCS>>(0x521E10, this);
     }
 
     // 0x521E30 | ?UpdateView@camBaseCS@@QAEXXZ
-    inline void UpdateView()
+    void UpdateView()
     {
         return stub<member_func_t<void, camBaseCS>>(0x521E30, this);
     }
 
     // 0x521DF0 | ??1camBaseCS@@UAE@XZ
-    inline ~camBaseCS() override
+    ~camBaseCS() override
     {
         stub<member_func_t<void, camBaseCS>>(0x521DF0, this);
     }
 
     // 0x521EA0 | ?FileIO@camBaseCS@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
+    void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, camBaseCS, class datParser&>>(0x521EA0, this, arg1);
     }
 
     // 0x521F30 | ?AfterLoad@camBaseCS@@UAEXXZ
-    inline void AfterLoad() override
+    void AfterLoad() override
     {
         return stub<member_func_t<void, camBaseCS>>(0x521F30, this);
     }
 
     // 0x521E00 | ?GetDirName@camBaseCS@@UAEPBDXZ
-    inline char const* GetDirName() override
+    char const* GetDirName() override
     {
         return stub<member_func_t<char const*, camBaseCS>>(0x521E00, this);
     }
 
     // 0x521520 | ?MakeActive@camBaseCS@@UAEXXZ
-    virtual inline void MakeActive()
+    virtual void MakeActive()
     {
         return stub<member_func_t<void, camBaseCS>>(0x521520, this);
     }
 
     // 0x520410 | ?UpdateInput@camBaseCS@@UAEXXZ
-    virtual inline void UpdateInput()
+    virtual void UpdateInput()
     {
         return stub<member_func_t<void, camBaseCS>>(0x520410, this);
     }
 
     // 0x521E60 | ?ForceMatrixDelta@camBaseCS@@UAEXABVVector3@@@Z
-    virtual inline void ForceMatrixDelta(class Vector3 const& arg1)
+    virtual void ForceMatrixDelta(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, camBaseCS, class Vector3 const&>>(0x521E60, this, arg1);
     }
 
     // 0x51D750 | ?SetST@camBaseCS@@UAEXPAM@Z
-    virtual inline void SetST(f32* arg1)
+    virtual void SetST(f32* arg1)
     {
         return stub<member_func_t<void, camBaseCS, f32*>>(0x51D750, this, arg1);
     }

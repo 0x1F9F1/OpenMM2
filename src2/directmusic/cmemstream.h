@@ -51,43 +51,43 @@ struct CMemStream
 {
 public:
     // 0x518EA0 | ??0CMemStream@@QAE@PAVCLoader@@@Z
-    inline CMemStream(class CLoader* arg1)
+    CMemStream(class CLoader* arg1)
     {
         stub<member_func_t<void, CMemStream, class CLoader*>>(0x518EA0, this, arg1);
     }
 
     // 0x518EF0 | ??1CMemStream@@QAE@XZ
-    inline ~CMemStream()
+    ~CMemStream()
     {
         stub<member_func_t<void, CMemStream>>(0x518EF0, this);
     }
 
     // 0x518F20 | ?Open@CMemStream@@QAEJPAE_J@Z
-    inline i32 Open(u8* arg1, i64 arg2)
+    i32 Open(u8* arg1, i64 arg2)
     {
         return stub<member_func_t<i32, CMemStream, u8*, i64>>(0x518F20, this, arg1, arg2);
     }
 
     // 0x518F80 | ?Close@CMemStream@@QAEJXZ
-    inline i32 Close()
+    i32 Close()
     {
         return stub<member_func_t<i32, CMemStream>>(0x518F80, this);
     }
 
     // 0x519260 | ?QueryInterface@CMemStream@@W3AGJABU_GUID@@PAPAX@Z
-    inline i32 __stdcall QueryInterface(struct _GUID const& arg1, void** arg2)
+    i32 __stdcall QueryInterface(struct _GUID const& arg1, void** arg2)
     {
         return stub<member_func_t<i32, CMemStream, struct _GUID const&, void**>>(0x519260, this, arg1, arg2);
     }
 
     // 0x519270 | ?AddRef@CMemStream@@W3AGKXZ
-    inline u32 __stdcall AddRef()
+    u32 __stdcall AddRef()
     {
         return stub<member_func_t<u32, CMemStream>>(0x519270, this);
     }
 
     // 0x519280 | ?Release@CMemStream@@W3AGKXZ
-    inline u32 __stdcall Release()
+    u32 __stdcall Release()
     {
         return stub<member_func_t<u32, CMemStream>>(0x519280, this);
     }

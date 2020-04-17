@@ -37,31 +37,31 @@ public:
     // vehAero::`vftable' @ 0x5B3034
 
     // 0x4D9320 | ??0vehAero@@QAE@XZ
-    inline vehAero()
+    vehAero()
     {
         stub<member_func_t<void, vehAero>>(0x4D9320, this);
     }
 
     // 0x4CCF00 | ??1vehAero@@UAE@XZ
-    inline ~vehAero() override
+    ~vehAero() override
     {
         stub<member_func_t<void, vehAero>>(0x4CCF00, this);
     }
 
     // 0x4D9360 | ?Update@vehAero@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, vehAero>>(0x4D9360, this);
     }
 
     // 0x4D96E0 | ?FileIO@vehAero@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
+    void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, vehAero, class datParser&>>(0x4D96E0, this, arg1);
     }
 
     // 0x4D9790 | ?GetClassName@vehAero@@UAEPADXZ
-    inline char* GetClassName() override
+    char* GetClassName() override
     {
         return stub<member_func_t<char*, vehAero>>(0x4D9790, this);
     }

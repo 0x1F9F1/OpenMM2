@@ -59,7 +59,7 @@ public:
     // fxShardManager::`vftable' @ 0x5B1930
 
     // 0x45FE70 | ??0fxShardManager@@QAE@XZ
-    inline fxShardManager()
+    fxShardManager()
     {
         stub<member_func_t<void, fxShardManager>>(0x45FE70, this);
     }
@@ -71,52 +71,52 @@ public:
     }
 
     // 0x45FF80 | ?Init@fxShardManager@@QAEXHPAVmodShader@@H@Z
-    inline void Init(i32 arg1, class modShader* arg2, i32 arg3)
+    void Init(i32 arg1, class modShader* arg2, i32 arg3)
     {
         return stub<member_func_t<void, fxShardManager, i32, class modShader*, i32>>(0x45FF80, this, arg1, arg2, arg3);
     }
 
     // 0x460010 | ?SetShader@fxShardManager@@QAEXPAVmodShader@@H@Z
-    inline void SetShader(class modShader* arg1, i32 arg2)
+    void SetShader(class modShader* arg1, i32 arg2)
     {
         return stub<member_func_t<void, fxShardManager, class modShader*, i32>>(0x460010, this, arg1, arg2);
     }
 
     // 0x460030 | ?EmitShards@fxShardManager@@QAEXVVector3@@MMABVMatrix34@@@Z
-    inline void EmitShards(class Vector3 arg1, f32 arg2, f32 arg3, class Matrix34 const& arg4)
+    void EmitShards(class Vector3 arg1, f32 arg2, f32 arg3, class Matrix34 const& arg4)
     {
         return stub<member_func_t<void, fxShardManager, class Vector3, f32, f32, class Matrix34 const&>>(
             0x460030, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4600B0 | ?EmitAllShards@fxShardManager@@QAEXVVector3@@MABVMatrix34@@@Z
-    inline void EmitAllShards(class Vector3 arg1, f32 arg2, class Matrix34 const& arg3)
+    void EmitAllShards(class Vector3 arg1, f32 arg2, class Matrix34 const& arg3)
     {
         return stub<member_func_t<void, fxShardManager, class Vector3, f32, class Matrix34 const&>>(
             0x4600B0, this, arg1, arg2, arg3);
     }
 
     // 0x460100 | ?EmitShard@fxShardManager@@QAEXVVector3@@MABVMatrix34@@@Z
-    inline void EmitShard(class Vector3 arg1, f32 arg2, class Matrix34 const& arg3)
+    void EmitShard(class Vector3 arg1, f32 arg2, class Matrix34 const& arg3)
     {
         return stub<member_func_t<void, fxShardManager, class Vector3, f32, class Matrix34 const&>>(
             0x460100, this, arg1, arg2, arg3);
     }
 
     // 0x4602D0 | ?Draw@fxShardManager@@QAEXXZ
-    inline void Draw()
+    void Draw()
     {
         return stub<member_func_t<void, fxShardManager>>(0x4602D0, this);
     }
 
     // 0x45FEE0 | ??1fxShardManager@@UAE@XZ
-    inline ~fxShardManager() override
+    ~fxShardManager() override
     {
         stub<member_func_t<void, fxShardManager>>(0x45FEE0, this);
     }
 
     // 0x4602A0 | ?Update@fxShardManager@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, fxShardManager>>(0x4602A0, this);
     }
@@ -126,32 +126,32 @@ struct fxShard
 {
 public:
     // 0x45FCE0 | ??0fxShard@@QAE@XZ
-    inline fxShard()
+    fxShard()
     {
         stub<member_func_t<void, fxShard>>(0x45FCE0, this);
     }
 
     // 0x45FD20 | ??1fxShard@@QAE@XZ
-    inline ~fxShard()
+    ~fxShard()
     {
         stub<member_func_t<void, fxShard>>(0x45FD20, this);
     }
 
     // 0x45FD30 | ?AddShard@fxShard@@QAEXVVector3@@00M@Z
-    inline void AddShard(class Vector3 arg1, class Vector3 arg2, class Vector3 arg3, f32 arg4)
+    void AddShard(class Vector3 arg1, class Vector3 arg2, class Vector3 arg3, f32 arg4)
     {
         return stub<member_func_t<void, fxShard, class Vector3, class Vector3, class Vector3, f32>>(
             0x45FD30, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x45FDA0 | ?Update@fxShard@@QAEXXZ
-    inline void Update()
+    void Update()
     {
         return stub<member_func_t<void, fxShard>>(0x45FDA0, this);
     }
 
     // 0x45FE30 | ?Draw@fxShard@@QAEXPAVmodShader@@@Z
-    inline void Draw(class modShader* arg1)
+    void Draw(class modShader* arg1)
     {
         return stub<member_func_t<void, fxShard, class modShader*>>(0x45FE30, this, arg1);
     }

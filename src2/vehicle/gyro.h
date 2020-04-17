@@ -40,43 +40,43 @@ public:
     // vehGyro::`vftable' @ 0x5B2E84
 
     // 0x4D5B80 | ??0vehGyro@@QAE@XZ
-    inline vehGyro()
+    vehGyro()
     {
         stub<member_func_t<void, vehGyro>>(0x4D5B80, this);
     }
 
     // 0x4D5BD0 | ?Init@vehGyro@@QAEXPAVvehCarSim@@PBD@Z
-    inline void Init(class vehCarSim* arg1, char const* arg2)
+    void Init(class vehCarSim* arg1, char const* arg2)
     {
         return stub<member_func_t<void, vehGyro, class vehCarSim*, char const*>>(0x4D5BD0, this, arg1, arg2);
     }
 
     // 0x4D5F90 | ??1vehGyro@@UAE@XZ
-    inline ~vehGyro() override
+    ~vehGyro() override
     {
         stub<member_func_t<void, vehGyro>>(0x4D5F90, this);
     }
 
     // 0x4D5C00 | ?Update@vehGyro@@UAEXXZ
-    inline void Update() override
+    void Update() override
     {
         return stub<member_func_t<void, vehGyro>>(0x4D5C00, this);
     }
 
     // 0x4D5EE0 | ?FileIO@vehGyro@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
+    void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, vehGyro, class datParser&>>(0x4D5EE0, this, arg1);
     }
 
     // 0x4D5FA0 | ?GetClassName@vehGyro@@UAEPADXZ
-    inline char* GetClassName() override
+    char* GetClassName() override
     {
         return stub<member_func_t<char*, vehGyro>>(0x4D5FA0, this);
     }
 
     // 0x4D5BC0 | ?GetDirName@vehGyro@@UAEPBDXZ
-    inline char const* GetDirName() override
+    char const* GetDirName() override
     {
         return stub<member_func_t<char const*, vehGyro>>(0x4D5BC0, this);
     }
