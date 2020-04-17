@@ -45,19 +45,28 @@ datCallback::datCallback(void (Base::*callback)(void), Base* this_param)
     : _class(this_param)
     , _callback(TaggedCallback(callback, datCallback_ParamCount0))
     , _parameter(nullptr)
-{}
+{
+    if (!this_param)
+        Quitf("Passed member callback with null 'this' parameter");
+}
 
 datCallback::datCallback(void (Base::*callback)(void*), Base* this_param, void* void_param)
     : _class(this_param)
     , _callback(TaggedCallback(callback, datCallback_ParamCount1))
     , _parameter(void_param)
-{}
+{
+    if (!this_param)
+        Quitf("Passed member callback with null 'this' parameter");
+}
 
 datCallback::datCallback(void (Base::*callback)(void*, void*), Base* this_param, void* void_param)
     : _class(this_param)
     , _callback(TaggedCallback(callback, datCallback_ParamCount2))
     , _parameter(void_param)
-{}
+{
+    if (!this_param)
+        Quitf("Passed member callback with null 'this' parameter");
+}
 
 datCallback::datCallback(void (*callback)(void))
     : _class(nullptr)
