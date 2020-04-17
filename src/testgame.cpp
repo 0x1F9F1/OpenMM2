@@ -527,5 +527,6 @@ int ExceptMain()
 include_dummy_symbol(sfPointer);
 include_dummy_symbol(vehCarAudioContainer);
 include_dummy_symbol(Matrix34);
+include_dummy_symbol(datCallback);
 
 run_once([] { new (&ROOT) asRoot(); });

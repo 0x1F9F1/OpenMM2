@@ -119,3 +119,5 @@ run_once([] {
 
     auto_hook(0x4C7B50, datCallback::Call);
 });
+
+define_dummy_symbol(datCallback);
