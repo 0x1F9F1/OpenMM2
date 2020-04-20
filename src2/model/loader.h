@@ -28,9 +28,9 @@
 */
 
 // 0x597A70 | ?modGetModel@@YAPAVmodModel@@PBDI_N1@Z
-inline class modModel* modGetModel(char const* arg1, u32 arg2, bool arg3, bool arg4)
+inline class modModel* modGetModel(char const* arg1, uint32_t arg2, bool arg3, bool arg4)
 {
-    return stub<cdecl_t<class modModel*, char const*, u32, bool, bool>>(0x597A70, arg1, arg2, arg3, arg4);
+    return stub<cdecl_t<class modModel*, char const*, uint32_t, bool, bool>>(0x597A70, arg1, arg2, arg3, arg4);
 }
 
 // 0x597BD0 | ?modConvertModel@@YAXPBD0_N@Z

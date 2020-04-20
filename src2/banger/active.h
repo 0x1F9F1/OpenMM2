@@ -53,27 +53,27 @@ public:
     // dgBangerActiveManager::`vftable' @ 0x5B13C4
 
     // 0x440170 | ??0dgBangerActiveManager@@QAE@XZ
-    dgBangerActiveManager()
+    inline dgBangerActiveManager()
     {
         stub<member_func_t<void, dgBangerActiveManager>>(0x440170, this);
     }
 
     // 0x440290 | ?GetActive@dgBangerActiveManager@@QAEPAVdgBangerActive@@PAVdgBangerInstance@@@Z
-    class dgBangerActive* GetActive(class dgBangerInstance* arg1)
+    inline class dgBangerActive* GetActive(class dgBangerInstance* arg1)
     {
         return stub<member_func_t<class dgBangerActive*, dgBangerActiveManager, class dgBangerInstance*>>(
             0x440290, this, arg1);
     }
 
     // 0x4402C0 | ?Attach@dgBangerActiveManager@@QAEPAVdgBangerActive@@PAVdgBangerInstance@@@Z
-    class dgBangerActive* Attach(class dgBangerInstance* arg1)
+    inline class dgBangerActive* Attach(class dgBangerInstance* arg1)
     {
         return stub<member_func_t<class dgBangerActive*, dgBangerActiveManager, class dgBangerInstance*>>(
             0x4402C0, this, arg1);
     }
 
     // 0x440350 | ?Detach@dgBangerActiveManager@@QAEXPAVdgBangerActive@@@Z
-    void Detach(class dgBangerActive* arg1)
+    inline void Detach(class dgBangerActive* arg1)
     {
         return stub<member_func_t<void, dgBangerActiveManager, class dgBangerActive*>>(0x440350, this, arg1);
     }
@@ -82,19 +82,19 @@ public:
     inline extern_var(0x627630, class dgBangerActiveManager*, Instance);
 
     // 0x440220 | ??1dgBangerActiveManager@@UAE@XZ
-    ~dgBangerActiveManager() override
+    inline ~dgBangerActiveManager() override
     {
         stub<member_func_t<void, dgBangerActiveManager>>(0x440220, this);
     }
 
     // 0x4403A0 | ?Update@dgBangerActiveManager@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, dgBangerActiveManager>>(0x4403A0, this);
     }
 
     // 0x440500 | ?Reset@dgBangerActiveManager@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, dgBangerActiveManager>>(0x440500, this);
     }
@@ -106,55 +106,55 @@ public:
     // dgBangerActive::`vftable' @ 0x5B1398
 
     // 0x43FC70 | ??0dgBangerActive@@QAE@XZ
-    dgBangerActive()
+    inline dgBangerActive()
     {
         stub<member_func_t<void, dgBangerActive>>(0x43FC70, this);
     }
 
     // 0x43FDC0 | ?Attach@dgBangerActive@@QAEXPAVdgBangerInstance@@@Z
-    void Attach(class dgBangerInstance* arg1)
+    inline void Attach(class dgBangerInstance* arg1)
     {
         return stub<member_func_t<void, dgBangerActive, class dgBangerInstance*>>(0x43FDC0, this, arg1);
     }
 
     // 0x43FFF0 | ?Detach@dgBangerActive@@QAEXXZ
-    void Detach()
+    inline void Detach()
     {
         return stub<member_func_t<void, dgBangerActive>>(0x43FFF0, this);
     }
 
     // 0x43FD40 | ??1dgBangerActive@@UAE@XZ
-    ~dgBangerActive() override
+    inline ~dgBangerActive() override
     {
         stub<member_func_t<void, dgBangerActive>>(0x43FD40, this);
     }
 
     // 0x440050 | ?Update@dgBangerActive@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, dgBangerActive>>(0x440050, this);
     }
 
     // 0x4400E0 | ?PostUpdate@dgBangerActive@@UAEXXZ
-    void PostUpdate() override
+    inline void PostUpdate() override
     {
         return stub<member_func_t<void, dgBangerActive>>(0x4400E0, this);
     }
 
     // 0x4405C0 | ?GetICS@dgBangerActive@@UAEPAVphInertialCS@@XZ
-    class phInertialCS* GetICS() override
+    inline class phInertialCS* GetICS() override
     {
         return stub<member_func_t<class phInertialCS*, dgBangerActive>>(0x4405C0, this);
     }
 
     // 0x43FDB0 | ?GetInst@dgBangerActive@@UAEPAVlvlInstance@@XZ
-    class lvlInstance* GetInst() override
+    inline class lvlInstance* GetInst() override
     {
         return stub<member_func_t<class lvlInstance*, dgBangerActive>>(0x43FDB0, this);
     }
 
     // 0x440030 | ?DetachMe@dgBangerActive@@UAEXXZ
-    void DetachMe() override
+    inline void DetachMe() override
     {
         return stub<member_func_t<void, dgBangerActive>>(0x440030, this);
     }

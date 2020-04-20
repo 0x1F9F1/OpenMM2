@@ -43,61 +43,61 @@ public:
     // vehStuck::`vftable' @ 0x5B2EB8
 
     // 0x4D5FB0 | ??0vehStuck@@QAE@XZ
-    vehStuck()
+    inline vehStuck()
     {
         stub<member_func_t<void, vehStuck>>(0x4D5FB0, this);
     }
 
     // 0x4D6090 | ?Init@vehStuck@@QAEXPAVvehCarSim@@PBD@Z
-    void Init(class vehCarSim* arg1, char const* arg2)
+    inline void Init(class vehCarSim* arg1, char const* arg2)
     {
         return stub<member_func_t<void, vehStuck, class vehCarSim*, char const*>>(0x4D6090, this, arg1, arg2);
     }
 
     // 0x4D60C0 | ?Impact@vehStuck@@QAEXXZ
-    void Impact()
+    inline void Impact()
     {
         return stub<member_func_t<void, vehStuck>>(0x4D60C0, this);
     }
 
     // 0x4D6100 | ?Pegged@vehStuck@@QAEHXZ
-    i32 Pegged()
+    inline int32_t Pegged()
     {
-        return stub<member_func_t<i32, vehStuck>>(0x4D6100, this);
+        return stub<member_func_t<int32_t, vehStuck>>(0x4D6100, this);
     }
 
     // 0x4D65E0 | ??1vehStuck@@UAE@XZ
-    ~vehStuck() override
+    inline ~vehStuck() override
     {
         stub<member_func_t<void, vehStuck>>(0x4D65E0, this);
     }
 
     // 0x4D6140 | ?Update@vehStuck@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, vehStuck>>(0x4D6140, this);
     }
 
     // 0x4D6060 | ?Reset@vehStuck@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, vehStuck>>(0x4D6060, this);
     }
 
     // 0x4D6510 | ?FileIO@vehStuck@@UAEXAAVdatParser@@@Z
-    void FileIO(class datParser& arg1) override
+    inline void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, vehStuck, class datParser&>>(0x4D6510, this, arg1);
     }
 
     // 0x4D65F0 | ?GetClassName@vehStuck@@UAEPADXZ
-    char* GetClassName() override
+    inline char* GetClassName() override
     {
         return stub<member_func_t<char*, vehStuck>>(0x4D65F0, this);
     }
 
     // 0x4D6080 | ?GetDirName@vehStuck@@UAEPBDXZ
-    char const* GetDirName() override
+    inline char const* GetDirName() override
     {
         return stub<member_func_t<char const*, vehStuck>>(0x4D6080, this);
     }

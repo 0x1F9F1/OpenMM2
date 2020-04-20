@@ -53,19 +53,20 @@ public:
     }
 
     // 0x4A3B30 | ?Load@modShader@@QAEXPAVStream@@_N@Z
-    void Load(class Stream* arg1, bool arg2)
+    inline void Load(class Stream* arg1, bool arg2)
     {
         return stub<member_func_t<void, modShader, class Stream*, bool>>(0x4A3B30, this, arg1, arg2);
     }
 
     // 0x4A3F60 | ?LoadShaderSet@modShader@@SAPAPAV1@PAVStream@@PAH1_N@Z
-    static inline class modShader** LoadShaderSet(class Stream* arg1, i32* arg2, i32* arg3, bool arg4)
+    static inline class modShader** LoadShaderSet(class Stream* arg1, int32_t* arg2, int32_t* arg3, bool arg4)
     {
-        return stub<cdecl_t<class modShader**, class Stream*, i32*, i32*, bool>>(0x4A3F60, arg1, arg2, arg3, arg4);
+        return stub<cdecl_t<class modShader**, class Stream*, int32_t*, int32_t*, bool>>(
+            0x4A3F60, arg1, arg2, arg3, arg4);
     }
 
     // 0x4A40C0 | ?PreLoad@modShader@@QAEXXZ
-    void PreLoad()
+    inline void PreLoad()
     {
         return stub<member_func_t<void, modShader>>(0x4A40C0, this);
     }

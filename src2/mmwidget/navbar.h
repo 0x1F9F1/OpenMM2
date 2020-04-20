@@ -45,79 +45,79 @@ public:
     // uiNavBar::`vftable' @ 0x5B32C8
 
     // 0x4E6230 | ??0uiNavBar@@QAE@H@Z
-    uiNavBar(i32 arg1)
+    inline uiNavBar(int32_t arg1)
     {
-        stub<member_func_t<void, uiNavBar, i32>>(0x4E6230, this, arg1);
+        stub<member_func_t<void, uiNavBar, int32_t>>(0x4E6230, this, arg1);
     }
 
     // 0x4E6460 | ?Help@uiNavBar@@QAEXXZ
-    void Help()
+    inline void Help()
     {
         return stub<member_func_t<void, uiNavBar>>(0x4E6460, this);
     }
 
     // 0x4E6470 | ?Minimize@uiNavBar@@QAEXXZ
-    void Minimize()
+    inline void Minimize()
     {
         return stub<member_func_t<void, uiNavBar>>(0x4E6470, this);
     }
 
     // 0x4E64B0 | ?ResetState@uiNavBar@@QAEXXZ
-    void ResetState()
+    inline void ResetState()
     {
         return stub<member_func_t<void, uiNavBar>>(0x4E64B0, this);
     }
 
     // 0x4E64C0 | ?OptionActive@uiNavBar@@QAEXXZ
-    void OptionActive()
+    inline void OptionActive()
     {
         return stub<member_func_t<void, uiNavBar>>(0x4E64C0, this);
     }
 
     // 0x4E64E0 | ?OptionInActive@uiNavBar@@QAEXXZ
-    void OptionInActive()
+    inline void OptionInActive()
     {
         return stub<member_func_t<void, uiNavBar>>(0x4E64E0, this);
     }
 
     // 0x4E65A0 | ?SetPrevPos@uiNavBar@@QAEXMM@Z
-    void SetPrevPos(f32 arg1, f32 arg2)
+    inline void SetPrevPos(float arg1, float arg2)
     {
-        return stub<member_func_t<void, uiNavBar, f32, f32>>(0x4E65A0, this, arg1, arg2);
+        return stub<member_func_t<void, uiNavBar, float, float>>(0x4E65A0, this, arg1, arg2);
     }
 
     // 0x4E65F0 | ?TurnOnPrev@uiNavBar@@QAEXXZ
-    void TurnOnPrev()
+    inline void TurnOnPrev()
     {
         return stub<member_func_t<void, uiNavBar>>(0x4E65F0, this);
     }
 
     // 0x4E6610 | ?TurnOffPrev@uiNavBar@@QAEXXZ
-    void TurnOffPrev()
+    inline void TurnOffPrev()
     {
         return stub<member_func_t<void, uiNavBar>>(0x4E6610, this);
     }
 
     // 0x4E6630 | ?SetPrevBitmap@uiNavBar@@QAEXPAD@Z
-    void SetPrevBitmap(char* arg1)
+    inline void SetPrevBitmap(char* arg1)
     {
         return stub<member_func_t<void, uiNavBar, char*>>(0x4E6630, this, arg1);
     }
 
     // 0x4E64A0 | ??1uiNavBar@@UAE@XZ
-    ~uiNavBar() override
+    inline ~uiNavBar() override
     {
         stub<member_func_t<void, uiNavBar>>(0x4E64A0, this);
     }
 
     // 0x4E6500 | ?Update@uiNavBar@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, uiNavBar>>(0x4E6500, this);
     }
 
     // 0x4E6680 | ?BackUp@uiNavBar@@UAEXXZ
-    void BackUp() override
+    inline void BackUp() override
     {
         return stub<member_func_t<void, uiNavBar>>(0x4E6680, this);
     }

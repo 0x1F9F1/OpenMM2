@@ -43,67 +43,67 @@ public:
     // Spline::`vftable' @ 0x5B51B8
 
     // 0x522BC0 | ??0Spline@@QAE@XZ
-    Spline()
+    inline Spline()
     {
         stub<member_func_t<void, Spline>>(0x522BC0, this);
     }
 
     // 0x522BF0 | ?Init@Spline@@QAEXPAMH@Z
-    void Init(f32* arg1, i32 arg2)
+    inline void Init(float* arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, Spline, f32*, i32>>(0x522BF0, this, arg1, arg2);
+        return stub<member_func_t<void, Spline, float*, int32_t>>(0x522BF0, this, arg1, arg2);
     }
 
     // 0x522D00 | ?InRange@Spline@@QAEHXZ
-    i32 InRange()
+    inline int32_t InRange()
     {
-        return stub<member_func_t<i32, Spline>>(0x522D00, this);
+        return stub<member_func_t<int32_t, Spline>>(0x522D00, this);
     }
 
     // 0x522D50 | ?CalcCoeff@Spline@@QAEXXZ
-    void CalcCoeff()
+    inline void CalcCoeff()
     {
         return stub<member_func_t<void, Spline>>(0x522D50, this);
     }
 
     // 0x522E60 | ?SetValue@Spline@@QAEXPAM@Z
-    void SetValue(f32* arg1)
+    inline void SetValue(float* arg1)
     {
-        return stub<member_func_t<void, Spline, f32*>>(0x522E60, this, arg1);
+        return stub<member_func_t<void, Spline, float*>>(0x522E60, this, arg1);
     }
 
     // 0x522ED0 | ?SetGoal@Spline@@QAEXPAMM@Z
-    void SetGoal(f32* arg1, f32 arg2)
+    inline void SetGoal(float* arg1, float arg2)
     {
-        return stub<member_func_t<void, Spline, f32*, f32>>(0x522ED0, this, arg1, arg2);
+        return stub<member_func_t<void, Spline, float*, float>>(0x522ED0, this, arg1, arg2);
     }
 
     // 0x522FB0 | ?Solve@Spline@@QAEXM@Z
-    void Solve(f32 arg1)
+    inline void Solve(float arg1)
     {
-        return stub<member_func_t<void, Spline, f32>>(0x522FB0, this, arg1);
+        return stub<member_func_t<void, Spline, float>>(0x522FB0, this, arg1);
     }
 
     // 0x5230E0 | ?Print@Spline@@QAEXH@Z
-    void Print(i32 arg1)
+    inline void Print(int32_t arg1)
     {
-        return stub<member_func_t<void, Spline, i32>>(0x5230E0, this, arg1);
+        return stub<member_func_t<void, Spline, int32_t>>(0x5230E0, this, arg1);
     }
 
     // 0x5231E0 | ?FixTimeStop@Spline@@QAEXXZ
-    void FixTimeStop()
+    inline void FixTimeStop()
     {
         return stub<member_func_t<void, Spline>>(0x5231E0, this);
     }
 
     // 0x51FD50 | ??1Spline@@UAE@XZ
-    ~Spline() override
+    inline ~Spline() override
     {
         stub<member_func_t<void, Spline>>(0x51FD50, this);
     }
 
     // 0x523210 | ?Update@Spline@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, Spline>>(0x523210, this);
     }

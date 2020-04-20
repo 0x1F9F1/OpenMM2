@@ -40,44 +40,44 @@ public:
     // PUAudioOptions::`vftable' @ 0x5B49FC
 
     // 0x50C620 | ??0PUAudioOptions@@QAE@HMMMM@Z
-    PUAudioOptions(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
+    inline PUAudioOptions(int32_t arg1, float arg2, float arg3, float arg4, float arg5)
     {
-        stub<member_func_t<void, PUAudioOptions, i32, f32, f32, f32, f32>>(
+        stub<member_func_t<void, PUAudioOptions, int32_t, float, float, float, float>>(
             0x50C620, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x50C8F0 | ?SetWaveVolume@PUAudioOptions@@QAEXXZ
-    void SetWaveVolume()
+    inline void SetWaveVolume()
     {
         return stub<member_func_t<void, PUAudioOptions>>(0x50C8F0, this);
     }
 
     // 0x50C910 | ?SetCDVolume@PUAudioOptions@@QAEXXZ
-    void SetCDVolume()
+    inline void SetCDVolume()
     {
         return stub<member_func_t<void, PUAudioOptions>>(0x50C910, this);
     }
 
     // 0x50C940 | ?SetBalance@PUAudioOptions@@QAEXXZ
-    void SetBalance()
+    inline void SetBalance()
     {
         return stub<member_func_t<void, PUAudioOptions>>(0x50C940, this);
     }
 
     // 0x50C990 | ?CancelAction@PUAudioOptions@@QAEXXZ
-    void CancelAction()
+    inline void CancelAction()
     {
         return stub<member_func_t<void, PUAudioOptions>>(0x50C990, this);
     }
 
     // 0x50C8E0 | ??1PUAudioOptions@@UAE@XZ
-    ~PUAudioOptions() override
+    inline ~PUAudioOptions() override
     {
         stub<member_func_t<void, PUAudioOptions>>(0x50C8E0, this);
     }
 
     // 0x50C980 | ?PreSetup@PUAudioOptions@@UAEXXZ
-    void PreSetup() override
+    inline void PreSetup() override
     {
         return stub<member_func_t<void, PUAudioOptions>>(0x50C980, this);
     }

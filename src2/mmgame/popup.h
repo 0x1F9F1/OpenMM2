@@ -54,128 +54,128 @@ public:
     // mmPopup::`vftable' @ 0x5B0B44
 
     // 0x429D90 | ??0mmPopup@@QAE@PAVmmGame@@MMMM@Z
-    mmPopup(class mmGame* arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
+    inline mmPopup(class mmGame* arg1, float arg2, float arg3, float arg4, float arg5)
     {
-        stub<member_func_t<void, mmPopup, class mmGame*, f32, f32, f32, f32>>(
+        stub<member_func_t<void, mmPopup, class mmGame*, float, float, float, float>>(
             0x429D90, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x42A280 | ?IsEnabled@mmPopup@@QAEHXZ
-    i32 IsEnabled()
+    inline int32_t IsEnabled()
     {
-        return stub<member_func_t<i32, mmPopup>>(0x42A280, this);
+        return stub<member_func_t<int32_t, mmPopup>>(0x42A280, this);
     }
 
     // 0x42A290 | ?DisablePU@mmPopup@@QAEXH@Z
-    void DisablePU(i32 arg1)
+    inline void DisablePU(int32_t arg1)
     {
-        return stub<member_func_t<void, mmPopup, i32>>(0x42A290, this, arg1);
+        return stub<member_func_t<void, mmPopup, int32_t>>(0x42A290, this, arg1);
     }
 
     // 0x42A320 | ?ProcessEscape@mmPopup@@QAEXH@Z
-    void ProcessEscape(i32 arg1)
+    inline void ProcessEscape(int32_t arg1)
     {
-        return stub<member_func_t<void, mmPopup, i32>>(0x42A320, this, arg1);
+        return stub<member_func_t<void, mmPopup, int32_t>>(0x42A320, this, arg1);
     }
 
     // 0x42A400 | ?ProcessChat@mmPopup@@QAEXXZ
-    void ProcessChat()
+    inline void ProcessChat()
     {
         return stub<member_func_t<void, mmPopup>>(0x42A400, this);
     }
 
     // 0x42A4B0 | ?ProcessKeymap@mmPopup@@QAEXH@Z
-    void ProcessKeymap(i32 arg1)
+    inline void ProcessKeymap(int32_t arg1)
     {
-        return stub<member_func_t<void, mmPopup, i32>>(0x42A4B0, this, arg1);
+        return stub<member_func_t<void, mmPopup, int32_t>>(0x42A4B0, this, arg1);
     }
 
     // 0x42A5E0 | ?ShowResults@mmPopup@@QAEXH@Z
-    void ShowResults(i32 arg1)
+    inline void ShowResults(int32_t arg1)
     {
-        return stub<member_func_t<void, mmPopup, i32>>(0x42A5E0, this, arg1);
+        return stub<member_func_t<void, mmPopup, int32_t>>(0x42A5E0, this, arg1);
     }
 
     // 0x42A6D0 | ?ShowRoster@mmPopup@@QAEXXZ
-    void ShowRoster()
+    inline void ShowRoster()
     {
         return stub<member_func_t<void, mmPopup>>(0x42A6D0, this);
     }
 
     // 0x42A760 | ?ShowReplay@mmPopup@@QAEXXZ
-    void ShowReplay()
+    inline void ShowReplay()
     {
         return stub<member_func_t<void, mmPopup>>(0x42A760, this);
     }
 
     // 0x42A7A0 | ?ForceRoster@mmPopup@@QAEXXZ
-    void ForceRoster()
+    inline void ForceRoster()
     {
         return stub<member_func_t<void, mmPopup>>(0x42A7A0, this);
     }
 
     // 0x42B450 | ?GetComment@mmPopup@@QAEPADXZ
-    char* GetComment()
+    inline char* GetComment()
     {
         return stub<member_func_t<char*, mmPopup>>(0x42B450, this);
     }
 
     // 0x42B460 | ?SetComment@mmPopup@@QAEXPAD@Z
-    void SetComment(char* arg1)
+    inline void SetComment(char* arg1)
     {
         return stub<member_func_t<void, mmPopup, char*>>(0x42B460, this, arg1);
     }
 
     // 0x42B480 | ?SaveReplay@mmPopup@@QAEXXZ
-    void SaveReplay()
+    inline void SaveReplay()
     {
         return stub<member_func_t<void, mmPopup>>(0x42B480, this);
     }
 
     // 0x42B4F0 | ?Lock@mmPopup@@QAEXXZ
-    void Lock()
+    inline void Lock()
     {
         return stub<member_func_t<void, mmPopup>>(0x42B4F0, this);
     }
 
     // 0x42B500 | ?Unlock@mmPopup@@QAEXXZ
-    void Unlock()
+    inline void Unlock()
     {
         return stub<member_func_t<void, mmPopup>>(0x42B500, this);
     }
 
     // 0x42B510 | ?ChatCB@mmPopup@@QAEXXZ
-    void ChatCB()
+    inline void ChatCB()
     {
         return stub<member_func_t<void, mmPopup>>(0x42B510, this);
     }
 
     // 0x42B570 | ?PlayPauseMusic@mmPopup@@QAEXXZ
-    void PlayPauseMusic()
+    inline void PlayPauseMusic()
     {
         return stub<member_func_t<void, mmPopup>>(0x42B570, this);
     }
 
     // 0x42B5B0 | ?PlayReturnMusic@mmPopup@@QAEXXZ
-    void PlayReturnMusic()
+    inline void PlayReturnMusic()
     {
         return stub<member_func_t<void, mmPopup>>(0x42B5B0, this);
     }
 
     // 0x42A270 | ??1mmPopup@@UAE@XZ
-    ~mmPopup() override
+    inline ~mmPopup() override
     {
         stub<member_func_t<void, mmPopup>>(0x42A270, this);
     }
 
     // 0x42A830 | ?Update@mmPopup@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, mmPopup>>(0x42A830, this);
     }
 
     // 0x42B430 | ?Reset@mmPopup@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, mmPopup>>(0x42B430, this);
     }

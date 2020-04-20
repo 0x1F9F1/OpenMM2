@@ -39,43 +39,44 @@ public:
     // PUControl::`vftable' @ 0x5B4918
 
     // 0x50BD00 | ??0PUControl@@QAE@HMMMM@Z
-    PUControl(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
+    inline PUControl(int32_t arg1, float arg2, float arg3, float arg4, float arg5)
     {
-        stub<member_func_t<void, PUControl, i32, f32, f32, f32, f32>>(0x50BD00, this, arg1, arg2, arg3, arg4, arg5);
+        stub<member_func_t<void, PUControl, int32_t, float, float, float, float>>(
+            0x50BD00, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x50C110 | ?CancelAction@PUControl@@QAEXXZ
-    void CancelAction()
+    inline void CancelAction()
     {
         return stub<member_func_t<void, PUControl>>(0x50C110, this);
     }
 
     // 0x50C130 | ?SetRWStates@PUControl@@QAEXXZ
-    void SetRWStates()
+    inline void SetRWStates()
     {
         return stub<member_func_t<void, PUControl>>(0x50C130, this);
     }
 
     // 0x50C1C0 | ?ControlSelect@PUControl@@QAEXXZ
-    void ControlSelect()
+    inline void ControlSelect()
     {
         return stub<member_func_t<void, PUControl>>(0x50C1C0, this);
     }
 
     // 0x50C1F0 | ?SetSensitivityCB@PUControl@@QAEXXZ
-    void SetSensitivityCB()
+    inline void SetSensitivityCB()
     {
         return stub<member_func_t<void, PUControl>>(0x50C1F0, this);
     }
 
     // 0x50C090 | ??1PUControl@@UAE@XZ
-    ~PUControl() override
+    inline ~PUControl() override
     {
         stub<member_func_t<void, PUControl>>(0x50C090, this);
     }
 
     // 0x50C0F0 | ?PreSetup@PUControl@@UAEXXZ
-    void PreSetup() override
+    inline void PreSetup() override
     {
         return stub<member_func_t<void, PUControl>>(0x50C0F0, this);
     }

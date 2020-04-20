@@ -40,51 +40,52 @@ public:
     // UIMexButton::`vftable' @ 0x5B3988
 
     // 0x4EE440 | ??0UIMexButton@@QAE@XZ
-    UIMexButton()
+    inline UIMexButton()
     {
         stub<member_func_t<void, UIMexButton>>(0x4EE440, this);
     }
 
     // 0x4EE4D0 | ?Init@UIMexButton@@QAEXPAULocString@@PAHHMMMMHHVdatCallback@@@Z
-    void Init(struct LocString* arg1, i32* arg2, i32 arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7, i32 arg8, i32 arg9,
-        class datCallback arg10)
+    inline void Init(struct LocString* arg1, int32_t* arg2, int32_t arg3, float arg4, float arg5, float arg6,
+        float arg7, int32_t arg8, int32_t arg9, class datCallback arg10)
     {
-        return stub<member_func_t<void, UIMexButton, struct LocString*, i32*, i32, f32, f32, f32, f32, i32, i32,
-            class datCallback>>(0x4EE4D0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
+        return stub<member_func_t<void, UIMexButton, struct LocString*, int32_t*, int32_t, float, float, float, float,
+            int32_t, int32_t, class datCallback>>(
+            0x4EE4D0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
     }
 
     // 0x4EE4C0 | ??1UIMexButton@@UAE@XZ
-    ~UIMexButton() override
+    inline ~UIMexButton() override
     {
         stub<member_func_t<void, UIMexButton>>(0x4EE4C0, this);
     }
 
     // 0x4EE590 | ?Update@UIMexButton@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, UIMexButton>>(0x4EE590, this);
     }
 
     // 0x4EE640 | ?Action@UIMexButton@@UAEXTeqEvent@@@Z
-    void Action(union eqEvent arg1) override
+    inline void Action(union eqEvent arg1) override
     {
         return stub<member_func_t<void, UIMexButton, union eqEvent>>(0x4EE640, this, arg1);
     }
 
     // 0x4EE620 | ?DoToggle@UIMexButton@@UAEXXZ
-    void DoToggle() override
+    inline void DoToggle() override
     {
         return stub<member_func_t<void, UIMexButton>>(0x4EE620, this);
     }
 
     // 0x4EE5E0 | ?DrawOff@UIMexButton@@EAEXXZ
-    void DrawOff() override
+    inline void DrawOff() override
     {
         return stub<member_func_t<void, UIMexButton>>(0x4EE5E0, this);
     }
 
     // 0x4EE5F0 | ?DrawOn@UIMexButton@@EAEXXZ
-    void DrawOn() override
+    inline void DrawOn() override
     {
         return stub<member_func_t<void, UIMexButton>>(0x4EE5F0, this);
     }

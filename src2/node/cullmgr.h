@@ -43,19 +43,19 @@ public:
     // asCullManager::`vftable' @ 0x5B291C
 
     // 0x4A1290 | ??0asCullManager@@QAE@HH@Z
-    asCullManager(i32 arg1, i32 arg2)
+    inline asCullManager(int32_t arg1, int32_t arg2)
     {
-        stub<member_func_t<void, asCullManager, i32, i32>>(0x4A1290, this, arg1, arg2);
+        stub<member_func_t<void, asCullManager, int32_t, int32_t>>(0x4A1290, this, arg1, arg2);
     }
 
     // 0x4A1440 | ?DisplayVersionString@asCullManager@@IAEXXZ
-    void DisplayVersionString()
+    inline void DisplayVersionString()
     {
         return stub<member_func_t<void, asCullManager>>(0x4A1440, this);
     }
 
     // 0x4A1680 | ?DeclareBitmap@asCullManager@@QAEXPAVasCullable@@PAVgfxBitmap@@@Z
-    void DeclareBitmap(class asCullable* arg1, class gfxBitmap* arg2)
+    inline void DeclareBitmap(class asCullable* arg1, class gfxBitmap* arg2)
     {
         return stub<member_func_t<void, asCullManager, class asCullable*, class gfxBitmap*>>(
             0x4A1680, this, arg1, arg2);
@@ -65,43 +65,43 @@ public:
     inline extern_var(0x661784, class asCullManager*, Instance);
 
     // 0x4A1370 | ??1asCullManager@@UAE@XZ
-    ~asCullManager() override
+    inline ~asCullManager() override
     {
         stub<member_func_t<void, asCullManager>>(0x4A1370, this);
     }
 
     // 0x4A1450 | ?Update@asCullManager@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, asCullManager>>(0x4A1450, this);
     }
 
     // 0x4A13F0 | ?Reset@asCullManager@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, asCullManager>>(0x4A13F0, this);
     }
 
     // 0x4A1580 | ?DeclareCamera@asCullManager@@UAEXPAVasCamera@@@Z
-    virtual void DeclareCamera(class asCamera* arg1)
+    virtual inline void DeclareCamera(class asCamera* arg1)
     {
         return stub<member_func_t<void, asCullManager, class asCamera*>>(0x4A1580, this, arg1);
     }
 
     // 0x4A15B0 | ?DeclareCullable@asCullManager@@UAEXPAVasCullable@@@Z
-    virtual void DeclareCullable(class asCullable* arg1)
+    virtual inline void DeclareCullable(class asCullable* arg1)
     {
         return stub<member_func_t<void, asCullManager, class asCullable*>>(0x4A15B0, this, arg1);
     }
 
     // 0x4A1600 | ?DeclareCullable2D@asCullManager@@UAEXPAVasCullable@@@Z
-    virtual void DeclareCullable2D(class asCullable* arg1)
+    virtual inline void DeclareCullable2D(class asCullable* arg1)
     {
         return stub<member_func_t<void, asCullManager, class asCullable*>>(0x4A1600, this, arg1);
     }
 
     // 0x4A1640 | ?DeclareCullable2DFG@asCullManager@@UAEXPAVasCullable@@@Z
-    virtual void DeclareCullable2DFG(class asCullable* arg1)
+    virtual inline void DeclareCullable2DFG(class asCullable* arg1)
     {
         return stub<member_func_t<void, asCullManager, class asCullable*>>(0x4A1640, this, arg1);
     }

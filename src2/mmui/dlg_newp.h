@@ -36,26 +36,26 @@ public:
     // Dialog_NewPlayer::`vftable' @ 0x5B40DC
 
     // 0x4FD5B0 | ??0Dialog_NewPlayer@@QAE@HMMMMPAD@Z
-    Dialog_NewPlayer(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    inline Dialog_NewPlayer(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
     {
-        stub<member_func_t<void, Dialog_NewPlayer, i32, f32, f32, f32, f32, char*>>(
+        stub<member_func_t<void, Dialog_NewPlayer, int32_t, float, float, float, float, char*>>(
             0x4FD5B0, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4FD920 | ?EnterNewPlayer@Dialog_NewPlayer@@QAEXXZ
-    void EnterNewPlayer()
+    inline void EnterNewPlayer()
     {
         return stub<member_func_t<void, Dialog_NewPlayer>>(0x4FD920, this);
     }
 
     // 0x4FD910 | ??1Dialog_NewPlayer@@UAE@XZ
-    ~Dialog_NewPlayer() override
+    inline ~Dialog_NewPlayer() override
     {
         stub<member_func_t<void, Dialog_NewPlayer>>(0x4FD910, this);
     }
 
     // 0x4FD930 | ?PreSetup@Dialog_NewPlayer@@UAEXXZ
-    void PreSetup() override
+    inline void PreSetup() override
     {
         return stub<member_func_t<void, Dialog_NewPlayer>>(0x4FD930, this);
     }

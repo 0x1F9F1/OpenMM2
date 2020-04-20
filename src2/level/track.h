@@ -37,32 +37,32 @@ class lvlTrackManager
 {
 public:
     // 0x465EC0 | ??0lvlTrackManager@@QAE@XZ
-    lvlTrackManager()
+    inline lvlTrackManager()
     {
         stub<member_func_t<void, lvlTrackManager>>(0x465EC0, this);
     }
 
     // 0x465ED0 | ??1lvlTrackManager@@QAE@XZ
-    ~lvlTrackManager()
+    inline ~lvlTrackManager()
     {
         stub<member_func_t<void, lvlTrackManager>>(0x465ED0, this);
     }
 
     // 0x465EE0 | ?Init@lvlTrackManager@@QAEXABVMatrix34@@MH@Z
-    void Init(class Matrix34 const& arg1, f32 arg2, i32 arg3)
+    inline void Init(class Matrix34 const& arg1, float arg2, int32_t arg3)
     {
-        return stub<member_func_t<void, lvlTrackManager, class Matrix34 const&, f32, i32>>(
+        return stub<member_func_t<void, lvlTrackManager, class Matrix34 const&, float, int32_t>>(
             0x465EE0, this, arg1, arg2, arg3);
     }
 
     // 0x465F50 | ?Reset@lvlTrackManager@@QAEXXZ
-    void Reset()
+    inline void Reset()
     {
         return stub<member_func_t<void, lvlTrackManager>>(0x465F50, this);
     }
 
     // 0x465F60 | ?Update@lvlTrackManager@@QAEXABVVector3@@0PAVgfxTexture@@@Z
-    void Update(class Vector3 const& arg1, class Vector3 const& arg2, class gfxTexture* arg3)
+    inline void Update(class Vector3 const& arg1, class Vector3 const& arg2, class gfxTexture* arg3)
     {
         return stub<
             member_func_t<void, lvlTrackManager, class Vector3 const&, class Vector3 const&, class gfxTexture*>>(
@@ -70,16 +70,16 @@ public:
     }
 
     // 0x466320 | ?Draw@lvlTrackManager@@QAEXXZ
-    void Draw()
+    inline void Draw()
     {
         return stub<member_func_t<void, lvlTrackManager>>(0x466320, this);
     }
 
     // 0x4663E0 | ?AddVertex@lvlTrackManager@@AAEXPAVgfxTexture@@MABVVector3@@1@Z
-    void AddVertex(class gfxTexture* arg1, f32 arg2, class Vector3 const& arg3, class Vector3 const& arg4)
+    inline void AddVertex(class gfxTexture* arg1, float arg2, class Vector3 const& arg3, class Vector3 const& arg4)
     {
         return stub<
-            member_func_t<void, lvlTrackManager, class gfxTexture*, f32, class Vector3 const&, class Vector3 const&>>(
+            member_func_t<void, lvlTrackManager, class gfxTexture*, float, class Vector3 const&, class Vector3 const&>>(
             0x4663E0, this, arg1, arg2, arg3, arg4);
     }
 };

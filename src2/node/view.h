@@ -45,67 +45,67 @@ public:
     // asViewCS::`vftable' @ 0x5B86A8
 
     // 0x596200 | ??0asViewCS@@QAE@XZ
-    asViewCS()
+    inline asViewCS()
     {
         stub<member_func_t<void, asViewCS>>(0x596200, this);
     }
 
     // 0x596330 | ?SetAzimuth@asViewCS@@QAEXXZ
-    void SetAzimuth()
+    inline void SetAzimuth()
     {
         return stub<member_func_t<void, asViewCS>>(0x596330, this);
     }
 
     // 0x596580 | ?UpdatePolar@asViewCS@@QAEXXZ
-    void UpdatePolar()
+    inline void UpdatePolar()
     {
         return stub<member_func_t<void, asViewCS>>(0x596580, this);
     }
 
     // 0x5966E0 | ?UpdateRoam@asViewCS@@QAEXXZ
-    void UpdateRoam()
+    inline void UpdateRoam()
     {
         return stub<member_func_t<void, asViewCS>>(0x5966E0, this);
     }
 
     // 0x5967E0 | ?UpdatePOV@asViewCS@@QAEXXZ
-    void UpdatePOV()
+    inline void UpdatePOV()
     {
         return stub<member_func_t<void, asViewCS>>(0x5967E0, this);
     }
 
     // 0x596880 | ?UpdateLookAt@asViewCS@@QAEXXZ
-    void UpdateLookAt()
+    inline void UpdateLookAt()
     {
         return stub<member_func_t<void, asViewCS>>(0x596880, this);
     }
 
     // 0x5968E0 | ?UpdateTrack@asViewCS@@QAEXXZ
-    void UpdateTrack()
+    inline void UpdateTrack()
     {
         return stub<member_func_t<void, asViewCS>>(0x5968E0, this);
     }
 
     // 0x596C80 | ?UpdateStereo@asViewCS@@QAEXXZ
-    void UpdateStereo()
+    inline void UpdateStereo()
     {
         return stub<member_func_t<void, asViewCS>>(0x596C80, this);
     }
 
     // 0x596E10 | ??1asViewCS@@UAE@XZ
-    ~asViewCS() override
+    inline ~asViewCS() override
     {
         stub<member_func_t<void, asViewCS>>(0x596E10, this);
     }
 
     // 0x596500 | ?Update@asViewCS@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, asViewCS>>(0x596500, this);
     }
 
     // 0x596390 | ?Reset@asViewCS@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, asViewCS>>(0x596390, this);
     }

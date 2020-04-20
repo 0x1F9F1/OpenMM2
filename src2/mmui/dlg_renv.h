@@ -39,44 +39,44 @@ public:
     // Dialog_RaceEnvironment::`vftable' @ 0x5B3FB8
 
     // 0x4FB200 | ??0Dialog_RaceEnvironment@@QAE@HMMMMPAD@Z
-    Dialog_RaceEnvironment(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    inline Dialog_RaceEnvironment(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
     {
-        stub<member_func_t<void, Dialog_RaceEnvironment, i32, f32, f32, f32, f32, char*>>(
+        stub<member_func_t<void, Dialog_RaceEnvironment, int32_t, float, float, float, float, char*>>(
             0x4FB200, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4FB980 | ?ControlPedSlider@Dialog_RaceEnvironment@@QAEXXZ
-    void ControlPedSlider()
+    inline void ControlPedSlider()
     {
         return stub<member_func_t<void, Dialog_RaceEnvironment>>(0x4FB980, this);
     }
 
     // 0x4FB9A0 | ?SetMultiRaceOptions@Dialog_RaceEnvironment@@QAEXH@Z
-    void SetMultiRaceOptions(i32 arg1)
+    inline void SetMultiRaceOptions(int32_t arg1)
     {
-        return stub<member_func_t<void, Dialog_RaceEnvironment, i32>>(0x4FB9A0, this, arg1);
+        return stub<member_func_t<void, Dialog_RaceEnvironment, int32_t>>(0x4FB9A0, this, arg1);
     }
 
     // 0x4FB9E0 | ?DoneCallback@Dialog_RaceEnvironment@@QAEXXZ
-    void DoneCallback()
+    inline void DoneCallback()
     {
         return stub<member_func_t<void, Dialog_RaceEnvironment>>(0x4FB9E0, this);
     }
 
     // 0x4FBA30 | ?CancelCallback@Dialog_RaceEnvironment@@QAEXXZ
-    void CancelCallback()
+    inline void CancelCallback()
     {
         return stub<member_func_t<void, Dialog_RaceEnvironment>>(0x4FBA30, this);
     }
 
     // 0x4FB8D0 | ??1Dialog_RaceEnvironment@@UAE@XZ
-    ~Dialog_RaceEnvironment() override
+    inline ~Dialog_RaceEnvironment() override
     {
         stub<member_func_t<void, Dialog_RaceEnvironment>>(0x4FB8D0, this);
     }
 
     // 0x4FB930 | ?PreSetup@Dialog_RaceEnvironment@@UAEXXZ
-    void PreSetup() override
+    inline void PreSetup() override
     {
         return stub<member_func_t<void, Dialog_RaceEnvironment>>(0x4FB930, this);
     }

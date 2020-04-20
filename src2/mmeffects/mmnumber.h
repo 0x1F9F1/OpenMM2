@@ -41,27 +41,27 @@ class mmNumberFont
 {
 public:
     // 0x5332B0 | ??0mmNumberFont@@QAE@PAD@Z
-    mmNumberFont(char* arg1)
+    inline mmNumberFont(char* arg1)
     {
         stub<member_func_t<void, mmNumberFont, char*>>(0x5332B0, this, arg1);
     }
 
     // 0x5332E0 | ??1mmNumberFont@@QAE@XZ
-    ~mmNumberFont()
+    inline ~mmNumberFont()
     {
         stub<member_func_t<void, mmNumberFont>>(0x5332E0, this);
     }
 
     // 0x533340 | ?LoadFont@mmNumberFont@@QAEXPADHI@Z
-    void LoadFont(char* arg1, i32 arg2, u32 arg3)
+    inline void LoadFont(char* arg1, int32_t arg2, uint32_t arg3)
     {
-        return stub<member_func_t<void, mmNumberFont, char*, i32, u32>>(0x533340, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmNumberFont, char*, int32_t, uint32_t>>(0x533340, this, arg1, arg2, arg3);
     }
 
     // 0x5333B0 | ?LoadLocFont@mmNumberFont@@QAEXPADPAULocString@@HI@Z
-    void LoadLocFont(char* arg1, struct LocString* arg2, i32 arg3, u32 arg4)
+    inline void LoadLocFont(char* arg1, struct LocString* arg2, int32_t arg3, uint32_t arg4)
     {
-        return stub<member_func_t<void, mmNumberFont, char*, struct LocString*, i32, u32>>(
+        return stub<member_func_t<void, mmNumberFont, char*, struct LocString*, int32_t, uint32_t>>(
             0x5333B0, this, arg1, arg2, arg3, arg4);
     }
 };
@@ -72,19 +72,19 @@ public:
     // mmNumber::`vftable' @ 0x5B5324
 
     // 0x533420 | ??0mmNumber@@QAE@XZ
-    mmNumber()
+    inline mmNumber()
     {
         stub<member_func_t<void, mmNumber>>(0x533420, this);
     }
 
     // 0x533450 | ?Init@mmNumber@@QAEXPAVmmNumberFont@@MM@Z
-    void Init(class mmNumberFont* arg1, f32 arg2, f32 arg3)
+    inline void Init(class mmNumberFont* arg1, float arg2, float arg3)
     {
-        return stub<member_func_t<void, mmNumber, class mmNumberFont*, f32, f32>>(0x533450, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmNumber, class mmNumberFont*, float, float>>(0x533450, this, arg1, arg2, arg3);
     }
 
     // 0x533470 | ?SetString@mmNumber@@QAEXPAD@Z
-    void SetString(char* arg1)
+    inline void SetString(char* arg1)
     {
         return stub<member_func_t<void, mmNumber, char*>>(0x533470, this, arg1);
     }
@@ -93,19 +93,19 @@ public:
     // Skipped (Variable Arguments)
 
     // 0x533440 | ??1mmNumber@@UAE@XZ
-    ~mmNumber() override
+    inline ~mmNumber() override
     {
         stub<member_func_t<void, mmNumber>>(0x533440, this);
     }
 
     // 0x5334E0 | ?Cull@mmNumber@@UAEXXZ
-    void Cull() override
+    inline void Cull() override
     {
         return stub<member_func_t<void, mmNumber>>(0x5334E0, this);
     }
 
     // 0x5334C0 | ?Update@mmNumber@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, mmNumber>>(0x5334C0, this);
     }

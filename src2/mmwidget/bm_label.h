@@ -37,26 +37,26 @@ class UIBMLabel : uiWidget
 {
 public:
     // 0x4ED4D0 | ??0UIBMLabel@@QAE@XZ
-    UIBMLabel()
+    inline UIBMLabel()
     {
         stub<member_func_t<void, UIBMLabel>>(0x4ED4D0, this);
     }
 
     // 0x4ED5C0 | ?Init@UIBMLabel@@QAEXPAVstring@@MMPAH@Z
-    void Init(class string* arg1, f32 arg2, f32 arg3, i32* arg4)
+    inline void Init(class string* arg1, float arg2, float arg3, int32_t* arg4)
     {
-        return stub<member_func_t<void, UIBMLabel, class string*, f32, f32, i32*>>(
+        return stub<member_func_t<void, UIBMLabel, class string*, float, float, int32_t*>>(
             0x4ED5C0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4ED680 | ?SetBitmapName@UIBMLabel@@QAEXPAVstring@@@Z
-    void SetBitmapName(class string* arg1)
+    inline void SetBitmapName(class string* arg1)
     {
         return stub<member_func_t<void, UIBMLabel, class string*>>(0x4ED680, this, arg1);
     }
 
     // 0x4ED720 | ?LoadBitmap@UIBMLabel@@AAEXXZ
-    void LoadBitmap()
+    inline void LoadBitmap()
     {
         return stub<member_func_t<void, UIBMLabel>>(0x4ED720, this);
     }

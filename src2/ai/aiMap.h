@@ -141,459 +141,460 @@ public:
     // aiMap::`vftable' @ 0x5B5460
 
     // 0x534850 | ?Path@aiMap@@QAEPAVaiPath@@H@Z
-    class aiPath* Path(i32 arg1)
+    inline class aiPath* Path(int32_t arg1)
     {
-        return stub<member_func_t<class aiPath*, aiMap, i32>>(0x534850, this, arg1);
+        return stub<member_func_t<class aiPath*, aiMap, int32_t>>(0x534850, this, arg1);
     }
 
     // 0x534880 | ?Intersection@aiMap@@QAEPAVaiIntersection@@H@Z
-    class aiIntersection* Intersection(i32 arg1)
+    inline class aiIntersection* Intersection(int32_t arg1)
     {
-        return stub<member_func_t<class aiIntersection*, aiMap, i32>>(0x534880, this, arg1);
+        return stub<member_func_t<class aiIntersection*, aiMap, int32_t>>(0x534880, this, arg1);
     }
 
     // 0x5348B0 | ?Vehicle@aiMap@@QAEPAVaiVehicleAmbient@@H@Z
-    class aiVehicleAmbient* Vehicle(i32 arg1)
+    inline class aiVehicleAmbient* Vehicle(int32_t arg1)
     {
-        return stub<member_func_t<class aiVehicleAmbient*, aiMap, i32>>(0x5348B0, this, arg1);
+        return stub<member_func_t<class aiVehicleAmbient*, aiMap, int32_t>>(0x5348B0, this, arg1);
     }
 
     // 0x5348F0 | ?Police@aiMap@@QAEPAVaiPoliceOfficer@@H@Z
-    class aiPoliceOfficer* Police(i32 arg1)
+    inline class aiPoliceOfficer* Police(int32_t arg1)
     {
-        return stub<member_func_t<class aiPoliceOfficer*, aiMap, i32>>(0x5348F0, this, arg1);
+        return stub<member_func_t<class aiPoliceOfficer*, aiMap, int32_t>>(0x5348F0, this, arg1);
     }
 
     // 0x534940 | ?Opponent@aiMap@@QAEPAVaiRouteRacer@@H@Z
-    class aiRouteRacer* Opponent(i32 arg1)
+    inline class aiRouteRacer* Opponent(int32_t arg1)
     {
-        return stub<member_func_t<class aiRouteRacer*, aiMap, i32>>(0x534940, this, arg1);
+        return stub<member_func_t<class aiRouteRacer*, aiMap, int32_t>>(0x534940, this, arg1);
     }
 
     // 0x534990 | ?CTFOpponent@aiMap@@QAEPAVaiCTFRacer@@H@Z
-    class aiCTFRacer* CTFOpponent(i32 arg1)
+    inline class aiCTFRacer* CTFOpponent(int32_t arg1)
     {
-        return stub<member_func_t<class aiCTFRacer*, aiMap, i32>>(0x534990, this, arg1);
+        return stub<member_func_t<class aiCTFRacer*, aiMap, int32_t>>(0x534990, this, arg1);
     }
 
     // 0x5349E0 | ?Hookman@aiMap@@QAEPAVmcHookman@@H@Z
-    class mcHookman* Hookman(i32 arg1)
+    inline class mcHookman* Hookman(int32_t arg1)
     {
-        return stub<member_func_t<class mcHookman*, aiMap, i32>>(0x5349E0, this, arg1);
+        return stub<member_func_t<class mcHookman*, aiMap, int32_t>>(0x5349E0, this, arg1);
     }
 
     // 0x534A30 | ?CableCar@aiMap@@QAEPAVaiCableCar@@H@Z
-    class aiCableCar* CableCar(i32 arg1)
+    inline class aiCableCar* CableCar(int32_t arg1)
     {
-        return stub<member_func_t<class aiCableCar*, aiMap, i32>>(0x534A30, this, arg1);
+        return stub<member_func_t<class aiCableCar*, aiMap, int32_t>>(0x534A30, this, arg1);
     }
 
     // 0x534A70 | ?Subway@aiMap@@QAEPAVaiSubway@@H@Z
-    class aiSubway* Subway(i32 arg1)
+    inline class aiSubway* Subway(int32_t arg1)
     {
-        return stub<member_func_t<class aiSubway*, aiMap, i32>>(0x534A70, this, arg1);
+        return stub<member_func_t<class aiSubway*, aiMap, int32_t>>(0x534A70, this, arg1);
     }
 
     // 0x534AB0 | ?Pedestrian@aiMap@@QAEPAVaiPedestrian@@H@Z
-    class aiPedestrian* Pedestrian(i32 arg1)
+    inline class aiPedestrian* Pedestrian(int32_t arg1)
     {
-        return stub<member_func_t<class aiPedestrian*, aiMap, i32>>(0x534AB0, this, arg1);
+        return stub<member_func_t<class aiPedestrian*, aiMap, int32_t>>(0x534AB0, this, arg1);
     }
 
     // 0x534AF0 | ?Player@aiMap@@QAEPAVaiVehiclePlayer@@H@Z
-    class aiVehiclePlayer* Player(i32 arg1)
+    inline class aiVehiclePlayer* Player(int32_t arg1)
     {
-        return stub<member_func_t<class aiVehiclePlayer*, aiMap, i32>>(0x534AF0, this, arg1);
+        return stub<member_func_t<class aiVehiclePlayer*, aiMap, int32_t>>(0x534AF0, this, arg1);
     }
 
     // 0x534B30 | ??0aiMap@@QAE@XZ
-    aiMap()
+    inline aiMap()
     {
         stub<member_func_t<void, aiMap>>(0x534B30, this);
     }
 
     // 0x534C10 | ?Clean@aiMap@@QAEXXZ
-    void Clean()
+    inline void Clean()
     {
         return stub<member_func_t<void, aiMap>>(0x534C10, this);
     }
 
     // 0x534F60 | ?InitRouting@aiMap@@QAEXXZ
-    void InitRouting()
+    inline void InitRouting()
     {
         return stub<member_func_t<void, aiMap>>(0x534F60, this);
     }
 
     // 0x534FC0 | ?Init@aiMap@@QAEXPAD00ABUdgStatePack@@HPAPAVvehCar@@_N@Z
-    void Init(
-        char* arg1, char* arg2, char* arg3, struct dgStatePack const& arg4, i32 arg5, class vehCar** arg6, bool arg7)
+    inline void Init(char* arg1, char* arg2, char* arg3, struct dgStatePack const& arg4, int32_t arg5,
+        class vehCar** arg6, bool arg7)
     {
         return stub<
-            member_func_t<void, aiMap, char*, char*, char*, struct dgStatePack const&, i32, class vehCar**, bool>>(
+            member_func_t<void, aiMap, char*, char*, char*, struct dgStatePack const&, int32_t, class vehCar**, bool>>(
             0x534FC0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x535DF0 | ?SaveBinary@aiMap@@QAEXPAD0@Z
-    void SaveBinary(char* arg1, char* arg2)
+    inline void SaveBinary(char* arg1, char* arg2)
     {
         return stub<member_func_t<void, aiMap, char*, char*>>(0x535DF0, this, arg1, arg2);
     }
 
     // 0x535EE0 | ?ReadBinary@aiMap@@QAEXPAD0@Z
-    void ReadBinary(char* arg1, char* arg2)
+    inline void ReadBinary(char* arg1, char* arg2)
     {
         return stub<member_func_t<void, aiMap, char*, char*>>(0x535EE0, this, arg1, arg2);
     }
 
     // 0x5364A0 | ?MapRoadToRooms@aiMap@@AAEXPAVaiPath@@W4aiMapCompTypes@@@Z
-    void MapRoadToRooms(class aiPath* arg1, enum aiMapCompTypes arg2)
+    inline void MapRoadToRooms(class aiPath* arg1, enum aiMapCompTypes arg2)
     {
         return stub<member_func_t<void, aiMap, class aiPath*, enum aiMapCompTypes>>(0x5364A0, this, arg1, arg2);
     }
 
     // 0x537410 | ?StopRoadTraffic@aiMap@@AAEX_N@Z
-    void StopRoadTraffic(bool arg1)
+    inline void StopRoadTraffic(bool arg1)
     {
         return stub<member_func_t<void, aiMap, bool>>(0x537410, this, arg1);
     }
 
     // 0x537500 | ?DrawNextVisibleAmbient@aiMap@@QAEXXZ
-    void DrawNextVisibleAmbient()
+    inline void DrawNextVisibleAmbient()
     {
         return stub<member_func_t<void, aiMap>>(0x537500, this);
     }
 
     // 0x537510 | ?DrawX@aiMap@@QAEXAAVVector3@@@Z
-    void DrawX(class Vector3& arg1)
+    inline void DrawX(class Vector3& arg1)
     {
         return stub<member_func_t<void, aiMap, class Vector3&>>(0x537510, this, arg1);
     }
 
     // 0x537520 | ?AllwaysGreen@aiMap@@QAEXXZ
-    void AllwaysGreen()
+    inline void AllwaysGreen()
     {
         return stub<member_func_t<void, aiMap>>(0x537520, this);
     }
 
     // 0x537560 | ?AllwaysRed@aiMap@@QAEXXZ
-    void AllwaysRed()
+    inline void AllwaysRed()
     {
         return stub<member_func_t<void, aiMap>>(0x537560, this);
     }
 
     // 0x5375A0 | ?DrawAppRoads@aiMap@@QAEXXZ
-    void DrawAppRoads()
+    inline void DrawAppRoads()
     {
         return stub<member_func_t<void, aiMap>>(0x5375A0, this);
     }
 
     // 0x5375C0 | ?DrawMap@aiMap@@QAEXXZ
-    void DrawMap()
+    inline void DrawMap()
     {
         return stub<member_func_t<void, aiMap>>(0x5375C0, this);
     }
 
     // 0x5375E0 | ?DrawPathIds@aiMap@@QAEXXZ
-    void DrawPathIds()
+    inline void DrawPathIds()
     {
         return stub<member_func_t<void, aiMap>>(0x5375E0, this);
     }
 
     // 0x537600 | ?MapComponentType@aiMap@@QAEHHPAH@Z
-    i32 MapComponentType(i32 arg1, i32* arg2)
+    inline int32_t MapComponentType(int32_t arg1, int32_t* arg2)
     {
-        return stub<member_func_t<i32, aiMap, i32, i32*>>(0x537600, this, arg1, arg2);
+        return stub<member_func_t<int32_t, aiMap, int32_t, int32_t*>>(0x537600, this, arg1, arg2);
     }
 
     // 0x537680 | ?MapComponent@aiMap@@QAEHABVVector3@@PAF1F@Z
-    i32 MapComponent(class Vector3 const& arg1, i16* arg2, i16* arg3, i16 arg4)
+    inline int32_t MapComponent(class Vector3 const& arg1, int16_t* arg2, int16_t* arg3, int16_t arg4)
     {
-        return stub<member_func_t<i32, aiMap, class Vector3 const&, i16*, i16*, i16>>(
+        return stub<member_func_t<int32_t, aiMap, class Vector3 const&, int16_t*, int16_t*, int16_t>>(
             0x537680, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x5377B0 | ?PositionToAIMapComp@aiMap@@QAEHABVVector3@@PAF11F@Z
-    i32 PositionToAIMapComp(class Vector3 const& arg1, i16* arg2, i16* arg3, i16* arg4, i16 arg5)
+    inline int32_t PositionToAIMapComp(
+        class Vector3 const& arg1, int16_t* arg2, int16_t* arg3, int16_t* arg4, int16_t arg5)
     {
-        return stub<member_func_t<i32, aiMap, class Vector3 const&, i16*, i16*, i16*, i16>>(
+        return stub<member_func_t<int32_t, aiMap, class Vector3 const&, int16_t*, int16_t*, int16_t*, int16_t>>(
             0x5377B0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x537AA0 | ?MapComponent@aiMap@@QAEHABVVector3@@PAF1FF@Z
-    i32 MapComponent(class Vector3 const& arg1, i16* arg2, i16* arg3, i16 arg4, i16 arg5)
+    inline int32_t MapComponent(class Vector3 const& arg1, int16_t* arg2, int16_t* arg3, int16_t arg4, int16_t arg5)
     {
-        return stub<member_func_t<i32, aiMap, class Vector3 const&, i16*, i16*, i16, i16>>(
+        return stub<member_func_t<int32_t, aiMap, class Vector3 const&, int16_t*, int16_t*, int16_t, int16_t>>(
             0x537AA0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x537C70 | ?CoreMapComponent@aiMap@@QAEHABVVector3@@PAF1FF@Z
-    i32 CoreMapComponent(class Vector3 const& arg1, i16* arg2, i16* arg3, i16 arg4, i16 arg5)
+    inline int32_t CoreMapComponent(class Vector3 const& arg1, int16_t* arg2, int16_t* arg3, int16_t arg4, int16_t arg5)
     {
-        return stub<member_func_t<i32, aiMap, class Vector3 const&, i16*, i16*, i16, i16>>(
+        return stub<member_func_t<int32_t, aiMap, class Vector3 const&, int16_t*, int16_t*, int16_t, int16_t>>(
             0x537C70, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x537E00 | ?DetermineRoadPosInfo@aiMap@@QAEHABVMatrix34@@PAVaiRailSet@@PAFPAM23HH@Z
-    i32 DetermineRoadPosInfo(class Matrix34 const& arg1, class aiRailSet* arg2, i16* arg3, f32* arg4, i16* arg5,
-        f32* arg6, i32 arg7, i32 arg8)
+    inline int32_t DetermineRoadPosInfo(class Matrix34 const& arg1, class aiRailSet* arg2, int16_t* arg3, float* arg4,
+        int16_t* arg5, float* arg6, int32_t arg7, int32_t arg8)
     {
-        return stub<
-            member_func_t<i32, aiMap, class Matrix34 const&, class aiRailSet*, i16*, f32*, i16*, f32*, i32, i32>>(
-            0x537E00, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+        return stub<member_func_t<int32_t, aiMap, class Matrix34 const&, class aiRailSet*, int16_t*, float*, int16_t*,
+            float*, int32_t, int32_t>>(0x537E00, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
     // 0x537F30 | ?FindAmbAppRoad@aiMap@@QAEHH@Z
-    i32 FindAmbAppRoad(i32 arg1)
+    inline int32_t FindAmbAppRoad(int32_t arg1)
     {
-        return stub<member_func_t<i32, aiMap, i32>>(0x537F30, this, arg1);
+        return stub<member_func_t<int32_t, aiMap, int32_t>>(0x537F30, this, arg1);
     }
 
     // 0x537F60 | ?FindPedAppRoad@aiMap@@QAEHH@Z
-    i32 FindPedAppRoad(i32 arg1)
+    inline int32_t FindPedAppRoad(int32_t arg1)
     {
-        return stub<member_func_t<i32, aiMap, i32>>(0x537F60, this, arg1);
+        return stub<member_func_t<int32_t, aiMap, int32_t>>(0x537F60, this, arg1);
     }
 
     // 0x537F90 | ?PredictIntersectionPath@aiMap@@QAEPAVaiPath@@HABVMatrix34@@HPA_N@Z
-    class aiPath* PredictIntersectionPath(i32 arg1, class Matrix34 const& arg2, i32 arg3, bool* arg4)
+    inline class aiPath* PredictIntersectionPath(int32_t arg1, class Matrix34 const& arg2, int32_t arg3, bool* arg4)
     {
-        return stub<member_func_t<class aiPath*, aiMap, i32, class Matrix34 const&, i32, bool*>>(
+        return stub<member_func_t<class aiPath*, aiMap, int32_t, class Matrix34 const&, int32_t, bool*>>(
             0x537F90, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x538280 | ?GetPathFromID@aiMap@@QAEPAVaiPath@@H@Z
-    class aiPath* GetPathFromID(i32 arg1)
+    inline class aiPath* GetPathFromID(int32_t arg1)
     {
-        return stub<member_func_t<class aiPath*, aiMap, i32>>(0x538280, this, arg1);
+        return stub<member_func_t<class aiPath*, aiMap, int32_t>>(0x538280, this, arg1);
     }
 
     // 0x5382C0 | ?PredictAmbIntersectionPath@aiMap@@QAEPAVaiPath@@HABVMatrix34@@@Z
-    class aiPath* PredictAmbIntersectionPath(i32 arg1, class Matrix34 const& arg2)
+    inline class aiPath* PredictAmbIntersectionPath(int32_t arg1, class Matrix34 const& arg2)
     {
-        return stub<member_func_t<class aiPath*, aiMap, i32, class Matrix34 const&>>(0x5382C0, this, arg1, arg2);
+        return stub<member_func_t<class aiPath*, aiMap, int32_t, class Matrix34 const&>>(0x5382C0, this, arg1, arg2);
     }
 
     // 0x538530 | ?PredictAmbFreewayIntersectionPath@aiMap@@QAEPAVaiPath@@HABVMatrix34@@@Z
-    class aiPath* PredictAmbFreewayIntersectionPath(i32 arg1, class Matrix34 const& arg2)
+    inline class aiPath* PredictAmbFreewayIntersectionPath(int32_t arg1, class Matrix34 const& arg2)
     {
-        return stub<member_func_t<class aiPath*, aiMap, i32, class Matrix34 const&>>(0x538530, this, arg1, arg2);
+        return stub<member_func_t<class aiPath*, aiMap, int32_t, class Matrix34 const&>>(0x538530, this, arg1, arg2);
     }
 
     // 0x538840 | ?Dump@aiMap@@QAEXXZ
-    void Dump()
+    inline void Dump()
     {
         return stub<member_func_t<void, aiMap>>(0x538840, this);
     }
 
     // 0x538960 | ?NumCars@aiMap@@AAEHHMM@Z
-    i32 NumCars(i32 arg1, f32 arg2, f32 arg3)
+    inline int32_t NumCars(int32_t arg1, float arg2, float arg3)
     {
-        return stub<member_func_t<i32, aiMap, i32, f32, f32>>(0x538960, this, arg1, arg2, arg3);
+        return stub<member_func_t<int32_t, aiMap, int32_t, float, float>>(0x538960, this, arg1, arg2, arg3);
     }
 
     // 0x538990 | ?FindRoad@aiMap@@AAEHPAVCArrayList@@H@Z
-    i32 FindRoad(class CArrayList* arg1, i32 arg2)
+    inline int32_t FindRoad(class CArrayList* arg1, int32_t arg2)
     {
-        return stub<member_func_t<i32, aiMap, class CArrayList*, i32>>(0x538990, this, arg1, arg2);
+        return stub<member_func_t<int32_t, aiMap, class CArrayList*, int32_t>>(0x538990, this, arg1, arg2);
     }
 
     // 0x5389D0 | ?FindInt@aiMap@@AAEHPAFHH@Z
-    i32 FindInt(i16* arg1, i32 arg2, i32 arg3)
+    inline int32_t FindInt(int16_t* arg1, int32_t arg2, int32_t arg3)
     {
-        return stub<member_func_t<i32, aiMap, i16*, i32, i32>>(0x5389D0, this, arg1, arg2, arg3);
+        return stub<member_func_t<int32_t, aiMap, int16_t*, int32_t, int32_t>>(0x5389D0, this, arg1, arg2, arg3);
     }
 
     // 0x538A10 | ?ChooseNextRandomLink@aiMap@@QAEHPAVaiRailSet@@@Z
-    i32 ChooseNextRandomLink(class aiRailSet* arg1)
+    inline int32_t ChooseNextRandomLink(class aiRailSet* arg1)
     {
-        return stub<member_func_t<i32, aiMap, class aiRailSet*>>(0x538A10, this, arg1);
+        return stub<member_func_t<int32_t, aiMap, class aiRailSet*>>(0x538A10, this, arg1);
     }
 
     // 0x538BD0 | ?ChooseNextLeftStraightLink@aiMap@@QAEHPAVaiRailSet@@@Z
-    i32 ChooseNextLeftStraightLink(class aiRailSet* arg1)
+    inline int32_t ChooseNextLeftStraightLink(class aiRailSet* arg1)
     {
-        return stub<member_func_t<i32, aiMap, class aiRailSet*>>(0x538BD0, this, arg1);
+        return stub<member_func_t<int32_t, aiMap, class aiRailSet*>>(0x538BD0, this, arg1);
     }
 
     // 0x538EC0 | ?ChooseNextRightLink@aiMap@@QAEHPAVaiRailSet@@@Z
-    i32 ChooseNextRightLink(class aiRailSet* arg1)
+    inline int32_t ChooseNextRightLink(class aiRailSet* arg1)
     {
-        return stub<member_func_t<i32, aiMap, class aiRailSet*>>(0x538EC0, this, arg1);
+        return stub<member_func_t<int32_t, aiMap, class aiRailSet*>>(0x538EC0, this, arg1);
     }
 
     // 0x538FA0 | ?ChooseNextRightStraightLink@aiMap@@QAEHPAVaiRailSet@@@Z
-    i32 ChooseNextRightStraightLink(class aiRailSet* arg1)
+    inline int32_t ChooseNextRightStraightLink(class aiRailSet* arg1)
     {
-        return stub<member_func_t<i32, aiMap, class aiRailSet*>>(0x538FA0, this, arg1);
+        return stub<member_func_t<int32_t, aiMap, class aiRailSet*>>(0x538FA0, this, arg1);
     }
 
     // 0x5392B0 | ?ChooseNextStraightLink@aiMap@@QAEHPAVaiRailSet@@@Z
-    i32 ChooseNextStraightLink(class aiRailSet* arg1)
+    inline int32_t ChooseNextStraightLink(class aiRailSet* arg1)
     {
-        return stub<member_func_t<i32, aiMap, class aiRailSet*>>(0x5392B0, this, arg1);
+        return stub<member_func_t<int32_t, aiMap, class aiRailSet*>>(0x5392B0, this, arg1);
     }
 
     // 0x5396A0 | ?ChooseStraightLinkAt4Way@aiMap@@QAEHPAVaiRailSet@@@Z
-    i32 ChooseStraightLinkAt4Way(class aiRailSet* arg1)
+    inline int32_t ChooseStraightLinkAt4Way(class aiRailSet* arg1)
     {
-        return stub<member_func_t<i32, aiMap, class aiRailSet*>>(0x5396A0, this, arg1);
+        return stub<member_func_t<int32_t, aiMap, class aiRailSet*>>(0x5396A0, this, arg1);
     }
 
     // 0x539750 | ?ChooseNextLaneLink@aiMap@@QAEHPAVaiRailSet@@@Z
-    i32 ChooseNextLaneLink(class aiRailSet* arg1)
+    inline int32_t ChooseNextLaneLink(class aiRailSet* arg1)
     {
-        return stub<member_func_t<i32, aiMap, class aiRailSet*>>(0x539750, this, arg1);
+        return stub<member_func_t<int32_t, aiMap, class aiRailSet*>>(0x539750, this, arg1);
     }
 
     // 0x539870 | ?ChooseNextFreewayLink@aiMap@@QAEHPAVaiRailSet@@@Z
-    i32 ChooseNextFreewayLink(class aiRailSet* arg1)
+    inline int32_t ChooseNextFreewayLink(class aiRailSet* arg1)
     {
-        return stub<member_func_t<i32, aiMap, class aiRailSet*>>(0x539870, this, arg1);
+        return stub<member_func_t<int32_t, aiMap, class aiRailSet*>>(0x539870, this, arg1);
     }
 
     // 0x5399A0 | ?ChooseNextRightStraightFreewayLink@aiMap@@QAEHPAVaiRailSet@@@Z
-    i32 ChooseNextRightStraightFreewayLink(class aiRailSet* arg1)
+    inline int32_t ChooseNextRightStraightFreewayLink(class aiRailSet* arg1)
     {
-        return stub<member_func_t<i32, aiMap, class aiRailSet*>>(0x5399A0, this, arg1);
+        return stub<member_func_t<int32_t, aiMap, class aiRailSet*>>(0x5399A0, this, arg1);
     }
 
     // 0x539A20 | ?AdjustPedestrians@aiMap@@AAEXHHH@Z
-    void AdjustPedestrians(i32 arg1, i32 arg2, i32 arg3)
+    inline void AdjustPedestrians(int32_t arg1, int32_t arg2, int32_t arg3)
     {
-        return stub<member_func_t<void, aiMap, i32, i32, i32>>(0x539A20, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, aiMap, int32_t, int32_t, int32_t>>(0x539A20, this, arg1, arg2, arg3);
     }
 
     // 0x539CF0 | ?ClearPeds@aiMap@@QAEXPAVaiPath@@@Z
-    void ClearPeds(class aiPath* arg1)
+    inline void ClearPeds(class aiPath* arg1)
     {
         return stub<member_func_t<void, aiMap, class aiPath*>>(0x539CF0, this, arg1);
     }
 
     // 0x539D30 | ?AddPedestrian@aiMap@@QAEXPAVaiPedestrian@@@Z
-    void AddPedestrian(class aiPedestrian* arg1)
+    inline void AddPedestrian(class aiPedestrian* arg1)
     {
         return stub<member_func_t<void, aiMap, class aiPedestrian*>>(0x539D30, this, arg1);
     }
 
     // 0x539D70 | ?RemovePedestrian@aiMap@@QAEXPAVaiPedestrian@@@Z
-    void RemovePedestrian(class aiPedestrian* arg1)
+    inline void RemovePedestrian(class aiPedestrian* arg1)
     {
         return stub<member_func_t<void, aiMap, class aiPedestrian*>>(0x539D70, this, arg1);
     }
 
     // 0x539DD0 | ?AdjustAmbients@aiMap@@AAEXHHH@Z
-    void AdjustAmbients(i32 arg1, i32 arg2, i32 arg3)
+    inline void AdjustAmbients(int32_t arg1, int32_t arg2, int32_t arg3)
     {
-        return stub<member_func_t<void, aiMap, i32, i32, i32>>(0x539DD0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, aiMap, int32_t, int32_t, int32_t>>(0x539DD0, this, arg1, arg2, arg3);
     }
 
     // 0x53A5B0 | ?AddAmbient@aiMap@@QAEXPAVaiVehicleSpline@@@Z
-    void AddAmbient(class aiVehicleSpline* arg1)
+    inline void AddAmbient(class aiVehicleSpline* arg1)
     {
         return stub<member_func_t<void, aiMap, class aiVehicleSpline*>>(0x53A5B0, this, arg1);
     }
 
     // 0x53A600 | ?RemoveAmbient@aiMap@@QAEXPAVaiVehicleSpline@@@Z
-    void RemoveAmbient(class aiVehicleSpline* arg1)
+    inline void RemoveAmbient(class aiVehicleSpline* arg1)
     {
         return stub<member_func_t<void, aiMap, class aiVehicleSpline*>>(0x53A600, this, arg1);
     }
 
     // 0x53A680 | ?DetRdSegBetweenInts@aiMap@@QAEPAVaiPath@@PAVaiIntersection@@0PA_N@Z
-    class aiPath* DetRdSegBetweenInts(class aiIntersection* arg1, class aiIntersection* arg2, bool* arg3)
+    inline class aiPath* DetRdSegBetweenInts(class aiIntersection* arg1, class aiIntersection* arg2, bool* arg3)
     {
         return stub<member_func_t<class aiPath*, aiMap, class aiIntersection*, class aiIntersection*, bool*>>(
             0x53A680, this, arg1, arg2, arg3);
     }
 
     // 0x53A730 | ?DetRdSegBetweenInts@aiMap@@QAEPAVaiPath@@HH@Z
-    class aiPath* DetRdSegBetweenInts(i32 arg1, i32 arg2)
+    inline class aiPath* DetRdSegBetweenInts(int32_t arg1, int32_t arg2)
     {
-        return stub<member_func_t<class aiPath*, aiMap, i32, i32>>(0x53A730, this, arg1, arg2);
+        return stub<member_func_t<class aiPath*, aiMap, int32_t, int32_t>>(0x53A730, this, arg1, arg2);
     }
 
     // 0x53A760 | ?GoodRoadForCopStartPos@aiMap@@QAEHH@Z
-    i32 GoodRoadForCopStartPos(i32 arg1)
+    inline int32_t GoodRoadForCopStartPos(int32_t arg1)
     {
-        return stub<member_func_t<i32, aiMap, i32>>(0x53A760, this, arg1);
+        return stub<member_func_t<int32_t, aiMap, int32_t>>(0x53A760, this, arg1);
     }
 
     // 0x53A7A0 | ?CalcRoute@aiMap@@QAEXABVMatrix34@@ABVVector3@@1PAF2FF_N@Z
-    void CalcRoute(class Matrix34 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3, i16* arg4,
-        i16* arg5, i16 arg6, i16 arg7, bool arg8)
+    inline void CalcRoute(class Matrix34 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
+        int16_t* arg4, int16_t* arg5, int16_t arg6, int16_t arg7, bool arg8)
     {
-        return stub<member_func_t<void, aiMap, class Matrix34 const&, class Vector3 const&, class Vector3 const&, i16*,
-            i16*, i16, i16, bool>>(0x53A7A0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+        return stub<member_func_t<void, aiMap, class Matrix34 const&, class Vector3 const&, class Vector3 const&,
+            int16_t*, int16_t*, int16_t, int16_t, bool>>(
+            0x53A7A0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
     // 0x53B560 | ?AddRoutingNode@aiMap@@QAEXH@Z
-    void AddRoutingNode(i32 arg1)
+    inline void AddRoutingNode(int32_t arg1)
     {
-        return stub<member_func_t<void, aiMap, i32>>(0x53B560, this, arg1);
+        return stub<member_func_t<void, aiMap, int32_t>>(0x53B560, this, arg1);
     }
 
     // 0x53B5D0 | ?RemoveRoutingNode@aiMap@@QAEXH@Z
-    void RemoveRoutingNode(i32 arg1)
+    inline void RemoveRoutingNode(int32_t arg1)
     {
-        return stub<member_func_t<void, aiMap, i32>>(0x53B5D0, this, arg1);
+        return stub<member_func_t<void, aiMap, int32_t>>(0x53B5D0, this, arg1);
     }
 
     // 0x53B640 | ?AddPlayer@aiMap@@QAEHPAVvehCar@@@Z
-    i32 AddPlayer(class vehCar* arg1)
+    inline int32_t AddPlayer(class vehCar* arg1)
     {
-        return stub<member_func_t<i32, aiMap, class vehCar*>>(0x53B640, this, arg1);
+        return stub<member_func_t<int32_t, aiMap, class vehCar*>>(0x53B640, this, arg1);
     }
 
     // 0x53B700 | ?RemovePlayer@aiMap@@QAEHPAVvehCar@@@Z
-    i32 RemovePlayer(class vehCar* arg1)
+    inline int32_t RemovePlayer(class vehCar* arg1)
     {
-        return stub<member_func_t<i32, aiMap, class vehCar*>>(0x53B700, this, arg1);
+        return stub<member_func_t<int32_t, aiMap, class vehCar*>>(0x53B700, this, arg1);
     }
 
     // 0x53B7B0 | ?SetWaypoints@aiMap@@QAEXPAVVector4@@HH@Z
-    void SetWaypoints(class Vector4* arg1, i32 arg2, i32 arg3)
+    inline void SetWaypoints(class Vector4* arg1, int32_t arg2, int32_t arg3)
     {
-        return stub<member_func_t<void, aiMap, class Vector4*, i32, i32>>(0x53B7B0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, aiMap, class Vector4*, int32_t, int32_t>>(0x53B7B0, this, arg1, arg2, arg3);
     }
 
     // 0x53B860 | ?DrawFinalCheckPoint@aiMap@@QAEXXZ
-    void DrawFinalCheckPoint()
+    inline void DrawFinalCheckPoint()
     {
         return stub<member_func_t<void, aiMap>>(0x53B860, this);
     }
 
     // 0x53B870 | ?TestProbes@aiMap@@QAEXH@Z
-    void TestProbes(i32 arg1)
+    inline void TestProbes(int32_t arg1)
     {
-        return stub<member_func_t<void, aiMap, i32>>(0x53B870, this, arg1);
+        return stub<member_func_t<void, aiMap, int32_t>>(0x53B870, this, arg1);
     }
 
     // 0x534BB0 | ??1aiMap@@UAE@XZ
-    ~aiMap() override
+    inline ~aiMap() override
     {
         stub<member_func_t<void, aiMap>>(0x534BB0, this);
     }
 
     // 0x5374F0 | ?Cull@aiMap@@UAEXXZ
-    void Cull() override
+    inline void Cull() override
     {
         return stub<member_func_t<void, aiMap>>(0x5374F0, this);
     }
 
     // 0x536E50 | ?Update@aiMap@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, aiMap>>(0x536E50, this);
     }
 
     // 0x536A30 | ?Reset@aiMap@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, aiMap>>(0x536A30, this);
     }
 
     // 0x5374E0 | ?UpdatePaused@aiMap@@UAEXXZ
-    void UpdatePaused() override
+    inline void UpdatePaused() override
     {
         return stub<member_func_t<void, aiMap>>(0x5374E0, this);
     }

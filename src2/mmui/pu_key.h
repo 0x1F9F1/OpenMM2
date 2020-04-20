@@ -36,25 +36,26 @@ public:
     // PUKey::`vftable' @ 0x5B4840
 
     // 0x50B5A0 | ??0PUKey@@QAE@HMMMM@Z
-    PUKey(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
+    inline PUKey(int32_t arg1, float arg2, float arg3, float arg4, float arg5)
     {
-        stub<member_func_t<void, PUKey, i32, f32, f32, f32, f32>>(0x50B5A0, this, arg1, arg2, arg3, arg4, arg5);
+        stub<member_func_t<void, PUKey, int32_t, float, float, float, float>>(
+            0x50B5A0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x50B640 | ??1PUKey@@UAE@XZ
-    ~PUKey() override
+    inline ~PUKey() override
     {
         stub<member_func_t<void, PUKey>>(0x50B640, this);
     }
 
     // 0x50B650 | ?PreSetup@PUKey@@EAEXXZ
-    void PreSetup() override
+    inline void PreSetup() override
     {
         return stub<member_func_t<void, PUKey>>(0x50B650, this);
     }
 
     // 0x50B910 | ?PostSetup@PUKey@@EAEXXZ
-    void PostSetup() override
+    inline void PostSetup() override
     {
         return stub<member_func_t<void, PUKey>>(0x50B910, this);
     }

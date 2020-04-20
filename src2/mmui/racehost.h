@@ -53,115 +53,115 @@ public:
     // HostRaceMenu::`vftable' @ 0x5B424C
 
     // 0x5006A0 | ??0HostRaceMenu@@QAE@H@Z
-    HostRaceMenu(i32 arg1)
+    inline HostRaceMenu(int32_t arg1)
     {
-        stub<member_func_t<void, HostRaceMenu, i32>>(0x5006A0, this, arg1);
+        stub<member_func_t<void, HostRaceMenu, int32_t>>(0x5006A0, this, arg1);
     }
 
     // 0x501330 | ?SetLimitControl@HostRaceMenu@@QAEXXZ
-    void SetLimitControl()
+    inline void SetLimitControl()
     {
         return stub<member_func_t<void, HostRaceMenu>>(0x501330, this);
     }
 
     // 0x5014E0 | ?EncodeCRData@HostRaceMenu@@QAEHXZ
-    i32 EncodeCRData()
+    inline int32_t EncodeCRData()
     {
-        return stub<member_func_t<i32, HostRaceMenu>>(0x5014E0, this);
+        return stub<member_func_t<int32_t, HostRaceMenu>>(0x5014E0, this);
     }
 
     // 0x501530 | ?DecodeCRData@HostRaceMenu@@QAEXH@Z
-    void DecodeCRData(i32 arg1)
+    inline void DecodeCRData(int32_t arg1)
     {
-        return stub<member_func_t<void, HostRaceMenu, i32>>(0x501530, this, arg1);
+        return stub<member_func_t<void, HostRaceMenu, int32_t>>(0x501530, this, arg1);
     }
 
     // 0x5015A0 | ?GetLimit@HostRaceMenu@@QAEXAAH0@Z
-    void GetLimit(i32& arg1, i32& arg2)
+    inline void GetLimit(int32_t& arg1, int32_t& arg2)
     {
-        return stub<member_func_t<void, HostRaceMenu, i32&, i32&>>(0x5015A0, this, arg1, arg2);
+        return stub<member_func_t<void, HostRaceMenu, int32_t&, int32_t&>>(0x5015A0, this, arg1, arg2);
     }
 
     // 0x5015F0 | ?SetLimit@HostRaceMenu@@QAEXAAH0@Z
-    void SetLimit(i32& arg1, i32& arg2)
+    inline void SetLimit(int32_t& arg1, int32_t& arg2)
     {
-        return stub<member_func_t<void, HostRaceMenu, i32&, i32&>>(0x5015F0, this, arg1, arg2);
+        return stub<member_func_t<void, HostRaceMenu, int32_t&, int32_t&>>(0x5015F0, this, arg1, arg2);
     }
 
     // 0x501670 | ?SetGoldMass@HostRaceMenu@@QAEXH@Z
-    void SetGoldMass(i32 arg1)
+    inline void SetGoldMass(int32_t arg1)
     {
-        return stub<member_func_t<void, HostRaceMenu, i32>>(0x501670, this, arg1);
+        return stub<member_func_t<void, HostRaceMenu, int32_t>>(0x501670, this, arg1);
     }
 
     // 0x5016A0 | ?GetGoldMass@HostRaceMenu@@QAEHXZ
-    i32 GetGoldMass()
+    inline int32_t GetGoldMass()
     {
-        return stub<member_func_t<i32, HostRaceMenu>>(0x5016A0, this);
+        return stub<member_func_t<int32_t, HostRaceMenu>>(0x5016A0, this);
     }
 
     // 0x5016B0 | ?GetLimitVal@HostRaceMenu@@QAEHAAH@Z
-    i32 GetLimitVal(i32& arg1)
+    inline int32_t GetLimitVal(int32_t& arg1)
     {
-        return stub<member_func_t<i32, HostRaceMenu, i32&>>(0x5016B0, this, arg1);
+        return stub<member_func_t<int32_t, HostRaceMenu, int32_t&>>(0x5016B0, this, arg1);
     }
 
     // 0x501700 | ?GetGoldMassVal@HostRaceMenu@@QAEHXZ
-    i32 GetGoldMassVal()
+    inline int32_t GetGoldMassVal()
     {
-        return stub<member_func_t<i32, HostRaceMenu>>(0x501700, this);
+        return stub<member_func_t<int32_t, HostRaceMenu>>(0x501700, this);
     }
 
     // 0x501710 | ?SetGameClassCallback@HostRaceMenu@@QAEXXZ
-    void SetGameClassCallback()
+    inline void SetGameClassCallback()
     {
         return stub<member_func_t<void, HostRaceMenu>>(0x501710, this);
     }
 
     // 0x501720 | ?LimitInc@HostRaceMenu@@QAEXXZ
-    void LimitInc()
+    inline void LimitInc()
     {
         return stub<member_func_t<void, HostRaceMenu>>(0x501720, this);
     }
 
     // 0x501770 | ?LimitDec@HostRaceMenu@@QAEXXZ
-    void LimitDec()
+    inline void LimitDec()
     {
         return stub<member_func_t<void, HostRaceMenu>>(0x501770, this);
     }
 
     // 0x5017C0 | ?MassInc@HostRaceMenu@@QAEXXZ
-    void MassInc()
+    inline void MassInc()
     {
         return stub<member_func_t<void, HostRaceMenu>>(0x5017C0, this);
     }
 
     // 0x5017F0 | ?MassDec@HostRaceMenu@@QAEXXZ
-    void MassDec()
+    inline void MassDec()
     {
         return stub<member_func_t<void, HostRaceMenu>>(0x5017F0, this);
     }
 
     // 0x5007E0 | ??1HostRaceMenu@@UAE@XZ
-    ~HostRaceMenu() override
+    inline ~HostRaceMenu() override
     {
         stub<member_func_t<void, HostRaceMenu>>(0x5007E0, this);
     }
 
     // 0x500870 | ?PreSetup@HostRaceMenu@@UAEXXZ
-    void PreSetup() override
+    inline void PreSetup() override
     {
         return stub<member_func_t<void, HostRaceMenu>>(0x500870, this);
     }
 
     // 0x501230 | ?SetCRWidgets@HostRaceMenu@@UAEXH@Z
-    void SetCRWidgets(i32 arg1) override
+    inline void SetCRWidgets(int32_t arg1) override
     {
-        return stub<member_func_t<void, HostRaceMenu, i32>>(0x501230, this, arg1);
+        return stub<member_func_t<void, HostRaceMenu, int32_t>>(0x501230, this, arg1);
     }
 
     // 0x500890 | ?InitCRWidgets@HostRaceMenu@@UAEXXZ
-    void InitCRWidgets() override
+    inline void InitCRWidgets() override
     {
         return stub<member_func_t<void, HostRaceMenu>>(0x500890, this);
     }

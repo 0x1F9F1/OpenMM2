@@ -42,95 +42,96 @@ class audHead
 {
 public:
     // 0x5A6500 | ?Create@audHead@@QAEPAV1@PAVaudManager@@@Z
-    class audHead* Create(class audManager* arg1)
+    inline class audHead* Create(class audManager* arg1)
     {
         return stub<member_func_t<class audHead*, audHead, class audManager*>>(0x5A6500, this, arg1);
     }
 
     // 0x5A6530 | ?Init@audHead@@QAEXXZ
-    void Init()
+    inline void Init()
     {
         return stub<member_func_t<void, audHead>>(0x5A6530, this);
     }
 
     // 0x5A65A0 | ?Destroy@audHead@@QAEXXZ
-    void Destroy()
+    inline void Destroy()
     {
         return stub<member_func_t<void, audHead>>(0x5A65A0, this);
     }
 
     // 0x5A65B0 | ?SetHandle@audHead@@QAEXH@Z
-    void SetHandle(i32 arg1)
+    inline void SetHandle(int32_t arg1)
     {
-        return stub<member_func_t<void, audHead, i32>>(0x5A65B0, this, arg1);
+        return stub<member_func_t<void, audHead, int32_t>>(0x5A65B0, this, arg1);
     }
 
     // 0x5A65C0 | ?GetHandle@audHead@@QAEHXZ
-    i32 GetHandle()
+    inline int32_t GetHandle()
     {
-        return stub<member_func_t<i32, audHead>>(0x5A65C0, this);
+        return stub<member_func_t<int32_t, audHead>>(0x5A65C0, this);
     }
 
     // 0x5A65D0 | ?SetHeadPosition@audHead@@QAEXPAU_audvector3_@@@Z
-    void SetHeadPosition(struct _audvector3_* arg1)
+    inline void SetHeadPosition(struct _audvector3_* arg1)
     {
         return stub<member_func_t<void, audHead, struct _audvector3_*>>(0x5A65D0, this, arg1);
     }
 
     // 0x5A65F0 | ?GetHeadPosition@audHead@@QAEPAU_audvector3_@@XZ
-    struct _audvector3_* GetHeadPosition()
+    inline struct _audvector3_* GetHeadPosition()
     {
         return stub<member_func_t<struct _audvector3_*, audHead>>(0x5A65F0, this);
     }
 
     // 0x5A6600 | ?SetHeadVelocity@audHead@@QAEXPAU_audvector3_@@@Z
-    void SetHeadVelocity(struct _audvector3_* arg1)
+    inline void SetHeadVelocity(struct _audvector3_* arg1)
     {
         return stub<member_func_t<void, audHead, struct _audvector3_*>>(0x5A6600, this, arg1);
     }
 
     // 0x5A6620 | ?GetHeadVelocity@audHead@@QAEPAU_audvector3_@@XZ
-    struct _audvector3_* GetHeadVelocity()
+    inline struct _audvector3_* GetHeadVelocity()
     {
         return stub<member_func_t<struct _audvector3_*, audHead>>(0x5A6620, this);
     }
 
     // 0x5A6630 | ?SetHeadFacingDir@audHead@@QAEXPAU_audvector3_@@_N@Z
-    void SetHeadFacingDir(struct _audvector3_* arg1, bool arg2)
+    inline void SetHeadFacingDir(struct _audvector3_* arg1, bool arg2)
     {
         return stub<member_func_t<void, audHead, struct _audvector3_*, bool>>(0x5A6630, this, arg1, arg2);
     }
 
     // 0x5A6660 | ?GetHeadFacingDir@audHead@@QAEPAU_audvector3_@@XZ
-    struct _audvector3_* GetHeadFacingDir()
+    inline struct _audvector3_* GetHeadFacingDir()
     {
         return stub<member_func_t<struct _audvector3_*, audHead>>(0x5A6660, this);
     }
 
     // 0x5A6670 | ?SetHeadTF@audHead@@QAEXPAU_audvector3_@@0@Z
-    void SetHeadTF(struct _audvector3_* arg1, struct _audvector3_* arg2)
+    inline void SetHeadTF(struct _audvector3_* arg1, struct _audvector3_* arg2)
     {
         return stub<member_func_t<void, audHead, struct _audvector3_*, struct _audvector3_*>>(
             0x5A6670, this, arg1, arg2);
     }
 
     // 0x5A66A0 | ?SetHeadLimits@audHead@@QAEXPAU_audvector3_@@0@Z
-    void SetHeadLimits(struct _audvector3_* arg1, struct _audvector3_* arg2)
+    inline void SetHeadLimits(struct _audvector3_* arg1, struct _audvector3_* arg2)
     {
         return stub<member_func_t<void, audHead, struct _audvector3_*, struct _audvector3_*>>(
             0x5A66A0, this, arg1, arg2);
     }
 
     // 0x5A6740 | ?SetHeadMinLimit@audHead@@QAEXM@Z
-    void SetHeadMinLimit(f32 arg1)
+    inline void SetHeadMinLimit(float arg1)
     {
-        return stub<member_func_t<void, audHead, f32>>(0x5A6740, this, arg1);
+        return stub<member_func_t<void, audHead, float>>(0x5A6740, this, arg1);
     }
 
     // 0x5A6750 | ?GetHeadVolumePanPitch@audHead@@QAE_NPAU_audvector3_@@0PAM11@Z
-    bool GetHeadVolumePanPitch(struct _audvector3_* arg1, struct _audvector3_* arg2, f32* arg3, f32* arg4, f32* arg5)
+    inline bool GetHeadVolumePanPitch(
+        struct _audvector3_* arg1, struct _audvector3_* arg2, float* arg3, float* arg4, float* arg5)
     {
-        return stub<member_func_t<bool, audHead, struct _audvector3_*, struct _audvector3_*, f32*, f32*, f32*>>(
+        return stub<member_func_t<bool, audHead, struct _audvector3_*, struct _audvector3_*, float*, float*, float*>>(
             0x5A6750, this, arg1, arg2, arg3, arg4, arg5);
     }
 };

@@ -79,8 +79,8 @@
 */
 
 class dgHitBangerInstance
-    : dgBangerInstance
-    , lvlInstance
+    : lvlInstance
+    , dgBangerInstance
 {
 public:
     // dgHitBangerInstance::`vftable' @ 0x5B15B8
@@ -89,45 +89,45 @@ public:
     // Skipped (scalar/vector destructor)
 
     // 0x4429B0 | ??1dgHitBangerInstance@@QAE@XZ
-    ~dgHitBangerInstance()
+    inline ~dgHitBangerInstance()
     {
         stub<member_func_t<void, dgHitBangerInstance>>(0x4429B0, this);
     }
 
     // 0x442A60 | ??0dgHitBangerInstance@@QAE@XZ
-    dgHitBangerInstance()
+    inline dgHitBangerInstance()
     {
         stub<member_func_t<void, dgHitBangerInstance>>(0x442A60, this);
     }
 
     // 0x441B70 | ?GetPosition@dgHitBangerInstance@@UAEABVVector3@@XZ
-    virtual class Vector3 const& GetPosition()
+    virtual inline class Vector3 const& GetPosition()
     {
         return stub<member_func_t<class Vector3 const&, dgHitBangerInstance>>(0x441B70, this);
     }
 
     // 0x441B60 | ?GetMatrix@dgHitBangerInstance@@UAEABVMatrix34@@AAV2@@Z
-    virtual class Matrix34 const& GetMatrix(class Matrix34& arg1)
+    virtual inline class Matrix34 const& GetMatrix(class Matrix34& arg1)
     {
         return stub<member_func_t<class Matrix34 const&, dgHitBangerInstance, class Matrix34&>>(0x441B60, this, arg1);
     }
 
     // 0x441B40 | ?SetMatrix@dgHitBangerInstance@@UAEXABVMatrix34@@@Z
-    virtual void SetMatrix(class Matrix34 const& arg1)
+    virtual inline void SetMatrix(class Matrix34 const& arg1)
     {
         return stub<member_func_t<void, dgHitBangerInstance, class Matrix34 const&>>(0x441B40, this, arg1);
     }
 
     // 0x442680 | ?Detach@dgHitBangerInstance@@UAEXXZ
-    virtual void Detach()
+    virtual inline void Detach()
     {
         return stub<member_func_t<void, dgHitBangerInstance>>(0x442680, this);
     }
 
     // 0x442AB0 | ?SizeOf@dgHitBangerInstance@@UAEIXZ
-    virtual u32 SizeOf()
+    virtual inline uint32_t SizeOf()
     {
-        return stub<member_func_t<u32, dgHitBangerInstance>>(0x442AB0, this);
+        return stub<member_func_t<uint32_t, dgHitBangerInstance>>(0x442AB0, this);
     }
 };
 
@@ -135,13 +135,13 @@ class dgBangerInstance : asNode
 {
 public:
     // 0x4417C0 | ?DrawTree@dgBangerInstance@@QAEXH@Z
-    void DrawTree(i32 arg1)
+    inline void DrawTree(int32_t arg1)
     {
-        return stub<member_func_t<void, dgBangerInstance, i32>>(0x4417C0, this, arg1);
+        return stub<member_func_t<void, dgBangerInstance, int32_t>>(0x4417C0, this, arg1);
     }
 
     // 0x441AB0 | ?GetData@dgBangerInstance@@QAEPAVdgBangerData@@XZ
-    class dgBangerData* GetData()
+    inline class dgBangerData* GetData()
     {
         return stub<member_func_t<class dgBangerData*, dgBangerInstance>>(0x441AB0, this);
     }
@@ -153,25 +153,25 @@ public:
     // dgBangerManager::`vftable' @ 0x5B1584
 
     // 0x4426B0 | ??0dgBangerManager@@QAE@XZ
-    dgBangerManager()
+    inline dgBangerManager()
     {
         stub<member_func_t<void, dgBangerManager>>(0x4426B0, this);
     }
 
     // 0x442780 | ?GetBanger@dgBangerManager@@QAEPAVdgHitBangerInstance@@XZ
-    class dgHitBangerInstance* GetBanger()
+    inline class dgHitBangerInstance* GetBanger()
     {
         return stub<member_func_t<class dgHitBangerInstance*, dgBangerManager>>(0x442780, this);
     }
 
     // 0x4427E0 | ?Init@dgBangerManager@@QAEXH@Z
-    void Init(i32 arg1)
+    inline void Init(int32_t arg1)
     {
-        return stub<member_func_t<void, dgBangerManager, i32>>(0x4427E0, this, arg1);
+        return stub<member_func_t<void, dgBangerManager, int32_t>>(0x4427E0, this, arg1);
     }
 
     // 0x442870 | ?InitGlow@dgBangerManager@@QAEXPBD@Z
-    void InitGlow(char const* arg1)
+    inline void InitGlow(char const* arg1)
     {
         return stub<member_func_t<void, dgBangerManager, char const*>>(0x442870, this, arg1);
     }
@@ -180,73 +180,73 @@ public:
     inline extern_var(0x627678, class dgBangerManager*, Instance);
 
     // 0x4426E0 | ??1dgBangerManager@@UAE@XZ
-    ~dgBangerManager() override
+    inline ~dgBangerManager() override
     {
         stub<member_func_t<void, dgBangerManager>>(0x4426E0, this);
     }
 
     // 0x4428A0 | ?Reset@dgBangerManager@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, dgBangerManager>>(0x4428A0, this);
     }
 };
 
 class dgUnhitBangerInstance
-    : dgBangerInstance
-    , lvlInstance
+    : lvlInstance
+    , dgBangerInstance
 {
 public:
     // dgUnhitBangerInstance::`vftable' @ 0x5B56D4
 
     // 0x441B80 | ?InitBreakables@dgUnhitBangerInstance@@QAEXPBDPAVdgBangerData@@@Z
-    void InitBreakables(char const* arg1, class dgBangerData* arg2)
+    inline void InitBreakables(char const* arg1, class dgBangerData* arg2)
     {
         return stub<member_func_t<void, dgUnhitBangerInstance, char const*, class dgBangerData*>>(
             0x441B80, this, arg1, arg2);
     }
 
     // 0x441D80 | ?RequestBanger@dgUnhitBangerInstance@@SAPAV1@PBDH@Z
-    static inline class dgUnhitBangerInstance* RequestBanger(char const* arg1, i32 arg2)
+    static inline class dgUnhitBangerInstance* RequestBanger(char const* arg1, int32_t arg2)
     {
-        return stub<cdecl_t<class dgUnhitBangerInstance*, char const*, i32>>(0x441D80, arg1, arg2);
+        return stub<cdecl_t<class dgUnhitBangerInstance*, char const*, int32_t>>(0x441D80, arg1, arg2);
     }
 
     // 0x442570 | ?InitBound@dgUnhitBangerInstance@@QAE_NPBD0PAVdgBangerData@@H@Z
-    bool InitBound(char const* arg1, char const* arg2, class dgBangerData* arg3, i32 arg4)
+    inline bool InitBound(char const* arg1, char const* arg2, class dgBangerData* arg3, int32_t arg4)
     {
-        return stub<member_func_t<bool, dgUnhitBangerInstance, char const*, char const*, class dgBangerData*, i32>>(
+        return stub<member_func_t<bool, dgUnhitBangerInstance, char const*, char const*, class dgBangerData*, int32_t>>(
             0x442570, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x541880 | ??0dgUnhitBangerInstance@@QAE@XZ
-    dgUnhitBangerInstance()
+    inline dgUnhitBangerInstance()
     {
         stub<member_func_t<void, dgUnhitBangerInstance>>(0x541880, this);
     }
 
     // 0x582519 | __purecall
-    virtual class Vector3 const& GetPosition()
+    virtual inline class Vector3 const& GetPosition()
     {
         return stub<member_func_t<class Vector3 const&, dgUnhitBangerInstance>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual class Matrix34 const& GetMatrix(class Matrix34& arg1)
+    virtual inline class Matrix34 const& GetMatrix(class Matrix34& arg1)
     {
         return stub<member_func_t<class Matrix34 const&, dgUnhitBangerInstance, class Matrix34&>>(0x582519, this, arg1);
     }
 
     // 0x582519 | __purecall
-    virtual void SetMatrix(class Matrix34 const& arg1)
+    virtual inline void SetMatrix(class Matrix34 const& arg1)
     {
         return stub<member_func_t<void, dgUnhitBangerInstance, class Matrix34 const&>>(0x582519, this, arg1);
     }
 
     // 0x582519 | __purecall
-    virtual u32 SizeOf()
+    virtual inline uint32_t SizeOf()
     {
-        return stub<member_func_t<u32, dgUnhitBangerInstance>>(0x582519, this);
+        return stub<member_func_t<uint32_t, dgUnhitBangerInstance>>(0x582519, this);
     }
 };
 
@@ -256,34 +256,34 @@ public:
     // dgUnhitYBangerInstance::`vftable' @ 0x5B150C
 
     // 0x5418A0 | ??1dgUnhitYBangerInstance@@QAE@XZ
-    ~dgUnhitYBangerInstance()
+    inline ~dgUnhitYBangerInstance()
     {
         stub<member_func_t<void, dgUnhitYBangerInstance>>(0x5418A0, this);
     }
 
     // 0x441FC0 | ?GetPosition@dgUnhitYBangerInstance@@UAEABVVector3@@XZ
-    class Vector3 const& GetPosition() override
+    inline class Vector3 const& GetPosition() override
     {
         return stub<member_func_t<class Vector3 const&, dgUnhitYBangerInstance>>(0x441FC0, this);
     }
 
     // 0x441F70 | ?GetMatrix@dgUnhitYBangerInstance@@UAEABVMatrix34@@AAV2@@Z
-    class Matrix34 const& GetMatrix(class Matrix34& arg1) override
+    inline class Matrix34 const& GetMatrix(class Matrix34& arg1) override
     {
         return stub<member_func_t<class Matrix34 const&, dgUnhitYBangerInstance, class Matrix34&>>(
             0x441F70, this, arg1);
     }
 
     // 0x441F40 | ?SetMatrix@dgUnhitYBangerInstance@@UAEXABVMatrix34@@@Z
-    void SetMatrix(class Matrix34 const& arg1) override
+    inline void SetMatrix(class Matrix34 const& arg1) override
     {
         return stub<member_func_t<void, dgUnhitYBangerInstance, class Matrix34 const&>>(0x441F40, this, arg1);
     }
 
     // 0x442AE0 | ?SizeOf@dgUnhitYBangerInstance@@UAEIXZ
-    u32 SizeOf() override
+    inline uint32_t SizeOf() override
     {
-        return stub<member_func_t<u32, dgUnhitYBangerInstance>>(0x442AE0, this);
+        return stub<member_func_t<uint32_t, dgUnhitYBangerInstance>>(0x442AE0, this);
     }
 };
 
@@ -293,27 +293,27 @@ public:
     // dgUnhitMtxBangerInstance::`vftable' @ 0x5B1494
 
     // 0x442000 | ?GetPosition@dgUnhitMtxBangerInstance@@UAEABVVector3@@XZ
-    class Vector3 const& GetPosition() override
+    inline class Vector3 const& GetPosition() override
     {
         return stub<member_func_t<class Vector3 const&, dgUnhitMtxBangerInstance>>(0x442000, this);
     }
 
     // 0x441FF0 | ?GetMatrix@dgUnhitMtxBangerInstance@@UAEABVMatrix34@@AAV2@@Z
-    class Matrix34 const& GetMatrix(class Matrix34& arg1) override
+    inline class Matrix34 const& GetMatrix(class Matrix34& arg1) override
     {
         return stub<member_func_t<class Matrix34 const&, dgUnhitMtxBangerInstance, class Matrix34&>>(
             0x441FF0, this, arg1);
     }
 
     // 0x441FD0 | ?SetMatrix@dgUnhitMtxBangerInstance@@UAEXABVMatrix34@@@Z
-    void SetMatrix(class Matrix34 const& arg1) override
+    inline void SetMatrix(class Matrix34 const& arg1) override
     {
         return stub<member_func_t<void, dgUnhitMtxBangerInstance, class Matrix34 const&>>(0x441FD0, this, arg1);
     }
 
     // 0x442AF0 | ?SizeOf@dgUnhitMtxBangerInstance@@UAEIXZ
-    u32 SizeOf() override
+    inline uint32_t SizeOf() override
     {
-        return stub<member_func_t<u32, dgUnhitMtxBangerInstance>>(0x442AF0, this);
+        return stub<member_func_t<uint32_t, dgUnhitMtxBangerInstance>>(0x442AF0, this);
     }
 };

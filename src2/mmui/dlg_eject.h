@@ -45,80 +45,81 @@ public:
     // Dialog_Eject::`vftable' @ 0x5B3DF8
 
     // 0x4F9340 | ??0Dialog_Eject@@QAE@HMMMMPAD@Z
-    Dialog_Eject(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    inline Dialog_Eject(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
     {
-        stub<member_func_t<void, Dialog_Eject, i32, f32, f32, f32, f32, char*>>(
+        stub<member_func_t<void, Dialog_Eject, int32_t, float, float, float, float, char*>>(
             0x4F9340, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4F95B0 | ?BootButtonCB@Dialog_Eject@@QAEXXZ
-    void BootButtonCB()
+    inline void BootButtonCB()
     {
         return stub<member_func_t<void, Dialog_Eject>>(0x4F95B0, this);
     }
 
     // 0x4F9610 | ?AddName@Dialog_Eject@@QAEXPBDKH@Z
-    void AddName(char const* arg1, u32 arg2, i32 arg3)
+    inline void AddName(char const* arg1, uint32_t arg2, int32_t arg3)
     {
-        return stub<member_func_t<void, Dialog_Eject, char const*, u32, i32>>(0x4F9610, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, Dialog_Eject, char const*, uint32_t, int32_t>>(
+            0x4F9610, this, arg1, arg2, arg3);
     }
 
     // 0x4F96B0 | ?RemoveName@Dialog_Eject@@QAEXPBDK@Z
-    void RemoveName(char const* arg1, u32 arg2)
+    inline void RemoveName(char const* arg1, uint32_t arg2)
     {
-        return stub<member_func_t<void, Dialog_Eject, char const*, u32>>(0x4F96B0, this, arg1, arg2);
+        return stub<member_func_t<void, Dialog_Eject, char const*, uint32_t>>(0x4F96B0, this, arg1, arg2);
     }
 
     // 0x4F9800 | ?RemoveName@Dialog_Eject@@QAEXK@Z
-    void RemoveName(u32 arg1)
+    inline void RemoveName(uint32_t arg1)
     {
-        return stub<member_func_t<void, Dialog_Eject, u32>>(0x4F9800, this, arg1);
+        return stub<member_func_t<void, Dialog_Eject, uint32_t>>(0x4F9800, this, arg1);
     }
 
     // 0x4F9940 | ?ClearNames@Dialog_Eject@@QAEXXZ
-    void ClearNames()
+    inline void ClearNames()
     {
         return stub<member_func_t<void, Dialog_Eject>>(0x4F9940, this);
     }
 
     // 0x4F99C0 | ?PostNames@Dialog_Eject@@QAEXXZ
-    void PostNames()
+    inline void PostNames()
     {
         return stub<member_func_t<void, Dialog_Eject>>(0x4F99C0, this);
     }
 
     // 0x4F99F0 | ?SetBootCB@Dialog_Eject@@QAEXVdatCallback@@@Z
-    void SetBootCB(class datCallback arg1)
+    inline void SetBootCB(class datCallback arg1)
     {
         return stub<member_func_t<void, Dialog_Eject, class datCallback>>(0x4F99F0, this, arg1);
     }
 
     // 0x4F9A10 | ?FindRosterName@Dialog_Eject@@QAEHPBD@Z
-    i32 FindRosterName(char const* arg1)
+    inline int32_t FindRosterName(char const* arg1)
     {
-        return stub<member_func_t<i32, Dialog_Eject, char const*>>(0x4F9A10, this, arg1);
+        return stub<member_func_t<int32_t, Dialog_Eject, char const*>>(0x4F9A10, this, arg1);
     }
 
     // 0x4F9A80 | ?FindRosterName@Dialog_Eject@@QAEHK@Z
-    i32 FindRosterName(u32 arg1)
+    inline int32_t FindRosterName(uint32_t arg1)
     {
-        return stub<member_func_t<i32, Dialog_Eject, u32>>(0x4F9A80, this, arg1);
+        return stub<member_func_t<int32_t, Dialog_Eject, uint32_t>>(0x4F9A80, this, arg1);
     }
 
     // 0x4F9520 | ??1Dialog_Eject@@UAE@XZ
-    ~Dialog_Eject() override
+    inline ~Dialog_Eject() override
     {
         stub<member_func_t<void, Dialog_Eject>>(0x4F9520, this);
     }
 
     // 0x4F95A0 | ?PreSetup@Dialog_Eject@@UAEXXZ
-    void PreSetup() override
+    inline void PreSetup() override
     {
         return stub<member_func_t<void, Dialog_Eject>>(0x4F95A0, this);
     }
 
     // 0x4F9590 | ?PostSetup@Dialog_Eject@@UAEXXZ
-    void PostSetup() override
+    inline void PostSetup() override
     {
         return stub<member_func_t<void, Dialog_Eject>>(0x4F9590, this);
     }

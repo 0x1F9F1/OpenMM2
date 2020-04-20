@@ -83,7 +83,7 @@ struct gfxLight
 {
 public:
     // 0x4B1C00 | ?Reset@gfxLight@@QAEXXZ
-    void Reset()
+    inline void Reset()
     {
         return stub<member_func_t<void, gfxLight>>(0x4B1C00, this);
     }
@@ -96,7 +96,7 @@ struct gfxMaterial
 {
 public:
     // 0x4B1BB0 | ?Reset@gfxMaterial@@QAEXXZ
-    void Reset()
+    inline void Reset()
     {
         return stub<member_func_t<void, gfxMaterial>>(0x4B1BB0, this);
     }
@@ -109,87 +109,88 @@ class gfxRenderState
 {
 public:
     // 0x43F480 | ?CheckSet@gfxRenderState@@AAEXAAEE@Z
-    void CheckSet(u8& arg1, u8 arg2)
+    inline void CheckSet(uint8_t& arg1, uint8_t arg2)
     {
-        return stub<member_func_t<void, gfxRenderState, u8&, u8>>(0x43F480, this, arg1, arg2);
+        return stub<member_func_t<void, gfxRenderState, uint8_t&, uint8_t>>(0x43F480, this, arg1, arg2);
     }
 
     // 0x4B1C70 | ?Init@gfxRenderState@@AAEXXZ
-    void Init()
+    inline void Init()
     {
         return stub<member_func_t<void, gfxRenderState>>(0x4B1C70, this);
     }
 
     // 0x4B1DA0 | ?Default@gfxRenderState@@QAEXXZ
-    void Default()
+    inline void Default()
     {
         return stub<member_func_t<void, gfxRenderState>>(0x4B1DA0, this);
     }
 
     // 0x4B2150 | ?LerpRGBA@gfxRenderState@@QAEIIIM@Z
-    u32 LerpRGBA(u32 arg1, u32 arg2, f32 arg3)
+    inline uint32_t LerpRGBA(uint32_t arg1, uint32_t arg2, float arg3)
     {
-        return stub<member_func_t<u32, gfxRenderState, u32, u32, f32>>(0x4B2150, this, arg1, arg2, arg3);
+        return stub<member_func_t<uint32_t, gfxRenderState, uint32_t, uint32_t, float>>(
+            0x4B2150, this, arg1, arg2, arg3);
     }
 
     // 0x4B2220 | ?LightEnable@gfxRenderState@@QAEXH_N@Z
-    void LightEnable(i32 arg1, bool arg2)
+    inline void LightEnable(int32_t arg1, bool arg2)
     {
-        return stub<member_func_t<void, gfxRenderState, i32, bool>>(0x4B2220, this, arg1, arg2);
+        return stub<member_func_t<void, gfxRenderState, int32_t, bool>>(0x4B2220, this, arg1, arg2);
     }
 
     // 0x4B2270 | ?SetLight@gfxRenderState@@QAEXHPBUgfxLight@@@Z
-    void SetLight(i32 arg1, struct gfxLight const* arg2)
+    inline void SetLight(int32_t arg1, struct gfxLight const* arg2)
     {
-        return stub<member_func_t<void, gfxRenderState, i32, struct gfxLight const*>>(0x4B2270, this, arg1, arg2);
+        return stub<member_func_t<void, gfxRenderState, int32_t, struct gfxLight const*>>(0x4B2270, this, arg1, arg2);
     }
 
     // 0x4B22D0 | ?DisableAllLights@gfxRenderState@@QAEXXZ
-    void DisableAllLights()
+    inline void DisableAllLights()
     {
         return stub<member_func_t<void, gfxRenderState>>(0x4B22D0, this);
     }
 
     // 0x4B2300 | ?GetLight@gfxRenderState@@QAEXHPAUgfxLight@@@Z
-    void GetLight(i32 arg1, struct gfxLight* arg2)
+    inline void GetLight(int32_t arg1, struct gfxLight* arg2)
     {
-        return stub<member_func_t<void, gfxRenderState, i32, struct gfxLight*>>(0x4B2300, this, arg1, arg2);
+        return stub<member_func_t<void, gfxRenderState, int32_t, struct gfxLight*>>(0x4B2300, this, arg1, arg2);
     }
 
     // 0x4B2330 | ?SetTexSource@gfxRenderState@@QAEXHH@Z
-    void SetTexSource(i32 arg1, i32 arg2)
+    inline void SetTexSource(int32_t arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, gfxRenderState, i32, i32>>(0x4B2330, this, arg1, arg2);
+        return stub<member_func_t<void, gfxRenderState, int32_t, int32_t>>(0x4B2330, this, arg1, arg2);
     }
 
     // 0x4B2350 | ?SetBlendSet@gfxRenderState@@QAEXW4gfxBlendSet@@E@Z
-    void SetBlendSet(enum gfxBlendSet arg1, u8 arg2)
+    inline void SetBlendSet(enum gfxBlendSet arg1, uint8_t arg2)
     {
-        return stub<member_func_t<void, gfxRenderState, enum gfxBlendSet, u8>>(0x4B2350, this, arg1, arg2);
+        return stub<member_func_t<void, gfxRenderState, enum gfxBlendSet, uint8_t>>(0x4B2350, this, arg1, arg2);
     }
 
     // 0x4B25F0 | ?SetTexTransform@gfxRenderState@@QAEXHH_N@Z
-    void SetTexTransform(i32 arg1, i32 arg2, bool arg3)
+    inline void SetTexTransform(int32_t arg1, int32_t arg2, bool arg3)
     {
-        return stub<member_func_t<void, gfxRenderState, i32, i32, bool>>(0x4B25F0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, gfxRenderState, int32_t, int32_t, bool>>(0x4B25F0, this, arg1, arg2, arg3);
     }
 
     // 0x4B2620 | ?SetTexMipmapBias@gfxRenderState@@QAEXHM@Z
-    void SetTexMipmapBias(i32 arg1, f32 arg2)
+    inline void SetTexMipmapBias(int32_t arg1, float arg2)
     {
-        return stub<member_func_t<void, gfxRenderState, i32, f32>>(0x4B2620, this, arg1, arg2);
+        return stub<member_func_t<void, gfxRenderState, int32_t, float>>(0x4B2620, this, arg1, arg2);
     }
 
     // 0x4B2640 | ?SetTexMatrix@gfxRenderState@@QAEXHABVMatrix44@@@Z
-    void SetTexMatrix(i32 arg1, class Matrix44 const& arg2)
+    inline void SetTexMatrix(int32_t arg1, class Matrix44 const& arg2)
     {
-        return stub<member_func_t<void, gfxRenderState, i32, class Matrix44 const&>>(0x4B2640, this, arg1, arg2);
+        return stub<member_func_t<void, gfxRenderState, int32_t, class Matrix44 const&>>(0x4B2640, this, arg1, arg2);
     }
 
     // 0x4B2660 | ?SetBlendMatrix@gfxRenderState@@QAEXHABVMatrix44@@@Z
-    void SetBlendMatrix(i32 arg1, class Matrix44 const& arg2)
+    inline void SetBlendMatrix(int32_t arg1, class Matrix44 const& arg2)
     {
-        return stub<member_func_t<void, gfxRenderState, i32, class Matrix44 const&>>(0x4B2660, this, arg1, arg2);
+        return stub<member_func_t<void, gfxRenderState, int32_t, class Matrix44 const&>>(0x4B2660, this, arg1, arg2);
     }
 
     // 0x4B2680 | ?SetCard@gfxRenderState@@SAXABVVector3@@@Z
@@ -268,7 +269,7 @@ public:
     inline extern_var(0x685788, int32_t, sm_MaxTextures);
 
     // 0x4B4C40 | ?DoFlush@gfxRenderState@@QAEXPAVgfxRenderStateData@@@Z
-    void DoFlush(class gfxRenderStateData* arg1)
+    inline void DoFlush(class gfxRenderStateData* arg1)
     {
         return stub<member_func_t<void, gfxRenderState, class gfxRenderStateData*>>(0x4B4C40, this, arg1);
     }

@@ -35,13 +35,14 @@ class ptxGlass
 {
 public:
     // 0x461A10 | ?Init@ptxGlass@@QAEXHHPAVgfxTexture@@@Z
-    void Init(i32 arg1, i32 arg2, class gfxTexture* arg3)
+    inline void Init(int32_t arg1, int32_t arg2, class gfxTexture* arg3)
     {
-        return stub<member_func_t<void, ptxGlass, i32, i32, class gfxTexture*>>(0x461A10, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, ptxGlass, int32_t, int32_t, class gfxTexture*>>(
+            0x461A10, this, arg1, arg2, arg3);
     }
 
     // 0x461AC0 | ?AddShards@ptxGlass@@QAEXABVVector3@@00ABVVector2@@11000@Z
-    void AddShards(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
+    inline void AddShards(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
         class Vector2 const& arg4, class Vector2 const& arg5, class Vector2 const& arg6, class Vector3 const& arg7,
         class Vector3 const& arg8, class Vector3 const& arg9)
     {
@@ -52,23 +53,23 @@ public:
     }
 
     // 0x461F80 | ?CreateShards@ptxGlass@@QAEXMMQAVVector2@@AAVMatrix34@@ABVVector3@@2@Z
-    void CreateShards(f32 arg1, f32 arg2, class Vector2* const arg3, class Matrix34& arg4, class Vector3 const& arg5,
-        class Vector3 const& arg6)
+    inline void CreateShards(float arg1, float arg2, class Vector2* const arg3, class Matrix34& arg4,
+        class Vector3 const& arg5, class Vector3 const& arg6)
     {
-        return stub<member_func_t<void, ptxGlass, f32, f32, class Vector2* const, class Matrix34&, class Vector3 const&,
-            class Vector3 const&>>(0x461F80, this, arg1, arg2, arg3, arg4, arg5, arg6);
+        return stub<member_func_t<void, ptxGlass, float, float, class Vector2* const, class Matrix34&,
+            class Vector3 const&, class Vector3 const&>>(0x461F80, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x462760 | ?Update@ptxGlass@@QAEXM@Z
-    void Update(f32 arg1)
+    inline void Update(float arg1)
     {
-        return stub<member_func_t<void, ptxGlass, f32>>(0x462760, this, arg1);
+        return stub<member_func_t<void, ptxGlass, float>>(0x462760, this, arg1);
     }
 
     // 0x462AE0 | ?DrawShards@ptxGlass@@QAEXH@Z
-    void DrawShards(i32 arg1)
+    inline void DrawShards(int32_t arg1)
     {
-        return stub<member_func_t<void, ptxGlass, i32>>(0x462AE0, this, arg1);
+        return stub<member_func_t<void, ptxGlass, int32_t>>(0x462AE0, this, arg1);
     }
 };
 
@@ -76,7 +77,7 @@ struct ptxGlass::ptxShard
 {
 public:
     // 0x462CF0 | ?SetCentroidFromVerts@ptxShard@ptxGlass@@QAEXXZ
-    void SetCentroidFromVerts()
+    inline void SetCentroidFromVerts()
     {
         return stub<member_func_t<void, ptxShard>>(0x462CF0, this);
     }

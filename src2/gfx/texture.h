@@ -83,28 +83,28 @@
 */
 
 // 0x4AC8C0 | ?ilog2@@YAHH@Z
-inline i32 ilog2(i32 arg1)
+inline int32_t ilog2(int32_t arg1)
 {
-    return stub<cdecl_t<i32, i32>>(0x4AC8C0, arg1);
+    return stub<cdecl_t<int32_t, int32_t>>(0x4AC8C0, arg1);
 }
 
 class gfxTexture
 {
 public:
     // 0x45D180 | ?GetColor@gfxTexture@@QBEIXZ
-    u32 GetColor()
+    inline uint32_t GetColor()
     {
-        return stub<member_func_t<u32, gfxTexture>>(0x45D180, this);
+        return stub<member_func_t<uint32_t, gfxTexture>>(0x45D180, this);
     }
 
     // 0x4AC8E0 | ??0gfxTexture@@AAE@XZ
-    gfxTexture()
+    inline gfxTexture()
     {
         stub<member_func_t<void, gfxTexture>>(0x4AC8E0, this);
     }
 
     // 0x4AC910 | ??1gfxTexture@@AAE@XZ
-    ~gfxTexture()
+    inline ~gfxTexture()
     {
         stub<member_func_t<void, gfxTexture>>(0x4AC910, this);
     }
@@ -122,24 +122,23 @@ public:
     }
 
     // 0x4ACA10 | ?MarkFirstUse@gfxTexture@@AAEXXZ
-    void MarkFirstUse()
+    inline void MarkFirstUse()
     {
         return stub<member_func_t<void, gfxTexture>>(0x4ACA10, this);
     }
 
     // 0x4ACA30 | ?MarkHigherUse@gfxTexture@@AAEXXZ
-    void MarkHigherUse()
+    inline void MarkHigherUse()
     {
         return stub<member_func_t<void, gfxTexture>>(0x4ACA30, this);
     }
 
     // 0x4ACA90 | ?Create@gfxTexture@@SAPAV1@HHW4gfxImageFormat@gfxImage@@0H@Z
-    static inline class gfxTexture* Create(
-        i32 arg1, i32 arg2, enum gfxImage::gfxImageFormat arg3, enum gfxImage::gfxImageFormat arg4, i32 arg5)
+    static inline class gfxTexture* Create(int32_t arg1, int32_t arg2, enum gfxImage::gfxImageFormat arg3,
+        enum gfxImage::gfxImageFormat arg4, int32_t arg5)
     {
-        return stub<
-            cdecl_t<class gfxTexture*, i32, i32, enum gfxImage::gfxImageFormat, enum gfxImage::gfxImageFormat, i32>>(
-            0x4ACA90, arg1, arg2, arg3, arg4, arg5);
+        return stub<cdecl_t<class gfxTexture*, int32_t, int32_t, enum gfxImage::gfxImageFormat,
+            enum gfxImage::gfxImageFormat, int32_t>>(0x4ACA90, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x4AD090 | ?Create@gfxTexture@@SAPAV1@PAVgfxImage@@_N@Z
@@ -149,46 +148,46 @@ public:
     }
 
     // 0x4AD100 | ?Load@gfxTexture@@QAEXPAVgfxImage@@@Z
-    void Load(class gfxImage* arg1)
+    inline void Load(class gfxImage* arg1)
     {
         return stub<member_func_t<void, gfxTexture, class gfxImage*>>(0x4AD100, this, arg1);
     }
 
     // 0x4AD720 | ?CreateFromTexture@gfxTexture@@QAEPAV1@PBDHHHH@Z
-    class gfxTexture* CreateFromTexture(char const* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5)
+    inline class gfxTexture* CreateFromTexture(char const* arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5)
     {
-        return stub<member_func_t<class gfxTexture*, gfxTexture, char const*, i32, i32, i32, i32>>(
+        return stub<member_func_t<class gfxTexture*, gfxTexture, char const*, int32_t, int32_t, int32_t, int32_t>>(
             0x4AD720, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x4AD730 | ?SetDefaultMIPMapEnv@gfxTexture@@SAXIM@Z
-    static inline void SetDefaultMIPMapEnv(u32 arg1, f32 arg2)
+    static inline void SetDefaultMIPMapEnv(uint32_t arg1, float arg2)
     {
-        return stub<cdecl_t<void, u32, f32>>(0x4AD730, arg1, arg2);
+        return stub<cdecl_t<void, uint32_t, float>>(0x4AD730, arg1, arg2);
     }
 
     // 0x4AD740 | ?GetDefaultMIPMapEnv@gfxTexture@@SAXAAIAAM@Z
-    static inline void GetDefaultMIPMapEnv(u32& arg1, f32& arg2)
+    static inline void GetDefaultMIPMapEnv(uint32_t& arg1, float& arg2)
     {
-        return stub<cdecl_t<void, u32&, f32&>>(0x4AD740, arg1, arg2);
+        return stub<cdecl_t<void, uint32_t&, float&>>(0x4AD740, arg1, arg2);
     }
 
     // 0x4AD750 | ?SetMIPMapEnv@gfxTexture@@QAEXIM@Z
-    void SetMIPMapEnv(u32 arg1, f32 arg2)
+    inline void SetMIPMapEnv(uint32_t arg1, float arg2)
     {
-        return stub<member_func_t<void, gfxTexture, u32, f32>>(0x4AD750, this, arg1, arg2);
+        return stub<member_func_t<void, gfxTexture, uint32_t, float>>(0x4AD750, this, arg1, arg2);
     }
 
     // 0x4AD760 | ?GetMIPMapEnv@gfxTexture@@QAEXAAIAAM@Z
-    void GetMIPMapEnv(u32& arg1, f32& arg2)
+    inline void GetMIPMapEnv(uint32_t& arg1, float& arg2)
     {
-        return stub<member_func_t<void, gfxTexture, u32&, f32&>>(0x4AD760, this, arg1, arg2);
+        return stub<member_func_t<void, gfxTexture, uint32_t&, float&>>(0x4AD760, this, arg1, arg2);
     }
 
     // 0x4AD770 | ?CalcMIPMapEnv@gfxTexture@@SAXHHAAG0@Z
-    static inline void CalcMIPMapEnv(i32 arg1, i32 arg2, u16& arg3, u16& arg4)
+    static inline void CalcMIPMapEnv(int32_t arg1, int32_t arg2, uint16_t& arg3, uint16_t& arg4)
     {
-        return stub<cdecl_t<void, i32, i32, u16&, u16&>>(0x4AD770, arg1, arg2, arg3, arg4);
+        return stub<cdecl_t<void, int32_t, int32_t, uint16_t&, uint16_t&>>(0x4AD770, arg1, arg2, arg3, arg4);
     }
 
     // 0x4AD780 | ?EnableTrilinearMipMaping@gfxTexture@@SAX_N@Z
@@ -198,19 +197,19 @@ public:
     }
 
     // 0x4AD790 | ?PreLoad@gfxTexture@@QAEXXZ
-    void PreLoad()
+    inline void PreLoad()
     {
         return stub<member_func_t<void, gfxTexture>>(0x4AD790, this);
     }
 
     // 0x4AD7E0 | ?MakeResident@gfxTexture@@QAEXXZ
-    void MakeResident()
+    inline void MakeResident()
     {
         return stub<member_func_t<void, gfxTexture>>(0x4AD7E0, this);
     }
 
     // 0x4AD820 | ?MakeUnresident@gfxTexture@@QAEXXZ
-    void MakeUnresident()
+    inline void MakeUnresident()
     {
         return stub<member_func_t<void, gfxTexture>>(0x4AD820, this);
     }
@@ -240,44 +239,46 @@ public:
     }
 
     // 0x4ADED0 | ?FindEntry@gfxTexture@@QAEPAUIDirectDrawSurface7@@XZ
-    struct IDirectDrawSurface7* FindEntry()
+    inline struct IDirectDrawSurface7* FindEntry()
     {
         return stub<member_func_t<struct IDirectDrawSurface7*, gfxTexture>>(0x4ADED0, this);
     }
 
     // 0x4ADF00 | ?CreateRenderTarget@gfxTexture@@SAPAV1@HHII@Z
-    static inline class gfxTexture* CreateRenderTarget(i32 arg1, i32 arg2, u32 arg3, u32 arg4)
+    static inline class gfxTexture* CreateRenderTarget(int32_t arg1, int32_t arg2, uint32_t arg3, uint32_t arg4)
     {
-        return stub<cdecl_t<class gfxTexture*, i32, i32, u32, u32>>(0x4ADF00, arg1, arg2, arg3, arg4);
+        return stub<cdecl_t<class gfxTexture*, int32_t, int32_t, uint32_t, uint32_t>>(0x4ADF00, arg1, arg2, arg3, arg4);
     }
 
     // 0x4ADFD0 | ?CreateCubeMap@gfxTexture@@SAPAV1@HHQAPAV1@@Z
-    static inline class gfxTexture* CreateCubeMap(i32 arg1, i32 arg2, class gfxTexture** const arg3)
+    static inline class gfxTexture* CreateCubeMap(int32_t arg1, int32_t arg2, class gfxTexture** const arg3)
     {
-        return stub<cdecl_t<class gfxTexture*, i32, i32, class gfxTexture** const>>(0x4ADFD0, arg1, arg2, arg3);
+        return stub<cdecl_t<class gfxTexture*, int32_t, int32_t, class gfxTexture** const>>(0x4ADFD0, arg1, arg2, arg3);
     }
 
     // 0x4AE1A0 | ?SetTexEnv@gfxTexture@@QAEXI@Z
-    void SetTexEnv(u32 arg1)
+    inline void SetTexEnv(uint32_t arg1)
     {
-        return stub<member_func_t<void, gfxTexture, u32>>(0x4AE1A0, this, arg1);
+        return stub<member_func_t<void, gfxTexture, uint32_t>>(0x4AE1A0, this, arg1);
     }
 
     // 0x4AE1B0 | ?SetName@gfxTexture@@QAEXPBD@Z
-    void SetName(char const* arg1)
+    inline void SetName(char const* arg1)
     {
         return stub<member_func_t<void, gfxTexture, char const*>>(0x4AE1B0, this, arg1);
     }
 
     // 0x4AE1E0 | ?Blit@gfxTexture@@QAEXHHPAV1@HHHH@Z
-    void Blit(i32 arg1, i32 arg2, class gfxTexture* arg3, i32 arg4, i32 arg5, i32 arg6, i32 arg7)
+    inline void Blit(
+        int32_t arg1, int32_t arg2, class gfxTexture* arg3, int32_t arg4, int32_t arg5, int32_t arg6, int32_t arg7)
     {
-        return stub<member_func_t<void, gfxTexture, i32, i32, class gfxTexture*, i32, i32, i32, i32>>(
+        return stub<
+            member_func_t<void, gfxTexture, int32_t, int32_t, class gfxTexture*, int32_t, int32_t, int32_t, int32_t>>(
             0x4AE1E0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x4AE250 | ?Clone@gfxTexture@@QAEPAV1@XZ
-    class gfxTexture* Clone()
+    inline class gfxTexture* Clone()
     {
         return stub<member_func_t<class gfxTexture*, gfxTexture>>(0x4AE250, this);
     }
@@ -308,19 +309,19 @@ class gfxBitmap
 {
 public:
     // 0x4AE370 | ??0gfxBitmap@@AAE@HH@Z
-    gfxBitmap(i32 arg1, i32 arg2)
+    inline gfxBitmap(int32_t arg1, int32_t arg2)
     {
-        stub<member_func_t<void, gfxBitmap, i32, i32>>(0x4AE370, this, arg1, arg2);
+        stub<member_func_t<void, gfxBitmap, int32_t, int32_t>>(0x4AE370, this, arg1, arg2);
     }
 
     // 0x4AE3B0 | ?SetName@gfxBitmap@@QAEXPBD@Z
-    void SetName(char const* arg1)
+    inline void SetName(char const* arg1)
     {
         return stub<member_func_t<void, gfxBitmap, char const*>>(0x4AE3B0, this, arg1);
     }
 
     // 0x4AE3E0 | ??1gfxBitmap@@AAE@XZ
-    ~gfxBitmap()
+    inline ~gfxBitmap()
     {
         stub<member_func_t<void, gfxBitmap>>(0x4AE3E0, this);
     }
@@ -338,19 +339,19 @@ public:
     }
 
     // 0x4AE4D0 | ?Create@gfxBitmap@@SAPAV1@HH_N@Z
-    static inline class gfxBitmap* Create(i32 arg1, i32 arg2, bool arg3)
+    static inline class gfxBitmap* Create(int32_t arg1, int32_t arg2, bool arg3)
     {
-        return stub<cdecl_t<class gfxBitmap*, i32, i32, bool>>(0x4AE4D0, arg1, arg2, arg3);
+        return stub<cdecl_t<class gfxBitmap*, int32_t, int32_t, bool>>(0x4AE4D0, arg1, arg2, arg3);
     }
 
     // 0x4AE580 | ?Clear@gfxBitmap@@QAEXI@Z
-    void Clear(u32 arg1)
+    inline void Clear(uint32_t arg1)
     {
-        return stub<member_func_t<void, gfxBitmap, u32>>(0x4AE580, this, arg1);
+        return stub<member_func_t<void, gfxBitmap, uint32_t>>(0x4AE580, this, arg1);
     }
 
     // 0x4AE5C0 | ?Load@gfxBitmap@@QAE_NPAVgfxImage@@@Z
-    bool Load(class gfxImage* arg1)
+    inline bool Load(class gfxImage* arg1)
     {
         return stub<member_func_t<bool, gfxBitmap, class gfxImage*>>(0x4AE5C0, this, arg1);
     }
@@ -363,37 +364,37 @@ class gfxTextureCachePool
 {
 public:
     // 0x4ADB90 | ??0gfxTextureCachePool@@QAE@PAV0@@Z
-    gfxTextureCachePool(class gfxTextureCachePool* arg1)
+    inline gfxTextureCachePool(class gfxTextureCachePool* arg1)
     {
         stub<member_func_t<void, gfxTextureCachePool, class gfxTextureCachePool*>>(0x4ADB90, this, arg1);
     }
 
     // 0x4ADBB0 | ??1gfxTextureCachePool@@QAE@XZ
-    ~gfxTextureCachePool()
+    inline ~gfxTextureCachePool()
     {
         stub<member_func_t<void, gfxTextureCachePool>>(0x4ADBB0, this);
     }
 
     // 0x4ADBE0 | ?IsCompatibleWith@gfxTextureCachePool@@QAE_NPAVgfxTexture@@@Z
-    bool IsCompatibleWith(class gfxTexture* arg1)
+    inline bool IsCompatibleWith(class gfxTexture* arg1)
     {
         return stub<member_func_t<bool, gfxTextureCachePool, class gfxTexture*>>(0x4ADBE0, this, arg1);
     }
 
     // 0x4ADC90 | ?Init@gfxTextureCachePool@@QAEXPAVgfxTexture@@@Z
-    void Init(class gfxTexture* arg1)
+    inline void Init(class gfxTexture* arg1)
     {
         return stub<member_func_t<void, gfxTextureCachePool, class gfxTexture*>>(0x4ADC90, this, arg1);
     }
 
     // 0x4ADCF0 | ?FindEntry@gfxTextureCachePool@@QAEXPAVgfxTexture@@@Z
-    void FindEntry(class gfxTexture* arg1)
+    inline void FindEntry(class gfxTexture* arg1)
     {
         return stub<member_func_t<void, gfxTextureCachePool, class gfxTexture*>>(0x4ADCF0, this, arg1);
     }
 
     // 0x4ADD30 | ?AddSlot@gfxTextureCachePool@@QAE_NXZ
-    bool AddSlot()
+    inline bool AddSlot()
     {
         return stub<member_func_t<bool, gfxTextureCachePool>>(0x4ADD30, this);
     }
@@ -403,26 +404,26 @@ class gfxTextureCacheEntry
 {
 public:
     // 0x4ADAD0 | ??0gfxTextureCacheEntry@@AAE@PAUIDirectDrawSurface7@@PAV0@@Z
-    gfxTextureCacheEntry(struct IDirectDrawSurface7* arg1, class gfxTextureCacheEntry* arg2)
+    inline gfxTextureCacheEntry(struct IDirectDrawSurface7* arg1, class gfxTextureCacheEntry* arg2)
     {
         stub<member_func_t<void, gfxTextureCacheEntry, struct IDirectDrawSurface7*, class gfxTextureCacheEntry*>>(
             0x4ADAD0, this, arg1, arg2);
     }
 
     // 0x4ADB00 | ?Evict@gfxTextureCacheEntry@@QAEXXZ
-    void Evict()
+    inline void Evict()
     {
         return stub<member_func_t<void, gfxTextureCacheEntry>>(0x4ADB00, this);
     }
 
     // 0x4ADB30 | ?Lease@gfxTextureCacheEntry@@QAEXPAVgfxTexture@@@Z
-    void Lease(class gfxTexture* arg1)
+    inline void Lease(class gfxTexture* arg1)
     {
         return stub<member_func_t<void, gfxTextureCacheEntry, class gfxTexture*>>(0x4ADB30, this, arg1);
     }
 
     // 0x4ADB70 | ??1gfxTextureCacheEntry@@QAE@XZ
-    ~gfxTextureCacheEntry()
+    inline ~gfxTextureCacheEntry()
     {
         stub<member_func_t<void, gfxTextureCacheEntry>>(0x4ADB70, this);
     }

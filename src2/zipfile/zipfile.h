@@ -50,62 +50,62 @@ class zipFile
 {
 public:
     // 0x5731A0 | ?zipOpen@zipFile@@SAHPBD_N@Z
-    static inline i32 zipOpen(char const* arg1, bool arg2)
+    static inline int32_t zipOpen(char const* arg1, bool arg2)
     {
-        return stub<cdecl_t<i32, char const*, bool>>(0x5731A0, arg1, arg2);
+        return stub<cdecl_t<int32_t, char const*, bool>>(0x5731A0, arg1, arg2);
     }
 
     // 0x5731F0 | ?zipCreate@zipFile@@SAHPBD@Z
-    static inline i32 zipCreate(char const* arg1)
+    static inline int32_t zipCreate(char const* arg1)
     {
-        return stub<cdecl_t<i32, char const*>>(0x5731F0, arg1);
+        return stub<cdecl_t<int32_t, char const*>>(0x5731F0, arg1);
     }
 
     // 0x573210 | ?zipRead@zipFile@@SAHHPAXH@Z
-    static inline i32 zipRead(i32 arg1, void* arg2, i32 arg3)
+    static inline int32_t zipRead(int32_t arg1, void* arg2, int32_t arg3)
     {
-        return stub<cdecl_t<i32, i32, void*, i32>>(0x573210, arg1, arg2, arg3);
+        return stub<cdecl_t<int32_t, int32_t, void*, int32_t>>(0x573210, arg1, arg2, arg3);
     }
 
     // 0x573230 | ?zipWrite@zipFile@@SAHHPBXH@Z
-    static inline i32 zipWrite(i32 arg1, void const* arg2, i32 arg3)
+    static inline int32_t zipWrite(int32_t arg1, void const* arg2, int32_t arg3)
     {
-        return stub<cdecl_t<i32, i32, void const*, i32>>(0x573230, arg1, arg2, arg3);
+        return stub<cdecl_t<int32_t, int32_t, void const*, int32_t>>(0x573230, arg1, arg2, arg3);
     }
 
     // 0x573250 | ?zipSeek@zipFile@@SAHHHW4seekWhence@@@Z
-    static inline i32 zipSeek(i32 arg1, i32 arg2, enum seekWhence arg3)
+    static inline int32_t zipSeek(int32_t arg1, int32_t arg2, enum seekWhence arg3)
     {
-        return stub<cdecl_t<i32, i32, i32, enum seekWhence>>(0x573250, arg1, arg2, arg3);
+        return stub<cdecl_t<int32_t, int32_t, int32_t, enum seekWhence>>(0x573250, arg1, arg2, arg3);
     }
 
     // 0x573270 | ?zipClose@zipFile@@SAHH@Z
-    static inline i32 zipClose(i32 arg1)
+    static inline int32_t zipClose(int32_t arg1)
     {
-        return stub<cdecl_t<i32, i32>>(0x573270, arg1);
+        return stub<cdecl_t<int32_t, int32_t>>(0x573270, arg1);
     }
 
     // 0x5732A0 | ?zipEnumFiles@zipFile@@SAHPBDP6AX0_NPAX@Z2@Z
-    static inline i32 zipEnumFiles(char const* arg1, void(__cdecl* arg2)(char const*, bool, void*), void* arg3)
+    static inline int32_t zipEnumFiles(char const* arg1, void(__cdecl* arg2)(char const*, bool, void*), void* arg3)
     {
-        return stub<cdecl_t<i32, char const*, void(__cdecl*)(char const*, bool, void*), void*>>(
+        return stub<cdecl_t<int32_t, char const*, void(__cdecl*)(char const*, bool, void*), void*>>(
             0x5732A0, arg1, arg2, arg3);
     }
 
     // 0x5732E0 | ?zipSize@zipFile@@SAHH@Z
-    static inline i32 zipSize(i32 arg1)
+    static inline int32_t zipSize(int32_t arg1)
     {
-        return stub<cdecl_t<i32, i32>>(0x5732E0, arg1);
+        return stub<cdecl_t<int32_t, int32_t>>(0x5732E0, arg1);
     }
 
     // 0x573300 | ??0zipFile@@QAE@XZ
-    zipFile()
+    inline zipFile()
     {
         stub<member_func_t<void, zipFile>>(0x573300, this);
     }
 
     // 0x573320 | ??1zipFile@@QAE@XZ
-    ~zipFile()
+    inline ~zipFile()
     {
         stub<member_func_t<void, zipFile>>(0x573320, this);
     }
@@ -117,33 +117,33 @@ public:
     }
 
     // 0x573390 | ?internalSeek@zipFile@@AAEHH@Z
-    i32 internalSeek(i32 arg1)
+    inline int32_t internalSeek(int32_t arg1)
     {
-        return stub<member_func_t<i32, zipFile, i32>>(0x573390, this, arg1);
+        return stub<member_func_t<int32_t, zipFile, int32_t>>(0x573390, this, arg1);
     }
 
     // 0x573410 | ?internalRead@zipFile@@AAEHPAXH_N@Z
-    i32 internalRead(void* arg1, i32 arg2, bool arg3)
+    inline int32_t internalRead(void* arg1, int32_t arg2, bool arg3)
     {
-        return stub<member_func_t<i32, zipFile, void*, i32, bool>>(0x573410, this, arg1, arg2, arg3);
+        return stub<member_func_t<int32_t, zipFile, void*, int32_t, bool>>(0x573410, this, arg1, arg2, arg3);
     }
 
     // 0x573480 | ?Init@zipFile@@QAE_NPBD@Z
-    bool Init(char const* arg1)
+    inline bool Init(char const* arg1)
     {
         return stub<member_func_t<bool, zipFile, char const*>>(0x573480, this, arg1);
     }
 
     // 0x573A80 | ?Open@zipFile@@QAEHPBD@Z
-    i32 Open(char const* arg1)
+    inline int32_t Open(char const* arg1)
     {
-        return stub<member_func_t<i32, zipFile, char const*>>(0x573A80, this, arg1);
+        return stub<member_func_t<int32_t, zipFile, char const*>>(0x573A80, this, arg1);
     }
 
     // 0x573B60 | ?EnumFiles@zipFile@@QAEHPBDP6AX0_NPAX@Z2@Z
-    i32 EnumFiles(char const* arg1, void(__cdecl* arg2)(char const*, bool, void*), void* arg3)
+    inline int32_t EnumFiles(char const* arg1, void(__cdecl* arg2)(char const*, bool, void*), void* arg3)
     {
-        return stub<member_func_t<i32, zipFile, char const*, void(__cdecl*)(char const*, bool, void*), void*>>(
+        return stub<member_func_t<int32_t, zipFile, char const*, void(__cdecl*)(char const*, bool, void*), void*>>(
             0x573B60, this, arg1, arg2, arg3);
     }
 
@@ -158,14 +158,14 @@ struct zipHandle
 {
 public:
     // 0x572F80 | ?Read@zipHandle@@QAEHPAXH@Z
-    i32 Read(void* arg1, i32 arg2)
+    inline int32_t Read(void* arg1, int32_t arg2)
     {
-        return stub<member_func_t<i32, zipHandle, void*, i32>>(0x572F80, this, arg1, arg2);
+        return stub<member_func_t<int32_t, zipHandle, void*, int32_t>>(0x572F80, this, arg1, arg2);
     }
 
     // 0x573080 | ?Seek@zipHandle@@QAEHHW4seekWhence@@@Z
-    i32 Seek(i32 arg1, enum seekWhence arg2)
+    inline int32_t Seek(int32_t arg1, enum seekWhence arg2)
     {
-        return stub<member_func_t<i32, zipHandle, i32, enum seekWhence>>(0x573080, this, arg1, arg2);
+        return stub<member_func_t<int32_t, zipHandle, int32_t, enum seekWhence>>(0x573080, this, arg1, arg2);
     }
 };

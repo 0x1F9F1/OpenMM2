@@ -58,61 +58,61 @@ public:
     // mmVehList::`vftable' @ 0x5B5204
 
     // 0x524550 | ??0mmVehList@@QAE@XZ
-    mmVehList()
+    inline mmVehList()
     {
         stub<member_func_t<void, mmVehList>>(0x524550, this);
     }
 
     // 0x5245D0 | ?Init@mmVehList@@QAEXH@Z
-    void Init(i32 arg1)
+    inline void Init(int32_t arg1)
     {
-        return stub<member_func_t<void, mmVehList, i32>>(0x5245D0, this, arg1);
+        return stub<member_func_t<void, mmVehList, int32_t>>(0x5245D0, this, arg1);
     }
 
     // 0x5245E0 | ?GetVehicleInfo@mmVehList@@QAEPAVmmVehInfo@@H@Z
-    class mmVehInfo* GetVehicleInfo(i32 arg1)
+    inline class mmVehInfo* GetVehicleInfo(int32_t arg1)
     {
-        return stub<member_func_t<class mmVehInfo*, mmVehList, i32>>(0x5245E0, this, arg1);
+        return stub<member_func_t<class mmVehInfo*, mmVehList, int32_t>>(0x5245E0, this, arg1);
     }
 
     // 0x524610 | ?GetVehicleInfo@mmVehList@@QAEPAVmmVehInfo@@PAD@Z
-    class mmVehInfo* GetVehicleInfo(char* arg1)
+    inline class mmVehInfo* GetVehicleInfo(char* arg1)
     {
         return stub<member_func_t<class mmVehInfo*, mmVehList, char*>>(0x524610, this, arg1);
     }
 
     // 0x524690 | ?SetDefaultVehicle@mmVehList@@QAEXPAD@Z
-    void SetDefaultVehicle(char* arg1)
+    inline void SetDefaultVehicle(char* arg1)
     {
         return stub<member_func_t<void, mmVehList, char*>>(0x524690, this, arg1);
     }
 
     // 0x5246B0 | ?GetVehicleID@mmVehList@@QAEHPAD@Z
-    i32 GetVehicleID(char* arg1)
+    inline int32_t GetVehicleID(char* arg1)
     {
-        return stub<member_func_t<i32, mmVehList, char*>>(0x5246B0, this, arg1);
+        return stub<member_func_t<int32_t, mmVehList, char*>>(0x5246B0, this, arg1);
     }
 
     // 0x524720 | ?Load@mmVehList@@QAEXPAD@Z
-    void Load(char* arg1)
+    inline void Load(char* arg1)
     {
         return stub<member_func_t<void, mmVehList, char*>>(0x524720, this, arg1);
     }
 
     // 0x524810 | ?Print@mmVehList@@QAEXXZ
-    void Print()
+    inline void Print()
     {
         return stub<member_func_t<void, mmVehList>>(0x524810, this);
     }
 
     // 0x524950 | ?LoadAll@mmVehList@@QAEXXZ
-    void LoadAll()
+    inline void LoadAll()
     {
         return stub<member_func_t<void, mmVehList>>(0x524950, this);
     }
 
     // 0x524570 | ??1mmVehList@@UAE@XZ
-    virtual ~mmVehList()
+    virtual inline ~mmVehList()
     {
         stub<member_func_t<void, mmVehList>>(0x524570, this);
     }

@@ -35,13 +35,13 @@ public:
     // aiCityData::`vftable' @ 0x5B59E4
 
     // 0x555BD0 | ??0aiCityData@@QAE@PAD0@Z
-    aiCityData(char* arg1, char* arg2)
+    inline aiCityData(char* arg1, char* arg2)
     {
         stub<member_func_t<void, aiCityData, char*, char*>>(0x555BD0, this, arg1, arg2);
     }
 
     // 0x5560E0 | ??1aiCityData@@UAE@XZ
-    ~aiCityData() override
+    inline ~aiCityData() override
     {
         stub<member_func_t<void, aiCityData>>(0x5560E0, this);
     }

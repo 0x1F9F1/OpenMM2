@@ -33,38 +33,38 @@ class datMemStream
 {
 public:
     // 0x4C9280 | ?Read@datMemStream@@QAEHPAXH@Z
-    i32 Read(void* arg1, i32 arg2)
+    inline int32_t Read(void* arg1, int32_t arg2)
     {
-        return stub<member_func_t<i32, datMemStream, void*, i32>>(0x4C9280, this, arg1, arg2);
+        return stub<member_func_t<int32_t, datMemStream, void*, int32_t>>(0x4C9280, this, arg1, arg2);
     }
 
     // 0x4C92D0 | ?Write@datMemStream@@QAEHPBXH@Z
-    i32 Write(void const* arg1, i32 arg2)
+    inline int32_t Write(void const* arg1, int32_t arg2)
     {
-        return stub<member_func_t<i32, datMemStream, void const*, i32>>(0x4C92D0, this, arg1, arg2);
+        return stub<member_func_t<int32_t, datMemStream, void const*, int32_t>>(0x4C92D0, this, arg1, arg2);
     }
 
     // 0x4C9330 | ?GetCh@datMemStream@@QAEHXZ
-    i32 GetCh()
+    inline int32_t GetCh()
     {
-        return stub<member_func_t<i32, datMemStream>>(0x4C9330, this);
+        return stub<member_func_t<int32_t, datMemStream>>(0x4C9330, this);
     }
 
     // 0x4C9360 | ?PutCh@datMemStream@@QAEHE@Z
-    i32 PutCh(u8 arg1)
+    inline int32_t PutCh(uint8_t arg1)
     {
-        return stub<member_func_t<i32, datMemStream, u8>>(0x4C9360, this, arg1);
+        return stub<member_func_t<int32_t, datMemStream, uint8_t>>(0x4C9360, this, arg1);
     }
 
     // 0x4C9390 | ?Close@datMemStream@@QAEHXZ
-    i32 Close()
+    inline int32_t Close()
     {
-        return stub<member_func_t<i32, datMemStream>>(0x4C9390, this);
+        return stub<member_func_t<int32_t, datMemStream>>(0x4C9390, this);
     }
 
     // 0x4C93A0 | ?Size@datMemStream@@QAEHXZ
-    i32 Size()
+    inline int32_t Size()
     {
-        return stub<member_func_t<i32, datMemStream>>(0x4C93A0, this);
+        return stub<member_func_t<int32_t, datMemStream>>(0x4C93A0, this);
     }
 };

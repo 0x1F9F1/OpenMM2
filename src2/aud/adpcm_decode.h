@@ -25,8 +25,8 @@
 */
 
 // 0x5A7600 | ?adpcm_decoder@@YAXQBDQAFHPAUadpcm_state@@@Z
-inline void adpcm_decoder(char const* const arg1, i16* const arg2, i32 arg3, struct adpcm_state* arg4)
+inline void adpcm_decoder(char const* const arg1, int16_t* const arg2, int32_t arg3, struct adpcm_state* arg4)
 {
-    return stub<cdecl_t<void, char const* const, i16* const, i32, struct adpcm_state*>>(
+    return stub<cdecl_t<void, char const* const, int16_t* const, int32_t, struct adpcm_state*>>(
         0x5A7600, arg1, arg2, arg3, arg4);
 }

@@ -51,43 +51,43 @@ public:
     // gizFerryMgr::`vftable' @ 0x5B61F8
 
     // 0x579550 | ??0gizFerryMgr@@QAE@XZ
-    gizFerryMgr()
+    inline gizFerryMgr()
     {
         stub<member_func_t<void, gizFerryMgr>>(0x579550, this);
     }
 
     // 0x579680 | ?Init@gizFerryMgr@@QAE_NPAD00@Z
-    bool Init(char* arg1, char* arg2, char* arg3)
+    inline bool Init(char* arg1, char* arg2, char* arg3)
     {
         return stub<member_func_t<bool, gizFerryMgr, char*, char*, char*>>(0x579680, this, arg1, arg2, arg3);
     }
 
     // 0x579910 | ?ApplyTuning@gizFerryMgr@@AAEXXZ
-    void ApplyTuning()
+    inline void ApplyTuning()
     {
         return stub<member_func_t<void, gizFerryMgr>>(0x579910, this);
     }
 
     // 0x5795C0 | ??1gizFerryMgr@@UAE@XZ
-    ~gizFerryMgr() override
+    inline ~gizFerryMgr() override
     {
         stub<member_func_t<void, gizFerryMgr>>(0x5795C0, this);
     }
 
     // 0x579820 | ?Cull@gizFerryMgr@@UAEXXZ
-    void Cull() override
+    inline void Cull() override
     {
         return stub<member_func_t<void, gizFerryMgr>>(0x579820, this);
     }
 
     // 0x5797D0 | ?Update@gizFerryMgr@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, gizFerryMgr>>(0x5797D0, this);
     }
 
     // 0x579650 | ?Reset@gizFerryMgr@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, gizFerryMgr>>(0x579650, this);
     }
@@ -99,59 +99,59 @@ public:
     // gizFerry::`vftable' @ 0x5B6180
 
     // 0x579260 | ??0gizFerry@@QAE@XZ
-    gizFerry()
+    inline gizFerry()
     {
         stub<member_func_t<void, gizFerry>>(0x579260, this);
     }
 
     // 0x5792D0 | ??1gizFerry@@QAE@XZ
-    ~gizFerry()
+    inline ~gizFerry()
     {
         stub<member_func_t<void, gizFerry>>(0x5792D0, this);
     }
 
     // 0x5793A0 | ?Init@gizFerry@@QAEXPADPAVdgPath@@@Z
-    void Init(char* arg1, class dgPath* arg2)
+    inline void Init(char* arg1, class dgPath* arg2)
     {
         return stub<member_func_t<void, gizFerry, char*, class dgPath*>>(0x5793A0, this, arg1, arg2);
     }
 
     // 0x579460 | ?Update@gizFerry@@QAEXXZ
-    void Update()
+    inline void Update()
     {
         return stub<member_func_t<void, gizFerry>>(0x579460, this);
     }
 
     // 0x579520 | ?SetSpeed@gizFerry@@QAEXM@Z
-    void SetSpeed(f32 arg1)
+    inline void SetSpeed(float arg1)
     {
-        return stub<member_func_t<void, gizFerry, f32>>(0x579520, this, arg1);
+        return stub<member_func_t<void, gizFerry, float>>(0x579520, this, arg1);
     }
 
     // 0x579540 | ?Cull@gizFerry@@QAEXH@Z
-    void Cull(i32 arg1)
+    inline void Cull(int32_t arg1)
     {
-        return stub<member_func_t<void, gizFerry, i32>>(0x579540, this, arg1);
+        return stub<member_func_t<void, gizFerry, int32_t>>(0x579540, this, arg1);
     }
 
     // 0x5799A0 | ??_EgizFerry@@QAEPAXI@Z
     // Skipped (scalar/vector destructor)
 
     // 0x579350 | ?Reset@gizFerry@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, gizFerry>>(0x579350, this);
     }
 
     // 0x579A00 | ?Draw@gizFerry@@UAEXH@Z
-    void Draw(i32 arg1) override
+    inline void Draw(int32_t arg1) override
     {
-        return stub<member_func_t<void, gizFerry, i32>>(0x579A00, this, arg1);
+        return stub<member_func_t<void, gizFerry, int32_t>>(0x579A00, this, arg1);
     }
 
     // 0x579A10 | ?SizeOf@gizFerry@@UAEIXZ
-    u32 SizeOf() override
+    inline uint32_t SizeOf() override
     {
-        return stub<member_func_t<u32, gizFerry>>(0x579A10, this);
+        return stub<member_func_t<uint32_t, gizFerry>>(0x579A10, this);
     }
 };

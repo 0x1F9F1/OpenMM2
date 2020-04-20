@@ -39,19 +39,20 @@ public:
     // vehAxle::`vftable' @ 0x5B309C
 
     // 0x4D9990 | ??0vehAxle@@QAE@XZ
-    vehAxle()
+    inline vehAxle()
     {
         stub<member_func_t<void, vehAxle>>(0x4D9990, this);
     }
 
     // 0x4D9A20 | ?ComputeConstants@vehAxle@@QAEXXZ
-    void ComputeConstants()
+    inline void ComputeConstants()
     {
         return stub<member_func_t<void, vehAxle>>(0x4D9A20, this);
     }
 
     // 0x4D9A50 | ?Init@vehAxle@@QAEXPAVvehCarSim@@PBD1PAVvehWheel@@2@Z
-    void Init(class vehCarSim* arg1, char const* arg2, char const* arg3, class vehWheel* arg4, class vehWheel* arg5)
+    inline void Init(
+        class vehCarSim* arg1, char const* arg2, char const* arg3, class vehWheel* arg4, class vehWheel* arg5)
     {
         return stub<
             member_func_t<void, vehAxle, class vehCarSim*, char const*, char const*, class vehWheel*, class vehWheel*>>(
@@ -59,25 +60,25 @@ public:
     }
 
     // 0x4CCEE0 | ??1vehAxle@@UAE@XZ
-    ~vehAxle() override
+    inline ~vehAxle() override
     {
         stub<member_func_t<void, vehAxle>>(0x4CCEE0, this);
     }
 
     // 0x4D9B20 | ?Update@vehAxle@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, vehAxle>>(0x4D9B20, this);
     }
 
     // 0x4D9CA0 | ?FileIO@vehAxle@@UAEXAAVdatParser@@@Z
-    void FileIO(class datParser& arg1) override
+    inline void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, vehAxle, class datParser&>>(0x4D9CA0, this, arg1);
     }
 
     // 0x4D9D20 | ?GetClassName@vehAxle@@UAEPADXZ
-    char* GetClassName() override
+    inline char* GetClassName() override
     {
         return stub<member_func_t<char*, vehAxle>>(0x4D9D20, this);
     }

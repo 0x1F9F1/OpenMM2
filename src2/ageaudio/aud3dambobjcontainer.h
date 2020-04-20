@@ -33,38 +33,38 @@ struct Aud3DAmbObjContainer
 {
 public:
     // 0x513710 | ??0Aud3DAmbObjContainer@@QAE@XZ
-    Aud3DAmbObjContainer()
+    inline Aud3DAmbObjContainer()
     {
         stub<member_func_t<void, Aud3DAmbObjContainer>>(0x513710, this);
     }
 
     // 0x513720 | ??1Aud3DAmbObjContainer@@QAE@XZ
-    ~Aud3DAmbObjContainer()
+    inline ~Aud3DAmbObjContainer()
     {
         stub<member_func_t<void, Aud3DAmbObjContainer>>(0x513720, this);
     }
 
     // 0x513780 | ?FileValid@Aud3DAmbObjContainer@@AAE_NPAD@Z
-    bool FileValid(char* arg1)
+    inline bool FileValid(char* arg1)
     {
         return stub<member_func_t<bool, Aud3DAmbObjContainer, char*>>(0x513780, this, arg1);
     }
 
     // 0x5137C0 | ?Init@Aud3DAmbObjContainer@@QAE_NPAD@Z
-    bool Init(char* arg1)
+    inline bool Init(char* arg1)
     {
         return stub<member_func_t<bool, Aud3DAmbObjContainer, char*>>(0x5137C0, this, arg1);
     }
 
     // 0x5138A0 | ?CreateAmbientObject@Aud3DAmbObjContainer@@AAEXPAD@Z
-    void CreateAmbientObject(char* arg1)
+    inline void CreateAmbientObject(char* arg1)
     {
         return stub<member_func_t<void, Aud3DAmbObjContainer, char*>>(0x5138A0, this, arg1);
     }
 
     // 0x513970 | ?Update@Aud3DAmbObjContainer@@QAEXM@Z
-    void Update(f32 arg1)
+    inline void Update(float arg1)
     {
-        return stub<member_func_t<void, Aud3DAmbObjContainer, f32>>(0x513970, this, arg1);
+        return stub<member_func_t<void, Aud3DAmbObjContainer, float>>(0x513970, this, arg1);
     }
 };

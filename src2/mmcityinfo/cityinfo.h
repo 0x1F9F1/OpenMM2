@@ -35,19 +35,19 @@ public:
     // mmCityInfo::`vftable' @ 0x5B524C
 
     // 0x52A540 | ??0mmCityInfo@@QAE@XZ
-    mmCityInfo()
+    inline mmCityInfo()
     {
         stub<member_func_t<void, mmCityInfo>>(0x52A540, this);
     }
 
     // 0x52A570 | ?Load@mmCityInfo@@QAEHPAD@Z
-    i32 Load(char* arg1)
+    inline int32_t Load(char* arg1)
     {
-        return stub<member_func_t<i32, mmCityInfo, char*>>(0x52A570, this, arg1);
+        return stub<member_func_t<int32_t, mmCityInfo, char*>>(0x52A570, this, arg1);
     }
 
     // 0x52A560 | ??1mmCityInfo@@UAE@XZ
-    virtual ~mmCityInfo()
+    virtual inline ~mmCityInfo()
     {
         stub<member_func_t<void, mmCityInfo>>(0x52A560, this);
     }

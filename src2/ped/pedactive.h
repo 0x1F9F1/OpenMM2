@@ -50,19 +50,19 @@ public:
     // Skipped (scalar/vector destructor)
 
     // 0x57BE90 | ??0pedActiveData@@QAE@XZ
-    pedActiveData()
+    inline pedActiveData()
     {
         stub<member_func_t<void, pedActiveData>>(0x57BE90, this);
     }
 
     // 0x57BEA0 | ?Init@pedActiveData@@QAEXPBD@Z
-    void Init(char const* arg1)
+    inline void Init(char const* arg1)
     {
         return stub<member_func_t<void, pedActiveData, char const*>>(0x57BEA0, this, arg1);
     }
 
     // 0x57C040 | ??1pedActiveData@@QAE@XZ
-    ~pedActiveData()
+    inline ~pedActiveData()
     {
         stub<member_func_t<void, pedActiveData>>(0x57C040, this);
     }
@@ -74,86 +74,86 @@ public:
     // pedActive::`vftable' @ 0x5B639C
 
     // 0x57BD70 | ??0pedActive@@QAE@XZ
-    pedActive()
+    inline pedActive()
     {
         stub<member_func_t<void, pedActive>>(0x57BD70, this);
     }
 
     // 0x57C090 | ?IsAsleep@pedActive@@QAEHXZ
-    i32 IsAsleep()
+    inline int32_t IsAsleep()
     {
-        return stub<member_func_t<i32, pedActive>>(0x57C090, this);
+        return stub<member_func_t<int32_t, pedActive>>(0x57C090, this);
     }
 
     // 0x57C2B0 | ?SetRagdollBlend@pedActive@@QAEXM@Z
-    void SetRagdollBlend(f32 arg1)
+    inline void SetRagdollBlend(float arg1)
     {
-        return stub<member_func_t<void, pedActive, f32>>(0x57C2B0, this, arg1);
+        return stub<member_func_t<void, pedActive, float>>(0x57C2B0, this, arg1);
     }
 
     // 0x57C2C0 | ?StartRagdoll@pedActive@@QAEXXZ
-    void StartRagdoll()
+    inline void StartRagdoll()
     {
         return stub<member_func_t<void, pedActive>>(0x57C2C0, this);
     }
 
     // 0x57C2D0 | ?StopRagdoll@pedActive@@QAEXXZ
-    void StopRagdoll()
+    inline void StopRagdoll()
     {
         return stub<member_func_t<void, pedActive>>(0x57C2D0, this);
     }
 
     // 0x57BF80 | ??1pedActive@@UAE@XZ
-    ~pedActive() override
+    inline ~pedActive() override
     {
         stub<member_func_t<void, pedActive>>(0x57BF80, this);
     }
 
     // 0x57C0F0 | ?Update@pedActive@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, pedActive>>(0x57C0F0, this);
     }
 
     // 0x57C500 | ?PostUpdate@pedActive@@UAEXXZ
-    void PostUpdate() override
+    inline void PostUpdate() override
     {
         return stub<member_func_t<void, pedActive>>(0x57C500, this);
     }
 
     // 0x57C290 | ?GetICS@pedActive@@UAEPAVphInertialCS@@XZ
-    class phInertialCS* GetICS() override
+    inline class phInertialCS* GetICS() override
     {
         return stub<member_func_t<class phInertialCS*, pedActive>>(0x57C290, this);
     }
 
     // 0x57C2A0 | ?GetInst@pedActive@@UAEPAVlvlInstance@@XZ
-    class lvlInstance* GetInst() override
+    inline class lvlInstance* GetInst() override
     {
         return stub<member_func_t<class lvlInstance*, pedActive>>(0x57C2A0, this);
     }
 
     // 0x57C2E0 | ?FirstImpactCallback@pedActive@@UAEXXZ
-    void FirstImpactCallback() override
+    inline void FirstImpactCallback() override
     {
         return stub<member_func_t<void, pedActive>>(0x57C2E0, this);
     }
 
     // 0x57C0C0 | ?Reset@pedActive@@UAEXXZ
-    virtual void Reset()
+    virtual inline void Reset()
     {
         return stub<member_func_t<void, pedActive>>(0x57C0C0, this);
     }
 
     // 0x57C170 | ?Activate@pedActive@@UAEXPAVaiPedestrianInstance@@PAVpedActiveData@@@Z
-    virtual void Activate(class aiPedestrianInstance* arg1, class pedActiveData* arg2)
+    virtual inline void Activate(class aiPedestrianInstance* arg1, class pedActiveData* arg2)
     {
         return stub<member_func_t<void, pedActive, class aiPedestrianInstance*, class pedActiveData*>>(
             0x57C170, this, arg1, arg2);
     }
 
     // 0x57C260 | ?Deactivate@pedActive@@UAEXXZ
-    virtual void Deactivate()
+    virtual inline void Deactivate()
     {
         return stub<member_func_t<void, pedActive>>(0x57C260, this);
     }

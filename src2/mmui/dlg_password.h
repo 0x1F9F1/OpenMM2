@@ -36,26 +36,26 @@ public:
     // Dialog_Password::`vftable' @ 0x5B3F6C
 
     // 0x4FB010 | ??0Dialog_Password@@QAE@HMMMMPAD@Z
-    Dialog_Password(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    inline Dialog_Password(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
     {
-        stub<member_func_t<void, Dialog_Password, i32, f32, f32, f32, f32, char*>>(
+        stub<member_func_t<void, Dialog_Password, int32_t, float, float, float, float, char*>>(
             0x4FB010, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4FB1C0 | ?PasswordCallback@Dialog_Password@@QAEXXZ
-    void PasswordCallback()
+    inline void PasswordCallback()
     {
         return stub<member_func_t<void, Dialog_Password>>(0x4FB1C0, this);
     }
 
     // 0x4FB1A0 | ??1Dialog_Password@@UAE@XZ
-    ~Dialog_Password() override
+    inline ~Dialog_Password() override
     {
         stub<member_func_t<void, Dialog_Password>>(0x4FB1A0, this);
     }
 
     // 0x4FB1B0 | ?PreSetup@Dialog_Password@@UAEXXZ
-    void PreSetup() override
+    inline void PreSetup() override
     {
         return stub<member_func_t<void, Dialog_Password>>(0x4FB1B0, this);
     }

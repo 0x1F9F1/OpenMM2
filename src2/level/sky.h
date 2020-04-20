@@ -49,62 +49,62 @@ public:
     // lvlSky::`vftable' @ 0x5B19F4
 
     // 0x464C00 | ??0lvlSky@@QAE@XZ
-    lvlSky()
+    inline lvlSky()
     {
         stub<member_func_t<void, lvlSky>>(0x464C00, this);
     }
 
     // 0x464CB0 | ?AutoInit@lvlSky@@QAEXPBD0H@Z
-    void AutoInit(char const* arg1, char const* arg2, i32 arg3)
+    inline void AutoInit(char const* arg1, char const* arg2, int32_t arg3)
     {
-        return stub<member_func_t<void, lvlSky, char const*, char const*, i32>>(0x464CB0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, lvlSky, char const*, char const*, int32_t>>(0x464CB0, this, arg1, arg2, arg3);
     }
 
     // 0x464E90 | ?Init@lvlSky@@QAEXPBDMMMH@Z
-    void Init(char const* arg1, f32 arg2, f32 arg3, f32 arg4, i32 arg5)
+    inline void Init(char const* arg1, float arg2, float arg3, float arg4, int32_t arg5)
     {
-        return stub<member_func_t<void, lvlSky, char const*, f32, f32, f32, i32>>(
+        return stub<member_func_t<void, lvlSky, char const*, float, float, float, int32_t>>(
             0x464E90, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x465270 | ?SetupFog@lvlSky@@QAEXM@Z
-    void SetupFog(f32 arg1)
+    inline void SetupFog(float arg1)
     {
-        return stub<member_func_t<void, lvlSky, f32>>(0x465270, this, arg1);
+        return stub<member_func_t<void, lvlSky, float>>(0x465270, this, arg1);
     }
 
     // 0x464CA0 | ??1lvlSky@@UAE@XZ
-    virtual ~lvlSky()
+    virtual inline ~lvlSky()
     {
         stub<member_func_t<void, lvlSky>>(0x464CA0, this);
     }
 
     // 0x464C90 | ?Reset@lvlSky@@UAEXXZ
-    virtual void Reset()
+    virtual inline void Reset()
     {
         return stub<member_func_t<void, lvlSky>>(0x464C90, this);
     }
 
     // 0x464F90 | ?Update@lvlSky@@UAEXXZ
-    virtual void Update()
+    virtual inline void Update()
     {
         return stub<member_func_t<void, lvlSky>>(0x464F90, this);
     }
 
     // 0x464FB0 | ?Draw@lvlSky@@UAEXXZ
-    virtual void Draw()
+    virtual inline void Draw()
     {
         return stub<member_func_t<void, lvlSky>>(0x464FB0, this);
     }
 
     // 0x4650B0 | ?DrawWithNoZState@lvlSky@@UAEXXZ
-    virtual void DrawWithNoZState()
+    virtual inline void DrawWithNoZState()
     {
         return stub<member_func_t<void, lvlSky>>(0x4650B0, this);
     }
 
     // 0x465140 | ?DrawHat@lvlSky@@UAEXXZ
-    virtual void DrawHat()
+    virtual inline void DrawHat()
     {
         return stub<member_func_t<void, lvlSky>>(0x465140, this);
     }

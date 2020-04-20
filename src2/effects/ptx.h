@@ -42,9 +42,9 @@
 */
 
 // 0x461580 | ?cmpPtx@@YAHPBX0@Z
-inline i32 cmpPtx(void const* arg1, void const* arg2)
+inline int32_t cmpPtx(void const* arg1, void const* arg2)
 {
-    return stub<cdecl_t<i32, void const*, void const*>>(0x461580, arg1, arg2);
+    return stub<cdecl_t<int32_t, void const*, void const*>>(0x461580, arg1, arg2);
 }
 
 class asParticles : Base
@@ -53,56 +53,56 @@ public:
     // asParticles::`vftable' @ 0x5B1974
 
     // 0x460EB0 | ??0asParticles@@QAE@XZ
-    asParticles()
+    inline asParticles()
     {
         stub<member_func_t<void, asParticles>>(0x460EB0, this);
     }
 
     // 0x460FB0 | ?Init@asParticles@@QAEXHHHHPAUasMeshCardVertex@@@Z
-    void Init(i32 arg1, i32 arg2, i32 arg3, i32 arg4, struct asMeshCardVertex* arg5)
+    inline void Init(int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, struct asMeshCardVertex* arg5)
     {
-        return stub<member_func_t<void, asParticles, i32, i32, i32, i32, struct asMeshCardVertex*>>(
+        return stub<member_func_t<void, asParticles, int32_t, int32_t, int32_t, int32_t, struct asMeshCardVertex*>>(
             0x460FB0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x461040 | ?Reset@asParticles@@QAEXXZ
-    void Reset()
+    inline void Reset()
     {
         return stub<member_func_t<void, asParticles>>(0x461040, this);
     }
 
     // 0x461050 | ?SetTexture@asParticles@@QAEXPAVgfxTexture@@@Z
-    void SetTexture(class gfxTexture* arg1)
+    inline void SetTexture(class gfxTexture* arg1)
     {
         return stub<member_func_t<void, asParticles, class gfxTexture*>>(0x461050, this, arg1);
     }
 
     // 0x461090 | ?SetTexture@asParticles@@QAEXPBD@Z
-    void SetTexture(char const* arg1)
+    inline void SetTexture(char const* arg1)
     {
         return stub<member_func_t<void, asParticles, char const*>>(0x461090, this, arg1);
     }
 
     // 0x4610F0 | ?Update@asParticles@@QAEXXZ
-    void Update()
+    inline void Update()
     {
         return stub<member_func_t<void, asParticles>>(0x4610F0, this);
     }
 
     // 0x461490 | ?Blast@asParticles@@QAEXHPAVasBirthRule@@@Z
-    void Blast(i32 arg1, class asBirthRule* arg2)
+    inline void Blast(int32_t arg1, class asBirthRule* arg2)
     {
-        return stub<member_func_t<void, asParticles, i32, class asBirthRule*>>(0x461490, this, arg1, arg2);
+        return stub<member_func_t<void, asParticles, int32_t, class asBirthRule*>>(0x461490, this, arg1, arg2);
     }
 
     // 0x460F20 | ??1asParticles@@UAE@XZ
-    ~asParticles() override
+    inline ~asParticles() override
     {
         stub<member_func_t<void, asParticles>>(0x460F20, this);
     }
 
     // 0x4615A0 | ?Cull@asParticles@@UAEXXZ
-    virtual void Cull()
+    virtual inline void Cull()
     {
         return stub<member_func_t<void, asParticles>>(0x4615A0, this);
     }
@@ -112,21 +112,21 @@ struct asMeshCardInfo
 {
 public:
     // 0x461600 | ?Init@asMeshCardInfo@@QAEXHPAUasMeshCardVertex@@HHH@Z
-    void Init(i32 arg1, struct asMeshCardVertex* arg2, i32 arg3, i32 arg4, i32 arg5)
+    inline void Init(int32_t arg1, struct asMeshCardVertex* arg2, int32_t arg3, int32_t arg4, int32_t arg5)
     {
-        return stub<member_func_t<void, asMeshCardInfo, i32, struct asMeshCardVertex*, i32, i32, i32>>(
+        return stub<member_func_t<void, asMeshCardInfo, int32_t, struct asMeshCardVertex*, int32_t, int32_t, int32_t>>(
             0x461600, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x461770 | ?Draw@asMeshCardInfo@@QAEXPBUasSparkPos@@H@Z
-    void Draw(struct asSparkPos const* arg1, i32 arg2)
+    inline void Draw(struct asSparkPos const* arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, asMeshCardInfo, struct asSparkPos const*, i32>>(0x461770, this, arg1, arg2);
+        return stub<member_func_t<void, asMeshCardInfo, struct asSparkPos const*, int32_t>>(0x461770, this, arg1, arg2);
     }
 
     // 0x461890 | ?DrawShadows@asMeshCardInfo@@QAEXPBUasSparkPos@@H@Z
-    void DrawShadows(struct asSparkPos const* arg1, i32 arg2)
+    inline void DrawShadows(struct asSparkPos const* arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, asMeshCardInfo, struct asSparkPos const*, i32>>(0x461890, this, arg1, arg2);
+        return stub<member_func_t<void, asMeshCardInfo, struct asSparkPos const*, int32_t>>(0x461890, this, arg1, arg2);
     }
 };

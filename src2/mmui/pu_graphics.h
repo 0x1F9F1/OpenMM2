@@ -41,43 +41,44 @@ public:
     // PUGraphics::`vftable' @ 0x5B46D8
 
     // 0x50A000 | ??0PUGraphics@@QAE@HMMMM@Z
-    PUGraphics(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
+    inline PUGraphics(int32_t arg1, float arg2, float arg3, float arg4, float arg5)
     {
-        stub<member_func_t<void, PUGraphics, i32, f32, f32, f32, f32>>(0x50A000, this, arg1, arg2, arg3, arg4, arg5);
+        stub<member_func_t<void, PUGraphics, int32_t, float, float, float, float>>(
+            0x50A000, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x50A500 | ?CancelAction@PUGraphics@@QAEXXZ
-    void CancelAction()
+    inline void CancelAction()
     {
         return stub<member_func_t<void, PUGraphics>>(0x50A500, this);
     }
 
     // 0x50A510 | ?SetFarClip@PUGraphics@@QAEXM@Z
-    void SetFarClip(f32 arg1)
+    inline void SetFarClip(float arg1)
     {
-        return stub<member_func_t<void, PUGraphics, f32>>(0x50A510, this, arg1);
+        return stub<member_func_t<void, PUGraphics, float>>(0x50A510, this, arg1);
     }
 
     // 0x50A530 | ?FixClip@PUGraphics@@QAEXXZ
-    void FixClip()
+    inline void FixClip()
     {
         return stub<member_func_t<void, PUGraphics>>(0x50A530, this);
     }
 
     // 0x50A580 | ?RenderQualityCB@PUGraphics@@QAEXXZ
-    void RenderQualityCB()
+    inline void RenderQualityCB()
     {
         return stub<member_func_t<void, PUGraphics>>(0x50A580, this);
     }
 
     // 0x50A4A0 | ??1PUGraphics@@UAE@XZ
-    ~PUGraphics() override
+    inline ~PUGraphics() override
     {
         stub<member_func_t<void, PUGraphics>>(0x50A4A0, this);
     }
 
     // 0x50A4B0 | ?PreSetup@PUGraphics@@UAEXXZ
-    void PreSetup() override
+    inline void PreSetup() override
     {
         return stub<member_func_t<void, PUGraphics>>(0x50A4B0, this);
     }

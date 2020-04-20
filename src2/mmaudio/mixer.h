@@ -51,104 +51,104 @@ public:
     // MixerCTL::`vftable' @ 0x5B4E70
 
     // 0x51C1F0 | ?Init@MixerCTL@@QAEKXZ
-    u32 Init()
+    inline uint32_t Init()
     {
-        return stub<member_func_t<u32, MixerCTL>>(0x51C1F0, this);
+        return stub<member_func_t<uint32_t, MixerCTL>>(0x51C1F0, this);
     }
 
     // 0x51C240 | ?AssignWaveBalance@MixerCTL@@QAEXM@Z
-    void AssignWaveBalance(f32 arg1)
+    inline void AssignWaveBalance(float arg1)
     {
-        return stub<member_func_t<void, MixerCTL, f32>>(0x51C240, this, arg1);
+        return stub<member_func_t<void, MixerCTL, float>>(0x51C240, this, arg1);
     }
 
     // 0x51C290 | ?AssignCDBalance@MixerCTL@@QAEXM@Z
-    void AssignCDBalance(f32 arg1)
+    inline void AssignCDBalance(float arg1)
     {
-        return stub<member_func_t<void, MixerCTL, f32>>(0x51C290, this, arg1);
+        return stub<member_func_t<void, MixerCTL, float>>(0x51C290, this, arg1);
     }
 
     // 0x51C2E0 | ?RefreshAll@MixerCTL@@QAEXK@Z
-    void RefreshAll(u32 arg1)
+    inline void RefreshAll(uint32_t arg1)
     {
-        return stub<member_func_t<void, MixerCTL, u32>>(0x51C2E0, this, arg1);
+        return stub<member_func_t<void, MixerCTL, uint32_t>>(0x51C2E0, this, arg1);
     }
 
     // 0x51C2F0 | ?GetWaveBalance@MixerCTL@@QAEMXZ
-    f32 GetWaveBalance()
+    inline float GetWaveBalance()
     {
-        return stub<member_func_t<f32, MixerCTL>>(0x51C2F0, this);
+        return stub<member_func_t<float, MixerCTL>>(0x51C2F0, this);
     }
 
     // 0x51C300 | ?GetWaveVolume@MixerCTL@@QAEMXZ
-    f32 GetWaveVolume()
+    inline float GetWaveVolume()
     {
-        return stub<member_func_t<f32, MixerCTL>>(0x51C300, this);
+        return stub<member_func_t<float, MixerCTL>>(0x51C300, this);
     }
 
     // 0x51C310 | ?AssignWaveVolume@MixerCTL@@QAEXM@Z
-    void AssignWaveVolume(f32 arg1)
+    inline void AssignWaveVolume(float arg1)
     {
-        return stub<member_func_t<void, MixerCTL, f32>>(0x51C310, this, arg1);
+        return stub<member_func_t<void, MixerCTL, float>>(0x51C310, this, arg1);
     }
 
     // 0x51C330 | ?AssignCDVolume@MixerCTL@@QAEXM@Z
-    void AssignCDVolume(f32 arg1)
+    inline void AssignCDVolume(float arg1)
     {
-        return stub<member_func_t<void, MixerCTL, f32>>(0x51C330, this, arg1);
+        return stub<member_func_t<void, MixerCTL, float>>(0x51C330, this, arg1);
     }
 
     // 0x51C350 | ?GetCDBalance@MixerCTL@@QAEMXZ
-    f32 GetCDBalance()
+    inline float GetCDBalance()
     {
-        return stub<member_func_t<f32, MixerCTL>>(0x51C350, this);
+        return stub<member_func_t<float, MixerCTL>>(0x51C350, this);
     }
 
     // 0x51C360 | ?GetCDVolume@MixerCTL@@QAEMXZ
-    f32 GetCDVolume()
+    inline float GetCDVolume()
     {
-        return stub<member_func_t<f32, MixerCTL>>(0x51C360, this);
+        return stub<member_func_t<float, MixerCTL>>(0x51C360, this);
     }
 
     // 0x51C370 | ?AssignMixerVolume@MixerCTL@@QAEKMK@Z
-    u32 AssignMixerVolume(f32 arg1, u32 arg2)
+    inline uint32_t AssignMixerVolume(float arg1, uint32_t arg2)
     {
-        return stub<member_func_t<u32, MixerCTL, f32, u32>>(0x51C370, this, arg1, arg2);
+        return stub<member_func_t<uint32_t, MixerCTL, float, uint32_t>>(0x51C370, this, arg1, arg2);
     }
 
     // 0x51C5C0 | ?AssignMixerBalance@MixerCTL@@QAEKMK@Z
-    u32 AssignMixerBalance(f32 arg1, u32 arg2)
+    inline uint32_t AssignMixerBalance(float arg1, uint32_t arg2)
     {
-        return stub<member_func_t<u32, MixerCTL, f32, u32>>(0x51C5C0, this, arg1, arg2);
+        return stub<member_func_t<uint32_t, MixerCTL, float, uint32_t>>(0x51C5C0, this, arg1, arg2);
     }
 
     // 0x51C870 | ?GetMixerBalance@MixerCTL@@QAEMK@Z
-    f32 GetMixerBalance(u32 arg1)
+    inline float GetMixerBalance(uint32_t arg1)
     {
-        return stub<member_func_t<f32, MixerCTL, u32>>(0x51C870, this, arg1);
+        return stub<member_func_t<float, MixerCTL, uint32_t>>(0x51C870, this, arg1);
     }
 
     // 0x51CAE0 | ?SetDeviceNum@MixerCTL@@QAEXI@Z
-    void SetDeviceNum(u32 arg1)
+    inline void SetDeviceNum(uint32_t arg1)
     {
-        return stub<member_func_t<void, MixerCTL, u32>>(0x51CAE0, this, arg1);
+        return stub<member_func_t<void, MixerCTL, uint32_t>>(0x51CAE0, this, arg1);
     }
 
     // 0x51CB00 | ?GetErrorMessage@MixerCTL@@AAEPADK@Z
-    char* GetErrorMessage(u32 arg1)
+    inline char* GetErrorMessage(uint32_t arg1)
     {
-        return stub<member_func_t<char*, MixerCTL, u32>>(0x51CB00, this, arg1);
+        return stub<member_func_t<char*, MixerCTL, uint32_t>>(0x51CB00, this, arg1);
     }
 
     // 0x51CBA0 | ?WindowProc@MixerCTL@@AAEJPAUHWND__@@IIJ@Z
-    i32 WindowProc(struct HWND__* arg1, u32 arg2, u32 arg3, i32 arg4)
+    inline int32_t WindowProc(struct HWND__* arg1, uint32_t arg2, uint32_t arg3, int32_t arg4)
     {
-        return stub<member_func_t<i32, MixerCTL, struct HWND__*, u32, u32, i32>>(
+        return stub<member_func_t<int32_t, MixerCTL, struct HWND__*, uint32_t, uint32_t, int32_t>>(
             0x51CBA0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x51C230 | ??1MixerCTL@@UAE@XZ
-    virtual ~MixerCTL()
+    virtual inline ~MixerCTL()
     {
         stub<member_func_t<void, MixerCTL>>(0x51C230, this);
     }
@@ -158,14 +158,14 @@ struct VolumeDW
 {
 public:
     // 0x51C100 | ?Set@VolumeDW@@QAEXMM@Z
-    void Set(f32 arg1, f32 arg2)
+    inline void Set(float arg1, float arg2)
     {
-        return stub<member_func_t<void, VolumeDW, f32, f32>>(0x51C100, this, arg1, arg2);
+        return stub<member_func_t<void, VolumeDW, float, float>>(0x51C100, this, arg1, arg2);
     }
 
     // 0x51C1C0 | ?Value@VolumeDW@@QAEKXZ
-    u32 Value()
+    inline uint32_t Value()
     {
-        return stub<member_func_t<u32, VolumeDW>>(0x51C1C0, this);
+        return stub<member_func_t<uint32_t, VolumeDW>>(0x51C1C0, this);
     }
 };

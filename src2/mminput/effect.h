@@ -31,9 +31,9 @@
 */
 
 // 0x5314E0 | ?inputEnumEffectTypeProc@@YGHPBUDIEFFECTINFOA@@PAX@Z
-inline i32 __stdcall inputEnumEffectTypeProc(struct DIEFFECTINFOA const* arg1, void* arg2)
+inline int32_t __stdcall inputEnumEffectTypeProc(struct DIEFFECTINFOA const* arg1, void* arg2)
 {
-    return stub<stdcall_t<i32, struct DIEFFECTINFOA const*, void*>>(0x5314E0, arg1, arg2);
+    return stub<stdcall_t<int32_t, struct DIEFFECTINFOA const*, void*>>(0x5314E0, arg1, arg2);
 }
 
 class mmEffectFF
@@ -42,13 +42,13 @@ public:
     // mmEffectFF::`vftable' @ 0x5B52DC
 
     // 0x531540 | ??0mmEffectFF@@QAE@XZ
-    mmEffectFF()
+    inline mmEffectFF()
     {
         stub<member_func_t<void, mmEffectFF>>(0x531540, this);
     }
 
     // 0x5315B0 | ??1mmEffectFF@@QAE@XZ
-    ~mmEffectFF()
+    inline ~mmEffectFF()
     {
         stub<member_func_t<void, mmEffectFF>>(0x5315B0, this);
     }
@@ -56,20 +56,20 @@ public:
     // 0x582519 | __purecall
 
     // 0x5315D0 | ?Play@mmEffectFF@@UAEHXZ
-    virtual i32 Play()
+    virtual inline int32_t Play()
     {
-        return stub<member_func_t<i32, mmEffectFF>>(0x5315D0, this);
+        return stub<member_func_t<int32_t, mmEffectFF>>(0x5315D0, this);
     }
 
     // 0x5315E0 | ?Stop@mmEffectFF@@UAEHXZ
-    virtual i32 Stop()
+    virtual inline int32_t Stop()
     {
-        return stub<member_func_t<i32, mmEffectFF>>(0x5315E0, this);
+        return stub<member_func_t<int32_t, mmEffectFF>>(0x5315E0, this);
     }
 
     // 0x5315F0 | ?SetValues@mmEffectFF@@UAEHMM@Z
-    virtual i32 SetValues(f32 arg1, f32 arg2)
+    virtual inline int32_t SetValues(float arg1, float arg2)
     {
-        return stub<member_func_t<i32, mmEffectFF, f32, f32>>(0x5315F0, this, arg1, arg2);
+        return stub<member_func_t<int32_t, mmEffectFF, float, float>>(0x5315F0, this, arg1, arg2);
     }
 };

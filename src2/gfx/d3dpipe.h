@@ -91,9 +91,10 @@
 */
 
 // 0x4A9270 | ?MultiMonCallback@@YGHPAU_GUID@@PAD1PAXPAUHMONITOR__@@@Z
-inline i32 __stdcall MultiMonCallback(struct _GUID* arg1, char* arg2, char* arg3, void* arg4, struct HMONITOR__* arg5)
+inline int32_t __stdcall MultiMonCallback(
+    struct _GUID* arg1, char* arg2, char* arg3, void* arg4, struct HMONITOR__* arg5)
 {
-    return stub<stdcall_t<i32, struct _GUID*, char*, char*, void*, struct HMONITOR__*>>(
+    return stub<stdcall_t<int32_t, struct _GUID*, char*, char*, void*, struct HMONITOR__*>>(
         0x4A9270, arg1, arg2, arg3, arg4, arg5);
 }
 
@@ -163,19 +164,19 @@ struct gfxVertexBuffer
 {
 public:
     // 0x4AB660 | ??0gfxVertexBuffer@@QAE@PAUIDirect3DVertexBuffer7@@@Z
-    gfxVertexBuffer(struct IDirect3DVertexBuffer7* arg1)
+    inline gfxVertexBuffer(struct IDirect3DVertexBuffer7* arg1)
     {
         stub<member_func_t<void, gfxVertexBuffer, struct IDirect3DVertexBuffer7*>>(0x4AB660, this, arg1);
     }
 
     // 0x4AB690 | ??0gfxVertexBuffer@@QAE@II@Z
-    gfxVertexBuffer(u32 arg1, u32 arg2)
+    inline gfxVertexBuffer(uint32_t arg1, uint32_t arg2)
     {
-        stub<member_func_t<void, gfxVertexBuffer, u32, u32>>(0x4AB690, this, arg1, arg2);
+        stub<member_func_t<void, gfxVertexBuffer, uint32_t, uint32_t>>(0x4AB690, this, arg1, arg2);
     }
 
     // 0x4AB6E0 | ??1gfxVertexBuffer@@QAE@XZ
-    ~gfxVertexBuffer()
+    inline ~gfxVertexBuffer()
     {
         stub<member_func_t<void, gfxVertexBuffer>>(0x4AB6E0, this);
     }

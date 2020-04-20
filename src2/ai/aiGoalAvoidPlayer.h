@@ -42,62 +42,62 @@ public:
     // aiGoalAvoidPlayer::`vftable' @ 0x5B5BB8
 
     // 0x56AD00 | ??0aiGoalAvoidPlayer@@QAE@PAVaiRailSet@@PAVaiVehicleAmbient@@@Z
-    aiGoalAvoidPlayer(class aiRailSet* arg1, class aiVehicleAmbient* arg2)
+    inline aiGoalAvoidPlayer(class aiRailSet* arg1, class aiVehicleAmbient* arg2)
     {
         stub<member_func_t<void, aiGoalAvoidPlayer, class aiRailSet*, class aiVehicleAmbient*>>(
             0x56AD00, this, arg1, arg2);
     }
 
     // 0x56AD30 | ??1aiGoalAvoidPlayer@@QAE@XZ
-    ~aiGoalAvoidPlayer()
+    inline ~aiGoalAvoidPlayer()
     {
         stub<member_func_t<void, aiGoalAvoidPlayer>>(0x56AD30, this);
     }
 
     // 0x56B200 | ?AvoidPlayer@aiGoalAvoidPlayer@@AAEXXZ
-    void AvoidPlayer()
+    inline void AvoidPlayer()
     {
         return stub<member_func_t<void, aiGoalAvoidPlayer>>(0x56B200, this);
     }
 
     // 0x56B4F0 | ?Context@aiGoalAvoidPlayer@@QAEHXZ
-    i32 Context()
+    inline int32_t Context()
     {
-        return stub<member_func_t<i32, aiGoalAvoidPlayer>>(0x56B4F0, this);
+        return stub<member_func_t<int32_t, aiGoalAvoidPlayer>>(0x56B4F0, this);
     }
 
     // 0x56B510 | ?Priority@aiGoalAvoidPlayer@@QAEHXZ
-    i32 Priority()
+    inline int32_t Priority()
     {
-        return stub<member_func_t<i32, aiGoalAvoidPlayer>>(0x56B510, this);
+        return stub<member_func_t<int32_t, aiGoalAvoidPlayer>>(0x56B510, this);
     }
 
     // 0x56B520 | ?Dump@aiGoalAvoidPlayer@@QAEXXZ
-    void Dump()
+    inline void Dump()
     {
         return stub<member_func_t<void, aiGoalAvoidPlayer>>(0x56B520, this);
     }
 
     // 0x56B570 | ?ReplayDebug@aiGoalAvoidPlayer@@QAEXXZ
-    void ReplayDebug()
+    inline void ReplayDebug()
     {
         return stub<member_func_t<void, aiGoalAvoidPlayer>>(0x56B570, this);
     }
 
     // 0x56AD40 | ?Init@aiGoalAvoidPlayer@@UAEXXZ
-    void Init() override
+    inline void Init() override
     {
         return stub<member_func_t<void, aiGoalAvoidPlayer>>(0x56AD40, this);
     }
 
     // 0x56AD50 | ?Reset@aiGoalAvoidPlayer@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, aiGoalAvoidPlayer>>(0x56AD50, this);
     }
 
     // 0x56AF50 | ?Update@aiGoalAvoidPlayer@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, aiGoalAvoidPlayer>>(0x56AF50, this);
     }
@@ -109,19 +109,19 @@ public:
     // aiGoal::`vftable' @ 0x5B5BC4
 
     // 0x582519 | __purecall
-    virtual void Init()
+    virtual inline void Init()
     {
         return stub<member_func_t<void, aiGoal>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual void Reset()
+    virtual inline void Reset()
     {
         return stub<member_func_t<void, aiGoal>>(0x582519, this);
     }
 
     // 0x56B6D0 | ?Update@aiGoal@@UAEXXZ
-    virtual void Update()
+    virtual inline void Update()
     {
         return stub<member_func_t<void, aiGoal>>(0x56B6D0, this);
     }

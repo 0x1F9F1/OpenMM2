@@ -53,123 +53,124 @@ public:
     // vehWheel::`vftable' @ 0x5B2DCC
 
     // 0x4D2190 | ??0vehWheel@@QAE@XZ
-    vehWheel()
+    inline vehWheel()
     {
         stub<member_func_t<void, vehWheel>>(0x4D2190, this);
     }
 
     // 0x4D23F0 | ?ComputeConstants@vehWheel@@QAEXXZ
-    void ComputeConstants()
+    inline void ComputeConstants()
     {
         return stub<member_func_t<void, vehWheel>>(0x4D23F0, this);
     }
 
     // 0x4D2490 | ?AddNormalLoad@vehWheel@@QAEXM@Z
-    void AddNormalLoad(f32 arg1)
+    inline void AddNormalLoad(float arg1)
     {
-        return stub<member_func_t<void, vehWheel, f32>>(0x4D2490, this, arg1);
+        return stub<member_func_t<void, vehWheel, float>>(0x4D2490, this, arg1);
     }
 
     // 0x4D24C0 | ?SetNormalLoad@vehWheel@@QAEXM@Z
-    void SetNormalLoad(f32 arg1)
+    inline void SetNormalLoad(float arg1)
     {
-        return stub<member_func_t<void, vehWheel, f32>>(0x4D24C0, this, arg1);
+        return stub<member_func_t<void, vehWheel, float>>(0x4D24C0, this, arg1);
     }
 
     // 0x4D25D0 | ?ComputeFriction@vehWheel@@AAEMMPAM@Z
-    f32 ComputeFriction(f32 arg1, f32* arg2)
+    inline float ComputeFriction(float arg1, float* arg2)
     {
-        return stub<member_func_t<f32, vehWheel, f32, f32*>>(0x4D25D0, this, arg1, arg2);
+        return stub<member_func_t<float, vehWheel, float, float*>>(0x4D25D0, this, arg1, arg2);
     }
 
     // 0x4D2690 | ?Init@vehWheel@@QAEXPAVvehCarSim@@PBDPADVVector3@@PAVphInertialCS@@HH@Z
-    void Init(class vehCarSim* arg1, char const* arg2, char* arg3, class Vector3 arg4, class phInertialCS* arg5,
-        i32 arg6, i32 arg7)
+    inline void Init(class vehCarSim* arg1, char const* arg2, char* arg3, class Vector3 arg4, class phInertialCS* arg5,
+        int32_t arg6, int32_t arg7)
     {
         return stub<member_func_t<void, vehWheel, class vehCarSim*, char const*, char*, class Vector3,
-            class phInertialCS*, i32, i32>>(0x4D2690, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+            class phInertialCS*, int32_t, int32_t>>(0x4D2690, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x4D2720 | ?CalcSuspensionForce@vehWheel@@AAEXM_NM@Z
-    void CalcSuspensionForce(f32 arg1, bool arg2, f32 arg3)
+    inline void CalcSuspensionForce(float arg1, bool arg2, float arg3)
     {
-        return stub<member_func_t<void, vehWheel, f32, bool, f32>>(0x4D2720, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, vehWheel, float, bool, float>>(0x4D2720, this, arg1, arg2, arg3);
     }
 
     // 0x4D2A00 | ?ComputeDwtdw@vehWheel@@QAEXMPAM00@Z
-    void ComputeDwtdw(f32 arg1, f32* arg2, f32* arg3, f32* arg4)
+    inline void ComputeDwtdw(float arg1, float* arg2, float* arg3, float* arg4)
     {
-        return stub<member_func_t<void, vehWheel, f32, f32*, f32*, f32*>>(0x4D2A00, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, vehWheel, float, float*, float*, float*>>(
+            0x4D2A00, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4D3440 | ?GetBumpDisplacement@vehWheel@@AAEMM@Z
-    f32 GetBumpDisplacement(f32 arg1)
+    inline float GetBumpDisplacement(float arg1)
     {
-        return stub<member_func_t<f32, vehWheel, f32>>(0x4D3440, this, arg1);
+        return stub<member_func_t<float, vehWheel, float>>(0x4D3440, this, arg1);
     }
 
     // 0x4D3F60 | ?GetSurfaceSound@vehWheel@@QAEHXZ
-    i32 GetSurfaceSound()
+    inline int32_t GetSurfaceSound()
     {
-        return stub<member_func_t<i32, vehWheel>>(0x4D3F60, this);
+        return stub<member_func_t<int32_t, vehWheel>>(0x4D3F60, this);
     }
 
     // 0x4D3F80 | ?SetInputs@vehWheel@@QAEXMMM@Z
-    void SetInputs(f32 arg1, f32 arg2, f32 arg3)
+    inline void SetInputs(float arg1, float arg2, float arg3)
     {
-        return stub<member_func_t<void, vehWheel, f32, f32, f32>>(0x4D3F80, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, vehWheel, float, float, float>>(0x4D3F80, this, arg1, arg2, arg3);
     }
 
     // 0x4D4030 | ?GetVisualDispVert@vehWheel@@QAEMXZ
-    f32 GetVisualDispVert()
+    inline float GetVisualDispVert()
     {
-        return stub<member_func_t<f32, vehWheel>>(0x4D4030, this);
+        return stub<member_func_t<float, vehWheel>>(0x4D4030, this);
     }
 
     // 0x4D4090 | ?GetVisualDispLat@vehWheel@@QAEMXZ
-    f32 GetVisualDispLat()
+    inline float GetVisualDispLat()
     {
-        return stub<member_func_t<f32, vehWheel>>(0x4D4090, this);
+        return stub<member_func_t<float, vehWheel>>(0x4D4090, this);
     }
 
     // 0x4D40D0 | ?GetVisualDispLong@vehWheel@@QAEMXZ
-    f32 GetVisualDispLong()
+    inline float GetVisualDispLong()
     {
-        return stub<member_func_t<f32, vehWheel>>(0x4D40D0, this);
+        return stub<member_func_t<float, vehWheel>>(0x4D40D0, this);
     }
 
     // 0x4D4110 | ?CopyVars@vehWheel@@QAEXPAV1@@Z
-    void CopyVars(class vehWheel* arg1)
+    inline void CopyVars(class vehWheel* arg1)
     {
         return stub<member_func_t<void, vehWheel, class vehWheel*>>(0x4D4110, this, arg1);
     }
 
     // 0x4CCED0 | ??1vehWheel@@UAE@XZ
-    ~vehWheel() override
+    inline ~vehWheel() override
     {
         stub<member_func_t<void, vehWheel>>(0x4CCED0, this);
     }
 
     // 0x4D34E0 | ?Update@vehWheel@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, vehWheel>>(0x4D34E0, this);
     }
 
     // 0x4D22E0 | ?Reset@vehWheel@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, vehWheel>>(0x4D22E0, this);
     }
 
     // 0x4D41C0 | ?FileIO@vehWheel@@UAEXAAVdatParser@@@Z
-    void FileIO(class datParser& arg1) override
+    inline void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, vehWheel, class datParser&>>(0x4D41C0, this, arg1);
     }
 
     // 0x4D43C0 | ?GetClassName@vehWheel@@UAEPADXZ
-    char* GetClassName() override
+    inline char* GetClassName() override
     {
         return stub<member_func_t<char*, vehWheel>>(0x4D43C0, this);
     }

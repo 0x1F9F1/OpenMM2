@@ -43,31 +43,31 @@ public:
     // pedRagdollMgr::`vftable' @ 0x5B635C
 
     // 0x57B8B0 | ??0pedRagdollMgr@@QAE@XZ
-    pedRagdollMgr()
+    inline pedRagdollMgr()
     {
         stub<member_func_t<void, pedRagdollMgr>>(0x57B8B0, this);
     }
 
     // 0x57B9B0 | ?Init@pedRagdollMgr@@QAEXHPAPAD@Z
-    void Init(i32 arg1, char** arg2)
+    inline void Init(int32_t arg1, char** arg2)
     {
-        return stub<member_func_t<void, pedRagdollMgr, i32, char**>>(0x57B9B0, this, arg1, arg2);
+        return stub<member_func_t<void, pedRagdollMgr, int32_t, char**>>(0x57B9B0, this, arg1, arg2);
     }
 
     // 0x57BAF0 | ?Attach@pedRagdollMgr@@QAEPAVpedActive@@PAVaiPedestrianInstance@@@Z
-    class pedActive* Attach(class aiPedestrianInstance* arg1)
+    inline class pedActive* Attach(class aiPedestrianInstance* arg1)
     {
         return stub<member_func_t<class pedActive*, pedRagdollMgr, class aiPedestrianInstance*>>(0x57BAF0, this, arg1);
     }
 
     // 0x57BB80 | ?Detach@pedRagdollMgr@@QAEXPAVaiPedestrianInstance@@@Z
-    void Detach(class aiPedestrianInstance* arg1)
+    inline void Detach(class aiPedestrianInstance* arg1)
     {
         return stub<member_func_t<void, pedRagdollMgr, class aiPedestrianInstance*>>(0x57BB80, this, arg1);
     }
 
     // 0x57BBB0 | ?UnusedActive@pedRagdollMgr@@QAE_NXZ
-    bool UnusedActive()
+    inline bool UnusedActive()
     {
         return stub<member_func_t<bool, pedRagdollMgr>>(0x57BBB0, this);
     }
@@ -76,19 +76,19 @@ public:
     inline extern_var(0x6B4740, class pedRagdollMgr*, Instance);
 
     // 0x57B910 | ??1pedRagdollMgr@@UAE@XZ
-    ~pedRagdollMgr() override
+    inline ~pedRagdollMgr() override
     {
         stub<member_func_t<void, pedRagdollMgr>>(0x57B910, this);
     }
 
     // 0x57BC10 | ?Update@pedRagdollMgr@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, pedRagdollMgr>>(0x57BC10, this);
     }
 
     // 0x57BBD0 | ?Reset@pedRagdollMgr@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, pedRagdollMgr>>(0x57BBD0, this);
     }

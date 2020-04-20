@@ -46,283 +46,283 @@ class Vector3
 {
 public:
     // 0x45CCA0 | ??0Vector3@@QAE@XZ
-    Vector3()
+    inline Vector3()
     {
         stub<member_func_t<void, Vector3>>(0x45CCA0, this);
     }
 
     // 0x42EB40 | ?Scale@Vector3@@QAEXM@Z
-    void Scale(f32 arg1)
+    inline void Scale(float arg1)
     {
-        return stub<member_func_t<void, Vector3, f32>>(0x42EB40, this, arg1);
+        return stub<member_func_t<void, Vector3, float>>(0x42EB40, this, arg1);
     }
 
     // 0x43BBB0 | ?Dot@Vector3@@QAEXABV1@ABVMatrix34@@@Z
-    void Dot(class Vector3 const& arg1, class Matrix34 const& arg2)
+    inline void Dot(class Vector3 const& arg1, class Matrix34 const& arg2)
     {
         return stub<member_func_t<void, Vector3, class Vector3 const&, class Matrix34 const&>>(
             0x43BBB0, this, arg1, arg2);
     }
 
     // 0x45CE40 | ?Scale@Vector3@@QAEXABV1@M@Z
-    void Scale(class Vector3 const& arg1, f32 arg2)
+    inline void Scale(class Vector3 const& arg1, float arg2)
     {
-        return stub<member_func_t<void, Vector3, class Vector3 const&, f32>>(0x45CE40, this, arg1, arg2);
+        return stub<member_func_t<void, Vector3, class Vector3 const&, float>>(0x45CE40, this, arg1, arg2);
     }
 
     // 0x43DD30 | ??0Vector3@@QAE@MMM@Z
-    Vector3(f32 arg1, f32 arg2, f32 arg3)
+    inline Vector3(float arg1, float arg2, float arg3)
     {
-        stub<member_func_t<void, Vector3, f32, f32, f32>>(0x43DD30, this, arg1, arg2, arg3);
+        stub<member_func_t<void, Vector3, float, float, float>>(0x43DD30, this, arg1, arg2, arg3);
     }
 
     // 0x480AA0 | ?Set@Vector3@@QAEXABV1@@Z
-    void Set(class Vector3 const& arg1)
+    inline void Set(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, Vector3, class Vector3 const&>>(0x480AA0, this, arg1);
     }
 
     // 0x45CE00 | ?Add@Vector3@@QAEXABV1@@Z
-    void Add(class Vector3 const& arg1)
+    inline void Add(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, Vector3, class Vector3 const&>>(0x45CE00, this, arg1);
     }
 
     // 0x4429C0 | ?Cross@Vector3@@QAEXABV1@0@Z
-    void Cross(class Vector3 const& arg1, class Vector3 const& arg2)
+    inline void Cross(class Vector3 const& arg1, class Vector3 const& arg2)
     {
         return stub<member_func_t<void, Vector3, class Vector3 const&, class Vector3 const&>>(
             0x4429C0, this, arg1, arg2);
     }
 
     // 0x45CCB0 | ?Set@Vector3@@QAEXMMM@Z
-    void Set(f32 arg1, f32 arg2, f32 arg3)
+    inline void Set(float arg1, float arg2, float arg3)
     {
-        return stub<member_func_t<void, Vector3, f32, f32, f32>>(0x45CCB0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, Vector3, float, float, float>>(0x45CCB0, this, arg1, arg2, arg3);
     }
 
     // 0x45CD30 | ?Subtract@Vector3@@QAEXABV1@@Z
-    void Subtract(class Vector3 const& arg1)
+    inline void Subtract(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, Vector3, class Vector3 const&>>(0x45CD30, this, arg1);
     }
 
     // 0x45CD60 | ?Normalize@Vector3@@QAEXXZ
-    void Normalize()
+    inline void Normalize()
     {
         return stub<member_func_t<void, Vector3>>(0x45CD60, this);
     }
 
     // 0x45CDC0 | ?InvMag@Vector3@@QBEMXZ
-    f32 InvMag()
+    inline float InvMag()
     {
-        return stub<member_func_t<f32, Vector3>>(0x45CDC0, this);
+        return stub<member_func_t<float, Vector3>>(0x45CDC0, this);
     }
 
     // 0x45CE80 | ?Cross@Vector3@@QAEXABV1@@Z
-    void Cross(class Vector3 const& arg1)
+    inline void Cross(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, Vector3, class Vector3 const&>>(0x45CE80, this, arg1);
     }
 
     // 0x45CEC0 | ?Dist@Vector3@@QBEMABV1@@Z
-    f32 Dist(class Vector3 const& arg1)
+    inline float Dist(class Vector3 const& arg1)
     {
-        return stub<member_func_t<f32, Vector3, class Vector3 const&>>(0x45CEC0, this, arg1);
+        return stub<member_func_t<float, Vector3, class Vector3 const&>>(0x45CEC0, this, arg1);
     }
 
     // 0x45CF00 | ?FlatDist@Vector3@@QBEMABV1@@Z
-    f32 FlatDist(class Vector3 const& arg1)
+    inline float FlatDist(class Vector3 const& arg1)
     {
-        return stub<member_func_t<f32, Vector3, class Vector3 const&>>(0x45CF00, this, arg1);
+        return stub<member_func_t<float, Vector3, class Vector3 const&>>(0x45CF00, this, arg1);
     }
 
     // 0x466470 | ?Dot@Vector3@@QBEMABV1@@Z
-    f32 Dot(class Vector3 const& arg1)
+    inline float Dot(class Vector3 const& arg1)
     {
-        return stub<member_func_t<f32, Vector3, class Vector3 const&>>(0x466470, this, arg1);
+        return stub<member_func_t<float, Vector3, class Vector3 const&>>(0x466470, this, arg1);
     }
 
     // 0x466490 | ?Mag@Vector3@@QBEMXZ
-    f32 Mag()
+    inline float Mag()
     {
-        return stub<member_func_t<f32, Vector3>>(0x466490, this);
+        return stub<member_func_t<float, Vector3>>(0x466490, this);
     }
 
     // 0x45CCD0 | ??YVector3@@QAEXABV0@@Z
-    void operator+=(class Vector3 const& arg1)
+    inline void operator+=(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, Vector3, class Vector3 const&>>(0x45CCD0, this, arg1);
     }
 
     // 0x46C990 | ?Mag2@Vector3@@QBEMXZ
-    f32 Mag2()
+    inline float Mag2()
     {
-        return stub<member_func_t<f32, Vector3>>(0x46C990, this);
+        return stub<member_func_t<float, Vector3>>(0x46C990, this);
     }
 
     // 0x45CD00 | ??ZVector3@@QAEXABV0@@Z
-    void operator-=(class Vector3 const& arg1)
+    inline void operator-=(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, Vector3, class Vector3 const&>>(0x45CD00, this, arg1);
     }
 
     // 0x474000 | ?SubtractScaled@Vector3@@QAEXABV1@M@Z
-    void SubtractScaled(class Vector3 const& arg1, f32 arg2)
+    inline void SubtractScaled(class Vector3 const& arg1, float arg2)
     {
-        return stub<member_func_t<void, Vector3, class Vector3 const&, f32>>(0x474000, this, arg1, arg2);
+        return stub<member_func_t<void, Vector3, class Vector3 const&, float>>(0x474000, this, arg1, arg2);
     }
 
     // 0x479560 | ?Dot3x3@Vector3@@QAEXABVMatrix34@@@Z
-    void Dot3x3(class Matrix34 const& arg1)
+    inline void Dot3x3(class Matrix34 const& arg1)
     {
         return stub<member_func_t<void, Vector3, class Matrix34 const&>>(0x479560, this, arg1);
     }
 
     // 0x4795C0 | ?Dot3x3Transpose@Vector3@@QAEXABVMatrix34@@@Z
-    void Dot3x3Transpose(class Matrix34 const& arg1)
+    inline void Dot3x3Transpose(class Matrix34 const& arg1)
     {
         return stub<member_func_t<void, Vector3, class Matrix34 const&>>(0x4795C0, this, arg1);
     }
 
     // 0x480AC0 | ?Negate@Vector3@@QAEXABV1@@Z
-    void Negate(class Vector3 const& arg1)
+    inline void Negate(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, Vector3, class Vector3 const&>>(0x480AC0, this, arg1);
     }
 
     // 0x484420 | ?AddScaled@Vector3@@QAEXABV1@0M@Z
-    void AddScaled(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3)
+    inline void AddScaled(class Vector3 const& arg1, class Vector3 const& arg2, float arg3)
     {
-        return stub<member_func_t<void, Vector3, class Vector3 const&, class Vector3 const&, f32>>(
+        return stub<member_func_t<void, Vector3, class Vector3 const&, class Vector3 const&, float>>(
             0x484420, this, arg1, arg2, arg3);
     }
 
     // 0x491860 | ??GVector3@@QBE?AV0@ABV0@@Z
-    class Vector3 operator-(class Vector3 const& arg1)
+    inline class Vector3 operator-(class Vector3 const& arg1)
     {
         return stub<member_func_t<class Vector3, Vector3, class Vector3 const&>>(0x491860, this, arg1);
     }
 
     // 0x4918A0 | ??KVector3@@QBE?AV0@M@Z
-    class Vector3 operator/(f32 arg1)
+    inline class Vector3 operator/(float arg1)
     {
-        return stub<member_func_t<class Vector3, Vector3, f32>>(0x4918A0, this, arg1);
+        return stub<member_func_t<class Vector3, Vector3, float>>(0x4918A0, this, arg1);
     }
 
     // 0x494C00 | ?Lerp@Vector3@@QAEXMABV1@0@Z
-    void Lerp(f32 arg1, class Vector3 const& arg2, class Vector3 const& arg3)
+    inline void Lerp(float arg1, class Vector3 const& arg2, class Vector3 const& arg3)
     {
-        return stub<member_func_t<void, Vector3, f32, class Vector3 const&, class Vector3 const&>>(
+        return stub<member_func_t<void, Vector3, float, class Vector3 const&, class Vector3 const&>>(
             0x494C00, this, arg1, arg2, arg3);
     }
 
     // 0x4BFEB0 | ?Print@Vector3@@QBEXXZ
-    void Print()
+    inline void Print()
     {
         return stub<member_func_t<void, Vector3>>(0x4BFEB0, this);
     }
 
     // 0x4BFEE0 | ?Print@Vector3@@QBEXPBD@Z
-    void Print(char const* arg1)
+    inline void Print(char const* arg1)
     {
         return stub<member_func_t<void, Vector3, char const*>>(0x4BFEE0, this, arg1);
     }
 
     // 0x4BFF20 | ?Approach@Vector3@@QAE_NABV1@MM@Z
-    bool Approach(class Vector3 const& arg1, f32 arg2, f32 arg3)
+    inline bool Approach(class Vector3 const& arg1, float arg2, float arg3)
     {
-        return stub<member_func_t<bool, Vector3, class Vector3 const&, f32, f32>>(0x4BFF20, this, arg1, arg2, arg3);
+        return stub<member_func_t<bool, Vector3, class Vector3 const&, float, float>>(0x4BFF20, this, arg1, arg2, arg3);
     }
 
     // 0x4C0020 | ?RotateAboutAxis@Vector3@@QAEXMH@Z
-    void RotateAboutAxis(f32 arg1, i32 arg2)
+    inline void RotateAboutAxis(float arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, Vector3, f32, i32>>(0x4C0020, this, arg1, arg2);
+        return stub<member_func_t<void, Vector3, float, int32_t>>(0x4C0020, this, arg1, arg2);
     }
 
     // 0x4C00C0 | ?GetVector2@Vector3@@QBEXHAAVVector2@@@Z
-    void GetVector2(i32 arg1, class Vector2& arg2)
+    inline void GetVector2(int32_t arg1, class Vector2& arg2)
     {
-        return stub<member_func_t<void, Vector3, i32, class Vector2&>>(0x4C00C0, this, arg1, arg2);
+        return stub<member_func_t<void, Vector3, int32_t, class Vector2&>>(0x4C00C0, this, arg1, arg2);
     }
 
     // 0x4C0160 | ?RGBtoHSV@Vector3@@QAEXXZ
-    void RGBtoHSV()
+    inline void RGBtoHSV()
     {
         return stub<member_func_t<void, Vector3>>(0x4C0160, this);
     }
 
     // 0x4C0270 | ?HSVtoRGB@Vector3@@QAEXXZ
-    void HSVtoRGB()
+    inline void HSVtoRGB()
     {
         return stub<member_func_t<void, Vector3>>(0x4C0270, this);
     }
 
     // 0x4C0390 | ?RotateX@Vector3@@QAEXM@Z
-    void RotateX(f32 arg1)
+    inline void RotateX(float arg1)
     {
-        return stub<member_func_t<void, Vector3, f32>>(0x4C0390, this, arg1);
+        return stub<member_func_t<void, Vector3, float>>(0x4C0390, this, arg1);
     }
 
     // 0x4C03D0 | ?RotateY@Vector3@@QAEXM@Z
-    void RotateY(f32 arg1)
+    inline void RotateY(float arg1)
     {
-        return stub<member_func_t<void, Vector3, f32>>(0x4C03D0, this, arg1);
+        return stub<member_func_t<void, Vector3, float>>(0x4C03D0, this, arg1);
     }
 
     // 0x4C0400 | ?RotateZ@Vector3@@QAEXM@Z
-    void RotateZ(f32 arg1)
+    inline void RotateZ(float arg1)
     {
-        return stub<member_func_t<void, Vector3, f32>>(0x4C0400, this, arg1);
+        return stub<member_func_t<void, Vector3, float>>(0x4C0400, this, arg1);
     }
 
     // 0x4C0430 | ?Angle@Vector3@@QBEMABV1@@Z
-    f32 Angle(class Vector3 const& arg1)
+    inline float Angle(class Vector3 const& arg1)
     {
-        return stub<member_func_t<f32, Vector3, class Vector3 const&>>(0x4C0430, this, arg1);
+        return stub<member_func_t<float, Vector3, class Vector3 const&>>(0x4C0430, this, arg1);
     }
 
     // 0x4C0500 | ?FastAngle@Vector3@@QBEMABV1@@Z
-    f32 FastAngle(class Vector3 const& arg1)
+    inline float FastAngle(class Vector3 const& arg1)
     {
-        return stub<member_func_t<f32, Vector3, class Vector3 const&>>(0x4C0500, this, arg1);
+        return stub<member_func_t<float, Vector3, class Vector3 const&>>(0x4C0500, this, arg1);
     }
 
     // 0x4C0530 | ?GetPolar@Vector3@@QBEXABV1@PAVVector4@@PAV1@@Z
-    void GetPolar(class Vector3 const& arg1, class Vector4* arg2, class Vector3* arg3)
+    inline void GetPolar(class Vector3 const& arg1, class Vector4* arg2, class Vector3* arg3)
     {
         return stub<member_func_t<void, Vector3, class Vector3 const&, class Vector4*, class Vector3*>>(
             0x4C0530, this, arg1, arg2, arg3);
     }
 
     // 0x4C05D0 | ?Extend@Vector3@@QAEXM@Z
-    void Extend(f32 arg1)
+    inline void Extend(float arg1)
     {
-        return stub<member_func_t<void, Vector3, f32>>(0x4C05D0, this, arg1);
+        return stub<member_func_t<void, Vector3, float>>(0x4C05D0, this, arg1);
     }
 
     // 0x4C0620 | ?Extend@Vector3@@QAEXABV1@M@Z
-    void Extend(class Vector3 const& arg1, f32 arg2)
+    inline void Extend(class Vector3 const& arg1, float arg2)
     {
-        return stub<member_func_t<void, Vector3, class Vector3 const&, f32>>(0x4C0620, this, arg1, arg2);
+        return stub<member_func_t<void, Vector3, class Vector3 const&, float>>(0x4C0620, this, arg1, arg2);
     }
 
     // 0x522B80 | ?IsEqual@Vector3@@QBE_NABV1@@Z
-    bool IsEqual(class Vector3 const& arg1)
+    inline bool IsEqual(class Vector3 const& arg1)
     {
         return stub<member_func_t<bool, Vector3, class Vector3 const&>>(0x522B80, this, arg1);
     }
 
     // 0x541770 | ??LVector3@@QBE?AV0@ABV0@@Z
-    class Vector3 operator%(class Vector3 const& arg1)
+    inline class Vector3 operator%(class Vector3 const& arg1)
     {
         return stub<member_func_t<class Vector3, Vector3, class Vector3 const&>>(0x541770, this, arg1);
     }
 
     // 0x595B70 | ?InvScale@Vector3@@QAEXM@Z
-    void InvScale(f32 arg1)
+    inline void InvScale(float arg1)
     {
-        return stub<member_func_t<void, Vector3, f32>>(0x595B70, this, arg1);
+        return stub<member_func_t<void, Vector3, float>>(0x595B70, this, arg1);
     }
 };

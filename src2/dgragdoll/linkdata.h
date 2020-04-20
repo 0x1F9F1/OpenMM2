@@ -30,13 +30,13 @@ class dgLinkData
 {
 public:
     // 0x5A8890 | ??0dgLinkData@@QAE@XZ
-    dgLinkData()
+    inline dgLinkData()
     {
         stub<member_func_t<void, dgLinkData>>(0x5A8890, this);
     }
 
     // 0x5A88E0 | ?FileIO@dgLinkData@@QAEXAAVdatParser@@@Z
-    void FileIO(class datParser& arg1)
+    inline void FileIO(class datParser& arg1)
     {
         return stub<member_func_t<void, dgLinkData, class datParser&>>(0x5A88E0, this, arg1);
     }

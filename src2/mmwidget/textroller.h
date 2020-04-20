@@ -45,83 +45,84 @@ public:
     // UITextRoller::`vftable' @ 0x5B344C
 
     // 0x4E88D0 | ??0UITextRoller@@QAE@XZ
-    UITextRoller()
+    inline UITextRoller()
     {
         stub<member_func_t<void, UITextRoller>>(0x4E88D0, this);
     }
 
     // 0x4E8A10 | ?Init@UITextRoller@@QAEXPAULocString@@PAHMMMMVstring@@HHHHVdatCallback@@PAVUIMenu@@@Z
-    void Init(struct LocString* arg1, i32* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, class string arg7, i32 arg8,
-        i32 arg9, i32 arg10, i32 arg11, class datCallback arg12, class UIMenu* arg13)
+    inline void Init(struct LocString* arg1, int32_t* arg2, float arg3, float arg4, float arg5, float arg6,
+        class string arg7, int32_t arg8, int32_t arg9, int32_t arg10, int32_t arg11, class datCallback arg12,
+        class UIMenu* arg13)
     {
-        return stub<member_func_t<void, UITextRoller, struct LocString*, i32*, f32, f32, f32, f32, class string, i32,
-            i32, i32, i32, class datCallback, class UIMenu*>>(
+        return stub<member_func_t<void, UITextRoller, struct LocString*, int32_t*, float, float, float, float,
+            class string, int32_t, int32_t, int32_t, int32_t, class datCallback, class UIMenu*>>(
             0x4E8A10, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
     }
 
     // 0x4E9020 | ?EvalMouseXY@UITextRoller@@QAEXMM@Z
-    void EvalMouseXY(f32 arg1, f32 arg2)
+    inline void EvalMouseXY(float arg1, float arg2)
     {
-        return stub<member_func_t<void, UITextRoller, f32, f32>>(0x4E9020, this, arg1, arg2);
+        return stub<member_func_t<void, UITextRoller, float, float>>(0x4E9020, this, arg1, arg2);
     }
 
     // 0x4E9100 | ?SetValue@UITextRoller@@QAEHH@Z
-    i32 SetValue(i32 arg1)
+    inline int32_t SetValue(int32_t arg1)
     {
-        return stub<member_func_t<i32, UITextRoller, i32>>(0x4E9100, this, arg1);
+        return stub<member_func_t<int32_t, UITextRoller, int32_t>>(0x4E9100, this, arg1);
     }
 
     // 0x4E91A0 | ?SetString@UITextRoller@@QAEXVstring@@@Z
-    void SetString(class string arg1)
+    inline void SetString(class string arg1)
     {
         return stub<member_func_t<void, UITextRoller, class string>>(0x4E91A0, this, arg1);
     }
 
     // 0x4E9270 | ?SetText@UITextRoller@@QAEXXZ
-    void SetText()
+    inline void SetText()
     {
         return stub<member_func_t<void, UITextRoller>>(0x4E9270, this);
     }
 
     // 0x4E92E0 | ?Inc@UITextRoller@@QAEHXZ
-    i32 Inc()
+    inline int32_t Inc()
     {
-        return stub<member_func_t<i32, UITextRoller>>(0x4E92E0, this);
+        return stub<member_func_t<int32_t, UITextRoller>>(0x4E92E0, this);
     }
 
     // 0x4E9300 | ?Dec@UITextRoller@@QAEHXZ
-    i32 Dec()
+    inline int32_t Dec()
     {
-        return stub<member_func_t<i32, UITextRoller>>(0x4E9300, this);
+        return stub<member_func_t<int32_t, UITextRoller>>(0x4E9300, this);
     }
 
     // 0x4E89A0 | ??1UITextRoller@@UAE@XZ
-    ~UITextRoller() override
+    inline ~UITextRoller() override
     {
         stub<member_func_t<void, UITextRoller>>(0x4E89A0, this);
     }
 
     // 0x4E9320 | ?Cull@UITextRoller@@UAEXXZ
-    void Cull() override
+    inline void Cull() override
     {
         return stub<member_func_t<void, UITextRoller>>(0x4E9320, this);
     }
 
     // 0x4E8EA0 | ?Update@UITextRoller@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, UITextRoller>>(0x4E8EA0, this);
     }
 
     // 0x4E8F30 | ?Action@UITextRoller@@UAEXTeqEvent@@@Z
-    void Action(union eqEvent arg1) override
+    inline void Action(union eqEvent arg1) override
     {
         return stub<member_func_t<void, UITextRoller, union eqEvent>>(0x4E8F30, this, arg1);
     }
 
     // 0x4E8F00 | ?Switch@UITextRoller@@UAEXH@Z
-    void Switch(i32 arg1) override
+    inline void Switch(int32_t arg1) override
     {
-        return stub<member_func_t<void, UITextRoller, i32>>(0x4E8F00, this, arg1);
+        return stub<member_func_t<void, UITextRoller, int32_t>>(0x4E8F00, this, arg1);
     }
 };

@@ -55,143 +55,143 @@ public:
     // UICompositeScroll::`vftable' @ 0x5B357C
 
     // 0x4EB050 | ??0UICompositeScroll@@QAE@XZ
-    UICompositeScroll()
+    inline UICompositeScroll()
     {
         stub<member_func_t<void, UICompositeScroll>>(0x4EB050, this);
     }
 
     // 0x4EB1E0 | ?Init@UICompositeScroll@@QAEXMMMMMHPAHHHVdatCallback@@@Z
-    void Init(f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, i32 arg6, i32* arg7, i32 arg8, i32 arg9,
-        class datCallback arg10)
+    inline void Init(float arg1, float arg2, float arg3, float arg4, float arg5, int32_t arg6, int32_t* arg7,
+        int32_t arg8, int32_t arg9, class datCallback arg10)
     {
-        return stub<
-            member_func_t<void, UICompositeScroll, f32, f32, f32, f32, f32, i32, i32*, i32, i32, class datCallback>>(
+        return stub<member_func_t<void, UICompositeScroll, float, float, float, float, float, int32_t, int32_t*,
+            int32_t, int32_t, class datCallback>>(
             0x4EB1E0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
     }
 
     // 0x4EB410 | ?InitVScroll@UICompositeScroll@@QAEXMMM@Z
-    void InitVScroll(f32 arg1, f32 arg2, f32 arg3)
+    inline void InitVScroll(float arg1, float arg2, float arg3)
     {
-        return stub<member_func_t<void, UICompositeScroll, f32, f32, f32>>(0x4EB410, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, UICompositeScroll, float, float, float>>(0x4EB410, this, arg1, arg2, arg3);
     }
 
     // 0x4EB490 | ?RemoveAllComponentChildren@UICompositeScroll@@QAEXXZ
-    void RemoveAllComponentChildren()
+    inline void RemoveAllComponentChildren()
     {
         return stub<member_func_t<void, UICompositeScroll>>(0x4EB490, this);
     }
 
     // 0x4EB4F0 | ?AddComponent@UICompositeScroll@@QAEXPAVmmCompBase@@@Z
-    void AddComponent(class mmCompBase* arg1)
+    inline void AddComponent(class mmCompBase* arg1)
     {
         return stub<member_func_t<void, UICompositeScroll, class mmCompBase*>>(0x4EB4F0, this, arg1);
     }
 
     // 0x4EB5C0 | ?AddTitle@UICompositeScroll@@QAEXPAVmmCompBase@@@Z
-    void AddTitle(class mmCompBase* arg1)
+    inline void AddTitle(class mmCompBase* arg1)
     {
         return stub<member_func_t<void, UICompositeScroll, class mmCompBase*>>(0x4EB5C0, this, arg1);
     }
 
     // 0x4EB5E0 | ?GetSelectedCount@UICompositeScroll@@QAEHXZ
-    i32 GetSelectedCount()
+    inline int32_t GetSelectedCount()
     {
-        return stub<member_func_t<i32, UICompositeScroll>>(0x4EB5E0, this);
+        return stub<member_func_t<int32_t, UICompositeScroll>>(0x4EB5E0, this);
     }
 
     // 0x4EB630 | ?Redraw@UICompositeScroll@@QAEXXZ
-    void Redraw()
+    inline void Redraw()
     {
         return stub<member_func_t<void, UICompositeScroll>>(0x4EB630, this);
     }
 
     // 0x4EB760 | ?VScrollCB@UICompositeScroll@@QAEXXZ
-    void VScrollCB()
+    inline void VScrollCB()
     {
         return stub<member_func_t<void, UICompositeScroll>>(0x4EB760, this);
     }
 
     // 0x4EB7D0 | ?SetVScrollVals@UICompositeScroll@@QAEXXZ
-    void SetVScrollVals()
+    inline void SetVScrollVals()
     {
         return stub<member_func_t<void, UICompositeScroll>>(0x4EB7D0, this);
     }
 
     // 0x4EB820 | ?SetVScrollPos@UICompositeScroll@@QAEXXZ
-    void SetVScrollPos()
+    inline void SetVScrollPos()
     {
         return stub<member_func_t<void, UICompositeScroll>>(0x4EB820, this);
     }
 
     // 0x4EB880 | ?GetHit@UICompositeScroll@@QAEHMM@Z
-    i32 GetHit(f32 arg1, f32 arg2)
+    inline int32_t GetHit(float arg1, float arg2)
     {
-        return stub<member_func_t<i32, UICompositeScroll, f32, f32>>(0x4EB880, this, arg1, arg2);
+        return stub<member_func_t<int32_t, UICompositeScroll, float, float>>(0x4EB880, this, arg1, arg2);
     }
 
     // 0x4EBDC0 | ?Clear@UICompositeScroll@@QAEXXZ
-    void Clear()
+    inline void Clear()
     {
         return stub<member_func_t<void, UICompositeScroll>>(0x4EBDC0, this);
     }
 
     // 0x4EBDD0 | ?SetHighlight@UICompositeScroll@@QAEXH@Z
-    void SetHighlight(i32 arg1)
+    inline void SetHighlight(int32_t arg1)
     {
-        return stub<member_func_t<void, UICompositeScroll, i32>>(0x4EBDD0, this, arg1);
+        return stub<member_func_t<void, UICompositeScroll, int32_t>>(0x4EBDD0, this, arg1);
     }
 
     // 0x4EBDF0 | ?SetHighlightComp@UICompositeScroll@@QAEXXZ
-    void SetHighlightComp()
+    inline void SetHighlightComp()
     {
         return stub<member_func_t<void, UICompositeScroll>>(0x4EBDF0, this);
     }
 
     // 0x4EBE90 | ?GetHeight@UICompositeScroll@@QAEMXZ
-    f32 GetHeight()
+    inline float GetHeight()
     {
-        return stub<member_func_t<f32, UICompositeScroll>>(0x4EBE90, this);
+        return stub<member_func_t<float, UICompositeScroll>>(0x4EBE90, this);
     }
 
     // 0x4EBEB0 | ?SetPosition@UICompositeScroll@@QAEXH@Z
-    void SetPosition(i32 arg1)
+    inline void SetPosition(int32_t arg1)
     {
-        return stub<member_func_t<void, UICompositeScroll, i32>>(0x4EBEB0, this, arg1);
+        return stub<member_func_t<void, UICompositeScroll, int32_t>>(0x4EBEB0, this, arg1);
     }
 
     // 0x4EB140 | ??1UICompositeScroll@@UAE@XZ
-    ~UICompositeScroll() override
+    inline ~UICompositeScroll() override
     {
         stub<member_func_t<void, UICompositeScroll>>(0x4EB140, this);
     }
 
     // 0x4EB870 | ?Update@UICompositeScroll@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, UICompositeScroll>>(0x4EB870, this);
     }
 
     // 0x4EB850 | ?Reset@UICompositeScroll@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, UICompositeScroll>>(0x4EB850, this);
     }
 
     // 0x4EB900 | ?Action@UICompositeScroll@@UAEXTeqEvent@@@Z
-    void Action(union eqEvent arg1) override
+    inline void Action(union eqEvent arg1) override
     {
         return stub<member_func_t<void, UICompositeScroll, union eqEvent>>(0x4EB900, this, arg1);
     }
 
     // 0x4EBD10 | ?CaptureAction@UICompositeScroll@@UAEXTeqEvent@@@Z
-    void CaptureAction(union eqEvent arg1) override
+    inline void CaptureAction(union eqEvent arg1) override
     {
         return stub<member_func_t<void, UICompositeScroll, union eqEvent>>(0x4EBD10, this, arg1);
     }
 
     // 0x4EBD80 | ?Switch@UICompositeScroll@@UAEXH@Z
-    void Switch(i32 arg1) override
+    inline void Switch(int32_t arg1) override
     {
-        return stub<member_func_t<void, UICompositeScroll, i32>>(0x4EBD80, this, arg1);
+        return stub<member_func_t<void, UICompositeScroll, int32_t>>(0x4EBD80, this, arg1);
     }
 };

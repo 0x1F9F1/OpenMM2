@@ -43,70 +43,74 @@ class phPolygon
 {
 public:
     // 0x4938E0 | ??0phPolygon@@QAE@XZ
-    phPolygon()
+    inline phPolygon()
     {
         stub<member_func_t<void, phPolygon>>(0x4938E0, this);
     }
 
     // 0x493910 | ?InitTriangle@phPolygon@@QAEXGGGPBVVector3@@@Z
-    void InitTriangle(u16 arg1, u16 arg2, u16 arg3, class Vector3 const* arg4)
+    inline void InitTriangle(uint16_t arg1, uint16_t arg2, uint16_t arg3, class Vector3 const* arg4)
     {
-        return stub<member_func_t<void, phPolygon, u16, u16, u16, class Vector3 const*>>(
+        return stub<member_func_t<void, phPolygon, uint16_t, uint16_t, uint16_t, class Vector3 const*>>(
             0x493910, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x493940 | ?InitQuad@phPolygon@@QAEXGGGGPBVVector3@@@Z
-    void InitQuad(u16 arg1, u16 arg2, u16 arg3, u16 arg4, class Vector3 const* arg5)
+    inline void InitQuad(uint16_t arg1, uint16_t arg2, uint16_t arg3, uint16_t arg4, class Vector3 const* arg5)
     {
-        return stub<member_func_t<void, phPolygon, u16, u16, u16, u16, class Vector3 const*>>(
+        return stub<member_func_t<void, phPolygon, uint16_t, uint16_t, uint16_t, uint16_t, class Vector3 const*>>(
             0x493940, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x493970 | ?Rotate@phPolygon@@QAEXXZ
-    void Rotate()
+    inline void Rotate()
     {
         return stub<member_func_t<void, phPolygon>>(0x493970, this);
     }
 
     // 0x493A40 | ?CalculateNormal@phPolygon@@QAEXPBVVector3@@@Z
-    void CalculateNormal(class Vector3 const* arg1)
+    inline void CalculateNormal(class Vector3 const* arg1)
     {
         return stub<member_func_t<void, phPolygon, class Vector3 const*>>(0x493A40, this, arg1);
     }
 
     // 0x493C00 | ?ComputeEdgeNormalCross@phPolygon@@IAEXPAVVector4@@PBVVector3@@@Z
-    void ComputeEdgeNormalCross(class Vector4* arg1, class Vector3 const* arg2)
+    inline void ComputeEdgeNormalCross(class Vector4* arg1, class Vector3 const* arg2)
     {
         return stub<member_func_t<void, phPolygon, class Vector4*, class Vector3 const*>>(0x493C00, this, arg1, arg2);
     }
 
     // 0x493D40 | ?TestSegmentDirected@phPolygon@@QBEHPBVVector3@@ABVphSegment@@PAVphIntersectionPoint@@M@Z
-    i32 TestSegmentDirected(
-        class Vector3 const* arg1, class phSegment const& arg2, class phIntersectionPoint* arg3, f32 arg4)
+    inline int32_t TestSegmentDirected(
+        class Vector3 const* arg1, class phSegment const& arg2, class phIntersectionPoint* arg3, float arg4)
     {
-        return stub<member_func_t<i32, phPolygon, class Vector3 const*, class phSegment const&,
-            class phIntersectionPoint*, f32>>(0x493D40, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<int32_t, phPolygon, class Vector3 const*, class phSegment const&,
+            class phIntersectionPoint*, float>>(0x493D40, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4940D0 | ?TestSegmentUndirected@phPolygon@@QBEHPBVVector3@@ABVphSegment@@PAVphIntersectionPoint@@MM@Z
-    i32 TestSegmentUndirected(
-        class Vector3 const* arg1, class phSegment const& arg2, class phIntersectionPoint* arg3, f32 arg4, f32 arg5)
+    inline int32_t TestSegmentUndirected(
+        class Vector3 const* arg1, class phSegment const& arg2, class phIntersectionPoint* arg3, float arg4, float arg5)
     {
-        return stub<member_func_t<i32, phPolygon, class Vector3 const*, class phSegment const&,
-            class phIntersectionPoint*, f32, f32>>(0x4940D0, this, arg1, arg2, arg3, arg4, arg5);
+        return stub<member_func_t<int32_t, phPolygon, class Vector3 const*, class phSegment const&,
+            class phIntersectionPoint*, float, float>>(0x4940D0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x4944B0 | ?DetectSegmentDirected@phPolygon@@QBEHPBVVector3@@ABV2@1@Z
-    i32 DetectSegmentDirected(class Vector3 const* arg1, class Vector3 const& arg2, class Vector3 const& arg3)
+    inline int32_t DetectSegmentDirected(
+        class Vector3 const* arg1, class Vector3 const& arg2, class Vector3 const& arg3)
     {
-        return stub<member_func_t<i32, phPolygon, class Vector3 const*, class Vector3 const&, class Vector3 const&>>(
+        return stub<
+            member_func_t<int32_t, phPolygon, class Vector3 const*, class Vector3 const&, class Vector3 const&>>(
             0x4944B0, this, arg1, arg2, arg3);
     }
 
     // 0x494780 | ?DetectSegmentUndirected@phPolygon@@QBEHPBVVector3@@ABVVector4@@1@Z
-    i32 DetectSegmentUndirected(class Vector3 const* arg1, class Vector4 const& arg2, class Vector4 const& arg3)
+    inline int32_t DetectSegmentUndirected(
+        class Vector3 const* arg1, class Vector4 const& arg2, class Vector4 const& arg3)
     {
-        return stub<member_func_t<i32, phPolygon, class Vector3 const*, class Vector4 const&, class Vector4 const&>>(
+        return stub<
+            member_func_t<int32_t, phPolygon, class Vector3 const*, class Vector4 const&, class Vector4 const&>>(
             0x494780, this, arg1, arg2, arg3);
     }
 

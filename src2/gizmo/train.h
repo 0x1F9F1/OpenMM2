@@ -62,37 +62,37 @@ public:
     // gizTrainMgr::`vftable' @ 0x5B614C
 
     // 0x578F10 | ??0gizTrainMgr@@QAE@XZ
-    gizTrainMgr()
+    inline gizTrainMgr()
     {
         stub<member_func_t<void, gizTrainMgr>>(0x578F10, this);
     }
 
     // 0x579020 | ?Init@gizTrainMgr@@QAE_NPAD00@Z
-    bool Init(char* arg1, char* arg2, char* arg3)
+    inline bool Init(char* arg1, char* arg2, char* arg3)
     {
         return stub<member_func_t<bool, gizTrainMgr, char*, char*, char*>>(0x579020, this, arg1, arg2, arg3);
     }
 
     // 0x5791B0 | ?ApplyTuning@gizTrainMgr@@AAEXXZ
-    void ApplyTuning()
+    inline void ApplyTuning()
     {
         return stub<member_func_t<void, gizTrainMgr>>(0x5791B0, this);
     }
 
     // 0x578F60 | ??1gizTrainMgr@@UAE@XZ
-    ~gizTrainMgr() override
+    inline ~gizTrainMgr() override
     {
         stub<member_func_t<void, gizTrainMgr>>(0x578F60, this);
     }
 
     // 0x579170 | ?Update@gizTrainMgr@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, gizTrainMgr>>(0x579170, this);
     }
 
     // 0x578FF0 | ?Reset@gizTrainMgr@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, gizTrainMgr>>(0x578FF0, this);
     }
@@ -104,51 +104,51 @@ public:
     // gizTrainCar::`vftable' @ 0x5B60D4
 
     // 0x5788A0 | ??0gizTrainCar@@QAE@XZ
-    gizTrainCar()
+    inline gizTrainCar()
     {
         stub<member_func_t<void, gizTrainCar>>(0x5788A0, this);
     }
 
     // 0x5788C0 | ??1gizTrainCar@@QAE@XZ
-    ~gizTrainCar()
+    inline ~gizTrainCar()
     {
         stub<member_func_t<void, gizTrainCar>>(0x5788C0, this);
     }
 
     // 0x578930 | ?Reset@gizTrainCar@@QAEXH@Z
-    void Reset(i32 arg1)
+    inline void Reset(int32_t arg1)
     {
-        return stub<member_func_t<void, gizTrainCar, i32>>(0x578930, this, arg1);
+        return stub<member_func_t<void, gizTrainCar, int32_t>>(0x578930, this, arg1);
     }
 
     // 0x578970 | ?Init@gizTrainCar@@QAEXPADPAVdgPath@@M@Z
-    void Init(char* arg1, class dgPath* arg2, f32 arg3)
+    inline void Init(char* arg1, class dgPath* arg2, float arg3)
     {
-        return stub<member_func_t<void, gizTrainCar, char*, class dgPath*, f32>>(0x578970, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, gizTrainCar, char*, class dgPath*, float>>(0x578970, this, arg1, arg2, arg3);
     }
 
     // 0x578A30 | ?Update@gizTrainCar@@QAEXM@Z
-    void Update(f32 arg1)
+    inline void Update(float arg1)
     {
-        return stub<member_func_t<void, gizTrainCar, f32>>(0x578A30, this, arg1);
+        return stub<member_func_t<void, gizTrainCar, float>>(0x578A30, this, arg1);
     }
 
     // 0x578B20 | ?IsFirstStop@gizTrainCar@@QAE_NXZ
-    bool IsFirstStop()
+    inline bool IsFirstStop()
     {
         return stub<member_func_t<bool, gizTrainCar>>(0x578B20, this);
     }
 
     // 0x578B30 | ?IsLastStop@gizTrainCar@@QAE_NXZ
-    bool IsLastStop()
+    inline bool IsLastStop()
     {
         return stub<member_func_t<bool, gizTrainCar>>(0x578B30, this);
     }
 
     // 0x579250 | ?SizeOf@gizTrainCar@@UAEIXZ
-    u32 SizeOf() override
+    inline uint32_t SizeOf() override
     {
-        return stub<member_func_t<u32, gizTrainCar>>(0x579250, this);
+        return stub<member_func_t<uint32_t, gizTrainCar>>(0x579250, this);
     }
 };
 
@@ -156,43 +156,43 @@ struct gizTrain
 {
 public:
     // 0x578B50 | ??0gizTrain@@QAE@XZ
-    gizTrain()
+    inline gizTrain()
     {
         stub<member_func_t<void, gizTrain>>(0x578B50, this);
     }
 
     // 0x578BC0 | ??1gizTrain@@QAE@XZ
-    ~gizTrain()
+    inline ~gizTrain()
     {
         stub<member_func_t<void, gizTrain>>(0x578BC0, this);
     }
 
     // 0x578C20 | ?Reset@gizTrain@@QAEXXZ
-    void Reset()
+    inline void Reset()
     {
         return stub<member_func_t<void, gizTrain>>(0x578C20, this);
     }
 
     // 0x578C60 | ?Init@gizTrain@@QAEXPADPAVdgPath@@@Z
-    void Init(char* arg1, class dgPath* arg2)
+    inline void Init(char* arg1, class dgPath* arg2)
     {
         return stub<member_func_t<void, gizTrain, char*, class dgPath*>>(0x578C60, this, arg1, arg2);
     }
 
     // 0x578CC0 | ?CalcTrainAccel@gizTrain@@QAEXXZ
-    void CalcTrainAccel()
+    inline void CalcTrainAccel()
     {
         return stub<member_func_t<void, gizTrain>>(0x578CC0, this);
     }
 
     // 0x578CD0 | ?Update@gizTrain@@QAEXXZ
-    void Update()
+    inline void Update()
     {
         return stub<member_func_t<void, gizTrain>>(0x578CD0, this);
     }
 
     // 0x578EF0 | ?InStation@gizTrain@@QAE_NXZ
-    bool InStation()
+    inline bool InStation()
     {
         return stub<member_func_t<bool, gizTrain>>(0x578EF0, this);
     }

@@ -39,106 +39,106 @@ public:
     // aiVehicle::`vftable' @ 0x5B59E8
 
     // 0x5561E0 | ??0aiVehicle@@QAE@XZ
-    aiVehicle()
+    inline aiVehicle()
     {
         stub<member_func_t<void, aiVehicle>>(0x5561E0, this);
     }
 
     // 0x5561F0 | ??1aiVehicle@@QAE@XZ
-    ~aiVehicle()
+    inline ~aiVehicle()
     {
         stub<member_func_t<void, aiVehicle>>(0x5561F0, this);
     }
 
     // 0x556200 | ?Init@aiVehicle@@QAEXH@Z
-    void Init(i32 arg1)
+    inline void Init(int32_t arg1)
     {
-        return stub<member_func_t<void, aiVehicle, i32>>(0x556200, this, arg1);
+        return stub<member_func_t<void, aiVehicle, int32_t>>(0x556200, this, arg1);
     }
 
     // 0x556250 | ?PreAvoid@aiVehicle@@UAEXABVVector3@@0MAAV2@1@Z
-    void PreAvoid(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, class Vector3& arg4,
+    inline void PreAvoid(class Vector3 const& arg1, class Vector3 const& arg2, float arg3, class Vector3& arg4,
         class Vector3& arg5) override
     {
-        return stub<member_func_t<void, aiVehicle, class Vector3 const&, class Vector3 const&, f32, class Vector3&,
+        return stub<member_func_t<void, aiVehicle, class Vector3 const&, class Vector3 const&, float, class Vector3&,
             class Vector3&>>(0x556250, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x556850 | ?IsBlockingTarget@aiVehicle@@UAEMABVVector3@@0MM@Z
-    f32 IsBlockingTarget(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, f32 arg4) override
+    inline float IsBlockingTarget(class Vector3 const& arg1, class Vector3 const& arg2, float arg3, float arg4) override
     {
-        return stub<member_func_t<f32, aiVehicle, class Vector3 const&, class Vector3 const&, f32, f32>>(
+        return stub<member_func_t<float, aiVehicle, class Vector3 const&, class Vector3 const&, float, float>>(
             0x556850, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x556230 | ?Update@aiVehicle@@UAEXXZ
-    virtual void Update()
+    virtual inline void Update()
     {
         return stub<member_func_t<void, aiVehicle>>(0x556230, this);
     }
 
     // 0x556210 | ?Reset@aiVehicle@@UAEXXZ
-    virtual void Reset()
+    virtual inline void Reset()
     {
         return stub<member_func_t<void, aiVehicle>>(0x556210, this);
     }
 
     // 0x582519 | __purecall
-    virtual i32 Type()
+    virtual inline int32_t Type()
     {
-        return stub<member_func_t<i32, aiVehicle>>(0x582519, this);
+        return stub<member_func_t<int32_t, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual class Matrix34& GetMatrix()
+    virtual inline class Matrix34& GetMatrix()
     {
         return stub<member_func_t<class Matrix34&, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual f32 FrontBumperDistance()
+    virtual inline float FrontBumperDistance()
     {
-        return stub<member_func_t<f32, aiVehicle>>(0x582519, this);
+        return stub<member_func_t<float, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual f32 BackBumperDistance()
+    virtual inline float BackBumperDistance()
     {
-        return stub<member_func_t<f32, aiVehicle>>(0x582519, this);
+        return stub<member_func_t<float, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual f32 LSideDistance()
+    virtual inline float LSideDistance()
     {
-        return stub<member_func_t<f32, aiVehicle>>(0x582519, this);
+        return stub<member_func_t<float, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual f32 RSideDistance()
+    virtual inline float RSideDistance()
     {
-        return stub<member_func_t<f32, aiVehicle>>(0x582519, this);
+        return stub<member_func_t<float, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual i32 CurrentLane()
+    virtual inline int32_t CurrentLane()
     {
-        return stub<member_func_t<i32, aiVehicle>>(0x582519, this);
+        return stub<member_func_t<int32_t, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual i32 CurrentRoadId()
+    virtual inline int32_t CurrentRoadId()
     {
-        return stub<member_func_t<i32, aiVehicle>>(0x582519, this);
+        return stub<member_func_t<int32_t, aiVehicle>>(0x582519, this);
     }
 
     // 0x582519 | __purecall
-    virtual void DrawId()
+    virtual inline void DrawId()
     {
         return stub<member_func_t<void, aiVehicle>>(0x582519, this);
     }
 
     // 0x556D00 | ?ReplayDebug@aiVehicle@@UAEXXZ
-    virtual void ReplayDebug()
+    virtual inline void ReplayDebug()
     {
         return stub<member_func_t<void, aiVehicle>>(0x556D00, this);
     }

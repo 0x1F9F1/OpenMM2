@@ -54,147 +54,145 @@
     float ParticleMultiplier | ?ParticleMultiplier@@3MA
 */
 
-class mmPlayerConfig
-    : Base
-    , mmInfoBase
+class mmPlayerConfig : mmInfoBase
 {
 public:
     // mmPlayerConfig::`vftable' @ 0x5B5224
 
     // 0x5254B0 | ??0mmPlayerConfig@@QAE@XZ
-    mmPlayerConfig()
+    inline mmPlayerConfig()
     {
         stub<member_func_t<void, mmPlayerConfig>>(0x5254B0, this);
     }
 
     // 0x5255D0 | ??4mmPlayerConfig@@QAEXAAV0@@Z
-    void operator=(class mmPlayerConfig& arg1)
+    inline void operator=(class mmPlayerConfig& arg1)
     {
         return stub<member_func_t<void, mmPlayerConfig, class mmPlayerConfig&>>(0x5255D0, this, arg1);
     }
 
     // 0x525750 | ?Load@mmPlayerConfig@@QAEHPAD@Z
-    i32 Load(char* arg1)
+    inline int32_t Load(char* arg1)
     {
-        return stub<member_func_t<i32, mmPlayerConfig, char*>>(0x525750, this, arg1);
+        return stub<member_func_t<int32_t, mmPlayerConfig, char*>>(0x525750, this, arg1);
     }
 
     // 0x5257B0 | ?LoadBinary@mmPlayerConfig@@QAEHPAD@Z
-    i32 LoadBinary(char* arg1)
+    inline int32_t LoadBinary(char* arg1)
     {
-        return stub<member_func_t<i32, mmPlayerConfig, char*>>(0x5257B0, this, arg1);
+        return stub<member_func_t<int32_t, mmPlayerConfig, char*>>(0x5257B0, this, arg1);
     }
 
     // 0x525A30 | ?SaveBinary@mmPlayerConfig@@QAEHPAD@Z
-    i32 SaveBinary(char* arg1)
+    inline int32_t SaveBinary(char* arg1)
     {
-        return stub<member_func_t<i32, mmPlayerConfig, char*>>(0x525A30, this, arg1);
+        return stub<member_func_t<int32_t, mmPlayerConfig, char*>>(0x525A30, this, arg1);
     }
 
     // 0x525C70 | ?SetDefaults@mmPlayerConfig@@QAEXXZ
-    void SetDefaults()
+    inline void SetDefaults()
     {
         return stub<member_func_t<void, mmPlayerConfig>>(0x525C70, this);
     }
 
     // 0x525C80 | ?Save@mmPlayerConfig@@QAEHPADH@Z
-    i32 Save(char* arg1, i32 arg2)
+    inline int32_t Save(char* arg1, int32_t arg2)
     {
-        return stub<member_func_t<i32, mmPlayerConfig, char*, i32>>(0x525C80, this, arg1, arg2);
+        return stub<member_func_t<int32_t, mmPlayerConfig, char*, int32_t>>(0x525C80, this, arg1, arg2);
     }
 
     // 0x525D20 | ?SetAudio@mmPlayerConfig@@QAEXXZ
-    void SetAudio()
+    inline void SetAudio()
     {
         return stub<member_func_t<void, mmPlayerConfig>>(0x525D20, this);
     }
 
     // 0x525E20 | ?SetControls@mmPlayerConfig@@QAEXXZ
-    void SetControls()
+    inline void SetControls()
     {
         return stub<member_func_t<void, mmPlayerConfig>>(0x525E20, this);
     }
 
     // 0x525F10 | ?GetCustom@mmPlayerConfig@@QAEXXZ
-    void GetCustom()
+    inline void GetCustom()
     {
         return stub<member_func_t<void, mmPlayerConfig>>(0x525F10, this);
     }
 
     // 0x525F40 | ?SetCustom@mmPlayerConfig@@QAEXXZ
-    void SetCustom()
+    inline void SetCustom()
     {
         return stub<member_func_t<void, mmPlayerConfig>>(0x525F40, this);
     }
 
     // 0x526090 | ?GetGraphics@mmPlayerConfig@@QAEXXZ
-    void GetGraphics()
+    inline void GetGraphics()
     {
         return stub<member_func_t<void, mmPlayerConfig>>(0x526090, this);
     }
 
     // 0x5260A0 | ?SetGraphics@mmPlayerConfig@@QAEXXZ
-    void SetGraphics()
+    inline void SetGraphics()
     {
         return stub<member_func_t<void, mmPlayerConfig>>(0x5260A0, this);
     }
 
     // 0x5260B0 | ?GetAudio@mmPlayerConfig@@QAEXXZ
-    void GetAudio()
+    inline void GetAudio()
     {
         return stub<member_func_t<void, mmPlayerConfig>>(0x5260B0, this);
     }
 
     // 0x526120 | ?GetControls@mmPlayerConfig@@QAEXXZ
-    void GetControls()
+    inline void GetControls()
     {
         return stub<member_func_t<void, mmPlayerConfig>>(0x526120, this);
     }
 
     // 0x526200 | ?GetViewSettings@mmPlayerConfig@@QAEXXZ
-    void GetViewSettings()
+    inline void GetViewSettings()
     {
         return stub<member_func_t<void, mmPlayerConfig>>(0x526200, this);
     }
 
     // 0x526220 | ?SetViewSettings@mmPlayerConfig@@QAEXXZ
-    void SetViewSettings()
+    inline void SetViewSettings()
     {
         return stub<member_func_t<void, mmPlayerConfig>>(0x526220, this);
     }
 
     // 0x526240 | ?DefaultAudio@mmPlayerConfig@@QAEXXZ
-    void DefaultAudio()
+    inline void DefaultAudio()
     {
         return stub<member_func_t<void, mmPlayerConfig>>(0x526240, this);
     }
 
     // 0x5262F0 | ?DefaultControls@mmPlayerConfig@@QAEXXZ
-    void DefaultControls()
+    inline void DefaultControls()
     {
         return stub<member_func_t<void, mmPlayerConfig>>(0x5262F0, this);
     }
 
     // 0x526350 | ?DefaultViewSettings@mmPlayerConfig@@QAEXXZ
-    void DefaultViewSettings()
+    inline void DefaultViewSettings()
     {
         return stub<member_func_t<void, mmPlayerConfig>>(0x526350, this);
     }
 
     // 0x526390 | ?Reset@mmPlayerConfig@@QAEXXZ
-    void Reset()
+    inline void Reset()
     {
         return stub<member_func_t<void, mmPlayerConfig>>(0x526390, this);
     }
 
     // 0x5263A0 | ?DefaultGraphics@mmPlayerConfig@@QAEXXZ
-    void DefaultGraphics()
+    inline void DefaultGraphics()
     {
         return stub<member_func_t<void, mmPlayerConfig>>(0x5263A0, this);
     }
 
     // 0x525560 | ??1mmPlayerConfig@@UAE@XZ
-    virtual ~mmPlayerConfig()
+    inline ~mmPlayerConfig() override
     {
         stub<member_func_t<void, mmPlayerConfig>>(0x525560, this);
     }
@@ -204,19 +202,19 @@ struct mmGfxCFG
 {
 public:
     // 0x525F70 | ??0mmGfxCFG@@QAE@XZ
-    mmGfxCFG()
+    inline mmGfxCFG()
     {
         stub<member_func_t<void, mmGfxCFG>>(0x525F70, this);
     }
 
     // 0x525FB0 | ?Get@mmGfxCFG@@QAEXXZ
-    void Get()
+    inline void Get()
     {
         return stub<member_func_t<void, mmGfxCFG>>(0x525FB0, this);
     }
 
     // 0x526020 | ?Set@mmGfxCFG@@QAEXXZ
-    void Set()
+    inline void Set()
     {
         return stub<member_func_t<void, mmGfxCFG>>(0x526020, this);
     }

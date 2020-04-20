@@ -51,120 +51,122 @@ public:
     // mmCompRoster::`vftable' @ 0x5B89BC
 
     // 0x59F8C0 | ??0mmCompRoster@@QAE@XZ
-    mmCompRoster()
+    inline mmCompRoster()
     {
         stub<member_func_t<void, mmCompRoster>>(0x59F8C0, this);
     }
 
     // 0x59FA00 | ?Init@mmCompRoster@@QAEXPAD00KHH@Z
-    void Init(char* arg1, char* arg2, char* arg3, u32 arg4, i32 arg5, i32 arg6)
+    inline void Init(char* arg1, char* arg2, char* arg3, uint32_t arg4, int32_t arg5, int32_t arg6)
     {
-        return stub<member_func_t<void, mmCompRoster, char*, char*, char*, u32, i32, i32>>(
+        return stub<member_func_t<void, mmCompRoster, char*, char*, char*, uint32_t, int32_t, int32_t>>(
             0x59FA00, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x59FAE0 | ?InitTitle@mmCompRoster@@QAEXMMMMPAULocString@@000H@Z
-    void InitTitle(f32 arg1, f32 arg2, f32 arg3, f32 arg4, struct LocString* arg5, struct LocString* arg6,
-        struct LocString* arg7, struct LocString* arg8, i32 arg9)
+    inline void InitTitle(float arg1, float arg2, float arg3, float arg4, struct LocString* arg5,
+        struct LocString* arg6, struct LocString* arg7, struct LocString* arg8, int32_t arg9)
     {
-        return stub<member_func_t<void, mmCompRoster, f32, f32, f32, f32, struct LocString*, struct LocString*,
-            struct LocString*, struct LocString*, i32>>(
+        return stub<member_func_t<void, mmCompRoster, float, float, float, float, struct LocString*, struct LocString*,
+            struct LocString*, struct LocString*, int32_t>>(
             0x59FAE0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
     }
 
     // 0x59FAF0 | ?LoadBitmap@mmCompRoster@@QAEXPAD@Z
-    void LoadBitmap(char* arg1)
+    inline void LoadBitmap(char* arg1)
     {
         return stub<member_func_t<void, mmCompRoster, char*>>(0x59FAF0, this, arg1);
     }
 
     // 0x59FB50 | ?LoadTeamBitmap@mmCompRoster@@QAEXPAD@Z
-    void LoadTeamBitmap(char* arg1)
+    inline void LoadTeamBitmap(char* arg1)
     {
         return stub<member_func_t<void, mmCompRoster, char*>>(0x59FB50, this, arg1);
     }
 
     // 0x59FBE0 | ?SetError@mmCompRoster@@QAEXXZ
-    void SetError()
+    inline void SetError()
     {
         return stub<member_func_t<void, mmCompRoster>>(0x59FBE0, this);
     }
 
     // 0x59FC10 | ?SetReady@mmCompRoster@@QAEXH@Z
-    void SetReady(i32 arg1)
+    inline void SetReady(int32_t arg1)
     {
-        return stub<member_func_t<void, mmCompRoster, i32>>(0x59FC10, this, arg1);
+        return stub<member_func_t<void, mmCompRoster, int32_t>>(0x59FC10, this, arg1);
     }
 
     // 0x59FC50 | ?SetSubwidgetGeometry@mmCompRoster@@QAEXXZ
-    void SetSubwidgetGeometry()
+    inline void SetSubwidgetGeometry()
     {
         return stub<member_func_t<void, mmCompRoster>>(0x59FC50, this);
     }
 
     // 0x59FE20 | ?SetName@mmCompRoster@@QAEXPAD@Z
-    void SetName(char* arg1)
+    inline void SetName(char* arg1)
     {
         return stub<member_func_t<void, mmCompRoster, char*>>(0x59FE20, this, arg1);
     }
 
     // 0x59FE60 | ?SetColor@mmCompRoster@@QAEXPAD@Z
-    void SetColor(char* arg1)
+    inline void SetColor(char* arg1)
     {
         return stub<member_func_t<void, mmCompRoster, char*>>(0x59FE60, this, arg1);
     }
 
     // 0x59FE70 | ?SetCar@mmCompRoster@@QAEXPAD@Z
-    void SetCar(char* arg1)
+    inline void SetCar(char* arg1)
     {
         return stub<member_func_t<void, mmCompRoster, char*>>(0x59FE70, this, arg1);
     }
 
     // 0x59FEB0 | ?SetTeam@mmCompRoster@@QAEXH@Z
-    void SetTeam(i32 arg1)
+    inline void SetTeam(int32_t arg1)
     {
-        return stub<member_func_t<void, mmCompRoster, i32>>(0x59FEB0, this, arg1);
+        return stub<member_func_t<void, mmCompRoster, int32_t>>(0x59FEB0, this, arg1);
     }
 
     // 0x59F940 | ??1mmCompRoster@@UAE@XZ
-    ~mmCompRoster() override
+    inline ~mmCompRoster() override
     {
         stub<member_func_t<void, mmCompRoster>>(0x59F940, this);
     }
 
     // 0x59FD90 | ?Cull@mmCompRoster@@UAEXXZ
-    void Cull() override
+    inline void Cull() override
     {
         return stub<member_func_t<void, mmCompRoster>>(0x59FD90, this);
     }
 
     // 0x59FBA0 | ?Update@mmCompRoster@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, mmCompRoster>>(0x59FBA0, this);
     }
 
     // 0x59FB90 | ?Reset@mmCompRoster@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, mmCompRoster>>(0x59FB90, this);
     }
 
     // 0x59FD60 | ?SetBltXY@mmCompRoster@@UAEXMM@Z
-    void SetBltXY(f32 arg1, f32 arg2) override
+    inline void SetBltXY(float arg1, float arg2) override
     {
-        return stub<member_func_t<void, mmCompRoster, f32, f32>>(0x59FD60, this, arg1, arg2);
+        return stub<member_func_t<void, mmCompRoster, float, float>>(0x59FD60, this, arg1, arg2);
     }
 
     // 0x59FD30 | ?SetGeometry@mmCompRoster@@UAEXMMMM@Z
-    void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4) override
+    inline void SetGeometry(float arg1, float arg2, float arg3, float arg4) override
     {
-        return stub<member_func_t<void, mmCompRoster, f32, f32, f32, f32>>(0x59FD30, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, mmCompRoster, float, float, float, float>>(
+            0x59FD30, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x59FCB0 | ?SetPosition@mmCompRoster@@UAEXPAVmmTextNode@@HM@Z
-    void SetPosition(class mmTextNode* arg1, i32 arg2, f32 arg3) override
+    inline void SetPosition(class mmTextNode* arg1, int32_t arg2, float arg3) override
     {
-        return stub<member_func_t<void, mmCompRoster, class mmTextNode*, i32, f32>>(0x59FCB0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmCompRoster, class mmTextNode*, int32_t, float>>(
+            0x59FCB0, this, arg1, arg2, arg3);
     }
 };

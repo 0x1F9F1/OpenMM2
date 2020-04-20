@@ -60,139 +60,139 @@ public:
     // RaceMenuBase::`vftable' @ 0x5B4630
 
     // 0x506BD0 | ??0RaceMenuBase@@QAE@H@Z
-    RaceMenuBase(i32 arg1)
+    inline RaceMenuBase(int32_t arg1)
     {
-        stub<member_func_t<void, RaceMenuBase, i32>>(0x506BD0, this, arg1);
+        stub<member_func_t<void, RaceMenuBase, int32_t>>(0x506BD0, this, arg1);
     }
 
     // 0x506CC0 | ?Init@RaceMenuBase@@QAEXH@Z
-    void Init(i32 arg1)
+    inline void Init(int32_t arg1)
     {
-        return stub<member_func_t<void, RaceMenuBase, i32>>(0x506CC0, this, arg1);
+        return stub<member_func_t<void, RaceMenuBase, int32_t>>(0x506CC0, this, arg1);
     }
 
     // 0x507DF0 | ?FocusDescription@RaceMenuBase@@QAEXHH@Z
-    void FocusDescription(i32 arg1, i32 arg2)
+    inline void FocusDescription(int32_t arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, RaceMenuBase, i32, i32>>(0x507DF0, this, arg1, arg2);
+        return stub<member_func_t<void, RaceMenuBase, int32_t, int32_t>>(0x507DF0, this, arg1, arg2);
     }
 
     // 0x507E40 | ?WidgetOnOff@RaceMenuBase@@QAEXHPAVuiWidget@@@Z
-    void WidgetOnOff(i32 arg1, class uiWidget* arg2)
+    inline void WidgetOnOff(int32_t arg1, class uiWidget* arg2)
     {
-        return stub<member_func_t<void, RaceMenuBase, i32, class uiWidget*>>(0x507E40, this, arg1, arg2);
+        return stub<member_func_t<void, RaceMenuBase, int32_t, class uiWidget*>>(0x507E40, this, arg1, arg2);
     }
 
     // 0x507EB0 | ?SetRW@RaceMenuBase@@QAEXXZ
-    void SetRW()
+    inline void SetRW()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x507EB0, this);
     }
 
     // 0x5082C0 | ?CheatCallback@RaceMenuBase@@QAEXXZ
-    void CheatCallback()
+    inline void CheatCallback()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x5082C0, this);
     }
 
     // 0x5082D0 | ?SyncRaceState@RaceMenuBase@@QAEXXZ
-    void SyncRaceState()
+    inline void SyncRaceState()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x5082D0, this);
     }
 
     // 0x508350 | ?CityChange@RaceMenuBase@@QAEXXZ
-    void CityChange()
+    inline void CityChange()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508350, this);
     }
 
     // 0x5084C0 | ?AnotherCityChangeCB@RaceMenuBase@@QAEXXZ
-    void AnotherCityChangeCB()
+    inline void AnotherCityChangeCB()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x5084C0, this);
     }
 
     // 0x508540 | ?GameCallback@RaceMenuBase@@QAEXXZ
-    void GameCallback()
+    inline void GameCallback()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508540, this);
     }
 
     // 0x5085C0 | ?LapsCallback@RaceMenuBase@@QAEXXZ
-    void LapsCallback()
+    inline void LapsCallback()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x5085C0, this);
     }
 
     // 0x5085D0 | ?AICallback@RaceMenuBase@@QAEXXZ
-    void AICallback()
+    inline void AICallback()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x5085D0, this);
     }
 
     // 0x508620 | ?ChangeLocalVals@RaceMenuBase@@QAEXXZ
-    void ChangeLocalVals()
+    inline void ChangeLocalVals()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508620, this);
     }
 
     // 0x5088C0 | ?SetStateRace@RaceMenuBase@@QAEXXZ
-    void SetStateRace()
+    inline void SetStateRace()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x5088C0, this);
     }
 
     // 0x508C90 | ?LoadRaceMap@RaceMenuBase@@QAEXXZ
-    void LoadRaceMap()
+    inline void LoadRaceMap()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508C90, this);
     }
 
     // 0x508D20 | ?DecRaceName@RaceMenuBase@@QAEXXZ
-    void DecRaceName()
+    inline void DecRaceName()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508D20, this);
     }
 
     // 0x508DD0 | ?IncRaceName@RaceMenuBase@@QAEXXZ
-    void IncRaceName()
+    inline void IncRaceName()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508DD0, this);
     }
 
     // 0x508E80 | ?IncLocale@RaceMenuBase@@QAEXXZ
-    void IncLocale()
+    inline void IncLocale()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508E80, this);
     }
 
     // 0x508EB0 | ?DecLocale@RaceMenuBase@@QAEXXZ
-    void DecLocale()
+    inline void DecLocale()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508EB0, this);
     }
 
     // 0x508ED0 | ?IncTime@RaceMenuBase@@QAEXXZ
-    void IncTime()
+    inline void IncTime()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508ED0, this);
     }
 
     // 0x508F00 | ?DecTime@RaceMenuBase@@QAEXXZ
-    void DecTime()
+    inline void DecTime()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508F00, this);
     }
 
     // 0x508F30 | ?IncWeather@RaceMenuBase@@QAEXXZ
-    void IncWeather()
+    inline void IncWeather()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508F30, this);
     }
 
     // 0x508F60 | ?DecWeather@RaceMenuBase@@QAEXXZ
-    void DecWeather()
+    inline void DecWeather()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x508F60, this);
     }
@@ -207,25 +207,25 @@ public:
     static inline extern_var(0x6B0F30, class mmRaceData, BlitzData);
 
     // 0x507D30 | ??1RaceMenuBase@@UAE@XZ
-    ~RaceMenuBase() override
+    inline ~RaceMenuBase() override
     {
         stub<member_func_t<void, RaceMenuBase>>(0x507D30, this);
     }
 
     // 0x507DC0 | ?PreSetup@RaceMenuBase@@UAEXXZ
-    void PreSetup() override
+    inline void PreSetup() override
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x507DC0, this);
     }
 
     // 0x505450 | ?SetCRWidgets@RaceMenuBase@@UAEXH@Z
-    virtual void SetCRWidgets(i32 arg1)
+    virtual inline void SetCRWidgets(int32_t arg1)
     {
-        return stub<member_func_t<void, RaceMenuBase, i32>>(0x505450, this, arg1);
+        return stub<member_func_t<void, RaceMenuBase, int32_t>>(0x505450, this, arg1);
     }
 
     // 0x505460 | ?InitCRWidgets@RaceMenuBase@@UAEXXZ
-    virtual void InitCRWidgets()
+    virtual inline void InitCRWidgets()
     {
         return stub<member_func_t<void, RaceMenuBase>>(0x505460, this);
     }

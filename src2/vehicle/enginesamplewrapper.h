@@ -55,99 +55,99 @@ struct vehEngineSampleWrapper
 {
 public:
     // 0x4DF550 | ??0vehEngineSampleWrapper@@QAE@XZ
-    vehEngineSampleWrapper()
+    inline vehEngineSampleWrapper()
     {
         stub<member_func_t<void, vehEngineSampleWrapper>>(0x4DF550, this);
     }
 
     // 0x4DF580 | ?SetSoundPtr@vehEngineSampleWrapper@@QAEXPAVAudSoundBase@@@Z
-    void SetSoundPtr(class AudSoundBase* arg1)
+    inline void SetSoundPtr(class AudSoundBase* arg1)
     {
         return stub<member_func_t<void, vehEngineSampleWrapper, class AudSoundBase*>>(0x4DF580, this, arg1);
     }
 
     // 0x4DF5B0 | ?DeallocateSoundPtr@vehEngineSampleWrapper@@QAEXXZ
-    void DeallocateSoundPtr()
+    inline void DeallocateSoundPtr()
     {
         return stub<member_func_t<void, vehEngineSampleWrapper>>(0x4DF5B0, this);
     }
 
     // 0x4DF5D0 | ?Stop@vehEngineSampleWrapper@@QAEXXZ
-    void Stop()
+    inline void Stop()
     {
         return stub<member_func_t<void, vehEngineSampleWrapper>>(0x4DF5D0, this);
     }
 
     // 0x4DF5F0 | ?SetPan@vehEngineSampleWrapper@@QAEXM@Z
-    void SetPan(f32 arg1)
+    inline void SetPan(float arg1)
     {
-        return stub<member_func_t<void, vehEngineSampleWrapper, f32>>(0x4DF5F0, this, arg1);
+        return stub<member_func_t<void, vehEngineSampleWrapper, float>>(0x4DF5F0, this, arg1);
     }
 
     // 0x4DF610 | ?UpdateRPM@vehEngineSampleWrapper@@QAEXMMMM@Z
-    void UpdateRPM(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
+    inline void UpdateRPM(float arg1, float arg2, float arg3, float arg4)
     {
-        return stub<member_func_t<void, vehEngineSampleWrapper, f32, f32, f32, f32>>(
+        return stub<member_func_t<void, vehEngineSampleWrapper, float, float, float, float>>(
             0x4DF610, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4DF6E0 | ?UpdateRPM@vehEngineSampleWrapper@@QAEXM@Z
-    void UpdateRPM(f32 arg1)
+    inline void UpdateRPM(float arg1)
     {
-        return stub<member_func_t<void, vehEngineSampleWrapper, f32>>(0x4DF6E0, this, arg1);
+        return stub<member_func_t<void, vehEngineSampleWrapper, float>>(0x4DF6E0, this, arg1);
     }
 
     // 0x4DF790 | ?CalculateVolumeOld@vehEngineSampleWrapper@@QAEMM@Z
-    f32 CalculateVolumeOld(f32 arg1)
+    inline float CalculateVolumeOld(float arg1)
     {
-        return stub<member_func_t<f32, vehEngineSampleWrapper, f32>>(0x4DF790, this, arg1);
+        return stub<member_func_t<float, vehEngineSampleWrapper, float>>(0x4DF790, this, arg1);
     }
 
     // 0x4DF7F0 | ?CalculateVolume@vehEngineSampleWrapper@@QAEMM@Z
-    f32 CalculateVolume(f32 arg1)
+    inline float CalculateVolume(float arg1)
     {
-        return stub<member_func_t<f32, vehEngineSampleWrapper, f32>>(0x4DF7F0, this, arg1);
+        return stub<member_func_t<float, vehEngineSampleWrapper, float>>(0x4DF7F0, this, arg1);
     }
 
     // 0x4DF860 | ?CalculatePitch@vehEngineSampleWrapper@@QAEMM@Z
-    f32 CalculatePitch(f32 arg1)
+    inline float CalculatePitch(float arg1)
     {
-        return stub<member_func_t<f32, vehEngineSampleWrapper, f32>>(0x4DF860, this, arg1);
+        return stub<member_func_t<float, vehEngineSampleWrapper, float>>(0x4DF860, this, arg1);
     }
 
     // 0x4DF8A0 | ?EchoOn@vehEngineSampleWrapper@@QAEXM@Z
-    void EchoOn(f32 arg1)
+    inline void EchoOn(float arg1)
     {
-        return stub<member_func_t<void, vehEngineSampleWrapper, f32>>(0x4DF8A0, this, arg1);
+        return stub<member_func_t<void, vehEngineSampleWrapper, float>>(0x4DF8A0, this, arg1);
     }
 
     // 0x4DF8D0 | ?EchoOff@vehEngineSampleWrapper@@QAEXXZ
-    void EchoOff()
+    inline void EchoOff()
     {
         return stub<member_func_t<void, vehEngineSampleWrapper>>(0x4DF8D0, this);
     }
 
     // 0x4DF8F0 | ?Silence@vehEngineSampleWrapper@@QAEXH@Z
-    void Silence(i32 arg1)
+    inline void Silence(int32_t arg1)
     {
-        return stub<member_func_t<void, vehEngineSampleWrapper, i32>>(0x4DF8F0, this, arg1);
+        return stub<member_func_t<void, vehEngineSampleWrapper, int32_t>>(0x4DF8F0, this, arg1);
     }
 
     // 0x4DF920 | ?ParseCSVBufferOld@vehEngineSampleWrapper@@QAEXPAD@Z
-    void ParseCSVBufferOld(char* arg1)
+    inline void ParseCSVBufferOld(char* arg1)
     {
         return stub<member_func_t<void, vehEngineSampleWrapper, char*>>(0x4DF920, this, arg1);
     }
 
     // 0x4DFA40 | ?ParseCSVBuffer@vehEngineSampleWrapper@@QAEXPAD@Z
-    void ParseCSVBuffer(char* arg1)
+    inline void ParseCSVBuffer(char* arg1)
     {
         return stub<member_func_t<void, vehEngineSampleWrapper, char*>>(0x4DFA40, this, arg1);
     }
 
     // 0x4DFC10 | ?SetMaxVolume@vehEngineSampleWrapper@@QAEXM@Z
-    void SetMaxVolume(f32 arg1)
+    inline void SetMaxVolume(float arg1)
     {
-        return stub<member_func_t<void, vehEngineSampleWrapper, f32>>(0x4DFC10, this, arg1);
+        return stub<member_func_t<void, vehEngineSampleWrapper, float>>(0x4DFC10, this, arg1);
     }
 };

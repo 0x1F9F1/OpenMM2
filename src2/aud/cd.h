@@ -35,49 +35,49 @@ struct audCD
 {
 public:
     // 0x5A6EA0 | ?Update@audCD@@QAE_NH@Z
-    bool Update(i32 arg1)
+    inline bool Update(int32_t arg1)
     {
-        return stub<member_func_t<bool, audCD, i32>>(0x5A6EA0, this, arg1);
+        return stub<member_func_t<bool, audCD, int32_t>>(0x5A6EA0, this, arg1);
     }
 
     // 0x5A6EB0 | ?GetStatus@audCD@@QAE?AW4AUD_OBJECTSTATUS@audObject@@XZ
-    enum audObject::AUD_OBJECTSTATUS GetStatus()
+    inline enum audObject::AUD_OBJECTSTATUS GetStatus()
     {
         return stub<member_func_t<enum audObject::AUD_OBJECTSTATUS, audCD>>(0x5A6EB0, this);
     }
 
     // 0x5A6EC0 | ?Play@audCD@@QAE_NXZ
-    bool Play()
+    inline bool Play()
     {
         return stub<member_func_t<bool, audCD>>(0x5A6EC0, this);
     }
 
     // 0x5A6ED0 | ?Stop@audCD@@QAE_NXZ
-    bool Stop()
+    inline bool Stop()
     {
         return stub<member_func_t<bool, audCD>>(0x5A6ED0, this);
     }
 
     // 0x5A6EE0 | ?SetVolume@audCD@@QAE_NM@Z
-    bool SetVolume(f32 arg1)
+    inline bool SetVolume(float arg1)
     {
-        return stub<member_func_t<bool, audCD, f32>>(0x5A6EE0, this, arg1);
+        return stub<member_func_t<bool, audCD, float>>(0x5A6EE0, this, arg1);
     }
 
     // 0x5A6EF0 | ?SetPitch@audCD@@QAE_NM@Z
-    bool SetPitch(f32 arg1)
+    inline bool SetPitch(float arg1)
     {
-        return stub<member_func_t<bool, audCD, f32>>(0x5A6EF0, this, arg1);
+        return stub<member_func_t<bool, audCD, float>>(0x5A6EF0, this, arg1);
     }
 
     // 0x5A6F00 | ?SetPan@audCD@@QAE_NM@Z
-    bool SetPan(f32 arg1)
+    inline bool SetPan(float arg1)
     {
-        return stub<member_func_t<bool, audCD, f32>>(0x5A6F00, this, arg1);
+        return stub<member_func_t<bool, audCD, float>>(0x5A6F00, this, arg1);
     }
 
     // 0x5A6F10 | ?PauseResume@audCD@@QAE_N_N@Z
-    bool PauseResume(bool arg1)
+    inline bool PauseResume(bool arg1)
     {
         return stub<member_func_t<bool, audCD, bool>>(0x5A6F10, this, arg1);
     }

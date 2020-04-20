@@ -51,9 +51,9 @@
 */
 
 // 0x4F3F50 | ?AutoDetect@@YAXH@Z
-inline void AutoDetect(i32 arg1)
+inline void AutoDetect(int32_t arg1)
 {
-    return stub<cdecl_t<void, i32>>(0x4F3F50, arg1);
+    return stub<cdecl_t<void, int32_t>>(0x4F3F50, arg1);
 }
 
 // 0x6B0454 | ?mmCpuSpeed@@3IA
@@ -65,67 +65,67 @@ public:
     // GraphicsOptions::`vftable' @ 0x5B3CD4
 
     // 0x4F4280 | ??0GraphicsOptions@@QAE@H@Z
-    GraphicsOptions(i32 arg1)
+    inline GraphicsOptions(int32_t arg1)
     {
-        stub<member_func_t<void, GraphicsOptions, i32>>(0x4F4280, this, arg1);
+        stub<member_func_t<void, GraphicsOptions, int32_t>>(0x4F4280, this, arg1);
     }
 
     // 0x4F5140 | ?SetResolution@GraphicsOptions@@QAEXXZ
-    void SetResolution()
+    inline void SetResolution()
     {
         return stub<member_func_t<void, GraphicsOptions>>(0x4F5140, this);
     }
 
     // 0x4F5150 | ?TogglePeds@GraphicsOptions@@QAEXXZ
-    void TogglePeds()
+    inline void TogglePeds()
     {
         return stub<member_func_t<void, GraphicsOptions>>(0x4F5150, this);
     }
 
     // 0x4F5170 | ?SetLightQuality@GraphicsOptions@@QAEXXZ
-    void SetLightQuality()
+    inline void SetLightQuality()
     {
         return stub<member_func_t<void, GraphicsOptions>>(0x4F5170, this);
     }
 
     // 0x4F5220 | ?SetRenderer@GraphicsOptions@@QAEXXZ
-    void SetRenderer()
+    inline void SetRenderer()
     {
         return stub<member_func_t<void, GraphicsOptions>>(0x4F5220, this);
     }
 
     // 0x4F53F0 | ?FocusDescription@GraphicsOptions@@QAEXPAX0@Z
-    void FocusDescription(void* arg1, void* arg2)
+    inline void FocusDescription(void* arg1, void* arg2)
     {
         return stub<member_func_t<void, GraphicsOptions, void*, void*>>(0x4F53F0, this, arg1, arg2);
     }
 
     // 0x4F50D0 | ??1GraphicsOptions@@UAE@XZ
-    ~GraphicsOptions() override
+    inline ~GraphicsOptions() override
     {
         stub<member_func_t<void, GraphicsOptions>>(0x4F50D0, this);
     }
 
     // 0x4F5230 | ?PreSetup@GraphicsOptions@@UAEXXZ
-    void PreSetup() override
+    inline void PreSetup() override
     {
         return stub<member_func_t<void, GraphicsOptions>>(0x4F5230, this);
     }
 
     // 0x4F53A0 | ?CancelAction@GraphicsOptions@@UAEXXZ
-    void CancelAction() override
+    inline void CancelAction() override
     {
         return stub<member_func_t<void, GraphicsOptions>>(0x4F53A0, this);
     }
 
     // 0x4F53B0 | ?DoneAction@GraphicsOptions@@UAEXXZ
-    void DoneAction() override
+    inline void DoneAction() override
     {
         return stub<member_func_t<void, GraphicsOptions>>(0x4F53B0, this);
     }
 
     // 0x4F52E0 | ?ResetDefaultAction@GraphicsOptions@@UAEXXZ
-    void ResetDefaultAction() override
+    inline void ResetDefaultAction() override
     {
         return stub<member_func_t<void, GraphicsOptions>>(0x4F52E0, this);
     }

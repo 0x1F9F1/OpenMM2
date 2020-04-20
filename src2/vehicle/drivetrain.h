@@ -46,67 +46,67 @@ public:
     // vehDrivetrain::`vftable' @ 0x5B30D0
 
     // 0x4D9D60 | ??0vehDrivetrain@@QAE@XZ
-    vehDrivetrain()
+    inline vehDrivetrain()
     {
         stub<member_func_t<void, vehDrivetrain>>(0x4D9D60, this);
     }
 
     // 0x4D9DD0 | ?Init@vehDrivetrain@@QAEXPAVvehCarSim@@@Z
-    void Init(class vehCarSim* arg1)
+    inline void Init(class vehCarSim* arg1)
     {
         return stub<member_func_t<void, vehDrivetrain, class vehCarSim*>>(0x4D9DD0, this, arg1);
     }
 
     // 0x4D9DE0 | ?CopyVars@vehDrivetrain@@QAEXPAV1@@Z
-    void CopyVars(class vehDrivetrain* arg1)
+    inline void CopyVars(class vehDrivetrain* arg1)
     {
         return stub<member_func_t<void, vehDrivetrain, class vehDrivetrain*>>(0x4D9DE0, this, arg1);
     }
 
     // 0x4D9E20 | ?Attach@vehDrivetrain@@QAEXXZ
-    void Attach()
+    inline void Attach()
     {
         return stub<member_func_t<void, vehDrivetrain>>(0x4D9E20, this);
     }
 
     // 0x4D9E40 | ?Detach@vehDrivetrain@@QAEXXZ
-    void Detach()
+    inline void Detach()
     {
         return stub<member_func_t<void, vehDrivetrain>>(0x4D9E40, this);
     }
 
     // 0x4D9E50 | ?AddWheel@vehDrivetrain@@QAEHPAVvehWheel@@@Z
-    i32 AddWheel(class vehWheel* arg1)
+    inline int32_t AddWheel(class vehWheel* arg1)
     {
-        return stub<member_func_t<i32, vehDrivetrain, class vehWheel*>>(0x4D9E50, this, arg1);
+        return stub<member_func_t<int32_t, vehDrivetrain, class vehWheel*>>(0x4D9E50, this, arg1);
     }
 
     // 0x4CCEC0 | ??1vehDrivetrain@@UAE@XZ
-    ~vehDrivetrain() override
+    inline ~vehDrivetrain() override
     {
         stub<member_func_t<void, vehDrivetrain>>(0x4CCEC0, this);
     }
 
     // 0x4D9E90 | ?Update@vehDrivetrain@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, vehDrivetrain>>(0x4D9E90, this);
     }
 
     // 0x4D9E00 | ?Reset@vehDrivetrain@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, vehDrivetrain>>(0x4D9E00, this);
     }
 
     // 0x4DA570 | ?FileIO@vehDrivetrain@@UAEXAAVdatParser@@@Z
-    void FileIO(class datParser& arg1) override
+    inline void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, vehDrivetrain, class datParser&>>(0x4DA570, this, arg1);
     }
 
     // 0x4DA600 | ?GetClassName@vehDrivetrain@@UAEPADXZ
-    char* GetClassName() override
+    inline char* GetClassName() override
     {
         return stub<member_func_t<char*, vehDrivetrain>>(0x4DA600, this);
     }

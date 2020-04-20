@@ -25,7 +25,7 @@
 */
 
 // 0x52A8F0 | ?UpdateCrc@@YAKPAEI@Z
-inline u32 UpdateCrc(u8* arg1, u32 arg2)
+inline uint32_t UpdateCrc(uint8_t* arg1, uint32_t arg2)
 {
-    return stub<cdecl_t<u32, u8*, u32>>(0x52A8F0, arg1, arg2);
+    return stub<cdecl_t<uint32_t, uint8_t*, uint32_t>>(0x52A8F0, arg1, arg2);
 }

@@ -71,9 +71,9 @@ class gfxPacket
 {
 public:
     // 0x4B3310 | ?ForceCPV@gfxPacket@@SAXI@Z
-    static inline void ForceCPV(u32 arg1)
+    static inline void ForceCPV(uint32_t arg1)
     {
-        return stub<cdecl_t<void, u32>>(0x4B3310, arg1);
+        return stub<cdecl_t<void, uint32_t>>(0x4B3310, arg1);
     }
 
     // 0x4B3320 | ?BeginRef@gfxPacket@@SAXXZ
@@ -89,73 +89,75 @@ public:
     }
 
     // 0x4B3340 | ?Draw@gfxPacket@@QBEXI@Z
-    void Draw(u32 arg1)
+    inline void Draw(uint32_t arg1)
     {
-        return stub<member_func_t<void, gfxPacket, u32>>(0x4B3340, this, arg1);
+        return stub<member_func_t<void, gfxPacket, uint32_t>>(0x4B3340, this, arg1);
     }
 
     // 0x4B34E0 | ?Draw@gfxPacket@@QBEXPBVMatrix44@@I@Z
-    void Draw(class Matrix44 const* arg1, u32 arg2)
+    inline void Draw(class Matrix44 const* arg1, uint32_t arg2)
     {
-        return stub<member_func_t<void, gfxPacket, class Matrix44 const*, u32>>(0x4B34E0, this, arg1, arg2);
+        return stub<member_func_t<void, gfxPacket, class Matrix44 const*, uint32_t>>(0x4B34E0, this, arg1, arg2);
     }
 
     // 0x4B38A0 | ??0gfxPacket@@QAE@IIIPBEIPBGIPAVgfxReskin@@IE00_N@Z
-    gfxPacket(u32 arg1, u32 arg2, u32 arg3, u8 const* arg4, u32 arg5, u16 const* arg6, u32 arg7, class gfxReskin* arg8,
-        u32 arg9, u8 arg10, u8 const* arg11, u8 const* arg12, bool arg13)
+    inline gfxPacket(uint32_t arg1, uint32_t arg2, uint32_t arg3, uint8_t const* arg4, uint32_t arg5,
+        uint16_t const* arg6, uint32_t arg7, class gfxReskin* arg8, uint32_t arg9, uint8_t arg10, uint8_t const* arg11,
+        uint8_t const* arg12, bool arg13)
     {
-        stub<member_func_t<void, gfxPacket, u32, u32, u32, u8 const*, u32, u16 const*, u32, class gfxReskin*, u32, u8,
-            u8 const*, u8 const*, bool>>(
+        stub<member_func_t<void, gfxPacket, uint32_t, uint32_t, uint32_t, uint8_t const*, uint32_t, uint16_t const*,
+            uint32_t, class gfxReskin*, uint32_t, uint8_t, uint8_t const*, uint8_t const*, bool>>(
             0x4B38A0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
     }
 
     // 0x4B3BE0 | ?GetSkinnedVert@gfxPacket@@QBEXPBVMatrix34@@AAVVector3@@H@Z
-    void GetSkinnedVert(class Matrix34 const* arg1, class Vector3& arg2, i32 arg3)
+    inline void GetSkinnedVert(class Matrix34 const* arg1, class Vector3& arg2, int32_t arg3)
     {
-        return stub<member_func_t<void, gfxPacket, class Matrix34 const*, class Vector3&, i32>>(
+        return stub<member_func_t<void, gfxPacket, class Matrix34 const*, class Vector3&, int32_t>>(
             0x4B3BE0, this, arg1, arg2, arg3);
     }
 
     // 0x4B3C10 | ?GetPosition@gfxPacket@@QBEXAAVVector3@@H@Z
-    void GetPosition(class Vector3& arg1, i32 arg2)
+    inline void GetPosition(class Vector3& arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, gfxPacket, class Vector3&, i32>>(0x4B3C10, this, arg1, arg2);
+        return stub<member_func_t<void, gfxPacket, class Vector3&, int32_t>>(0x4B3C10, this, arg1, arg2);
     }
 
     // 0x4B3C70 | ?SetPosition@gfxPacket@@QBEXABVVector3@@H@Z
-    void SetPosition(class Vector3 const& arg1, i32 arg2)
+    inline void SetPosition(class Vector3 const& arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, gfxPacket, class Vector3 const&, i32>>(0x4B3C70, this, arg1, arg2);
+        return stub<member_func_t<void, gfxPacket, class Vector3 const&, int32_t>>(0x4B3C70, this, arg1, arg2);
     }
 
     // 0x4B3CF0 | ?GetNormal@gfxPacket@@QBEXAAVVector3@@H@Z
-    void GetNormal(class Vector3& arg1, i32 arg2)
+    inline void GetNormal(class Vector3& arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, gfxPacket, class Vector3&, i32>>(0x4B3CF0, this, arg1, arg2);
+        return stub<member_func_t<void, gfxPacket, class Vector3&, int32_t>>(0x4B3CF0, this, arg1, arg2);
     }
 
     // 0x4B3D90 | ?SetNormal@gfxPacket@@QBEXABVVector3@@H@Z
-    void SetNormal(class Vector3 const& arg1, i32 arg2)
+    inline void SetNormal(class Vector3 const& arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, gfxPacket, class Vector3 const&, i32>>(0x4B3D90, this, arg1, arg2);
+        return stub<member_func_t<void, gfxPacket, class Vector3 const&, int32_t>>(0x4B3D90, this, arg1, arg2);
     }
 
     // 0x4B3E20 | ?GetTexCoord@gfxPacket@@QBEXAAVVector2@@H@Z
-    void GetTexCoord(class Vector2& arg1, i32 arg2)
+    inline void GetTexCoord(class Vector2& arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, gfxPacket, class Vector2&, i32>>(0x4B3E20, this, arg1, arg2);
+        return stub<member_func_t<void, gfxPacket, class Vector2&, int32_t>>(0x4B3E20, this, arg1, arg2);
     }
 
     // 0x4B3EC0 | ?GetTri@gfxPacket@@QBEXQAHH@Z
-    void GetTri(i32* const arg1, i32 arg2)
+    inline void GetTri(int32_t* const arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, gfxPacket, i32* const, i32>>(0x4B3EC0, this, arg1, arg2);
+        return stub<member_func_t<void, gfxPacket, int32_t* const, int32_t>>(0x4B3EC0, this, arg1, arg2);
     }
 
     // 0x4B3F00 | ?SetPacking@gfxPacket@@SAXMEEEME@Z
-    static inline void SetPacking(f32 arg1, u8 arg2, u8 arg3, u8 arg4, f32 arg5, u8 arg6)
+    static inline void SetPacking(float arg1, uint8_t arg2, uint8_t arg3, uint8_t arg4, float arg5, uint8_t arg6)
     {
-        return stub<cdecl_t<void, f32, u8, u8, u8, f32, u8>>(0x4B3F00, arg1, arg2, arg3, arg4, arg5, arg6);
+        return stub<cdecl_t<void, float, uint8_t, uint8_t, uint8_t, float, uint8_t>>(
+            0x4B3F00, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4B3F40 | ?SetDefaultPacking@gfxPacket@@SAXXZ
@@ -165,45 +167,46 @@ public:
     }
 
     // 0x4B3F60 | ?AutoSetPacking@gfxPacket@@SAXIIPBE@Z
-    static inline void AutoSetPacking(u32 arg1, u32 arg2, u8 const* arg3)
+    static inline void AutoSetPacking(uint32_t arg1, uint32_t arg2, uint8_t const* arg3)
     {
-        return stub<cdecl_t<void, u32, u32, u8 const*>>(0x4B3F60, arg1, arg2, arg3);
+        return stub<cdecl_t<void, uint32_t, uint32_t, uint8_t const*>>(0x4B3F60, arg1, arg2, arg3);
     }
 
     // 0x4B40F0 | ?Clone@gfxPacket@@QBEPAV1@XZ
-    class gfxPacket* Clone()
+    inline class gfxPacket* Clone()
     {
         return stub<member_func_t<class gfxPacket*, gfxPacket>>(0x4B40F0, this);
     }
 
     // 0x4B4170 | ??0gfxPacket@@QAE@PBV0@@Z
-    gfxPacket(class gfxPacket const* arg1)
+    inline gfxPacket(class gfxPacket const* arg1)
     {
         stub<member_func_t<void, gfxPacket, class gfxPacket const*>>(0x4B4170, this, arg1);
     }
 
     // 0x4B4260 | ?CopyFrom@gfxPacket@@QAEXPBV1@@Z
-    void CopyFrom(class gfxPacket const* arg1)
+    inline void CopyFrom(class gfxPacket const* arg1)
     {
         return stub<member_func_t<void, gfxPacket, class gfxPacket const*>>(0x4B4260, this, arg1);
     }
 
     // 0x4B43E0 | ?AllocateVertexBuffer@gfxPacket@@IAEXXZ
-    void AllocateVertexBuffer()
+    inline void AllocateVertexBuffer()
     {
         return stub<member_func_t<void, gfxPacket>>(0x4B43E0, this);
     }
 
     // 0x4B4570 | ?ReserveVertexBuffer@gfxPacket@@SAXII@Z
-    static inline void ReserveVertexBuffer(u32 arg1, u32 arg2)
+    static inline void ReserveVertexBuffer(uint32_t arg1, uint32_t arg2)
     {
-        return stub<cdecl_t<void, u32, u32>>(0x4B4570, arg1, arg2);
+        return stub<cdecl_t<void, uint32_t, uint32_t>>(0x4B4570, arg1, arg2);
     }
 
     // 0x4B45D0 | ?Persist@gfxPacket@@KAPAEPAUIDirect3DVertexBuffer7@@IPAXI@Z
-    static inline u8* Persist(struct IDirect3DVertexBuffer7* arg1, u32 arg2, void* arg3, u32 arg4)
+    static inline uint8_t* Persist(struct IDirect3DVertexBuffer7* arg1, uint32_t arg2, void* arg3, uint32_t arg4)
     {
-        return stub<cdecl_t<u8*, struct IDirect3DVertexBuffer7*, u32, void*, u32>>(0x4B45D0, arg1, arg2, arg3, arg4);
+        return stub<cdecl_t<uint8_t*, struct IDirect3DVertexBuffer7*, uint32_t, void*, uint32_t>>(
+            0x4B45D0, arg1, arg2, arg3, arg4);
     }
 
     // 0x4B4640 | ?FreeAllVertexBuffers@gfxPacket@@SAXXZ
@@ -219,21 +222,21 @@ public:
     }
 
     // 0x4B4720 | ?DoLock@gfxPacket@@IAEXXZ
-    void DoLock()
+    inline void DoLock()
     {
         return stub<member_func_t<void, gfxPacket>>(0x4B4720, this);
     }
 
     // 0x4B4740 | ?DoUnlock@gfxPacket@@IAEXXZ
-    void DoUnlock()
+    inline void DoUnlock()
     {
         return stub<member_func_t<void, gfxPacket>>(0x4B4740, this);
     }
 
     // 0x4B4760 | ?OrthoMap@gfxPacket@@QAEXM@Z
-    void OrthoMap(f32 arg1)
+    inline void OrthoMap(float arg1)
     {
-        return stub<member_func_t<void, gfxPacket, f32>>(0x4B4760, this, arg1);
+        return stub<member_func_t<void, gfxPacket, float>>(0x4B4760, this, arg1);
     }
 
     // 0x4B4860 | ?MakeList@gfxPacket@@SAPAVgfxPacketList@@PAV1@@Z

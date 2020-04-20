@@ -26,13 +26,13 @@
 */
 
 // 0x4C93B0 | ?__ComputeCpuSpeed@@YAIXZ
-inline u32 __ComputeCpuSpeed()
+inline uint32_t __ComputeCpuSpeed()
 {
-    return stub<cdecl_t<u32>>(0x4C93B0);
+    return stub<cdecl_t<uint32_t>>(0x4C93B0);
 }
 
 // 0x4C9470 | ?ComputeCpuSpeed@@YAIXZ
-inline u32 ComputeCpuSpeed()
+inline uint32_t ComputeCpuSpeed()
 {
-    return stub<cdecl_t<u32>>(0x4C9470);
+    return stub<cdecl_t<uint32_t>>(0x4C9470);
 }

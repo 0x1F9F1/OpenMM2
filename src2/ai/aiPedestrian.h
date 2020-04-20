@@ -70,243 +70,243 @@ public:
     // Skipped (scalar/vector destructor)
 
     // 0x54AFA0 | ??0aiPedestrian@@QAE@XZ
-    aiPedestrian()
+    inline aiPedestrian()
     {
         stub<member_func_t<void, aiPedestrian>>(0x54AFA0, this);
     }
 
     // 0x54B0C0 | ??1aiPedestrian@@QAE@XZ
-    ~aiPedestrian()
+    inline ~aiPedestrian()
     {
         stub<member_func_t<void, aiPedestrian>>(0x54B0C0, this);
     }
 
     // 0x54B0D0 | ?Init@aiPedestrian@@QAEXPADHH@Z
-    void Init(char* arg1, i32 arg2, i32 arg3)
+    inline void Init(char* arg1, int32_t arg2, int32_t arg3)
     {
-        return stub<member_func_t<void, aiPedestrian, char*, i32, i32>>(0x54B0D0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, aiPedestrian, char*, int32_t, int32_t>>(0x54B0D0, this, arg1, arg2, arg3);
     }
 
     // 0x54B5C0 | ?Reset@aiPedestrian@@QAEXPAVaiPath@@H@Z
-    void Reset(class aiPath* arg1, i32 arg2)
+    inline void Reset(class aiPath* arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, aiPedestrian, class aiPath*, i32>>(0x54B5C0, this, arg1, arg2);
+        return stub<member_func_t<void, aiPedestrian, class aiPath*, int32_t>>(0x54B5C0, this, arg1, arg2);
     }
 
     // 0x54B9C0 | ?Update@aiPedestrian@@QAEXXZ
-    void Update()
+    inline void Update()
     {
         return stub<member_func_t<void, aiPedestrian>>(0x54B9C0, this);
     }
 
     // 0x54BFA0 | ?PreCrossStreet@aiPedestrian@@AAEXXZ
-    void PreCrossStreet()
+    inline void PreCrossStreet()
     {
         return stub<member_func_t<void, aiPedestrian>>(0x54BFA0, this);
     }
 
     // 0x54C4F0 | ?CrossStreet@aiPedestrian@@AAEXXZ
-    void CrossStreet()
+    inline void CrossStreet()
     {
         return stub<member_func_t<void, aiPedestrian>>(0x54C4F0, this);
     }
 
     // 0x54C6F0 | ?WaitCrossStreet@aiPedestrian@@AAEXXZ
-    void WaitCrossStreet()
+    inline void WaitCrossStreet()
     {
         return stub<member_func_t<void, aiPedestrian>>(0x54C6F0, this);
     }
 
     // 0x54CCC0 | ?Accident@aiPedestrian@@AAEHXZ
-    i32 Accident()
+    inline int32_t Accident()
     {
-        return stub<member_func_t<i32, aiPedestrian>>(0x54CCC0, this);
+        return stub<member_func_t<int32_t, aiPedestrian>>(0x54CCC0, this);
     }
 
     // 0x54CDB0 | ?Wander@aiPedestrian@@AAEXXZ
-    void Wander()
+    inline void Wander()
     {
         return stub<member_func_t<void, aiPedestrian>>(0x54CDB0, this);
     }
 
     // 0x54D100 | ?Anticipate@aiPedestrian@@AAEXXZ
-    void Anticipate()
+    inline void Anticipate()
     {
         return stub<member_func_t<void, aiPedestrian>>(0x54D100, this);
     }
 
     // 0x54D8D0 | ?Avoid@aiPedestrian@@AAEXPAM@Z
-    void Avoid(f32* arg1)
+    inline void Avoid(float* arg1)
     {
-        return stub<member_func_t<void, aiPedestrian, f32*>>(0x54D8D0, this, arg1);
+        return stub<member_func_t<void, aiPedestrian, float*>>(0x54D8D0, this, arg1);
     }
 
     // 0x54E650 | ?TimeToCollision@aiPedestrian@@AAEMM@Z
-    f32 TimeToCollision(f32 arg1)
+    inline float TimeToCollision(float arg1)
     {
-        return stub<member_func_t<f32, aiPedestrian, f32>>(0x54E650, this, arg1);
+        return stub<member_func_t<float, aiPedestrian, float>>(0x54E650, this, arg1);
     }
 
     // 0x54E680 | ?DetectPlayerForwardCollision@aiPedestrian@@AAEHPAM0@Z
-    i32 DetectPlayerForwardCollision(f32* arg1, f32* arg2)
+    inline int32_t DetectPlayerForwardCollision(float* arg1, float* arg2)
     {
-        return stub<member_func_t<i32, aiPedestrian, f32*, f32*>>(0x54E680, this, arg1, arg2);
+        return stub<member_func_t<int32_t, aiPedestrian, float*, float*>>(0x54E680, this, arg1, arg2);
     }
 
     // 0x54E8C0 | ?DetectPlayerAnticipate@aiPedestrian@@AAEHPAM0@Z
-    i32 DetectPlayerAnticipate(f32* arg1, f32* arg2)
+    inline int32_t DetectPlayerAnticipate(float* arg1, float* arg2)
     {
-        return stub<member_func_t<i32, aiPedestrian, f32*, f32*>>(0x54E8C0, this, arg1, arg2);
+        return stub<member_func_t<int32_t, aiPedestrian, float*, float*>>(0x54E8C0, this, arg1, arg2);
     }
 
     // 0x54EAE0 | ?RoadDistance@aiPedestrian@@AAEMXZ
-    f32 RoadDistance()
+    inline float RoadDistance()
     {
-        return stub<member_func_t<f32, aiPedestrian>>(0x54EAE0, this);
+        return stub<member_func_t<float, aiPedestrian>>(0x54EAE0, this);
     }
 
     // 0x54F1D0 | ?SolveRoadSegment@aiPedestrian@@AAEXM@Z
-    void SolveRoadSegment(f32 arg1)
+    inline void SolveRoadSegment(float arg1)
     {
-        return stub<member_func_t<void, aiPedestrian, f32>>(0x54F1D0, this, arg1);
+        return stub<member_func_t<void, aiPedestrian, float>>(0x54F1D0, this, arg1);
     }
 
     // 0x54F310 | ?SetNextRoad@aiPedestrian@@AAEPAVaiPath@@XZ
-    class aiPath* SetNextRoad()
+    inline class aiPath* SetNextRoad()
     {
         return stub<member_func_t<class aiPath*, aiPedestrian>>(0x54F310, this);
     }
 
     // 0x54F340 | ?UpcomingAccident@aiPedestrian@@AAEHXZ
-    i32 UpcomingAccident()
+    inline int32_t UpcomingAccident()
     {
-        return stub<member_func_t<i32, aiPedestrian>>(0x54F340, this);
+        return stub<member_func_t<int32_t, aiPedestrian>>(0x54F340, this);
     }
 
     // 0x54F390 | ?PickNextRdSeg@aiPedestrian@@AAEPAVaiPath@@XZ
-    class aiPath* PickNextRdSeg()
+    inline class aiPath* PickNextRdSeg()
     {
         return stub<member_func_t<class aiPath*, aiPedestrian>>(0x54F390, this);
     }
 
     // 0x54F620 | ?GetRoadToRight@aiPedestrian@@AAEPAVaiPath@@XZ
-    class aiPath* GetRoadToRight()
+    inline class aiPath* GetRoadToRight()
     {
         return stub<member_func_t<class aiPath*, aiPedestrian>>(0x54F620, this);
     }
 
     // 0x54F6A0 | ?GetRoadToLeft@aiPedestrian@@AAEPAVaiPath@@XZ
-    class aiPath* GetRoadToLeft()
+    inline class aiPath* GetRoadToLeft()
     {
         return stub<member_func_t<class aiPath*, aiPedestrian>>(0x54F6A0, this);
     }
 
     // 0x54F720 | ?DetectPlayerCollision@aiPedestrian@@AAEHPAM@Z
-    i32 DetectPlayerCollision(f32* arg1)
+    inline int32_t DetectPlayerCollision(float* arg1)
     {
-        return stub<member_func_t<i32, aiPedestrian, f32*>>(0x54F720, this, arg1);
+        return stub<member_func_t<int32_t, aiPedestrian, float*>>(0x54F720, this, arg1);
     }
 
     // 0x54F800 | ?DetectBangerCollision@aiPedestrian@@AAEHPAPAVlvlInstance@@PAM@Z
-    i32 DetectBangerCollision(class lvlInstance** arg1, f32* arg2)
+    inline int32_t DetectBangerCollision(class lvlInstance** arg1, float* arg2)
     {
-        return stub<member_func_t<i32, aiPedestrian, class lvlInstance**, f32*>>(0x54F800, this, arg1, arg2);
+        return stub<member_func_t<int32_t, aiPedestrian, class lvlInstance**, float*>>(0x54F800, this, arg1, arg2);
     }
 
     // 0x54FA00 | ?DetectPedCollision@aiPedestrian@@AAEHMPAPAV1@PAM@Z
-    i32 DetectPedCollision(f32 arg1, class aiPedestrian** arg2, f32* arg3)
+    inline int32_t DetectPedCollision(float arg1, class aiPedestrian** arg2, float* arg3)
     {
-        return stub<member_func_t<i32, aiPedestrian, f32, class aiPedestrian**, f32*>>(
+        return stub<member_func_t<int32_t, aiPedestrian, float, class aiPedestrian**, float*>>(
             0x54FA00, this, arg1, arg2, arg3);
     }
 
     // 0x54FDE0 | ?AvoidPlayer@aiPedestrian@@AAEXAAVVector3@@M@Z
-    void AvoidPlayer(class Vector3& arg1, f32 arg2)
+    inline void AvoidPlayer(class Vector3& arg1, float arg2)
     {
-        return stub<member_func_t<void, aiPedestrian, class Vector3&, f32>>(0x54FDE0, this, arg1, arg2);
+        return stub<member_func_t<void, aiPedestrian, class Vector3&, float>>(0x54FDE0, this, arg1, arg2);
     }
 
     // 0x54FE50 | ?AvoidBanger@aiPedestrian@@AAEXPAVlvlInstance@@M@Z
-    void AvoidBanger(class lvlInstance* arg1, f32 arg2)
+    inline void AvoidBanger(class lvlInstance* arg1, float arg2)
     {
-        return stub<member_func_t<void, aiPedestrian, class lvlInstance*, f32>>(0x54FE50, this, arg1, arg2);
+        return stub<member_func_t<void, aiPedestrian, class lvlInstance*, float>>(0x54FE50, this, arg1, arg2);
     }
 
     // 0x54FEC0 | ?AvoidPedCollision@aiPedestrian@@AAEXPAV1@M@Z
-    void AvoidPedCollision(class aiPedestrian* arg1, f32 arg2)
+    inline void AvoidPedCollision(class aiPedestrian* arg1, float arg2)
     {
-        return stub<member_func_t<void, aiPedestrian, class aiPedestrian*, f32>>(0x54FEC0, this, arg1, arg2);
+        return stub<member_func_t<void, aiPedestrian, class aiPedestrian*, float>>(0x54FEC0, this, arg1, arg2);
     }
 
     // 0x54FF90 | ?AvoidObstacle@aiPedestrian@@AAEXABVVector3@@M@Z
-    void AvoidObstacle(class Vector3 const& arg1, f32 arg2)
+    inline void AvoidObstacle(class Vector3 const& arg1, float arg2)
     {
-        return stub<member_func_t<void, aiPedestrian, class Vector3 const&, f32>>(0x54FF90, this, arg1, arg2);
+        return stub<member_func_t<void, aiPedestrian, class Vector3 const&, float>>(0x54FF90, this, arg1, arg2);
     }
 
     // 0x550400 | ?SolveTargetPoint@aiPedestrian@@AAEXM@Z
-    void SolveTargetPoint(f32 arg1)
+    inline void SolveTargetPoint(float arg1)
     {
-        return stub<member_func_t<void, aiPedestrian, f32>>(0x550400, this, arg1);
+        return stub<member_func_t<void, aiPedestrian, float>>(0x550400, this, arg1);
     }
 
     // 0x5504A0 | ?CalcCurve@aiPedestrian@@AAEXHHM@Z
-    void CalcCurve(i32 arg1, i32 arg2, f32 arg3)
+    inline void CalcCurve(int32_t arg1, int32_t arg2, float arg3)
     {
-        return stub<member_func_t<void, aiPedestrian, i32, i32, f32>>(0x5504A0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, aiPedestrian, int32_t, int32_t, float>>(0x5504A0, this, arg1, arg2, arg3);
     }
 
     // 0x5509D0 | ?ComputeCurve@aiPedestrian@@AAEXAAVVector3@@000@Z
-    void ComputeCurve(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3, class Vector3& arg4)
+    inline void ComputeCurve(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3, class Vector3& arg4)
     {
         return stub<member_func_t<void, aiPedestrian, class Vector3&, class Vector3&, class Vector3&, class Vector3&>>(
             0x5509D0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x550BA0 | ?SolvePosition@aiPedestrian@@AAEXAAVVector3@@M@Z
-    void SolvePosition(class Vector3& arg1, f32 arg2)
+    inline void SolvePosition(class Vector3& arg1, float arg2)
     {
-        return stub<member_func_t<void, aiPedestrian, class Vector3&, f32>>(0x550BA0, this, arg1, arg2);
+        return stub<member_func_t<void, aiPedestrian, class Vector3&, float>>(0x550BA0, this, arg1, arg2);
     }
 
     // 0x550BF0 | ?Reset@aiPedestrian@@QAEXXZ
-    void Reset()
+    inline void Reset()
     {
         return stub<member_func_t<void, aiPedestrian>>(0x550BF0, this);
     }
 
     // 0x550C00 | ?Stop@aiPedestrian@@QAEXXZ
-    void Stop()
+    inline void Stop()
     {
         return stub<member_func_t<void, aiPedestrian>>(0x550C00, this);
     }
 
     // 0x550C20 | ?Go@aiPedestrian@@QAEXXZ
-    void Go()
+    inline void Go()
     {
         return stub<member_func_t<void, aiPedestrian>>(0x550C20, this);
     }
 
     // 0x550C40 | ?Dump@aiPedestrian@@QAEXXZ
-    void Dump()
+    inline void Dump()
     {
         return stub<member_func_t<void, aiPedestrian>>(0x550C40, this);
     }
 
     // 0x550DE0 | ?QuickDump@aiPedestrian@@QAEXXZ
-    void QuickDump()
+    inline void QuickDump()
     {
         return stub<member_func_t<void, aiPedestrian>>(0x550DE0, this);
     }
 
     // 0x550EA0 | ?ReplayDebug@aiPedestrian@@QAEXXZ
-    void ReplayDebug()
+    inline void ReplayDebug()
     {
         return stub<member_func_t<void, aiPedestrian>>(0x550EA0, this);
     }
 
     // 0x550EB0 | ?DrawDebug@aiPedestrian@@QAEXXZ
-    void DrawDebug()
+    inline void DrawDebug()
     {
         return stub<member_func_t<void, aiPedestrian>>(0x550EB0, this);
     }

@@ -29,21 +29,21 @@ struct EffectBase
 {
 public:
     // 0x5A3850 | ??1EffectBase@@QAE@XZ
-    ~EffectBase()
+    inline ~EffectBase()
     {
         stub<member_func_t<void, EffectBase>>(0x5A3850, this);
     }
 
     // 0x5A74E0 | ?CreateDSoundBuffer@EffectBase@@QAEPAUIDirectSoundBuffer@@KPAU2@@Z
-    struct IDirectSoundBuffer* CreateDSoundBuffer(u32 arg1, struct IDirectSoundBuffer* arg2)
+    inline struct IDirectSoundBuffer* CreateDSoundBuffer(uint32_t arg1, struct IDirectSoundBuffer* arg2)
     {
-        return stub<member_func_t<struct IDirectSoundBuffer*, EffectBase, u32, struct IDirectSoundBuffer*>>(
+        return stub<member_func_t<struct IDirectSoundBuffer*, EffectBase, uint32_t, struct IDirectSoundBuffer*>>(
             0x5A74E0, this, arg1, arg2);
     }
 
     // 0x5A7590 | ?OriginalBufferPlaying@EffectBase@@QAEFF@Z
-    i16 OriginalBufferPlaying(i16 arg1)
+    inline int16_t OriginalBufferPlaying(int16_t arg1)
     {
-        return stub<member_func_t<i16, EffectBase, i16>>(0x5A7590, this, arg1);
+        return stub<member_func_t<int16_t, EffectBase, int16_t>>(0x5A7590, this, arg1);
     }
 };

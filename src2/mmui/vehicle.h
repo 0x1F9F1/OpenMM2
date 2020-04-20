@@ -38,37 +38,37 @@ public:
     // Vehicle::`vftable' @ 0x5B453C
 
     // 0x5056D0 | ??0Vehicle@@QAE@H@Z
-    Vehicle(i32 arg1)
+    inline Vehicle(int32_t arg1)
     {
-        stub<member_func_t<void, Vehicle, i32>>(0x5056D0, this, arg1);
+        stub<member_func_t<void, Vehicle, int32_t>>(0x5056D0, this, arg1);
     }
 
     // 0x5057C0 | ?SetSubMenu@Vehicle@@QAEXH@Z
-    void SetSubMenu(i32 arg1)
+    inline void SetSubMenu(int32_t arg1)
     {
-        return stub<member_func_t<void, Vehicle, i32>>(0x5057C0, this, arg1);
+        return stub<member_func_t<void, Vehicle, int32_t>>(0x5057C0, this, arg1);
     }
 
     // 0x5057E0 | ?SetSubMenuButtons@Vehicle@@QAEXXZ
-    void SetSubMenuButtons()
+    inline void SetSubMenuButtons()
     {
         return stub<member_func_t<void, Vehicle>>(0x5057E0, this);
     }
 
     // 0x5057B0 | ??1Vehicle@@UAE@XZ
-    ~Vehicle() override
+    inline ~Vehicle() override
     {
         stub<member_func_t<void, Vehicle>>(0x5057B0, this);
     }
 
     // 0x505800 | ?PreSetup@Vehicle@@UAEXXZ
-    void PreSetup() override
+    inline void PreSetup() override
     {
         return stub<member_func_t<void, Vehicle>>(0x505800, this);
     }
 
     // 0x505810 | ?PostSetup@Vehicle@@UAEXXZ
-    void PostSetup() override
+    inline void PostSetup() override
     {
         return stub<member_func_t<void, Vehicle>>(0x505810, this);
     }

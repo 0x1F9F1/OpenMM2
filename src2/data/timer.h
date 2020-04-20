@@ -36,19 +36,19 @@ class Timer
 {
 public:
     // 0x4C77E0 | ?Ticks@Timer@@SAIXZ
-    static inline u32 Ticks()
+    static inline uint32_t Ticks()
     {
-        return stub<cdecl_t<u32>>(0x4C77E0);
+        return stub<cdecl_t<uint32_t>>(0x4C77E0);
     }
 
     // 0x4C7810 | ?QuickTicks@Timer@@SAIXZ
-    static inline u32 QuickTicks()
+    static inline uint32_t QuickTicks()
     {
-        return stub<cdecl_t<u32>>(0x4C7810);
+        return stub<cdecl_t<uint32_t>>(0x4C7810);
     }
 
     // 0x4C7840 | ??0Timer@@QAE@XZ
-    Timer()
+    inline Timer()
     {
         stub<member_func_t<void, Timer>>(0x4C7840, this);
     }

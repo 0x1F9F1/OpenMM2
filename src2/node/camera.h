@@ -70,135 +70,136 @@ public:
     // asCamera::`vftable' @ 0x5B2978
 
     // 0x4A2340 | ??0asCamera@@QAE@XZ
-    asCamera()
+    inline asCamera()
     {
         stub<member_func_t<void, asCamera>>(0x4A2340, this);
     }
 
     // 0x4A2650 | ?SetClipArea@asCamera@@QAEXMMMM@Z
-    void SetClipArea(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
+    inline void SetClipArea(float arg1, float arg2, float arg3, float arg4)
     {
-        return stub<member_func_t<void, asCamera, f32, f32, f32, f32>>(0x4A2650, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, asCamera, float, float, float, float>>(0x4A2650, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4A2790 | ?SetLighting@asCamera@@QAEXH@Z
-    void SetLighting(i32 arg1)
+    inline void SetLighting(int32_t arg1)
     {
-        return stub<member_func_t<void, asCamera, i32>>(0x4A2790, this, arg1);
+        return stub<member_func_t<void, asCamera, int32_t>>(0x4A2790, this, arg1);
     }
 
     // 0x4A27E0 | ?SetWorld@asCamera@@QAEXAAVMatrix34@@@Z
-    void SetWorld(class Matrix34& arg1)
+    inline void SetWorld(class Matrix34& arg1)
     {
         return stub<member_func_t<void, asCamera, class Matrix34&>>(0x4A27E0, this, arg1);
     }
 
     // 0x4A27F0 | ?GetNearClip@asCamera@@QAEXPAVVector3@@AAVMatrix34@@W4kNearClip@1@@Z
-    void GetNearClip(class Vector3* arg1, class Matrix34& arg2, enum asCamera::kNearClip arg3)
+    inline void GetNearClip(class Vector3* arg1, class Matrix34& arg2, enum asCamera::kNearClip arg3)
     {
         return stub<member_func_t<void, asCamera, class Vector3*, class Matrix34&, enum asCamera::kNearClip>>(
             0x4A27F0, this, arg1, arg2, arg3);
     }
 
     // 0x4A2D60 | ?DrawBegin@asCamera@@QAEXXZ
-    void DrawBegin()
+    inline void DrawBegin()
     {
         return stub<member_func_t<void, asCamera>>(0x4A2D60, this);
     }
 
     // 0x4A2D70 | ?DrawEnd@asCamera@@QAEXXZ
-    void DrawEnd()
+    inline void DrawEnd()
     {
         return stub<member_func_t<void, asCamera>>(0x4A2D70, this);
     }
 
     // 0x4A2DD0 | ?SetViewport@asCamera@@QAEXMMMMH@Z
-    void SetViewport(f32 arg1, f32 arg2, f32 arg3, f32 arg4, i32 arg5)
+    inline void SetViewport(float arg1, float arg2, float arg3, float arg4, int32_t arg5)
     {
-        return stub<member_func_t<void, asCamera, f32, f32, f32, f32, i32>>(
+        return stub<member_func_t<void, asCamera, float, float, float, float, int32_t>>(
             0x4A2DD0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x4A2E50 | ?SetView@asCamera@@QAEXMMMM@Z
-    void SetView(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
+    inline void SetView(float arg1, float arg2, float arg3, float arg4)
     {
-        return stub<member_func_t<void, asCamera, f32, f32, f32, f32>>(0x4A2E50, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, asCamera, float, float, float, float>>(0x4A2E50, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4A2EC0 | ?SetFog@asCamera@@QAEXMMMM@Z
-    void SetFog(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
+    inline void SetFog(float arg1, float arg2, float arg3, float arg4)
     {
-        return stub<member_func_t<void, asCamera, f32, f32, f32, f32>>(0x4A2EC0, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, asCamera, float, float, float, float>>(0x4A2EC0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4A2EF0 | ?SetUnderlay@asCamera@@QAEXPAD@Z
-    void SetUnderlay(char* arg1)
+    inline void SetUnderlay(char* arg1)
     {
         return stub<member_func_t<void, asCamera, char*>>(0x4A2EF0, this, arg1);
     }
 
     // 0x4A2F30 | ?SetUnderlayCB@asCamera@@QAEXPAVgfxBitmap@@PAVdatCallback@@@Z
-    void SetUnderlayCB(class gfxBitmap* arg1, class datCallback* arg2)
+    inline void SetUnderlayCB(class gfxBitmap* arg1, class datCallback* arg2)
     {
         return stub<member_func_t<void, asCamera, class gfxBitmap*, class datCallback*>>(0x4A2F30, this, arg1, arg2);
     }
 
     // 0x4A2F60 | ?GetViewportWidth@asCamera@@QAEHXZ
-    i32 GetViewportWidth()
+    inline int32_t GetViewportWidth()
     {
-        return stub<member_func_t<i32, asCamera>>(0x4A2F60, this);
+        return stub<member_func_t<int32_t, asCamera>>(0x4A2F60, this);
     }
 
     // 0x4A2F70 | ?GetViewportHeight@asCamera@@QAEHXZ
-    i32 GetViewportHeight()
+    inline int32_t GetViewportHeight()
     {
-        return stub<member_func_t<i32, asCamera>>(0x4A2F70, this);
+        return stub<member_func_t<int32_t, asCamera>>(0x4A2F70, this);
     }
 
     // 0x4A2F80 | ?FadeOut@asCamera@@QAEXMH@Z
-    void FadeOut(f32 arg1, i32 arg2)
+    inline void FadeOut(float arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, asCamera, f32, i32>>(0x4A2F80, this, arg1, arg2);
+        return stub<member_func_t<void, asCamera, float, int32_t>>(0x4A2F80, this, arg1, arg2);
     }
 
     // 0x4A2FE0 | ?FadeIn@asCamera@@QAEXMH@Z
-    void FadeIn(f32 arg1, i32 arg2)
+    inline void FadeIn(float arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, asCamera, f32, i32>>(0x4A2FE0, this, arg1, arg2);
+        return stub<member_func_t<void, asCamera, float, int32_t>>(0x4A2FE0, this, arg1, arg2);
     }
 
     // 0x4A3040 | ?SphereVisible@asCamera@@QAEMABVVector3@@MPAM@Z
-    f32 SphereVisible(class Vector3 const& arg1, f32 arg2, f32* arg3)
+    inline float SphereVisible(class Vector3 const& arg1, float arg2, float* arg3)
     {
-        return stub<member_func_t<f32, asCamera, class Vector3 const&, f32, f32*>>(0x4A3040, this, arg1, arg2, arg3);
+        return stub<member_func_t<float, asCamera, class Vector3 const&, float, float*>>(
+            0x4A3040, this, arg1, arg2, arg3);
     }
 
     // 0x4A3210 | ?SetAmbient@asCamera@@QAEXABVVector3@@@Z
-    void SetAmbient(class Vector3 const& arg1)
+    inline void SetAmbient(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, asCamera, class Vector3 const&>>(0x4A3210, this, arg1);
     }
 
     // 0x4A3220 | ?SetMonochrome@asCamera@@QAEXH@Z
-    void SetMonochrome(i32 arg1)
+    inline void SetMonochrome(int32_t arg1)
     {
-        return stub<member_func_t<void, asCamera, i32>>(0x4A3220, this, arg1);
+        return stub<member_func_t<void, asCamera, int32_t>>(0x4A3220, this, arg1);
     }
 
     // 0x4A3230 | ?Regen@asCamera@@AAEXXZ
-    void Regen()
+    inline void Regen()
     {
         return stub<member_func_t<void, asCamera>>(0x4A3230, this);
     }
 
     // 0x4A22E0 | ??1asCamera@@UAE@XZ
-    ~asCamera() override
+    inline ~asCamera() override
     {
         stub<member_func_t<void, asCamera>>(0x4A22E0, this);
     }
 
     // 0x4A24A0 | ?Update@asCamera@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, asCamera>>(0x4A24A0, this);
     }
@@ -210,31 +211,31 @@ public:
     // asUnderlay::`vftable' @ 0x5B2970
 
     // 0x4A2270 | ??0asUnderlay@@QAE@XZ
-    asUnderlay()
+    inline asUnderlay()
     {
         stub<member_func_t<void, asUnderlay>>(0x4A2270, this);
     }
 
     // 0x4A2290 | ?SetBitmap@asUnderlay@@QAEXPAVgfxBitmap@@@Z
-    void SetBitmap(class gfxBitmap* arg1)
+    inline void SetBitmap(class gfxBitmap* arg1)
     {
         return stub<member_func_t<void, asUnderlay, class gfxBitmap*>>(0x4A2290, this, arg1);
     }
 
     // 0x4A22A0 | ?AddRef@asUnderlay@@QAEXXZ
-    void AddRef()
+    inline void AddRef()
     {
         return stub<member_func_t<void, asUnderlay>>(0x4A22A0, this);
     }
 
     // 0x4A2280 | ??1asUnderlay@@UAE@XZ
-    virtual ~asUnderlay()
+    virtual inline ~asUnderlay()
     {
         stub<member_func_t<void, asUnderlay>>(0x4A2280, this);
     }
 
     // 0x4A22B0 | ?Cull@asUnderlay@@UAEXXZ
-    virtual void Cull()
+    virtual inline void Cull()
     {
         return stub<member_func_t<void, asUnderlay>>(0x4A22B0, this);
     }

@@ -57,27 +57,27 @@
 */
 
 // 0x4A5370 | ?vgl_VERTEX_VCT1@@YAXMMM@Z
-inline void vgl_VERTEX_VCT1(f32 arg1, f32 arg2, f32 arg3)
+inline void vgl_VERTEX_VCT1(float arg1, float arg2, float arg3)
 {
-    return stub<cdecl_t<void, f32, f32, f32>>(0x4A5370, arg1, arg2, arg3);
+    return stub<cdecl_t<void, float, float, float>>(0x4A5370, arg1, arg2, arg3);
 }
 
 // 0x4A5400 | ?vgl_VERTEX_VNT1@@YAXMMM@Z
-inline void vgl_VERTEX_VNT1(f32 arg1, f32 arg2, f32 arg3)
+inline void vgl_VERTEX_VNT1(float arg1, float arg2, float arg3)
 {
-    return stub<cdecl_t<void, f32, f32, f32>>(0x4A5400, arg1, arg2, arg3);
+    return stub<cdecl_t<void, float, float, float>>(0x4A5400, arg1, arg2, arg3);
 }
 
 // 0x4A5490 | ?vglSetFormat@@YAXIIII@Z
-inline void vglSetFormat(u32 arg1, u32 arg2, u32 arg3, u32 arg4)
+inline void vglSetFormat(uint32_t arg1, uint32_t arg2, uint32_t arg3, uint32_t arg4)
 {
-    return stub<cdecl_t<void, u32, u32, u32, u32>>(0x4A5490, arg1, arg2, arg3, arg4);
+    return stub<cdecl_t<void, uint32_t, uint32_t, uint32_t, uint32_t>>(0x4A5490, arg1, arg2, arg3, arg4);
 }
 
 // 0x4A5500 | ?vglBegin@@YAXW4gfxDrawMode@@H@Z
-inline void vglBegin(enum gfxDrawMode arg1, i32 arg2)
+inline void vglBegin(enum gfxDrawMode arg1, int32_t arg2)
 {
-    return stub<cdecl_t<void, enum gfxDrawMode, i32>>(0x4A5500, arg1, arg2);
+    return stub<cdecl_t<void, enum gfxDrawMode, int32_t>>(0x4A5500, arg1, arg2);
 }
 
 // 0x4A5A90 | ?vglEnd@@YAXXZ
@@ -120,9 +120,9 @@ inline void vglSetCloudMap(char const* arg1)
 }
 
 // 0x4A5DE0 | ?vglSetOffset@@YAXMMM@Z
-inline void vglSetOffset(f32 arg1, f32 arg2, f32 arg3)
+inline void vglSetOffset(float arg1, float arg2, float arg3)
 {
-    return stub<cdecl_t<void, f32, f32, f32>>(0x4A5DE0, arg1, arg2, arg3);
+    return stub<cdecl_t<void, float, float, float>>(0x4A5DE0, arg1, arg2, arg3);
 }
 
 // 0x4A5F00 | ?rglEnableDisable@@YA_NW4rglToken@@_N@Z
@@ -162,21 +162,22 @@ inline void rglBindTexture2(class gfxTexture const* arg1)
 }
 
 // 0x4A6190 | ?tglDrawParticle@@YAXABVVector3@@MABVVector4@@@Z
-inline void tglDrawParticle(class Vector3 const& arg1, f32 arg2, class Vector4 const& arg3)
+inline void tglDrawParticle(class Vector3 const& arg1, float arg2, class Vector4 const& arg3)
 {
-    return stub<cdecl_t<void, class Vector3 const&, f32, class Vector4 const&>>(0x4A6190, arg1, arg2, arg3);
+    return stub<cdecl_t<void, class Vector3 const&, float, class Vector4 const&>>(0x4A6190, arg1, arg2, arg3);
 }
 
 // 0x4A6550 | ?tglDrawRotatedParticle@@YAXABVVector3@@MMABVVector4@@@Z
-inline void tglDrawRotatedParticle(class Vector3 const& arg1, f32 arg2, f32 arg3, class Vector4 const& arg4)
+inline void tglDrawRotatedParticle(class Vector3 const& arg1, float arg2, float arg3, class Vector4 const& arg4)
 {
-    return stub<cdecl_t<void, class Vector3 const&, f32, f32, class Vector4 const&>>(0x4A6550, arg1, arg2, arg3, arg4);
+    return stub<cdecl_t<void, class Vector3 const&, float, float, class Vector4 const&>>(
+        0x4A6550, arg1, arg2, arg3, arg4);
 }
 
 // 0x4A7880 | ?mkfrgba@@YAIMMMM@Z
-inline u32 mkfrgba(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
+inline uint32_t mkfrgba(float arg1, float arg2, float arg3, float arg4)
 {
-    return stub<cdecl_t<u32, f32, f32, f32, f32>>(0x4A7880, arg1, arg2, arg3, arg4);
+    return stub<cdecl_t<uint32_t, float, float, float, float>>(0x4A7880, arg1, arg2, arg3, arg4);
 }
 
 // 0x682B64 | ?vglCloudMapEnable@@3IA

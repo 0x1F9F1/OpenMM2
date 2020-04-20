@@ -57,13 +57,13 @@ public:
     // crAnimation::`vftable' @ 0x5B63D0
 
     // 0x57CE60 | ??0crAnimation@@QAE@HH@Z
-    crAnimation(i32 arg1, i32 arg2)
+    inline crAnimation(int32_t arg1, int32_t arg2)
     {
-        stub<member_func_t<void, crAnimation, i32, i32>>(0x57CE60, this, arg1, arg2);
+        stub<member_func_t<void, crAnimation, int32_t, int32_t>>(0x57CE60, this, arg1, arg2);
     }
 
     // 0x57CF20 | ??0crAnimation@@AAE@XZ
-    crAnimation()
+    inline crAnimation()
     {
         stub<member_func_t<void, crAnimation>>(0x57CF20, this);
     }
@@ -113,85 +113,86 @@ public:
     }
 
     // 0x57D3D0 | ?LoadAnim@crAnimation@@AAE_NPBD_N@Z
-    bool LoadAnim(char const* arg1, bool arg2)
+    inline bool LoadAnim(char const* arg1, bool arg2)
     {
         return stub<member_func_t<bool, crAnimation, char const*, bool>>(0x57D3D0, this, arg1, arg2);
     }
 
     // 0x57D590 | ?SaveAnim@crAnimation@@QAE_NPBD@Z
-    bool SaveAnim(char const* arg1)
+    inline bool SaveAnim(char const* arg1)
     {
         return stub<member_func_t<bool, crAnimation, char const*>>(0x57D590, this, arg1);
     }
 
     // 0x57D670 | ?LoadChanAnim@crAnimation@@AAE_NPBD@Z
-    bool LoadChanAnim(char const* arg1)
+    inline bool LoadChanAnim(char const* arg1)
     {
         return stub<member_func_t<bool, crAnimation, char const*>>(0x57D670, this, arg1);
     }
 
     // 0x57D7B0 | ?Normalize@crAnimation@@QAEX_N@Z
-    void Normalize(bool arg1)
+    inline void Normalize(bool arg1)
     {
         return stub<member_func_t<void, crAnimation, bool>>(0x57D7B0, this, arg1);
     }
 
     // 0x57D810 | ?NormalizeX@crAnimation@@QAEXXZ
-    void NormalizeX()
+    inline void NormalizeX()
     {
         return stub<member_func_t<void, crAnimation>>(0x57D810, this);
     }
 
     // 0x57D860 | ?NormalizeY@crAnimation@@QAEXXZ
-    void NormalizeY()
+    inline void NormalizeY()
     {
         return stub<member_func_t<void, crAnimation>>(0x57D860, this);
     }
 
     // 0x57D8C0 | ?ZeroX@crAnimation@@QAEXXZ
-    void ZeroX()
+    inline void ZeroX()
     {
         return stub<member_func_t<void, crAnimation>>(0x57D8C0, this);
     }
 
     // 0x57D8F0 | ?ZeroY@crAnimation@@QAEXXZ
-    void ZeroY()
+    inline void ZeroY()
     {
         return stub<member_func_t<void, crAnimation>>(0x57D8F0, this);
     }
 
     // 0x57D920 | ?ZeroYSeg@crAnimation@@QAEXHH@Z
-    void ZeroYSeg(i32 arg1, i32 arg2)
+    inline void ZeroYSeg(int32_t arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, crAnimation, i32, i32>>(0x57D920, this, arg1, arg2);
+        return stub<member_func_t<void, crAnimation, int32_t, int32_t>>(0x57D920, this, arg1, arg2);
     }
 
     // 0x57D960 | ?Subtract@crAnimation@@QAEXAAVcrAnimFrame@@@Z
-    void Subtract(class crAnimFrame& arg1)
+    inline void Subtract(class crAnimFrame& arg1)
     {
         return stub<member_func_t<void, crAnimation, class crAnimFrame&>>(0x57D960, this, arg1);
     }
 
     // 0x57D9A0 | ?CopyAnim@crAnimation@@QAEXPAV1@HH@Z
-    void CopyAnim(class crAnimation* arg1, i32 arg2, i32 arg3)
+    inline void CopyAnim(class crAnimation* arg1, int32_t arg2, int32_t arg3)
     {
-        return stub<member_func_t<void, crAnimation, class crAnimation*, i32, i32>>(0x57D9A0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, crAnimation, class crAnimation*, int32_t, int32_t>>(
+            0x57D9A0, this, arg1, arg2, arg3);
     }
 
     // 0x57DA90 | ?Flip@crAnimation@@QAEXXZ
-    void Flip()
+    inline void Flip()
     {
         return stub<member_func_t<void, crAnimation>>(0x57DA90, this);
     }
 
     // 0x57DAC0 | ?GetBlendFrame@crAnimation@@QBEXAAVcrAnimFrame@@M@Z
-    void GetBlendFrame(class crAnimFrame& arg1, f32 arg2)
+    inline void GetBlendFrame(class crAnimFrame& arg1, float arg2)
     {
-        return stub<member_func_t<void, crAnimation, class crAnimFrame&, f32>>(0x57DAC0, this, arg1, arg2);
+        return stub<member_func_t<void, crAnimation, class crAnimFrame&, float>>(0x57DAC0, this, arg1, arg2);
     }
 
     // 0x57CF50 | ??1crAnimation@@UAE@XZ
-    ~crAnimation() override
+    inline ~crAnimation() override
     {
         stub<member_func_t<void, crAnimation>>(0x57CF50, this);
     }

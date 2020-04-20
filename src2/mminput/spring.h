@@ -34,32 +34,32 @@ public:
     // mmSpringFF::`vftable' @ 0x5B52BC
 
     // 0x531FF0 | ?Assign@mmSpringFF@@QAEHJ@Z
-    i32 Assign(i32 arg1)
+    inline int32_t Assign(int32_t arg1)
     {
-        return stub<member_func_t<i32, mmSpringFF, i32>>(0x531FF0, this, arg1);
+        return stub<member_func_t<int32_t, mmSpringFF, int32_t>>(0x531FF0, this, arg1);
     }
 
     // 0x531EC0 | ?Init@mmSpringFF@@UAEHPAUIDirectInputDevice2A@@@Z
-    virtual i32 Init(struct IDirectInputDevice2A* arg1)
+    virtual inline int32_t Init(struct IDirectInputDevice2A* arg1)
     {
-        return stub<member_func_t<i32, mmSpringFF, struct IDirectInputDevice2A*>>(0x531EC0, this, arg1);
+        return stub<member_func_t<int32_t, mmSpringFF, struct IDirectInputDevice2A*>>(0x531EC0, this, arg1);
     }
 
     // 0x5320E0 | ?Play@mmSpringFF@@UAEHXZ
-    virtual i32 Play()
+    virtual inline int32_t Play()
     {
-        return stub<member_func_t<i32, mmSpringFF>>(0x5320E0, this);
+        return stub<member_func_t<int32_t, mmSpringFF>>(0x5320E0, this);
     }
 
     // 0x532150 | ?Stop@mmSpringFF@@UAEHXZ
-    virtual i32 Stop()
+    virtual inline int32_t Stop()
     {
-        return stub<member_func_t<i32, mmSpringFF>>(0x532150, this);
+        return stub<member_func_t<int32_t, mmSpringFF>>(0x532150, this);
     }
 
     // 0x531FC0 | ?SetValues@mmSpringFF@@UAEHMM@Z
-    virtual i32 SetValues(f32 arg1, f32 arg2)
+    virtual inline int32_t SetValues(float arg1, float arg2)
     {
-        return stub<member_func_t<i32, mmSpringFF, f32, f32>>(0x531FC0, this, arg1, arg2);
+        return stub<member_func_t<int32_t, mmSpringFF, float, float>>(0x531FC0, this, arg1, arg2);
     }
 };

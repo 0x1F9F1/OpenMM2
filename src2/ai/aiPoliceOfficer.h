@@ -55,145 +55,145 @@ public:
     // Skipped (scalar/vector destructor)
 
     // 0x53D910 | ??0aiPoliceOfficer@@QAE@XZ
-    aiPoliceOfficer()
+    inline aiPoliceOfficer()
     {
         stub<member_func_t<void, aiPoliceOfficer>>(0x53D910, this);
     }
 
     // 0x53D920 | ??1aiPoliceOfficer@@QAE@XZ
-    ~aiPoliceOfficer()
+    inline ~aiPoliceOfficer()
     {
         stub<member_func_t<void, aiPoliceOfficer>>(0x53D920, this);
     }
 
     // 0x53D930 | ?Init@aiPoliceOfficer@@QAEXH@Z
-    void Init(i32 arg1)
+    inline void Init(int32_t arg1)
     {
-        return stub<member_func_t<void, aiPoliceOfficer, i32>>(0x53D930, this, arg1);
+        return stub<member_func_t<void, aiPoliceOfficer, int32_t>>(0x53D930, this, arg1);
     }
 
     // 0x53DAA0 | ?Reset@aiPoliceOfficer@@QAEXXZ
-    void Reset()
+    inline void Reset()
     {
         return stub<member_func_t<void, aiPoliceOfficer>>(0x53DAA0, this);
     }
 
     // 0x53DBF0 | ?StartSiren@aiPoliceOfficer@@QAEXXZ
-    void StartSiren()
+    inline void StartSiren()
     {
         return stub<member_func_t<void, aiPoliceOfficer>>(0x53DBF0, this);
     }
 
     // 0x53DC40 | ?StopSiren@aiPoliceOfficer@@QAEXXZ
-    void StopSiren()
+    inline void StopSiren()
     {
         return stub<member_func_t<void, aiPoliceOfficer>>(0x53DC40, this);
     }
 
     // 0x53DC70 | ?Update@aiPoliceOfficer@@QAEXXZ
-    void Update()
+    inline void Update()
     {
         return stub<member_func_t<void, aiPoliceOfficer>>(0x53DC70, this);
     }
 
     // 0x53DFD0 | ?DetectPerpetrator@aiPoliceOfficer@@AAEXXZ
-    void DetectPerpetrator()
+    inline void DetectPerpetrator()
     {
         return stub<member_func_t<void, aiPoliceOfficer>>(0x53DFD0, this);
     }
 
     // 0x53E2A0 | ?Fov@aiPoliceOfficer@@AAEHPAVvehCar@@@Z
-    i32 Fov(class vehCar* arg1)
+    inline int32_t Fov(class vehCar* arg1)
     {
-        return stub<member_func_t<i32, aiPoliceOfficer, class vehCar*>>(0x53E2A0, this, arg1);
+        return stub<member_func_t<int32_t, aiPoliceOfficer, class vehCar*>>(0x53E2A0, this, arg1);
     }
 
     // 0x53E360 | ?Speeding@aiPoliceOfficer@@AAEHPAVvehCar@@@Z
-    i32 Speeding(class vehCar* arg1)
+    inline int32_t Speeding(class vehCar* arg1)
     {
-        return stub<member_func_t<i32, aiPoliceOfficer, class vehCar*>>(0x53E360, this, arg1);
+        return stub<member_func_t<int32_t, aiPoliceOfficer, class vehCar*>>(0x53E360, this, arg1);
     }
 
     // 0x53E370 | ?Collision@aiPoliceOfficer@@AAEHPAVvehCar@@@Z
-    i32 Collision(class vehCar* arg1)
+    inline int32_t Collision(class vehCar* arg1)
     {
-        return stub<member_func_t<i32, aiPoliceOfficer, class vehCar*>>(0x53E370, this, arg1);
+        return stub<member_func_t<int32_t, aiPoliceOfficer, class vehCar*>>(0x53E370, this, arg1);
     }
 
     // 0x53E390 | ?HitMe@aiPoliceOfficer@@AAEHPAVvehCar@@@Z
-    i32 HitMe(class vehCar* arg1)
+    inline int32_t HitMe(class vehCar* arg1)
     {
-        return stub<member_func_t<i32, aiPoliceOfficer, class vehCar*>>(0x53E390, this, arg1);
+        return stub<member_func_t<int32_t, aiPoliceOfficer, class vehCar*>>(0x53E390, this, arg1);
     }
 
     // 0x53E3B0 | ?Stopped@aiPoliceOfficer@@AAEHPAVvehCar@@@Z
-    i32 Stopped(class vehCar* arg1)
+    inline int32_t Stopped(class vehCar* arg1)
     {
-        return stub<member_func_t<i32, aiPoliceOfficer, class vehCar*>>(0x53E3B0, this, arg1);
+        return stub<member_func_t<int32_t, aiPoliceOfficer, class vehCar*>>(0x53E3B0, this, arg1);
     }
 
     // 0x53E3E0 | ?IsPerpACop@aiPoliceOfficer@@AAEHPAVvehCar@@@Z
-    i32 IsPerpACop(class vehCar* arg1)
+    inline int32_t IsPerpACop(class vehCar* arg1)
     {
-        return stub<member_func_t<i32, aiPoliceOfficer, class vehCar*>>(0x53E3E0, this, arg1);
+        return stub<member_func_t<int32_t, aiPoliceOfficer, class vehCar*>>(0x53E3E0, this, arg1);
     }
 
     // 0x53E3F0 | ?OffRoad@aiPoliceOfficer@@AAEHPAVvehCar@@@Z
-    i32 OffRoad(class vehCar* arg1)
+    inline int32_t OffRoad(class vehCar* arg1)
     {
-        return stub<member_func_t<i32, aiPoliceOfficer, class vehCar*>>(0x53E3F0, this, arg1);
+        return stub<member_func_t<int32_t, aiPoliceOfficer, class vehCar*>>(0x53E3F0, this, arg1);
     }
 
     // 0x53E400 | ?InPersuit@aiPoliceOfficer@@QAEHXZ
-    i32 InPersuit()
+    inline int32_t InPersuit()
     {
-        return stub<member_func_t<i32, aiPoliceOfficer>>(0x53E400, this);
+        return stub<member_func_t<int32_t, aiPoliceOfficer>>(0x53E400, this);
     }
 
     // 0x53E410 | ?FollowPerpetrator@aiPoliceOfficer@@AAEXXZ
-    void FollowPerpetrator()
+    inline void FollowPerpetrator()
     {
         return stub<member_func_t<void, aiPoliceOfficer>>(0x53E410, this);
     }
 
     // 0x53E580 | ?ApprehendPerpetrator@aiPoliceOfficer@@AAEXXZ
-    void ApprehendPerpetrator()
+    inline void ApprehendPerpetrator()
     {
         return stub<member_func_t<void, aiPoliceOfficer>>(0x53E580, this);
     }
 
     // 0x53E700 | ?Barricade@aiPoliceOfficer@@AAEXXZ
-    void Barricade()
+    inline void Barricade()
     {
         return stub<member_func_t<void, aiPoliceOfficer>>(0x53E700, this);
     }
 
     // 0x53E710 | ?Push@aiPoliceOfficer@@AAEXXZ
-    void Push()
+    inline void Push()
     {
         return stub<member_func_t<void, aiPoliceOfficer>>(0x53E710, this);
     }
 
     // 0x53EA60 | ?Block@aiPoliceOfficer@@AAEXXZ
-    void Block()
+    inline void Block()
     {
         return stub<member_func_t<void, aiPoliceOfficer>>(0x53EA60, this);
     }
 
     // 0x53F170 | ?PerpEscapes@aiPoliceOfficer@@QAEX_N@Z
-    void PerpEscapes(bool arg1)
+    inline void PerpEscapes(bool arg1)
     {
         return stub<member_func_t<void, aiPoliceOfficer, bool>>(0x53F170, this, arg1);
     }
 
     // 0x53F1E0 | ?DrawId@aiPoliceOfficer@@QAEXXZ
-    void DrawId()
+    inline void DrawId()
     {
         return stub<member_func_t<void, aiPoliceOfficer>>(0x53F1E0, this);
     }
 
     // 0x53F1F0 | ?DrawRouteThroughTraffic@aiPoliceOfficer@@QAEXXZ
-    void DrawRouteThroughTraffic()
+    inline void DrawRouteThroughTraffic()
     {
         return stub<member_func_t<void, aiPoliceOfficer>>(0x53F1F0, this);
     }

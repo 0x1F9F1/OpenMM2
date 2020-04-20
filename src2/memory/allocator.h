@@ -48,9 +48,9 @@ class memMemoryAllocator
 {
 public:
     // 0x5766A0 | ?LogAllocations@memMemoryAllocator@@SAXH@Z
-    static inline void LogAllocations(i32 arg1)
+    static inline void LogAllocations(int32_t arg1)
     {
-        return stub<cdecl_t<void, i32>>(0x5766A0, arg1);
+        return stub<cdecl_t<void, int32_t>>(0x5766A0, arg1);
     }
 
     // 0x5766B0 | ?FindHeap@memMemoryAllocator@@SAPAV1@PAX@Z
@@ -60,94 +60,94 @@ public:
     }
 
     // 0x5766F0 | ??0memMemoryAllocator@@QAE@XZ
-    memMemoryAllocator()
+    inline memMemoryAllocator()
     {
         stub<member_func_t<void, memMemoryAllocator>>(0x5766F0, this);
     }
 
     // 0x576720 | ??1memMemoryAllocator@@QAE@XZ
-    ~memMemoryAllocator()
+    inline ~memMemoryAllocator()
     {
         stub<member_func_t<void, memMemoryAllocator>>(0x576720, this);
     }
 
     // 0x576730 | ?Init@memMemoryAllocator@@QAEXPAXI_N1@Z
-    void Init(void* arg1, u32 arg2, bool arg3, bool arg4)
+    inline void Init(void* arg1, uint32_t arg2, bool arg3, bool arg4)
     {
-        return stub<member_func_t<void, memMemoryAllocator, void*, u32, bool, bool>>(
+        return stub<member_func_t<void, memMemoryAllocator, void*, uint32_t, bool, bool>>(
             0x576730, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x576790 | ?Kill@memMemoryAllocator@@QAEXXZ
-    void Kill()
+    inline void Kill()
     {
         return stub<member_func_t<void, memMemoryAllocator>>(0x576790, this);
     }
 
     // 0x5767A0 | ?Allocate@memMemoryAllocator@@QAEPAXI_N@Z
-    void* Allocate(u32 arg1, bool arg2)
+    inline void* Allocate(uint32_t arg1, bool arg2)
     {
-        return stub<member_func_t<void*, memMemoryAllocator, u32, bool>>(0x5767A0, this, arg1, arg2);
+        return stub<member_func_t<void*, memMemoryAllocator, uint32_t, bool>>(0x5767A0, this, arg1, arg2);
     }
 
     // 0x576A20 | ?CheckPointer@memMemoryAllocator@@QAEXPAX@Z
-    void CheckPointer(void* arg1)
+    inline void CheckPointer(void* arg1)
     {
         return stub<member_func_t<void, memMemoryAllocator, void*>>(0x576A20, this, arg1);
     }
 
     // 0x576A80 | ?Free@memMemoryAllocator@@QAEXPAX_N@Z
-    void Free(void* arg1, bool arg2)
+    inline void Free(void* arg1, bool arg2)
     {
         return stub<member_func_t<void, memMemoryAllocator, void*, bool>>(0x576A80, this, arg1, arg2);
     }
 
     // 0x576BD0 | ?Unlink@memMemoryAllocator@@AAEXPAUnode@1@@Z
-    void Unlink(struct memMemoryAllocator::node* arg1)
+    inline void Unlink(struct memMemoryAllocator::node* arg1)
     {
         return stub<member_func_t<void, memMemoryAllocator, struct memMemoryAllocator::node*>>(0x576BD0, this, arg1);
     }
 
     // 0x576C30 | ?Link@memMemoryAllocator@@AAEXPAUnode@1@@Z
-    void Link(struct memMemoryAllocator::node* arg1)
+    inline void Link(struct memMemoryAllocator::node* arg1)
     {
         return stub<member_func_t<void, memMemoryAllocator, struct memMemoryAllocator::node*>>(0x576C30, this, arg1);
     }
 
     // 0x576C80 | ?Reallocate@memMemoryAllocator@@QAEPAXPAXI@Z
-    void* Reallocate(void* arg1, u32 arg2)
+    inline void* Reallocate(void* arg1, uint32_t arg2)
     {
-        return stub<member_func_t<void*, memMemoryAllocator, void*, u32>>(0x576C80, this, arg1, arg2);
+        return stub<member_func_t<void*, memMemoryAllocator, void*, uint32_t>>(0x576C80, this, arg1, arg2);
     }
 
     // 0x576CE0 | ?VerifyBlock@memMemoryAllocator@@AAEXPAX@Z
-    void VerifyBlock(void* arg1)
+    inline void VerifyBlock(void* arg1)
     {
         return stub<member_func_t<void, memMemoryAllocator, void*>>(0x576CE0, this, arg1);
     }
 
     // 0x576D10 | ?GetStats@memMemoryAllocator@@QAEXPAUmemMemStats@@_N@Z
-    void GetStats(struct memMemStats* arg1, bool arg2)
+    inline void GetStats(struct memMemStats* arg1, bool arg2)
     {
         return stub<member_func_t<void, memMemoryAllocator, struct memMemStats*, bool>>(0x576D10, this, arg1, arg2);
     }
 
     // 0x576DB0 | ?SanityCheck@memMemoryAllocator@@QAEXXZ
-    void SanityCheck()
+    inline void SanityCheck()
     {
         return stub<member_func_t<void, memMemoryAllocator>>(0x576DB0, this);
     }
 
     // 0x577020 | ?CopyHeap@memMemoryAllocator@@QAE_NPAV1@@Z
-    bool CopyHeap(class memMemoryAllocator* arg1)
+    inline bool CopyHeap(class memMemoryAllocator* arg1)
     {
         return stub<member_func_t<bool, memMemoryAllocator, class memMemoryAllocator*>>(0x577020, this, arg1);
     }
 
     // 0x577070 | ?CompareHeap@memMemoryAllocator@@QAEIPAV1@@Z
-    u32 CompareHeap(class memMemoryAllocator* arg1)
+    inline uint32_t CompareHeap(class memMemoryAllocator* arg1)
     {
-        return stub<member_func_t<u32, memMemoryAllocator, class memMemoryAllocator*>>(0x577070, this, arg1);
+        return stub<member_func_t<uint32_t, memMemoryAllocator, class memMemoryAllocator*>>(0x577070, this, arg1);
     }
 
     // 0x577170 | ?DisplayUsed@memMemoryAllocator@@SAXPBD@Z

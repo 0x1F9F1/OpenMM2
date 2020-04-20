@@ -56,161 +56,163 @@ public:
     // phBoundTerrain::`vftable' @ 0x5B2344
 
     // 0x48C150 | ??0phBoundTerrain@@QAE@XZ
-    phBoundTerrain()
+    inline phBoundTerrain()
     {
         stub<member_func_t<void, phBoundTerrain>>(0x48C150, this);
     }
 
     // 0x48C1D0 | ??1phBoundTerrain@@QAE@XZ
-    ~phBoundTerrain()
+    inline ~phBoundTerrain()
     {
         stub<member_func_t<void, phBoundTerrain>>(0x48C1D0, this);
     }
 
     // 0x48C270 | ?SetHotEdges@phBoundTerrain@@QAEX_N@Z
-    void SetHotEdges(bool arg1)
+    inline void SetHotEdges(bool arg1)
     {
         return stub<member_func_t<void, phBoundTerrain, bool>>(0x48C270, this, arg1);
     }
 
     // 0x48C2E0 | ?Load@phBoundTerrain@@QAE_NPBD@Z
-    bool Load(char const* arg1)
+    inline bool Load(char const* arg1)
     {
         return stub<member_func_t<bool, phBoundTerrain, char const*>>(0x48C2E0, this, arg1);
     }
 
     // 0x48C690 | ?Save@phBoundTerrain@@QAE_NPBD@Z
-    bool Save(char const* arg1)
+    inline bool Save(char const* arg1)
     {
         return stub<member_func_t<bool, phBoundTerrain, char const*>>(0x48C690, this, arg1);
     }
 
     // 0x48C8A0 | ?TestBoundTerrainPoly@phBoundTerrain@@QBEHPBVphBoundPolygonal@@PBVMatrix34@@1PAVphColliderBase@@2PAVphIntersection@@3HPAH4ABVVector3@@_N@Z
-    i32 TestBoundTerrainPoly(class phBoundPolygonal const* arg1, class Matrix34 const* arg2, class Matrix34 const* arg3,
-        class phColliderBase* arg4, class phColliderBase* arg5, class phIntersection* arg6, class phIntersection* arg7,
-        i32 arg8, i32* arg9, i32* arg10, class Vector3 const& arg11, bool arg12)
+    inline int32_t TestBoundTerrainPoly(class phBoundPolygonal const* arg1, class Matrix34 const* arg2,
+        class Matrix34 const* arg3, class phColliderBase* arg4, class phColliderBase* arg5, class phIntersection* arg6,
+        class phIntersection* arg7, int32_t arg8, int32_t* arg9, int32_t* arg10, class Vector3 const& arg11, bool arg12)
     {
-        return stub<member_func_t<i32, phBoundTerrain, class phBoundPolygonal const*, class Matrix34 const*,
+        return stub<member_func_t<int32_t, phBoundTerrain, class phBoundPolygonal const*, class Matrix34 const*,
             class Matrix34 const*, class phColliderBase*, class phColliderBase*, class phIntersection*,
-            class phIntersection*, i32, i32*, i32*, class Vector3 const&, bool>>(
+            class phIntersection*, int32_t, int32_t*, int32_t*, class Vector3 const&, bool>>(
             0x48C8A0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
     }
 
     // 0x48C960 | ?TestBoundTerrainEdgesVsPoly@phBoundTerrain@@QBEHPBVphBoundPolygonal@@PAVphColliderBase@@PBVMatrix34@@PAVphIntersection@@HPAH@Z
-    i32 TestBoundTerrainEdgesVsPoly(class phBoundPolygonal const* arg1, class phColliderBase* arg2,
-        class Matrix34 const* arg3, class phIntersection* arg4, i32 arg5, i32* arg6)
+    inline int32_t TestBoundTerrainEdgesVsPoly(class phBoundPolygonal const* arg1, class phColliderBase* arg2,
+        class Matrix34 const* arg3, class phIntersection* arg4, int32_t arg5, int32_t* arg6)
     {
-        return stub<member_func_t<i32, phBoundTerrain, class phBoundPolygonal const*, class phColliderBase*,
-            class Matrix34 const*, class phIntersection*, i32, i32*>>(
+        return stub<member_func_t<int32_t, phBoundTerrain, class phBoundPolygonal const*, class phColliderBase*,
+            class Matrix34 const*, class phIntersection*, int32_t, int32_t*>>(
             0x48C960, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x48CD00 | ?TestBoundPolyTerrain@phBoundTerrain@@QBEHPBVphBoundPolygonal@@PAVphColliderBase@@PBVMatrix34@@2PAVphIntersection@@HPAHPBVVector3@@_N@Z
-    i32 TestBoundPolyTerrain(class phBoundPolygonal const* arg1, class phColliderBase* arg2, class Matrix34 const* arg3,
-        class Matrix34 const* arg4, class phIntersection* arg5, i32 arg6, i32* arg7, class Vector3 const* arg8,
-        bool arg9)
+    inline int32_t TestBoundPolyTerrain(class phBoundPolygonal const* arg1, class phColliderBase* arg2,
+        class Matrix34 const* arg3, class Matrix34 const* arg4, class phIntersection* arg5, int32_t arg6, int32_t* arg7,
+        class Vector3 const* arg8, bool arg9)
     {
-        return stub<member_func_t<i32, phBoundTerrain, class phBoundPolygonal const*, class phColliderBase*,
-            class Matrix34 const*, class Matrix34 const*, class phIntersection*, i32, i32*, class Vector3 const*,
-            bool>>(0x48CD00, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
+        return stub<member_func_t<int32_t, phBoundTerrain, class phBoundPolygonal const*, class phColliderBase*,
+            class Matrix34 const*, class Matrix34 const*, class phIntersection*, int32_t, int32_t*,
+            class Vector3 const*, bool>>(0x48CD00, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
     }
 
     // 0x48D9C0 | ?InitPolyIterator@phBoundTerrain@@QBEXABVVector3@@M@Z
-    void InitPolyIterator(class Vector3 const& arg1, f32 arg2)
+    inline void InitPolyIterator(class Vector3 const& arg1, float arg2)
     {
-        return stub<member_func_t<void, phBoundTerrain, class Vector3 const&, f32>>(0x48D9C0, this, arg1, arg2);
+        return stub<member_func_t<void, phBoundTerrain, class Vector3 const&, float>>(0x48D9C0, this, arg1, arg2);
     }
 
     // 0x48DDC0 | ?InitPolyIterator@phBoundTerrain@@QBEXABVphSegment@@@Z
-    void InitPolyIterator(class phSegment const& arg1)
+    inline void InitPolyIterator(class phSegment const& arg1)
     {
         return stub<member_func_t<void, phBoundTerrain, class phSegment const&>>(0x48DDC0, this, arg1);
     }
 
     // 0x48E0C0 | ?ClearPolyTouched@phBoundTerrain@@QBEXXZ
-    void ClearPolyTouched()
+    inline void ClearPolyTouched()
     {
         return stub<member_func_t<void, phBoundTerrain>>(0x48E0C0, this);
     }
 
     // 0x48E680 | ?CalculateBuckets@phBoundTerrain@@IBEXMMMM@Z
-    void CalculateBuckets(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
+    inline void CalculateBuckets(float arg1, float arg2, float arg3, float arg4)
     {
-        return stub<member_func_t<void, phBoundTerrain, f32, f32, f32, f32>>(0x48E680, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, phBoundTerrain, float, float, float, float>>(
+            0x48E680, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x48EF50 | ?FindImpactsSphereToTerrain@phBoundTerrain@@QBEHPBVphBoundSphere@@PBVMatrix34@@1PAVphColliderBase@@2PAVphImpactBase@@HABVVector3@@4@Z
-    i32 FindImpactsSphereToTerrain(class phBoundSphere const* arg1, class Matrix34 const* arg2,
+    inline int32_t FindImpactsSphereToTerrain(class phBoundSphere const* arg1, class Matrix34 const* arg2,
         class Matrix34 const* arg3, class phColliderBase* arg4, class phColliderBase* arg5, class phImpactBase* arg6,
-        i32 arg7, class Vector3 const& arg8, class Vector3 const& arg9)
+        int32_t arg7, class Vector3 const& arg8, class Vector3 const& arg9)
     {
-        return stub<member_func_t<i32, phBoundTerrain, class phBoundSphere const*, class Matrix34 const*,
-            class Matrix34 const*, class phColliderBase*, class phColliderBase*, class phImpactBase*, i32,
+        return stub<member_func_t<int32_t, phBoundTerrain, class phBoundSphere const*, class Matrix34 const*,
+            class Matrix34 const*, class phColliderBase*, class phColliderBase*, class phImpactBase*, int32_t,
             class Vector3 const&, class Vector3 const&>>(
             0x48EF50, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
     }
 
     // 0x48F440 | ?FindImpactsHotdogToTerrain@phBoundTerrain@@QBEHPBVphBoundHotdog@@PBVMatrix34@@1PAVphColliderBase@@2PAVphImpactBase@@HABVVector3@@4@Z
-    i32 FindImpactsHotdogToTerrain(class phBoundHotdog const* arg1, class Matrix34 const* arg2,
+    inline int32_t FindImpactsHotdogToTerrain(class phBoundHotdog const* arg1, class Matrix34 const* arg2,
         class Matrix34 const* arg3, class phColliderBase* arg4, class phColliderBase* arg5, class phImpactBase* arg6,
-        i32 arg7, class Vector3 const& arg8, class Vector3 const& arg9)
+        int32_t arg7, class Vector3 const& arg8, class Vector3 const& arg9)
     {
-        return stub<member_func_t<i32, phBoundTerrain, class phBoundHotdog const*, class Matrix34 const*,
-            class Matrix34 const*, class phColliderBase*, class phColliderBase*, class phImpactBase*, i32,
+        return stub<member_func_t<int32_t, phBoundTerrain, class phBoundHotdog const*, class Matrix34 const*,
+            class Matrix34 const*, class phColliderBase*, class phColliderBase*, class phImpactBase*, int32_t,
             class Vector3 const&, class Vector3 const&>>(
             0x48F440, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
     }
 
     // 0x4901F0 | ?PackNormal@phBoundTerrain@@SAXAAIABVVector4@@@Z
-    static inline void PackNormal(u32& arg1, class Vector4 const& arg2)
+    static inline void PackNormal(uint32_t& arg1, class Vector4 const& arg2)
     {
-        return stub<cdecl_t<void, u32&, class Vector4 const&>>(0x4901F0, arg1, arg2);
+        return stub<cdecl_t<void, uint32_t&, class Vector4 const&>>(0x4901F0, arg1, arg2);
     }
 
     // 0x490280 | ?UnpackNormal@phBoundTerrain@@SAXAAVVector4@@I@Z
-    static inline void UnpackNormal(class Vector4& arg1, u32 arg2)
+    static inline void UnpackNormal(class Vector4& arg1, uint32_t arg2)
     {
-        return stub<cdecl_t<void, class Vector4&, u32>>(0x490280, arg1, arg2);
+        return stub<cdecl_t<void, class Vector4&, uint32_t>>(0x490280, arg1, arg2);
     }
 
     // 0x48E200 | ?TestProbePoint@phBoundTerrain@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@M@Z
-    bool TestProbePoint(class phSegment& arg1, class phIntersectionPoint* arg2, f32 arg3) override
+    inline bool TestProbePoint(class phSegment& arg1, class phIntersectionPoint* arg2, float arg3) override
     {
-        return stub<member_func_t<bool, phBoundTerrain, class phSegment&, class phIntersectionPoint*, f32>>(
+        return stub<member_func_t<bool, phBoundTerrain, class phSegment&, class phIntersectionPoint*, float>>(
             0x48E200, this, arg1, arg2, arg3);
     }
 
     // 0x48E100 | ?TestAIPoint@phBoundTerrain@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@@Z
-    bool TestAIPoint(class phSegment& arg1, class phIntersectionPoint* arg2) override
+    inline bool TestAIPoint(class phSegment& arg1, class phIntersectionPoint* arg2) override
     {
         return stub<member_func_t<bool, phBoundTerrain, class phSegment&, class phIntersectionPoint*>>(
             0x48E100, this, arg1, arg2);
     }
 
     // 0x48E480 | ?TestEdge@phBoundTerrain@@UBEHAAVphSegment@@PAVphIntersection@@H@Z
-    i32 TestEdge(class phSegment& arg1, class phIntersection* arg2, i32 arg3) override
+    inline int32_t TestEdge(class phSegment& arg1, class phIntersection* arg2, int32_t arg3) override
     {
-        return stub<member_func_t<i32, phBoundTerrain, class phSegment&, class phIntersection*, i32>>(
+        return stub<member_func_t<int32_t, phBoundTerrain, class phSegment&, class phIntersection*, int32_t>>(
             0x48E480, this, arg1, arg2, arg3);
     }
 
     // 0x48E310 | ?TestProbe@phBoundTerrain@@UBE_NAAVphSegment@@PAVphIntersection@@M@Z
-    bool TestProbe(class phSegment& arg1, class phIntersection* arg2, f32 arg3) override
+    inline bool TestProbe(class phSegment& arg1, class phIntersection* arg2, float arg3) override
     {
-        return stub<member_func_t<bool, phBoundTerrain, class phSegment&, class phIntersection*, f32>>(
+        return stub<member_func_t<bool, phBoundTerrain, class phSegment&, class phIntersection*, float>>(
             0x48E310, this, arg1, arg2, arg3);
     }
 
     // 0x48D790 | ?TestSphere@phBoundTerrain@@UBE_NABVVector3@@MAAV2@1AAM@Z
-    bool TestSphere(class Vector3 const& arg1, f32 arg2, class Vector3& arg3, class Vector3& arg4, f32& arg5) override
+    inline bool TestSphere(
+        class Vector3 const& arg1, float arg2, class Vector3& arg3, class Vector3& arg4, float& arg5) override
     {
         return stub<
-            member_func_t<bool, phBoundTerrain, class Vector3 const&, f32, class Vector3&, class Vector3&, f32&>>(
+            member_func_t<bool, phBoundTerrain, class Vector3 const&, float, class Vector3&, class Vector3&, float&>>(
             0x48D790, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x48C2D0 | ?PostLoadCompute@phBoundTerrain@@UAEXXZ
-    void PostLoadCompute() override
+    inline void PostLoadCompute() override
     {
         return stub<member_func_t<void, phBoundTerrain>>(0x48C2D0, this);
     }

@@ -42,56 +42,56 @@ public:
     // asMeshSetForm::`vftable' @ 0x5B5358
 
     // 0x533600 | ??0asMeshSetForm@@QAE@XZ
-    asMeshSetForm()
+    inline asMeshSetForm()
     {
         stub<member_func_t<void, asMeshSetForm>>(0x533600, this);
     }
 
     // 0x533660 | ?SetShape@asMeshSetForm@@QAEXPAD0_NPAVVector3@@@Z
-    void SetShape(char* arg1, char* arg2, bool arg3, class Vector3* arg4)
+    inline void SetShape(char* arg1, char* arg2, bool arg3, class Vector3* arg4)
     {
         return stub<member_func_t<void, asMeshSetForm, char*, char*, bool, class Vector3*>>(
             0x533660, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x533770 | ?SetZRead@asMeshSetForm@@QAEX_N@Z
-    void SetZRead(bool arg1)
+    inline void SetZRead(bool arg1)
     {
         return stub<member_func_t<void, asMeshSetForm, bool>>(0x533770, this, arg1);
     }
 
     // 0x533790 | ?SetZWrite@asMeshSetForm@@QAEX_N@Z
-    void SetZWrite(bool arg1)
+    inline void SetZWrite(bool arg1)
     {
         return stub<member_func_t<void, asMeshSetForm, bool>>(0x533790, this, arg1);
     }
 
     // 0x5337B0 | ?EnableLighting@asMeshSetForm@@QAEX_N@Z
-    void EnableLighting(bool arg1)
+    inline void EnableLighting(bool arg1)
     {
         return stub<member_func_t<void, asMeshSetForm, bool>>(0x5337B0, this, arg1);
     }
 
     // 0x5337D0 | ?EnableAlpha@asMeshSetForm@@QAEX_N@Z
-    void EnableAlpha(bool arg1)
+    inline void EnableAlpha(bool arg1)
     {
         return stub<member_func_t<void, asMeshSetForm, bool>>(0x5337D0, this, arg1);
     }
 
     // 0x5339D0 | ??1asMeshSetForm@@UAE@XZ
-    ~asMeshSetForm() override
+    inline ~asMeshSetForm() override
     {
         stub<member_func_t<void, asMeshSetForm>>(0x5339D0, this);
     }
 
     // 0x533810 | ?Cull@asMeshSetForm@@UAEXXZ
-    void Cull() override
+    inline void Cull() override
     {
         return stub<member_func_t<void, asMeshSetForm>>(0x533810, this);
     }
 
     // 0x5337F0 | ?Update@asMeshSetForm@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, asMeshSetForm>>(0x5337F0, this);
     }

@@ -40,80 +40,80 @@ class aiEngineAudio
 {
 public:
     // 0x4DA720 | ??0aiEngineAudio@@QAE@XZ
-    aiEngineAudio()
+    inline aiEngineAudio()
     {
         stub<member_func_t<void, aiEngineAudio>>(0x4DA720, this);
     }
 
     // 0x4DA740 | ??0aiEngineAudio@@QAE@PAV0@@Z
-    aiEngineAudio(class aiEngineAudio* arg1)
+    inline aiEngineAudio(class aiEngineAudio* arg1)
     {
         stub<member_func_t<void, aiEngineAudio, class aiEngineAudio*>>(0x4DA740, this, arg1);
     }
 
     // 0x4DA820 | ??1aiEngineAudio@@QAE@XZ
-    ~aiEngineAudio()
+    inline ~aiEngineAudio()
     {
         stub<member_func_t<void, aiEngineAudio>>(0x4DA820, this);
     }
 
     // 0x4DA8D0 | ?Load@aiEngineAudio@@SAHPAPAV1@PAD1PAH@Z
-    static inline i32 Load(class aiEngineAudio** arg1, char* arg2, char* arg3, i32* arg4)
+    static inline int32_t Load(class aiEngineAudio** arg1, char* arg2, char* arg3, int32_t* arg4)
     {
-        return stub<cdecl_t<i32, class aiEngineAudio**, char*, char*, i32*>>(0x4DA8D0, arg1, arg2, arg3, arg4);
+        return stub<cdecl_t<int32_t, class aiEngineAudio**, char*, char*, int32_t*>>(0x4DA8D0, arg1, arg2, arg3, arg4);
     }
 
     // 0x4DA990 | ?AddToHash@aiEngineAudio@@SAXPADH@Z
-    static inline void AddToHash(char* arg1, i32 arg2)
+    static inline void AddToHash(char* arg1, int32_t arg2)
     {
-        return stub<cdecl_t<void, char*, i32>>(0x4DA990, arg1, arg2);
+        return stub<cdecl_t<void, char*, int32_t>>(0x4DA990, arg1, arg2);
     }
 
     // 0x4DA9D0 | ?ReadCSV@aiEngineAudio@@AAEHPAVStream@@@Z
-    i32 ReadCSV(class Stream* arg1)
+    inline int32_t ReadCSV(class Stream* arg1)
     {
-        return stub<member_func_t<i32, aiEngineAudio, class Stream*>>(0x4DA9D0, this, arg1);
+        return stub<member_func_t<int32_t, aiEngineAudio, class Stream*>>(0x4DA9D0, this, arg1);
     }
 
     // 0x4DAC10 | ?EchoOn@aiEngineAudio@@QAEXM@Z
-    void EchoOn(f32 arg1)
+    inline void EchoOn(float arg1)
     {
-        return stub<member_func_t<void, aiEngineAudio, f32>>(0x4DAC10, this, arg1);
+        return stub<member_func_t<void, aiEngineAudio, float>>(0x4DAC10, this, arg1);
     }
 
     // 0x4DAC40 | ?EchoOff@aiEngineAudio@@QAEXXZ
-    void EchoOff()
+    inline void EchoOff()
     {
         return stub<member_func_t<void, aiEngineAudio>>(0x4DAC40, this);
     }
 
     // 0x4DAC50 | ?UpdateEcho@aiEngineAudio@@QAEXXZ
-    void UpdateEcho()
+    inline void UpdateEcho()
     {
         return stub<member_func_t<void, aiEngineAudio>>(0x4DAC50, this);
     }
 
     // 0x4DAC60 | ?AssignSounds@aiEngineAudio@@QAEXH@Z
-    void AssignSounds(i32 arg1)
+    inline void AssignSounds(int32_t arg1)
     {
-        return stub<member_func_t<void, aiEngineAudio, i32>>(0x4DAC60, this, arg1);
+        return stub<member_func_t<void, aiEngineAudio, int32_t>>(0x4DAC60, this, arg1);
     }
 
     // 0x4DAC80 | ?UnAssignSounds@aiEngineAudio@@QAEXXZ
-    void UnAssignSounds()
+    inline void UnAssignSounds()
     {
         return stub<member_func_t<void, aiEngineAudio>>(0x4DAC80, this);
     }
 
     // 0x4DACA0 | ?CalculatePitch@aiEngineAudio@@QAEXMMH@Z
-    void CalculatePitch(f32 arg1, f32 arg2, i32 arg3)
+    inline void CalculatePitch(float arg1, float arg2, int32_t arg3)
     {
-        return stub<member_func_t<void, aiEngineAudio, f32, f32, i32>>(0x4DACA0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, aiEngineAudio, float, float, int32_t>>(0x4DACA0, this, arg1, arg2, arg3);
     }
 
     // 0x4DAD30 | ?UpdateDoppler@aiEngineAudio@@QAEXMMM@Z
-    void UpdateDoppler(f32 arg1, f32 arg2, f32 arg3)
+    inline void UpdateDoppler(float arg1, float arg2, float arg3)
     {
-        return stub<member_func_t<void, aiEngineAudio, f32, f32, f32>>(0x4DAD30, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, aiEngineAudio, float, float, float>>(0x4DAD30, this, arg1, arg2, arg3);
     }
 };

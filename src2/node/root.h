@@ -46,61 +46,61 @@ public:
     // asRoot::`vftable' @ 0x5B28B4
 
     // 0x4A0B70 | ??0asRoot@@QAE@XZ
-    asRoot()
+    inline asRoot()
     {
         stub<member_func_t<void, asRoot>>(0x4A0B70, this);
     }
 
     // 0x4A0BE0 | ?Init@asRoot@@QAEX_N@Z
-    void Init(bool arg1)
+    inline void Init(bool arg1)
     {
         return stub<member_func_t<void, asRoot, bool>>(0x4A0BE0, this, arg1);
     }
 
     // 0x4A0C50 | ?Quit@asRoot@@QAEXXZ
-    void Quit()
+    inline void Quit()
     {
         return stub<member_func_t<void, asRoot>>(0x4A0C50, this);
     }
 
     // 0x4A0C60 | ?IsPaused@asRoot@@QAE_NXZ
-    bool IsPaused()
+    inline bool IsPaused()
     {
         return stub<member_func_t<bool, asRoot>>(0x4A0C60, this);
     }
 
     // 0x4A0C70 | ?TogglePause@asRoot@@QAEXXZ
-    void TogglePause()
+    inline void TogglePause()
     {
         return stub<member_func_t<void, asRoot>>(0x4A0C70, this);
     }
 
     // 0x4A0C80 | ?SetPause@asRoot@@QAEX_N@Z
-    void SetPause(bool arg1)
+    inline void SetPause(bool arg1)
     {
         return stub<member_func_t<void, asRoot, bool>>(0x4A0C80, this, arg1);
     }
 
     // 0x4A0C90 | ??1asRoot@@UAE@XZ
-    ~asRoot() override
+    inline ~asRoot() override
     {
         stub<member_func_t<void, asRoot>>(0x4A0C90, this);
     }
 
     // 0x4A0C00 | ?Update@asRoot@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, asRoot>>(0x4A0C00, this);
     }
 
     // 0x4A0C40 | ?Reset@asRoot@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, asRoot>>(0x4A0C40, this);
     }
 
     // 0x4A0CD0 | ?GetClassName@asRoot@@UAEPADXZ
-    char* GetClassName() override
+    inline char* GetClassName() override
     {
         return stub<member_func_t<char*, asRoot>>(0x4A0CD0, this);
     }

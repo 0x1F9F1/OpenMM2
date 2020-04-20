@@ -36,57 +36,58 @@ struct DMusicManager
 {
 public:
     // 0x5173F0 | ??0DMusicManager@@QAE@XZ
-    DMusicManager()
+    inline DMusicManager()
     {
         stub<member_func_t<void, DMusicManager>>(0x5173F0, this);
     }
 
     // 0x517400 | ??1DMusicManager@@QAE@XZ
-    ~DMusicManager()
+    inline ~DMusicManager()
     {
         stub<member_func_t<void, DMusicManager>>(0x517400, this);
     }
 
     // 0x517420 | ?Init@DMusicManager@@QAEHPAUIDirectSound@@HKHKK@Z
-    i32 Init(struct IDirectSound* arg1, i32 arg2, u32 arg3, i32 arg4, u32 arg5, u32 arg6)
+    inline int32_t Init(
+        struct IDirectSound* arg1, int32_t arg2, uint32_t arg3, int32_t arg4, uint32_t arg5, uint32_t arg6)
     {
-        return stub<member_func_t<i32, DMusicManager, struct IDirectSound*, i32, u32, i32, u32, u32>>(
-            0x517420, this, arg1, arg2, arg3, arg4, arg5, arg6);
+        return stub<member_func_t<int32_t, DMusicManager, struct IDirectSound*, int32_t, uint32_t, int32_t, uint32_t,
+            uint32_t>>(0x517420, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x5174B0 | ?Activate@DMusicManager@@QAEXH@Z
-    void Activate(i32 arg1)
+    inline void Activate(int32_t arg1)
     {
-        return stub<member_func_t<void, DMusicManager, i32>>(0x5174B0, this, arg1);
+        return stub<member_func_t<void, DMusicManager, int32_t>>(0x5174B0, this, arg1);
     }
 
     // 0x5174D0 | ?GetDMusicObjectPtr@DMusicManager@@QAEPAVDMusicObject@@XZ
-    class DMusicObject* GetDMusicObjectPtr()
+    inline class DMusicObject* GetDMusicObjectPtr()
     {
         return stub<member_func_t<class DMusicObject*, DMusicManager>>(0x5174D0, this);
     }
 
     // 0x5174E0 | ?Update@DMusicManager@@QAEXXZ
-    void Update()
+    inline void Update()
     {
         return stub<member_func_t<void, DMusicManager>>(0x5174E0, this);
     }
 
     // 0x5174F0 | ?SetVolume@DMusicManager@@QAEXM@Z
-    void SetVolume(f32 arg1)
+    inline void SetVolume(float arg1)
     {
-        return stub<member_func_t<void, DMusicManager, f32>>(0x5174F0, this, arg1);
+        return stub<member_func_t<void, DMusicManager, float>>(0x5174F0, this, arg1);
     }
 
     // 0x517520 | ?GetVolume@DMusicManager@@QAEMXZ
-    f32 GetVolume()
+    inline float GetVolume()
     {
-        return stub<member_func_t<f32, DMusicManager>>(0x517520, this);
+        return stub<member_func_t<float, DMusicManager>>(0x517520, this);
     }
 
     // 0x517540 | ?SetPan@DMusicManager@@QAEXM@Z
-    void SetPan(f32 arg1)
+    inline void SetPan(float arg1)
     {
-        return stub<member_func_t<void, DMusicManager, f32>>(0x517540, this, arg1);
+        return stub<member_func_t<void, DMusicManager, float>>(0x517540, this, arg1);
     }
 };

@@ -38,25 +38,25 @@ public:
     // camCarCS::`vftable' @ 0x5B50A8
 
     // 0x521470 | ??0camCarCS@@QAE@XZ
-    camCarCS()
+    inline camCarCS()
     {
         stub<member_func_t<void, camCarCS>>(0x521470, this);
     }
 
     // 0x5214A0 | ?Init@camCarCS@@QAEXPAVvehCar@@PAD@Z
-    void Init(class vehCar* arg1, char* arg2)
+    inline void Init(class vehCar* arg1, char* arg2)
     {
         return stub<member_func_t<void, camCarCS, class vehCar*, char*>>(0x5214A0, this, arg1, arg2);
     }
 
     // 0x521490 | ??1camCarCS@@UAE@XZ
-    ~camCarCS() override
+    inline ~camCarCS() override
     {
         stub<member_func_t<void, camCarCS>>(0x521490, this);
     }
 
     // 0x5214E0 | ?FileIO@camCarCS@@UAEXAAVdatParser@@@Z
-    void FileIO(class datParser& arg1) override
+    inline void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, camCarCS, class datParser&>>(0x5214E0, this, arg1);
     }

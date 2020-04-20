@@ -56,68 +56,68 @@ public:
     // Skipped (scalar/vector destructor)
 
     // 0x551340 | ??0aiVehicleAmbient@@QAE@XZ
-    aiVehicleAmbient()
+    inline aiVehicleAmbient()
     {
         stub<member_func_t<void, aiVehicleAmbient>>(0x551340, this);
     }
 
     // 0x551370 | ??1aiVehicleAmbient@@QAE@XZ
-    ~aiVehicleAmbient()
+    inline ~aiVehicleAmbient()
     {
         stub<member_func_t<void, aiVehicleAmbient>>(0x551370, this);
     }
 
     // 0x551380 | ?Init@aiVehicleAmbient@@QAEXPADH@Z
-    void Init(char* arg1, i32 arg2)
+    inline void Init(char* arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, aiVehicleAmbient, char*, i32>>(0x551380, this, arg1, arg2);
+        return stub<member_func_t<void, aiVehicleAmbient, char*, int32_t>>(0x551380, this, arg1, arg2);
     }
 
     // 0x551A70 | ?DrawBBox@aiVehicleAmbient@@QAEXF@Z
-    void DrawBBox(i16 arg1)
+    inline void DrawBBox(int16_t arg1)
     {
-        return stub<member_func_t<void, aiVehicleAmbient, i16>>(0x551A70, this, arg1);
+        return stub<member_func_t<void, aiVehicleAmbient, int16_t>>(0x551A70, this, arg1);
     }
 
     // 0x551A80 | ?Dump@aiVehicleAmbient@@QAEXXZ
-    void Dump()
+    inline void Dump()
     {
         return stub<member_func_t<void, aiVehicleAmbient>>(0x551A80, this);
     }
 
     // 0x551600 | ?Update@aiVehicleAmbient@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, aiVehicleAmbient>>(0x551600, this);
     }
 
     // 0x551520 | ?Reset@aiVehicleAmbient@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, aiVehicleAmbient>>(0x551520, this);
     }
 
     // 0x551CC0 | ?Type@aiVehicleAmbient@@UAEHXZ
-    i32 Type() override
+    inline int32_t Type() override
     {
-        return stub<member_func_t<i32, aiVehicleAmbient>>(0x551CC0, this);
+        return stub<member_func_t<int32_t, aiVehicleAmbient>>(0x551CC0, this);
     }
 
     // 0x551A60 | ?DrawId@aiVehicleAmbient@@UAEXXZ
-    void DrawId() override
+    inline void DrawId() override
     {
         return stub<member_func_t<void, aiVehicleAmbient>>(0x551A60, this);
     }
 
     // 0x551950 | ?ReplayDebug@aiVehicleAmbient@@UAEXXZ
-    void ReplayDebug() override
+    inline void ReplayDebug() override
     {
         return stub<member_func_t<void, aiVehicleAmbient>>(0x551950, this);
     }
 
     // 0x5519C0 | ?Impact@aiVehicleAmbient@@UAEXH@Z
-    void Impact(i32 arg1) override
+    inline void Impact(int32_t arg1) override
     {
-        return stub<member_func_t<void, aiVehicleAmbient, i32>>(0x5519C0, this, arg1);
+        return stub<member_func_t<void, aiVehicleAmbient, int32_t>>(0x5519C0, this, arg1);
     }
 };

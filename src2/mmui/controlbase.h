@@ -31,25 +31,25 @@ struct ControlBase
 {
 public:
     // 0x50D4C0 | ??0ControlBase@@QAE@XZ
-    ControlBase()
+    inline ControlBase()
     {
         stub<member_func_t<void, ControlBase>>(0x50D4C0, this);
     }
 
     // 0x50D4D0 | ??1ControlBase@@QAE@XZ
-    ~ControlBase()
+    inline ~ControlBase()
     {
         stub<member_func_t<void, ControlBase>>(0x50D4D0, this);
     }
 
     // 0x50D4E0 | ?InitSensitivity@ControlBase@@QAEXXZ
-    void InitSensitivity()
+    inline void InitSensitivity()
     {
         return stub<member_func_t<void, ControlBase>>(0x50D4E0, this);
     }
 
     // 0x50D540 | ?SetSensitivity@ControlBase@@QAEXXZ
-    void SetSensitivity()
+    inline void SetSensitivity()
     {
         return stub<member_func_t<void, ControlBase>>(0x50D540, this);
     }

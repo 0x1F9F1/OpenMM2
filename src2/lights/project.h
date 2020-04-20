@@ -42,69 +42,70 @@ class ltProjection
 {
 public:
     // 0x59C510 | ??0ltProjection@@QAE@H@Z
-    ltProjection(i32 arg1)
+    inline ltProjection(int32_t arg1)
     {
-        stub<member_func_t<void, ltProjection, i32>>(0x59C510, this, arg1);
+        stub<member_func_t<void, ltProjection, int32_t>>(0x59C510, this, arg1);
     }
 
     // 0x59C580 | ??1ltProjection@@QAE@XZ
-    ~ltProjection()
+    inline ~ltProjection()
     {
         stub<member_func_t<void, ltProjection>>(0x59C580, this);
     }
 
     // 0x59C5B0 | ?MakeOrthoMatrix@ltProjection@@QAEXABVVector3@@00M@Z
-    void MakeOrthoMatrix(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3, f32 arg4)
+    inline void MakeOrthoMatrix(
+        class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3, float arg4)
     {
         return stub<
-            member_func_t<void, ltProjection, class Vector3 const&, class Vector3 const&, class Vector3 const&, f32>>(
+            member_func_t<void, ltProjection, class Vector3 const&, class Vector3 const&, class Vector3 const&, float>>(
             0x59C5B0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x59C770 | ?DrawBegin@ltProjection@@QAEXABVMatrix34@@@Z
-    void DrawBegin(class Matrix34 const& arg1)
+    inline void DrawBegin(class Matrix34 const& arg1)
     {
         return stub<member_func_t<void, ltProjection, class Matrix34 const&>>(0x59C770, this, arg1);
     }
 
     // 0x59C950 | ?DrawEnd@ltProjection@@QAEXXZ
-    void DrawEnd()
+    inline void DrawEnd()
     {
         return stub<member_func_t<void, ltProjection>>(0x59C950, this);
     }
 
     // 0x59C9C0 | ?DrawMultiStageBegin@ltProjection@@QAEXHABVMatrix34@@@Z
-    void DrawMultiStageBegin(i32 arg1, class Matrix34 const& arg2)
+    inline void DrawMultiStageBegin(int32_t arg1, class Matrix34 const& arg2)
     {
-        return stub<member_func_t<void, ltProjection, i32, class Matrix34 const&>>(0x59C9C0, this, arg1, arg2);
+        return stub<member_func_t<void, ltProjection, int32_t, class Matrix34 const&>>(0x59C9C0, this, arg1, arg2);
     }
 
     // 0x59CB20 | ?DrawMultiStageEnd@ltProjection@@QAEXH@Z
-    void DrawMultiStageEnd(i32 arg1)
+    inline void DrawMultiStageEnd(int32_t arg1)
     {
-        return stub<member_func_t<void, ltProjection, i32>>(0x59CB20, this, arg1);
+        return stub<member_func_t<void, ltProjection, int32_t>>(0x59CB20, this, arg1);
     }
 
     // 0x59CB80 | ?OffScreenBegin@ltProjection@@QAEX_N@Z
-    void OffScreenBegin(bool arg1)
+    inline void OffScreenBegin(bool arg1)
     {
         return stub<member_func_t<void, ltProjection, bool>>(0x59CB80, this, arg1);
     }
 
     // 0x59CE10 | ?OffScreenEnd@ltProjection@@QAEXXZ
-    void OffScreenEnd()
+    inline void OffScreenEnd()
     {
         return stub<member_func_t<void, ltProjection>>(0x59CE10, this);
     }
 
     // 0x59D030 | ?DrawAmbient@ltProjection@@QAEXABVVector3@@@Z
-    void DrawAmbient(class Vector3 const& arg1)
+    inline void DrawAmbient(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, ltProjection, class Vector3 const&>>(0x59D030, this, arg1);
     }
 
     // 0x59D230 | ?DrawDebug@ltProjection@@QAEXXZ
-    void DrawDebug()
+    inline void DrawDebug()
     {
         return stub<member_func_t<void, ltProjection>>(0x59D230, this);
     }

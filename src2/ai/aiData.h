@@ -34,14 +34,14 @@ struct aiRaceData : Base
 {
 public:
     // 0x554C40 | ??0aiRaceData@@QAE@PAD0PBUdgStatePack@@@Z
-    aiRaceData(char* arg1, char* arg2, struct dgStatePack const* arg3)
+    inline aiRaceData(char* arg1, char* arg2, struct dgStatePack const* arg3)
     {
         stub<member_func_t<void, aiRaceData, char*, char*, struct dgStatePack const*>>(
             0x554C40, this, arg1, arg2, arg3);
     }
 
     // 0x5558D0 | ?SaveData@aiRaceData@@QAEXXZ
-    void SaveData()
+    inline void SaveData()
     {
         return stub<member_func_t<void, aiRaceData>>(0x5558D0, this);
     }

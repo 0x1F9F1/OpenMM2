@@ -73,13 +73,13 @@ struct dgTrailerJoint : phJoint
 {
 public:
     // 0x592CC0 | ??0dgTrailerJoint@@QAE@XZ
-    dgTrailerJoint()
+    inline dgTrailerJoint()
     {
         stub<member_func_t<void, dgTrailerJoint>>(0x592CC0, this);
     }
 
     // 0x592D20 | ?Init@dgTrailerJoint@@QAEXPBDPAVphInertialCS@@1ABVVector3@@2@Z
-    void Init(char const* arg1, class phInertialCS* arg2, class phInertialCS* arg3, class Vector3 const& arg4,
+    inline void Init(char const* arg1, class phInertialCS* arg2, class phInertialCS* arg3, class Vector3 const& arg4,
         class Vector3 const& arg5)
     {
         return stub<member_func_t<void, dgTrailerJoint, char const*, class phInertialCS*, class phInertialCS*,
@@ -87,141 +87,141 @@ public:
     }
 
     // 0x592E50 | ?Reset@dgTrailerJoint@@QAEXXZ
-    void Reset()
+    inline void Reset()
     {
         return stub<member_func_t<void, dgTrailerJoint>>(0x592E50, this);
     }
 
     // 0x592EC0 | ?SetPosition@dgTrailerJoint@@QAEXABVVector3@@@Z
-    void SetPosition(class Vector3 const& arg1)
+    inline void SetPosition(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, dgTrailerJoint, class Vector3 const&>>(0x592EC0, this, arg1);
     }
 
     // 0x592FF0 | ?SetCosFreeLean@dgTrailerJoint@@QAEXXZ
-    void SetCosFreeLean()
+    inline void SetCosFreeLean()
     {
         return stub<member_func_t<void, dgTrailerJoint>>(0x592FF0, this);
     }
 
     // 0x593000 | ?SetRotate1@dgTrailerJoint@@QAEXABVMatrix34@@@Z
-    void SetRotate1(class Matrix34 const& arg1)
+    inline void SetRotate1(class Matrix34 const& arg1)
     {
         return stub<member_func_t<void, dgTrailerJoint, class Matrix34 const&>>(0x593000, this, arg1);
     }
 
     // 0x593020 | ?SetRotate2@dgTrailerJoint@@QAEXABVMatrix34@@@Z
-    void SetRotate2(class Matrix34 const& arg1)
+    inline void SetRotate2(class Matrix34 const& arg1)
     {
         return stub<member_func_t<void, dgTrailerJoint, class Matrix34 const&>>(0x593020, this, arg1);
     }
 
     // 0x593040 | ?SetFrictionLean@dgTrailerJoint@@QAEXMMM@Z
-    void SetFrictionLean(f32 arg1, f32 arg2, f32 arg3)
+    inline void SetFrictionLean(float arg1, float arg2, float arg3)
     {
-        return stub<member_func_t<void, dgTrailerJoint, f32, f32, f32>>(0x593040, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, dgTrailerJoint, float, float, float>>(0x593040, this, arg1, arg2, arg3);
     }
 
     // 0x593070 | ?SetFrictionRoll@dgTrailerJoint@@QAEXMMM@Z
-    void SetFrictionRoll(f32 arg1, f32 arg2, f32 arg3)
+    inline void SetFrictionRoll(float arg1, float arg2, float arg3)
     {
-        return stub<member_func_t<void, dgTrailerJoint, f32, f32, f32>>(0x593070, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, dgTrailerJoint, float, float, float>>(0x593070, this, arg1, arg2, arg3);
     }
 
     // 0x5930A0 | ?SetLeanLimit@dgTrailerJoint@@QAEXMM@Z
-    void SetLeanLimit(f32 arg1, f32 arg2)
+    inline void SetLeanLimit(float arg1, float arg2)
     {
-        return stub<member_func_t<void, dgTrailerJoint, f32, f32>>(0x5930A0, this, arg1, arg2);
+        return stub<member_func_t<void, dgTrailerJoint, float, float>>(0x5930A0, this, arg1, arg2);
     }
 
     // 0x5930C0 | ?SetRollLimit@dgTrailerJoint@@QAEXMM@Z
-    void SetRollLimit(f32 arg1, f32 arg2)
+    inline void SetRollLimit(float arg1, float arg2)
     {
-        return stub<member_func_t<void, dgTrailerJoint, f32, f32>>(0x5930C0, this, arg1, arg2);
+        return stub<member_func_t<void, dgTrailerJoint, float, float>>(0x5930C0, this, arg1, arg2);
     }
 
     // 0x5930E0 | ?SetRollLimit@dgTrailerJoint@@QAEXMMM@Z
-    void SetRollLimit(f32 arg1, f32 arg2, f32 arg3)
+    inline void SetRollLimit(float arg1, float arg2, float arg3)
     {
-        return stub<member_func_t<void, dgTrailerJoint, f32, f32, f32>>(0x5930E0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, dgTrailerJoint, float, float, float>>(0x5930E0, this, arg1, arg2, arg3);
     }
 
     // 0x593110 | ?SetRestOrientation@dgTrailerJoint@@QAEXXZ
-    void SetRestOrientation()
+    inline void SetRestOrientation()
     {
         return stub<member_func_t<void, dgTrailerJoint>>(0x593110, this);
     }
 
     // 0x593170 | ?SetRestOrientMat@dgTrailerJoint@@QAEXABVMatrix34@@@Z
-    void SetRestOrientMat(class Matrix34 const& arg1)
+    inline void SetRestOrientMat(class Matrix34 const& arg1)
     {
         return stub<member_func_t<void, dgTrailerJoint, class Matrix34 const&>>(0x593170, this, arg1);
     }
 
     // 0x5931B0 | ?SetRestOrientMat@dgTrailerJoint@@QAEXABVMatrix34@@0@Z
-    void SetRestOrientMat(class Matrix34 const& arg1, class Matrix34 const& arg2)
+    inline void SetRestOrientMat(class Matrix34 const& arg1, class Matrix34 const& arg2)
     {
         return stub<member_func_t<void, dgTrailerJoint, class Matrix34 const&, class Matrix34 const&>>(
             0x5931B0, this, arg1, arg2);
     }
 
     // 0x593200 | ?SetForceLimit@dgTrailerJoint@@QAEXM@Z
-    void SetForceLimit(f32 arg1)
+    inline void SetForceLimit(float arg1)
     {
-        return stub<member_func_t<void, dgTrailerJoint, f32>>(0x593200, this, arg1);
+        return stub<member_func_t<void, dgTrailerJoint, float>>(0x593200, this, arg1);
     }
 
     // 0x593210 | ?SetJointForceFlag@dgTrailerJoint@@QAEXXZ
-    void SetJointForceFlag()
+    inline void SetJointForceFlag()
     {
         return stub<member_func_t<void, dgTrailerJoint>>(0x593210, this);
     }
 
     // 0x5932B0 | ?Update@dgTrailerJoint@@QAEXXZ
-    void Update()
+    inline void Update()
     {
         return stub<member_func_t<void, dgTrailerJoint>>(0x5932B0, this);
     }
 
     // 0x5942B0 | ?MoveICS@dgTrailerJoint@@QAEXXZ
-    void MoveICS()
+    inline void MoveICS()
     {
         return stub<member_func_t<void, dgTrailerJoint>>(0x5942B0, this);
     }
 
     // 0x5942D0 | ?BreakJoint@dgTrailerJoint@@QAEXXZ
-    void BreakJoint()
+    inline void BreakJoint()
     {
         return stub<member_func_t<void, dgTrailerJoint>>(0x5942D0, this);
     }
 
     // 0x5942E0 | ?UnbreakJoint@dgTrailerJoint@@QAEXXZ
-    void UnbreakJoint()
+    inline void UnbreakJoint()
     {
         return stub<member_func_t<void, dgTrailerJoint>>(0x5942E0, this);
     }
 
     // 0x5942F0 | ?DoJointTorque@dgTrailerJoint@@QAEXABVMatrix34@@000AAM1AAVVector3@@11@Z
-    void DoJointTorque(class Matrix34 const& arg1, class Matrix34 const& arg2, class Matrix34 const& arg3,
-        class Matrix34 const& arg4, f32& arg5, f32& arg6, class Vector3& arg7, f32& arg8, f32& arg9)
+    inline void DoJointTorque(class Matrix34 const& arg1, class Matrix34 const& arg2, class Matrix34 const& arg3,
+        class Matrix34 const& arg4, float& arg5, float& arg6, class Vector3& arg7, float& arg8, float& arg9)
     {
         return stub<member_func_t<void, dgTrailerJoint, class Matrix34 const&, class Matrix34 const&,
-            class Matrix34 const&, class Matrix34 const&, f32&, f32&, class Vector3&, f32&, f32&>>(
+            class Matrix34 const&, class Matrix34 const&, float&, float&, class Vector3&, float&, float&>>(
             0x5942F0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
     }
 
     // 0x5949B0 | ?DoJointLimits@dgTrailerJoint@@QAEXMABVVector3@@M0AAV2@ABVMatrix34@@2222@Z
-    void DoJointLimits(f32 arg1, class Vector3 const& arg2, f32 arg3, class Vector3 const& arg4, class Vector3& arg5,
-        class Matrix34 const& arg6, class Matrix34 const& arg7, class Matrix34 const& arg8, class Matrix34 const& arg9,
-        class Matrix34 const& arg10)
+    inline void DoJointLimits(float arg1, class Vector3 const& arg2, float arg3, class Vector3 const& arg4,
+        class Vector3& arg5, class Matrix34 const& arg6, class Matrix34 const& arg7, class Matrix34 const& arg8,
+        class Matrix34 const& arg9, class Matrix34 const& arg10)
     {
-        return stub<member_func_t<void, dgTrailerJoint, f32, class Vector3 const&, f32, class Vector3 const&,
+        return stub<member_func_t<void, dgTrailerJoint, float, class Vector3 const&, float, class Vector3 const&,
             class Vector3&, class Matrix34 const&, class Matrix34 const&, class Matrix34 const&, class Matrix34 const&,
             class Matrix34 const&>>(0x5949B0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
     }
 
     // 0x595390 | ?ComputeInvMassMatrix@dgTrailerJoint@@QAEXPAVphInertialCS@@0AAVMatrix34@@ABVVector3@@@Z
-    void ComputeInvMassMatrix(
+    inline void ComputeInvMassMatrix(
         class phInertialCS* arg1, class phInertialCS* arg2, class Matrix34& arg3, class Vector3 const& arg4)
     {
         return stub<member_func_t<void, dgTrailerJoint, class phInertialCS*, class phInertialCS*, class Matrix34&,

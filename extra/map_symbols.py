@@ -685,21 +685,21 @@ def collect_classes(all_symbols, name_to_type, vtables, class_hiers, path_libs, 
                     symbol_string += '    {} {};\n'.format('return' if should_return else '', sym_to_stub(symbol))
                     symbol_string += '}\n'
 
-                    for a, b in [
-                        ('int8_t', 'i8'),
-                        ('int16_t', 'i16'),
-                        ('int32_t', 'i32'),
-                        ('int64_t', 'i64'),
+                    # for a, b in [
+                    #     ('int8_t', 'i8'),
+                    #     ('int16_t', 'i16'),
+                    #     ('int32_t', 'i32'),
+                    #     ('int64_t', 'i64'),
 
-                        ('uint8_t', 'u8'),
-                        ('uint16_t', 'u16'),
-                        ('uint32_t', 'u32'),
-                        ('uint64_t', 'u64'),
+                    #     ('uint8_t', 'u8'),
+                    #     ('uint16_t', 'u16'),
+                    #     ('uint32_t', 'u32'),
+                    #     ('uint64_t', 'u64'),
 
-                        ('float', 'f32'),
-                        ('double', 'f64'),
-                    ]:
-                        symbol_string = re.sub('\\b' + a + '\\b', b, symbol_string)
+                    #     ('float', 'f32'),
+                    #     ('double', 'f64'),
+                    # ]:
+                    #     symbol_string = re.sub('\\b' + a + '\\b', b, symbol_string)
             elif sym_type.type_class != TypeClass.VoidTypeClass:
                 symbol_string += '{}\n'.format(sym_to_extern_var(symbol))
             else:
@@ -736,7 +736,7 @@ function_libs = map_to_symbols(map_lines, idc_to_symbols(idc_lines))
 function_libs['gizmo:bridge'].append(('?Draw@gizBridge@@UAEXH@Z', 0x578240))
 function_libs['gizmo:bridge'].append(('?Cull@gizBridgeMgr@@UAEXXZ', 0x577FF0))
 
-view = BinaryViewType.get_view_of_file('midtown2.bndb')
+view = BinaryViewType.get_view_of_file('Midtown2.bndb')
 print('Got View', view)
 
 all_symbols = collect_symbols(view, function_libs)
@@ -760,6 +760,7 @@ class_hiers.update({
     'dgBangerInstance': ['asNode'],
     'lvlLevelBound': ['phBound'],
     'dgPhysEntity': ['Base'],
+    'mmInfoBase': ['Base'],
 })
 
 class_hiers = dict(class_hiers)

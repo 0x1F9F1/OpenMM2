@@ -40,34 +40,34 @@ class phImpact
 {
 public:
     // 0x46C9B0 | ?EffectiveMass@phImpact@@QBEMXZ
-    f32 EffectiveMass()
+    inline float EffectiveMass()
     {
-        return stub<member_func_t<f32, phImpact>>(0x46C9B0, this);
+        return stub<member_func_t<float, phImpact>>(0x46C9B0, this);
     }
 
     // 0x46CB70 | ?GetLocalVelocities@phImpact@@QBEXAAVVector3@@0@Z
-    void GetLocalVelocities(class Vector3& arg1, class Vector3& arg2)
+    inline void GetLocalVelocities(class Vector3& arg1, class Vector3& arg2)
     {
         return stub<member_func_t<void, phImpact, class Vector3&, class Vector3&>>(0x46CB70, this, arg1, arg2);
     }
 
     // 0x46CC30 | ?GetRelDisplacement@phImpact@@QBEXPAVVector3@@@Z
-    void GetRelDisplacement(class Vector3* arg1)
+    inline void GetRelDisplacement(class Vector3* arg1)
     {
         return stub<member_func_t<void, phImpact, class Vector3*>>(0x46CC30, this, arg1);
     }
 
     // 0x46CCF0 | ?CalcCollision@phImpact@@QAEXABVVector3@@MPAV2@11@Z
-    void CalcCollision(
-        class Vector3 const& arg1, f32 arg2, class Vector3* arg3, class Vector3* arg4, class Vector3* arg5)
+    inline void CalcCollision(
+        class Vector3 const& arg1, float arg2, class Vector3* arg3, class Vector3* arg4, class Vector3* arg5)
     {
         return stub<
-            member_func_t<void, phImpact, class Vector3 const&, f32, class Vector3*, class Vector3*, class Vector3*>>(
+            member_func_t<void, phImpact, class Vector3 const&, float, class Vector3*, class Vector3*, class Vector3*>>(
             0x46CCF0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x46D1F0 | ?Contact@phImpact@@QAEXABVVector3@@00ABVMatrix34@@@Z
-    void Contact(
+    inline void Contact(
         class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3, class Matrix34 const& arg4)
     {
         return stub<member_func_t<void, phImpact, class Vector3 const&, class Vector3 const&, class Vector3 const&,
@@ -75,30 +75,30 @@ public:
     }
 
     // 0x46D250 | ?Impact@phImpact@@QAEXABVVector3@@00@Z
-    void Impact(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3)
+    inline void Impact(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3)
     {
         return stub<member_func_t<void, phImpact, class Vector3 const&, class Vector3 const&, class Vector3 const&>>(
             0x46D250, this, arg1, arg2, arg3);
     }
 
     // 0x46D2A0 | ?CalcCollisionNoFriction@phImpact@@SAMABVphInertialCS@@ABVVector3@@M1@Z
-    static inline f32 CalcCollisionNoFriction(
-        class phInertialCS const& arg1, class Vector3 const& arg2, f32 arg3, class Vector3 const& arg4)
+    static inline float CalcCollisionNoFriction(
+        class phInertialCS const& arg1, class Vector3 const& arg2, float arg3, class Vector3 const& arg4)
     {
-        return stub<cdecl_t<f32, class phInertialCS const&, class Vector3 const&, f32, class Vector3 const&>>(
+        return stub<cdecl_t<float, class phInertialCS const&, class Vector3 const&, float, class Vector3 const&>>(
             0x46D2A0, arg1, arg2, arg3, arg4);
     }
 
     // 0x46D340 | ?FindFrictionAndElasticity@phImpact@@QAEXXZ
-    void FindFrictionAndElasticity()
+    inline void FindFrictionAndElasticity()
     {
         return stub<member_func_t<void, phImpact>>(0x46D340, this);
     }
 
     // 0x46D3A0 | ?GetMaterial@phImpact@@QAEPBVphMaterial@@PAVphColliderBase@@H@Z
-    class phMaterial const* GetMaterial(class phColliderBase* arg1, i32 arg2)
+    inline class phMaterial const* GetMaterial(class phColliderBase* arg1, int32_t arg2)
     {
-        return stub<member_func_t<class phMaterial const*, phImpact, class phColliderBase*, i32>>(
+        return stub<member_func_t<class phMaterial const*, phImpact, class phColliderBase*, int32_t>>(
             0x46D3A0, this, arg1, arg2);
     }
 };

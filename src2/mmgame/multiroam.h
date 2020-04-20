@@ -46,85 +46,85 @@ public:
     // mmMultiRoam::`vftable' @ 0x5B0A20
 
     // 0x427530 | ??0mmMultiRoam@@QAE@XZ
-    mmMultiRoam()
+    inline mmMultiRoam()
     {
         stub<member_func_t<void, mmMultiRoam>>(0x427530, this);
     }
 
     // 0x427560 | ??1mmMultiRoam@@UAE@XZ
-    ~mmMultiRoam() override
+    inline ~mmMultiRoam() override
     {
         stub<member_func_t<void, mmMultiRoam>>(0x427560, this);
     }
 
     // 0x427C50 | ?Reset@mmMultiRoam@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, mmMultiRoam>>(0x427C50, this);
     }
 
     // 0x427600 | ?Init@mmMultiRoam@@UAEHXZ
-    i32 Init() override
+    inline int32_t Init() override
     {
-        return stub<member_func_t<i32, mmMultiRoam>>(0x427600, this);
+        return stub<member_func_t<int32_t, mmMultiRoam>>(0x427600, this);
     }
 
     // 0x427700 | ?InitMyPlayer@mmMultiRoam@@UAEXXZ
-    void InitMyPlayer() override
+    inline void InitMyPlayer() override
     {
         return stub<member_func_t<void, mmMultiRoam>>(0x427700, this);
     }
 
     // 0x4277A0 | ?InitGameObjects@mmMultiRoam@@UAEXXZ
-    void InitGameObjects() override
+    inline void InitGameObjects() override
     {
         return stub<member_func_t<void, mmMultiRoam>>(0x4277A0, this);
     }
 
     // 0x427770 | ?InitHUD@mmMultiRoam@@UAEXXZ
-    void InitHUD() override
+    inline void InitHUD() override
     {
         return stub<member_func_t<void, mmMultiRoam>>(0x427770, this);
     }
 
     // 0x427CC0 | ?UpdateGameInput@mmMultiRoam@@UAEXH@Z
-    void UpdateGameInput(i32 arg1) override
+    inline void UpdateGameInput(int32_t arg1) override
     {
-        return stub<member_func_t<void, mmMultiRoam, i32>>(0x427CC0, this, arg1);
+        return stub<member_func_t<void, mmMultiRoam, int32_t>>(0x427CC0, this, arg1);
     }
 
     // 0x427CD0 | ?UpdateGame@mmMultiRoam@@UAEXXZ
-    void UpdateGame() override
+    inline void UpdateGame() override
     {
         return stub<member_func_t<void, mmMultiRoam>>(0x427CD0, this);
     }
 
     // 0x427EB0 | ?SwitchState@mmMultiRoam@@UAEXH@Z
-    void SwitchState(i32 arg1) override
+    inline void SwitchState(int32_t arg1) override
     {
-        return stub<member_func_t<void, mmMultiRoam, i32>>(0x427EB0, this, arg1);
+        return stub<member_func_t<void, mmMultiRoam, int32_t>>(0x427EB0, this, arg1);
     }
 
     // 0x428250 | ?GetWaypoints@mmMultiRoam@@UAEPAVmmWaypoints@@XZ
-    class mmWaypoints* GetWaypoints() override
+    inline class mmWaypoints* GetWaypoints() override
     {
         return stub<member_func_t<class mmWaypoints*, mmMultiRoam>>(0x428250, this);
     }
 
     // 0x427880 | ?InitNetworkPlayers@mmMultiRoam@@UAEXXZ
-    void InitNetworkPlayers() override
+    inline void InitNetworkPlayers() override
     {
         return stub<member_func_t<void, mmMultiRoam>>(0x427880, this);
     }
 
     // 0x427EC0 | ?SystemMessage@mmMultiRoam@@UAEXPAUNETSYS_MSG@@@Z
-    void SystemMessage(struct NETSYS_MSG* arg1) override
+    inline void SystemMessage(struct NETSYS_MSG* arg1) override
     {
         return stub<member_func_t<void, mmMultiRoam, struct NETSYS_MSG*>>(0x427EC0, this, arg1);
     }
 
     // 0x428050 | ?GameMessage@mmMultiRoam@@UAEXPAUNET_RCXHEAD@@@Z
-    void GameMessage(struct NET_RCXHEAD* arg1) override
+    inline void GameMessage(struct NET_RCXHEAD* arg1) override
     {
         return stub<member_func_t<void, mmMultiRoam, struct NET_RCXHEAD*>>(0x428050, this, arg1);
     }

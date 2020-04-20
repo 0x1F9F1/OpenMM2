@@ -71,13 +71,13 @@ public:
     // Skipped (scalar/vector destructor)
 
     // 0x59AB80 | ??0ltLight@@QAE@XZ
-    ltLight()
+    inline ltLight()
     {
         stub<member_func_t<void, ltLight>>(0x59AB80, this);
     }
 
     // 0x59ABC0 | ??1ltLight@@QAE@XZ
-    ~ltLight()
+    inline ~ltLight()
     {
         stub<member_func_t<void, ltLight>>(0x59ABC0, this);
     }
@@ -89,25 +89,25 @@ public:
     }
 
     // 0x59ABF0 | ?Default@ltLight@@QAEXXZ
-    void Default()
+    inline void Default()
     {
         return stub<member_func_t<void, ltLight>>(0x59ABF0, this);
     }
 
     // 0x59AC40 | ?Random@ltLight@@QAEXXZ
-    void Random()
+    inline void Random()
     {
         return stub<member_func_t<void, ltLight>>(0x59AC40, this);
     }
 
     // 0x59ACB0 | ?Draw@ltLight@@QAEXM@Z
-    void Draw(f32 arg1)
+    inline void Draw(float arg1)
     {
-        return stub<member_func_t<void, ltLight, f32>>(0x59ACB0, this, arg1);
+        return stub<member_func_t<void, ltLight, float>>(0x59ACB0, this, arg1);
     }
 
     // 0x59AD90 | ?DrawGlow@ltLight@@QAEXABVVector3@@@Z
-    void DrawGlow(class Vector3 const& arg1)
+    inline void DrawGlow(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, ltLight, class Vector3 const&>>(0x59AD90, this, arg1);
     }
@@ -125,7 +125,7 @@ public:
     }
 
     // 0x59AFB0 | ?DrawHighlight@ltLight@@QAEXABVVector3@@ABVMatrix34@@@Z
-    void DrawHighlight(class Vector3 const& arg1, class Matrix34 const& arg2)
+    inline void DrawHighlight(class Vector3 const& arg1, class Matrix34 const& arg2)
     {
         return stub<member_func_t<void, ltLight, class Vector3 const&, class Matrix34 const&>>(
             0x59AFB0, this, arg1, arg2);
@@ -138,15 +138,15 @@ public:
     }
 
     // 0x59B3E0 | ?GetNumPointLights@ltLight@@SAHXZ
-    static inline i32 GetNumPointLights()
+    static inline int32_t GetNumPointLights()
     {
-        return stub<cdecl_t<i32>>(0x59B3E0);
+        return stub<cdecl_t<int32_t>>(0x59B3E0);
     }
 
     // 0x59B3F0 | ?GetPointLight@ltLight@@SAPAV1@H@Z
-    static inline class ltLight* GetPointLight(i32 arg1)
+    static inline class ltLight* GetPointLight(int32_t arg1)
     {
-        return stub<cdecl_t<class ltLight*, i32>>(0x59B3F0, arg1);
+        return stub<cdecl_t<class ltLight*, int32_t>>(0x59B3F0, arg1);
     }
 
     // 0x59B410 | ?GetClosestLight@ltLight@@SAPAV1@XZ
@@ -162,44 +162,44 @@ public:
     }
 
     // 0x59B5B0 | ?SetUpGfxLight@ltLight@@QAEXXZ
-    void SetUpGfxLight()
+    inline void SetUpGfxLight()
     {
         return stub<member_func_t<void, ltLight>>(0x59B5B0, this);
     }
 
     // 0x59B740 | ?SetGfxLight@ltLight@@QAE_NAAUgfxLight@@ABVVector3@@@Z
-    bool SetGfxLight(struct gfxLight& arg1, class Vector3 const& arg2)
+    inline bool SetGfxLight(struct gfxLight& arg1, class Vector3 const& arg2)
     {
         return stub<member_func_t<bool, ltLight, struct gfxLight&, class Vector3 const&>>(0x59B740, this, arg1, arg2);
     }
 
     // 0x59B990 | ?Illuminate@ltLight@@QAEXAAVVector3@@00@Z
-    void Illuminate(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3)
+    inline void Illuminate(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3)
     {
         return stub<member_func_t<void, ltLight, class Vector3&, class Vector3&, class Vector3&>>(
             0x59B990, this, arg1, arg2, arg3);
     }
 
     // 0x59BA50 | ?ComputeIntensity@ltLight@@QAEMABVVector3@@M@Z
-    f32 ComputeIntensity(class Vector3 const& arg1, f32 arg2)
+    inline float ComputeIntensity(class Vector3 const& arg1, float arg2)
     {
-        return stub<member_func_t<f32, ltLight, class Vector3 const&, f32>>(0x59BA50, this, arg1, arg2);
+        return stub<member_func_t<float, ltLight, class Vector3 const&, float>>(0x59BA50, this, arg1, arg2);
     }
 
     // 0x59BB70 | ?ComputeDistance@ltLight@@QAEMABVVector3@@@Z
-    f32 ComputeDistance(class Vector3 const& arg1)
+    inline float ComputeDistance(class Vector3 const& arg1)
     {
-        return stub<member_func_t<f32, ltLight, class Vector3 const&>>(0x59BB70, this, arg1);
+        return stub<member_func_t<float, ltLight, class Vector3 const&>>(0x59BB70, this, arg1);
     }
 
     // 0x59BBB0 | ?SetUpProjection@ltLight@@QAEXAAVltProjection@@@Z
-    void SetUpProjection(class ltProjection& arg1)
+    inline void SetUpProjection(class ltProjection& arg1)
     {
         return stub<member_func_t<void, ltLight, class ltProjection&>>(0x59BBB0, this, arg1);
     }
 
     // 0x59BCA0 | ?FileIO@ltLight@@QAEXAAVdatParser@@@Z
-    void FileIO(class datParser& arg1)
+    inline void FileIO(class datParser& arg1)
     {
         return stub<member_func_t<void, ltLight, class datParser&>>(0x59BCA0, this, arg1);
     }

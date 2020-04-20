@@ -44,9 +44,9 @@ class gfxTextureMovie
 {
 public:
     // 0x4B4AF0 | ?UpdateAll@gfxTextureMovie@@SAXM@Z
-    static inline void UpdateAll(f32 arg1)
+    static inline void UpdateAll(float arg1)
     {
-        return stub<cdecl_t<void, f32>>(0x4B4AF0, arg1);
+        return stub<cdecl_t<void, float>>(0x4B4AF0, arg1);
     }
 
     // 0x4B4B20 | ?KillAll@gfxTextureMovie@@SAXXZ
@@ -56,19 +56,19 @@ public:
     }
 
     // 0x4B4B30 | ?Update@gfxTextureMovie@@QAEXM@Z
-    void Update(f32 arg1)
+    inline void Update(float arg1)
     {
-        return stub<member_func_t<void, gfxTextureMovie, f32>>(0x4B4B30, this, arg1);
+        return stub<member_func_t<void, gfxTextureMovie, float>>(0x4B4B30, this, arg1);
     }
 
     // 0x4B4BA0 | ??0gfxTextureMovie@@AAE@PBDH@Z
-    gfxTextureMovie(char const* arg1, i32 arg2)
+    inline gfxTextureMovie(char const* arg1, int32_t arg2)
     {
-        stub<member_func_t<void, gfxTextureMovie, char const*, i32>>(0x4B4BA0, this, arg1, arg2);
+        stub<member_func_t<void, gfxTextureMovie, char const*, int32_t>>(0x4B4BA0, this, arg1, arg2);
     }
 
     // 0x4B4C00 | ?AddClient@gfxTextureMovie@@QAEXPAPAVgfxTexture@@@Z
-    void AddClient(class gfxTexture** arg1)
+    inline void AddClient(class gfxTexture** arg1)
     {
         return stub<member_func_t<void, gfxTextureMovie, class gfxTexture**>>(0x4B4C00, this, arg1);
     }

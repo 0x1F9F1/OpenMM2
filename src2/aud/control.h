@@ -69,227 +69,227 @@ class audControl
 {
 public:
     // 0x59FF40 | ?Init@audControl@@QAEXW4AUDTYPE@audManager@@PAV3@@Z
-    void Init(enum audManager::AUDTYPE arg1, class audManager* arg2)
+    inline void Init(enum audManager::AUDTYPE arg1, class audManager* arg2)
     {
         return stub<member_func_t<void, audControl, enum audManager::AUDTYPE, class audManager*>>(
             0x59FF40, this, arg1, arg2);
     }
 
     // 0x59FFA0 | ?Create@audControl@@QAEPAV1@W4AUDTYPE@audManager@@PAV3@@Z
-    class audControl* Create(enum audManager::AUDTYPE arg1, class audManager* arg2)
+    inline class audControl* Create(enum audManager::AUDTYPE arg1, class audManager* arg2)
     {
         return stub<member_func_t<class audControl*, audControl, enum audManager::AUDTYPE, class audManager*>>(
             0x59FFA0, this, arg1, arg2);
     }
 
     // 0x59FFD0 | ?SetMaxConcurrent@audControl@@QAEXH@Z
-    void SetMaxConcurrent(i32 arg1)
+    inline void SetMaxConcurrent(int32_t arg1)
     {
-        return stub<member_func_t<void, audControl, i32>>(0x59FFD0, this, arg1);
+        return stub<member_func_t<void, audControl, int32_t>>(0x59FFD0, this, arg1);
     }
 
     // 0x5A0010 | ?Update@audControl@@QAEXH@Z
-    void Update(i32 arg1)
+    inline void Update(int32_t arg1)
     {
-        return stub<member_func_t<void, audControl, i32>>(0x5A0010, this, arg1);
+        return stub<member_func_t<void, audControl, int32_t>>(0x5A0010, this, arg1);
     }
 
     // 0x5A0060 | ?Add@audControl@@QAEHPAVaudObject@@H@Z
-    i32 Add(class audObject* arg1, i32 arg2)
+    inline int32_t Add(class audObject* arg1, int32_t arg2)
     {
-        return stub<member_func_t<i32, audControl, class audObject*, i32>>(0x5A0060, this, arg1, arg2);
+        return stub<member_func_t<int32_t, audControl, class audObject*, int32_t>>(0x5A0060, this, arg1, arg2);
     }
 
     // 0x5A00C0 | ?Remove@audControl@@QAE_NPAVaudObject@@H@Z
-    bool Remove(class audObject* arg1, i32 arg2)
+    inline bool Remove(class audObject* arg1, int32_t arg2)
     {
-        return stub<member_func_t<bool, audControl, class audObject*, i32>>(0x5A00C0, this, arg1, arg2);
+        return stub<member_func_t<bool, audControl, class audObject*, int32_t>>(0x5A00C0, this, arg1, arg2);
     }
 
     // 0x5A0180 | ?GetManager@audControl@@QAEPAVaudManager@@XZ
-    class audManager* GetManager()
+    inline class audManager* GetManager()
     {
         return stub<member_func_t<class audManager*, audControl>>(0x5A0180, this);
     }
 
     // 0x5A0190 | ?MoveToActive@audControl@@QAE_NW4AUDTYPE@audManager@@PAVaudObject@@@Z
-    bool MoveToActive(enum audManager::AUDTYPE arg1, class audObject* arg2)
+    inline bool MoveToActive(enum audManager::AUDTYPE arg1, class audObject* arg2)
     {
         return stub<member_func_t<bool, audControl, enum audManager::AUDTYPE, class audObject*>>(
             0x5A0190, this, arg1, arg2);
     }
 
     // 0x5A0290 | ?MoveFromActive@audControl@@QAE_NW4AUDTYPE@audManager@@PAVaudObject@@@Z
-    bool MoveFromActive(enum audManager::AUDTYPE arg1, class audObject* arg2)
+    inline bool MoveFromActive(enum audManager::AUDTYPE arg1, class audObject* arg2)
     {
         return stub<member_func_t<bool, audControl, enum audManager::AUDTYPE, class audObject*>>(
             0x5A0290, this, arg1, arg2);
     }
 
     // 0x5A0300 | ?FindObjectByHandle@audControl@@QAEPAVaudObject@@H@Z
-    class audObject* FindObjectByHandle(i32 arg1)
+    inline class audObject* FindObjectByHandle(int32_t arg1)
     {
-        return stub<member_func_t<class audObject*, audControl, i32>>(0x5A0300, this, arg1);
+        return stub<member_func_t<class audObject*, audControl, int32_t>>(0x5A0300, this, arg1);
     }
 
     // 0x5A03B0 | ?GetObjectHandle@audControl@@QAEHPAVaudObject@@@Z
-    i32 GetObjectHandle(class audObject* arg1)
+    inline int32_t GetObjectHandle(class audObject* arg1)
     {
-        return stub<member_func_t<i32, audControl, class audObject*>>(0x5A03B0, this, arg1);
+        return stub<member_func_t<int32_t, audControl, class audObject*>>(0x5A03B0, this, arg1);
     }
 
     // 0x5A03C0 | ?FindActiveObjectByHandle@audControl@@QAEPAVaudObject@@H@Z
-    class audObject* FindActiveObjectByHandle(i32 arg1)
+    inline class audObject* FindActiveObjectByHandle(int32_t arg1)
     {
-        return stub<member_func_t<class audObject*, audControl, i32>>(0x5A03C0, this, arg1);
+        return stub<member_func_t<class audObject*, audControl, int32_t>>(0x5A03C0, this, arg1);
     }
 
     // 0x5A0420 | ?ResetAutoHandle@audControl@@QAEXH@Z
-    void ResetAutoHandle(i32 arg1)
+    inline void ResetAutoHandle(int32_t arg1)
     {
-        return stub<member_func_t<void, audControl, i32>>(0x5A0420, this, arg1);
+        return stub<member_func_t<void, audControl, int32_t>>(0x5A0420, this, arg1);
     }
 
     // 0x5A0430 | ?SetHandle@audControl@@QAEXH@Z
-    void SetHandle(i32 arg1)
+    inline void SetHandle(int32_t arg1)
     {
-        return stub<member_func_t<void, audControl, i32>>(0x5A0430, this, arg1);
+        return stub<member_func_t<void, audControl, int32_t>>(0x5A0430, this, arg1);
     }
 
     // 0x5A0440 | ?GetHandle@audControl@@QAEHXZ
-    i32 GetHandle()
+    inline int32_t GetHandle()
     {
-        return stub<member_func_t<i32, audControl>>(0x5A0440, this);
+        return stub<member_func_t<int32_t, audControl>>(0x5A0440, this);
     }
 
     // 0x5A0450 | ?Count@audControl@@QAEHXZ
-    i32 Count()
+    inline int32_t Count()
     {
-        return stub<member_func_t<i32, audControl>>(0x5A0450, this);
+        return stub<member_func_t<int32_t, audControl>>(0x5A0450, this);
     }
 
     // 0x5A0490 | ?SetPath@audControl@@QAEXPBD@Z
-    void SetPath(char const* arg1)
+    inline void SetPath(char const* arg1)
     {
         return stub<member_func_t<void, audControl, char const*>>(0x5A0490, this, arg1);
     }
 
     // 0x5A04E0 | ?GetPath@audControl@@QAEPADXZ
-    char* GetPath()
+    inline char* GetPath()
     {
         return stub<member_func_t<char*, audControl>>(0x5A04E0, this);
     }
 
     // 0x5A04F0 | ?SetAssetDbId@audControl@@QAEXH@Z
-    void SetAssetDbId(i32 arg1)
+    inline void SetAssetDbId(int32_t arg1)
     {
-        return stub<member_func_t<void, audControl, i32>>(0x5A04F0, this, arg1);
+        return stub<member_func_t<void, audControl, int32_t>>(0x5A04F0, this, arg1);
     }
 
     // 0x5A0500 | ?GetAssetDbId@audControl@@QAEHXZ
-    i32 GetAssetDbId()
+    inline int32_t GetAssetDbId()
     {
-        return stub<member_func_t<i32, audControl>>(0x5A0500, this);
+        return stub<member_func_t<int32_t, audControl>>(0x5A0500, this);
     }
 
     // 0x5A0510 | ?SetVolume@audControl@@QAEXMH@Z
-    void SetVolume(f32 arg1, i32 arg2)
+    inline void SetVolume(float arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, audControl, f32, i32>>(0x5A0510, this, arg1, arg2);
+        return stub<member_func_t<void, audControl, float, int32_t>>(0x5A0510, this, arg1, arg2);
     }
 
     // 0x5A05B0 | ?SetPan@audControl@@QAEXMH@Z
-    void SetPan(f32 arg1, i32 arg2)
+    inline void SetPan(float arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, audControl, f32, i32>>(0x5A05B0, this, arg1, arg2);
+        return stub<member_func_t<void, audControl, float, int32_t>>(0x5A05B0, this, arg1, arg2);
     }
 
     // 0x5A0650 | ?SetPitch@audControl@@QAEXMH@Z
-    void SetPitch(f32 arg1, i32 arg2)
+    inline void SetPitch(float arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, audControl, f32, i32>>(0x5A0650, this, arg1, arg2);
+        return stub<member_func_t<void, audControl, float, int32_t>>(0x5A0650, this, arg1, arg2);
     }
 
     // 0x5A06F0 | ?GetVolume@audControl@@QAEMH@Z
-    f32 GetVolume(i32 arg1)
+    inline float GetVolume(int32_t arg1)
     {
-        return stub<member_func_t<f32, audControl, i32>>(0x5A06F0, this, arg1);
+        return stub<member_func_t<float, audControl, int32_t>>(0x5A06F0, this, arg1);
     }
 
     // 0x5A0750 | ?GetPan@audControl@@QAEMH@Z
-    f32 GetPan(i32 arg1)
+    inline float GetPan(int32_t arg1)
     {
-        return stub<member_func_t<f32, audControl, i32>>(0x5A0750, this, arg1);
+        return stub<member_func_t<float, audControl, int32_t>>(0x5A0750, this, arg1);
     }
 
     // 0x5A07B0 | ?GetPitch@audControl@@QAEMH@Z
-    f32 GetPitch(i32 arg1)
+    inline float GetPitch(int32_t arg1)
     {
-        return stub<member_func_t<f32, audControl, i32>>(0x5A07B0, this, arg1);
+        return stub<member_func_t<float, audControl, int32_t>>(0x5A07B0, this, arg1);
     }
 
     // 0x5A0810 | ?Play@audControl@@QAE_NH@Z
-    bool Play(i32 arg1)
+    inline bool Play(int32_t arg1)
     {
-        return stub<member_func_t<bool, audControl, i32>>(0x5A0810, this, arg1);
+        return stub<member_func_t<bool, audControl, int32_t>>(0x5A0810, this, arg1);
     }
 
     // 0x5A0870 | ?PlayRandom@audControl@@QAE_NH@Z
-    bool PlayRandom(i32 arg1)
+    inline bool PlayRandom(int32_t arg1)
     {
-        return stub<member_func_t<bool, audControl, i32>>(0x5A0870, this, arg1);
+        return stub<member_func_t<bool, audControl, int32_t>>(0x5A0870, this, arg1);
     }
 
     // 0x5A08D0 | ?Stop@audControl@@QAE_NH@Z
-    bool Stop(i32 arg1)
+    inline bool Stop(int32_t arg1)
     {
-        return stub<member_func_t<bool, audControl, i32>>(0x5A08D0, this, arg1);
+        return stub<member_func_t<bool, audControl, int32_t>>(0x5A08D0, this, arg1);
     }
 
     // 0x5A0940 | ?PauseResume@audControl@@QAE_N_NH@Z
-    bool PauseResume(bool arg1, i32 arg2)
+    inline bool PauseResume(bool arg1, int32_t arg2)
     {
-        return stub<member_func_t<bool, audControl, bool, i32>>(0x5A0940, this, arg1, arg2);
+        return stub<member_func_t<bool, audControl, bool, int32_t>>(0x5A0940, this, arg1, arg2);
     }
 
     // 0x5A09B0 | ?SetPosition@audControl@@QAEXPAU_audvector3_@@H@Z
-    void SetPosition(struct _audvector3_* arg1, i32 arg2)
+    inline void SetPosition(struct _audvector3_* arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, audControl, struct _audvector3_*, i32>>(0x5A09B0, this, arg1, arg2);
+        return stub<member_func_t<void, audControl, struct _audvector3_*, int32_t>>(0x5A09B0, this, arg1, arg2);
     }
 
     // 0x5A09F0 | ?Enable3DMode@audControl@@QAEXH@Z
-    void Enable3DMode(i32 arg1)
+    inline void Enable3DMode(int32_t arg1)
     {
-        return stub<member_func_t<void, audControl, i32>>(0x5A09F0, this, arg1);
+        return stub<member_func_t<void, audControl, int32_t>>(0x5A09F0, this, arg1);
     }
 
     // 0x5A0A90 | ?Disable3DMode@audControl@@QAEXH@Z
-    void Disable3DMode(i32 arg1)
+    inline void Disable3DMode(int32_t arg1)
     {
-        return stub<member_func_t<void, audControl, i32>>(0x5A0A90, this, arg1);
+        return stub<member_func_t<void, audControl, int32_t>>(0x5A0A90, this, arg1);
     }
 
     // 0x5A0B30 | ?GetPosition@audControl@@QAEPAU_audvector3_@@H@Z
-    struct _audvector3_* GetPosition(i32 arg1)
+    inline struct _audvector3_* GetPosition(int32_t arg1)
     {
-        return stub<member_func_t<struct _audvector3_*, audControl, i32>>(0x5A0B30, this, arg1);
+        return stub<member_func_t<struct _audvector3_*, audControl, int32_t>>(0x5A0B30, this, arg1);
     }
 
     // 0x5A0B60 | ?Destroy@audControl@@QAEXXZ
-    void Destroy()
+    inline void Destroy()
     {
         return stub<member_func_t<void, audControl>>(0x5A0B60, this);
     }
 
     // 0x5A0BF0 | ?FreeAndDestroy@audControl@@QAEXXZ
-    void FreeAndDestroy()
+    inline void FreeAndDestroy()
     {
         return stub<member_func_t<void, audControl>>(0x5A0BF0, this);
     }
 
     // 0x5A0C20 | ?SetControlFlags@audControl@@QAEXW4AUDCONTROLFLAGS@1@0@Z
-    void SetControlFlags(enum audControl::AUDCONTROLFLAGS arg1, enum audControl::AUDCONTROLFLAGS arg2)
+    inline void SetControlFlags(enum audControl::AUDCONTROLFLAGS arg1, enum audControl::AUDCONTROLFLAGS arg2)
     {
         return stub<
             member_func_t<void, audControl, enum audControl::AUDCONTROLFLAGS, enum audControl::AUDCONTROLFLAGS>>(
@@ -297,32 +297,32 @@ public:
     }
 
     // 0x5A0C40 | ?GetControlFlags@audControl@@QAEHXZ
-    i32 GetControlFlags()
+    inline int32_t GetControlFlags()
     {
-        return stub<member_func_t<i32, audControl>>(0x5A0C40, this);
+        return stub<member_func_t<int32_t, audControl>>(0x5A0C40, this);
     }
 
     // 0x5A0C50 | ?SetPriority@audControl@@QAEXH@Z
-    void SetPriority(i32 arg1)
+    inline void SetPriority(int32_t arg1)
     {
-        return stub<member_func_t<void, audControl, i32>>(0x5A0C50, this, arg1);
+        return stub<member_func_t<void, audControl, int32_t>>(0x5A0C50, this, arg1);
     }
 
     // 0x5A0C80 | ?GetPriority@audControl@@QAEHXZ
-    i32 GetPriority()
+    inline int32_t GetPriority()
     {
-        return stub<member_func_t<i32, audControl>>(0x5A0C80, this);
+        return stub<member_func_t<int32_t, audControl>>(0x5A0C80, this);
     }
 
     // 0x5A0C90 | ?StopPCEchoBuffers@audControl@@QAEXXZ
-    void StopPCEchoBuffers()
+    inline void StopPCEchoBuffers()
     {
         return stub<member_func_t<void, audControl>>(0x5A0C90, this);
     }
 
     // 0x5A0CF0 | ?SetVolPCEchoBuffers@audControl@@QAEXM@Z
-    void SetVolPCEchoBuffers(f32 arg1)
+    inline void SetVolPCEchoBuffers(float arg1)
     {
-        return stub<member_func_t<void, audControl, f32>>(0x5A0CF0, this, arg1);
+        return stub<member_func_t<void, audControl, float>>(0x5A0CF0, this, arg1);
     }
 };

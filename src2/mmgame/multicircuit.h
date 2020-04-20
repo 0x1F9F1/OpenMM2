@@ -49,91 +49,91 @@ public:
     // mmMultiCircuit::`vftable' @ 0x5B08EC
 
     // 0x421B90 | ??0mmMultiCircuit@@QAE@XZ
-    mmMultiCircuit()
+    inline mmMultiCircuit()
     {
         stub<member_func_t<void, mmMultiCircuit>>(0x421B90, this);
     }
 
     // 0x421BC0 | ??1mmMultiCircuit@@UAE@XZ
-    ~mmMultiCircuit() override
+    inline ~mmMultiCircuit() override
     {
         stub<member_func_t<void, mmMultiCircuit>>(0x421BC0, this);
     }
 
     // 0x422470 | ?Reset@mmMultiCircuit@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, mmMultiCircuit>>(0x422470, this);
     }
 
     // 0x421C60 | ?Init@mmMultiCircuit@@UAEHXZ
-    i32 Init() override
+    inline int32_t Init() override
     {
-        return stub<member_func_t<i32, mmMultiCircuit>>(0x421C60, this);
+        return stub<member_func_t<int32_t, mmMultiCircuit>>(0x421C60, this);
     }
 
     // 0x421DD0 | ?InitMyPlayer@mmMultiCircuit@@UAEXXZ
-    void InitMyPlayer() override
+    inline void InitMyPlayer() override
     {
         return stub<member_func_t<void, mmMultiCircuit>>(0x421DD0, this);
     }
 
     // 0x421E90 | ?InitGameObjects@mmMultiCircuit@@UAEXXZ
-    void InitGameObjects() override
+    inline void InitGameObjects() override
     {
         return stub<member_func_t<void, mmMultiCircuit>>(0x421E90, this);
     }
 
     // 0x421E40 | ?InitHUD@mmMultiCircuit@@UAEXXZ
-    void InitHUD() override
+    inline void InitHUD() override
     {
         return stub<member_func_t<void, mmMultiCircuit>>(0x421E40, this);
     }
 
     // 0x422530 | ?UpdateGameInput@mmMultiCircuit@@UAEXH@Z
-    void UpdateGameInput(i32 arg1) override
+    inline void UpdateGameInput(int32_t arg1) override
     {
-        return stub<member_func_t<void, mmMultiCircuit, i32>>(0x422530, this, arg1);
+        return stub<member_func_t<void, mmMultiCircuit, int32_t>>(0x422530, this, arg1);
     }
 
     // 0x422DA0 | ?UpdateDebugKeyInput@mmMultiCircuit@@UAEXH@Z
-    void UpdateDebugKeyInput(i32 arg1) override
+    inline void UpdateDebugKeyInput(int32_t arg1) override
     {
-        return stub<member_func_t<void, mmMultiCircuit, i32>>(0x422DA0, this, arg1);
+        return stub<member_func_t<void, mmMultiCircuit, int32_t>>(0x422DA0, this, arg1);
     }
 
     // 0x422570 | ?UpdateGame@mmMultiCircuit@@UAEXXZ
-    void UpdateGame() override
+    inline void UpdateGame() override
     {
         return stub<member_func_t<void, mmMultiCircuit>>(0x422570, this);
     }
 
     // 0x422D90 | ?SwitchState@mmMultiCircuit@@UAEXH@Z
-    void SwitchState(i32 arg1) override
+    inline void SwitchState(int32_t arg1) override
     {
-        return stub<member_func_t<void, mmMultiCircuit, i32>>(0x422D90, this, arg1);
+        return stub<member_func_t<void, mmMultiCircuit, int32_t>>(0x422D90, this, arg1);
     }
 
     // 0x4236A0 | ?GetWaypoints@mmMultiCircuit@@UAEPAVmmWaypoints@@XZ
-    class mmWaypoints* GetWaypoints() override
+    inline class mmWaypoints* GetWaypoints() override
     {
         return stub<member_func_t<class mmWaypoints*, mmMultiCircuit>>(0x4236A0, this);
     }
 
     // 0x4220A0 | ?InitNetworkPlayers@mmMultiCircuit@@UAEXXZ
-    void InitNetworkPlayers() override
+    inline void InitNetworkPlayers() override
     {
         return stub<member_func_t<void, mmMultiCircuit>>(0x4220A0, this);
     }
 
     // 0x422DB0 | ?SystemMessage@mmMultiCircuit@@UAEXPAUNETSYS_MSG@@@Z
-    void SystemMessage(struct NETSYS_MSG* arg1) override
+    inline void SystemMessage(struct NETSYS_MSG* arg1) override
     {
         return stub<member_func_t<void, mmMultiCircuit, struct NETSYS_MSG*>>(0x422DB0, this, arg1);
     }
 
     // 0x422EC0 | ?GameMessage@mmMultiCircuit@@UAEXPAUNET_RCXHEAD@@@Z
-    void GameMessage(struct NET_RCXHEAD* arg1) override
+    inline void GameMessage(struct NET_RCXHEAD* arg1) override
     {
         return stub<member_func_t<void, mmMultiCircuit, struct NET_RCXHEAD*>>(0x422EC0, this, arg1);
     }

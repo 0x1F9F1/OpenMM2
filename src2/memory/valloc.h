@@ -34,44 +34,44 @@ struct memSafeHeap
 {
 public:
     // 0x5771E0 | ??0memSafeHeap@@QAE@XZ
-    memSafeHeap()
+    inline memSafeHeap()
     {
         stub<member_func_t<void, memSafeHeap>>(0x5771E0, this);
     }
 
     // 0x577200 | ??1memSafeHeap@@QAE@XZ
-    ~memSafeHeap()
+    inline ~memSafeHeap()
     {
         stub<member_func_t<void, memSafeHeap>>(0x577200, this);
     }
 
     // 0x577210 | ?Init@memSafeHeap@@QAEXPAVmemMemoryAllocator@@I_N11@Z
-    void Init(class memMemoryAllocator* arg1, u32 arg2, bool arg3, bool arg4, bool arg5)
+    inline void Init(class memMemoryAllocator* arg1, uint32_t arg2, bool arg3, bool arg4, bool arg5)
     {
-        return stub<member_func_t<void, memSafeHeap, class memMemoryAllocator*, u32, bool, bool, bool>>(
+        return stub<member_func_t<void, memSafeHeap, class memMemoryAllocator*, uint32_t, bool, bool, bool>>(
             0x577210, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x577280 | ?Restart@memSafeHeap@@QAEXXZ
-    void Restart()
+    inline void Restart()
     {
         return stub<member_func_t<void, memSafeHeap>>(0x577280, this);
     }
 
     // 0x5772B0 | ?Kill@memSafeHeap@@QAEXXZ
-    void Kill()
+    inline void Kill()
     {
         return stub<member_func_t<void, memSafeHeap>>(0x5772B0, this);
     }
 
     // 0x5772E0 | ?Activate@memSafeHeap@@IAEXXZ
-    void Activate()
+    inline void Activate()
     {
         return stub<member_func_t<void, memSafeHeap>>(0x5772E0, this);
     }
 
     // 0x577330 | ?Deactivate@memSafeHeap@@IAEXXZ
-    void Deactivate()
+    inline void Deactivate()
     {
         return stub<member_func_t<void, memSafeHeap>>(0x577330, this);
     }

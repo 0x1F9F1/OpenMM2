@@ -36,25 +36,25 @@ public:
     // datRefCount::`vftable' @ 0x5B8740
 
     // 0x59AAD0 | ??0datRefCount@@IAE@XZ
-    datRefCount()
+    inline datRefCount()
     {
         stub<member_func_t<void, datRefCount>>(0x59AAD0, this);
     }
 
     // 0x59AAF0 | ?IncRef@datRefCount@@QBEHXZ
-    i32 IncRef()
+    inline int32_t IncRef()
     {
-        return stub<member_func_t<i32, datRefCount>>(0x59AAF0, this);
+        return stub<member_func_t<int32_t, datRefCount>>(0x59AAF0, this);
     }
 
     // 0x59AB00 | ?DecRef@datRefCount@@QBEHXZ
-    i32 DecRef()
+    inline int32_t DecRef()
     {
-        return stub<member_func_t<i32, datRefCount>>(0x59AB00, this);
+        return stub<member_func_t<int32_t, datRefCount>>(0x59AB00, this);
     }
 
     // 0x59AAE0 | ??1datRefCount@@MAE@XZ
-    virtual ~datRefCount()
+    virtual inline ~datRefCount()
     {
         stub<member_func_t<void, datRefCount>>(0x59AAE0, this);
     }

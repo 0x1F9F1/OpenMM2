@@ -38,9 +38,9 @@
 */
 
 // 0x4B3020 | ?gfxSetTexReduceSize@@YAHH@Z
-inline i32 gfxSetTexReduceSize(i32 arg1)
+inline int32_t gfxSetTexReduceSize(int32_t arg1)
 {
-    return stub<cdecl_t<i32, i32>>(0x4B3020, arg1);
+    return stub<cdecl_t<int32_t, int32_t>>(0x4B3020, arg1);
 }
 
 // 0x4B3040 | ?gfxDefaultPrepareImage@@YAPAVgfxImage@@PAV1@PBD_N@Z

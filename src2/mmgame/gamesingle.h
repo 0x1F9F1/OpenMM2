@@ -47,85 +47,85 @@ public:
     // mmGameSingle::`vftable' @ 0x5B0EB0
 
     // 0x433A60 | ??0mmGameSingle@@QAE@XZ
-    mmGameSingle()
+    inline mmGameSingle()
     {
         stub<member_func_t<void, mmGameSingle>>(0x433A60, this);
     }
 
     // 0x433B50 | ?EnableRacers@mmGameSingle@@IAEXXZ
-    void EnableRacers()
+    inline void EnableRacers()
     {
         return stub<member_func_t<void, mmGameSingle>>(0x433B50, this);
     }
 
     // 0x433C00 | ?DisableRacers@mmGameSingle@@IAEXXZ
-    void DisableRacers()
+    inline void DisableRacers()
     {
         return stub<member_func_t<void, mmGameSingle>>(0x433C00, this);
     }
 
     // 0x433CB0 | ?UpdateRewards@mmGameSingle@@IAE_NXZ
-    bool UpdateRewards()
+    inline bool UpdateRewards()
     {
         return stub<member_func_t<bool, mmGameSingle>>(0x433CB0, this);
     }
 
     // 0x433A90 | ??1mmGameSingle@@UAE@XZ
-    ~mmGameSingle() override
+    inline ~mmGameSingle() override
     {
         stub<member_func_t<void, mmGameSingle>>(0x433A90, this);
     }
 
     // 0x433C80 | ?Update@mmGameSingle@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, mmGameSingle>>(0x433C80, this);
     }
 
     // 0x433AC0 | ?Reset@mmGameSingle@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, mmGameSingle>>(0x433AC0, this);
     }
 
     // 0x433AA0 | ?Init@mmGameSingle@@UAEHXZ
-    i32 Init() override
+    inline int32_t Init() override
     {
-        return stub<member_func_t<i32, mmGameSingle>>(0x433AA0, this);
+        return stub<member_func_t<int32_t, mmGameSingle>>(0x433AA0, this);
     }
 
     // 0x433AB0 | ?InitOtherPlayers@mmGameSingle@@UAEXXZ
-    void InitOtherPlayers() override
+    inline void InitOtherPlayers() override
     {
         return stub<member_func_t<void, mmGameSingle>>(0x433AB0, this);
     }
 
     // 0x433C90 | ?UpdateGameInput@mmGameSingle@@UAEXH@Z
-    void UpdateGameInput(i32 arg1) override
+    inline void UpdateGameInput(int32_t arg1) override
     {
-        return stub<member_func_t<void, mmGameSingle, i32>>(0x433C90, this, arg1);
+        return stub<member_func_t<void, mmGameSingle, int32_t>>(0x433C90, this, arg1);
     }
 
     // 0x433F20 | ?UpdateDebugKeyInput@mmGameSingle@@UAEXH@Z
-    void UpdateDebugKeyInput(i32 arg1) override
+    inline void UpdateDebugKeyInput(int32_t arg1) override
     {
-        return stub<member_func_t<void, mmGameSingle, i32>>(0x433F20, this, arg1);
+        return stub<member_func_t<void, mmGameSingle, int32_t>>(0x433F20, this, arg1);
     }
 
     // 0x433CA0 | ?UpdateGame@mmGameSingle@@UAEXXZ
-    void UpdateGame() override
+    inline void UpdateGame() override
     {
         return stub<member_func_t<void, mmGameSingle>>(0x433CA0, this);
     }
 
     // 0x433C70 | ?HitWaterHandler@mmGameSingle@@UAEXXZ
-    void HitWaterHandler() override
+    inline void HitWaterHandler() override
     {
         return stub<member_func_t<void, mmGameSingle>>(0x433C70, this);
     }
 
     // 0x41ABA0 | ?GetWaypoints@mmGameSingle@@UAEPAVmmWaypoints@@XZ
-    class mmWaypoints* GetWaypoints() override
+    inline class mmWaypoints* GetWaypoints() override
     {
         return stub<member_func_t<class mmWaypoints*, mmGameSingle>>(0x41ABA0, this);
     }

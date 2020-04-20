@@ -58,73 +58,73 @@ public:
     }
 
     // 0x517590 | ??0SegmentWrapper@@QAE@XZ
-    SegmentWrapper()
+    inline SegmentWrapper()
     {
         stub<member_func_t<void, SegmentWrapper>>(0x517590, this);
     }
 
     // 0x5175B0 | ??1SegmentWrapper@@QAE@XZ
-    ~SegmentWrapper()
+    inline ~SegmentWrapper()
     {
         stub<member_func_t<void, SegmentWrapper>>(0x5175B0, this);
     }
 
     // 0x5175C0 | ?OpenSegmentFile@SegmentWrapper@@QAE_NPAD_N@Z
-    bool OpenSegmentFile(char* arg1, bool arg2)
+    inline bool OpenSegmentFile(char* arg1, bool arg2)
     {
         return stub<member_func_t<bool, SegmentWrapper, char*, bool>>(0x5175C0, this, arg1, arg2);
     }
 
     // 0x517750 | ?LoadSegmentBands@SegmentWrapper@@QAE_NXZ
-    bool LoadSegmentBands()
+    inline bool LoadSegmentBands()
     {
         return stub<member_func_t<bool, SegmentWrapper>>(0x517750, this);
     }
 
     // 0x5177F0 | ?UnloadSegmentBands@SegmentWrapper@@QAE_NXZ
-    bool UnloadSegmentBands()
+    inline bool UnloadSegmentBands()
     {
         return stub<member_func_t<bool, SegmentWrapper>>(0x5177F0, this);
     }
 
     // 0x517890 | ?Stop@SegmentWrapper@@QAE_NXZ
-    bool Stop()
+    inline bool Stop()
     {
         return stub<member_func_t<bool, SegmentWrapper>>(0x517890, this);
     }
 
     // 0x5178C0 | ?LoadBand@SegmentWrapper@@QAE_NPAD@Z
-    bool LoadBand(char* arg1)
+    inline bool LoadBand(char* arg1)
     {
         return stub<member_func_t<bool, SegmentWrapper, char*>>(0x5178C0, this, arg1);
     }
 
     // 0x5179A0 | ?PlayBand@SegmentWrapper@@QAE_NXZ
-    bool PlayBand()
+    inline bool PlayBand()
     {
         return stub<member_func_t<bool, SegmentWrapper>>(0x5179A0, this);
     }
 
     // 0x517A00 | ?IsPlaying@SegmentWrapper@@QAE_NXZ
-    bool IsPlaying()
+    inline bool IsPlaying()
     {
         return stub<member_func_t<bool, SegmentWrapper>>(0x517A00, this);
     }
 
     // 0x517A40 | ?Play@SegmentWrapper@@QAE_NKK@Z
-    bool Play(u32 arg1, u32 arg2)
+    inline bool Play(uint32_t arg1, uint32_t arg2)
     {
-        return stub<member_func_t<bool, SegmentWrapper, u32, u32>>(0x517A40, this, arg1, arg2);
+        return stub<member_func_t<bool, SegmentWrapper, uint32_t, uint32_t>>(0x517A40, this, arg1, arg2);
     }
 
     // 0x517AE0 | ?SetGrooveLevel@SegmentWrapper@@QAE_NEE@Z
-    bool SetGrooveLevel(u8 arg1, u8 arg2)
+    inline bool SetGrooveLevel(uint8_t arg1, uint8_t arg2)
     {
-        return stub<member_func_t<bool, SegmentWrapper, u8, u8>>(0x517AE0, this, arg1, arg2);
+        return stub<member_func_t<bool, SegmentWrapper, uint8_t, uint8_t>>(0x517AE0, this, arg1, arg2);
     }
 
     // 0x517B40 | ?CleanUp@SegmentWrapper@@QAEXXZ
-    void CleanUp()
+    inline void CleanUp()
     {
         return stub<member_func_t<void, SegmentWrapper>>(0x517B40, this);
     }

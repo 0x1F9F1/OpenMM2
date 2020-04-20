@@ -98,229 +98,230 @@ public:
     // mmHUD::`vftable' @ 0x5B0C20
 
     // 0x42CD50 | ??0mmHUD@@QAE@XZ
-    mmHUD()
+    inline mmHUD()
     {
         stub<member_func_t<void, mmHUD>>(0x42CD50, this);
     }
 
     // 0x42D280 | ?PostChatMessage@mmHUD@@QAEXPAD@Z
-    void PostChatMessage(char* arg1)
+    inline void PostChatMessage(char* arg1)
     {
         return stub<member_func_t<void, mmHUD, char*>>(0x42D280, this, arg1);
     }
 
     // 0x42D560 | ?StartTimers@mmHUD@@QAEXXZ
-    void StartTimers()
+    inline void StartTimers()
     {
         return stub<member_func_t<void, mmHUD>>(0x42D560, this);
     }
 
     // 0x42D580 | ?StopTimers@mmHUD@@QAEXXZ
-    void StopTimers()
+    inline void StopTimers()
     {
         return stub<member_func_t<void, mmHUD>>(0x42D580, this);
     }
 
     // 0x42D5A0 | ?ResetTimers@mmHUD@@QAEXXZ
-    void ResetTimers()
+    inline void ResetTimers()
     {
         return stub<member_func_t<void, mmHUD>>(0x42D5A0, this);
     }
 
     // 0x42D5E0 | ?Init@mmHUD@@QAEXPADPAVmmPlayer@@H@Z
-    void Init(char* arg1, class mmPlayer* arg2, i32 arg3)
+    inline void Init(char* arg1, class mmPlayer* arg2, int32_t arg3)
     {
-        return stub<member_func_t<void, mmHUD, char*, class mmPlayer*, i32>>(0x42D5E0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmHUD, char*, class mmPlayer*, int32_t>>(0x42D5E0, this, arg1, arg2, arg3);
     }
 
     // 0x42D910 | ?Enable@mmHUD@@QAEXXZ
-    void Enable()
+    inline void Enable()
     {
         return stub<member_func_t<void, mmHUD>>(0x42D910, this);
     }
 
     // 0x42D970 | ?Disable@mmHUD@@QAEXH@Z
-    void Disable(i32 arg1)
+    inline void Disable(int32_t arg1)
     {
-        return stub<member_func_t<void, mmHUD, i32>>(0x42D970, this, arg1);
+        return stub<member_func_t<void, mmHUD, int32_t>>(0x42D970, this, arg1);
     }
 
     // 0x42D9D0 | ?Toggle@mmHUD@@QAEXXZ
-    void Toggle()
+    inline void Toggle()
     {
         return stub<member_func_t<void, mmHUD>>(0x42D9D0, this);
     }
 
     // 0x42D9F0 | ?ToggleExternalView@mmHUD@@QAEXXZ
-    void ToggleExternalView()
+    inline void ToggleExternalView()
     {
         return stub<member_func_t<void, mmHUD>>(0x42D9F0, this);
     }
 
     // 0x42DA90 | ?SetDash@mmHUD@@QAEXH@Z
-    void SetDash(i32 arg1)
+    inline void SetDash(int32_t arg1)
     {
-        return stub<member_func_t<void, mmHUD, i32>>(0x42DA90, this, arg1);
+        return stub<member_func_t<void, mmHUD, int32_t>>(0x42DA90, this, arg1);
     }
 
     // 0x42DAB0 | ?ActivateDash@mmHUD@@QAEXXZ
-    void ActivateDash()
+    inline void ActivateDash()
     {
         return stub<member_func_t<void, mmHUD>>(0x42DAB0, this);
     }
 
     // 0x42DAE0 | ?DeactivateDash@mmHUD@@QAEXXZ
-    void DeactivateDash()
+    inline void DeactivateDash()
     {
         return stub<member_func_t<void, mmHUD>>(0x42DAE0, this);
     }
 
     // 0x42DB10 | ?IsDashActive@mmHUD@@QAEHXZ
-    i32 IsDashActive()
+    inline int32_t IsDashActive()
     {
-        return stub<member_func_t<i32, mmHUD>>(0x42DB10, this);
+        return stub<member_func_t<int32_t, mmHUD>>(0x42DB10, this);
     }
 
     // 0x42DB60 | ?SetTransparency@mmHUD@@QAEX_N@Z
-    void SetTransparency(bool arg1)
+    inline void SetTransparency(bool arg1)
     {
         return stub<member_func_t<void, mmHUD, bool>>(0x42DB60, this, arg1);
     }
 
     // 0x42DB70 | ?PostUpdate@mmHUD@@QAEXXZ
-    void PostUpdate()
+    inline void PostUpdate()
     {
         return stub<member_func_t<void, mmHUD>>(0x42DB70, this);
     }
 
     // 0x42E040 | ?ShowSplitTime@mmHUD@@QAEXXZ
-    void ShowSplitTime()
+    inline void ShowSplitTime()
     {
         return stub<member_func_t<void, mmHUD>>(0x42E040, this);
     }
 
     // 0x42E0A0 | ?SetStandings@mmHUD@@QAEXHH@Z
-    void SetStandings(i32 arg1, i32 arg2)
+    inline void SetStandings(int32_t arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, mmHUD, i32, i32>>(0x42E0A0, this, arg1, arg2);
+        return stub<member_func_t<void, mmHUD, int32_t, int32_t>>(0x42E0A0, this, arg1, arg2);
     }
 
     // 0x42E0E0 | ?PostLapTime@mmHUD@@QAEX_N@Z
-    void PostLapTime(bool arg1)
+    inline void PostLapTime(bool arg1)
     {
         return stub<member_func_t<void, mmHUD, bool>>(0x42E0E0, this, arg1);
     }
 
     // 0x42E1D0 | ?SetWPCleared@mmHUD@@QAEXHH@Z
-    void SetWPCleared(i32 arg1, i32 arg2)
+    inline void SetWPCleared(int32_t arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, mmHUD, i32, i32>>(0x42E1D0, this, arg1, arg2);
+        return stub<member_func_t<void, mmHUD, int32_t, int32_t>>(0x42E1D0, this, arg1, arg2);
     }
 
     // 0x42E1F0 | ?SetMessage@mmHUD@@QAEXPAULocString@@MH@Z
-    void SetMessage(struct LocString* arg1, f32 arg2, i32 arg3)
+    inline void SetMessage(struct LocString* arg1, float arg2, int32_t arg3)
     {
-        return stub<member_func_t<void, mmHUD, struct LocString*, f32, i32>>(0x42E1F0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmHUD, struct LocString*, float, int32_t>>(0x42E1F0, this, arg1, arg2, arg3);
     }
 
     // 0x42E240 | ?SetMessage2@mmHUD@@QAEXPAULocString@@@Z
-    void SetMessage2(struct LocString* arg1)
+    inline void SetMessage2(struct LocString* arg1)
     {
         return stub<member_func_t<void, mmHUD, struct LocString*>>(0x42E240, this, arg1);
     }
 
     // 0x42E270 | ?SetScore@mmHUD@@QAEXPAD@Z
-    void SetScore(char* arg1)
+    inline void SetScore(char* arg1)
     {
         return stub<member_func_t<void, mmHUD, char*>>(0x42E270, this, arg1);
     }
 
     // 0x42E290 | ?AddPlayer@mmHUD@@QAEXPBDKHH@Z
-    void AddPlayer(char const* arg1, u32 arg2, i32 arg3, i32 arg4)
+    inline void AddPlayer(char const* arg1, uint32_t arg2, int32_t arg3, int32_t arg4)
     {
-        return stub<member_func_t<void, mmHUD, char const*, u32, i32, i32>>(0x42E290, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, mmHUD, char const*, uint32_t, int32_t, int32_t>>(
+            0x42E290, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x42E2C0 | ?SetScore@mmHUD@@QAEXKH@Z
-    void SetScore(u32 arg1, i32 arg2)
+    inline void SetScore(uint32_t arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, mmHUD, u32, i32>>(0x42E2C0, this, arg1, arg2);
+        return stub<member_func_t<void, mmHUD, uint32_t, int32_t>>(0x42E2C0, this, arg1, arg2);
     }
 
     // 0x42E2E0 | ?RemovePlayer@mmHUD@@QAEXK@Z
-    void RemovePlayer(u32 arg1)
+    inline void RemovePlayer(uint32_t arg1)
     {
-        return stub<member_func_t<void, mmHUD, u32>>(0x42E2E0, this, arg1);
+        return stub<member_func_t<void, mmHUD, uint32_t>>(0x42E2E0, this, arg1);
     }
 
     // 0x42E300 | ?ActivateGold@mmHUD@@QAEXXZ
-    void ActivateGold()
+    inline void ActivateGold()
     {
         return stub<member_func_t<void, mmHUD>>(0x42E300, this);
     }
 
     // 0x42E310 | ?DeactivateGold@mmHUD@@QAEXXZ
-    void DeactivateGold()
+    inline void DeactivateGold()
     {
         return stub<member_func_t<void, mmHUD>>(0x42E310, this);
     }
 
     // 0x42E320 | ?GetTime@mmHUD@@QAEXPADM@Z
-    void GetTime(char* arg1, f32 arg2)
+    inline void GetTime(char* arg1, float arg2)
     {
-        return stub<member_func_t<void, mmHUD, char*, f32>>(0x42E320, this, arg1, arg2);
+        return stub<member_func_t<void, mmHUD, char*, float>>(0x42E320, this, arg1, arg2);
     }
 
     // 0x42E340 | ?PlayNetAlert@mmHUD@@QAEXXZ
-    void PlayNetAlert()
+    inline void PlayNetAlert()
     {
         return stub<member_func_t<void, mmHUD>>(0x42E340, this);
     }
 
     // 0x42E360 | ?TogglePositionDisplay@mmHUD@@QAEXH@Z
-    void TogglePositionDisplay(i32 arg1)
+    inline void TogglePositionDisplay(int32_t arg1)
     {
-        return stub<member_func_t<void, mmHUD, i32>>(0x42E360, this, arg1);
+        return stub<member_func_t<void, mmHUD, int32_t>>(0x42E360, this, arg1);
     }
 
     // 0x42E3C0 | ?GetPosHdg@mmHUD@@QAEXAAVVector4@@@Z
-    void GetPosHdg(class Vector4& arg1)
+    inline void GetPosHdg(class Vector4& arg1)
     {
         return stub<member_func_t<void, mmHUD, class Vector4&>>(0x42E3C0, this, arg1);
     }
 
     // 0x42D3C0 | ??1mmHUD@@UAE@XZ
-    ~mmHUD() override
+    inline ~mmHUD() override
     {
         stub<member_func_t<void, mmHUD>>(0x42D3C0, this);
     }
 
     // 0x42DF40 | ?Cull@mmHUD@@UAEXXZ
-    void Cull() override
+    inline void Cull() override
     {
         return stub<member_func_t<void, mmHUD>>(0x42DF40, this);
     }
 
     // 0x42DBC0 | ?Update@mmHUD@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, mmHUD>>(0x42DBC0, this);
     }
 
     // 0x42DB20 | ?Reset@mmHUD@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, mmHUD>>(0x42DB20, this);
     }
 
     // 0x42D2E0 | ?ResChange@mmHUD@@UAEXHH@Z
-    void ResChange(i32 arg1, i32 arg2) override
+    inline void ResChange(int32_t arg1, int32_t arg2) override
     {
-        return stub<member_func_t<void, mmHUD, i32, i32>>(0x42D2E0, this, arg1, arg2);
+        return stub<member_func_t<void, mmHUD, int32_t, int32_t>>(0x42D2E0, this, arg1, arg2);
     }
 
     // 0x42DF10 | ?UpdatePaused@mmHUD@@UAEXXZ
-    void UpdatePaused() override
+    inline void UpdatePaused() override
     {
         return stub<member_func_t<void, mmHUD>>(0x42DF10, this);
     }
@@ -332,55 +333,55 @@ public:
     // mmTimer::`vftable' @ 0x5B0C78
 
     // 0x42E420 | ??0mmTimer@@QAE@XZ
-    mmTimer()
+    inline mmTimer()
     {
         stub<member_func_t<void, mmTimer>>(0x42E420, this);
     }
 
     // 0x42E490 | ?Init@mmTimer@@QAEXHMH@Z
-    void Init(i32 arg1, f32 arg2, i32 arg3)
+    inline void Init(int32_t arg1, float arg2, int32_t arg3)
     {
-        return stub<member_func_t<void, mmTimer, i32, f32, i32>>(0x42E490, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmTimer, int32_t, float, int32_t>>(0x42E490, this, arg1, arg2, arg3);
     }
 
     // 0x42E4C0 | ?GetTime@mmTimer@@QAEMXZ
-    f32 GetTime()
+    inline float GetTime()
     {
-        return stub<member_func_t<f32, mmTimer>>(0x42E4C0, this);
+        return stub<member_func_t<float, mmTimer>>(0x42E4C0, this);
     }
 
     // 0x42E610 | ?Start@mmTimer@@QAEXXZ
-    void Start()
+    inline void Start()
     {
         return stub<member_func_t<void, mmTimer>>(0x42E610, this);
     }
 
     // 0x42E630 | ?Stop@mmTimer@@QAEXXZ
-    void Stop()
+    inline void Stop()
     {
         return stub<member_func_t<void, mmTimer>>(0x42E630, this);
     }
 
     // 0x42E640 | ?StartStop@mmTimer@@QAEXXZ
-    void StartStop()
+    inline void StartStop()
     {
         return stub<member_func_t<void, mmTimer>>(0x42E640, this);
     }
 
     // 0x42E480 | ??1mmTimer@@UAE@XZ
-    ~mmTimer() override
+    inline ~mmTimer() override
     {
         stub<member_func_t<void, mmTimer>>(0x42E480, this);
     }
 
     // 0x42E4D0 | ?Update@mmTimer@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, mmTimer>>(0x42E4D0, this);
     }
 
     // 0x42E5F0 | ?Reset@mmTimer@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, mmTimer>>(0x42E5F0, this);
     }
@@ -392,43 +393,43 @@ public:
     // mmArrow::`vftable' @ 0x5B0CAC
 
     // 0x42E650 | ??0mmArrow@@QAE@XZ
-    mmArrow()
+    inline mmArrow()
     {
         stub<member_func_t<void, mmArrow>>(0x42E650, this);
     }
 
     // 0x42E770 | ?Init@mmArrow@@QAEXPAVMatrix34@@@Z
-    void Init(class Matrix34* arg1)
+    inline void Init(class Matrix34* arg1)
     {
         return stub<member_func_t<void, mmArrow, class Matrix34*>>(0x42E770, this, arg1);
     }
 
     // 0x42E790 | ?SetInterest@mmArrow@@QAEXPAVVector3@@@Z
-    void SetInterest(class Vector3* arg1)
+    inline void SetInterest(class Vector3* arg1)
     {
         return stub<member_func_t<void, mmArrow, class Vector3*>>(0x42E790, this, arg1);
     }
 
     // 0x42E7A0 | ?ReColorArrow@mmArrow@@AAEXH@Z
-    void ReColorArrow(i32 arg1)
+    inline void ReColorArrow(int32_t arg1)
     {
-        return stub<member_func_t<void, mmArrow, i32>>(0x42E7A0, this, arg1);
+        return stub<member_func_t<void, mmArrow, int32_t>>(0x42E7A0, this, arg1);
     }
 
     // 0x42E710 | ??1mmArrow@@UAE@XZ
-    ~mmArrow() override
+    inline ~mmArrow() override
     {
         stub<member_func_t<void, mmArrow>>(0x42E710, this);
     }
 
     // 0x42E7F0 | ?Update@mmArrow@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, mmArrow>>(0x42E7F0, this);
     }
 
     // 0x42E780 | ?Reset@mmArrow@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, mmArrow>>(0x42E780, this);
     }

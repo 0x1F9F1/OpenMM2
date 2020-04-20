@@ -46,7 +46,7 @@ public:
     // vehWheelPtx::`vftable' @ 0x5B2D98
 
     // 0x4D1C00 | ??0vehWheelPtx@@QAE@XZ
-    vehWheelPtx()
+    inline vehWheelPtx()
     {
         stub<member_func_t<void, vehWheelPtx>>(0x4D1C00, this);
     }
@@ -64,21 +64,21 @@ public:
     }
 
     // 0x4D1DD0 | ?Init@vehWheelPtx@@QAEXPAVvehCarSim@@@Z
-    void Init(class vehCarSim* arg1)
+    inline void Init(class vehCarSim* arg1)
     {
         return stub<member_func_t<void, vehWheelPtx, class vehCarSim*>>(0x4D1DD0, this, arg1);
     }
 
     // 0x4D1E90 | ?UpdateWheel@vehWheelPtx@@QAEXPAVvehWheel@@@Z
-    void UpdateWheel(class vehWheel* arg1)
+    inline void UpdateWheel(class vehWheel* arg1)
     {
         return stub<member_func_t<void, vehWheelPtx, class vehWheel*>>(0x4D1E90, this, arg1);
     }
 
     // 0x4D1EF0 | ?Blast@vehWheelPtx@@QAEXPAVvehWheel@@MHH@Z
-    void Blast(class vehWheel* arg1, f32 arg2, i32 arg3, i32 arg4)
+    inline void Blast(class vehWheel* arg1, float arg2, int32_t arg3, int32_t arg4)
     {
-        return stub<member_func_t<void, vehWheelPtx, class vehWheel*, f32, i32, i32>>(
+        return stub<member_func_t<void, vehWheelPtx, class vehWheel*, float, int32_t, int32_t>>(
             0x4D1EF0, this, arg1, arg2, arg3, arg4);
     }
 
@@ -86,19 +86,19 @@ public:
     inline extern_var(0x6AFFAC, class asBirthRule**, Rule);
 
     // 0x4D1C60 | ??1vehWheelPtx@@UAE@XZ
-    ~vehWheelPtx() override
+    inline ~vehWheelPtx() override
     {
         stub<member_func_t<void, vehWheelPtx>>(0x4D1C60, this);
     }
 
     // 0x4D1E40 | ?Update@vehWheelPtx@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, vehWheelPtx>>(0x4D1E40, this);
     }
 
     // 0x4D1DC0 | ?Reset@vehWheelPtx@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, vehWheelPtx>>(0x4D1DC0, this);
     }

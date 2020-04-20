@@ -34,7 +34,7 @@
 */
 
 // 0x4918E0 | ??D@YA?AVVector3@@MABV0@@Z
-inline class Vector3 operator*(f32 arg1, class Vector3 const& arg2)
+inline class Vector3 operator*(float arg1, class Vector3 const& arg2)
 {
-    return stub<cdecl_t<class Vector3, f32, class Vector3 const&>>(0x4918E0, arg1, arg2);
+    return stub<cdecl_t<class Vector3, float, class Vector3 const&>>(0x4918E0, arg1, arg2);
 }

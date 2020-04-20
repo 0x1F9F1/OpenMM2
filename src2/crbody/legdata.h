@@ -36,37 +36,37 @@ public:
     // crLegData::`vftable' @ 0x5B6414
 
     // 0x57ECF0 | ??0crLegData@@QAE@XZ
-    crLegData()
+    inline crLegData()
     {
         stub<member_func_t<void, crLegData>>(0x57ECF0, this);
     }
 
     // 0x57EF00 | ?Acosf@crLegData@@IBEMM@Z
-    f32 Acosf(f32 arg1)
+    inline float Acosf(float arg1)
     {
-        return stub<member_func_t<f32, crLegData, f32>>(0x57EF00, this, arg1);
+        return stub<member_func_t<float, crLegData, float>>(0x57EF00, this, arg1);
     }
 
     // 0x57ED20 | ?Init@crLegData@@UAEXAAVcrSkeletonData@@D@Z
-    virtual void Init(class crSkeletonData& arg1, char arg2)
+    virtual inline void Init(class crSkeletonData& arg1, char arg2)
     {
         return stub<member_func_t<void, crLegData, class crSkeletonData&, char>>(0x57ED20, this, arg1, arg2);
     }
 
     // 0x57EF60 | ?SolveIK@crLegData@@UBEXAAVcrSkeleton@@AAVcrIKGoal@@@Z
-    virtual void SolveIK(class crSkeleton& arg1, class crIKGoal& arg2)
+    virtual inline void SolveIK(class crSkeleton& arg1, class crIKGoal& arg2)
     {
         return stub<member_func_t<void, crLegData, class crSkeleton&, class crIKGoal&>>(0x57EF60, this, arg1, arg2);
     }
 
     // 0x57FF20 | ?SolveLimpIK@crLegData@@UBEXAAVcrSkeleton@@AAVcrIKGoal@@@Z
-    virtual void SolveLimpIK(class crSkeleton& arg1, class crIKGoal& arg2)
+    virtual inline void SolveLimpIK(class crSkeleton& arg1, class crIKGoal& arg2)
     {
         return stub<member_func_t<void, crLegData, class crSkeleton&, class crIKGoal&>>(0x57FF20, this, arg1, arg2);
     }
 
     // 0x57EE70 | ?MatchPose@crLegData@@UBEXAAVcrSkeleton@@AAVcrIKGoal@@@Z
-    virtual void MatchPose(class crSkeleton& arg1, class crIKGoal& arg2)
+    virtual inline void MatchPose(class crSkeleton& arg1, class crIKGoal& arg2)
     {
         return stub<member_func_t<void, crLegData, class crSkeleton&, class crIKGoal&>>(0x57EE70, this, arg1, arg2);
     }

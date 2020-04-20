@@ -39,49 +39,49 @@ public:
     // camAICS::`vftable' @ 0x5B501C
 
     // 0x520A30 | ??0camAICS@@QAE@XZ
-    camAICS()
+    inline camAICS()
     {
         stub<member_func_t<void, camAICS>>(0x520A30, this);
     }
 
     // 0x520A70 | ?Init@camAICS@@QAEXPAVvehCar@@@Z
-    void Init(class vehCar* arg1)
+    inline void Init(class vehCar* arg1)
     {
         return stub<member_func_t<void, camAICS, class vehCar*>>(0x520A70, this, arg1);
     }
 
     // 0x520AC0 | ?SetPosition@camAICS@@QAEXAAVVector3@@@Z
-    void SetPosition(class Vector3& arg1)
+    inline void SetPosition(class Vector3& arg1)
     {
         return stub<member_func_t<void, camAICS, class Vector3&>>(0x520AC0, this, arg1);
     }
 
     // 0x520AE0 | ?SetMatrix@camAICS@@QAEXPAVMatrix34@@@Z
-    void SetMatrix(class Matrix34* arg1)
+    inline void SetMatrix(class Matrix34* arg1)
     {
         return stub<member_func_t<void, camAICS, class Matrix34*>>(0x520AE0, this, arg1);
     }
 
     // 0x406810 | ??1camAICS@@UAE@XZ
-    ~camAICS() override
+    inline ~camAICS() override
     {
         stub<member_func_t<void, camAICS>>(0x406810, this);
     }
 
     // 0x520C50 | ?Update@camAICS@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, camAICS>>(0x520C50, this);
     }
 
     // 0x520AB0 | ?Reset@camAICS@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, camAICS>>(0x520AB0, this);
     }
 
     // 0x520BA0 | ?MakeActive@camAICS@@UAEXXZ
-    void MakeActive() override
+    inline void MakeActive() override
     {
         return stub<member_func_t<void, camAICS>>(0x520BA0, this);
     }

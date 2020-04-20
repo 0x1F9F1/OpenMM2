@@ -45,74 +45,74 @@ public:
     // vehEngine::`vftable' @ 0x5B2FEC
 
     // 0x4D8C10 | ??0vehEngine@@QAE@XZ
-    vehEngine()
+    inline vehEngine()
     {
         stub<member_func_t<void, vehEngine>>(0x4D8C10, this);
     }
 
     // 0x4D8D20 | ?Init@vehEngine@@QAEXPAVvehCarSim@@PBD1@Z
-    void Init(class vehCarSim* arg1, char const* arg2, char const* arg3)
+    inline void Init(class vehCarSim* arg1, char const* arg2, char const* arg3)
     {
         return stub<member_func_t<void, vehEngine, class vehCarSim*, char const*, char const*>>(
             0x4D8D20, this, arg1, arg2, arg3);
     }
 
     // 0x4D8DC0 | ?ComputeConstants@vehEngine@@QAEXXZ
-    void ComputeConstants()
+    inline void ComputeConstants()
     {
         return stub<member_func_t<void, vehEngine>>(0x4D8DC0, this);
     }
 
     // 0x4D8E20 | ?CalcTorqueAtFullThrottle@vehEngine@@QAEMM@Z
-    f32 CalcTorqueAtFullThrottle(f32 arg1)
+    inline float CalcTorqueAtFullThrottle(float arg1)
     {
-        return stub<member_func_t<f32, vehEngine, f32>>(0x4D8E20, this, arg1);
+        return stub<member_func_t<float, vehEngine, float>>(0x4D8E20, this, arg1);
     }
 
     // 0x4D8EA0 | ?CalcTorqueAtZeroThrottle@vehEngine@@QAEMXZ
-    f32 CalcTorqueAtZeroThrottle()
+    inline float CalcTorqueAtZeroThrottle()
     {
-        return stub<member_func_t<f32, vehEngine>>(0x4D8EA0, this);
+        return stub<member_func_t<float, vehEngine>>(0x4D8EA0, this);
     }
 
     // 0x4D8ED0 | ?CalcTorque@vehEngine@@QAEMM@Z
-    f32 CalcTorque(f32 arg1)
+    inline float CalcTorque(float arg1)
     {
-        return stub<member_func_t<f32, vehEngine, f32>>(0x4D8ED0, this, arg1);
+        return stub<member_func_t<float, vehEngine, float>>(0x4D8ED0, this, arg1);
     }
 
     // 0x4D8F10 | ?CalcHPAtFullThrottle@vehEngine@@QAEMM@Z
-    f32 CalcHPAtFullThrottle(f32 arg1)
+    inline float CalcHPAtFullThrottle(float arg1)
     {
-        return stub<member_func_t<f32, vehEngine, f32>>(0x4D8F10, this, arg1);
+        return stub<member_func_t<float, vehEngine, float>>(0x4D8F10, this, arg1);
     }
 
     // 0x4D8CD0 | ??1vehEngine@@UAE@XZ
-    ~vehEngine() override
+    inline ~vehEngine() override
     {
         stub<member_func_t<void, vehEngine>>(0x4D8CD0, this);
     }
 
     // 0x4D8F30 | ?Update@vehEngine@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, vehEngine>>(0x4D8F30, this);
     }
 
     // 0x4D8CE0 | ?Reset@vehEngine@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, vehEngine>>(0x4D8CE0, this);
     }
 
     // 0x4D9240 | ?FileIO@vehEngine@@UAEXAAVdatParser@@@Z
-    void FileIO(class datParser& arg1) override
+    inline void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, vehEngine, class datParser&>>(0x4D9240, this, arg1);
     }
 
     // 0x4D9310 | ?GetClassName@vehEngine@@UAEPADXZ
-    char* GetClassName() override
+    inline char* GetClassName() override
     {
         return stub<member_func_t<char*, vehEngine>>(0x4D9310, this);
     }

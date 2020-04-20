@@ -57,76 +57,76 @@ public:
     // UIBMButton::`vftable' @ 0x5B39FC
 
     // 0x4EE6F0 | ??0UIBMButton@@QAE@XZ
-    UIBMButton()
+    inline UIBMButton()
     {
         stub<member_func_t<void, UIBMButton>>(0x4EE6F0, this);
     }
 
     // 0x4EE810 | ?Init@UIBMButton@@QAEXPADMMHHPAHHHPAULocString@@VdatCallback@@3@Z
-    void Init(char* arg1, f32 arg2, f32 arg3, i32 arg4, i32 arg5, i32* arg6, i32 arg7, i32 arg8, struct LocString* arg9,
-        class datCallback arg10, class datCallback arg11)
+    inline void Init(char* arg1, float arg2, float arg3, int32_t arg4, int32_t arg5, int32_t* arg6, int32_t arg7,
+        int32_t arg8, struct LocString* arg9, class datCallback arg10, class datCallback arg11)
     {
-        return stub<member_func_t<void, UIBMButton, char*, f32, f32, i32, i32, i32*, i32, i32, struct LocString*,
-            class datCallback, class datCallback>>(
+        return stub<member_func_t<void, UIBMButton, char*, float, float, int32_t, int32_t, int32_t*, int32_t, int32_t,
+            struct LocString*, class datCallback, class datCallback>>(
             0x4EE810, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
     }
 
     // 0x4EEA90 | ?LoadBitmap@UIBMButton@@QAEXPAD@Z
-    void LoadBitmap(char* arg1)
+    inline void LoadBitmap(char* arg1)
     {
         return stub<member_func_t<void, UIBMButton, char*>>(0x4EEA90, this, arg1);
     }
 
     // 0x4EEAD0 | ?GetDiv@UIBMButton@@QAEHXZ
-    i32 GetDiv()
+    inline int32_t GetDiv()
     {
-        return stub<member_func_t<i32, UIBMButton>>(0x4EEAD0, this);
+        return stub<member_func_t<int32_t, UIBMButton>>(0x4EEAD0, this);
     }
 
     // 0x4EEB00 | ?GetSize@UIBMButton@@AAEXXZ
-    void GetSize()
+    inline void GetSize()
     {
         return stub<member_func_t<void, UIBMButton>>(0x4EEB00, this);
     }
 
     // 0x4EEC80 | ?GetHitArea@UIBMButton@@QAEXAAM0@Z
-    void GetHitArea(f32& arg1, f32& arg2)
+    inline void GetHitArea(float& arg1, float& arg2)
     {
-        return stub<member_func_t<void, UIBMButton, f32&, f32&>>(0x4EEC80, this, arg1, arg2);
+        return stub<member_func_t<void, UIBMButton, float&, float&>>(0x4EEC80, this, arg1, arg2);
     }
 
     // 0x4EECD0 | ?DoToggle@UIBMButton@@QAEXXZ
-    void DoToggle()
+    inline void DoToggle()
     {
         return stub<member_func_t<void, UIBMButton>>(0x4EECD0, this);
     }
 
     // 0x4EED90 | ?Kill@UIBMButton@@QAEXXZ
-    void Kill()
+    inline void Kill()
     {
         return stub<member_func_t<void, UIBMButton>>(0x4EED90, this);
     }
 
     // 0x4EEDB0 | ?Unkill@UIBMButton@@QAEXXZ
-    void Unkill()
+    inline void Unkill()
     {
         return stub<member_func_t<void, UIBMButton>>(0x4EEDB0, this);
     }
 
     // 0x4EEFE0 | ?MexOff@UIBMButton@@QAEXXZ
-    void MexOff()
+    inline void MexOff()
     {
         return stub<member_func_t<void, UIBMButton>>(0x4EEFE0, this);
     }
 
     // 0x4EEFF0 | ?MexOn@UIBMButton@@QAEXXZ
-    void MexOn()
+    inline void MexOn()
     {
         return stub<member_func_t<void, UIBMButton>>(0x4EEFF0, this);
     }
 
     // 0x4EF030 | ?MexToggle@UIBMButton@@QAEXXZ
-    void MexToggle()
+    inline void MexToggle()
     {
         return stub<member_func_t<void, UIBMButton>>(0x4EF030, this);
     }
@@ -138,7 +138,7 @@ public:
     }
 
     // 0x4EF620 | ?PlaySound@UIBMButton@@AAEXXZ
-    void PlaySound()
+    inline void PlaySound()
     {
         return stub<member_func_t<void, UIBMButton>>(0x4EF620, this);
     }
@@ -147,62 +147,62 @@ public:
     inline extern_var(0x6B0418, class AudSoundBase*, s_pSound);
 
     // 0x4EE790 | ??1UIBMButton@@UAE@XZ
-    ~UIBMButton() override
+    inline ~UIBMButton() override
     {
         stub<member_func_t<void, UIBMButton>>(0x4EE790, this);
     }
 
     // 0x4EF2B0 | ?Cull@UIBMButton@@UAEXXZ
-    void Cull() override
+    inline void Cull() override
     {
         return stub<member_func_t<void, UIBMButton>>(0x4EF2B0, this);
     }
 
     // 0x4EF060 | ?Update@UIBMButton@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, UIBMButton>>(0x4EF060, this);
     }
 
     // 0x4EF6B0 | ?Disable@UIBMButton@@UAEXXZ
-    void Disable() override
+    inline void Disable() override
     {
         return stub<member_func_t<void, UIBMButton>>(0x4EF6B0, this);
     }
 
     // 0x4EF690 | ?Enable@UIBMButton@@UAEXXZ
-    void Enable() override
+    inline void Enable() override
     {
         return stub<member_func_t<void, UIBMButton>>(0x4EF690, this);
     }
 
     // 0x4EEF20 | ?Action@UIBMButton@@UAEXTeqEvent@@@Z
-    void Action(union eqEvent arg1) override
+    inline void Action(union eqEvent arg1) override
     {
         return stub<member_func_t<void, UIBMButton, union eqEvent>>(0x4EEF20, this, arg1);
     }
 
     // 0x4EEDF0 | ?Switch@UIBMButton@@UAEXH@Z
-    void Switch(i32 arg1) override
+    inline void Switch(int32_t arg1) override
     {
-        return stub<member_func_t<void, UIBMButton, i32>>(0x4EEDF0, this, arg1);
+        return stub<member_func_t<void, UIBMButton, int32_t>>(0x4EEDF0, this, arg1);
     }
 
     // 0x4EF1F0 | ?ReturnDescription@UIBMButton@@UAEPADXZ
-    char* ReturnDescription() override
+    inline char* ReturnDescription() override
     {
         return stub<member_func_t<char*, UIBMButton>>(0x4EF1F0, this);
     }
 
     // 0x4EEB30 | ?SetPosition@UIBMButton@@UAEXMM@Z
-    void SetPosition(f32 arg1, f32 arg2) override
+    inline void SetPosition(float arg1, float arg2) override
     {
-        return stub<member_func_t<void, UIBMButton, f32, f32>>(0x4EEB30, this, arg1, arg2);
+        return stub<member_func_t<void, UIBMButton, float, float>>(0x4EEB30, this, arg1, arg2);
     }
 
     // 0x4EF2A0 | ?GetScreenHeight@UIBMButton@@UAEMXZ
-    f32 GetScreenHeight() override
+    inline float GetScreenHeight() override
     {
-        return stub<member_func_t<f32, UIBMButton>>(0x4EF2A0, this);
+        return stub<member_func_t<float, UIBMButton>>(0x4EF2A0, this);
     }
 };

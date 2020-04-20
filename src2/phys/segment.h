@@ -30,7 +30,7 @@ class lvlSegmentInfo
 {
 public:
     // 0x46A0F0 | ?AllocateState@lvlSegmentInfo@@QAEXXZ
-    void AllocateState()
+    inline void AllocateState()
     {
         return stub<member_func_t<void, lvlSegmentInfo>>(0x46A0F0, this);
     }
@@ -40,15 +40,14 @@ class lvlSegment
 {
 public:
     // 0x469F90 | ?Set@lvlSegment@@QAEXABVVector3@@0HPAVlvlSegmentInfo@@@Z
-    void Set(class Vector3 const& arg1, class Vector3 const& arg2, i32 arg3, class lvlSegmentInfo* arg4)
+    inline void Set(class Vector3 const& arg1, class Vector3 const& arg2, int32_t arg3, class lvlSegmentInfo* arg4)
     {
-        return stub<
-            member_func_t<void, lvlSegment, class Vector3 const&, class Vector3 const&, i32, class lvlSegmentInfo*>>(
-            0x469F90, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, lvlSegment, class Vector3 const&, class Vector3 const&, int32_t,
+            class lvlSegmentInfo*>>(0x469F90, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x46A060 | ?CalculateInfo@lvlSegment@@QAEXXZ
-    void CalculateInfo()
+    inline void CalculateInfo()
     {
         return stub<member_func_t<void, lvlSegment>>(0x46A060, this);
     }

@@ -63,160 +63,162 @@ class string
 {
 public:
     // 0x412500 | ?Init@string@@QAEXH@Z
-    void Init(i32 arg1)
+    inline void Init(int32_t arg1)
     {
-        return stub<member_func_t<void, string, i32>>(0x412500, this, arg1);
+        return stub<member_func_t<void, string, int32_t>>(0x412500, this, arg1);
     }
 
     // 0x49F150 | ??0string@@QAE@XZ
-    string()
+    inline string()
     {
         stub<member_func_t<void, string>>(0x49F150, this);
     }
 
     // 0x49F180 | ??Hstring@@QBE?AV0@PBD@Z
-    class string operator+(char const* arg1)
+    inline class string operator+(char const* arg1)
     {
         return stub<member_func_t<class string, string, char const*>>(0x49F180, this, arg1);
     }
 
     // 0x49F3E0 | ??Ystring@@QAEXPBD@Z
-    void operator+=(char const* arg1)
+    inline void operator+=(char const* arg1)
     {
         return stub<member_func_t<void, string, char const*>>(0x49F3E0, this, arg1);
     }
 
     // 0x49F4C0 | ??Ystring@@QAEXD@Z
-    void operator+=(char arg1)
+    inline void operator+=(char arg1)
     {
         return stub<member_func_t<void, string, char>>(0x49F4C0, this, arg1);
     }
 
     // 0x49F560 | ??Gstring@@QBE?AV0@PBD@Z
-    class string operator-(char const* arg1)
+    inline class string operator-(char const* arg1)
     {
         return stub<member_func_t<class string, string, char const*>>(0x49F560, this, arg1);
     }
 
     // 0x49F6D0 | ??Zstring@@QAEXPBD@Z
-    void operator-=(char const* arg1)
+    inline void operator-=(char const* arg1)
     {
         return stub<member_func_t<void, string, char const*>>(0x49F6D0, this, arg1);
     }
 
     // 0x49F790 | ?MinusEqual@string@@QAEXD@Z
-    void MinusEqual(char arg1)
+    inline void MinusEqual(char arg1)
     {
         return stub<member_func_t<void, string, char>>(0x49F790, this, arg1);
     }
 
     // 0x49F8E0 | ?Contains@string@@QBEHAAV1@@Z
-    i32 Contains(class string& arg1)
+    inline int32_t Contains(class string& arg1)
     {
-        return stub<member_func_t<i32, string, class string&>>(0x49F8E0, this, arg1);
+        return stub<member_func_t<int32_t, string, class string&>>(0x49F8E0, this, arg1);
     }
 
     // 0x49F970 | ?SaveName@string@@QAEXABV1@H00@Z
-    void SaveName(class string const& arg1, i32 arg2, class string const& arg3, class string const& arg4)
+    inline void SaveName(class string const& arg1, int32_t arg2, class string const& arg3, class string const& arg4)
     {
-        return stub<member_func_t<void, string, class string const&, i32, class string const&, class string const&>>(
+        return stub<
+            member_func_t<void, string, class string const&, int32_t, class string const&, class string const&>>(
             0x49F970, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x49FB30 | ?FindFile@string@@QAEHABV1@H00@Z
-    i32 FindFile(class string const& arg1, i32 arg2, class string const& arg3, class string const& arg4)
+    inline int32_t FindFile(class string const& arg1, int32_t arg2, class string const& arg3, class string const& arg4)
     {
-        return stub<member_func_t<i32, string, class string const&, i32, class string const&, class string const&>>(
+        return stub<
+            member_func_t<int32_t, string, class string const&, int32_t, class string const&, class string const&>>(
             0x49FB30, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x49FEB0 | ?FileExists@string@@QBEHXZ
-    i32 FileExists()
+    inline int32_t FileExists()
     {
-        return stub<member_func_t<i32, string>>(0x49FEB0, this);
+        return stub<member_func_t<int32_t, string>>(0x49FEB0, this);
     }
 
     // 0x49FEE0 | ?DirFileExt@string@@QBEXAAV1@00@Z
-    void DirFileExt(class string& arg1, class string& arg2, class string& arg3)
+    inline void DirFileExt(class string& arg1, class string& arg2, class string& arg3)
     {
         return stub<member_func_t<void, string, class string&, class string&, class string&>>(
             0x49FEE0, this, arg1, arg2, arg3);
     }
 
     // 0x4A0100 | ?CommaFile@string@@QBEHXZ
-    i32 CommaFile()
+    inline int32_t CommaFile()
     {
-        return stub<member_func_t<i32, string>>(0x4A0100, this);
+        return stub<member_func_t<int32_t, string>>(0x4A0100, this);
     }
 
     // 0x4A02E0 | ?FileName@string@@QBE?AV1@XZ
-    class string FileName()
+    inline class string FileName()
     {
         return stub<member_func_t<class string, string>>(0x4A02E0, this);
     }
 
     // 0x4A0460 | ?Extension@string@@QBE?AV1@XZ
-    class string Extension()
+    inline class string Extension()
     {
         return stub<member_func_t<class string, string>>(0x4A0460, this);
     }
 
     // 0x4A0580 | ?ChangeExtension@string@@QAEXABV1@@Z
-    void ChangeExtension(class string const& arg1)
+    inline void ChangeExtension(class string const& arg1)
     {
         return stub<member_func_t<void, string, class string const&>>(0x4A0580, this, arg1);
     }
 
     // 0x4A0730 | ?RemoveExtension@string@@QAEXXZ
-    void RemoveExtension()
+    inline void RemoveExtension()
     {
         return stub<member_func_t<void, string>>(0x4A0730, this);
     }
 
     // 0x4A0760 | ?ExpandEnvs@string@@QAEXXZ
-    void ExpandEnvs()
+    inline void ExpandEnvs()
     {
         return stub<member_func_t<void, string>>(0x4A0760, this);
     }
 
     // 0x4A0910 | ?SubString@string@@QBE?AV1@H@Z
-    class string SubString(i32 arg1)
+    inline class string SubString(int32_t arg1)
     {
-        return stub<member_func_t<class string, string, i32>>(0x4A0910, this, arg1);
+        return stub<member_func_t<class string, string, int32_t>>(0x4A0910, this, arg1);
     }
 
     // 0x4A0A20 | ?NumSubStrings@string@@QBEHXZ
-    i32 NumSubStrings()
+    inline int32_t NumSubStrings()
     {
-        return stub<member_func_t<i32, string>>(0x4A0A20, this);
+        return stub<member_func_t<int32_t, string>>(0x4A0A20, this);
     }
 
     // 0x4A0A60 | ?IsNumeric@string@@QBEHXZ
-    i32 IsNumeric()
+    inline int32_t IsNumeric()
     {
-        return stub<member_func_t<i32, string>>(0x4A0A60, this);
+        return stub<member_func_t<int32_t, string>>(0x4A0A60, this);
     }
 
     // 0x4A0A90 | ??4string@@QAEXPBD@Z
-    void operator=(char const* arg1)
+    inline void operator=(char const* arg1)
     {
         return stub<member_func_t<void, string, char const*>>(0x4A0A90, this, arg1);
     }
 
     // 0x4A0B00 | ??Hstring@@QBE?AV0@ABV0@@Z
-    class string operator+(class string const& arg1)
+    inline class string operator+(class string const& arg1)
     {
         return stub<member_func_t<class string, string, class string const&>>(0x4A0B00, this, arg1);
     }
 
     // 0x4E2D80 | ??0string@@QAE@ABV0@@Z
-    string(class string const& arg1)
+    inline string(class string const& arg1)
     {
         stub<member_func_t<void, string, class string const&>>(0x4E2D80, this, arg1);
     }
 
     // 0x505070 | ??0string@@QAE@PBD@Z
-    string(char const* arg1)
+    inline string(char const* arg1)
     {
         stub<member_func_t<void, string, char const*>>(0x505070, this, arg1);
     }

@@ -50,92 +50,92 @@ public:
     // mmSingleRoam::`vftable' @ 0x5B07CC
 
     // 0x41F990 | ??0mmSingleRoam@@QAE@XZ
-    mmSingleRoam()
+    inline mmSingleRoam()
     {
         stub<member_func_t<void, mmSingleRoam>>(0x41F990, this);
     }
 
     // 0x41F9C0 | ??1mmSingleRoam@@UAE@XZ
-    ~mmSingleRoam() override
+    inline ~mmSingleRoam() override
     {
         stub<member_func_t<void, mmSingleRoam>>(0x41F9C0, this);
     }
 
     // 0x41FCE0 | ?Update@mmSingleRoam@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, mmSingleRoam>>(0x41FCE0, this);
     }
 
     // 0x41FC90 | ?Reset@mmSingleRoam@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, mmSingleRoam>>(0x41FC90, this);
     }
 
     // 0x41FA30 | ?Init@mmSingleRoam@@UAEHXZ
-    i32 Init() override
+    inline int32_t Init() override
     {
-        return stub<member_func_t<i32, mmSingleRoam>>(0x41FA30, this);
+        return stub<member_func_t<int32_t, mmSingleRoam>>(0x41FA30, this);
     }
 
     // 0x41FAA0 | ?InitMyPlayer@mmSingleRoam@@UAEXXZ
-    void InitMyPlayer() override
+    inline void InitMyPlayer() override
     {
         return stub<member_func_t<void, mmSingleRoam>>(0x41FAA0, this);
     }
 
     // 0x41FC40 | ?InitOtherPlayers@mmSingleRoam@@UAEXXZ
-    void InitOtherPlayers() override
+    inline void InitOtherPlayers() override
     {
         return stub<member_func_t<void, mmSingleRoam>>(0x41FC40, this);
     }
 
     // 0x41FB40 | ?InitGameObjects@mmSingleRoam@@UAEXXZ
-    void InitGameObjects() override
+    inline void InitGameObjects() override
     {
         return stub<member_func_t<void, mmSingleRoam>>(0x41FB40, this);
     }
 
     // 0x41FB10 | ?InitHUD@mmSingleRoam@@UAEXXZ
-    void InitHUD() override
+    inline void InitHUD() override
     {
         return stub<member_func_t<void, mmSingleRoam>>(0x41FB10, this);
     }
 
     // 0x41FCF0 | ?UpdateGameInput@mmSingleRoam@@UAEXH@Z
-    void UpdateGameInput(i32 arg1) override
+    inline void UpdateGameInput(int32_t arg1) override
     {
-        return stub<member_func_t<void, mmSingleRoam, i32>>(0x41FCF0, this, arg1);
+        return stub<member_func_t<void, mmSingleRoam, int32_t>>(0x41FCF0, this, arg1);
     }
 
     // 0x41FF20 | ?UpdateDebugKeyInput@mmSingleRoam@@UAEXH@Z
-    void UpdateDebugKeyInput(i32 arg1) override
+    inline void UpdateDebugKeyInput(int32_t arg1) override
     {
-        return stub<member_func_t<void, mmSingleRoam, i32>>(0x41FF20, this, arg1);
+        return stub<member_func_t<void, mmSingleRoam, int32_t>>(0x41FF20, this, arg1);
     }
 
     // 0x41FD00 | ?UpdateGame@mmSingleRoam@@UAEXXZ
-    void UpdateGame() override
+    inline void UpdateGame() override
     {
         return stub<member_func_t<void, mmSingleRoam>>(0x41FD00, this);
     }
 
     // 0x41FDA0 | ?NextRace@mmSingleRoam@@UAEXXZ
-    void NextRace() override
+    inline void NextRace() override
     {
         return stub<member_func_t<void, mmSingleRoam>>(0x41FDA0, this);
     }
 
     // 0x41FCD0 | ?HitWaterHandler@mmSingleRoam@@UAEXXZ
-    void HitWaterHandler() override
+    inline void HitWaterHandler() override
     {
         return stub<member_func_t<void, mmSingleRoam>>(0x41FCD0, this);
     }
 
     // 0x41FD90 | ?SwitchState@mmSingleRoam@@UAEXH@Z
-    void SwitchState(i32 arg1) override
+    inline void SwitchState(int32_t arg1) override
     {
-        return stub<member_func_t<void, mmSingleRoam, i32>>(0x41FD90, this, arg1);
+        return stub<member_func_t<void, mmSingleRoam, int32_t>>(0x41FD90, this, arg1);
     }
 };

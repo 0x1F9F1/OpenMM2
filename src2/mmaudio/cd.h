@@ -43,68 +43,71 @@ public:
     // CDMan::`vftable' @ 0x5B4E78
 
     // 0x51CE80 | ??0CDMan@@QAE@XZ
-    CDMan()
+    inline CDMan()
     {
         stub<member_func_t<void, CDMan>>(0x51CE80, this);
     }
 
     // 0x51CF00 | ?Init@CDMan@@QAEKF@Z
-    u32 Init(i16 arg1)
+    inline uint32_t Init(int16_t arg1)
     {
-        return stub<member_func_t<u32, CDMan, i16>>(0x51CF00, this, arg1);
+        return stub<member_func_t<uint32_t, CDMan, int16_t>>(0x51CF00, this, arg1);
     }
 
     // 0x51CFC0 | ?PlayTrack@CDMan@@QAEKEE@Z
-    u32 PlayTrack(u8 arg1, u8 arg2)
+    inline uint32_t PlayTrack(uint8_t arg1, uint8_t arg2)
     {
-        return stub<member_func_t<u32, CDMan, u8, u8>>(0x51CFC0, this, arg1, arg2);
+        return stub<member_func_t<uint32_t, CDMan, uint8_t, uint8_t>>(0x51CFC0, this, arg1, arg2);
     }
 
     // 0x51D0B0 | ?ResumePlay@CDMan@@QAEKXZ
-    u32 ResumePlay()
+    inline uint32_t ResumePlay()
     {
-        return stub<member_func_t<u32, CDMan>>(0x51D0B0, this);
+        return stub<member_func_t<uint32_t, CDMan>>(0x51D0B0, this);
     }
 
     // 0x51D0D0 | ?PlayTrack@CDMan@@QAEKEEEEE@Z
-    u32 PlayTrack(u8 arg1, u8 arg2, u8 arg3, u8 arg4, u8 arg5)
+    inline uint32_t PlayTrack(uint8_t arg1, uint8_t arg2, uint8_t arg3, uint8_t arg4, uint8_t arg5)
     {
-        return stub<member_func_t<u32, CDMan, u8, u8, u8, u8, u8>>(0x51D0D0, this, arg1, arg2, arg3, arg4, arg5);
+        return stub<member_func_t<uint32_t, CDMan, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t>>(
+            0x51D0D0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x51D1E0 | ?Stop@CDMan@@QAEKXZ
-    u32 Stop()
+    inline uint32_t Stop()
     {
-        return stub<member_func_t<u32, CDMan>>(0x51D1E0, this);
+        return stub<member_func_t<uint32_t, CDMan>>(0x51D1E0, this);
     }
 
     // 0x51D220 | ?SeekTrack@CDMan@@QAEKE@Z
-    u32 SeekTrack(u8 arg1)
+    inline uint32_t SeekTrack(uint8_t arg1)
     {
-        return stub<member_func_t<u32, CDMan, u8>>(0x51D220, this, arg1);
+        return stub<member_func_t<uint32_t, CDMan, uint8_t>>(0x51D220, this, arg1);
     }
 
     // 0x51D290 | ?GetPosition@CDMan@@QAEKPAE000@Z
-    u32 GetPosition(u8* arg1, u8* arg2, u8* arg3, u8* arg4)
+    inline uint32_t GetPosition(uint8_t* arg1, uint8_t* arg2, uint8_t* arg3, uint8_t* arg4)
     {
-        return stub<member_func_t<u32, CDMan, u8*, u8*, u8*, u8*>>(0x51D290, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<uint32_t, CDMan, uint8_t*, uint8_t*, uint8_t*, uint8_t*>>(
+            0x51D290, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x51D380 | ?GetNumTracks@CDMan@@QAEFXZ
-    i16 GetNumTracks()
+    inline int16_t GetNumTracks()
     {
-        return stub<member_func_t<i16, CDMan>>(0x51D380, this);
+        return stub<member_func_t<int16_t, CDMan>>(0x51D380, this);
     }
 
     // 0x51CEC0 | ??1CDMan@@UAE@XZ
-    ~CDMan() override
+    inline ~CDMan() override
     {
         stub<member_func_t<void, CDMan>>(0x51CEC0, this);
     }
 
     // 0x51D310 | ?WindowProc@CDMan@@EAEJPAUHWND__@@IIJ@Z
-    i32 WindowProc(struct HWND__* arg1, u32 arg2, u32 arg3, i32 arg4) override
+    inline int32_t WindowProc(struct HWND__* arg1, uint32_t arg2, uint32_t arg3, int32_t arg4) override
     {
-        return stub<member_func_t<i32, CDMan, struct HWND__*, u32, u32, i32>>(0x51D310, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<int32_t, CDMan, struct HWND__*, uint32_t, uint32_t, int32_t>>(
+            0x51D310, this, arg1, arg2, arg3, arg4);
     }
 };

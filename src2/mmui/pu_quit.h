@@ -35,20 +35,20 @@ public:
     // PUQuit::`vftable' @ 0x5B47B0
 
     // 0x50B040 | ??0PUQuit@@QAE@HMMMMPAD@Z
-    PUQuit(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    inline PUQuit(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
     {
-        stub<member_func_t<void, PUQuit, i32, f32, f32, f32, f32, char*>>(
+        stub<member_func_t<void, PUQuit, int32_t, float, float, float, float, char*>>(
             0x50B040, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x50B200 | ?EnableMigrateHost@PUQuit@@QAEX_N@Z
-    void EnableMigrateHost(bool arg1)
+    inline void EnableMigrateHost(bool arg1)
     {
         return stub<member_func_t<void, PUQuit, bool>>(0x50B200, this, arg1);
     }
 
     // 0x50B1F0 | ??1PUQuit@@UAE@XZ
-    ~PUQuit() override
+    inline ~PUQuit() override
     {
         stub<member_func_t<void, PUQuit>>(0x50B1F0, this);
     }

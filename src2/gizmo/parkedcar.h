@@ -40,37 +40,37 @@ public:
     // gizParkedCarMgr::`vftable' @ 0x5B622C
 
     // 0x579A20 | ??0gizParkedCarMgr@@QAE@XZ
-    gizParkedCarMgr()
+    inline gizParkedCarMgr()
     {
         stub<member_func_t<void, gizParkedCarMgr>>(0x579A20, this);
     }
 
     // 0x579AF0 | ?Init@gizParkedCarMgr@@QAE_NPAD00@Z
-    bool Init(char* arg1, char* arg2, char* arg3)
+    inline bool Init(char* arg1, char* arg2, char* arg3)
     {
         return stub<member_func_t<bool, gizParkedCarMgr, char*, char*, char*>>(0x579AF0, this, arg1, arg2, arg3);
     }
 
     // 0x579CC0 | ?ApplyTuning@gizParkedCarMgr@@AAEXXZ
-    void ApplyTuning()
+    inline void ApplyTuning()
     {
         return stub<member_func_t<void, gizParkedCarMgr>>(0x579CC0, this);
     }
 
     // 0x579A80 | ??1gizParkedCarMgr@@UAE@XZ
-    ~gizParkedCarMgr() override
+    inline ~gizParkedCarMgr() override
     {
         stub<member_func_t<void, gizParkedCarMgr>>(0x579A80, this);
     }
 
     // 0x579CB0 | ?Update@gizParkedCarMgr@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, gizParkedCarMgr>>(0x579CB0, this);
     }
 
     // 0x579AE0 | ?Reset@gizParkedCarMgr@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, gizParkedCarMgr>>(0x579AE0, this);
     }

@@ -56,73 +56,73 @@ public:
     // mmCityList::`vftable' @ 0x5B5200
 
     // 0x524160 | ??0mmCityList@@QAE@XZ
-    mmCityList()
+    inline mmCityList()
     {
         stub<member_func_t<void, mmCityList>>(0x524160, this);
     }
 
     // 0x5241E0 | ?Init@mmCityList@@QAEXH@Z
-    void Init(i32 arg1)
+    inline void Init(int32_t arg1)
     {
-        return stub<member_func_t<void, mmCityList, i32>>(0x5241E0, this, arg1);
+        return stub<member_func_t<void, mmCityList, int32_t>>(0x5241E0, this, arg1);
     }
 
     // 0x5241F0 | ?GetCityInfo@mmCityList@@QAEPAVmmCityInfo@@H@Z
-    class mmCityInfo* GetCityInfo(i32 arg1)
+    inline class mmCityInfo* GetCityInfo(int32_t arg1)
     {
-        return stub<member_func_t<class mmCityInfo*, mmCityList, i32>>(0x5241F0, this, arg1);
+        return stub<member_func_t<class mmCityInfo*, mmCityList, int32_t>>(0x5241F0, this, arg1);
     }
 
     // 0x524220 | ?GetCityInfo@mmCityList@@QAEPAVmmCityInfo@@PAD@Z
-    class mmCityInfo* GetCityInfo(char* arg1)
+    inline class mmCityInfo* GetCityInfo(char* arg1)
     {
         return stub<member_func_t<class mmCityInfo*, mmCityList, char*>>(0x524220, this, arg1);
     }
 
     // 0x524270 | ?GetCityID@mmCityList@@QAEHPAD@Z
-    i32 GetCityID(char* arg1)
+    inline int32_t GetCityID(char* arg1)
     {
-        return stub<member_func_t<i32, mmCityList, char*>>(0x524270, this, arg1);
+        return stub<member_func_t<int32_t, mmCityList, char*>>(0x524270, this, arg1);
     }
 
     // 0x5242C0 | ?SetCurrentCity@mmCityList@@QAEXPAD@Z
-    void SetCurrentCity(char* arg1)
+    inline void SetCurrentCity(char* arg1)
     {
         return stub<member_func_t<void, mmCityList, char*>>(0x5242C0, this, arg1);
     }
 
     // 0x5242F0 | ?SetCurrentCity@mmCityList@@QAEXH@Z
-    void SetCurrentCity(i32 arg1)
+    inline void SetCurrentCity(int32_t arg1)
     {
-        return stub<member_func_t<void, mmCityList, i32>>(0x5242F0, this, arg1);
+        return stub<member_func_t<void, mmCityList, int32_t>>(0x5242F0, this, arg1);
     }
 
     // 0x524320 | ?GetCurrentCity@mmCityList@@QAEPAVmmCityInfo@@XZ
-    class mmCityInfo* GetCurrentCity()
+    inline class mmCityInfo* GetCurrentCity()
     {
         return stub<member_func_t<class mmCityInfo*, mmCityList>>(0x524320, this);
     }
 
     // 0x524330 | ?Load@mmCityList@@QAEXPAD@Z
-    void Load(char* arg1)
+    inline void Load(char* arg1)
     {
         return stub<member_func_t<void, mmCityList, char*>>(0x524330, this, arg1);
     }
 
     // 0x524420 | ?Print@mmCityList@@QAEXXZ
-    void Print()
+    inline void Print()
     {
         return stub<member_func_t<void, mmCityList>>(0x524420, this);
     }
 
     // 0x5244F0 | ?LoadAll@mmCityList@@QAEXXZ
-    void LoadAll()
+    inline void LoadAll()
     {
         return stub<member_func_t<void, mmCityList>>(0x5244F0, this);
     }
 
     // 0x524180 | ??1mmCityList@@UAE@XZ
-    virtual ~mmCityList()
+    virtual inline ~mmCityList()
     {
         stub<member_func_t<void, mmCityList>>(0x524180, this);
     }

@@ -61,128 +61,128 @@ public:
     // vehCarSim::`vftable' @ 0x5B2C74
 
     // 0x4CB660 | ??0vehCarSim@@QAE@XZ
-    vehCarSim()
+    inline vehCarSim()
     {
         stub<member_func_t<void, vehCarSim>>(0x4CB660, this);
     }
 
     // 0x4CBB00 | ?OnGround@vehCarSim@@QAEHXZ
-    i32 OnGround()
+    inline int32_t OnGround()
     {
-        return stub<member_func_t<i32, vehCarSim>>(0x4CBB00, this);
+        return stub<member_func_t<int32_t, vehCarSim>>(0x4CBB00, this);
     }
 
     // 0x4CBB40 | ?BottomedOut@vehCarSim@@QAEHXZ
-    i32 BottomedOut()
+    inline int32_t BottomedOut()
     {
-        return stub<member_func_t<i32, vehCarSim>>(0x4CBB40, this);
+        return stub<member_func_t<int32_t, vehCarSim>>(0x4CBB40, this);
     }
 
     // 0x4CBB80 | ?Init@vehCarSim@@QAEXPBDPAVphColliderJointed@@PAVlvlInstance@@@Z
-    void Init(char const* arg1, class phColliderJointed* arg2, class lvlInstance* arg3)
+    inline void Init(char const* arg1, class phColliderJointed* arg2, class lvlInstance* arg3)
     {
         return stub<member_func_t<void, vehCarSim, char const*, class phColliderJointed*, class lvlInstance*>>(
             0x4CBB80, this, arg1, arg2, arg3);
     }
 
     // 0x4CBF50 | ?SetWorldMatrix@vehCarSim@@QAEXXZ
-    void SetWorldMatrix()
+    inline void SetWorldMatrix()
     {
         return stub<member_func_t<void, vehCarSim>>(0x4CBF50, this);
     }
 
     // 0x4CC050 | ?RestoreImpactParams@vehCarSim@@QAEXXZ
-    void RestoreImpactParams()
+    inline void RestoreImpactParams()
     {
         return stub<member_func_t<void, vehCarSim>>(0x4CC050, this);
     }
 
     // 0x4CC080 | ?SetHackedImpactParams@vehCarSim@@QAEXXZ
-    void SetHackedImpactParams()
+    inline void SetHackedImpactParams()
     {
         return stub<member_func_t<void, vehCarSim>>(0x4CC080, this);
     }
 
     // 0x4CC0B0 | ?ReconfigureDrivetrain@vehCarSim@@QAEXXZ
-    void ReconfigureDrivetrain()
+    inline void ReconfigureDrivetrain()
     {
         return stub<member_func_t<void, vehCarSim>>(0x4CC0B0, this);
     }
 
     // 0x4CC0D0 | ?ConfigureDrivetrain@vehCarSim@@QAEXXZ
-    void ConfigureDrivetrain()
+    inline void ConfigureDrivetrain()
     {
         return stub<member_func_t<void, vehCarSim>>(0x4CC0D0, this);
     }
 
     // 0x4CC4E0 | ?UnconfigureDrivetrain@vehCarSim@@QAEXXZ
-    void UnconfigureDrivetrain()
+    inline void UnconfigureDrivetrain()
     {
         return stub<member_func_t<void, vehCarSim>>(0x4CC4E0, this);
     }
 
     // 0x4CC830 | ?SetResetPos@vehCarSim@@QAEXABVVector3@@@Z
-    void SetResetPos(class Vector3 const& arg1)
+    inline void SetResetPos(class Vector3 const& arg1)
     {
         return stub<member_func_t<void, vehCarSim, class Vector3 const&>>(0x4CC830, this, arg1);
     }
 
     // 0x4CC880 | ?ClearDamage@vehCarSim@@QAEXXZ
-    void ClearDamage()
+    inline void ClearDamage()
     {
         return stub<member_func_t<void, vehCarSim>>(0x4CC880, this);
     }
 
     // 0x4CC890 | ?GetSSSFactor@vehCarSim@@QAEMM@Z
-    f32 GetSSSFactor(f32 arg1)
+    inline float GetSSSFactor(float arg1)
     {
-        return stub<member_func_t<f32, vehCarSim, f32>>(0x4CC890, this, arg1);
+        return stub<member_func_t<float, vehCarSim, float>>(0x4CC890, this, arg1);
     }
 
     // 0x4CCAB0 | ?PlaybackReplay@vehCarSim@@QAEXXZ
-    void PlaybackReplay()
+    inline void PlaybackReplay()
     {
         return stub<member_func_t<void, vehCarSim>>(0x4CCAB0, this);
     }
 
     // 0x4CCB30 | ?RecordReplay@vehCarSim@@QAEXXZ
-    void RecordReplay()
+    inline void RecordReplay()
     {
         return stub<member_func_t<void, vehCarSim>>(0x4CCB30, this);
     }
 
     // 0x4CB8E0 | ??1vehCarSim@@UAE@XZ
-    ~vehCarSim() override
+    inline ~vehCarSim() override
     {
         stub<member_func_t<void, vehCarSim>>(0x4CB8E0, this);
     }
 
     // 0x4CC8E0 | ?Update@vehCarSim@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, vehCarSim>>(0x4CC8E0, this);
     }
 
     // 0x4CBA70 | ?Reset@vehCarSim@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, vehCarSim>>(0x4CBA70, this);
     }
 
     // 0x4CCC70 | ?FileIO@vehCarSim@@UAEXAAVdatParser@@@Z
-    void FileIO(class datParser& arg1) override
+    inline void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, vehCarSim, class datParser&>>(0x4CCC70, this, arg1);
     }
 
     // 0x4CCF10 | ?GetClassName@vehCarSim@@UAEPADXZ
-    char* GetClassName() override
+    inline char* GetClassName() override
     {
         return stub<member_func_t<char*, vehCarSim>>(0x4CCF10, this);
     }
 
     // 0x4CBAF0 | ?GetDirName@vehCarSim@@UAEPBDXZ
-    char const* GetDirName() override
+    inline char const* GetDirName() override
     {
         return stub<member_func_t<char const*, vehCarSim>>(0x4CBAF0, this);
     }

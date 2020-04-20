@@ -70,32 +70,32 @@ struct vehTrailer : dgPhysEntity
 {
 public:
     // 0x4D6F40 | ??0vehTrailer@@QAE@XZ
-    vehTrailer()
+    inline vehTrailer()
     {
         stub<member_func_t<void, vehTrailer>>(0x4D6F40, this);
     }
 
     // 0x4D72F0 | ?Init@vehTrailer@@QAEXPBDABVVector3@@PAVvehCarSim@@H@Z
-    void Init(char const* arg1, class Vector3 const& arg2, class vehCarSim* arg3, i32 arg4)
+    inline void Init(char const* arg1, class Vector3 const& arg2, class vehCarSim* arg3, int32_t arg4)
     {
-        return stub<member_func_t<void, vehTrailer, char const*, class Vector3 const&, class vehCarSim*, i32>>(
+        return stub<member_func_t<void, vehTrailer, char const*, class Vector3 const&, class vehCarSim*, int32_t>>(
             0x4D72F0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4D7980 | ?BottomedOut@vehTrailer@@QAEHXZ
-    i32 BottomedOut()
+    inline int32_t BottomedOut()
     {
-        return stub<member_func_t<i32, vehTrailer>>(0x4D7980, this);
+        return stub<member_func_t<int32_t, vehTrailer>>(0x4D7980, this);
     }
 
     // 0x4D7C50 | ?SetCarHitchOffset@vehTrailer@@QAEXXZ
-    void SetCarHitchOffset()
+    inline void SetCarHitchOffset()
     {
         return stub<member_func_t<void, vehTrailer>>(0x4D7C50, this);
     }
 
     // 0x4D7C80 | ?SetTrailerHitchOffset@vehTrailer@@QAEXXZ
-    void SetTrailerHitchOffset()
+    inline void SetTrailerHitchOffset()
     {
         return stub<member_func_t<void, vehTrailer>>(0x4D7C80, this);
     }
@@ -104,7 +104,7 @@ public:
     // Skipped (scalar/vector destructor)
 
     // 0x4D8500 | ?Update@vehTrailer@@WLE@AEXXZ
-    void Update()
+    inline void Update()
     {
         return stub<member_func_t<void, vehTrailer>>(0x4D8500, this);
     }
@@ -116,75 +116,75 @@ public:
     // vehTrailerInstance::`vftable' @ 0x5B2F84
 
     // 0x4D7DF0 | ?Init@vehTrailerInstance@@QAEXPBDABVVector3@@H@Z
-    void Init(char const* arg1, class Vector3 const& arg2, i32 arg3)
+    inline void Init(char const* arg1, class Vector3 const& arg2, int32_t arg3)
     {
-        return stub<member_func_t<void, vehTrailerInstance, char const*, class Vector3 const&, i32>>(
+        return stub<member_func_t<void, vehTrailerInstance, char const*, class Vector3 const&, int32_t>>(
             0x4D7DF0, this, arg1, arg2, arg3);
     }
 
     // 0x4D8420 | ?GetTrailerHitch@vehTrailerInstance@@QAE_NPAVVector3@@@Z
-    bool GetTrailerHitch(class Vector3* arg1)
+    inline bool GetTrailerHitch(class Vector3* arg1)
     {
         return stub<member_func_t<bool, vehTrailerInstance, class Vector3*>>(0x4D8420, this, arg1);
     }
 
     // 0x4D7810 | ?GetPosition@vehTrailerInstance@@UAEABVVector3@@XZ
-    class Vector3 const& GetPosition() override
+    inline class Vector3 const& GetPosition() override
     {
         return stub<member_func_t<class Vector3 const&, vehTrailerInstance>>(0x4D7810, this);
     }
 
     // 0x4D77F0 | ?GetMatrix@vehTrailerInstance@@UAEABVMatrix34@@AAV2@@Z
-    class Matrix34 const& GetMatrix(class Matrix34& arg1) override
+    inline class Matrix34 const& GetMatrix(class Matrix34& arg1) override
     {
         return stub<member_func_t<class Matrix34 const&, vehTrailerInstance, class Matrix34&>>(0x4D77F0, this, arg1);
     }
 
     // 0x4D77D0 | ?SetMatrix@vehTrailerInstance@@UAEXABVMatrix34@@@Z
-    void SetMatrix(class Matrix34 const& arg1) override
+    inline void SetMatrix(class Matrix34 const& arg1) override
     {
         return stub<member_func_t<void, vehTrailerInstance, class Matrix34 const&>>(0x4D77D0, this, arg1);
     }
 
     // 0x4D7820 | ?GetEntity@vehTrailerInstance@@UAEPAVdgPhysEntity@@XZ
-    class dgPhysEntity* GetEntity() override
+    inline class dgPhysEntity* GetEntity() override
     {
         return stub<member_func_t<class dgPhysEntity*, vehTrailerInstance>>(0x4D7820, this);
     }
 
     // 0x4D7830 | ?AttachEntity@vehTrailerInstance@@UAEPAVdgPhysEntity@@XZ
-    class dgPhysEntity* AttachEntity() override
+    inline class dgPhysEntity* AttachEntity() override
     {
         return stub<member_func_t<class dgPhysEntity*, vehTrailerInstance>>(0x4D7830, this);
     }
 
     // 0x4D7840 | ?GetVelocity@vehTrailerInstance@@UAEABVVector3@@XZ
-    class Vector3 const& GetVelocity() override
+    inline class Vector3 const& GetVelocity() override
     {
         return stub<member_func_t<class Vector3 const&, vehTrailerInstance>>(0x4D7840, this);
     }
 
     // 0x4D7F20 | ?Draw@vehTrailerInstance@@UAEXH@Z
-    void Draw(i32 arg1) override
+    inline void Draw(int32_t arg1) override
     {
-        return stub<member_func_t<void, vehTrailerInstance, i32>>(0x4D7F20, this, arg1);
+        return stub<member_func_t<void, vehTrailerInstance, int32_t>>(0x4D7F20, this, arg1);
     }
 
     // 0x4D81F0 | ?DrawShadow@vehTrailerInstance@@UAEXXZ
-    void DrawShadow() override
+    inline void DrawShadow() override
     {
         return stub<member_func_t<void, vehTrailerInstance>>(0x4D81F0, this);
     }
 
     // 0x4D8320 | ?DrawShadowMap@vehTrailerInstance@@UAEXXZ
-    void DrawShadowMap() override
+    inline void DrawShadowMap() override
     {
         return stub<member_func_t<void, vehTrailerInstance>>(0x4D8320, this);
     }
 
     // 0x4D7850 | ?SizeOf@vehTrailerInstance@@UAEIXZ
-    u32 SizeOf() override
+    inline uint32_t SizeOf() override
     {
-        return stub<member_func_t<u32, vehTrailerInstance>>(0x4D7850, this);
+        return stub<member_func_t<uint32_t, vehTrailerInstance>>(0x4D7850, this);
     }
 };

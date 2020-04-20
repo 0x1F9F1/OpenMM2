@@ -25,7 +25,7 @@
 */
 
 // 0x49D450 | ?jinit_d_post_controller@@YAXPAUjpeg_decompress_struct@@E@Z
-inline void jinit_d_post_controller(struct jpeg_decompress_struct* arg1, u8 arg2)
+inline void jinit_d_post_controller(struct jpeg_decompress_struct* arg1, uint8_t arg2)
 {
-    return stub<cdecl_t<void, struct jpeg_decompress_struct*, u8>>(0x49D450, arg1, arg2);
+    return stub<cdecl_t<void, struct jpeg_decompress_struct*, uint8_t>>(0x49D450, arg1, arg2);
 }

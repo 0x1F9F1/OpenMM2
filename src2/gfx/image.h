@@ -41,24 +41,23 @@ class gfxImage
 {
 public:
     // 0x4AE8C0 | ??1gfxImage@@AAE@XZ
-    ~gfxImage()
+    inline ~gfxImage()
     {
         stub<member_func_t<void, gfxImage>>(0x4AE8C0, this);
     }
 
     // 0x4AE920 | ?Create@gfxImage@@SAPAV1@HHW4gfxImageFormat@1@0H@Z
-    static inline class gfxImage* Create(
-        i32 arg1, i32 arg2, enum gfxImage::gfxImageFormat arg3, enum gfxImage::gfxImageFormat arg4, i32 arg5)
+    static inline class gfxImage* Create(int32_t arg1, int32_t arg2, enum gfxImage::gfxImageFormat arg3,
+        enum gfxImage::gfxImageFormat arg4, int32_t arg5)
     {
-        return stub<
-            cdecl_t<class gfxImage*, i32, i32, enum gfxImage::gfxImageFormat, enum gfxImage::gfxImageFormat, i32>>(
-            0x4AE920, arg1, arg2, arg3, arg4, arg5);
+        return stub<cdecl_t<class gfxImage*, int32_t, int32_t, enum gfxImage::gfxImageFormat,
+            enum gfxImage::gfxImageFormat, int32_t>>(0x4AE920, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x4AEA30 | ?GetFont@gfxImage@@SAPAV1@AAH0@Z
-    static inline class gfxImage* GetFont(i32& arg1, i32& arg2)
+    static inline class gfxImage* GetFont(int32_t& arg1, int32_t& arg2)
     {
-        return stub<cdecl_t<class gfxImage*, i32&, i32&>>(0x4AEA30, arg1, arg2);
+        return stub<cdecl_t<class gfxImage*, int32_t&, int32_t&>>(0x4AEA30, arg1, arg2);
     }
 
     // 0x4AEB60 | ?FreeFont@gfxImage@@SAXXZ
@@ -68,38 +67,38 @@ public:
     }
 
     // 0x4AEBA0 | ?Halve@gfxImage@@QAEXXZ
-    void Halve()
+    inline void Halve()
     {
         return stub<member_func_t<void, gfxImage>>(0x4AEBA0, this);
     }
 
     // 0x4AEC90 | ?GenerateMipmaps@gfxImage@@QAEXXZ
-    void GenerateMipmaps()
+    inline void GenerateMipmaps()
     {
         return stub<member_func_t<void, gfxImage>>(0x4AEC90, this);
     }
 
     // 0x4AEDC0 | ?Scale@gfxImage@@QAEXHH@Z
-    void Scale(i32 arg1, i32 arg2)
+    inline void Scale(int32_t arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, gfxImage, i32, i32>>(0x4AEDC0, this, arg1, arg2);
+        return stub<member_func_t<void, gfxImage, int32_t, int32_t>>(0x4AEDC0, this, arg1, arg2);
     }
 
     // 0x4AF1A0 | ?Reformat@gfxImage@@QAEXW4gfxImageFormat@1@0@Z
-    void Reformat(enum gfxImage::gfxImageFormat arg1, enum gfxImage::gfxImageFormat arg2)
+    inline void Reformat(enum gfxImage::gfxImageFormat arg1, enum gfxImage::gfxImageFormat arg2)
     {
         return stub<member_func_t<void, gfxImage, enum gfxImage::gfxImageFormat, enum gfxImage::gfxImageFormat>>(
             0x4AF1A0, this, arg1, arg2);
     }
 
     // 0x4AF2D0 | ?GetDominantColor@gfxImage@@QBEIXZ
-    u32 GetDominantColor()
+    inline uint32_t GetDominantColor()
     {
-        return stub<member_func_t<u32, gfxImage>>(0x4AF2D0, this);
+        return stub<member_func_t<uint32_t, gfxImage>>(0x4AF2D0, this);
     }
 
     // 0x4AF470 | ?Flip@gfxImage@@QAEXXZ
-    void Flip()
+    inline void Flip()
     {
         return stub<member_func_t<void, gfxImage>>(0x4AF470, this);
     }

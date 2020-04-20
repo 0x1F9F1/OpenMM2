@@ -34,31 +34,31 @@ public:
     // Skipped (scalar/vector destructor)
 
     // 0x53C030 | ??0CArrayList@@QAE@XZ
-    CArrayList()
+    inline CArrayList()
     {
         stub<member_func_t<void, CArrayList>>(0x53C030, this);
     }
 
     // 0x543D40 | ??1CArrayList@@QAE@XZ
-    ~CArrayList()
+    inline ~CArrayList()
     {
         stub<member_func_t<void, CArrayList>>(0x543D40, this);
     }
 
     // 0x543D50 | ?Append@CArrayList@@QAEXH@Z
-    void Append(i32 arg1)
+    inline void Append(int32_t arg1)
     {
-        return stub<member_func_t<void, CArrayList, i32>>(0x543D50, this, arg1);
+        return stub<member_func_t<void, CArrayList, int32_t>>(0x543D50, this, arg1);
     }
 
     // 0x543DB0 | ?SaveBinary@CArrayList@@QAEXPAVStream@@@Z
-    void SaveBinary(class Stream* arg1)
+    inline void SaveBinary(class Stream* arg1)
     {
         return stub<member_func_t<void, CArrayList, class Stream*>>(0x543DB0, this, arg1);
     }
 
     // 0x543DE0 | ?ReadBinary@CArrayList@@QAEXPAVStream@@@Z
-    void ReadBinary(class Stream* arg1)
+    inline void ReadBinary(class Stream* arg1)
     {
         return stub<member_func_t<void, CArrayList, class Stream*>>(0x543DE0, this, arg1);
     }

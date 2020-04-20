@@ -63,9 +63,9 @@
 */
 
 // 0x5310E0 | ?DecodeDIErrorMFlag@@YAXJ@Z
-inline void DecodeDIErrorMFlag(i32 arg1)
+inline void DecodeDIErrorMFlag(int32_t arg1)
 {
-    return stub<cdecl_t<void, i32>>(0x5310E0, arg1);
+    return stub<cdecl_t<void, int32_t>>(0x5310E0, arg1);
 }
 
 struct mmJoystick
@@ -75,164 +75,164 @@ public:
     // Skipped (scalar/vector destructor)
 
     // 0x530330 | ??0mmJoystick@@QAE@XZ
-    mmJoystick()
+    inline mmJoystick()
     {
         stub<member_func_t<void, mmJoystick>>(0x530330, this);
     }
 
     // 0x5303B0 | ??1mmJoystick@@QAE@XZ
-    ~mmJoystick()
+    inline ~mmJoystick()
     {
         stub<member_func_t<void, mmJoystick>>(0x5303B0, this);
     }
 
     // 0x5304B0 | ?Init@mmJoystick@@QAEHPAUIDirectInputDevice2A@@PAUHWND__@@@Z
-    i32 Init(struct IDirectInputDevice2A* arg1, struct HWND__* arg2)
+    inline int32_t Init(struct IDirectInputDevice2A* arg1, struct HWND__* arg2)
     {
-        return stub<member_func_t<i32, mmJoystick, struct IDirectInputDevice2A*, struct HWND__*>>(
+        return stub<member_func_t<int32_t, mmJoystick, struct IDirectInputDevice2A*, struct HWND__*>>(
             0x5304B0, this, arg1, arg2);
     }
 
     // 0x5305C0 | ?inputPrepareDevice@mmJoystick@@QAEHXZ
-    i32 inputPrepareDevice()
+    inline int32_t inputPrepareDevice()
     {
-        return stub<member_func_t<i32, mmJoystick>>(0x5305C0, this);
+        return stub<member_func_t<int32_t, mmJoystick>>(0x5305C0, this);
     }
 
     // 0x530770 | ?SetDeadZone@mmJoystick@@QAEHM@Z
-    i32 SetDeadZone(f32 arg1)
+    inline int32_t SetDeadZone(float arg1)
     {
-        return stub<member_func_t<i32, mmJoystick, f32>>(0x530770, this, arg1);
+        return stub<member_func_t<int32_t, mmJoystick, float>>(0x530770, this, arg1);
     }
 
     // 0x530810 | ?DisableAutoCenter@mmJoystick@@QAEHXZ
-    i32 DisableAutoCenter()
+    inline int32_t DisableAutoCenter()
     {
-        return stub<member_func_t<i32, mmJoystick>>(0x530810, this);
+        return stub<member_func_t<int32_t, mmJoystick>>(0x530810, this);
     }
 
     // 0x530860 | ?Poll@mmJoystick@@QAEKXZ
-    u32 Poll()
+    inline uint32_t Poll()
     {
-        return stub<member_func_t<u32, mmJoystick>>(0x530860, this);
+        return stub<member_func_t<uint32_t, mmJoystick>>(0x530860, this);
     }
 
     // 0x530970 | ?GetAxis@mmJoystick@@QAEMH@Z
-    f32 GetAxis(i32 arg1)
+    inline float GetAxis(int32_t arg1)
     {
-        return stub<member_func_t<f32, mmJoystick, i32>>(0x530970, this, arg1);
+        return stub<member_func_t<float, mmJoystick, int32_t>>(0x530970, this, arg1);
     }
 
     // 0x530A70 | ?GetButton@mmJoystick@@QAEMH@Z
-    f32 GetButton(i32 arg1)
+    inline float GetButton(int32_t arg1)
     {
-        return stub<member_func_t<f32, mmJoystick, i32>>(0x530A70, this, arg1);
+        return stub<member_func_t<float, mmJoystick, int32_t>>(0x530A70, this, arg1);
     }
 
     // 0x530AA0 | ?Update@mmJoystick@@QAEXXZ
-    void Update()
+    inline void Update()
     {
         return stub<member_func_t<void, mmJoystick>>(0x530AA0, this);
     }
 
     // 0x530B30 | ?ResetAxisCapture@mmJoystick@@QAEXXZ
-    void ResetAxisCapture()
+    inline void ResetAxisCapture()
     {
         return stub<member_func_t<void, mmJoystick>>(0x530B30, this);
     }
 
     // 0x530BB0 | ?InputCreateEffect@mmJoystick@@QAEXXZ
-    void InputCreateEffect()
+    inline void InputCreateEffect()
     {
         return stub<member_func_t<void, mmJoystick>>(0x530BB0, this);
     }
 
     // 0x530CE0 | ?InputInitEffect@mmJoystick@@QAEXXZ
-    void InputInitEffect()
+    inline void InputInitEffect()
     {
         return stub<member_func_t<void, mmJoystick>>(0x530CE0, this);
     }
 
     // 0x530D20 | ?InputStopEffect@mmJoystick@@QAEXXZ
-    void InputStopEffect()
+    inline void InputStopEffect()
     {
         return stub<member_func_t<void, mmJoystick>>(0x530D20, this);
     }
 
     // 0x530D60 | ?SetShake@mmJoystick@@QAEHKK@Z
-    i32 SetShake(u32 arg1, u32 arg2)
+    inline int32_t SetShake(uint32_t arg1, uint32_t arg2)
     {
-        return stub<member_func_t<i32, mmJoystick, u32, u32>>(0x530D60, this, arg1, arg2);
+        return stub<member_func_t<int32_t, mmJoystick, uint32_t, uint32_t>>(0x530D60, this, arg1, arg2);
     }
 
     // 0x530D90 | ?PlayShake@mmJoystick@@QAEHXZ
-    i32 PlayShake()
+    inline int32_t PlayShake()
     {
-        return stub<member_func_t<i32, mmJoystick>>(0x530D90, this);
+        return stub<member_func_t<int32_t, mmJoystick>>(0x530D90, this);
     }
 
     // 0x530DB0 | ?StopShake@mmJoystick@@QAEHXZ
-    i32 StopShake()
+    inline int32_t StopShake()
     {
-        return stub<member_func_t<i32, mmJoystick>>(0x530DB0, this);
+        return stub<member_func_t<int32_t, mmJoystick>>(0x530DB0, this);
     }
 
     // 0x530DD0 | ?PlayCollision@mmJoystick@@QAEHXZ
-    i32 PlayCollision()
+    inline int32_t PlayCollision()
     {
-        return stub<member_func_t<i32, mmJoystick>>(0x530DD0, this);
+        return stub<member_func_t<int32_t, mmJoystick>>(0x530DD0, this);
     }
 
     // 0x530DF0 | ?SetSteer@mmJoystick@@QAEHJ@Z
-    i32 SetSteer(i32 arg1)
+    inline int32_t SetSteer(int32_t arg1)
     {
-        return stub<member_func_t<i32, mmJoystick, i32>>(0x530DF0, this, arg1);
+        return stub<member_func_t<int32_t, mmJoystick, int32_t>>(0x530DF0, this, arg1);
     }
 
     // 0x530E10 | ?PlaySteer@mmJoystick@@QAEHXZ
-    i32 PlaySteer()
+    inline int32_t PlaySteer()
     {
-        return stub<member_func_t<i32, mmJoystick>>(0x530E10, this);
+        return stub<member_func_t<int32_t, mmJoystick>>(0x530E10, this);
     }
 
     // 0x530E30 | ?StopSteer@mmJoystick@@QAEHXZ
-    i32 StopSteer()
+    inline int32_t StopSteer()
     {
-        return stub<member_func_t<i32, mmJoystick>>(0x530E30, this);
+        return stub<member_func_t<int32_t, mmJoystick>>(0x530E30, this);
     }
 
     // 0x530E50 | ?SetFriction@mmJoystick@@QAEHJ@Z
-    i32 SetFriction(i32 arg1)
+    inline int32_t SetFriction(int32_t arg1)
     {
-        return stub<member_func_t<i32, mmJoystick, i32>>(0x530E50, this, arg1);
+        return stub<member_func_t<int32_t, mmJoystick, int32_t>>(0x530E50, this, arg1);
     }
 
     // 0x530E70 | ?PlayFriction@mmJoystick@@QAEHXZ
-    i32 PlayFriction()
+    inline int32_t PlayFriction()
     {
-        return stub<member_func_t<i32, mmJoystick>>(0x530E70, this);
+        return stub<member_func_t<int32_t, mmJoystick>>(0x530E70, this);
     }
 
     // 0x530E90 | ?StopFriction@mmJoystick@@QAEHXZ
-    i32 StopFriction()
+    inline int32_t StopFriction()
     {
-        return stub<member_func_t<i32, mmJoystick>>(0x530E90, this);
+        return stub<member_func_t<int32_t, mmJoystick>>(0x530E90, this);
     }
 
     // 0x530EB0 | ?GetFFEffect@mmJoystick@@QAEPAVmmEffectFF@@H@Z
-    class mmEffectFF* GetFFEffect(i32 arg1)
+    inline class mmEffectFF* GetFFEffect(int32_t arg1)
     {
-        return stub<member_func_t<class mmEffectFF*, mmJoystick, i32>>(0x530EB0, this, arg1);
+        return stub<member_func_t<class mmEffectFF*, mmJoystick, int32_t>>(0x530EB0, this, arg1);
     }
 
     // 0x530F00 | ?GetNumButtons@mmJoystick@@QAEHXZ
-    i32 GetNumButtons()
+    inline int32_t GetNumButtons()
     {
-        return stub<member_func_t<i32, mmJoystick>>(0x530F00, this);
+        return stub<member_func_t<int32_t, mmJoystick>>(0x530F00, this);
     }
 
     // 0x530F10 | ?PrintDeviceCaps@mmJoystick@@QAEXXZ
-    void PrintDeviceCaps()
+    inline void PrintDeviceCaps()
     {
         return stub<member_func_t<void, mmJoystick>>(0x530F10, this);
     }
@@ -242,43 +242,43 @@ struct mmJaxis
 {
 public:
     // 0x530230 | ??0mmJaxis@@QAE@XZ
-    mmJaxis()
+    inline mmJaxis()
     {
         stub<member_func_t<void, mmJaxis>>(0x530230, this);
     }
 
     // 0x530250 | ??1mmJaxis@@QAE@XZ
-    ~mmJaxis()
+    inline ~mmJaxis()
     {
         stub<member_func_t<void, mmJaxis>>(0x530250, this);
     }
 
     // 0x530260 | ?SetRange@mmJaxis@@QAEXMM@Z
-    void SetRange(f32 arg1, f32 arg2)
+    inline void SetRange(float arg1, float arg2)
     {
-        return stub<member_func_t<void, mmJaxis, f32, f32>>(0x530260, this, arg1, arg2);
+        return stub<member_func_t<void, mmJaxis, float, float>>(0x530260, this, arg1, arg2);
     }
 
     // 0x530280 | ?Normalize@mmJaxis@@QAEXM@Z
-    void Normalize(f32 arg1)
+    inline void Normalize(float arg1)
     {
-        return stub<member_func_t<void, mmJaxis, f32>>(0x530280, this, arg1);
+        return stub<member_func_t<void, mmJaxis, float>>(0x530280, this, arg1);
     }
 
     // 0x5302A0 | ?NormalizePOV@mmJaxis@@QAEXK@Z
-    void NormalizePOV(u32 arg1)
+    inline void NormalizePOV(uint32_t arg1)
     {
-        return stub<member_func_t<void, mmJaxis, u32>>(0x5302A0, this, arg1);
+        return stub<member_func_t<void, mmJaxis, uint32_t>>(0x5302A0, this, arg1);
     }
 
     // 0x5302E0 | ?Capture@mmJaxis@@QAEHXZ
-    i32 Capture()
+    inline int32_t Capture()
     {
-        return stub<member_func_t<i32, mmJaxis>>(0x5302E0, this);
+        return stub<member_func_t<int32_t, mmJaxis>>(0x5302E0, this);
     }
 
     // 0x530310 | ?ResetCapture@mmJaxis@@QAEXXZ
-    void ResetCapture()
+    inline void ResetCapture()
     {
         return stub<member_func_t<void, mmJaxis>>(0x530310, this);
     }

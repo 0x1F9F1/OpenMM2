@@ -55,135 +55,135 @@ public:
     // UICWArray::`vftable' @ 0x5B3A60
 
     // 0x4EF6D0 | ??0UICWArray@@QAE@XZ
-    UICWArray()
+    inline UICWArray()
     {
         stub<member_func_t<void, UICWArray>>(0x4EF6D0, this);
     }
 
     // 0x4EF840 | ?Init@UICWArray@@QAEXMMMMHVdatCallback@@@Z
-    void Init(f32 arg1, f32 arg2, f32 arg3, f32 arg4, i32 arg5, class datCallback arg6)
+    inline void Init(float arg1, float arg2, float arg3, float arg4, int32_t arg5, class datCallback arg6)
     {
-        return stub<member_func_t<void, UICWArray, f32, f32, f32, f32, i32, class datCallback>>(
+        return stub<member_func_t<void, UICWArray, float, float, float, float, int32_t, class datCallback>>(
             0x4EF840, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4EFA90 | ?VScrollCB@UICWArray@@QAEXXZ
-    void VScrollCB()
+    inline void VScrollCB()
     {
         return stub<member_func_t<void, UICWArray>>(0x4EFA90, this);
     }
 
     // 0x4EFB00 | ?SetVScrollVals@UICWArray@@QAEXXZ
-    void SetVScrollVals()
+    inline void SetVScrollVals()
     {
         return stub<member_func_t<void, UICWArray>>(0x4EFB00, this);
     }
 
     // 0x4EFB70 | ?SetVScrollPos@UICWArray@@QAEXXZ
-    void SetVScrollPos()
+    inline void SetVScrollPos()
     {
         return stub<member_func_t<void, UICWArray>>(0x4EFB70, this);
     }
 
     // 0x4EFBA0 | ?SetStartOffset@UICWArray@@QAEXH@Z
-    void SetStartOffset(i32 arg1)
+    inline void SetStartOffset(int32_t arg1)
     {
-        return stub<member_func_t<void, UICWArray, i32>>(0x4EFBA0, this, arg1);
+        return stub<member_func_t<void, UICWArray, int32_t>>(0x4EFBA0, this, arg1);
     }
 
     // 0x4EFBE0 | ?Redraw@UICWArray@@QAEXXZ
-    void Redraw()
+    inline void Redraw()
     {
         return stub<member_func_t<void, UICWArray>>(0x4EFBE0, this);
     }
 
     // 0x4EFFC0 | ?EnterCapture@UICWArray@@QAEXH@Z
-    void EnterCapture(i32 arg1)
+    inline void EnterCapture(int32_t arg1)
     {
-        return stub<member_func_t<void, UICWArray, i32>>(0x4EFFC0, this, arg1);
+        return stub<member_func_t<void, UICWArray, int32_t>>(0x4EFFC0, this, arg1);
     }
 
     // 0x4F0030 | ?ForceCapture@UICWArray@@QAEXXZ
-    void ForceCapture()
+    inline void ForceCapture()
     {
         return stub<member_func_t<void, UICWArray>>(0x4F0030, this);
     }
 
     // 0x4F0060 | ?AcceptCapture@UICWArray@@QAEXXZ
-    void AcceptCapture()
+    inline void AcceptCapture()
     {
         return stub<member_func_t<void, UICWArray>>(0x4F0060, this);
     }
 
     // 0x4F00B0 | ?ResetCapture@UICWArray@@QAEXXZ
-    void ResetCapture()
+    inline void ResetCapture()
     {
         return stub<member_func_t<void, UICWArray>>(0x4F00B0, this);
     }
 
     // 0x4F00E0 | ?CheckCapture@UICWArray@@QAEXXZ
-    void CheckCapture()
+    inline void CheckCapture()
     {
         return stub<member_func_t<void, UICWArray>>(0x4F00E0, this);
     }
 
     // 0x4F0190 | ?SaveCFG@UICWArray@@QAEXXZ
-    void SaveCFG()
+    inline void SaveCFG()
     {
         return stub<member_func_t<void, UICWArray>>(0x4F0190, this);
     }
 
     // 0x4F01D0 | ?LoadCFG@UICWArray@@QAEXXZ
-    void LoadCFG()
+    inline void LoadCFG()
     {
         return stub<member_func_t<void, UICWArray>>(0x4F01D0, this);
     }
 
     // 0x4F0220 | ?DefaultCFG@UICWArray@@QAEXXZ
-    void DefaultCFG()
+    inline void DefaultCFG()
     {
         return stub<member_func_t<void, UICWArray>>(0x4F0220, this);
     }
 
     // 0x4F0250 | ?DebugForceSetting@UICWArray@@QAEXXZ
-    void DebugForceSetting()
+    inline void DebugForceSetting()
     {
         return stub<member_func_t<void, UICWArray>>(0x4F0250, this);
     }
 
     // 0x4EF7A0 | ??1UICWArray@@UAE@XZ
-    ~UICWArray() override
+    inline ~UICWArray() override
     {
         stub<member_func_t<void, UICWArray>>(0x4EF7A0, this);
     }
 
     // 0x4EFF30 | ?Update@UICWArray@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, UICWArray>>(0x4EFF30, this);
     }
 
     // 0x4EF830 | ?Reset@UICWArray@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, UICWArray>>(0x4EF830, this);
     }
 
     // 0x4EFD80 | ?Action@UICWArray@@UAEXTeqEvent@@@Z
-    void Action(union eqEvent arg1) override
+    inline void Action(union eqEvent arg1) override
     {
         return stub<member_func_t<void, UICWArray, union eqEvent>>(0x4EFD80, this, arg1);
     }
 
     // 0x4EFEC0 | ?CaptureAction@UICWArray@@UAEXTeqEvent@@@Z
-    void CaptureAction(union eqEvent arg1) override
+    inline void CaptureAction(union eqEvent arg1) override
     {
         return stub<member_func_t<void, UICWArray, union eqEvent>>(0x4EFEC0, this, arg1);
     }
 
     // 0x4EFD40 | ?Switch@UICWArray@@UAEXH@Z
-    void Switch(i32 arg1) override
+    inline void Switch(int32_t arg1) override
     {
-        return stub<member_func_t<void, UICWArray, i32>>(0x4EFD40, this, arg1);
+        return stub<member_func_t<void, UICWArray, int32_t>>(0x4EFD40, this, arg1);
     }
 };

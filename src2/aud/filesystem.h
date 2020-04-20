@@ -40,79 +40,79 @@ class audFileSystem
 {
 public:
     // 0x5A6930 | ?Create@audFileSystem@@QAEPAV1@PAVaudManager@@@Z
-    class audFileSystem* Create(class audManager* arg1)
+    inline class audFileSystem* Create(class audManager* arg1)
     {
         return stub<member_func_t<class audFileSystem*, audFileSystem, class audManager*>>(0x5A6930, this, arg1);
     }
 
     // 0x5A6960 | ?Init@audFileSystem@@QAEXXZ
-    void Init()
+    inline void Init()
     {
         return stub<member_func_t<void, audFileSystem>>(0x5A6960, this);
     }
 
     // 0x5A6980 | ?Destroy@audFileSystem@@QAEXXZ
-    void Destroy()
+    inline void Destroy()
     {
         return stub<member_func_t<void, audFileSystem>>(0x5A6980, this);
     }
 
     // 0x5A69A0 | ?FileOpenRead@audFileSystem@@QAE_NPAD0_N@Z
-    bool FileOpenRead(char* arg1, char* arg2, bool arg3)
+    inline bool FileOpenRead(char* arg1, char* arg2, bool arg3)
     {
         return stub<member_func_t<bool, audFileSystem, char*, char*, bool>>(0x5A69A0, this, arg1, arg2, arg3);
     }
 
     // 0x5A6B10 | ?GetFileHandle@audFileSystem@@QAEPAXXZ
-    void* GetFileHandle()
+    inline void* GetFileHandle()
     {
         return stub<member_func_t<void*, audFileSystem>>(0x5A6B10, this);
     }
 
     // 0x5A6B20 | ?FileClose@audFileSystem@@QAEXXZ
-    void FileClose()
+    inline void FileClose()
     {
         return stub<member_func_t<void, audFileSystem>>(0x5A6B20, this);
     }
 
     // 0x5A6B40 | ?FileSeek@audFileSystem@@QAEXHH@Z
-    void FileSeek(i32 arg1, i32 arg2)
+    inline void FileSeek(int32_t arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, audFileSystem, i32, i32>>(0x5A6B40, this, arg1, arg2);
+        return stub<member_func_t<void, audFileSystem, int32_t, int32_t>>(0x5A6B40, this, arg1, arg2);
     }
 
     // 0x5A6B90 | ?GetFileSize@audFileSystem@@QAEHXZ
-    i32 GetFileSize()
+    inline int32_t GetFileSize()
     {
-        return stub<member_func_t<i32, audFileSystem>>(0x5A6B90, this);
+        return stub<member_func_t<int32_t, audFileSystem>>(0x5A6B90, this);
     }
 
     // 0x5A6BB0 | ?FileRead@audFileSystem@@QAEHPAXH@Z
-    i32 FileRead(void* arg1, i32 arg2)
+    inline int32_t FileRead(void* arg1, int32_t arg2)
     {
-        return stub<member_func_t<i32, audFileSystem, void*, i32>>(0x5A6BB0, this, arg1, arg2);
+        return stub<member_func_t<int32_t, audFileSystem, void*, int32_t>>(0x5A6BB0, this, arg1, arg2);
     }
 
     // 0x5A6BE0 | ?IsOpen@audFileSystem@@QAE_NXZ
-    bool IsOpen()
+    inline bool IsOpen()
     {
         return stub<member_func_t<bool, audFileSystem>>(0x5A6BE0, this);
     }
 
     // 0x5A6BF0 | ?IsPersistent@audFileSystem@@QAE_NXZ
-    bool IsPersistent()
+    inline bool IsPersistent()
     {
         return stub<member_func_t<bool, audFileSystem>>(0x5A6BF0, this);
     }
 
     // 0x5A6C00 | ?GetName@audFileSystem@@QAEPADXZ
-    char* GetName()
+    inline char* GetName()
     {
         return stub<member_func_t<char*, audFileSystem>>(0x5A6C00, this);
     }
 
     // 0x5A6C10 | ?GetPath@audFileSystem@@QAEPADXZ
-    char* GetPath()
+    inline char* GetPath()
     {
         return stub<member_func_t<char*, audFileSystem>>(0x5A6C10, this);
     }

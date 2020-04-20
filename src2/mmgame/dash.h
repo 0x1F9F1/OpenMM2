@@ -64,49 +64,49 @@ public:
     // mmExternalView::`vftable' @ 0x5B0DB0
 
     // 0x4317B0 | ??0mmExternalView@@QAE@XZ
-    mmExternalView()
+    inline mmExternalView()
     {
         stub<member_func_t<void, mmExternalView>>(0x4317B0, this);
     }
 
     // 0x431840 | ?Init@mmExternalView@@QAEXPAVmmPlayer@@@Z
-    void Init(class mmPlayer* arg1)
+    inline void Init(class mmPlayer* arg1)
     {
         return stub<member_func_t<void, mmExternalView, class mmPlayer*>>(0x431840, this, arg1);
     }
 
     // 0x42EA80 | ??1mmExternalView@@UAE@XZ
-    ~mmExternalView() override
+    inline ~mmExternalView() override
     {
         stub<member_func_t<void, mmExternalView>>(0x42EA80, this);
     }
 
     // 0x4319F0 | ?Cull@mmExternalView@@UAEXXZ
-    void Cull() override
+    inline void Cull() override
     {
         return stub<member_func_t<void, mmExternalView>>(0x4319F0, this);
     }
 
     // 0x4319E0 | ?Update@mmExternalView@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, mmExternalView>>(0x4319E0, this);
     }
 
     // 0x4319D0 | ?Reset@mmExternalView@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, mmExternalView>>(0x4319D0, this);
     }
 
     // 0x431880 | ?ResChange@mmExternalView@@UAEXHH@Z
-    void ResChange(i32 arg1, i32 arg2) override
+    inline void ResChange(int32_t arg1, int32_t arg2) override
     {
-        return stub<member_func_t<void, mmExternalView, i32, i32>>(0x431880, this, arg1, arg2);
+        return stub<member_func_t<void, mmExternalView, int32_t, int32_t>>(0x431880, this, arg1, arg2);
     }
 
     // 0x431C20 | ?GetClassNameA@mmExternalView@@UAEPADXZ
-    virtual char* GetClassNameA()
+    virtual inline char* GetClassNameA()
     {
         return stub<member_func_t<char*, mmExternalView>>(0x431C20, this);
     }
@@ -118,97 +118,97 @@ public:
     // mmDashView::`vftable' @ 0x5B0D78
 
     // 0x430610 | ??0mmDashView@@QAE@XZ
-    mmDashView()
+    inline mmDashView()
     {
         stub<member_func_t<void, mmDashView>>(0x430610, this);
     }
 
     // 0x430890 | ?Init@mmDashView@@QAEXPADPAVmmPlayer@@@Z
-    void Init(char* arg1, class mmPlayer* arg2)
+    inline void Init(char* arg1, class mmPlayer* arg2)
     {
         return stub<member_func_t<void, mmDashView, char*, class mmPlayer*>>(0x430890, this, arg1, arg2);
     }
 
     // 0x430A90 | ?LoadPkg@mmDashView@@AAEXPAD@Z
-    void LoadPkg(char* arg1)
+    inline void LoadPkg(char* arg1)
     {
         return stub<member_func_t<void, mmDashView, char*>>(0x430A90, this, arg1);
     }
 
     // 0x430C30 | ?LoadPivotInfo@mmDashView@@AAEXPAD@Z
-    void LoadPivotInfo(char* arg1)
+    inline void LoadPivotInfo(char* arg1)
     {
         return stub<member_func_t<void, mmDashView, char*>>(0x430C30, this, arg1);
     }
 
     // 0x430E60 | ?ActivateUntilTransitionIsOver@mmDashView@@QAEXXZ
-    void ActivateUntilTransitionIsOver()
+    inline void ActivateUntilTransitionIsOver()
     {
         return stub<member_func_t<void, mmDashView>>(0x430E60, this);
     }
 
     // 0x430E80 | ?Activate@mmDashView@@QAEXXZ
-    void Activate()
+    inline void Activate()
     {
         return stub<member_func_t<void, mmDashView>>(0x430E80, this);
     }
 
     // 0x430EA0 | ?Deactivate@mmDashView@@QAEXXZ
-    void Deactivate()
+    inline void Deactivate()
     {
         return stub<member_func_t<void, mmDashView>>(0x430EA0, this);
     }
 
     // 0x430EC0 | ?TempDeactivate@mmDashView@@QAEXXZ
-    void TempDeactivate()
+    inline void TempDeactivate()
     {
         return stub<member_func_t<void, mmDashView>>(0x430EC0, this);
     }
 
     // 0x4307B0 | ??1mmDashView@@UAE@XZ
-    ~mmDashView() override
+    inline ~mmDashView() override
     {
         stub<member_func_t<void, mmDashView>>(0x4307B0, this);
     }
 
     // 0x430FB0 | ?Cull@mmDashView@@UAEXXZ
-    void Cull() override
+    inline void Cull() override
     {
         return stub<member_func_t<void, mmDashView>>(0x430FB0, this);
     }
 
     // 0x430ED0 | ?Update@mmDashView@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, mmDashView>>(0x430ED0, this);
     }
 
     // 0x430D90 | ?Reset@mmDashView@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, mmDashView>>(0x430D90, this);
     }
 
     // 0x4315D0 | ?FileIO@mmDashView@@EAEXAAVdatParser@@@Z
-    void FileIO(class datParser& arg1) override
+    inline void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, mmDashView, class datParser&>>(0x4315D0, this, arg1);
     }
 
     // 0x430E00 | ?AfterLoad@mmDashView@@UAEXXZ
-    void AfterLoad() override
+    inline void AfterLoad() override
     {
         return stub<member_func_t<void, mmDashView>>(0x430E00, this);
     }
 
     // 0x430DA0 | ?BeforeSave@mmDashView@@UAEXXZ
-    void BeforeSave() override
+    inline void BeforeSave() override
     {
         return stub<member_func_t<void, mmDashView>>(0x430DA0, this);
     }
 
     // 0x431C30 | ?GetClassNameA@mmDashView@@UAEPADXZ
-    virtual char* GetClassNameA()
+    virtual inline char* GetClassNameA()
     {
         return stub<member_func_t<char*, mmDashView>>(0x431C30, this);
     }

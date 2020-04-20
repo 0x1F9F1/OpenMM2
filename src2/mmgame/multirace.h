@@ -48,97 +48,97 @@ public:
     // mmMultiRace::`vftable' @ 0x5B0AB0
 
     // 0x428260 | ??0mmMultiRace@@QAE@XZ
-    mmMultiRace()
+    inline mmMultiRace()
     {
         stub<member_func_t<void, mmMultiRace>>(0x428260, this);
     }
 
     // 0x429BE0 | ?SetTimeoutOn@mmMultiRace@@QAEXXZ
-    void SetTimeoutOn()
+    inline void SetTimeoutOn()
     {
         return stub<member_func_t<void, mmMultiRace>>(0x429BE0, this);
     }
 
     // 0x429C10 | ?SetTimeoutOff@mmMultiRace@@QAEXXZ
-    void SetTimeoutOff()
+    inline void SetTimeoutOff()
     {
         return stub<member_func_t<void, mmMultiRace>>(0x429C10, this);
     }
 
     // 0x4282A0 | ??1mmMultiRace@@UAE@XZ
-    ~mmMultiRace() override
+    inline ~mmMultiRace() override
     {
         stub<member_func_t<void, mmMultiRace>>(0x4282A0, this);
     }
 
     // 0x428AD0 | ?Reset@mmMultiRace@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, mmMultiRace>>(0x428AD0, this);
     }
 
     // 0x428340 | ?Init@mmMultiRace@@UAEHXZ
-    i32 Init() override
+    inline int32_t Init() override
     {
-        return stub<member_func_t<i32, mmMultiRace>>(0x428340, this);
+        return stub<member_func_t<int32_t, mmMultiRace>>(0x428340, this);
     }
 
     // 0x428430 | ?InitMyPlayer@mmMultiRace@@UAEXXZ
-    void InitMyPlayer() override
+    inline void InitMyPlayer() override
     {
         return stub<member_func_t<void, mmMultiRace>>(0x428430, this);
     }
 
     // 0x4284F0 | ?InitGameObjects@mmMultiRace@@UAEXXZ
-    void InitGameObjects() override
+    inline void InitGameObjects() override
     {
         return stub<member_func_t<void, mmMultiRace>>(0x4284F0, this);
     }
 
     // 0x4284A0 | ?InitHUD@mmMultiRace@@UAEXXZ
-    void InitHUD() override
+    inline void InitHUD() override
     {
         return stub<member_func_t<void, mmMultiRace>>(0x4284A0, this);
     }
 
     // 0x428BA0 | ?UpdateGameInput@mmMultiRace@@UAEXH@Z
-    void UpdateGameInput(i32 arg1) override
+    inline void UpdateGameInput(int32_t arg1) override
     {
-        return stub<member_func_t<void, mmMultiRace, i32>>(0x428BA0, this, arg1);
+        return stub<member_func_t<void, mmMultiRace, int32_t>>(0x428BA0, this, arg1);
     }
 
     // 0x428BE0 | ?UpdateGame@mmMultiRace@@UAEXXZ
-    void UpdateGame() override
+    inline void UpdateGame() override
     {
         return stub<member_func_t<void, mmMultiRace>>(0x428BE0, this);
     }
 
     // 0x429440 | ?SwitchState@mmMultiRace@@UAEXH@Z
-    void SwitchState(i32 arg1) override
+    inline void SwitchState(int32_t arg1) override
     {
-        return stub<member_func_t<void, mmMultiRace, i32>>(0x429440, this, arg1);
+        return stub<member_func_t<void, mmMultiRace, int32_t>>(0x429440, this, arg1);
     }
 
     // 0x429D80 | ?GetWaypoints@mmMultiRace@@UAEPAVmmWaypoints@@XZ
-    class mmWaypoints* GetWaypoints() override
+    inline class mmWaypoints* GetWaypoints() override
     {
         return stub<member_func_t<class mmWaypoints*, mmMultiRace>>(0x429D80, this);
     }
 
     // 0x428700 | ?InitNetworkPlayers@mmMultiRace@@UAEXXZ
-    void InitNetworkPlayers() override
+    inline void InitNetworkPlayers() override
     {
         return stub<member_func_t<void, mmMultiRace>>(0x428700, this);
     }
 
     // 0x429450 | ?SystemMessage@mmMultiRace@@UAEXPAUNETSYS_MSG@@@Z
-    void SystemMessage(struct NETSYS_MSG* arg1) override
+    inline void SystemMessage(struct NETSYS_MSG* arg1) override
     {
         return stub<member_func_t<void, mmMultiRace, struct NETSYS_MSG*>>(0x429450, this, arg1);
     }
 
     // 0x429560 | ?GameMessage@mmMultiRace@@UAEXPAUNET_RCXHEAD@@@Z
-    void GameMessage(struct NET_RCXHEAD* arg1) override
+    inline void GameMessage(struct NET_RCXHEAD* arg1) override
     {
         return stub<member_func_t<void, mmMultiRace, struct NET_RCXHEAD*>>(0x429560, this, arg1);
     }

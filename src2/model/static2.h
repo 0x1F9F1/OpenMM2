@@ -46,64 +46,64 @@ class modStatic
 {
 public:
     // 0x4A4550 | ?Draw@modStatic@@QBEXPAVmodShader@@@Z
-    void Draw(class modShader* arg1)
+    inline void Draw(class modShader* arg1)
     {
         return stub<member_func_t<void, modStatic, class modShader*>>(0x4A4550, this, arg1);
     }
 
     // 0x4A49A0 | ?Optimize@modStatic@@QAEXPAVmodShader@@@Z
-    void Optimize(class modShader* arg1)
+    inline void Optimize(class modShader* arg1)
     {
         return stub<member_func_t<void, modStatic, class modShader*>>(0x4A49A0, this, arg1);
     }
 
     // 0x4A4A20 | ?DrawNoAlpha@modStatic@@QBEXPAVmodShader@@@Z
-    void DrawNoAlpha(class modShader* arg1)
+    inline void DrawNoAlpha(class modShader* arg1)
     {
         return stub<member_func_t<void, modStatic, class modShader*>>(0x4A4A20, this, arg1);
     }
 
     // 0x4A4A50 | ?DrawEnvMapped@modStatic@@QBEXPAVmodShader@@PAVgfxTexture@@M@Z
-    void DrawEnvMapped(class modShader* arg1, class gfxTexture* arg2, f32 arg3)
+    inline void DrawEnvMapped(class modShader* arg1, class gfxTexture* arg2, float arg3)
     {
-        return stub<member_func_t<void, modStatic, class modShader*, class gfxTexture*, f32>>(
+        return stub<member_func_t<void, modStatic, class modShader*, class gfxTexture*, float>>(
             0x4A4A50, this, arg1, arg2, arg3);
     }
 
     // 0x4A4B30 | ?DrawOrthoMapped@modStatic@@QBEXPAVmodShader@@PAVgfxTexture@@MI@Z
-    void DrawOrthoMapped(class modShader* arg1, class gfxTexture* arg2, f32 arg3, u32 arg4)
+    inline void DrawOrthoMapped(class modShader* arg1, class gfxTexture* arg2, float arg3, uint32_t arg4)
     {
-        return stub<member_func_t<void, modStatic, class modShader*, class gfxTexture*, f32, u32>>(
+        return stub<member_func_t<void, modStatic, class modShader*, class gfxTexture*, float, uint32_t>>(
             0x4A4B30, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4A4C50 | ?DrawWithTexGenAndTexMatrix@modStatic@@QBEXXZ
-    void DrawWithTexGenAndTexMatrix()
+    inline void DrawWithTexGenAndTexMatrix()
     {
         return stub<member_func_t<void, modStatic>>(0x4A4C50, this);
     }
 
     // 0x4A4CA0 | ?Clone@modStatic@@QBEPAV1@XZ
-    class modStatic* Clone()
+    inline class modStatic* Clone()
     {
         return stub<member_func_t<class modStatic*, modStatic>>(0x4A4CA0, this);
     }
 
     // 0x4A4D60 | ?CopyFrom@modStatic@@QAEXPBV1@@Z
-    void CopyFrom(class modStatic const* arg1)
+    inline void CopyFrom(class modStatic const* arg1)
     {
         return stub<member_func_t<void, modStatic, class modStatic const*>>(0x4A4D60, this, arg1);
     }
 
     // 0x4A4DB0 | ?GetAdjunctCount@modStatic@@QBEHXZ
-    i32 GetAdjunctCount()
+    inline int32_t GetAdjunctCount()
     {
-        return stub<member_func_t<i32, modStatic>>(0x4A4DB0, this);
+        return stub<member_func_t<int32_t, modStatic>>(0x4A4DB0, this);
     }
 
     // 0x4A4DE0 | ?GetTriCount@modStatic@@QBEHXZ
-    i32 GetTriCount()
+    inline int32_t GetTriCount()
     {
-        return stub<member_func_t<i32, modStatic>>(0x4A4DE0, this);
+        return stub<member_func_t<int32_t, modStatic>>(0x4A4DE0, this);
     }
 };

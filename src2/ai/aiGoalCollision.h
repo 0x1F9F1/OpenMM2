@@ -37,44 +37,44 @@ public:
     // aiGoalCollision::`vftable' @ 0x5B5C14
 
     // 0x56F550 | ??0aiGoalCollision@@QAE@PAVaiRailSet@@PAVaiVehicleSpline@@@Z
-    aiGoalCollision(class aiRailSet* arg1, class aiVehicleSpline* arg2)
+    inline aiGoalCollision(class aiRailSet* arg1, class aiVehicleSpline* arg2)
     {
         stub<member_func_t<void, aiGoalCollision, class aiRailSet*, class aiVehicleSpline*>>(
             0x56F550, this, arg1, arg2);
     }
 
     // 0x56F580 | ??1aiGoalCollision@@QAE@XZ
-    ~aiGoalCollision()
+    inline ~aiGoalCollision()
     {
         stub<member_func_t<void, aiGoalCollision>>(0x56F580, this);
     }
 
     // 0x56F620 | ?Context@aiGoalCollision@@QAEHXZ
-    i32 Context()
+    inline int32_t Context()
     {
-        return stub<member_func_t<i32, aiGoalCollision>>(0x56F620, this);
+        return stub<member_func_t<int32_t, aiGoalCollision>>(0x56F620, this);
     }
 
     // 0x56F640 | ?Priority@aiGoalCollision@@QAEHXZ
-    i32 Priority()
+    inline int32_t Priority()
     {
-        return stub<member_func_t<i32, aiGoalCollision>>(0x56F640, this);
+        return stub<member_func_t<int32_t, aiGoalCollision>>(0x56F640, this);
     }
 
     // 0x56F590 | ?Init@aiGoalCollision@@UAEXXZ
-    void Init() override
+    inline void Init() override
     {
         return stub<member_func_t<void, aiGoalCollision>>(0x56F590, this);
     }
 
     // 0x56F5A0 | ?Reset@aiGoalCollision@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, aiGoalCollision>>(0x56F5A0, this);
     }
 
     // 0x56F5B0 | ?Update@aiGoalCollision@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, aiGoalCollision>>(0x56F5B0, this);
     }

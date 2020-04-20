@@ -37,32 +37,32 @@ public:
     // Dialog_Host::`vftable' @ 0x5B3F24
 
     // 0x4FAD20 | ??0Dialog_Host@@QAE@HMMMMPAD@Z
-    Dialog_Host(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    inline Dialog_Host(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
     {
-        stub<member_func_t<void, Dialog_Host, i32, f32, f32, f32, f32, char*>>(
+        stub<member_func_t<void, Dialog_Host, int32_t, float, float, float, float, char*>>(
             0x4FAD20, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x4FAF90 | ?PasswordCallback@Dialog_Host@@QAEXXZ
-    void PasswordCallback()
+    inline void PasswordCallback()
     {
         return stub<member_func_t<void, Dialog_Host>>(0x4FAF90, this);
     }
 
     // 0x4FAFA0 | ?Clear@Dialog_Host@@QAEXXZ
-    void Clear()
+    inline void Clear()
     {
         return stub<member_func_t<void, Dialog_Host>>(0x4FAFA0, this);
     }
 
     // 0x4FAF40 | ??1Dialog_Host@@UAE@XZ
-    ~Dialog_Host() override
+    inline ~Dialog_Host() override
     {
         stub<member_func_t<void, Dialog_Host>>(0x4FAF40, this);
     }
 
     // 0x4FAF50 | ?PreSetup@Dialog_Host@@UAEXXZ
-    void PreSetup() override
+    inline void PreSetup() override
     {
         return stub<member_func_t<void, Dialog_Host>>(0x4FAF50, this);
     }

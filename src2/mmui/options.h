@@ -37,31 +37,31 @@ public:
     // OptionsMenu::`vftable' @ 0x5B434C
 
     // 0x502950 | ??0OptionsMenu@@QAE@H@Z
-    OptionsMenu(i32 arg1)
+    inline OptionsMenu(int32_t arg1)
     {
-        stub<member_func_t<void, OptionsMenu, i32>>(0x502950, this, arg1);
+        stub<member_func_t<void, OptionsMenu, int32_t>>(0x502950, this, arg1);
     }
 
     // 0x502CE0 | ?FocusDescription@OptionsMenu@@QAEXHH@Z
-    void FocusDescription(i32 arg1, i32 arg2)
+    inline void FocusDescription(int32_t arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, OptionsMenu, i32, i32>>(0x502CE0, this, arg1, arg2);
+        return stub<member_func_t<void, OptionsMenu, int32_t, int32_t>>(0x502CE0, this, arg1, arg2);
     }
 
     // 0x502C70 | ??1OptionsMenu@@UAE@XZ
-    ~OptionsMenu() override
+    inline ~OptionsMenu() override
     {
         stub<member_func_t<void, OptionsMenu>>(0x502C70, this);
     }
 
     // 0x502C80 | ?PreSetup@OptionsMenu@@UAEXXZ
-    void PreSetup() override
+    inline void PreSetup() override
     {
         return stub<member_func_t<void, OptionsMenu>>(0x502C80, this);
     }
 
     // 0x502CC0 | ?PostSetup@OptionsMenu@@UAEXXZ
-    void PostSetup() override
+    inline void PostSetup() override
     {
         return stub<member_func_t<void, OptionsMenu>>(0x502CC0, this);
     }

@@ -30,31 +30,32 @@
 */
 
 // 0x49BB00 | ?jdiv_round_up@@YAJJJ@Z
-inline i32 jdiv_round_up(i32 arg1, i32 arg2)
+inline int32_t jdiv_round_up(int32_t arg1, int32_t arg2)
 {
-    return stub<cdecl_t<i32, i32, i32>>(0x49BB00, arg1, arg2);
+    return stub<cdecl_t<int32_t, int32_t, int32_t>>(0x49BB00, arg1, arg2);
 }
 
 // 0x49BB20 | ?jround_up@@YAJJJ@Z
-inline i32 jround_up(i32 arg1, i32 arg2)
+inline int32_t jround_up(int32_t arg1, int32_t arg2)
 {
-    return stub<cdecl_t<i32, i32, i32>>(0x49BB20, arg1, arg2);
+    return stub<cdecl_t<int32_t, int32_t, int32_t>>(0x49BB20, arg1, arg2);
 }
 
 // 0x49BB40 | ?jcopy_sample_rows@@YAXPAPAEH0HHI@Z
-inline void jcopy_sample_rows(u8** arg1, i32 arg2, u8** arg3, i32 arg4, i32 arg5, u32 arg6)
+inline void jcopy_sample_rows(uint8_t** arg1, int32_t arg2, uint8_t** arg3, int32_t arg4, int32_t arg5, uint32_t arg6)
 {
-    return stub<cdecl_t<void, u8**, i32, u8**, i32, i32, u32>>(0x49BB40, arg1, arg2, arg3, arg4, arg5, arg6);
+    return stub<cdecl_t<void, uint8_t**, int32_t, uint8_t**, int32_t, int32_t, uint32_t>>(
+        0x49BB40, arg1, arg2, arg3, arg4, arg5, arg6);
 }
 
 // 0x49BB90 | ?jcopy_block_row@@YAXPAY0EA@F0I@Z
-inline void jcopy_block_row(i16 (*arg1)[64], i16 (*arg2)[64], u32 arg3)
+inline void jcopy_block_row(int16_t (*arg1)[64], int16_t (*arg2)[64], uint32_t arg3)
 {
-    return stub<cdecl_t<void, i16(*)[64], i16(*)[64], u32>>(0x49BB90, arg1, arg2, arg3);
+    return stub<cdecl_t<void, int16_t(*)[64], int16_t(*)[64], uint32_t>>(0x49BB90, arg1, arg2, arg3);
 }
 
 // 0x49BBC0 | ?jzero_far@@YAXPAXI@Z
-inline void jzero_far(void* arg1, u32 arg2)
+inline void jzero_far(void* arg1, uint32_t arg2)
 {
-    return stub<cdecl_t<void, void*, u32>>(0x49BBC0, arg1, arg2);
+    return stub<cdecl_t<void, void*, uint32_t>>(0x49BBC0, arg1, arg2);
 }

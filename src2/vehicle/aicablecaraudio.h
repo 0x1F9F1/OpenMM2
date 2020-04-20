@@ -41,43 +41,43 @@ public:
     // aiCableCarAudio::`vftable' @ 0x5B8754
 
     // 0x59D350 | ??0aiCableCarAudio@@QAE@XZ
-    aiCableCarAudio()
+    inline aiCableCarAudio()
     {
         stub<member_func_t<void, aiCableCarAudio>>(0x59D350, this);
     }
 
     // 0x59D400 | ?Init@aiCableCarAudio@@QAEXPAVVector3@@PAM@Z
-    void Init(class Vector3* arg1, f32* arg2)
+    inline void Init(class Vector3* arg1, float* arg2)
     {
-        return stub<member_func_t<void, aiCableCarAudio, class Vector3*, f32*>>(0x59D400, this, arg1, arg2);
+        return stub<member_func_t<void, aiCableCarAudio, class Vector3*, float*>>(0x59D400, this, arg1, arg2);
     }
 
     // 0x59D440 | ?Reset@aiCableCarAudio@@QAEXXZ
-    void Reset()
+    inline void Reset()
     {
         return stub<member_func_t<void, aiCableCarAudio>>(0x59D440, this);
     }
 
     // 0x59D490 | ?UpdateAudio@aiCableCarAudio@@QAEHM@Z
-    i32 UpdateAudio(f32 arg1)
+    inline int32_t UpdateAudio(float arg1)
     {
-        return stub<member_func_t<i32, aiCableCarAudio, f32>>(0x59D490, this, arg1);
+        return stub<member_func_t<int32_t, aiCableCarAudio, float>>(0x59D490, this, arg1);
     }
 
     // 0x59D530 | ?AssignSounds@aiCableCarAudio@@UAEXXZ
-    void AssignSounds() override
+    inline void AssignSounds() override
     {
         return stub<member_func_t<void, aiCableCarAudio>>(0x59D530, this);
     }
 
     // 0x59D450 | ?UnAssignSounds@aiCableCarAudio@@UAEXH@Z
-    void UnAssignSounds(i32 arg1) override
+    inline void UnAssignSounds(int32_t arg1) override
     {
-        return stub<member_func_t<void, aiCableCarAudio, i32>>(0x59D450, this, arg1);
+        return stub<member_func_t<void, aiCableCarAudio, int32_t>>(0x59D450, this, arg1);
     }
 
     // 0x59D460 | ?UpdateAudio@aiCableCarAudio@@UAEXXZ
-    void UpdateAudio() override
+    inline void UpdateAudio() override
     {
         return stub<member_func_t<void, aiCableCarAudio>>(0x59D460, this);
     }

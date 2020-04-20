@@ -32,9 +32,9 @@
 */
 
 // 0x497D10 | ?jpeg_CreateDecompress@@YAXPAUjpeg_decompress_struct@@HI@Z
-inline void jpeg_CreateDecompress(struct jpeg_decompress_struct* arg1, i32 arg2, u32 arg3)
+inline void jpeg_CreateDecompress(struct jpeg_decompress_struct* arg1, int32_t arg2, uint32_t arg3)
 {
-    return stub<cdecl_t<void, struct jpeg_decompress_struct*, i32, u32>>(0x497D10, arg1, arg2, arg3);
+    return stub<cdecl_t<void, struct jpeg_decompress_struct*, int32_t, uint32_t>>(0x497D10, arg1, arg2, arg3);
 }
 
 // 0x497DF0 | ?jpeg_destroy_decompress@@YAXPAUjpeg_decompress_struct@@@Z
@@ -50,31 +50,31 @@ inline void jpeg_abort_decompress(struct jpeg_decompress_struct* arg1)
 }
 
 // 0x497E30 | ?jpeg_read_header@@YAHPAUjpeg_decompress_struct@@E@Z
-inline i32 jpeg_read_header(struct jpeg_decompress_struct* arg1, u8 arg2)
+inline int32_t jpeg_read_header(struct jpeg_decompress_struct* arg1, uint8_t arg2)
 {
-    return stub<cdecl_t<i32, struct jpeg_decompress_struct*, u8>>(0x497E30, arg1, arg2);
+    return stub<cdecl_t<int32_t, struct jpeg_decompress_struct*, uint8_t>>(0x497E30, arg1, arg2);
 }
 
 // 0x497EB0 | ?jpeg_consume_input@@YAHPAUjpeg_decompress_struct@@@Z
-inline i32 jpeg_consume_input(struct jpeg_decompress_struct* arg1)
+inline int32_t jpeg_consume_input(struct jpeg_decompress_struct* arg1)
 {
-    return stub<cdecl_t<i32, struct jpeg_decompress_struct*>>(0x497EB0, arg1);
+    return stub<cdecl_t<int32_t, struct jpeg_decompress_struct*>>(0x497EB0, arg1);
 }
 
 // 0x498130 | ?jpeg_input_complete@@YAEPAUjpeg_decompress_struct@@@Z
-inline u8 jpeg_input_complete(struct jpeg_decompress_struct* arg1)
+inline uint8_t jpeg_input_complete(struct jpeg_decompress_struct* arg1)
 {
-    return stub<cdecl_t<u8, struct jpeg_decompress_struct*>>(0x498130, arg1);
+    return stub<cdecl_t<uint8_t, struct jpeg_decompress_struct*>>(0x498130, arg1);
 }
 
 // 0x498180 | ?jpeg_has_multiple_scans@@YAEPAUjpeg_decompress_struct@@@Z
-inline u8 jpeg_has_multiple_scans(struct jpeg_decompress_struct* arg1)
+inline uint8_t jpeg_has_multiple_scans(struct jpeg_decompress_struct* arg1)
 {
-    return stub<cdecl_t<u8, struct jpeg_decompress_struct*>>(0x498180, arg1);
+    return stub<cdecl_t<uint8_t, struct jpeg_decompress_struct*>>(0x498180, arg1);
 }
 
 // 0x4981D0 | ?jpeg_finish_decompress@@YAEPAUjpeg_decompress_struct@@@Z
-inline u8 jpeg_finish_decompress(struct jpeg_decompress_struct* arg1)
+inline uint8_t jpeg_finish_decompress(struct jpeg_decompress_struct* arg1)
 {
-    return stub<cdecl_t<u8, struct jpeg_decompress_struct*>>(0x4981D0, arg1);
+    return stub<cdecl_t<uint8_t, struct jpeg_decompress_struct*>>(0x4981D0, arg1);
 }

@@ -47,25 +47,25 @@ struct mmStatePack : dgStatePack
 {
 public:
     // 0x523310 | ?SetDefaults@mmStatePack@@QAEXPAD0@Z
-    void SetDefaults(char* arg1, char* arg2)
+    inline void SetDefaults(char* arg1, char* arg2)
     {
         return stub<member_func_t<void, mmStatePack, char*, char*>>(0x523310, this, arg1, arg2);
     }
 
     // 0x523590 | ?ParseStateArgs@mmStatePack@@QAE_NXZ
-    bool ParseStateArgs()
+    inline bool ParseStateArgs()
     {
         return stub<member_func_t<bool, mmStatePack>>(0x523590, this);
     }
 
     // 0x5237B0 | ??1mmStatePack@@QAE@XZ
-    ~mmStatePack()
+    inline ~mmStatePack()
     {
         stub<member_func_t<void, mmStatePack>>(0x5237B0, this);
     }
 
     // 0x523800 | ??0mmStatePack@@QAE@XZ
-    mmStatePack()
+    inline mmStatePack()
     {
         stub<member_func_t<void, mmStatePack>>(0x523800, this);
     }
@@ -75,44 +75,44 @@ struct NetStartArray
 {
 public:
     // 0x5235A0 | ??0NetStartArray@@QAE@XZ
-    NetStartArray()
+    inline NetStartArray()
     {
         stub<member_func_t<void, NetStartArray>>(0x5235A0, this);
     }
 
     // 0x5235B0 | ??1NetStartArray@@QAE@XZ
-    ~NetStartArray()
+    inline ~NetStartArray()
     {
         stub<member_func_t<void, NetStartArray>>(0x5235B0, this);
     }
 
     // 0x5235C0 | ?Clear@NetStartArray@@QAEXXZ
-    void Clear()
+    inline void Clear()
     {
         return stub<member_func_t<void, NetStartArray>>(0x5235C0, this);
     }
 
     // 0x5235D0 | ?GetIndex@NetStartArray@@QAEHK@Z
-    i32 GetIndex(u32 arg1)
+    inline int32_t GetIndex(uint32_t arg1)
     {
-        return stub<member_func_t<i32, NetStartArray, u32>>(0x5235D0, this, arg1);
+        return stub<member_func_t<int32_t, NetStartArray, uint32_t>>(0x5235D0, this, arg1);
     }
 
     // 0x5235F0 | ?ClearIndex@NetStartArray@@QAEXK@Z
-    void ClearIndex(u32 arg1)
+    inline void ClearIndex(uint32_t arg1)
     {
-        return stub<member_func_t<void, NetStartArray, u32>>(0x5235F0, this, arg1);
+        return stub<member_func_t<void, NetStartArray, uint32_t>>(0x5235F0, this, arg1);
     }
 
     // 0x523610 | ?AssignOpenIndex@NetStartArray@@QAEHK@Z
-    i32 AssignOpenIndex(u32 arg1)
+    inline int32_t AssignOpenIndex(uint32_t arg1)
     {
-        return stub<member_func_t<i32, NetStartArray, u32>>(0x523610, this, arg1);
+        return stub<member_func_t<int32_t, NetStartArray, uint32_t>>(0x523610, this, arg1);
     }
 
     // 0x523650 | ?Init@NetStartArray@@QAEXPAK@Z
-    void Init(u32* arg1)
+    inline void Init(uint32_t* arg1)
     {
-        return stub<member_func_t<void, NetStartArray, u32*>>(0x523650, this, arg1);
+        return stub<member_func_t<void, NetStartArray, uint32_t*>>(0x523650, this, arg1);
     }
 };

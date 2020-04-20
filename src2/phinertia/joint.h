@@ -44,84 +44,86 @@ public:
     // phJoint::`vftable' @ 0x5B8690
 
     // 0x595B90 | ??0phJoint@@QAE@XZ
-    phJoint()
+    inline phJoint()
     {
         stub<member_func_t<void, phJoint>>(0x595B90, this);
     }
 
     // 0x595BE0 | ??0phJoint@@QAE@PAVphInertialCS@@0ABVVector3@@1@Z
-    phJoint(class phInertialCS* arg1, class phInertialCS* arg2, class Vector3 const& arg3, class Vector3 const& arg4)
+    inline phJoint(
+        class phInertialCS* arg1, class phInertialCS* arg2, class Vector3 const& arg3, class Vector3 const& arg4)
     {
         stub<member_func_t<void, phJoint, class phInertialCS*, class phInertialCS*, class Vector3 const&,
             class Vector3 const&>>(0x595BE0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x595C10 | ??0phJoint@@QAE@PAVphInertialCS@@0ABVVector3@@@Z
-    phJoint(class phInertialCS* arg1, class phInertialCS* arg2, class Vector3 const& arg3)
+    inline phJoint(class phInertialCS* arg1, class phInertialCS* arg2, class Vector3 const& arg3)
     {
         stub<member_func_t<void, phJoint, class phInertialCS*, class phInertialCS*, class Vector3 const&>>(
             0x595C10, this, arg1, arg2, arg3);
     }
 
     // 0x595C40 | ?Init@phJoint@@QAEXPAVphInertialCS@@0ABVVector3@@@Z
-    void Init(class phInertialCS* arg1, class phInertialCS* arg2, class Vector3 const& arg3)
+    inline void Init(class phInertialCS* arg1, class phInertialCS* arg2, class Vector3 const& arg3)
     {
         return stub<member_func_t<void, phJoint, class phInertialCS*, class phInertialCS*, class Vector3 const&>>(
             0x595C40, this, arg1, arg2, arg3);
     }
 
     // 0x595D10 | ?Init@phJoint@@QAEXPAVphInertialCS@@0ABVVector3@@1@Z
-    void Init(class phInertialCS* arg1, class phInertialCS* arg2, class Vector3 const& arg3, class Vector3 const& arg4)
+    inline void Init(
+        class phInertialCS* arg1, class phInertialCS* arg2, class Vector3 const& arg3, class Vector3 const& arg4)
     {
         return stub<member_func_t<void, phJoint, class phInertialCS*, class phInertialCS*, class Vector3 const&,
             class Vector3 const&>>(0x595D10, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x595DB0 | ?Reset@phJoint@@QAEXXZ
-    void Reset()
+    inline void Reset()
     {
         return stub<member_func_t<void, phJoint>>(0x595DB0, this);
     }
 
     // 0x595DD0 | ?Update@phJoint@@QAEXXZ
-    void Update()
+    inline void Update()
     {
         return stub<member_func_t<void, phJoint>>(0x595DD0, this);
     }
 
     // 0x5961F0 | ?IsBroken@phJoint@@UBE_NXZ
-    virtual bool IsBroken()
+    virtual inline bool IsBroken()
     {
         return stub<member_func_t<bool, phJoint>>(0x5961F0, this);
     }
 
     // 0x595E90 | ?ComputeInvMassMatrix@phJoint@@UBEXPAVphInertialCS@@AAVMatrix34@@ABVVector3@@@Z
-    virtual void ComputeInvMassMatrix(class phInertialCS* arg1, class Matrix34& arg2, class Vector3 const& arg3)
+    virtual inline void ComputeInvMassMatrix(class phInertialCS* arg1, class Matrix34& arg2, class Vector3 const& arg3)
     {
         return stub<member_func_t<void, phJoint, class phInertialCS*, class Matrix34&, class Vector3 const&>>(
             0x595E90, this, arg1, arg2, arg3);
     }
 
     // 0x595DF0 | ?ComputeInvMassMatrix@phJoint@@UAEXXZ
-    virtual void ComputeInvMassMatrix()
+    virtual inline void ComputeInvMassMatrix()
     {
         return stub<member_func_t<void, phJoint>>(0x595DF0, this);
     }
 
     // 0x595EA0 | ?ComputeJointForce@phJoint@@UAEXXZ
-    virtual void ComputeJointForce()
+    virtual inline void ComputeJointForce()
     {
         return stub<member_func_t<void, phJoint>>(0x595EA0, this);
     }
 
     // 0x5960C0 | ?ComputeJointPush@phJoint@@UAEXXZ
-    virtual void ComputeJointPush()
+    virtual inline void ComputeJointPush()
     {
         return stub<member_func_t<void, phJoint>>(0x5960C0, this);
     }
 
     // 0x595AD0 | ?GetInvMassMatrix@phJoint@@UAEAAVMatrix34@@XZ
-    virtual class Matrix34& GetInvMassMatrix()
+    virtual inline class Matrix34& GetInvMassMatrix()
     {
         return stub<member_func_t<class Matrix34&, phJoint>>(0x595AD0, this);
     }

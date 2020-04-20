@@ -54,134 +54,134 @@ class mmRaceSpeech : AudSpeech
 {
 public:
     // 0x51A4E0 | ??0mmRaceSpeech@@QAE@XZ
-    mmRaceSpeech()
+    inline mmRaceSpeech()
     {
         stub<member_func_t<void, mmRaceSpeech>>(0x51A4E0, this);
     }
 
     // 0x51A590 | ?PlayPreRace@mmRaceSpeech@@QAEXXZ
-    void PlayPreRace()
+    inline void PlayPreRace()
     {
         return stub<member_func_t<void, mmRaceSpeech>>(0x51A590, this);
     }
 
     // 0x51A660 | ?PlayUnlockRace@mmRaceSpeech@@QAEXXZ
-    void PlayUnlockRace()
+    inline void PlayUnlockRace()
     {
         return stub<member_func_t<void, mmRaceSpeech>>(0x51A660, this);
     }
 
     // 0x51A6C0 | ?PlayUnlockVehicle@mmRaceSpeech@@QAEXXZ
-    void PlayUnlockVehicle()
+    inline void PlayUnlockVehicle()
     {
         return stub<member_func_t<void, mmRaceSpeech>>(0x51A6C0, this);
     }
 
     // 0x51A720 | ?PlayUnlockTexture@mmRaceSpeech@@QAEXXZ
-    void PlayUnlockTexture()
+    inline void PlayUnlockTexture()
     {
         return stub<member_func_t<void, mmRaceSpeech>>(0x51A720, this);
     }
 
     // 0x51A750 | ?PlayFinalCheckPoint@mmRaceSpeech@@QAEXXZ
-    void PlayFinalCheckPoint()
+    inline void PlayFinalCheckPoint()
     {
         return stub<member_func_t<void, mmRaceSpeech>>(0x51A750, this);
     }
 
     // 0x51A780 | ?PlayFinalLap@mmRaceSpeech@@QAEXXZ
-    void PlayFinalLap()
+    inline void PlayFinalLap()
     {
         return stub<member_func_t<void, mmRaceSpeech>>(0x51A780, this);
     }
 
     // 0x51A7A0 | ?PlayDamagePenalty@mmRaceSpeech@@QAEXXZ
-    void PlayDamagePenalty()
+    inline void PlayDamagePenalty()
     {
         return stub<member_func_t<void, mmRaceSpeech>>(0x51A7A0, this);
     }
 
     // 0x51A7D0 | ?PlayRaceProgress@mmRaceSpeech@@QAEXXZ
-    void PlayRaceProgress()
+    inline void PlayRaceProgress()
     {
         return stub<member_func_t<void, mmRaceSpeech>>(0x51A7D0, this);
     }
 
     // 0x51A800 | ?PlayResults@mmRaceSpeech@@QAEXHH@Z
-    void PlayResults(i32 arg1, i32 arg2)
+    inline void PlayResults(int32_t arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, mmRaceSpeech, i32, i32>>(0x51A800, this, arg1, arg2);
+        return stub<member_func_t<void, mmRaceSpeech, int32_t, int32_t>>(0x51A800, this, arg1, arg2);
     }
 
     // 0x51A840 | ?PlayResultsPoor@mmRaceSpeech@@QAEXXZ
-    void PlayResultsPoor()
+    inline void PlayResultsPoor()
     {
         return stub<member_func_t<void, mmRaceSpeech>>(0x51A840, this);
     }
 
     // 0x51A890 | ?PlayResultsWin@mmRaceSpeech@@QAEXXZ
-    void PlayResultsWin()
+    inline void PlayResultsWin()
     {
         return stub<member_func_t<void, mmRaceSpeech>>(0x51A890, this);
     }
 
     // 0x51A8E0 | ?PlayResultsMid@mmRaceSpeech@@QAEXXZ
-    void PlayResultsMid()
+    inline void PlayResultsMid()
     {
         return stub<member_func_t<void, mmRaceSpeech>>(0x51A8E0, this);
     }
 
     // 0x51A930 | ?LoadCityInfo@mmRaceSpeech@@QAE_NPAD@Z
-    bool LoadCityInfo(char* arg1)
+    inline bool LoadCityInfo(char* arg1)
     {
         return stub<member_func_t<bool, mmRaceSpeech, char*>>(0x51A930, this, arg1);
     }
 
     // 0x51AB80 | ?LoadVehicleUnlock@mmRaceSpeech@@QAE_NPAD@Z
-    bool LoadVehicleUnlock(char* arg1)
+    inline bool LoadVehicleUnlock(char* arg1)
     {
         return stub<member_func_t<bool, mmRaceSpeech, char*>>(0x51AB80, this, arg1);
     }
 
     // 0x51ABC0 | ?LoadTextureUnlock@mmRaceSpeech@@QAE_NPAD@Z
-    bool LoadTextureUnlock(char* arg1)
+    inline bool LoadTextureUnlock(char* arg1)
     {
         return stub<member_func_t<bool, mmRaceSpeech, char*>>(0x51ABC0, this, arg1);
     }
 
     // 0x51AC00 | ?LoadPreRace@mmRaceSpeech@@QAE_NPAD@Z
-    bool LoadPreRace(char* arg1)
+    inline bool LoadPreRace(char* arg1)
     {
         return stub<member_func_t<bool, mmRaceSpeech, char*>>(0x51AC00, this, arg1);
     }
 
     // 0x51AC40 | ?LoadResults@mmRaceSpeech@@QAE_NPAD@Z
-    bool LoadResults(char* arg1)
+    inline bool LoadResults(char* arg1)
     {
         return stub<member_func_t<bool, mmRaceSpeech, char*>>(0x51AC40, this, arg1);
     }
 
     // 0x51AC80 | ?LoadGroup@mmRaceSpeech@@QAE_NPADH@Z
-    bool LoadGroup(char* arg1, i32 arg2)
+    inline bool LoadGroup(char* arg1, int32_t arg2)
     {
-        return stub<member_func_t<bool, mmRaceSpeech, char*, i32>>(0x51AC80, this, arg1, arg2);
+        return stub<member_func_t<bool, mmRaceSpeech, char*, int32_t>>(0x51AC80, this, arg1, arg2);
     }
 
     // 0x51AF10 | ?CheckRaceLoadSanity@mmRaceSpeech@@AAEXMH@Z
-    void CheckRaceLoadSanity(f32 arg1, i32 arg2)
+    inline void CheckRaceLoadSanity(float arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, mmRaceSpeech, f32, i32>>(0x51AF10, this, arg1, arg2);
+        return stub<member_func_t<void, mmRaceSpeech, float, int32_t>>(0x51AF10, this, arg1, arg2);
     }
 
     // 0x51AF20 | ?SetReadState@mmRaceSpeech@@AAE_NPADMPAH@Z
-    bool SetReadState(char* arg1, f32 arg2, i32* arg3)
+    inline bool SetReadState(char* arg1, float arg2, int32_t* arg3)
     {
-        return stub<member_func_t<bool, mmRaceSpeech, char*, f32, i32*>>(0x51AF20, this, arg1, arg2, arg3);
+        return stub<member_func_t<bool, mmRaceSpeech, char*, float, int32_t*>>(0x51AF20, this, arg1, arg2, arg3);
     }
 
     // 0x51B300 | ?locstrnicmp@mmRaceSpeech@@AAEHPAD0@Z
-    i32 locstrnicmp(char* arg1, char* arg2)
+    inline int32_t locstrnicmp(char* arg1, char* arg2)
     {
-        return stub<member_func_t<i32, mmRaceSpeech, char*, char*>>(0x51B300, this, arg1, arg2);
+        return stub<member_func_t<int32_t, mmRaceSpeech, char*, char*>>(0x51B300, this, arg1, arg2);
     }
 };

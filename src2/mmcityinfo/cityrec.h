@@ -47,66 +47,64 @@
     0x6B1CD4 | public: static int mmPlayerRecord::SizeOf | ?SizeOf@mmPlayerRecord@@2HA
 */
 
-class mmPlayerRecord
-    : Base
-    , mmInfoBase
+class mmPlayerRecord : mmInfoBase
 {
 public:
     // mmPlayerRecord::`vftable' @ 0x5B062C
 
     // 0x41AA70 | ??0mmPlayerRecord@@QAE@ABV0@@Z
-    mmPlayerRecord(class mmPlayerRecord const& arg1)
+    inline mmPlayerRecord(class mmPlayerRecord const& arg1)
     {
         stub<member_func_t<void, mmPlayerRecord, class mmPlayerRecord const&>>(0x41AA70, this, arg1);
     }
 
     // 0x528750 | ??0mmPlayerRecord@@QAE@XZ
-    mmPlayerRecord()
+    inline mmPlayerRecord()
     {
         stub<member_func_t<void, mmPlayerRecord>>(0x528750, this);
     }
 
     // 0x5287B0 | ?Reset@mmPlayerRecord@@QAEXXZ
-    void Reset()
+    inline void Reset()
     {
         return stub<member_func_t<void, mmPlayerRecord>>(0x5287B0, this);
     }
 
     // 0x5287E0 | ??4mmPlayerRecord@@QAEXAAV0@@Z
-    void operator=(class mmPlayerRecord& arg1)
+    inline void operator=(class mmPlayerRecord& arg1)
     {
         return stub<member_func_t<void, mmPlayerRecord, class mmPlayerRecord&>>(0x5287E0, this, arg1);
     }
 
     // 0x528830 | ??8mmPlayerRecord@@QAEHABV0@@Z
-    i32 operator==(class mmPlayerRecord const& arg1)
+    inline int32_t operator==(class mmPlayerRecord const& arg1)
     {
-        return stub<member_func_t<i32, mmPlayerRecord, class mmPlayerRecord const&>>(0x528830, this, arg1);
+        return stub<member_func_t<int32_t, mmPlayerRecord, class mmPlayerRecord const&>>(0x528830, this, arg1);
     }
 
     // 0x5288C0 | ?ComputeCRC@mmPlayerRecord@@QAEIXZ
-    u32 ComputeCRC()
+    inline uint32_t ComputeCRC()
     {
-        return stub<member_func_t<u32, mmPlayerRecord>>(0x5288C0, this);
+        return stub<member_func_t<uint32_t, mmPlayerRecord>>(0x5288C0, this);
     }
 
     // 0x528910 | ?SaveBinary@mmPlayerRecord@@QAEHPAVStream@@@Z
-    i32 SaveBinary(class Stream* arg1)
+    inline int32_t SaveBinary(class Stream* arg1)
     {
-        return stub<member_func_t<i32, mmPlayerRecord, class Stream*>>(0x528910, this, arg1);
+        return stub<member_func_t<int32_t, mmPlayerRecord, class Stream*>>(0x528910, this, arg1);
     }
 
     // 0x528990 | ?LoadBinary@mmPlayerRecord@@QAEHPAVStream@@@Z
-    i32 LoadBinary(class Stream* arg1)
+    inline int32_t LoadBinary(class Stream* arg1)
     {
-        return stub<member_func_t<i32, mmPlayerRecord, class Stream*>>(0x528990, this, arg1);
+        return stub<member_func_t<int32_t, mmPlayerRecord, class Stream*>>(0x528990, this, arg1);
     }
 
     // 0x6B1CD4 | ?SizeOf@mmPlayerRecord@@2HA
     inline extern_var(0x6B1CD4, int32_t, SizeOf);
 
     // 0x5287A0 | ??1mmPlayerRecord@@UAE@XZ
-    virtual ~mmPlayerRecord()
+    inline ~mmPlayerRecord() override
     {
         stub<member_func_t<void, mmPlayerRecord>>(0x5287A0, this);
     }
@@ -118,82 +116,82 @@ public:
     // mmPlayerCityRecord::`vftable' @ 0x5B5234
 
     // 0x528A10 | ??0mmPlayerCityRecord@@QAE@XZ
-    mmPlayerCityRecord()
+    inline mmPlayerCityRecord()
     {
         stub<member_func_t<void, mmPlayerCityRecord>>(0x528A10, this);
     }
 
     // 0x528A60 | ?Reset@mmPlayerCityRecord@@QAEXXZ
-    void Reset()
+    inline void Reset()
     {
         return stub<member_func_t<void, mmPlayerCityRecord>>(0x528A60, this);
     }
 
     // 0x528A70 | ?ComputeCRC@mmPlayerCityRecord@@QAEIXZ
-    u32 ComputeCRC()
+    inline uint32_t ComputeCRC()
     {
-        return stub<member_func_t<u32, mmPlayerCityRecord>>(0x528A70, this);
+        return stub<member_func_t<uint32_t, mmPlayerCityRecord>>(0x528A70, this);
     }
 
     // 0x528B10 | ?InitCityRecord@mmPlayerCityRecord@@QAEXPADMHHHH@Z
-    void InitCityRecord(char* arg1, f32 arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6)
+    inline void InitCityRecord(char* arg1, float arg2, int32_t arg3, int32_t arg4, int32_t arg5, int32_t arg6)
     {
-        return stub<member_func_t<void, mmPlayerCityRecord, char*, f32, i32, i32, i32, i32>>(
+        return stub<member_func_t<void, mmPlayerCityRecord, char*, float, int32_t, int32_t, int32_t, int32_t>>(
             0x528B10, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x528DB0 | ?Open@mmPlayerCityRecord@@QAEHPADM@Z
-    i32 Open(char* arg1, f32 arg2)
+    inline int32_t Open(char* arg1, float arg2)
     {
-        return stub<member_func_t<i32, mmPlayerCityRecord, char*, f32>>(0x528DB0, this, arg1, arg2);
+        return stub<member_func_t<int32_t, mmPlayerCityRecord, char*, float>>(0x528DB0, this, arg1, arg2);
     }
 
     // 0x528FA0 | ?GetRecord@mmPlayerCityRecord@@QAEHAAVmmPlayerRecord@@HH@Z
-    i32 GetRecord(class mmPlayerRecord& arg1, i32 arg2, i32 arg3)
+    inline int32_t GetRecord(class mmPlayerRecord& arg1, int32_t arg2, int32_t arg3)
     {
-        return stub<member_func_t<i32, mmPlayerCityRecord, class mmPlayerRecord&, i32, i32>>(
+        return stub<member_func_t<int32_t, mmPlayerCityRecord, class mmPlayerRecord&, int32_t, int32_t>>(
             0x528FA0, this, arg1, arg2, arg3);
     }
 
     // 0x5290C0 | ?NewRecord@mmPlayerCityRecord@@QAEHVmmPlayerRecord@@HH@Z
-    i32 NewRecord(class mmPlayerRecord arg1, i32 arg2, i32 arg3)
+    inline int32_t NewRecord(class mmPlayerRecord arg1, int32_t arg2, int32_t arg3)
     {
-        return stub<member_func_t<i32, mmPlayerCityRecord, class mmPlayerRecord, i32, i32>>(
+        return stub<member_func_t<int32_t, mmPlayerCityRecord, class mmPlayerRecord, int32_t, int32_t>>(
             0x5290C0, this, arg1, arg2, arg3);
     }
 
     // 0x529360 | ?Close@mmPlayerCityRecord@@QAEHXZ
-    i32 Close()
+    inline int32_t Close()
     {
-        return stub<member_func_t<i32, mmPlayerCityRecord>>(0x529360, this);
+        return stub<member_func_t<int32_t, mmPlayerCityRecord>>(0x529360, this);
     }
 
     // 0x529490 | ?GetNumPassed@mmPlayerCityRecord@@QAEHH@Z
-    i32 GetNumPassed(i32 arg1)
+    inline int32_t GetNumPassed(int32_t arg1)
     {
-        return stub<member_func_t<i32, mmPlayerCityRecord, i32>>(0x529490, this, arg1);
+        return stub<member_func_t<int32_t, mmPlayerCityRecord, int32_t>>(0x529490, this, arg1);
     }
 
     // 0x529580 | ?GetNumRaces@mmPlayerCityRecord@@QAEHH@Z
-    i32 GetNumRaces(i32 arg1)
+    inline int32_t GetNumRaces(int32_t arg1)
     {
-        return stub<member_func_t<i32, mmPlayerCityRecord, i32>>(0x529580, this, arg1);
+        return stub<member_func_t<int32_t, mmPlayerCityRecord, int32_t>>(0x529580, this, arg1);
     }
 
     // 0x5295E0 | ?GetPassedMask@mmPlayerCityRecord@@QAEKH@Z
-    u32 GetPassedMask(i32 arg1)
+    inline uint32_t GetPassedMask(int32_t arg1)
     {
-        return stub<member_func_t<u32, mmPlayerCityRecord, i32>>(0x5295E0, this, arg1);
+        return stub<member_func_t<uint32_t, mmPlayerCityRecord, int32_t>>(0x5295E0, this, arg1);
     }
 
     // 0x529640 | ?GetFileOffset@mmPlayerCityRecord@@AAEJHH@Z
-    i32 GetFileOffset(i32 arg1, i32 arg2)
+    inline int32_t GetFileOffset(int32_t arg1, int32_t arg2)
     {
-        return stub<member_func_t<i32, mmPlayerCityRecord, i32, i32>>(0x529640, this, arg1, arg2);
+        return stub<member_func_t<int32_t, mmPlayerCityRecord, int32_t, int32_t>>(0x529640, this, arg1, arg2);
     }
 
     // 0x528220 | ??1mmPlayerCityRecord@@UAE@XZ
-    ~mmPlayerCityRecord() override
+    inline ~mmPlayerCityRecord() override
     {
         stub<member_func_t<void, mmPlayerCityRecord>>(0x528220, this);
     }

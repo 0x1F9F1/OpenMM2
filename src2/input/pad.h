@@ -36,28 +36,28 @@
 */
 
 // 0x4BB710 | ?AddDeadZone@@YAMMM@Z
-inline f32 AddDeadZone(f32 arg1, f32 arg2)
+inline float AddDeadZone(float arg1, float arg2)
 {
-    return stub<cdecl_t<f32, f32, f32>>(0x4BB710, arg1, arg2);
+    return stub<cdecl_t<float, float, float>>(0x4BB710, arg1, arg2);
 }
 
 class ioPad
 {
 public:
     // 0x4BB4E0 | ?Begin@ioPad@@AAEXH@Z
-    void Begin(i32 arg1)
+    inline void Begin(int32_t arg1)
     {
-        return stub<member_func_t<void, ioPad, i32>>(0x4BB4E0, this, arg1);
+        return stub<member_func_t<void, ioPad, int32_t>>(0x4BB4E0, this, arg1);
     }
 
     // 0x4BB520 | ?End@ioPad@@AAEXXZ
-    void End()
+    inline void End()
     {
         return stub<member_func_t<void, ioPad>>(0x4BB520, this);
     }
 
     // 0x4BB530 | ?Update@ioPad@@AAEXXZ
-    void Update()
+    inline void Update()
     {
         return stub<member_func_t<void, ioPad>>(0x4BB530, this);
     }
@@ -81,13 +81,13 @@ public:
     }
 
     // 0x4BB7C0 | ??0ioPad@@QAE@XZ
-    ioPad()
+    inline ioPad()
     {
         stub<member_func_t<void, ioPad>>(0x4BB7C0, this);
     }
 
     // 0x4BB7E0 | ??1ioPad@@QAE@XZ
-    ~ioPad()
+    inline ~ioPad()
     {
         stub<member_func_t<void, ioPad>>(0x4BB7E0, this);
     }

@@ -42,69 +42,69 @@ struct parCsvFile
 {
 public:
     // 0x4A8270 | ?Kill@parCsvFile@@QAEXXZ
-    void Kill()
+    inline void Kill()
     {
         return stub<member_func_t<void, parCsvFile>>(0x4A8270, this);
     }
 
     // 0x4A82F0 | ?Load@parCsvFile@@QAE_NPBD0_NH@Z
-    bool Load(char const* arg1, char const* arg2, bool arg3, i32 arg4)
+    inline bool Load(char const* arg1, char const* arg2, bool arg3, int32_t arg4)
     {
-        return stub<member_func_t<bool, parCsvFile, char const*, char const*, bool, i32>>(
+        return stub<member_func_t<bool, parCsvFile, char const*, char const*, bool, int32_t>>(
             0x4A82F0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4A8600 | ?Print@parCsvFile@@QBEXXZ
-    void Print()
+    inline void Print()
     {
         return stub<member_func_t<void, parCsvFile>>(0x4A8600, this);
     }
 
     // 0x4A86A0 | ?GetInt@parCsvFile@@QBEHHH@Z
-    i32 GetInt(i32 arg1, i32 arg2)
+    inline int32_t GetInt(int32_t arg1, int32_t arg2)
     {
-        return stub<member_func_t<i32, parCsvFile, i32, i32>>(0x4A86A0, this, arg1, arg2);
+        return stub<member_func_t<int32_t, parCsvFile, int32_t, int32_t>>(0x4A86A0, this, arg1, arg2);
     }
 
     // 0x4A86D0 | ?GetFloat@parCsvFile@@QBEMHH@Z
-    f32 GetFloat(i32 arg1, i32 arg2)
+    inline float GetFloat(int32_t arg1, int32_t arg2)
     {
-        return stub<member_func_t<f32, parCsvFile, i32, i32>>(0x4A86D0, this, arg1, arg2);
+        return stub<member_func_t<float, parCsvFile, int32_t, int32_t>>(0x4A86D0, this, arg1, arg2);
     }
 
     // 0x4A8700 | ?GetColumn@parCsvFile@@QBEHPBD@Z
-    i32 GetColumn(char const* arg1)
+    inline int32_t GetColumn(char const* arg1)
     {
-        return stub<member_func_t<i32, parCsvFile, char const*>>(0x4A8700, this, arg1);
+        return stub<member_func_t<int32_t, parCsvFile, char const*>>(0x4A8700, this, arg1);
     }
 
     // 0x4A8760 | ?GetRow@parCsvFile@@QBEHHPBD@Z
-    i32 GetRow(i32 arg1, char const* arg2)
+    inline int32_t GetRow(int32_t arg1, char const* arg2)
     {
-        return stub<member_func_t<i32, parCsvFile, i32, char const*>>(0x4A8760, this, arg1, arg2);
+        return stub<member_func_t<int32_t, parCsvFile, int32_t, char const*>>(0x4A8760, this, arg1, arg2);
     }
 
     // 0x4A87D0 | ?GetRowSafe@parCsvFile@@QBEHHPBD@Z
-    i32 GetRowSafe(i32 arg1, char const* arg2)
+    inline int32_t GetRowSafe(int32_t arg1, char const* arg2)
     {
-        return stub<member_func_t<i32, parCsvFile, i32, char const*>>(0x4A87D0, this, arg1, arg2);
+        return stub<member_func_t<int32_t, parCsvFile, int32_t, char const*>>(0x4A87D0, this, arg1, arg2);
     }
 
     // 0x4A8830 | ?SetString@parCsvFile@@QAEXHHPBD@Z
-    void SetString(i32 arg1, i32 arg2, char const* arg3)
+    inline void SetString(int32_t arg1, int32_t arg2, char const* arg3)
     {
-        return stub<member_func_t<void, parCsvFile, i32, i32, char const*>>(0x4A8830, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, parCsvFile, int32_t, int32_t, char const*>>(0x4A8830, this, arg1, arg2, arg3);
     }
 
     // 0x4A8870 | ?SetInt@parCsvFile@@QAEXHHH@Z
-    void SetInt(i32 arg1, i32 arg2, i32 arg3)
+    inline void SetInt(int32_t arg1, int32_t arg2, int32_t arg3)
     {
-        return stub<member_func_t<void, parCsvFile, i32, i32, i32>>(0x4A8870, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, parCsvFile, int32_t, int32_t, int32_t>>(0x4A8870, this, arg1, arg2, arg3);
     }
 
     // 0x4A88B0 | ?SetFloat@parCsvFile@@QAEXHHM@Z
-    void SetFloat(i32 arg1, i32 arg2, f32 arg3)
+    inline void SetFloat(int32_t arg1, int32_t arg2, float arg3)
     {
-        return stub<member_func_t<void, parCsvFile, i32, i32, f32>>(0x4A88B0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, parCsvFile, int32_t, int32_t, float>>(0x4A88B0, this, arg1, arg2, arg3);
     }
 };

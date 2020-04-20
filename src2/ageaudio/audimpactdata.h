@@ -48,77 +48,77 @@ class AudImpactData
 {
 public:
     // 0x514120 | ??0AudImpactData@@QAE@XZ
-    AudImpactData()
+    inline AudImpactData()
     {
         stub<member_func_t<void, AudImpactData>>(0x514120, this);
     }
 
     // 0x514130 | ??0AudImpactData@@QAE@PAV0@@Z
-    AudImpactData(class AudImpactData* arg1)
+    inline AudImpactData(class AudImpactData* arg1)
     {
         stub<member_func_t<void, AudImpactData, class AudImpactData*>>(0x514130, this, arg1);
     }
 
     // 0x5141A0 | ?ReadCSV@AudImpactData@@QAE_NPAVStream@@H@Z
-    bool ReadCSV(class Stream* arg1, i32 arg2)
+    inline bool ReadCSV(class Stream* arg1, int32_t arg2)
     {
-        return stub<member_func_t<bool, AudImpactData, class Stream*, i32>>(0x5141A0, this, arg1, arg2);
+        return stub<member_func_t<bool, AudImpactData, class Stream*, int32_t>>(0x5141A0, this, arg1, arg2);
     }
 
     // 0x5143A0 | ?AssignSounds@AudImpactData@@QAEXH@Z
-    void AssignSounds(i32 arg1)
+    inline void AssignSounds(int32_t arg1)
     {
-        return stub<member_func_t<void, AudImpactData, i32>>(0x5143A0, this, arg1);
+        return stub<member_func_t<void, AudImpactData, int32_t>>(0x5143A0, this, arg1);
     }
 
     // 0x514410 | ?UnAssignSounds@AudImpactData@@QAEXXZ
-    void UnAssignSounds()
+    inline void UnAssignSounds()
     {
         return stub<member_func_t<void, AudImpactData>>(0x514410, this);
     }
 
     // 0x514430 | ?UpdateAttenuation@AudImpactData@@QAEXMM@Z
-    void UpdateAttenuation(f32 arg1, f32 arg2)
+    inline void UpdateAttenuation(float arg1, float arg2)
     {
-        return stub<member_func_t<void, AudImpactData, f32, f32>>(0x514430, this, arg1, arg2);
+        return stub<member_func_t<void, AudImpactData, float, float>>(0x514430, this, arg1, arg2);
     }
 
     // 0x514470 | ?UpdateAttenuation@AudImpactData@@AAEXPAUtagImpactSampleWrapper@@MM@Z
-    void UpdateAttenuation(struct tagImpactSampleWrapper* arg1, f32 arg2, f32 arg3)
+    inline void UpdateAttenuation(struct tagImpactSampleWrapper* arg1, float arg2, float arg3)
     {
-        return stub<member_func_t<void, AudImpactData, struct tagImpactSampleWrapper*, f32, f32>>(
+        return stub<member_func_t<void, AudImpactData, struct tagImpactSampleWrapper*, float, float>>(
             0x514470, this, arg1, arg2, arg3);
     }
 
     // 0x5144C0 | ?Play@AudImpactData@@QAEXM@Z
-    void Play(f32 arg1)
+    inline void Play(float arg1)
     {
-        return stub<member_func_t<void, AudImpactData, f32>>(0x5144C0, this, arg1);
+        return stub<member_func_t<void, AudImpactData, float>>(0x5144C0, this, arg1);
     }
 
     // 0x514520 | ?PlaySample@AudImpactData@@AAEXPAUtagImpactSampleWrapper@@M@Z
-    void PlaySample(struct tagImpactSampleWrapper* arg1, f32 arg2)
+    inline void PlaySample(struct tagImpactSampleWrapper* arg1, float arg2)
     {
-        return stub<member_func_t<void, AudImpactData, struct tagImpactSampleWrapper*, f32>>(
+        return stub<member_func_t<void, AudImpactData, struct tagImpactSampleWrapper*, float>>(
             0x514520, this, arg1, arg2);
     }
 
     // 0x5145A0 | ?Play@AudImpactData@@QAEXMMM@Z
-    void Play(f32 arg1, f32 arg2, f32 arg3)
+    inline void Play(float arg1, float arg2, float arg3)
     {
-        return stub<member_func_t<void, AudImpactData, f32, f32, f32>>(0x5145A0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, AudImpactData, float, float, float>>(0x5145A0, this, arg1, arg2, arg3);
     }
 
     // 0x514610 | ?PlaySample@AudImpactData@@AAEXPAUtagImpactSampleWrapper@@MMM@Z
-    void PlaySample(struct tagImpactSampleWrapper* arg1, f32 arg2, f32 arg3, f32 arg4)
+    inline void PlaySample(struct tagImpactSampleWrapper* arg1, float arg2, float arg3, float arg4)
     {
-        return stub<member_func_t<void, AudImpactData, struct tagImpactSampleWrapper*, f32, f32, f32>>(
+        return stub<member_func_t<void, AudImpactData, struct tagImpactSampleWrapper*, float, float, float>>(
             0x514610, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x5146B0 | ?SetPan@AudImpactData@@QAEXM@Z
-    void SetPan(f32 arg1)
+    inline void SetPan(float arg1)
     {
-        return stub<member_func_t<void, AudImpactData, f32>>(0x5146B0, this, arg1);
+        return stub<member_func_t<void, AudImpactData, float>>(0x5146B0, this, arg1);
     }
 };

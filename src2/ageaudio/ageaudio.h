@@ -68,27 +68,27 @@ inline void Aud_Stream_Close(class Stream* arg1)
 }
 
 // 0x50ED90 | ?Aud_Stream_Tell@@YAHPAVStream@@@Z
-inline i32 Aud_Stream_Tell(class Stream* arg1)
+inline int32_t Aud_Stream_Tell(class Stream* arg1)
 {
-    return stub<cdecl_t<i32, class Stream*>>(0x50ED90, arg1);
+    return stub<cdecl_t<int32_t, class Stream*>>(0x50ED90, arg1);
 }
 
 // 0x50EDA0 | ?Aud_Stream_Seek@@YAHPAVStream@@H@Z
-inline i32 Aud_Stream_Seek(class Stream* arg1, i32 arg2)
+inline int32_t Aud_Stream_Seek(class Stream* arg1, int32_t arg2)
 {
-    return stub<cdecl_t<i32, class Stream*, i32>>(0x50EDA0, arg1, arg2);
+    return stub<cdecl_t<int32_t, class Stream*, int32_t>>(0x50EDA0, arg1, arg2);
 }
 
 // 0x50EDC0 | ?Aud_Stream_Size@@YAHPAVStream@@@Z
-inline i32 Aud_Stream_Size(class Stream* arg1)
+inline int32_t Aud_Stream_Size(class Stream* arg1)
 {
-    return stub<cdecl_t<i32, class Stream*>>(0x50EDC0, arg1);
+    return stub<cdecl_t<int32_t, class Stream*>>(0x50EDC0, arg1);
 }
 
 // 0x50EDF0 | ?Aud_Stream_Read@@YAHPAVStream@@PAXH@Z
-inline i32 Aud_Stream_Read(class Stream* arg1, void* arg2, i32 arg3)
+inline int32_t Aud_Stream_Read(class Stream* arg1, void* arg2, int32_t arg3)
 {
-    return stub<cdecl_t<i32, class Stream*, void*, i32>>(0x50EDF0, arg1, arg2, arg3);
+    return stub<cdecl_t<int32_t, class Stream*, void*, int32_t>>(0x50EDF0, arg1, arg2, arg3);
 }
 
 // 0x6B1474 | ?AUDMGRPTR@@3PAVAudManagerBase@@A
@@ -103,127 +103,128 @@ public:
     // AudManagerBase::`vftable' @ 0x5B4C18
 
     // 0x50EE10 | ??0AudManagerBase@@QAE@XZ
-    AudManagerBase()
+    inline AudManagerBase()
     {
         stub<member_func_t<void, AudManagerBase>>(0x50EE10, this);
     }
 
     // 0x50EED0 | ?Init@AudManagerBase@@QAEXHFFH@Z
-    void Init(i32 arg1, i16 arg2, i16 arg3, i32 arg4)
+    inline void Init(int32_t arg1, int16_t arg2, int16_t arg3, int32_t arg4)
     {
-        return stub<member_func_t<void, AudManagerBase, i32, i16, i16, i32>>(0x50EED0, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, AudManagerBase, int32_t, int16_t, int16_t, int32_t>>(
+            0x50EED0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x50EF80 | ?RestartAudio@AudManagerBase@@QAEXHHH@Z
-    void RestartAudio(i32 arg1, i32 arg2, i32 arg3)
+    inline void RestartAudio(int32_t arg1, int32_t arg2, int32_t arg3)
     {
-        return stub<member_func_t<void, AudManagerBase, i32, i32, i32>>(0x50EF80, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, AudManagerBase, int32_t, int32_t, int32_t>>(0x50EF80, this, arg1, arg2, arg3);
     }
 
     // 0x50F000 | ?ShutDownAudio@AudManagerBase@@QAEXXZ
-    void ShutDownAudio()
+    inline void ShutDownAudio()
     {
         return stub<member_func_t<void, AudManagerBase>>(0x50F000, this);
     }
 
     // 0x50F060 | ?LoadSoundBank@AudManagerBase@@QAEPAVaudSoundBankHdr@@PAD@Z
-    class audSoundBankHdr* LoadSoundBank(char* arg1)
+    inline class audSoundBankHdr* LoadSoundBank(char* arg1)
     {
         return stub<member_func_t<class audSoundBankHdr*, AudManagerBase, char*>>(0x50F060, this, arg1);
     }
 
     // 0x50F070 | ?SoundFXOn@AudManagerBase@@QAE_NXZ
-    bool SoundFXOn()
+    inline bool SoundFXOn()
     {
         return stub<member_func_t<bool, AudManagerBase>>(0x50F070, this);
     }
 
     // 0x50F090 | ?SetStereoFlag@AudManagerBase@@QAEXH@Z
-    void SetStereoFlag(i32 arg1)
+    inline void SetStereoFlag(int32_t arg1)
     {
-        return stub<member_func_t<void, AudManagerBase, i32>>(0x50F090, this, arg1);
+        return stub<member_func_t<void, AudManagerBase, int32_t>>(0x50F090, this, arg1);
     }
 
     // 0x50F0C0 | ?SetReverbFlags@AudManagerBase@@QAEXHH@Z
-    void SetReverbFlags(i32 arg1, i32 arg2)
+    inline void SetReverbFlags(int32_t arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, AudManagerBase, i32, i32>>(0x50F0C0, this, arg1, arg2);
+        return stub<member_func_t<void, AudManagerBase, int32_t, int32_t>>(0x50F0C0, this, arg1, arg2);
     }
 
     // 0x50F0D0 | ?IsStereo@AudManagerBase@@QAEHXZ
-    i32 IsStereo()
+    inline int32_t IsStereo()
     {
-        return stub<member_func_t<i32, AudManagerBase>>(0x50F0D0, this);
+        return stub<member_func_t<int32_t, AudManagerBase>>(0x50F0D0, this);
     }
 
     // 0x50F0F0 | ?Enable@AudManagerBase@@QAEXXZ
-    void Enable()
+    inline void Enable()
     {
         return stub<member_func_t<void, AudManagerBase>>(0x50F0F0, this);
     }
 
     // 0x50F100 | ?IsEnabled@AudManagerBase@@QAE_NXZ
-    bool IsEnabled()
+    inline bool IsEnabled()
     {
         return stub<member_func_t<bool, AudManagerBase>>(0x50F100, this);
     }
 
     // 0x50F120 | ?Disable@AudManagerBase@@QAEXXZ
-    void Disable()
+    inline void Disable()
     {
         return stub<member_func_t<void, AudManagerBase>>(0x50F120, this);
     }
 
     // 0x50F1C0 | ?GetMasterSFXVolume@AudManagerBase@@QAEMXZ
-    f32 GetMasterSFXVolume()
+    inline float GetMasterSFXVolume()
     {
-        return stub<member_func_t<f32, AudManagerBase>>(0x50F1C0, this);
+        return stub<member_func_t<float, AudManagerBase>>(0x50F1C0, this);
     }
 
     // 0x50F1E0 | ?StopAllSounds@AudManagerBase@@QAEXXZ
-    void StopAllSounds()
+    inline void StopAllSounds()
     {
         return stub<member_func_t<void, AudManagerBase>>(0x50F1E0, this);
     }
 
     // 0x50F230 | ?RandomizeNumber@AudManagerBase@@QAEMM@Z
-    f32 RandomizeNumber(f32 arg1)
+    inline float RandomizeNumber(float arg1)
     {
-        return stub<member_func_t<f32, AudManagerBase, f32>>(0x50F230, this, arg1);
+        return stub<member_func_t<float, AudManagerBase, float>>(0x50F230, this, arg1);
     }
 
     // 0x50F290 | ?RandomizeNumber@AudManagerBase@@QAEMMM@Z
-    f32 RandomizeNumber(f32 arg1, f32 arg2)
+    inline float RandomizeNumber(float arg1, float arg2)
     {
-        return stub<member_func_t<f32, AudManagerBase, f32, f32>>(0x50F290, this, arg1, arg2);
+        return stub<member_func_t<float, AudManagerBase, float, float>>(0x50F290, this, arg1, arg2);
     }
 
     // 0x50F300 | ?GetAgeAudioManager@AudManagerBase@@QAEPAVaudManager@@XZ
-    class audManager* GetAgeAudioManager()
+    inline class audManager* GetAgeAudioManager()
     {
         return stub<member_func_t<class audManager*, AudManagerBase>>(0x50F300, this);
     }
 
     // 0x50F310 | ?SetReverb@AudManagerBase@@QAEXH@Z
-    void SetReverb(i32 arg1)
+    inline void SetReverb(int32_t arg1)
     {
-        return stub<member_func_t<void, AudManagerBase, i32>>(0x50F310, this, arg1);
+        return stub<member_func_t<void, AudManagerBase, int32_t>>(0x50F310, this, arg1);
     }
 
     // 0x50EE40 | ??1AudManagerBase@@UAE@XZ
-    ~AudManagerBase() override
+    inline ~AudManagerBase() override
     {
         stub<member_func_t<void, AudManagerBase>>(0x50EE40, this);
     }
 
     // 0x50F130 | ?Update@AudManagerBase@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, AudManagerBase>>(0x50F130, this);
     }
 
     // 0x50F1A0 | ?UpdatePaused@AudManagerBase@@UAEXXZ
-    void UpdatePaused() override
+    inline void UpdatePaused() override
     {
         return stub<member_func_t<void, AudManagerBase>>(0x50F1A0, this);
     }

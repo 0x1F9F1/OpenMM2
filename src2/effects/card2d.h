@@ -41,50 +41,50 @@ public:
     // Card2D::`vftable' @ 0x5B8600
 
     // 0x5928B0 | ??0Card2D@@QAE@XZ
-    Card2D()
+    inline Card2D()
     {
         stub<member_func_t<void, Card2D>>(0x5928B0, this);
     }
 
     // 0x5928D0 | ?Init@Card2D@@QAEXPAVasCamera@@MMMMM@Z
-    void Init(class asCamera* arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6)
+    inline void Init(class asCamera* arg1, float arg2, float arg3, float arg4, float arg5, float arg6)
     {
-        return stub<member_func_t<void, Card2D, class asCamera*, f32, f32, f32, f32, f32>>(
+        return stub<member_func_t<void, Card2D, class asCamera*, float, float, float, float, float>>(
             0x5928D0, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x592910 | ?SetDimensions@Card2D@@QAEXMMMM@Z
-    void SetDimensions(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
+    inline void SetDimensions(float arg1, float arg2, float arg3, float arg4)
     {
-        return stub<member_func_t<void, Card2D, f32, f32, f32, f32>>(0x592910, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, Card2D, float, float, float, float>>(0x592910, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x592A00 | ?SetPosition@Card2D@@QAEXMM@Z
-    void SetPosition(f32 arg1, f32 arg2)
+    inline void SetPosition(float arg1, float arg2)
     {
-        return stub<member_func_t<void, Card2D, f32, f32>>(0x592A00, this, arg1, arg2);
+        return stub<member_func_t<void, Card2D, float, float>>(0x592A00, this, arg1, arg2);
     }
 
     // 0x592A20 | ?SetAlpha@Card2D@@QAEXM@Z
-    void SetAlpha(f32 arg1)
+    inline void SetAlpha(float arg1)
     {
-        return stub<member_func_t<void, Card2D, f32>>(0x592A20, this, arg1);
+        return stub<member_func_t<void, Card2D, float>>(0x592A20, this, arg1);
     }
 
     // 0x592C80 | ??1Card2D@@UAE@XZ
-    ~Card2D() override
+    inline ~Card2D() override
     {
         stub<member_func_t<void, Card2D>>(0x592C80, this);
     }
 
     // 0x592A90 | ?Cull@Card2D@@EAEXXZ
-    void Cull() override
+    inline void Cull() override
     {
         return stub<member_func_t<void, Card2D>>(0x592A90, this);
     }
 
     // 0x592A80 | ?Update@Card2D@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, Card2D>>(0x592A80, this);
     }

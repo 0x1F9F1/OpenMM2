@@ -38,40 +38,42 @@ public:
     // eqEventQ::`vftable' @ 0x5B29E0
 
     // 0x4A3450 | ??0eqEventQ@@QAE@H@Z
-    eqEventQ(i32 arg1)
+    inline eqEventQ(int32_t arg1)
     {
-        stub<member_func_t<void, eqEventQ, i32>>(0x4A3450, this, arg1);
+        stub<member_func_t<void, eqEventQ, int32_t>>(0x4A3450, this, arg1);
     }
 
     // 0x4A3630 | ?Queue@eqEventQ@@AAEXAATeqEvent@@@Z
-    void Queue(union eqEvent& arg1)
+    inline void Queue(union eqEvent& arg1)
     {
         return stub<member_func_t<void, eqEventQ, union eqEvent&>>(0x4A3630, this, arg1);
     }
 
     // 0x4A3670 | ?Pop@eqEventQ@@QAEHPATeqEvent@@@Z
-    i32 Pop(union eqEvent* arg1)
+    inline int32_t Pop(union eqEvent* arg1)
     {
-        return stub<member_func_t<i32, eqEventQ, union eqEvent*>>(0x4A3670, this, arg1);
+        return stub<member_func_t<int32_t, eqEventQ, union eqEvent*>>(0x4A3670, this, arg1);
     }
 
     // 0x4A34D0 | ??1eqEventQ@@UAE@XZ
-    ~eqEventQ() override
+    inline ~eqEventQ() override
     {
         stub<member_func_t<void, eqEventQ>>(0x4A34D0, this);
     }
 
     // 0x4A3540 | ?Mouse@eqEventQ@@UAEXPAXHHHHHHH@Z
-    void Mouse(void* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6, i32 arg7, i32 arg8) override
+    inline void Mouse(void* arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5, int32_t arg6, int32_t arg7,
+        int32_t arg8) override
     {
-        return stub<member_func_t<void, eqEventQ, void*, i32, i32, i32, i32, i32, i32, i32>>(
+        return stub<
+            member_func_t<void, eqEventQ, void*, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t>>(
             0x4A3540, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
     // 0x4A35D0 | ?Keyboard@eqEventQ@@UAEXPAXHHHH@Z
-    void Keyboard(void* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5) override
+    inline void Keyboard(void* arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5) override
     {
-        return stub<member_func_t<void, eqEventQ, void*, i32, i32, i32, i32>>(
+        return stub<member_func_t<void, eqEventQ, void*, int32_t, int32_t, int32_t, int32_t>>(
             0x4A35D0, this, arg1, arg2, arg3, arg4, arg5);
     }
 };

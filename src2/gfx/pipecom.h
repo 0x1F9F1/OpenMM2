@@ -41,13 +41,13 @@
 */
 
 // 0x4B2E30 | ?gfxFVFSize@@YAII@Z
-inline u32 gfxFVFSize(u32 arg1)
+inline uint32_t gfxFVFSize(uint32_t arg1)
 {
-    return stub<cdecl_t<u32, u32>>(0x4B2E30, arg1);
+    return stub<cdecl_t<uint32_t, uint32_t>>(0x4B2E30, arg1);
 }
 
 // 0x4B2E80 | ?gfxFVFOffset@@YAIII@Z
-inline u32 gfxFVFOffset(u32 arg1, u32 arg2)
+inline uint32_t gfxFVFOffset(uint32_t arg1, uint32_t arg2)
 {
-    return stub<cdecl_t<u32, u32, u32>>(0x4B2E80, arg1, arg2);
+    return stub<cdecl_t<uint32_t, uint32_t, uint32_t>>(0x4B2E80, arg1, arg2);
 }

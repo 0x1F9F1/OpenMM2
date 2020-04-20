@@ -43,73 +43,73 @@ class aiCTFRacer : Base
 {
 public:
     // 0x5543C0 | ??0aiCTFRacer@@QAE@XZ
-    aiCTFRacer()
+    inline aiCTFRacer()
     {
         stub<member_func_t<void, aiCTFRacer>>(0x5543C0, this);
     }
 
     // 0x554470 | ?Init@aiCTFRacer@@QAEXHPAD@Z
-    void Init(i32 arg1, char* arg2)
+    inline void Init(int32_t arg1, char* arg2)
     {
-        return stub<member_func_t<void, aiCTFRacer, i32, char*>>(0x554470, this, arg1, arg2);
+        return stub<member_func_t<void, aiCTFRacer, int32_t, char*>>(0x554470, this, arg1, arg2);
     }
 
     // 0x554510 | ?Reset@aiCTFRacer@@QAEXXZ
-    void Reset()
+    inline void Reset()
     {
         return stub<member_func_t<void, aiCTFRacer>>(0x554510, this);
     }
 
     // 0x554550 | ?DropFlag@aiCTFRacer@@QAEXHPBM@Z
-    void DropFlag(i32 arg1, f32 const* arg2)
+    inline void DropFlag(int32_t arg1, float const* arg2)
     {
-        return stub<member_func_t<void, aiCTFRacer, i32, f32 const*>>(0x554550, this, arg1, arg2);
+        return stub<member_func_t<void, aiCTFRacer, int32_t, float const*>>(0x554550, this, arg1, arg2);
     }
 
     // 0x554580 | ?Update@aiCTFRacer@@QAEXXZ
-    void Update()
+    inline void Update()
     {
         return stub<member_func_t<void, aiCTFRacer>>(0x554580, this);
     }
 
     // 0x554620 | ?ReleaseFlag@aiCTFRacer@@QAEXXZ
-    void ReleaseFlag()
+    inline void ReleaseFlag()
     {
         return stub<member_func_t<void, aiCTFRacer>>(0x554620, this);
     }
 
     // 0x554630 | ?PickupFlag@aiCTFRacer@@QAEXXZ
-    void PickupFlag()
+    inline void PickupFlag()
     {
         return stub<member_func_t<void, aiCTFRacer>>(0x554630, this);
     }
 
     // 0x554640 | ?PreAquireFlag@aiCTFRacer@@AAEXXZ
-    void PreAquireFlag()
+    inline void PreAquireFlag()
     {
         return stub<member_func_t<void, aiCTFRacer>>(0x554640, this);
     }
 
     // 0x5547E0 | ?AquireFlag@aiCTFRacer@@AAEXXZ
-    void AquireFlag()
+    inline void AquireFlag()
     {
         return stub<member_func_t<void, aiCTFRacer>>(0x5547E0, this);
     }
 
     // 0x554990 | ?PreDeliverFlag@aiCTFRacer@@AAEXXZ
-    void PreDeliverFlag()
+    inline void PreDeliverFlag()
     {
         return stub<member_func_t<void, aiCTFRacer>>(0x554990, this);
     }
 
     // 0x554B00 | ?DeliverFlag@aiCTFRacer@@AAEXXZ
-    void DeliverFlag()
+    inline void DeliverFlag()
     {
         return stub<member_func_t<void, aiCTFRacer>>(0x554B00, this);
     }
 
     // 0x554C00 | ?DrawRouteThroughTraffic@aiCTFRacer@@QAEXXZ
-    void DrawRouteThroughTraffic()
+    inline void DrawRouteThroughTraffic()
     {
         return stub<member_func_t<void, aiCTFRacer>>(0x554C00, this);
     }

@@ -28,29 +28,29 @@
 */
 
 // 0x4A3750 | ?logf_fast@@YAMM@Z
-inline f32 logf_fast(f32 arg1)
+inline float logf_fast(float arg1)
 {
-    return stub<cdecl_t<f32, f32>>(0x4A3750, arg1);
+    return stub<cdecl_t<float, float>>(0x4A3750, arg1);
 }
 
 struct Random
 {
 public:
     // 0x4A37D0 | ?Seed@Random@@QAEXH@Z
-    void Seed(i32 arg1)
+    inline void Seed(int32_t arg1)
     {
-        return stub<member_func_t<void, Random, i32>>(0x4A37D0, this, arg1);
+        return stub<member_func_t<void, Random, int32_t>>(0x4A37D0, this, arg1);
     }
 
     // 0x4A3880 | ?Number@Random@@QAEMXZ
-    f32 Number()
+    inline float Number()
     {
-        return stub<member_func_t<f32, Random>>(0x4A3880, this);
+        return stub<member_func_t<float, Random>>(0x4A3880, this);
     }
 
     // 0x4A38E0 | ?Normal@Random@@QAEMMM@Z
-    f32 Normal(f32 arg1, f32 arg2)
+    inline float Normal(float arg1, float arg2)
     {
-        return stub<member_func_t<f32, Random, f32, f32>>(0x4A38E0, this, arg1, arg2);
+        return stub<member_func_t<float, Random, float, float>>(0x4A38E0, this, arg1, arg2);
     }
 };

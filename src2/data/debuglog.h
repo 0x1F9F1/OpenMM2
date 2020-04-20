@@ -39,7 +39,7 @@ inline void DebugLogShutdown()
 }
 
 // 0x4C7C70 | ?DebugLog@@YAXHPBXH_N@Z
-inline void DebugLog(i32 arg1, void const* arg2, i32 arg3, bool arg4)
+inline void DebugLog(int32_t arg1, void const* arg2, int32_t arg3, bool arg4)
 {
-    return stub<cdecl_t<void, i32, void const*, i32, bool>>(0x4C7C70, arg1, arg2, arg3, arg4);
+    return stub<cdecl_t<void, int32_t, void const*, int32_t, bool>>(0x4C7C70, arg1, arg2, arg3, arg4);
 }

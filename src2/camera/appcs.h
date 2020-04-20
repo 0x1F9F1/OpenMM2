@@ -41,44 +41,44 @@ public:
     // camAppCS::`vftable' @ 0x5B5174
 
     // 0x521F70 | ??0camAppCS@@QAE@XZ
-    camAppCS()
+    inline camAppCS()
     {
         stub<member_func_t<void, camAppCS>>(0x521F70, this);
     }
 
     // 0x522060 | ?ApproachIt@camAppCS@@IAEXXZ
-    void ApproachIt()
+    inline void ApproachIt()
     {
         return stub<member_func_t<void, camAppCS>>(0x522060, this);
     }
 
     // 0x522090 | ?UpdateApproach@camAppCS@@AAEXXZ
-    void UpdateApproach()
+    inline void UpdateApproach()
     {
         return stub<member_func_t<void, camAppCS>>(0x522090, this);
     }
 
     // 0x522650 | ?UpdateMaxDist@camAppCS@@AAEXXZ
-    void UpdateMaxDist()
+    inline void UpdateMaxDist()
     {
         return stub<member_func_t<void, camAppCS>>(0x522650, this);
     }
 
     // 0x522880 | ?DApproach@camAppCS@@AAEHAAMMMM0M@Z
-    i32 DApproach(f32& arg1, f32 arg2, f32 arg3, f32 arg4, f32& arg5, f32 arg6)
+    inline int32_t DApproach(float& arg1, float arg2, float arg3, float arg4, float& arg5, float arg6)
     {
-        return stub<member_func_t<i32, camAppCS, f32&, f32, f32, f32, f32&, f32>>(
+        return stub<member_func_t<int32_t, camAppCS, float&, float, float, float, float&, float>>(
             0x522880, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x522050 | ??1camAppCS@@UAE@XZ
-    ~camAppCS() override
+    inline ~camAppCS() override
     {
         stub<member_func_t<void, camAppCS>>(0x522050, this);
     }
 
     // 0x5229D0 | ?FileIO@camAppCS@@UAEXAAVdatParser@@@Z
-    void FileIO(class datParser& arg1) override
+    inline void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, camAppCS, class datParser&>>(0x5229D0, this, arg1);
     }

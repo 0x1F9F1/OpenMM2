@@ -38,37 +38,37 @@ public:
     // aiVehicleData::`vftable' @ 0x5B5C20
 
     // 0x56F770 | ??0aiVehicleData@@QAE@XZ
-    aiVehicleData()
+    inline aiVehicleData()
     {
         stub<member_func_t<void, aiVehicleData>>(0x56F770, this);
     }
 
     // 0x56F790 | ?SetFricElas@aiVehicleData@@QAEXXZ
-    void SetFricElas()
+    inline void SetFricElas()
     {
         return stub<member_func_t<void, aiVehicleData>>(0x56F790, this);
     }
 
     // 0x5543A0 | ??1aiVehicleData@@UAE@XZ
-    ~aiVehicleData() override
+    inline ~aiVehicleData() override
     {
         stub<member_func_t<void, aiVehicleData>>(0x5543A0, this);
     }
 
     // 0x56F7C0 | ?FileIO@aiVehicleData@@UAEXAAVdatParser@@@Z
-    void FileIO(class datParser& arg1) override
+    inline void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, aiVehicleData, class datParser&>>(0x56F7C0, this, arg1);
     }
 
     // 0x56F940 | ?GetClassName@aiVehicleData@@UAEPADXZ
-    char* GetClassName() override
+    inline char* GetClassName() override
     {
         return stub<member_func_t<char*, aiVehicleData>>(0x56F940, this);
     }
 
     // 0x56F950 | ?GetDirName@aiVehicleData@@UAEPBDXZ
-    char const* GetDirName() override
+    inline char const* GetDirName() override
     {
         return stub<member_func_t<char const*, aiVehicleData>>(0x56F950, this);
     }

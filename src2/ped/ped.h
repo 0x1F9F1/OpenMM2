@@ -48,13 +48,13 @@ struct pedAnimation
 {
 public:
     // 0x57A7A0 | ?LookupSequence@pedAnimation@@QAEHPAD@Z
-    i32 LookupSequence(char* arg1)
+    inline int32_t LookupSequence(char* arg1)
     {
-        return stub<member_func_t<i32, pedAnimation, char*>>(0x57A7A0, this, arg1);
+        return stub<member_func_t<int32_t, pedAnimation, char*>>(0x57A7A0, this, arg1);
     }
 
     // 0x57A800 | ?Load@pedAnimation@@QAEXPADPAVStream@@@Z
-    void Load(char* arg1, class Stream* arg2)
+    inline void Load(char* arg1, class Stream* arg2)
     {
         return stub<member_func_t<void, pedAnimation, char*, class Stream*>>(0x57A800, this, arg1, arg2);
     }
@@ -66,9 +66,9 @@ public:
     }
 
     // 0x57AB60 | ?DrawSkeleton@pedAnimation@@QAEXHPAVcrSkeleton@@@Z
-    void DrawSkeleton(i32 arg1, class crSkeleton* arg2)
+    inline void DrawSkeleton(int32_t arg1, class crSkeleton* arg2)
     {
-        return stub<member_func_t<void, pedAnimation, i32, class crSkeleton*>>(0x57AB60, this, arg1, arg2);
+        return stub<member_func_t<void, pedAnimation, int32_t, class crSkeleton*>>(0x57AB60, this, arg1, arg2);
     }
 };
 
@@ -76,51 +76,51 @@ struct pedAnimationInstance
 {
 public:
     // 0x57ADB0 | ?Init@pedAnimationInstance@@QAEXPAD@Z
-    void Init(char* arg1)
+    inline void Init(char* arg1)
     {
         return stub<member_func_t<void, pedAnimationInstance, char*>>(0x57ADB0, this, arg1);
     }
 
     // 0x57B270 | ?PreUpdate@pedAnimationInstance@@QAEXM@Z
-    void PreUpdate(f32 arg1)
+    inline void PreUpdate(float arg1)
     {
-        return stub<member_func_t<void, pedAnimationInstance, f32>>(0x57B270, this, arg1);
+        return stub<member_func_t<void, pedAnimationInstance, float>>(0x57B270, this, arg1);
     }
 
     // 0x57B2C0 | ?Reset@pedAnimationInstance@@QAEXXZ
-    void Reset()
+    inline void Reset()
     {
         return stub<member_func_t<void, pedAnimationInstance>>(0x57B2C0, this);
     }
 
     // 0x57B2F0 | ?Update@pedAnimationInstance@@QAEXXZ
-    void Update()
+    inline void Update()
     {
         return stub<member_func_t<void, pedAnimationInstance>>(0x57B2F0, this);
     }
 
     // 0x57B370 | ?Draw@pedAnimationInstance@@QAEX_N@Z
-    void Draw(bool arg1)
+    inline void Draw(bool arg1)
     {
         return stub<member_func_t<void, pedAnimationInstance, bool>>(0x57B370, this, arg1);
     }
 
     // 0x57B510 | ?DrawShadow@pedAnimationInstance@@QAEXXZ
-    void DrawShadow()
+    inline void DrawShadow()
     {
         return stub<member_func_t<void, pedAnimationInstance>>(0x57B510, this);
     }
 
     // 0x57B520 | ?VerifySeq@pedAnimationInstance@@QAEXH@Z
-    void VerifySeq(i32 arg1)
+    inline void VerifySeq(int32_t arg1)
     {
-        return stub<member_func_t<void, pedAnimationInstance, i32>>(0x57B520, this, arg1);
+        return stub<member_func_t<void, pedAnimationInstance, int32_t>>(0x57B520, this, arg1);
     }
 
     // 0x57B550 | ?Start@pedAnimationInstance@@QAEXH@Z
-    void Start(i32 arg1)
+    inline void Start(int32_t arg1)
     {
-        return stub<member_func_t<void, pedAnimationInstance, i32>>(0x57B550, this, arg1);
+        return stub<member_func_t<void, pedAnimationInstance, int32_t>>(0x57B550, this, arg1);
     }
 
     // 0x6B4720 | ?FrameDelta@pedAnimationInstance@@0HA

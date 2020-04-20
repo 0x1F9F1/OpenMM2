@@ -46,49 +46,49 @@ public:
     // mmVehInfo::`vftable' @ 0x5B5248
 
     // 0x4F7A90 | ?IsValid@mmVehInfo@@QAEHXZ
-    i32 IsValid()
+    inline int32_t IsValid()
     {
-        return stub<member_func_t<i32, mmVehInfo>>(0x4F7A90, this);
+        return stub<member_func_t<int32_t, mmVehInfo>>(0x4F7A90, this);
     }
 
     // 0x529720 | ??0mmVehInfo@@QAE@XZ
-    mmVehInfo()
+    inline mmVehInfo()
     {
         stub<member_func_t<void, mmVehInfo>>(0x529720, this);
     }
 
     // 0x5297B0 | ?Load@mmVehInfo@@QAEHPAD@Z
-    i32 Load(char* arg1)
+    inline int32_t Load(char* arg1)
     {
-        return stub<member_func_t<i32, mmVehInfo, char*>>(0x5297B0, this, arg1);
+        return stub<member_func_t<int32_t, mmVehInfo, char*>>(0x5297B0, this, arg1);
     }
 
     // 0x529A00 | ?HasColorVariations@mmVehInfo@@QAEHXZ
-    i32 HasColorVariations()
+    inline int32_t HasColorVariations()
     {
-        return stub<member_func_t<i32, mmVehInfo>>(0x529A00, this);
+        return stub<member_func_t<int32_t, mmVehInfo>>(0x529A00, this);
     }
 
     // 0x529A20 | ?Print@mmVehInfo@@QAEXXZ
-    void Print()
+    inline void Print()
     {
         return stub<member_func_t<void, mmVehInfo>>(0x529A20, this);
     }
 
     // 0x529AA0 | ?GetTuningCRC@mmVehInfo@@QAEKXZ
-    u32 GetTuningCRC()
+    inline uint32_t GetTuningCRC()
     {
-        return stub<member_func_t<u32, mmVehInfo>>(0x529AA0, this);
+        return stub<member_func_t<uint32_t, mmVehInfo>>(0x529AA0, this);
     }
 
     // 0x529AB0 | ?ComputeTuningCRC@mmVehInfo@@QAEXXZ
-    void ComputeTuningCRC()
+    inline void ComputeTuningCRC()
     {
         return stub<member_func_t<void, mmVehInfo>>(0x529AB0, this);
     }
 
     // 0x529770 | ??1mmVehInfo@@UAE@XZ
-    virtual ~mmVehInfo()
+    virtual inline ~mmVehInfo()
     {
         stub<member_func_t<void, mmVehInfo>>(0x529770, this);
     }

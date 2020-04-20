@@ -41,7 +41,7 @@ public:
     // dgGlassInstance::`vftable' @ 0x5B1628
 
     // 0x442C10 | ??0dgGlassInstance@@QAE@XZ
-    dgGlassInstance()
+    inline dgGlassInstance()
     {
         stub<member_func_t<void, dgGlassInstance>>(0x442C10, this);
     }
@@ -62,31 +62,31 @@ public:
     inline extern_var(0x6276E8, class gfxTexture*, sm_Texture);
 
     // 0x442C90 | ?Reset@dgGlassInstance@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, dgGlassInstance>>(0x442C90, this);
     }
 
     // 0x442E90 | ?Draw@dgGlassInstance@@UAEXH@Z
-    void Draw(i32 arg1) override
+    inline void Draw(int32_t arg1) override
     {
-        return stub<member_func_t<void, dgGlassInstance, i32>>(0x442E90, this, arg1);
+        return stub<member_func_t<void, dgGlassInstance, int32_t>>(0x442E90, this, arg1);
     }
 
     // 0x442EF0 | ?DrawGlow@dgGlassInstance@@UAEXXZ
-    void DrawGlow() override
+    inline void DrawGlow() override
     {
         return stub<member_func_t<void, dgGlassInstance>>(0x442EF0, this);
     }
 
     // 0x442F00 | ?SizeOf@dgGlassInstance@@UAEIXZ
-    u32 SizeOf() override
+    inline uint32_t SizeOf() override
     {
-        return stub<member_func_t<u32, dgGlassInstance>>(0x442F00, this);
+        return stub<member_func_t<uint32_t, dgGlassInstance>>(0x442F00, this);
     }
 
     // 0x442CD0 | ?Impact@dgGlassInstance@@UAEXPAVlvlInstance@@PAVVector3@@@Z
-    void Impact(class lvlInstance* arg1, class Vector3* arg2) override
+    inline void Impact(class lvlInstance* arg1, class Vector3* arg2) override
     {
         return stub<member_func_t<void, dgGlassInstance, class lvlInstance*, class Vector3*>>(
             0x442CD0, this, arg1, arg2);

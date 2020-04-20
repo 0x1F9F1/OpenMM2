@@ -32,32 +32,32 @@ class crBoneData
 {
 public:
     // 0x57CB90 | ??0crBoneData@@QAE@XZ
-    crBoneData()
+    inline crBoneData()
     {
         stub<member_func_t<void, crBoneData>>(0x57CB90, this);
     }
 
     // 0x57CC00 | ?AddChild@crBoneData@@QAEXPAV1@@Z
-    void AddChild(class crBoneData* arg1)
+    inline void AddChild(class crBoneData* arg1)
     {
         return stub<member_func_t<void, crBoneData, class crBoneData*>>(0x57CC00, this, arg1);
     }
 
     // 0x57CC40 | ?Load@crBoneData@@QAE_NAAVdatTokenizer@@PAPAV1@AAH@Z
-    bool Load(class datTokenizer& arg1, class crBoneData** arg2, i32& arg3)
+    inline bool Load(class datTokenizer& arg1, class crBoneData** arg2, int32_t& arg3)
     {
-        return stub<member_func_t<bool, crBoneData, class datTokenizer&, class crBoneData**, i32&>>(
+        return stub<member_func_t<bool, crBoneData, class datTokenizer&, class crBoneData**, int32_t&>>(
             0x57CC40, this, arg1, arg2, arg3);
     }
 
     // 0x57CD50 | ?Transform@crBoneData@@QBEXPBVMatrix34@@PAVcrBone@@@Z
-    void Transform(class Matrix34 const* arg1, class crBone* arg2)
+    inline void Transform(class Matrix34 const* arg1, class crBone* arg2)
     {
         return stub<member_func_t<void, crBoneData, class Matrix34 const*, class crBone*>>(0x57CD50, this, arg1, arg2);
     }
 
     // 0x57CDC0 | ?ApplyLimits@crBoneData@@QBEXAAVMatrix34@@@Z
-    void ApplyLimits(class Matrix34& arg1)
+    inline void ApplyLimits(class Matrix34& arg1)
     {
         return stub<member_func_t<void, crBoneData, class Matrix34&>>(0x57CDC0, this, arg1);
     }

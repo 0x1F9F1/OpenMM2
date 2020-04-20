@@ -26,7 +26,8 @@
 */
 
 // 0x5761E0 | ?inflate_flush@@YAHPAUinflate_blocks_state@@PAUz_stream_s@@H@Z
-inline i32 inflate_flush(struct inflate_blocks_state* arg1, struct z_stream_s* arg2, i32 arg3)
+inline int32_t inflate_flush(struct inflate_blocks_state* arg1, struct z_stream_s* arg2, int32_t arg3)
 {
-    return stub<cdecl_t<i32, struct inflate_blocks_state*, struct z_stream_s*, i32>>(0x5761E0, arg1, arg2, arg3);
+    return stub<cdecl_t<int32_t, struct inflate_blocks_state*, struct z_stream_s*, int32_t>>(
+        0x5761E0, arg1, arg2, arg3);
 }

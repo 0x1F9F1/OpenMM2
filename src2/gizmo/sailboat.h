@@ -52,37 +52,37 @@ public:
     // gizSailboatMgr::`vftable' @ 0x5B60A0
 
     // 0x5784B0 | ??0gizSailboatMgr@@QAE@XZ
-    gizSailboatMgr()
+    inline gizSailboatMgr()
     {
         stub<member_func_t<void, gizSailboatMgr>>(0x5784B0, this);
     }
 
     // 0x5785F0 | ?Init@gizSailboatMgr@@QAE_NPAD00@Z
-    bool Init(char* arg1, char* arg2, char* arg3)
+    inline bool Init(char* arg1, char* arg2, char* arg3)
     {
         return stub<member_func_t<bool, gizSailboatMgr, char*, char*, char*>>(0x5785F0, this, arg1, arg2, arg3);
     }
 
     // 0x5787A0 | ?ApplyTuning@gizSailboatMgr@@AAEXXZ
-    void ApplyTuning()
+    inline void ApplyTuning()
     {
         return stub<member_func_t<void, gizSailboatMgr>>(0x5787A0, this);
     }
 
     // 0x578520 | ??1gizSailboatMgr@@UAE@XZ
-    ~gizSailboatMgr() override
+    inline ~gizSailboatMgr() override
     {
         stub<member_func_t<void, gizSailboatMgr>>(0x578520, this);
     }
 
     // 0x578770 | ?Update@gizSailboatMgr@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, gizSailboatMgr>>(0x578770, this);
     }
 
     // 0x5785C0 | ?Reset@gizSailboatMgr@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, gizSailboatMgr>>(0x5785C0, this);
     }
@@ -94,47 +94,47 @@ public:
     // gizSailboat::`vftable' @ 0x5B6038
 
     // 0x578260 | ??0gizSailboat@@QAE@XZ
-    gizSailboat()
+    inline gizSailboat()
     {
         stub<member_func_t<void, gizSailboat>>(0x578260, this);
     }
 
     // 0x5782B0 | ??1gizSailboat@@QAE@XZ
-    ~gizSailboat()
+    inline ~gizSailboat()
     {
         stub<member_func_t<void, gizSailboat>>(0x5782B0, this);
     }
 
     // 0x578330 | ?Init@gizSailboat@@QAEXPADPAVdgPath@@@Z
-    void Init(char* arg1, class dgPath* arg2)
+    inline void Init(char* arg1, class dgPath* arg2)
     {
         return stub<member_func_t<void, gizSailboat, char*, class dgPath*>>(0x578330, this, arg1, arg2);
     }
 
     // 0x578410 | ?Update@gizSailboat@@QAEXXZ
-    void Update()
+    inline void Update()
     {
         return stub<member_func_t<void, gizSailboat>>(0x578410, this);
     }
 
     // 0x578490 | ?SetSpeed@gizSailboat@@QAEXM@Z
-    void SetSpeed(f32 arg1)
+    inline void SetSpeed(float arg1)
     {
-        return stub<member_func_t<void, gizSailboat, f32>>(0x578490, this, arg1);
+        return stub<member_func_t<void, gizSailboat, float>>(0x578490, this, arg1);
     }
 
     // 0x578830 | ??_EgizSailboat@@QAEPAXI@Z
     // Skipped (scalar/vector destructor)
 
     // 0x578320 | ?Reset@gizSailboat@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, gizSailboat>>(0x578320, this);
     }
 
     // 0x578890 | ?SizeOf@gizSailboat@@UAEIXZ
-    u32 SizeOf() override
+    inline uint32_t SizeOf() override
     {
-        return stub<member_func_t<u32, gizSailboat>>(0x578890, this);
+        return stub<member_func_t<uint32_t, gizSailboat>>(0x578890, this);
     }
 };

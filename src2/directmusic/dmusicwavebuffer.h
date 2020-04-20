@@ -32,33 +32,33 @@ class DMusicWaveBuffer
 {
 public:
     // 0x518740 | ??0DMusicWaveBuffer@@QAE@XZ
-    DMusicWaveBuffer()
+    inline DMusicWaveBuffer()
     {
         stub<member_func_t<void, DMusicWaveBuffer>>(0x518740, this);
     }
 
     // 0x518760 | ??1DMusicWaveBuffer@@QAE@XZ
-    ~DMusicWaveBuffer()
+    inline ~DMusicWaveBuffer()
     {
         stub<member_func_t<void, DMusicWaveBuffer>>(0x518760, this);
     }
 
     // 0x518770 | ?Create@DMusicWaveBuffer@@QAEHPAUIDirectMusicPort@@PAUIDirectSound@@@Z
-    i32 Create(struct IDirectMusicPort* arg1, struct IDirectSound* arg2)
+    inline int32_t Create(struct IDirectMusicPort* arg1, struct IDirectSound* arg2)
     {
-        return stub<member_func_t<i32, DMusicWaveBuffer, struct IDirectMusicPort*, struct IDirectSound*>>(
+        return stub<member_func_t<int32_t, DMusicWaveBuffer, struct IDirectMusicPort*, struct IDirectSound*>>(
             0x518770, this, arg1, arg2);
     }
 
     // 0x518930 | ?SetVolume@DMusicWaveBuffer@@QAEXM@Z
-    void SetVolume(f32 arg1)
+    inline void SetVolume(float arg1)
     {
-        return stub<member_func_t<void, DMusicWaveBuffer, f32>>(0x518930, this, arg1);
+        return stub<member_func_t<void, DMusicWaveBuffer, float>>(0x518930, this, arg1);
     }
 
     // 0x5189E0 | ?SetPan@DMusicWaveBuffer@@QAEXM@Z
-    void SetPan(f32 arg1)
+    inline void SetPan(float arg1)
     {
-        return stub<member_func_t<void, DMusicWaveBuffer, f32>>(0x5189E0, this, arg1);
+        return stub<member_func_t<void, DMusicWaveBuffer, float>>(0x5189E0, this, arg1);
     }
 };

@@ -56,27 +56,27 @@ inline void ResetRandomSeed()
 }
 
 // 0x4BBDC0 | ?irand@@YAHH@Z
-inline i32 irand(i32 arg1)
+inline int32_t irand(int32_t arg1)
 {
-    return stub<cdecl_t<i32, i32>>(0x4BBDC0, arg1);
+    return stub<cdecl_t<int32_t, int32_t>>(0x4BBDC0, arg1);
 }
 
 // 0x4BBDF0 | ?irand@@YAHXZ
-inline i32 irand()
+inline int32_t irand()
 {
-    return stub<cdecl_t<i32>>(0x4BBDF0);
+    return stub<cdecl_t<int32_t>>(0x4BBDF0);
 }
 
 // 0x4BBE30 | ?frand@@YAMXZ
-inline f32 frand()
+inline float frand()
 {
-    return stub<cdecl_t<f32>>(0x4BBE30);
+    return stub<cdecl_t<float>>(0x4BBE30);
 }
 
 // 0x4BBE50 | ?frand@@YAMH@Z
-inline f32 frand(i32 arg1)
+inline float frand(int32_t arg1)
 {
-    return stub<cdecl_t<f32, i32>>(0x4BBE50, arg1);
+    return stub<cdecl_t<float, int32_t>>(0x4BBE50, arg1);
 }
 
 // 0x4BBE70 | _rand

@@ -143,27 +143,27 @@
 // 0x45CBB0 | _sqrtf
 
 // 0x45CC10 | ?Max@@YAMMM@Z
-inline f32 Max(f32 arg1, f32 arg2)
+inline float Max(float arg1, float arg2)
 {
-    return stub<cdecl_t<f32, f32, f32>>(0x45CC10, arg1, arg2);
+    return stub<cdecl_t<float, float, float>>(0x45CC10, arg1, arg2);
 }
 
 // 0x45CC30 | ?Lerp@@YAMMMM@Z
-inline f32 Lerp(f32 arg1, f32 arg2, f32 arg3)
+inline float Lerp(float arg1, float arg2, float arg3)
 {
-    return stub<cdecl_t<f32, f32, f32, f32>>(0x45CC30, arg1, arg2, arg3);
+    return stub<cdecl_t<float, float, float, float>>(0x45CC30, arg1, arg2, arg3);
 }
 
 // 0x45CFD0 | ?vglTexCoord2f@@YAXMM@Z
-inline void vglTexCoord2f(f32 arg1, f32 arg2)
+inline void vglTexCoord2f(float arg1, float arg2)
 {
-    return stub<cdecl_t<void, f32, f32>>(0x45CFD0, arg1, arg2);
+    return stub<cdecl_t<void, float, float>>(0x45CFD0, arg1, arg2);
 }
 
 // 0x45CFF0 | ?vglVertex3f@@YAXMMM@Z
-inline void vglVertex3f(f32 arg1, f32 arg2, f32 arg3)
+inline void vglVertex3f(float arg1, float arg2, float arg3)
 {
-    return stub<cdecl_t<void, f32, f32, f32>>(0x45CFF0, arg1, arg2, arg3);
+    return stub<cdecl_t<void, float, float, float>>(0x45CFF0, arg1, arg2, arg3);
 }
 
 // 0x45D080 | ?vglVertex3f@@YAXVVector3@@@Z
@@ -176,21 +176,21 @@ class Vector2
 {
 public:
     // 0x45CC50 | ??0Vector2@@QAE@XZ
-    Vector2()
+    inline Vector2()
     {
         stub<member_func_t<void, Vector2>>(0x45CC50, this);
     }
 
     // 0x45CC60 | ?Mag@Vector2@@QBEMXZ
-    f32 Mag()
+    inline float Mag()
     {
-        return stub<member_func_t<f32, Vector2>>(0x45CC60, this);
+        return stub<member_func_t<float, Vector2>>(0x45CC60, this);
     }
 
     // 0x45CC80 | ?Mag2@Vector2@@QBEMXZ
-    f32 Mag2()
+    inline float Mag2()
     {
-        return stub<member_func_t<f32, Vector2>>(0x45CC80, this);
+        return stub<member_func_t<float, Vector2>>(0x45CC80, this);
     }
 };
 
@@ -200,43 +200,45 @@ public:
     // lvlSDL::`vftable' @ 0x5B1868
 
     // 0x45A530 | ??0lvlSDL@@QAE@XZ
-    lvlSDL()
+    inline lvlSDL()
     {
         stub<member_func_t<void, lvlSDL>>(0x45A530, this);
     }
 
     // 0x45A550 | ??1lvlSDL@@QAE@XZ
-    ~lvlSDL()
+    inline ~lvlSDL()
     {
         stub<member_func_t<void, lvlSDL>>(0x45A550, this);
     }
 
     // 0x45BE50 | ?Enumerate@lvlSDL@@QBEXHP6AXABV1@HHHPBGPAX@Z2@Z
-    void Enumerate(i32 arg1, void(__cdecl* arg2)(class lvlSDL const&, i32, i32, i32, u16 const*, void*), void* arg3)
+    inline void Enumerate(int32_t arg1,
+        void(__cdecl* arg2)(class lvlSDL const&, int32_t, int32_t, int32_t, uint16_t const*, void*), void* arg3)
     {
-        return stub<member_func_t<void, lvlSDL, i32,
-            void(__cdecl*)(class lvlSDL const&, i32, i32, i32, u16 const*, void*), void*>>(
+        return stub<member_func_t<void, lvlSDL, int32_t,
+            void(__cdecl*)(class lvlSDL const&, int32_t, int32_t, int32_t, uint16_t const*, void*), void*>>(
             0x45BE50, this, arg1, arg2, arg3);
     }
 
     // 0x45C040 | ?LoadBinary@lvlSDL@@QAE_NPBD@Z
-    bool LoadBinary(char const* arg1)
+    inline bool LoadBinary(char const* arg1)
     {
         return stub<member_func_t<bool, lvlSDL, char const*>>(0x45C040, this, arg1);
     }
 
     // 0x45C540 | ?IsoLerp@lvlSDL@@CA_NAAVVector3@@AAHPBV2@HPBGHM_N4@Z
-    static inline bool IsoLerp(class Vector3& arg1, i32& arg2, class Vector3 const* arg3, i32 arg4, u16 const* arg5,
-        i32 arg6, f32 arg7, bool arg8, bool arg9)
+    static inline bool IsoLerp(class Vector3& arg1, int32_t& arg2, class Vector3 const* arg3, int32_t arg4,
+        uint16_t const* arg5, int32_t arg6, float arg7, bool arg8, bool arg9)
     {
-        return stub<cdecl_t<bool, class Vector3&, i32&, class Vector3 const*, i32, u16 const*, i32, f32, bool, bool>>(
-            0x45C540, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
+        return stub<cdecl_t<bool, class Vector3&, int32_t&, class Vector3 const*, int32_t, uint16_t const*, int32_t,
+            float, bool, bool>>(0x45C540, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
     }
 
     // 0x45C660 | ?Propulate@lvlSDL@@SAXABV1@HHHPBGPAX@Z
-    static inline void Propulate(class lvlSDL const& arg1, i32 arg2, i32 arg3, i32 arg4, u16 const* arg5, void* arg6)
+    static inline void Propulate(
+        class lvlSDL const& arg1, int32_t arg2, int32_t arg3, int32_t arg4, uint16_t const* arg5, void* arg6)
     {
-        return stub<cdecl_t<void, class lvlSDL const&, i32, i32, i32, u16 const*, void*>>(
+        return stub<cdecl_t<void, class lvlSDL const&, int32_t, int32_t, int32_t, uint16_t const*, void*>>(
             0x45C660, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
@@ -247,39 +249,42 @@ public:
     inline extern_var(0x6311A4, class Vector3*, sm_Verts);
 
     // 0x45CB90 | ?GetVertex@lvlSDL@@UBEABVVector3@@H@Z
-    class Vector3 const& GetVertex(i32 arg1) override
+    inline class Vector3 const& GetVertex(int32_t arg1) override
     {
-        return stub<member_func_t<class Vector3 const&, lvlSDL, i32>>(0x45CB90, this, arg1);
+        return stub<member_func_t<class Vector3 const&, lvlSDL, int32_t>>(0x45CB90, this, arg1);
     }
 
     // 0x45BBA0 | ?CollideEdge@lvlSDL@@UBEHAAVlvlSegment@@PAVlvlIntersection@@HPAHH@Z
-    i32 CollideEdge(class lvlSegment& arg1, class lvlIntersection* arg2, i32 arg3, i32* arg4, i32 arg5) override
+    inline int32_t CollideEdge(
+        class lvlSegment& arg1, class lvlIntersection* arg2, int32_t arg3, int32_t* arg4, int32_t arg5) override
     {
-        return stub<member_func_t<i32, lvlSDL, class lvlSegment&, class lvlIntersection*, i32, i32*, i32>>(
+        return stub<
+            member_func_t<int32_t, lvlSDL, class lvlSegment&, class lvlIntersection*, int32_t, int32_t*, int32_t>>(
             0x45BBA0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x45BBB0 | ?CollideProbe@lvlSDL@@UBE_NAAVlvlSegment@@PAVlvlIntersection@@M@Z
-    bool CollideProbe(class lvlSegment& arg1, class lvlIntersection* arg2, f32 arg3) override
+    inline bool CollideProbe(class lvlSegment& arg1, class lvlIntersection* arg2, float arg3) override
     {
-        return stub<member_func_t<bool, lvlSDL, class lvlSegment&, class lvlIntersection*, f32>>(
+        return stub<member_func_t<bool, lvlSDL, class lvlSegment&, class lvlIntersection*, float>>(
             0x45BBB0, this, arg1, arg2, arg3);
     }
 
     // 0x45BE40 | ?CollideAI@lvlSDL@@UBE_NAAVlvlSegment@@PAVlvlIntersection@@PAHH@Z
-    bool CollideAI(class lvlSegment& arg1, class lvlIntersection* arg2, i32* arg3, i32 arg4) override
+    inline bool CollideAI(class lvlSegment& arg1, class lvlIntersection* arg2, int32_t* arg3, int32_t arg4) override
     {
-        return stub<member_func_t<bool, lvlSDL, class lvlSegment&, class lvlIntersection*, i32*, i32>>(
+        return stub<member_func_t<bool, lvlSDL, class lvlSegment&, class lvlIntersection*, int32_t*, int32_t>>(
             0x45BE40, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x45B060 | ?CollidePolyToLevel@lvlSDL@@UBEHPBVphBoundPolygonal@@PAHHPAVphColliderBase@@PBVMatrix34@@3PAVlvlIntersection@@H1_N@Z
-    i32 CollidePolyToLevel(class phBoundPolygonal const* arg1, i32* arg2, i32 arg3, class phColliderBase* arg4,
-        class Matrix34 const* arg5, class Matrix34 const* arg6, class lvlIntersection* arg7, i32 arg8, i32* arg9,
-        bool arg10) override
+    inline int32_t CollidePolyToLevel(class phBoundPolygonal const* arg1, int32_t* arg2, int32_t arg3,
+        class phColliderBase* arg4, class Matrix34 const* arg5, class Matrix34 const* arg6, class lvlIntersection* arg7,
+        int32_t arg8, int32_t* arg9, bool arg10) override
     {
-        return stub<member_func_t<i32, lvlSDL, class phBoundPolygonal const*, i32*, i32, class phColliderBase*,
-            class Matrix34 const*, class Matrix34 const*, class lvlIntersection*, i32, i32*, bool>>(
+        return stub<
+            member_func_t<int32_t, lvlSDL, class phBoundPolygonal const*, int32_t*, int32_t, class phColliderBase*,
+                class Matrix34 const*, class Matrix34 const*, class lvlIntersection*, int32_t, int32_t*, bool>>(
             0x45B060, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
     }
 };
@@ -290,7 +295,7 @@ public:
     // sdlCommon::`vftable' @ 0x5B17CC
 
     // 0x448050 | ??0sdlCommon@@QAE@XZ
-    sdlCommon()
+    inline sdlCommon()
     {
         stub<member_func_t<void, sdlCommon>>(0x448050, this);
     }
@@ -302,7 +307,7 @@ public:
     }
 
     // 0x4482C0 | ??1sdlCommon@@QAE@XZ
-    ~sdlCommon()
+    inline ~sdlCommon()
     {
         stub<member_func_t<void, sdlCommon>>(0x4482C0, this);
     }
@@ -320,49 +325,51 @@ public:
     inline extern_var(0x6311A8, class sdlCommon*, sm_Instance);
 
     // 0x582519 | __purecall
-    virtual i32 CollideEdge(class lvlSegment& arg1, class lvlIntersection* arg2, i32 arg3, i32* arg4, i32 arg5)
+    virtual inline int32_t CollideEdge(
+        class lvlSegment& arg1, class lvlIntersection* arg2, int32_t arg3, int32_t* arg4, int32_t arg5)
     {
-        return stub<member_func_t<i32, sdlCommon, class lvlSegment&, class lvlIntersection*, i32, i32*, i32>>(
+        return stub<
+            member_func_t<int32_t, sdlCommon, class lvlSegment&, class lvlIntersection*, int32_t, int32_t*, int32_t>>(
             0x582519, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x582519 | __purecall
-    virtual bool CollideProbe(class lvlSegment& arg1, class lvlIntersection* arg2, f32 arg3)
+    virtual inline bool CollideProbe(class lvlSegment& arg1, class lvlIntersection* arg2, float arg3)
     {
-        return stub<member_func_t<bool, sdlCommon, class lvlSegment&, class lvlIntersection*, f32>>(
+        return stub<member_func_t<bool, sdlCommon, class lvlSegment&, class lvlIntersection*, float>>(
             0x582519, this, arg1, arg2, arg3);
     }
 
     // 0x582519 | __purecall
-    virtual bool CollideAI(class lvlSegment& arg1, class lvlIntersection* arg2, i32* arg3, i32 arg4)
+    virtual inline bool CollideAI(class lvlSegment& arg1, class lvlIntersection* arg2, int32_t* arg3, int32_t arg4)
     {
-        return stub<member_func_t<bool, sdlCommon, class lvlSegment&, class lvlIntersection*, i32*, i32>>(
+        return stub<member_func_t<bool, sdlCommon, class lvlSegment&, class lvlIntersection*, int32_t*, int32_t>>(
             0x582519, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4482E0 | ?CollideEdgePoint@sdlCommon@@UBEHAAVlvlSegment@@PAVlvlIntersectionPoint@@H@Z
-    virtual i32 CollideEdgePoint(class lvlSegment& arg1, class lvlIntersectionPoint* arg2, i32 arg3)
+    virtual inline int32_t CollideEdgePoint(class lvlSegment& arg1, class lvlIntersectionPoint* arg2, int32_t arg3)
     {
-        return stub<member_func_t<i32, sdlCommon, class lvlSegment&, class lvlIntersectionPoint*, i32>>(
+        return stub<member_func_t<int32_t, sdlCommon, class lvlSegment&, class lvlIntersectionPoint*, int32_t>>(
             0x4482E0, this, arg1, arg2, arg3);
     }
 
     // 0x4482F0 | ?CollideProbePoint@sdlCommon@@UBE_NAAVlvlSegment@@PAVlvlIntersectionPoint@@M@Z
-    virtual bool CollideProbePoint(class lvlSegment& arg1, class lvlIntersectionPoint* arg2, f32 arg3)
+    virtual inline bool CollideProbePoint(class lvlSegment& arg1, class lvlIntersectionPoint* arg2, float arg3)
     {
-        return stub<member_func_t<bool, sdlCommon, class lvlSegment&, class lvlIntersectionPoint*, f32>>(
+        return stub<member_func_t<bool, sdlCommon, class lvlSegment&, class lvlIntersectionPoint*, float>>(
             0x4482F0, this, arg1, arg2, arg3);
     }
 
     // 0x448300 | ?CollideAIPoint@sdlCommon@@UBE_NAAVlvlSegment@@PAVlvlIntersectionPoint@@@Z
-    virtual bool CollideAIPoint(class lvlSegment& arg1, class lvlIntersectionPoint* arg2)
+    virtual inline bool CollideAIPoint(class lvlSegment& arg1, class lvlIntersectionPoint* arg2)
     {
         return stub<member_func_t<bool, sdlCommon, class lvlSegment&, class lvlIntersectionPoint*>>(
             0x448300, this, arg1, arg2);
     }
 
     // 0x448310 | ?AllocateState@sdlCommon@@UBEPADXZ
-    virtual char* AllocateState()
+    virtual inline char* AllocateState()
     {
         return stub<member_func_t<char*, sdlCommon>>(0x448310, this);
     }
@@ -372,77 +379,76 @@ class sdlPage16
 {
 public:
     // 0x448330 | ?Draw@sdlPage16@@QBEXHI@Z
-    void Draw(i32 arg1, u32 arg2)
+    inline void Draw(int32_t arg1, uint32_t arg2)
     {
-        return stub<member_func_t<void, sdlPage16, i32, u32>>(0x448330, this, arg1, arg2);
+        return stub<member_func_t<void, sdlPage16, int32_t, uint32_t>>(0x448330, this, arg1, arg2);
     }
 
     // 0x450930 | ?GetDrawnSDLPrims@sdlPage16@@QBEHHPAHH@Z
-    i32 GetDrawnSDLPrims(i32 arg1, i32* arg2, i32 arg3)
+    inline int32_t GetDrawnSDLPrims(int32_t arg1, int32_t* arg2, int32_t arg3)
     {
-        return stub<member_func_t<i32, sdlPage16, i32, i32*, i32>>(0x450930, this, arg1, arg2, arg3);
+        return stub<member_func_t<int32_t, sdlPage16, int32_t, int32_t*, int32_t>>(0x450930, this, arg1, arg2, arg3);
     }
 
     // 0x455830 | ?Collect@sdlPage16@@QBEHPBVVector4@@PAVsdlPoly@@HAAH@Z
-    i32 Collect(class Vector4 const* arg1, class sdlPoly* arg2, i32 arg3, i32& arg4)
+    inline int32_t Collect(class Vector4 const* arg1, class sdlPoly* arg2, int32_t arg3, int32_t& arg4)
     {
-        return stub<member_func_t<i32, sdlPage16, class Vector4 const*, class sdlPoly*, i32, i32&>>(
+        return stub<member_func_t<int32_t, sdlPage16, class Vector4 const*, class sdlPoly*, int32_t, int32_t&>>(
             0x455830, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x45A4E0 | ??0sdlPage16@@QAE@HH@Z
-    sdlPage16(i32 arg1, i32 arg2)
+    inline sdlPage16(int32_t arg1, int32_t arg2)
     {
-        stub<member_func_t<void, sdlPage16, i32, i32>>(0x45A4E0, this, arg1, arg2);
+        stub<member_func_t<void, sdlPage16, int32_t, int32_t>>(0x45A4E0, this, arg1, arg2);
     }
 
     // 0x45A560 | ?ArcMap@sdlPage16@@QBEXPAMPBGHHH@Z
-    void ArcMap(f32* arg1, u16 const* arg2, i32 arg3, i32 arg4, i32 arg5)
+    inline void ArcMap(float* arg1, uint16_t const* arg2, int32_t arg3, int32_t arg4, int32_t arg5)
     {
-        return stub<member_func_t<void, sdlPage16, f32*, u16 const*, i32, i32, i32>>(
+        return stub<member_func_t<void, sdlPage16, float*, uint16_t const*, int32_t, int32_t, int32_t>>(
             0x45A560, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x45A760 | ?WallMap@sdlPage16@@QBEXPAMPBGMHH@Z
-    void WallMap(f32* arg1, u16 const* arg2, f32 arg3, i32 arg4, i32 arg5)
+    inline void WallMap(float* arg1, uint16_t const* arg2, float arg3, int32_t arg4, int32_t arg5)
     {
-        return stub<member_func_t<void, sdlPage16, f32*, u16 const*, f32, i32, i32>>(
+        return stub<member_func_t<void, sdlPage16, float*, uint16_t const*, float, int32_t, int32_t>>(
             0x45A760, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x45A900 | ?PointInPerimeter@sdlPage16@@QBE_NMM@Z
-    bool PointInPerimeter(f32 arg1, f32 arg2)
+    inline bool PointInPerimeter(float arg1, float arg2)
     {
-        return stub<member_func_t<bool, sdlPage16, f32, f32>>(0x45A900, this, arg1, arg2);
+        return stub<member_func_t<bool, sdlPage16, float, float>>(0x45A900, this, arg1, arg2);
     }
 
     // 0x45A9F0 | ?GetCentroid@sdlPage16@@QBEXAAVVector3@@@Z
-    void GetCentroid(class Vector3& arg1)
+    inline void GetCentroid(class Vector3& arg1)
     {
         return stub<member_func_t<void, sdlPage16, class Vector3&>>(0x45A9F0, this, arg1);
     }
 
     // 0x45AB40 | ?FindBoundingIsoParams@sdlPage16@@SAXPBVVector4@@PBVVector3@@PBGHHAAH3@Z
-    static inline void FindBoundingIsoParams(
-        class Vector4 const* arg1, class Vector3 const* arg2, u16 const* arg3, i32 arg4, i32 arg5, i32& arg6, i32& arg7)
+    static inline void FindBoundingIsoParams(class Vector4 const* arg1, class Vector3 const* arg2, uint16_t const* arg3,
+        int32_t arg4, int32_t arg5, int32_t& arg6, int32_t& arg7)
     {
-        return stub<cdecl_t<void, class Vector4 const*, class Vector3 const*, u16 const*, i32, i32, i32&, i32&>>(
-            0x45AB40, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+        return stub<cdecl_t<void, class Vector4 const*, class Vector3 const*, uint16_t const*, int32_t, int32_t,
+            int32_t&, int32_t&>>(0x45AB40, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x45ADF0 | ?ComputeBoundSphere@sdlPage16@@QBEXAAVVector4@@@Z
-    void ComputeBoundSphere(class Vector4& arg1)
+    inline void ComputeBoundSphere(class Vector4& arg1)
     {
         return stub<member_func_t<void, sdlPage16, class Vector4&>>(0x45ADF0, this, arg1);
     }
 
     // 0x45AE90 | ?CollideSegment@sdlPage16@@QBE_NPBVVector4@@AAVlvlSegment@@AAVlvlIntersection@@MM@Z
-    bool CollideSegment(
-        class Vector4 const* arg1, class lvlSegment& arg2, class lvlIntersection& arg3, f32 arg4, f32 arg5)
+    inline bool CollideSegment(
+        class Vector4 const* arg1, class lvlSegment& arg2, class lvlIntersection& arg3, float arg4, float arg5)
     {
-        return stub<
-            member_func_t<bool, sdlPage16, class Vector4 const*, class lvlSegment&, class lvlIntersection&, f32, f32>>(
-            0x45AE90, this, arg1, arg2, arg3, arg4, arg5);
+        return stub<member_func_t<bool, sdlPage16, class Vector4 const*, class lvlSegment&, class lvlIntersection&,
+            float, float>>(0x45AE90, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x45BF90 | ?LoadBinary@sdlPage16@@SAPAV1@PAVStream@@@Z
@@ -452,33 +458,33 @@ public:
     }
 
     // 0x45D110 | ?GetPerimeterCount@sdlPage16@@QBEHXZ
-    i32 GetPerimeterCount()
+    inline int32_t GetPerimeterCount()
     {
-        return stub<member_func_t<i32, sdlPage16>>(0x45D110, this);
+        return stub<member_func_t<int32_t, sdlPage16>>(0x45D110, this);
     }
 
     // 0x45D120 | ?GetPerimeterVertexIndex@sdlPage16@@QBEHH@Z
-    i32 GetPerimeterVertexIndex(i32 arg1)
+    inline int32_t GetPerimeterVertexIndex(int32_t arg1)
     {
-        return stub<member_func_t<i32, sdlPage16, i32>>(0x45D120, this, arg1);
+        return stub<member_func_t<int32_t, sdlPage16, int32_t>>(0x45D120, this, arg1);
     }
 
     // 0x45D140 | ?GetCodedVertex@sdlPage16@@QBEABVVector3@@H@Z
-    class Vector3 const& GetCodedVertex(i32 arg1)
+    inline class Vector3 const& GetCodedVertex(int32_t arg1)
     {
-        return stub<member_func_t<class Vector3 const&, sdlPage16, i32>>(0x45D140, this, arg1);
+        return stub<member_func_t<class Vector3 const&, sdlPage16, int32_t>>(0x45D140, this, arg1);
     }
 
     // 0x45D160 | ?GetFloat@sdlPage16@@QBEMH@Z
-    f32 GetFloat(i32 arg1)
+    inline float GetFloat(int32_t arg1)
     {
-        return stub<member_func_t<f32, sdlPage16, i32>>(0x45D160, this, arg1);
+        return stub<member_func_t<float, sdlPage16, int32_t>>(0x45D160, this, arg1);
     }
 
     // 0x45D170 | ?GetTexture@sdlPage16@@QBEPAVgfxTexture@@H@Z
-    class gfxTexture* GetTexture(i32 arg1)
+    inline class gfxTexture* GetTexture(int32_t arg1)
     {
-        return stub<member_func_t<class gfxTexture*, sdlPage16, i32>>(0x45D170, this, arg1);
+        return stub<member_func_t<class gfxTexture*, sdlPage16, int32_t>>(0x45D170, this, arg1);
     }
 };
 
@@ -486,60 +492,62 @@ class sdlPoly
 {
 public:
     // 0x447300 | ?InitNoArea@sdlPoly@@IAE_NHHHHH@Z
-    bool InitNoArea(i32 arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5)
+    inline bool InitNoArea(int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5)
     {
-        return stub<member_func_t<bool, sdlPoly, i32, i32, i32, i32, i32>>(
+        return stub<member_func_t<bool, sdlPoly, int32_t, int32_t, int32_t, int32_t, int32_t>>(
             0x447300, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x447470 | ?SetQuad@sdlPoly@@QAE_NHHMHMHMHM@Z
-    bool SetQuad(i32 arg1, i32 arg2, f32 arg3, i32 arg4, f32 arg5, i32 arg6, f32 arg7, i32 arg8, f32 arg9)
+    inline bool SetQuad(int32_t arg1, int32_t arg2, float arg3, int32_t arg4, float arg5, int32_t arg6, float arg7,
+        int32_t arg8, float arg9)
     {
-        return stub<member_func_t<bool, sdlPoly, i32, i32, f32, i32, f32, i32, f32, i32, f32>>(
+        return stub<
+            member_func_t<bool, sdlPoly, int32_t, int32_t, float, int32_t, float, int32_t, float, int32_t, float>>(
             0x447470, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
     }
 
     // 0x447670 | ?SetFlatQuad@sdlPoly@@QAE_NHHHHHM@Z
-    bool SetFlatQuad(i32 arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, f32 arg6)
+    inline bool SetFlatQuad(int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5, float arg6)
     {
-        return stub<member_func_t<bool, sdlPoly, i32, i32, i32, i32, i32, f32>>(
+        return stub<member_func_t<bool, sdlPoly, int32_t, int32_t, int32_t, int32_t, int32_t, float>>(
             0x447670, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x447850 | ?SetQuad@sdlPoly@@QAE_NHABVVector3@@000@Z
-    bool SetQuad(i32 arg1, class Vector3 const& arg2, class Vector3 const& arg3, class Vector3 const& arg4,
+    inline bool SetQuad(int32_t arg1, class Vector3 const& arg2, class Vector3 const& arg3, class Vector3 const& arg4,
         class Vector3 const& arg5)
     {
-        return stub<member_func_t<bool, sdlPoly, i32, class Vector3 const&, class Vector3 const&, class Vector3 const&,
-            class Vector3 const&>>(0x447850, this, arg1, arg2, arg3, arg4, arg5);
+        return stub<member_func_t<bool, sdlPoly, int32_t, class Vector3 const&, class Vector3 const&,
+            class Vector3 const&, class Vector3 const&>>(0x447850, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x4479D0 | ?SetTri@sdlPoly@@QAE_NHABVVector3@@00@Z
-    bool SetTri(i32 arg1, class Vector3 const& arg2, class Vector3 const& arg3, class Vector3 const& arg4)
+    inline bool SetTri(int32_t arg1, class Vector3 const& arg2, class Vector3 const& arg3, class Vector3 const& arg4)
     {
         return stub<
-            member_func_t<bool, sdlPoly, i32, class Vector3 const&, class Vector3 const&, class Vector3 const&>>(
+            member_func_t<bool, sdlPoly, int32_t, class Vector3 const&, class Vector3 const&, class Vector3 const&>>(
             0x4479D0, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x447AF0 | ?SetFlatTri@sdlPoly@@QAE_NHHHHM@Z
-    bool SetFlatTri(i32 arg1, i32 arg2, i32 arg3, i32 arg4, f32 arg5)
+    inline bool SetFlatTri(int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, float arg5)
     {
-        return stub<member_func_t<bool, sdlPoly, i32, i32, i32, i32, f32>>(
+        return stub<member_func_t<bool, sdlPoly, int32_t, int32_t, int32_t, int32_t, float>>(
             0x447AF0, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x447C70 | ?SetWall@sdlPoly@@QAE_NHHHMM@Z
-    bool SetWall(i32 arg1, i32 arg2, i32 arg3, f32 arg4, f32 arg5)
+    inline bool SetWall(int32_t arg1, int32_t arg2, int32_t arg3, float arg4, float arg5)
     {
-        return stub<member_func_t<bool, sdlPoly, i32, i32, i32, f32, f32>>(
+        return stub<member_func_t<bool, sdlPoly, int32_t, int32_t, int32_t, float, float>>(
             0x447C70, this, arg1, arg2, arg3, arg4, arg5);
     }
 
     // 0x447D50 | ?SetWall@sdlPoly@@QAE_NHABVVector3@@0MM@Z
-    bool SetWall(i32 arg1, class Vector3 const& arg2, class Vector3 const& arg3, f32 arg4, f32 arg5)
+    inline bool SetWall(int32_t arg1, class Vector3 const& arg2, class Vector3 const& arg3, float arg4, float arg5)
     {
-        return stub<member_func_t<bool, sdlPoly, i32, class Vector3 const&, class Vector3 const&, f32, f32>>(
+        return stub<member_func_t<bool, sdlPoly, int32_t, class Vector3 const&, class Vector3 const&, float, float>>(
             0x447D50, this, arg1, arg2, arg3, arg4, arg5);
     }
 };
@@ -548,7 +556,7 @@ struct sdlPolyCached
 {
 public:
     // 0x447ED0 | ?InitFromPoly@sdlPolyCached@@QAEXPBVsdlPoly@@@Z
-    void InitFromPoly(class sdlPoly const* arg1)
+    inline void InitFromPoly(class sdlPoly const* arg1)
     {
         return stub<member_func_t<void, sdlPolyCached, class sdlPoly const*>>(0x447ED0, this, arg1);
     }

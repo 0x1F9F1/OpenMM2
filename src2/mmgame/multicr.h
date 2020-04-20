@@ -84,296 +84,296 @@ public:
     // mmMultiCR::`vftable' @ 0x5B0980
 
     // 0x4236E0 | ??0mmMultiCR@@QAE@XZ
-    mmMultiCR()
+    inline mmMultiCR()
     {
         stub<member_func_t<void, mmMultiCR>>(0x4236E0, this);
     }
 
     // 0x424640 | ?LoadSets@mmMultiCR@@QAEHPAD@Z
-    i32 LoadSets(char* arg1)
+    inline int32_t LoadSets(char* arg1)
     {
-        return stub<member_func_t<i32, mmMultiCR, char*>>(0x424640, this, arg1);
+        return stub<member_func_t<int32_t, mmMultiCR, char*>>(0x424640, this, arg1);
     }
 
     // 0x424880 | ?LoadCSV@mmMultiCR@@QAEHPAD@Z
-    i32 LoadCSV(char* arg1)
+    inline int32_t LoadCSV(char* arg1)
     {
-        return stub<member_func_t<i32, mmMultiCR, char*>>(0x424880, this, arg1);
+        return stub<member_func_t<int32_t, mmMultiCR, char*>>(0x424880, this, arg1);
     }
 
     // 0x424900 | ?ImpactCallback@mmMultiCR@@QAEXPAX0@Z
-    void ImpactCallback(void* arg1, void* arg2)
+    inline void ImpactCallback(void* arg1, void* arg2)
     {
         return stub<member_func_t<void, mmMultiCR, void*, void*>>(0x424900, this, arg1, arg2);
     }
 
     // 0x424A00 | ?FondleCarMass@mmMultiCR@@QAEXPAVvehCar@@M@Z
-    void FondleCarMass(class vehCar* arg1, f32 arg2)
+    inline void FondleCarMass(class vehCar* arg1, float arg2)
     {
-        return stub<member_func_t<void, mmMultiCR, class vehCar*, f32>>(0x424A00, this, arg1, arg2);
+        return stub<member_func_t<void, mmMultiCR, class vehCar*, float>>(0x424A00, this, arg1, arg2);
     }
 
     // 0x424AD0 | ?GetNewSet@mmMultiCR@@AAEXXZ
-    void GetNewSet()
+    inline void GetNewSet()
     {
         return stub<member_func_t<void, mmMultiCR>>(0x424AD0, this);
     }
 
     // 0x424BF0 | ?GetRandomPoints@mmMultiCR@@AAEXAAVVector3@@00@Z
-    void GetRandomPoints(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3)
+    inline void GetRandomPoints(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3)
     {
         return stub<member_func_t<void, mmMultiCR, class Vector3&, class Vector3&, class Vector3&>>(
             0x424BF0, this, arg1, arg2, arg3);
     }
 
     // 0x424E20 | ?GetRandomIndex@mmMultiCR@@AAEHXZ
-    i32 GetRandomIndex()
+    inline int32_t GetRandomIndex()
     {
-        return stub<member_func_t<i32, mmMultiCR>>(0x424E20, this);
+        return stub<member_func_t<int32_t, mmMultiCR>>(0x424E20, this);
     }
 
     // 0x424E40 | ?ResetPositions@mmMultiCR@@QAEXH@Z
-    void ResetPositions(i32 arg1)
+    inline void ResetPositions(int32_t arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, i32>>(0x424E40, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x424E40, this, arg1);
     }
 
     // 0x424F70 | ?SelectTeams@mmMultiCR@@AAEHXZ
-    i32 SelectTeams()
+    inline int32_t SelectTeams()
     {
-        return stub<member_func_t<i32, mmMultiCR>>(0x424F70, this);
+        return stub<member_func_t<int32_t, mmMultiCR>>(0x424F70, this);
     }
 
     // 0x425520 | ?StealGold@mmMultiCR@@AAEXPAVvehCar@@@Z
-    void StealGold(class vehCar* arg1)
+    inline void StealGold(class vehCar* arg1)
     {
         return stub<member_func_t<void, mmMultiCR, class vehCar*>>(0x425520, this, arg1);
     }
 
     // 0x425560 | ?OppStealGold@mmMultiCR@@AAEXH@Z
-    void OppStealGold(i32 arg1)
+    inline void OppStealGold(int32_t arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, i32>>(0x425560, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x425560, this, arg1);
     }
 
     // 0x4255D0 | ?FindGround@mmMultiCR@@AAEXVVector3@@AAV2@@Z
-    void FindGround(class Vector3 arg1, class Vector3& arg2)
+    inline void FindGround(class Vector3 arg1, class Vector3& arg2)
     {
         return stub<member_func_t<void, mmMultiCR, class Vector3, class Vector3&>>(0x4255D0, this, arg1, arg2);
     }
 
     // 0x4256A0 | ?DropGold@mmMultiCR@@AAEXVVector3@@HH@Z
-    void DropGold(class Vector3 arg1, i32 arg2, i32 arg3)
+    inline void DropGold(class Vector3 arg1, int32_t arg2, int32_t arg3)
     {
-        return stub<member_func_t<void, mmMultiCR, class Vector3, i32, i32>>(0x4256A0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmMultiCR, class Vector3, int32_t, int32_t>>(0x4256A0, this, arg1, arg2, arg3);
     }
 
     // 0x425830 | ?UpdateGold@mmMultiCR@@AAEXXZ
-    void UpdateGold()
+    inline void UpdateGold()
     {
         return stub<member_func_t<void, mmMultiCR>>(0x425830, this);
     }
 
     // 0x425A50 | ?UpdateHideout@mmMultiCR@@AAEXXZ
-    void UpdateHideout()
+    inline void UpdateHideout()
     {
         return stub<member_func_t<void, mmMultiCR>>(0x425A50, this);
     }
 
     // 0x425BA0 | ?UpdateBank@mmMultiCR@@AAEXXZ
-    void UpdateBank()
+    inline void UpdateBank()
     {
         return stub<member_func_t<void, mmMultiCR>>(0x425BA0, this);
     }
 
     // 0x425CF0 | ?UpdateLimit@mmMultiCR@@AAEXXZ
-    void UpdateLimit()
+    inline void UpdateLimit()
     {
         return stub<member_func_t<void, mmMultiCR>>(0x425CF0, this);
     }
 
     // 0x425EE0 | ?FillResults@mmMultiCR@@AAEXXZ
-    void FillResults()
+    inline void FillResults()
     {
         return stub<member_func_t<void, mmMultiCR>>(0x425EE0, this);
     }
 
     // 0x426D10 | ?UpdateTimeWarning@mmMultiCR@@AAEXXZ
-    void UpdateTimeWarning()
+    inline void UpdateTimeWarning()
     {
         return stub<member_func_t<void, mmMultiCR>>(0x426D10, this);
     }
 
     // 0x426E80 | ?DisplayTimeWarning@mmMultiCR@@AAEXH@Z
-    void DisplayTimeWarning(i32 arg1)
+    inline void DisplayTimeWarning(int32_t arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, i32>>(0x426E80, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x426E80, this, arg1);
     }
 
     // 0x426F10 | ?SendGameState@mmMultiCR@@AAEXK@Z
-    void SendGameState(u32 arg1)
+    inline void SendGameState(uint32_t arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, u32>>(0x426F10, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, uint32_t>>(0x426F10, this, arg1);
     }
 
     // 0x426FF0 | ?SendSetup@mmMultiCR@@AAEXK@Z
-    void SendSetup(u32 arg1)
+    inline void SendSetup(uint32_t arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, u32>>(0x426FF0, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, uint32_t>>(0x426FF0, this, arg1);
     }
 
     // 0x427000 | ?SendGoldDrop@mmMultiCR@@AAEXVVector3@@@Z
-    void SendGoldDrop(class Vector3 arg1)
+    inline void SendGoldDrop(class Vector3 arg1)
     {
         return stub<member_func_t<void, mmMultiCR, class Vector3>>(0x427000, this, arg1);
     }
 
     // 0x427040 | ?SendGoldAck@mmMultiCR@@AAEXK@Z
-    void SendGoldAck(u32 arg1)
+    inline void SendGoldAck(uint32_t arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, u32>>(0x427040, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, uint32_t>>(0x427040, this, arg1);
     }
 
     // 0x427080 | ?SendGoldDeliver@mmMultiCR@@AAEXXZ
-    void SendGoldDeliver()
+    inline void SendGoldDeliver()
     {
         return stub<member_func_t<void, mmMultiCR>>(0x427080, this);
     }
 
     // 0x4270A0 | ?SendChangeSet@mmMultiCR@@AAEXH@Z
-    void SendChangeSet(i32 arg1)
+    inline void SendChangeSet(int32_t arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, i32>>(0x4270A0, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x4270A0, this, arg1);
     }
 
     // 0x427120 | ?SendLimitReached@mmMultiCR@@AAEXH@Z
-    void SendLimitReached(i32 arg1)
+    inline void SendLimitReached(int32_t arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, i32>>(0x427120, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x427120, this, arg1);
     }
 
     // 0x427150 | ?SendTimeWarning@mmMultiCR@@AAEXH@Z
-    void SendTimeWarning(i32 arg1)
+    inline void SendTimeWarning(int32_t arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, i32>>(0x427150, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x427150, this, arg1);
     }
 
     // 0x427180 | ?UpdateHUD@mmMultiCR@@AAEXXZ
-    void UpdateHUD()
+    inline void UpdateHUD()
     {
         return stub<member_func_t<void, mmMultiCR>>(0x427180, this);
     }
 
     // 0x4272A0 | ?Score@mmMultiCR@@AAEXH@Z
-    void Score(i32 arg1)
+    inline void Score(int32_t arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, i32>>(0x4272A0, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x4272A0, this, arg1);
     }
 
     // 0x4272E0 | ?CycleInterest@mmMultiCR@@AAEXH@Z
-    void CycleInterest(i32 arg1)
+    inline void CycleInterest(int32_t arg1)
     {
-        return stub<member_func_t<void, mmMultiCR, i32>>(0x4272E0, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x4272E0, this, arg1);
     }
 
     // 0x427340 | ?SendLobbyResults@mmMultiCR@@QAEXKHH@Z
-    void SendLobbyResults(u32 arg1, i32 arg2, i32 arg3)
+    inline void SendLobbyResults(uint32_t arg1, int32_t arg2, int32_t arg3)
     {
-        return stub<member_func_t<void, mmMultiCR, u32, i32, i32>>(0x427340, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmMultiCR, uint32_t, int32_t, int32_t>>(0x427340, this, arg1, arg2, arg3);
     }
 
     // 0x4237C0 | ??1mmMultiCR@@UAE@XZ
-    ~mmMultiCR() override
+    inline ~mmMultiCR() override
     {
         stub<member_func_t<void, mmMultiCR>>(0x4237C0, this);
     }
 
     // 0x424440 | ?Reset@mmMultiCR@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, mmMultiCR>>(0x424440, this);
     }
 
     // 0x423870 | ?Init@mmMultiCR@@UAEHXZ
-    i32 Init() override
+    inline int32_t Init() override
     {
-        return stub<member_func_t<i32, mmMultiCR>>(0x423870, this);
+        return stub<member_func_t<int32_t, mmMultiCR>>(0x423870, this);
     }
 
     // 0x4239F0 | ?InitMyPlayer@mmMultiCR@@UAEXXZ
-    void InitMyPlayer() override
+    inline void InitMyPlayer() override
     {
         return stub<member_func_t<void, mmMultiCR>>(0x4239F0, this);
     }
 
     // 0x423C80 | ?InitGameObjects@mmMultiCR@@UAEXXZ
-    void InitGameObjects() override
+    inline void InitGameObjects() override
     {
         return stub<member_func_t<void, mmMultiCR>>(0x423C80, this);
     }
 
     // 0x423B00 | ?InitHUD@mmMultiCR@@UAEXXZ
-    void InitHUD() override
+    inline void InitHUD() override
     {
         return stub<member_func_t<void, mmMultiCR>>(0x423B00, this);
     }
 
     // 0x424F80 | ?UpdateGameInput@mmMultiCR@@UAEXH@Z
-    void UpdateGameInput(i32 arg1) override
+    inline void UpdateGameInput(int32_t arg1) override
     {
-        return stub<member_func_t<void, mmMultiCR, i32>>(0x424F80, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x424F80, this, arg1);
     }
 
     // 0x4272D0 | ?UpdateDebugKeyInput@mmMultiCR@@UAEXH@Z
-    void UpdateDebugKeyInput(i32 arg1) override
+    inline void UpdateDebugKeyInput(int32_t arg1) override
     {
-        return stub<member_func_t<void, mmMultiCR, i32>>(0x4272D0, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x4272D0, this, arg1);
     }
 
     // 0x424F90 | ?UpdateGame@mmMultiCR@@UAEXXZ
-    void UpdateGame() override
+    inline void UpdateGame() override
     {
         return stub<member_func_t<void, mmMultiCR>>(0x424F90, this);
     }
 
     // 0x4253A0 | ?HitWaterHandler@mmMultiCR@@UAEXXZ
-    void HitWaterHandler() override
+    inline void HitWaterHandler() override
     {
         return stub<member_func_t<void, mmMultiCR>>(0x4253A0, this);
     }
 
     // 0x425460 | ?DropThruCityHandler@mmMultiCR@@UAEXXZ
-    void DropThruCityHandler() override
+    inline void DropThruCityHandler() override
     {
         return stub<member_func_t<void, mmMultiCR>>(0x425460, this);
     }
 
     // 0x425390 | ?SwitchState@mmMultiCR@@UAEXH@Z
-    void SwitchState(i32 arg1) override
+    inline void SwitchState(int32_t arg1) override
     {
-        return stub<member_func_t<void, mmMultiCR, i32>>(0x425390, this, arg1);
+        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x425390, this, arg1);
     }
 
     // 0x427510 | ?GetWaypoints@mmMultiCR@@UAEPAVmmWaypoints@@XZ
-    class mmWaypoints* GetWaypoints() override
+    inline class mmWaypoints* GetWaypoints() override
     {
         return stub<member_func_t<class mmWaypoints*, mmMultiCR>>(0x427510, this);
     }
 
     // 0x424090 | ?InitNetworkPlayers@mmMultiCR@@UAEXXZ
-    void InitNetworkPlayers() override
+    inline void InitNetworkPlayers() override
     {
         return stub<member_func_t<void, mmMultiCR>>(0x424090, this);
     }
 
     // 0x4261B0 | ?SystemMessage@mmMultiCR@@UAEXPAUNETSYS_MSG@@@Z
-    void SystemMessage(struct NETSYS_MSG* arg1) override
+    inline void SystemMessage(struct NETSYS_MSG* arg1) override
     {
         return stub<member_func_t<void, mmMultiCR, struct NETSYS_MSG*>>(0x4261B0, this, arg1);
     }
 
     // 0x426340 | ?GameMessage@mmMultiCR@@UAEXPAUNET_RCXHEAD@@@Z
-    void GameMessage(struct NET_RCXHEAD* arg1) override
+    inline void GameMessage(struct NET_RCXHEAD* arg1) override
     {
         return stub<member_func_t<void, mmMultiCR, struct NET_RCXHEAD*>>(0x426340, this, arg1);
     }
@@ -383,13 +383,13 @@ struct netScoreInfo
 {
 public:
     // 0x427520 | ??1netScoreInfo@@QAE@XZ
-    ~netScoreInfo()
+    inline ~netScoreInfo()
     {
         stub<member_func_t<void, netScoreInfo>>(0x427520, this);
     }
 
     // 0x572990 | ??0netScoreInfo@@QAE@XZ
-    netScoreInfo()
+    inline netScoreInfo()
     {
         stub<member_func_t<void, netScoreInfo>>(0x572990, this);
     }

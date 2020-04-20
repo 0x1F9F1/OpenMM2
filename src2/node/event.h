@@ -53,67 +53,68 @@ public:
     // eqEventHandler::`vftable' @ 0x5B2960
 
     // 0x4A16C0 | ??0eqEventHandler@@QAE@XZ
-    eqEventHandler()
+    inline eqEventHandler()
     {
         stub<member_func_t<void, eqEventHandler>>(0x4A16C0, this);
     }
 
     // 0x4A1730 | ?BeginGfx@eqEventHandler@@QAEHHHH@Z
-    i32 BeginGfx(i32 arg1, i32 arg2, i32 arg3)
+    inline int32_t BeginGfx(int32_t arg1, int32_t arg2, int32_t arg3)
     {
-        return stub<member_func_t<i32, eqEventHandler, i32, i32, i32>>(0x4A1730, this, arg1, arg2, arg3);
+        return stub<member_func_t<int32_t, eqEventHandler, int32_t, int32_t, int32_t>>(
+            0x4A1730, this, arg1, arg2, arg3);
     }
 
     // 0x4A1740 | ?EndGfx@eqEventHandler@@QAEXXZ
-    void EndGfx()
+    inline void EndGfx()
     {
         return stub<member_func_t<void, eqEventHandler>>(0x4A1740, this);
     }
 
     // 0x4A1750 | ?RestoreApp@eqEventHandler@@QAEXXZ
-    void RestoreApp()
+    inline void RestoreApp()
     {
         return stub<member_func_t<void, eqEventHandler>>(0x4A1750, this);
     }
 
     // 0x4A1760 | ?MinimizeApp@eqEventHandler@@QAEXH@Z
-    void MinimizeApp(i32 arg1)
+    inline void MinimizeApp(int32_t arg1)
     {
-        return stub<member_func_t<void, eqEventHandler, i32>>(0x4A1760, this, arg1);
+        return stub<member_func_t<void, eqEventHandler, int32_t>>(0x4A1760, this, arg1);
     }
 
     // 0x4A1770 | ?SetActive@eqEventHandler@@QAEXH@Z
-    void SetActive(i32 arg1)
+    inline void SetActive(int32_t arg1)
     {
-        return stub<member_func_t<void, eqEventHandler, i32>>(0x4A1770, this, arg1);
+        return stub<member_func_t<void, eqEventHandler, int32_t>>(0x4A1770, this, arg1);
     }
 
     // 0x4A1780 | ?ClearActive@eqEventHandler@@QAEXH@Z
-    void ClearActive(i32 arg1)
+    inline void ClearActive(int32_t arg1)
     {
-        return stub<member_func_t<void, eqEventHandler, i32>>(0x4A1780, this, arg1);
+        return stub<member_func_t<void, eqEventHandler, int32_t>>(0x4A1780, this, arg1);
     }
 
     // 0x4A1790 | ?Update@eqEventHandler@@QAEXXZ
-    void Update()
+    inline void Update()
     {
         return stub<member_func_t<void, eqEventHandler>>(0x4A1790, this);
     }
 
     // 0x4A1D60 | ?EKeyName@eqEventHandler@@SAPADH@Z
-    static inline char* EKeyName(i32 arg1)
+    static inline char* EKeyName(int32_t arg1)
     {
-        return stub<cdecl_t<char*, i32>>(0x4A1D60, arg1);
+        return stub<cdecl_t<char*, int32_t>>(0x4A1D60, arg1);
     }
 
     // 0x4A2030 | ?AddClient@eqEventHandler@@QAEXPAVeqEventMonitor@@@Z
-    void AddClient(class eqEventMonitor* arg1)
+    inline void AddClient(class eqEventMonitor* arg1)
     {
         return stub<member_func_t<void, eqEventHandler, class eqEventMonitor*>>(0x4A2030, this, arg1);
     }
 
     // 0x4A2090 | ?RemoveClient@eqEventHandler@@QAEXPAVeqEventMonitor@@@Z
-    void RemoveClient(class eqEventMonitor* arg1)
+    inline void RemoveClient(class eqEventMonitor* arg1)
     {
         return stub<member_func_t<void, eqEventHandler, class eqEventMonitor*>>(0x4A2090, this, arg1);
     }
@@ -122,7 +123,7 @@ public:
     inline extern_var(0x661788, class eqEventHandler*, SuperQ);
 
     // 0x4A1700 | ??1eqEventHandler@@UAE@XZ
-    virtual ~eqEventHandler()
+    virtual inline ~eqEventHandler()
     {
         stub<member_func_t<void, eqEventHandler>>(0x4A1700, this);
     }
@@ -134,28 +135,30 @@ public:
     // eqEventMonitor::`vftable' @ 0x5B2964
 
     // 0x4A20D0 | ??0eqEventMonitor@@QAE@XZ
-    eqEventMonitor()
+    inline eqEventMonitor()
     {
         stub<member_func_t<void, eqEventMonitor>>(0x4A20D0, this);
     }
 
     // 0x4A20F0 | ??1eqEventMonitor@@UAE@XZ
-    virtual ~eqEventMonitor()
+    virtual inline ~eqEventMonitor()
     {
         stub<member_func_t<void, eqEventMonitor>>(0x4A20F0, this);
     }
 
     // 0x4A2110 | ?Mouse@eqEventMonitor@@UAEXPAXHHHHHHH@Z
-    virtual void Mouse(void* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6, i32 arg7, i32 arg8)
+    virtual inline void Mouse(
+        void* arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5, int32_t arg6, int32_t arg7, int32_t arg8)
     {
-        return stub<member_func_t<void, eqEventMonitor, void*, i32, i32, i32, i32, i32, i32, i32>>(
+        return stub<
+            member_func_t<void, eqEventMonitor, void*, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t>>(
             0x4A2110, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
     // 0x4A2190 | ?Keyboard@eqEventMonitor@@UAEXPAXHHHH@Z
-    virtual void Keyboard(void* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5)
+    virtual inline void Keyboard(void* arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5)
     {
-        return stub<member_func_t<void, eqEventMonitor, void*, i32, i32, i32, i32>>(
+        return stub<member_func_t<void, eqEventMonitor, void*, int32_t, int32_t, int32_t, int32_t>>(
             0x4A2190, this, arg1, arg2, arg3, arg4, arg5);
     }
 };

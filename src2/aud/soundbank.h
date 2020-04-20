@@ -36,59 +36,59 @@ class audSoundBankHdr
 {
 public:
     // 0x5A7430 | ?Init@audSoundBankHdr@@QAEXXZ
-    void Init()
+    inline void Init()
     {
         return stub<member_func_t<void, audSoundBankHdr>>(0x5A7430, this);
     }
 
     // 0x5A7460 | ?Destroy@audSoundBankHdr@@QAEXXZ
-    void Destroy()
+    inline void Destroy()
     {
         return stub<member_func_t<void, audSoundBankHdr>>(0x5A7460, this);
     }
 
     // 0x5A7470 | ?CreateEmptyBank@audSoundBankHdr@@QAEPAV1@PAPAX@Z
-    class audSoundBankHdr* CreateEmptyBank(void** arg1)
+    inline class audSoundBankHdr* CreateEmptyBank(void** arg1)
     {
         return stub<member_func_t<class audSoundBankHdr*, audSoundBankHdr, void**>>(0x5A7470, this, arg1);
     }
 
     // 0x5A7480 | ?AddFromMemory@audSoundBankHdr@@QAEHPAXPAV1@@Z
-    i32 AddFromMemory(void* arg1, class audSoundBankHdr* arg2)
+    inline int32_t AddFromMemory(void* arg1, class audSoundBankHdr* arg2)
     {
-        return stub<member_func_t<i32, audSoundBankHdr, void*, class audSoundBankHdr*>>(0x5A7480, this, arg1, arg2);
+        return stub<member_func_t<int32_t, audSoundBankHdr, void*, class audSoundBankHdr*>>(0x5A7480, this, arg1, arg2);
     }
 
     // 0x5A7490 | ?CreateFromFile@audSoundBankHdr@@QAEPAV1@PADPAPAX1@Z
-    class audSoundBankHdr* CreateFromFile(char* arg1, void** arg2, void** arg3)
+    inline class audSoundBankHdr* CreateFromFile(char* arg1, void** arg2, void** arg3)
     {
         return stub<member_func_t<class audSoundBankHdr*, audSoundBankHdr, char*, void**, void**>>(
             0x5A7490, this, arg1, arg2, arg3);
     }
 
     // 0x5A74A0 | ?CreateFromMemory@audSoundBankHdr@@QAEPAV1@PAXH0HPAU_bank_attrib@@HPAPAX@Z
-    class audSoundBankHdr* CreateFromMemory(
-        void* arg1, i32 arg2, void* arg3, i32 arg4, struct _bank_attrib* arg5, i32 arg6, void** arg7)
+    inline class audSoundBankHdr* CreateFromMemory(
+        void* arg1, int32_t arg2, void* arg3, int32_t arg4, struct _bank_attrib* arg5, int32_t arg6, void** arg7)
     {
-        return stub<member_func_t<class audSoundBankHdr*, audSoundBankHdr, void*, i32, void*, i32, struct _bank_attrib*,
-            i32, void**>>(0x5A74A0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+        return stub<member_func_t<class audSoundBankHdr*, audSoundBankHdr, void*, int32_t, void*, int32_t,
+            struct _bank_attrib*, int32_t, void**>>(0x5A74A0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x5A74B0 | ?GetNumberOfAttribs@audSoundBankHdr@@QAEHXZ
-    i32 GetNumberOfAttribs()
+    inline int32_t GetNumberOfAttribs()
     {
-        return stub<member_func_t<i32, audSoundBankHdr>>(0x5A74B0, this);
+        return stub<member_func_t<int32_t, audSoundBankHdr>>(0x5A74B0, this);
     }
 
     // 0x5A74C0 | ?GetBankHandle@audSoundBankHdr@@QAEHXZ
-    i32 GetBankHandle()
+    inline int32_t GetBankHandle()
     {
-        return stub<member_func_t<i32, audSoundBankHdr>>(0x5A74C0, this);
+        return stub<member_func_t<int32_t, audSoundBankHdr>>(0x5A74C0, this);
     }
 
     // 0x5A74D0 | ?GetSoundIndex@audSoundBankHdr@@QAEHPAD@Z
-    i32 GetSoundIndex(char* arg1)
+    inline int32_t GetSoundIndex(char* arg1)
     {
-        return stub<member_func_t<i32, audSoundBankHdr, char*>>(0x5A74D0, this, arg1);
+        return stub<member_func_t<int32_t, audSoundBankHdr, char*>>(0x5A74D0, this, arg1);
     }
 };

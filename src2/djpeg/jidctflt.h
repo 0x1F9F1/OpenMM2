@@ -26,8 +26,9 @@
 
 // 0x49ED70 | ?jpeg_idct_float@@YAXPAUjpeg_decompress_struct@@PAUjpeg_component_info@@PAFPAPAEI@Z
 inline void jpeg_idct_float(
-    struct jpeg_decompress_struct* arg1, struct jpeg_component_info* arg2, i16* arg3, u8** arg4, u32 arg5)
+    struct jpeg_decompress_struct* arg1, struct jpeg_component_info* arg2, int16_t* arg3, uint8_t** arg4, uint32_t arg5)
 {
-    return stub<cdecl_t<void, struct jpeg_decompress_struct*, struct jpeg_component_info*, i16*, u8**, u32>>(
+    return stub<
+        cdecl_t<void, struct jpeg_decompress_struct*, struct jpeg_component_info*, int16_t*, uint8_t**, uint32_t>>(
         0x49ED70, arg1, arg2, arg3, arg4, arg5);
 }

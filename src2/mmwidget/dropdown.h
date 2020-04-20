@@ -47,92 +47,92 @@ public:
     // mmDropDown::`vftable' @ 0x5B3BD0
 
     // 0x4F1DA0 | ??0mmDropDown@@QAE@XZ
-    mmDropDown()
+    inline mmDropDown()
     {
         stub<member_func_t<void, mmDropDown>>(0x4F1DA0, this);
     }
 
     // 0x4F1EA0 | ?Init@mmDropDown@@QAEXPAXMMMMVstring@@H@Z
-    void Init(void* arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, class string arg6, i32 arg7)
+    inline void Init(void* arg1, float arg2, float arg3, float arg4, float arg5, class string arg6, int32_t arg7)
     {
-        return stub<member_func_t<void, mmDropDown, void*, f32, f32, f32, f32, class string, i32>>(
+        return stub<member_func_t<void, mmDropDown, void*, float, float, float, float, class string, int32_t>>(
             0x4F1EA0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x4F2020 | ?InitString@mmDropDown@@QAEXVstring@@@Z
-    void InitString(class string arg1)
+    inline void InitString(class string arg1)
     {
         return stub<member_func_t<void, mmDropDown, class string>>(0x4F2020, this, arg1);
     }
 
     // 0x4F2420 | ?SetString@mmDropDown@@AAEXVstring@@@Z
-    void SetString(class string arg1)
+    inline void SetString(class string arg1)
     {
         return stub<member_func_t<void, mmDropDown, class string>>(0x4F2420, this, arg1);
     }
 
     // 0x4F2510 | ?GetCurrentString@mmDropDown@@QAEXPADH@Z
-    void GetCurrentString(char* arg1, i32 arg2)
+    inline void GetCurrentString(char* arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, mmDropDown, char*, i32>>(0x4F2510, this, arg1, arg2);
+        return stub<member_func_t<void, mmDropDown, char*, int32_t>>(0x4F2510, this, arg1, arg2);
     }
 
     // 0x4F2560 | ?SetDisabledColors@mmDropDown@@QAEXXZ
-    void SetDisabledColors()
+    inline void SetDisabledColors()
     {
         return stub<member_func_t<void, mmDropDown>>(0x4F2560, this);
     }
 
     // 0x4F25E0 | ?FindFirstEnabled@mmDropDown@@QAEHXZ
-    i32 FindFirstEnabled()
+    inline int32_t FindFirstEnabled()
     {
-        return stub<member_func_t<i32, mmDropDown>>(0x4F25E0, this);
+        return stub<member_func_t<int32_t, mmDropDown>>(0x4F25E0, this);
     }
 
     // 0x4F2610 | ?SetHighlight@mmDropDown@@QAEXH@Z
-    void SetHighlight(i32 arg1)
+    inline void SetHighlight(int32_t arg1)
     {
-        return stub<member_func_t<void, mmDropDown, i32>>(0x4F2610, this, arg1);
+        return stub<member_func_t<void, mmDropDown, int32_t>>(0x4F2610, this, arg1);
     }
 
     // 0x4F2680 | ?GetHit@mmDropDown@@QAEHMM@Z
-    i32 GetHit(f32 arg1, f32 arg2)
+    inline int32_t GetHit(float arg1, float arg2)
     {
-        return stub<member_func_t<i32, mmDropDown, f32, f32>>(0x4F2680, this, arg1, arg2);
+        return stub<member_func_t<int32_t, mmDropDown, float, float>>(0x4F2680, this, arg1, arg2);
     }
 
     // 0x4F2760 | ?GetXmin@mmDropDown@@QAEMXZ
-    f32 GetXmin()
+    inline float GetXmin()
     {
-        return stub<member_func_t<f32, mmDropDown>>(0x4F2760, this);
+        return stub<member_func_t<float, mmDropDown>>(0x4F2760, this);
     }
 
     // 0x4F2770 | ?GetYmin@mmDropDown@@QAEMXZ
-    f32 GetYmin()
+    inline float GetYmin()
     {
-        return stub<member_func_t<f32, mmDropDown>>(0x4F2770, this);
+        return stub<member_func_t<float, mmDropDown>>(0x4F2770, this);
     }
 
     // 0x4F2780 | ?GetW@mmDropDown@@QAEMXZ
-    f32 GetW()
+    inline float GetW()
     {
-        return stub<member_func_t<f32, mmDropDown>>(0x4F2780, this);
+        return stub<member_func_t<float, mmDropDown>>(0x4F2780, this);
     }
 
     // 0x4F2790 | ?GetH@mmDropDown@@QAEMXZ
-    f32 GetH()
+    inline float GetH()
     {
-        return stub<member_func_t<f32, mmDropDown>>(0x4F2790, this);
+        return stub<member_func_t<float, mmDropDown>>(0x4F2790, this);
     }
 
     // 0x4F1E20 | ??1mmDropDown@@UAE@XZ
-    ~mmDropDown() override
+    inline ~mmDropDown() override
     {
         stub<member_func_t<void, mmDropDown>>(0x4F1E20, this);
     }
 
     // 0x4F2750 | ?Update@mmDropDown@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, mmDropDown>>(0x4F2750, this);
     }

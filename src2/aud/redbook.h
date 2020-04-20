@@ -36,55 +36,55 @@ struct audRedbook
 {
 public:
     // 0x5A6C20 | ?Update@audRedbook@@QAE_NH@Z
-    bool Update(i32 arg1)
+    inline bool Update(int32_t arg1)
     {
-        return stub<member_func_t<bool, audRedbook, i32>>(0x5A6C20, this, arg1);
+        return stub<member_func_t<bool, audRedbook, int32_t>>(0x5A6C20, this, arg1);
     }
 
     // 0x5A6C30 | ?GetStatus@audRedbook@@QAE?AW4AUD_OBJECTSTATUS@audObject@@XZ
-    enum audObject::AUD_OBJECTSTATUS GetStatus()
+    inline enum audObject::AUD_OBJECTSTATUS GetStatus()
     {
         return stub<member_func_t<enum audObject::AUD_OBJECTSTATUS, audRedbook>>(0x5A6C30, this);
     }
 
     // 0x5A6CB0 | ?Play@audRedbook@@QAE_NXZ
-    bool Play()
+    inline bool Play()
     {
         return stub<member_func_t<bool, audRedbook>>(0x5A6CB0, this);
     }
 
     // 0x5A6D00 | ?Stop@audRedbook@@QAE_NXZ
-    bool Stop()
+    inline bool Stop()
     {
         return stub<member_func_t<bool, audRedbook>>(0x5A6D00, this);
     }
 
     // 0x5A6D30 | ?SetVolume@audRedbook@@QAE_NM@Z
-    bool SetVolume(f32 arg1)
+    inline bool SetVolume(float arg1)
     {
-        return stub<member_func_t<bool, audRedbook, f32>>(0x5A6D30, this, arg1);
+        return stub<member_func_t<bool, audRedbook, float>>(0x5A6D30, this, arg1);
     }
 
     // 0x5A6D40 | ?SetPitch@audRedbook@@QAE_NM@Z
-    bool SetPitch(f32 arg1)
+    inline bool SetPitch(float arg1)
     {
-        return stub<member_func_t<bool, audRedbook, f32>>(0x5A6D40, this, arg1);
+        return stub<member_func_t<bool, audRedbook, float>>(0x5A6D40, this, arg1);
     }
 
     // 0x5A6D50 | ?SetPan@audRedbook@@QAE_NM@Z
-    bool SetPan(f32 arg1)
+    inline bool SetPan(float arg1)
     {
-        return stub<member_func_t<bool, audRedbook, f32>>(0x5A6D50, this, arg1);
+        return stub<member_func_t<bool, audRedbook, float>>(0x5A6D50, this, arg1);
     }
 
     // 0x5A6D60 | ?PauseResume@audRedbook@@QAE_N_N@Z
-    bool PauseResume(bool arg1)
+    inline bool PauseResume(bool arg1)
     {
         return stub<member_func_t<bool, audRedbook, bool>>(0x5A6D60, this, arg1);
     }
 
     // 0x5A6DF0 | ?Destroy@audRedbook@@QAEXXZ
-    void Destroy()
+    inline void Destroy()
     {
         return stub<member_func_t<void, audRedbook>>(0x5A6DF0, this);
     }

@@ -39,43 +39,43 @@ public:
     // camPolarCS::`vftable' @ 0x5B5060
 
     // 0x520FB0 | ??0camPolarCS@@QAE@XZ
-    camPolarCS()
+    inline camPolarCS()
     {
         stub<member_func_t<void, camPolarCS>>(0x520FB0, this);
     }
 
     // 0x406800 | ??1camPolarCS@@UAE@XZ
-    ~camPolarCS() override
+    inline ~camPolarCS() override
     {
         stub<member_func_t<void, camPolarCS>>(0x406800, this);
     }
 
     // 0x521030 | ?Update@camPolarCS@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, camPolarCS>>(0x521030, this);
     }
 
     // 0x521010 | ?Reset@camPolarCS@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, camPolarCS>>(0x521010, this);
     }
 
     // 0x521380 | ?FileIO@camPolarCS@@UAEXAAVdatParser@@@Z
-    void FileIO(class datParser& arg1) override
+    inline void FileIO(class datParser& arg1) override
     {
         return stub<member_func_t<void, camPolarCS, class datParser&>>(0x521380, this, arg1);
     }
 
     // 0x521460 | ?GetClassName@camPolarCS@@UAEPADXZ
-    char* GetClassName() override
+    inline char* GetClassName() override
     {
         return stub<member_func_t<char*, camPolarCS>>(0x521460, this);
     }
 
     // 0x521020 | ?MakeActive@camPolarCS@@UAEXXZ
-    void MakeActive() override
+    inline void MakeActive() override
     {
         return stub<member_func_t<void, camPolarCS>>(0x521020, this);
     }

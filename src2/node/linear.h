@@ -40,7 +40,7 @@ public:
     // asLinearCS::`vftable' @ 0x5B29AC
 
     // 0x4A32F0 | ??0asLinearCS@@QAE@XZ
-    asLinearCS()
+    inline asLinearCS()
     {
         stub<member_func_t<void, asLinearCS>>(0x4A32F0, this);
     }
@@ -55,19 +55,19 @@ public:
     inline extern_var(0x6618AC, class Matrix34*, CurrentMatrix);
 
     // 0x431B80 | ??1asLinearCS@@UAE@XZ
-    ~asLinearCS() override
+    inline ~asLinearCS() override
     {
         stub<member_func_t<void, asLinearCS>>(0x431B80, this);
     }
 
     // 0x4A3400 | ?Cull@asLinearCS@@UAEXXZ
-    void Cull() override
+    inline void Cull() override
     {
         return stub<member_func_t<void, asLinearCS>>(0x4A3400, this);
     }
 
     // 0x4A3370 | ?Update@asLinearCS@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, asLinearCS>>(0x4A3370, this);
     }

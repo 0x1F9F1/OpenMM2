@@ -41,51 +41,51 @@ public:
     // UIToggleButton::`vftable' @ 0x5B38A4
 
     // 0x4EDE10 | ??0UIToggleButton@@QAE@XZ
-    UIToggleButton()
+    inline UIToggleButton()
     {
         stub<member_func_t<void, UIToggleButton>>(0x4EDE10, this);
     }
 
     // 0x4EDF00 | ?Init@UIToggleButton@@QAEXPAULocString@@PAHMMMMHHVdatCallback@@@Z
-    void Init(struct LocString* arg1, i32* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7, i32 arg8,
-        class datCallback arg9)
+    inline void Init(struct LocString* arg1, int32_t* arg2, float arg3, float arg4, float arg5, float arg6,
+        int32_t arg7, int32_t arg8, class datCallback arg9)
     {
-        return stub<member_func_t<void, UIToggleButton, struct LocString*, i32*, f32, f32, f32, f32, i32, i32,
-            class datCallback>>(0x4EDF00, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
+        return stub<member_func_t<void, UIToggleButton, struct LocString*, int32_t*, float, float, float, float,
+            int32_t, int32_t, class datCallback>>(0x4EDF00, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
     }
 
     // 0x4EDE90 | ??1UIToggleButton@@UAE@XZ
-    ~UIToggleButton() override
+    inline ~UIToggleButton() override
     {
         stub<member_func_t<void, UIToggleButton>>(0x4EDE90, this);
     }
 
     // 0x4EE0B0 | ?Update@UIToggleButton@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, UIToggleButton>>(0x4EE0B0, this);
     }
 
     // 0x4EE000 | ?Action@UIToggleButton@@UAEXTeqEvent@@@Z
-    void Action(union eqEvent arg1) override
+    inline void Action(union eqEvent arg1) override
     {
         return stub<member_func_t<void, UIToggleButton, union eqEvent>>(0x4EE000, this, arg1);
     }
 
     // 0x4EDFE0 | ?DoToggle@UIToggleButton@@UAEXXZ
-    virtual void DoToggle()
+    virtual inline void DoToggle()
     {
         return stub<member_func_t<void, UIToggleButton>>(0x4EDFE0, this);
     }
 
     // 0x4EDFA0 | ?DrawOff@UIToggleButton@@MAEXXZ
-    virtual void DrawOff()
+    virtual inline void DrawOff()
     {
         return stub<member_func_t<void, UIToggleButton>>(0x4EDFA0, this);
     }
 
     // 0x4EDFC0 | ?DrawOn@UIToggleButton@@MAEXXZ
-    virtual void DrawOn()
+    virtual inline void DrawOn()
     {
         return stub<member_func_t<void, UIToggleButton>>(0x4EDFC0, this);
     }

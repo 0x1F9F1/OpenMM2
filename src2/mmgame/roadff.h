@@ -42,61 +42,61 @@ public:
     // mmCarRoadFF::`vftable' @ 0x5B0D38
 
     // 0x42FD70 | ??0mmCarRoadFF@@QAE@XZ
-    mmCarRoadFF()
+    inline mmCarRoadFF()
     {
         stub<member_func_t<void, mmCarRoadFF>>(0x42FD70, this);
     }
 
     // 0x42FE10 | ?AssignProperties@mmCarRoadFF@@QAEXMH@Z
-    void AssignProperties(f32 arg1, i32 arg2)
+    inline void AssignProperties(float arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, mmCarRoadFF, f32, i32>>(0x42FE10, this, arg1, arg2);
+        return stub<member_func_t<void, mmCarRoadFF, float, int32_t>>(0x42FE10, this, arg1, arg2);
     }
 
     // 0x42FE20 | ?SetFGVals@mmCarRoadFF@@QAEXMMM@Z
-    void SetFGVals(f32 arg1, f32 arg2, f32 arg3)
+    inline void SetFGVals(float arg1, float arg2, float arg3)
     {
-        return stub<member_func_t<void, mmCarRoadFF, f32, f32, f32>>(0x42FE20, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmCarRoadFF, float, float, float>>(0x42FE20, this, arg1, arg2, arg3);
     }
 
     // 0x42FF10 | ?Start@mmCarRoadFF@@QAEXXZ
-    void Start()
+    inline void Start()
     {
         return stub<member_func_t<void, mmCarRoadFF>>(0x42FF10, this);
     }
 
     // 0x42FF30 | ?Stop@mmCarRoadFF@@QAEXXZ
-    void Stop()
+    inline void Stop()
     {
         return stub<member_func_t<void, mmCarRoadFF>>(0x42FF30, this);
     }
 
     // 0x42FF70 | ?IsPlaying@mmCarRoadFF@@QAEHXZ
-    i32 IsPlaying()
+    inline int32_t IsPlaying()
     {
-        return stub<member_func_t<i32, mmCarRoadFF>>(0x42FF70, this);
+        return stub<member_func_t<int32_t, mmCarRoadFF>>(0x42FF70, this);
     }
 
     // 0x42FFD0 | ?UpdateVals@mmCarRoadFF@@QAEXXZ
-    void UpdateVals()
+    inline void UpdateVals()
     {
         return stub<member_func_t<void, mmCarRoadFF>>(0x42FFD0, this);
     }
 
     // 0x42FDB0 | ??1mmCarRoadFF@@UAE@XZ
-    ~mmCarRoadFF() override
+    inline ~mmCarRoadFF() override
     {
         stub<member_func_t<void, mmCarRoadFF>>(0x42FDB0, this);
     }
 
     // 0x42FF80 | ?Update@mmCarRoadFF@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, mmCarRoadFF>>(0x42FF80, this);
     }
 
     // 0x42FF40 | ?Reset@mmCarRoadFF@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, mmCarRoadFF>>(0x42FF40, this);
     }

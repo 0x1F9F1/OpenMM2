@@ -50,116 +50,116 @@ public:
     // aiGoalRandomDrive::`vftable' @ 0x5B5BF4
 
     // 0x56C0C0 | ??0aiGoalRandomDrive@@QAE@PAVaiRailSet@@PAVaiVehicleSpline@@@Z
-    aiGoalRandomDrive(class aiRailSet* arg1, class aiVehicleSpline* arg2)
+    inline aiGoalRandomDrive(class aiRailSet* arg1, class aiVehicleSpline* arg2)
     {
         stub<member_func_t<void, aiGoalRandomDrive, class aiRailSet*, class aiVehicleSpline*>>(
             0x56C0C0, this, arg1, arg2);
     }
 
     // 0x56C180 | ??1aiGoalRandomDrive@@QAE@XZ
-    ~aiGoalRandomDrive()
+    inline ~aiGoalRandomDrive()
     {
         stub<member_func_t<void, aiGoalRandomDrive>>(0x56C180, this);
     }
 
     // 0x56CDC0 | ?Context@aiGoalRandomDrive@@QAEHXZ
-    i32 Context()
+    inline int32_t Context()
     {
-        return stub<member_func_t<i32, aiGoalRandomDrive>>(0x56CDC0, this);
+        return stub<member_func_t<int32_t, aiGoalRandomDrive>>(0x56CDC0, this);
     }
 
     // 0x56CDE0 | ?Priority@aiGoalRandomDrive@@QAEHXZ
-    i32 Priority()
+    inline int32_t Priority()
     {
-        return stub<member_func_t<i32, aiGoalRandomDrive>>(0x56CDE0, this);
+        return stub<member_func_t<int32_t, aiGoalRandomDrive>>(0x56CDE0, this);
     }
 
     // 0x56CDF0 | ?SolveVelocity@aiGoalRandomDrive@@AAEXXZ
-    void SolveVelocity()
+    inline void SolveVelocity()
     {
         return stub<member_func_t<void, aiGoalRandomDrive>>(0x56CDF0, this);
     }
 
     // 0x56D5F0 | ?UpcomingAccident@aiGoalRandomDrive@@AAEHXZ
-    i32 UpcomingAccident()
+    inline int32_t UpcomingAccident()
     {
-        return stub<member_func_t<i32, aiGoalRandomDrive>>(0x56D5F0, this);
+        return stub<member_func_t<int32_t, aiGoalRandomDrive>>(0x56D5F0, this);
     }
 
     // 0x56D6A0 | ?SpeedLimit@aiGoalRandomDrive@@AAEMXZ
-    f32 SpeedLimit()
+    inline float SpeedLimit()
     {
-        return stub<member_func_t<f32, aiGoalRandomDrive>>(0x56D6A0, this);
+        return stub<member_func_t<float, aiGoalRandomDrive>>(0x56D6A0, this);
     }
 
     // 0x56D6F0 | ?OkayToEnterIntersection@aiGoalRandomDrive@@AAEHM@Z
-    i32 OkayToEnterIntersection(f32 arg1)
+    inline int32_t OkayToEnterIntersection(float arg1)
     {
-        return stub<member_func_t<i32, aiGoalRandomDrive, f32>>(0x56D6F0, this, arg1);
+        return stub<member_func_t<int32_t, aiGoalRandomDrive, float>>(0x56D6F0, this, arg1);
     }
 
     // 0x56D8A0 | ?AnyVehiclesComingThisWay@aiGoalRandomDrive@@AAEHXZ
-    i32 AnyVehiclesComingThisWay()
+    inline int32_t AnyVehiclesComingThisWay()
     {
-        return stub<member_func_t<i32, aiGoalRandomDrive>>(0x56D8A0, this);
+        return stub<member_func_t<int32_t, aiGoalRandomDrive>>(0x56D8A0, this);
     }
 
     // 0x56DB20 | ?AvoidCollision@aiGoalRandomDrive@@AAEXPAVaiVehicleSpline@@M@Z
-    void AvoidCollision(class aiVehicleSpline* arg1, f32 arg2)
+    inline void AvoidCollision(class aiVehicleSpline* arg1, float arg2)
     {
-        return stub<member_func_t<void, aiGoalRandomDrive, class aiVehicleSpline*, f32>>(0x56DB20, this, arg1, arg2);
+        return stub<member_func_t<void, aiGoalRandomDrive, class aiVehicleSpline*, float>>(0x56DB20, this, arg1, arg2);
     }
 
     // 0x56DD60 | ?SolvePosition@aiGoalRandomDrive@@QAEXAAVVector3@@M@Z
-    void SolvePosition(class Vector3& arg1, f32 arg2)
+    inline void SolvePosition(class Vector3& arg1, float arg2)
     {
-        return stub<member_func_t<void, aiGoalRandomDrive, class Vector3&, f32>>(0x56DD60, this, arg1, arg2);
+        return stub<member_func_t<void, aiGoalRandomDrive, class Vector3&, float>>(0x56DD60, this, arg1, arg2);
     }
 
     // 0x56DDB0 | ?SolveRailType@aiGoalRandomDrive@@AAE_NXZ
-    bool SolveRailType()
+    inline bool SolveRailType()
     {
         return stub<member_func_t<bool, aiGoalRandomDrive>>(0x56DDB0, this);
     }
 
     // 0x56ED50 | ?SolveLane@aiGoalRandomDrive@@AAEXXZ
-    void SolveLane()
+    inline void SolveLane()
     {
         return stub<member_func_t<void, aiGoalRandomDrive>>(0x56ED50, this);
     }
 
     // 0x56EE60 | ?ChangeLanes@aiGoalRandomDrive@@AAEXXZ
-    void ChangeLanes()
+    inline void ChangeLanes()
     {
         return stub<member_func_t<void, aiGoalRandomDrive>>(0x56EE60, this);
     }
 
     // 0x56F3C0 | ?Dump@aiGoalRandomDrive@@QAEXXZ
-    void Dump()
+    inline void Dump()
     {
         return stub<member_func_t<void, aiGoalRandomDrive>>(0x56F3C0, this);
     }
 
     // 0x56F3F0 | ?ReplayDebug@aiGoalRandomDrive@@QAEXXZ
-    void ReplayDebug()
+    inline void ReplayDebug()
     {
         return stub<member_func_t<void, aiGoalRandomDrive>>(0x56F3F0, this);
     }
 
     // 0x56C190 | ?Init@aiGoalRandomDrive@@UAEXXZ
-    void Init() override
+    inline void Init() override
     {
         return stub<member_func_t<void, aiGoalRandomDrive>>(0x56C190, this);
     }
 
     // 0x56C1B0 | ?Reset@aiGoalRandomDrive@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, aiGoalRandomDrive>>(0x56C1B0, this);
     }
 
     // 0x56CBF0 | ?Update@aiGoalRandomDrive@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, aiGoalRandomDrive>>(0x56CBF0, this);
     }

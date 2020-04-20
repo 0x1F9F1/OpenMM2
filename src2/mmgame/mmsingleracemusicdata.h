@@ -31,13 +31,13 @@ public:
     // mmSingleRaceMusicData::`vftable' @ 0x5B0610
 
     // 0x433890 | ?LoadMusicSegments@mmSingleRaceMusicData@@AAE_NPAVStream@@F@Z
-    bool LoadMusicSegments(class Stream* arg1, i16 arg2)
+    inline bool LoadMusicSegments(class Stream* arg1, int16_t arg2)
     {
-        return stub<member_func_t<bool, mmSingleRaceMusicData, class Stream*, i16>>(0x433890, this, arg1, arg2);
+        return stub<member_func_t<bool, mmSingleRaceMusicData, class Stream*, int16_t>>(0x433890, this, arg1, arg2);
     }
 
     // 0x4336D0 | ?LoadMusic@mmSingleRaceMusicData@@UAE_NPAD@Z
-    virtual bool LoadMusic(char* arg1)
+    virtual inline bool LoadMusic(char* arg1)
     {
         return stub<member_func_t<bool, mmSingleRaceMusicData, char*>>(0x4336D0, this, arg1);
     }

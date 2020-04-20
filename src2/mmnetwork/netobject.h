@@ -35,19 +35,19 @@ public:
     // asNetObject::`vftable' @ 0x5B5D18
 
     // 0x572BE0 | ??0asNetObject@@QAE@XZ
-    asNetObject()
+    inline asNetObject()
     {
         stub<member_func_t<void, asNetObject>>(0x572BE0, this);
     }
 
     // 0x572C00 | ??1asNetObject@@UAE@XZ
-    ~asNetObject() override
+    inline ~asNetObject() override
     {
         stub<member_func_t<void, asNetObject>>(0x572C00, this);
     }
 
     // 0x572C10 | ?Update@asNetObject@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, asNetObject>>(0x572C10, this);
     }

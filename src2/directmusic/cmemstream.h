@@ -51,44 +51,44 @@ struct CMemStream
 {
 public:
     // 0x518EA0 | ??0CMemStream@@QAE@PAVCLoader@@@Z
-    CMemStream(class CLoader* arg1)
+    inline CMemStream(class CLoader* arg1)
     {
         stub<member_func_t<void, CMemStream, class CLoader*>>(0x518EA0, this, arg1);
     }
 
     // 0x518EF0 | ??1CMemStream@@QAE@XZ
-    ~CMemStream()
+    inline ~CMemStream()
     {
         stub<member_func_t<void, CMemStream>>(0x518EF0, this);
     }
 
     // 0x518F20 | ?Open@CMemStream@@QAEJPAE_J@Z
-    i32 Open(u8* arg1, i64 arg2)
+    inline int32_t Open(uint8_t* arg1, int64_t arg2)
     {
-        return stub<member_func_t<i32, CMemStream, u8*, i64>>(0x518F20, this, arg1, arg2);
+        return stub<member_func_t<int32_t, CMemStream, uint8_t*, int64_t>>(0x518F20, this, arg1, arg2);
     }
 
     // 0x518F80 | ?Close@CMemStream@@QAEJXZ
-    i32 Close()
+    inline int32_t Close()
     {
-        return stub<member_func_t<i32, CMemStream>>(0x518F80, this);
+        return stub<member_func_t<int32_t, CMemStream>>(0x518F80, this);
     }
 
     // 0x519260 | ?QueryInterface@CMemStream@@W3AGJABU_GUID@@PAPAX@Z
-    i32 __stdcall QueryInterface(struct _GUID const& arg1, void** arg2)
+    inline int32_t __stdcall QueryInterface(struct _GUID const& arg1, void** arg2)
     {
-        return stub<member_func_t<i32, CMemStream, struct _GUID const&, void**>>(0x519260, this, arg1, arg2);
+        return stub<member_func_t<int32_t, CMemStream, struct _GUID const&, void**>>(0x519260, this, arg1, arg2);
     }
 
     // 0x519270 | ?AddRef@CMemStream@@W3AGKXZ
-    u32 __stdcall AddRef()
+    inline uint32_t __stdcall AddRef()
     {
-        return stub<member_func_t<u32, CMemStream>>(0x519270, this);
+        return stub<member_func_t<uint32_t, CMemStream>>(0x519270, this);
     }
 
     // 0x519280 | ?Release@CMemStream@@W3AGKXZ
-    u32 __stdcall Release()
+    inline uint32_t __stdcall Release()
     {
-        return stub<member_func_t<u32, CMemStream>>(0x519280, this);
+        return stub<member_func_t<uint32_t, CMemStream>>(0x519280, this);
     }
 };

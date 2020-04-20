@@ -38,44 +38,44 @@ public:
     // aiGoalRegainRail::`vftable' @ 0x5B5BDC
 
     // 0x56B6E0 | ??0aiGoalRegainRail@@QAE@PAVaiRailSet@@PAVaiVehicleAmbient@@@Z
-    aiGoalRegainRail(class aiRailSet* arg1, class aiVehicleAmbient* arg2)
+    inline aiGoalRegainRail(class aiRailSet* arg1, class aiVehicleAmbient* arg2)
     {
         stub<member_func_t<void, aiGoalRegainRail, class aiRailSet*, class aiVehicleAmbient*>>(
             0x56B6E0, this, arg1, arg2);
     }
 
     // 0x56B710 | ??1aiGoalRegainRail@@QAE@XZ
-    ~aiGoalRegainRail()
+    inline ~aiGoalRegainRail()
     {
         stub<member_func_t<void, aiGoalRegainRail>>(0x56B710, this);
     }
 
     // 0x56BF00 | ?Dump@aiGoalRegainRail@@QAEXXZ
-    void Dump()
+    inline void Dump()
     {
         return stub<member_func_t<void, aiGoalRegainRail>>(0x56BF00, this);
     }
 
     // 0x56BF60 | ?ReplayDebug@aiGoalRegainRail@@QAEXXZ
-    void ReplayDebug()
+    inline void ReplayDebug()
     {
         return stub<member_func_t<void, aiGoalRegainRail>>(0x56BF60, this);
     }
 
     // 0x56B720 | ?Init@aiGoalRegainRail@@UAEXXZ
-    void Init() override
+    inline void Init() override
     {
         return stub<member_func_t<void, aiGoalRegainRail>>(0x56B720, this);
     }
 
     // 0x56B750 | ?Reset@aiGoalRegainRail@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, aiGoalRegainRail>>(0x56B750, this);
     }
 
     // 0x56BD80 | ?Update@aiGoalRegainRail@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, aiGoalRegainRail>>(0x56BD80, this);
     }

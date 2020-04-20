@@ -36,26 +36,26 @@ public:
     // PUChat::`vftable' @ 0x5B48D0
 
     // 0x50BB20 | ??0PUChat@@QAE@HMMMMPAD@Z
-    PUChat(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+    inline PUChat(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
     {
-        stub<member_func_t<void, PUChat, i32, f32, f32, f32, f32, char*>>(
+        stub<member_func_t<void, PUChat, int32_t, float, float, float, float, char*>>(
             0x50BB20, this, arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
     // 0x50BC30 | ?ClearChat@PUChat@@QAEXXZ
-    void ClearChat()
+    inline void ClearChat()
     {
         return stub<member_func_t<void, PUChat>>(0x50BC30, this);
     }
 
     // 0x50BC70 | ?ChatEntry@PUChat@@QAEXXZ
-    void ChatEntry()
+    inline void ChatEntry()
     {
         return stub<member_func_t<void, PUChat>>(0x50BC70, this);
     }
 
     // 0x50BC20 | ??1PUChat@@UAE@XZ
-    ~PUChat() override
+    inline ~PUChat() override
     {
         stub<member_func_t<void, PUChat>>(0x50BC20, this);
     }

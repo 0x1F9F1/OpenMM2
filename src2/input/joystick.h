@@ -39,9 +39,9 @@ class ioJoystick
 {
 public:
     // 0x4BB7F0 | ?EnumDeviceProc@ioJoystick@@CGHPBUDIDEVICEINSTANCEA@@PAX@Z
-    static inline i32 __stdcall EnumDeviceProc(struct DIDEVICEINSTANCEA const* arg1, void* arg2)
+    static inline int32_t __stdcall EnumDeviceProc(struct DIDEVICEINSTANCEA const* arg1, void* arg2)
     {
-        return stub<stdcall_t<i32, struct DIDEVICEINSTANCEA const*, void*>>(0x4BB7F0, arg1, arg2);
+        return stub<stdcall_t<int32_t, struct DIDEVICEINSTANCEA const*, void*>>(0x4BB7F0, arg1, arg2);
     }
 
     // 0x4BBA00 | ?BeginAll@ioJoystick@@SAXXZ
@@ -69,31 +69,31 @@ public:
     }
 
     // 0x4BBAE0 | ?EnumObjectProc@ioJoystick@@CGHPBUDIDEVICEOBJECTINSTANCEA@@PAX@Z
-    static inline i32 __stdcall EnumObjectProc(struct DIDEVICEOBJECTINSTANCEA const* arg1, void* arg2)
+    static inline int32_t __stdcall EnumObjectProc(struct DIDEVICEOBJECTINSTANCEA const* arg1, void* arg2)
     {
-        return stub<stdcall_t<i32, struct DIDEVICEOBJECTINSTANCEA const*, void*>>(0x4BBAE0, arg1, arg2);
+        return stub<stdcall_t<int32_t, struct DIDEVICEOBJECTINSTANCEA const*, void*>>(0x4BBAE0, arg1, arg2);
     }
 
     // 0x4BBAF0 | ?Begin@ioJoystick@@AAEXXZ
-    void Begin()
+    inline void Begin()
     {
         return stub<member_func_t<void, ioJoystick>>(0x4BBAF0, this);
     }
 
     // 0x4BBC50 | ?Poll@ioJoystick@@AAEXXZ
-    void Poll()
+    inline void Poll()
     {
         return stub<member_func_t<void, ioJoystick>>(0x4BBC50, this);
     }
 
     // 0x4BBC60 | ?Update@ioJoystick@@AAEXXZ
-    void Update()
+    inline void Update()
     {
         return stub<member_func_t<void, ioJoystick>>(0x4BBC60, this);
     }
 
     // 0x4BBD20 | ?End@ioJoystick@@AAEXXZ
-    void End()
+    inline void End()
     {
         return stub<member_func_t<void, ioJoystick>>(0x4BBD20, this);
     }

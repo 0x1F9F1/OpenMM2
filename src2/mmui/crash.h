@@ -56,37 +56,38 @@ public:
     // ccStatus::`vftable' @ 0x5B43DC
 
     // 0x502EF0 | ??0ccStatus@@QAE@XZ
-    ccStatus()
+    inline ccStatus()
     {
         stub<member_func_t<void, ccStatus>>(0x502EF0, this);
     }
 
     // 0x502F80 | ?LoadBitmap@ccStatus@@QAEXPADHHH@Z
-    void LoadBitmap(char* arg1, i32 arg2, i32 arg3, i32 arg4)
+    inline void LoadBitmap(char* arg1, int32_t arg2, int32_t arg3, int32_t arg4)
     {
-        return stub<member_func_t<void, ccStatus, char*, i32, i32, i32>>(0x502F80, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, ccStatus, char*, int32_t, int32_t, int32_t>>(
+            0x502F80, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x503060 | ?SetStatus@ccStatus@@QAEXF@Z
-    void SetStatus(i16 arg1)
+    inline void SetStatus(int16_t arg1)
     {
-        return stub<member_func_t<void, ccStatus, i16>>(0x503060, this, arg1);
+        return stub<member_func_t<void, ccStatus, int16_t>>(0x503060, this, arg1);
     }
 
     // 0x502F20 | ??1ccStatus@@UAE@XZ
-    ~ccStatus() override
+    inline ~ccStatus() override
     {
         stub<member_func_t<void, ccStatus>>(0x502F20, this);
     }
 
     // 0x503010 | ?Cull@ccStatus@@UAEXXZ
-    void Cull() override
+    inline void Cull() override
     {
         return stub<member_func_t<void, ccStatus>>(0x503010, this);
     }
 
     // 0x502FF0 | ?Update@ccStatus@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, ccStatus>>(0x502FF0, this);
     }
@@ -98,91 +99,91 @@ public:
     // CrashCourse::`vftable' @ 0x5B4410
 
     // 0x503070 | ??0CrashCourse@@QAE@H@Z
-    CrashCourse(i32 arg1)
+    inline CrashCourse(int32_t arg1)
     {
-        stub<member_func_t<void, CrashCourse, i32>>(0x503070, this, arg1);
+        stub<member_func_t<void, CrashCourse, int32_t>>(0x503070, this, arg1);
     }
 
     // 0x503790 | ?SetRaceGrade@CrashCourse@@QAEXHH@Z
-    void SetRaceGrade(i32 arg1, i32 arg2)
+    inline void SetRaceGrade(int32_t arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, CrashCourse, i32, i32>>(0x503790, this, arg1, arg2);
+        return stub<member_func_t<void, CrashCourse, int32_t, int32_t>>(0x503790, this, arg1, arg2);
     }
 
     // 0x503960 | ?GameCallback@CrashCourse@@QAEXXZ
-    void GameCallback()
+    inline void GameCallback()
     {
         return stub<member_func_t<void, CrashCourse>>(0x503960, this);
     }
 
     // 0x503980 | ?SetEnvironment@CrashCourse@@QAEXXZ
-    void SetEnvironment()
+    inline void SetEnvironment()
     {
         return stub<member_func_t<void, CrashCourse>>(0x503980, this);
     }
 
     // 0x503BD0 | ?SetRaceState@CrashCourse@@QAEXXZ
-    void SetRaceState()
+    inline void SetRaceState()
     {
         return stub<member_func_t<void, CrashCourse>>(0x503BD0, this);
     }
 
     // 0x503CF0 | ?ChangeLocalVals@CrashCourse@@QAEXXZ
-    void ChangeLocalVals()
+    inline void ChangeLocalVals()
     {
         return stub<member_func_t<void, CrashCourse>>(0x503CF0, this);
     }
 
     // 0x503F00 | ?FocusDescription@CrashCourse@@QAEXHH@Z
-    void FocusDescription(i32 arg1, i32 arg2)
+    inline void FocusDescription(int32_t arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, CrashCourse, i32, i32>>(0x503F00, this, arg1, arg2);
+        return stub<member_func_t<void, CrashCourse, int32_t, int32_t>>(0x503F00, this, arg1, arg2);
     }
 
     // 0x503F10 | ?SetProgressMask@CrashCourse@@QAEXH@Z
-    void SetProgressMask(i32 arg1)
+    inline void SetProgressMask(int32_t arg1)
     {
-        return stub<member_func_t<void, CrashCourse, i32>>(0x503F10, this, arg1);
+        return stub<member_func_t<void, CrashCourse, int32_t>>(0x503F10, this, arg1);
     }
 
     // 0x503F30 | ?SetBlitzMask@CrashCourse@@QAEXH@Z
-    void SetBlitzMask(i32 arg1)
+    inline void SetBlitzMask(int32_t arg1)
     {
-        return stub<member_func_t<void, CrashCourse, i32>>(0x503F30, this, arg1);
+        return stub<member_func_t<void, CrashCourse, int32_t>>(0x503F30, this, arg1);
     }
 
     // 0x503F50 | ?SetCheckpointMask@CrashCourse@@QAEXH@Z
-    void SetCheckpointMask(i32 arg1)
+    inline void SetCheckpointMask(int32_t arg1)
     {
-        return stub<member_func_t<void, CrashCourse, i32>>(0x503F50, this, arg1);
+        return stub<member_func_t<void, CrashCourse, int32_t>>(0x503F50, this, arg1);
     }
 
     // 0x503F70 | ?IncRaceName@CrashCourse@@QAEXXZ
-    void IncRaceName()
+    inline void IncRaceName()
     {
         return stub<member_func_t<void, CrashCourse>>(0x503F70, this);
     }
 
     // 0x504010 | ?DecRaceName@CrashCourse@@QAEXXZ
-    void DecRaceName()
+    inline void DecRaceName()
     {
         return stub<member_func_t<void, CrashCourse>>(0x504010, this);
     }
 
     // 0x504080 | ?SetVehicleNext@CrashCourse@@QAEX_N@Z
-    void SetVehicleNext(bool arg1)
+    inline void SetVehicleNext(bool arg1)
     {
         return stub<member_func_t<void, CrashCourse, bool>>(0x504080, this, arg1);
     }
 
     // 0x503710 | ??1CrashCourse@@UAE@XZ
-    ~CrashCourse() override
+    inline ~CrashCourse() override
     {
         stub<member_func_t<void, CrashCourse>>(0x503710, this);
     }
 
     // 0x5037C0 | ?PreSetup@CrashCourse@@UAEXXZ
-    void PreSetup() override
+    inline void PreSetup() override
     {
         return stub<member_func_t<void, CrashCourse>>(0x5037C0, this);
     }

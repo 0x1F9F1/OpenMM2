@@ -54,7 +54,7 @@ public:
     }
 
     // 0x4604B0 | ?Init@asSparkLut@@QAEXPAD@Z
-    void Init(char* arg1)
+    inline void Init(char* arg1)
     {
         return stub<member_func_t<void, asSparkLut, char*>>(0x4604B0, this, arg1);
     }
@@ -69,38 +69,38 @@ public:
     // asLineSparks::`vftable' @ 0x5B1968
 
     // 0x460690 | ??0asLineSparks@@QAE@XZ
-    asLineSparks()
+    inline asLineSparks()
     {
         stub<member_func_t<void, asLineSparks>>(0x460690, this);
     }
 
     // 0x460740 | ?Init@asLineSparks@@QAEXHPAD@Z
-    void Init(i32 arg1, char* arg2)
+    inline void Init(int32_t arg1, char* arg2)
     {
-        return stub<member_func_t<void, asLineSparks, i32, char*>>(0x460740, this, arg1, arg2);
+        return stub<member_func_t<void, asLineSparks, int32_t, char*>>(0x460740, this, arg1, arg2);
     }
 
     // 0x460830 | ?RadialBlast@asLineSparks@@QAEXHAAVVector3@@0@Z
-    void RadialBlast(i32 arg1, class Vector3& arg2, class Vector3& arg3)
+    inline void RadialBlast(int32_t arg1, class Vector3& arg2, class Vector3& arg3)
     {
-        return stub<member_func_t<void, asLineSparks, i32, class Vector3&, class Vector3&>>(
+        return stub<member_func_t<void, asLineSparks, int32_t, class Vector3&, class Vector3&>>(
             0x460830, this, arg1, arg2, arg3);
     }
 
     // 0x460BE0 | ?Update@asLineSparks@@QAEXXZ
-    void Update()
+    inline void Update()
     {
         return stub<member_func_t<void, asLineSparks>>(0x460BE0, this);
     }
 
     // 0x460C20 | ?Update@asLineSparks@@QAEXM@Z
-    void Update(f32 arg1)
+    inline void Update(float arg1)
     {
-        return stub<member_func_t<void, asLineSparks, f32>>(0x460C20, this, arg1);
+        return stub<member_func_t<void, asLineSparks, float>>(0x460C20, this, arg1);
     }
 
     // 0x460DE0 | ?Draw@asLineSparks@@QAEXXZ
-    void Draw()
+    inline void Draw()
     {
         return stub<member_func_t<void, asLineSparks>>(0x460DE0, this);
     }
@@ -112,7 +112,7 @@ public:
     inline extern_var(0x631650, int32_t, RefCount);
 
     // 0x4606B0 | ??1asLineSparks@@UAE@XZ
-    virtual ~asLineSparks()
+    virtual inline ~asLineSparks()
     {
         stub<member_func_t<void, asLineSparks>>(0x4606B0, this);
     }

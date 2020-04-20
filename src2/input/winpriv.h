@@ -33,9 +33,9 @@
 */
 
 // 0x4BAD20 | ?InputWindowProc@@YGJPAUHWND__@@IIJ@Z
-inline i32 __stdcall InputWindowProc(struct HWND__* arg1, u32 arg2, u32 arg3, i32 arg4)
+inline int32_t __stdcall InputWindowProc(struct HWND__* arg1, uint32_t arg2, uint32_t arg3, int32_t arg4)
 {
-    return stub<stdcall_t<i32, struct HWND__*, u32, u32, i32>>(0x4BAD20, arg1, arg2, arg3, arg4);
+    return stub<stdcall_t<int32_t, struct HWND__*, uint32_t, uint32_t, int32_t>>(0x4BAD20, arg1, arg2, arg3, arg4);
 }
 
 // 0x4BB1A0 | ?diInit@@YAXXZ
@@ -53,21 +53,21 @@ public:
     // winDispatchable::`vftable' @ 0x5B2AFC
 
     // 0x4BACD0 | ??0winDispatchable@@QAE@I@Z
-    winDispatchable(u32 arg1)
+    inline winDispatchable(uint32_t arg1)
     {
-        stub<member_func_t<void, winDispatchable, u32>>(0x4BACD0, this, arg1);
+        stub<member_func_t<void, winDispatchable, uint32_t>>(0x4BACD0, this, arg1);
     }
 
     // 0x4BAD00 | ??1winDispatchable@@UAE@XZ
-    virtual ~winDispatchable()
+    virtual inline ~winDispatchable()
     {
         stub<member_func_t<void, winDispatchable>>(0x4BAD00, this);
     }
 
     // 0x582519 | __purecall
-    virtual i32 WindowProc(struct HWND__* arg1, u32 arg2, u32 arg3, i32 arg4)
+    virtual inline int32_t WindowProc(struct HWND__* arg1, uint32_t arg2, uint32_t arg3, int32_t arg4)
     {
-        return stub<member_func_t<i32, winDispatchable, struct HWND__*, u32, u32, i32>>(
+        return stub<member_func_t<int32_t, winDispatchable, struct HWND__*, uint32_t, uint32_t, int32_t>>(
             0x582519, this, arg1, arg2, arg3, arg4);
     }
 };

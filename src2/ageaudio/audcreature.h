@@ -44,103 +44,103 @@ class AudCreature
 {
 public:
     // 0x512700 | ??0AudCreature@@QAE@XZ
-    AudCreature()
+    inline AudCreature()
     {
         stub<member_func_t<void, AudCreature>>(0x512700, this);
     }
 
     // 0x512710 | ??0AudCreature@@QAE@PAV0@@Z
-    AudCreature(class AudCreature* arg1)
+    inline AudCreature(class AudCreature* arg1)
     {
         stub<member_func_t<void, AudCreature, class AudCreature*>>(0x512710, this, arg1);
     }
 
     // 0x512840 | ??1AudCreature@@QAE@XZ
-    ~AudCreature()
+    inline ~AudCreature()
     {
         stub<member_func_t<void, AudCreature>>(0x512840, this);
     }
 
     // 0x5128C0 | ?SetAud3DObjectPtr@AudCreature@@QAEXPAVAud3DObject@@@Z
-    void SetAud3DObjectPtr(class Aud3DObject* arg1)
+    inline void SetAud3DObjectPtr(class Aud3DObject* arg1)
     {
         return stub<member_func_t<void, AudCreature, class Aud3DObject*>>(0x5128C0, this, arg1);
     }
 
     // 0x512900 | ?PlayAvoidance@AudCreature@@QAEXM@Z
-    void PlayAvoidance(f32 arg1)
+    inline void PlayAvoidance(float arg1)
     {
-        return stub<member_func_t<void, AudCreature, f32>>(0x512900, this, arg1);
+        return stub<member_func_t<void, AudCreature, float>>(0x512900, this, arg1);
     }
 
     // 0x512940 | ?IsPlaying@AudCreature@@QAE_NXZ
-    bool IsPlaying()
+    inline bool IsPlaying()
     {
         return stub<member_func_t<bool, AudCreature>>(0x512940, this);
     }
 
     // 0x512990 | ?PlayImpact@AudCreature@@QAEXM@Z
-    void PlayImpact(f32 arg1)
+    inline void PlayImpact(float arg1)
     {
-        return stub<member_func_t<void, AudCreature, f32>>(0x512990, this, arg1);
+        return stub<member_func_t<void, AudCreature, float>>(0x512990, this, arg1);
     }
 
     // 0x5129B0 | ?UpdateAttenuation@AudCreature@@QAEXMMM@Z
-    void UpdateAttenuation(f32 arg1, f32 arg2, f32 arg3)
+    inline void UpdateAttenuation(float arg1, float arg2, float arg3)
     {
-        return stub<member_func_t<void, AudCreature, f32, f32, f32>>(0x5129B0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, AudCreature, float, float, float>>(0x5129B0, this, arg1, arg2, arg3);
     }
 
     // 0x512A60 | ?Load@AudCreature@@SAHPAPAV1@PAD1PAH@Z
-    static inline i32 Load(class AudCreature** arg1, char* arg2, char* arg3, i32* arg4)
+    static inline int32_t Load(class AudCreature** arg1, char* arg2, char* arg3, int32_t* arg4)
     {
-        return stub<cdecl_t<i32, class AudCreature**, char*, char*, i32*>>(0x512A60, arg1, arg2, arg3, arg4);
+        return stub<cdecl_t<int32_t, class AudCreature**, char*, char*, int32_t*>>(0x512A60, arg1, arg2, arg3, arg4);
     }
 
     // 0x512B00 | ?AddToHash@AudCreature@@SAXPADH@Z
-    static inline void AddToHash(char* arg1, i32 arg2)
+    static inline void AddToHash(char* arg1, int32_t arg2)
     {
-        return stub<cdecl_t<void, char*, i32>>(0x512B00, arg1, arg2);
+        return stub<cdecl_t<void, char*, int32_t>>(0x512B00, arg1, arg2);
     }
 
     // 0x512B20 | ?ReadCSV@AudCreature@@AAEHPAVStream@@@Z
-    i32 ReadCSV(class Stream* arg1)
+    inline int32_t ReadCSV(class Stream* arg1)
     {
-        return stub<member_func_t<i32, AudCreature, class Stream*>>(0x512B20, this, arg1);
+        return stub<member_func_t<int32_t, AudCreature, class Stream*>>(0x512B20, this, arg1);
     }
 
     // 0x512D90 | ?AssignSounds@AudCreature@@QAEXH@Z
-    void AssignSounds(i32 arg1)
+    inline void AssignSounds(int32_t arg1)
     {
-        return stub<member_func_t<void, AudCreature, i32>>(0x512D90, this, arg1);
+        return stub<member_func_t<void, AudCreature, int32_t>>(0x512D90, this, arg1);
     }
 
     // 0x512DD0 | ?UnAssignSounds@AudCreature@@QAEXXZ
-    void UnAssignSounds()
+    inline void UnAssignSounds()
     {
         return stub<member_func_t<void, AudCreature>>(0x512DD0, this);
     }
 
     // 0x512E10 | ?EchoOn@AudCreature@@QAEXM@Z
-    void EchoOn(f32 arg1)
+    inline void EchoOn(float arg1)
     {
-        return stub<member_func_t<void, AudCreature, f32>>(0x512E10, this, arg1);
+        return stub<member_func_t<void, AudCreature, float>>(0x512E10, this, arg1);
     }
 
     // 0x512E50 | ?EchoOff@AudCreature@@QAEXXZ
-    void EchoOff()
+    inline void EchoOff()
     {
         return stub<member_func_t<void, AudCreature>>(0x512E50, this);
     }
 
     // 0x512E90 | ?Update@AudCreature@@QAEXM@Z
-    void Update(f32 arg1)
+    inline void Update(float arg1)
     {
-        return stub<member_func_t<void, AudCreature, f32>>(0x512E90, this, arg1);
+        return stub<member_func_t<void, AudCreature, float>>(0x512E90, this, arg1);
     }
 
     // 0x512ED0 | ?UpdateEcho@AudCreature@@QAEXXZ
-    void UpdateEcho()
+    inline void UpdateEcho()
     {
         return stub<member_func_t<void, AudCreature>>(0x512ED0, this);
     }

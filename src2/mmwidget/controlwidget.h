@@ -43,75 +43,78 @@ public:
     // UIControlWidget::`vftable' @ 0x5B35E8
 
     // 0x4EBF20 | ??0UIControlWidget@@QAE@XZ
-    UIControlWidget()
+    inline UIControlWidget()
     {
         stub<member_func_t<void, UIControlWidget>>(0x4EBF20, this);
     }
 
     // 0x4EC0D0 | ?Init@UIControlWidget@@QAEXMMMMMPAVmmIO@@VdatCallback@@@Z
-    void Init(f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, class mmIO* arg6, class datCallback arg7)
+    inline void Init(
+        float arg1, float arg2, float arg3, float arg4, float arg5, class mmIO* arg6, class datCallback arg7)
     {
-        return stub<member_func_t<void, UIControlWidget, f32, f32, f32, f32, f32, class mmIO*, class datCallback>>(
+        return stub<
+            member_func_t<void, UIControlWidget, float, float, float, float, float, class mmIO*, class datCallback>>(
             0x4EC0D0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x4EC250 | ?SetPosition@UIControlWidget@@QAEXMMMM@Z
-    void SetPosition(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
+    inline void SetPosition(float arg1, float arg2, float arg3, float arg4)
     {
-        return stub<member_func_t<void, UIControlWidget, f32, f32, f32, f32>>(0x4EC250, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, UIControlWidget, float, float, float, float>>(
+            0x4EC250, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x4EC330 | ?UpdateField@UIControlWidget@@QAEXXZ
-    void UpdateField()
+    inline void UpdateField()
     {
         return stub<member_func_t<void, UIControlWidget>>(0x4EC330, this);
     }
 
     // 0x4EC420 | ?EnableField@UIControlWidget@@QAEXXZ
-    void EnableField()
+    inline void EnableField()
     {
         return stub<member_func_t<void, UIControlWidget>>(0x4EC420, this);
     }
 
     // 0x4EC480 | ?DisableField@UIControlWidget@@QAEXXZ
-    void DisableField()
+    inline void DisableField()
     {
         return stub<member_func_t<void, UIControlWidget>>(0x4EC480, this);
     }
 
     // 0x4EC030 | ??1UIControlWidget@@UAE@XZ
-    ~UIControlWidget() override
+    inline ~UIControlWidget() override
     {
         stub<member_func_t<void, UIControlWidget>>(0x4EC030, this);
     }
 
     // 0x4EC310 | ?Update@UIControlWidget@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, UIControlWidget>>(0x4EC310, this);
     }
 
     // 0x4EC500 | ?TurnOn@UIControlWidget@@UAEXXZ
-    void TurnOn() override
+    inline void TurnOn() override
     {
         return stub<member_func_t<void, UIControlWidget>>(0x4EC500, this);
     }
 
     // 0x4EC510 | ?TurnOff@UIControlWidget@@UAEXXZ
-    void TurnOff() override
+    inline void TurnOff() override
     {
         return stub<member_func_t<void, UIControlWidget>>(0x4EC510, this);
     }
 
     // 0x4EC360 | ?Action@UIControlWidget@@UAEXTeqEvent@@@Z
-    void Action(union eqEvent arg1) override
+    inline void Action(union eqEvent arg1) override
     {
         return stub<member_func_t<void, UIControlWidget, union eqEvent>>(0x4EC360, this, arg1);
     }
 
     // 0x4EC3B0 | ?Switch@UIControlWidget@@UAEXH@Z
-    void Switch(i32 arg1) override
+    inline void Switch(int32_t arg1) override
     {
-        return stub<member_func_t<void, UIControlWidget, i32>>(0x4EC3B0, this, arg1);
+        return stub<member_func_t<void, UIControlWidget, int32_t>>(0x4EC3B0, this, arg1);
     }
 };

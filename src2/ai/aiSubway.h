@@ -69,172 +69,174 @@ public:
     // Skipped (scalar/vector destructor)
 
     // 0x5418D0 | ??0aiSubway@@QAE@XZ
-    aiSubway()
+    inline aiSubway()
     {
         stub<member_func_t<void, aiSubway>>(0x5418D0, this);
     }
 
     // 0x5419F0 | ??1aiSubway@@QAE@XZ
-    ~aiSubway()
+    inline ~aiSubway()
     {
         stub<member_func_t<void, aiSubway>>(0x5419F0, this);
     }
 
     // 0x541A80 | ?Init@aiSubway@@QAEXPADHHHHHPAV1@1@Z
-    void Init(char* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6, class aiSubway* arg7, class aiSubway* arg8)
+    inline void Init(char* arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5, int32_t arg6,
+        class aiSubway* arg7, class aiSubway* arg8)
     {
-        return stub<member_func_t<void, aiSubway, char*, i32, i32, i32, i32, i32, class aiSubway*, class aiSubway*>>(
-            0x541A80, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+        return stub<member_func_t<void, aiSubway, char*, int32_t, int32_t, int32_t, int32_t, int32_t, class aiSubway*,
+            class aiSubway*>>(0x541A80, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
     // 0x542060 | ?DetermineNextLink@aiSubway@@AAE_NPAVaiPath@@PAPAV2@@Z
-    bool DetermineNextLink(class aiPath* arg1, class aiPath** arg2)
+    inline bool DetermineNextLink(class aiPath* arg1, class aiPath** arg2)
     {
         return stub<member_func_t<bool, aiSubway, class aiPath*, class aiPath**>>(0x542060, this, arg1, arg2);
     }
 
     // 0x542160 | ?SolvePositionAndOrientation@aiSubway@@AAEXXZ
-    void SolvePositionAndOrientation()
+    inline void SolvePositionAndOrientation()
     {
         return stub<member_func_t<void, aiSubway>>(0x542160, this);
     }
 
     // 0x5427B0 | ?SolveVelocity@aiSubway@@AAEXXZ
-    void SolveVelocity()
+    inline void SolveVelocity()
     {
         return stub<member_func_t<void, aiSubway>>(0x5427B0, this);
     }
 
     // 0x5429A0 | ?ReverseDirection@aiSubway@@AAEXXZ
-    void ReverseDirection()
+    inline void ReverseDirection()
     {
         return stub<member_func_t<void, aiSubway>>(0x5429A0, this);
     }
 
     // 0x542A20 | ?OkayToEnterIntersection@aiSubway@@AAE_NM@Z
-    bool OkayToEnterIntersection(f32 arg1)
+    inline bool OkayToEnterIntersection(float arg1)
     {
-        return stub<member_func_t<bool, aiSubway, f32>>(0x542A20, this, arg1);
+        return stub<member_func_t<bool, aiSubway, float>>(0x542A20, this, arg1);
     }
 
     // 0x542AF0 | ?DistanceToIntersection@aiSubway@@AAEMXZ
-    f32 DistanceToIntersection()
+    inline float DistanceToIntersection()
     {
-        return stub<member_func_t<f32, aiSubway>>(0x542AF0, this);
+        return stub<member_func_t<float, aiSubway>>(0x542AF0, this);
     }
 
     // 0x542B90 | ?SolveRailType@aiSubway@@AAEXXZ
-    void SolveRailType()
+    inline void SolveRailType()
     {
         return stub<member_func_t<void, aiSubway>>(0x542B90, this);
     }
 
     // 0x543620 | ?UpdateObstacleMap@aiSubway@@AAEXXZ
-    void UpdateObstacleMap()
+    inline void UpdateObstacleMap()
     {
         return stub<member_func_t<void, aiSubway>>(0x543620, this);
     }
 
     // 0x543850 | ?ComputeXZCurve@aiSubway@@AAEXAAVVector3@@000@Z
-    void ComputeXZCurve(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3, class Vector3& arg4)
+    inline void ComputeXZCurve(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3, class Vector3& arg4)
     {
         return stub<member_func_t<void, aiSubway, class Vector3&, class Vector3&, class Vector3&, class Vector3&>>(
             0x543850, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x543A20 | ?SolveXZCurve@aiSubway@@AAEXAAVVector3@@0M@Z
-    void SolveXZCurve(class Vector3& arg1, class Vector3& arg2, f32 arg3)
+    inline void SolveXZCurve(class Vector3& arg1, class Vector3& arg2, float arg3)
     {
-        return stub<member_func_t<void, aiSubway, class Vector3&, class Vector3&, f32>>(
+        return stub<member_func_t<void, aiSubway, class Vector3&, class Vector3&, float>>(
             0x543A20, this, arg1, arg2, arg3);
     }
 
     // 0x543D00 | ?Position@aiSubway@@UAEXAAVVector3@@@Z
-    void Position(class Vector3& arg1) override
+    inline void Position(class Vector3& arg1) override
     {
         return stub<member_func_t<void, aiSubway, class Vector3&>>(0x543D00, this, arg1);
     }
 
     // 0x543CA0 | ?Speed@aiSubway@@UAEMXZ
-    f32 Speed() override
+    inline float Speed() override
     {
-        return stub<member_func_t<f32, aiSubway>>(0x543CA0, this);
+        return stub<member_func_t<float, aiSubway>>(0x543CA0, this);
     }
 
     // 0x5434F0 | ?CurrentRoadIdx@aiSubway@@UAEHPAPAVaiPath@@QA_NPAH@Z
-    i32 CurrentRoadIdx(class aiPath** arg1, bool* const arg2, i32* arg3) override
+    inline int32_t CurrentRoadIdx(class aiPath** arg1, bool* const arg2, int32_t* arg3) override
     {
-        return stub<member_func_t<i32, aiSubway, class aiPath**, bool* const, i32*>>(0x5434F0, this, arg1, arg2, arg3);
+        return stub<member_func_t<int32_t, aiSubway, class aiPath**, bool* const, int32_t*>>(
+            0x5434F0, this, arg1, arg2, arg3);
     }
 
     // 0x543600 | ?CurrentRdVert@aiSubway@@UAEHXZ
-    i32 CurrentRdVert() override
+    inline int32_t CurrentRdVert() override
     {
-        return stub<member_func_t<i32, aiSubway>>(0x543600, this);
+        return stub<member_func_t<int32_t, aiSubway>>(0x543600, this);
     }
 
     // 0x541F60 | ?Update@aiSubway@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, aiSubway>>(0x541F60, this);
     }
 
     // 0x541C50 | ?Reset@aiSubway@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, aiSubway>>(0x541C50, this);
     }
 
     // 0x543C90 | ?Type@aiSubway@@UAEHXZ
-    i32 Type() override
+    inline int32_t Type() override
     {
-        return stub<member_func_t<i32, aiSubway>>(0x543C90, this);
+        return stub<member_func_t<int32_t, aiSubway>>(0x543C90, this);
     }
 
     // 0x543D20 | ?GetMatrix@aiSubway@@UAEAAVMatrix34@@XZ
-    class Matrix34& GetMatrix() override
+    inline class Matrix34& GetMatrix() override
     {
         return stub<member_func_t<class Matrix34&, aiSubway>>(0x543D20, this);
     }
 
     // 0x543CC0 | ?FrontBumperDistance@aiSubway@@UAEMXZ
-    f32 FrontBumperDistance() override
+    inline float FrontBumperDistance() override
     {
-        return stub<member_func_t<f32, aiSubway>>(0x543CC0, this);
+        return stub<member_func_t<float, aiSubway>>(0x543CC0, this);
     }
 
     // 0x543CD0 | ?BackBumperDistance@aiSubway@@UAEMXZ
-    f32 BackBumperDistance() override
+    inline float BackBumperDistance() override
     {
-        return stub<member_func_t<f32, aiSubway>>(0x543CD0, this);
+        return stub<member_func_t<float, aiSubway>>(0x543CD0, this);
     }
 
     // 0x543CE0 | ?LSideDistance@aiSubway@@UAEMXZ
-    f32 LSideDistance() override
+    inline float LSideDistance() override
     {
-        return stub<member_func_t<f32, aiSubway>>(0x543CE0, this);
+        return stub<member_func_t<float, aiSubway>>(0x543CE0, this);
     }
 
     // 0x543CF0 | ?RSideDistance@aiSubway@@UAEMXZ
-    f32 RSideDistance() override
+    inline float RSideDistance() override
     {
-        return stub<member_func_t<f32, aiSubway>>(0x543CF0, this);
+        return stub<member_func_t<float, aiSubway>>(0x543CF0, this);
     }
 
     // 0x543CB0 | ?CurrentLane@aiSubway@@UAEHXZ
-    i32 CurrentLane() override
+    inline int32_t CurrentLane() override
     {
-        return stub<member_func_t<i32, aiSubway>>(0x543CB0, this);
+        return stub<member_func_t<int32_t, aiSubway>>(0x543CB0, this);
     }
 
     // 0x543D30 | ?CurrentRoadId@aiSubway@@UAEHXZ
-    i32 CurrentRoadId() override
+    inline int32_t CurrentRoadId() override
     {
-        return stub<member_func_t<i32, aiSubway>>(0x543D30, this);
+        return stub<member_func_t<int32_t, aiSubway>>(0x543D30, this);
     }
 
     // 0x543AD0 | ?DrawId@aiSubway@@UAEXXZ
-    void DrawId() override
+    inline void DrawId() override
     {
         return stub<member_func_t<void, aiSubway>>(0x543AD0, this);
     }
@@ -246,43 +248,43 @@ public:
     // aiSubwayInstance::`vftable' @ 0x5B5798
 
     // 0x543B70 | ?GetPosition@aiSubwayInstance@@UAEABVVector3@@XZ
-    class Vector3 const& GetPosition() override
+    inline class Vector3 const& GetPosition() override
     {
         return stub<member_func_t<class Vector3 const&, aiSubwayInstance>>(0x543B70, this);
     }
 
     // 0x543AE0 | ?GetMatrix@aiSubwayInstance@@UAEABVMatrix34@@AAV2@@Z
-    class Matrix34 const& GetMatrix(class Matrix34& arg1) override
+    inline class Matrix34 const& GetMatrix(class Matrix34& arg1) override
     {
         return stub<member_func_t<class Matrix34 const&, aiSubwayInstance, class Matrix34&>>(0x543AE0, this, arg1);
     }
 
     // 0x543AF0 | ?SetMatrix@aiSubwayInstance@@UAEXABVMatrix34@@@Z
-    void SetMatrix(class Matrix34 const& arg1) override
+    inline void SetMatrix(class Matrix34 const& arg1) override
     {
         return stub<member_func_t<void, aiSubwayInstance, class Matrix34 const&>>(0x543AF0, this, arg1);
     }
 
     // 0x543B10 | ?GetVelocity@aiSubwayInstance@@UAEABVVector3@@XZ
-    class Vector3 const& GetVelocity() override
+    inline class Vector3 const& GetVelocity() override
     {
         return stub<member_func_t<class Vector3 const&, aiSubwayInstance>>(0x543B10, this);
     }
 
     // 0x543BA0 | ?Draw@aiSubwayInstance@@UAEXH@Z
-    void Draw(i32 arg1) override
+    inline void Draw(int32_t arg1) override
     {
-        return stub<member_func_t<void, aiSubwayInstance, i32>>(0x543BA0, this, arg1);
+        return stub<member_func_t<void, aiSubwayInstance, int32_t>>(0x543BA0, this, arg1);
     }
 
     // 0x543B80 | ?SizeOf@aiSubwayInstance@@UAEIXZ
-    u32 SizeOf() override
+    inline uint32_t SizeOf() override
     {
-        return stub<member_func_t<u32, aiSubwayInstance>>(0x543B80, this);
+        return stub<member_func_t<uint32_t, aiSubwayInstance>>(0x543B80, this);
     }
 
     // 0x543B90 | ?ImpactCB@aiSubwayInstance@@UAEXPAVdgHitBangerInstance@@@Z
-    virtual void ImpactCB(class dgHitBangerInstance* arg1)
+    virtual inline void ImpactCB(class dgHitBangerInstance* arg1)
     {
         return stub<member_func_t<void, aiSubwayInstance, class dgHitBangerInstance*>>(0x543B90, this, arg1);
     }

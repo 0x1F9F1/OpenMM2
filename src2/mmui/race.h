@@ -42,49 +42,49 @@ public:
     // RaceMenu::`vftable' @ 0x5B44A4
 
     // 0x505110 | ??0RaceMenu@@QAE@H@Z
-    RaceMenu(i32 arg1)
+    inline RaceMenu(int32_t arg1)
     {
-        stub<member_func_t<void, RaceMenu, i32>>(0x505110, this, arg1);
+        stub<member_func_t<void, RaceMenu, int32_t>>(0x505110, this, arg1);
     }
 
     // 0x5051F0 | ?GetRaceID@RaceMenu@@QAEHXZ
-    i32 GetRaceID()
+    inline int32_t GetRaceID()
     {
-        return stub<member_func_t<i32, RaceMenu>>(0x5051F0, this);
+        return stub<member_func_t<int32_t, RaceMenu>>(0x5051F0, this);
     }
 
     // 0x505280 | ?SetProgressMask@RaceMenu@@QAEXH@Z
-    void SetProgressMask(i32 arg1)
+    inline void SetProgressMask(int32_t arg1)
     {
-        return stub<member_func_t<void, RaceMenu, i32>>(0x505280, this, arg1);
+        return stub<member_func_t<void, RaceMenu, int32_t>>(0x505280, this, arg1);
     }
 
     // 0x5052A0 | ?SetBlitzMask@RaceMenu@@QAEXH@Z
-    void SetBlitzMask(i32 arg1)
+    inline void SetBlitzMask(int32_t arg1)
     {
-        return stub<member_func_t<void, RaceMenu, i32>>(0x5052A0, this, arg1);
+        return stub<member_func_t<void, RaceMenu, int32_t>>(0x5052A0, this, arg1);
     }
 
     // 0x5052C0 | ?SetCheckpointMask@RaceMenu@@QAEXH@Z
-    void SetCheckpointMask(i32 arg1)
+    inline void SetCheckpointMask(int32_t arg1)
     {
-        return stub<member_func_t<void, RaceMenu, i32>>(0x5052C0, this, arg1);
+        return stub<member_func_t<void, RaceMenu, int32_t>>(0x5052C0, this, arg1);
     }
 
     // 0x5052E0 | ?SetCircuitMask@RaceMenu@@QAEXH@Z
-    void SetCircuitMask(i32 arg1)
+    inline void SetCircuitMask(int32_t arg1)
     {
-        return stub<member_func_t<void, RaceMenu, i32>>(0x5052E0, this, arg1);
+        return stub<member_func_t<void, RaceMenu, int32_t>>(0x5052E0, this, arg1);
     }
 
     // 0x505300 | ?GetRaceName@RaceMenu@@QAEPADW4dgGameMode@@H@Z
-    char* GetRaceName(enum dgGameMode arg1, i32 arg2)
+    inline char* GetRaceName(enum dgGameMode arg1, int32_t arg2)
     {
-        return stub<member_func_t<char*, RaceMenu, enum dgGameMode, i32>>(0x505300, this, arg1, arg2);
+        return stub<member_func_t<char*, RaceMenu, enum dgGameMode, int32_t>>(0x505300, this, arg1, arg2);
     }
 
     // 0x5051E0 | ??1RaceMenu@@UAE@XZ
-    ~RaceMenu() override
+    inline ~RaceMenu() override
     {
         stub<member_func_t<void, RaceMenu>>(0x5051E0, this);
     }

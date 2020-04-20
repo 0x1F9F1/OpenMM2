@@ -39,74 +39,74 @@ class audList
 {
 public:
     // 0x5A5C30 | ?Init@audList@@QAEXXZ
-    void Init()
+    inline void Init()
     {
         return stub<member_func_t<void, audList>>(0x5A5C30, this);
     }
 
     // 0x5A5C40 | ?LinkNext@audList@@QAEPAV1@PAV1@@Z
-    class audList* LinkNext(class audList* arg1)
+    inline class audList* LinkNext(class audList* arg1)
     {
         return stub<member_func_t<class audList*, audList, class audList*>>(0x5A5C40, this, arg1);
     }
 
     // 0x5A5CB0 | ?LinkPrev@audList@@QAEPAV1@PAV1@@Z
-    class audList* LinkPrev(class audList* arg1)
+    inline class audList* LinkPrev(class audList* arg1)
     {
         return stub<member_func_t<class audList*, audList, class audList*>>(0x5A5CB0, this, arg1);
     }
 
     // 0x5A5CD0 | ?GetNext@audList@@QAEPAV1@XZ
-    class audList* GetNext()
+    inline class audList* GetNext()
     {
         return stub<member_func_t<class audList*, audList>>(0x5A5CD0, this);
     }
 
     // 0x5A5CE0 | ?GetPrev@audList@@QAEPAV1@XZ
-    class audList* GetPrev()
+    inline class audList* GetPrev()
     {
         return stub<member_func_t<class audList*, audList>>(0x5A5CE0, this);
     }
 
     // 0x5A5CF0 | ?SetNext@audList@@QAEPAV1@PAV1@@Z
-    class audList* SetNext(class audList* arg1)
+    inline class audList* SetNext(class audList* arg1)
     {
         return stub<member_func_t<class audList*, audList, class audList*>>(0x5A5CF0, this, arg1);
     }
 
     // 0x5A5D10 | ?SetPrev@audList@@QAEPAV1@PAV1@@Z
-    class audList* SetPrev(class audList* arg1)
+    inline class audList* SetPrev(class audList* arg1)
     {
         return stub<member_func_t<class audList*, audList, class audList*>>(0x5A5D10, this, arg1);
     }
 
     // 0x5A5D30 | ?Unlink@audList@@QAE_NXZ
-    bool Unlink()
+    inline bool Unlink()
     {
         return stub<member_func_t<bool, audList>>(0x5A5D30, this);
     }
 
     // 0x5A5D60 | ?Count@audList@@QAEHXZ
-    i32 Count()
+    inline int32_t Count()
     {
-        return stub<member_func_t<i32, audList>>(0x5A5D60, this);
+        return stub<member_func_t<int32_t, audList>>(0x5A5D60, this);
     }
 
     // 0x5A5D80 | ?FindObjectAt@audList@@QAEPAXH@Z
-    void* FindObjectAt(i32 arg1)
+    inline void* FindObjectAt(int32_t arg1)
     {
-        return stub<member_func_t<void*, audList, i32>>(0x5A5D80, this, arg1);
+        return stub<member_func_t<void*, audList, int32_t>>(0x5A5D80, this, arg1);
     }
 
     // 0x5A5DA0 | ?FindObject@audList@@QAEPAV1@PAX@Z
-    class audList* FindObject(void* arg1)
+    inline class audList* FindObject(void* arg1)
     {
         return stub<member_func_t<class audList*, audList, void*>>(0x5A5DA0, this, arg1);
     }
 
     // 0x5A5DE0 | ?FindObjectPos@audList@@QAEHPAX@Z
-    i32 FindObjectPos(void* arg1)
+    inline int32_t FindObjectPos(void* arg1)
     {
-        return stub<member_func_t<i32, audList, void*>>(0x5A5DE0, this, arg1);
+        return stub<member_func_t<int32_t, audList, void*>>(0x5A5DE0, this, arg1);
     }
 };

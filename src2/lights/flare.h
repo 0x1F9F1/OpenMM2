@@ -42,13 +42,13 @@ struct ltFlare
 {
 public:
     // 0x59BD80 | ??0ltFlare@@QAE@XZ
-    ltFlare()
+    inline ltFlare()
     {
         stub<member_func_t<void, ltFlare>>(0x59BD80, this);
     }
 
     // 0x59BDB0 | ?Random@ltFlare@@QAEXXZ
-    void Random()
+    inline void Random()
     {
         return stub<member_func_t<void, ltFlare>>(0x59BDB0, this);
     }
@@ -58,33 +58,33 @@ struct ltLensFlare
 {
 public:
     // 0x59BE80 | ??0ltLensFlare@@QAE@H@Z
-    ltLensFlare(i32 arg1)
+    inline ltLensFlare(int32_t arg1)
     {
-        stub<member_func_t<void, ltLensFlare, i32>>(0x59BE80, this, arg1);
+        stub<member_func_t<void, ltLensFlare, int32_t>>(0x59BE80, this, arg1);
     }
 
     // 0x59BF80 | ??1ltLensFlare@@QAE@XZ
-    ~ltLensFlare()
+    inline ~ltLensFlare()
     {
         stub<member_func_t<void, ltLensFlare>>(0x59BF80, this);
     }
 
     // 0x59BFA0 | ?DrawBegin@ltLensFlare@@QAEXXZ
-    void DrawBegin()
+    inline void DrawBegin()
     {
         return stub<member_func_t<void, ltLensFlare>>(0x59BFA0, this);
     }
 
     // 0x59C0C0 | ?DrawEnd@ltLensFlare@@QAEXXZ
-    void DrawEnd()
+    inline void DrawEnd()
     {
         return stub<member_func_t<void, ltLensFlare>>(0x59C0C0, this);
     }
 
     // 0x59C1C0 | ?Draw@ltLensFlare@@QAEXAAVVector3@@0M@Z
-    void Draw(class Vector3& arg1, class Vector3& arg2, f32 arg3)
+    inline void Draw(class Vector3& arg1, class Vector3& arg2, float arg3)
     {
-        return stub<member_func_t<void, ltLensFlare, class Vector3&, class Vector3&, f32>>(
+        return stub<member_func_t<void, ltLensFlare, class Vector3&, class Vector3&, float>>(
             0x59C1C0, this, arg1, arg2, arg3);
     }
 };

@@ -37,44 +37,44 @@ public:
     // gizInstance::`vftable' @ 0x5B6278
 
     // 0x579DB0 | ??0gizInstance@@QAE@XZ
-    gizInstance()
+    inline gizInstance()
     {
         stub<member_func_t<void, gizInstance>>(0x579DB0, this);
     }
 
     // 0x579E10 | ??1gizInstance@@QAE@XZ
-    ~gizInstance()
+    inline ~gizInstance()
     {
         stub<member_func_t<void, gizInstance>>(0x579E10, this);
     }
 
     // 0x579E90 | ?Init@gizInstance@@QAEXPADH@Z
-    void Init(char* arg1, i32 arg2)
+    inline void Init(char* arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, gizInstance, char*, i32>>(0x579E90, this, arg1, arg2);
+        return stub<member_func_t<void, gizInstance, char*, int32_t>>(0x579E90, this, arg1, arg2);
     }
 
     // 0x579E30 | ?GetPosition@gizInstance@@UAEABVVector3@@XZ
-    class Vector3 const& GetPosition() override
+    inline class Vector3 const& GetPosition() override
     {
         return stub<member_func_t<class Vector3 const&, gizInstance>>(0x579E30, this);
     }
 
     // 0x579E40 | ?GetMatrix@gizInstance@@UAEABVMatrix34@@AAV2@@Z
-    class Matrix34 const& GetMatrix(class Matrix34& arg1) override
+    inline class Matrix34 const& GetMatrix(class Matrix34& arg1) override
     {
         return stub<member_func_t<class Matrix34 const&, gizInstance, class Matrix34&>>(0x579E40, this, arg1);
     }
 
     // 0x579E60 | ?SetMatrix@gizInstance@@UAEXABVMatrix34@@@Z
-    void SetMatrix(class Matrix34 const& arg1) override
+    inline void SetMatrix(class Matrix34 const& arg1) override
     {
         return stub<member_func_t<void, gizInstance, class Matrix34 const&>>(0x579E60, this, arg1);
     }
 
     // 0x579F30 | ?Draw@gizInstance@@UAEXH@Z
-    void Draw(i32 arg1) override
+    inline void Draw(int32_t arg1) override
     {
-        return stub<member_func_t<void, gizInstance, i32>>(0x579F30, this, arg1);
+        return stub<member_func_t<void, gizInstance, int32_t>>(0x579F30, this, arg1);
     }
 };

@@ -58,115 +58,116 @@ public:
     // ControlSetup::`vftable' @ 0x5B429C
 
     // 0x501860 | ??0ControlSetup@@QAE@H@Z
-    ControlSetup(i32 arg1)
+    inline ControlSetup(int32_t arg1)
     {
-        stub<member_func_t<void, ControlSetup, i32>>(0x501860, this, arg1);
+        stub<member_func_t<void, ControlSetup, int32_t>>(0x501860, this, arg1);
     }
 
     // 0x501AE0 | ?CreateDeviceOptions@ControlSetup@@QAEXXZ
-    void CreateDeviceOptions()
+    inline void CreateDeviceOptions()
     {
         return stub<member_func_t<void, ControlSetup>>(0x501AE0, this);
     }
 
     // 0x502020 | ?DeactivateAllDeviceOptions@ControlSetup@@QAEXXZ
-    void DeactivateAllDeviceOptions()
+    inline void DeactivateAllDeviceOptions()
     {
         return stub<member_func_t<void, ControlSetup>>(0x502020, this);
     }
 
     // 0x502080 | ?ActivateDeviceOptions@ControlSetup@@QAEXXZ
-    void ActivateDeviceOptions()
+    inline void ActivateDeviceOptions()
     {
         return stub<member_func_t<void, ControlSetup>>(0x502080, this);
     }
 
     // 0x502360 | ?SetControlPosition@ControlSetup@@QAEMPAVuiWidget@@MM@Z
-    f32 SetControlPosition(class uiWidget* arg1, f32 arg2, f32 arg3)
+    inline float SetControlPosition(class uiWidget* arg1, float arg2, float arg3)
     {
-        return stub<member_func_t<f32, ControlSetup, class uiWidget*, f32, f32>>(0x502360, this, arg1, arg2, arg3);
+        return stub<member_func_t<float, ControlSetup, class uiWidget*, float, float>>(
+            0x502360, this, arg1, arg2, arg3);
     }
 
     // 0x502380 | ?POVCB@ControlSetup@@QAEXXZ
-    void POVCB()
+    inline void POVCB()
     {
         return stub<member_func_t<void, ControlSetup>>(0x502380, this);
     }
 
     // 0x502390 | ?SetSensitivityCB@ControlSetup@@QAEXXZ
-    void SetSensitivityCB()
+    inline void SetSensitivityCB()
     {
         return stub<member_func_t<void, ControlSetup>>(0x502390, this);
     }
 
     // 0x5023A0 | ?ControlSelect@ControlSetup@@QAEXXZ
-    void ControlSelect()
+    inline void ControlSelect()
     {
         return stub<member_func_t<void, ControlSetup>>(0x5023A0, this);
     }
 
     // 0x502430 | ?SetFFPermissions@ControlSetup@@QAEXXZ
-    void SetFFPermissions()
+    inline void SetFFPermissions()
     {
         return stub<member_func_t<void, ControlSetup>>(0x502430, this);
     }
 
     // 0x502470 | ?InitCustomControls@ControlSetup@@QAEXXZ
-    void InitCustomControls()
+    inline void InitCustomControls()
     {
         return stub<member_func_t<void, ControlSetup>>(0x502470, this);
     }
 
     // 0x502570 | ?LaunchJoyCpl@ControlSetup@@QAEXXZ
-    void LaunchJoyCpl()
+    inline void LaunchJoyCpl()
     {
         return stub<member_func_t<void, ControlSetup>>(0x502570, this);
     }
 
     // 0x502720 | ?FocusDescription@ControlSetup@@QAEXPAX0@Z
-    void FocusDescription(void* arg1, void* arg2)
+    inline void FocusDescription(void* arg1, void* arg2)
     {
         return stub<member_func_t<void, ControlSetup, void*, void*>>(0x502720, this, arg1, arg2);
     }
 
     // 0x501A60 | ??1ControlSetup@@UAE@XZ
-    ~ControlSetup() override
+    inline ~ControlSetup() override
     {
         stub<member_func_t<void, ControlSetup>>(0x501A60, this);
     }
 
     // 0x502500 | ?Update@ControlSetup@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, ControlSetup>>(0x502500, this);
     }
 
     // 0x5023F0 | ?PreSetup@ControlSetup@@UAEXXZ
-    void PreSetup() override
+    inline void PreSetup() override
     {
         return stub<member_func_t<void, ControlSetup>>(0x5023F0, this);
     }
 
     // 0x502700 | ?CancelAction@ControlSetup@@UAEXXZ
-    void CancelAction() override
+    inline void CancelAction() override
     {
         return stub<member_func_t<void, ControlSetup>>(0x502700, this);
     }
 
     // 0x502710 | ?DoneAction@ControlSetup@@UAEXXZ
-    void DoneAction() override
+    inline void DoneAction() override
     {
         return stub<member_func_t<void, ControlSetup>>(0x502710, this);
     }
 
     // 0x502530 | ?ResetDefaultAction@ControlSetup@@UAEXXZ
-    void ResetDefaultAction() override
+    inline void ResetDefaultAction() override
     {
         return stub<member_func_t<void, ControlSetup>>(0x502530, this);
     }
 
     // 0x502520 | ?StoreCurrentSetup@ControlSetup@@UAEXXZ
-    void StoreCurrentSetup() override
+    inline void StoreCurrentSetup() override
     {
         return stub<member_func_t<void, ControlSetup>>(0x502520, this);
     }

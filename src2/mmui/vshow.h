@@ -36,25 +36,25 @@ public:
     // VehShowcase::`vftable' @ 0x5B44F4
 
     // 0x505470 | ??0VehShowcase@@QAE@H@Z
-    VehShowcase(i32 arg1)
+    inline VehShowcase(int32_t arg1)
     {
-        stub<member_func_t<void, VehShowcase, i32>>(0x505470, this, arg1);
+        stub<member_func_t<void, VehShowcase, int32_t>>(0x505470, this, arg1);
     }
 
     // 0x5055C0 | ??1VehShowcase@@UAE@XZ
-    ~VehShowcase() override
+    inline ~VehShowcase() override
     {
         stub<member_func_t<void, VehShowcase>>(0x5055C0, this);
     }
 
     // 0x505620 | ?PreSetup@VehShowcase@@UAEXXZ
-    void PreSetup() override
+    inline void PreSetup() override
     {
         return stub<member_func_t<void, VehShowcase>>(0x505620, this);
     }
 
     // 0x505690 | ?PostSetup@VehShowcase@@UAEXXZ
-    void PostSetup() override
+    inline void PostSetup() override
     {
         return stub<member_func_t<void, VehShowcase>>(0x505690, this);
     }

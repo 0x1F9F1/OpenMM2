@@ -33,32 +33,32 @@ public:
     // lvlLandmark::`vftable' @ 0x5B1A88
 
     // 0x468030 | ?IsVisible@lvlLandmark@@UAEHABVgfxViewport@@@Z
-    i32 IsVisible(class gfxViewport const& arg1) override
+    inline int32_t IsVisible(class gfxViewport const& arg1) override
     {
-        return stub<member_func_t<i32, lvlLandmark, class gfxViewport const&>>(0x468030, this, arg1);
+        return stub<member_func_t<int32_t, lvlLandmark, class gfxViewport const&>>(0x468030, this, arg1);
     }
 
     // 0x468010 | ?Init@lvlLandmark@@UAEHPBDABVMatrix34@@H@Z
-    i32 Init(char const* arg1, class Matrix34 const& arg2, i32 arg3) override
+    inline int32_t Init(char const* arg1, class Matrix34 const& arg2, int32_t arg3) override
     {
-        return stub<member_func_t<i32, lvlLandmark, char const*, class Matrix34 const&, i32>>(
+        return stub<member_func_t<int32_t, lvlLandmark, char const*, class Matrix34 const&, int32_t>>(
             0x468010, this, arg1, arg2, arg3);
     }
 
     // 0x468000 | ?SizeOf@lvlLandmark@@UAEIXZ
-    u32 SizeOf() override
+    inline uint32_t SizeOf() override
     {
-        return stub<member_func_t<u32, lvlLandmark>>(0x468000, this);
+        return stub<member_func_t<uint32_t, lvlLandmark>>(0x468000, this);
     }
 
     // 0x467FF0 | ?IsLandmark@lvlLandmark@@UAE_NXZ
-    bool IsLandmark() override
+    inline bool IsLandmark() override
     {
         return stub<member_func_t<bool, lvlLandmark>>(0x467FF0, this);
     }
 
     // 0x465EB0 | ?IsCollidable@lvlLandmark@@UAE_NXZ
-    bool IsCollidable() override
+    inline bool IsCollidable() override
     {
         return stub<member_func_t<bool, lvlLandmark>>(0x465EB0, this);
     }

@@ -38,39 +38,41 @@ public:
     // UIIconW::`vftable' @ 0x5B3840
 
     // 0x4EDA70 | ??0UIIconW@@QAE@XZ
-    UIIconW()
+    inline UIIconW()
     {
         stub<member_func_t<void, UIIconW>>(0x4EDA70, this);
     }
 
     // 0x4EDBA0 | ?Init@UIIconW@@QAEXPAULocString@@PADMMMMVdatCallback@@@Z
-    void Init(struct LocString* arg1, char* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, class datCallback arg7)
+    inline void Init(
+        struct LocString* arg1, char* arg2, float arg3, float arg4, float arg5, float arg6, class datCallback arg7)
     {
-        return stub<member_func_t<void, UIIconW, struct LocString*, char*, f32, f32, f32, f32, class datCallback>>(
+        return stub<
+            member_func_t<void, UIIconW, struct LocString*, char*, float, float, float, float, class datCallback>>(
             0x4EDBA0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x4EDB30 | ??1UIIconW@@UAE@XZ
-    ~UIIconW() override
+    inline ~UIIconW() override
     {
         stub<member_func_t<void, UIIconW>>(0x4EDB30, this);
     }
 
     // 0x4EDCF0 | ?Update@UIIconW@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, UIIconW>>(0x4EDCF0, this);
     }
 
     // 0x4EDC90 | ?Action@UIIconW@@UAEXTeqEvent@@@Z
-    void Action(union eqEvent arg1) override
+    inline void Action(union eqEvent arg1) override
     {
         return stub<member_func_t<void, UIIconW, union eqEvent>>(0x4EDC90, this, arg1);
     }
 
     // 0x4EDD70 | ?Switch@UIIconW@@UAEXH@Z
-    void Switch(i32 arg1) override
+    inline void Switch(int32_t arg1) override
     {
-        return stub<member_func_t<void, UIIconW, i32>>(0x4EDD70, this, arg1);
+        return stub<member_func_t<void, UIIconW, int32_t>>(0x4EDD70, this, arg1);
     }
 };

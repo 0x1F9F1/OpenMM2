@@ -31,19 +31,19 @@ class dgTreeRenderer
 {
 public:
     // 0x442B00 | ??0dgTreeRenderer@@QAE@XZ
-    dgTreeRenderer()
+    inline dgTreeRenderer()
     {
         stub<member_func_t<void, dgTreeRenderer>>(0x442B00, this);
     }
 
     // 0x442B20 | ?AddTree@dgTreeRenderer@@QAEXPAVdgBangerInstance@@H@Z
-    void AddTree(class dgBangerInstance* arg1, i32 arg2)
+    inline void AddTree(class dgBangerInstance* arg1, int32_t arg2)
     {
-        return stub<member_func_t<void, dgTreeRenderer, class dgBangerInstance*, i32>>(0x442B20, this, arg1, arg2);
+        return stub<member_func_t<void, dgTreeRenderer, class dgBangerInstance*, int32_t>>(0x442B20, this, arg1, arg2);
     }
 
     // 0x442B50 | ?RenderTrees@dgTreeRenderer@@QAEXXZ
-    void RenderTrees()
+    inline void RenderTrees()
     {
         return stub<member_func_t<void, dgTreeRenderer>>(0x442B50, this);
     }

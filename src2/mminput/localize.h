@@ -25,7 +25,7 @@
 */
 
 // 0x5314A0 | ?AngelReadKeyString@@YAPAULocString@@I@Z
-inline struct LocString* AngelReadKeyString(u32 arg1)
+inline struct LocString* AngelReadKeyString(uint32_t arg1)
 {
-    return stub<cdecl_t<struct LocString*, u32>>(0x5314A0, arg1);
+    return stub<cdecl_t<struct LocString*, uint32_t>>(0x5314A0, arg1);
 }

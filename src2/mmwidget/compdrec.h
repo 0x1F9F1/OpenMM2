@@ -45,84 +45,86 @@ public:
     // mmCompDRecord::`vftable' @ 0x5B895C
 
     // 0x59F330 | ??0mmCompDRecord@@QAE@XZ
-    mmCompDRecord()
+    inline mmCompDRecord()
     {
         stub<member_func_t<void, mmCompDRecord>>(0x59F330, this);
     }
 
     // 0x59F420 | ?Init@mmCompDRecord@@QAEXHPADM0HHH@Z
-    void Init(i32 arg1, char* arg2, f32 arg3, char* arg4, i32 arg5, i32 arg6, i32 arg7)
+    inline void Init(int32_t arg1, char* arg2, float arg3, char* arg4, int32_t arg5, int32_t arg6, int32_t arg7)
     {
-        return stub<member_func_t<void, mmCompDRecord, i32, char*, f32, char*, i32, i32, i32>>(
+        return stub<member_func_t<void, mmCompDRecord, int32_t, char*, float, char*, int32_t, int32_t, int32_t>>(
             0x59F420, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x59F500 | ?InitTitle@mmCompDRecord@@QAEXMMMMPAULocString@@0000H@Z
-    void InitTitle(f32 arg1, f32 arg2, f32 arg3, f32 arg4, struct LocString* arg5, struct LocString* arg6,
-        struct LocString* arg7, struct LocString* arg8, struct LocString* arg9, i32 arg10)
+    inline void InitTitle(float arg1, float arg2, float arg3, float arg4, struct LocString* arg5,
+        struct LocString* arg6, struct LocString* arg7, struct LocString* arg8, struct LocString* arg9, int32_t arg10)
     {
-        return stub<member_func_t<void, mmCompDRecord, f32, f32, f32, f32, struct LocString*, struct LocString*,
-            struct LocString*, struct LocString*, struct LocString*, i32>>(
+        return stub<member_func_t<void, mmCompDRecord, float, float, float, float, struct LocString*, struct LocString*,
+            struct LocString*, struct LocString*, struct LocString*, int32_t>>(
             0x59F500, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
     }
 
     // 0x59F570 | ?LoadBitmap@mmCompDRecord@@QAEXPAD@Z
-    void LoadBitmap(char* arg1)
+    inline void LoadBitmap(char* arg1)
     {
         return stub<member_func_t<void, mmCompDRecord, char*>>(0x59F570, this, arg1);
     }
 
     // 0x59F620 | ?SetSubwidgetGeometry@mmCompDRecord@@QAEXXZ
-    void SetSubwidgetGeometry()
+    inline void SetSubwidgetGeometry()
     {
         return stub<member_func_t<void, mmCompDRecord>>(0x59F620, this);
     }
 
     // 0x59F370 | ??1mmCompDRecord@@UAE@XZ
-    ~mmCompDRecord() override
+    inline ~mmCompDRecord() override
     {
         stub<member_func_t<void, mmCompDRecord>>(0x59F370, this);
     }
 
     // 0x59F7F0 | ?Cull@mmCompDRecord@@UAEXXZ
-    void Cull() override
+    inline void Cull() override
     {
         return stub<member_func_t<void, mmCompDRecord>>(0x59F7F0, this);
     }
 
     // 0x59F5F0 | ?Update@mmCompDRecord@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, mmCompDRecord>>(0x59F5F0, this);
     }
 
     // 0x59F5E0 | ?Reset@mmCompDRecord@@UAEXXZ
-    void Reset() override
+    inline void Reset() override
     {
         return stub<member_func_t<void, mmCompDRecord>>(0x59F5E0, this);
     }
 
     // 0x59F8B0 | ?DisableBlt@mmCompDRecord@@UAEXXZ
-    void DisableBlt() override
+    inline void DisableBlt() override
     {
         return stub<member_func_t<void, mmCompDRecord>>(0x59F8B0, this);
     }
 
     // 0x59F7B0 | ?SetBltXY@mmCompDRecord@@UAEXMM@Z
-    void SetBltXY(f32 arg1, f32 arg2) override
+    inline void SetBltXY(float arg1, float arg2) override
     {
-        return stub<member_func_t<void, mmCompDRecord, f32, f32>>(0x59F7B0, this, arg1, arg2);
+        return stub<member_func_t<void, mmCompDRecord, float, float>>(0x59F7B0, this, arg1, arg2);
     }
 
     // 0x59F780 | ?SetGeometry@mmCompDRecord@@UAEXMMMM@Z
-    void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4) override
+    inline void SetGeometry(float arg1, float arg2, float arg3, float arg4) override
     {
-        return stub<member_func_t<void, mmCompDRecord, f32, f32, f32, f32>>(0x59F780, this, arg1, arg2, arg3, arg4);
+        return stub<member_func_t<void, mmCompDRecord, float, float, float, float>>(
+            0x59F780, this, arg1, arg2, arg3, arg4);
     }
 
     // 0x59F6E0 | ?SetPosition@mmCompDRecord@@UAEXPAVmmTextNode@@HM@Z
-    void SetPosition(class mmTextNode* arg1, i32 arg2, f32 arg3) override
+    inline void SetPosition(class mmTextNode* arg1, int32_t arg2, float arg3) override
     {
-        return stub<member_func_t<void, mmCompDRecord, class mmTextNode*, i32, f32>>(0x59F6E0, this, arg1, arg2, arg3);
+        return stub<member_func_t<void, mmCompDRecord, class mmTextNode*, int32_t, float>>(
+            0x59F6E0, this, arg1, arg2, arg3);
     }
 };

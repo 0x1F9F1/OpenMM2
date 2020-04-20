@@ -42,19 +42,19 @@ public:
     // aiPedAudio::`vftable' @ 0x5B5568
 
     // 0x53CD60 | ??0aiPedAudio@@QAE@XZ
-    aiPedAudio()
+    inline aiPedAudio()
     {
         stub<member_func_t<void, aiPedAudio>>(0x53CD60, this);
     }
 
     // 0x53CD90 | ?LoadFemaleVoices@aiPedAudio@@QAE_NPAD_N@Z
-    bool LoadFemaleVoices(char* arg1, bool arg2)
+    inline bool LoadFemaleVoices(char* arg1, bool arg2)
     {
         return stub<member_func_t<bool, aiPedAudio, char*, bool>>(0x53CD90, this, arg1, arg2);
     }
 
     // 0x53CE00 | ?LoadMaleVoices@aiPedAudio@@QAE_NPAD_N@Z
-    bool LoadMaleVoices(char* arg1, bool arg2)
+    inline bool LoadMaleVoices(char* arg1, bool arg2)
     {
         return stub<member_func_t<bool, aiPedAudio, char*, bool>>(0x53CE00, this, arg1, arg2);
     }

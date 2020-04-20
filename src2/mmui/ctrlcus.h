@@ -41,55 +41,55 @@ public:
     // ControlCustom::`vftable' @ 0x5B42F4
 
     // 0x502780 | ??0ControlCustom@@QAE@H@Z
-    ControlCustom(i32 arg1)
+    inline ControlCustom(int32_t arg1)
     {
-        stub<member_func_t<void, ControlCustom, i32>>(0x502780, this, arg1);
+        stub<member_func_t<void, ControlCustom, int32_t>>(0x502780, this, arg1);
     }
 
     // 0x502830 | ?BadAssignCB@ControlCustom@@QAEXXZ
-    void BadAssignCB()
+    inline void BadAssignCB()
     {
         return stub<member_func_t<void, ControlCustom>>(0x502830, this);
     }
 
     // 0x502880 | ?ClearBadAssignment@ControlCustom@@QAEXXZ
-    void ClearBadAssignment()
+    inline void ClearBadAssignment()
     {
         return stub<member_func_t<void, ControlCustom>>(0x502880, this);
     }
 
     // 0x502890 | ?CancelBadAssignment@ControlCustom@@QAEXXZ
-    void CancelBadAssignment()
+    inline void CancelBadAssignment()
     {
         return stub<member_func_t<void, ControlCustom>>(0x502890, this);
     }
 
     // 0x5028B0 | ?VerifyBadAssignment@ControlCustom@@QAEXXZ
-    void VerifyBadAssignment()
+    inline void VerifyBadAssignment()
     {
         return stub<member_func_t<void, ControlCustom>>(0x5028B0, this);
     }
 
     // 0x502820 | ??1ControlCustom@@UAE@XZ
-    ~ControlCustom() override
+    inline ~ControlCustom() override
     {
         stub<member_func_t<void, ControlCustom>>(0x502820, this);
     }
 
     // 0x502900 | ?CancelAction@ControlCustom@@UAEXXZ
-    void CancelAction() override
+    inline void CancelAction() override
     {
         return stub<member_func_t<void, ControlCustom>>(0x502900, this);
     }
 
     // 0x5028F0 | ?DoneAction@ControlCustom@@UAEXXZ
-    void DoneAction() override
+    inline void DoneAction() override
     {
         return stub<member_func_t<void, ControlCustom>>(0x5028F0, this);
     }
 
     // 0x5028D0 | ?ResetDefaultAction@ControlCustom@@UAEXXZ
-    void ResetDefaultAction() override
+    inline void ResetDefaultAction() override
     {
         return stub<member_func_t<void, ControlCustom>>(0x5028D0, this);
     }

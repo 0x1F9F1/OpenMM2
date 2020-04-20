@@ -56,33 +56,33 @@ public:
     // AudCreatureContainer::`vftable' @ 0x5B4C9C
 
     // 0x5108D0 | ??0AudCreatureContainer@@QAE@XZ
-    AudCreatureContainer()
+    inline AudCreatureContainer()
     {
         stub<member_func_t<void, AudCreatureContainer>>(0x5108D0, this);
     }
 
     // 0x510910 | ?IsPlaying@AudCreatureContainer@@QAE_NXZ
-    bool IsPlaying()
+    inline bool IsPlaying()
     {
         return stub<member_func_t<bool, AudCreatureContainer>>(0x510910, this);
     }
 
     // 0x510920 | ?Init@AudCreatureContainer@@QAEXPADPAVVector3@@@Z
-    void Init(char* arg1, class Vector3* arg2)
+    inline void Init(char* arg1, class Vector3* arg2)
     {
         return stub<member_func_t<void, AudCreatureContainer, char*, class Vector3*>>(0x510920, this, arg1, arg2);
     }
 
     // 0x510980 | ?Reset@AudCreatureContainer@@QAEXXZ
-    void Reset()
+    inline void Reset()
     {
         return stub<member_func_t<void, AudCreatureContainer>>(0x510980, this);
     }
 
     // 0x510A80 | ?UpdateAudio@AudCreatureContainer@@QAEHM@Z
-    i32 UpdateAudio(f32 arg1)
+    inline int32_t UpdateAudio(float arg1)
     {
-        return stub<member_func_t<i32, AudCreatureContainer, f32>>(0x510A80, this, arg1);
+        return stub<member_func_t<int32_t, AudCreatureContainer, float>>(0x510A80, this, arg1);
     }
 
     // 0x510B10 | ?InitStatics@AudCreatureContainer@@SAXXZ
@@ -98,79 +98,79 @@ public:
     }
 
     // 0x510BF0 | ?UpdateStatics@AudCreatureContainer@@SAXM@Z
-    static inline void UpdateStatics(f32 arg1)
+    static inline void UpdateStatics(float arg1)
     {
-        return stub<cdecl_t<void, f32>>(0x510BF0, arg1);
+        return stub<cdecl_t<void, float>>(0x510BF0, arg1);
     }
 
     // 0x510C20 | ?UpdateVoices@AudCreatureContainer@@CAXHM@Z
-    static inline void UpdateVoices(i32 arg1, f32 arg2)
+    static inline void UpdateVoices(int32_t arg1, float arg2)
     {
-        return stub<cdecl_t<void, i32, f32>>(0x510C20, arg1, arg2);
+        return stub<cdecl_t<void, int32_t, float>>(0x510C20, arg1, arg2);
     }
 
     // 0x510C60 | ?EchoOn@AudCreatureContainer@@QAEXXZ
-    void EchoOn()
+    inline void EchoOn()
     {
         return stub<member_func_t<void, AudCreatureContainer>>(0x510C60, this);
     }
 
     // 0x510C90 | ?EchoOff@AudCreatureContainer@@QAEXXZ
-    void EchoOff()
+    inline void EchoOff()
     {
         return stub<member_func_t<void, AudCreatureContainer>>(0x510C90, this);
     }
 
     // 0x510CB0 | ?UpdateEcho@AudCreatureContainer@@AAEXXZ
-    void UpdateEcho()
+    inline void UpdateEcho()
     {
         return stub<member_func_t<void, AudCreatureContainer>>(0x510CB0, this);
     }
 
     // 0x510CC0 | ?PlayImpactReaction@AudCreatureContainer@@QAEXM@Z
-    void PlayImpactReaction(f32 arg1)
+    inline void PlayImpactReaction(float arg1)
     {
-        return stub<member_func_t<void, AudCreatureContainer, f32>>(0x510CC0, this, arg1);
+        return stub<member_func_t<void, AudCreatureContainer, float>>(0x510CC0, this, arg1);
     }
 
     // 0x510CF0 | ?PlayAvoidanceReaction@AudCreatureContainer@@QAEXM@Z
-    void PlayAvoidanceReaction(f32 arg1)
+    inline void PlayAvoidanceReaction(float arg1)
     {
-        return stub<member_func_t<void, AudCreatureContainer, f32>>(0x510CF0, this, arg1);
+        return stub<member_func_t<void, AudCreatureContainer, float>>(0x510CF0, this, arg1);
     }
 
     // 0x510D20 | ?LoadVoices@AudCreatureContainer@@QAE_NPAD0@Z
-    bool LoadVoices(char* arg1, char* arg2)
+    inline bool LoadVoices(char* arg1, char* arg2)
     {
         return stub<member_func_t<bool, AudCreatureContainer, char*, char*>>(0x510D20, this, arg1, arg2);
     }
 
     // 0x510F50 | ?LoadNumFileChoices@AudCreatureContainer@@SAXPADPAH@Z
-    static inline void LoadNumFileChoices(char* arg1, i32* arg2)
+    static inline void LoadNumFileChoices(char* arg1, int32_t* arg2)
     {
-        return stub<cdecl_t<void, char*, i32*>>(0x510F50, arg1, arg2);
+        return stub<cdecl_t<void, char*, int32_t*>>(0x510F50, arg1, arg2);
     }
 
     // 0x5109A0 | ?AssignSounds@AudCreatureContainer@@UAEXXZ
-    void AssignSounds() override
+    inline void AssignSounds() override
     {
         return stub<member_func_t<void, AudCreatureContainer>>(0x5109A0, this);
     }
 
     // 0x5109E0 | ?UnAssignSounds@AudCreatureContainer@@UAEXH@Z
-    void UnAssignSounds(i32 arg1) override
+    inline void UnAssignSounds(int32_t arg1) override
     {
-        return stub<member_func_t<void, AudCreatureContainer, i32>>(0x5109E0, this, arg1);
+        return stub<member_func_t<void, AudCreatureContainer, int32_t>>(0x5109E0, this, arg1);
     }
 
     // 0x510A20 | ?UpdateAudio@AudCreatureContainer@@UAEXXZ
-    void UpdateAudio() override
+    inline void UpdateAudio() override
     {
         return stub<member_func_t<void, AudCreatureContainer>>(0x510A20, this);
     }
 
     // 0x510950 | ?Update@AudCreatureContainer@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, AudCreatureContainer>>(0x510950, this);
     }

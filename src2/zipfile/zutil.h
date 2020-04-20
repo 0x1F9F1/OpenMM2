@@ -33,9 +33,9 @@
 // 0x574560 | _zError
 
 // 0x574580 | ?zcalloc@@YAPAXPAXII@Z
-inline void* zcalloc(void* arg1, u32 arg2, u32 arg3)
+inline void* zcalloc(void* arg1, uint32_t arg2, uint32_t arg3)
 {
-    return stub<cdecl_t<void*, void*, u32, u32>>(0x574580, arg1, arg2, arg3);
+    return stub<cdecl_t<void*, void*, uint32_t, uint32_t>>(0x574580, arg1, arg2, arg3);
 }
 
 // 0x5745A0 | ?zcfree@@YAXPAX0@Z

@@ -33,38 +33,38 @@ class crSkeleton
 {
 public:
     // 0x57C510 | ??0crSkeleton@@QAE@XZ
-    crSkeleton()
+    inline crSkeleton()
     {
         stub<member_func_t<void, crSkeleton>>(0x57C510, this);
     }
 
     // 0x57C5C0 | ??1crSkeleton@@QAE@XZ
-    ~crSkeleton()
+    inline ~crSkeleton()
     {
         stub<member_func_t<void, crSkeleton>>(0x57C5C0, this);
     }
 
     // 0x57C5D0 | ?Init@crSkeleton@@QAEXABVcrSkeletonData@@PAVMatrix34@@@Z
-    void Init(class crSkeletonData const& arg1, class Matrix34* arg2)
+    inline void Init(class crSkeletonData const& arg1, class Matrix34* arg2)
     {
         return stub<member_func_t<void, crSkeleton, class crSkeletonData const&, class Matrix34*>>(
             0x57C5D0, this, arg1, arg2);
     }
 
     // 0x57C630 | ?Update@crSkeleton@@QAEXXZ
-    void Update()
+    inline void Update()
     {
         return stub<member_func_t<void, crSkeleton>>(0x57C630, this);
     }
 
     // 0x57C650 | ?Attach@crSkeleton@@QBEXQAVMatrix34@@@Z
-    void Attach(class Matrix34* const arg1)
+    inline void Attach(class Matrix34* const arg1)
     {
         return stub<member_func_t<void, crSkeleton, class Matrix34* const>>(0x57C650, this, arg1);
     }
 
     // 0x57C690 | ?Attach@crSkeleton@@QBEXQAVMatrix44@@@Z
-    void Attach(class Matrix44* const arg1)
+    inline void Attach(class Matrix44* const arg1)
     {
         return stub<member_func_t<void, crSkeleton, class Matrix44* const>>(0x57C690, this, arg1);
     }

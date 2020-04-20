@@ -42,60 +42,60 @@ public:
     // UILabel::`vftable' @ 0x5B3714
 
     // 0x4ED200 | ??0UILabel@@QAE@XZ
-    UILabel()
+    inline UILabel()
     {
         stub<member_func_t<void, UILabel>>(0x4ED200, this);
     }
 
     // 0x4ED2E0 | ?Init@UILabel@@QAEXPAULocString@@HMMMMH@Z
-    void Init(struct LocString* arg1, i32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7)
+    inline void Init(struct LocString* arg1, int32_t arg2, float arg3, float arg4, float arg5, float arg6, int32_t arg7)
     {
-        return stub<member_func_t<void, UILabel, struct LocString*, i32, f32, f32, f32, f32, i32>>(
+        return stub<member_func_t<void, UILabel, struct LocString*, int32_t, float, float, float, float, int32_t>>(
             0x4ED2E0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
     // 0x4ED3A0 | ?SetText@UILabel@@QAEXPAULocString@@@Z
-    void SetText(struct LocString* arg1)
+    inline void SetText(struct LocString* arg1)
     {
         return stub<member_func_t<void, UILabel, struct LocString*>>(0x4ED3A0, this, arg1);
     }
 
     // 0x4ED400 | ?SetBlink@UILabel@@QAEXH@Z
-    void SetBlink(i32 arg1)
+    inline void SetBlink(int32_t arg1)
     {
-        return stub<member_func_t<void, UILabel, i32>>(0x4ED400, this, arg1);
+        return stub<member_func_t<void, UILabel, int32_t>>(0x4ED400, this, arg1);
     }
 
     // 0x4ED440 | ?SwitchState@UILabel@@QAEXH@Z
-    void SwitchState(i32 arg1)
+    inline void SwitchState(int32_t arg1)
     {
-        return stub<member_func_t<void, UILabel, i32>>(0x4ED440, this, arg1);
+        return stub<member_func_t<void, UILabel, int32_t>>(0x4ED440, this, arg1);
     }
 
     // 0x6B03F4 | ?TextHeight@UILabel@@2MA
     inline extern_var(0x6B03F4, float, TextHeight);
 
     // 0x4ED280 | ??1UILabel@@UAE@XZ
-    ~UILabel() override
+    inline ~UILabel() override
     {
         stub<member_func_t<void, UILabel>>(0x4ED280, this);
     }
 
     // 0x4ED3C0 | ?Update@UILabel@@UAEXXZ
-    void Update() override
+    inline void Update() override
     {
         return stub<member_func_t<void, UILabel>>(0x4ED3C0, this);
     }
 
     // 0x4ED4C0 | ?Action@UILabel@@UAEXTeqEvent@@@Z
-    void Action(union eqEvent arg1) override
+    inline void Action(union eqEvent arg1) override
     {
         return stub<member_func_t<void, UILabel, union eqEvent>>(0x4ED4C0, this, arg1);
     }
 
     // 0x4ED430 | ?Switch@UILabel@@UAEXH@Z
-    void Switch(i32 arg1) override
+    inline void Switch(int32_t arg1) override
     {
-        return stub<member_func_t<void, UILabel, i32>>(0x4ED430, this, arg1);
+        return stub<member_func_t<void, UILabel, int32_t>>(0x4ED430, this, arg1);
     }
 };
