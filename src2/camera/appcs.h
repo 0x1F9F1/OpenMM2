@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "basecs.h"
 
 /*
     camera:appcs
@@ -35,51 +37,34 @@
     0x5B5174 | const camAppCS::`vftable' | ??_7camAppCS@@6B@
 */
 
-struct camAppCS : camBaseCS
+class camAppCS : public camBaseCS
 {
+    // const camAppCS::`vftable' @ 0x5B5174
+
 public:
-    // camAppCS::`vftable' @ 0x5B5174
-
     // 0x521F70 | ??0camAppCS@@QAE@XZ
-    inline camAppCS()
-    {
-        stub<member_func_t<void, camAppCS>>(0x521F70, this);
-    }
+    camAppCS();
 
-    // 0x522060 | ?ApproachIt@camAppCS@@IAEXXZ
-    inline void ApproachIt()
-    {
-        return stub<member_func_t<void, camAppCS>>(0x522060, this);
-    }
-
-    // 0x522090 | ?UpdateApproach@camAppCS@@AAEXXZ
-    inline void UpdateApproach()
-    {
-        return stub<member_func_t<void, camAppCS>>(0x522090, this);
-    }
-
-    // 0x522650 | ?UpdateMaxDist@camAppCS@@AAEXXZ
-    inline void UpdateMaxDist()
-    {
-        return stub<member_func_t<void, camAppCS>>(0x522650, this);
-    }
-
-    // 0x522880 | ?DApproach@camAppCS@@AAEHAAMMMM0M@Z
-    inline int32_t DApproach(float& arg1, float arg2, float arg3, float arg4, float& arg5, float arg6)
-    {
-        return stub<member_func_t<int32_t, camAppCS, float&, float, float, float, float&, float>>(
-            0x522880, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
-
+    // 0x522B50 | ??_GcamAppCS@@UAEPAXI@Z
     // 0x522050 | ??1camAppCS@@UAE@XZ
-    inline ~camAppCS() override
-    {
-        stub<member_func_t<void, camAppCS>>(0x522050, this);
-    }
+    ~camAppCS() override;
 
     // 0x5229D0 | ?FileIO@camAppCS@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
-    {
-        return stub<member_func_t<void, camAppCS, class datParser&>>(0x5229D0, this, arg1);
-    }
+    void FileIO(class datParser& arg1) override;
+
+protected:
+    // 0x522060 | ?ApproachIt@camAppCS@@IAEXXZ
+    void ApproachIt();
+
+private:
+    // 0x522880 | ?DApproach@camAppCS@@AAEHAAMMMM0M@Z
+    i32 DApproach(f32& arg1, f32 arg2, f32 arg3, f32 arg4, f32& arg5, f32 arg6);
+
+    // 0x522090 | ?UpdateApproach@camAppCS@@AAEXXZ
+    void UpdateApproach();
+
+    // 0x522650 | ?UpdateMaxDist@camAppCS@@AAEXXZ
+    void UpdateMaxDist();
 };
+
+check_size(camAppCS, 0x0);

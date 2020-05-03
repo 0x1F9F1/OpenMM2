@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,45 @@
 */
 
 #include "zone.h"
+
+netZoneScore::netZoneScore()
+{
+    unimplemented();
+}
+
+netZoneScore::~netZoneScore()
+{
+    unimplemented();
+}
+
+bool netZoneScore::Init(struct _GUID arg1, struct IDirectPlayLobby3* arg2)
+{
+    return stub<thiscall_t<bool, netZoneScore*, struct _GUID, struct IDirectPlayLobby3*>>(0x5729D0, this, arg1, arg2);
+}
+
+void netZoneScore::InitResults(i32 arg1, bool arg2)
+{
+    return stub<thiscall_t<void, netZoneScore*, i32, bool>>(0x572B50, this, arg1, arg2);
+}
+
+void netZoneScore::SendGameEnd()
+{
+    return stub<thiscall_t<void, netZoneScore*>>(0x572B00, this);
+}
+
+void netZoneScore::SendGameSettings(char* arg1)
+{
+    return stub<thiscall_t<void, netZoneScore*, char*>>(0x572A30, this, arg1);
+}
+
+void netZoneScore::SendGameStart()
+{
+    return stub<thiscall_t<void, netZoneScore*>>(0x572AA0, this);
+}
+
+void netZoneScore::SendGameStartStaging()
+{
+    return stub<thiscall_t<void, netZoneScore*>>(0x572AD0, this);
+}
+
+define_dummy_symbol(mmnetwork_zone);

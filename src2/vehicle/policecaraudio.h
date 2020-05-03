@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "caraudio.h"
 
 /*
     vehicle:policecaraudio
@@ -62,218 +64,119 @@
     0x6AFFE4 | private: static int vehPoliceCarAudio::s_iNumCopsPursuingPlayer | ?s_iNumCopsPursuingPlayer@vehPoliceCarAudio@@0HA
 */
 
-class vehPoliceCarAudio : vehCarAudio
+class vehPoliceCarAudio : public vehCarAudio
 {
+    // const vehPoliceCarAudio::`vftable' @ 0x5B2E18
+
 public:
-    // vehPoliceCarAudio::`vftable' @ 0x5B2E18
-
     // 0x4D43D0 | ??0vehPoliceCarAudio@@QAE@PAVvehCarSim@@PAVvehCarDamage@@PBD2_N@Z
-    inline vehPoliceCarAudio(
-        class vehCarSim* arg1, class vehCarDamage* arg2, char const* arg3, char const* arg4, bool arg5)
-    {
-        stub<member_func_t<void, vehPoliceCarAudio, class vehCarSim*, class vehCarDamage*, char const*, char const*,
-            bool>>(0x4D43D0, this, arg1, arg2, arg3, arg4, arg5);
-    }
+    vehPoliceCarAudio(class vehCarSim* arg1, class vehCarDamage* arg2, char const* arg3, char const* arg4, bool arg5);
 
-    // 0x4D4590 | ?DeallocateSirenPlayInfo@vehPoliceCarAudio@@AAEXPAUtagSirenData@@@Z
-    inline void DeallocateSirenPlayInfo(struct tagSirenData* arg1)
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio, struct tagSirenData*>>(0x4D4590, this, arg1);
-    }
-
-    // 0x4D45F0 | ?EchoOn@vehPoliceCarAudio@@QAEXXZ
-    inline void EchoOn()
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D45F0, this);
-    }
-
-    // 0x4D4670 | ?EchoOff@vehPoliceCarAudio@@QAEXXZ
-    inline void EchoOff()
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D4670, this);
-    }
-
-    // 0x4D46B0 | ?UpdateEcho@vehPoliceCarAudio@@QAEXXZ
-    inline void UpdateEcho()
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D46B0, this);
-    }
-
-    // 0x4D46F0 | ?Init@vehPoliceCarAudio@@QAEXPAVvehCarSim@@PAVvehCarDamage@@PBD2_N@Z
-    inline void Init(class vehCarSim* arg1, class vehCarDamage* arg2, char const* arg3, char const* arg4, bool arg5)
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio, class vehCarSim*, class vehCarDamage*, char const*,
-            char const*, bool>>(0x4D46F0, this, arg1, arg2, arg3, arg4, arg5);
-    }
-
-    // 0x4D4730 | ?Load@vehPoliceCarAudio@@AAEXPBD@Z
-    inline void Load(char const* arg1)
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio, char const*>>(0x4D4730, this, arg1);
-    }
-
-    // 0x4D4800 | ?ReadSirenData@vehPoliceCarAudio@@AAEXPAVStream@@@Z
-    inline void ReadSirenData(class Stream* arg1)
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio, class Stream*>>(0x4D4800, this, arg1);
-    }
-
-    // 0x4D49E0 | ?ReadSirenData@vehPoliceCarAudio@@AAEXPAUtagSirenData@@PAD@Z
-    inline void ReadSirenData(struct tagSirenData* arg1, char* arg2)
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio, struct tagSirenData*, char*>>(0x4D49E0, this, arg1, arg2);
-    }
-
-    // 0x4D4A50 | ?ReadSirenPlayInfo@vehPoliceCarAudio@@AAEXPAUtagSirenData@@PAD@Z
-    inline void ReadSirenPlayInfo(struct tagSirenData* arg1, char* arg2)
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio, struct tagSirenData*, char*>>(0x4D4A50, this, arg1, arg2);
-    }
-
-    // 0x4D4B00 | ?ExplosionIsPlaying@vehPoliceCarAudio@@QAEHXZ
-    inline int32_t ExplosionIsPlaying()
-    {
-        return stub<member_func_t<int32_t, vehPoliceCarAudio>>(0x4D4B00, this);
-    }
-
-    // 0x4D4B20 | ?StartSiren@vehPoliceCarAudio@@QAEXH@Z
-    inline void StartSiren(int32_t arg1)
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio, int32_t>>(0x4D4B20, this, arg1);
-    }
-
-    // 0x4D4C20 | ?StopSiren@vehPoliceCarAudio@@QAEXXZ
-    inline void StopSiren()
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D4C20, this);
-    }
-
-    // 0x4D4C90 | ?PlayExplosion@vehPoliceCarAudio@@QAEXXZ
-    inline void PlayExplosion()
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D4C90, this);
-    }
-
-    // 0x4D4D50 | ?DamageSiren@vehPoliceCarAudio@@QAEXXZ
-    inline void DamageSiren()
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D4D50, this);
-    }
-
-    // 0x4D4E40 | ?UpdateSiren@vehPoliceCarAudio@@QAEHMMM@Z
-    inline int32_t UpdateSiren(float arg1, float arg2, float arg3)
-    {
-        return stub<member_func_t<int32_t, vehPoliceCarAudio, float, float, float>>(0x4D4E40, this, arg1, arg2, arg3);
-    }
-
-    // 0x4D4F60 | ?UpdateSiren@vehPoliceCarAudio@@QAEXXZ
-    inline void UpdateSiren()
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D4F60, this);
-    }
-
-    // 0x4D4FB0 | ?FluctuateSiren@vehPoliceCarAudio@@AAEXXZ
-    inline void FluctuateSiren()
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D4FB0, this);
-    }
-
-    // 0x4D5060 | ?UpdateAudio3D@vehPoliceCarAudio@@QAEHM@Z
-    inline int32_t UpdateAudio3D(float arg1)
-    {
-        return stub<member_func_t<int32_t, vehPoliceCarAudio, float>>(0x4D5060, this, arg1);
-    }
-
-    // 0x4D50B0 | ?UpdateExplosion@vehPoliceCarAudio@@QAEXMM@Z
-    inline void UpdateExplosion(float arg1, float arg2)
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio, float, float>>(0x4D50B0, this, arg1, arg2);
-    }
-
-    // 0x4D5120 | ?PlayVoice@vehPoliceCarAudio@@QAEXXZ
-    inline void PlayVoice()
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D5120, this);
-    }
-
-    // 0x4D5290 | ?Reset@vehPoliceCarAudio@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D5290, this);
-    }
-
-    // 0x4D52F0 | ?UpdateAudio3D@vehPoliceCarAudio@@QAEXXZ
-    inline void UpdateAudio3D()
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D52F0, this);
-    }
-
-    // 0x4D53B0 | ?UpdateAudioNon3D@vehPoliceCarAudio@@QAEXXZ
-    inline void UpdateAudioNon3D()
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D53B0, this);
-    }
-
-    // 0x4D5400 | ?RandomizeNumber@vehPoliceCarAudio@@QAEFXZ
-    inline int16_t RandomizeNumber()
-    {
-        return stub<member_func_t<int16_t, vehPoliceCarAudio>>(0x4D5400, this);
-    }
-
-    // 0x4D5440 | ?GetNumCopsPursuingPlayer@vehPoliceCarAudio@@SAHXZ
-    static inline int32_t GetNumCopsPursuingPlayer()
-    {
-        return stub<cdecl_t<int32_t>>(0x4D5440);
-    }
-
-    // 0x4D54F0 | ?Set2DPan@vehPoliceCarAudio@@QAEXM@Z
-    inline void Set2DPan(float arg1)
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio, float>>(0x4D54F0, this, arg1);
-    }
-
-    // 0x4D5580 | ?RemoveFromManager@vehPoliceCarAudio@@QAEXXZ
-    inline void RemoveFromManager()
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D5580, this);
-    }
-
-    // 0x6AFFE4 | ?s_iNumCopsPursuingPlayer@vehPoliceCarAudio@@0HA
-    inline extern_var(0x6AFFE4, int32_t, s_iNumCopsPursuingPlayer);
+    // 0x4D44C0 | ??1vehPoliceCarAudio@@UAE@XZ
+    ~vehPoliceCarAudio();
 
     // 0x4D5130 | ?AssignSounds@vehPoliceCarAudio@@UAEXXZ
-    inline void AssignSounds() override
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D5130, this);
-    }
+    void AssignSounds() override;
 
-    // 0x4D5220 | ?UnAssignSounds@vehPoliceCarAudio@@UAEXH@Z
-    inline void UnAssignSounds(int32_t arg1) override
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio, int32_t>>(0x4D5220, this, arg1);
-    }
+    // 0x4D4D50 | ?DamageSiren@vehPoliceCarAudio@@QAEXXZ
+    void DamageSiren();
 
-    // 0x4D52A0 | ?UpdateAudio@vehPoliceCarAudio@@UAEXXZ
-    inline void UpdateAudio() override
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D52A0, this);
-    }
+    // 0x4D4670 | ?EchoOff@vehPoliceCarAudio@@QAEXXZ
+    void EchoOff();
 
-    // 0x4D5590 | ?Update@vehPoliceCarAudio@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D5590, this);
-    }
+    // 0x4D45F0 | ?EchoOn@vehPoliceCarAudio@@QAEXXZ
+    void EchoOn();
 
-    // 0x4D5450 | ?SetNon3DParams@vehPoliceCarAudio@@UAEXXZ
-    inline void SetNon3DParams() override
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D5450, this);
-    }
+    // 0x4D4B00 | ?ExplosionIsPlaying@vehPoliceCarAudio@@QAEHXZ
+    i32 ExplosionIsPlaying();
+
+    // 0x4D46F0 | ?Init@vehPoliceCarAudio@@QAEXPAVvehCarSim@@PAVvehCarDamage@@PBD2_N@Z
+    void Init(class vehCarSim* arg1, class vehCarDamage* arg2, char const* arg3, char const* arg4, bool arg5);
+
+    // 0x4D4C90 | ?PlayExplosion@vehPoliceCarAudio@@QAEXXZ
+    void PlayExplosion();
+
+    // 0x4D5120 | ?PlayVoice@vehPoliceCarAudio@@QAEXXZ
+    void PlayVoice();
+
+    // 0x4D5400 | ?RandomizeNumber@vehPoliceCarAudio@@QAEFXZ
+    i16 RandomizeNumber();
+
+    // 0x4D5580 | ?RemoveFromManager@vehPoliceCarAudio@@QAEXXZ
+    void RemoveFromManager();
+
+    // 0x4D5290 | ?Reset@vehPoliceCarAudio@@QAEXXZ
+    void Reset();
+
+    // 0x4D54F0 | ?Set2DPan@vehPoliceCarAudio@@QAEXM@Z
+    void Set2DPan(f32 arg1);
 
     // 0x4D5570 | ?Set3DParams@vehPoliceCarAudio@@UAEXXZ
-    inline void Set3DParams() override
-    {
-        return stub<member_func_t<void, vehPoliceCarAudio>>(0x4D5570, this);
-    }
+    void Set3DParams() override;
+
+    // 0x4D5450 | ?SetNon3DParams@vehPoliceCarAudio@@UAEXXZ
+    void SetNon3DParams() override;
+
+    // 0x4D4B20 | ?StartSiren@vehPoliceCarAudio@@QAEXH@Z
+    void StartSiren(i32 arg1);
+
+    // 0x4D4C20 | ?StopSiren@vehPoliceCarAudio@@QAEXXZ
+    void StopSiren();
+
+    // 0x4D5220 | ?UnAssignSounds@vehPoliceCarAudio@@UAEXH@Z
+    void UnAssignSounds(i32 arg1) override;
+
+    // 0x4D5590 | ?Update@vehPoliceCarAudio@@UAEXXZ
+    void Update() override;
+
+    // 0x4D52A0 | ?UpdateAudio@vehPoliceCarAudio@@UAEXXZ
+    void UpdateAudio() override;
+
+    // 0x4D52F0 | ?UpdateAudio3D@vehPoliceCarAudio@@QAEXXZ
+    void UpdateAudio3D();
+
+    // 0x4D5060 | ?UpdateAudio3D@vehPoliceCarAudio@@QAEHM@Z
+    i32 UpdateAudio3D(f32 arg1);
+
+    // 0x4D53B0 | ?UpdateAudioNon3D@vehPoliceCarAudio@@QAEXXZ
+    void UpdateAudioNon3D();
+
+    // 0x4D46B0 | ?UpdateEcho@vehPoliceCarAudio@@QAEXXZ
+    void UpdateEcho();
+
+    // 0x4D50B0 | ?UpdateExplosion@vehPoliceCarAudio@@QAEXMM@Z
+    void UpdateExplosion(f32 arg1, f32 arg2);
+
+    // 0x4D4F60 | ?UpdateSiren@vehPoliceCarAudio@@QAEXXZ
+    void UpdateSiren();
+
+    // 0x4D4E40 | ?UpdateSiren@vehPoliceCarAudio@@QAEHMMM@Z
+    i32 UpdateSiren(f32 arg1, f32 arg2, f32 arg3);
+
+    // 0x4D5440 | ?GetNumCopsPursuingPlayer@vehPoliceCarAudio@@SAHXZ
+    static i32 GetNumCopsPursuingPlayer();
+
+private:
+    // 0x4D4590 | ?DeallocateSirenPlayInfo@vehPoliceCarAudio@@AAEXPAUtagSirenData@@@Z
+    void DeallocateSirenPlayInfo(struct tagSirenData* arg1);
+
+    // 0x4D4FB0 | ?FluctuateSiren@vehPoliceCarAudio@@AAEXXZ
+    void FluctuateSiren();
+
+    // 0x4D4730 | ?Load@vehPoliceCarAudio@@AAEXPBD@Z
+    void Load(char const* arg1);
+
+    // 0x4D4800 | ?ReadSirenData@vehPoliceCarAudio@@AAEXPAVStream@@@Z
+    void ReadSirenData(class Stream* arg1);
+
+    // 0x4D49E0 | ?ReadSirenData@vehPoliceCarAudio@@AAEXPAUtagSirenData@@PAD@Z
+    void ReadSirenData(struct tagSirenData* arg1, char* arg2);
+
+    // 0x4D4A50 | ?ReadSirenPlayInfo@vehPoliceCarAudio@@AAEXPAUtagSirenData@@PAD@Z
+    void ReadSirenPlayInfo(struct tagSirenData* arg1, char* arg2);
+
+    // 0x6AFFE4 | ?s_iNumCopsPursuingPlayer@vehPoliceCarAudio@@0HA
+    static inline extern_var(0x6AFFE4, i32, s_iNumCopsPursuingPlayer);
 };
+
+check_size(vehPoliceCarAudio, 0x248);

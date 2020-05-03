@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,25 @@
 */
 
 #include "dlg_newp.h"
+
+Dialog_NewPlayer::Dialog_NewPlayer(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+{
+    unimplemented();
+}
+
+Dialog_NewPlayer::~Dialog_NewPlayer()
+{
+    unimplemented();
+}
+
+void Dialog_NewPlayer::EnterNewPlayer()
+{
+    return stub<thiscall_t<void, Dialog_NewPlayer*>>(0x4FD920, this);
+}
+
+void Dialog_NewPlayer::PreSetup()
+{
+    return stub<thiscall_t<void, Dialog_NewPlayer*>>(0x4FD930, this);
+}
+
+define_dummy_symbol(mmui_dlg_newp);

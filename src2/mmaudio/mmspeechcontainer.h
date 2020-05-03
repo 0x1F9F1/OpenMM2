@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -35,50 +35,29 @@ class mmSpeechContainer
 {
 public:
     // 0x51B450 | ??0mmSpeechContainer@@QAE@HHPAD@Z
-    inline mmSpeechContainer(int32_t arg1, int32_t arg2, char* arg3)
-    {
-        stub<member_func_t<void, mmSpeechContainer, int32_t, int32_t, char*>>(0x51B450, this, arg1, arg2, arg3);
-    }
+    mmSpeechContainer(i32 arg1, i32 arg2, char* arg3);
 
     // 0x51B4C0 | ??1mmSpeechContainer@@QAE@XZ
-    inline ~mmSpeechContainer()
-    {
-        stub<member_func_t<void, mmSpeechContainer>>(0x51B4C0, this);
-    }
-
-    // 0x51B5C0 | ?InitRace@mmSpeechContainer@@AAEXHHPAD@Z
-    inline void InitRace(int32_t arg1, int32_t arg2, char* arg3)
-    {
-        return stub<member_func_t<void, mmSpeechContainer, int32_t, int32_t, char*>>(0x51B5C0, this, arg1, arg2, arg3);
-    }
-
-    // 0x51B6A0 | ?InitCC@mmSpeechContainer@@AAEXHPAD@Z
-    inline void InitCC(int32_t arg1, char* arg2)
-    {
-        return stub<member_func_t<void, mmSpeechContainer, int32_t, char*>>(0x51B6A0, this, arg1, arg2);
-    }
-
-    // 0x51B7A0 | ?Stop@mmSpeechContainer@@QAEXXZ
-    inline void Stop()
-    {
-        return stub<member_func_t<void, mmSpeechContainer>>(0x51B7A0, this);
-    }
-
-    // 0x51B7B0 | ?Update@mmSpeechContainer@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, mmSpeechContainer>>(0x51B7B0, this);
-    }
-
-    // 0x51B7E0 | ?GetRaceSpeechPtr@mmSpeechContainer@@QAEPAVmmRaceSpeech@@XZ
-    inline class mmRaceSpeech* GetRaceSpeechPtr()
-    {
-        return stub<member_func_t<class mmRaceSpeech*, mmSpeechContainer>>(0x51B7E0, this);
-    }
+    ~mmSpeechContainer();
 
     // 0x51B7F0 | ?GetCCSpeechPtr@mmSpeechContainer@@QAEPAVmmCCSpeech@@XZ
-    inline class mmCCSpeech* GetCCSpeechPtr()
-    {
-        return stub<member_func_t<class mmCCSpeech*, mmSpeechContainer>>(0x51B7F0, this);
-    }
+    class mmCCSpeech* GetCCSpeechPtr();
+
+    // 0x51B7E0 | ?GetRaceSpeechPtr@mmSpeechContainer@@QAEPAVmmRaceSpeech@@XZ
+    class mmRaceSpeech* GetRaceSpeechPtr();
+
+    // 0x51B7A0 | ?Stop@mmSpeechContainer@@QAEXXZ
+    void Stop();
+
+    // 0x51B7B0 | ?Update@mmSpeechContainer@@QAEXXZ
+    void Update();
+
+private:
+    // 0x51B6A0 | ?InitCC@mmSpeechContainer@@AAEXHPAD@Z
+    void InitCC(i32 arg1, char* arg2);
+
+    // 0x51B5C0 | ?InitRace@mmSpeechContainer@@AAEXHHPAD@Z
+    void InitRace(i32 arg1, i32 arg2, char* arg3);
 };
+
+check_size(mmSpeechContainer, 0xC);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,9 @@
 */
 
 #pragma once
+
+#include "data/base.h"
+#include "node/node.h"
 
 /*
     mmgame:mirror
@@ -76,275 +79,154 @@
     0x5B063C | const Base::`vftable' | ??_7Base@@6B@
     public: static float vehCar::sm_SampleStep | ?sm_SampleStep@vehCar@@2MA
     public: static int vehCar::sm_MaxSamples | ?sm_MaxSamples@vehCar@@2HA
-    private: static bool vehCar::bHeadlights | ?bHeadlights@vehCar@@0_NA
+    0x627518 | private: static bool vehCar::bHeadlights | ?bHeadlights@vehCar@@0_NA
     0x62751C | class mmMirror * MIRROR | ?MIRROR@@3PAVmmMirror@@A
 */
 
-// 0x62751C | ?MIRROR@@3PAVmmMirror@@A
-inline extern_var(0x62751C, class mmMirror*, MIRROR);
-
-class dgPhysEntity : Base
+class mmMirror : public asNode
 {
+    // const mmMirror::`vftable' @ 0x5B0B7C
+
 public:
-    // dgPhysEntity::`vftable' @ 0x5B0BD8
-
-    // 0x42CC60 | ??1dgPhysEntity@@UAE@XZ
-    inline ~dgPhysEntity() override
-    {
-        stub<member_func_t<void, dgPhysEntity>>(0x42CC60, this);
-    }
-
-    // 0x42CBE0 | ?PreUpdate@dgPhysEntity@@UAEXXZ
-    virtual inline void PreUpdate()
-    {
-        return stub<member_func_t<void, dgPhysEntity>>(0x42CBE0, this);
-    }
-
-    // 0x46A120 | ?Update@dgPhysEntity@@UAEXXZ
-    virtual inline void Update()
-    {
-        return stub<member_func_t<void, dgPhysEntity>>(0x46A120, this);
-    }
-
-    // 0x582519 | __purecall
-    virtual inline void PostUpdate()
-    {
-        return stub<member_func_t<void, dgPhysEntity>>(0x582519, this);
-    }
-
-    // 0x582519 | __purecall
-    virtual inline class phInertialCS* GetICS()
-    {
-        return stub<member_func_t<class phInertialCS*, dgPhysEntity>>(0x582519, this);
-    }
-
-    // 0x42CBF0 | ?GetCollider@dgPhysEntity@@UAEPAVphCollider@@XZ
-    virtual inline class phCollider* GetCollider()
-    {
-        return stub<member_func_t<class phCollider*, dgPhysEntity>>(0x42CBF0, this);
-    }
-
-    // 0x582519 | __purecall
-    virtual inline class lvlInstance* GetInst()
-    {
-        return stub<member_func_t<class lvlInstance*, dgPhysEntity>>(0x582519, this);
-    }
-
-    // 0x42CC00 | ?DetachMe@dgPhysEntity@@UAEXXZ
-    virtual inline void DetachMe()
-    {
-        return stub<member_func_t<void, dgPhysEntity>>(0x42CC00, this);
-    }
-
-    // 0x42CC10 | ?RequiresTerrainCollision@dgPhysEntity@@UAE_NXZ
-    virtual inline bool RequiresTerrainCollision()
-    {
-        return stub<member_func_t<bool, dgPhysEntity>>(0x42CC10, this);
-    }
-
-    // 0x42CC20 | ?FirstImpactCallback@dgPhysEntity@@UAEXXZ
-    virtual inline void FirstImpactCallback()
-    {
-        return stub<member_func_t<void, dgPhysEntity>>(0x42CC20, this);
-    }
-};
-
-class vehCar : dgPhysEntity
-{
-public:
-    // vehCar::`vftable' @ 0x5B0BB0
-
-    // 0x42BAB0 | ??0vehCar@@QAE@H@Z
-    inline vehCar(int32_t arg1)
-    {
-        stub<member_func_t<void, vehCar, int32_t>>(0x42BAB0, this, arg1);
-    }
-
-    // 0x42BE10 | ?Init@vehCar@@QAEXPBDHH_N@Z
-    inline void Init(char const* arg1, int32_t arg2, int32_t arg3, bool arg4)
-    {
-        return stub<member_func_t<void, vehCar, char const*, int32_t, int32_t, bool>>(
-            0x42BE10, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x42C1D0 | ?SetColliderID@vehCar@@QAEXH@Z
-    inline void SetColliderID(int32_t arg1)
-    {
-        return stub<member_func_t<void, vehCar, int32_t>>(0x42C1D0, this, arg1);
-    }
-
-    // 0x42C1E0 | ?SetAudio@vehCar@@QAEXPAVvehCarAudioContainer@@@Z
-    inline void SetAudio(class vehCarAudioContainer* arg1)
-    {
-        return stub<member_func_t<void, vehCar, class vehCarAudioContainer*>>(0x42C1E0, this, arg1);
-    }
-
-    // 0x42C1F0 | ?InitAudio@vehCar@@QAEXPBDH@Z
-    inline void InitAudio(char const* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, vehCar, char const*, int32_t>>(0x42C1F0, this, arg1, arg2);
-    }
-
-    // 0x42C290 | ?SetInput@vehCar@@QAEXPAVvehInput@@@Z
-    inline void SetInput(class vehInput* arg1)
-    {
-        return stub<member_func_t<void, vehCar, class vehInput*>>(0x42C290, this, arg1);
-    }
-
-    // 0x42C2A0 | ?GetInput@vehCar@@QAEPAVvehInput@@XZ
-    inline class vehInput* GetInput()
-    {
-        return stub<member_func_t<class vehInput*, vehCar>>(0x42C2A0, this);
-    }
-
-    // 0x42C2B0 | ?SetDriver@vehCar@@QAEXPAVvehDriver@@@Z
-    inline void SetDriver(class vehDriver* arg1)
-    {
-        return stub<member_func_t<void, vehCar, class vehDriver*>>(0x42C2B0, this, arg1);
-    }
-
-    // 0x42C2C0 | ?SetDrivable@vehCar@@QAEXHH@Z
-    inline void SetDrivable(int32_t arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, vehCar, int32_t, int32_t>>(0x42C2C0, this, arg1, arg2);
-    }
-
-    // 0x42C330 | ?Reset@vehCar@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, vehCar>>(0x42C330, this);
-    }
-
-    // 0x42C450 | ?ClearDamage@vehCar@@QAEXXZ
-    inline void ClearDamage()
-    {
-        return stub<member_func_t<void, vehCar>>(0x42C450, this);
-    }
-
-    // 0x42C570 | ?UpdateTrack@vehCar@@AAEXAAVlvlTrackManager@@ABVvehWheel@@@Z
-    inline void UpdateTrack(class lvlTrackManager& arg1, class vehWheel const& arg2)
-    {
-        return stub<member_func_t<void, vehCar, class lvlTrackManager&, class vehWheel const&>>(
-            0x42C570, this, arg1, arg2);
-    }
-
-    // 0x42C5E0 | ?DrawTracks@vehCar@@QAEXXZ
-    inline void DrawTracks()
-    {
-        return stub<member_func_t<void, vehCar>>(0x42C5E0, this);
-    }
-
-    // 0x42C890 | ?IsPlayer@vehCar@@QAEHXZ
-    inline int32_t IsPlayer()
-    {
-        return stub<member_func_t<int32_t, vehCar>>(0x42C890, this);
-    }
-
-    // 0x42BCC0 | ??1vehCar@@UAE@XZ
-    inline ~vehCar() override
-    {
-        stub<member_func_t<void, vehCar>>(0x42BCC0, this);
-    }
-
-    // 0x42C480 | ?PreUpdate@vehCar@@UAEXXZ
-    inline void PreUpdate() override
-    {
-        return stub<member_func_t<void, vehCar>>(0x42C480, this);
-    }
-
-    // 0x42C690 | ?Update@vehCar@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, vehCar>>(0x42C690, this);
-    }
-
-    // 0x42C8B0 | ?PostUpdate@vehCar@@UAEXXZ
-    inline void PostUpdate() override
-    {
-        return stub<member_func_t<void, vehCar>>(0x42C8B0, this);
-    }
-
-    // 0x42CA70 | ?GetICS@vehCar@@UAEPAVphInertialCS@@XZ
-    inline class phInertialCS* GetICS() override
-    {
-        return stub<member_func_t<class phInertialCS*, vehCar>>(0x42CA70, this);
-    }
-
-    // 0x42CA80 | ?GetInst@vehCar@@UAEPAVlvlInstance@@XZ
-    inline class lvlInstance* GetInst() override
-    {
-        return stub<member_func_t<class lvlInstance*, vehCar>>(0x42CA80, this);
-    }
-
-    // 0x42CA90 | ?RequiresTerrainCollision@vehCar@@UAE_NXZ
-    inline bool RequiresTerrainCollision() override
-    {
-        return stub<member_func_t<bool, vehCar>>(0x42CA90, this);
-    }
-};
-
-class mmMirror : asNode
-{
-public:
-    // mmMirror::`vftable' @ 0x5B0B7C
-
     // 0x42B750 | ??0mmMirror@@QAE@XZ
-    inline mmMirror()
-    {
-        stub<member_func_t<void, mmMirror>>(0x42B750, this);
-    }
+    mmMirror();
 
-    // 0x42B7C0 | ?Init@mmMirror@@QAEXXZ
-    inline void Init()
-    {
-        return stub<member_func_t<void, mmMirror>>(0x42B7C0, this);
-    }
-
+    // 0x42CBA0 | ??_GmmMirror@@UAEPAXI@Z
     // 0x42B7A0 | ??1mmMirror@@UAE@XZ
-    inline ~mmMirror() override
-    {
-        stub<member_func_t<void, mmMirror>>(0x42B7A0, this);
-    }
+    ~mmMirror() override;
 
     // 0x42B8C0 | ?Cull@mmMirror@@UAEXXZ
-    inline void Cull() override
-    {
-        return stub<member_func_t<void, mmMirror>>(0x42B8C0, this);
-    }
-
-    // 0x42B8B0 | ?Update@mmMirror@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmMirror>>(0x42B8B0, this);
-    }
-
-    // 0x42B840 | ?Reset@mmMirror@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmMirror>>(0x42B840, this);
-    }
+    void Cull() override;
 
     // 0x42B9E0 | ?FileIO@mmMirror@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
-    {
-        return stub<member_func_t<void, mmMirror, class datParser&>>(0x42B9E0, this, arg1);
-    }
+    void FileIO(class datParser& arg1) override;
 
     // 0x42CBD0 | ?GetClassName@mmMirror@@UAEPADXZ
-    inline char* GetClassName() override
-    {
-        return stub<member_func_t<char*, mmMirror>>(0x42CBD0, this);
-    }
+    char* GetClassName() override;
+
+    // 0x42B7C0 | ?Init@mmMirror@@QAEXXZ
+    void Init();
+
+    // 0x42B840 | ?Reset@mmMirror@@UAEXXZ
+    void Reset() override;
+
+    // 0x42B8B0 | ?Update@mmMirror@@UAEXXZ
+    void Update() override;
 };
 
-struct Base
+check_size(mmMirror, 0x64);
+
+class vehCar : public dgPhysEntity
 {
-public:
-    // Base::`vftable' @ 0x5B063C
+    // const vehCar::`vftable' @ 0x5B0BB0
 
-    // 0x4C8200 | ??1Base@@UAE@XZ
-    virtual inline ~Base()
-    {
-        stub<member_func_t<void, Base>>(0x4C8200, this);
-    }
+public:
+    // 0x42BAB0 | ??0vehCar@@QAE@H@Z
+    vehCar(i32 arg1);
+
+    // 0x42CC30 | ??_GvehCar@@UAEPAXI@Z
+    // 0x42BCC0 | ??1vehCar@@UAE@XZ
+    ~vehCar() override;
+
+    // 0x42C450 | ?ClearDamage@vehCar@@QAEXXZ
+    void ClearDamage();
+
+    // 0x42C5E0 | ?DrawTracks@vehCar@@QAEXXZ
+    void DrawTracks();
+
+    // 0x42CA70 | ?GetICS@vehCar@@UAEPAVphInertialCS@@XZ
+    class phInertialCS* GetICS() override;
+
+    // 0x42C2A0 | ?GetInput@vehCar@@QAEPAVvehInput@@XZ
+    class vehInput* GetInput();
+
+    // 0x42CA80 | ?GetInst@vehCar@@UAEPAVlvlInstance@@XZ
+    class lvlInstance* GetInst() override;
+
+    // 0x42BE10 | ?Init@vehCar@@QAEXPBDHH_N@Z
+    void Init(char const* arg1, i32 arg2, i32 arg3, bool arg4);
+
+    // 0x42C1F0 | ?InitAudio@vehCar@@QAEXPBDH@Z
+    void InitAudio(char const* arg1, i32 arg2);
+
+    // 0x42C890 | ?IsPlayer@vehCar@@QAEHXZ
+    i32 IsPlayer();
+
+    // 0x42C8B0 | ?PostUpdate@vehCar@@UAEXXZ
+    void PostUpdate() override;
+
+    // 0x42C480 | ?PreUpdate@vehCar@@UAEXXZ
+    void PreUpdate() override;
+
+    // 0x42CA90 | ?RequiresTerrainCollision@vehCar@@UAE_NXZ
+    bool RequiresTerrainCollision() override;
+
+    // 0x42C330 | ?Reset@vehCar@@QAEXXZ
+    void Reset();
+
+    // 0x42C1E0 | ?SetAudio@vehCar@@QAEXPAVvehCarAudioContainer@@@Z
+    void SetAudio(class vehCarAudioContainer* arg1);
+
+    // 0x42C1D0 | ?SetColliderID@vehCar@@QAEXH@Z
+    void SetColliderID(i32 arg1);
+
+    // 0x42C2C0 | ?SetDrivable@vehCar@@QAEXHH@Z
+    void SetDrivable(i32 arg1, i32 arg2);
+
+    // 0x42C2B0 | ?SetDriver@vehCar@@QAEXPAVvehDriver@@@Z
+    void SetDriver(class vehDriver* arg1);
+
+    // 0x42C290 | ?SetInput@vehCar@@QAEXPAVvehInput@@@Z
+    void SetInput(class vehInput* arg1);
+
+    // 0x42C690 | ?Update@vehCar@@UAEXXZ
+    void Update() override;
+
+private:
+    // 0x42C570 | ?UpdateTrack@vehCar@@AAEXAAVlvlTrackManager@@ABVvehWheel@@@Z
+    void UpdateTrack(class lvlTrackManager& arg1, class vehWheel const& arg2);
+
+    // 0x627518 | ?bHeadlights@vehCar@@0_NA
+    static inline extern_var(0x627518, bool, bHeadlights);
 };
+
+check_size(vehCar, 0x258);
+
+class dgPhysEntity : public Base
+{
+    // const dgPhysEntity::`vftable' @ 0x5B0BD8
+
+public:
+    // 0x42CC70 | ??_GdgPhysEntity@@UAEPAXI@Z
+    // 0x42CC60 | ??1dgPhysEntity@@UAE@XZ
+    ~dgPhysEntity() override;
+
+    // 0x42CBE0 | ?PreUpdate@dgPhysEntity@@UAEXXZ
+    virtual void PreUpdate();
+
+    // 0x46A120 | ?Update@dgPhysEntity@@UAEXXZ
+    virtual void Update();
+
+    virtual void PostUpdate() = 0;
+
+    virtual class phInertialCS* GetICS() = 0;
+
+    // 0x42CBF0 | ?GetCollider@dgPhysEntity@@UAEPAVphCollider@@XZ
+    virtual class phCollider* GetCollider();
+
+    virtual class lvlInstance* GetInst() = 0;
+
+    // 0x42CC00 | ?DetachMe@dgPhysEntity@@UAEXXZ
+    virtual void DetachMe();
+
+    // 0x42CC10 | ?RequiresTerrainCollision@dgPhysEntity@@UAE_NXZ
+    virtual bool RequiresTerrainCollision();
+
+    // 0x42CC20 | ?FirstImpactCallback@dgPhysEntity@@UAEXXZ
+    virtual void FirstImpactCallback();
+};
+
+check_size(dgPhysEntity, 0x0);
+
+// 0x62751C | ?MIRROR@@3PAVmmMirror@@A
+inline extern_var(0x62751C, class mmMirror*, MIRROR);

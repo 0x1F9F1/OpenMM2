@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "mmgame/mirror.h"
 
 /*
     ped:pedactive
@@ -46,115 +48,67 @@
 class pedActiveData
 {
 public:
-    // 0x57BCB0 | ??_EpedActiveData@@QAEPAXI@Z
-    // Skipped (scalar/vector destructor)
-
     // 0x57BE90 | ??0pedActiveData@@QAE@XZ
-    inline pedActiveData()
-    {
-        stub<member_func_t<void, pedActiveData>>(0x57BE90, this);
-    }
-
-    // 0x57BEA0 | ?Init@pedActiveData@@QAEXPBD@Z
-    inline void Init(char const* arg1)
-    {
-        return stub<member_func_t<void, pedActiveData, char const*>>(0x57BEA0, this, arg1);
-    }
+    pedActiveData();
 
     // 0x57C040 | ??1pedActiveData@@QAE@XZ
-    inline ~pedActiveData()
-    {
-        stub<member_func_t<void, pedActiveData>>(0x57C040, this);
-    }
+    // 0x57BCB0 | ??_EpedActiveData@@QAEPAXI@Z
+    ~pedActiveData();
+
+    // 0x57BEA0 | ?Init@pedActiveData@@QAEXPBD@Z
+    void Init(char const* arg1);
 };
 
-class pedActive : dgPhysEntity
+check_size(pedActiveData, 0xC);
+
+class pedActive : public dgPhysEntity
 {
+    // const pedActive::`vftable' @ 0x5B639C
+
 public:
-    // pedActive::`vftable' @ 0x5B639C
-
     // 0x57BD70 | ??0pedActive@@QAE@XZ
-    inline pedActive()
-    {
-        stub<member_func_t<void, pedActive>>(0x57BD70, this);
-    }
+    pedActive();
 
-    // 0x57C090 | ?IsAsleep@pedActive@@QAEHXZ
-    inline int32_t IsAsleep()
-    {
-        return stub<member_func_t<int32_t, pedActive>>(0x57C090, this);
-    }
-
-    // 0x57C2B0 | ?SetRagdollBlend@pedActive@@QAEXM@Z
-    inline void SetRagdollBlend(float arg1)
-    {
-        return stub<member_func_t<void, pedActive, float>>(0x57C2B0, this, arg1);
-    }
-
-    // 0x57C2C0 | ?StartRagdoll@pedActive@@QAEXXZ
-    inline void StartRagdoll()
-    {
-        return stub<member_func_t<void, pedActive>>(0x57C2C0, this);
-    }
-
-    // 0x57C2D0 | ?StopRagdoll@pedActive@@QAEXXZ
-    inline void StopRagdoll()
-    {
-        return stub<member_func_t<void, pedActive>>(0x57C2D0, this);
-    }
-
+    // 0x57BD10 | ??_EpedActive@@UAEPAXI@Z
     // 0x57BF80 | ??1pedActive@@UAE@XZ
-    inline ~pedActive() override
-    {
-        stub<member_func_t<void, pedActive>>(0x57BF80, this);
-    }
-
-    // 0x57C0F0 | ?Update@pedActive@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, pedActive>>(0x57C0F0, this);
-    }
-
-    // 0x57C500 | ?PostUpdate@pedActive@@UAEXXZ
-    inline void PostUpdate() override
-    {
-        return stub<member_func_t<void, pedActive>>(0x57C500, this);
-    }
-
-    // 0x57C290 | ?GetICS@pedActive@@UAEPAVphInertialCS@@XZ
-    inline class phInertialCS* GetICS() override
-    {
-        return stub<member_func_t<class phInertialCS*, pedActive>>(0x57C290, this);
-    }
-
-    // 0x57C2A0 | ?GetInst@pedActive@@UAEPAVlvlInstance@@XZ
-    inline class lvlInstance* GetInst() override
-    {
-        return stub<member_func_t<class lvlInstance*, pedActive>>(0x57C2A0, this);
-    }
+    // 0x57C4D0 | ??_GpedActive@@UAEPAXI@Z
+    ~pedActive() override;
 
     // 0x57C2E0 | ?FirstImpactCallback@pedActive@@UAEXXZ
-    inline void FirstImpactCallback() override
-    {
-        return stub<member_func_t<void, pedActive>>(0x57C2E0, this);
-    }
+    void FirstImpactCallback() override;
+
+    // 0x57C290 | ?GetICS@pedActive@@UAEPAVphInertialCS@@XZ
+    class phInertialCS* GetICS() override;
+
+    // 0x57C2A0 | ?GetInst@pedActive@@UAEPAVlvlInstance@@XZ
+    class lvlInstance* GetInst() override;
+
+    // 0x57C090 | ?IsAsleep@pedActive@@QAEHXZ
+    i32 IsAsleep();
+
+    // 0x57C500 | ?PostUpdate@pedActive@@UAEXXZ
+    void PostUpdate() override;
+
+    // 0x57C2B0 | ?SetRagdollBlend@pedActive@@QAEXM@Z
+    void SetRagdollBlend(f32 arg1);
+
+    // 0x57C2C0 | ?StartRagdoll@pedActive@@QAEXXZ
+    void StartRagdoll();
+
+    // 0x57C2D0 | ?StopRagdoll@pedActive@@QAEXXZ
+    void StopRagdoll();
+
+    // 0x57C0F0 | ?Update@pedActive@@UAEXXZ
+    void Update() override;
 
     // 0x57C0C0 | ?Reset@pedActive@@UAEXXZ
-    virtual inline void Reset()
-    {
-        return stub<member_func_t<void, pedActive>>(0x57C0C0, this);
-    }
+    virtual void Reset();
 
     // 0x57C170 | ?Activate@pedActive@@UAEXPAVaiPedestrianInstance@@PAVpedActiveData@@@Z
-    virtual inline void Activate(class aiPedestrianInstance* arg1, class pedActiveData* arg2)
-    {
-        return stub<member_func_t<void, pedActive, class aiPedestrianInstance*, class pedActiveData*>>(
-            0x57C170, this, arg1, arg2);
-    }
+    virtual void Activate(class aiPedestrianInstance* arg1, class pedActiveData* arg2);
 
     // 0x57C260 | ?Deactivate@pedActive@@UAEXXZ
-    virtual inline void Deactivate()
-    {
-        return stub<member_func_t<void, pedActive>>(0x57C260, this);
-    }
+    virtual void Deactivate();
 };
+
+check_size(pedActive, 0x114);

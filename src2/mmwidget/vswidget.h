@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     mmwidget:vswidget
@@ -42,107 +44,59 @@
     0x5B3C04 | const VSWidget::`vftable' | ??_7VSWidget@@6B@
 */
 
-struct VSWidget : asNode
+class VSWidget : public asNode
 {
+    // const VSWidget::`vftable' @ 0x5B3C04
+
 public:
-    // VSWidget::`vftable' @ 0x5B3C04
-
     // 0x4F27D0 | ??0VSWidget@@QAE@XZ
-    inline VSWidget()
-    {
-        stub<member_func_t<void, VSWidget>>(0x4F27D0, this);
-    }
+    VSWidget();
 
-    // 0x4F28F0 | ?Init@VSWidget@@QAEXMMMMPAHVdatCallback@@H@Z
-    inline void Init(
-        float arg1, float arg2, float arg3, float arg4, int32_t* arg5, class datCallback arg6, int32_t arg7)
-    {
-        return stub<member_func_t<void, VSWidget, float, float, float, float, int32_t*, class datCallback, int32_t>>(
-            0x4F28F0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-    }
-
-    // 0x4F2950 | ?LoadBitmap@VSWidget@@QAEXXZ
-    inline void LoadBitmap()
-    {
-        return stub<member_func_t<void, VSWidget>>(0x4F2950, this);
-    }
-
-    // 0x4F2A90 | ?CalcTroughRatio@VSWidget@@QAEXM@Z
-    inline void CalcTroughRatio(float arg1)
-    {
-        return stub<member_func_t<void, VSWidget, float>>(0x4F2A90, this, arg1);
-    }
-
-    // 0x4F2B00 | ?SetHotSpots@VSWidget@@QAEXXZ
-    inline void SetHotSpots()
-    {
-        return stub<member_func_t<void, VSWidget>>(0x4F2B00, this);
-    }
-
-    // 0x4F2B70 | ?SyncData@VSWidget@@QAEXXZ
-    inline void SyncData()
-    {
-        return stub<member_func_t<void, VSWidget>>(0x4F2B70, this);
-    }
-
-    // 0x4F2BB0 | ?Inc@VSWidget@@QAEMXZ
-    inline float Inc()
-    {
-        return stub<member_func_t<float, VSWidget>>(0x4F2BB0, this);
-    }
-
-    // 0x4F2C00 | ?Dec@VSWidget@@QAEMXZ
-    inline float Dec()
-    {
-        return stub<member_func_t<float, VSWidget>>(0x4F2C00, this);
-    }
-
-    // 0x4F2C60 | ?SetStep@VSWidget@@QAEXHM@Z
-    inline void SetStep(int32_t arg1, float arg2)
-    {
-        return stub<member_func_t<void, VSWidget, int32_t, float>>(0x4F2C60, this, arg1, arg2);
-    }
-
-    // 0x4F2CD0 | ?SetTrough@VSWidget@@QAEXM@Z
-    inline void SetTrough(float arg1)
-    {
-        return stub<member_func_t<void, VSWidget, float>>(0x4F2CD0, this, arg1);
-    }
-
-    // 0x4F2D90 | ?Switch@VSWidget@@QAEXHMM@Z
-    inline void Switch(int32_t arg1, float arg2, float arg3)
-    {
-        return stub<member_func_t<void, VSWidget, int32_t, float, float>>(0x4F2D90, this, arg1, arg2, arg3);
-    }
+    // 0x4F3190 | ??_GVSWidget@@UAEPAXI@Z
+    // 0x4F2860 | ??1VSWidget@@UAE@XZ
+    ~VSWidget() override;
 
     // 0x4F2DE0 | ?Action@VSWidget@@QAEHTeqEvent@@MMH@Z
-    inline int32_t Action(union eqEvent arg1, float arg2, float arg3, int32_t arg4)
-    {
-        return stub<member_func_t<int32_t, VSWidget, union eqEvent, float, float, int32_t>>(
-            0x4F2DE0, this, arg1, arg2, arg3, arg4);
-    }
+    i32 Action(union eqEvent arg1, f32 arg2, f32 arg3, i32 arg4);
 
-    // 0x4F2EA0 | ?EvalMouseXY@VSWidget@@QAEXMMH@Z
-    inline void EvalMouseXY(float arg1, float arg2, int32_t arg3)
-    {
-        return stub<member_func_t<void, VSWidget, float, float, int32_t>>(0x4F2EA0, this, arg1, arg2, arg3);
-    }
-
-    // 0x4F2860 | ??1VSWidget@@UAE@XZ
-    inline ~VSWidget() override
-    {
-        stub<member_func_t<void, VSWidget>>(0x4F2860, this);
-    }
+    // 0x4F2A90 | ?CalcTroughRatio@VSWidget@@QAEXM@Z
+    void CalcTroughRatio(f32 arg1);
 
     // 0x4F3020 | ?Cull@VSWidget@@UAEXXZ
-    inline void Cull() override
-    {
-        return stub<member_func_t<void, VSWidget>>(0x4F3020, this);
-    }
+    void Cull() override;
+
+    // 0x4F2C00 | ?Dec@VSWidget@@QAEMXZ
+    f32 Dec();
+
+    // 0x4F2EA0 | ?EvalMouseXY@VSWidget@@QAEXMMH@Z
+    void EvalMouseXY(f32 arg1, f32 arg2, i32 arg3);
+
+    // 0x4F2BB0 | ?Inc@VSWidget@@QAEMXZ
+    f32 Inc();
+
+    // 0x4F28F0 | ?Init@VSWidget@@QAEXMMMMPAHVdatCallback@@H@Z
+    void Init(f32 arg1, f32 arg2, f32 arg3, f32 arg4, i32* arg5, class datCallback arg6, i32 arg7);
+
+    // 0x4F2950 | ?LoadBitmap@VSWidget@@QAEXXZ
+    void LoadBitmap();
+
+    // 0x4F2B00 | ?SetHotSpots@VSWidget@@QAEXXZ
+    void SetHotSpots();
+
+    // 0x4F2C60 | ?SetStep@VSWidget@@QAEXHM@Z
+    void SetStep(i32 arg1, f32 arg2);
+
+    // 0x4F2CD0 | ?SetTrough@VSWidget@@QAEXM@Z
+    void SetTrough(f32 arg1);
+
+    // 0x4F2D90 | ?Switch@VSWidget@@QAEXHMM@Z
+    void Switch(i32 arg1, f32 arg2, f32 arg3);
+
+    // 0x4F2B70 | ?SyncData@VSWidget@@QAEXXZ
+    void SyncData();
 
     // 0x4F2D60 | ?Update@VSWidget@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, VSWidget>>(0x4F2D60, this);
-    }
+    void Update() override;
 };
+
+check_size(VSWidget, 0xC0);

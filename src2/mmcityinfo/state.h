@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "city/state.h"
 
 /*
     mmcityinfo:state
@@ -36,83 +38,57 @@
     0x5238B0 | public: virtual void * __thiscall mmPlayerData::`scalar deleting destructor'(unsigned int) | ??_GmmPlayerData@@UAEPAXI@Z
     public: virtual void * __thiscall mmPlayerData::`vector deleting destructor'(unsigned int) | ??_EmmPlayerData@@UAEPAXI@Z
     0x5B51F8 | const mmPlayerData::`vftable' | ??_7mmPlayerData@@6B@
-    class mmStatePack MMSTATE | ?MMSTATE@@3VmmStatePack@@A
+    0x6B1610 | class mmStatePack MMSTATE | ?MMSTATE@@3VmmStatePack@@A
     0x6B19F8 | class mmPlayerData MMCURRPLAYER | ?MMCURRPLAYER@@3VmmPlayerData@@A
 */
 
-// 0x6B19F8 | ?MMCURRPLAYER@@3VmmPlayerData@@A
-inline extern_var(0x6B19F8, class mmPlayerData, MMCURRPLAYER);
-
-struct mmStatePack : dgStatePack
+class mmStatePack : public dgStatePack
 {
 public:
-    // 0x523310 | ?SetDefaults@mmStatePack@@QAEXPAD0@Z
-    inline void SetDefaults(char* arg1, char* arg2)
-    {
-        return stub<member_func_t<void, mmStatePack, char*, char*>>(0x523310, this, arg1, arg2);
-    }
-
-    // 0x523590 | ?ParseStateArgs@mmStatePack@@QAE_NXZ
-    inline bool ParseStateArgs()
-    {
-        return stub<member_func_t<bool, mmStatePack>>(0x523590, this);
-    }
+    // 0x523800 | ??0mmStatePack@@QAE@XZ
+    mmStatePack();
 
     // 0x5237B0 | ??1mmStatePack@@QAE@XZ
-    inline ~mmStatePack()
-    {
-        stub<member_func_t<void, mmStatePack>>(0x5237B0, this);
-    }
+    ~mmStatePack();
 
-    // 0x523800 | ??0mmStatePack@@QAE@XZ
-    inline mmStatePack()
-    {
-        stub<member_func_t<void, mmStatePack>>(0x523800, this);
-    }
+    // 0x523590 | ?ParseStateArgs@mmStatePack@@QAE_NXZ
+    bool ParseStateArgs();
+
+    // 0x523310 | ?SetDefaults@mmStatePack@@QAEXPAD0@Z
+    void SetDefaults(char* arg1, char* arg2);
 };
+
+check_size(mmStatePack, 0x0);
 
 struct NetStartArray
 {
 public:
     // 0x5235A0 | ??0NetStartArray@@QAE@XZ
-    inline NetStartArray()
-    {
-        stub<member_func_t<void, NetStartArray>>(0x5235A0, this);
-    }
+    NetStartArray();
 
     // 0x5235B0 | ??1NetStartArray@@QAE@XZ
-    inline ~NetStartArray()
-    {
-        stub<member_func_t<void, NetStartArray>>(0x5235B0, this);
-    }
-
-    // 0x5235C0 | ?Clear@NetStartArray@@QAEXXZ
-    inline void Clear()
-    {
-        return stub<member_func_t<void, NetStartArray>>(0x5235C0, this);
-    }
-
-    // 0x5235D0 | ?GetIndex@NetStartArray@@QAEHK@Z
-    inline int32_t GetIndex(uint32_t arg1)
-    {
-        return stub<member_func_t<int32_t, NetStartArray, uint32_t>>(0x5235D0, this, arg1);
-    }
-
-    // 0x5235F0 | ?ClearIndex@NetStartArray@@QAEXK@Z
-    inline void ClearIndex(uint32_t arg1)
-    {
-        return stub<member_func_t<void, NetStartArray, uint32_t>>(0x5235F0, this, arg1);
-    }
+    ~NetStartArray();
 
     // 0x523610 | ?AssignOpenIndex@NetStartArray@@QAEHK@Z
-    inline int32_t AssignOpenIndex(uint32_t arg1)
-    {
-        return stub<member_func_t<int32_t, NetStartArray, uint32_t>>(0x523610, this, arg1);
-    }
+    i32 AssignOpenIndex(u32 arg1);
+
+    // 0x5235C0 | ?Clear@NetStartArray@@QAEXXZ
+    void Clear();
+
+    // 0x5235F0 | ?ClearIndex@NetStartArray@@QAEXK@Z
+    void ClearIndex(u32 arg1);
+
+    // 0x5235D0 | ?GetIndex@NetStartArray@@QAEHK@Z
+    i32 GetIndex(u32 arg1);
 
     // 0x523650 | ?Init@NetStartArray@@QAEXPAK@Z
-    inline void Init(uint32_t* arg1)
-    {
-        return stub<member_func_t<void, NetStartArray, uint32_t*>>(0x523650, this, arg1);
-    }
+    void Init(u32* arg1);
 };
+
+check_size(NetStartArray, 0x0);
+
+// 0x6B19F8 | ?MMCURRPLAYER@@3VmmPlayerData@@A
+inline extern_var(0x6B19F8, class mmPlayerData, MMCURRPLAYER);
+
+// 0x6B1610 | ?MMSTATE@@3VmmStatePack@@A
+inline extern_var(0x6B1610, class mmStatePack, MMSTATE);

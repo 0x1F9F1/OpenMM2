@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,50 @@
 */
 
 #include "redbook.h"
+
+void audRedbook::Destroy()
+{
+    return stub<thiscall_t<void, audRedbook*>>(0x5A6DF0, this);
+}
+
+enum audObject::AUD_OBJECTSTATUS audRedbook::GetStatus()
+{
+    return stub<thiscall_t<enum audObject::AUD_OBJECTSTATUS, audRedbook*>>(0x5A6C30, this);
+}
+
+bool audRedbook::PauseResume(bool arg1)
+{
+    return stub<thiscall_t<bool, audRedbook*, bool>>(0x5A6D60, this, arg1);
+}
+
+bool audRedbook::Play()
+{
+    return stub<thiscall_t<bool, audRedbook*>>(0x5A6CB0, this);
+}
+
+bool audRedbook::SetPan(f32 arg1)
+{
+    return stub<thiscall_t<bool, audRedbook*, f32>>(0x5A6D50, this, arg1);
+}
+
+bool audRedbook::SetPitch(f32 arg1)
+{
+    return stub<thiscall_t<bool, audRedbook*, f32>>(0x5A6D40, this, arg1);
+}
+
+bool audRedbook::SetVolume(f32 arg1)
+{
+    return stub<thiscall_t<bool, audRedbook*, f32>>(0x5A6D30, this, arg1);
+}
+
+bool audRedbook::Stop()
+{
+    return stub<thiscall_t<bool, audRedbook*>>(0x5A6D00, this);
+}
+
+bool audRedbook::Update(i32 arg1)
+{
+    return stub<thiscall_t<bool, audRedbook*, i32>>(0x5A6C20, this, arg1);
+}
+
+define_dummy_symbol(aud_redbook);

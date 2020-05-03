@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,45 @@
 */
 
 #include "precs.h"
+
+camPreCS::camPreCS()
+{
+    unimplemented();
+}
+
+camPreCS::~camPreCS()
+{
+    unimplemented();
+}
+
+void camPreCS::FileIO(class datParser& arg1)
+{
+    return stub<thiscall_t<void, camPreCS*, class datParser&>>(0x520550, this, arg1);
+}
+
+char* camPreCS::GetClassName()
+{
+    return stub<thiscall_t<char*, camPreCS*>>(0x520600, this);
+}
+
+void camPreCS::Init(class vehCar* arg1)
+{
+    return stub<thiscall_t<void, camPreCS*, class vehCar*>>(0x520480, this, arg1);
+}
+
+void camPreCS::MakeActive()
+{
+    return stub<thiscall_t<void, camPreCS*>>(0x5204D0, this);
+}
+
+void camPreCS::Reset()
+{
+    return stub<thiscall_t<void, camPreCS*>>(0x5204C0, this);
+}
+
+void camPreCS::Update()
+{
+    return stub<thiscall_t<void, camPreCS*>>(0x5204F0, this);
+}
+
+define_dummy_symbol(camera_precs);

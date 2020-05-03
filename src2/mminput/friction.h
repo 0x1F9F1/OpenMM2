@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "effect.h"
+
 /*
     mminput:friction
 
@@ -28,38 +30,25 @@
     0x531E80 | public: virtual int __thiscall mmFrictionFF::Stop(void) | ?Stop@mmFrictionFF@@UAEHXZ
 */
 
-struct mmFrictionFF
+class mmFrictionFF : public mmEffectFF
 {
-public:
-    // mmFrictionFF::`vftable' @ 0x5B529C
+    // const mmFrictionFF::`vftable' @ 0x5B529C
 
+public:
     // 0x531D60 | ?Assign@mmFrictionFF@@QAEHJ@Z
-    inline int32_t Assign(int32_t arg1)
-    {
-        return stub<member_func_t<int32_t, mmFrictionFF, int32_t>>(0x531D60, this, arg1);
-    }
+    i32 Assign(i32 arg1);
 
     // 0x531C20 | ?Init@mmFrictionFF@@UAEHPAUIDirectInputDevice2A@@@Z
-    virtual inline int32_t Init(struct IDirectInputDevice2A* arg1)
-    {
-        return stub<member_func_t<int32_t, mmFrictionFF, struct IDirectInputDevice2A*>>(0x531C20, this, arg1);
-    }
+    i32 Init(struct IDirectInputDevice2A* arg1) override;
 
     // 0x531E20 | ?Play@mmFrictionFF@@UAEHXZ
-    virtual inline int32_t Play()
-    {
-        return stub<member_func_t<int32_t, mmFrictionFF>>(0x531E20, this);
-    }
-
-    // 0x531E80 | ?Stop@mmFrictionFF@@UAEHXZ
-    virtual inline int32_t Stop()
-    {
-        return stub<member_func_t<int32_t, mmFrictionFF>>(0x531E80, this);
-    }
+    i32 Play() override;
 
     // 0x531D30 | ?SetValues@mmFrictionFF@@UAEHMM@Z
-    virtual inline int32_t SetValues(float arg1, float arg2)
-    {
-        return stub<member_func_t<int32_t, mmFrictionFF, float, float>>(0x531D30, this, arg1, arg2);
-    }
+    i32 SetValues(f32 arg1, f32 arg2) override;
+
+    // 0x531E80 | ?Stop@mmFrictionFF@@UAEHXZ
+    i32 Stop() override;
 };
+
+check_size(mmFrictionFF, 0x0);

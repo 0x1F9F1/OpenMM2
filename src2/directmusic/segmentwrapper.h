@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -35,97 +35,62 @@
     0x517A40 | public: bool __thiscall SegmentWrapper::Play(unsigned long,unsigned long) | ?Play@SegmentWrapper@@QAE_NKK@Z
     0x517AE0 | public: bool __thiscall SegmentWrapper::SetGrooveLevel(unsigned char,unsigned char) | ?SetGrooveLevel@SegmentWrapper@@QAE_NEE@Z
     0x517B40 | public: void __thiscall SegmentWrapper::CleanUp(void) | ?CleanUp@SegmentWrapper@@QAEXXZ
-    private: static struct IDirectMusicPerformance * SegmentWrapper::s_pPerformance | ?s_pPerformance@SegmentWrapper@@0PAUIDirectMusicPerformance@@A
-    private: static struct IDirectMusicLoader * SegmentWrapper::s_pLoader | ?s_pLoader@SegmentWrapper@@0PAUIDirectMusicLoader@@A
+    0x6B1594 | private: static struct IDirectMusicPerformance * SegmentWrapper::s_pPerformance | ?s_pPerformance@SegmentWrapper@@0PAUIDirectMusicPerformance@@A
+    0x6B1598 | private: static struct IDirectMusicLoader * SegmentWrapper::s_pLoader | ?s_pLoader@SegmentWrapper@@0PAUIDirectMusicLoader@@A
 */
 
 struct SegmentWrapper
 {
 public:
-    // 0x517390 | ??_ESegmentWrapper@@QAEPAXI@Z
-    // Skipped (scalar/vector destructor)
-
-    // 0x517570 | ?SetPerformancePtr@SegmentWrapper@@SAXPAUIDirectMusicPerformance@@@Z
-    static inline void SetPerformancePtr(struct IDirectMusicPerformance* arg1)
-    {
-        return stub<cdecl_t<void, struct IDirectMusicPerformance*>>(0x517570, arg1);
-    }
-
-    // 0x517580 | ?SetLoaderPtr@SegmentWrapper@@SAXPAUIDirectMusicLoader@@@Z
-    static inline void SetLoaderPtr(struct IDirectMusicLoader* arg1)
-    {
-        return stub<cdecl_t<void, struct IDirectMusicLoader*>>(0x517580, arg1);
-    }
-
     // 0x517590 | ??0SegmentWrapper@@QAE@XZ
-    inline SegmentWrapper()
-    {
-        stub<member_func_t<void, SegmentWrapper>>(0x517590, this);
-    }
+    SegmentWrapper();
 
     // 0x5175B0 | ??1SegmentWrapper@@QAE@XZ
-    inline ~SegmentWrapper()
-    {
-        stub<member_func_t<void, SegmentWrapper>>(0x5175B0, this);
-    }
-
-    // 0x5175C0 | ?OpenSegmentFile@SegmentWrapper@@QAE_NPAD_N@Z
-    inline bool OpenSegmentFile(char* arg1, bool arg2)
-    {
-        return stub<member_func_t<bool, SegmentWrapper, char*, bool>>(0x5175C0, this, arg1, arg2);
-    }
-
-    // 0x517750 | ?LoadSegmentBands@SegmentWrapper@@QAE_NXZ
-    inline bool LoadSegmentBands()
-    {
-        return stub<member_func_t<bool, SegmentWrapper>>(0x517750, this);
-    }
-
-    // 0x5177F0 | ?UnloadSegmentBands@SegmentWrapper@@QAE_NXZ
-    inline bool UnloadSegmentBands()
-    {
-        return stub<member_func_t<bool, SegmentWrapper>>(0x5177F0, this);
-    }
-
-    // 0x517890 | ?Stop@SegmentWrapper@@QAE_NXZ
-    inline bool Stop()
-    {
-        return stub<member_func_t<bool, SegmentWrapper>>(0x517890, this);
-    }
-
-    // 0x5178C0 | ?LoadBand@SegmentWrapper@@QAE_NPAD@Z
-    inline bool LoadBand(char* arg1)
-    {
-        return stub<member_func_t<bool, SegmentWrapper, char*>>(0x5178C0, this, arg1);
-    }
-
-    // 0x5179A0 | ?PlayBand@SegmentWrapper@@QAE_NXZ
-    inline bool PlayBand()
-    {
-        return stub<member_func_t<bool, SegmentWrapper>>(0x5179A0, this);
-    }
-
-    // 0x517A00 | ?IsPlaying@SegmentWrapper@@QAE_NXZ
-    inline bool IsPlaying()
-    {
-        return stub<member_func_t<bool, SegmentWrapper>>(0x517A00, this);
-    }
-
-    // 0x517A40 | ?Play@SegmentWrapper@@QAE_NKK@Z
-    inline bool Play(uint32_t arg1, uint32_t arg2)
-    {
-        return stub<member_func_t<bool, SegmentWrapper, uint32_t, uint32_t>>(0x517A40, this, arg1, arg2);
-    }
-
-    // 0x517AE0 | ?SetGrooveLevel@SegmentWrapper@@QAE_NEE@Z
-    inline bool SetGrooveLevel(uint8_t arg1, uint8_t arg2)
-    {
-        return stub<member_func_t<bool, SegmentWrapper, uint8_t, uint8_t>>(0x517AE0, this, arg1, arg2);
-    }
+    // 0x517390 | ??_ESegmentWrapper@@QAEPAXI@Z
+    ~SegmentWrapper();
 
     // 0x517B40 | ?CleanUp@SegmentWrapper@@QAEXXZ
-    inline void CleanUp()
-    {
-        return stub<member_func_t<void, SegmentWrapper>>(0x517B40, this);
-    }
+    void CleanUp();
+
+    // 0x517A00 | ?IsPlaying@SegmentWrapper@@QAE_NXZ
+    bool IsPlaying();
+
+    // 0x5178C0 | ?LoadBand@SegmentWrapper@@QAE_NPAD@Z
+    bool LoadBand(char* arg1);
+
+    // 0x517750 | ?LoadSegmentBands@SegmentWrapper@@QAE_NXZ
+    bool LoadSegmentBands();
+
+    // 0x5175C0 | ?OpenSegmentFile@SegmentWrapper@@QAE_NPAD_N@Z
+    bool OpenSegmentFile(char* arg1, bool arg2);
+
+    // 0x517A40 | ?Play@SegmentWrapper@@QAE_NKK@Z
+    bool Play(u32 arg1, u32 arg2);
+
+    // 0x5179A0 | ?PlayBand@SegmentWrapper@@QAE_NXZ
+    bool PlayBand();
+
+    // 0x517AE0 | ?SetGrooveLevel@SegmentWrapper@@QAE_NEE@Z
+    bool SetGrooveLevel(u8 arg1, u8 arg2);
+
+    // 0x517890 | ?Stop@SegmentWrapper@@QAE_NXZ
+    bool Stop();
+
+    // 0x5177F0 | ?UnloadSegmentBands@SegmentWrapper@@QAE_NXZ
+    bool UnloadSegmentBands();
+
+    // 0x517580 | ?SetLoaderPtr@SegmentWrapper@@SAXPAUIDirectMusicLoader@@@Z
+    static void SetLoaderPtr(struct IDirectMusicLoader* arg1);
+
+    // 0x517570 | ?SetPerformancePtr@SegmentWrapper@@SAXPAUIDirectMusicPerformance@@@Z
+    static void SetPerformancePtr(struct IDirectMusicPerformance* arg1);
+
+private:
+    // 0x6B1598 | ?s_pLoader@SegmentWrapper@@0PAUIDirectMusicLoader@@A
+    static inline extern_var(0x6B1598, struct IDirectMusicLoader*, s_pLoader);
+
+    // 0x6B1594 | ?s_pPerformance@SegmentWrapper@@0PAUIDirectMusicPerformance@@A
+    static inline extern_var(0x6B1594, struct IDirectMusicPerformance*, s_pPerformance);
 };
+
+check_size(SegmentWrapper, 0x18);

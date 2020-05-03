@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "gamesingle.h"
 
 /*
     mmgame:singlerace
@@ -49,140 +51,78 @@
     0x5B074C | const mmSingleRace::`vftable' | ??_7mmSingleRace@@6B@
 */
 
-struct mmSingleRace : mmGameSingle
+class mmSingleRace : public mmGameSingle
 {
+    // const mmSingleRace::`vftable' @ 0x5B074C
+
 public:
-    // mmSingleRace::`vftable' @ 0x5B074C
-
     // 0x41DF30 | ??0mmSingleRace@@QAE@XZ
-    inline mmSingleRace()
-    {
-        stub<member_func_t<void, mmSingleRace>>(0x41DF30, this);
-    }
+    mmSingleRace();
 
-    // 0x41EBA0 | ?UpdateOpponentStatus@mmSingleRace@@QAEXXZ
-    inline void UpdateOpponentStatus()
-    {
-        return stub<member_func_t<void, mmSingleRace>>(0x41EBA0, this);
-    }
-
-    // 0x41EDC0 | ?UpdateScore@mmSingleRace@@QAEXXZ
-    inline void UpdateScore()
-    {
-        return stub<member_func_t<void, mmSingleRace>>(0x41EDC0, this);
-    }
-
-    // 0x41F100 | ?NextRaceAvailable@mmSingleRace@@AAEHXZ
-    inline int32_t NextRaceAvailable()
-    {
-        return stub<member_func_t<int32_t, mmSingleRace>>(0x41F100, this);
-    }
-
-    // 0x41F170 | ?FinishMessage@mmSingleRace@@AAEXHH@Z
-    inline void FinishMessage(int32_t arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, mmSingleRace, int32_t, int32_t>>(0x41F170, this, arg1, arg2);
-    }
-
-    // 0x41F310 | ?RegisterFinish@mmSingleRace@@AAEHXZ
-    inline int32_t RegisterFinish()
-    {
-        return stub<member_func_t<int32_t, mmSingleRace>>(0x41F310, this);
-    }
-
-    // 0x41F590 | ?ProgressCheck@mmSingleRace@@AAEHHH@Z
-    inline int32_t ProgressCheck(int32_t arg1, int32_t arg2)
-    {
-        return stub<member_func_t<int32_t, mmSingleRace, int32_t, int32_t>>(0x41F590, this, arg1, arg2);
-    }
-
+    // 0x41F940 | ??_GmmSingleRace@@UAEPAXI@Z
     // 0x41DF60 | ??1mmSingleRace@@UAE@XZ
-    inline ~mmSingleRace() override
-    {
-        stub<member_func_t<void, mmSingleRace>>(0x41DF60, this);
-    }
-
-    // 0x41E5A0 | ?Update@mmSingleRace@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmSingleRace>>(0x41E5A0, this);
-    }
-
-    // 0x41E4F0 | ?Reset@mmSingleRace@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmSingleRace>>(0x41E4F0, this);
-    }
-
-    // 0x41E010 | ?Init@mmSingleRace@@UAEHXZ
-    inline int32_t Init() override
-    {
-        return stub<member_func_t<int32_t, mmSingleRace>>(0x41E010, this);
-    }
-
-    // 0x41E130 | ?InitMyPlayer@mmSingleRace@@UAEXXZ
-    inline void InitMyPlayer() override
-    {
-        return stub<member_func_t<void, mmSingleRace>>(0x41E130, this);
-    }
-
-    // 0x41E4E0 | ?InitOtherPlayers@mmSingleRace@@UAEXXZ
-    inline void InitOtherPlayers() override
-    {
-        return stub<member_func_t<void, mmSingleRace>>(0x41E4E0, this);
-    }
-
-    // 0x41E200 | ?InitGameObjects@mmSingleRace@@UAEXXZ
-    inline void InitGameObjects() override
-    {
-        return stub<member_func_t<void, mmSingleRace>>(0x41E200, this);
-    }
-
-    // 0x41E1A0 | ?InitHUD@mmSingleRace@@UAEXXZ
-    inline void InitHUD() override
-    {
-        return stub<member_func_t<void, mmSingleRace>>(0x41E1A0, this);
-    }
-
-    // 0x41E5B0 | ?UpdateGameInput@mmSingleRace@@UAEXH@Z
-    inline void UpdateGameInput(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmSingleRace, int32_t>>(0x41E5B0, this, arg1);
-    }
-
-    // 0x41F970 | ?UpdateDebugKeyInput@mmSingleRace@@UAEXH@Z
-    inline void UpdateDebugKeyInput(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmSingleRace, int32_t>>(0x41F970, this, arg1);
-    }
-
-    // 0x41E5F0 | ?UpdateGame@mmSingleRace@@UAEXXZ
-    inline void UpdateGame() override
-    {
-        return stub<member_func_t<void, mmSingleRace>>(0x41E5F0, this);
-    }
-
-    // 0x41F600 | ?NextRace@mmSingleRace@@UAEXXZ
-    inline void NextRace() override
-    {
-        return stub<member_func_t<void, mmSingleRace>>(0x41F600, this);
-    }
-
-    // 0x41E530 | ?HitWaterHandler@mmSingleRace@@UAEXXZ
-    inline void HitWaterHandler() override
-    {
-        return stub<member_func_t<void, mmSingleRace>>(0x41E530, this);
-    }
-
-    // 0x41EDB0 | ?SwitchState@mmSingleRace@@UAEXH@Z
-    inline void SwitchState(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmSingleRace, int32_t>>(0x41EDB0, this, arg1);
-    }
+    ~mmSingleRace() override;
 
     // 0x41F980 | ?GetWaypoints@mmSingleRace@@UAEPAVmmWaypoints@@XZ
-    inline class mmWaypoints* GetWaypoints() override
-    {
-        return stub<member_func_t<class mmWaypoints*, mmSingleRace>>(0x41F980, this);
-    }
+    class mmWaypoints* GetWaypoints() override;
+
+    // 0x41E530 | ?HitWaterHandler@mmSingleRace@@UAEXXZ
+    void HitWaterHandler() override;
+
+    // 0x41E010 | ?Init@mmSingleRace@@UAEHXZ
+    i32 Init() override;
+
+    // 0x41E200 | ?InitGameObjects@mmSingleRace@@UAEXXZ
+    void InitGameObjects() override;
+
+    // 0x41E1A0 | ?InitHUD@mmSingleRace@@UAEXXZ
+    void InitHUD() override;
+
+    // 0x41E130 | ?InitMyPlayer@mmSingleRace@@UAEXXZ
+    void InitMyPlayer() override;
+
+    // 0x41E4E0 | ?InitOtherPlayers@mmSingleRace@@UAEXXZ
+    void InitOtherPlayers() override;
+
+    // 0x41F600 | ?NextRace@mmSingleRace@@UAEXXZ
+    void NextRace() override;
+
+    // 0x41E4F0 | ?Reset@mmSingleRace@@UAEXXZ
+    void Reset() override;
+
+    // 0x41EDB0 | ?SwitchState@mmSingleRace@@UAEXH@Z
+    void SwitchState(i32 arg1) override;
+
+    // 0x41E5A0 | ?Update@mmSingleRace@@UAEXXZ
+    void Update() override;
+
+    // 0x41F970 | ?UpdateDebugKeyInput@mmSingleRace@@UAEXH@Z
+    void UpdateDebugKeyInput(i32 arg1) override;
+
+    // 0x41E5F0 | ?UpdateGame@mmSingleRace@@UAEXXZ
+    void UpdateGame() override;
+
+    // 0x41E5B0 | ?UpdateGameInput@mmSingleRace@@UAEXH@Z
+    void UpdateGameInput(i32 arg1) override;
+
+    // 0x41EBA0 | ?UpdateOpponentStatus@mmSingleRace@@QAEXXZ
+    void UpdateOpponentStatus();
+
+    // 0x41EDC0 | ?UpdateScore@mmSingleRace@@QAEXXZ
+    void UpdateScore();
+
+private:
+    // 0x41F170 | ?FinishMessage@mmSingleRace@@AAEXHH@Z
+    void FinishMessage(i32 arg1, i32 arg2);
+
+    // 0x41F100 | ?NextRaceAvailable@mmSingleRace@@AAEHXZ
+    i32 NextRaceAvailable();
+
+    // 0x41F590 | ?ProgressCheck@mmSingleRace@@AAEHHH@Z
+    i32 ProgressCheck(i32 arg1, i32 arg2);
+
+    // 0x41F310 | ?RegisterFinish@mmSingleRace@@AAEHXZ
+    i32 RegisterFinish();
 };
+
+check_size(mmSingleRace, 0x76F0);

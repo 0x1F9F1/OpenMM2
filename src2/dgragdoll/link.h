@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -38,69 +38,37 @@ struct dgLink
 {
 public:
     // 0x5A81D0 | ??0dgLink@@QAE@XZ
-    inline dgLink()
-    {
-        stub<member_func_t<void, dgLink>>(0x5A81D0, this);
-    }
-
-    // 0x5A8200 | ?Init@dgLink@@QAEXAAVdgLinkData@@AAVcrIKGoal@@AAVVector3@@AAVdgRagdoll@@@Z
-    inline void Init(class dgLinkData& arg1, class crIKGoal& arg2, class Vector3& arg3, class dgRagdoll& arg4)
-    {
-        return stub<member_func_t<void, dgLink, class dgLinkData&, class crIKGoal&, class Vector3&, class dgRagdoll&>>(
-            0x5A8200, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x5A8220 | ?Reset@dgLink@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, dgLink>>(0x5A8220, this);
-    }
-
-    // 0x5A8250 | ?ResetGoal@dgLink@@QAEXXZ
-    inline void ResetGoal()
-    {
-        return stub<member_func_t<void, dgLink>>(0x5A8250, this);
-    }
-
-    // 0x5A8270 | ?SetMode@dgLink@@QAEXH@Z
-    inline void SetMode(int32_t arg1)
-    {
-        return stub<member_func_t<void, dgLink, int32_t>>(0x5A8270, this, arg1);
-    }
-
-    // 0x5A82A0 | ?Update@dgLink@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, dgLink>>(0x5A82A0, this);
-    }
-
-    // 0x5A82E0 | ?UpdateFree@dgLink@@QAEXXZ
-    inline void UpdateFree()
-    {
-        return stub<member_func_t<void, dgLink>>(0x5A82E0, this);
-    }
+    dgLink();
 
     // 0x5A8540 | ?Bounce@dgLink@@QAEXAAVVector3@@0@Z
-    inline void Bounce(class Vector3& arg1, class Vector3& arg2)
-    {
-        return stub<member_func_t<void, dgLink, class Vector3&, class Vector3&>>(0x5A8540, this, arg1, arg2);
-    }
+    void Bounce(class Vector3& arg1, class Vector3& arg2);
 
-    // 0x5A8620 | ?UpdateGrasp@dgLink@@QAEXXZ
-    inline void UpdateGrasp()
-    {
-        return stub<member_func_t<void, dgLink>>(0x5A8620, this);
-    }
+    // 0x5A8200 | ?Init@dgLink@@QAEXAAVdgLinkData@@AAVcrIKGoal@@AAVVector3@@AAVdgRagdoll@@@Z
+    void Init(class dgLinkData& arg1, class crIKGoal& arg2, class Vector3& arg3, class dgRagdoll& arg4);
+
+    // 0x5A8220 | ?Reset@dgLink@@QAEXXZ
+    void Reset();
+
+    // 0x5A8250 | ?ResetGoal@dgLink@@QAEXXZ
+    void ResetGoal();
+
+    // 0x5A8270 | ?SetMode@dgLink@@QAEXH@Z
+    void SetMode(i32 arg1);
+
+    // 0x5A82A0 | ?Update@dgLink@@QAEXXZ
+    void Update();
 
     // 0x5A8630 | ?UpdateDamping@dgLink@@QAEXXZ
-    inline void UpdateDamping()
-    {
-        return stub<member_func_t<void, dgLink>>(0x5A8630, this);
-    }
+    void UpdateDamping();
+
+    // 0x5A82E0 | ?UpdateFree@dgLink@@QAEXXZ
+    void UpdateFree();
+
+    // 0x5A8620 | ?UpdateGrasp@dgLink@@QAEXXZ
+    void UpdateGrasp();
 
     // 0x5A87B0 | ?UpdateTendon@dgLink@@QAEXXZ
-    inline void UpdateTendon()
-    {
-        return stub<member_func_t<void, dgLink>>(0x5A87B0, this);
-    }
+    void UpdateTendon();
 };
+
+check_size(dgLink, 0x0);

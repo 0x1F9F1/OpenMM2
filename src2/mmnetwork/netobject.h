@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "node/node.h"
+
 /*
     mmnetwork:netobject
 
@@ -29,26 +31,20 @@
     0x5B5D18 | const asNetObject::`vftable' | ??_7asNetObject@@6B@
 */
 
-struct asNetObject : asNode
+class asNetObject : public asNode
 {
+    // const asNetObject::`vftable' @ 0x5B5D18
+
 public:
-    // asNetObject::`vftable' @ 0x5B5D18
-
     // 0x572BE0 | ??0asNetObject@@QAE@XZ
-    inline asNetObject()
-    {
-        stub<member_func_t<void, asNetObject>>(0x572BE0, this);
-    }
+    asNetObject();
 
+    // 0x572C20 | ??_GasNetObject@@UAEPAXI@Z
     // 0x572C00 | ??1asNetObject@@UAE@XZ
-    inline ~asNetObject() override
-    {
-        stub<member_func_t<void, asNetObject>>(0x572C00, this);
-    }
+    ~asNetObject() override;
 
     // 0x572C10 | ?Update@asNetObject@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, asNetObject>>(0x572C10, this);
-    }
+    void Update() override;
 };
+
+check_size(asNetObject, 0x0);

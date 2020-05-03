@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -32,42 +32,27 @@
 
 struct crLegData
 {
+    // const crLegData::`vftable' @ 0x5B6414
+
 public:
-    // crLegData::`vftable' @ 0x5B6414
-
     // 0x57ECF0 | ??0crLegData@@QAE@XZ
-    inline crLegData()
-    {
-        stub<member_func_t<void, crLegData>>(0x57ECF0, this);
-    }
-
-    // 0x57EF00 | ?Acosf@crLegData@@IBEMM@Z
-    inline float Acosf(float arg1)
-    {
-        return stub<member_func_t<float, crLegData, float>>(0x57EF00, this, arg1);
-    }
+    crLegData();
 
     // 0x57ED20 | ?Init@crLegData@@UAEXAAVcrSkeletonData@@D@Z
-    virtual inline void Init(class crSkeletonData& arg1, char arg2)
-    {
-        return stub<member_func_t<void, crLegData, class crSkeletonData&, char>>(0x57ED20, this, arg1, arg2);
-    }
+    virtual void Init(class crSkeletonData& arg1, char arg2);
 
     // 0x57EF60 | ?SolveIK@crLegData@@UBEXAAVcrSkeleton@@AAVcrIKGoal@@@Z
-    virtual inline void SolveIK(class crSkeleton& arg1, class crIKGoal& arg2)
-    {
-        return stub<member_func_t<void, crLegData, class crSkeleton&, class crIKGoal&>>(0x57EF60, this, arg1, arg2);
-    }
+    virtual void SolveIK(class crSkeleton& arg1, class crIKGoal& arg2);
 
     // 0x57FF20 | ?SolveLimpIK@crLegData@@UBEXAAVcrSkeleton@@AAVcrIKGoal@@@Z
-    virtual inline void SolveLimpIK(class crSkeleton& arg1, class crIKGoal& arg2)
-    {
-        return stub<member_func_t<void, crLegData, class crSkeleton&, class crIKGoal&>>(0x57FF20, this, arg1, arg2);
-    }
+    virtual void SolveLimpIK(class crSkeleton& arg1, class crIKGoal& arg2);
 
     // 0x57EE70 | ?MatchPose@crLegData@@UBEXAAVcrSkeleton@@AAVcrIKGoal@@@Z
-    virtual inline void MatchPose(class crSkeleton& arg1, class crIKGoal& arg2)
-    {
-        return stub<member_func_t<void, crLegData, class crSkeleton&, class crIKGoal&>>(0x57EE70, this, arg1, arg2);
-    }
+    virtual void MatchPose(class crSkeleton& arg1, class crIKGoal& arg2);
+
+protected:
+    // 0x57EF00 | ?Acosf@crLegData@@IBEMM@Z
+    f32 Acosf(f32 arg1);
 };
+
+check_size(crLegData, 0x0);

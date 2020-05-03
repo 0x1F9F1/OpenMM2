@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "mmwidget/menu.h"
 
 /*
     mmui:main
@@ -45,123 +47,68 @@
     0x5B45E0 | const MainMenu::`vftable' | ??_7MainMenu@@6B@
 */
 
-struct MainMenu : UIMenu
+class MainMenu : public UIMenu
 {
+    // const MainMenu::`vftable' @ 0x5B45E0
+
 public:
-    // MainMenu::`vftable' @ 0x5B45E0
-
     // 0x505C30 | ??0MainMenu@@QAE@H@Z
-    inline MainMenu(int32_t arg1)
-    {
-        stub<member_func_t<void, MainMenu, int32_t>>(0x505C30, this, arg1);
-    }
+    MainMenu(i32 arg1);
 
-    // 0x5060B0 | ?EnableReplay@MainMenu@@QAEXH@Z
-    inline void EnableReplay(int32_t arg1)
-    {
-        return stub<member_func_t<void, MainMenu, int32_t>>(0x5060B0, this, arg1);
-    }
-
-    // 0x5060D0 | ?IsReplayReadOnly@MainMenu@@QAEHXZ
-    inline int32_t IsReplayReadOnly()
-    {
-        return stub<member_func_t<int32_t, MainMenu>>(0x5060D0, this);
-    }
-
-    // 0x5060E0 | ?InitDriver@MainMenu@@QAEXXZ
-    inline void InitDriver()
-    {
-        return stub<member_func_t<void, MainMenu>>(0x5060E0, this);
-    }
-
-    // 0x506560 | ?RemovePlayer@MainMenu@@QAEXPAD@Z
-    inline void RemovePlayer(char* arg1)
-    {
-        return stub<member_func_t<void, MainMenu, char*>>(0x506560, this, arg1);
-    }
-
-    // 0x5067C0 | ?SetPlayerPick@MainMenu@@QAEXH@Z
-    inline void SetPlayerPick(int32_t arg1)
-    {
-        return stub<member_func_t<void, MainMenu, int32_t>>(0x5067C0, this, arg1);
-    }
-
-    // 0x5067D0 | ?DecPlayer@MainMenu@@QAEXXZ
-    inline void DecPlayer()
-    {
-        return stub<member_func_t<void, MainMenu>>(0x5067D0, this);
-    }
-
-    // 0x506800 | ?IncPlayer@MainMenu@@QAEXXZ
-    inline void IncPlayer()
-    {
-        return stub<member_func_t<void, MainMenu>>(0x506800, this);
-    }
-
-    // 0x506830 | ?RemoveAllPlayers@MainMenu@@QAEXXZ
-    inline void RemoveAllPlayers()
-    {
-        return stub<member_func_t<void, MainMenu>>(0x506830, this);
-    }
+    // 0x506AB0 | ??_GMainMenu@@UAEPAXI@Z
+    // 0x506020 | ??1MainMenu@@UAE@XZ
+    ~MainMenu() override;
 
     // 0x506840 | ?AddPlayer@MainMenu@@QAEXPAD@Z
-    inline void AddPlayer(char* arg1)
-    {
-        return stub<member_func_t<void, MainMenu, char*>>(0x506840, this, arg1);
-    }
+    void AddPlayer(char* arg1);
 
-    // 0x506960 | ?TDPickCB@MainMenu@@QAEXXZ
-    inline void TDPickCB()
-    {
-        return stub<member_func_t<void, MainMenu>>(0x506960, this);
-    }
+    // 0x5067D0 | ?DecPlayer@MainMenu@@QAEXXZ
+    void DecPlayer();
 
     // 0x506970 | ?DeleteCB@MainMenu@@QAEXXZ
-    inline void DeleteCB()
-    {
-        return stub<member_func_t<void, MainMenu>>(0x506970, this);
-    }
-
-    // 0x506980 | ?EnterNewPlayer@MainMenu@@QAEXXZ
-    inline void EnterNewPlayer()
-    {
-        return stub<member_func_t<void, MainMenu>>(0x506980, this);
-    }
+    void DeleteCB();
 
     // 0x506990 | ?DisplayDriverInfo@MainMenu@@QAEXPAD0000H@Z
-    inline void DisplayDriverInfo(char* arg1, char* arg2, char* arg3, char* arg4, char* arg5, int32_t arg6)
-    {
-        return stub<member_func_t<void, MainMenu, char*, char*, char*, char*, char*, int32_t>>(
-            0x506990, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
+    void DisplayDriverInfo(char* arg1, char* arg2, char* arg3, char* arg4, char* arg5, i32 arg6);
 
-    // 0x506A50 | ?SetController@MainMenu@@QAEXPAD@Z
-    inline void SetController(char* arg1)
-    {
-        return stub<member_func_t<void, MainMenu, char*>>(0x506A50, this, arg1);
-    }
+    // 0x5060B0 | ?EnableReplay@MainMenu@@QAEXH@Z
+    void EnableReplay(i32 arg1);
 
-    // 0x506A70 | ?SetNetName@MainMenu@@QAEXPAD@Z
-    inline void SetNetName(char* arg1)
-    {
-        return stub<member_func_t<void, MainMenu, char*>>(0x506A70, this, arg1);
-    }
+    // 0x506980 | ?EnterNewPlayer@MainMenu@@QAEXXZ
+    void EnterNewPlayer();
 
     // 0x506A80 | ?FocusDescription@MainMenu@@QAEXHH@Z
-    inline void FocusDescription(int32_t arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, MainMenu, int32_t, int32_t>>(0x506A80, this, arg1, arg2);
-    }
+    void FocusDescription(i32 arg1, i32 arg2);
 
-    // 0x506020 | ??1MainMenu@@UAE@XZ
-    inline ~MainMenu() override
-    {
-        stub<member_func_t<void, MainMenu>>(0x506020, this);
-    }
+    // 0x506800 | ?IncPlayer@MainMenu@@QAEXXZ
+    void IncPlayer();
+
+    // 0x5060E0 | ?InitDriver@MainMenu@@QAEXXZ
+    void InitDriver();
+
+    // 0x5060D0 | ?IsReplayReadOnly@MainMenu@@QAEHXZ
+    i32 IsReplayReadOnly();
 
     // 0x5060A0 | ?PreSetup@MainMenu@@UAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, MainMenu>>(0x5060A0, this);
-    }
+    void PreSetup() override;
+
+    // 0x506830 | ?RemoveAllPlayers@MainMenu@@QAEXXZ
+    void RemoveAllPlayers();
+
+    // 0x506560 | ?RemovePlayer@MainMenu@@QAEXPAD@Z
+    void RemovePlayer(char* arg1);
+
+    // 0x506A50 | ?SetController@MainMenu@@QAEXPAD@Z
+    void SetController(char* arg1);
+
+    // 0x506A70 | ?SetNetName@MainMenu@@QAEXPAD@Z
+    void SetNetName(char* arg1);
+
+    // 0x5067C0 | ?SetPlayerPick@MainMenu@@QAEXH@Z
+    void SetPlayerPick(i32 arg1);
+
+    // 0x506960 | ?TDPickCB@MainMenu@@QAEXXZ
+    void TDPickCB();
 };
+
+check_size(MainMenu, 0x100);

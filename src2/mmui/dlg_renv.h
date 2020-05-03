@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "pu_menu.h"
+
 /*
     mmui:dlg_renv
 
@@ -33,51 +35,32 @@
     0x5B3FB8 | const Dialog_RaceEnvironment::`vftable' | ??_7Dialog_RaceEnvironment@@6B@
 */
 
-struct Dialog_RaceEnvironment : PUMenuBase
+class Dialog_RaceEnvironment : public PUMenuBase
 {
+    // const Dialog_RaceEnvironment::`vftable' @ 0x5B3FB8
+
 public:
-    // Dialog_RaceEnvironment::`vftable' @ 0x5B3FB8
-
     // 0x4FB200 | ??0Dialog_RaceEnvironment@@QAE@HMMMMPAD@Z
-    inline Dialog_RaceEnvironment(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
-    {
-        stub<member_func_t<void, Dialog_RaceEnvironment, int32_t, float, float, float, float, char*>>(
-            0x4FB200, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
+    Dialog_RaceEnvironment(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6);
 
-    // 0x4FB980 | ?ControlPedSlider@Dialog_RaceEnvironment@@QAEXXZ
-    inline void ControlPedSlider()
-    {
-        return stub<member_func_t<void, Dialog_RaceEnvironment>>(0x4FB980, this);
-    }
-
-    // 0x4FB9A0 | ?SetMultiRaceOptions@Dialog_RaceEnvironment@@QAEXH@Z
-    inline void SetMultiRaceOptions(int32_t arg1)
-    {
-        return stub<member_func_t<void, Dialog_RaceEnvironment, int32_t>>(0x4FB9A0, this, arg1);
-    }
-
-    // 0x4FB9E0 | ?DoneCallback@Dialog_RaceEnvironment@@QAEXXZ
-    inline void DoneCallback()
-    {
-        return stub<member_func_t<void, Dialog_RaceEnvironment>>(0x4FB9E0, this);
-    }
+    // 0x4FBA40 | ??_GDialog_RaceEnvironment@@UAEPAXI@Z
+    // 0x4FB8D0 | ??1Dialog_RaceEnvironment@@UAE@XZ
+    ~Dialog_RaceEnvironment() override;
 
     // 0x4FBA30 | ?CancelCallback@Dialog_RaceEnvironment@@QAEXXZ
-    inline void CancelCallback()
-    {
-        return stub<member_func_t<void, Dialog_RaceEnvironment>>(0x4FBA30, this);
-    }
+    void CancelCallback();
 
-    // 0x4FB8D0 | ??1Dialog_RaceEnvironment@@UAE@XZ
-    inline ~Dialog_RaceEnvironment() override
-    {
-        stub<member_func_t<void, Dialog_RaceEnvironment>>(0x4FB8D0, this);
-    }
+    // 0x4FB980 | ?ControlPedSlider@Dialog_RaceEnvironment@@QAEXXZ
+    void ControlPedSlider();
+
+    // 0x4FB9E0 | ?DoneCallback@Dialog_RaceEnvironment@@QAEXXZ
+    void DoneCallback();
 
     // 0x4FB930 | ?PreSetup@Dialog_RaceEnvironment@@UAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, Dialog_RaceEnvironment>>(0x4FB930, this);
-    }
+    void PreSetup() override;
+
+    // 0x4FB9A0 | ?SetMultiRaceOptions@Dialog_RaceEnvironment@@QAEXH@Z
+    void SetMultiRaceOptions(i32 arg1);
 };
+
+check_size(Dialog_RaceEnvironment, 0x0);

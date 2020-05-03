@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -32,49 +32,25 @@
 */
 
 // 0x497D10 | ?jpeg_CreateDecompress@@YAXPAUjpeg_decompress_struct@@HI@Z
-inline void jpeg_CreateDecompress(struct jpeg_decompress_struct* arg1, int32_t arg2, uint32_t arg3)
-{
-    return stub<cdecl_t<void, struct jpeg_decompress_struct*, int32_t, uint32_t>>(0x497D10, arg1, arg2, arg3);
-}
-
-// 0x497DF0 | ?jpeg_destroy_decompress@@YAXPAUjpeg_decompress_struct@@@Z
-inline void jpeg_destroy_decompress(struct jpeg_decompress_struct* arg1)
-{
-    return stub<cdecl_t<void, struct jpeg_decompress_struct*>>(0x497DF0, arg1);
-}
+void jpeg_CreateDecompress(struct jpeg_decompress_struct* arg1, i32 arg2, u32 arg3);
 
 // 0x497E10 | ?jpeg_abort_decompress@@YAXPAUjpeg_decompress_struct@@@Z
-inline void jpeg_abort_decompress(struct jpeg_decompress_struct* arg1)
-{
-    return stub<cdecl_t<void, struct jpeg_decompress_struct*>>(0x497E10, arg1);
-}
-
-// 0x497E30 | ?jpeg_read_header@@YAHPAUjpeg_decompress_struct@@E@Z
-inline int32_t jpeg_read_header(struct jpeg_decompress_struct* arg1, uint8_t arg2)
-{
-    return stub<cdecl_t<int32_t, struct jpeg_decompress_struct*, uint8_t>>(0x497E30, arg1, arg2);
-}
+void jpeg_abort_decompress(struct jpeg_decompress_struct* arg1);
 
 // 0x497EB0 | ?jpeg_consume_input@@YAHPAUjpeg_decompress_struct@@@Z
-inline int32_t jpeg_consume_input(struct jpeg_decompress_struct* arg1)
-{
-    return stub<cdecl_t<int32_t, struct jpeg_decompress_struct*>>(0x497EB0, arg1);
-}
+i32 jpeg_consume_input(struct jpeg_decompress_struct* arg1);
 
-// 0x498130 | ?jpeg_input_complete@@YAEPAUjpeg_decompress_struct@@@Z
-inline uint8_t jpeg_input_complete(struct jpeg_decompress_struct* arg1)
-{
-    return stub<cdecl_t<uint8_t, struct jpeg_decompress_struct*>>(0x498130, arg1);
-}
-
-// 0x498180 | ?jpeg_has_multiple_scans@@YAEPAUjpeg_decompress_struct@@@Z
-inline uint8_t jpeg_has_multiple_scans(struct jpeg_decompress_struct* arg1)
-{
-    return stub<cdecl_t<uint8_t, struct jpeg_decompress_struct*>>(0x498180, arg1);
-}
+// 0x497DF0 | ?jpeg_destroy_decompress@@YAXPAUjpeg_decompress_struct@@@Z
+void jpeg_destroy_decompress(struct jpeg_decompress_struct* arg1);
 
 // 0x4981D0 | ?jpeg_finish_decompress@@YAEPAUjpeg_decompress_struct@@@Z
-inline uint8_t jpeg_finish_decompress(struct jpeg_decompress_struct* arg1)
-{
-    return stub<cdecl_t<uint8_t, struct jpeg_decompress_struct*>>(0x4981D0, arg1);
-}
+u8 jpeg_finish_decompress(struct jpeg_decompress_struct* arg1);
+
+// 0x498180 | ?jpeg_has_multiple_scans@@YAEPAUjpeg_decompress_struct@@@Z
+u8 jpeg_has_multiple_scans(struct jpeg_decompress_struct* arg1);
+
+// 0x498130 | ?jpeg_input_complete@@YAEPAUjpeg_decompress_struct@@@Z
+u8 jpeg_input_complete(struct jpeg_decompress_struct* arg1);
+
+// 0x497E30 | ?jpeg_read_header@@YAHPAUjpeg_decompress_struct@@E@Z
+i32 jpeg_read_header(struct jpeg_decompress_struct* arg1, u8 arg2);

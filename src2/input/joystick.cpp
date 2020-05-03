@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,55 @@
 */
 
 #include "joystick.h"
+
+void ioJoystick::BeginAll()
+{
+    return stub<cdecl_t<void>>(0x4BBA00);
+}
+
+void ioJoystick::EndAll()
+{
+    return stub<cdecl_t<void>>(0x4BBAB0);
+}
+
+void ioJoystick::PollAll()
+{
+    return stub<cdecl_t<void>>(0x4BBA50);
+}
+
+void ioJoystick::UpdateAll()
+{
+    return stub<cdecl_t<void>>(0x4BBA80);
+}
+
+void ioJoystick::Begin()
+{
+    return stub<thiscall_t<void, ioJoystick*>>(0x4BBAF0, this);
+}
+
+void ioJoystick::End()
+{
+    return stub<thiscall_t<void, ioJoystick*>>(0x4BBD20, this);
+}
+
+void ioJoystick::Poll()
+{
+    return stub<thiscall_t<void, ioJoystick*>>(0x4BBC50, this);
+}
+
+void ioJoystick::Update()
+{
+    return stub<thiscall_t<void, ioJoystick*>>(0x4BBC60, this);
+}
+
+i32 __stdcall ioJoystick::EnumDeviceProc(struct DIDEVICEINSTANCEA const* arg1, void* arg2)
+{
+    return stub<stdcall_t<i32, struct DIDEVICEINSTANCEA const*, void*>>(0x4BB7F0, arg1, arg2);
+}
+
+i32 __stdcall ioJoystick::EnumObjectProc(struct DIDEVICEOBJECTINSTANCEA const* arg1, void* arg2)
+{
+    return stub<stdcall_t<i32, struct DIDEVICEOBJECTINSTANCEA const*, void*>>(0x4BBAE0, arg1, arg2);
+}
+
+define_dummy_symbol(input_joystick);

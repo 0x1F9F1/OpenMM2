@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     vehicle:stuck
@@ -37,68 +39,41 @@
     0x5B2EB8 | const vehStuck::`vftable' | ??_7vehStuck@@6B@
 */
 
-struct vehStuck : asNode
+class vehStuck : public asNode
 {
+    // const vehStuck::`vftable' @ 0x5B2EB8
+
 public:
-    // vehStuck::`vftable' @ 0x5B2EB8
-
     // 0x4D5FB0 | ??0vehStuck@@QAE@XZ
-    inline vehStuck()
-    {
-        stub<member_func_t<void, vehStuck>>(0x4D5FB0, this);
-    }
+    vehStuck();
 
-    // 0x4D6090 | ?Init@vehStuck@@QAEXPAVvehCarSim@@PBD@Z
-    inline void Init(class vehCarSim* arg1, char const* arg2)
-    {
-        return stub<member_func_t<void, vehStuck, class vehCarSim*, char const*>>(0x4D6090, this, arg1, arg2);
-    }
-
-    // 0x4D60C0 | ?Impact@vehStuck@@QAEXXZ
-    inline void Impact()
-    {
-        return stub<member_func_t<void, vehStuck>>(0x4D60C0, this);
-    }
-
-    // 0x4D6100 | ?Pegged@vehStuck@@QAEHXZ
-    inline int32_t Pegged()
-    {
-        return stub<member_func_t<int32_t, vehStuck>>(0x4D6100, this);
-    }
-
+    // 0x4D65B0 | ??_GvehStuck@@UAEPAXI@Z
     // 0x4D65E0 | ??1vehStuck@@UAE@XZ
-    inline ~vehStuck() override
-    {
-        stub<member_func_t<void, vehStuck>>(0x4D65E0, this);
-    }
-
-    // 0x4D6140 | ?Update@vehStuck@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, vehStuck>>(0x4D6140, this);
-    }
-
-    // 0x4D6060 | ?Reset@vehStuck@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, vehStuck>>(0x4D6060, this);
-    }
+    ~vehStuck() override;
 
     // 0x4D6510 | ?FileIO@vehStuck@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
-    {
-        return stub<member_func_t<void, vehStuck, class datParser&>>(0x4D6510, this, arg1);
-    }
+    void FileIO(class datParser& arg1) override;
 
     // 0x4D65F0 | ?GetClassName@vehStuck@@UAEPADXZ
-    inline char* GetClassName() override
-    {
-        return stub<member_func_t<char*, vehStuck>>(0x4D65F0, this);
-    }
+    char* GetClassName() override;
 
     // 0x4D6080 | ?GetDirName@vehStuck@@UAEPBDXZ
-    inline char const* GetDirName() override
-    {
-        return stub<member_func_t<char const*, vehStuck>>(0x4D6080, this);
-    }
+    char const* GetDirName() override;
+
+    // 0x4D60C0 | ?Impact@vehStuck@@QAEXXZ
+    void Impact();
+
+    // 0x4D6090 | ?Init@vehStuck@@QAEXPAVvehCarSim@@PBD@Z
+    void Init(class vehCarSim* arg1, char const* arg2);
+
+    // 0x4D6100 | ?Pegged@vehStuck@@QAEHXZ
+    i32 Pegged();
+
+    // 0x4D6060 | ?Reset@vehStuck@@UAEXXZ
+    void Reset() override;
+
+    // 0x4D6140 | ?Update@vehStuck@@UAEXXZ
+    void Update() override;
 };
+
+check_size(vehStuck, 0x54);

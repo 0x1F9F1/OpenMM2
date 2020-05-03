@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,20 @@
 */
 
 #include "fx.h"
+
+class audFX* audFX::Create(class audManager* arg1, class audObject* arg2)
+{
+    return stub<thiscall_t<class audFX*, audFX*, class audManager*, class audObject*>>(0x5A3860, this, arg1, arg2);
+}
+
+void audFX::Destroy()
+{
+    return stub<thiscall_t<void, audFX*>>(0x5A3890, this);
+}
+
+class EchoEffect* audFX::EnablePCEcho(u32 arg1, i32 arg2)
+{
+    return stub<thiscall_t<class EchoEffect*, audFX*, u32, i32>>(0x5A38C0, this, arg1, arg2);
+}
+
+define_dummy_symbol(aud_fx);

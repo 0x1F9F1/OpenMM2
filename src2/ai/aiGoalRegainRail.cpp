@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,40 @@
 */
 
 #include "aiGoalRegainRail.h"
+
+aiGoalRegainRail::aiGoalRegainRail(class aiRailSet* arg1, class aiVehicleAmbient* arg2)
+{
+    unimplemented();
+}
+
+aiGoalRegainRail::~aiGoalRegainRail()
+{
+    unimplemented();
+}
+
+void aiGoalRegainRail::Dump()
+{
+    return stub<thiscall_t<void, aiGoalRegainRail*>>(0x56BF00, this);
+}
+
+void aiGoalRegainRail::ReplayDebug()
+{
+    return stub<thiscall_t<void, aiGoalRegainRail*>>(0x56BF60, this);
+}
+
+void aiGoalRegainRail::Init()
+{
+    return stub<thiscall_t<void, aiGoalRegainRail*>>(0x56B720, this);
+}
+
+void aiGoalRegainRail::Reset()
+{
+    return stub<thiscall_t<void, aiGoalRegainRail*>>(0x56B750, this);
+}
+
+void aiGoalRegainRail::Update()
+{
+    return stub<thiscall_t<void, aiGoalRegainRail*>>(0x56BD80, this);
+}
+
+define_dummy_symbol(ai_aiGoalRegainRail);

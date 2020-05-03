@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,25 @@
 */
 
 #include "controlbase.h"
+
+ControlBase::ControlBase()
+{
+    unimplemented();
+}
+
+ControlBase::~ControlBase()
+{
+    unimplemented();
+}
+
+void ControlBase::InitSensitivity()
+{
+    return stub<thiscall_t<void, ControlBase*>>(0x50D4E0, this);
+}
+
+void ControlBase::SetSensitivity()
+{
+    return stub<thiscall_t<void, ControlBase*>>(0x50D540, this);
+}
+
+define_dummy_symbol(mmui_controlbase);

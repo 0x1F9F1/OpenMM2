@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "level/inst.h"
+
 /*
     gizmo:gizmoinst
 
@@ -31,50 +33,31 @@
     0x5B6278 | const gizInstance::`vftable' | ??_7gizInstance@@6B@
 */
 
-struct gizInstance : lvlInstance
+class gizInstance : public lvlInstance
 {
-public:
-    // gizInstance::`vftable' @ 0x5B6278
+    // const gizInstance::`vftable' @ 0x5B6278
 
+public:
     // 0x579DB0 | ??0gizInstance@@QAE@XZ
-    inline gizInstance()
-    {
-        stub<member_func_t<void, gizInstance>>(0x579DB0, this);
-    }
+    gizInstance();
 
     // 0x579E10 | ??1gizInstance@@QAE@XZ
-    inline ~gizInstance()
-    {
-        stub<member_func_t<void, gizInstance>>(0x579E10, this);
-    }
-
-    // 0x579E90 | ?Init@gizInstance@@QAEXPADH@Z
-    inline void Init(char* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, gizInstance, char*, int32_t>>(0x579E90, this, arg1, arg2);
-    }
-
-    // 0x579E30 | ?GetPosition@gizInstance@@UAEABVVector3@@XZ
-    inline class Vector3 const& GetPosition() override
-    {
-        return stub<member_func_t<class Vector3 const&, gizInstance>>(0x579E30, this);
-    }
-
-    // 0x579E40 | ?GetMatrix@gizInstance@@UAEABVMatrix34@@AAV2@@Z
-    inline class Matrix34 const& GetMatrix(class Matrix34& arg1) override
-    {
-        return stub<member_func_t<class Matrix34 const&, gizInstance, class Matrix34&>>(0x579E40, this, arg1);
-    }
-
-    // 0x579E60 | ?SetMatrix@gizInstance@@UAEXABVMatrix34@@@Z
-    inline void SetMatrix(class Matrix34 const& arg1) override
-    {
-        return stub<member_func_t<void, gizInstance, class Matrix34 const&>>(0x579E60, this, arg1);
-    }
+    ~gizInstance();
 
     // 0x579F30 | ?Draw@gizInstance@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
-    {
-        return stub<member_func_t<void, gizInstance, int32_t>>(0x579F30, this, arg1);
-    }
+    void Draw(i32 arg1) override;
+
+    // 0x579E40 | ?GetMatrix@gizInstance@@UAEABVMatrix34@@AAV2@@Z
+    class Matrix34 const& GetMatrix(class Matrix34& arg1) override;
+
+    // 0x579E30 | ?GetPosition@gizInstance@@UAEABVVector3@@XZ
+    class Vector3 const& GetPosition() override;
+
+    // 0x579E90 | ?Init@gizInstance@@QAEXPADH@Z
+    void Init(char* arg1, i32 arg2);
+
+    // 0x579E60 | ?SetMatrix@gizInstance@@UAEXABVMatrix34@@@Z
+    void SetMatrix(class Matrix34 const& arg1) override;
 };
+
+check_size(gizInstance, 0x0);

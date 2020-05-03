@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,45 @@
 */
 
 #include "audspeechdata.h"
+
+AudSpeechData::AudSpeechData(char* arg1, f32 arg2, f32 arg3, bool arg4, char* arg5, char* arg6)
+{
+    unimplemented();
+}
+
+AudSpeechData::~AudSpeechData()
+{
+    unimplemented();
+}
+
+char* AudSpeechData::GetName(i32 arg1)
+{
+    return stub<thiscall_t<char*, AudSpeechData*, i32>>(0x513FB0, this, arg1);
+}
+
+class AudSoundBase* AudSpeechData::GetOneShot(i32 arg1)
+{
+    return stub<thiscall_t<class AudSoundBase*, AudSpeechData*, i32>>(0x513FF0, this, arg1);
+}
+
+char* AudSpeechData::GetRandomName()
+{
+    return stub<thiscall_t<char*, AudSpeechData*>>(0x514010, this);
+}
+
+class AudSoundBase* AudSpeechData::GetRandomOneShot()
+{
+    return stub<thiscall_t<class AudSoundBase*, AudSpeechData*>>(0x5140B0, this);
+}
+
+void AudSpeechData::SetVolume(f32 arg1)
+{
+    return stub<thiscall_t<void, AudSpeechData*, f32>>(0x513F70, this, arg1);
+}
+
+void AudSpeechData::LoadOneShots(char* arg1, char* arg2)
+{
+    return stub<thiscall_t<void, AudSpeechData*, char*, char*>>(0x513E20, this, arg1, arg2);
+}
+
+define_dummy_symbol(ageaudio_audspeechdata);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "optionsbase.h"
 
 /*
     mmui:ctrlcus
@@ -35,62 +37,38 @@
     0x5B42F4 | const ControlCustom::`vftable' | ??_7ControlCustom@@6B@
 */
 
-struct ControlCustom : OptionsBase
+class ControlCustom : public OptionsBase
 {
-public:
-    // ControlCustom::`vftable' @ 0x5B42F4
+    // const ControlCustom::`vftable' @ 0x5B42F4
 
+public:
     // 0x502780 | ??0ControlCustom@@QAE@H@Z
-    inline ControlCustom(int32_t arg1)
-    {
-        stub<member_func_t<void, ControlCustom, int32_t>>(0x502780, this, arg1);
-    }
+    ControlCustom(i32 arg1);
+
+    // 0x502920 | ??_GControlCustom@@UAEPAXI@Z
+    // 0x502820 | ??1ControlCustom@@UAE@XZ
+    ~ControlCustom() override;
 
     // 0x502830 | ?BadAssignCB@ControlCustom@@QAEXXZ
-    inline void BadAssignCB()
-    {
-        return stub<member_func_t<void, ControlCustom>>(0x502830, this);
-    }
-
-    // 0x502880 | ?ClearBadAssignment@ControlCustom@@QAEXXZ
-    inline void ClearBadAssignment()
-    {
-        return stub<member_func_t<void, ControlCustom>>(0x502880, this);
-    }
-
-    // 0x502890 | ?CancelBadAssignment@ControlCustom@@QAEXXZ
-    inline void CancelBadAssignment()
-    {
-        return stub<member_func_t<void, ControlCustom>>(0x502890, this);
-    }
-
-    // 0x5028B0 | ?VerifyBadAssignment@ControlCustom@@QAEXXZ
-    inline void VerifyBadAssignment()
-    {
-        return stub<member_func_t<void, ControlCustom>>(0x5028B0, this);
-    }
-
-    // 0x502820 | ??1ControlCustom@@UAE@XZ
-    inline ~ControlCustom() override
-    {
-        stub<member_func_t<void, ControlCustom>>(0x502820, this);
-    }
+    void BadAssignCB();
 
     // 0x502900 | ?CancelAction@ControlCustom@@UAEXXZ
-    inline void CancelAction() override
-    {
-        return stub<member_func_t<void, ControlCustom>>(0x502900, this);
-    }
+    void CancelAction() override;
+
+    // 0x502890 | ?CancelBadAssignment@ControlCustom@@QAEXXZ
+    void CancelBadAssignment();
+
+    // 0x502880 | ?ClearBadAssignment@ControlCustom@@QAEXXZ
+    void ClearBadAssignment();
 
     // 0x5028F0 | ?DoneAction@ControlCustom@@UAEXXZ
-    inline void DoneAction() override
-    {
-        return stub<member_func_t<void, ControlCustom>>(0x5028F0, this);
-    }
+    void DoneAction() override;
 
     // 0x5028D0 | ?ResetDefaultAction@ControlCustom@@UAEXXZ
-    inline void ResetDefaultAction() override
-    {
-        return stub<member_func_t<void, ControlCustom>>(0x5028D0, this);
-    }
+    void ResetDefaultAction() override;
+
+    // 0x5028B0 | ?VerifyBadAssignment@ControlCustom@@QAEXXZ
+    void VerifyBadAssignment();
 };
+
+check_size(ControlCustom, 0x7218);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     mminput:input
@@ -112,430 +114,224 @@
 */
 
 // 0x52A950 | ?testsuperq@@YAXXZ
-inline void testsuperq()
-{
-    return stub<cdecl_t<void>>(0x52A950);
-}
-
-// 0x6B1CEC | ?IODev@@3PAVmmIODev@@A
-inline extern_var(0x6B1CEC, class mmIODev*, IODev);
+void testsuperq();
 
 // 0x6B1CF0 | ?GameInputPtr@@3PAVmmInput@@A
 inline extern_var(0x6B1CF0, class mmInput*, GameInputPtr);
 
-class mmInput : asNode
+// 0x6B1CEC | ?IODev@@3PAVmmIODev@@A
+inline extern_var(0x6B1CEC, class mmIODev*, IODev);
+
+class mmInput : public asNode
 {
+    // const mmInput::`vftable' @ 0x5B5250
+
 public:
-    // mmInput::`vftable' @ 0x5B5250
-
     // 0x52A990 | ??0mmInput@@QAE@XZ
-    inline mmInput()
-    {
-        stub<member_func_t<void, mmInput>>(0x52A990, this);
-    }
+    mmInput();
 
-    // 0x52ACB0 | ?AttachToPipe@mmInput@@QAEHXZ
-    inline int32_t AttachToPipe()
-    {
-        return stub<member_func_t<int32_t, mmInput>>(0x52ACB0, this);
-    }
-
-    // 0x52B1B0 | ?IOInit@mmInput@@QAEXHPAULocString@@J@Z
-    inline void IOInit(int32_t arg1, struct LocString* arg2, int32_t arg3)
-    {
-        return stub<member_func_t<void, mmInput, int32_t, struct LocString*, int32_t>>(
-            0x52B1B0, this, arg1, arg2, arg3);
-    }
-
-    // 0x52B1E0 | ?AutoSetup@mmInput@@QAEXXZ
-    inline void AutoSetup()
-    {
-        return stub<member_func_t<void, mmInput>>(0x52B1E0, this);
-    }
-
-    // 0x52B200 | ?SaveCB@mmInput@@QAEXXZ
-    inline void SaveCB()
-    {
-        return stub<member_func_t<void, mmInput>>(0x52B200, this);
-    }
-
-    // 0x52B240 | ?RestoreDefaultConfig@mmInput@@QAEXH@Z
-    inline void RestoreDefaultConfig(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmInput, int32_t>>(0x52B240, this, arg1);
-    }
-
-    // 0x52B290 | ?SetDefaultConfig@mmInput@@QAEXH@Z
-    inline void SetDefaultConfig(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmInput, int32_t>>(0x52B290, this, arg1);
-    }
-
-    // 0x52C380 | ?Init@mmInput@@QAEXH@Z
-    inline void Init(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmInput, int32_t>>(0x52C380, this, arg1);
-    }
-
-    // 0x52C570 | ?FlagIODevChanged@mmInput@@QAEXXZ
-    inline void FlagIODevChanged()
-    {
-        return stub<member_func_t<void, mmInput>>(0x52C570, this);
-    }
-
-    // 0x52C590 | ?ReturnStateCaptured@mmInput@@QAEHXZ
-    inline int32_t ReturnStateCaptured()
-    {
-        return stub<member_func_t<int32_t, mmInput>>(0x52C590, this);
-    }
-
-    // 0x52C5B0 | ?CaptureState@mmInput@@QAEXH@Z
-    inline void CaptureState(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmInput, int32_t>>(0x52C5B0, this, arg1);
-    }
-
-    // 0x52C5E0 | ?BuildCaptureIO@mmInput@@QAEHHPAVmmIO@@TeqEvent@@@Z
-    inline int32_t BuildCaptureIO(int32_t arg1, class mmIO* arg2, union eqEvent arg3)
-    {
-        return stub<member_func_t<int32_t, mmInput, int32_t, class mmIO*, union eqEvent>>(
-            0x52C5E0, this, arg1, arg2, arg3);
-    }
-
-    // 0x52C7A0 | ?ForceAssignment@mmInput@@QAEXPAVmmIO@@@Z
-    inline void ForceAssignment(class mmIO* arg1)
-    {
-        return stub<member_func_t<void, mmInput, class mmIO*>>(0x52C7A0, this, arg1);
-    }
-
-    // 0x52C7C0 | ?SanityCheck@mmInput@@QAEHPAVmmIO@@HH@Z
-    inline int32_t SanityCheck(class mmIO* arg1, int32_t arg2, int32_t arg3)
-    {
-        return stub<member_func_t<int32_t, mmInput, class mmIO*, int32_t, int32_t>>(0x52C7C0, this, arg1, arg2, arg3);
-    }
-
-    // 0x52C830 | ?IsAlreadyAssigned@mmInput@@QAEHPAVmmIO@@HHH@Z
-    inline int32_t IsAlreadyAssigned(class mmIO* arg1, int32_t arg2, int32_t arg3, int32_t arg4)
-    {
-        return stub<member_func_t<int32_t, mmInput, class mmIO*, int32_t, int32_t, int32_t>>(
-            0x52C830, this, arg1, arg2, arg3, arg4);
-    }
+    // 0x52EDC0 | ??_GmmInput@@UAEPAXI@Z
+    // 0x52AB90 | ??1mmInput@@UAE@XZ
+    ~mmInput() override;
 
     // 0x52C920 | ?AssignIO@mmInput@@QAEXPAVmmIO@@HH@Z
-    inline void AssignIO(class mmIO* arg1, int32_t arg2, int32_t arg3)
-    {
-        return stub<member_func_t<void, mmInput, class mmIO*, int32_t, int32_t>>(0x52C920, this, arg1, arg2, arg3);
-    }
+    void AssignIO(class mmIO* arg1, i32 arg2, i32 arg3);
 
-    // 0x52CA80 | ?PollStates@mmInput@@QAEHXZ
-    inline int32_t PollStates()
-    {
-        return stub<member_func_t<int32_t, mmInput>>(0x52CA80, this);
-    }
+    // 0x52ACB0 | ?AttachToPipe@mmInput@@QAEHXZ
+    i32 AttachToPipe();
 
-    // 0x52CB40 | ?PollSuperQ@mmInput@@QAEHXZ
-    inline int32_t PollSuperQ()
-    {
-        return stub<member_func_t<int32_t, mmInput>>(0x52CB40, this);
-    }
-
-    // 0x52CB90 | ?Flush@mmInput@@QAEXXZ
-    inline void Flush()
-    {
-        return stub<member_func_t<void, mmInput>>(0x52CB90, this);
-    }
-
-    // 0x52CBF0 | ?ClearEventHitFlags@mmInput@@QAEXXZ
-    inline void ClearEventHitFlags()
-    {
-        return stub<member_func_t<void, mmInput>>(0x52CBF0, this);
-    }
-
-    // 0x52CC10 | ?ProcessMouseEvents@mmInput@@AAEXXZ
-    inline void ProcessMouseEvents()
-    {
-        return stub<member_func_t<void, mmInput>>(0x52CC10, this);
-    }
-
-    // 0x52CC70 | ?ProcessKeyboardEvents@mmInput@@AAEXXZ
-    inline void ProcessKeyboardEvents()
-    {
-        return stub<member_func_t<void, mmInput>>(0x52CC70, this);
-    }
-
-    // 0x52CCC0 | ?GetBufferedKeyboardData@mmInput@@AAEXXZ
-    inline void GetBufferedKeyboardData()
-    {
-        return stub<member_func_t<void, mmInput>>(0x52CCC0, this);
-    }
-
-    // 0x52CCE0 | ?GetNextKeyboardEvent@mmInput@@AAEHPATeqEvent@@@Z
-    inline int32_t GetNextKeyboardEvent(union eqEvent* arg1)
-    {
-        return stub<member_func_t<int32_t, mmInput, union eqEvent*>>(0x52CCE0, this, arg1);
-    }
-
-    // 0x52CD30 | ?ProcessEvents@mmInput@@AAEXXZ
-    inline void ProcessEvents()
-    {
-        return stub<member_func_t<void, mmInput>>(0x52CD30, this);
-    }
-
-    // 0x52CD50 | ?ProcessStates@mmInput@@AAE_JXZ
-    inline int64_t ProcessStates()
-    {
-        return stub<member_func_t<int64_t, mmInput>>(0x52CD50, this);
-    }
-
-    // 0x52CE30 | ?ScanState@mmInput@@AAE_JPAVmmIO@@@Z
-    inline int64_t ScanState(class mmIO* arg1)
-    {
-        return stub<member_func_t<int64_t, mmInput, class mmIO*>>(0x52CE30, this, arg1);
-    }
-
-    // 0x52CFE0 | ?EventToButton@mmInput@@AAEHH@Z
-    inline int32_t EventToButton(int32_t arg1)
-    {
-        return stub<member_func_t<int32_t, mmInput, int32_t>>(0x52CFE0, this, arg1);
-    }
-
-    // 0x52D010 | ?ProcessJoyEvents@mmInput@@AAEXXZ
-    inline void ProcessJoyEvents()
-    {
-        return stub<member_func_t<void, mmInput>>(0x52D010, this);
-    }
-
-    // 0x52D520 | ?ScanForEvent@mmInput@@AAE_JPATeqEvent@@@Z
-    inline int64_t ScanForEvent(union eqEvent* arg1)
-    {
-        return stub<member_func_t<int64_t, mmInput, union eqEvent*>>(0x52D520, this, arg1);
-    }
-
-    // 0x52D5E0 | ?PutEventInQueue@mmInput@@AAEX_J@Z
-    inline void PutEventInQueue(int64_t arg1)
-    {
-        return stub<member_func_t<void, mmInput, int64_t>>(0x52D5E0, this, arg1);
-    }
-
-    // 0x52D610 | ?PollContinuous@mmInput@@AAEXPAVmmIO@@@Z
-    inline void PollContinuous(class mmIO* arg1)
-    {
-        return stub<member_func_t<void, mmInput, class mmIO*>>(0x52D610, this, arg1);
-    }
-
-    // 0x52D950 | ?GetThrottle@mmInput@@QAEMXZ
-    inline float GetThrottle()
-    {
-        return stub<member_func_t<float, mmInput>>(0x52D950, this);
-    }
-
-    // 0x52D970 | ?GetThrottleVal@mmInput@@QAEMXZ
-    inline float GetThrottleVal()
-    {
-        return stub<member_func_t<float, mmInput>>(0x52D970, this);
-    }
-
-    // 0x52D9E0 | ?GetBrakes@mmInput@@QAEMXZ
-    inline float GetBrakes()
-    {
-        return stub<member_func_t<float, mmInput>>(0x52D9E0, this);
-    }
-
-    // 0x52DA00 | ?GetBrakesVal@mmInput@@QAEMXZ
-    inline float GetBrakesVal()
-    {
-        return stub<member_func_t<float, mmInput>>(0x52DA00, this);
-    }
-
-    // 0x52DA70 | ?GetHandBrake@mmInput@@QAEMXZ
-    inline float GetHandBrake()
-    {
-        return stub<member_func_t<float, mmInput>>(0x52DA70, this);
-    }
-
-    // 0x52DAF0 | ?FilterDiscreteSteering@mmInput@@AAEMM@Z
-    inline float FilterDiscreteSteering(float arg1)
-    {
-        return stub<member_func_t<float, mmInput, float>>(0x52DAF0, this, arg1);
-    }
-
-    // 0x52DC80 | ?FilterGamepadSteering@mmInput@@QAEMXZ
-    inline float FilterGamepadSteering()
-    {
-        return stub<member_func_t<float, mmInput>>(0x52DC80, this);
-    }
-
-    // 0x52DE90 | ?GetSteering@mmInput@@QAEMP6AMM@Z@Z
-    inline float GetSteering(float(__cdecl* arg1)(float))
-    {
-        return stub<member_func_t<float, mmInput, float(__cdecl*)(float)>>(0x52DE90, this, arg1);
-    }
-
-    // 0x52DF60 | ?GetCamPan@mmInput@@QAEMXZ
-    inline float GetCamPan()
-    {
-        return stub<member_func_t<float, mmInput>>(0x52DF60, this);
-    }
-
-    // 0x52E0A0 | ?DeviceConnected@mmInput@@QAEHXZ
-    inline int32_t DeviceConnected()
-    {
-        return stub<member_func_t<int32_t, mmInput>>(0x52E0A0, this);
-    }
-
-    // 0x52E0C0 | ?JoystickConnected@mmInput@@QAEHXZ
-    inline int32_t JoystickConnected()
-    {
-        return stub<member_func_t<int32_t, mmInput>>(0x52E0C0, this);
-    }
-
-    // 0x52E0D0 | ?GamepadConnected@mmInput@@QAEHXZ
-    inline int32_t GamepadConnected()
-    {
-        return stub<member_func_t<int32_t, mmInput>>(0x52E0D0, this);
-    }
-
-    // 0x52E0E0 | ?WheelConnected@mmInput@@QAEHXZ
-    inline int32_t WheelConnected()
-    {
-        return stub<member_func_t<int32_t, mmInput>>(0x52E0E0, this);
-    }
-
-    // 0x52E0F0 | ?SetDeadZone@mmInput@@QAEXM@Z
-    inline void SetDeadZone(float arg1)
-    {
-        return stub<member_func_t<void, mmInput, float>>(0x52E0F0, this, arg1);
-    }
-
-    // 0x52E120 | ?JoystickHasCoolie@mmInput@@QAEHXZ
-    inline int32_t JoystickHasCoolie()
-    {
-        return stub<member_func_t<int32_t, mmInput>>(0x52E120, this);
-    }
-
-    // 0x52E140 | ?JoystickHasThrottle@mmInput@@QAEHXZ
-    inline int32_t JoystickHasThrottle()
-    {
-        return stub<member_func_t<int32_t, mmInput>>(0x52E140, this);
-    }
-
-    // 0x52E160 | ?WheelHas3Axis@mmInput@@QAEHXZ
-    inline int32_t WheelHas3Axis()
-    {
-        return stub<member_func_t<int32_t, mmInput>>(0x52E160, this);
-    }
-
-    // 0x52E1A0 | ?DoingFF@mmInput@@QAEHXZ
-    inline int32_t DoingFF()
-    {
-        return stub<member_func_t<int32_t, mmInput>>(0x52E1A0, this);
-    }
-
-    // 0x52E1D0 | ?StopAllFF@mmInput@@QAEXXZ
-    inline void StopAllFF()
-    {
-        return stub<member_func_t<void, mmInput>>(0x52E1D0, this);
-    }
-
-    // 0x52E1E0 | ?SetForceFeedbackScale@mmInput@@QAEXM@Z
-    inline void SetForceFeedbackScale(float arg1)
-    {
-        return stub<member_func_t<void, mmInput, float>>(0x52E1E0, this, arg1);
-    }
-
-    // 0x52E230 | ?SetRoadForceScale@mmInput@@QAEXM@Z
-    inline void SetRoadForceScale(float arg1)
-    {
-        return stub<member_func_t<void, mmInput, float>>(0x52E230, this, arg1);
-    }
-
-    // 0x52E280 | ?ToggleFFEnabled@mmInput@@QAEHH@Z
-    inline int32_t ToggleFFEnabled(int32_t arg1)
-    {
-        return stub<member_func_t<int32_t, mmInput, int32_t>>(0x52E280, this, arg1);
-    }
-
-    // 0x52E2B0 | ?FFPlay@mmInput@@QAEHH@Z
-    inline int32_t FFPlay(int32_t arg1)
-    {
-        return stub<member_func_t<int32_t, mmInput, int32_t>>(0x52E2B0, this, arg1);
-    }
-
-    // 0x52E2E0 | ?FFStop@mmInput@@QAEHH@Z
-    inline int32_t FFStop(int32_t arg1)
-    {
-        return stub<member_func_t<int32_t, mmInput, int32_t>>(0x52E2E0, this, arg1);
-    }
-
-    // 0x52E310 | ?FFIsPlaying@mmInput@@QAEHH@Z
-    inline int32_t FFIsPlaying(int32_t arg1)
-    {
-        return stub<member_func_t<int32_t, mmInput, int32_t>>(0x52E310, this, arg1);
-    }
-
-    // 0x52E340 | ?FFSetValues@mmInput@@QAEHHMM@Z
-    inline int32_t FFSetValues(int32_t arg1, float arg2, float arg3)
-    {
-        return stub<member_func_t<int32_t, mmInput, int32_t, float, float>>(0x52E340, this, arg1, arg2, arg3);
-    }
-
-    // 0x52E380 | ?PopEvent@mmInput@@QAEHPAH@Z
-    inline int32_t PopEvent(int32_t* arg1)
-    {
-        return stub<member_func_t<int32_t, mmInput, int32_t*>>(0x52E380, this, arg1);
-    }
-
-    // 0x52E3B0 | ?LoadConfig@mmInput@@QAEHPAVStream@@@Z
-    inline int32_t LoadConfig(class Stream* arg1)
-    {
-        return stub<member_func_t<int32_t, mmInput, class Stream*>>(0x52E3B0, this, arg1);
-    }
+    // 0x52B1E0 | ?AutoSetup@mmInput@@QAEXXZ
+    void AutoSetup();
 
     // 0x52E440 | ?BinaryLoadConfig@mmInput@@QAEHPAVStream@@@Z
-    inline int32_t BinaryLoadConfig(class Stream* arg1)
-    {
-        return stub<member_func_t<int32_t, mmInput, class Stream*>>(0x52E440, this, arg1);
-    }
-
-    // 0x52E500 | ?SaveConfig@mmInput@@QAEHPAVStream@@@Z
-    inline int32_t SaveConfig(class Stream* arg1)
-    {
-        return stub<member_func_t<int32_t, mmInput, class Stream*>>(0x52E500, this, arg1);
-    }
+    i32 BinaryLoadConfig(class Stream* arg1);
 
     // 0x52E580 | ?BinarySaveConfig@mmInput@@QAEHPAVStream@@@Z
-    inline int32_t BinarySaveConfig(class Stream* arg1)
-    {
-        return stub<member_func_t<int32_t, mmInput, class Stream*>>(0x52E580, this, arg1);
-    }
+    i32 BinarySaveConfig(class Stream* arg1);
+
+    // 0x52C5E0 | ?BuildCaptureIO@mmInput@@QAEHHPAVmmIO@@TeqEvent@@@Z
+    i32 BuildCaptureIO(i32 arg1, class mmIO* arg2, union eqEvent arg3);
+
+    // 0x52C5B0 | ?CaptureState@mmInput@@QAEXH@Z
+    void CaptureState(i32 arg1);
+
+    // 0x52CBF0 | ?ClearEventHitFlags@mmInput@@QAEXXZ
+    void ClearEventHitFlags();
+
+    // 0x52E0A0 | ?DeviceConnected@mmInput@@QAEHXZ
+    i32 DeviceConnected();
+
+    // 0x52E1A0 | ?DoingFF@mmInput@@QAEHXZ
+    i32 DoingFF();
+
+    // 0x52E310 | ?FFIsPlaying@mmInput@@QAEHH@Z
+    i32 FFIsPlaying(i32 arg1);
+
+    // 0x52E2B0 | ?FFPlay@mmInput@@QAEHH@Z
+    i32 FFPlay(i32 arg1);
+
+    // 0x52E340 | ?FFSetValues@mmInput@@QAEHHMM@Z
+    i32 FFSetValues(i32 arg1, f32 arg2, f32 arg3);
+
+    // 0x52E2E0 | ?FFStop@mmInput@@QAEHH@Z
+    i32 FFStop(i32 arg1);
+
+    // 0x52DC80 | ?FilterGamepadSteering@mmInput@@QAEMXZ
+    f32 FilterGamepadSteering();
+
+    // 0x52C570 | ?FlagIODevChanged@mmInput@@QAEXXZ
+    void FlagIODevChanged();
+
+    // 0x52CB90 | ?Flush@mmInput@@QAEXXZ
+    void Flush();
+
+    // 0x52C7A0 | ?ForceAssignment@mmInput@@QAEXPAVmmIO@@@Z
+    void ForceAssignment(class mmIO* arg1);
+
+    // 0x52E0D0 | ?GamepadConnected@mmInput@@QAEHXZ
+    i32 GamepadConnected();
+
+    // 0x52D9E0 | ?GetBrakes@mmInput@@QAEMXZ
+    f32 GetBrakes();
+
+    // 0x52DA00 | ?GetBrakesVal@mmInput@@QAEMXZ
+    f32 GetBrakesVal();
+
+    // 0x52DF60 | ?GetCamPan@mmInput@@QAEMXZ
+    f32 GetCamPan();
+
+    // 0x52DA70 | ?GetHandBrake@mmInput@@QAEMXZ
+    f32 GetHandBrake();
+
+    // 0x52DE90 | ?GetSteering@mmInput@@QAEMP6AMM@Z@Z
+    f32 GetSteering(f32 (*arg1)(f32));
+
+    // 0x52D950 | ?GetThrottle@mmInput@@QAEMXZ
+    f32 GetThrottle();
+
+    // 0x52D970 | ?GetThrottleVal@mmInput@@QAEMXZ
+    f32 GetThrottleVal();
+
+    // 0x52B1B0 | ?IOInit@mmInput@@QAEXHPAULocString@@J@Z
+    void IOInit(i32 arg1, struct LocString* arg2, i32 arg3);
+
+    // 0x52C380 | ?Init@mmInput@@QAEXH@Z
+    void Init(i32 arg1);
+
+    // 0x52C830 | ?IsAlreadyAssigned@mmInput@@QAEHPAVmmIO@@HHH@Z
+    i32 IsAlreadyAssigned(class mmIO* arg1, i32 arg2, i32 arg3, i32 arg4);
+
+    // 0x52E0C0 | ?JoystickConnected@mmInput@@QAEHXZ
+    i32 JoystickConnected();
+
+    // 0x52E120 | ?JoystickHasCoolie@mmInput@@QAEHXZ
+    i32 JoystickHasCoolie();
+
+    // 0x52E140 | ?JoystickHasThrottle@mmInput@@QAEHXZ
+    i32 JoystickHasThrottle();
+
+    // 0x52E3B0 | ?LoadConfig@mmInput@@QAEHPAVStream@@@Z
+    i32 LoadConfig(class Stream* arg1);
+
+    // 0x52CA80 | ?PollStates@mmInput@@QAEHXZ
+    i32 PollStates();
+
+    // 0x52CB40 | ?PollSuperQ@mmInput@@QAEHXZ
+    i32 PollSuperQ();
+
+    // 0x52E380 | ?PopEvent@mmInput@@QAEHPAH@Z
+    i32 PopEvent(i32* arg1);
 
     // 0x52E610 | ?PrintIODev@mmInput@@QAEXXZ
-    inline void PrintIODev()
-    {
-        return stub<member_func_t<void, mmInput>>(0x52E610, this);
-    }
-
-    // 0x52E6E0 | ?SaveCodeConfig@mmInput@@QAEHPAVStream@@@Z
-    inline int32_t SaveCodeConfig(class Stream* arg1)
-    {
-        return stub<member_func_t<int32_t, mmInput, class Stream*>>(0x52E6E0, this, arg1);
-    }
-
-    // 0x52AB90 | ??1mmInput@@UAE@XZ
-    inline ~mmInput() override
-    {
-        stub<member_func_t<void, mmInput>>(0x52AB90, this);
-    }
-
-    // 0x52C9B0 | ?Update@mmInput@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmInput>>(0x52C9B0, this);
-    }
+    void PrintIODev();
 
     // 0x52B170 | ?Reset@mmInput@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmInput>>(0x52B170, this);
-    }
+    void Reset() override;
+
+    // 0x52B240 | ?RestoreDefaultConfig@mmInput@@QAEXH@Z
+    void RestoreDefaultConfig(i32 arg1);
+
+    // 0x52C590 | ?ReturnStateCaptured@mmInput@@QAEHXZ
+    i32 ReturnStateCaptured();
+
+    // 0x52C7C0 | ?SanityCheck@mmInput@@QAEHPAVmmIO@@HH@Z
+    i32 SanityCheck(class mmIO* arg1, i32 arg2, i32 arg3);
+
+    // 0x52B200 | ?SaveCB@mmInput@@QAEXXZ
+    void SaveCB();
+
+    // 0x52E6E0 | ?SaveCodeConfig@mmInput@@QAEHPAVStream@@@Z
+    i32 SaveCodeConfig(class Stream* arg1);
+
+    // 0x52E500 | ?SaveConfig@mmInput@@QAEHPAVStream@@@Z
+    i32 SaveConfig(class Stream* arg1);
+
+    // 0x52E0F0 | ?SetDeadZone@mmInput@@QAEXM@Z
+    void SetDeadZone(f32 arg1);
+
+    // 0x52B290 | ?SetDefaultConfig@mmInput@@QAEXH@Z
+    void SetDefaultConfig(i32 arg1);
+
+    // 0x52E1E0 | ?SetForceFeedbackScale@mmInput@@QAEXM@Z
+    void SetForceFeedbackScale(f32 arg1);
+
+    // 0x52E230 | ?SetRoadForceScale@mmInput@@QAEXM@Z
+    void SetRoadForceScale(f32 arg1);
+
+    // 0x52E1D0 | ?StopAllFF@mmInput@@QAEXXZ
+    void StopAllFF();
+
+    // 0x52E280 | ?ToggleFFEnabled@mmInput@@QAEHH@Z
+    i32 ToggleFFEnabled(i32 arg1);
+
+    // 0x52C9B0 | ?Update@mmInput@@UAEXXZ
+    void Update() override;
+
+    // 0x52E0E0 | ?WheelConnected@mmInput@@QAEHXZ
+    i32 WheelConnected();
+
+    // 0x52E160 | ?WheelHas3Axis@mmInput@@QAEHXZ
+    i32 WheelHas3Axis();
+
+private:
+    // 0x52CFE0 | ?EventToButton@mmInput@@AAEHH@Z
+    i32 EventToButton(i32 arg1);
+
+    // 0x52DAF0 | ?FilterDiscreteSteering@mmInput@@AAEMM@Z
+    f32 FilterDiscreteSteering(f32 arg1);
+
+    // 0x52CCC0 | ?GetBufferedKeyboardData@mmInput@@AAEXXZ
+    void GetBufferedKeyboardData();
+
+    // 0x52CCE0 | ?GetNextKeyboardEvent@mmInput@@AAEHPATeqEvent@@@Z
+    i32 GetNextKeyboardEvent(union eqEvent* arg1);
+
+    // 0x52D610 | ?PollContinuous@mmInput@@AAEXPAVmmIO@@@Z
+    void PollContinuous(class mmIO* arg1);
+
+    // 0x52CD30 | ?ProcessEvents@mmInput@@AAEXXZ
+    void ProcessEvents();
+
+    // 0x52D010 | ?ProcessJoyEvents@mmInput@@AAEXXZ
+    void ProcessJoyEvents();
+
+    // 0x52CC70 | ?ProcessKeyboardEvents@mmInput@@AAEXXZ
+    void ProcessKeyboardEvents();
+
+    // 0x52CC10 | ?ProcessMouseEvents@mmInput@@AAEXXZ
+    void ProcessMouseEvents();
+
+    // 0x52CD50 | ?ProcessStates@mmInput@@AAE_JXZ
+    i64 ProcessStates();
+
+    // 0x52D5E0 | ?PutEventInQueue@mmInput@@AAEX_J@Z
+    void PutEventInQueue(i64 arg1);
+
+    // 0x52D520 | ?ScanForEvent@mmInput@@AAE_JPATeqEvent@@@Z
+    i64 ScanForEvent(union eqEvent* arg1);
+
+    // 0x52CE30 | ?ScanState@mmInput@@AAE_JPAVmmIO@@@Z
+    i64 ScanState(class mmIO* arg1);
 };
+
+check_size(mmInput, 0x0);

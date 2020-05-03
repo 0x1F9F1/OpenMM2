@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,9 @@
 */
 
 #pragma once
+
+#include "gamesingle.h"
+#include "mmgamemusicdata.h"
 
 /*
     mmgame:singleroam
@@ -44,98 +47,71 @@
     0x5B0840 | const mmSingleRoamMusicData::`vftable' | ??_7mmSingleRoamMusicData@@6B@
 */
 
-struct mmSingleRoam : mmGameSingle
+class mmSingleRoam : public mmGameSingle
 {
+    // const mmSingleRoam::`vftable' @ 0x5B07CC
+
 public:
-    // mmSingleRoam::`vftable' @ 0x5B07CC
-
     // 0x41F990 | ??0mmSingleRoam@@QAE@XZ
-    inline mmSingleRoam()
-    {
-        stub<member_func_t<void, mmSingleRoam>>(0x41F990, this);
-    }
+    mmSingleRoam();
 
+    // 0x41FEE0 | ??_GmmSingleRoam@@UAEPAXI@Z
     // 0x41F9C0 | ??1mmSingleRoam@@UAE@XZ
-    inline ~mmSingleRoam() override
-    {
-        stub<member_func_t<void, mmSingleRoam>>(0x41F9C0, this);
-    }
-
-    // 0x41FCE0 | ?Update@mmSingleRoam@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmSingleRoam>>(0x41FCE0, this);
-    }
-
-    // 0x41FC90 | ?Reset@mmSingleRoam@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmSingleRoam>>(0x41FC90, this);
-    }
-
-    // 0x41FA30 | ?Init@mmSingleRoam@@UAEHXZ
-    inline int32_t Init() override
-    {
-        return stub<member_func_t<int32_t, mmSingleRoam>>(0x41FA30, this);
-    }
-
-    // 0x41FAA0 | ?InitMyPlayer@mmSingleRoam@@UAEXXZ
-    inline void InitMyPlayer() override
-    {
-        return stub<member_func_t<void, mmSingleRoam>>(0x41FAA0, this);
-    }
-
-    // 0x41FC40 | ?InitOtherPlayers@mmSingleRoam@@UAEXXZ
-    inline void InitOtherPlayers() override
-    {
-        return stub<member_func_t<void, mmSingleRoam>>(0x41FC40, this);
-    }
-
-    // 0x41FB40 | ?InitGameObjects@mmSingleRoam@@UAEXXZ
-    inline void InitGameObjects() override
-    {
-        return stub<member_func_t<void, mmSingleRoam>>(0x41FB40, this);
-    }
-
-    // 0x41FB10 | ?InitHUD@mmSingleRoam@@UAEXXZ
-    inline void InitHUD() override
-    {
-        return stub<member_func_t<void, mmSingleRoam>>(0x41FB10, this);
-    }
-
-    // 0x41FCF0 | ?UpdateGameInput@mmSingleRoam@@UAEXH@Z
-    inline void UpdateGameInput(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmSingleRoam, int32_t>>(0x41FCF0, this, arg1);
-    }
-
-    // 0x41FF20 | ?UpdateDebugKeyInput@mmSingleRoam@@UAEXH@Z
-    inline void UpdateDebugKeyInput(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmSingleRoam, int32_t>>(0x41FF20, this, arg1);
-    }
-
-    // 0x41FD00 | ?UpdateGame@mmSingleRoam@@UAEXXZ
-    inline void UpdateGame() override
-    {
-        return stub<member_func_t<void, mmSingleRoam>>(0x41FD00, this);
-    }
-
-    // 0x41FDA0 | ?NextRace@mmSingleRoam@@UAEXXZ
-    inline void NextRace() override
-    {
-        return stub<member_func_t<void, mmSingleRoam>>(0x41FDA0, this);
-    }
+    ~mmSingleRoam() override;
 
     // 0x41FCD0 | ?HitWaterHandler@mmSingleRoam@@UAEXXZ
-    inline void HitWaterHandler() override
-    {
-        return stub<member_func_t<void, mmSingleRoam>>(0x41FCD0, this);
-    }
+    void HitWaterHandler() override;
+
+    // 0x41FA30 | ?Init@mmSingleRoam@@UAEHXZ
+    i32 Init() override;
+
+    // 0x41FB40 | ?InitGameObjects@mmSingleRoam@@UAEXXZ
+    void InitGameObjects() override;
+
+    // 0x41FB10 | ?InitHUD@mmSingleRoam@@UAEXXZ
+    void InitHUD() override;
+
+    // 0x41FAA0 | ?InitMyPlayer@mmSingleRoam@@UAEXXZ
+    void InitMyPlayer() override;
+
+    // 0x41FC40 | ?InitOtherPlayers@mmSingleRoam@@UAEXXZ
+    void InitOtherPlayers() override;
+
+    // 0x41FDA0 | ?NextRace@mmSingleRoam@@UAEXXZ
+    void NextRace() override;
+
+    // 0x41FC90 | ?Reset@mmSingleRoam@@UAEXXZ
+    void Reset() override;
 
     // 0x41FD90 | ?SwitchState@mmSingleRoam@@UAEXH@Z
-    inline void SwitchState(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmSingleRoam, int32_t>>(0x41FD90, this, arg1);
-    }
+    void SwitchState(i32 arg1) override;
+
+    // 0x41FCE0 | ?Update@mmSingleRoam@@UAEXXZ
+    void Update() override;
+
+    // 0x41FF20 | ?UpdateDebugKeyInput@mmSingleRoam@@UAEXH@Z
+    void UpdateDebugKeyInput(i32 arg1) override;
+
+    // 0x41FD00 | ?UpdateGame@mmSingleRoam@@UAEXXZ
+    void UpdateGame() override;
+
+    // 0x41FCF0 | ?UpdateGameInput@mmSingleRoam@@UAEXH@Z
+    void UpdateGameInput(i32 arg1) override;
 };
+
+check_size(mmSingleRoam, 0x76F0);
+
+struct mmSingleRoamMusicData : mmGameMusicData
+{
+    // const mmSingleRoamMusicData::`vftable' @ 0x5B0840
+
+public:
+    // 0x438980 | ?LoadMusic@mmSingleRoamMusicData@@UAE_NPAD@Z
+    bool LoadMusic(char* arg1) override;
+
+private:
+    // 0x438B00 | ?LoadMusicSegments@mmSingleRoamMusicData@@AAE_NPAVStream@@F@Z
+    bool LoadMusicSegments(class Stream* arg1, i16 arg2);
+};
+
+check_size(mmSingleRoamMusicData, 0x0);

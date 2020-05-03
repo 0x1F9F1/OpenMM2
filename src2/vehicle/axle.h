@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "node/node.h"
+
 /*
     vehicle:axle
 
@@ -33,53 +35,32 @@
     0x5B309C | const vehAxle::`vftable' | ??_7vehAxle@@6B@
 */
 
-struct vehAxle : asNode
+class vehAxle : public asNode
 {
-public:
-    // vehAxle::`vftable' @ 0x5B309C
+    // const vehAxle::`vftable' @ 0x5B309C
 
+public:
     // 0x4D9990 | ??0vehAxle@@QAE@XZ
-    inline vehAxle()
-    {
-        stub<member_func_t<void, vehAxle>>(0x4D9990, this);
-    }
+    vehAxle();
+
+    // 0x4D9CF0 | ??_GvehAxle@@UAEPAXI@Z
+    // 0x4CCEE0 | ??1vehAxle@@UAE@XZ
+    ~vehAxle() override;
 
     // 0x4D9A20 | ?ComputeConstants@vehAxle@@QAEXXZ
-    inline void ComputeConstants()
-    {
-        return stub<member_func_t<void, vehAxle>>(0x4D9A20, this);
-    }
-
-    // 0x4D9A50 | ?Init@vehAxle@@QAEXPAVvehCarSim@@PBD1PAVvehWheel@@2@Z
-    inline void Init(
-        class vehCarSim* arg1, char const* arg2, char const* arg3, class vehWheel* arg4, class vehWheel* arg5)
-    {
-        return stub<
-            member_func_t<void, vehAxle, class vehCarSim*, char const*, char const*, class vehWheel*, class vehWheel*>>(
-            0x4D9A50, this, arg1, arg2, arg3, arg4, arg5);
-    }
-
-    // 0x4CCEE0 | ??1vehAxle@@UAE@XZ
-    inline ~vehAxle() override
-    {
-        stub<member_func_t<void, vehAxle>>(0x4CCEE0, this);
-    }
-
-    // 0x4D9B20 | ?Update@vehAxle@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, vehAxle>>(0x4D9B20, this);
-    }
+    void ComputeConstants();
 
     // 0x4D9CA0 | ?FileIO@vehAxle@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
-    {
-        return stub<member_func_t<void, vehAxle, class datParser&>>(0x4D9CA0, this, arg1);
-    }
+    void FileIO(class datParser& arg1) override;
 
     // 0x4D9D20 | ?GetClassName@vehAxle@@UAEPADXZ
-    inline char* GetClassName() override
-    {
-        return stub<member_func_t<char*, vehAxle>>(0x4D9D20, this);
-    }
+    char* GetClassName() override;
+
+    // 0x4D9A50 | ?Init@vehAxle@@QAEXPAVvehCarSim@@PBD1PAVvehWheel@@2@Z
+    void Init(class vehCarSim* arg1, char const* arg2, char const* arg3, class vehWheel* arg4, class vehWheel* arg5);
+
+    // 0x4D9B20 | ?Update@vehAxle@@UAEXXZ
+    void Update() override;
 };
+
+check_size(vehAxle, 0x0);

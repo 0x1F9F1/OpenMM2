@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     mmgame:game
@@ -73,292 +75,150 @@
     0x5C3C00 | unsigned int * IconColor | ?IconColor@@3PAIA
 */
 
-// 0x415240 | ?init_gizmo_mgr@@YAPAVgizSailboatMgr@@PAVmmGame@@PBD1@Z
-inline class gizSailboatMgr* init_gizmo_mgr(class mmGame* arg1, char const* arg2, char const* arg3)
+class mmGame : public asNode
 {
-    return stub<cdecl_t<class gizSailboatMgr*, class mmGame*, char const*, char const*>>(0x415240, arg1, arg2, arg3);
-}
+    // const mmGame::`vftable' @ 0x5B0500
 
-// 0x415780 | ?init_gizmo_mgr@@YAPAVgizFerryMgr@@PAVmmGame@@PBD1@Z
-inline class gizFerryMgr* init_gizmo_mgr(class mmGame* arg1, char const* arg2, char const* arg3)
-{
-    return stub<cdecl_t<class gizFerryMgr*, class mmGame*, char const*, char const*>>(0x415780, arg1, arg2, arg3);
-}
+public:
+    // 0x412550 | ??0mmGame@@QAE@XZ
+    mmGame();
 
-// 0x415940 | ?init_gizmo_mgr@@YAPAVgizParkedCarMgr@@PAVmmGame@@PBD1@Z
-inline class gizParkedCarMgr* init_gizmo_mgr(class mmGame* arg1, char const* arg2, char const* arg3)
-{
-    return stub<cdecl_t<class gizParkedCarMgr*, class mmGame*, char const*, char const*>>(0x415940, arg1, arg2, arg3);
-}
+    // 0x4151F0 | ??_GmmGame@@UAEPAXI@Z
+    // 0x413940 | ??1mmGame@@UAE@XZ
+    ~mmGame() override;
 
-// 0x415400 | ?init_gizmo_mgr@@YAPAVgizBridgeMgr@@PAVmmGame@@PBD1@Z
-inline class gizBridgeMgr* init_gizmo_mgr(class mmGame* arg1, char const* arg2, char const* arg3)
-{
-    return stub<cdecl_t<class gizBridgeMgr*, class mmGame*, char const*, char const*>>(0x415400, arg1, arg2, arg3);
-}
+    // 0x413520 | ?CollideAIOpponents@mmGame@@QAEXXZ
+    void CollideAIOpponents();
 
-// 0x4155C0 | ?init_gizmo_mgr@@YAPAVgizTrainMgr@@PAVmmGame@@PBD1@Z
-inline class gizTrainMgr* init_gizmo_mgr(class mmGame* arg1, char const* arg2, char const* arg3)
-{
-    return stub<cdecl_t<class gizTrainMgr*, class mmGame*, char const*, char const*>>(0x4155C0, arg1, arg2, arg3);
-}
+    // 0x414F70 | ?CycleCam@mmGame@@QAEXXZ
+    void CycleCam();
 
-// 0x5C3C00 | ?IconColor@@3PAIA
-inline extern_var(0x5C3C00, uint32_t*, IconColor);
+    // 0x414EC0 | ?FarClipCB@mmGame@@QAEXXZ
+    void FarClipCB();
+
+    // 0x414FA0 | ?FindGroundPos@mmGame@@QAEXAAVVector3@@0@Z
+    void FindGroundPos(class Vector3& arg1, class Vector3& arg2);
+
+    // 0x413D30 | ?IsPopupEnabled@mmGame@@QAEHXZ
+    i32 IsPopupEnabled();
+
+    // 0x414F80 | ?NetHost@mmGame@@QAEHXZ
+    i32 NetHost();
+
+    // 0x414BD0 | ?PlayerSetState@mmGame@@QAEXXZ
+    void PlayerSetState();
+
+    // 0x413D40 | ?Reset@mmGame@@UAEXXZ
+    void Reset() override;
+
+    // 0x414BB0 | ?SetIconsState@mmGame@@QAEXXZ
+    void SetIconsState();
+
+    // 0x414EF0 | ?SetLevelGraphics@mmGame@@QAEXXZ
+    void SetLevelGraphics();
+
+    // 0x413DF0 | ?StartMusic@mmGame@@QAEXXZ
+    void StartMusic();
+
+    // 0x413E90 | ?Update@mmGame@@UAEXXZ
+    void Update() override;
+
+    // 0x4141F0 | ?UpdateDMusic@mmGame@@QAEXXZ
+    void UpdateDMusic();
+
+    // 0x4142A0 | ?UpdateDebugInput@mmGame@@QAE_NXZ
+    bool UpdateDebugInput();
+
+    // 0x414660 | ?UpdateGameInput@mmGame@@QAEXXZ
+    void UpdateGameInput();
+
+    // 0x4145B0 | ?UpdateHorn@mmGame@@QAEX_N@Z
+    void UpdateHorn(bool arg1);
+
+    // 0x4144A0 | ?UpdatePaused@mmGame@@UAEXXZ
+    void UpdatePaused() override;
+
+    // 0x414A00 | ?UpdateSteeringBrakes@mmGame@@QAEXXZ
+    void UpdateSteeringBrakes();
+
+    // 0x412710 | ?Init@mmGame@@UAEHXZ
+    virtual i32 Init();
+
+    // 0x413650 | ?InitGameStrings@mmGame@@UAEXXZ
+    virtual void InitGameStrings();
+
+    virtual void InitMyPlayer() = 0;
+
+    // 0x4133F0 | ?InitOtherPlayers@mmGame@@UAEXXZ
+    virtual void InitOtherPlayers();
+
+    virtual void InitGameObjects() = 0;
+
+    virtual void InitHUD() = 0;
+
+    virtual void UpdateGameInput(i32 arg1) = 0;
+
+    virtual void UpdateDebugKeyInput(i32 arg1) = 0;
+
+    virtual void UpdateGame() = 0;
+
+    virtual void NextRace() = 0;
+
+    // 0x414290 | ?HitWaterHandler@mmGame@@UAEXXZ
+    virtual void HitWaterHandler();
+
+    // 0x414280 | ?DropThruCityHandler@mmGame@@UAEXXZ
+    virtual void DropThruCityHandler();
+
+    // 0x414E50 | ?SendChatMessage@mmGame@@UAEXPAD@Z
+    virtual void SendChatMessage(char* arg1);
+
+    virtual void SwitchState(i32 arg1) = 0;
+
+    // 0x414D30 | ?BeDone@mmGame@@UAEXH@Z
+    virtual void BeDone(i32 arg1);
+
+    virtual class mmWaypoints* GetWaypoints() = 0;
+
+protected:
+    // 0x414E00 | ?CalculateRaceScore@mmGame@@IAEHHH@Z
+    i32 CalculateRaceScore(i32 arg1, i32 arg2);
+
+    // 0x413210 | ?InitGizmos@mmGame@@IAEXXZ
+    void InitGizmos();
+
+    // 0x413370 | ?InitWeather@mmGame@@IAEXXZ
+    void InitWeather();
+
+    // 0x413B70 | ?RespawnXYZ@mmGame@@IAEXAAVVector3@@AAM_N22@Z
+    void RespawnXYZ(class Vector3& arg1, f32& arg2, bool arg3, bool arg4, bool arg5);
+};
+
+check_size(mmGame, 0x0);
 
 class phIntersection
 {
 public:
     // 0x415230 | ??0phIntersection@@QAE@XZ
-    inline phIntersection()
-    {
-        stub<member_func_t<void, phIntersection>>(0x415230, this);
-    }
+    phIntersection();
 };
 
-class mmGame : asNode
-{
-public:
-    // mmGame::`vftable' @ 0x5B0500
+check_size(phIntersection, 0x0);
 
-    // 0x412550 | ??0mmGame@@QAE@XZ
-    inline mmGame()
-    {
-        stub<member_func_t<void, mmGame>>(0x412550, this);
-    }
+// 0x415400 | ?init_gizmo_mgr@@YAPAVgizBridgeMgr@@PAVmmGame@@PBD1@Z
+class gizBridgeMgr* init_gizmo_mgr(class mmGame* arg1, char const* arg2, char const* arg3);
 
-    // 0x413210 | ?InitGizmos@mmGame@@IAEXXZ
-    inline void InitGizmos()
-    {
-        return stub<member_func_t<void, mmGame>>(0x413210, this);
-    }
+// 0x415780 | ?init_gizmo_mgr@@YAPAVgizFerryMgr@@PAVmmGame@@PBD1@Z
+class gizFerryMgr* init_gizmo_mgr(class mmGame* arg1, char const* arg2, char const* arg3);
 
-    // 0x413370 | ?InitWeather@mmGame@@IAEXXZ
-    inline void InitWeather()
-    {
-        return stub<member_func_t<void, mmGame>>(0x413370, this);
-    }
+// 0x415940 | ?init_gizmo_mgr@@YAPAVgizParkedCarMgr@@PAVmmGame@@PBD1@Z
+class gizParkedCarMgr* init_gizmo_mgr(class mmGame* arg1, char const* arg2, char const* arg3);
 
-    // 0x413520 | ?CollideAIOpponents@mmGame@@QAEXXZ
-    inline void CollideAIOpponents()
-    {
-        return stub<member_func_t<void, mmGame>>(0x413520, this);
-    }
+// 0x415240 | ?init_gizmo_mgr@@YAPAVgizSailboatMgr@@PAVmmGame@@PBD1@Z
+class gizSailboatMgr* init_gizmo_mgr(class mmGame* arg1, char const* arg2, char const* arg3);
 
-    // 0x413B70 | ?RespawnXYZ@mmGame@@IAEXAAVVector3@@AAM_N22@Z
-    inline void RespawnXYZ(class Vector3& arg1, float& arg2, bool arg3, bool arg4, bool arg5)
-    {
-        return stub<member_func_t<void, mmGame, class Vector3&, float&, bool, bool, bool>>(
-            0x413B70, this, arg1, arg2, arg3, arg4, arg5);
-    }
+// 0x4155C0 | ?init_gizmo_mgr@@YAPAVgizTrainMgr@@PAVmmGame@@PBD1@Z
+class gizTrainMgr* init_gizmo_mgr(class mmGame* arg1, char const* arg2, char const* arg3);
 
-    // 0x413D30 | ?IsPopupEnabled@mmGame@@QAEHXZ
-    inline int32_t IsPopupEnabled()
-    {
-        return stub<member_func_t<int32_t, mmGame>>(0x413D30, this);
-    }
-
-    // 0x413DF0 | ?StartMusic@mmGame@@QAEXXZ
-    inline void StartMusic()
-    {
-        return stub<member_func_t<void, mmGame>>(0x413DF0, this);
-    }
-
-    // 0x4141F0 | ?UpdateDMusic@mmGame@@QAEXXZ
-    inline void UpdateDMusic()
-    {
-        return stub<member_func_t<void, mmGame>>(0x4141F0, this);
-    }
-
-    // 0x4142A0 | ?UpdateDebugInput@mmGame@@QAE_NXZ
-    inline bool UpdateDebugInput()
-    {
-        return stub<member_func_t<bool, mmGame>>(0x4142A0, this);
-    }
-
-    // 0x4145B0 | ?UpdateHorn@mmGame@@QAEX_N@Z
-    inline void UpdateHorn(bool arg1)
-    {
-        return stub<member_func_t<void, mmGame, bool>>(0x4145B0, this, arg1);
-    }
-
-    // 0x414660 | ?UpdateGameInput@mmGame@@QAEXXZ
-    inline void UpdateGameInput()
-    {
-        return stub<member_func_t<void, mmGame>>(0x414660, this);
-    }
-
-    // 0x414A00 | ?UpdateSteeringBrakes@mmGame@@QAEXXZ
-    inline void UpdateSteeringBrakes()
-    {
-        return stub<member_func_t<void, mmGame>>(0x414A00, this);
-    }
-
-    // 0x414BB0 | ?SetIconsState@mmGame@@QAEXXZ
-    inline void SetIconsState()
-    {
-        return stub<member_func_t<void, mmGame>>(0x414BB0, this);
-    }
-
-    // 0x414BD0 | ?PlayerSetState@mmGame@@QAEXXZ
-    inline void PlayerSetState()
-    {
-        return stub<member_func_t<void, mmGame>>(0x414BD0, this);
-    }
-
-    // 0x414E00 | ?CalculateRaceScore@mmGame@@IAEHHH@Z
-    inline int32_t CalculateRaceScore(int32_t arg1, int32_t arg2)
-    {
-        return stub<member_func_t<int32_t, mmGame, int32_t, int32_t>>(0x414E00, this, arg1, arg2);
-    }
-
-    // 0x414EC0 | ?FarClipCB@mmGame@@QAEXXZ
-    inline void FarClipCB()
-    {
-        return stub<member_func_t<void, mmGame>>(0x414EC0, this);
-    }
-
-    // 0x414EF0 | ?SetLevelGraphics@mmGame@@QAEXXZ
-    inline void SetLevelGraphics()
-    {
-        return stub<member_func_t<void, mmGame>>(0x414EF0, this);
-    }
-
-    // 0x414F70 | ?CycleCam@mmGame@@QAEXXZ
-    inline void CycleCam()
-    {
-        return stub<member_func_t<void, mmGame>>(0x414F70, this);
-    }
-
-    // 0x414F80 | ?NetHost@mmGame@@QAEHXZ
-    inline int32_t NetHost()
-    {
-        return stub<member_func_t<int32_t, mmGame>>(0x414F80, this);
-    }
-
-    // 0x414FA0 | ?FindGroundPos@mmGame@@QAEXAAVVector3@@0@Z
-    inline void FindGroundPos(class Vector3& arg1, class Vector3& arg2)
-    {
-        return stub<member_func_t<void, mmGame, class Vector3&, class Vector3&>>(0x414FA0, this, arg1, arg2);
-    }
-
-    // 0x413940 | ??1mmGame@@UAE@XZ
-    inline ~mmGame() override
-    {
-        stub<member_func_t<void, mmGame>>(0x413940, this);
-    }
-
-    // 0x413E90 | ?Update@mmGame@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmGame>>(0x413E90, this);
-    }
-
-    // 0x413D40 | ?Reset@mmGame@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmGame>>(0x413D40, this);
-    }
-
-    // 0x4144A0 | ?UpdatePaused@mmGame@@UAEXXZ
-    inline void UpdatePaused() override
-    {
-        return stub<member_func_t<void, mmGame>>(0x4144A0, this);
-    }
-
-    // 0x412710 | ?Init@mmGame@@UAEHXZ
-    virtual inline int32_t Init()
-    {
-        return stub<member_func_t<int32_t, mmGame>>(0x412710, this);
-    }
-
-    // 0x413650 | ?InitGameStrings@mmGame@@UAEXXZ
-    virtual inline void InitGameStrings()
-    {
-        return stub<member_func_t<void, mmGame>>(0x413650, this);
-    }
-
-    // 0x582519 | __purecall
-    virtual inline void InitMyPlayer()
-    {
-        return stub<member_func_t<void, mmGame>>(0x582519, this);
-    }
-
-    // 0x4133F0 | ?InitOtherPlayers@mmGame@@UAEXXZ
-    virtual inline void InitOtherPlayers()
-    {
-        return stub<member_func_t<void, mmGame>>(0x4133F0, this);
-    }
-
-    // 0x582519 | __purecall
-    virtual inline void InitGameObjects()
-    {
-        return stub<member_func_t<void, mmGame>>(0x582519, this);
-    }
-
-    // 0x582519 | __purecall
-    virtual inline void InitHUD()
-    {
-        return stub<member_func_t<void, mmGame>>(0x582519, this);
-    }
-
-    // 0x582519 | __purecall
-    virtual inline void UpdateGameInput(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmGame, int32_t>>(0x582519, this, arg1);
-    }
-
-    // 0x582519 | __purecall
-    virtual inline void UpdateDebugKeyInput(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmGame, int32_t>>(0x582519, this, arg1);
-    }
-
-    // 0x582519 | __purecall
-    virtual inline void UpdateGame()
-    {
-        return stub<member_func_t<void, mmGame>>(0x582519, this);
-    }
-
-    // 0x582519 | __purecall
-    virtual inline void NextRace()
-    {
-        return stub<member_func_t<void, mmGame>>(0x582519, this);
-    }
-
-    // 0x414290 | ?HitWaterHandler@mmGame@@UAEXXZ
-    virtual inline void HitWaterHandler()
-    {
-        return stub<member_func_t<void, mmGame>>(0x414290, this);
-    }
-
-    // 0x414280 | ?DropThruCityHandler@mmGame@@UAEXXZ
-    virtual inline void DropThruCityHandler()
-    {
-        return stub<member_func_t<void, mmGame>>(0x414280, this);
-    }
-
-    // 0x414E50 | ?SendChatMessage@mmGame@@UAEXPAD@Z
-    virtual inline void SendChatMessage(char* arg1)
-    {
-        return stub<member_func_t<void, mmGame, char*>>(0x414E50, this, arg1);
-    }
-
-    // 0x582519 | __purecall
-    virtual inline void SwitchState(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmGame, int32_t>>(0x582519, this, arg1);
-    }
-
-    // 0x414D30 | ?BeDone@mmGame@@UAEXH@Z
-    virtual inline void BeDone(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmGame, int32_t>>(0x414D30, this, arg1);
-    }
-
-    // 0x582519 | __purecall
-    virtual inline class mmWaypoints* GetWaypoints()
-    {
-        return stub<member_func_t<class mmWaypoints*, mmGame>>(0x582519, this);
-    }
-};
+// 0x5C3C00 | ?IconColor@@3PAIA
+inline extern_var(0x5C3C00, u32*, IconColor);

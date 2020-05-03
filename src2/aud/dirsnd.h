@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -48,130 +48,72 @@
 
 class DirSnd
 {
-public:
-    // DirSnd::`vftable' @ 0x5B8A1C
+    // const DirSnd::`vftable' @ 0x5B8A1C
 
+public:
     // 0x5A4ED0 | ??0DirSnd@@QAE@XZ
-    inline DirSnd()
-    {
-        stub<member_func_t<void, DirSnd>>(0x5A4ED0, this);
-    }
+    DirSnd();
 
     // 0x5A4F30 | ??1DirSnd@@QAE@XZ
-    inline ~DirSnd()
-    {
-        stub<member_func_t<void, DirSnd>>(0x5A4F30, this);
-    }
-
-    // 0x5A4FD0 | ?DeInit@DirSnd@@QAEXXZ
-    inline void DeInit()
-    {
-        return stub<member_func_t<void, DirSnd>>(0x5A4FD0, this);
-    }
-
-    // 0x5A5080 | ?Init@DirSnd@@SAPAV1@KE_NPAD@Z
-    static inline class DirSnd* Init(uint32_t arg1, uint8_t arg2, bool arg3, char* arg4)
-    {
-        return stub<cdecl_t<class DirSnd*, uint32_t, uint8_t, bool, char*>>(0x5A5080, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x5A5160 | ?Init3DListener@DirSnd@@QAEHMMMMM@Z
-    inline int32_t Init3DListener(float arg1, float arg2, float arg3, float arg4, float arg5)
-    {
-        return stub<member_func_t<int32_t, DirSnd, float, float, float, float, float>>(
-            0x5A5160, this, arg1, arg2, arg3, arg4, arg5);
-    }
-
-    // 0x5A51C0 | ?IsDSDeviceInList@DirSnd@@QAEHPAU_GUID@@@Z
-    inline int32_t IsDSDeviceInList(struct _GUID* arg1)
-    {
-        return stub<member_func_t<int32_t, DirSnd, struct _GUID*>>(0x5A51C0, this, arg1);
-    }
-
-    // 0x5A5390 | ?SetDeviceRating@DirSnd@@QAEXPAUtag_dsdevdesc@@@Z
-    inline void SetDeviceRating(struct tag_dsdevdesc* arg1)
-    {
-        return stub<member_func_t<void, DirSnd, struct tag_dsdevdesc*>>(0x5A5390, this, arg1);
-    }
-
-    // 0x5A5510 | ?EnumDSDevices@DirSnd@@QAEHXZ
-    inline int32_t EnumDSDevices()
-    {
-        return stub<member_func_t<int32_t, DirSnd>>(0x5A5510, this);
-    }
-
-    // 0x5A5630 | ?CreatePrimaryInterfaceAndBuffer@DirSnd@@IAEHPAU_DSBUFFERDESC@@@Z
-    inline int32_t CreatePrimaryInterfaceAndBuffer(struct _DSBUFFERDESC* arg1)
-    {
-        return stub<member_func_t<int32_t, DirSnd, struct _DSBUFFERDESC*>>(0x5A5630, this, arg1);
-    }
+    ~DirSnd();
 
     // 0x5A5770 | ?ClearDSDeviceList@DirSnd@@QAEXXZ
-    inline void ClearDSDeviceList()
-    {
-        return stub<member_func_t<void, DirSnd>>(0x5A5770, this);
-    }
+    void ClearDSDeviceList();
 
-    // 0x5A5860 | ?SetPrimaryBufferFormat@DirSnd@@QAEXKE@Z
-    inline void SetPrimaryBufferFormat(uint32_t arg1, uint8_t arg2)
-    {
-        return stub<member_func_t<void, DirSnd, uint32_t, uint8_t>>(0x5A5860, this, arg1, arg2);
-    }
+    // 0x5A4FD0 | ?DeInit@DirSnd@@QAEXXZ
+    void DeInit();
 
-    // 0x5A5950 | ?ScanAvailableDSFormats@DirSnd@@QAEXXZ
-    inline void ScanAvailableDSFormats()
-    {
-        return stub<member_func_t<void, DirSnd>>(0x5A5950, this);
-    }
-
-    // 0x5A5A30 | ?TranslateDSError@DirSnd@@QAEPADJ@Z
-    inline char* TranslateDSError(int32_t arg1)
-    {
-        return stub<member_func_t<char*, DirSnd, int32_t>>(0x5A5A30, this, arg1);
-    }
-
-    // 0x5A5BB0 | ?SetBitDepth@DirSnd@@QAEXH@Z
-    inline void SetBitDepth(int32_t arg1)
-    {
-        return stub<member_func_t<void, DirSnd, int32_t>>(0x5A5BB0, this, arg1);
-    }
+    // 0x5A5510 | ?EnumDSDevices@DirSnd@@QAEHXZ
+    i32 EnumDSDevices();
 
     // 0x5A5BD0 | ?GetDeviceNames@DirSnd@@QAEPAPADXZ
-    inline char** GetDeviceNames()
-    {
-        return stub<member_func_t<char**, DirSnd>>(0x5A5BD0, this);
-    }
+    char** GetDeviceNames();
 
     // 0x5A5C00 | ?GetNum3DHallBufs@DirSnd@@QAEIXZ
-    inline uint32_t GetNum3DHallBufs()
-    {
-        return stub<member_func_t<uint32_t, DirSnd>>(0x5A5C00, this);
-    }
+    u32 GetNum3DHallBufs();
+
+    // 0x5A5160 | ?Init3DListener@DirSnd@@QAEHMMMMM@Z
+    i32 Init3DListener(f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5);
+
+    // 0x5A51C0 | ?IsDSDeviceInList@DirSnd@@QAEHPAU_GUID@@@Z
+    i32 IsDSDeviceInList(struct _GUID* arg1);
+
+    // 0x5A5950 | ?ScanAvailableDSFormats@DirSnd@@QAEXXZ
+    void ScanAvailableDSFormats();
+
+    // 0x5A5BB0 | ?SetBitDepth@DirSnd@@QAEXH@Z
+    void SetBitDepth(i32 arg1);
+
+    // 0x5A5390 | ?SetDeviceRating@DirSnd@@QAEXPAUtag_dsdevdesc@@@Z
+    void SetDeviceRating(struct tag_dsdevdesc* arg1);
+
+    // 0x5A5860 | ?SetPrimaryBufferFormat@DirSnd@@QAEXKE@Z
+    void SetPrimaryBufferFormat(u32 arg1, u8 arg2);
+
+    // 0x5A5A30 | ?TranslateDSError@DirSnd@@QAEPADJ@Z
+    char* TranslateDSError(i32 arg1);
 
     // 0x5A5530 | ?InitPrimarySoundBuffer@DirSnd@@UAEHKEPAD@Z
-    virtual inline int32_t InitPrimarySoundBuffer(uint32_t arg1, uint8_t arg2, char* arg3)
-    {
-        return stub<member_func_t<int32_t, DirSnd, uint32_t, uint8_t, char*>>(0x5A5530, this, arg1, arg2, arg3);
-    }
+    virtual i32 InitPrimarySoundBuffer(u32 arg1, u8 arg2, char* arg3);
+
+    // 0x5A5080 | ?Init@DirSnd@@SAPAV1@KE_NPAD@Z
+    static class DirSnd* Init(u32 arg1, u8 arg2, bool arg3, char* arg4);
+
+protected:
+    // 0x5A5630 | ?CreatePrimaryInterfaceAndBuffer@DirSnd@@IAEHPAU_DSBUFFERDESC@@@Z
+    i32 CreatePrimaryInterfaceAndBuffer(struct _DSBUFFERDESC* arg1);
 };
 
-// 0x5A5170 | ?UpperCase@@YAXPAD@Z
-inline void UpperCase(char* arg1)
-{
-    return stub<cdecl_t<void, char*>>(0x5A5170, arg1);
-}
+check_size(DirSnd, 0x0);
 
 // 0x5A5210 | ?DSEnumProc@@YGHPAU_GUID@@PAD1PAX@Z
-inline int32_t __stdcall DSEnumProc(struct _GUID* arg1, char* arg2, char* arg3, void* arg4)
-{
-    return stub<stdcall_t<int32_t, struct _GUID*, char*, char*, void*>>(0x5A5210, arg1, arg2, arg3, arg4);
-}
+i32 __stdcall DSEnumProc(struct _GUID* arg1, char* arg2, char* arg3, void* arg4);
 
 // 0x5A57B0 | ?FormatCodeToWFX@@YAHKPAUtWAVEFORMATEX@@@Z
-inline int32_t FormatCodeToWFX(uint32_t arg1, struct tWAVEFORMATEX* arg2)
-{
-    return stub<cdecl_t<int32_t, uint32_t, struct tWAVEFORMATEX*>>(0x5A57B0, arg1, arg2);
-}
+i32 FormatCodeToWFX(u32 arg1, struct tWAVEFORMATEX* arg2);
+
+// 0x5A5170 | ?UpperCase@@YAXPAD@Z
+void UpperCase(char* arg1);
 
 // 0x6B4C2C | ?DSGlobalPtr@@3PAVDirSnd@@A
 inline extern_var(0x6B4C2C, class DirSnd*, DSGlobalPtr);

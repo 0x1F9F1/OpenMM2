@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,40 @@
 */
 
 #include "flare.h"
+
+ltFlare::ltFlare()
+{
+    unimplemented();
+}
+
+void ltFlare::Random()
+{
+    return stub<thiscall_t<void, ltFlare*>>(0x59BDB0, this);
+}
+
+ltLensFlare::ltLensFlare(i32 arg1)
+{
+    unimplemented();
+}
+
+ltLensFlare::~ltLensFlare()
+{
+    unimplemented();
+}
+
+void ltLensFlare::Draw(class Vector3& arg1, class Vector3& arg2, f32 arg3)
+{
+    return stub<thiscall_t<void, ltLensFlare*, class Vector3&, class Vector3&, f32>>(0x59C1C0, this, arg1, arg2, arg3);
+}
+
+void ltLensFlare::DrawBegin()
+{
+    return stub<thiscall_t<void, ltLensFlare*>>(0x59BFA0, this);
+}
+
+void ltLensFlare::DrawEnd()
+{
+    return stub<thiscall_t<void, ltLensFlare*>>(0x59C0C0, this);
+}
+
+define_dummy_symbol(lights_flare);

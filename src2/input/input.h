@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -27,3 +27,22 @@
     0x4BA910 | public: static void __cdecl ioInput::Update(void) | ?Update@ioInput@@SAXXZ
     0x5CDDE4 | public: static bool ioInput::bUseJoystick | ?bUseJoystick@ioInput@@2_NA
 */
+
+struct ioInput
+{
+public:
+    // 0x4BA8B0 | ?Begin@ioInput@@SAX_N@Z
+    static void Begin(bool arg1);
+
+    // 0x4BA8E0 | ?End@ioInput@@SAXXZ
+    static void End();
+
+    // 0x4BA900 | ?Poll@ioInput@@SAXXZ
+    static void Poll();
+
+    // 0x4BA910 | ?Update@ioInput@@SAXXZ
+    static void Update();
+
+    // 0x5CDDE4 | ?bUseJoystick@ioInput@@2_NA
+    static inline extern_var(0x5CDDE4, bool, bUseJoystick);
+};

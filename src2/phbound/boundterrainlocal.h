@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "boundterrain.h"
+
 /*
     phbound:boundterrainlocal
 
@@ -30,57 +32,32 @@
     0x5B23A4 | const phBoundTerrainLocal::`vftable' | ??_7phBoundTerrainLocal@@6B@
 */
 
-struct phBoundTerrainLocal : phBoundTerrain
+class phBoundTerrainLocal : public phBoundTerrain
 {
+    // const phBoundTerrainLocal::`vftable' @ 0x5B23A4
+
 public:
-    // phBoundTerrainLocal::`vftable' @ 0x5B23A4
-
     // 0x4902F0 | ??0phBoundTerrainLocal@@QAE@XZ
-    inline phBoundTerrainLocal()
-    {
-        stub<member_func_t<void, phBoundTerrainLocal>>(0x4902F0, this);
-    }
-
-    // 0x490310 | ?TestBoundTerrainPoly@phBoundTerrainLocal@@QBEHPBVphBoundPolygonal@@PBVMatrix34@@11PAVphColliderBase@@2PAVphIntersection@@3HPAH4ABVVector3@@_N@Z
-    inline int32_t TestBoundTerrainPoly(class phBoundPolygonal const* arg1, class Matrix34 const* arg2,
-        class Matrix34 const* arg3, class Matrix34 const* arg4, class phColliderBase* arg5, class phColliderBase* arg6,
-        class phIntersection* arg7, class phIntersection* arg8, int32_t arg9, int32_t* arg10, int32_t* arg11,
-        class Vector3 const& arg12, bool arg13)
-    {
-        return stub<member_func_t<int32_t, phBoundTerrainLocal, class phBoundPolygonal const*, class Matrix34 const*,
-            class Matrix34 const*, class Matrix34 const*, class phColliderBase*, class phColliderBase*,
-            class phIntersection*, class phIntersection*, int32_t, int32_t*, int32_t*, class Vector3 const&, bool>>(
-            0x490310, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
-    }
-
-    // 0x4903D0 | ?TestBoundTerrainEdgesVsPoly@phBoundTerrainLocal@@QBEHPBVphBoundPolygonal@@PAVphColliderBase@@PBVMatrix34@@2PAVphIntersection@@HPAH@Z
-    inline int32_t TestBoundTerrainEdgesVsPoly(class phBoundPolygonal const* arg1, class phColliderBase* arg2,
-        class Matrix34 const* arg3, class Matrix34 const* arg4, class phIntersection* arg5, int32_t arg6, int32_t* arg7)
-    {
-        return stub<member_func_t<int32_t, phBoundTerrainLocal, class phBoundPolygonal const*, class phColliderBase*,
-            class Matrix34 const*, class Matrix34 const*, class phIntersection*, int32_t, int32_t*>>(
-            0x4903D0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-    }
-
-    // 0x4903F0 | ?TestBoundPolyTerrain@phBoundTerrainLocal@@QBEHPBVphBoundPolygonal@@PAVphColliderBase@@PBVMatrix34@@22PAVphIntersection@@HPAHPBVVector3@@_N@Z
-    inline int32_t TestBoundPolyTerrain(class phBoundPolygonal const* arg1, class phColliderBase* arg2,
-        class Matrix34 const* arg3, class Matrix34 const* arg4, class Matrix34 const* arg5, class phIntersection* arg6,
-        int32_t arg7, int32_t* arg8, class Vector3 const* arg9, bool arg10)
-    {
-        return stub<member_func_t<int32_t, phBoundTerrainLocal, class phBoundPolygonal const*, class phColliderBase*,
-            class Matrix34 const*, class Matrix34 const*, class Matrix34 const*, class phIntersection*, int32_t,
-            int32_t*, class Vector3 const*, bool>>(
-            0x4903F0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
-    }
+    phBoundTerrainLocal();
 
     // 0x490400 | ?FindImpactsHotdogToTerrainLocal@phBoundTerrainLocal@@QBEHPBVphBoundHotdog@@PBVMatrix34@@1PAVphColliderBase@@2PAVphImpactBase@@HABVVector3@@4@Z
-    inline int32_t FindImpactsHotdogToTerrainLocal(class phBoundHotdog const* arg1, class Matrix34 const* arg2,
+    i32 FindImpactsHotdogToTerrainLocal(class phBoundHotdog const* arg1, class Matrix34 const* arg2,
         class Matrix34 const* arg3, class phColliderBase* arg4, class phColliderBase* arg5, class phImpactBase* arg6,
-        int32_t arg7, class Vector3 const& arg8, class Vector3 const& arg9)
-    {
-        return stub<member_func_t<int32_t, phBoundTerrainLocal, class phBoundHotdog const*, class Matrix34 const*,
-            class Matrix34 const*, class phColliderBase*, class phColliderBase*, class phImpactBase*, int32_t,
-            class Vector3 const&, class Vector3 const&>>(
-            0x490400, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
-    }
+        i32 arg7, class Vector3 const& arg8, class Vector3 const& arg9);
+
+    // 0x4903F0 | ?TestBoundPolyTerrain@phBoundTerrainLocal@@QBEHPBVphBoundPolygonal@@PAVphColliderBase@@PBVMatrix34@@22PAVphIntersection@@HPAHPBVVector3@@_N@Z
+    i32 TestBoundPolyTerrain(class phBoundPolygonal const* arg1, class phColliderBase* arg2, class Matrix34 const* arg3,
+        class Matrix34 const* arg4, class Matrix34 const* arg5, class phIntersection* arg6, i32 arg7, i32* arg8,
+        class Vector3 const* arg9, bool arg10);
+
+    // 0x4903D0 | ?TestBoundTerrainEdgesVsPoly@phBoundTerrainLocal@@QBEHPBVphBoundPolygonal@@PAVphColliderBase@@PBVMatrix34@@2PAVphIntersection@@HPAH@Z
+    i32 TestBoundTerrainEdgesVsPoly(class phBoundPolygonal const* arg1, class phColliderBase* arg2,
+        class Matrix34 const* arg3, class Matrix34 const* arg4, class phIntersection* arg5, i32 arg6, i32* arg7);
+
+    // 0x490310 | ?TestBoundTerrainPoly@phBoundTerrainLocal@@QBEHPBVphBoundPolygonal@@PBVMatrix34@@11PAVphColliderBase@@2PAVphIntersection@@3HPAH4ABVVector3@@_N@Z
+    i32 TestBoundTerrainPoly(class phBoundPolygonal const* arg1, class Matrix34 const* arg2, class Matrix34 const* arg3,
+        class Matrix34 const* arg4, class phColliderBase* arg5, class phColliderBase* arg6, class phIntersection* arg7,
+        class phIntersection* arg8, i32 arg9, i32* arg10, i32* arg11, class Vector3 const& arg12, bool arg13);
 };
+
+check_size(phBoundTerrainLocal, 0xCC);

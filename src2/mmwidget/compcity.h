@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     mmwidget:compcity
@@ -52,186 +54,102 @@
     0x5B8834 | const mmCompBase::`vftable' | ??_7mmCompBase@@6B@
 */
 
-class mmCompBase : asNode
+class mmCompCity : public mmCompBase
 {
+    // const mmCompCity::`vftable' @ 0x5B87D4
+
 public:
-    // mmCompBase::`vftable' @ 0x5B8834
-
-    // 0x59EB50 | ??1mmCompBase@@UAE@XZ
-    inline ~mmCompBase() override
-    {
-        stub<member_func_t<void, mmCompBase>>(0x59EB50, this);
-    }
-
-    // 0x59FF30 | ?Update@mmCompBase@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmCompBase>>(0x59FF30, this);
-    }
-
-    // 0x59FF20 | ?Reset@mmCompBase@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmCompBase>>(0x59FF20, this);
-    }
-
-    // 0x59EB60 | ?DisableBlt@mmCompBase@@UAEXXZ
-    virtual inline void DisableBlt()
-    {
-        return stub<member_func_t<void, mmCompBase>>(0x59EB60, this);
-    }
-
-    // 0x59EB70 | ?SetBltXY@mmCompBase@@UAEXMM@Z
-    virtual inline void SetBltXY(float arg1, float arg2)
-    {
-        return stub<member_func_t<void, mmCompBase, float, float>>(0x59EB70, this, arg1, arg2);
-    }
-
-    // 0x59EBC0 | ?Action@mmCompBase@@UAEXTeqEvent@@MMH@Z
-    virtual inline void Action(union eqEvent arg1, float arg2, float arg3, int32_t arg4)
-    {
-        return stub<member_func_t<void, mmCompBase, union eqEvent, float, float, int32_t>>(
-            0x59EBC0, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x59EB90 | ?Action@mmCompBase@@UAEXTeqEvent@@@Z
-    virtual inline void Action(union eqEvent arg1)
-    {
-        return stub<member_func_t<void, mmCompBase, union eqEvent>>(0x59EB90, this, arg1);
-    }
-
-    // 0x59EBA0 | ?CaptureAction@mmCompBase@@UAEXTeqEvent@@@Z
-    virtual inline void CaptureAction(union eqEvent arg1)
-    {
-        return stub<member_func_t<void, mmCompBase, union eqEvent>>(0x59EBA0, this, arg1);
-    }
-
-    // 0x59EBB0 | ?Switch@mmCompBase@@UAEXH@Z
-    virtual inline void Switch(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmCompBase, int32_t>>(0x59EBB0, this, arg1);
-    }
-
-    // 0x59EBD0 | ?EvalMouseXY@mmCompBase@@UAEXMM@Z
-    virtual inline void EvalMouseXY(float arg1, float arg2)
-    {
-        return stub<member_func_t<void, mmCompBase, float, float>>(0x59EBD0, this, arg1, arg2);
-    }
-
-    // 0x59EBE0 | ?Highlight@mmCompBase@@UAEXPAVmmTextNode@@H@Z
-    virtual inline void Highlight(class mmTextNode* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, mmCompBase, class mmTextNode*, int32_t>>(0x59EBE0, this, arg1, arg2);
-    }
-
-    // 0x59EBF0 | ?Box@mmCompBase@@UAEXHPAVmmTextNode@@H@Z
-    virtual inline void Box(int32_t arg1, class mmTextNode* arg2, int32_t arg3)
-    {
-        return stub<member_func_t<void, mmCompBase, int32_t, class mmTextNode*, int32_t>>(
-            0x59EBF0, this, arg1, arg2, arg3);
-    }
-
-    // 0x59EC00 | ?SetGeometry@mmCompBase@@UAEXMMMM@Z
-    virtual inline void SetGeometry(float arg1, float arg2, float arg3, float arg4)
-    {
-        return stub<member_func_t<void, mmCompBase, float, float, float, float>>(
-            0x59EC00, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x582519 | __purecall
-    virtual inline void SetPosition(class mmTextNode* arg1, int32_t arg2, float arg3)
-    {
-        return stub<member_func_t<void, mmCompBase, class mmTextNode*, int32_t, float>>(
-            0x582519, this, arg1, arg2, arg3);
-    }
-};
-
-struct mmCompCity : mmCompBase
-{
-public:
-    // mmCompCity::`vftable' @ 0x5B87D4
-
     // 0x59E7E0 | ??0mmCompCity@@QAE@XZ
-    inline mmCompCity()
-    {
-        stub<member_func_t<void, mmCompCity>>(0x59E7E0, this);
-    }
+    mmCompCity();
 
-    // 0x59E8A0 | ?Init@mmCompCity@@QAEXPADHHH@Z
-    inline void Init(char* arg1, int32_t arg2, int32_t arg3, int32_t arg4)
-    {
-        return stub<member_func_t<void, mmCompCity, char*, int32_t, int32_t, int32_t>>(
-            0x59E8A0, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x59E910 | ?InitTitle@mmCompCity@@QAEXMMMMPAULocString@@000@Z
-    inline void InitTitle(float arg1, float arg2, float arg3, float arg4, struct LocString* arg5,
-        struct LocString* arg6, struct LocString* arg7, struct LocString* arg8)
-    {
-        return stub<member_func_t<void, mmCompCity, float, float, float, float, struct LocString*, struct LocString*,
-            struct LocString*, struct LocString*>>(0x59E910, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
-    }
-
-    // 0x59E9A0 | ?SetSubwidgetGeometry@mmCompCity@@QAEXXZ
-    inline void SetSubwidgetGeometry()
-    {
-        return stub<member_func_t<void, mmCompCity>>(0x59E9A0, this);
-    }
-
-    // 0x59EA00 | ?SetTitleGeometry@mmCompCity@@QAEXXZ
-    inline void SetTitleGeometry()
-    {
-        return stub<member_func_t<void, mmCompCity>>(0x59EA00, this);
-    }
-
+    // 0x4F9FF0 | ??_EmmCompCity@@UAEPAXI@Z
     // 0x59E810 | ??1mmCompCity@@UAE@XZ
-    inline ~mmCompCity() override
-    {
-        stub<member_func_t<void, mmCompCity>>(0x59E810, this);
-    }
-
-    // 0x59EB10 | ?Cull@mmCompCity@@UAEXXZ
-    inline void Cull() override
-    {
-        return stub<member_func_t<void, mmCompCity>>(0x59EB10, this);
-    }
-
-    // 0x59E990 | ?Update@mmCompCity@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmCompCity>>(0x59E990, this);
-    }
-
-    // 0x59E980 | ?Reset@mmCompCity@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmCompCity>>(0x59E980, this);
-    }
-
-    // 0x59EA60 | ?Highlight@mmCompCity@@UAEXPAVmmTextNode@@H@Z
-    inline void Highlight(class mmTextNode* arg1, int32_t arg2) override
-    {
-        return stub<member_func_t<void, mmCompCity, class mmTextNode*, int32_t>>(0x59EA60, this, arg1, arg2);
-    }
+    // 0x59EB20 | ??_GmmCompCity@@UAEPAXI@Z
+    ~mmCompCity() override;
 
     // 0x59EAB0 | ?Box@mmCompCity@@UAEXHPAVmmTextNode@@H@Z
-    inline void Box(int32_t arg1, class mmTextNode* arg2, int32_t arg3) override
-    {
-        return stub<member_func_t<void, mmCompCity, int32_t, class mmTextNode*, int32_t>>(
-            0x59EAB0, this, arg1, arg2, arg3);
-    }
+    void Box(i32 arg1, class mmTextNode* arg2, i32 arg3) override;
+
+    // 0x59EB10 | ?Cull@mmCompCity@@UAEXXZ
+    void Cull() override;
+
+    // 0x59EA60 | ?Highlight@mmCompCity@@UAEXPAVmmTextNode@@H@Z
+    void Highlight(class mmTextNode* arg1, i32 arg2) override;
+
+    // 0x59E8A0 | ?Init@mmCompCity@@QAEXPADHHH@Z
+    void Init(char* arg1, i32 arg2, i32 arg3, i32 arg4);
+
+    // 0x59E910 | ?InitTitle@mmCompCity@@QAEXMMMMPAULocString@@000@Z
+    void InitTitle(f32 arg1, f32 arg2, f32 arg3, f32 arg4, struct LocString* arg5, struct LocString* arg6,
+        struct LocString* arg7, struct LocString* arg8);
+
+    // 0x59E980 | ?Reset@mmCompCity@@UAEXXZ
+    void Reset() override;
 
     // 0x59EAE0 | ?SetGeometry@mmCompCity@@UAEXMMMM@Z
-    inline void SetGeometry(float arg1, float arg2, float arg3, float arg4) override
-    {
-        return stub<member_func_t<void, mmCompCity, float, float, float, float>>(
-            0x59EAE0, this, arg1, arg2, arg3, arg4);
-    }
+    void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4) override;
 
     // 0x59EA20 | ?SetPosition@mmCompCity@@UAEXPAVmmTextNode@@HM@Z
-    inline void SetPosition(class mmTextNode* arg1, int32_t arg2, float arg3) override
-    {
-        return stub<member_func_t<void, mmCompCity, class mmTextNode*, int32_t, float>>(
-            0x59EA20, this, arg1, arg2, arg3);
-    }
+    void SetPosition(class mmTextNode* arg1, i32 arg2, f32 arg3) override;
+
+    // 0x59E9A0 | ?SetSubwidgetGeometry@mmCompCity@@QAEXXZ
+    void SetSubwidgetGeometry();
+
+    // 0x59EA00 | ?SetTitleGeometry@mmCompCity@@QAEXXZ
+    void SetTitleGeometry();
+
+    // 0x59E990 | ?Update@mmCompCity@@UAEXXZ
+    void Update() override;
 };
+
+check_size(mmCompCity, 0x70);
+
+class mmCompBase : public asNode
+{
+    // const mmCompBase::`vftable' @ 0x5B8834
+
+public:
+    // 0x59EC20 | ??_GmmCompBase@@UAEPAXI@Z
+    // 0x59EB50 | ??1mmCompBase@@UAE@XZ
+    ~mmCompBase() override;
+
+    // 0x59FF20 | ?Reset@mmCompBase@@UAEXXZ
+    void Reset() override;
+
+    // 0x59FF30 | ?Update@mmCompBase@@UAEXXZ
+    void Update() override;
+
+    // 0x59EB60 | ?DisableBlt@mmCompBase@@UAEXXZ
+    virtual void DisableBlt();
+
+    // 0x59EB70 | ?SetBltXY@mmCompBase@@UAEXMM@Z
+    virtual void SetBltXY(f32 arg1, f32 arg2);
+
+    // 0x59EBC0 | ?Action@mmCompBase@@UAEXTeqEvent@@MMH@Z
+    virtual void Action(union eqEvent arg1, f32 arg2, f32 arg3, i32 arg4);
+
+    // 0x59EB90 | ?Action@mmCompBase@@UAEXTeqEvent@@@Z
+    virtual void Action(union eqEvent arg1);
+
+    // 0x59EBA0 | ?CaptureAction@mmCompBase@@UAEXTeqEvent@@@Z
+    virtual void CaptureAction(union eqEvent arg1);
+
+    // 0x59EBB0 | ?Switch@mmCompBase@@UAEXH@Z
+    virtual void Switch(i32 arg1);
+
+    // 0x59EBD0 | ?EvalMouseXY@mmCompBase@@UAEXMM@Z
+    virtual void EvalMouseXY(f32 arg1, f32 arg2);
+
+    // 0x59EBE0 | ?Highlight@mmCompBase@@UAEXPAVmmTextNode@@H@Z
+    virtual void Highlight(class mmTextNode* arg1, i32 arg2);
+
+    // 0x59EBF0 | ?Box@mmCompBase@@UAEXHPAVmmTextNode@@H@Z
+    virtual void Box(i32 arg1, class mmTextNode* arg2, i32 arg3);
+
+    // 0x59EC00 | ?SetGeometry@mmCompBase@@UAEXMMMM@Z
+    virtual void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
+
+    virtual void SetPosition(class mmTextNode* arg1, i32 arg2, f32 arg3) = 0;
+};
+
+check_size(mmCompBase, 0x0);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,20 @@
 */
 
 #include "aiData.h"
+
+aiRaceData::aiRaceData(char* arg1, char* arg2, struct dgStatePack const* arg3)
+{
+    unimplemented();
+}
+
+aiRaceData::~aiRaceData()
+{
+    unimplemented();
+}
+
+void aiRaceData::SaveData()
+{
+    return stub<thiscall_t<void, aiRaceData*>>(0x5558D0, this);
+}
+
+define_dummy_symbol(ai_aiData);

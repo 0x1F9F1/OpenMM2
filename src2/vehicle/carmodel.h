@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "level/inst.h"
 
 /*
     vehicle:carmodel
@@ -57,189 +59,98 @@
     protected: static int vehCarModel::sm_DecalColorVariation | ?sm_DecalColorVariation@vehCarModel@@1HA
 */
 
-struct vehCarModel : lvlInstance
+class vehCarModel : public lvlInstance
 {
-public:
-    // vehCarModel::`vftable' @ 0x5B2CB0
+    // const vehCarModel::`vftable' @ 0x5B2CB0
 
+public:
     // 0x4CCF20 | ??0vehCarModel@@QAE@XZ
-    inline vehCarModel()
-    {
-        stub<member_func_t<void, vehCarModel>>(0x4CCF20, this);
-    }
+    vehCarModel();
 
     // 0x4CCF80 | ??1vehCarModel@@QAE@XZ
-    inline ~vehCarModel()
-    {
-        stub<member_func_t<void, vehCarModel>>(0x4CCF80, this);
-    }
-
-    // 0x4CCFE0 | ?Init@vehCarModel@@QAEXPAVvehCar@@PBDH@Z
-    inline void Init(class vehCar* arg1, char const* arg2, int32_t arg3)
-    {
-        return stub<member_func_t<void, vehCarModel, class vehCar*, char const*, int32_t>>(
-            0x4CCFE0, this, arg1, arg2, arg3);
-    }
-
-    // 0x4CDA20 | ?InitBound@vehCarModel@@QAEXPBD_N@Z
-    inline void InitBound(char const* arg1, bool arg2)
-    {
-        return stub<member_func_t<void, vehCarModel, char const*, bool>>(0x4CDA20, this, arg1, arg2);
-    }
-
-    // 0x4CDBF0 | ?GetTrailerHitch@vehCarModel@@QAE_NPAVVector3@@@Z
-    inline bool GetTrailerHitch(class Vector3* arg1)
-    {
-        return stub<member_func_t<bool, vehCarModel, class Vector3*>>(0x4CDBF0, this, arg1);
-    }
-
-    // 0x4CDC50 | ?InitBreakable@vehCarModel@@IAE_NPAVvehBreakableMgr@@PBD1HH@Z
-    inline bool InitBreakable(
-        class vehBreakableMgr* arg1, char const* arg2, char const* arg3, int32_t arg4, int32_t arg5)
-    {
-        return stub<
-            member_func_t<bool, vehCarModel, class vehBreakableMgr*, char const*, char const*, int32_t, int32_t>>(
-            0x4CDC50, this, arg1, arg2, arg3, arg4, arg5);
-    }
-
-    // 0x4CDCA0 | ?EjectOneshot@vehCarModel@@QAEXXZ
-    inline void EjectOneshot()
-    {
-        return stub<member_func_t<void, vehCarModel>>(0x4CDCA0, this);
-    }
-
-    // 0x4CDF00 | ?GetSurfaceColor@vehCarModel@@IAE_NPAVmodStatic@@AAVVector3@@@Z
-    inline bool GetSurfaceColor(class modStatic* arg1, class Vector3& arg2)
-    {
-        return stub<member_func_t<bool, vehCarModel, class modStatic*, class Vector3&>>(0x4CDF00, this, arg1, arg2);
-    }
-
-    // 0x4CDF60 | ?InitSirenLight@vehCarModel@@IAEXPBD0H@Z
-    inline void InitSirenLight(char const* arg1, char const* arg2, int32_t arg3)
-    {
-        return stub<member_func_t<void, vehCarModel, char const*, char const*, int32_t>>(
-            0x4CDF60, this, arg1, arg2, arg3);
-    }
-
-    // 0x4CDFF0 | ?ClearDamage@vehCarModel@@QAEXXZ
-    inline void ClearDamage()
-    {
-        return stub<member_func_t<void, vehCarModel>>(0x4CDFF0, this);
-    }
-
-    // 0x4CE840 | ?DrawPart@vehCarModel@@QAEXHHABVMatrix34@@PAVmodShader@@@Z
-    inline void DrawPart(int32_t arg1, int32_t arg2, class Matrix34 const& arg3, class modShader* arg4)
-    {
-        return stub<member_func_t<void, vehCarModel, int32_t, int32_t, class Matrix34 const&, class modShader*>>(
-            0x4CE840, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x4CE880 | ?DrawPart@vehCarModel@@QAEXPAVmodStatic@@ABVMatrix34@@PAVmodShader@@@Z
-    inline void DrawPart(class modStatic* arg1, class Matrix34 const& arg2, class modShader* arg3)
-    {
-        return stub<member_func_t<void, vehCarModel, class modStatic*, class Matrix34 const&, class modShader*>>(
-            0x4CE880, this, arg1, arg2, arg3);
-    }
-
-    // 0x4CED50 | ?DrawHeadlights@vehCarModel@@QAEX_N@Z
-    inline void DrawHeadlights(bool arg1)
-    {
-        return stub<member_func_t<void, vehCarModel, bool>>(0x4CED50, this, arg1);
-    }
-
-    // 0x4CEFE0 | ?BreakElectrics@vehCarModel@@QAEXABVVector3@@@Z
-    inline void BreakElectrics(class Vector3 const& arg1)
-    {
-        return stub<member_func_t<void, vehCarModel, class Vector3 const&>>(0x4CEFE0, this, arg1);
-    }
-
-    // 0x4CF050 | ?SetVisible@vehCarModel@@QAEX_N@Z
-    inline void SetVisible(bool arg1)
-    {
-        return stub<member_func_t<void, vehCarModel, bool>>(0x4CF050, this, arg1);
-    }
-
-    // 0x4CF070 | ?GetVisible@vehCarModel@@QAE_NXZ
-    inline bool GetVisible()
-    {
-        return stub<member_func_t<bool, vehCarModel>>(0x4CF070, this);
-    }
-
-    // 0x4CDFD0 | ?Reset@vehCarModel@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, vehCarModel>>(0x4CDFD0, this);
-    }
-
-    // 0x4CEF50 | ?GetPosition@vehCarModel@@UAEABVVector3@@XZ
-    inline class Vector3 const& GetPosition() override
-    {
-        return stub<member_func_t<class Vector3 const&, vehCarModel>>(0x4CEF50, this);
-    }
-
-    // 0x4CEF90 | ?GetMatrix@vehCarModel@@UAEABVMatrix34@@AAV2@@Z
-    inline class Matrix34 const& GetMatrix(class Matrix34& arg1) override
-    {
-        return stub<member_func_t<class Matrix34 const&, vehCarModel, class Matrix34&>>(0x4CEF90, this, arg1);
-    }
-
-    // 0x4CEFA0 | ?SetMatrix@vehCarModel@@UAEXABVMatrix34@@@Z
-    inline void SetMatrix(class Matrix34 const& arg1) override
-    {
-        return stub<member_func_t<void, vehCarModel, class Matrix34 const&>>(0x4CEFA0, this, arg1);
-    }
-
-    // 0x4CEFC0 | ?GetEntity@vehCarModel@@UAEPAVdgPhysEntity@@XZ
-    inline class dgPhysEntity* GetEntity() override
-    {
-        return stub<member_func_t<class dgPhysEntity*, vehCarModel>>(0x4CEFC0, this);
-    }
+    ~vehCarModel();
 
     // 0x4CEFD0 | ?AttachEntity@vehCarModel@@UAEPAVdgPhysEntity@@XZ
-    inline class dgPhysEntity* AttachEntity() override
-    {
-        return stub<member_func_t<class dgPhysEntity*, vehCarModel>>(0x4CEFD0, this);
-    }
+    class dgPhysEntity* AttachEntity() override;
 
-    // 0x4CEF80 | ?GetVelocity@vehCarModel@@UAEABVVector3@@XZ
-    inline class Vector3 const& GetVelocity() override
-    {
-        return stub<member_func_t<class Vector3 const&, vehCarModel>>(0x4CEF80, this);
-    }
+    // 0x4CEFE0 | ?BreakElectrics@vehCarModel@@QAEXABVVector3@@@Z
+    void BreakElectrics(class Vector3 const& arg1);
+
+    // 0x4CDFF0 | ?ClearDamage@vehCarModel@@QAEXXZ
+    void ClearDamage();
 
     // 0x4CE040 | ?Draw@vehCarModel@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
-    {
-        return stub<member_func_t<void, vehCarModel, int32_t>>(0x4CE040, this, arg1);
-    }
-
-    // 0x4CE940 | ?DrawShadow@vehCarModel@@UAEXXZ
-    inline void DrawShadow() override
-    {
-        return stub<member_func_t<void, vehCarModel>>(0x4CE940, this);
-    }
-
-    // 0x4CEA90 | ?DrawShadowMap@vehCarModel@@UAEXXZ
-    inline void DrawShadowMap() override
-    {
-        return stub<member_func_t<void, vehCarModel>>(0x4CEA90, this);
-    }
+    void Draw(i32 arg1) override;
 
     // 0x4CEB90 | ?DrawGlow@vehCarModel@@UAEXXZ
-    inline void DrawGlow() override
-    {
-        return stub<member_func_t<void, vehCarModel>>(0x4CEB90, this);
-    }
+    void DrawGlow() override;
+
+    // 0x4CED50 | ?DrawHeadlights@vehCarModel@@QAEX_N@Z
+    void DrawHeadlights(bool arg1);
+
+    // 0x4CE880 | ?DrawPart@vehCarModel@@QAEXPAVmodStatic@@ABVMatrix34@@PAVmodShader@@@Z
+    void DrawPart(class modStatic* arg1, class Matrix34 const& arg2, class modShader* arg3);
+
+    // 0x4CE840 | ?DrawPart@vehCarModel@@QAEXHHABVMatrix34@@PAVmodShader@@@Z
+    void DrawPart(i32 arg1, i32 arg2, class Matrix34 const& arg3, class modShader* arg4);
 
     // 0x4CF080 | ?DrawReflected@vehCarModel@@UAEXM@Z
-    inline void DrawReflected(float arg1) override
-    {
-        return stub<member_func_t<void, vehCarModel, float>>(0x4CF080, this, arg1);
-    }
+    void DrawReflected(f32 arg1) override;
+
+    // 0x4CE940 | ?DrawShadow@vehCarModel@@UAEXXZ
+    void DrawShadow() override;
+
+    // 0x4CEA90 | ?DrawShadowMap@vehCarModel@@UAEXXZ
+    void DrawShadowMap() override;
+
+    // 0x4CDCA0 | ?EjectOneshot@vehCarModel@@QAEXXZ
+    void EjectOneshot();
+
+    // 0x4CEFC0 | ?GetEntity@vehCarModel@@UAEPAVdgPhysEntity@@XZ
+    class dgPhysEntity* GetEntity() override;
+
+    // 0x4CEF90 | ?GetMatrix@vehCarModel@@UAEABVMatrix34@@AAV2@@Z
+    class Matrix34 const& GetMatrix(class Matrix34& arg1) override;
+
+    // 0x4CEF50 | ?GetPosition@vehCarModel@@UAEABVVector3@@XZ
+    class Vector3 const& GetPosition() override;
+
+    // 0x4CDBF0 | ?GetTrailerHitch@vehCarModel@@QAE_NPAVVector3@@@Z
+    bool GetTrailerHitch(class Vector3* arg1);
+
+    // 0x4CEF80 | ?GetVelocity@vehCarModel@@UAEABVVector3@@XZ
+    class Vector3 const& GetVelocity() override;
+
+    // 0x4CF070 | ?GetVisible@vehCarModel@@QAE_NXZ
+    bool GetVisible();
+
+    // 0x4CCFE0 | ?Init@vehCarModel@@QAEXPAVvehCar@@PBDH@Z
+    void Init(class vehCar* arg1, char const* arg2, i32 arg3);
+
+    // 0x4CDA20 | ?InitBound@vehCarModel@@QAEXPBD_N@Z
+    void InitBound(char const* arg1, bool arg2);
+
+    // 0x4CDFD0 | ?Reset@vehCarModel@@UAEXXZ
+    void Reset() override;
+
+    // 0x4CEFA0 | ?SetMatrix@vehCarModel@@UAEXABVMatrix34@@@Z
+    void SetMatrix(class Matrix34 const& arg1) override;
+
+    // 0x4CF050 | ?SetVisible@vehCarModel@@QAEX_N@Z
+    void SetVisible(bool arg1);
 
     // 0x4CDFE0 | ?SizeOf@vehCarModel@@UAEIXZ
-    inline uint32_t SizeOf() override
-    {
-        return stub<member_func_t<uint32_t, vehCarModel>>(0x4CDFE0, this);
-    }
+    u32 SizeOf() override;
+
+protected:
+    // 0x4CDF00 | ?GetSurfaceColor@vehCarModel@@IAE_NPAVmodStatic@@AAVVector3@@@Z
+    bool GetSurfaceColor(class modStatic* arg1, class Vector3& arg2);
+
+    // 0x4CDC50 | ?InitBreakable@vehCarModel@@IAE_NPAVvehBreakableMgr@@PBD1HH@Z
+    bool InitBreakable(class vehBreakableMgr* arg1, char const* arg2, char const* arg3, i32 arg4, i32 arg5);
+
+    // 0x4CDF60 | ?InitSirenLight@vehCarModel@@IAEXPBD0H@Z
+    void InitSirenLight(char const* arg1, char const* arg2, i32 arg3);
 };
+
+check_size(vehCarModel, 0x0);

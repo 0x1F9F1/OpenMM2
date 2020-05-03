@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -32,33 +32,19 @@ class DMusicWaveBuffer
 {
 public:
     // 0x518740 | ??0DMusicWaveBuffer@@QAE@XZ
-    inline DMusicWaveBuffer()
-    {
-        stub<member_func_t<void, DMusicWaveBuffer>>(0x518740, this);
-    }
+    DMusicWaveBuffer();
 
     // 0x518760 | ??1DMusicWaveBuffer@@QAE@XZ
-    inline ~DMusicWaveBuffer()
-    {
-        stub<member_func_t<void, DMusicWaveBuffer>>(0x518760, this);
-    }
+    ~DMusicWaveBuffer();
 
     // 0x518770 | ?Create@DMusicWaveBuffer@@QAEHPAUIDirectMusicPort@@PAUIDirectSound@@@Z
-    inline int32_t Create(struct IDirectMusicPort* arg1, struct IDirectSound* arg2)
-    {
-        return stub<member_func_t<int32_t, DMusicWaveBuffer, struct IDirectMusicPort*, struct IDirectSound*>>(
-            0x518770, this, arg1, arg2);
-    }
-
-    // 0x518930 | ?SetVolume@DMusicWaveBuffer@@QAEXM@Z
-    inline void SetVolume(float arg1)
-    {
-        return stub<member_func_t<void, DMusicWaveBuffer, float>>(0x518930, this, arg1);
-    }
+    i32 Create(struct IDirectMusicPort* arg1, struct IDirectSound* arg2);
 
     // 0x5189E0 | ?SetPan@DMusicWaveBuffer@@QAEXM@Z
-    inline void SetPan(float arg1)
-    {
-        return stub<member_func_t<void, DMusicWaveBuffer, float>>(0x5189E0, this, arg1);
-    }
+    void SetPan(f32 arg1);
+
+    // 0x518930 | ?SetVolume@DMusicWaveBuffer@@QAEXM@Z
+    void SetVolume(f32 arg1);
 };
+
+check_size(DMusicWaveBuffer, 0x10);

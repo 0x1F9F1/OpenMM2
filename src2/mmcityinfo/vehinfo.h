@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -34,62 +34,38 @@
     0x5B5248 | const mmVehInfo::`vftable' | ??_7mmVehInfo@@6B@
 */
 
-// 0x529780 | ?mygetstring@@YAXPAU_iobuf@@PAD@Z
-inline void mygetstring(struct _iobuf* arg1, char* arg2)
-{
-    return stub<cdecl_t<void, struct _iobuf*, char*>>(0x529780, arg1, arg2);
-}
-
 class mmVehInfo
 {
+    // const mmVehInfo::`vftable' @ 0x5B5248
+
 public:
-    // mmVehInfo::`vftable' @ 0x5B5248
-
-    // 0x4F7A90 | ?IsValid@mmVehInfo@@QAEHXZ
-    inline int32_t IsValid()
-    {
-        return stub<member_func_t<int32_t, mmVehInfo>>(0x4F7A90, this);
-    }
-
     // 0x529720 | ??0mmVehInfo@@QAE@XZ
-    inline mmVehInfo()
-    {
-        stub<member_func_t<void, mmVehInfo>>(0x529720, this);
-    }
+    mmVehInfo();
 
-    // 0x5297B0 | ?Load@mmVehInfo@@QAEHPAD@Z
-    inline int32_t Load(char* arg1)
-    {
-        return stub<member_func_t<int32_t, mmVehInfo, char*>>(0x5297B0, this, arg1);
-    }
-
-    // 0x529A00 | ?HasColorVariations@mmVehInfo@@QAEHXZ
-    inline int32_t HasColorVariations()
-    {
-        return stub<member_func_t<int32_t, mmVehInfo>>(0x529A00, this);
-    }
-
-    // 0x529A20 | ?Print@mmVehInfo@@QAEXXZ
-    inline void Print()
-    {
-        return stub<member_func_t<void, mmVehInfo>>(0x529A20, this);
-    }
-
-    // 0x529AA0 | ?GetTuningCRC@mmVehInfo@@QAEKXZ
-    inline uint32_t GetTuningCRC()
-    {
-        return stub<member_func_t<uint32_t, mmVehInfo>>(0x529AA0, this);
-    }
+    // 0x529B50 | ??_GmmVehInfo@@UAEPAXI@Z
+    // 0x529770 | ??1mmVehInfo@@UAE@XZ
+    virtual ~mmVehInfo();
 
     // 0x529AB0 | ?ComputeTuningCRC@mmVehInfo@@QAEXXZ
-    inline void ComputeTuningCRC()
-    {
-        return stub<member_func_t<void, mmVehInfo>>(0x529AB0, this);
-    }
+    void ComputeTuningCRC();
 
-    // 0x529770 | ??1mmVehInfo@@UAE@XZ
-    virtual inline ~mmVehInfo()
-    {
-        stub<member_func_t<void, mmVehInfo>>(0x529770, this);
-    }
+    // 0x529AA0 | ?GetTuningCRC@mmVehInfo@@QAEKXZ
+    u32 GetTuningCRC();
+
+    // 0x529A00 | ?HasColorVariations@mmVehInfo@@QAEHXZ
+    i32 HasColorVariations();
+
+    // 0x4F7A90 | ?IsValid@mmVehInfo@@QAEHXZ
+    i32 IsValid();
+
+    // 0x5297B0 | ?Load@mmVehInfo@@QAEHPAD@Z
+    i32 Load(char* arg1);
+
+    // 0x529A20 | ?Print@mmVehInfo@@QAEXXZ
+    void Print();
 };
+
+check_size(mmVehInfo, 0x0);
+
+// 0x529780 | ?mygetstring@@YAXPAU_iobuf@@PAD@Z
+void mygetstring(struct _iobuf* arg1, char* arg2);

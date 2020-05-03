@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -33,38 +33,22 @@ struct mmRainAudio
 {
 public:
     // 0x430050 | ??0mmRainAudio@@QAE@XZ
-    inline mmRainAudio()
-    {
-        stub<member_func_t<void, mmRainAudio>>(0x430050, this);
-    }
+    mmRainAudio();
 
     // 0x430220 | ??1mmRainAudio@@QAE@XZ
-    inline ~mmRainAudio()
-    {
-        stub<member_func_t<void, mmRainAudio>>(0x430220, this);
-    }
+    ~mmRainAudio();
 
     // 0x430260 | ?SetInterior@mmRainAudio@@QAEXE@Z
-    inline void SetInterior(uint8_t arg1)
-    {
-        return stub<member_func_t<void, mmRainAudio, uint8_t>>(0x430260, this, arg1);
-    }
-
-    // 0x4302F0 | ?ShelterOn@mmRainAudio@@QAEXXZ
-    inline void ShelterOn()
-    {
-        return stub<member_func_t<void, mmRainAudio>>(0x4302F0, this);
-    }
+    void SetInterior(u8 arg1);
 
     // 0x430350 | ?ShelterOff@mmRainAudio@@QAEXXZ
-    inline void ShelterOff()
-    {
-        return stub<member_func_t<void, mmRainAudio>>(0x430350, this);
-    }
+    void ShelterOff();
+
+    // 0x4302F0 | ?ShelterOn@mmRainAudio@@QAEXXZ
+    void ShelterOn();
 
     // 0x4303C0 | ?Update@mmRainAudio@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, mmRainAudio>>(0x4303C0, this);
-    }
+    void Update();
 };
+
+check_size(mmRainAudio, 0x0);

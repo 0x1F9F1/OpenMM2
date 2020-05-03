@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "pu_menu.h"
+
 /*
     mmui:pu_replay
 
@@ -30,33 +32,23 @@
     0x5B47F8 | const PUReplay::`vftable' | ??_7PUReplay@@6B@
 */
 
-struct PUReplay : PUMenuBase
+class PUReplay : public PUMenuBase
 {
+    // const PUReplay::`vftable' @ 0x5B47F8
+
 public:
-    // PUReplay::`vftable' @ 0x5B47F8
-
     // 0x50B270 | ??0PUReplay@@QAE@HMMMMPAD@Z
-    inline PUReplay(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
-    {
-        stub<member_func_t<void, PUReplay, int32_t, float, float, float, float, char*>>(
-            0x50B270, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
+    PUReplay(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6);
 
-    // 0x50B540 | ?SaveRO@PUReplay@@QAEXH@Z
-    inline void SaveRO(int32_t arg1)
-    {
-        return stub<member_func_t<void, PUReplay, int32_t>>(0x50B540, this, arg1);
-    }
+    // 0x50B570 | ??_GPUReplay@@UAEPAXI@Z
+    // 0x50B530 | ??1PUReplay@@UAE@XZ
+    ~PUReplay() override;
 
     // 0x50B560 | ?GetSaveRO@PUReplay@@QAEHXZ
-    inline int32_t GetSaveRO()
-    {
-        return stub<member_func_t<int32_t, PUReplay>>(0x50B560, this);
-    }
+    i32 GetSaveRO();
 
-    // 0x50B530 | ??1PUReplay@@UAE@XZ
-    inline ~PUReplay() override
-    {
-        stub<member_func_t<void, PUReplay>>(0x50B530, this);
-    }
+    // 0x50B540 | ?SaveRO@PUReplay@@QAEXH@Z
+    void SaveRO(i32 arg1);
 };
+
+check_size(PUReplay, 0xC0);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     mmgame:roadff
@@ -36,68 +38,41 @@
     0x5B0D38 | const mmCarRoadFF::`vftable' | ??_7mmCarRoadFF@@6B@
 */
 
-struct mmCarRoadFF : asNode
+class mmCarRoadFF : public asNode
 {
-public:
-    // mmCarRoadFF::`vftable' @ 0x5B0D38
+    // const mmCarRoadFF::`vftable' @ 0x5B0D38
 
+public:
     // 0x42FD70 | ??0mmCarRoadFF@@QAE@XZ
-    inline mmCarRoadFF()
-    {
-        stub<member_func_t<void, mmCarRoadFF>>(0x42FD70, this);
-    }
+    mmCarRoadFF();
+
+    // 0x430020 | ??_GmmCarRoadFF@@UAEPAXI@Z
+    // 0x42FDB0 | ??1mmCarRoadFF@@UAE@XZ
+    ~mmCarRoadFF() override;
 
     // 0x42FE10 | ?AssignProperties@mmCarRoadFF@@QAEXMH@Z
-    inline void AssignProperties(float arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, mmCarRoadFF, float, int32_t>>(0x42FE10, this, arg1, arg2);
-    }
-
-    // 0x42FE20 | ?SetFGVals@mmCarRoadFF@@QAEXMMM@Z
-    inline void SetFGVals(float arg1, float arg2, float arg3)
-    {
-        return stub<member_func_t<void, mmCarRoadFF, float, float, float>>(0x42FE20, this, arg1, arg2, arg3);
-    }
-
-    // 0x42FF10 | ?Start@mmCarRoadFF@@QAEXXZ
-    inline void Start()
-    {
-        return stub<member_func_t<void, mmCarRoadFF>>(0x42FF10, this);
-    }
-
-    // 0x42FF30 | ?Stop@mmCarRoadFF@@QAEXXZ
-    inline void Stop()
-    {
-        return stub<member_func_t<void, mmCarRoadFF>>(0x42FF30, this);
-    }
+    void AssignProperties(f32 arg1, i32 arg2);
 
     // 0x42FF70 | ?IsPlaying@mmCarRoadFF@@QAEHXZ
-    inline int32_t IsPlaying()
-    {
-        return stub<member_func_t<int32_t, mmCarRoadFF>>(0x42FF70, this);
-    }
-
-    // 0x42FFD0 | ?UpdateVals@mmCarRoadFF@@QAEXXZ
-    inline void UpdateVals()
-    {
-        return stub<member_func_t<void, mmCarRoadFF>>(0x42FFD0, this);
-    }
-
-    // 0x42FDB0 | ??1mmCarRoadFF@@UAE@XZ
-    inline ~mmCarRoadFF() override
-    {
-        stub<member_func_t<void, mmCarRoadFF>>(0x42FDB0, this);
-    }
-
-    // 0x42FF80 | ?Update@mmCarRoadFF@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmCarRoadFF>>(0x42FF80, this);
-    }
+    i32 IsPlaying();
 
     // 0x42FF40 | ?Reset@mmCarRoadFF@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmCarRoadFF>>(0x42FF40, this);
-    }
+    void Reset() override;
+
+    // 0x42FE20 | ?SetFGVals@mmCarRoadFF@@QAEXMMM@Z
+    void SetFGVals(f32 arg1, f32 arg2, f32 arg3);
+
+    // 0x42FF10 | ?Start@mmCarRoadFF@@QAEXXZ
+    void Start();
+
+    // 0x42FF30 | ?Stop@mmCarRoadFF@@QAEXXZ
+    void Stop();
+
+    // 0x42FF80 | ?Update@mmCarRoadFF@@UAEXXZ
+    void Update() override;
+
+    // 0x42FFD0 | ?UpdateVals@mmCarRoadFF@@QAEXXZ
+    void UpdateVals();
 };
+
+check_size(mmCarRoadFF, 0x3C);

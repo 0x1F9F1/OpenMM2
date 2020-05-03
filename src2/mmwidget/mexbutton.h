@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "togglebutton2.h"
+
 /*
     mmwidget:mexbutton
 
@@ -34,59 +36,37 @@
     0x5B3988 | const UIMexButton::`vftable' | ??_7UIMexButton@@6B@
 */
 
-class UIMexButton : UIToggleButton2
+class UIMexButton : public UIToggleButton2
 {
+    // const UIMexButton::`vftable' @ 0x5B3988
+
 public:
-    // UIMexButton::`vftable' @ 0x5B3988
-
     // 0x4EE440 | ??0UIMexButton@@QAE@XZ
-    inline UIMexButton()
-    {
-        stub<member_func_t<void, UIMexButton>>(0x4EE440, this);
-    }
+    UIMexButton();
 
-    // 0x4EE4D0 | ?Init@UIMexButton@@QAEXPAULocString@@PAHHMMMMHHVdatCallback@@@Z
-    inline void Init(struct LocString* arg1, int32_t* arg2, int32_t arg3, float arg4, float arg5, float arg6,
-        float arg7, int32_t arg8, int32_t arg9, class datCallback arg10)
-    {
-        return stub<member_func_t<void, UIMexButton, struct LocString*, int32_t*, int32_t, float, float, float, float,
-            int32_t, int32_t, class datCallback>>(
-            0x4EE4D0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
-    }
-
+    // 0x4EE6C0 | ??_GUIMexButton@@UAEPAXI@Z
     // 0x4EE4C0 | ??1UIMexButton@@UAE@XZ
-    inline ~UIMexButton() override
-    {
-        stub<member_func_t<void, UIMexButton>>(0x4EE4C0, this);
-    }
-
-    // 0x4EE590 | ?Update@UIMexButton@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, UIMexButton>>(0x4EE590, this);
-    }
+    ~UIMexButton() override;
 
     // 0x4EE640 | ?Action@UIMexButton@@UAEXTeqEvent@@@Z
-    inline void Action(union eqEvent arg1) override
-    {
-        return stub<member_func_t<void, UIMexButton, union eqEvent>>(0x4EE640, this, arg1);
-    }
+    void Action(union eqEvent arg1) override;
 
     // 0x4EE620 | ?DoToggle@UIMexButton@@UAEXXZ
-    inline void DoToggle() override
-    {
-        return stub<member_func_t<void, UIMexButton>>(0x4EE620, this);
-    }
+    void DoToggle() override;
 
+    // 0x4EE4D0 | ?Init@UIMexButton@@QAEXPAULocString@@PAHHMMMMHHVdatCallback@@@Z
+    void Init(struct LocString* arg1, i32* arg2, i32 arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7, i32 arg8, i32 arg9,
+        class datCallback arg10);
+
+    // 0x4EE590 | ?Update@UIMexButton@@UAEXXZ
+    void Update() override;
+
+private:
     // 0x4EE5E0 | ?DrawOff@UIMexButton@@EAEXXZ
-    inline void DrawOff() override
-    {
-        return stub<member_func_t<void, UIMexButton>>(0x4EE5E0, this);
-    }
+    void DrawOff() override;
 
     // 0x4EE5F0 | ?DrawOn@UIMexButton@@EAEXXZ
-    inline void DrawOn() override
-    {
-        return stub<member_func_t<void, UIMexButton>>(0x4EE5F0, this);
-    }
+    void DrawOn() override;
 };
+
+check_size(UIMexButton, 0xBC);

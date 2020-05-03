@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,25 @@
 */
 
 #include "input.h"
+
+void ioInput::Begin(bool arg1)
+{
+    return stub<cdecl_t<void, bool>>(0x4BA8B0, arg1);
+}
+
+void ioInput::End()
+{
+    return stub<cdecl_t<void>>(0x4BA8E0);
+}
+
+void ioInput::Poll()
+{
+    return stub<cdecl_t<void>>(0x4BA900);
+}
+
+void ioInput::Update()
+{
+    return stub<cdecl_t<void>>(0x4BA910);
+}
+
+define_dummy_symbol(input_input);

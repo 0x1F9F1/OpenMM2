@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "aiVehiclePhysics.h"
+
 /*
     ai:aiRouteRacer
 
@@ -33,63 +35,37 @@
     public: void __thiscall aiRouteRacer::AddWidgets(class bkBank &) | ?AddWidgets@aiRouteRacer@@QAEXAAVbkBank@@@Z
 */
 
-class aiRouteRacer : aiVehiclePhysics
+class aiRouteRacer : public aiVehiclePhysics
 {
 public:
-    // 0x53BD60 | ??_EaiRouteRacer@@QAEPAXI@Z
-    // Skipped (scalar/vector destructor)
-
     // 0x53D040 | ??0aiRouteRacer@@QAE@XZ
-    inline aiRouteRacer()
-    {
-        stub<member_func_t<void, aiRouteRacer>>(0x53D040, this);
-    }
+    aiRouteRacer();
 
     // 0x53D050 | ??1aiRouteRacer@@QAE@XZ
-    inline ~aiRouteRacer()
-    {
-        stub<member_func_t<void, aiRouteRacer>>(0x53D050, this);
-    }
-
-    // 0x53D060 | ?Init@aiRouteRacer@@QAEXHPAD@Z
-    inline void Init(int32_t arg1, char* arg2)
-    {
-        return stub<member_func_t<void, aiRouteRacer, int32_t, char*>>(0x53D060, this, arg1, arg2);
-    }
-
-    // 0x53D390 | ?Reset@aiRouteRacer@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, aiRouteRacer>>(0x53D390, this);
-    }
-
-    // 0x53D3B0 | ?Update@aiRouteRacer@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, aiRouteRacer>>(0x53D3B0, this);
-    }
-
-    // 0x53D4B0 | ?DriveRoute@aiRouteRacer@@AAEXXZ
-    inline void DriveRoute()
-    {
-        return stub<member_func_t<void, aiRouteRacer>>(0x53D4B0, this);
-    }
-
-    // 0x53D6B0 | ?Disabled@aiRouteRacer@@AAEXXZ
-    inline void Disabled()
-    {
-        return stub<member_func_t<void, aiRouteRacer>>(0x53D6B0, this);
-    }
-
-    // 0x53D6E0 | ?Finished@aiRouteRacer@@QAEHXZ
-    inline int32_t Finished()
-    {
-        return stub<member_func_t<int32_t, aiRouteRacer>>(0x53D6E0, this);
-    }
+    // 0x53BD60 | ??_EaiRouteRacer@@QAEPAXI@Z
+    ~aiRouteRacer();
 
     // 0x53D900 | ?DrawRouteThroughTraffic@aiRouteRacer@@QAEXXZ
-    inline void DrawRouteThroughTraffic()
-    {
-        return stub<member_func_t<void, aiRouteRacer>>(0x53D900, this);
-    }
+    void DrawRouteThroughTraffic();
+
+    // 0x53D6E0 | ?Finished@aiRouteRacer@@QAEHXZ
+    i32 Finished();
+
+    // 0x53D060 | ?Init@aiRouteRacer@@QAEXHPAD@Z
+    void Init(i32 arg1, char* arg2);
+
+    // 0x53D390 | ?Reset@aiRouteRacer@@QAEXXZ
+    void Reset();
+
+    // 0x53D3B0 | ?Update@aiRouteRacer@@QAEXXZ
+    void Update();
+
+private:
+    // 0x53D6B0 | ?Disabled@aiRouteRacer@@AAEXXZ
+    void Disabled();
+
+    // 0x53D4B0 | ?DriveRoute@aiRouteRacer@@AAEXXZ
+    void DriveRoute();
 };
+
+check_size(aiRouteRacer, 0x9794);

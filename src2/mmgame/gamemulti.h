@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "game.h"
 
 /*
     mmgame:gamemulti
@@ -88,363 +90,186 @@
     int stoopid | ?stoopid@@3HA
 */
 
-struct mmGameMulti : mmGame
+class mmGameMulti : public mmGame
 {
+    // const mmGameMulti::`vftable' @ 0x5B10A8
+
 public:
-    // mmGameMulti::`vftable' @ 0x5B10A8
-
     // 0x438CC0 | ??0mmGameMulti@@QAE@XZ
-    inline mmGameMulti()
-    {
-        stub<member_func_t<void, mmGameMulti>>(0x438CC0, this);
-    }
+    mmGameMulti();
 
-    // 0x439470 | ?SetFinishCam@mmGameMulti@@QAEXXZ
-    inline void SetFinishCam()
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x439470, this);
-    }
-
-    // 0x4394E0 | ?StartXYZ@mmGameMulti@@IAEXHAAVVector3@@0MM@Z
-    inline void StartXYZ(int32_t arg1, class Vector3& arg2, class Vector3& arg3, float arg4, float arg5)
-    {
-        return stub<member_func_t<void, mmGameMulti, int32_t, class Vector3&, class Vector3&, float, float>>(
-            0x4394E0, this, arg1, arg2, arg3, arg4, arg5);
-    }
-
-    // 0x439710 | ?SystemMessageCB@mmGameMulti@@QAEXPAX0@Z
-    inline void SystemMessageCB(void* arg1, void* arg2)
-    {
-        return stub<member_func_t<void, mmGameMulti, void*, void*>>(0x439710, this, arg1, arg2);
-    }
-
-    // 0x439AF0 | ?GameMessageCB@mmGameMulti@@QAEXPAX0@Z
-    inline void GameMessageCB(void* arg1, void* arg2)
-    {
-        return stub<member_func_t<void, mmGameMulti, void*, void*>>(0x439AF0, this, arg1, arg2);
-    }
-
-    // 0x43A3B0 | ?BootStrapCars@mmGameMulti@@QAEXXZ
-    inline void BootStrapCars()
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x43A3B0, this);
-    }
-
-    // 0x43A6E0 | ?ClearNetObjects@mmGameMulti@@QAEXXZ
-    inline void ClearNetObjects()
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x43A6E0, this);
-    }
-
-    // 0x43A7F0 | ?SendPosition@mmGameMulti@@QAEXXZ
-    inline void SendPosition()
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x43A7F0, this);
-    }
-
-    // 0x43A9B0 | ?UpdateScore@mmGameMulti@@QAEXXZ
-    inline void UpdateScore()
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x43A9B0, this);
-    }
-
-    // 0x43ADA0 | ?ClearRank@mmGameMulti@@QAEXXZ
-    inline void ClearRank()
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x43ADA0, this);
-    }
-
-    // 0x43ADD0 | ?RegisterMapNetObjects@mmGameMulti@@QAEXH@Z
-    inline void RegisterMapNetObjects(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmGameMulti, int32_t>>(0x43ADD0, this, arg1);
-    }
-
-    // 0x43AEF0 | ?DeactivateMapNetObject@mmGameMulti@@QAEXH@Z
-    inline void DeactivateMapNetObject(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmGameMulti, int32_t>>(0x43AEF0, this, arg1);
-    }
+    // 0x43BB80 | ??_GmmGameMulti@@UAEPAXI@Z
+    // 0x438E60 | ??1mmGameMulti@@UAE@XZ
+    ~mmGameMulti() override;
 
     // 0x43AF20 | ?ActivateMapNetObject@mmGameMulti@@QAEXH@Z
-    inline void ActivateMapNetObject(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmGameMulti, int32_t>>(0x43AF20, this, arg1);
-    }
-
-    // 0x43AF60 | ?GetInactiveNetObject@mmGameMulti@@QAEPAVmmNetObject@@XZ
-    inline class mmNetObject* GetInactiveNetObject()
-    {
-        return stub<member_func_t<class mmNetObject*, mmGameMulti>>(0x43AF60, this);
-    }
-
-    // 0x43AF90 | ?GetInactiveNetObjectIndex@mmGameMulti@@QAEHXZ
-    inline int32_t GetInactiveNetObjectIndex()
-    {
-        return stub<member_func_t<int32_t, mmGameMulti>>(0x43AF90, this);
-    }
-
-    // 0x43AFB0 | ?GetNetObject@mmGameMulti@@QAEPAVmmNetObject@@KH@Z
-    inline class mmNetObject* GetNetObject(uint32_t arg1, int32_t arg2)
-    {
-        return stub<member_func_t<class mmNetObject*, mmGameMulti, uint32_t, int32_t>>(0x43AFB0, this, arg1, arg2);
-    }
-
-    // 0x43AFF0 | ?GetNetObjectIndex@mmGameMulti@@QAEHKH@Z
-    inline int32_t GetNetObjectIndex(uint32_t arg1, int32_t arg2)
-    {
-        return stub<member_func_t<int32_t, mmGameMulti, uint32_t, int32_t>>(0x43AFF0, this, arg1, arg2);
-    }
-
-    // 0x43B040 | ?EnableRacers@mmGameMulti@@IAEXXZ
-    inline void EnableRacers()
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x43B040, this);
-    }
-
-    // 0x43B0E0 | ?DisableRacers@mmGameMulti@@IAEXXZ
-    inline void DisableRacers()
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x43B0E0, this);
-    }
-
-    // 0x43B140 | ?QuitNetwork@mmGameMulti@@QAEXXZ
-    inline void QuitNetwork()
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x43B140, this);
-    }
-
-    // 0x43B170 | ?PlayerFinishedLoading@mmGameMulti@@QAEXXZ
-    inline void PlayerFinishedLoading()
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x43B170, this);
-    }
-
-    // 0x43B1D0 | ?PlayerClearLoaded@mmGameMulti@@QAEXXZ
-    inline void PlayerClearLoaded()
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x43B1D0, this);
-    }
-
-    // 0x43B220 | ?ParseChatMessage@mmGameMulti@@QAEHPADH@Z
-    inline int32_t ParseChatMessage(char* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<int32_t, mmGameMulti, char*, int32_t>>(0x43B220, this, arg1, arg2);
-    }
-
-    // 0x43B310 | ?SortResults@mmGameMulti@@IAE_NKMH@Z
-    inline bool SortResults(uint32_t arg1, float arg2, int32_t arg3)
-    {
-        return stub<member_func_t<bool, mmGameMulti, uint32_t, float, int32_t>>(0x43B310, this, arg1, arg2, arg3);
-    }
-
-    // 0x43B390 | ?UpdateResults@mmGameMulti@@IAEXH@Z
-    inline void UpdateResults(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmGameMulti, int32_t>>(0x43B390, this, arg1);
-    }
-
-    // 0x43B4C0 | ?BroadCastCarTuning@mmGameMulti@@QAEXH@Z
-    inline void BroadCastCarTuning(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmGameMulti, int32_t>>(0x43B4C0, this, arg1);
-    }
-
-    // 0x43B5A0 | ?SendToChatMessage@mmGameMulti@@QAEXPADK@Z
-    inline void SendToChatMessage(char* arg1, uint32_t arg2)
-    {
-        return stub<member_func_t<void, mmGameMulti, char*, uint32_t>>(0x43B5A0, this, arg1, arg2);
-    }
-
-    // 0x43B610 | ?SendTimeMsg@mmGameMulti@@QAEXK@Z
-    inline void SendTimeMsg(uint32_t arg1)
-    {
-        return stub<member_func_t<void, mmGameMulti, uint32_t>>(0x43B610, this, arg1);
-    }
-
-    // 0x43B630 | ?SendCarTuning@mmGameMulti@@QAEXPBDK@Z
-    inline void SendCarTuning(char const* arg1, uint32_t arg2)
-    {
-        return stub<member_func_t<void, mmGameMulti, char const*, uint32_t>>(0x43B630, this, arg1, arg2);
-    }
-
-    // 0x43B640 | ?SendHostCars@mmGameMulti@@QAEXK@Z
-    inline void SendHostCars(uint32_t arg1)
-    {
-        return stub<member_func_t<void, mmGameMulti, uint32_t>>(0x43B640, this, arg1);
-    }
-
-    // 0x43B6C0 | ?FinishMessage@mmGameMulti@@QAEXH@Z
-    inline void FinishMessage(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmGameMulti, int32_t>>(0x43B6C0, this, arg1);
-    }
-
-    // 0x43B780 | ?BootPlayerCB@mmGameMulti@@QAEXPAX0@Z
-    inline void BootPlayerCB(void* arg1, void* arg2)
-    {
-        return stub<member_func_t<void, mmGameMulti, void*, void*>>(0x43B780, this, arg1, arg2);
-    }
-
-    // 0x43B7C0 | ?UpdateNetWorkAudio@mmGameMulti@@QAEXXZ
-    inline void UpdateNetWorkAudio()
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x43B7C0, this);
-    }
-
-    // 0x43B7D0 | ?SendLobbyResults@mmGameMulti@@QAEXHIM@Z
-    inline void SendLobbyResults(int32_t arg1, uint32_t arg2, float arg3)
-    {
-        return stub<member_func_t<void, mmGameMulti, int32_t, uint32_t, float>>(0x43B7D0, this, arg1, arg2, arg3);
-    }
-
-    // 0x43B870 | ?GetCarCRC@mmGameMulti@@IAEKPAD@Z
-    inline uint32_t GetCarCRC(char* arg1)
-    {
-        return stub<member_func_t<uint32_t, mmGameMulti, char*>>(0x43B870, this, arg1);
-    }
-
-    // 0x43B8B0 | ?SendMsg@mmGameMulti@@QAEXH@Z
-    inline void SendMsg(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmGameMulti, int32_t>>(0x43B8B0, this, arg1);
-    }
-
-    // 0x43B8D0 | ?SendBootMsg@mmGameMulti@@QAEXK@Z
-    inline void SendBootMsg(uint32_t arg1)
-    {
-        return stub<member_func_t<void, mmGameMulti, uint32_t>>(0x43B8D0, this, arg1);
-    }
-
-    // 0x43B8F0 | ?SendFinishAck@mmGameMulti@@IAEXKMH@Z
-    inline void SendFinishAck(uint32_t arg1, float arg2, int32_t arg3)
-    {
-        return stub<member_func_t<void, mmGameMulti, uint32_t, float, int32_t>>(0x43B8F0, this, arg1, arg2, arg3);
-    }
-
-    // 0x43B930 | ?SendFinishReq@mmGameMulti@@IAEXMH@Z
-    inline void SendFinishReq(float arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, mmGameMulti, float, int32_t>>(0x43B930, this, arg1, arg2);
-    }
-
-    // 0x43B970 | ?SendRaceReady@mmGameMulti@@IAEXXZ
-    inline void SendRaceReady()
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x43B970, this);
-    }
-
-    // 0x43B9B0 | ?SendGameSet@mmGameMulti@@IAEXXZ
-    inline void SendGameSet()
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x43B9B0, this);
-    }
-
-    // 0x43B9E0 | ?SendCheater@mmGameMulti@@IAEXK@Z
-    inline void SendCheater(uint32_t arg1)
-    {
-        return stub<member_func_t<void, mmGameMulti, uint32_t>>(0x43B9E0, this, arg1);
-    }
-
-    // 0x438E60 | ??1mmGameMulti@@UAE@XZ
-    inline ~mmGameMulti() override
-    {
-        stub<member_func_t<void, mmGameMulti>>(0x438E60, this);
-    }
-
-    // 0x43A900 | ?Update@mmGameMulti@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x43A900, this);
-    }
-
-    // 0x43A5D0 | ?Reset@mmGameMulti@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x43A5D0, this);
-    }
-
-    // 0x438F40 | ?Init@mmGameMulti@@UAEHXZ
-    inline int32_t Init() override
-    {
-        return stub<member_func_t<int32_t, mmGameMulti>>(0x438F40, this);
-    }
-
-    // 0x439240 | ?InitGameStrings@mmGameMulti@@UAEXXZ
-    inline void InitGameStrings() override
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x439240, this);
-    }
-
-    // 0x43A720 | ?InitOtherPlayers@mmGameMulti@@UAEXXZ
-    inline void InitOtherPlayers() override
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x43A720, this);
-    }
-
-    // 0x43ADC0 | ?UpdateDebugKeyInput@mmGameMulti@@UAEXH@Z
-    inline void UpdateDebugKeyInput(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmGameMulti, int32_t>>(0x43ADC0, this, arg1);
-    }
-
-    // 0x43A980 | ?UpdateGame@mmGameMulti@@UAEXXZ
-    inline void UpdateGame() override
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x43A980, this);
-    }
-
-    // 0x421B70 | ?NextRace@mmGameMulti@@UAEXXZ
-    inline void NextRace() override
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x421B70, this);
-    }
-
-    // 0x439130 | ?HitWaterHandler@mmGameMulti@@UAEXXZ
-    inline void HitWaterHandler() override
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x439130, this);
-    }
-
-    // 0x439230 | ?DropThruCityHandler@mmGameMulti@@UAEXXZ
-    inline void DropThruCityHandler() override
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x439230, this);
-    }
-
-    // 0x43B530 | ?SendChatMessage@mmGameMulti@@UAEXPAD@Z
-    inline void SendChatMessage(char* arg1) override
-    {
-        return stub<member_func_t<void, mmGameMulti, char*>>(0x43B530, this, arg1);
-    }
+    void ActivateMapNetObject(i32 arg1);
 
     // 0x43A4D0 | ?BeDone@mmGameMulti@@UAEXH@Z
-    inline void BeDone(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmGameMulti, int32_t>>(0x43A4D0, this, arg1);
-    }
+    void BeDone(i32 arg1) override;
 
-    // 0x582519 | __purecall
-    virtual inline void InitNetworkPlayers()
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x582519, this);
-    }
+    // 0x43B780 | ?BootPlayerCB@mmGameMulti@@QAEXPAX0@Z
+    void BootPlayerCB(void* arg1, void* arg2);
+
+    // 0x43A3B0 | ?BootStrapCars@mmGameMulti@@QAEXXZ
+    void BootStrapCars();
+
+    // 0x43B4C0 | ?BroadCastCarTuning@mmGameMulti@@QAEXH@Z
+    void BroadCastCarTuning(i32 arg1);
+
+    // 0x43A6E0 | ?ClearNetObjects@mmGameMulti@@QAEXXZ
+    void ClearNetObjects();
+
+    // 0x43ADA0 | ?ClearRank@mmGameMulti@@QAEXXZ
+    void ClearRank();
+
+    // 0x43AEF0 | ?DeactivateMapNetObject@mmGameMulti@@QAEXH@Z
+    void DeactivateMapNetObject(i32 arg1);
+
+    // 0x439230 | ?DropThruCityHandler@mmGameMulti@@UAEXXZ
+    void DropThruCityHandler() override;
+
+    // 0x43B6C0 | ?FinishMessage@mmGameMulti@@QAEXH@Z
+    void FinishMessage(i32 arg1);
+
+    // 0x439AF0 | ?GameMessageCB@mmGameMulti@@QAEXPAX0@Z
+    void GameMessageCB(void* arg1, void* arg2);
+
+    // 0x43AF60 | ?GetInactiveNetObject@mmGameMulti@@QAEPAVmmNetObject@@XZ
+    class mmNetObject* GetInactiveNetObject();
+
+    // 0x43AF90 | ?GetInactiveNetObjectIndex@mmGameMulti@@QAEHXZ
+    i32 GetInactiveNetObjectIndex();
+
+    // 0x43AFB0 | ?GetNetObject@mmGameMulti@@QAEPAVmmNetObject@@KH@Z
+    class mmNetObject* GetNetObject(u32 arg1, i32 arg2);
+
+    // 0x43AFF0 | ?GetNetObjectIndex@mmGameMulti@@QAEHKH@Z
+    i32 GetNetObjectIndex(u32 arg1, i32 arg2);
+
+    // 0x439130 | ?HitWaterHandler@mmGameMulti@@UAEXXZ
+    void HitWaterHandler() override;
+
+    // 0x438F40 | ?Init@mmGameMulti@@UAEHXZ
+    i32 Init() override;
+
+    // 0x439240 | ?InitGameStrings@mmGameMulti@@UAEXXZ
+    void InitGameStrings() override;
+
+    // 0x43A720 | ?InitOtherPlayers@mmGameMulti@@UAEXXZ
+    void InitOtherPlayers() override;
+
+    // 0x421B70 | ?NextRace@mmGameMulti@@UAEXXZ
+    void NextRace() override;
+
+    // 0x43B220 | ?ParseChatMessage@mmGameMulti@@QAEHPADH@Z
+    i32 ParseChatMessage(char* arg1, i32 arg2);
+
+    // 0x43B1D0 | ?PlayerClearLoaded@mmGameMulti@@QAEXXZ
+    void PlayerClearLoaded();
+
+    // 0x43B170 | ?PlayerFinishedLoading@mmGameMulti@@QAEXXZ
+    void PlayerFinishedLoading();
+
+    // 0x43B140 | ?QuitNetwork@mmGameMulti@@QAEXXZ
+    void QuitNetwork();
+
+    // 0x43ADD0 | ?RegisterMapNetObjects@mmGameMulti@@QAEXH@Z
+    void RegisterMapNetObjects(i32 arg1);
+
+    // 0x43A5D0 | ?Reset@mmGameMulti@@UAEXXZ
+    void Reset() override;
+
+    // 0x43B8D0 | ?SendBootMsg@mmGameMulti@@QAEXK@Z
+    void SendBootMsg(u32 arg1);
+
+    // 0x43B630 | ?SendCarTuning@mmGameMulti@@QAEXPBDK@Z
+    void SendCarTuning(char const* arg1, u32 arg2);
+
+    // 0x43B530 | ?SendChatMessage@mmGameMulti@@UAEXPAD@Z
+    void SendChatMessage(char* arg1) override;
+
+    // 0x43B640 | ?SendHostCars@mmGameMulti@@QAEXK@Z
+    void SendHostCars(u32 arg1);
+
+    // 0x43B7D0 | ?SendLobbyResults@mmGameMulti@@QAEXHIM@Z
+    void SendLobbyResults(i32 arg1, u32 arg2, f32 arg3);
+
+    // 0x43B8B0 | ?SendMsg@mmGameMulti@@QAEXH@Z
+    void SendMsg(i32 arg1);
+
+    // 0x43A7F0 | ?SendPosition@mmGameMulti@@QAEXXZ
+    void SendPosition();
+
+    // 0x43B610 | ?SendTimeMsg@mmGameMulti@@QAEXK@Z
+    void SendTimeMsg(u32 arg1);
+
+    // 0x43B5A0 | ?SendToChatMessage@mmGameMulti@@QAEXPADK@Z
+    void SendToChatMessage(char* arg1, u32 arg2);
+
+    // 0x439470 | ?SetFinishCam@mmGameMulti@@QAEXXZ
+    void SetFinishCam();
+
+    // 0x439710 | ?SystemMessageCB@mmGameMulti@@QAEXPAX0@Z
+    void SystemMessageCB(void* arg1, void* arg2);
+
+    // 0x43A900 | ?Update@mmGameMulti@@UAEXXZ
+    void Update() override;
+
+    // 0x43ADC0 | ?UpdateDebugKeyInput@mmGameMulti@@UAEXH@Z
+    void UpdateDebugKeyInput(i32 arg1) override;
+
+    // 0x43A980 | ?UpdateGame@mmGameMulti@@UAEXXZ
+    void UpdateGame() override;
+
+    // 0x43B7C0 | ?UpdateNetWorkAudio@mmGameMulti@@QAEXXZ
+    void UpdateNetWorkAudio();
+
+    // 0x43A9B0 | ?UpdateScore@mmGameMulti@@QAEXXZ
+    void UpdateScore();
+
+    virtual void InitNetworkPlayers() = 0;
 
     // 0x43A750 | ?InitRoster@mmGameMulti@@UAEXXZ
-    virtual inline void InitRoster()
-    {
-        return stub<member_func_t<void, mmGameMulti>>(0x43A750, this);
-    }
+    virtual void InitRoster();
 
-    // 0x582519 | __purecall
-    virtual inline void SystemMessage(struct NETSYS_MSG* arg1)
-    {
-        return stub<member_func_t<void, mmGameMulti, struct NETSYS_MSG*>>(0x582519, this, arg1);
-    }
+    virtual void SystemMessage(struct NETSYS_MSG* arg1) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline void GameMessage(struct NET_RCXHEAD* arg1)
-    {
-        return stub<member_func_t<void, mmGameMulti, struct NET_RCXHEAD*>>(0x582519, this, arg1);
-    }
+    virtual void GameMessage(struct NET_RCXHEAD* arg1) = 0;
+
+protected:
+    // 0x43B0E0 | ?DisableRacers@mmGameMulti@@IAEXXZ
+    void DisableRacers();
+
+    // 0x43B040 | ?EnableRacers@mmGameMulti@@IAEXXZ
+    void EnableRacers();
+
+    // 0x43B870 | ?GetCarCRC@mmGameMulti@@IAEKPAD@Z
+    u32 GetCarCRC(char* arg1);
+
+    // 0x43B9E0 | ?SendCheater@mmGameMulti@@IAEXK@Z
+    void SendCheater(u32 arg1);
+
+    // 0x43B8F0 | ?SendFinishAck@mmGameMulti@@IAEXKMH@Z
+    void SendFinishAck(u32 arg1, f32 arg2, i32 arg3);
+
+    // 0x43B930 | ?SendFinishReq@mmGameMulti@@IAEXMH@Z
+    void SendFinishReq(f32 arg1, i32 arg2);
+
+    // 0x43B9B0 | ?SendGameSet@mmGameMulti@@IAEXXZ
+    void SendGameSet();
+
+    // 0x43B970 | ?SendRaceReady@mmGameMulti@@IAEXXZ
+    void SendRaceReady();
+
+    // 0x43B310 | ?SortResults@mmGameMulti@@IAE_NKMH@Z
+    bool SortResults(u32 arg1, f32 arg2, i32 arg3);
+
+    // 0x4394E0 | ?StartXYZ@mmGameMulti@@IAEXHAAVVector3@@0MM@Z
+    void StartXYZ(i32 arg1, class Vector3& arg2, class Vector3& arg3, f32 arg4, f32 arg5);
+
+    // 0x43B390 | ?UpdateResults@mmGameMulti@@IAEXH@Z
+    void UpdateResults(i32 arg1);
 };
+
+check_size(mmGameMulti, 0x0);

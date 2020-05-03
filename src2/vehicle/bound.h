@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "phbound/boundgeom.h"
+
 /*
     vehicle:bound
 
@@ -29,38 +31,25 @@
     0x5B3110 | const vehBound::`vftable' | ??_7vehBound@@6B@
 */
 
-struct vehBound : phBoundGeometry
+class vehBound : public phBoundGeometry
 {
-public:
-    // vehBound::`vftable' @ 0x5B3110
+    // const vehBound::`vftable' @ 0x5B3110
 
+public:
     // 0x4DA610 | ??0vehBound@@QAE@XZ
-    inline vehBound()
-    {
-        stub<member_func_t<void, vehBound>>(0x4DA610, this);
-    }
+    vehBound();
 
     // 0x4DA680 | ??1vehBound@@QAE@XZ
-    inline ~vehBound()
-    {
-        stub<member_func_t<void, vehBound>>(0x4DA680, this);
-    }
+    ~vehBound();
 
     // 0x4DA6E0 | ?Init@vehBound@@QAEXXZ
-    inline void Init()
-    {
-        return stub<member_func_t<void, vehBound>>(0x4DA6E0, this);
-    }
-
-    // 0x4DA700 | ?SetFriction@vehBound@@UAEXM@Z
-    inline void SetFriction(float arg1) override
-    {
-        return stub<member_func_t<void, vehBound, float>>(0x4DA700, this, arg1);
-    }
+    void Init();
 
     // 0x4DA710 | ?SetElasticity@vehBound@@UAEXM@Z
-    inline void SetElasticity(float arg1) override
-    {
-        return stub<member_func_t<void, vehBound, float>>(0x4DA710, this, arg1);
-    }
+    void SetElasticity(f32 arg1) override;
+
+    // 0x4DA700 | ?SetFriction@vehBound@@UAEXM@Z
+    void SetFriction(f32 arg1) override;
 };
+
+check_size(vehBound, 0x80);

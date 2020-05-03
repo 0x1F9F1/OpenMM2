@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -34,45 +34,26 @@ struct memSafeHeap
 {
 public:
     // 0x5771E0 | ??0memSafeHeap@@QAE@XZ
-    inline memSafeHeap()
-    {
-        stub<member_func_t<void, memSafeHeap>>(0x5771E0, this);
-    }
+    memSafeHeap();
 
     // 0x577200 | ??1memSafeHeap@@QAE@XZ
-    inline ~memSafeHeap()
-    {
-        stub<member_func_t<void, memSafeHeap>>(0x577200, this);
-    }
+    ~memSafeHeap();
 
     // 0x577210 | ?Init@memSafeHeap@@QAEXPAVmemMemoryAllocator@@I_N11@Z
-    inline void Init(class memMemoryAllocator* arg1, uint32_t arg2, bool arg3, bool arg4, bool arg5)
-    {
-        return stub<member_func_t<void, memSafeHeap, class memMemoryAllocator*, uint32_t, bool, bool, bool>>(
-            0x577210, this, arg1, arg2, arg3, arg4, arg5);
-    }
-
-    // 0x577280 | ?Restart@memSafeHeap@@QAEXXZ
-    inline void Restart()
-    {
-        return stub<member_func_t<void, memSafeHeap>>(0x577280, this);
-    }
+    void Init(class memMemoryAllocator* arg1, u32 arg2, bool arg3, bool arg4, bool arg5);
 
     // 0x5772B0 | ?Kill@memSafeHeap@@QAEXXZ
-    inline void Kill()
-    {
-        return stub<member_func_t<void, memSafeHeap>>(0x5772B0, this);
-    }
+    void Kill();
 
+    // 0x577280 | ?Restart@memSafeHeap@@QAEXXZ
+    void Restart();
+
+protected:
     // 0x5772E0 | ?Activate@memSafeHeap@@IAEXXZ
-    inline void Activate()
-    {
-        return stub<member_func_t<void, memSafeHeap>>(0x5772E0, this);
-    }
+    void Activate();
 
     // 0x577330 | ?Deactivate@memSafeHeap@@IAEXXZ
-    inline void Deactivate()
-    {
-        return stub<member_func_t<void, memSafeHeap>>(0x577330, this);
-    }
+    void Deactivate();
 };
+
+check_size(memSafeHeap, 0x0);

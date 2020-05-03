@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,25 @@
 */
 
 #include "vshow.h"
+
+VehShowcase::VehShowcase(i32 arg1)
+{
+    unimplemented();
+}
+
+VehShowcase::~VehShowcase()
+{
+    unimplemented();
+}
+
+void VehShowcase::PostSetup()
+{
+    return stub<thiscall_t<void, VehShowcase*>>(0x505690, this);
+}
+
+void VehShowcase::PreSetup()
+{
+    return stub<thiscall_t<void, VehShowcase*>>(0x505620, this);
+}
+
+define_dummy_symbol(mmui_vshow);

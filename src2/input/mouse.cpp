@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,20 @@
 */
 
 #include "mouse.h"
+
+void ioMouse::Begin(bool arg1)
+{
+    return stub<cdecl_t<void, bool>>(0x4BB220, arg1);
+}
+
+void ioMouse::End()
+{
+    return stub<cdecl_t<void>>(0x4BB360);
+}
+
+void ioMouse::Update()
+{
+    return stub<cdecl_t<void>>(0x4BB3A0);
+}
+
+define_dummy_symbol(input_mouse);

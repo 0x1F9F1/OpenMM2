@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,20 @@
 */
 
 #include "localize.h"
+
+struct LocString* AngelReadString(u32 arg1)
+{
+    return stub<cdecl_t<struct LocString*, u32>>(0x534790, arg1);
+}
+
+char* GetLocTime(f32 arg1)
+{
+    return stub<cdecl_t<char*, f32>>(0x534600, arg1);
+}
+
+i32 __stdcall MyLoadStringA(struct HINSTANCE__* arg1, u32 arg2, char* arg3, i32 arg4)
+{
+    return stub<stdcall_t<i32, struct HINSTANCE__*, u32, char*, i32>>(0x5346B0, arg1, arg2, arg3, arg4);
+}
+
+define_dummy_symbol(localize_localize);

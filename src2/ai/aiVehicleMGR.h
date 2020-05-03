@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,10 @@
 */
 
 #pragma once
+
+#include "level/inst.h"
+#include "mmgame/mirror.h"
+#include "node/node.h"
 
 /*
     ai:aiVehicleMGR
@@ -75,285 +79,176 @@
     0x5B5974 | const aiVehicleActive::`vftable' | ??_7aiVehicleActive@@6B@
     0x5B599C | const aiVehicleManager::`vftable' | ??_7aiVehicleManager@@6B@
     0x6B31AC | public: static class aiVehicleManager * aiVehicleManager::Instance | ?Instance@aiVehicleManager@@2PAV1@A
-    class HashTable VehicleDataHash | ?VehicleDataHash@@3VHashTable@@A
-    class HashTable NoDataWhined | ?NoDataWhined@@3VHashTable@@A
-    public: static float aiVehicleManager::FloatClock | ?FloatClock@aiVehicleManager@@2MA
-    public: static int aiVehicleManager::SignalClock | ?SignalClock@aiVehicleManager@@2HA
+    0x6B31B0 | class HashTable VehicleDataHash | ?VehicleDataHash@@3VHashTable@@A
+    0x6B31D0 | class HashTable NoDataWhined | ?NoDataWhined@@3VHashTable@@A
+    0x6B31EC | public: static float aiVehicleManager::FloatClock | ?FloatClock@aiVehicleManager@@2MA
+    0x6B31F4 | public: static int aiVehicleManager::SignalClock | ?SignalClock@aiVehicleManager@@2HA
 */
 
-class aiVehicleManager : asNode
+class aiVehicleInstance : public lvlInstance
 {
+    // const aiVehicleInstance::`vftable' @ 0x5B590C
+
 public:
-    // aiVehicleManager::`vftable' @ 0x5B599C
-
-    // 0x553B30 | ??0aiVehicleManager@@QAE@XZ
-    inline aiVehicleManager()
-    {
-        stub<member_func_t<void, aiVehicleManager>>(0x553B30, this);
-    }
-
-    // 0x553CE0 | ?Init@aiVehicleManager@@QAEXPAD@Z
-    inline void Init(char* arg1)
-    {
-        return stub<member_func_t<void, aiVehicleManager, char*>>(0x553CE0, this, arg1);
-    }
-
-    // 0x553DC0 | ?Attach@aiVehicleManager@@QAEPAVaiVehicleActive@@PAVaiVehicleInstance@@@Z
-    inline class aiVehicleActive* Attach(class aiVehicleInstance* arg1)
-    {
-        return stub<member_func_t<class aiVehicleActive*, aiVehicleManager, class aiVehicleInstance*>>(
-            0x553DC0, this, arg1);
-    }
-
-    // 0x553E30 | ?Detach@aiVehicleManager@@QAEXPAVaiVehicleActive@@@Z
-    inline void Detach(class aiVehicleActive* arg1)
-    {
-        return stub<member_func_t<void, aiVehicleManager, class aiVehicleActive*>>(0x553E30, this, arg1);
-    }
-
-    // 0x553FA0 | ?AddVehicleDataEntry@aiVehicleManager@@QAEHPAD@Z
-    inline int32_t AddVehicleDataEntry(char* arg1)
-    {
-        return stub<member_func_t<int32_t, aiVehicleManager, char*>>(0x553FA0, this, arg1);
-    }
-
-    // 0x5541E0 | ?SaveEntry@aiVehicleManager@@QAEXXZ
-    inline void SaveEntry()
-    {
-        return stub<member_func_t<void, aiVehicleManager>>(0x5541E0, this);
-    }
-
-    // 0x6B31AC | ?Instance@aiVehicleManager@@2PAV1@A
-    inline extern_var(0x6B31AC, class aiVehicleManager*, Instance);
-
-    // 0x553C20 | ??1aiVehicleManager@@UAE@XZ
-    inline ~aiVehicleManager() override
-    {
-        stub<member_func_t<void, aiVehicleManager>>(0x553C20, this);
-    }
-
-    // 0x553EA0 | ?Update@aiVehicleManager@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, aiVehicleManager>>(0x553EA0, this);
-    }
-
-    // 0x553D60 | ?Reset@aiVehicleManager@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, aiVehicleManager>>(0x553D60, this);
-    }
-};
-
-class aiVehicleActive : dgPhysEntity
-{
-public:
-    // aiVehicleActive::`vftable' @ 0x5B5974
-
-    // 0x553070 | ??0aiVehicleActive@@QAE@XZ
-    inline aiVehicleActive()
-    {
-        stub<member_func_t<void, aiVehicleActive>>(0x553070, this);
-    }
-
-    // 0x553290 | ?Reset@aiVehicleActive@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, aiVehicleActive>>(0x553290, this);
-    }
-
-    // 0x5532A0 | ?Impact@aiVehicleActive@@SAXPAV1@PAUImpactCBData@@@Z
-    static inline void Impact(class aiVehicleActive* arg1, struct ImpactCBData* arg2)
-    {
-        return stub<cdecl_t<void, class aiVehicleActive*, struct ImpactCBData*>>(0x5532A0, arg1, arg2);
-    }
-
-    // 0x553440 | ?Attach@aiVehicleActive@@QAEXPAVaiVehicleInstance@@@Z
-    inline void Attach(class aiVehicleInstance* arg1)
-    {
-        return stub<member_func_t<void, aiVehicleActive, class aiVehicleInstance*>>(0x553440, this, arg1);
-    }
-
-    // 0x5536B0 | ?Detach@aiVehicleActive@@QAEXXZ
-    inline void Detach()
-    {
-        return stub<member_func_t<void, aiVehicleActive>>(0x5536B0, this);
-    }
-
-    // 0x5539E0 | ?BottomedOut@aiVehicleActive@@QAEHXZ
-    inline int32_t BottomedOut()
-    {
-        return stub<member_func_t<int32_t, aiVehicleActive>>(0x5539E0, this);
-    }
-
-    // 0x553B20 | ?UpdateDamage@aiVehicleActive@@QAEXXZ
-    inline void UpdateDamage()
-    {
-        return stub<member_func_t<void, aiVehicleActive>>(0x553B20, this);
-    }
-
-    // 0x5531B0 | ??1aiVehicleActive@@UAE@XZ
-    inline ~aiVehicleActive() override
-    {
-        stub<member_func_t<void, aiVehicleActive>>(0x5531B0, this);
-    }
-
-    // 0x553890 | ?Update@aiVehicleActive@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, aiVehicleActive>>(0x553890, this);
-    }
-
-    // 0x553960 | ?PostUpdate@aiVehicleActive@@UAEXXZ
-    inline void PostUpdate() override
-    {
-        return stub<member_func_t<void, aiVehicleActive>>(0x553960, this);
-    }
-
-    // 0x5543B0 | ?GetICS@aiVehicleActive@@UAEPAVphInertialCS@@XZ
-    inline class phInertialCS* GetICS() override
-    {
-        return stub<member_func_t<class phInertialCS*, aiVehicleActive>>(0x5543B0, this);
-    }
-
-    // 0x553430 | ?GetInst@aiVehicleActive@@UAEPAVlvlInstance@@XZ
-    inline class lvlInstance* GetInst() override
-    {
-        return stub<member_func_t<class lvlInstance*, aiVehicleActive>>(0x553430, this);
-    }
-
-    // 0x553690 | ?DetachMe@aiVehicleActive@@UAEXXZ
-    inline void DetachMe() override
-    {
-        return stub<member_func_t<void, aiVehicleActive>>(0x553690, this);
-    }
-
-    // 0x553A20 | ?RequiresTerrainCollision@aiVehicleActive@@UAE_NXZ
-    inline bool RequiresTerrainCollision() override
-    {
-        return stub<member_func_t<bool, aiVehicleActive>>(0x553A20, this);
-    }
-};
-
-class aiVehicleInstance : lvlInstance
-{
-public:
-    // aiVehicleInstance::`vftable' @ 0x5B590C
-
     // 0x551D90 | ??0aiVehicleInstance@@QAE@PAVaiVehicleSpline@@PAD@Z
-    inline aiVehicleInstance(class aiVehicleSpline* arg1, char* arg2)
-    {
-        stub<member_func_t<void, aiVehicleInstance, class aiVehicleSpline*, char*>>(0x551D90, this, arg1, arg2);
-    }
-
-    // 0x552010 | ?InitBreakable@aiVehicleInstance@@AAE_NPBD0H@Z
-    inline bool InitBreakable(char const* arg1, char const* arg2, int32_t arg3)
-    {
-        return stub<member_func_t<bool, aiVehicleInstance, char const*, char const*, int32_t>>(
-            0x552010, this, arg1, arg2, arg3);
-    }
-
-    // 0x552110 | ?SetColor@aiVehicleInstance@@QAEXXZ
-    inline void SetColor()
-    {
-        return stub<member_func_t<void, aiVehicleInstance>>(0x552110, this);
-    }
-
-    // 0x552870 | ?DrawPart@aiVehicleInstance@@QAEXAAVmodStatic@@ABVMatrix34@@PAVmodShader@@H@Z
-    inline void DrawPart(class modStatic& arg1, class Matrix34 const& arg2, class modShader* arg3, int32_t arg4)
-    {
-        return stub<
-            member_func_t<void, aiVehicleInstance, class modStatic&, class Matrix34 const&, class modShader*, int32_t>>(
-            0x552870, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x553F80 | ?GetData@aiVehicleInstance@@QAEPAVaiVehicleData@@XZ
-    inline class aiVehicleData* GetData()
-    {
-        return stub<member_func_t<class aiVehicleData*, aiVehicleInstance>>(0x553F80, this);
-    }
-
-    // 0x552100 | ?Reset@aiVehicleInstance@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, aiVehicleInstance>>(0x552100, this);
-    }
-
-    // 0x553030 | ?GetPosition@aiVehicleInstance@@UAEABVVector3@@XZ
-    inline class Vector3 const& GetPosition() override
-    {
-        return stub<member_func_t<class Vector3 const&, aiVehicleInstance>>(0x553030, this);
-    }
-
-    // 0x553020 | ?GetMatrix@aiVehicleInstance@@UAEABVMatrix34@@AAV2@@Z
-    inline class Matrix34 const& GetMatrix(class Matrix34& arg1) override
-    {
-        return stub<member_func_t<class Matrix34 const&, aiVehicleInstance, class Matrix34&>>(0x553020, this, arg1);
-    }
-
-    // 0x553010 | ?SetMatrix@aiVehicleInstance@@UAEXABVMatrix34@@@Z
-    inline void SetMatrix(class Matrix34 const& arg1) override
-    {
-        return stub<member_func_t<void, aiVehicleInstance, class Matrix34 const&>>(0x553010, this, arg1);
-    }
-
-    // 0x552F50 | ?GetEntity@aiVehicleInstance@@UAEPAVdgPhysEntity@@XZ
-    inline class dgPhysEntity* GetEntity() override
-    {
-        return stub<member_func_t<class dgPhysEntity*, aiVehicleInstance>>(0x552F50, this);
-    }
+    aiVehicleInstance(class aiVehicleSpline* arg1, char* arg2);
 
     // 0x552FB0 | ?AttachEntity@aiVehicleInstance@@UAEPAVdgPhysEntity@@XZ
-    inline class dgPhysEntity* AttachEntity() override
-    {
-        return stub<member_func_t<class dgPhysEntity*, aiVehicleInstance>>(0x552FB0, this);
-    }
+    class dgPhysEntity* AttachEntity() override;
 
     // 0x552F80 | ?Detach@aiVehicleInstance@@UAEXXZ
-    inline void Detach() override
-    {
-        return stub<member_func_t<void, aiVehicleInstance>>(0x552F80, this);
-    }
+    void Detach() override;
 
     // 0x552160 | ?Draw@aiVehicleInstance@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
-    {
-        return stub<member_func_t<void, aiVehicleInstance, int32_t>>(0x552160, this, arg1);
-    }
-
-    // 0x552CC0 | ?DrawShadow@aiVehicleInstance@@UAEXXZ
-    inline void DrawShadow() override
-    {
-        return stub<member_func_t<void, aiVehicleInstance>>(0x552CC0, this);
-    }
-
-    // 0x552F30 | ?DrawShadowMap@aiVehicleInstance@@UAEXXZ
-    inline void DrawShadowMap() override
-    {
-        return stub<member_func_t<void, aiVehicleInstance>>(0x552F30, this);
-    }
+    void Draw(i32 arg1) override;
 
     // 0x552930 | ?DrawGlow@aiVehicleInstance@@UAEXXZ
-    inline void DrawGlow() override
-    {
-        return stub<member_func_t<void, aiVehicleInstance>>(0x552930, this);
-    }
+    void DrawGlow() override;
+
+    // 0x552870 | ?DrawPart@aiVehicleInstance@@QAEXAAVmodStatic@@ABVMatrix34@@PAVmodShader@@H@Z
+    void DrawPart(class modStatic& arg1, class Matrix34 const& arg2, class modShader* arg3, i32 arg4);
 
     // 0x552CB0 | ?DrawReflected@aiVehicleInstance@@UAEXM@Z
-    inline void DrawReflected(float arg1) override
-    {
-        return stub<member_func_t<void, aiVehicleInstance, float>>(0x552CB0, this, arg1);
-    }
+    void DrawReflected(f32 arg1) override;
 
-    // 0x553060 | ?SizeOf@aiVehicleInstance@@UAEIXZ
-    inline uint32_t SizeOf() override
-    {
-        return stub<member_func_t<uint32_t, aiVehicleInstance>>(0x553060, this);
-    }
+    // 0x552CC0 | ?DrawShadow@aiVehicleInstance@@UAEXXZ
+    void DrawShadow() override;
+
+    // 0x552F30 | ?DrawShadowMap@aiVehicleInstance@@UAEXXZ
+    void DrawShadowMap() override;
 
     // 0x552F40 | ?GetBound@aiVehicleInstance@@UAEPBVphBound@@H@Z
-    inline class phBound const* GetBound(int32_t arg1) override
-    {
-        return stub<member_func_t<class phBound const*, aiVehicleInstance, int32_t>>(0x552F40, this, arg1);
-    }
+    class phBound const* GetBound(i32 arg1) override;
+
+    // 0x553F80 | ?GetData@aiVehicleInstance@@QAEPAVaiVehicleData@@XZ
+    class aiVehicleData* GetData();
+
+    // 0x552F50 | ?GetEntity@aiVehicleInstance@@UAEPAVdgPhysEntity@@XZ
+    class dgPhysEntity* GetEntity() override;
+
+    // 0x553020 | ?GetMatrix@aiVehicleInstance@@UAEABVMatrix34@@AAV2@@Z
+    class Matrix34 const& GetMatrix(class Matrix34& arg1) override;
+
+    // 0x553030 | ?GetPosition@aiVehicleInstance@@UAEABVVector3@@XZ
+    class Vector3 const& GetPosition() override;
+
+    // 0x552100 | ?Reset@aiVehicleInstance@@UAEXXZ
+    void Reset() override;
+
+    // 0x552110 | ?SetColor@aiVehicleInstance@@QAEXXZ
+    void SetColor();
+
+    // 0x553010 | ?SetMatrix@aiVehicleInstance@@UAEXABVMatrix34@@@Z
+    void SetMatrix(class Matrix34 const& arg1) override;
+
+    // 0x553060 | ?SizeOf@aiVehicleInstance@@UAEIXZ
+    u32 SizeOf() override;
+
+private:
+    // 0x552010 | ?InitBreakable@aiVehicleInstance@@AAE_NPBD0H@Z
+    bool InitBreakable(char const* arg1, char const* arg2, i32 arg3);
 };
+
+check_size(aiVehicleInstance, 0x0);
+
+class aiVehicleActive : public dgPhysEntity
+{
+    // const aiVehicleActive::`vftable' @ 0x5B5974
+
+public:
+    // 0x553070 | ??0aiVehicleActive@@QAE@XZ
+    aiVehicleActive();
+
+    // 0x554330 | ??_GaiVehicleActive@@UAEPAXI@Z
+    // 0x5531B0 | ??1aiVehicleActive@@UAE@XZ
+    ~aiVehicleActive() override;
+
+    // 0x553440 | ?Attach@aiVehicleActive@@QAEXPAVaiVehicleInstance@@@Z
+    void Attach(class aiVehicleInstance* arg1);
+
+    // 0x5539E0 | ?BottomedOut@aiVehicleActive@@QAEHXZ
+    i32 BottomedOut();
+
+    // 0x5536B0 | ?Detach@aiVehicleActive@@QAEXXZ
+    void Detach();
+
+    // 0x553690 | ?DetachMe@aiVehicleActive@@UAEXXZ
+    void DetachMe() override;
+
+    // 0x5543B0 | ?GetICS@aiVehicleActive@@UAEPAVphInertialCS@@XZ
+    class phInertialCS* GetICS() override;
+
+    // 0x553430 | ?GetInst@aiVehicleActive@@UAEPAVlvlInstance@@XZ
+    class lvlInstance* GetInst() override;
+
+    // 0x553960 | ?PostUpdate@aiVehicleActive@@UAEXXZ
+    void PostUpdate() override;
+
+    // 0x553A20 | ?RequiresTerrainCollision@aiVehicleActive@@UAE_NXZ
+    bool RequiresTerrainCollision() override;
+
+    // 0x553290 | ?Reset@aiVehicleActive@@QAEXXZ
+    void Reset();
+
+    // 0x553890 | ?Update@aiVehicleActive@@UAEXXZ
+    void Update() override;
+
+    // 0x553B20 | ?UpdateDamage@aiVehicleActive@@QAEXXZ
+    void UpdateDamage();
+
+    // 0x5532A0 | ?Impact@aiVehicleActive@@SAXPAV1@PAUImpactCBData@@@Z
+    static void Impact(class aiVehicleActive* arg1, struct ImpactCBData* arg2);
+};
+
+check_size(aiVehicleActive, 0xAFC);
+
+class aiVehicleManager : public asNode
+{
+    // const aiVehicleManager::`vftable' @ 0x5B599C
+
+public:
+    // 0x553B30 | ??0aiVehicleManager@@QAE@XZ
+    aiVehicleManager();
+
+    // 0x554370 | ??_GaiVehicleManager@@UAEPAXI@Z
+    // 0x553C20 | ??1aiVehicleManager@@UAE@XZ
+    ~aiVehicleManager() override;
+
+    // 0x553FA0 | ?AddVehicleDataEntry@aiVehicleManager@@QAEHPAD@Z
+    i32 AddVehicleDataEntry(char* arg1);
+
+    // 0x553DC0 | ?Attach@aiVehicleManager@@QAEPAVaiVehicleActive@@PAVaiVehicleInstance@@@Z
+    class aiVehicleActive* Attach(class aiVehicleInstance* arg1);
+
+    // 0x553E30 | ?Detach@aiVehicleManager@@QAEXPAVaiVehicleActive@@@Z
+    void Detach(class aiVehicleActive* arg1);
+
+    // 0x553CE0 | ?Init@aiVehicleManager@@QAEXPAD@Z
+    void Init(char* arg1);
+
+    // 0x553D60 | ?Reset@aiVehicleManager@@UAEXXZ
+    void Reset() override;
+
+    // 0x5541E0 | ?SaveEntry@aiVehicleManager@@QAEXXZ
+    void SaveEntry();
+
+    // 0x553EA0 | ?Update@aiVehicleManager@@UAEXXZ
+    void Update() override;
+
+    // 0x6B31EC | ?FloatClock@aiVehicleManager@@2MA
+    static inline extern_var(0x6B31EC, f32, FloatClock);
+
+    // 0x6B31AC | ?Instance@aiVehicleManager@@2PAV1@A
+    static inline extern_var(0x6B31AC, class aiVehicleManager*, Instance);
+
+    // 0x6B31F4 | ?SignalClock@aiVehicleManager@@2HA
+    static inline extern_var(0x6B31F4, i32, SignalClock);
+};
+
+check_size(aiVehicleManager, 0x0);
+
+// 0x6B31D0 | ?NoDataWhined@@3VHashTable@@A
+inline extern_var(0x6B31D0, class HashTable, NoDataWhined);
+
+// 0x6B31B0 | ?VehicleDataHash@@3VHashTable@@A
+inline extern_var(0x6B31B0, class HashTable, VehicleDataHash);

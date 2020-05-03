@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -29,7 +29,4 @@
 */
 
 // 0x4656D0 | ?CleanName@@YAPBDPBD@Z
-inline char const* CleanName(char const* arg1)
-{
-    return stub<cdecl_t<char const*, char const*>>(0x4656D0, arg1);
-}
+char const* CleanName(char const* arg1);

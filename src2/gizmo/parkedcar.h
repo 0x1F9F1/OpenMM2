@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "node/node.h"
+
 /*
     gizmo:parkedcar
 
@@ -34,44 +36,30 @@
     char * car_name_template | ?car_name_template@@3PADA
 */
 
-class gizParkedCarMgr : asNode
+class gizParkedCarMgr : public asNode
 {
-public:
-    // gizParkedCarMgr::`vftable' @ 0x5B622C
+    // const gizParkedCarMgr::`vftable' @ 0x5B622C
 
+public:
     // 0x579A20 | ??0gizParkedCarMgr@@QAE@XZ
-    inline gizParkedCarMgr()
-    {
-        stub<member_func_t<void, gizParkedCarMgr>>(0x579A20, this);
-    }
+    gizParkedCarMgr();
+
+    // 0x579CD0 | ??_GgizParkedCarMgr@@UAEPAXI@Z
+    // 0x579A80 | ??1gizParkedCarMgr@@UAE@XZ
+    ~gizParkedCarMgr() override;
 
     // 0x579AF0 | ?Init@gizParkedCarMgr@@QAE_NPAD00@Z
-    inline bool Init(char* arg1, char* arg2, char* arg3)
-    {
-        return stub<member_func_t<bool, gizParkedCarMgr, char*, char*, char*>>(0x579AF0, this, arg1, arg2, arg3);
-    }
-
-    // 0x579CC0 | ?ApplyTuning@gizParkedCarMgr@@AAEXXZ
-    inline void ApplyTuning()
-    {
-        return stub<member_func_t<void, gizParkedCarMgr>>(0x579CC0, this);
-    }
-
-    // 0x579A80 | ??1gizParkedCarMgr@@UAE@XZ
-    inline ~gizParkedCarMgr() override
-    {
-        stub<member_func_t<void, gizParkedCarMgr>>(0x579A80, this);
-    }
-
-    // 0x579CB0 | ?Update@gizParkedCarMgr@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, gizParkedCarMgr>>(0x579CB0, this);
-    }
+    bool Init(char* arg1, char* arg2, char* arg3);
 
     // 0x579AE0 | ?Reset@gizParkedCarMgr@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, gizParkedCarMgr>>(0x579AE0, this);
-    }
+    void Reset() override;
+
+    // 0x579CB0 | ?Update@gizParkedCarMgr@@UAEXXZ
+    void Update() override;
+
+private:
+    // 0x579CC0 | ?ApplyTuning@gizParkedCarMgr@@AAEXXZ
+    void ApplyTuning();
 };
+
+check_size(gizParkedCarMgr, 0x24);

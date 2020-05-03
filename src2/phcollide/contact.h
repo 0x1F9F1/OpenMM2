@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -32,76 +32,66 @@
     0x4700C0 | public: void __thiscall phContact::SwapAB(void) | ?SwapAB@phContact@@QAEXXZ
     public: float __thiscall Vector3::operator^(class Vector3 const &) const | ??TVector3@@QBEMABV0@@Z
     0x45CD00 | public: void __thiscall Vector3::operator-=(class Vector3 const &) | ??ZVector3@@QAEXABV0@@Z
-    public: static float phContact::ContactPenetrationScale | ?ContactPenetrationScale@phContact@@2MA
-    public: static bool phContact::ContactsEnabledFlag | ?ContactsEnabledFlag@phContact@@2_NA
-    public: static float phContact::Penetration | ?Penetration@phContact@@2MA
+    0x5C6F60 | public: static float phContact::ContactPenetrationScale | ?ContactPenetrationScale@phContact@@2MA
+    0x5C6F64 | public: static bool phContact::ContactsEnabledFlag | ?ContactsEnabledFlag@phContact@@2_NA
+    0x660F58 | public: static float phContact::Penetration | ?Penetration@phContact@@2MA
     float NominalPeneRoot | ?NominalPeneRoot@@3MA
     float DampCoef | ?DampCoef@@3MA
     float newCompPerp | ?newCompPerp@@3MA
-    class Matrix34 LastA | ?LastA@@3VMatrix34@@A
-    class Matrix34 LastB | ?LastB@@3VMatrix34@@A
+    0x660F68 | class Matrix34 LastA | ?LastA@@3VMatrix34@@A
+    0x660F98 | class Matrix34 LastB | ?LastB@@3VMatrix34@@A
     class phColliderBase * lastCollA | ?lastCollA@@3PAVphColliderBase@@A
-    class phContact * debugPtr | ?debugPtr@@3PAVphContact@@A
+    0x660FD0 | class phContact * debugPtr | ?debugPtr@@3PAVphContact@@A
 */
 
 class phContact
 {
 public:
-    // 0x46EEA0 | ?DisableContacts@phContact@@SAXXZ
-    static inline void DisableContacts()
-    {
-        return stub<cdecl_t<void>>(0x46EEA0);
-    }
-
-    // 0x46EEB0 | ?SetContactPenetrationScale@phContact@@SAXM@Z
-    static inline void SetContactPenetrationScale(float arg1)
-    {
-        return stub<cdecl_t<void, float>>(0x46EEB0, arg1);
-    }
-
-    // 0x46EED0 | ?SetContactPenetration@phContact@@SAXXZ
-    static inline void SetContactPenetration()
-    {
-        return stub<cdecl_t<void>>(0x46EED0);
-    }
+    // 0x46F410 | ?CalcContactForce@phContact@@QAE_NPBVphImpact@@ABVVector3@@11PAV3@PAVMatrix34@@PAMMM@Z
+    bool CalcContactForce(class phImpact const* arg1, class Vector3 const& arg2, class Vector3 const& arg3,
+        class Vector3 const& arg4, class Vector3* arg5, class Matrix34* arg6, f32* arg7, f32 arg8, f32 arg9);
 
     // 0x46EF10 | ?Init@phContact@@QAEXABVphImpact@@@Z
-    inline void Init(class phImpact const& arg1)
-    {
-        return stub<member_func_t<void, phContact, class phImpact const&>>(0x46EF10, this, arg1);
-    }
-
-    // 0x46F000 | ?Set@phContact@@QAEXABV1@@Z
-    inline void Set(class phContact const& arg1)
-    {
-        return stub<member_func_t<void, phContact, class phContact const&>>(0x46F000, this, arg1);
-    }
+    void Init(class phImpact const& arg1);
 
     // 0x46F110 | ?IsEqual@phContact@@QAE_NABVphImpact@@@Z
-    inline bool IsEqual(class phImpact const& arg1)
-    {
-        return stub<member_func_t<bool, phContact, class phImpact const&>>(0x46F110, this, arg1);
-    }
+    bool IsEqual(class phImpact const& arg1);
+
+    // 0x46F000 | ?Set@phContact@@QAEXABV1@@Z
+    void Set(class phContact const& arg1);
 
     // 0x46F1D0 | ?SetContactForceLimit@phContact@@QAEXABVphImpact@@ABVVector3@@@Z
-    inline void SetContactForceLimit(class phImpact const& arg1, class Vector3 const& arg2)
-    {
-        return stub<member_func_t<void, phContact, class phImpact const&, class Vector3 const&>>(
-            0x46F1D0, this, arg1, arg2);
-    }
-
-    // 0x46F410 | ?CalcContactForce@phContact@@QAE_NPBVphImpact@@ABVVector3@@11PAV3@PAVMatrix34@@PAMMM@Z
-    inline bool CalcContactForce(class phImpact const* arg1, class Vector3 const& arg2, class Vector3 const& arg3,
-        class Vector3 const& arg4, class Vector3* arg5, class Matrix34* arg6, float* arg7, float arg8, float arg9)
-    {
-        return stub<member_func_t<bool, phContact, class phImpact const*, class Vector3 const&, class Vector3 const&,
-            class Vector3 const&, class Vector3*, class Matrix34*, float*, float, float>>(
-            0x46F410, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
-    }
+    void SetContactForceLimit(class phImpact const& arg1, class Vector3 const& arg2);
 
     // 0x4700C0 | ?SwapAB@phContact@@QAEXXZ
-    inline void SwapAB()
-    {
-        return stub<member_func_t<void, phContact>>(0x4700C0, this);
-    }
+    void SwapAB();
+
+    // 0x46EEA0 | ?DisableContacts@phContact@@SAXXZ
+    static void DisableContacts();
+
+    // 0x46EED0 | ?SetContactPenetration@phContact@@SAXXZ
+    static void SetContactPenetration();
+
+    // 0x46EEB0 | ?SetContactPenetrationScale@phContact@@SAXM@Z
+    static void SetContactPenetrationScale(f32 arg1);
+
+    // 0x5C6F60 | ?ContactPenetrationScale@phContact@@2MA
+    static inline extern_var(0x5C6F60, f32, ContactPenetrationScale);
+
+    // 0x5C6F64 | ?ContactsEnabledFlag@phContact@@2_NA
+    static inline extern_var(0x5C6F64, bool, ContactsEnabledFlag);
+
+    // 0x660F58 | ?Penetration@phContact@@2MA
+    static inline extern_var(0x660F58, f32, Penetration);
 };
+
+check_size(phContact, 0x0);
+
+// 0x660F68 | ?LastA@@3VMatrix34@@A
+inline extern_var(0x660F68, class Matrix34, LastA);
+
+// 0x660F98 | ?LastB@@3VMatrix34@@A
+inline extern_var(0x660F98, class Matrix34, LastB);
+
+// 0x660FD0 | ?debugPtr@@3PAVphContact@@A
+inline extern_var(0x660FD0, class phContact*, debugPtr);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "level/inst.h"
 
 /*
     mmgame:wpinst
@@ -53,170 +55,105 @@
     0x5B132C | const mmPowerupInstance::`vftable' | ??_7mmPowerupInstance@@6B@
 */
 
-struct mmWaypointInstance : lvlInstance
+class mmWaypointInstance : public lvlInstance
 {
-public:
-    // mmWaypointInstance::`vftable' @ 0x5B11E8
+    // const mmWaypointInstance::`vftable' @ 0x5B11E8
 
+public:
     // 0x43F4A0 | ??0mmWaypointInstance@@QAE@XZ
-    inline mmWaypointInstance()
-    {
-        stub<member_func_t<void, mmWaypointInstance>>(0x43F4A0, this);
-    }
+    mmWaypointInstance();
 
     // 0x43F510 | ??1mmWaypointInstance@@QAE@XZ
-    inline ~mmWaypointInstance()
-    {
-        stub<member_func_t<void, mmWaypointInstance>>(0x43F510, this);
-    }
-
-    // 0x43F570 | ?MakeVisible@mmWaypointInstance@@QAEXXZ
-    inline void MakeVisible()
-    {
-        return stub<member_func_t<void, mmWaypointInstance>>(0x43F570, this);
-    }
-
-    // 0x43F580 | ?MakeInvisible@mmWaypointInstance@@QAEXXZ
-    inline void MakeInvisible()
-    {
-        return stub<member_func_t<void, mmWaypointInstance>>(0x43F580, this);
-    }
-
-    // 0x43F520 | ?GetPosition@mmWaypointInstance@@UAEABVVector3@@XZ
-    inline class Vector3 const& GetPosition() override
-    {
-        return stub<member_func_t<class Vector3 const&, mmWaypointInstance>>(0x43F520, this);
-    }
+    ~mmWaypointInstance();
 
     // 0x43F530 | ?GetMatrix@mmWaypointInstance@@UAEABVMatrix34@@AAV2@@Z
-    inline class Matrix34 const& GetMatrix(class Matrix34& arg1) override
-    {
-        return stub<member_func_t<class Matrix34 const&, mmWaypointInstance, class Matrix34&>>(0x43F530, this, arg1);
-    }
+    class Matrix34 const& GetMatrix(class Matrix34& arg1) override;
+
+    // 0x43F520 | ?GetPosition@mmWaypointInstance@@UAEABVVector3@@XZ
+    class Vector3 const& GetPosition() override;
+
+    // 0x43F580 | ?MakeInvisible@mmWaypointInstance@@QAEXXZ
+    void MakeInvisible();
+
+    // 0x43F570 | ?MakeVisible@mmWaypointInstance@@QAEXXZ
+    void MakeVisible();
 
     // 0x43F550 | ?SetMatrix@mmWaypointInstance@@UAEXABVMatrix34@@@Z
-    inline void SetMatrix(class Matrix34 const& arg1) override
-    {
-        return stub<member_func_t<void, mmWaypointInstance, class Matrix34 const&>>(0x43F550, this, arg1);
-    }
+    void SetMatrix(class Matrix34 const& arg1) override;
 
     // 0x43FC60 | ?SetVariant@mmWaypointInstance@@UAEXH@Z
-    inline void SetVariant(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmWaypointInstance, int32_t>>(0x43FC60, this, arg1);
-    }
+    void SetVariant(i32 arg1) override;
 
-    // 0x582519 | __purecall
-    virtual inline void Init(char* arg1, class Vector3 arg2)
-    {
-        return stub<member_func_t<void, mmWaypointInstance, char*, class Vector3>>(0x582519, this, arg1, arg2);
-    }
+    virtual void Init(char* arg1, class Vector3 arg2) = 0;
 };
 
-struct mmCheckpointInstance : mmWaypointInstance
-{
-public:
-    // mmCheckpointInstance::`vftable' @ 0x5B1254
+check_size(mmWaypointInstance, 0x0);
 
+class mmCheckpointInstance : public mmWaypointInstance
+{
+    // const mmCheckpointInstance::`vftable' @ 0x5B1254
+
+public:
     // 0x43F590 | ??0mmCheckpointInstance@@QAE@XZ
-    inline mmCheckpointInstance()
-    {
-        stub<member_func_t<void, mmCheckpointInstance>>(0x43F590, this);
-    }
+    mmCheckpointInstance();
 
     // 0x43F5F0 | ??1mmCheckpointInstance@@QAE@XZ
-    inline ~mmCheckpointInstance()
-    {
-        stub<member_func_t<void, mmCheckpointInstance>>(0x43F5F0, this);
-    }
+    ~mmCheckpointInstance();
 
     // 0x43F650 | ?Draw@mmCheckpointInstance@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmCheckpointInstance, int32_t>>(0x43F650, this, arg1);
-    }
-
-    // 0x43F7A0 | ?SizeOf@mmCheckpointInstance@@UAEIXZ
-    inline uint32_t SizeOf() override
-    {
-        return stub<member_func_t<uint32_t, mmCheckpointInstance>>(0x43F7A0, this);
-    }
+    void Draw(i32 arg1) override;
 
     // 0x43F600 | ?Init@mmCheckpointInstance@@UAEXPADVVector3@@@Z
-    inline void Init(char* arg1, class Vector3 arg2) override
-    {
-        return stub<member_func_t<void, mmCheckpointInstance, char*, class Vector3>>(0x43F600, this, arg1, arg2);
-    }
+    void Init(char* arg1, class Vector3 arg2) override;
+
+    // 0x43F7A0 | ?SizeOf@mmCheckpointInstance@@UAEIXZ
+    u32 SizeOf() override;
 };
 
-struct mmBillInstance : mmWaypointInstance
-{
-public:
-    // mmBillInstance::`vftable' @ 0x5B12C0
+check_size(mmCheckpointInstance, 0x0);
 
+class mmBillInstance : public mmWaypointInstance
+{
+    // const mmBillInstance::`vftable' @ 0x5B12C0
+
+public:
     // 0x43F7B0 | ??0mmBillInstance@@QAE@XZ
-    inline mmBillInstance()
-    {
-        stub<member_func_t<void, mmBillInstance>>(0x43F7B0, this);
-    }
+    mmBillInstance();
 
     // 0x43F810 | ??1mmBillInstance@@QAE@XZ
-    inline ~mmBillInstance()
-    {
-        stub<member_func_t<void, mmBillInstance>>(0x43F810, this);
-    }
+    ~mmBillInstance();
 
     // 0x43F860 | ?Draw@mmBillInstance@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmBillInstance, int32_t>>(0x43F860, this, arg1);
-    }
-
-    // 0x43FA10 | ?SizeOf@mmBillInstance@@UAEIXZ
-    inline uint32_t SizeOf() override
-    {
-        return stub<member_func_t<uint32_t, mmBillInstance>>(0x43FA10, this);
-    }
+    void Draw(i32 arg1) override;
 
     // 0x43F820 | ?Init@mmBillInstance@@UAEXPADVVector3@@@Z
-    inline void Init(char* arg1, class Vector3 arg2) override
-    {
-        return stub<member_func_t<void, mmBillInstance, char*, class Vector3>>(0x43F820, this, arg1, arg2);
-    }
+    void Init(char* arg1, class Vector3 arg2) override;
+
+    // 0x43FA10 | ?SizeOf@mmBillInstance@@UAEIXZ
+    u32 SizeOf() override;
 };
 
-struct mmPowerupInstance : mmWaypointInstance
-{
-public:
-    // mmPowerupInstance::`vftable' @ 0x5B132C
+check_size(mmBillInstance, 0x0);
 
+class mmPowerupInstance : public mmWaypointInstance
+{
+    // const mmPowerupInstance::`vftable' @ 0x5B132C
+
+public:
     // 0x43FA20 | ??0mmPowerupInstance@@QAE@XZ
-    inline mmPowerupInstance()
-    {
-        stub<member_func_t<void, mmPowerupInstance>>(0x43FA20, this);
-    }
+    mmPowerupInstance();
 
     // 0x43FA80 | ??1mmPowerupInstance@@QAE@XZ
-    inline ~mmPowerupInstance()
-    {
-        stub<member_func_t<void, mmPowerupInstance>>(0x43FA80, this);
-    }
+    ~mmPowerupInstance();
 
     // 0x43FAD0 | ?Draw@mmPowerupInstance@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmPowerupInstance, int32_t>>(0x43FAD0, this, arg1);
-    }
-
-    // 0x43FC20 | ?SizeOf@mmPowerupInstance@@UAEIXZ
-    inline uint32_t SizeOf() override
-    {
-        return stub<member_func_t<uint32_t, mmPowerupInstance>>(0x43FC20, this);
-    }
+    void Draw(i32 arg1) override;
 
     // 0x43FA90 | ?Init@mmPowerupInstance@@UAEXPADVVector3@@@Z
-    inline void Init(char* arg1, class Vector3 arg2) override
-    {
-        return stub<member_func_t<void, mmPowerupInstance, char*, class Vector3>>(0x43FA90, this, arg1, arg2);
-    }
+    void Init(char* arg1, class Vector3 arg2) override;
+
+    // 0x43FC20 | ?SizeOf@mmPowerupInstance@@UAEIXZ
+    u32 SizeOf() override;
 };
+
+check_size(mmPowerupInstance, 0x0);

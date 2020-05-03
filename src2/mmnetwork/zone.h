@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -41,69 +41,46 @@
     0x5B5D08 | _CLSID_ZoneScore
 */
 
-// 0x5B5CA8 | _ZONEPROPERTY_LobbyGuid3
-
-// 0x5B5CB8 | _ZONEPROPERTY_GameOptions
-
-// 0x5B5CC8 | _ZONEPROPERTY_GameState
-
-// 0x5B5CD8 | _ZONEPROPERTY_GameNewHost
-
-// 0x5B5CE8 | _IID_IZoneScore
-
-// 0x5B5CF8 | _LIBID_ZONESCORECLIENTLib
-
-// 0x5B5D08 | _CLSID_ZoneScore
-
 struct netZoneScore
 {
 public:
     // 0x5729B0 | ??0netZoneScore@@QAE@XZ
-    inline netZoneScore()
-    {
-        stub<member_func_t<void, netZoneScore>>(0x5729B0, this);
-    }
+    netZoneScore();
 
     // 0x5729C0 | ??1netZoneScore@@QAE@XZ
-    inline ~netZoneScore()
-    {
-        stub<member_func_t<void, netZoneScore>>(0x5729C0, this);
-    }
+    ~netZoneScore();
 
     // 0x5729D0 | ?Init@netZoneScore@@QAE_NU_GUID@@PAUIDirectPlayLobby3@@@Z
-    inline bool Init(struct _GUID arg1, struct IDirectPlayLobby3* arg2)
-    {
-        return stub<member_func_t<bool, netZoneScore, struct _GUID, struct IDirectPlayLobby3*>>(
-            0x5729D0, this, arg1, arg2);
-    }
-
-    // 0x572A30 | ?SendGameSettings@netZoneScore@@QAEXPAD@Z
-    inline void SendGameSettings(char* arg1)
-    {
-        return stub<member_func_t<void, netZoneScore, char*>>(0x572A30, this, arg1);
-    }
-
-    // 0x572AA0 | ?SendGameStart@netZoneScore@@QAEXXZ
-    inline void SendGameStart()
-    {
-        return stub<member_func_t<void, netZoneScore>>(0x572AA0, this);
-    }
-
-    // 0x572AD0 | ?SendGameStartStaging@netZoneScore@@QAEXXZ
-    inline void SendGameStartStaging()
-    {
-        return stub<member_func_t<void, netZoneScore>>(0x572AD0, this);
-    }
-
-    // 0x572B00 | ?SendGameEnd@netZoneScore@@QAEXXZ
-    inline void SendGameEnd()
-    {
-        return stub<member_func_t<void, netZoneScore>>(0x572B00, this);
-    }
+    bool Init(struct _GUID arg1, struct IDirectPlayLobby3* arg2);
 
     // 0x572B50 | ?InitResults@netZoneScore@@QAEXH_N@Z
-    inline void InitResults(int32_t arg1, bool arg2)
-    {
-        return stub<member_func_t<void, netZoneScore, int32_t, bool>>(0x572B50, this, arg1, arg2);
-    }
+    void InitResults(i32 arg1, bool arg2);
+
+    // 0x572B00 | ?SendGameEnd@netZoneScore@@QAEXXZ
+    void SendGameEnd();
+
+    // 0x572A30 | ?SendGameSettings@netZoneScore@@QAEXPAD@Z
+    void SendGameSettings(char* arg1);
+
+    // 0x572AA0 | ?SendGameStart@netZoneScore@@QAEXXZ
+    void SendGameStart();
+
+    // 0x572AD0 | ?SendGameStartStaging@netZoneScore@@QAEXXZ
+    void SendGameStartStaging();
 };
+
+check_size(netZoneScore, 0x0);
+
+// 0x5B5D08 | _CLSID_ZoneScore (Skipped: void)
+
+// 0x5B5CE8 | _IID_IZoneScore (Skipped: void)
+
+// 0x5B5CF8 | _LIBID_ZONESCORECLIENTLib (Skipped: void)
+
+// 0x5B5CD8 | _ZONEPROPERTY_GameNewHost (Skipped: void)
+
+// 0x5B5CB8 | _ZONEPROPERTY_GameOptions (Skipped: void)
+
+// 0x5B5CC8 | _ZONEPROPERTY_GameState (Skipped: void)
+
+// 0x5B5CA8 | _ZONEPROPERTY_LobbyGuid3 (Skipped: void)

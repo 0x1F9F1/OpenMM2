@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "aiVehiclePhysics.h"
+
 /*
     ai:mcHookman
 
@@ -33,63 +35,37 @@
     public: void __thiscall mcHookman::AddWidgets(class bkBank *) | ?AddWidgets@mcHookman@@QAEXPAVbkBank@@@Z
 */
 
-class mcHookman : aiVehiclePhysics
+class mcHookman : public aiVehiclePhysics
 {
 public:
-    // 0x53BE20 | ??_EmcHookman@@QAEPAXI@Z
-    // Skipped (scalar/vector destructor)
-
     // 0x54A600 | ??0mcHookman@@QAE@XZ
-    inline mcHookman()
-    {
-        stub<member_func_t<void, mcHookman>>(0x54A600, this);
-    }
+    mcHookman();
 
     // 0x54A610 | ??1mcHookman@@QAE@XZ
-    inline ~mcHookman()
-    {
-        stub<member_func_t<void, mcHookman>>(0x54A610, this);
-    }
-
-    // 0x54A620 | ?Init@mcHookman@@QAEXHPAD@Z
-    inline void Init(int32_t arg1, char* arg2)
-    {
-        return stub<member_func_t<void, mcHookman, int32_t, char*>>(0x54A620, this, arg1, arg2);
-    }
-
-    // 0x54A9F0 | ?Reset@mcHookman@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, mcHookman>>(0x54A9F0, this);
-    }
-
-    // 0x54AA10 | ?Update@mcHookman@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, mcHookman>>(0x54AA10, this);
-    }
-
-    // 0x54AB40 | ?DriveCircuit@mcHookman@@AAEXXZ
-    inline void DriveCircuit()
-    {
-        return stub<member_func_t<void, mcHookman>>(0x54AB40, this);
-    }
-
-    // 0x54AC80 | ?DriveToHideout@mcHookman@@AAEXXZ
-    inline void DriveToHideout()
-    {
-        return stub<member_func_t<void, mcHookman>>(0x54AC80, this);
-    }
-
-    // 0x54AE10 | ?ReturnToCircuit@mcHookman@@AAEXXZ
-    inline void ReturnToCircuit()
-    {
-        return stub<member_func_t<void, mcHookman>>(0x54AE10, this);
-    }
+    // 0x53BE20 | ??_EmcHookman@@QAEPAXI@Z
+    ~mcHookman();
 
     // 0x54AF70 | ?DrawRouteThroughTraffic@mcHookman@@QAEXXZ
-    inline void DrawRouteThroughTraffic()
-    {
-        return stub<member_func_t<void, mcHookman>>(0x54AF70, this);
-    }
+    void DrawRouteThroughTraffic();
+
+    // 0x54A620 | ?Init@mcHookman@@QAEXHPAD@Z
+    void Init(i32 arg1, char* arg2);
+
+    // 0x54A9F0 | ?Reset@mcHookman@@QAEXXZ
+    void Reset();
+
+    // 0x54AA10 | ?Update@mcHookman@@QAEXXZ
+    void Update();
+
+private:
+    // 0x54AB40 | ?DriveCircuit@mcHookman@@AAEXXZ
+    void DriveCircuit();
+
+    // 0x54AC80 | ?DriveToHideout@mcHookman@@AAEXXZ
+    void DriveToHideout();
+
+    // 0x54AE10 | ?ReturnToCircuit@mcHookman@@AAEXXZ
+    void ReturnToCircuit();
 };
+
+check_size(mcHookman, 0x9870);

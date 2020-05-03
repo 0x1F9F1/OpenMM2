@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,27 @@
 */
 
 #include "jdhuff.h"
+
+void jinit_huff_decoder(struct jpeg_decompress_struct* arg1)
+{
+    return stub<cdecl_t<void, struct jpeg_decompress_struct*>>(0x49CBB0, arg1);
+}
+
+u8 jpeg_fill_bit_buffer(struct bitread_working_state* arg1, i32 arg2, i32 arg3, i32 arg4)
+{
+    return stub<cdecl_t<u8, struct bitread_working_state*, i32, i32, i32>>(0x49C9A0, arg1, arg2, arg3, arg4);
+}
+
+i32 jpeg_huff_decode(struct bitread_working_state* arg1, i32 arg2, i32 arg3, struct d_derived_tbl* arg4, i32 arg5)
+{
+    return stub<cdecl_t<i32, struct bitread_working_state*, i32, i32, struct d_derived_tbl*, i32>>(
+        0x49CAC0, arg1, arg2, arg3, arg4, arg5);
+}
+
+void jpeg_make_d_derived_tbl(struct jpeg_decompress_struct* arg1, u8 arg2, i32 arg3, struct d_derived_tbl** arg4)
+{
+    return stub<cdecl_t<void, struct jpeg_decompress_struct*, u8, i32, struct d_derived_tbl**>>(
+        0x49C6E0, arg1, arg2, arg3, arg4);
+}
+
+define_dummy_symbol(djpeg_jdhuff);

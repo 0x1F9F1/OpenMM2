@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -42,104 +42,55 @@
 class audSound
 {
 public:
-    // 0x5A3970 | ?Init@audSound@@QAEXXZ
-    inline void Init()
-    {
-        return stub<member_func_t<void, audSound>>(0x5A3970, this);
-    }
-
-    // 0x5A3990 | ?Destroy@audSound@@QAEXXZ
-    inline void Destroy()
-    {
-        return stub<member_func_t<void, audSound>>(0x5A3990, this);
-    }
+    // 0x5A4680 | ?CloseSoundFile@audSound@@QAE_NXZ
+    bool CloseSoundFile();
 
     // 0x5A39E0 | ?CreateDuplicateSoundBuffer@audSound@@QAEPAVaudSoundBuffer@@PAV1@@Z
-    inline class audSoundBuffer* CreateDuplicateSoundBuffer(class audSound* arg1)
-    {
-        return stub<member_func_t<class audSoundBuffer*, audSound, class audSound*>>(0x5A39E0, this, arg1);
-    }
-
-    // 0x5A3AC0 | ?OpenSoundFile@audSound@@QAEHH@Z
-    inline int32_t OpenSoundFile(int32_t arg1)
-    {
-        return stub<member_func_t<int32_t, audSound, int32_t>>(0x5A3AC0, this, arg1);
-    }
+    class audSoundBuffer* CreateDuplicateSoundBuffer(class audSound* arg1);
 
     // 0x5A3B20 | ?CreateSoundBufferFromFile@audSound@@QAEPAVaudSoundBuffer@@PAD0W4SOUNDBUFFERTYPE@2@HK@Z
-    inline class audSoundBuffer* CreateSoundBufferFromFile(
-        char* arg1, char* arg2, enum audSoundBuffer::SOUNDBUFFERTYPE arg3, int32_t arg4, uint32_t arg5)
-    {
-        return stub<member_func_t<class audSoundBuffer*, audSound, char*, char*, enum audSoundBuffer::SOUNDBUFFERTYPE,
-            int32_t, uint32_t>>(0x5A3B20, this, arg1, arg2, arg3, arg4, arg5);
-    }
-
-    // 0x5A3F10 | ?WriteWaveDataToBuffer@audSound@@QAEHHPAH@Z
-    inline int32_t WriteWaveDataToBuffer(int32_t arg1, int32_t* arg2)
-    {
-        return stub<member_func_t<int32_t, audSound, int32_t, int32_t*>>(0x5A3F10, this, arg1, arg2);
-    }
+    class audSoundBuffer* CreateSoundBufferFromFile(
+        char* arg1, char* arg2, enum audSoundBuffer::SOUNDBUFFERTYPE arg3, i32 arg4, u32 arg5);
 
     // 0x5A4210 | ?CreateSoundBufferFromMemory@audSound@@QAEPAVaudSoundBuffer@@PAXW4SOUNDBUFFERTYPE@2@PAPAX@Z
-    inline class audSoundBuffer* CreateSoundBufferFromMemory(
-        void* arg1, enum audSoundBuffer::SOUNDBUFFERTYPE arg2, void** arg3)
-    {
-        return stub<
-            member_func_t<class audSoundBuffer*, audSound, void*, enum audSoundBuffer::SOUNDBUFFERTYPE, void**>>(
-            0x5A4210, this, arg1, arg2, arg3);
-    }
+    class audSoundBuffer* CreateSoundBufferFromMemory(
+        void* arg1, enum audSoundBuffer::SOUNDBUFFERTYPE arg2, void** arg3);
 
-    // 0x5A4220 | ?Update@audSound@@QAE_NH@Z
-    inline bool Update(int32_t arg1)
-    {
-        return stub<member_func_t<bool, audSound, int32_t>>(0x5A4220, this, arg1);
-    }
-
-    // 0x5A4310 | ?Play@audSound@@QAE_NXZ
-    inline bool Play()
-    {
-        return stub<member_func_t<bool, audSound>>(0x5A4310, this);
-    }
+    // 0x5A3990 | ?Destroy@audSound@@QAEXXZ
+    void Destroy();
 
     // 0x5A4440 | ?GetStatus@audSound@@QAE?AW4AUD_OBJECTSTATUS@audObject@@XZ
-    inline enum audObject::AUD_OBJECTSTATUS GetStatus()
-    {
-        return stub<member_func_t<enum audObject::AUD_OBJECTSTATUS, audSound>>(0x5A4440, this);
-    }
+    enum audObject::AUD_OBJECTSTATUS GetStatus();
 
-    // 0x5A4490 | ?Stop@audSound@@QAE_NXZ
-    inline bool Stop()
-    {
-        return stub<member_func_t<bool, audSound>>(0x5A4490, this);
-    }
+    // 0x5A3970 | ?Init@audSound@@QAEXXZ
+    void Init();
 
-    // 0x5A44E0 | ?SetVolume@audSound@@QAE_NM@Z
-    inline bool SetVolume(float arg1)
-    {
-        return stub<member_func_t<bool, audSound, float>>(0x5A44E0, this, arg1);
-    }
-
-    // 0x5A4530 | ?SetPitch@audSound@@QAE_NM@Z
-    inline bool SetPitch(float arg1)
-    {
-        return stub<member_func_t<bool, audSound, float>>(0x5A4530, this, arg1);
-    }
-
-    // 0x5A45A0 | ?SetPan@audSound@@QAE_NM@Z
-    inline bool SetPan(float arg1)
-    {
-        return stub<member_func_t<bool, audSound, float>>(0x5A45A0, this, arg1);
-    }
+    // 0x5A3AC0 | ?OpenSoundFile@audSound@@QAEHH@Z
+    i32 OpenSoundFile(i32 arg1);
 
     // 0x5A45F0 | ?PauseResume@audSound@@QAE_N_N@Z
-    inline bool PauseResume(bool arg1)
-    {
-        return stub<member_func_t<bool, audSound, bool>>(0x5A45F0, this, arg1);
-    }
+    bool PauseResume(bool arg1);
 
-    // 0x5A4680 | ?CloseSoundFile@audSound@@QAE_NXZ
-    inline bool CloseSoundFile()
-    {
-        return stub<member_func_t<bool, audSound>>(0x5A4680, this);
-    }
+    // 0x5A4310 | ?Play@audSound@@QAE_NXZ
+    bool Play();
+
+    // 0x5A45A0 | ?SetPan@audSound@@QAE_NM@Z
+    bool SetPan(f32 arg1);
+
+    // 0x5A4530 | ?SetPitch@audSound@@QAE_NM@Z
+    bool SetPitch(f32 arg1);
+
+    // 0x5A44E0 | ?SetVolume@audSound@@QAE_NM@Z
+    bool SetVolume(f32 arg1);
+
+    // 0x5A4490 | ?Stop@audSound@@QAE_NXZ
+    bool Stop();
+
+    // 0x5A4220 | ?Update@audSound@@QAE_NH@Z
+    bool Update(i32 arg1);
+
+    // 0x5A3F10 | ?WriteWaveDataToBuffer@audSound@@QAEHHPAH@Z
+    i32 WriteWaveDataToBuffer(i32 arg1, i32* arg2);
 };
+
+check_size(audSound, 0x0);

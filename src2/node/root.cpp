@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,55 @@
 */
 
 #include "root.h"
+
+asRoot::asRoot()
+{
+    unimplemented();
+}
+
+asRoot::~asRoot()
+{
+    unimplemented();
+}
+
+char* asRoot::GetClassName()
+{
+    return stub<thiscall_t<char*, asRoot*>>(0x4A0CD0, this);
+}
+
+void asRoot::Init(bool arg1)
+{
+    return stub<thiscall_t<void, asRoot*, bool>>(0x4A0BE0, this, arg1);
+}
+
+bool asRoot::IsPaused()
+{
+    return stub<thiscall_t<bool, asRoot*>>(0x4A0C60, this);
+}
+
+void asRoot::Quit()
+{
+    return stub<thiscall_t<void, asRoot*>>(0x4A0C50, this);
+}
+
+void asRoot::Reset()
+{
+    return stub<thiscall_t<void, asRoot*>>(0x4A0C40, this);
+}
+
+void asRoot::SetPause(bool arg1)
+{
+    return stub<thiscall_t<void, asRoot*, bool>>(0x4A0C80, this, arg1);
+}
+
+void asRoot::TogglePause()
+{
+    return stub<thiscall_t<void, asRoot*>>(0x4A0C70, this);
+}
+
+void asRoot::Update()
+{
+    return stub<thiscall_t<void, asRoot*>>(0x4A0C00, this);
+}
+
+define_dummy_symbol(node_root);

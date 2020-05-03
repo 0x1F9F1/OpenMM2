@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,55 @@
 */
 
 #include "fileio.h"
+
+asFileIO::asFileIO()
+{
+    unimplemented();
+}
+
+asFileIO::~asFileIO()
+{
+    unimplemented();
+}
+
+void asFileIO::SetName(char const* arg1)
+{
+    return stub<thiscall_t<void, asFileIO*, char const*>>(0x597940, this, arg1);
+}
+
+void asFileIO::FileIO(class datParser& arg1)
+{
+    return stub<thiscall_t<void, asFileIO*, class datParser&>>(0x5979B0, this, arg1);
+}
+
+void asFileIO::AfterLoad()
+{
+    return stub<thiscall_t<void, asFileIO*>>(0x595AE0, this);
+}
+
+void asFileIO::BeforeSave()
+{
+    return stub<thiscall_t<void, asFileIO*>>(0x595AF0, this);
+}
+
+bool asFileIO::Save()
+{
+    return stub<thiscall_t<bool, asFileIO*>>(0x597800, this);
+}
+
+bool asFileIO::Load()
+{
+    return stub<thiscall_t<bool, asFileIO*>>(0x597890, this);
+}
+
+char const* asFileIO::GetDirName()
+{
+    return stub<thiscall_t<char const*, asFileIO*>>(0x597970, this);
+}
+
+char const* asFileIO::GetClassName()
+{
+    return stub<thiscall_t<char const*, asFileIO*>>(0x5979C0, this);
+}
+
+define_dummy_symbol(node_fileio);

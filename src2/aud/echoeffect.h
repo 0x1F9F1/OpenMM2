@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -46,111 +46,59 @@ class EchoEffect
 {
 public:
     // 0x5A2FA0 | ??0EchoEffect@@QAE@XZ
-    inline EchoEffect()
-    {
-        stub<member_func_t<void, EchoEffect>>(0x5A2FA0, this);
-    }
+    EchoEffect();
 
     // 0x5A2FE0 | ??1EchoEffect@@QAE@XZ
-    inline ~EchoEffect()
-    {
-        stub<member_func_t<void, EchoEffect>>(0x5A2FE0, this);
-    }
-
-    // 0x5A30A0 | ?Enable@EchoEffect@@QAEHKPAUIDirectSoundBuffer@@@Z
-    inline int32_t Enable(uint32_t arg1, struct IDirectSoundBuffer* arg2)
-    {
-        return stub<member_func_t<int32_t, EchoEffect, uint32_t, struct IDirectSoundBuffer*>>(
-            0x5A30A0, this, arg1, arg2);
-    }
-
-    // 0x5A3120 | ?Disable@EchoEffect@@QAEXXZ
-    inline void Disable()
-    {
-        return stub<member_func_t<void, EchoEffect>>(0x5A3120, this);
-    }
-
-    // 0x5A3150 | ?SetDelayTime@EchoEffect@@QAEXM@Z
-    inline void SetDelayTime(float arg1)
-    {
-        return stub<member_func_t<void, EchoEffect, float>>(0x5A3150, this, arg1);
-    }
-
-    // 0x5A3280 | ?Update@EchoEffect@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, EchoEffect>>(0x5A3280, this);
-    }
-
-    // 0x5A32F0 | ?UpdatePlay@EchoEffect@@AAEXXZ
-    inline void UpdatePlay()
-    {
-        return stub<member_func_t<void, EchoEffect>>(0x5A32F0, this);
-    }
-
-    // 0x5A33B0 | ?UpdateStop@EchoEffect@@AAEXXZ
-    inline void UpdateStop()
-    {
-        return stub<member_func_t<void, EchoEffect>>(0x5A33B0, this);
-    }
-
-    // 0x5A3460 | ?UpdateVolume@EchoEffect@@AAEXXZ
-    inline void UpdateVolume()
-    {
-        return stub<member_func_t<void, EchoEffect>>(0x5A3460, this);
-    }
-
-    // 0x5A3510 | ?UpdatePitch@EchoEffect@@AAEXXZ
-    inline void UpdatePitch()
-    {
-        return stub<member_func_t<void, EchoEffect>>(0x5A3510, this);
-    }
-
-    // 0x5A35C0 | ?QueuePlay@EchoEffect@@QAEXK@Z
-    inline void QueuePlay(uint32_t arg1)
-    {
-        return stub<member_func_t<void, EchoEffect, uint32_t>>(0x5A35C0, this, arg1);
-    }
-
-    // 0x5A3620 | ?QueueStop@EchoEffect@@QAEXXZ
-    inline void QueueStop()
-    {
-        return stub<member_func_t<void, EchoEffect>>(0x5A3620, this);
-    }
-
-    // 0x5A3650 | ?Stop@EchoEffect@@QAEXXZ
-    inline void Stop()
-    {
-        return stub<member_func_t<void, EchoEffect>>(0x5A3650, this);
-    }
-
-    // 0x5A3660 | ?SetFrequency@EchoEffect@@QAEXM@Z
-    inline void SetFrequency(float arg1)
-    {
-        return stub<member_func_t<void, EchoEffect, float>>(0x5A3660, this, arg1);
-    }
+    ~EchoEffect();
 
     // 0x5A3730 | ?CalculatePan@EchoEffect@@QAEXM@Z
-    inline void CalculatePan(float arg1)
-    {
-        return stub<member_func_t<void, EchoEffect, float>>(0x5A3730, this, arg1);
-    }
+    void CalculatePan(f32 arg1);
 
-    // 0x5A3790 | ?SetVolume@EchoEffect@@QAEXM@Z
-    inline void SetVolume(float arg1)
-    {
-        return stub<member_func_t<void, EchoEffect, float>>(0x5A3790, this, arg1);
-    }
+    // 0x5A3120 | ?Disable@EchoEffect@@QAEXXZ
+    void Disable();
 
-    // 0x5A37C0 | ?QueueVolume@EchoEffect@@QAEXM@Z
-    inline void QueueVolume(float arg1)
-    {
-        return stub<member_func_t<void, EchoEffect, float>>(0x5A37C0, this, arg1);
-    }
+    // 0x5A30A0 | ?Enable@EchoEffect@@QAEHKPAUIDirectSoundBuffer@@@Z
+    i32 Enable(u32 arg1, struct IDirectSoundBuffer* arg2);
 
     // 0x5A3810 | ?QueueFrequency@EchoEffect@@QAEXK@Z
-    inline void QueueFrequency(uint32_t arg1)
-    {
-        return stub<member_func_t<void, EchoEffect, uint32_t>>(0x5A3810, this, arg1);
-    }
+    void QueueFrequency(u32 arg1);
+
+    // 0x5A35C0 | ?QueuePlay@EchoEffect@@QAEXK@Z
+    void QueuePlay(u32 arg1);
+
+    // 0x5A3620 | ?QueueStop@EchoEffect@@QAEXXZ
+    void QueueStop();
+
+    // 0x5A37C0 | ?QueueVolume@EchoEffect@@QAEXM@Z
+    void QueueVolume(f32 arg1);
+
+    // 0x5A3150 | ?SetDelayTime@EchoEffect@@QAEXM@Z
+    void SetDelayTime(f32 arg1);
+
+    // 0x5A3660 | ?SetFrequency@EchoEffect@@QAEXM@Z
+    void SetFrequency(f32 arg1);
+
+    // 0x5A3790 | ?SetVolume@EchoEffect@@QAEXM@Z
+    void SetVolume(f32 arg1);
+
+    // 0x5A3650 | ?Stop@EchoEffect@@QAEXXZ
+    void Stop();
+
+    // 0x5A3280 | ?Update@EchoEffect@@QAEXXZ
+    void Update();
+
+private:
+    // 0x5A3510 | ?UpdatePitch@EchoEffect@@AAEXXZ
+    void UpdatePitch();
+
+    // 0x5A32F0 | ?UpdatePlay@EchoEffect@@AAEXXZ
+    void UpdatePlay();
+
+    // 0x5A33B0 | ?UpdateStop@EchoEffect@@AAEXXZ
+    void UpdateStop();
+
+    // 0x5A3460 | ?UpdateVolume@EchoEffect@@AAEXXZ
+    void UpdateVolume();
 };
+
+check_size(EchoEffect, 0x2C);

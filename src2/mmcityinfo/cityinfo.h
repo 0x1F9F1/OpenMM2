@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -31,24 +31,18 @@
 
 class mmCityInfo
 {
-public:
-    // mmCityInfo::`vftable' @ 0x5B524C
+    // const mmCityInfo::`vftable' @ 0x5B524C
 
+public:
     // 0x52A540 | ??0mmCityInfo@@QAE@XZ
-    inline mmCityInfo()
-    {
-        stub<member_func_t<void, mmCityInfo>>(0x52A540, this);
-    }
+    mmCityInfo();
+
+    // 0x52A8C0 | ??_GmmCityInfo@@UAEPAXI@Z
+    // 0x52A560 | ??1mmCityInfo@@UAE@XZ
+    virtual ~mmCityInfo();
 
     // 0x52A570 | ?Load@mmCityInfo@@QAEHPAD@Z
-    inline int32_t Load(char* arg1)
-    {
-        return stub<member_func_t<int32_t, mmCityInfo, char*>>(0x52A570, this, arg1);
-    }
-
-    // 0x52A560 | ??1mmCityInfo@@UAE@XZ
-    virtual inline ~mmCityInfo()
-    {
-        stub<member_func_t<void, mmCityInfo>>(0x52A560, this);
-    }
+    i32 Load(char* arg1);
 };
+
+check_size(mmCityInfo, 0x0);

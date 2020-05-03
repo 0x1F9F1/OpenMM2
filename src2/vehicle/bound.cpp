@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,30 @@
 */
 
 #include "bound.h"
+
+vehBound::vehBound()
+{
+    unimplemented();
+}
+
+vehBound::~vehBound()
+{
+    unimplemented();
+}
+
+void vehBound::Init()
+{
+    return stub<thiscall_t<void, vehBound*>>(0x4DA6E0, this);
+}
+
+void vehBound::SetElasticity(f32 arg1)
+{
+    return stub<thiscall_t<void, vehBound*, f32>>(0x4DA710, this, arg1);
+}
+
+void vehBound::SetFriction(f32 arg1)
+{
+    return stub<thiscall_t<void, vehBound*, f32>>(0x4DA700, this, arg1);
+}
+
+define_dummy_symbol(vehicle_bound);

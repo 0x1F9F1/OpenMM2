@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,60 @@
 */
 
 #include "view.h"
+
+asViewCS::asViewCS()
+{
+    unimplemented();
+}
+
+asViewCS::~asViewCS()
+{
+    unimplemented();
+}
+
+void asViewCS::Reset()
+{
+    return stub<thiscall_t<void, asViewCS*>>(0x596390, this);
+}
+
+void asViewCS::SetAzimuth()
+{
+    return stub<thiscall_t<void, asViewCS*>>(0x596330, this);
+}
+
+void asViewCS::Update()
+{
+    return stub<thiscall_t<void, asViewCS*>>(0x596500, this);
+}
+
+void asViewCS::UpdateLookAt()
+{
+    return stub<thiscall_t<void, asViewCS*>>(0x596880, this);
+}
+
+void asViewCS::UpdatePOV()
+{
+    return stub<thiscall_t<void, asViewCS*>>(0x5967E0, this);
+}
+
+void asViewCS::UpdatePolar()
+{
+    return stub<thiscall_t<void, asViewCS*>>(0x596580, this);
+}
+
+void asViewCS::UpdateRoam()
+{
+    return stub<thiscall_t<void, asViewCS*>>(0x5966E0, this);
+}
+
+void asViewCS::UpdateStereo()
+{
+    return stub<thiscall_t<void, asViewCS*>>(0x596C80, this);
+}
+
+void asViewCS::UpdateTrack()
+{
+    return stub<thiscall_t<void, asViewCS*>>(0x5968E0, this);
+}
+
+define_dummy_symbol(node_view);

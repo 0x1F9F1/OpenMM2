@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,75 @@
 */
 
 #include "gamesingle.h"
+
+mmGameSingle::mmGameSingle()
+{
+    unimplemented();
+}
+
+mmGameSingle::~mmGameSingle()
+{
+    unimplemented();
+}
+
+class mmWaypoints* mmGameSingle::GetWaypoints()
+{
+    return stub<thiscall_t<class mmWaypoints*, mmGameSingle*>>(0x41ABA0, this);
+}
+
+void mmGameSingle::HitWaterHandler()
+{
+    return stub<thiscall_t<void, mmGameSingle*>>(0x433C70, this);
+}
+
+i32 mmGameSingle::Init()
+{
+    return stub<thiscall_t<i32, mmGameSingle*>>(0x433AA0, this);
+}
+
+void mmGameSingle::InitOtherPlayers()
+{
+    return stub<thiscall_t<void, mmGameSingle*>>(0x433AB0, this);
+}
+
+void mmGameSingle::Reset()
+{
+    return stub<thiscall_t<void, mmGameSingle*>>(0x433AC0, this);
+}
+
+void mmGameSingle::Update()
+{
+    return stub<thiscall_t<void, mmGameSingle*>>(0x433C80, this);
+}
+
+void mmGameSingle::UpdateDebugKeyInput(i32 arg1)
+{
+    return stub<thiscall_t<void, mmGameSingle*, i32>>(0x433F20, this, arg1);
+}
+
+void mmGameSingle::UpdateGame()
+{
+    return stub<thiscall_t<void, mmGameSingle*>>(0x433CA0, this);
+}
+
+void mmGameSingle::UpdateGameInput(i32 arg1)
+{
+    return stub<thiscall_t<void, mmGameSingle*, i32>>(0x433C90, this, arg1);
+}
+
+void mmGameSingle::DisableRacers()
+{
+    return stub<thiscall_t<void, mmGameSingle*>>(0x433C00, this);
+}
+
+void mmGameSingle::EnableRacers()
+{
+    return stub<thiscall_t<void, mmGameSingle*>>(0x433B50, this);
+}
+
+bool mmGameSingle::UpdateRewards()
+{
+    return stub<thiscall_t<bool, mmGameSingle*>>(0x433CB0, this);
+}
+
+define_dummy_symbol(mmgame_gamesingle);

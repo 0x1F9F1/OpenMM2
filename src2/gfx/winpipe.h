@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -46,7 +46,7 @@
 */
 
 // 0x683104 | ?gfxDebug@@3HA
-inline extern_var(0x683104, int32_t, gfxDebug);
+inline extern_var(0x683104, i32, gfxDebug);
 
 // 0x683108 | ?gfxIcon@@3HA
-inline extern_var(0x683108, int32_t, gfxIcon);
+inline extern_var(0x683108, i32, gfxIcon);

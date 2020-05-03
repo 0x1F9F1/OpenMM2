@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "pu_menu.h"
 
 /*
     mmui:dlg_city2
@@ -35,57 +37,35 @@
     0x5B3E40 | const Dialog_City2::`vftable' | ??_7Dialog_City2@@6B@
 */
 
-struct Dialog_City2 : PUMenuBase
+class Dialog_City2 : public PUMenuBase
 {
+    // const Dialog_City2::`vftable' @ 0x5B3E40
+
 public:
-    // Dialog_City2::`vftable' @ 0x5B3E40
-
     // 0x4F9AE0 | ??0Dialog_City2@@QAE@HMMMMPAD@Z
-    inline Dialog_City2(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
-    {
-        stub<member_func_t<void, Dialog_City2, int32_t, float, float, float, float, char*>>(
-            0x4F9AE0, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
+    Dialog_City2(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6);
 
-    // 0x4F9EA0 | ?ScrollCB@Dialog_City2@@QAEXXZ
-    inline void ScrollCB()
-    {
-        return stub<member_func_t<void, Dialog_City2>>(0x4F9EA0, this);
-    }
+    // 0x4F9FC0 | ??_GDialog_City2@@UAEPAXI@Z
+    // 0x4F9E10 | ??1Dialog_City2@@UAE@XZ
+    ~Dialog_City2() override;
 
     // 0x4F9EB0 | ?CancelCB@Dialog_City2@@QAEXXZ
-    inline void CancelCB()
-    {
-        return stub<member_func_t<void, Dialog_City2>>(0x4F9EB0, this);
-    }
+    void CancelCB();
 
     // 0x4F9EE0 | ?DoneCB@Dialog_City2@@QAEXXZ
-    inline void DoneCB()
-    {
-        return stub<member_func_t<void, Dialog_City2>>(0x4F9EE0, this);
-    }
-
-    // 0x4F9F80 | ?SetCurrentCity@Dialog_City2@@QAEXH@Z
-    inline void SetCurrentCity(int32_t arg1)
-    {
-        return stub<member_func_t<void, Dialog_City2, int32_t>>(0x4F9F80, this, arg1);
-    }
-
-    // 0x4F9E10 | ??1Dialog_City2@@UAE@XZ
-    inline ~Dialog_City2() override
-    {
-        stub<member_func_t<void, Dialog_City2>>(0x4F9E10, this);
-    }
-
-    // 0x4F9E80 | ?PreSetup@Dialog_City2@@UAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, Dialog_City2>>(0x4F9E80, this);
-    }
+    void DoneCB();
 
     // 0x4F9E90 | ?PostSetup@Dialog_City2@@UAEXXZ
-    inline void PostSetup() override
-    {
-        return stub<member_func_t<void, Dialog_City2>>(0x4F9E90, this);
-    }
+    void PostSetup() override;
+
+    // 0x4F9E80 | ?PreSetup@Dialog_City2@@UAEXXZ
+    void PreSetup() override;
+
+    // 0x4F9EA0 | ?ScrollCB@Dialog_City2@@QAEXXZ
+    void ScrollCB();
+
+    // 0x4F9F80 | ?SetCurrentCity@Dialog_City2@@QAEXH@Z
+    void SetCurrentCity(i32 arg1);
 };
+
+check_size(Dialog_City2, 0xD0);

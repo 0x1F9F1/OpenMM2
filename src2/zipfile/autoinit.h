@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -26,13 +26,7 @@
 */
 
 // 0x572C50 | ?zipAutoInit@@YAXXZ
-inline void zipAutoInit()
-{
-    return stub<cdecl_t<void>>(0x572C50);
-}
+void zipAutoInit();
 
 // 0x572D20 | ?zipMultiAutoInit@@YAXPBD@Z
-inline void zipMultiAutoInit(char const* arg1)
-{
-    return stub<cdecl_t<void, char const*>>(0x572D20, arg1);
-}
+void zipMultiAutoInit(char const* arg1);

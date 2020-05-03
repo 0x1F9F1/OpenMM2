@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "cfilestream.h"
 
 /*
     directmusic:cmemstream
@@ -48,47 +50,76 @@
 */
 
 struct CMemStream
+    : IStream
+    , IDirectMusicGetLoader /* Warning: Unordered Multiple Inheritance */
 {
+    // const CMemStream::`vftable'{for `IDirectMusicGetLoader'} @ 0x5B4DC4
+    // const CMemStream::`vftable'{for `IStream'} @ 0x5B4DD4
+
 public:
     // 0x518EA0 | ??0CMemStream@@QAE@PAVCLoader@@@Z
-    inline CMemStream(class CLoader* arg1)
-    {
-        stub<member_func_t<void, CMemStream, class CLoader*>>(0x518EA0, this, arg1);
-    }
+    CMemStream(class CLoader* arg1);
 
     // 0x518EF0 | ??1CMemStream@@QAE@XZ
-    inline ~CMemStream()
-    {
-        stub<member_func_t<void, CMemStream>>(0x518EF0, this);
-    }
+    ~CMemStream();
 
-    // 0x518F20 | ?Open@CMemStream@@QAEJPAE_J@Z
-    inline int32_t Open(uint8_t* arg1, int64_t arg2)
-    {
-        return stub<member_func_t<int32_t, CMemStream, uint8_t*, int64_t>>(0x518F20, this, arg1, arg2);
-    }
+    // 0x519070 | ?AddRef@CMemStream@@UAGKXZ
+    u32 __stdcall AddRef() override;
+
+    // 0x519270 | ?AddRef@CMemStream@@W3AGKXZ (Skipped: thunk)
+
+    // 0x519250 | ?Clone@CMemStream@@UAGJPAPAUIStream@@@Z
+    i32 __stdcall Clone(struct IStream** arg1) override;
 
     // 0x518F80 | ?Close@CMemStream@@QAEJXZ
-    inline int32_t Close()
-    {
-        return stub<member_func_t<int32_t, CMemStream>>(0x518F80, this);
-    }
+    i32 Close();
 
-    // 0x519260 | ?QueryInterface@CMemStream@@W3AGJABU_GUID@@PAPAX@Z
-    inline int32_t __stdcall QueryInterface(struct _GUID const& arg1, void** arg2)
-    {
-        return stub<member_func_t<int32_t, CMemStream, struct _GUID const&, void**>>(0x519260, this, arg1, arg2);
-    }
+    // 0x519200 | ?Commit@CMemStream@@UAGJK@Z
+    i32 __stdcall Commit(u32 arg1) override;
 
-    // 0x519270 | ?AddRef@CMemStream@@W3AGKXZ
-    inline uint32_t __stdcall AddRef()
-    {
-        return stub<member_func_t<uint32_t, CMemStream>>(0x519270, this);
-    }
+    // 0x5191F0 | ?CopyTo@CMemStream@@UAGJPAUIStream@@T_ULARGE_INTEGER@@PAT3@2@Z
+    i32 __stdcall CopyTo(struct IStream* arg1, union _ULARGE_INTEGER arg2, union _ULARGE_INTEGER* arg3,
+        union _ULARGE_INTEGER* arg4) override;
 
-    // 0x519280 | ?Release@CMemStream@@W3AGKXZ
-    inline uint32_t __stdcall Release()
-    {
-        return stub<member_func_t<uint32_t, CMemStream>>(0x519280, this);
-    }
+    // 0x519030 | ?GetLoader@CMemStream@@UAGJPAPAUIDirectMusicLoader@@@Z
+    i32 __stdcall GetLoader(struct IDirectMusicLoader** arg1) override;
+
+    // 0x519220 | ?LockRegion@CMemStream@@UAGJT_ULARGE_INTEGER@@0K@Z
+    i32 __stdcall LockRegion(union _ULARGE_INTEGER arg1, union _ULARGE_INTEGER arg2, u32 arg3) override;
+
+    // 0x518F20 | ?Open@CMemStream@@QAEJPAE_J@Z
+    i32 Open(u8* arg1, i64 arg2);
+
+    // 0x518F90 | ?QueryInterface@CMemStream@@UAGJABU_GUID@@PAPAX@Z
+    i32 __stdcall QueryInterface(struct _GUID const& arg1, void** arg2) override;
+
+    // 0x519260 | ?QueryInterface@CMemStream@@W3AGJABU_GUID@@PAPAX@Z (Skipped: thunk)
+
+    // 0x5190D0 | ?Read@CMemStream@@UAGJPAXKPAK@Z
+    i32 __stdcall Read(void* arg1, u32 arg2, u32* arg3) override;
+
+    // 0x519090 | ?Release@CMemStream@@UAGKXZ
+    u32 __stdcall Release() override;
+
+    // 0x519280 | ?Release@CMemStream@@W3AGKXZ (Skipped: thunk)
+
+    // 0x519210 | ?Revert@CMemStream@@UAGJXZ
+    i32 __stdcall Revert() override;
+
+    // 0x519160 | ?Seek@CMemStream@@UAGJT_LARGE_INTEGER@@KPAT_ULARGE_INTEGER@@@Z
+    i32 __stdcall Seek(union _LARGE_INTEGER arg1, u32 arg2, union _ULARGE_INTEGER* arg3) override;
+
+    // 0x5191E0 | ?SetSize@CMemStream@@UAGJT_ULARGE_INTEGER@@@Z
+    i32 __stdcall SetSize(union _ULARGE_INTEGER arg1) override;
+
+    // 0x519240 | ?Stat@CMemStream@@UAGJPAUtagSTATSTG@@K@Z
+    i32 __stdcall Stat(struct tagSTATSTG* arg1, u32 arg2) override;
+
+    // 0x519230 | ?UnlockRegion@CMemStream@@UAGJT_ULARGE_INTEGER@@0K@Z
+    i32 __stdcall UnlockRegion(union _ULARGE_INTEGER arg1, union _ULARGE_INTEGER arg2, u32 arg3) override;
+
+    // 0x519150 | ?Write@CMemStream@@UAGJPBXKPAK@Z
+    i32 __stdcall Write(void const* arg1, u32 arg2, u32* arg3) override;
 };
+
+check_size(CMemStream, 0x0);

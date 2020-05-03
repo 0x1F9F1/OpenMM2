@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "pu_menu.h"
+
 /*
     mmui:pu_main
 
@@ -32,45 +34,29 @@
     0x5B4720 | const PUMain::`vftable' | ??_7PUMain@@6B@
 */
 
-struct PUMain : PUMenuBase
+class PUMain : public PUMenuBase
 {
+    // const PUMain::`vftable' @ 0x5B4720
+
 public:
-    // PUMain::`vftable' @ 0x5B4720
-
     // 0x50A5C0 | ??0PUMain@@QAE@HMMMMPAD@Z
-    inline PUMain(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
-    {
-        stub<member_func_t<void, PUMain, int32_t, float, float, float, float, char*>>(
-            0x50A5C0, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
+    PUMain(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6);
 
-    // 0x50A810 | ?RplRO@PUMain@@QAEXH@Z
-    inline void RplRO(int32_t arg1)
-    {
-        return stub<member_func_t<void, PUMain, int32_t>>(0x50A810, this, arg1);
-    }
-
-    // 0x50A830 | ?RestartRO@PUMain@@QAEXH@Z
-    inline void RestartRO(int32_t arg1)
-    {
-        return stub<member_func_t<void, PUMain, int32_t>>(0x50A830, this, arg1);
-    }
-
-    // 0x50A850 | ?RaceMenuRO@PUMain@@QAEXH@Z
-    inline void RaceMenuRO(int32_t arg1)
-    {
-        return stub<member_func_t<void, PUMain, int32_t>>(0x50A850, this, arg1);
-    }
+    // 0x50A880 | ??_GPUMain@@UAEPAXI@Z
+    // 0x50A800 | ??1PUMain@@UAE@XZ
+    ~PUMain() override;
 
     // 0x50A870 | ?IsRaceMenuReadOnly@PUMain@@QAEHXZ
-    inline int32_t IsRaceMenuReadOnly()
-    {
-        return stub<member_func_t<int32_t, PUMain>>(0x50A870, this);
-    }
+    i32 IsRaceMenuReadOnly();
 
-    // 0x50A800 | ??1PUMain@@UAE@XZ
-    inline ~PUMain() override
-    {
-        stub<member_func_t<void, PUMain>>(0x50A800, this);
-    }
+    // 0x50A850 | ?RaceMenuRO@PUMain@@QAEXH@Z
+    void RaceMenuRO(i32 arg1);
+
+    // 0x50A830 | ?RestartRO@PUMain@@QAEXH@Z
+    void RestartRO(i32 arg1);
+
+    // 0x50A810 | ?RplRO@PUMain@@QAEXH@Z
+    void RplRO(i32 arg1);
 };
+
+check_size(PUMain, 0xC8);

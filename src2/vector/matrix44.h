@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -51,163 +51,86 @@
     0x6A3B48 | public: static class Matrix44 Matrix44::I | ?I@Matrix44@@2V1@A
 */
 
-// 0x4C1DF0 | ?__vectorDotMatrix@@YAXAAVVector4@@ABV1@ABVMatrix44@@@Z
-inline void __vectorDotMatrix(class Vector4& arg1, class Vector4 const& arg2, class Matrix44 const& arg3)
-{
-    return stub<cdecl_t<void, class Vector4&, class Vector4 const&, class Matrix44 const&>>(0x4C1DF0, arg1, arg2, arg3);
-}
-
 class Matrix44
 {
 public:
-    // 0x4C0730 | ?Identity@Matrix44@@QAEXXZ
-    inline void Identity()
-    {
-        return stub<member_func_t<void, Matrix44>>(0x4C0730, this);
-    }
-
-    // 0x4C0770 | ?Zero@Matrix44@@QAEXXZ
-    inline void Zero()
-    {
-        return stub<member_func_t<void, Matrix44>>(0x4C0770, this);
-    }
-
-    // 0x4C07B0 | ?Set@Matrix44@@QAEXABV1@@Z
-    inline void Set(class Matrix44 const& arg1)
-    {
-        return stub<member_func_t<void, Matrix44, class Matrix44 const&>>(0x4C07B0, this, arg1);
-    }
-
-    // 0x4C0820 | ?Bezier@Matrix44@@QAEXXZ
-    inline void Bezier()
-    {
-        return stub<member_func_t<void, Matrix44>>(0x4C0820, this);
-    }
-
-    // 0x4C0870 | ?Hermite@Matrix44@@QAEXXZ
-    inline void Hermite()
-    {
-        return stub<member_func_t<void, Matrix44>>(0x4C0870, this);
-    }
-
-    // 0x4C08C0 | ?CatmullRom@Matrix44@@QAEXXZ
-    inline void CatmullRom()
-    {
-        return stub<member_func_t<void, Matrix44>>(0x4C08C0, this);
-    }
-
-    // 0x4C0920 | ?Transpose@Matrix44@@QAEXXZ
-    inline void Transpose()
-    {
-        return stub<member_func_t<void, Matrix44>>(0x4C0920, this);
-    }
-
-    // 0x4C0970 | ?FromMatrix34@Matrix44@@QAEXABVMatrix34@@@Z
-    inline void FromMatrix34(class Matrix34 const& arg1)
-    {
-        return stub<member_func_t<void, Matrix44, class Matrix34 const&>>(0x4C0970, this, arg1);
-    }
-
-    // 0x4C09E0 | ?ToMatrix34@Matrix44@@QBEXAAVMatrix34@@@Z
-    inline void ToMatrix34(class Matrix34& arg1)
-    {
-        return stub<member_func_t<void, Matrix44, class Matrix34&>>(0x4C09E0, this, arg1);
-    }
-
     // 0x4C0A30 | ?Add@Matrix44@@QAEXABV1@@Z
-    inline void Add(class Matrix44 const& arg1)
-    {
-        return stub<member_func_t<void, Matrix44, class Matrix44 const&>>(0x4C0A30, this, arg1);
-    }
+    void Add(class Matrix44 const& arg1);
 
     // 0x4C0AD0 | ?Add@Matrix44@@QAEXABV1@0@Z
-    inline void Add(class Matrix44 const& arg1, class Matrix44 const& arg2)
-    {
-        return stub<member_func_t<void, Matrix44, class Matrix44 const&, class Matrix44 const&>>(
-            0x4C0AD0, this, arg1, arg2);
-    }
-
-    // 0x4C0B70 | ?Subtract@Matrix44@@QAEXABV1@@Z
-    inline void Subtract(class Matrix44 const& arg1)
-    {
-        return stub<member_func_t<void, Matrix44, class Matrix44 const&>>(0x4C0B70, this, arg1);
-    }
-
-    // 0x4C0C10 | ?Subtract@Matrix44@@QAEXABV1@0@Z
-    inline void Subtract(class Matrix44 const& arg1, class Matrix44 const& arg2)
-    {
-        return stub<member_func_t<void, Matrix44, class Matrix44 const&, class Matrix44 const&>>(
-            0x4C0C10, this, arg1, arg2);
-    }
+    void Add(class Matrix44 const& arg1, class Matrix44 const& arg2);
 
     // 0x4C0CB0 | ?AddScaled@Matrix44@@QAEXABV1@M@Z
-    inline void AddScaled(class Matrix44 const& arg1, float arg2)
-    {
-        return stub<member_func_t<void, Matrix44, class Matrix44 const&, float>>(0x4C0CB0, this, arg1, arg2);
-    }
+    void AddScaled(class Matrix44 const& arg1, f32 arg2);
 
-    // 0x4C0D50 | ?Dot@Matrix44@@QAEAAV1@ABV1@@Z
-    inline class Matrix44& Dot(class Matrix44 const& arg1)
-    {
-        return stub<member_func_t<class Matrix44&, Matrix44, class Matrix44 const&>>(0x4C0D50, this, arg1);
-    }
+    // 0x4C0820 | ?Bezier@Matrix44@@QAEXXZ
+    void Bezier();
 
-    // 0x4C0FC0 | ?Dot@Matrix44@@QAEAAV1@ABV1@0@Z
-    inline class Matrix44& Dot(class Matrix44 const& arg1, class Matrix44 const& arg2)
-    {
-        return stub<member_func_t<class Matrix44&, Matrix44, class Matrix44 const&, class Matrix44 const&>>(
-            0x4C0FC0, this, arg1, arg2);
-    }
-
-    // 0x4C1260 | ?FastInverse@Matrix44@@QAEXABV1@@Z
-    inline void FastInverse(class Matrix44 const& arg1)
-    {
-        return stub<member_func_t<void, Matrix44, class Matrix44 const&>>(0x4C1260, this, arg1);
-    }
+    // 0x4C08C0 | ?CatmullRom@Matrix44@@QAEXXZ
+    void CatmullRom();
 
     // 0x4C1320 | ?Determinant@Matrix44@@QBEMXZ
-    inline float Determinant()
-    {
-        return stub<member_func_t<float, Matrix44>>(0x4C1320, this);
-    }
+    f32 Determinant();
+
+    // 0x4C0D50 | ?Dot@Matrix44@@QAEAAV1@ABV1@@Z
+    class Matrix44& Dot(class Matrix44 const& arg1);
+
+    // 0x4C0FC0 | ?Dot@Matrix44@@QAEAAV1@ABV1@0@Z
+    class Matrix44& Dot(class Matrix44 const& arg1, class Matrix44 const& arg2);
+
+    // 0x4C1260 | ?FastInverse@Matrix44@@QAEXABV1@@Z
+    void FastInverse(class Matrix44 const& arg1);
+
+    // 0x4C0970 | ?FromMatrix34@Matrix44@@QAEXABVMatrix34@@@Z
+    void FromMatrix34(class Matrix34 const& arg1);
+
+    // 0x4C0870 | ?Hermite@Matrix44@@QAEXXZ
+    void Hermite();
+
+    // 0x4C0730 | ?Identity@Matrix44@@QAEXXZ
+    void Identity();
 
     // 0x4C1510 | ?InvertTo@Matrix44@@QBEXAAV1@@Z
-    inline void InvertTo(class Matrix44& arg1)
-    {
-        return stub<member_func_t<void, Matrix44, class Matrix44&>>(0x4C1510, this, arg1);
-    }
+    void InvertTo(class Matrix44& arg1);
 
     // 0x4C1C00 | ?MakeRotX@Matrix44@@QAEAAV1@M@Z
-    inline class Matrix44& MakeRotX(float arg1)
-    {
-        return stub<member_func_t<class Matrix44&, Matrix44, float>>(0x4C1C00, this, arg1);
-    }
+    class Matrix44& MakeRotX(f32 arg1);
 
     // 0x4C1C50 | ?MakeRotY@Matrix44@@QAEAAV1@M@Z
-    inline class Matrix44& MakeRotY(float arg1)
-    {
-        return stub<member_func_t<class Matrix44&, Matrix44, float>>(0x4C1C50, this, arg1);
-    }
+    class Matrix44& MakeRotY(f32 arg1);
 
     // 0x4C1CA0 | ?MakeRotZ@Matrix44@@QAEAAV1@M@Z
-    inline class Matrix44& MakeRotZ(float arg1)
-    {
-        return stub<member_func_t<class Matrix44&, Matrix44, float>>(0x4C1CA0, this, arg1);
-    }
+    class Matrix44& MakeRotZ(f32 arg1);
 
     // 0x4C1CF0 | ?Print@Matrix44@@QBEXPBD@Z
-    inline void Print(char const* arg1)
-    {
-        return stub<member_func_t<void, Matrix44, char const*>>(0x4C1CF0, this, arg1);
-    }
+    void Print(char const* arg1);
+
+    // 0x4C07B0 | ?Set@Matrix44@@QAEXABV1@@Z
+    void Set(class Matrix44 const& arg1);
+
+    // 0x4C0B70 | ?Subtract@Matrix44@@QAEXABV1@@Z
+    void Subtract(class Matrix44 const& arg1);
+
+    // 0x4C0C10 | ?Subtract@Matrix44@@QAEXABV1@0@Z
+    void Subtract(class Matrix44 const& arg1, class Matrix44 const& arg2);
+
+    // 0x4C09E0 | ?ToMatrix34@Matrix44@@QBEXAAVMatrix34@@@Z
+    void ToMatrix34(class Matrix34& arg1);
 
     // 0x4C1D60 | ?Transform4@Matrix44@@QBEXPBVVector3@@PAVVector4@@H@Z
-    inline void Transform4(class Vector3 const* arg1, class Vector4* arg2, int32_t arg3)
-    {
-        return stub<member_func_t<void, Matrix44, class Vector3 const*, class Vector4*, int32_t>>(
-            0x4C1D60, this, arg1, arg2, arg3);
-    }
+    void Transform4(class Vector3 const* arg1, class Vector4* arg2, i32 arg3);
+
+    // 0x4C0920 | ?Transpose@Matrix44@@QAEXXZ
+    void Transpose();
+
+    // 0x4C0770 | ?Zero@Matrix44@@QAEXXZ
+    void Zero();
 
     // 0x6A3B48 | ?I@Matrix44@@2V1@A
     static inline extern_var(0x6A3B48, class Matrix44, I);
 };
+
+check_size(Matrix44, 0x0);
+
+// 0x4C1DF0 | ?__vectorDotMatrix@@YAXAAVVector4@@ABV1@ABVMatrix44@@@Z
+void __vectorDotMatrix(class Vector4& arg1, class Vector4 const& arg2, class Matrix44 const& arg3);

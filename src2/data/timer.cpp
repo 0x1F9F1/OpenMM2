@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,30 @@
 */
 
 #include "timer.h"
+
+Timer::Timer()
+{
+    unimplemented();
+}
+
+void Timer::BeginBenchmark()
+{
+    return stub<cdecl_t<void>>(0x4C7980);
+}
+
+void Timer::EndBenchmark()
+{
+    return stub<cdecl_t<void>>(0x4C79F0);
+}
+
+u32 Timer::QuickTicks()
+{
+    return stub<cdecl_t<u32>>(0x4C7810);
+}
+
+u32 Timer::Ticks()
+{
+    return stub<cdecl_t<u32>>(0x4C77E0);
+}
+
+define_dummy_symbol(data_timer);

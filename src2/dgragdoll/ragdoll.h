@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -39,69 +39,37 @@ class dgRagdoll
 {
 public:
     // 0x5A7CC0 | ??0dgRagdoll@@QAE@XZ
-    inline dgRagdoll()
-    {
-        stub<member_func_t<void, dgRagdoll>>(0x5A7CC0, this);
-    }
-
-    // 0x5A7D70 | ?GetMatrix@dgRagdoll@@QAEAAVMatrix34@@XZ
-    inline class Matrix34& GetMatrix()
-    {
-        return stub<member_func_t<class Matrix34&, dgRagdoll>>(0x5A7D70, this);
-    }
-
-    // 0x5A7D80 | ?Init@dgRagdoll@@QAEXABVdgRagdollData@@AAVcrKinematics@@PAVMatrix34@@@Z
-    inline void Init(class dgRagdollData const& arg1, class crKinematics& arg2, class Matrix34* arg3)
-    {
-        return stub<member_func_t<void, dgRagdoll, class dgRagdollData const&, class crKinematics&, class Matrix34*>>(
-            0x5A7D80, this, arg1, arg2, arg3);
-    }
+    dgRagdoll();
 
     // 0x5A7ED0 | ??1dgRagdoll@@QAE@XZ
-    inline ~dgRagdoll()
-    {
-        stub<member_func_t<void, dgRagdoll>>(0x5A7ED0, this);
-    }
-
-    // 0x5A7EF0 | ?Deactivate@dgRagdoll@@QAEXXZ
-    inline void Deactivate()
-    {
-        return stub<member_func_t<void, dgRagdoll>>(0x5A7EF0, this);
-    }
-
-    // 0x5A7F00 | ?ResetGoals@dgRagdoll@@QAEXXZ
-    inline void ResetGoals()
-    {
-        return stub<member_func_t<void, dgRagdoll>>(0x5A7F00, this);
-    }
-
-    // 0x5A7F10 | ?StartRagdoll@dgRagdoll@@QAEXXZ
-    inline void StartRagdoll()
-    {
-        return stub<member_func_t<void, dgRagdoll>>(0x5A7F10, this);
-    }
-
-    // 0x5A7F60 | ?StopRagdoll@dgRagdoll@@QAEXXZ
-    inline void StopRagdoll()
-    {
-        return stub<member_func_t<void, dgRagdoll>>(0x5A7F60, this);
-    }
-
-    // 0x5A7F70 | ?Reset@dgRagdoll@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, dgRagdoll>>(0x5A7F70, this);
-    }
-
-    // 0x5A7FB0 | ?Update@dgRagdoll@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, dgRagdoll>>(0x5A7FB0, this);
-    }
+    ~dgRagdoll();
 
     // 0x5A8030 | ?ApplyPushVelocity@dgRagdoll@@QAEXAAVVector3@@@Z
-    inline void ApplyPushVelocity(class Vector3& arg1)
-    {
-        return stub<member_func_t<void, dgRagdoll, class Vector3&>>(0x5A8030, this, arg1);
-    }
+    void ApplyPushVelocity(class Vector3& arg1);
+
+    // 0x5A7EF0 | ?Deactivate@dgRagdoll@@QAEXXZ
+    void Deactivate();
+
+    // 0x5A7D70 | ?GetMatrix@dgRagdoll@@QAEAAVMatrix34@@XZ
+    class Matrix34& GetMatrix();
+
+    // 0x5A7D80 | ?Init@dgRagdoll@@QAEXABVdgRagdollData@@AAVcrKinematics@@PAVMatrix34@@@Z
+    void Init(class dgRagdollData const& arg1, class crKinematics& arg2, class Matrix34* arg3);
+
+    // 0x5A7F70 | ?Reset@dgRagdoll@@QAEXXZ
+    void Reset();
+
+    // 0x5A7F00 | ?ResetGoals@dgRagdoll@@QAEXXZ
+    void ResetGoals();
+
+    // 0x5A7F10 | ?StartRagdoll@dgRagdoll@@QAEXXZ
+    void StartRagdoll();
+
+    // 0x5A7F60 | ?StopRagdoll@dgRagdoll@@QAEXXZ
+    void StopRagdoll();
+
+    // 0x5A7FB0 | ?Update@dgRagdoll@@QAEXXZ
+    void Update();
 };
+
+check_size(dgRagdoll, 0x18);

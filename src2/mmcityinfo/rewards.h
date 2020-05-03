@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -36,64 +36,39 @@
 class mmRewardRecord
 {
 public:
-    // 0x433F30 | ??1mmRewardRecord@@QAE@XZ
-    inline ~mmRewardRecord()
-    {
-        stub<member_func_t<void, mmRewardRecord>>(0x433F30, this);
-    }
-
-    // 0x5240D0 | ??_EmmRewardRecord@@QAEPAXI@Z
-    // Skipped (scalar/vector destructor)
-
     // 0x524140 | ??0mmRewardRecord@@QAE@XZ
-    inline mmRewardRecord()
-    {
-        stub<member_func_t<void, mmRewardRecord>>(0x524140, this);
-    }
+    mmRewardRecord();
+
+    // 0x433F30 | ??1mmRewardRecord@@QAE@XZ
+    // 0x5240D0 | ??_EmmRewardRecord@@QAEPAXI@Z
+    ~mmRewardRecord();
 };
+
+check_size(mmRewardRecord, 0x8);
 
 struct mmRewardList
 {
 public:
     // 0x5238E0 | ??0mmRewardList@@QAE@XZ
-    inline mmRewardList()
-    {
-        stub<member_func_t<void, mmRewardList>>(0x5238E0, this);
-    }
+    mmRewardList();
 
     // 0x5238F0 | ??1mmRewardList@@QAE@XZ
-    inline ~mmRewardList()
-    {
-        stub<member_func_t<void, mmRewardList>>(0x5238F0, this);
-    }
-
-    // 0x523930 | ?Init@mmRewardList@@QAEXH@Z
-    inline void Init(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmRewardList, int32_t>>(0x523930, this, arg1);
-    }
-
-    // 0x5239B0 | ?Load@mmRewardList@@QAE_NPAD00@Z
-    inline bool Load(char* arg1, char* arg2, char* arg3)
-    {
-        return stub<member_func_t<bool, mmRewardList, char*, char*, char*>>(0x5239B0, this, arg1, arg2, arg3);
-    }
+    ~mmRewardList();
 
     // 0x523C90 | ?GetRecord@mmRewardList@@QAEPAVmmRewardRecord@@H@Z
-    inline class mmRewardRecord* GetRecord(int32_t arg1)
-    {
-        return stub<member_func_t<class mmRewardRecord*, mmRewardList, int32_t>>(0x523C90, this, arg1);
-    }
+    class mmRewardRecord* GetRecord(i32 arg1);
 
-    // 0x523CA0 | ?UnlockPlayerRewards@mmRewardList@@SAXPAD@Z
-    static inline void UnlockPlayerRewards(char* arg1)
-    {
-        return stub<cdecl_t<void, char*>>(0x523CA0, arg1);
-    }
+    // 0x523930 | ?Init@mmRewardList@@QAEXH@Z
+    void Init(i32 arg1);
+
+    // 0x5239B0 | ?Load@mmRewardList@@QAE_NPAD00@Z
+    bool Load(char* arg1, char* arg2, char* arg3);
 
     // 0x523E70 | ?CheckReward@mmRewardList@@SA_NPADHPAVmmRewardRecord@@@Z
-    static inline bool CheckReward(char* arg1, int32_t arg2, class mmRewardRecord* arg3)
-    {
-        return stub<cdecl_t<bool, char*, int32_t, class mmRewardRecord*>>(0x523E70, arg1, arg2, arg3);
-    }
+    static bool CheckReward(char* arg1, i32 arg2, class mmRewardRecord* arg3);
+
+    // 0x523CA0 | ?UnlockPlayerRewards@mmRewardList@@SAXPAD@Z
+    static void UnlockPlayerRewards(char* arg1);
 };
+
+check_size(mmRewardList, 0x0);

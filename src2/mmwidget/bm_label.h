@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "textfield.h"
+
 /*
     mmwidget:bm_label
 
@@ -30,34 +32,36 @@
     0x4ED820 | public: virtual void __thiscall UIBMLabel::Cull(void) | ?Cull@UIBMLabel@@UAEXXZ
     public: virtual void * __thiscall UIBMLabel::`vector deleting destructor'(unsigned int) | ??_EUIBMLabel@@UAEPAXI@Z
     0x4ED850 | public: virtual void * __thiscall UIBMLabel::`scalar deleting destructor'(unsigned int) | ??_GUIBMLabel@@UAEPAXI@Z
-    const UIBMLabel::`vftable' | ??_7UIBMLabel@@6B@
+    0x5B3778 | const UIBMLabel::`vftable' | ??_7UIBMLabel@@6B@
 */
 
-class UIBMLabel : uiWidget
+class UIBMLabel : public uiWidget
 {
+    // const UIBMLabel::`vftable' @ 0x5B3778
+
 public:
     // 0x4ED4D0 | ??0UIBMLabel@@QAE@XZ
-    inline UIBMLabel()
-    {
-        stub<member_func_t<void, UIBMLabel>>(0x4ED4D0, this);
-    }
+    UIBMLabel();
+
+    // 0x4ED850 | ??_GUIBMLabel@@UAEPAXI@Z
+    // 0x4ED540 | ??1UIBMLabel@@UAE@XZ
+    ~UIBMLabel() override;
+
+    // 0x4ED820 | ?Cull@UIBMLabel@@UAEXXZ
+    void Cull() override;
 
     // 0x4ED5C0 | ?Init@UIBMLabel@@QAEXPAVstring@@MMPAH@Z
-    inline void Init(class string* arg1, float arg2, float arg3, int32_t* arg4)
-    {
-        return stub<member_func_t<void, UIBMLabel, class string*, float, float, int32_t*>>(
-            0x4ED5C0, this, arg1, arg2, arg3, arg4);
-    }
+    void Init(class string* arg1, f32 arg2, f32 arg3, i32* arg4);
 
     // 0x4ED680 | ?SetBitmapName@UIBMLabel@@QAEXPAVstring@@@Z
-    inline void SetBitmapName(class string* arg1)
-    {
-        return stub<member_func_t<void, UIBMLabel, class string*>>(0x4ED680, this, arg1);
-    }
+    void SetBitmapName(class string* arg1);
 
+    // 0x4ED7F0 | ?Update@UIBMLabel@@UAEXXZ
+    void Update() override;
+
+private:
     // 0x4ED720 | ?LoadBitmap@UIBMLabel@@AAEXXZ
-    inline void LoadBitmap()
-    {
-        return stub<member_func_t<void, UIBMLabel>>(0x4ED720, this);
-    }
+    void LoadBitmap();
 };
+
+check_size(UIBMLabel, 0x98);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -35,66 +35,42 @@
     0x6A3961 | private: static bool ioPad::sm_UseKeymap | ?sm_UseKeymap@ioPad@@0_NA
 */
 
-// 0x4BB710 | ?AddDeadZone@@YAMMM@Z
-inline float AddDeadZone(float arg1, float arg2)
-{
-    return stub<cdecl_t<float, float, float>>(0x4BB710, arg1, arg2);
-}
-
 class ioPad
 {
 public:
-    // 0x4BB4E0 | ?Begin@ioPad@@AAEXH@Z
-    inline void Begin(int32_t arg1)
-    {
-        return stub<member_func_t<void, ioPad, int32_t>>(0x4BB4E0, this, arg1);
-    }
-
-    // 0x4BB520 | ?End@ioPad@@AAEXXZ
-    inline void End()
-    {
-        return stub<member_func_t<void, ioPad>>(0x4BB520, this);
-    }
-
-    // 0x4BB530 | ?Update@ioPad@@AAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, ioPad>>(0x4BB530, this);
-    }
-
-    // 0x4BB760 | ?BeginAll@ioPad@@SAXXZ
-    static inline void BeginAll()
-    {
-        return stub<cdecl_t<void>>(0x4BB760);
-    }
-
-    // 0x4BB780 | ?EndAll@ioPad@@SAXXZ
-    static inline void EndAll()
-    {
-        return stub<cdecl_t<void>>(0x4BB780);
-    }
-
-    // 0x4BB7A0 | ?UpdateAll@ioPad@@SAXXZ
-    static inline void UpdateAll()
-    {
-        return stub<cdecl_t<void>>(0x4BB7A0);
-    }
-
     // 0x4BB7C0 | ??0ioPad@@QAE@XZ
-    inline ioPad()
-    {
-        stub<member_func_t<void, ioPad>>(0x4BB7C0, this);
-    }
+    ioPad();
 
     // 0x4BB7E0 | ??1ioPad@@QAE@XZ
-    inline ~ioPad()
-    {
-        stub<member_func_t<void, ioPad>>(0x4BB7E0, this);
-    }
+    ~ioPad();
+
+    // 0x4BB760 | ?BeginAll@ioPad@@SAXXZ
+    static void BeginAll();
+
+    // 0x4BB780 | ?EndAll@ioPad@@SAXXZ
+    static void EndAll();
+
+    // 0x4BB7A0 | ?UpdateAll@ioPad@@SAXXZ
+    static void UpdateAll();
+
+private:
+    // 0x4BB4E0 | ?Begin@ioPad@@AAEXH@Z
+    void Begin(i32 arg1);
+
+    // 0x4BB520 | ?End@ioPad@@AAEXXZ
+    void End();
+
+    // 0x4BB530 | ?Update@ioPad@@AAEXXZ
+    void Update();
 
     // 0x6A3900 | ?PADS@ioPad@@0PAV1@A
-    inline extern_var(0x6A3900, class ioPad*, PADS);
+    static inline extern_var(0x6A3900, class ioPad*, PADS);
 
     // 0x6A3961 | ?sm_UseKeymap@ioPad@@0_NA
     static inline extern_var(0x6A3961, bool, sm_UseKeymap);
 };
+
+check_size(ioPad, 0x18);
+
+// 0x4BB710 | ?AddDeadZone@@YAMMM@Z
+f32 AddDeadZone(f32 arg1, f32 arg2);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "compcity.h"
 
 /*
     mmwidget:comprrec
@@ -38,89 +40,48 @@
     0x5B88F4 | const mmCompRaceRecord::`vftable' | ??_7mmCompRaceRecord@@6B@
 */
 
-struct mmCompRaceRecord : mmCompBase
+class mmCompRaceRecord : public mmCompBase
 {
+    // const mmCompRaceRecord::`vftable' @ 0x5B88F4
+
 public:
-    // mmCompRaceRecord::`vftable' @ 0x5B88F4
-
     // 0x59EE90 | ??0mmCompRaceRecord@@QAE@XZ
-    inline mmCompRaceRecord()
-    {
-        stub<member_func_t<void, mmCompRaceRecord>>(0x59EE90, this);
-    }
+    mmCompRaceRecord();
 
-    // 0x59EF70 | ?Init@mmCompRaceRecord@@QAEXHPAD0000HH@Z
-    inline void Init(
-        int32_t arg1, char* arg2, char* arg3, char* arg4, char* arg5, char* arg6, int32_t arg7, int32_t arg8)
-    {
-        return stub<
-            member_func_t<void, mmCompRaceRecord, int32_t, char*, char*, char*, char*, char*, int32_t, int32_t>>(
-            0x59EF70, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
-    }
-
-    // 0x59EFF0 | ?InitTitle@mmCompRaceRecord@@QAEXMMMMPAULocString@@00000H@Z
-    inline void InitTitle(float arg1, float arg2, float arg3, float arg4, struct LocString* arg5,
-        struct LocString* arg6, struct LocString* arg7, struct LocString* arg8, struct LocString* arg9,
-        struct LocString* arg10, int32_t arg11)
-    {
-        return stub<member_func_t<void, mmCompRaceRecord, float, float, float, float, struct LocString*,
-            struct LocString*, struct LocString*, struct LocString*, struct LocString*, struct LocString*, int32_t>>(
-            0x59EFF0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
-    }
-
-    // 0x59F060 | ?LoadBitmap@mmCompRaceRecord@@QAEXPAD@Z
-    inline void LoadBitmap(char* arg1)
-    {
-        return stub<member_func_t<void, mmCompRaceRecord, char*>>(0x59F060, this, arg1);
-    }
-
-    // 0x59F0D0 | ?SetSubwidgetGeometry@mmCompRaceRecord@@QAEXXZ
-    inline void SetSubwidgetGeometry()
-    {
-        return stub<member_func_t<void, mmCompRaceRecord>>(0x59F0D0, this);
-    }
-
-    // 0x59F1E0 | ?SelectIfRaceType@mmCompRaceRecord@@QAEXHH@Z
-    inline void SelectIfRaceType(int32_t arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, mmCompRaceRecord, int32_t, int32_t>>(0x59F1E0, this, arg1, arg2);
-    }
-
+    // 0x59F300 | ??_GmmCompRaceRecord@@UAEPAXI@Z
     // 0x59EED0 | ??1mmCompRaceRecord@@UAE@XZ
-    inline ~mmCompRaceRecord() override
-    {
-        stub<member_func_t<void, mmCompRaceRecord>>(0x59EED0, this);
-    }
+    ~mmCompRaceRecord() override;
 
     // 0x59F2C0 | ?Cull@mmCompRaceRecord@@UAEXXZ
-    inline void Cull() override
-    {
-        return stub<member_func_t<void, mmCompRaceRecord>>(0x59F2C0, this);
-    }
+    void Cull() override;
 
-    // 0x59F0C0 | ?Update@mmCompRaceRecord@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmCompRaceRecord>>(0x59F0C0, this);
-    }
+    // 0x59EF70 | ?Init@mmCompRaceRecord@@QAEXHPAD0000HH@Z
+    void Init(i32 arg1, char* arg2, char* arg3, char* arg4, char* arg5, char* arg6, i32 arg7, i32 arg8);
+
+    // 0x59EFF0 | ?InitTitle@mmCompRaceRecord@@QAEXMMMMPAULocString@@00000H@Z
+    void InitTitle(f32 arg1, f32 arg2, f32 arg3, f32 arg4, struct LocString* arg5, struct LocString* arg6,
+        struct LocString* arg7, struct LocString* arg8, struct LocString* arg9, struct LocString* arg10, i32 arg11);
+
+    // 0x59F060 | ?LoadBitmap@mmCompRaceRecord@@QAEXPAD@Z
+    void LoadBitmap(char* arg1);
 
     // 0x59F0B0 | ?Reset@mmCompRaceRecord@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmCompRaceRecord>>(0x59F0B0, this);
-    }
+    void Reset() override;
+
+    // 0x59F1E0 | ?SelectIfRaceType@mmCompRaceRecord@@QAEXHH@Z
+    void SelectIfRaceType(i32 arg1, i32 arg2);
 
     // 0x59F1B0 | ?SetGeometry@mmCompRaceRecord@@UAEXMMMM@Z
-    inline void SetGeometry(float arg1, float arg2, float arg3, float arg4) override
-    {
-        return stub<member_func_t<void, mmCompRaceRecord, float, float, float, float>>(
-            0x59F1B0, this, arg1, arg2, arg3, arg4);
-    }
+    void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4) override;
 
     // 0x59F220 | ?SetPosition@mmCompRaceRecord@@UAEXPAVmmTextNode@@HM@Z
-    inline void SetPosition(class mmTextNode* arg1, int32_t arg2, float arg3) override
-    {
-        return stub<member_func_t<void, mmCompRaceRecord, class mmTextNode*, int32_t, float>>(
-            0x59F220, this, arg1, arg2, arg3);
-    }
+    void SetPosition(class mmTextNode* arg1, i32 arg2, f32 arg3) override;
+
+    // 0x59F0D0 | ?SetSubwidgetGeometry@mmCompRaceRecord@@QAEXXZ
+    void SetSubwidgetGeometry();
+
+    // 0x59F0C0 | ?Update@mmCompRaceRecord@@UAEXXZ
+    void Update() override;
 };
+
+check_size(mmCompRaceRecord, 0xA0);

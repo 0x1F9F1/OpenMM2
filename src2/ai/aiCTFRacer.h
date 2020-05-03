@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "data/base.h"
 
 /*
     ai:aiCTFRacer
@@ -39,78 +41,50 @@
     const aiCTFRacer::`vftable' | ??_7aiCTFRacer@@6B@
 */
 
-class aiCTFRacer : Base
+class aiCTFRacer : public Base
 {
 public:
     // 0x5543C0 | ??0aiCTFRacer@@QAE@XZ
-    inline aiCTFRacer()
-    {
-        stub<member_func_t<void, aiCTFRacer>>(0x5543C0, this);
-    }
+    aiCTFRacer();
 
-    // 0x554470 | ?Init@aiCTFRacer@@QAEXHPAD@Z
-    inline void Init(int32_t arg1, char* arg2)
-    {
-        return stub<member_func_t<void, aiCTFRacer, int32_t, char*>>(0x554470, this, arg1, arg2);
-    }
-
-    // 0x554510 | ?Reset@aiCTFRacer@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, aiCTFRacer>>(0x554510, this);
-    }
-
-    // 0x554550 | ?DropFlag@aiCTFRacer@@QAEXHPBM@Z
-    inline void DropFlag(int32_t arg1, float const* arg2)
-    {
-        return stub<member_func_t<void, aiCTFRacer, int32_t, float const*>>(0x554550, this, arg1, arg2);
-    }
-
-    // 0x554580 | ?Update@aiCTFRacer@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, aiCTFRacer>>(0x554580, this);
-    }
-
-    // 0x554620 | ?ReleaseFlag@aiCTFRacer@@QAEXXZ
-    inline void ReleaseFlag()
-    {
-        return stub<member_func_t<void, aiCTFRacer>>(0x554620, this);
-    }
-
-    // 0x554630 | ?PickupFlag@aiCTFRacer@@QAEXXZ
-    inline void PickupFlag()
-    {
-        return stub<member_func_t<void, aiCTFRacer>>(0x554630, this);
-    }
-
-    // 0x554640 | ?PreAquireFlag@aiCTFRacer@@AAEXXZ
-    inline void PreAquireFlag()
-    {
-        return stub<member_func_t<void, aiCTFRacer>>(0x554640, this);
-    }
-
-    // 0x5547E0 | ?AquireFlag@aiCTFRacer@@AAEXXZ
-    inline void AquireFlag()
-    {
-        return stub<member_func_t<void, aiCTFRacer>>(0x5547E0, this);
-    }
-
-    // 0x554990 | ?PreDeliverFlag@aiCTFRacer@@AAEXXZ
-    inline void PreDeliverFlag()
-    {
-        return stub<member_func_t<void, aiCTFRacer>>(0x554990, this);
-    }
-
-    // 0x554B00 | ?DeliverFlag@aiCTFRacer@@AAEXXZ
-    inline void DeliverFlag()
-    {
-        return stub<member_func_t<void, aiCTFRacer>>(0x554B00, this);
-    }
+    // 0x554410 | ??1aiCTFRacer@@UAE@XZ
+    // 0x53BFA0 | ??_EaiCTFRacer@@UAEPAXI@Z
+    // 0x554C10 | ??_GaiCTFRacer@@UAEPAXI@Z
+    ~aiCTFRacer();
 
     // 0x554C00 | ?DrawRouteThroughTraffic@aiCTFRacer@@QAEXXZ
-    inline void DrawRouteThroughTraffic()
-    {
-        return stub<member_func_t<void, aiCTFRacer>>(0x554C00, this);
-    }
+    void DrawRouteThroughTraffic();
+
+    // 0x554550 | ?DropFlag@aiCTFRacer@@QAEXHPBM@Z
+    void DropFlag(i32 arg1, f32 const* arg2);
+
+    // 0x554470 | ?Init@aiCTFRacer@@QAEXHPAD@Z
+    void Init(i32 arg1, char* arg2);
+
+    // 0x554630 | ?PickupFlag@aiCTFRacer@@QAEXXZ
+    void PickupFlag();
+
+    // 0x554620 | ?ReleaseFlag@aiCTFRacer@@QAEXXZ
+    void ReleaseFlag();
+
+    // 0x554510 | ?Reset@aiCTFRacer@@QAEXXZ
+    void Reset();
+
+    // 0x554580 | ?Update@aiCTFRacer@@QAEXXZ
+    void Update();
+
+private:
+    // 0x5547E0 | ?AquireFlag@aiCTFRacer@@AAEXXZ
+    void AquireFlag();
+
+    // 0x554B00 | ?DeliverFlag@aiCTFRacer@@AAEXXZ
+    void DeliverFlag();
+
+    // 0x554640 | ?PreAquireFlag@aiCTFRacer@@AAEXXZ
+    void PreAquireFlag();
+
+    // 0x554990 | ?PreDeliverFlag@aiCTFRacer@@AAEXXZ
+    void PreDeliverFlag();
 };
+
+check_size(aiCTFRacer, 0x9878);

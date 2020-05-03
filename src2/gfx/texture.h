@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -82,352 +82,207 @@
     0x684D40 | private: static class gfxBitmap * gfxBitmap::sm_First | ?sm_First@gfxBitmap@@0PAV1@A
 */
 
-// 0x4AC8C0 | ?ilog2@@YAHH@Z
-inline int32_t ilog2(int32_t arg1)
-{
-    return stub<cdecl_t<int32_t, int32_t>>(0x4AC8C0, arg1);
-}
-
 class gfxTexture
 {
 public:
-    // 0x45D180 | ?GetColor@gfxTexture@@QBEIXZ
-    inline uint32_t GetColor()
-    {
-        return stub<member_func_t<uint32_t, gfxTexture>>(0x45D180, this);
-    }
-
-    // 0x4AC8E0 | ??0gfxTexture@@AAE@XZ
-    inline gfxTexture()
-    {
-        stub<member_func_t<void, gfxTexture>>(0x4AC8E0, this);
-    }
-
-    // 0x4AC910 | ??1gfxTexture@@AAE@XZ
-    inline ~gfxTexture()
-    {
-        stub<member_func_t<void, gfxTexture>>(0x4AC910, this);
-    }
-
-    // 0x4AC9B0 | ?KillAll@gfxTexture@@SAXXZ
-    static inline void KillAll()
-    {
-        return stub<cdecl_t<void>>(0x4AC9B0);
-    }
-
-    // 0x4AC9F0 | ?SetLODs@gfxTexture@@SAXXZ
-    static inline void SetLODs()
-    {
-        return stub<cdecl_t<void>>(0x4AC9F0);
-    }
-
-    // 0x4ACA10 | ?MarkFirstUse@gfxTexture@@AAEXXZ
-    inline void MarkFirstUse()
-    {
-        return stub<member_func_t<void, gfxTexture>>(0x4ACA10, this);
-    }
-
-    // 0x4ACA30 | ?MarkHigherUse@gfxTexture@@AAEXXZ
-    inline void MarkHigherUse()
-    {
-        return stub<member_func_t<void, gfxTexture>>(0x4ACA30, this);
-    }
-
-    // 0x4ACA90 | ?Create@gfxTexture@@SAPAV1@HHW4gfxImageFormat@gfxImage@@0H@Z
-    static inline class gfxTexture* Create(int32_t arg1, int32_t arg2, enum gfxImage::gfxImageFormat arg3,
-        enum gfxImage::gfxImageFormat arg4, int32_t arg5)
-    {
-        return stub<cdecl_t<class gfxTexture*, int32_t, int32_t, enum gfxImage::gfxImageFormat,
-            enum gfxImage::gfxImageFormat, int32_t>>(0x4ACA90, arg1, arg2, arg3, arg4, arg5);
-    }
-
-    // 0x4AD090 | ?Create@gfxTexture@@SAPAV1@PAVgfxImage@@_N@Z
-    static inline class gfxTexture* Create(class gfxImage* arg1, bool arg2)
-    {
-        return stub<cdecl_t<class gfxTexture*, class gfxImage*, bool>>(0x4AD090, arg1, arg2);
-    }
-
-    // 0x4AD100 | ?Load@gfxTexture@@QAEXPAVgfxImage@@@Z
-    inline void Load(class gfxImage* arg1)
-    {
-        return stub<member_func_t<void, gfxTexture, class gfxImage*>>(0x4AD100, this, arg1);
-    }
-
-    // 0x4AD720 | ?CreateFromTexture@gfxTexture@@QAEPAV1@PBDHHHH@Z
-    inline class gfxTexture* CreateFromTexture(char const* arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5)
-    {
-        return stub<member_func_t<class gfxTexture*, gfxTexture, char const*, int32_t, int32_t, int32_t, int32_t>>(
-            0x4AD720, this, arg1, arg2, arg3, arg4, arg5);
-    }
-
-    // 0x4AD730 | ?SetDefaultMIPMapEnv@gfxTexture@@SAXIM@Z
-    static inline void SetDefaultMIPMapEnv(uint32_t arg1, float arg2)
-    {
-        return stub<cdecl_t<void, uint32_t, float>>(0x4AD730, arg1, arg2);
-    }
-
-    // 0x4AD740 | ?GetDefaultMIPMapEnv@gfxTexture@@SAXAAIAAM@Z
-    static inline void GetDefaultMIPMapEnv(uint32_t& arg1, float& arg2)
-    {
-        return stub<cdecl_t<void, uint32_t&, float&>>(0x4AD740, arg1, arg2);
-    }
-
-    // 0x4AD750 | ?SetMIPMapEnv@gfxTexture@@QAEXIM@Z
-    inline void SetMIPMapEnv(uint32_t arg1, float arg2)
-    {
-        return stub<member_func_t<void, gfxTexture, uint32_t, float>>(0x4AD750, this, arg1, arg2);
-    }
-
-    // 0x4AD760 | ?GetMIPMapEnv@gfxTexture@@QAEXAAIAAM@Z
-    inline void GetMIPMapEnv(uint32_t& arg1, float& arg2)
-    {
-        return stub<member_func_t<void, gfxTexture, uint32_t&, float&>>(0x4AD760, this, arg1, arg2);
-    }
-
-    // 0x4AD770 | ?CalcMIPMapEnv@gfxTexture@@SAXHHAAG0@Z
-    static inline void CalcMIPMapEnv(int32_t arg1, int32_t arg2, uint16_t& arg3, uint16_t& arg4)
-    {
-        return stub<cdecl_t<void, int32_t, int32_t, uint16_t&, uint16_t&>>(0x4AD770, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x4AD780 | ?EnableTrilinearMipMaping@gfxTexture@@SAX_N@Z
-    static inline void EnableTrilinearMipMaping(bool arg1)
-    {
-        return stub<cdecl_t<void, bool>>(0x4AD780, arg1);
-    }
-
-    // 0x4AD790 | ?PreLoad@gfxTexture@@QAEXXZ
-    inline void PreLoad()
-    {
-        return stub<member_func_t<void, gfxTexture>>(0x4AD790, this);
-    }
-
-    // 0x4AD7E0 | ?MakeResident@gfxTexture@@QAEXXZ
-    inline void MakeResident()
-    {
-        return stub<member_func_t<void, gfxTexture>>(0x4AD7E0, this);
-    }
-
-    // 0x4AD820 | ?MakeUnresident@gfxTexture@@QAEXXZ
-    inline void MakeUnresident()
-    {
-        return stub<member_func_t<void, gfxTexture>>(0x4AD820, this);
-    }
-
-    // 0x4AD830 | ?MakeAllUnresident@gfxTexture@@SAXXZ
-    static inline void MakeAllUnresident()
-    {
-        return stub<cdecl_t<void>>(0x4AD830);
-    }
-
-    // 0x4AD850 | ?EnableCache@gfxTexture@@SAX_N@Z
-    static inline void EnableCache(bool arg1)
-    {
-        return stub<cdecl_t<void, bool>>(0x4AD850, arg1);
-    }
-
-    // 0x4AD880 | ?InitCache@gfxTexture@@SAXXZ
-    static inline void InitCache()
-    {
-        return stub<cdecl_t<void>>(0x4AD880);
-    }
-
-    // 0x4ADE30 | ?ShutdownCache@gfxTexture@@SAXXZ
-    static inline void ShutdownCache()
-    {
-        return stub<cdecl_t<void>>(0x4ADE30);
-    }
-
-    // 0x4ADED0 | ?FindEntry@gfxTexture@@QAEPAUIDirectDrawSurface7@@XZ
-    inline struct IDirectDrawSurface7* FindEntry()
-    {
-        return stub<member_func_t<struct IDirectDrawSurface7*, gfxTexture>>(0x4ADED0, this);
-    }
-
-    // 0x4ADF00 | ?CreateRenderTarget@gfxTexture@@SAPAV1@HHII@Z
-    static inline class gfxTexture* CreateRenderTarget(int32_t arg1, int32_t arg2, uint32_t arg3, uint32_t arg4)
-    {
-        return stub<cdecl_t<class gfxTexture*, int32_t, int32_t, uint32_t, uint32_t>>(0x4ADF00, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x4ADFD0 | ?CreateCubeMap@gfxTexture@@SAPAV1@HHQAPAV1@@Z
-    static inline class gfxTexture* CreateCubeMap(int32_t arg1, int32_t arg2, class gfxTexture** const arg3)
-    {
-        return stub<cdecl_t<class gfxTexture*, int32_t, int32_t, class gfxTexture** const>>(0x4ADFD0, arg1, arg2, arg3);
-    }
-
-    // 0x4AE1A0 | ?SetTexEnv@gfxTexture@@QAEXI@Z
-    inline void SetTexEnv(uint32_t arg1)
-    {
-        return stub<member_func_t<void, gfxTexture, uint32_t>>(0x4AE1A0, this, arg1);
-    }
-
-    // 0x4AE1B0 | ?SetName@gfxTexture@@QAEXPBD@Z
-    inline void SetName(char const* arg1)
-    {
-        return stub<member_func_t<void, gfxTexture, char const*>>(0x4AE1B0, this, arg1);
-    }
-
     // 0x4AE1E0 | ?Blit@gfxTexture@@QAEXHHPAV1@HHHH@Z
-    inline void Blit(
-        int32_t arg1, int32_t arg2, class gfxTexture* arg3, int32_t arg4, int32_t arg5, int32_t arg6, int32_t arg7)
-    {
-        return stub<
-            member_func_t<void, gfxTexture, int32_t, int32_t, class gfxTexture*, int32_t, int32_t, int32_t, int32_t>>(
-            0x4AE1E0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-    }
+    void Blit(i32 arg1, i32 arg2, class gfxTexture* arg3, i32 arg4, i32 arg5, i32 arg6, i32 arg7);
 
     // 0x4AE250 | ?Clone@gfxTexture@@QAEPAV1@XZ
-    inline class gfxTexture* Clone()
-    {
-        return stub<member_func_t<class gfxTexture*, gfxTexture>>(0x4AE250, this);
-    }
+    class gfxTexture* Clone();
 
-    // 0x684524 | ?sm_UseInternalCache@gfxTexture@@0_NA
-    static inline extern_var(0x684524, bool, sm_UseInternalCache);
+    // 0x4AD720 | ?CreateFromTexture@gfxTexture@@QAEPAV1@PBDHHHH@Z
+    class gfxTexture* CreateFromTexture(char const* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5);
 
-    // 0x68452C | ?sm_FirstPool@gfxTexture@@0PAVgfxTextureCachePool@@A
-    inline extern_var(0x68452C, class gfxTextureCachePool*, sm_FirstPool);
+    // 0x4ADED0 | ?FindEntry@gfxTexture@@QAEPAUIDirectDrawSurface7@@XZ
+    struct IDirectDrawSurface7* FindEntry();
 
-    // 0x684D34 | ?sm_EnableSetLOD@gfxTexture@@2_NA
-    static inline extern_var(0x684D34, bool, sm_EnableSetLOD);
+    // 0x45D180 | ?GetColor@gfxTexture@@QBEIXZ
+    u32 GetColor();
 
-    // 0x684D35 | ?sm_LOD@gfxTexture@@0EA
-    inline extern_var(0x684D35, uint8_t, sm_LOD);
+    // 0x4AD760 | ?GetMIPMapEnv@gfxTexture@@QAEXAAIAAM@Z
+    void GetMIPMapEnv(u32& arg1, f32& arg2);
+
+    // 0x4AD100 | ?Load@gfxTexture@@QAEXPAVgfxImage@@@Z
+    void Load(class gfxImage* arg1);
+
+    // 0x4AD7E0 | ?MakeResident@gfxTexture@@QAEXXZ
+    void MakeResident();
+
+    // 0x4AD820 | ?MakeUnresident@gfxTexture@@QAEXXZ
+    void MakeUnresident();
+
+    // 0x4AD790 | ?PreLoad@gfxTexture@@QAEXXZ
+    void PreLoad();
+
+    // 0x4AD750 | ?SetMIPMapEnv@gfxTexture@@QAEXIM@Z
+    void SetMIPMapEnv(u32 arg1, f32 arg2);
+
+    // 0x4AE1B0 | ?SetName@gfxTexture@@QAEXPBD@Z
+    void SetName(char const* arg1);
+
+    // 0x4AE1A0 | ?SetTexEnv@gfxTexture@@QAEXI@Z
+    void SetTexEnv(u32 arg1);
+
+    // 0x4AD770 | ?CalcMIPMapEnv@gfxTexture@@SAXHHAAG0@Z
+    static void CalcMIPMapEnv(i32 arg1, i32 arg2, u16& arg3, u16& arg4);
+
+    // 0x4AD090 | ?Create@gfxTexture@@SAPAV1@PAVgfxImage@@_N@Z
+    static class gfxTexture* Create(class gfxImage* arg1, bool arg2);
+
+    // 0x4ACA90 | ?Create@gfxTexture@@SAPAV1@HHW4gfxImageFormat@gfxImage@@0H@Z
+    static class gfxTexture* Create(
+        i32 arg1, i32 arg2, enum gfxImage::gfxImageFormat arg3, enum gfxImage::gfxImageFormat arg4, i32 arg5);
+
+    // 0x4ADFD0 | ?CreateCubeMap@gfxTexture@@SAPAV1@HHQAPAV1@@Z
+    static class gfxTexture* CreateCubeMap(i32 arg1, i32 arg2, class gfxTexture** const arg3);
+
+    // 0x4ADF00 | ?CreateRenderTarget@gfxTexture@@SAPAV1@HHII@Z
+    static class gfxTexture* CreateRenderTarget(i32 arg1, i32 arg2, u32 arg3, u32 arg4);
+
+    // 0x4AD850 | ?EnableCache@gfxTexture@@SAX_N@Z
+    static void EnableCache(bool arg1);
+
+    // 0x4AD780 | ?EnableTrilinearMipMaping@gfxTexture@@SAX_N@Z
+    static void EnableTrilinearMipMaping(bool arg1);
+
+    // 0x4AD740 | ?GetDefaultMIPMapEnv@gfxTexture@@SAXAAIAAM@Z
+    static void GetDefaultMIPMapEnv(u32& arg1, f32& arg2);
+
+    // 0x4AD880 | ?InitCache@gfxTexture@@SAXXZ
+    static void InitCache();
+
+    // 0x4AC9B0 | ?KillAll@gfxTexture@@SAXXZ
+    static void KillAll();
+
+    // 0x4AD830 | ?MakeAllUnresident@gfxTexture@@SAXXZ
+    static void MakeAllUnresident();
+
+    // 0x4AD730 | ?SetDefaultMIPMapEnv@gfxTexture@@SAXIM@Z
+    static void SetDefaultMIPMapEnv(u32 arg1, f32 arg2);
+
+    // 0x4AC9F0 | ?SetLODs@gfxTexture@@SAXXZ
+    static void SetLODs();
+
+    // 0x4ADE30 | ?ShutdownCache@gfxTexture@@SAXXZ
+    static void ShutdownCache();
 
     // 0x684D36 | ?sm_Allow32@gfxTexture@@2_NA
     static inline extern_var(0x684D36, bool, sm_Allow32);
 
+    // 0x684D34 | ?sm_EnableSetLOD@gfxTexture@@2_NA
+    static inline extern_var(0x684D34, bool, sm_EnableSetLOD);
+
+private:
+    // 0x4AC8E0 | ??0gfxTexture@@AAE@XZ
+    gfxTexture();
+
+    // 0x4AC910 | ??1gfxTexture@@AAE@XZ
+    ~gfxTexture();
+
+    // 0x4ACA10 | ?MarkFirstUse@gfxTexture@@AAEXXZ
+    void MarkFirstUse();
+
+    // 0x4ACA30 | ?MarkHigherUse@gfxTexture@@AAEXXZ
+    void MarkHigherUse();
+
     // 0x684D38 | ?sm_First@gfxTexture@@0PAV1@A
-    inline extern_var(0x684D38, class gfxTexture*, sm_First);
+    static inline extern_var(0x684D38, class gfxTexture*, sm_First);
 
     // 0x684D3C | ?sm_FirstActive@gfxTexture@@0PAV1@A
-    inline extern_var(0x684D3C, class gfxTexture*, sm_FirstActive);
+    static inline extern_var(0x684D3C, class gfxTexture*, sm_FirstActive);
+
+    // 0x68452C | ?sm_FirstPool@gfxTexture@@0PAVgfxTextureCachePool@@A
+    static inline extern_var(0x68452C, class gfxTextureCachePool*, sm_FirstPool);
+
+    // 0x684D35 | ?sm_LOD@gfxTexture@@0EA
+    static inline extern_var(0x684D35, u8, sm_LOD);
+
+    // 0x684524 | ?sm_UseInternalCache@gfxTexture@@0_NA
+    static inline extern_var(0x684524, bool, sm_UseInternalCache);
 };
 
-class gfxBitmap
+check_size(gfxTexture, 0x0);
+
+// 0x4AC8C0 | ?ilog2@@YAHH@Z
+i32 ilog2(i32 arg1);
+
+class gfxTextureCacheEntry
 {
 public:
-    // 0x4AE370 | ??0gfxBitmap@@AAE@HH@Z
-    inline gfxBitmap(int32_t arg1, int32_t arg2)
-    {
-        stub<member_func_t<void, gfxBitmap, int32_t, int32_t>>(0x4AE370, this, arg1, arg2);
-    }
+    // 0x4ADB70 | ??1gfxTextureCacheEntry@@QAE@XZ
+    ~gfxTextureCacheEntry();
 
-    // 0x4AE3B0 | ?SetName@gfxBitmap@@QAEXPBD@Z
-    inline void SetName(char const* arg1)
-    {
-        return stub<member_func_t<void, gfxBitmap, char const*>>(0x4AE3B0, this, arg1);
-    }
+    // 0x4ADB00 | ?Evict@gfxTextureCacheEntry@@QAEXXZ
+    void Evict();
 
-    // 0x4AE3E0 | ??1gfxBitmap@@AAE@XZ
-    inline ~gfxBitmap()
-    {
-        stub<member_func_t<void, gfxBitmap>>(0x4AE3E0, this);
-    }
+    // 0x4ADB30 | ?Lease@gfxTextureCacheEntry@@QAEXPAVgfxTexture@@@Z
+    void Lease(class gfxTexture* arg1);
 
-    // 0x4AE440 | ?KillAll@gfxBitmap@@SAXXZ
-    static inline void KillAll()
-    {
-        return stub<cdecl_t<void>>(0x4AE440);
-    }
+private:
+    // 0x4ADAD0 | ??0gfxTextureCacheEntry@@AAE@PAUIDirectDrawSurface7@@PAV0@@Z
+    gfxTextureCacheEntry(struct IDirectDrawSurface7* arg1, class gfxTextureCacheEntry* arg2);
 
-    // 0x4AE480 | ?Create@gfxBitmap@@SAPAV1@PAVgfxImage@@_N@Z
-    static inline class gfxBitmap* Create(class gfxImage* arg1, bool arg2)
-    {
-        return stub<cdecl_t<class gfxBitmap*, class gfxImage*, bool>>(0x4AE480, arg1, arg2);
-    }
-
-    // 0x4AE4D0 | ?Create@gfxBitmap@@SAPAV1@HH_N@Z
-    static inline class gfxBitmap* Create(int32_t arg1, int32_t arg2, bool arg3)
-    {
-        return stub<cdecl_t<class gfxBitmap*, int32_t, int32_t, bool>>(0x4AE4D0, arg1, arg2, arg3);
-    }
-
-    // 0x4AE580 | ?Clear@gfxBitmap@@QAEXI@Z
-    inline void Clear(uint32_t arg1)
-    {
-        return stub<member_func_t<void, gfxBitmap, uint32_t>>(0x4AE580, this, arg1);
-    }
-
-    // 0x4AE5C0 | ?Load@gfxBitmap@@QAE_NPAVgfxImage@@@Z
-    inline bool Load(class gfxImage* arg1)
-    {
-        return stub<member_func_t<bool, gfxBitmap, class gfxImage*>>(0x4AE5C0, this, arg1);
-    }
-
-    // 0x684D40 | ?sm_First@gfxBitmap@@0PAV1@A
-    inline extern_var(0x684D40, class gfxBitmap*, sm_First);
+    // 0x684528 | ?sm_CurrentTime@gfxTextureCacheEntry@@0IA
+    static inline extern_var(0x684528, u32, sm_CurrentTime);
 };
+
+check_size(gfxTextureCacheEntry, 0x10);
 
 class gfxTextureCachePool
 {
 public:
     // 0x4ADB90 | ??0gfxTextureCachePool@@QAE@PAV0@@Z
-    inline gfxTextureCachePool(class gfxTextureCachePool* arg1)
-    {
-        stub<member_func_t<void, gfxTextureCachePool, class gfxTextureCachePool*>>(0x4ADB90, this, arg1);
-    }
+    gfxTextureCachePool(class gfxTextureCachePool* arg1);
 
     // 0x4ADBB0 | ??1gfxTextureCachePool@@QAE@XZ
-    inline ~gfxTextureCachePool()
-    {
-        stub<member_func_t<void, gfxTextureCachePool>>(0x4ADBB0, this);
-    }
-
-    // 0x4ADBE0 | ?IsCompatibleWith@gfxTextureCachePool@@QAE_NPAVgfxTexture@@@Z
-    inline bool IsCompatibleWith(class gfxTexture* arg1)
-    {
-        return stub<member_func_t<bool, gfxTextureCachePool, class gfxTexture*>>(0x4ADBE0, this, arg1);
-    }
-
-    // 0x4ADC90 | ?Init@gfxTextureCachePool@@QAEXPAVgfxTexture@@@Z
-    inline void Init(class gfxTexture* arg1)
-    {
-        return stub<member_func_t<void, gfxTextureCachePool, class gfxTexture*>>(0x4ADC90, this, arg1);
-    }
-
-    // 0x4ADCF0 | ?FindEntry@gfxTextureCachePool@@QAEXPAVgfxTexture@@@Z
-    inline void FindEntry(class gfxTexture* arg1)
-    {
-        return stub<member_func_t<void, gfxTextureCachePool, class gfxTexture*>>(0x4ADCF0, this, arg1);
-    }
+    ~gfxTextureCachePool();
 
     // 0x4ADD30 | ?AddSlot@gfxTextureCachePool@@QAE_NXZ
-    inline bool AddSlot()
-    {
-        return stub<member_func_t<bool, gfxTextureCachePool>>(0x4ADD30, this);
-    }
+    bool AddSlot();
+
+    // 0x4ADCF0 | ?FindEntry@gfxTextureCachePool@@QAEXPAVgfxTexture@@@Z
+    void FindEntry(class gfxTexture* arg1);
+
+    // 0x4ADC90 | ?Init@gfxTextureCachePool@@QAEXPAVgfxTexture@@@Z
+    void Init(class gfxTexture* arg1);
+
+    // 0x4ADBE0 | ?IsCompatibleWith@gfxTextureCachePool@@QAE_NPAVgfxTexture@@@Z
+    bool IsCompatibleWith(class gfxTexture* arg1);
 };
 
-class gfxTextureCacheEntry
+check_size(gfxTextureCachePool, 0x0);
+
+class gfxBitmap
 {
 public:
-    // 0x4ADAD0 | ??0gfxTextureCacheEntry@@AAE@PAUIDirectDrawSurface7@@PAV0@@Z
-    inline gfxTextureCacheEntry(struct IDirectDrawSurface7* arg1, class gfxTextureCacheEntry* arg2)
-    {
-        stub<member_func_t<void, gfxTextureCacheEntry, struct IDirectDrawSurface7*, class gfxTextureCacheEntry*>>(
-            0x4ADAD0, this, arg1, arg2);
-    }
+    // 0x4AE580 | ?Clear@gfxBitmap@@QAEXI@Z
+    void Clear(u32 arg1);
 
-    // 0x4ADB00 | ?Evict@gfxTextureCacheEntry@@QAEXXZ
-    inline void Evict()
-    {
-        return stub<member_func_t<void, gfxTextureCacheEntry>>(0x4ADB00, this);
-    }
+    // 0x4AE5C0 | ?Load@gfxBitmap@@QAE_NPAVgfxImage@@@Z
+    bool Load(class gfxImage* arg1);
 
-    // 0x4ADB30 | ?Lease@gfxTextureCacheEntry@@QAEXPAVgfxTexture@@@Z
-    inline void Lease(class gfxTexture* arg1)
-    {
-        return stub<member_func_t<void, gfxTextureCacheEntry, class gfxTexture*>>(0x4ADB30, this, arg1);
-    }
+    // 0x4AE3B0 | ?SetName@gfxBitmap@@QAEXPBD@Z
+    void SetName(char const* arg1);
 
-    // 0x4ADB70 | ??1gfxTextureCacheEntry@@QAE@XZ
-    inline ~gfxTextureCacheEntry()
-    {
-        stub<member_func_t<void, gfxTextureCacheEntry>>(0x4ADB70, this);
-    }
+    // 0x4AE480 | ?Create@gfxBitmap@@SAPAV1@PAVgfxImage@@_N@Z
+    static class gfxBitmap* Create(class gfxImage* arg1, bool arg2);
 
-    // 0x684528 | ?sm_CurrentTime@gfxTextureCacheEntry@@0IA
-    inline extern_var(0x684528, uint32_t, sm_CurrentTime);
+    // 0x4AE4D0 | ?Create@gfxBitmap@@SAPAV1@HH_N@Z
+    static class gfxBitmap* Create(i32 arg1, i32 arg2, bool arg3);
+
+    // 0x4AE440 | ?KillAll@gfxBitmap@@SAXXZ
+    static void KillAll();
+
+private:
+    // 0x4AE370 | ??0gfxBitmap@@AAE@HH@Z
+    gfxBitmap(i32 arg1, i32 arg2);
+
+    // 0x4AE3E0 | ??1gfxBitmap@@AAE@XZ
+    ~gfxBitmap();
+
+    // 0x684D40 | ?sm_First@gfxBitmap@@0PAV1@A
+    static inline extern_var(0x684D40, class gfxBitmap*, sm_First);
 };
+
+check_size(gfxBitmap, 0x14);

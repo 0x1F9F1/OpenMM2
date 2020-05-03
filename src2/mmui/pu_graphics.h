@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "pu_menu.h"
 
 /*
     mmui:pu_graphics
@@ -35,51 +37,32 @@
     0x5B46D8 | const PUGraphics::`vftable' | ??_7PUGraphics@@6B@
 */
 
-struct PUGraphics : PUMenuBase
+class PUGraphics : public PUMenuBase
 {
-public:
-    // PUGraphics::`vftable' @ 0x5B46D8
+    // const PUGraphics::`vftable' @ 0x5B46D8
 
+public:
     // 0x50A000 | ??0PUGraphics@@QAE@HMMMM@Z
-    inline PUGraphics(int32_t arg1, float arg2, float arg3, float arg4, float arg5)
-    {
-        stub<member_func_t<void, PUGraphics, int32_t, float, float, float, float>>(
-            0x50A000, this, arg1, arg2, arg3, arg4, arg5);
-    }
+    PUGraphics(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5);
+
+    // 0x50A590 | ??_GPUGraphics@@UAEPAXI@Z
+    // 0x50A4A0 | ??1PUGraphics@@UAE@XZ
+    ~PUGraphics() override;
 
     // 0x50A500 | ?CancelAction@PUGraphics@@QAEXXZ
-    inline void CancelAction()
-    {
-        return stub<member_func_t<void, PUGraphics>>(0x50A500, this);
-    }
-
-    // 0x50A510 | ?SetFarClip@PUGraphics@@QAEXM@Z
-    inline void SetFarClip(float arg1)
-    {
-        return stub<member_func_t<void, PUGraphics, float>>(0x50A510, this, arg1);
-    }
+    void CancelAction();
 
     // 0x50A530 | ?FixClip@PUGraphics@@QAEXXZ
-    inline void FixClip()
-    {
-        return stub<member_func_t<void, PUGraphics>>(0x50A530, this);
-    }
-
-    // 0x50A580 | ?RenderQualityCB@PUGraphics@@QAEXXZ
-    inline void RenderQualityCB()
-    {
-        return stub<member_func_t<void, PUGraphics>>(0x50A580, this);
-    }
-
-    // 0x50A4A0 | ??1PUGraphics@@UAE@XZ
-    inline ~PUGraphics() override
-    {
-        stub<member_func_t<void, PUGraphics>>(0x50A4A0, this);
-    }
+    void FixClip();
 
     // 0x50A4B0 | ?PreSetup@PUGraphics@@UAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, PUGraphics>>(0x50A4B0, this);
-    }
+    void PreSetup() override;
+
+    // 0x50A580 | ?RenderQualityCB@PUGraphics@@QAEXXZ
+    void RenderQualityCB();
+
+    // 0x50A510 | ?SetFarClip@PUGraphics@@QAEXM@Z
+    void SetFarClip(f32 arg1);
 };
+
+check_size(PUGraphics, 0xD4);

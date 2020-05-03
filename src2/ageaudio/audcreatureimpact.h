@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -37,106 +37,67 @@
     0x513560 | public: void __thiscall AudCreatureImpact::UpdateEcho(void) | ?UpdateEcho@AudCreatureImpact@@QAEXXZ
     0x513590 | public: void __thiscall AudCreatureImpact::Update(void) | ?Update@AudCreatureImpact@@QAEXXZ
     0x5135D0 | public: static void __cdecl AudCreatureImpact::UpdateStatics(void) | ?UpdateStatics@AudCreatureImpact@@SAXXZ
-    private: static float AudCreatureImpact::s_fTimeSincePlay | ?s_fTimeSincePlay@AudCreatureImpact@@0MA
-    private: static int AudCreatureImpact::s_iPrevPlayIndex | ?s_iPrevPlayIndex@AudCreatureImpact@@0HA
+    0x6B1540 | private: static float AudCreatureImpact::s_fTimeSincePlay | ?s_fTimeSincePlay@AudCreatureImpact@@0MA
+    0x6B1544 | private: static int AudCreatureImpact::s_iPrevPlayIndex | ?s_iPrevPlayIndex@AudCreatureImpact@@0HA
 */
 
 class AudCreatureImpact
 {
 public:
     // 0x512F10 | ??0AudCreatureImpact@@QAE@XZ
-    inline AudCreatureImpact()
-    {
-        stub<member_func_t<void, AudCreatureImpact>>(0x512F10, this);
-    }
+    AudCreatureImpact();
 
     // 0x512F40 | ??0AudCreatureImpact@@QAE@PAV0@@Z
-    inline AudCreatureImpact(class AudCreatureImpact* arg1)
-    {
-        stub<member_func_t<void, AudCreatureImpact, class AudCreatureImpact*>>(0x512F40, this, arg1);
-    }
+    AudCreatureImpact(class AudCreatureImpact* arg1);
 
     // 0x513030 | ??1AudCreatureImpact@@QAE@XZ
-    inline ~AudCreatureImpact()
-    {
-        stub<member_func_t<void, AudCreatureImpact>>(0x513030, this);
-    }
-
-    // 0x513090 | ?SetAud3DObjectPtr@AudCreatureImpact@@QAEXPAVAud3DObject@@@Z
-    inline void SetAud3DObjectPtr(class Aud3DObject* arg1)
-    {
-        return stub<member_func_t<void, AudCreatureImpact, class Aud3DObject*>>(0x513090, this, arg1);
-    }
-
-    // 0x5130A0 | ?SamplePlaying@AudCreatureImpact@@QAE_NXZ
-    inline bool SamplePlaying()
-    {
-        return stub<member_func_t<bool, AudCreatureImpact>>(0x5130A0, this);
-    }
-
-    // 0x5130C0 | ?ParseCSVBuffer@AudCreatureImpact@@QAEHPAVStream@@@Z
-    inline int32_t ParseCSVBuffer(class Stream* arg1)
-    {
-        return stub<member_func_t<int32_t, AudCreatureImpact, class Stream*>>(0x5130C0, this, arg1);
-    }
+    ~AudCreatureImpact();
 
     // 0x5132D0 | ?AssignSounds@AudCreatureImpact@@QAEXH@Z
-    inline void AssignSounds(int32_t arg1)
-    {
-        return stub<member_func_t<void, AudCreatureImpact, int32_t>>(0x5132D0, this, arg1);
-    }
-
-    // 0x513320 | ?UnAssignSounds@AudCreatureImpact@@QAEXXZ
-    inline void UnAssignSounds()
-    {
-        return stub<member_func_t<void, AudCreatureImpact>>(0x513320, this);
-    }
-
-    // 0x513350 | ?QueuePlay@AudCreatureImpact@@QAEXM@Z
-    inline void QueuePlay(float arg1)
-    {
-        return stub<member_func_t<void, AudCreatureImpact, float>>(0x513350, this, arg1);
-    }
-
-    // 0x5133D0 | ?Play@AudCreatureImpact@@AAEXXZ
-    inline void Play()
-    {
-        return stub<member_func_t<void, AudCreatureImpact>>(0x5133D0, this);
-    }
-
-    // 0x513460 | ?UpdateAttenuation@AudCreatureImpact@@QAEXMM@Z
-    inline void UpdateAttenuation(float arg1, float arg2)
-    {
-        return stub<member_func_t<void, AudCreatureImpact, float, float>>(0x513460, this, arg1, arg2);
-    }
-
-    // 0x5134D0 | ?EchoOn@AudCreatureImpact@@QAEXM@Z
-    inline void EchoOn(float arg1)
-    {
-        return stub<member_func_t<void, AudCreatureImpact, float>>(0x5134D0, this, arg1);
-    }
+    void AssignSounds(i32 arg1);
 
     // 0x513530 | ?EchoOff@AudCreatureImpact@@QAEXXZ
-    inline void EchoOff()
-    {
-        return stub<member_func_t<void, AudCreatureImpact>>(0x513530, this);
-    }
+    void EchoOff();
 
-    // 0x513560 | ?UpdateEcho@AudCreatureImpact@@QAEXXZ
-    inline void UpdateEcho()
-    {
-        return stub<member_func_t<void, AudCreatureImpact>>(0x513560, this);
-    }
+    // 0x5134D0 | ?EchoOn@AudCreatureImpact@@QAEXM@Z
+    void EchoOn(f32 arg1);
+
+    // 0x5130C0 | ?ParseCSVBuffer@AudCreatureImpact@@QAEHPAVStream@@@Z
+    i32 ParseCSVBuffer(class Stream* arg1);
+
+    // 0x513350 | ?QueuePlay@AudCreatureImpact@@QAEXM@Z
+    void QueuePlay(f32 arg1);
+
+    // 0x5130A0 | ?SamplePlaying@AudCreatureImpact@@QAE_NXZ
+    bool SamplePlaying();
+
+    // 0x513090 | ?SetAud3DObjectPtr@AudCreatureImpact@@QAEXPAVAud3DObject@@@Z
+    void SetAud3DObjectPtr(class Aud3DObject* arg1);
+
+    // 0x513320 | ?UnAssignSounds@AudCreatureImpact@@QAEXXZ
+    void UnAssignSounds();
 
     // 0x513590 | ?Update@AudCreatureImpact@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, AudCreatureImpact>>(0x513590, this);
-    }
+    void Update();
+
+    // 0x513460 | ?UpdateAttenuation@AudCreatureImpact@@QAEXMM@Z
+    void UpdateAttenuation(f32 arg1, f32 arg2);
+
+    // 0x513560 | ?UpdateEcho@AudCreatureImpact@@QAEXXZ
+    void UpdateEcho();
 
     // 0x5135D0 | ?UpdateStatics@AudCreatureImpact@@SAXXZ
-    static inline void UpdateStatics()
-    {
-        return stub<cdecl_t<void>>(0x5135D0);
-    }
+    static void UpdateStatics();
+
+private:
+    // 0x5133D0 | ?Play@AudCreatureImpact@@AAEXXZ
+    void Play();
+
+    // 0x6B1540 | ?s_fTimeSincePlay@AudCreatureImpact@@0MA
+    static inline extern_var(0x6B1540, f32, s_fTimeSincePlay);
+
+    // 0x6B1544 | ?s_iPrevPlayIndex@AudCreatureImpact@@0HA
+    static inline extern_var(0x6B1544, i32, s_iPrevPlayIndex);
 };
+
+check_size(AudCreatureImpact, 0x24);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "inst.h"
 
 /*
     level:fixed
@@ -43,138 +45,89 @@
     0x5B1B10 | const lvlFixedAny::`vftable' | ??_7lvlFixedAny@@6B@
     0x5B1B78 | const lvlFixedRotY::`vftable' | ??_7lvlFixedRotY@@6B@
     0x5B1BE0 | const lvlFixedMatrix::`vftable' | ??_7lvlFixedMatrix@@6B@
-    public: static bool lvlFixedAny::sm_EnableBackfacing | ?sm_EnableBackfacing@lvlFixedAny@@2_NA
+    0x655DA0 | public: static bool lvlFixedAny::sm_EnableBackfacing | ?sm_EnableBackfacing@lvlFixedAny@@2_NA
 */
 
-struct lvlFixedAny : lvlInstance
+class lvlFixedAny : public lvlInstance
 {
+    // const lvlFixedAny::`vftable' @ 0x5B1B10
+
 public:
-    // lvlFixedAny::`vftable' @ 0x5B1B10
-
     // 0x467300 | ??0lvlFixedAny@@QAE@XZ
-    inline lvlFixedAny()
-    {
-        stub<member_func_t<void, lvlFixedAny>>(0x467300, this);
-    }
-
-    // 0x467540 | ?SetVariant@lvlFixedAny@@UAEXH@Z
-    inline void SetVariant(int32_t arg1) override
-    {
-        return stub<member_func_t<void, lvlFixedAny, int32_t>>(0x467540, this, arg1);
-    }
+    lvlFixedAny();
 
     // 0x467420 | ?Draw@lvlFixedAny@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
-    {
-        return stub<member_func_t<void, lvlFixedAny, int32_t>>(0x467420, this, arg1);
-    }
-
-    // 0x4677E0 | ?DrawShadow@lvlFixedAny@@UAEXXZ
-    inline void DrawShadow() override
-    {
-        return stub<member_func_t<void, lvlFixedAny>>(0x4677E0, this);
-    }
-
-    // 0x467740 | ?DrawShadowMap@lvlFixedAny@@UAEXXZ
-    inline void DrawShadowMap() override
-    {
-        return stub<member_func_t<void, lvlFixedAny>>(0x467740, this);
-    }
+    void Draw(i32 arg1) override;
 
     // 0x467320 | ?DrawReflectedParts@lvlFixedAny@@UAEXH@Z
-    inline void DrawReflectedParts(int32_t arg1) override
-    {
-        return stub<member_func_t<void, lvlFixedAny, int32_t>>(0x467320, this, arg1);
-    }
+    void DrawReflectedParts(i32 arg1) override;
+
+    // 0x4677E0 | ?DrawShadow@lvlFixedAny@@UAEXXZ
+    void DrawShadow() override;
+
+    // 0x467740 | ?DrawShadowMap@lvlFixedAny@@UAEXXZ
+    void DrawShadowMap() override;
 
     // 0x467580 | ?Init@lvlFixedAny@@UAEHPBDABVMatrix34@@H@Z
-    inline int32_t Init(char const* arg1, class Matrix34 const& arg2, int32_t arg3) override
-    {
-        return stub<member_func_t<int32_t, lvlFixedAny, char const*, class Matrix34 const&, int32_t>>(
-            0x467580, this, arg1, arg2, arg3);
-    }
+    i32 Init(char const* arg1, class Matrix34 const& arg2, i32 arg3) override;
+
+    // 0x467540 | ?SetVariant@lvlFixedAny@@UAEXH@Z
+    void SetVariant(i32 arg1) override;
+
+    // 0x655DA0 | ?sm_EnableBackfacing@lvlFixedAny@@2_NA
+    static inline extern_var(0x655DA0, bool, sm_EnableBackfacing);
 };
 
-struct lvlFixedRotY : lvlFixedAny
+check_size(lvlFixedAny, 0x0);
+
+class lvlFixedRotY : public lvlFixedAny
 {
+    // const lvlFixedRotY::`vftable' @ 0x5B1B78
+
 public:
-    // lvlFixedRotY::`vftable' @ 0x5B1B78
-
     // 0x467910 | ??0lvlFixedRotY@@QAE@XZ
-    inline lvlFixedRotY()
-    {
-        stub<member_func_t<void, lvlFixedRotY>>(0x467910, this);
-    }
-
-    // 0x467940 | ?GetPosition@lvlFixedRotY@@UAEABVVector3@@XZ
-    inline class Vector3 const& GetPosition() override
-    {
-        return stub<member_func_t<class Vector3 const&, lvlFixedRotY>>(0x467940, this);
-    }
-
-    // 0x467950 | ?IsVisible@lvlFixedRotY@@UAEHABVgfxViewport@@@Z
-    inline int32_t IsVisible(class gfxViewport const& arg1) override
-    {
-        return stub<member_func_t<int32_t, lvlFixedRotY, class gfxViewport const&>>(0x467950, this, arg1);
-    }
+    lvlFixedRotY();
 
     // 0x4679A0 | ?GetMatrix@lvlFixedRotY@@UAEABVMatrix34@@AAV2@@Z
-    inline class Matrix34 const& GetMatrix(class Matrix34& arg1) override
-    {
-        return stub<member_func_t<class Matrix34 const&, lvlFixedRotY, class Matrix34&>>(0x4679A0, this, arg1);
-    }
+    class Matrix34 const& GetMatrix(class Matrix34& arg1) override;
+
+    // 0x467940 | ?GetPosition@lvlFixedRotY@@UAEABVVector3@@XZ
+    class Vector3 const& GetPosition() override;
+
+    // 0x467950 | ?IsVisible@lvlFixedRotY@@UAEHABVgfxViewport@@@Z
+    i32 IsVisible(class gfxViewport const& arg1) override;
 
     // 0x4679F0 | ?SetMatrix@lvlFixedRotY@@UAEXABVMatrix34@@@Z
-    inline void SetMatrix(class Matrix34 const& arg1) override
-    {
-        return stub<member_func_t<void, lvlFixedRotY, class Matrix34 const&>>(0x4679F0, this, arg1);
-    }
+    void SetMatrix(class Matrix34 const& arg1) override;
 
     // 0x467930 | ?SizeOf@lvlFixedRotY@@UAEIXZ
-    inline uint32_t SizeOf() override
-    {
-        return stub<member_func_t<uint32_t, lvlFixedRotY>>(0x467930, this);
-    }
+    u32 SizeOf() override;
 };
 
-struct lvlFixedMatrix : lvlFixedAny
+check_size(lvlFixedRotY, 0x0);
+
+class lvlFixedMatrix : public lvlFixedAny
 {
+    // const lvlFixedMatrix::`vftable' @ 0x5B1BE0
+
 public:
-    // lvlFixedMatrix::`vftable' @ 0x5B1BE0
-
     // 0x467A20 | ??0lvlFixedMatrix@@QAE@XZ
-    inline lvlFixedMatrix()
-    {
-        stub<member_func_t<void, lvlFixedMatrix>>(0x467A20, this);
-    }
-
-    // 0x467A50 | ?GetPosition@lvlFixedMatrix@@UAEABVVector3@@XZ
-    inline class Vector3 const& GetPosition() override
-    {
-        return stub<member_func_t<class Vector3 const&, lvlFixedMatrix>>(0x467A50, this);
-    }
-
-    // 0x467A60 | ?IsVisible@lvlFixedMatrix@@UAEHABVgfxViewport@@@Z
-    inline int32_t IsVisible(class gfxViewport const& arg1) override
-    {
-        return stub<member_func_t<int32_t, lvlFixedMatrix, class gfxViewport const&>>(0x467A60, this, arg1);
-    }
+    lvlFixedMatrix();
 
     // 0x467AB0 | ?GetMatrix@lvlFixedMatrix@@UAEABVMatrix34@@AAV2@@Z
-    inline class Matrix34 const& GetMatrix(class Matrix34& arg1) override
-    {
-        return stub<member_func_t<class Matrix34 const&, lvlFixedMatrix, class Matrix34&>>(0x467AB0, this, arg1);
-    }
+    class Matrix34 const& GetMatrix(class Matrix34& arg1) override;
+
+    // 0x467A50 | ?GetPosition@lvlFixedMatrix@@UAEABVVector3@@XZ
+    class Vector3 const& GetPosition() override;
+
+    // 0x467A60 | ?IsVisible@lvlFixedMatrix@@UAEHABVgfxViewport@@@Z
+    i32 IsVisible(class gfxViewport const& arg1) override;
 
     // 0x467AC0 | ?SetMatrix@lvlFixedMatrix@@UAEXABVMatrix34@@@Z
-    inline void SetMatrix(class Matrix34 const& arg1) override
-    {
-        return stub<member_func_t<void, lvlFixedMatrix, class Matrix34 const&>>(0x467AC0, this, arg1);
-    }
+    void SetMatrix(class Matrix34 const& arg1) override;
 
     // 0x467A40 | ?SizeOf@lvlFixedMatrix@@UAEIXZ
-    inline uint32_t SizeOf() override
-    {
-        return stub<member_func_t<uint32_t, lvlFixedMatrix>>(0x467A40, this);
-    }
+    u32 SizeOf() override;
 };
+
+check_size(lvlFixedMatrix, 0x0);

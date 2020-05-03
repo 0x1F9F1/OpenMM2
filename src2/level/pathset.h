@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "data/base.h"
 
 /*
     level:pathset
@@ -41,64 +43,40 @@ class dgPath
 {
 public:
     // 0x466B40 | ??0dgPath@@QAE@PBD@Z
-    inline dgPath(char const* arg1)
-    {
-        stub<member_func_t<void, dgPath, char const*>>(0x466B40, this, arg1);
-    }
-
-    // 0x466B80 | ?SetName@dgPath@@QAEXPBD@Z
-    inline void SetName(char const* arg1)
-    {
-        return stub<member_func_t<void, dgPath, char const*>>(0x466B80, this, arg1);
-    }
+    dgPath(char const* arg1);
 
     // 0x466BC0 | ??1dgPath@@QAE@XZ
-    inline ~dgPath()
-    {
-        stub<member_func_t<void, dgPath>>(0x466BC0, this);
-    }
-
-    // 0x466BD0 | ?Load@dgPath@@SAPAV1@PAVStream@@@Z
-    static inline class dgPath* Load(class Stream* arg1)
-    {
-        return stub<cdecl_t<class dgPath*, class Stream*>>(0x466BD0, arg1);
-    }
+    ~dgPath();
 
     // 0x466D40 | ?Enumerate@dgPath@@QBEXP6AXPBDABVMatrix34@@_N@ZMM@Z
-    inline void Enumerate(void(__cdecl* arg1)(char const*, class Matrix34 const&, bool), float arg2, float arg3)
-    {
-        return stub<
-            member_func_t<void, dgPath, void(__cdecl*)(char const*, class Matrix34 const&, bool), float, float>>(
-            0x466D40, this, arg1, arg2, arg3);
-    }
+    void Enumerate(void (*arg1)(char const*, class Matrix34 const&, bool), f32 arg2, f32 arg3);
+
+    // 0x466B80 | ?SetName@dgPath@@QAEXPBD@Z
+    void SetName(char const* arg1);
+
+    // 0x466BD0 | ?Load@dgPath@@SAPAV1@PAVStream@@@Z
+    static class dgPath* Load(class Stream* arg1);
 };
+
+check_size(dgPath, 0x38);
 
 struct dgPathSet : Base
 {
-public:
-    // dgPathSet::`vftable' @ 0x5B1B0C
+    // const dgPathSet::`vftable' @ 0x5B1B0C
 
+public:
     // 0x467150 | ??0dgPathSet@@QAE@XZ
-    inline dgPathSet()
-    {
-        stub<member_func_t<void, dgPathSet>>(0x467150, this);
-    }
+    dgPathSet();
+
+    // 0x4672D0 | ??_GdgPathSet@@UAEPAXI@Z
+    // 0x467170 | ??1dgPathSet@@UAE@XZ
+    ~dgPathSet() override;
 
     // 0x4671C0 | ?Kill@dgPathSet@@QAEXXZ
-    inline void Kill()
-    {
-        return stub<member_func_t<void, dgPathSet>>(0x4671C0, this);
-    }
+    void Kill();
 
     // 0x467210 | ?Load@dgPathSet@@QAE_NPBD0@Z
-    inline bool Load(char const* arg1, char const* arg2)
-    {
-        return stub<member_func_t<bool, dgPathSet, char const*, char const*>>(0x467210, this, arg1, arg2);
-    }
-
-    // 0x467170 | ??1dgPathSet@@UAE@XZ
-    inline ~dgPathSet() override
-    {
-        stub<member_func_t<void, dgPathSet>>(0x467170, this);
-    }
+    bool Load(char const* arg1, char const* arg2);
 };
+
+check_size(dgPathSet, 0x310);

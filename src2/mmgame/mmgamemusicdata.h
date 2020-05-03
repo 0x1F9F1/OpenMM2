@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -31,42 +31,27 @@
 
 struct mmGameMusicData
 {
+    // const mmGameMusicData::`vftable' @ 0x5B0614
+
 public:
-    // mmGameMusicData::`vftable' @ 0x5B0614
+    // 0x433FB0 | ?GetNumDMusicChoiceGroups@mmGameMusicData@@QAEFPAVStream@@@Z
+    i16 GetNumDMusicChoiceGroups(class Stream* arg1);
 
     // 0x433F40 | ?Load@mmGameMusicData@@QAE_NPAD0@Z
-    inline bool Load(char* arg1, char* arg2)
-    {
-        return stub<member_func_t<bool, mmGameMusicData, char*, char*>>(0x433F40, this, arg1, arg2);
-    }
-
-    // 0x433FB0 | ?GetNumDMusicChoiceGroups@mmGameMusicData@@QAEFPAVStream@@@Z
-    inline int16_t GetNumDMusicChoiceGroups(class Stream* arg1)
-    {
-        return stub<member_func_t<int16_t, mmGameMusicData, class Stream*>>(0x433FB0, this, arg1);
-    }
+    bool Load(char* arg1, char* arg2);
 
     // 0x434000 | ?RandomizeNumber@mmGameMusicData@@QAEFF@Z
-    inline int16_t RandomizeNumber(int16_t arg1)
-    {
-        return stub<member_func_t<int16_t, mmGameMusicData, int16_t>>(0x434000, this, arg1);
-    }
-
-    // 0x434060 | ?LoadAmbientSFX@mmGameMusicData@@AAE_NPAD@Z
-    inline bool LoadAmbientSFX(char* arg1)
-    {
-        return stub<member_func_t<bool, mmGameMusicData, char*>>(0x434060, this, arg1);
-    }
-
-    // 0x434190 | ?LoadAmbientSFXSegments@mmGameMusicData@@AAE_NPAVStream@@F@Z
-    inline bool LoadAmbientSFXSegments(class Stream* arg1, int16_t arg2)
-    {
-        return stub<member_func_t<bool, mmGameMusicData, class Stream*, int16_t>>(0x434190, this, arg1, arg2);
-    }
+    i16 RandomizeNumber(i16 arg1);
 
     // 0x434250 | ?LoadMusic@mmGameMusicData@@UAE_NPAD@Z
-    virtual inline bool LoadMusic(char* arg1)
-    {
-        return stub<member_func_t<bool, mmGameMusicData, char*>>(0x434250, this, arg1);
-    }
+    virtual bool LoadMusic(char* arg1);
+
+private:
+    // 0x434060 | ?LoadAmbientSFX@mmGameMusicData@@AAE_NPAD@Z
+    bool LoadAmbientSFX(char* arg1);
+
+    // 0x434190 | ?LoadAmbientSFXSegments@mmGameMusicData@@AAE_NPAVStream@@F@Z
+    bool LoadAmbientSFXSegments(class Stream* arg1, i16 arg2);
 };
+
+check_size(mmGameMusicData, 0x0);

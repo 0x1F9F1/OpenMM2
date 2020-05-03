@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -34,78 +34,41 @@
     0x5B1E8C | const phColliderJointed::`vftable' | ??_7phColliderJointed@@6B@
 */
 
-class phColliderJointed : phColliderBase
+class phColliderJointed
 {
+    // const phColliderJointed::`vftable' @ 0x5B1E8C
+
 public:
-    // phColliderJointed::`vftable' @ 0x5B1E8C
-
     // 0x46D3E0 | ??0phColliderJointed@@QAE@XZ
-    inline phColliderJointed()
-    {
-        stub<member_func_t<void, phColliderJointed>>(0x46D3E0, this);
-    }
-
-    // 0x46D410 | ?InitArray@phColliderJointed@@SAXQAV1@H@Z
-    static inline void InitArray(class phColliderJointed* const arg1, int32_t arg2)
-    {
-        return stub<cdecl_t<void, class phColliderJointed* const, int32_t>>(0x46D410, arg1, arg2);
-    }
+    phColliderJointed();
 
     // 0x46D4D0 | ?Attach@phColliderJointed@@QAEXPBVphJoint@@@Z
-    inline void Attach(class phJoint const* arg1)
-    {
-        return stub<member_func_t<void, phColliderJointed, class phJoint const*>>(0x46D4D0, this, arg1);
-    }
+    void Attach(class phJoint const* arg1);
 
     // 0x46D5F0 | ?GetInvMassMatrix@phColliderJointed@@UBEXABVVector3@@0AAVMatrix34@@H@Z
-    inline void GetInvMassMatrix(
-        class Vector3 const& arg1, class Vector3 const& arg2, class Matrix34& arg3, int32_t arg4) override
-    {
-        return stub<member_func_t<void, phColliderJointed, class Vector3 const&, class Vector3 const&, class Matrix34&,
-            int32_t>>(0x46D5F0, this, arg1, arg2, arg3, arg4);
-    }
+    virtual void GetInvMassMatrix(class Vector3 const& arg1, class Vector3 const& arg2, class Matrix34& arg3, i32 arg4);
 
     // 0x46D580 | ?GetInvMassMatrix@phColliderJointed@@UBEXABVVector3@@AAVMatrix34@@H@Z
-    inline void GetInvMassMatrix(class Vector3 const& arg1, class Matrix34& arg2, int32_t arg3) override
-    {
-        return stub<member_func_t<void, phColliderJointed, class Vector3 const&, class Matrix34&, int32_t>>(
-            0x46D580, this, arg1, arg2, arg3);
-    }
+    virtual void GetInvMassMatrix(class Vector3 const& arg1, class Matrix34& arg2, i32 arg3);
 
     // 0x46D500 | ?Impact@phColliderJointed@@UAEXPBVphImpactBase@@ABVVector3@@@Z
-    inline void Impact(class phImpactBase const* arg1, class Vector3 const& arg2) override
-    {
-        return stub<member_func_t<void, phColliderJointed, class phImpactBase const*, class Vector3 const&>>(
-            0x46D500, this, arg1, arg2);
-    }
+    virtual void Impact(class phImpactBase const* arg1, class Vector3 const& arg2);
 
     // 0x46D4E0 | ?Impact@phColliderJointed@@UAEXPBVphImpactBase@@ABVVector3@@1@Z
-    inline void Impact(class phImpactBase const* arg1, class Vector3 const& arg2, class Vector3 const& arg3) override
-    {
-        return stub<member_func_t<void, phColliderJointed, class phImpactBase const*, class Vector3 const&,
-            class Vector3 const&>>(0x46D4E0, this, arg1, arg2, arg3);
-    }
+    virtual void Impact(class phImpactBase const* arg1, class Vector3 const& arg2, class Vector3 const& arg3);
 
     // 0x46D560 | ?Contact@phColliderJointed@@UAEXABVVector3@@PBVphContact@@@Z
-    inline void Contact(class Vector3 const& arg1, class phContact const* arg2) override
-    {
-        return stub<member_func_t<void, phColliderJointed, class Vector3 const&, class phContact const*>>(
-            0x46D560, this, arg1, arg2);
-    }
+    virtual void Contact(class Vector3 const& arg1, class phContact const* arg2);
 
     // 0x46D540 | ?Contact@phColliderJointed@@UAEXABVVector3@@PBVphContact@@ABVMatrix34@@@Z
-    inline void Contact(class Vector3 const& arg1, class phContact const* arg2, class Matrix34 const& arg3) override
-    {
-        return stub<member_func_t<void, phColliderJointed, class Vector3 const&, class phContact const*,
-            class Matrix34 const&>>(0x46D540, this, arg1, arg2, arg3);
-    }
+    virtual void Contact(class Vector3 const& arg1, class phContact const* arg2, class Matrix34 const& arg3);
 
     // 0x46D520 | ?Contact@phColliderJointed@@UAEXPBVphImpactBase@@ABVVector3@@11ABVMatrix34@@@Z
-    inline void Contact(class phImpactBase const* arg1, class Vector3 const& arg2, class Vector3 const& arg3,
-        class Vector3 const& arg4, class Matrix34 const& arg5) override
-    {
-        return stub<member_func_t<void, phColliderJointed, class phImpactBase const*, class Vector3 const&,
-            class Vector3 const&, class Vector3 const&, class Matrix34 const&>>(
-            0x46D520, this, arg1, arg2, arg3, arg4, arg5);
-    }
+    virtual void Contact(class phImpactBase const* arg1, class Vector3 const& arg2, class Vector3 const& arg3,
+        class Vector3 const& arg4, class Matrix34 const& arg5);
+
+    // 0x46D410 | ?InitArray@phColliderJointed@@SAXQAV1@H@Z
+    static void InitArray(class phColliderJointed* const arg1, i32 arg2);
 };
+
+check_size(phColliderJointed, 0x0);

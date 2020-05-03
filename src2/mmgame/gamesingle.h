@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "game.h"
 
 /*
     mmgame:gamesingle
@@ -41,92 +43,54 @@
     0x5B0EB0 | const mmGameSingle::`vftable' | ??_7mmGameSingle@@6B@
 */
 
-struct mmGameSingle : mmGame
+class mmGameSingle : public mmGame
 {
+    // const mmGameSingle::`vftable' @ 0x5B0EB0
+
 public:
-    // mmGameSingle::`vftable' @ 0x5B0EB0
-
     // 0x433A60 | ??0mmGameSingle@@QAE@XZ
-    inline mmGameSingle()
-    {
-        stub<member_func_t<void, mmGameSingle>>(0x433A60, this);
-    }
+    mmGameSingle();
 
-    // 0x433B50 | ?EnableRacers@mmGameSingle@@IAEXXZ
-    inline void EnableRacers()
-    {
-        return stub<member_func_t<void, mmGameSingle>>(0x433B50, this);
-    }
-
-    // 0x433C00 | ?DisableRacers@mmGameSingle@@IAEXXZ
-    inline void DisableRacers()
-    {
-        return stub<member_func_t<void, mmGameSingle>>(0x433C00, this);
-    }
-
-    // 0x433CB0 | ?UpdateRewards@mmGameSingle@@IAE_NXZ
-    inline bool UpdateRewards()
-    {
-        return stub<member_func_t<bool, mmGameSingle>>(0x433CB0, this);
-    }
-
+    // 0x433EF0 | ??_GmmGameSingle@@UAEPAXI@Z
     // 0x433A90 | ??1mmGameSingle@@UAE@XZ
-    inline ~mmGameSingle() override
-    {
-        stub<member_func_t<void, mmGameSingle>>(0x433A90, this);
-    }
-
-    // 0x433C80 | ?Update@mmGameSingle@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmGameSingle>>(0x433C80, this);
-    }
-
-    // 0x433AC0 | ?Reset@mmGameSingle@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmGameSingle>>(0x433AC0, this);
-    }
-
-    // 0x433AA0 | ?Init@mmGameSingle@@UAEHXZ
-    inline int32_t Init() override
-    {
-        return stub<member_func_t<int32_t, mmGameSingle>>(0x433AA0, this);
-    }
-
-    // 0x433AB0 | ?InitOtherPlayers@mmGameSingle@@UAEXXZ
-    inline void InitOtherPlayers() override
-    {
-        return stub<member_func_t<void, mmGameSingle>>(0x433AB0, this);
-    }
-
-    // 0x433C90 | ?UpdateGameInput@mmGameSingle@@UAEXH@Z
-    inline void UpdateGameInput(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmGameSingle, int32_t>>(0x433C90, this, arg1);
-    }
-
-    // 0x433F20 | ?UpdateDebugKeyInput@mmGameSingle@@UAEXH@Z
-    inline void UpdateDebugKeyInput(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmGameSingle, int32_t>>(0x433F20, this, arg1);
-    }
-
-    // 0x433CA0 | ?UpdateGame@mmGameSingle@@UAEXXZ
-    inline void UpdateGame() override
-    {
-        return stub<member_func_t<void, mmGameSingle>>(0x433CA0, this);
-    }
-
-    // 0x433C70 | ?HitWaterHandler@mmGameSingle@@UAEXXZ
-    inline void HitWaterHandler() override
-    {
-        return stub<member_func_t<void, mmGameSingle>>(0x433C70, this);
-    }
+    ~mmGameSingle() override;
 
     // 0x41ABA0 | ?GetWaypoints@mmGameSingle@@UAEPAVmmWaypoints@@XZ
-    inline class mmWaypoints* GetWaypoints() override
-    {
-        return stub<member_func_t<class mmWaypoints*, mmGameSingle>>(0x41ABA0, this);
-    }
+    class mmWaypoints* GetWaypoints() override;
+
+    // 0x433C70 | ?HitWaterHandler@mmGameSingle@@UAEXXZ
+    void HitWaterHandler() override;
+
+    // 0x433AA0 | ?Init@mmGameSingle@@UAEHXZ
+    i32 Init() override;
+
+    // 0x433AB0 | ?InitOtherPlayers@mmGameSingle@@UAEXXZ
+    void InitOtherPlayers() override;
+
+    // 0x433AC0 | ?Reset@mmGameSingle@@UAEXXZ
+    void Reset() override;
+
+    // 0x433C80 | ?Update@mmGameSingle@@UAEXXZ
+    void Update() override;
+
+    // 0x433F20 | ?UpdateDebugKeyInput@mmGameSingle@@UAEXH@Z
+    void UpdateDebugKeyInput(i32 arg1) override;
+
+    // 0x433CA0 | ?UpdateGame@mmGameSingle@@UAEXXZ
+    void UpdateGame() override;
+
+    // 0x433C90 | ?UpdateGameInput@mmGameSingle@@UAEXH@Z
+    void UpdateGameInput(i32 arg1) override;
+
+protected:
+    // 0x433C00 | ?DisableRacers@mmGameSingle@@IAEXXZ
+    void DisableRacers();
+
+    // 0x433B50 | ?EnableRacers@mmGameSingle@@IAEXXZ
+    void EnableRacers();
+
+    // 0x433CB0 | ?UpdateRewards@mmGameSingle@@IAE_NXZ
+    bool UpdateRewards();
 };
+
+check_size(mmGameSingle, 0x0);

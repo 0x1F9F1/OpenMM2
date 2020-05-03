@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -35,51 +35,28 @@ struct MArray
 {
 public:
     // 0x4F0D20 | ??0MArray@@QAE@XZ
-    inline MArray()
-    {
-        stub<member_func_t<void, MArray>>(0x4F0D20, this);
-    }
+    MArray();
 
     // 0x4F0D30 | ??1MArray@@QAE@XZ
-    inline ~MArray()
-    {
-        stub<member_func_t<void, MArray>>(0x4F0D30, this);
-    }
-
-    // 0x4F0D40 | ?Init@MArray@@QAEXH@Z
-    inline void Init(int32_t arg1)
-    {
-        return stub<member_func_t<void, MArray, int32_t>>(0x4F0D40, this, arg1);
-    }
-
-    // 0x4F0D80 | ?Write@MArray@@QAEXPAD@Z
-    inline void Write(char* arg1)
-    {
-        return stub<member_func_t<void, MArray, char*>>(0x4F0D80, this, arg1);
-    }
-
-    // 0x4F0F30 | ?Flush@MArray@@QAEXXZ
-    inline void Flush()
-    {
-        return stub<member_func_t<void, MArray>>(0x4F0F30, this);
-    }
-
-    // 0x4F0F40 | ?Read@MArray@@QAEXPAD@Z
-    inline void Read(char* arg1)
-    {
-        return stub<member_func_t<void, MArray, char*>>(0x4F0F40, this, arg1);
-    }
+    ~MArray();
 
     // 0x4F10E0 | ?AddMenuData@MArray@@QAEXHAAVVector4@@PAD@Z
-    inline void AddMenuData(int32_t arg1, class Vector4& arg2, char* arg3)
-    {
-        return stub<member_func_t<void, MArray, int32_t, class Vector4&, char*>>(0x4F10E0, this, arg1, arg2, arg3);
-    }
+    void AddMenuData(i32 arg1, class Vector4& arg2, char* arg3);
+
+    // 0x4F0F30 | ?Flush@MArray@@QAEXXZ
+    void Flush();
+
+    // 0x4F0D40 | ?Init@MArray@@QAEXH@Z
+    void Init(i32 arg1);
+
+    // 0x4F0F40 | ?Read@MArray@@QAEXPAD@Z
+    void Read(char* arg1);
 
     // 0x4F1130 | ?RetrieveMenuData@MArray@@QAEHHAAM000@Z
-    inline int32_t RetrieveMenuData(int32_t arg1, float& arg2, float& arg3, float& arg4, float& arg5)
-    {
-        return stub<member_func_t<int32_t, MArray, int32_t, float&, float&, float&, float&>>(
-            0x4F1130, this, arg1, arg2, arg3, arg4, arg5);
-    }
+    i32 RetrieveMenuData(i32 arg1, f32& arg2, f32& arg3, f32& arg4, f32& arg5);
+
+    // 0x4F0D80 | ?Write@MArray@@QAEXPAD@Z
+    void Write(char* arg1);
 };
+
+check_size(MArray, 0xC);

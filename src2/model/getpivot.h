@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -25,7 +25,4 @@
 */
 
 // 0x4A5280 | ?GetPivot@@YA_NAAVMatrix34@@PBD1@Z
-inline bool GetPivot(class Matrix34& arg1, char const* arg2, char const* arg3)
-{
-    return stub<cdecl_t<bool, class Matrix34&, char const*, char const*>>(0x4A5280, arg1, arg2, arg3);
-}
+bool GetPivot(class Matrix34& arg1, char const* arg2, char const* arg3);

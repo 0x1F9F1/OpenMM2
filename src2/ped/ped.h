@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -47,85 +47,54 @@
 struct pedAnimation
 {
 public:
-    // 0x57A7A0 | ?LookupSequence@pedAnimation@@QAEHPAD@Z
-    inline int32_t LookupSequence(char* arg1)
-    {
-        return stub<member_func_t<int32_t, pedAnimation, char*>>(0x57A7A0, this, arg1);
-    }
+    // 0x57AB60 | ?DrawSkeleton@pedAnimation@@QAEXHPAVcrSkeleton@@@Z
+    void DrawSkeleton(i32 arg1, class crSkeleton* arg2);
 
     // 0x57A800 | ?Load@pedAnimation@@QAEXPADPAVStream@@@Z
-    inline void Load(char* arg1, class Stream* arg2)
-    {
-        return stub<member_func_t<void, pedAnimation, char*, class Stream*>>(0x57A800, this, arg1, arg2);
-    }
+    void Load(char* arg1, class Stream* arg2);
+
+    // 0x57A7A0 | ?LookupSequence@pedAnimation@@QAEHPAD@Z
+    i32 LookupSequence(char* arg1);
 
     // 0x57AB40 | ?Init@pedAnimation@@SAXXZ
-    static inline void Init()
-    {
-        return stub<cdecl_t<void>>(0x57AB40);
-    }
-
-    // 0x57AB60 | ?DrawSkeleton@pedAnimation@@QAEXHPAVcrSkeleton@@@Z
-    inline void DrawSkeleton(int32_t arg1, class crSkeleton* arg2)
-    {
-        return stub<member_func_t<void, pedAnimation, int32_t, class crSkeleton*>>(0x57AB60, this, arg1, arg2);
-    }
+    static void Init();
 };
+
+check_size(pedAnimation, 0x0);
 
 struct pedAnimationInstance
 {
 public:
-    // 0x57ADB0 | ?Init@pedAnimationInstance@@QAEXPAD@Z
-    inline void Init(char* arg1)
-    {
-        return stub<member_func_t<void, pedAnimationInstance, char*>>(0x57ADB0, this, arg1);
-    }
-
-    // 0x57B270 | ?PreUpdate@pedAnimationInstance@@QAEXM@Z
-    inline void PreUpdate(float arg1)
-    {
-        return stub<member_func_t<void, pedAnimationInstance, float>>(0x57B270, this, arg1);
-    }
-
-    // 0x57B2C0 | ?Reset@pedAnimationInstance@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, pedAnimationInstance>>(0x57B2C0, this);
-    }
-
-    // 0x57B2F0 | ?Update@pedAnimationInstance@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, pedAnimationInstance>>(0x57B2F0, this);
-    }
-
     // 0x57B370 | ?Draw@pedAnimationInstance@@QAEX_N@Z
-    inline void Draw(bool arg1)
-    {
-        return stub<member_func_t<void, pedAnimationInstance, bool>>(0x57B370, this, arg1);
-    }
+    void Draw(bool arg1);
 
     // 0x57B510 | ?DrawShadow@pedAnimationInstance@@QAEXXZ
-    inline void DrawShadow()
-    {
-        return stub<member_func_t<void, pedAnimationInstance>>(0x57B510, this);
-    }
+    void DrawShadow();
 
-    // 0x57B520 | ?VerifySeq@pedAnimationInstance@@QAEXH@Z
-    inline void VerifySeq(int32_t arg1)
-    {
-        return stub<member_func_t<void, pedAnimationInstance, int32_t>>(0x57B520, this, arg1);
-    }
+    // 0x57ADB0 | ?Init@pedAnimationInstance@@QAEXPAD@Z
+    void Init(char* arg1);
+
+    // 0x57B270 | ?PreUpdate@pedAnimationInstance@@QAEXM@Z
+    void PreUpdate(f32 arg1);
+
+    // 0x57B2C0 | ?Reset@pedAnimationInstance@@QAEXXZ
+    void Reset();
 
     // 0x57B550 | ?Start@pedAnimationInstance@@QAEXH@Z
-    inline void Start(int32_t arg1)
-    {
-        return stub<member_func_t<void, pedAnimationInstance, int32_t>>(0x57B550, this, arg1);
-    }
+    void Start(i32 arg1);
 
+    // 0x57B2F0 | ?Update@pedAnimationInstance@@QAEXXZ
+    void Update();
+
+    // 0x57B520 | ?VerifySeq@pedAnimationInstance@@QAEXH@Z
+    void VerifySeq(i32 arg1);
+
+private:
     // 0x6B4720 | ?FrameDelta@pedAnimationInstance@@0HA
-    inline extern_var(0x6B4720, int32_t, FrameDelta);
+    static inline extern_var(0x6B4720, i32, FrameDelta);
 
     // 0x6B4724 | ?FrameFraction@pedAnimationInstance@@0MA
-    inline extern_var(0x6B4724, float, FrameFraction);
+    static inline extern_var(0x6B4724, f32, FrameFraction);
 };
+
+check_size(pedAnimationInstance, 0x0);

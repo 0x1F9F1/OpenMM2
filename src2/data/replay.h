@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -37,3 +37,53 @@
     0x6A3D30 | private: static int datReplay::sm_FrameSize | ?sm_FrameSize@datReplay@@0HA
     0x6A3D34 | private: static int datReplay::sm_Remaining | ?sm_Remaining@datReplay@@0HA
 */
+
+struct datReplay
+{
+public:
+    // 0x4C91E0 | ?BeginFrame@datReplay@@SAXXZ
+    static void BeginFrame();
+
+    // 0x4C9150 | ?BeginPlayback@datReplay@@SA_NPAVdatMemStream@@@Z
+    static bool BeginPlayback(class datMemStream* arg1);
+
+    // 0x4C9110 | ?BeginRecord@datReplay@@SA_NPAVdatMemStream@@@Z
+    static bool BeginRecord(class datMemStream* arg1);
+
+    // 0x4C91B0 | ?Close@datReplay@@SAXXZ
+    static void Close();
+
+    // 0x4C91F0 | ?EndFrame@datReplay@@SA_NXZ
+    static bool EndFrame();
+
+    // 0x4C9060 | ?GetByte@datReplay@@SAHXZ
+    static i32 GetByte();
+
+    // 0x4C9080 | ?GetInt@datReplay@@SAHXZ
+    static i32 GetInt();
+
+    // 0x4C90B0 | ?RecordByte@datReplay@@SAXE@Z
+    static void RecordByte(u8 arg1);
+
+    // 0x4C90E0 | ?RecordInt@datReplay@@SAXH@Z
+    static void RecordInt(i32 arg1);
+
+    // 0x4C9040 | ?Reset@datReplay@@SAXXZ
+    static void Reset();
+
+private:
+    // 0x6A3D30 | ?sm_FrameSize@datReplay@@0HA
+    static inline extern_var(0x6A3D30, i32, sm_FrameSize);
+
+    // 0x6A3D28 | ?sm_InFrame@datReplay@@0_NA
+    static inline extern_var(0x6A3D28, bool, sm_InFrame);
+
+    // 0x6A3D29 | ?sm_Playback@datReplay@@0_NA
+    static inline extern_var(0x6A3D29, bool, sm_Playback);
+
+    // 0x6A3D34 | ?sm_Remaining@datReplay@@0HA
+    static inline extern_var(0x6A3D34, i32, sm_Remaining);
+
+    // 0x6A3D2C | ?sm_ReplayFile@datReplay@@0PAVdatMemStream@@A
+    static inline extern_var(0x6A3D2C, class datMemStream*, sm_ReplayFile);
+};

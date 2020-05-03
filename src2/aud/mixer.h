@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -36,65 +36,36 @@
 class audMixer
 {
 public:
-    // 0x5A6E00 | ?Update@audMixer@@QAE_NH@Z
-    inline bool Update(int32_t arg1)
-    {
-        return stub<member_func_t<bool, audMixer, int32_t>>(0x5A6E00, this, arg1);
-    }
-
-    // 0x5A6E10 | ?GetStatus@audMixer@@QAE?AW4AUD_OBJECTSTATUS@audObject@@XZ
-    inline enum audObject::AUD_OBJECTSTATUS GetStatus()
-    {
-        return stub<member_func_t<enum audObject::AUD_OBJECTSTATUS, audMixer>>(0x5A6E10, this);
-    }
-
-    // 0x5A6E20 | ?Play@audMixer@@QAE_NXZ
-    inline bool Play()
-    {
-        return stub<member_func_t<bool, audMixer>>(0x5A6E20, this);
-    }
-
-    // 0x5A6E30 | ?Stop@audMixer@@QAE_NXZ
-    inline bool Stop()
-    {
-        return stub<member_func_t<bool, audMixer>>(0x5A6E30, this);
-    }
-
-    // 0x5A6E40 | ?SetVolume@audMixer@@QAE_NM@Z
-    inline bool SetVolume(float arg1)
-    {
-        return stub<member_func_t<bool, audMixer, float>>(0x5A6E40, this, arg1);
-    }
-
     // 0x5A6E50 | ?CreateDuplicateMixerBuffer@audMixer@@QAEPAVaudSoundBuffer@@PAV1@@Z
-    inline class audSoundBuffer* CreateDuplicateMixerBuffer(class audMixer* arg1)
-    {
-        return stub<member_func_t<class audSoundBuffer*, audMixer, class audMixer*>>(0x5A6E50, this, arg1);
-    }
+    class audSoundBuffer* CreateDuplicateMixerBuffer(class audMixer* arg1);
 
     // 0x5A6E60 | ?CreateMixerBufferFromFile@audMixer@@QAEPAVaudSoundBuffer@@PAD0W4SOUNDBUFFERTYPE@2@H@Z
-    inline class audSoundBuffer* CreateMixerBufferFromFile(
-        char* arg1, char* arg2, enum audSoundBuffer::SOUNDBUFFERTYPE arg3, int32_t arg4)
-    {
-        return stub<member_func_t<class audSoundBuffer*, audMixer, char*, char*, enum audSoundBuffer::SOUNDBUFFERTYPE,
-            int32_t>>(0x5A6E60, this, arg1, arg2, arg3, arg4);
-    }
+    class audSoundBuffer* CreateMixerBufferFromFile(
+        char* arg1, char* arg2, enum audSoundBuffer::SOUNDBUFFERTYPE arg3, i32 arg4);
 
-    // 0x5A6E70 | ?SetPitch@audMixer@@QAE_NM@Z
-    inline bool SetPitch(float arg1)
-    {
-        return stub<member_func_t<bool, audMixer, float>>(0x5A6E70, this, arg1);
-    }
+    // 0x5A6E10 | ?GetStatus@audMixer@@QAE?AW4AUD_OBJECTSTATUS@audObject@@XZ
+    enum audObject::AUD_OBJECTSTATUS GetStatus();
 
-    // 0x5A6E80 | ?SetPan@audMixer@@QAE_NM@Z
-    inline bool SetPan(float arg1)
-    {
-        return stub<member_func_t<bool, audMixer, float>>(0x5A6E80, this, arg1);
-    }
+    // 0x5A6E20 | ?Play@audMixer@@QAE_NXZ
+    bool Play();
 
     // 0x5A6E90 | ?Set3D@audMixer@@QAE_NPAU_audvector3_@@@Z
-    inline bool Set3D(struct _audvector3_* arg1)
-    {
-        return stub<member_func_t<bool, audMixer, struct _audvector3_*>>(0x5A6E90, this, arg1);
-    }
+    bool Set3D(struct _audvector3_* arg1);
+
+    // 0x5A6E80 | ?SetPan@audMixer@@QAE_NM@Z
+    bool SetPan(f32 arg1);
+
+    // 0x5A6E70 | ?SetPitch@audMixer@@QAE_NM@Z
+    bool SetPitch(f32 arg1);
+
+    // 0x5A6E40 | ?SetVolume@audMixer@@QAE_NM@Z
+    bool SetVolume(f32 arg1);
+
+    // 0x5A6E30 | ?Stop@audMixer@@QAE_NXZ
+    bool Stop();
+
+    // 0x5A6E00 | ?Update@audMixer@@QAE_NH@Z
+    bool Update(i32 arg1);
 };
+
+check_size(audMixer, 0x0);

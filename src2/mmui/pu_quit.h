@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "pu_menu.h"
+
 /*
     mmui:pu_quit
 
@@ -29,27 +31,20 @@
     0x5B47B0 | const PUQuit::`vftable' | ??_7PUQuit@@6B@
 */
 
-struct PUQuit : PUMenuBase
+class PUQuit : public PUMenuBase
 {
-public:
-    // PUQuit::`vftable' @ 0x5B47B0
+    // const PUQuit::`vftable' @ 0x5B47B0
 
+public:
     // 0x50B040 | ??0PUQuit@@QAE@HMMMMPAD@Z
-    inline PUQuit(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
-    {
-        stub<member_func_t<void, PUQuit, int32_t, float, float, float, float, char*>>(
-            0x50B040, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
+    PUQuit(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6);
+
+    // 0x50B240 | ??_GPUQuit@@UAEPAXI@Z
+    // 0x50B1F0 | ??1PUQuit@@UAE@XZ
+    ~PUQuit() override;
 
     // 0x50B200 | ?EnableMigrateHost@PUQuit@@QAEX_N@Z
-    inline void EnableMigrateHost(bool arg1)
-    {
-        return stub<member_func_t<void, PUQuit, bool>>(0x50B200, this, arg1);
-    }
-
-    // 0x50B1F0 | ??1PUQuit@@UAE@XZ
-    inline ~PUQuit() override
-    {
-        stub<member_func_t<void, PUQuit>>(0x50B1F0, this);
-    }
+    void EnableMigrateHost(bool arg1);
 };
+
+check_size(PUQuit, 0xC4);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     mmeffects:mmnumber
@@ -37,76 +39,51 @@
     0x5B5324 | const mmNumber::`vftable' | ??_7mmNumber@@6B@
 */
 
+class mmNumber : public asNode
+{
+    // const mmNumber::`vftable' @ 0x5B5324
+
+public:
+    // 0x533420 | ??0mmNumber@@QAE@XZ
+    mmNumber();
+
+    // 0x438800 | ??_EmmNumber@@UAEPAXI@Z
+    // 0x533440 | ??1mmNumber@@UAE@XZ
+    // 0x5335D0 | ??_GmmNumber@@UAEPAXI@Z
+    ~mmNumber() override;
+
+    // 0x5334E0 | ?Cull@mmNumber@@UAEXXZ
+    void Cull() override;
+
+    // 0x533450 | ?Init@mmNumber@@QAEXPAVmmNumberFont@@MM@Z
+    void Init(class mmNumberFont* arg1, f32 arg2, f32 arg3);
+
+    // 0x5334A0 | ?Printf@mmNumber@@QAAXPBDZZ
+    void Printf(char const* arg1, ...);
+
+    // 0x533470 | ?SetString@mmNumber@@QAEXPAD@Z
+    void SetString(char* arg1);
+
+    // 0x5334C0 | ?Update@mmNumber@@UAEXXZ
+    void Update() override;
+};
+
+check_size(mmNumber, 0x74);
+
 class mmNumberFont
 {
 public:
     // 0x5332B0 | ??0mmNumberFont@@QAE@PAD@Z
-    inline mmNumberFont(char* arg1)
-    {
-        stub<member_func_t<void, mmNumberFont, char*>>(0x5332B0, this, arg1);
-    }
+    mmNumberFont(char* arg1);
 
     // 0x5332E0 | ??1mmNumberFont@@QAE@XZ
-    inline ~mmNumberFont()
-    {
-        stub<member_func_t<void, mmNumberFont>>(0x5332E0, this);
-    }
+    ~mmNumberFont();
 
     // 0x533340 | ?LoadFont@mmNumberFont@@QAEXPADHI@Z
-    inline void LoadFont(char* arg1, int32_t arg2, uint32_t arg3)
-    {
-        return stub<member_func_t<void, mmNumberFont, char*, int32_t, uint32_t>>(0x533340, this, arg1, arg2, arg3);
-    }
+    void LoadFont(char* arg1, i32 arg2, u32 arg3);
 
     // 0x5333B0 | ?LoadLocFont@mmNumberFont@@QAEXPADPAULocString@@HI@Z
-    inline void LoadLocFont(char* arg1, struct LocString* arg2, int32_t arg3, uint32_t arg4)
-    {
-        return stub<member_func_t<void, mmNumberFont, char*, struct LocString*, int32_t, uint32_t>>(
-            0x5333B0, this, arg1, arg2, arg3, arg4);
-    }
+    void LoadLocFont(char* arg1, struct LocString* arg2, i32 arg3, u32 arg4);
 };
 
-struct mmNumber : asNode
-{
-public:
-    // mmNumber::`vftable' @ 0x5B5324
-
-    // 0x533420 | ??0mmNumber@@QAE@XZ
-    inline mmNumber()
-    {
-        stub<member_func_t<void, mmNumber>>(0x533420, this);
-    }
-
-    // 0x533450 | ?Init@mmNumber@@QAEXPAVmmNumberFont@@MM@Z
-    inline void Init(class mmNumberFont* arg1, float arg2, float arg3)
-    {
-        return stub<member_func_t<void, mmNumber, class mmNumberFont*, float, float>>(0x533450, this, arg1, arg2, arg3);
-    }
-
-    // 0x533470 | ?SetString@mmNumber@@QAEXPAD@Z
-    inline void SetString(char* arg1)
-    {
-        return stub<member_func_t<void, mmNumber, char*>>(0x533470, this, arg1);
-    }
-
-    // 0x5334A0 | ?Printf@mmNumber@@QAAXPBDZZ
-    // Skipped (Variable Arguments)
-
-    // 0x533440 | ??1mmNumber@@UAE@XZ
-    inline ~mmNumber() override
-    {
-        stub<member_func_t<void, mmNumber>>(0x533440, this);
-    }
-
-    // 0x5334E0 | ?Cull@mmNumber@@UAEXXZ
-    inline void Cull() override
-    {
-        return stub<member_func_t<void, mmNumber>>(0x5334E0, this);
-    }
-
-    // 0x5334C0 | ?Update@mmNumber@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmNumber>>(0x5334C0, this);
-    }
-};
+check_size(mmNumberFont, 0x0);

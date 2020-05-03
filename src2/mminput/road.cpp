@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,30 @@
 */
 
 #include "road.h"
+
+i32 mmRoadFF::Assign(i32 arg1, i32 arg2)
+{
+    return stub<thiscall_t<i32, mmRoadFF*, i32, i32>>(0x531A70, this, arg1, arg2);
+}
+
+i32 mmRoadFF::Init(struct IDirectInputDevice2A* arg1)
+{
+    return stub<thiscall_t<i32, mmRoadFF*, struct IDirectInputDevice2A*>>(0x531940, this, arg1);
+}
+
+i32 mmRoadFF::Play()
+{
+    return stub<thiscall_t<i32, mmRoadFF*>>(0x531B60, this);
+}
+
+i32 mmRoadFF::SetValues(f32 arg1, f32 arg2)
+{
+    return stub<thiscall_t<i32, mmRoadFF*, f32, f32>>(0x531A40, this, arg1, arg2);
+}
+
+i32 mmRoadFF::Stop()
+{
+    return stub<thiscall_t<i32, mmRoadFF*>>(0x531BD0, this);
+}
+
+define_dummy_symbol(mminput_road);

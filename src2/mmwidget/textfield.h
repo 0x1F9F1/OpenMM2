@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     mmwidget:textfield
@@ -57,215 +59,120 @@
     0x5B3374 | const uiWidget::`vftable' | ??_7uiWidget@@6B@
 */
 
-class uiWidget : asNode
+class UITextField : public uiWidget
 {
+    // const UITextField::`vftable' @ 0x5B3310
+
 public:
-    // uiWidget::`vftable' @ 0x5B3374
-
-    // 0x4E7440 | ??0uiWidget@@QAE@XZ
-    inline uiWidget()
-    {
-        stub<member_func_t<void, uiWidget>>(0x4E7440, this);
-    }
-
-    // 0x4E7470 | ?AddToolTip@uiWidget@@QAEXPAVUIMenu@@PAULocString@@@Z
-    inline void AddToolTip(class UIMenu* arg1, struct LocString* arg2)
-    {
-        return stub<member_func_t<void, uiWidget, class UIMenu*, struct LocString*>>(0x4E7470, this, arg1, arg2);
-    }
-
-    // 0x4E74A0 | ?ResetToolTip@uiWidget@@QAEXXZ
-    inline void ResetToolTip()
-    {
-        return stub<member_func_t<void, uiWidget>>(0x4E74A0, this);
-    }
-
-    // 0x4E74B0 | ?SetToolTipText@uiWidget@@QAEXPAULocString@@@Z
-    inline void SetToolTipText(struct LocString* arg1)
-    {
-        return stub<member_func_t<void, uiWidget, struct LocString*>>(0x4E74B0, this, arg1);
-    }
-
-    // 0x4E7320 | ??1uiWidget@@UAE@XZ
-    inline ~uiWidget() override
-    {
-        stub<member_func_t<void, uiWidget>>(0x4E7320, this);
-    }
-
-    // 0x4E7330 | ?Disable@uiWidget@@UAEXXZ
-    virtual inline void Disable()
-    {
-        return stub<member_func_t<void, uiWidget>>(0x4E7330, this);
-    }
-
-    // 0x4E7340 | ?Enable@uiWidget@@UAEXXZ
-    virtual inline void Enable()
-    {
-        return stub<member_func_t<void, uiWidget>>(0x4E7340, this);
-    }
-
-    // 0x4E7350 | ?TurnOn@uiWidget@@UAEXXZ
-    virtual inline void TurnOn()
-    {
-        return stub<member_func_t<void, uiWidget>>(0x4E7350, this);
-    }
-
-    // 0x4E7370 | ?TurnOff@uiWidget@@UAEXXZ
-    virtual inline void TurnOff()
-    {
-        return stub<member_func_t<void, uiWidget>>(0x4E7370, this);
-    }
-
-    // 0x4E7380 | ?SetReadOnly@uiWidget@@UAEXH@Z
-    virtual inline void SetReadOnly(int32_t arg1)
-    {
-        return stub<member_func_t<void, uiWidget, int32_t>>(0x4E7380, this, arg1);
-    }
-
-    // 0x4E73A0 | ?Action@uiWidget@@UAEXTeqEvent@@@Z
-    virtual inline void Action(union eqEvent arg1)
-    {
-        return stub<member_func_t<void, uiWidget, union eqEvent>>(0x4E73A0, this, arg1);
-    }
-
-    // 0x4E73B0 | ?CaptureAction@uiWidget@@UAEXTeqEvent@@@Z
-    virtual inline void CaptureAction(union eqEvent arg1)
-    {
-        return stub<member_func_t<void, uiWidget, union eqEvent>>(0x4E73B0, this, arg1);
-    }
-
-    // 0x4E7480 | ?Switch@uiWidget@@UAEXH@Z
-    virtual inline void Switch(int32_t arg1)
-    {
-        return stub<member_func_t<void, uiWidget, int32_t>>(0x4E7480, this, arg1);
-    }
-
-    // 0x4E73C0 | ?EvalMouseX@uiWidget@@UAEXM@Z
-    virtual inline void EvalMouseX(float arg1)
-    {
-        return stub<member_func_t<void, uiWidget, float>>(0x4E73C0, this, arg1);
-    }
-
-    // 0x4E73D0 | ?ReturnDescription@uiWidget@@UAEPADXZ
-    virtual inline char* ReturnDescription()
-    {
-        return stub<member_func_t<char*, uiWidget>>(0x4E73D0, this);
-    }
-
-    // 0x4E73E0 | ?SetPosition@uiWidget@@UAEXMM@Z
-    virtual inline void SetPosition(float arg1, float arg2)
-    {
-        return stub<member_func_t<void, uiWidget, float, float>>(0x4E73E0, this, arg1, arg2);
-    }
-
-    // 0x4E73F0 | ?GetScreenHeight@uiWidget@@UAEMXZ
-    virtual inline float GetScreenHeight()
-    {
-        return stub<member_func_t<float, uiWidget>>(0x4E73F0, this);
-    }
-};
-
-class UITextField : uiWidget
-{
-public:
-    // UITextField::`vftable' @ 0x5B3310
-
     // 0x4E6690 | ??0UITextField@@QAE@XZ
-    inline UITextField()
-    {
-        stub<member_func_t<void, UITextField>>(0x4E6690, this);
-    }
+    UITextField();
 
-    // 0x4E6820 | ?Init@UITextField@@QAEXPAULocString@@PADMMMMHHHHHVdatCallback@@PAVUIMenu@@@Z
-    inline void Init(struct LocString* arg1, char* arg2, float arg3, float arg4, float arg5, float arg6, int32_t arg7,
-        int32_t arg8, int32_t arg9, int32_t arg10, int32_t arg11, class datCallback arg12, class UIMenu* arg13)
-    {
-        return stub<member_func_t<void, UITextField, struct LocString*, char*, float, float, float, float, int32_t,
-            int32_t, int32_t, int32_t, int32_t, class datCallback, class UIMenu*>>(
-            0x4E6820, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
-    }
-
-    // 0x4E6B20 | ?SetText@UITextField@@QAEXPAULocString@@@Z
-    inline void SetText(struct LocString* arg1)
-    {
-        return stub<member_func_t<void, UITextField, struct LocString*>>(0x4E6B20, this, arg1);
-    }
-
-    // 0x4E6B40 | ?SetField@UITextField@@QAEXPAD@Z
-    inline void SetField(char* arg1)
-    {
-        return stub<member_func_t<void, UITextField, char*>>(0x4E6B40, this, arg1);
-    }
-
-    // 0x4E6C00 | ?ClearField@UITextField@@QAEXXZ
-    inline void ClearField()
-    {
-        return stub<member_func_t<void, UITextField>>(0x4E6C00, this);
-    }
-
-    // 0x4E6C60 | ?SetTextField@UITextField@@QAEXXZ
-    inline void SetTextField()
-    {
-        return stub<member_func_t<void, UITextField>>(0x4E6C60, this);
-    }
-
-    // 0x4E6CB0 | ?ToggleField@UITextField@@QAEXH@Z
-    inline void ToggleField(int32_t arg1)
-    {
-        return stub<member_func_t<void, UITextField, int32_t>>(0x4E6CB0, this, arg1);
-    }
-
-    // 0x4E6EB0 | ?IsValidChar@UITextField@@QAEHG@Z
-    inline int32_t IsValidChar(uint16_t arg1)
-    {
-        return stub<member_func_t<int32_t, UITextField, uint16_t>>(0x4E6EB0, this, arg1);
-    }
-
-    // 0x4E6F70 | ?WmCharHandler@UITextField@@QAEXE@Z
-    inline void WmCharHandler(uint8_t arg1)
-    {
-        return stub<member_func_t<void, UITextField, uint8_t>>(0x4E6F70, this, arg1);
-    }
-
-    // 0x4E70F0 | ?KeyAction@UITextField@@QAEXPATeqEvent@@@Z
-    inline void KeyAction(union eqEvent* arg1)
-    {
-        return stub<member_func_t<void, UITextField, union eqEvent*>>(0x4E70F0, this, arg1);
-    }
-
-    // 0x4E7200 | ?SetCompositionWindow@UITextField@@QAEXXZ
-    inline void SetCompositionWindow()
-    {
-        return stub<member_func_t<void, UITextField>>(0x4E7200, this);
-    }
-
+    // 0x4E72F0 | ??_GUITextField@@UAEPAXI@Z
     // 0x4E67B0 | ??1UITextField@@UAE@XZ
-    inline ~UITextField() override
-    {
-        stub<member_func_t<void, UITextField>>(0x4E67B0, this);
-    }
-
-    // 0x4E7430 | ?Update@UITextField@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, UITextField>>(0x4E7430, this);
-    }
+    ~UITextField() override;
 
     // 0x4E6BB0 | ?Action@UITextField@@UAEXTeqEvent@@@Z
-    inline void Action(union eqEvent arg1) override
-    {
-        return stub<member_func_t<void, UITextField, union eqEvent>>(0x4E6BB0, this, arg1);
-    }
+    void Action(union eqEvent arg1) override;
 
     // 0x4E6BA0 | ?CaptureAction@UITextField@@UAEXTeqEvent@@@Z
-    inline void CaptureAction(union eqEvent arg1) override
-    {
-        return stub<member_func_t<void, UITextField, union eqEvent>>(0x4E6BA0, this, arg1);
-    }
+    void CaptureAction(union eqEvent arg1) override;
+
+    // 0x4E6C00 | ?ClearField@UITextField@@QAEXXZ
+    void ClearField();
+
+    // 0x4E6820 | ?Init@UITextField@@QAEXPAULocString@@PADMMMMHHHHHVdatCallback@@PAVUIMenu@@@Z
+    void Init(struct LocString* arg1, char* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7, i32 arg8, i32 arg9,
+        i32 arg10, i32 arg11, class datCallback arg12, class UIMenu* arg13);
+
+    // 0x4E6EB0 | ?IsValidChar@UITextField@@QAEHG@Z
+    i32 IsValidChar(u16 arg1);
+
+    // 0x4E70F0 | ?KeyAction@UITextField@@QAEXPATeqEvent@@@Z
+    void KeyAction(union eqEvent* arg1);
+
+    // 0x4E7200 | ?SetCompositionWindow@UITextField@@QAEXXZ
+    void SetCompositionWindow();
+
+    // 0x4E6B40 | ?SetField@UITextField@@QAEXPAD@Z
+    void SetField(char* arg1);
+
+    // 0x4E6B20 | ?SetText@UITextField@@QAEXPAULocString@@@Z
+    void SetText(struct LocString* arg1);
+
+    // 0x4E6C60 | ?SetTextField@UITextField@@QAEXXZ
+    void SetTextField();
 
     // 0x4E6E00 | ?Switch@UITextField@@UAEXH@Z
-    inline void Switch(int32_t arg1) override
-    {
-        return stub<member_func_t<void, UITextField, int32_t>>(0x4E6E00, this, arg1);
-    }
+    void Switch(i32 arg1) override;
+
+    // 0x4E6CB0 | ?ToggleField@UITextField@@QAEXH@Z
+    void ToggleField(i32 arg1);
+
+    // 0x4E7430 | ?Update@UITextField@@UAEXXZ
+    void Update() override;
+
+    // 0x4E6F70 | ?WmCharHandler@UITextField@@QAEXE@Z
+    void WmCharHandler(u8 arg1);
 };
+
+check_size(UITextField, 0x1E4);
+
+class uiWidget : public asNode
+{
+    // const uiWidget::`vftable' @ 0x5B3374
+
+public:
+    // 0x4E7440 | ??0uiWidget@@QAE@XZ
+    uiWidget();
+
+    // 0x4E7400 | ??_GuiWidget@@UAEPAXI@Z
+    // 0x4E7320 | ??1uiWidget@@UAE@XZ
+    ~uiWidget() override;
+
+    // 0x4E7470 | ?AddToolTip@uiWidget@@QAEXPAVUIMenu@@PAULocString@@@Z
+    void AddToolTip(class UIMenu* arg1, struct LocString* arg2);
+
+    // 0x4E74A0 | ?ResetToolTip@uiWidget@@QAEXXZ
+    void ResetToolTip();
+
+    // 0x4E74B0 | ?SetToolTipText@uiWidget@@QAEXPAULocString@@@Z
+    void SetToolTipText(struct LocString* arg1);
+
+    // 0x4E7330 | ?Disable@uiWidget@@UAEXXZ
+    virtual void Disable();
+
+    // 0x4E7340 | ?Enable@uiWidget@@UAEXXZ
+    virtual void Enable();
+
+    // 0x4E7350 | ?TurnOn@uiWidget@@UAEXXZ
+    virtual void TurnOn();
+
+    // 0x4E7370 | ?TurnOff@uiWidget@@UAEXXZ
+    virtual void TurnOff();
+
+    // 0x4E7380 | ?SetReadOnly@uiWidget@@UAEXH@Z
+    virtual void SetReadOnly(i32 arg1);
+
+    // 0x4E73A0 | ?Action@uiWidget@@UAEXTeqEvent@@@Z
+    virtual void Action(union eqEvent arg1);
+
+    // 0x4E73B0 | ?CaptureAction@uiWidget@@UAEXTeqEvent@@@Z
+    virtual void CaptureAction(union eqEvent arg1);
+
+    // 0x4E7480 | ?Switch@uiWidget@@UAEXH@Z
+    virtual void Switch(i32 arg1);
+
+    // 0x4E73C0 | ?EvalMouseX@uiWidget@@UAEXM@Z
+    virtual void EvalMouseX(f32 arg1);
+
+    // 0x4E73D0 | ?ReturnDescription@uiWidget@@UAEPADXZ
+    virtual char* ReturnDescription();
+
+    // 0x4E73E0 | ?SetPosition@uiWidget@@UAEXMM@Z
+    virtual void SetPosition(f32 arg1, f32 arg2);
+
+    // 0x4E73F0 | ?GetScreenHeight@uiWidget@@UAEMXZ
+    virtual f32 GetScreenHeight();
+};
+
+check_size(uiWidget, 0x6C);

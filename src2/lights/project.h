@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -33,80 +33,56 @@
     0x59D030 | public: void __thiscall ltProjection::DrawAmbient(class Vector3 const &) | ?DrawAmbient@ltProjection@@QAEXABVVector3@@@Z
     0x59D230 | public: void __thiscall ltProjection::DrawDebug(void) | ?DrawDebug@ltProjection@@QAEXXZ
     public: void __thiscall ltProjection::AddWidgets(class bkBank &) | ?AddWidgets@ltProjection@@QAEXAAVbkBank@@@Z
-    private: static int ltProjection::ShadowRes | ?ShadowRes@ltProjection@@0HA
-    private: static class gfxTexture * ltProjection::ShadowMap | ?ShadowMap@ltProjection@@0PAVgfxTexture@@A
-    private: static class gfxViewport * ltProjection::ShadowViewport | ?ShadowViewport@ltProjection@@0PAVgfxViewport@@A
+    0x6B4BC8 | private: static int ltProjection::ShadowRes | ?ShadowRes@ltProjection@@0HA
+    0x6B4BCC | private: static class gfxTexture * ltProjection::ShadowMap | ?ShadowMap@ltProjection@@0PAVgfxTexture@@A
+    0x6B4BD0 | private: static class gfxViewport * ltProjection::ShadowViewport | ?ShadowViewport@ltProjection@@0PAVgfxViewport@@A
 */
 
 class ltProjection
 {
 public:
     // 0x59C510 | ??0ltProjection@@QAE@H@Z
-    inline ltProjection(int32_t arg1)
-    {
-        stub<member_func_t<void, ltProjection, int32_t>>(0x59C510, this, arg1);
-    }
+    ltProjection(i32 arg1);
 
     // 0x59C580 | ??1ltProjection@@QAE@XZ
-    inline ~ltProjection()
-    {
-        stub<member_func_t<void, ltProjection>>(0x59C580, this);
-    }
-
-    // 0x59C5B0 | ?MakeOrthoMatrix@ltProjection@@QAEXABVVector3@@00M@Z
-    inline void MakeOrthoMatrix(
-        class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3, float arg4)
-    {
-        return stub<
-            member_func_t<void, ltProjection, class Vector3 const&, class Vector3 const&, class Vector3 const&, float>>(
-            0x59C5B0, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x59C770 | ?DrawBegin@ltProjection@@QAEXABVMatrix34@@@Z
-    inline void DrawBegin(class Matrix34 const& arg1)
-    {
-        return stub<member_func_t<void, ltProjection, class Matrix34 const&>>(0x59C770, this, arg1);
-    }
-
-    // 0x59C950 | ?DrawEnd@ltProjection@@QAEXXZ
-    inline void DrawEnd()
-    {
-        return stub<member_func_t<void, ltProjection>>(0x59C950, this);
-    }
-
-    // 0x59C9C0 | ?DrawMultiStageBegin@ltProjection@@QAEXHABVMatrix34@@@Z
-    inline void DrawMultiStageBegin(int32_t arg1, class Matrix34 const& arg2)
-    {
-        return stub<member_func_t<void, ltProjection, int32_t, class Matrix34 const&>>(0x59C9C0, this, arg1, arg2);
-    }
-
-    // 0x59CB20 | ?DrawMultiStageEnd@ltProjection@@QAEXH@Z
-    inline void DrawMultiStageEnd(int32_t arg1)
-    {
-        return stub<member_func_t<void, ltProjection, int32_t>>(0x59CB20, this, arg1);
-    }
-
-    // 0x59CB80 | ?OffScreenBegin@ltProjection@@QAEX_N@Z
-    inline void OffScreenBegin(bool arg1)
-    {
-        return stub<member_func_t<void, ltProjection, bool>>(0x59CB80, this, arg1);
-    }
-
-    // 0x59CE10 | ?OffScreenEnd@ltProjection@@QAEXXZ
-    inline void OffScreenEnd()
-    {
-        return stub<member_func_t<void, ltProjection>>(0x59CE10, this);
-    }
+    ~ltProjection();
 
     // 0x59D030 | ?DrawAmbient@ltProjection@@QAEXABVVector3@@@Z
-    inline void DrawAmbient(class Vector3 const& arg1)
-    {
-        return stub<member_func_t<void, ltProjection, class Vector3 const&>>(0x59D030, this, arg1);
-    }
+    void DrawAmbient(class Vector3 const& arg1);
+
+    // 0x59C770 | ?DrawBegin@ltProjection@@QAEXABVMatrix34@@@Z
+    void DrawBegin(class Matrix34 const& arg1);
 
     // 0x59D230 | ?DrawDebug@ltProjection@@QAEXXZ
-    inline void DrawDebug()
-    {
-        return stub<member_func_t<void, ltProjection>>(0x59D230, this);
-    }
+    void DrawDebug();
+
+    // 0x59C950 | ?DrawEnd@ltProjection@@QAEXXZ
+    void DrawEnd();
+
+    // 0x59C9C0 | ?DrawMultiStageBegin@ltProjection@@QAEXHABVMatrix34@@@Z
+    void DrawMultiStageBegin(i32 arg1, class Matrix34 const& arg2);
+
+    // 0x59CB20 | ?DrawMultiStageEnd@ltProjection@@QAEXH@Z
+    void DrawMultiStageEnd(i32 arg1);
+
+    // 0x59C5B0 | ?MakeOrthoMatrix@ltProjection@@QAEXABVVector3@@00M@Z
+    void MakeOrthoMatrix(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3, f32 arg4);
+
+    // 0x59CB80 | ?OffScreenBegin@ltProjection@@QAEX_N@Z
+    void OffScreenBegin(bool arg1);
+
+    // 0x59CE10 | ?OffScreenEnd@ltProjection@@QAEXXZ
+    void OffScreenEnd();
+
+private:
+    // 0x6B4BCC | ?ShadowMap@ltProjection@@0PAVgfxTexture@@A
+    static inline extern_var(0x6B4BCC, class gfxTexture*, ShadowMap);
+
+    // 0x6B4BC8 | ?ShadowRes@ltProjection@@0HA
+    static inline extern_var(0x6B4BC8, i32, ShadowRes);
+
+    // 0x6B4BD0 | ?ShadowViewport@ltProjection@@0PAVgfxViewport@@A
+    static inline extern_var(0x6B4BD0, class gfxViewport*, ShadowViewport);
 };
+
+check_size(ltProjection, 0x0);

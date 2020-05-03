@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,9 @@
 */
 
 #pragma once
+
+#include "mmwidget/menu.h"
+#include "node/node.h"
 
 /*
     mmui:crash
@@ -50,141 +53,83 @@
     0x5B4410 | const CrashCourse::`vftable' | ??_7CrashCourse@@6B@
 */
 
-struct ccStatus : asNode
+class ccStatus : public asNode
 {
+    // const ccStatus::`vftable' @ 0x5B43DC
+
 public:
-    // ccStatus::`vftable' @ 0x5B43DC
-
     // 0x502EF0 | ??0ccStatus@@QAE@XZ
-    inline ccStatus()
-    {
-        stub<member_func_t<void, ccStatus>>(0x502EF0, this);
-    }
+    ccStatus();
 
-    // 0x502F80 | ?LoadBitmap@ccStatus@@QAEXPADHHH@Z
-    inline void LoadBitmap(char* arg1, int32_t arg2, int32_t arg3, int32_t arg4)
-    {
-        return stub<member_func_t<void, ccStatus, char*, int32_t, int32_t, int32_t>>(
-            0x502F80, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x503060 | ?SetStatus@ccStatus@@QAEXF@Z
-    inline void SetStatus(int16_t arg1)
-    {
-        return stub<member_func_t<void, ccStatus, int16_t>>(0x503060, this, arg1);
-    }
-
+    // 0x5040D0 | ??_GccStatus@@UAEPAXI@Z
     // 0x502F20 | ??1ccStatus@@UAE@XZ
-    inline ~ccStatus() override
-    {
-        stub<member_func_t<void, ccStatus>>(0x502F20, this);
-    }
+    ~ccStatus() override;
 
     // 0x503010 | ?Cull@ccStatus@@UAEXXZ
-    inline void Cull() override
-    {
-        return stub<member_func_t<void, ccStatus>>(0x503010, this);
-    }
+    void Cull() override;
+
+    // 0x502F80 | ?LoadBitmap@ccStatus@@QAEXPADHHH@Z
+    void LoadBitmap(char* arg1, i32 arg2, i32 arg3, i32 arg4);
+
+    // 0x503060 | ?SetStatus@ccStatus@@QAEXF@Z
+    void SetStatus(i16 arg1);
 
     // 0x502FF0 | ?Update@ccStatus@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, ccStatus>>(0x502FF0, this);
-    }
+    void Update() override;
 };
 
-struct CrashCourse : UIMenu
+check_size(ccStatus, 0x38);
+
+class CrashCourse : public UIMenu
 {
+    // const CrashCourse::`vftable' @ 0x5B4410
+
 public:
-    // CrashCourse::`vftable' @ 0x5B4410
-
     // 0x503070 | ??0CrashCourse@@QAE@H@Z
-    inline CrashCourse(int32_t arg1)
-    {
-        stub<member_func_t<void, CrashCourse, int32_t>>(0x503070, this, arg1);
-    }
+    CrashCourse(i32 arg1);
 
-    // 0x503790 | ?SetRaceGrade@CrashCourse@@QAEXHH@Z
-    inline void SetRaceGrade(int32_t arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, CrashCourse, int32_t, int32_t>>(0x503790, this, arg1, arg2);
-    }
-
-    // 0x503960 | ?GameCallback@CrashCourse@@QAEXXZ
-    inline void GameCallback()
-    {
-        return stub<member_func_t<void, CrashCourse>>(0x503960, this);
-    }
-
-    // 0x503980 | ?SetEnvironment@CrashCourse@@QAEXXZ
-    inline void SetEnvironment()
-    {
-        return stub<member_func_t<void, CrashCourse>>(0x503980, this);
-    }
-
-    // 0x503BD0 | ?SetRaceState@CrashCourse@@QAEXXZ
-    inline void SetRaceState()
-    {
-        return stub<member_func_t<void, CrashCourse>>(0x503BD0, this);
-    }
+    // 0x504100 | ??_GCrashCourse@@UAEPAXI@Z
+    // 0x503710 | ??1CrashCourse@@UAE@XZ
+    ~CrashCourse() override;
 
     // 0x503CF0 | ?ChangeLocalVals@CrashCourse@@QAEXXZ
-    inline void ChangeLocalVals()
-    {
-        return stub<member_func_t<void, CrashCourse>>(0x503CF0, this);
-    }
-
-    // 0x503F00 | ?FocusDescription@CrashCourse@@QAEXHH@Z
-    inline void FocusDescription(int32_t arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, CrashCourse, int32_t, int32_t>>(0x503F00, this, arg1, arg2);
-    }
-
-    // 0x503F10 | ?SetProgressMask@CrashCourse@@QAEXH@Z
-    inline void SetProgressMask(int32_t arg1)
-    {
-        return stub<member_func_t<void, CrashCourse, int32_t>>(0x503F10, this, arg1);
-    }
-
-    // 0x503F30 | ?SetBlitzMask@CrashCourse@@QAEXH@Z
-    inline void SetBlitzMask(int32_t arg1)
-    {
-        return stub<member_func_t<void, CrashCourse, int32_t>>(0x503F30, this, arg1);
-    }
-
-    // 0x503F50 | ?SetCheckpointMask@CrashCourse@@QAEXH@Z
-    inline void SetCheckpointMask(int32_t arg1)
-    {
-        return stub<member_func_t<void, CrashCourse, int32_t>>(0x503F50, this, arg1);
-    }
-
-    // 0x503F70 | ?IncRaceName@CrashCourse@@QAEXXZ
-    inline void IncRaceName()
-    {
-        return stub<member_func_t<void, CrashCourse>>(0x503F70, this);
-    }
+    void ChangeLocalVals();
 
     // 0x504010 | ?DecRaceName@CrashCourse@@QAEXXZ
-    inline void DecRaceName()
-    {
-        return stub<member_func_t<void, CrashCourse>>(0x504010, this);
-    }
+    void DecRaceName();
 
-    // 0x504080 | ?SetVehicleNext@CrashCourse@@QAEX_N@Z
-    inline void SetVehicleNext(bool arg1)
-    {
-        return stub<member_func_t<void, CrashCourse, bool>>(0x504080, this, arg1);
-    }
+    // 0x503F00 | ?FocusDescription@CrashCourse@@QAEXHH@Z
+    void FocusDescription(i32 arg1, i32 arg2);
 
-    // 0x503710 | ??1CrashCourse@@UAE@XZ
-    inline ~CrashCourse() override
-    {
-        stub<member_func_t<void, CrashCourse>>(0x503710, this);
-    }
+    // 0x503960 | ?GameCallback@CrashCourse@@QAEXXZ
+    void GameCallback();
+
+    // 0x503F70 | ?IncRaceName@CrashCourse@@QAEXXZ
+    void IncRaceName();
 
     // 0x5037C0 | ?PreSetup@CrashCourse@@UAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, CrashCourse>>(0x5037C0, this);
-    }
+    void PreSetup() override;
+
+    // 0x503F30 | ?SetBlitzMask@CrashCourse@@QAEXH@Z
+    void SetBlitzMask(i32 arg1);
+
+    // 0x503F50 | ?SetCheckpointMask@CrashCourse@@QAEXH@Z
+    void SetCheckpointMask(i32 arg1);
+
+    // 0x503980 | ?SetEnvironment@CrashCourse@@QAEXXZ
+    void SetEnvironment();
+
+    // 0x503F10 | ?SetProgressMask@CrashCourse@@QAEXH@Z
+    void SetProgressMask(i32 arg1);
+
+    // 0x503790 | ?SetRaceGrade@CrashCourse@@QAEXHH@Z
+    void SetRaceGrade(i32 arg1, i32 arg2);
+
+    // 0x503BD0 | ?SetRaceState@CrashCourse@@QAEXXZ
+    void SetRaceState();
+
+    // 0x504080 | ?SetVehicleNext@CrashCourse@@QAEX_N@Z
+    void SetVehicleNext(bool arg1);
 };
+
+check_size(CrashCourse, 0x850);

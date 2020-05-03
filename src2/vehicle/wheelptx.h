@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     vehicle:wheelptx
@@ -35,71 +37,52 @@
     public: virtual void * __thiscall vehWheelPtx::`vector deleting destructor'(unsigned int) | ??_EvehWheelPtx@@UAEPAXI@Z
     0x4D2160 | public: virtual void * __thiscall vehWheelPtx::`scalar deleting destructor'(unsigned int) | ??_GvehWheelPtx@@UAEPAXI@Z
     0x5B2D98 | const vehWheelPtx::`vftable' | ??_7vehWheelPtx@@6B@
-    public: static char * vehWheelPtx::TexName | ?TexName@vehWheelPtx@@2PADA
-    public: static char * * vehWheelPtx::PtxName | ?PtxName@vehWheelPtx@@2PAPADA
+    0x5CF604 | public: static char * vehWheelPtx::TexName | ?TexName@vehWheelPtx@@2PADA
+    0x5CF608 | public: static char * * vehWheelPtx::PtxName | ?PtxName@vehWheelPtx@@2PAPADA
     0x6AFFAC | public: static class asBirthRule * * vehWheelPtx::Rule | ?Rule@vehWheelPtx@@2PAPAVasBirthRule@@A
 */
 
-struct vehWheelPtx : asNode
+class vehWheelPtx : public asNode
 {
+    // const vehWheelPtx::`vftable' @ 0x5B2D98
+
 public:
-    // vehWheelPtx::`vftable' @ 0x5B2D98
-
     // 0x4D1C00 | ??0vehWheelPtx@@QAE@XZ
-    inline vehWheelPtx()
-    {
-        stub<member_func_t<void, vehWheelPtx>>(0x4D1C00, this);
-    }
+    vehWheelPtx();
 
-    // 0x4D1CC0 | ?ConstructClass@vehWheelPtx@@SAXPBD@Z
-    static inline void ConstructClass(char const* arg1)
-    {
-        return stub<cdecl_t<void, char const*>>(0x4D1CC0, arg1);
-    }
-
-    // 0x4D1D90 | ?DestroyClass@vehWheelPtx@@SAXXZ
-    static inline void DestroyClass()
-    {
-        return stub<cdecl_t<void>>(0x4D1D90);
-    }
-
-    // 0x4D1DD0 | ?Init@vehWheelPtx@@QAEXPAVvehCarSim@@@Z
-    inline void Init(class vehCarSim* arg1)
-    {
-        return stub<member_func_t<void, vehWheelPtx, class vehCarSim*>>(0x4D1DD0, this, arg1);
-    }
-
-    // 0x4D1E90 | ?UpdateWheel@vehWheelPtx@@QAEXPAVvehWheel@@@Z
-    inline void UpdateWheel(class vehWheel* arg1)
-    {
-        return stub<member_func_t<void, vehWheelPtx, class vehWheel*>>(0x4D1E90, this, arg1);
-    }
+    // 0x4D2160 | ??_GvehWheelPtx@@UAEPAXI@Z
+    // 0x4D1C60 | ??1vehWheelPtx@@UAE@XZ
+    ~vehWheelPtx() override;
 
     // 0x4D1EF0 | ?Blast@vehWheelPtx@@QAEXPAVvehWheel@@MHH@Z
-    inline void Blast(class vehWheel* arg1, float arg2, int32_t arg3, int32_t arg4)
-    {
-        return stub<member_func_t<void, vehWheelPtx, class vehWheel*, float, int32_t, int32_t>>(
-            0x4D1EF0, this, arg1, arg2, arg3, arg4);
-    }
+    void Blast(class vehWheel* arg1, f32 arg2, i32 arg3, i32 arg4);
 
-    // 0x6AFFAC | ?Rule@vehWheelPtx@@2PAPAVasBirthRule@@A
-    inline extern_var(0x6AFFAC, class asBirthRule**, Rule);
-
-    // 0x4D1C60 | ??1vehWheelPtx@@UAE@XZ
-    inline ~vehWheelPtx() override
-    {
-        stub<member_func_t<void, vehWheelPtx>>(0x4D1C60, this);
-    }
-
-    // 0x4D1E40 | ?Update@vehWheelPtx@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, vehWheelPtx>>(0x4D1E40, this);
-    }
+    // 0x4D1DD0 | ?Init@vehWheelPtx@@QAEXPAVvehCarSim@@@Z
+    void Init(class vehCarSim* arg1);
 
     // 0x4D1DC0 | ?Reset@vehWheelPtx@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, vehWheelPtx>>(0x4D1DC0, this);
-    }
+    void Reset() override;
+
+    // 0x4D1E40 | ?Update@vehWheelPtx@@UAEXXZ
+    void Update() override;
+
+    // 0x4D1E90 | ?UpdateWheel@vehWheelPtx@@QAEXPAVvehWheel@@@Z
+    void UpdateWheel(class vehWheel* arg1);
+
+    // 0x4D1CC0 | ?ConstructClass@vehWheelPtx@@SAXPBD@Z
+    static void ConstructClass(char const* arg1);
+
+    // 0x4D1D90 | ?DestroyClass@vehWheelPtx@@SAXXZ
+    static void DestroyClass();
+
+    // 0x5CF608 | ?PtxName@vehWheelPtx@@2PAPADA
+    static inline extern_var(0x5CF608, char**, PtxName);
+
+    // 0x6AFFAC | ?Rule@vehWheelPtx@@2PAPAVasBirthRule@@A
+    static inline extern_var(0x6AFFAC, class asBirthRule**, Rule);
+
+    // 0x5CF604 | ?TexName@vehWheelPtx@@2PADA
+    static inline extern_var(0x5CF604, char*, TexName);
 };
+
+check_size(vehWheelPtx, 0x78);

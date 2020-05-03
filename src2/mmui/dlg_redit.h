@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "pu_menu.h"
+
 /*
     mmui:dlg_redit
 
@@ -31,39 +33,26 @@
     0x5B3E88 | const Dialog_ReplayEdit::`vftable' | ??_7Dialog_ReplayEdit@@6B@
 */
 
-struct Dialog_ReplayEdit : PUMenuBase
+class Dialog_ReplayEdit : public PUMenuBase
 {
+    // const Dialog_ReplayEdit::`vftable' @ 0x5B3E88
+
 public:
-    // Dialog_ReplayEdit::`vftable' @ 0x5B3E88
-
     // 0x4FA050 | ??0Dialog_ReplayEdit@@QAE@HMMMMPAD@Z
-    inline Dialog_ReplayEdit(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
-    {
-        stub<member_func_t<void, Dialog_ReplayEdit, int32_t, float, float, float, float, char*>>(
-            0x4FA050, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
+    Dialog_ReplayEdit(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6);
 
-    // 0x4FA200 | ?ReplayDescCallback@Dialog_ReplayEdit@@QAEXXZ
-    inline void ReplayDescCallback()
-    {
-        return stub<member_func_t<void, Dialog_ReplayEdit>>(0x4FA200, this);
-    }
-
-    // 0x4FA210 | ?SetDesc@Dialog_ReplayEdit@@QAEXPAD@Z
-    inline void SetDesc(char* arg1)
-    {
-        return stub<member_func_t<void, Dialog_ReplayEdit, char*>>(0x4FA210, this, arg1);
-    }
-
+    // 0x4FA280 | ??_GDialog_ReplayEdit@@UAEPAXI@Z
     // 0x4FA1E0 | ??1Dialog_ReplayEdit@@UAE@XZ
-    inline ~Dialog_ReplayEdit() override
-    {
-        stub<member_func_t<void, Dialog_ReplayEdit>>(0x4FA1E0, this);
-    }
+    ~Dialog_ReplayEdit() override;
 
     // 0x4FA1F0 | ?PreSetup@Dialog_ReplayEdit@@UAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, Dialog_ReplayEdit>>(0x4FA1F0, this);
-    }
+    void PreSetup() override;
+
+    // 0x4FA200 | ?ReplayDescCallback@Dialog_ReplayEdit@@QAEXXZ
+    void ReplayDescCallback();
+
+    // 0x4FA210 | ?SetDesc@Dialog_ReplayEdit@@QAEXPAD@Z
+    void SetDesc(char* arg1);
 };
+
+check_size(Dialog_ReplayEdit, 0x0);

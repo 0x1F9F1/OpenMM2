@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "mmgame/singlestunt.h"
 
 /*
     mmcityinfo:playerdir
@@ -48,126 +50,70 @@
 
 struct mmPlayerDirectory : mmInfoBase
 {
+    // const mmPlayerDirectory::`vftable' @ 0x5B522C
+
 public:
-    // mmPlayerDirectory::`vftable' @ 0x5B522C
-
     // 0x526520 | ??0mmPlayerDirectory@@QAE@XZ
-    inline mmPlayerDirectory()
-    {
-        stub<member_func_t<void, mmPlayerDirectory>>(0x526520, this);
-    }
+    mmPlayerDirectory();
 
-    // 0x5265D0 | ?NewDirectory@mmPlayerDirectory@@QAEXH@Z
-    inline void NewDirectory(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmPlayerDirectory, int32_t>>(0x5265D0, this, arg1);
-    }
-
-    // 0x526610 | ?SetPlayer@mmPlayerDirectory@@QAEXHPAD0@Z
-    inline void SetPlayer(int32_t arg1, char* arg2, char* arg3)
-    {
-        return stub<member_func_t<void, mmPlayerDirectory, int32_t, char*, char*>>(0x526610, this, arg1, arg2, arg3);
-    }
-
-    // 0x526640 | ?SetLastPlayer@mmPlayerDirectory@@QAEXPAD@Z
-    inline void SetLastPlayer(char* arg1)
-    {
-        return stub<member_func_t<void, mmPlayerDirectory, char*>>(0x526640, this, arg1);
-    }
-
-    // 0x526690 | ?GetPlayer@mmPlayerDirectory@@QAEPADH@Z
-    inline char* GetPlayer(int32_t arg1)
-    {
-        return stub<member_func_t<char*, mmPlayerDirectory, int32_t>>(0x526690, this, arg1);
-    }
-
-    // 0x5266C0 | ?GetNumPlayers@mmPlayerDirectory@@QAEHXZ
-    inline int32_t GetNumPlayers()
-    {
-        return stub<member_func_t<int32_t, mmPlayerDirectory>>(0x5266C0, this);
-    }
-
-    // 0x5266D0 | ?GetLastPlayer@mmPlayerDirectory@@QAEPADXZ
-    inline char* GetLastPlayer()
-    {
-        return stub<member_func_t<char*, mmPlayerDirectory>>(0x5266D0, this);
-    }
+    // 0x526FB0 | ??_GmmPlayerDirectory@@UAEPAXI@Z
+    // 0x526560 | ??1mmPlayerDirectory@@UAE@XZ
+    ~mmPlayerDirectory() override;
 
     // 0x526700 | ?AddPlayer@mmPlayerDirectory@@QAEHPAD@Z
-    inline int32_t AddPlayer(char* arg1)
-    {
-        return stub<member_func_t<int32_t, mmPlayerDirectory, char*>>(0x526700, this, arg1);
-    }
-
-    // 0x526830 | ?CreatePlayer@mmPlayerDirectory@@AAEXPAD0@Z
-    inline void CreatePlayer(char* arg1, char* arg2)
-    {
-        return stub<member_func_t<void, mmPlayerDirectory, char*, char*>>(0x526830, this, arg1, arg2);
-    }
+    i32 AddPlayer(char* arg1);
 
     // 0x526930 | ?FindPlayer@mmPlayerDirectory@@QAEHPAD@Z
-    inline int32_t FindPlayer(char* arg1)
-    {
-        return stub<member_func_t<int32_t, mmPlayerDirectory, char*>>(0x526930, this, arg1);
-    }
+    i32 FindPlayer(char* arg1);
 
     // 0x5269A0 | ?GetFileName@mmPlayerDirectory@@QAEPADPAD@Z
-    inline char* GetFileName(char* arg1)
-    {
-        return stub<member_func_t<char*, mmPlayerDirectory, char*>>(0x5269A0, this, arg1);
-    }
-
-    // 0x526A30 | ?GetPlayerName@mmPlayerDirectory@@QAEPADPAD@Z
-    inline char* GetPlayerName(char* arg1)
-    {
-        return stub<member_func_t<char*, mmPlayerDirectory, char*>>(0x526A30, this, arg1);
-    }
+    char* GetFileName(char* arg1);
 
     // 0x526AC0 | ?GetFileName@mmPlayerDirectory@@QAEPADH@Z
-    inline char* GetFileName(int32_t arg1)
-    {
-        return stub<member_func_t<char*, mmPlayerDirectory, int32_t>>(0x526AC0, this, arg1);
-    }
+    char* GetFileName(i32 arg1);
 
-    // 0x526AF0 | ?MakeFileName@mmPlayerDirectory@@AAEPADXZ
-    inline char* MakeFileName()
-    {
-        return stub<member_func_t<char*, mmPlayerDirectory>>(0x526AF0, this);
-    }
+    // 0x5266D0 | ?GetLastPlayer@mmPlayerDirectory@@QAEPADXZ
+    char* GetLastPlayer();
 
-    // 0x526BB0 | ?RemovePlayer@mmPlayerDirectory@@QAEHPAD@Z
-    inline int32_t RemovePlayer(char* arg1)
-    {
-        return stub<member_func_t<int32_t, mmPlayerDirectory, char*>>(0x526BB0, this, arg1);
-    }
+    // 0x5266C0 | ?GetNumPlayers@mmPlayerDirectory@@QAEHXZ
+    i32 GetNumPlayers();
+
+    // 0x526690 | ?GetPlayer@mmPlayerDirectory@@QAEPADH@Z
+    char* GetPlayer(i32 arg1);
+
+    // 0x526A30 | ?GetPlayerName@mmPlayerDirectory@@QAEPADPAD@Z
+    char* GetPlayerName(char* arg1);
 
     // 0x526CA0 | ?Load@mmPlayerDirectory@@QAEHPAD@Z
-    inline int32_t Load(char* arg1)
-    {
-        return stub<member_func_t<int32_t, mmPlayerDirectory, char*>>(0x526CA0, this, arg1);
-    }
-
-    // 0x526CD0 | ?Save@mmPlayerDirectory@@QAEHPADH@Z
-    inline int32_t Save(char* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<int32_t, mmPlayerDirectory, char*, int32_t>>(0x526CD0, this, arg1, arg2);
-    }
-
-    // 0x526D70 | ?SaveBinary@mmPlayerDirectory@@QAEHPAD@Z
-    inline int32_t SaveBinary(char* arg1)
-    {
-        return stub<member_func_t<int32_t, mmPlayerDirectory, char*>>(0x526D70, this, arg1);
-    }
+    i32 Load(char* arg1);
 
     // 0x526E70 | ?LoadBinary@mmPlayerDirectory@@QAEHPAD@Z
-    inline int32_t LoadBinary(char* arg1)
-    {
-        return stub<member_func_t<int32_t, mmPlayerDirectory, char*>>(0x526E70, this, arg1);
-    }
+    i32 LoadBinary(char* arg1);
 
-    // 0x526560 | ??1mmPlayerDirectory@@UAE@XZ
-    inline ~mmPlayerDirectory() override
-    {
-        stub<member_func_t<void, mmPlayerDirectory>>(0x526560, this);
-    }
+    // 0x5265D0 | ?NewDirectory@mmPlayerDirectory@@QAEXH@Z
+    void NewDirectory(i32 arg1);
+
+    // 0x526BB0 | ?RemovePlayer@mmPlayerDirectory@@QAEHPAD@Z
+    i32 RemovePlayer(char* arg1);
+
+    // 0x526CD0 | ?Save@mmPlayerDirectory@@QAEHPADH@Z
+    i32 Save(char* arg1, i32 arg2);
+
+    // 0x526D70 | ?SaveBinary@mmPlayerDirectory@@QAEHPAD@Z
+    i32 SaveBinary(char* arg1);
+
+    // 0x526640 | ?SetLastPlayer@mmPlayerDirectory@@QAEXPAD@Z
+    void SetLastPlayer(char* arg1);
+
+    // 0x526610 | ?SetPlayer@mmPlayerDirectory@@QAEXHPAD0@Z
+    void SetPlayer(i32 arg1, char* arg2, char* arg3);
+
+private:
+    // 0x526830 | ?CreatePlayer@mmPlayerDirectory@@AAEXPAD0@Z
+    void CreatePlayer(char* arg1, char* arg2);
+
+    // 0x526AF0 | ?MakeFileName@mmPlayerDirectory@@AAEPADXZ
+    char* MakeFileName();
 };
+
+check_size(mmPlayerDirectory, 0x0);

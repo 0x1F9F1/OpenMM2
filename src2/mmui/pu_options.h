@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "pu_menu.h"
+
 /*
     mmui:pu_options
 
@@ -28,21 +30,17 @@
     0x5B49A8 | const PUOptions::`vftable' | ??_7PUOptions@@6B@
 */
 
-struct PUOptions : PUMenuBase
+class PUOptions : public PUMenuBase
 {
+    // const PUOptions::`vftable' @ 0x5B49A8
+
 public:
-    // PUOptions::`vftable' @ 0x5B49A8
-
     // 0x50C440 | ??0PUOptions@@QAE@HMMMM@Z
-    inline PUOptions(int32_t arg1, float arg2, float arg3, float arg4, float arg5)
-    {
-        stub<member_func_t<void, PUOptions, int32_t, float, float, float, float>>(
-            0x50C440, this, arg1, arg2, arg3, arg4, arg5);
-    }
+    PUOptions(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5);
 
+    // 0x50C5F0 | ??_GPUOptions@@UAEPAXI@Z
     // 0x50C5E0 | ??1PUOptions@@UAE@XZ
-    inline ~PUOptions() override
-    {
-        stub<member_func_t<void, PUOptions>>(0x50C5E0, this);
-    }
+    ~PUOptions() override;
 };
+
+check_size(PUOptions, 0xBC);

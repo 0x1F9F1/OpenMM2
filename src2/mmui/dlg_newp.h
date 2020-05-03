@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "pu_menu.h"
+
 /*
     mmui:dlg_newp
 
@@ -30,33 +32,23 @@
     0x5B40DC | const Dialog_NewPlayer::`vftable' | ??_7Dialog_NewPlayer@@6B@
 */
 
-struct Dialog_NewPlayer : PUMenuBase
+class Dialog_NewPlayer : public PUMenuBase
 {
-public:
-    // Dialog_NewPlayer::`vftable' @ 0x5B40DC
+    // const Dialog_NewPlayer::`vftable' @ 0x5B40DC
 
+public:
     // 0x4FD5B0 | ??0Dialog_NewPlayer@@QAE@HMMMMPAD@Z
-    inline Dialog_NewPlayer(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
-    {
-        stub<member_func_t<void, Dialog_NewPlayer, int32_t, float, float, float, float, char*>>(
-            0x4FD5B0, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
+    Dialog_NewPlayer(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6);
+
+    // 0x4FD960 | ??_GDialog_NewPlayer@@UAEPAXI@Z
+    // 0x4FD910 | ??1Dialog_NewPlayer@@UAE@XZ
+    ~Dialog_NewPlayer() override;
 
     // 0x4FD920 | ?EnterNewPlayer@Dialog_NewPlayer@@QAEXXZ
-    inline void EnterNewPlayer()
-    {
-        return stub<member_func_t<void, Dialog_NewPlayer>>(0x4FD920, this);
-    }
-
-    // 0x4FD910 | ??1Dialog_NewPlayer@@UAE@XZ
-    inline ~Dialog_NewPlayer() override
-    {
-        stub<member_func_t<void, Dialog_NewPlayer>>(0x4FD910, this);
-    }
+    void EnterNewPlayer();
 
     // 0x4FD930 | ?PreSetup@Dialog_NewPlayer@@UAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, Dialog_NewPlayer>>(0x4FD930, this);
-    }
+    void PreSetup() override;
 };
+
+check_size(Dialog_NewPlayer, 0x0);

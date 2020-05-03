@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "pu_menu.h"
+
 /*
     mmui:pu_chat
 
@@ -30,33 +32,23 @@
     0x5B48D0 | const PUChat::`vftable' | ??_7PUChat@@6B@
 */
 
-struct PUChat : PUMenuBase
+class PUChat : public PUMenuBase
 {
+    // const PUChat::`vftable' @ 0x5B48D0
+
 public:
-    // PUChat::`vftable' @ 0x5B48D0
-
     // 0x50BB20 | ??0PUChat@@QAE@HMMMMPAD@Z
-    inline PUChat(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
-    {
-        stub<member_func_t<void, PUChat, int32_t, float, float, float, float, char*>>(
-            0x50BB20, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
+    PUChat(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6);
 
-    // 0x50BC30 | ?ClearChat@PUChat@@QAEXXZ
-    inline void ClearChat()
-    {
-        return stub<member_func_t<void, PUChat>>(0x50BC30, this);
-    }
+    // 0x50BCD0 | ??_GPUChat@@UAEPAXI@Z
+    // 0x50BC20 | ??1PUChat@@UAE@XZ
+    ~PUChat() override;
 
     // 0x50BC70 | ?ChatEntry@PUChat@@QAEXXZ
-    inline void ChatEntry()
-    {
-        return stub<member_func_t<void, PUChat>>(0x50BC70, this);
-    }
+    void ChatEntry();
 
-    // 0x50BC20 | ??1PUChat@@UAE@XZ
-    inline ~PUChat() override
-    {
-        stub<member_func_t<void, PUChat>>(0x50BC20, this);
-    }
+    // 0x50BC30 | ?ClearChat@PUChat@@QAEXXZ
+    void ClearChat();
 };
+
+check_size(PUChat, 0x11C);

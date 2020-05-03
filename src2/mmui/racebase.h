@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "mmwidget/menu.h"
 
 /*
     mmui:racebase
@@ -54,179 +56,101 @@
     0x6B0F30 | public: static class mmRaceData RaceMenuBase::BlitzData | ?BlitzData@RaceMenuBase@@2VmmRaceData@@A
 */
 
-struct RaceMenuBase : UIMenu
+class RaceMenuBase : public UIMenu
 {
+    // const RaceMenuBase::`vftable' @ 0x5B4630
+
 public:
-    // RaceMenuBase::`vftable' @ 0x5B4630
-
     // 0x506BD0 | ??0RaceMenuBase@@QAE@H@Z
-    inline RaceMenuBase(int32_t arg1)
-    {
-        stub<member_func_t<void, RaceMenuBase, int32_t>>(0x506BD0, this, arg1);
-    }
+    RaceMenuBase(i32 arg1);
 
-    // 0x506CC0 | ?Init@RaceMenuBase@@QAEXH@Z
-    inline void Init(int32_t arg1)
-    {
-        return stub<member_func_t<void, RaceMenuBase, int32_t>>(0x506CC0, this, arg1);
-    }
-
-    // 0x507DF0 | ?FocusDescription@RaceMenuBase@@QAEXHH@Z
-    inline void FocusDescription(int32_t arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, RaceMenuBase, int32_t, int32_t>>(0x507DF0, this, arg1, arg2);
-    }
-
-    // 0x507E40 | ?WidgetOnOff@RaceMenuBase@@QAEXHPAVuiWidget@@@Z
-    inline void WidgetOnOff(int32_t arg1, class uiWidget* arg2)
-    {
-        return stub<member_func_t<void, RaceMenuBase, int32_t, class uiWidget*>>(0x507E40, this, arg1, arg2);
-    }
-
-    // 0x507EB0 | ?SetRW@RaceMenuBase@@QAEXXZ
-    inline void SetRW()
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x507EB0, this);
-    }
-
-    // 0x5082C0 | ?CheatCallback@RaceMenuBase@@QAEXXZ
-    inline void CheatCallback()
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x5082C0, this);
-    }
-
-    // 0x5082D0 | ?SyncRaceState@RaceMenuBase@@QAEXXZ
-    inline void SyncRaceState()
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x5082D0, this);
-    }
-
-    // 0x508350 | ?CityChange@RaceMenuBase@@QAEXXZ
-    inline void CityChange()
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x508350, this);
-    }
-
-    // 0x5084C0 | ?AnotherCityChangeCB@RaceMenuBase@@QAEXXZ
-    inline void AnotherCityChangeCB()
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x5084C0, this);
-    }
-
-    // 0x508540 | ?GameCallback@RaceMenuBase@@QAEXXZ
-    inline void GameCallback()
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x508540, this);
-    }
-
-    // 0x5085C0 | ?LapsCallback@RaceMenuBase@@QAEXXZ
-    inline void LapsCallback()
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x5085C0, this);
-    }
+    // 0x508F90 | ??_GRaceMenuBase@@UAEPAXI@Z
+    // 0x507D30 | ??1RaceMenuBase@@UAE@XZ
+    ~RaceMenuBase() override;
 
     // 0x5085D0 | ?AICallback@RaceMenuBase@@QAEXXZ
-    inline void AICallback()
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x5085D0, this);
-    }
+    void AICallback();
+
+    // 0x5084C0 | ?AnotherCityChangeCB@RaceMenuBase@@QAEXXZ
+    void AnotherCityChangeCB();
 
     // 0x508620 | ?ChangeLocalVals@RaceMenuBase@@QAEXXZ
-    inline void ChangeLocalVals()
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x508620, this);
-    }
+    void ChangeLocalVals();
 
-    // 0x5088C0 | ?SetStateRace@RaceMenuBase@@QAEXXZ
-    inline void SetStateRace()
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x5088C0, this);
-    }
+    // 0x5082C0 | ?CheatCallback@RaceMenuBase@@QAEXXZ
+    void CheatCallback();
 
-    // 0x508C90 | ?LoadRaceMap@RaceMenuBase@@QAEXXZ
-    inline void LoadRaceMap()
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x508C90, this);
-    }
-
-    // 0x508D20 | ?DecRaceName@RaceMenuBase@@QAEXXZ
-    inline void DecRaceName()
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x508D20, this);
-    }
-
-    // 0x508DD0 | ?IncRaceName@RaceMenuBase@@QAEXXZ
-    inline void IncRaceName()
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x508DD0, this);
-    }
-
-    // 0x508E80 | ?IncLocale@RaceMenuBase@@QAEXXZ
-    inline void IncLocale()
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x508E80, this);
-    }
+    // 0x508350 | ?CityChange@RaceMenuBase@@QAEXXZ
+    void CityChange();
 
     // 0x508EB0 | ?DecLocale@RaceMenuBase@@QAEXXZ
-    inline void DecLocale()
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x508EB0, this);
-    }
+    void DecLocale();
 
-    // 0x508ED0 | ?IncTime@RaceMenuBase@@QAEXXZ
-    inline void IncTime()
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x508ED0, this);
-    }
+    // 0x508D20 | ?DecRaceName@RaceMenuBase@@QAEXXZ
+    void DecRaceName();
 
     // 0x508F00 | ?DecTime@RaceMenuBase@@QAEXXZ
-    inline void DecTime()
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x508F00, this);
-    }
-
-    // 0x508F30 | ?IncWeather@RaceMenuBase@@QAEXXZ
-    inline void IncWeather()
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x508F30, this);
-    }
+    void DecTime();
 
     // 0x508F60 | ?DecWeather@RaceMenuBase@@QAEXXZ
-    inline void DecWeather()
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x508F60, this);
-    }
+    void DecWeather();
+
+    // 0x507DF0 | ?FocusDescription@RaceMenuBase@@QAEXHH@Z
+    void FocusDescription(i32 arg1, i32 arg2);
+
+    // 0x508540 | ?GameCallback@RaceMenuBase@@QAEXXZ
+    void GameCallback();
+
+    // 0x508E80 | ?IncLocale@RaceMenuBase@@QAEXXZ
+    void IncLocale();
+
+    // 0x508DD0 | ?IncRaceName@RaceMenuBase@@QAEXXZ
+    void IncRaceName();
+
+    // 0x508ED0 | ?IncTime@RaceMenuBase@@QAEXXZ
+    void IncTime();
+
+    // 0x508F30 | ?IncWeather@RaceMenuBase@@QAEXXZ
+    void IncWeather();
+
+    // 0x506CC0 | ?Init@RaceMenuBase@@QAEXH@Z
+    void Init(i32 arg1);
+
+    // 0x5085C0 | ?LapsCallback@RaceMenuBase@@QAEXXZ
+    void LapsCallback();
+
+    // 0x508C90 | ?LoadRaceMap@RaceMenuBase@@QAEXXZ
+    void LoadRaceMap();
+
+    // 0x507DC0 | ?PreSetup@RaceMenuBase@@UAEXXZ
+    void PreSetup() override;
+
+    // 0x507EB0 | ?SetRW@RaceMenuBase@@QAEXXZ
+    void SetRW();
+
+    // 0x5088C0 | ?SetStateRace@RaceMenuBase@@QAEXXZ
+    void SetStateRace();
+
+    // 0x5082D0 | ?SyncRaceState@RaceMenuBase@@QAEXXZ
+    void SyncRaceState();
+
+    // 0x507E40 | ?WidgetOnOff@RaceMenuBase@@QAEXHPAVuiWidget@@@Z
+    void WidgetOnOff(i32 arg1, class uiWidget* arg2);
+
+    // 0x505450 | ?SetCRWidgets@RaceMenuBase@@UAEXH@Z
+    virtual void SetCRWidgets(i32 arg1);
+
+    // 0x505460 | ?InitCRWidgets@RaceMenuBase@@UAEXXZ
+    virtual void InitCRWidgets();
+
+    // 0x6B0F30 | ?BlitzData@RaceMenuBase@@2VmmRaceData@@A
+    static inline extern_var(0x6B0F30, class mmRaceData, BlitzData);
 
     // 0x6B05C0 | ?CircuitData@RaceMenuBase@@2VmmRaceData@@A
     static inline extern_var(0x6B05C0, class mmRaceData, CircuitData);
 
     // 0x6B0A78 | ?RaceData@RaceMenuBase@@2VmmRaceData@@A
     static inline extern_var(0x6B0A78, class mmRaceData, RaceData);
-
-    // 0x6B0F30 | ?BlitzData@RaceMenuBase@@2VmmRaceData@@A
-    static inline extern_var(0x6B0F30, class mmRaceData, BlitzData);
-
-    // 0x507D30 | ??1RaceMenuBase@@UAE@XZ
-    inline ~RaceMenuBase() override
-    {
-        stub<member_func_t<void, RaceMenuBase>>(0x507D30, this);
-    }
-
-    // 0x507DC0 | ?PreSetup@RaceMenuBase@@UAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x507DC0, this);
-    }
-
-    // 0x505450 | ?SetCRWidgets@RaceMenuBase@@UAEXH@Z
-    virtual inline void SetCRWidgets(int32_t arg1)
-    {
-        return stub<member_func_t<void, RaceMenuBase, int32_t>>(0x505450, this, arg1);
-    }
-
-    // 0x505460 | ?InitCRWidgets@RaceMenuBase@@UAEXXZ
-    virtual inline void InitCRWidgets()
-    {
-        return stub<member_func_t<void, RaceMenuBase>>(0x505460, this);
-    }
 };
+
+check_size(RaceMenuBase, 0x0);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,10 @@
 */
 
 #pragma once
+
+#include "level/inst.h"
+#include "mmgame/mirror.h"
+#include "node/node.h"
 
 /*
     vehicle:trailer
@@ -66,125 +70,112 @@
     public: static int vehTrailer::sm_MaxSamples | ?sm_MaxSamples@vehTrailer@@2HA
 */
 
-struct vehTrailer : dgPhysEntity
+struct vehTrailer
+    : dgPhysEntity
+    , asNode /* Warning: Unordered Multiple Inheritance */
 {
+    // const vehTrailer::`vftable'{for `asNode'} @ 0x5B2F28
+    // const vehTrailer::`vftable'{for `dgPhysEntity'} @ 0x5B2F5C
+
 public:
     // 0x4D6F40 | ??0vehTrailer@@QAE@XZ
-    inline vehTrailer()
-    {
-        stub<member_func_t<void, vehTrailer>>(0x4D6F40, this);
-    }
+    vehTrailer();
 
-    // 0x4D72F0 | ?Init@vehTrailer@@QAEXPBDABVVector3@@PAVvehCarSim@@H@Z
-    inline void Init(char const* arg1, class Vector3 const& arg2, class vehCarSim* arg3, int32_t arg4)
-    {
-        return stub<member_func_t<void, vehTrailer, char const*, class Vector3 const&, class vehCarSim*, int32_t>>(
-            0x4D72F0, this, arg1, arg2, arg3, arg4);
-    }
+    // 0x4D84B0 | ??_EvehTrailer@@UAEPAXI@Z
+    // 0x4D84F0 | ??_EvehTrailer@@WLE@AEPAXI@Z
+    // 0x4D71A0 | ??1vehTrailer@@UAE@XZ
+    ~vehTrailer() override;
 
     // 0x4D7980 | ?BottomedOut@vehTrailer@@QAEHXZ
-    inline int32_t BottomedOut()
-    {
-        return stub<member_func_t<int32_t, vehTrailer>>(0x4D7980, this);
-    }
+    i32 BottomedOut();
+
+    // 0x4D7CB0 | ?FileIO@vehTrailer@@UAEXAAVdatParser@@@Z
+    void FileIO(class datParser& arg1) override;
+
+    // 0x4D8510 | ?GetClassName@vehTrailer@@UAEPADXZ
+    char* GetClassName() override;
+
+    // 0x4D72E0 | ?GetDirName@vehTrailer@@UAEPBDXZ
+    char const* GetDirName() override;
+
+    // 0x4D8520 | ?GetICS@vehTrailer@@UAEPAVphInertialCS@@XZ
+    class phInertialCS* GetICS() override;
+
+    // 0x4D7860 | ?GetInst@vehTrailer@@UAEPAVlvlInstance@@XZ
+    class lvlInstance* GetInst() override;
+
+    // 0x4D72F0 | ?Init@vehTrailer@@QAEXPBDABVVector3@@PAVvehCarSim@@H@Z
+    void Init(char const* arg1, class Vector3 const& arg2, class vehCarSim* arg3, i32 arg4);
+
+    // 0x4D7DC0 | ?Load@vehTrailer@@UAE_NXZ
+    bool Load() override;
+
+    // 0x4D7C40 | ?PostUpdate@vehTrailer@@UAEXXZ
+    void PostUpdate() override;
+
+    // 0x4D7870 | ?RequiresTerrainCollision@vehTrailer@@UAE_NXZ
+    bool RequiresTerrainCollision() override;
+
+    // 0x4D79C0 | ?Reset@vehTrailer@@UAEXXZ
+    void Reset() override;
+
+    // 0x4D7D90 | ?Save@vehTrailer@@UAE_NXZ
+    bool Save() override;
 
     // 0x4D7C50 | ?SetCarHitchOffset@vehTrailer@@QAEXXZ
-    inline void SetCarHitchOffset()
-    {
-        return stub<member_func_t<void, vehTrailer>>(0x4D7C50, this);
-    }
+    void SetCarHitchOffset();
 
     // 0x4D7C80 | ?SetTrailerHitchOffset@vehTrailer@@QAEXXZ
-    inline void SetTrailerHitchOffset()
-    {
-        return stub<member_func_t<void, vehTrailer>>(0x4D7C80, this);
-    }
+    void SetTrailerHitchOffset();
 
-    // 0x4D84F0 | ??_EvehTrailer@@WLE@AEPAXI@Z
-    // Skipped (scalar/vector destructor)
+    // 0x4D7B00 | ?Update@vehTrailer@@UAEXXZ
+    void Update() override;
 
-    // 0x4D8500 | ?Update@vehTrailer@@WLE@AEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, vehTrailer>>(0x4D8500, this);
-    }
+    // 0x4D8500 | ?Update@vehTrailer@@WLE@AEXXZ (Skipped: thunk)
 };
 
-struct vehTrailerInstance : lvlInstance
+check_size(vehTrailer, 0x1038);
+
+class vehTrailerInstance : public lvlInstance
 {
+    // const vehTrailerInstance::`vftable' @ 0x5B2F84
+
 public:
-    // vehTrailerInstance::`vftable' @ 0x5B2F84
-
-    // 0x4D7DF0 | ?Init@vehTrailerInstance@@QAEXPBDABVVector3@@H@Z
-    inline void Init(char const* arg1, class Vector3 const& arg2, int32_t arg3)
-    {
-        return stub<member_func_t<void, vehTrailerInstance, char const*, class Vector3 const&, int32_t>>(
-            0x4D7DF0, this, arg1, arg2, arg3);
-    }
-
-    // 0x4D8420 | ?GetTrailerHitch@vehTrailerInstance@@QAE_NPAVVector3@@@Z
-    inline bool GetTrailerHitch(class Vector3* arg1)
-    {
-        return stub<member_func_t<bool, vehTrailerInstance, class Vector3*>>(0x4D8420, this, arg1);
-    }
-
-    // 0x4D7810 | ?GetPosition@vehTrailerInstance@@UAEABVVector3@@XZ
-    inline class Vector3 const& GetPosition() override
-    {
-        return stub<member_func_t<class Vector3 const&, vehTrailerInstance>>(0x4D7810, this);
-    }
-
-    // 0x4D77F0 | ?GetMatrix@vehTrailerInstance@@UAEABVMatrix34@@AAV2@@Z
-    inline class Matrix34 const& GetMatrix(class Matrix34& arg1) override
-    {
-        return stub<member_func_t<class Matrix34 const&, vehTrailerInstance, class Matrix34&>>(0x4D77F0, this, arg1);
-    }
-
-    // 0x4D77D0 | ?SetMatrix@vehTrailerInstance@@UAEXABVMatrix34@@@Z
-    inline void SetMatrix(class Matrix34 const& arg1) override
-    {
-        return stub<member_func_t<void, vehTrailerInstance, class Matrix34 const&>>(0x4D77D0, this, arg1);
-    }
-
-    // 0x4D7820 | ?GetEntity@vehTrailerInstance@@UAEPAVdgPhysEntity@@XZ
-    inline class dgPhysEntity* GetEntity() override
-    {
-        return stub<member_func_t<class dgPhysEntity*, vehTrailerInstance>>(0x4D7820, this);
-    }
-
     // 0x4D7830 | ?AttachEntity@vehTrailerInstance@@UAEPAVdgPhysEntity@@XZ
-    inline class dgPhysEntity* AttachEntity() override
-    {
-        return stub<member_func_t<class dgPhysEntity*, vehTrailerInstance>>(0x4D7830, this);
-    }
-
-    // 0x4D7840 | ?GetVelocity@vehTrailerInstance@@UAEABVVector3@@XZ
-    inline class Vector3 const& GetVelocity() override
-    {
-        return stub<member_func_t<class Vector3 const&, vehTrailerInstance>>(0x4D7840, this);
-    }
+    class dgPhysEntity* AttachEntity() override;
 
     // 0x4D7F20 | ?Draw@vehTrailerInstance@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
-    {
-        return stub<member_func_t<void, vehTrailerInstance, int32_t>>(0x4D7F20, this, arg1);
-    }
+    void Draw(i32 arg1) override;
 
     // 0x4D81F0 | ?DrawShadow@vehTrailerInstance@@UAEXXZ
-    inline void DrawShadow() override
-    {
-        return stub<member_func_t<void, vehTrailerInstance>>(0x4D81F0, this);
-    }
+    void DrawShadow() override;
 
     // 0x4D8320 | ?DrawShadowMap@vehTrailerInstance@@UAEXXZ
-    inline void DrawShadowMap() override
-    {
-        return stub<member_func_t<void, vehTrailerInstance>>(0x4D8320, this);
-    }
+    void DrawShadowMap() override;
+
+    // 0x4D7820 | ?GetEntity@vehTrailerInstance@@UAEPAVdgPhysEntity@@XZ
+    class dgPhysEntity* GetEntity() override;
+
+    // 0x4D77F0 | ?GetMatrix@vehTrailerInstance@@UAEABVMatrix34@@AAV2@@Z
+    class Matrix34 const& GetMatrix(class Matrix34& arg1) override;
+
+    // 0x4D7810 | ?GetPosition@vehTrailerInstance@@UAEABVVector3@@XZ
+    class Vector3 const& GetPosition() override;
+
+    // 0x4D8420 | ?GetTrailerHitch@vehTrailerInstance@@QAE_NPAVVector3@@@Z
+    bool GetTrailerHitch(class Vector3* arg1);
+
+    // 0x4D7840 | ?GetVelocity@vehTrailerInstance@@UAEABVVector3@@XZ
+    class Vector3 const& GetVelocity() override;
+
+    // 0x4D7DF0 | ?Init@vehTrailerInstance@@QAEXPBDABVVector3@@H@Z
+    void Init(char const* arg1, class Vector3 const& arg2, i32 arg3);
+
+    // 0x4D77D0 | ?SetMatrix@vehTrailerInstance@@UAEXABVMatrix34@@@Z
+    void SetMatrix(class Matrix34 const& arg1) override;
 
     // 0x4D7850 | ?SizeOf@vehTrailerInstance@@UAEIXZ
-    inline uint32_t SizeOf() override
-    {
-        return stub<member_func_t<uint32_t, vehTrailerInstance>>(0x4D7850, this);
-    }
+    u32 SizeOf() override;
 };
+
+check_size(vehTrailerInstance, 0x0);

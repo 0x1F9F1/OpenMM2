@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,31 @@
 */
 
 #include "wheelcheap.h"
+
+vehWheelCheap::vehWheelCheap()
+{
+    unimplemented();
+}
+
+vehWheelCheap::~vehWheelCheap()
+{
+    unimplemented();
+}
+
+void vehWheelCheap::Init(class Vector3* arg1, class aiVehicleData* arg2, class phInertialCS* arg3)
+{
+    return stub<thiscall_t<void, vehWheelCheap*, class Vector3*, class aiVehicleData*, class phInertialCS*>>(
+        0x59D890, this, arg1, arg2, arg3);
+}
+
+void vehWheelCheap::Reset()
+{
+    return stub<thiscall_t<void, vehWheelCheap*>>(0x59D860, this);
+}
+
+void vehWheelCheap::Update()
+{
+    return stub<thiscall_t<void, vehWheelCheap*>>(0x59D970, this);
+}
+
+define_dummy_symbol(vehicle_wheelcheap);

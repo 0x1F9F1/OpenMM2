@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -38,111 +38,66 @@
     0x514EA0 | public: void __thiscall AudCreatureAvoid::UpdateEcho(void) | ?UpdateEcho@AudCreatureAvoid@@QAEXXZ
     0x514ED0 | public: void __thiscall AudCreatureAvoid::Update(float) | ?Update@AudCreatureAvoid@@QAEXM@Z
     0x514F50 | public: bool __thiscall AudCreatureAvoid::IsEligible(void) | ?IsEligible@AudCreatureAvoid@@QAE_NXZ
-    private: static int AudCreatureAvoid::s_iPrevPlayIndex | ?s_iPrevPlayIndex@AudCreatureAvoid@@0HA
+    0x6B1578 | private: static int AudCreatureAvoid::s_iPrevPlayIndex | ?s_iPrevPlayIndex@AudCreatureAvoid@@0HA
 */
 
 class AudCreatureAvoid
 {
 public:
     // 0x514810 | ??0AudCreatureAvoid@@QAE@XZ
-    inline AudCreatureAvoid()
-    {
-        stub<member_func_t<void, AudCreatureAvoid>>(0x514810, this);
-    }
+    AudCreatureAvoid();
 
     // 0x514850 | ??0AudCreatureAvoid@@QAE@PAV0@@Z
-    inline AudCreatureAvoid(class AudCreatureAvoid* arg1)
-    {
-        stub<member_func_t<void, AudCreatureAvoid, class AudCreatureAvoid*>>(0x514850, this, arg1);
-    }
+    AudCreatureAvoid(class AudCreatureAvoid* arg1);
 
     // 0x514960 | ??1AudCreatureAvoid@@QAE@XZ
-    inline ~AudCreatureAvoid()
-    {
-        stub<member_func_t<void, AudCreatureAvoid>>(0x514960, this);
-    }
-
-    // 0x5149C0 | ?ParseCSVBuffer@AudCreatureAvoid@@QAEHPAVStream@@@Z
-    inline int32_t ParseCSVBuffer(class Stream* arg1)
-    {
-        return stub<member_func_t<int32_t, AudCreatureAvoid, class Stream*>>(0x5149C0, this, arg1);
-    }
+    ~AudCreatureAvoid();
 
     // 0x514BF0 | ?AssignSounds@AudCreatureAvoid@@QAEXH@Z
-    inline void AssignSounds(int32_t arg1)
-    {
-        return stub<member_func_t<void, AudCreatureAvoid, int32_t>>(0x514BF0, this, arg1);
-    }
-
-    // 0x514C40 | ?UnAssignSounds@AudCreatureAvoid@@QAEXXZ
-    inline void UnAssignSounds()
-    {
-        return stub<member_func_t<void, AudCreatureAvoid>>(0x514C40, this);
-    }
-
-    // 0x514C70 | ?InSpeedRange@AudCreatureAvoid@@AAE_NM@Z
-    inline bool InSpeedRange(float arg1)
-    {
-        return stub<member_func_t<bool, AudCreatureAvoid, float>>(0x514C70, this, arg1);
-    }
-
-    // 0x514CA0 | ?SetAud3DObjectPtr@AudCreatureAvoid@@QAEXPAVAud3DObject@@@Z
-    inline void SetAud3DObjectPtr(class Aud3DObject* arg1)
-    {
-        return stub<member_func_t<void, AudCreatureAvoid, class Aud3DObject*>>(0x514CA0, this, arg1);
-    }
-
-    // 0x514CB0 | ?QueuePlay@AudCreatureAvoid@@QAEXXZ
-    inline void QueuePlay()
-    {
-        return stub<member_func_t<void, AudCreatureAvoid>>(0x514CB0, this);
-    }
-
-    // 0x514D10 | ?SamplePlaying@AudCreatureAvoid@@QAE_NXZ
-    inline bool SamplePlaying()
-    {
-        return stub<member_func_t<bool, AudCreatureAvoid>>(0x514D10, this);
-    }
-
-    // 0x514D30 | ?Play@AudCreatureAvoid@@AAEXXZ
-    inline void Play()
-    {
-        return stub<member_func_t<void, AudCreatureAvoid>>(0x514D30, this);
-    }
-
-    // 0x514DA0 | ?UpdateAttenuation@AudCreatureAvoid@@QAEXMM@Z
-    inline void UpdateAttenuation(float arg1, float arg2)
-    {
-        return stub<member_func_t<void, AudCreatureAvoid, float, float>>(0x514DA0, this, arg1, arg2);
-    }
-
-    // 0x514E10 | ?EchoOn@AudCreatureAvoid@@QAEXM@Z
-    inline void EchoOn(float arg1)
-    {
-        return stub<member_func_t<void, AudCreatureAvoid, float>>(0x514E10, this, arg1);
-    }
+    void AssignSounds(i32 arg1);
 
     // 0x514E70 | ?EchoOff@AudCreatureAvoid@@QAEXXZ
-    inline void EchoOff()
-    {
-        return stub<member_func_t<void, AudCreatureAvoid>>(0x514E70, this);
-    }
+    void EchoOff();
 
-    // 0x514EA0 | ?UpdateEcho@AudCreatureAvoid@@QAEXXZ
-    inline void UpdateEcho()
-    {
-        return stub<member_func_t<void, AudCreatureAvoid>>(0x514EA0, this);
-    }
-
-    // 0x514ED0 | ?Update@AudCreatureAvoid@@QAEXM@Z
-    inline void Update(float arg1)
-    {
-        return stub<member_func_t<void, AudCreatureAvoid, float>>(0x514ED0, this, arg1);
-    }
+    // 0x514E10 | ?EchoOn@AudCreatureAvoid@@QAEXM@Z
+    void EchoOn(f32 arg1);
 
     // 0x514F50 | ?IsEligible@AudCreatureAvoid@@QAE_NXZ
-    inline bool IsEligible()
-    {
-        return stub<member_func_t<bool, AudCreatureAvoid>>(0x514F50, this);
-    }
+    bool IsEligible();
+
+    // 0x5149C0 | ?ParseCSVBuffer@AudCreatureAvoid@@QAEHPAVStream@@@Z
+    i32 ParseCSVBuffer(class Stream* arg1);
+
+    // 0x514CB0 | ?QueuePlay@AudCreatureAvoid@@QAEXXZ
+    void QueuePlay();
+
+    // 0x514D10 | ?SamplePlaying@AudCreatureAvoid@@QAE_NXZ
+    bool SamplePlaying();
+
+    // 0x514CA0 | ?SetAud3DObjectPtr@AudCreatureAvoid@@QAEXPAVAud3DObject@@@Z
+    void SetAud3DObjectPtr(class Aud3DObject* arg1);
+
+    // 0x514C40 | ?UnAssignSounds@AudCreatureAvoid@@QAEXXZ
+    void UnAssignSounds();
+
+    // 0x514ED0 | ?Update@AudCreatureAvoid@@QAEXM@Z
+    void Update(f32 arg1);
+
+    // 0x514DA0 | ?UpdateAttenuation@AudCreatureAvoid@@QAEXMM@Z
+    void UpdateAttenuation(f32 arg1, f32 arg2);
+
+    // 0x514EA0 | ?UpdateEcho@AudCreatureAvoid@@QAEXXZ
+    void UpdateEcho();
+
+private:
+    // 0x514C70 | ?InSpeedRange@AudCreatureAvoid@@AAE_NM@Z
+    bool InSpeedRange(f32 arg1);
+
+    // 0x514D30 | ?Play@AudCreatureAvoid@@AAEXXZ
+    void Play();
+
+    // 0x6B1578 | ?s_iPrevPlayIndex@AudCreatureAvoid@@0HA
+    static inline extern_var(0x6B1578, i32, s_iPrevPlayIndex);
 };
+
+check_size(AudCreatureAvoid, 0x3C);

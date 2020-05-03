@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "gamemulti.h"
 
 /*
     mmgame:multicr
@@ -78,319 +80,171 @@
     class Vector3 DefaultVec | ?DefaultVec@@3VVector3@@A
 */
 
-struct mmMultiCR : mmGameMulti
+class mmMultiCR : public mmGameMulti
 {
+    // const mmMultiCR::`vftable' @ 0x5B0980
+
 public:
-    // mmMultiCR::`vftable' @ 0x5B0980
-
     // 0x4236E0 | ??0mmMultiCR@@QAE@XZ
-    inline mmMultiCR()
-    {
-        stub<member_func_t<void, mmMultiCR>>(0x4236E0, this);
-    }
+    mmMultiCR();
 
-    // 0x424640 | ?LoadSets@mmMultiCR@@QAEHPAD@Z
-    inline int32_t LoadSets(char* arg1)
-    {
-        return stub<member_func_t<int32_t, mmMultiCR, char*>>(0x424640, this, arg1);
-    }
-
-    // 0x424880 | ?LoadCSV@mmMultiCR@@QAEHPAD@Z
-    inline int32_t LoadCSV(char* arg1)
-    {
-        return stub<member_func_t<int32_t, mmMultiCR, char*>>(0x424880, this, arg1);
-    }
-
-    // 0x424900 | ?ImpactCallback@mmMultiCR@@QAEXPAX0@Z
-    inline void ImpactCallback(void* arg1, void* arg2)
-    {
-        return stub<member_func_t<void, mmMultiCR, void*, void*>>(0x424900, this, arg1, arg2);
-    }
-
-    // 0x424A00 | ?FondleCarMass@mmMultiCR@@QAEXPAVvehCar@@M@Z
-    inline void FondleCarMass(class vehCar* arg1, float arg2)
-    {
-        return stub<member_func_t<void, mmMultiCR, class vehCar*, float>>(0x424A00, this, arg1, arg2);
-    }
-
-    // 0x424AD0 | ?GetNewSet@mmMultiCR@@AAEXXZ
-    inline void GetNewSet()
-    {
-        return stub<member_func_t<void, mmMultiCR>>(0x424AD0, this);
-    }
-
-    // 0x424BF0 | ?GetRandomPoints@mmMultiCR@@AAEXAAVVector3@@00@Z
-    inline void GetRandomPoints(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3)
-    {
-        return stub<member_func_t<void, mmMultiCR, class Vector3&, class Vector3&, class Vector3&>>(
-            0x424BF0, this, arg1, arg2, arg3);
-    }
-
-    // 0x424E20 | ?GetRandomIndex@mmMultiCR@@AAEHXZ
-    inline int32_t GetRandomIndex()
-    {
-        return stub<member_func_t<int32_t, mmMultiCR>>(0x424E20, this);
-    }
-
-    // 0x424E40 | ?ResetPositions@mmMultiCR@@QAEXH@Z
-    inline void ResetPositions(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x424E40, this, arg1);
-    }
-
-    // 0x424F70 | ?SelectTeams@mmMultiCR@@AAEHXZ
-    inline int32_t SelectTeams()
-    {
-        return stub<member_func_t<int32_t, mmMultiCR>>(0x424F70, this);
-    }
-
-    // 0x425520 | ?StealGold@mmMultiCR@@AAEXPAVvehCar@@@Z
-    inline void StealGold(class vehCar* arg1)
-    {
-        return stub<member_func_t<void, mmMultiCR, class vehCar*>>(0x425520, this, arg1);
-    }
-
-    // 0x425560 | ?OppStealGold@mmMultiCR@@AAEXH@Z
-    inline void OppStealGold(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x425560, this, arg1);
-    }
-
-    // 0x4255D0 | ?FindGround@mmMultiCR@@AAEXVVector3@@AAV2@@Z
-    inline void FindGround(class Vector3 arg1, class Vector3& arg2)
-    {
-        return stub<member_func_t<void, mmMultiCR, class Vector3, class Vector3&>>(0x4255D0, this, arg1, arg2);
-    }
-
-    // 0x4256A0 | ?DropGold@mmMultiCR@@AAEXVVector3@@HH@Z
-    inline void DropGold(class Vector3 arg1, int32_t arg2, int32_t arg3)
-    {
-        return stub<member_func_t<void, mmMultiCR, class Vector3, int32_t, int32_t>>(0x4256A0, this, arg1, arg2, arg3);
-    }
-
-    // 0x425830 | ?UpdateGold@mmMultiCR@@AAEXXZ
-    inline void UpdateGold()
-    {
-        return stub<member_func_t<void, mmMultiCR>>(0x425830, this);
-    }
-
-    // 0x425A50 | ?UpdateHideout@mmMultiCR@@AAEXXZ
-    inline void UpdateHideout()
-    {
-        return stub<member_func_t<void, mmMultiCR>>(0x425A50, this);
-    }
-
-    // 0x425BA0 | ?UpdateBank@mmMultiCR@@AAEXXZ
-    inline void UpdateBank()
-    {
-        return stub<member_func_t<void, mmMultiCR>>(0x425BA0, this);
-    }
-
-    // 0x425CF0 | ?UpdateLimit@mmMultiCR@@AAEXXZ
-    inline void UpdateLimit()
-    {
-        return stub<member_func_t<void, mmMultiCR>>(0x425CF0, this);
-    }
-
-    // 0x425EE0 | ?FillResults@mmMultiCR@@AAEXXZ
-    inline void FillResults()
-    {
-        return stub<member_func_t<void, mmMultiCR>>(0x425EE0, this);
-    }
-
-    // 0x426D10 | ?UpdateTimeWarning@mmMultiCR@@AAEXXZ
-    inline void UpdateTimeWarning()
-    {
-        return stub<member_func_t<void, mmMultiCR>>(0x426D10, this);
-    }
-
-    // 0x426E80 | ?DisplayTimeWarning@mmMultiCR@@AAEXH@Z
-    inline void DisplayTimeWarning(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x426E80, this, arg1);
-    }
-
-    // 0x426F10 | ?SendGameState@mmMultiCR@@AAEXK@Z
-    inline void SendGameState(uint32_t arg1)
-    {
-        return stub<member_func_t<void, mmMultiCR, uint32_t>>(0x426F10, this, arg1);
-    }
-
-    // 0x426FF0 | ?SendSetup@mmMultiCR@@AAEXK@Z
-    inline void SendSetup(uint32_t arg1)
-    {
-        return stub<member_func_t<void, mmMultiCR, uint32_t>>(0x426FF0, this, arg1);
-    }
-
-    // 0x427000 | ?SendGoldDrop@mmMultiCR@@AAEXVVector3@@@Z
-    inline void SendGoldDrop(class Vector3 arg1)
-    {
-        return stub<member_func_t<void, mmMultiCR, class Vector3>>(0x427000, this, arg1);
-    }
-
-    // 0x427040 | ?SendGoldAck@mmMultiCR@@AAEXK@Z
-    inline void SendGoldAck(uint32_t arg1)
-    {
-        return stub<member_func_t<void, mmMultiCR, uint32_t>>(0x427040, this, arg1);
-    }
-
-    // 0x427080 | ?SendGoldDeliver@mmMultiCR@@AAEXXZ
-    inline void SendGoldDeliver()
-    {
-        return stub<member_func_t<void, mmMultiCR>>(0x427080, this);
-    }
-
-    // 0x4270A0 | ?SendChangeSet@mmMultiCR@@AAEXH@Z
-    inline void SendChangeSet(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x4270A0, this, arg1);
-    }
-
-    // 0x427120 | ?SendLimitReached@mmMultiCR@@AAEXH@Z
-    inline void SendLimitReached(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x427120, this, arg1);
-    }
-
-    // 0x427150 | ?SendTimeWarning@mmMultiCR@@AAEXH@Z
-    inline void SendTimeWarning(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x427150, this, arg1);
-    }
-
-    // 0x427180 | ?UpdateHUD@mmMultiCR@@AAEXXZ
-    inline void UpdateHUD()
-    {
-        return stub<member_func_t<void, mmMultiCR>>(0x427180, this);
-    }
-
-    // 0x4272A0 | ?Score@mmMultiCR@@AAEXH@Z
-    inline void Score(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x4272A0, this, arg1);
-    }
-
-    // 0x4272E0 | ?CycleInterest@mmMultiCR@@AAEXH@Z
-    inline void CycleInterest(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x4272E0, this, arg1);
-    }
-
-    // 0x427340 | ?SendLobbyResults@mmMultiCR@@QAEXKHH@Z
-    inline void SendLobbyResults(uint32_t arg1, int32_t arg2, int32_t arg3)
-    {
-        return stub<member_func_t<void, mmMultiCR, uint32_t, int32_t, int32_t>>(0x427340, this, arg1, arg2, arg3);
-    }
-
+    // 0x4274E0 | ??_GmmMultiCR@@UAEPAXI@Z
     // 0x4237C0 | ??1mmMultiCR@@UAE@XZ
-    inline ~mmMultiCR() override
-    {
-        stub<member_func_t<void, mmMultiCR>>(0x4237C0, this);
-    }
-
-    // 0x424440 | ?Reset@mmMultiCR@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmMultiCR>>(0x424440, this);
-    }
-
-    // 0x423870 | ?Init@mmMultiCR@@UAEHXZ
-    inline int32_t Init() override
-    {
-        return stub<member_func_t<int32_t, mmMultiCR>>(0x423870, this);
-    }
-
-    // 0x4239F0 | ?InitMyPlayer@mmMultiCR@@UAEXXZ
-    inline void InitMyPlayer() override
-    {
-        return stub<member_func_t<void, mmMultiCR>>(0x4239F0, this);
-    }
-
-    // 0x423C80 | ?InitGameObjects@mmMultiCR@@UAEXXZ
-    inline void InitGameObjects() override
-    {
-        return stub<member_func_t<void, mmMultiCR>>(0x423C80, this);
-    }
-
-    // 0x423B00 | ?InitHUD@mmMultiCR@@UAEXXZ
-    inline void InitHUD() override
-    {
-        return stub<member_func_t<void, mmMultiCR>>(0x423B00, this);
-    }
-
-    // 0x424F80 | ?UpdateGameInput@mmMultiCR@@UAEXH@Z
-    inline void UpdateGameInput(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x424F80, this, arg1);
-    }
-
-    // 0x4272D0 | ?UpdateDebugKeyInput@mmMultiCR@@UAEXH@Z
-    inline void UpdateDebugKeyInput(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x4272D0, this, arg1);
-    }
-
-    // 0x424F90 | ?UpdateGame@mmMultiCR@@UAEXXZ
-    inline void UpdateGame() override
-    {
-        return stub<member_func_t<void, mmMultiCR>>(0x424F90, this);
-    }
-
-    // 0x4253A0 | ?HitWaterHandler@mmMultiCR@@UAEXXZ
-    inline void HitWaterHandler() override
-    {
-        return stub<member_func_t<void, mmMultiCR>>(0x4253A0, this);
-    }
+    ~mmMultiCR() override;
 
     // 0x425460 | ?DropThruCityHandler@mmMultiCR@@UAEXXZ
-    inline void DropThruCityHandler() override
-    {
-        return stub<member_func_t<void, mmMultiCR>>(0x425460, this);
-    }
+    void DropThruCityHandler() override;
 
-    // 0x425390 | ?SwitchState@mmMultiCR@@UAEXH@Z
-    inline void SwitchState(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmMultiCR, int32_t>>(0x425390, this, arg1);
-    }
-
-    // 0x427510 | ?GetWaypoints@mmMultiCR@@UAEPAVmmWaypoints@@XZ
-    inline class mmWaypoints* GetWaypoints() override
-    {
-        return stub<member_func_t<class mmWaypoints*, mmMultiCR>>(0x427510, this);
-    }
-
-    // 0x424090 | ?InitNetworkPlayers@mmMultiCR@@UAEXXZ
-    inline void InitNetworkPlayers() override
-    {
-        return stub<member_func_t<void, mmMultiCR>>(0x424090, this);
-    }
-
-    // 0x4261B0 | ?SystemMessage@mmMultiCR@@UAEXPAUNETSYS_MSG@@@Z
-    inline void SystemMessage(struct NETSYS_MSG* arg1) override
-    {
-        return stub<member_func_t<void, mmMultiCR, struct NETSYS_MSG*>>(0x4261B0, this, arg1);
-    }
+    // 0x424A00 | ?FondleCarMass@mmMultiCR@@QAEXPAVvehCar@@M@Z
+    void FondleCarMass(class vehCar* arg1, f32 arg2);
 
     // 0x426340 | ?GameMessage@mmMultiCR@@UAEXPAUNET_RCXHEAD@@@Z
-    inline void GameMessage(struct NET_RCXHEAD* arg1) override
-    {
-        return stub<member_func_t<void, mmMultiCR, struct NET_RCXHEAD*>>(0x426340, this, arg1);
-    }
+    void GameMessage(struct NET_RCXHEAD* arg1) override;
+
+    // 0x427510 | ?GetWaypoints@mmMultiCR@@UAEPAVmmWaypoints@@XZ
+    class mmWaypoints* GetWaypoints() override;
+
+    // 0x4253A0 | ?HitWaterHandler@mmMultiCR@@UAEXXZ
+    void HitWaterHandler() override;
+
+    // 0x424900 | ?ImpactCallback@mmMultiCR@@QAEXPAX0@Z
+    void ImpactCallback(void* arg1, void* arg2);
+
+    // 0x423870 | ?Init@mmMultiCR@@UAEHXZ
+    i32 Init() override;
+
+    // 0x423C80 | ?InitGameObjects@mmMultiCR@@UAEXXZ
+    void InitGameObjects() override;
+
+    // 0x423B00 | ?InitHUD@mmMultiCR@@UAEXXZ
+    void InitHUD() override;
+
+    // 0x4239F0 | ?InitMyPlayer@mmMultiCR@@UAEXXZ
+    void InitMyPlayer() override;
+
+    // 0x424090 | ?InitNetworkPlayers@mmMultiCR@@UAEXXZ
+    void InitNetworkPlayers() override;
+
+    // 0x424880 | ?LoadCSV@mmMultiCR@@QAEHPAD@Z
+    i32 LoadCSV(char* arg1);
+
+    // 0x424640 | ?LoadSets@mmMultiCR@@QAEHPAD@Z
+    i32 LoadSets(char* arg1);
+
+    // 0x424440 | ?Reset@mmMultiCR@@UAEXXZ
+    void Reset() override;
+
+    // 0x424E40 | ?ResetPositions@mmMultiCR@@QAEXH@Z
+    void ResetPositions(i32 arg1);
+
+    // 0x427340 | ?SendLobbyResults@mmMultiCR@@QAEXKHH@Z
+    void SendLobbyResults(u32 arg1, i32 arg2, i32 arg3);
+
+    // 0x425390 | ?SwitchState@mmMultiCR@@UAEXH@Z
+    void SwitchState(i32 arg1) override;
+
+    // 0x4261B0 | ?SystemMessage@mmMultiCR@@UAEXPAUNETSYS_MSG@@@Z
+    void SystemMessage(struct NETSYS_MSG* arg1) override;
+
+    // 0x4272D0 | ?UpdateDebugKeyInput@mmMultiCR@@UAEXH@Z
+    void UpdateDebugKeyInput(i32 arg1) override;
+
+    // 0x424F90 | ?UpdateGame@mmMultiCR@@UAEXXZ
+    void UpdateGame() override;
+
+    // 0x424F80 | ?UpdateGameInput@mmMultiCR@@UAEXH@Z
+    void UpdateGameInput(i32 arg1) override;
+
+private:
+    // 0x4272E0 | ?CycleInterest@mmMultiCR@@AAEXH@Z
+    void CycleInterest(i32 arg1);
+
+    // 0x426E80 | ?DisplayTimeWarning@mmMultiCR@@AAEXH@Z
+    void DisplayTimeWarning(i32 arg1);
+
+    // 0x4256A0 | ?DropGold@mmMultiCR@@AAEXVVector3@@HH@Z
+    void DropGold(class Vector3 arg1, i32 arg2, i32 arg3);
+
+    // 0x425EE0 | ?FillResults@mmMultiCR@@AAEXXZ
+    void FillResults();
+
+    // 0x4255D0 | ?FindGround@mmMultiCR@@AAEXVVector3@@AAV2@@Z
+    void FindGround(class Vector3 arg1, class Vector3& arg2);
+
+    // 0x424AD0 | ?GetNewSet@mmMultiCR@@AAEXXZ
+    void GetNewSet();
+
+    // 0x424E20 | ?GetRandomIndex@mmMultiCR@@AAEHXZ
+    i32 GetRandomIndex();
+
+    // 0x424BF0 | ?GetRandomPoints@mmMultiCR@@AAEXAAVVector3@@00@Z
+    void GetRandomPoints(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3);
+
+    // 0x425560 | ?OppStealGold@mmMultiCR@@AAEXH@Z
+    void OppStealGold(i32 arg1);
+
+    // 0x4272A0 | ?Score@mmMultiCR@@AAEXH@Z
+    void Score(i32 arg1);
+
+    // 0x424F70 | ?SelectTeams@mmMultiCR@@AAEHXZ
+    i32 SelectTeams();
+
+    // 0x4270A0 | ?SendChangeSet@mmMultiCR@@AAEXH@Z
+    void SendChangeSet(i32 arg1);
+
+    // 0x426F10 | ?SendGameState@mmMultiCR@@AAEXK@Z
+    void SendGameState(u32 arg1);
+
+    // 0x427040 | ?SendGoldAck@mmMultiCR@@AAEXK@Z
+    void SendGoldAck(u32 arg1);
+
+    // 0x427080 | ?SendGoldDeliver@mmMultiCR@@AAEXXZ
+    void SendGoldDeliver();
+
+    // 0x427000 | ?SendGoldDrop@mmMultiCR@@AAEXVVector3@@@Z
+    void SendGoldDrop(class Vector3 arg1);
+
+    // 0x427120 | ?SendLimitReached@mmMultiCR@@AAEXH@Z
+    void SendLimitReached(i32 arg1);
+
+    // 0x426FF0 | ?SendSetup@mmMultiCR@@AAEXK@Z
+    void SendSetup(u32 arg1);
+
+    // 0x427150 | ?SendTimeWarning@mmMultiCR@@AAEXH@Z
+    void SendTimeWarning(i32 arg1);
+
+    // 0x425520 | ?StealGold@mmMultiCR@@AAEXPAVvehCar@@@Z
+    void StealGold(class vehCar* arg1);
+
+    // 0x425BA0 | ?UpdateBank@mmMultiCR@@AAEXXZ
+    void UpdateBank();
+
+    // 0x425830 | ?UpdateGold@mmMultiCR@@AAEXXZ
+    void UpdateGold();
+
+    // 0x427180 | ?UpdateHUD@mmMultiCR@@AAEXXZ
+    void UpdateHUD();
+
+    // 0x425A50 | ?UpdateHideout@mmMultiCR@@AAEXXZ
+    void UpdateHideout();
+
+    // 0x425CF0 | ?UpdateLimit@mmMultiCR@@AAEXXZ
+    void UpdateLimit();
+
+    // 0x426D10 | ?UpdateTimeWarning@mmMultiCR@@AAEXXZ
+    void UpdateTimeWarning();
 };
 
-struct netScoreInfo
+check_size(mmMultiCR, 0x0);
+
+class netScoreInfo
 {
 public:
-    // 0x427520 | ??1netScoreInfo@@QAE@XZ
-    inline ~netScoreInfo()
-    {
-        stub<member_func_t<void, netScoreInfo>>(0x427520, this);
-    }
-
     // 0x572990 | ??0netScoreInfo@@QAE@XZ
-    inline netScoreInfo()
-    {
-        stub<member_func_t<void, netScoreInfo>>(0x572990, this);
-    }
+    netScoreInfo();
+
+    // 0x427520 | ??1netScoreInfo@@QAE@XZ
+    ~netScoreInfo();
 };
+
+check_size(netScoreInfo, 0x0);

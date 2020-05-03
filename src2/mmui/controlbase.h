@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -31,26 +31,16 @@ struct ControlBase
 {
 public:
     // 0x50D4C0 | ??0ControlBase@@QAE@XZ
-    inline ControlBase()
-    {
-        stub<member_func_t<void, ControlBase>>(0x50D4C0, this);
-    }
+    ControlBase();
 
     // 0x50D4D0 | ??1ControlBase@@QAE@XZ
-    inline ~ControlBase()
-    {
-        stub<member_func_t<void, ControlBase>>(0x50D4D0, this);
-    }
+    ~ControlBase();
 
     // 0x50D4E0 | ?InitSensitivity@ControlBase@@QAEXXZ
-    inline void InitSensitivity()
-    {
-        return stub<member_func_t<void, ControlBase>>(0x50D4E0, this);
-    }
+    void InitSensitivity();
 
     // 0x50D540 | ?SetSensitivity@ControlBase@@QAEXXZ
-    inline void SetSensitivity()
-    {
-        return stub<member_func_t<void, ControlBase>>(0x50D540, this);
-    }
+    void SetSensitivity();
 };
+
+check_size(ControlBase, 0x0);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -34,44 +34,25 @@ class Aud3DSampleWrapper
 {
 public:
     // 0x5139A0 | ??0Aud3DSampleWrapper@@QAE@PADHK@Z
-    inline Aud3DSampleWrapper(char* arg1, int32_t arg2, uint32_t arg3)
-    {
-        stub<member_func_t<void, Aud3DSampleWrapper, char*, int32_t, uint32_t>>(0x5139A0, this, arg1, arg2, arg3);
-    }
+    Aud3DSampleWrapper(char* arg1, i32 arg2, u32 arg3);
 
     // 0x513AE0 | ??0Aud3DSampleWrapper@@QAE@HHK@Z
-    inline Aud3DSampleWrapper(int32_t arg1, int32_t arg2, uint32_t arg3)
-    {
-        stub<member_func_t<void, Aud3DSampleWrapper, int32_t, int32_t, uint32_t>>(0x513AE0, this, arg1, arg2, arg3);
-    }
+    Aud3DSampleWrapper(i32 arg1, i32 arg2, u32 arg3);
 
     // 0x513BB0 | ??1Aud3DSampleWrapper@@QAE@XZ
-    inline ~Aud3DSampleWrapper()
-    {
-        stub<member_func_t<void, Aud3DSampleWrapper>>(0x513BB0, this);
-    }
-
-    // 0x513C20 | ?SetSampleName@Aud3DSampleWrapper@@QAEXPAD@Z
-    inline void SetSampleName(char* arg1)
-    {
-        return stub<member_func_t<void, Aud3DSampleWrapper, char*>>(0x513C20, this, arg1);
-    }
-
-    // 0x513C40 | ?Load@Aud3DSampleWrapper@@QAEXPADH@Z
-    inline void Load(char* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, Aud3DSampleWrapper, char*, int32_t>>(0x513C40, this, arg1, arg2);
-    }
+    ~Aud3DSampleWrapper();
 
     // 0x513CA0 | ?GetSoundPtr@Aud3DSampleWrapper@@QAEPAVAudSoundBase@@F@Z
-    inline class AudSoundBase* GetSoundPtr(int16_t arg1)
-    {
-        return stub<member_func_t<class AudSoundBase*, Aud3DSampleWrapper, int16_t>>(0x513CA0, this, arg1);
-    }
+    class AudSoundBase* GetSoundPtr(i16 arg1);
+
+    // 0x513C40 | ?Load@Aud3DSampleWrapper@@QAEXPADH@Z
+    void Load(char* arg1, i32 arg2);
+
+    // 0x513C20 | ?SetSampleName@Aud3DSampleWrapper@@QAEXPAD@Z
+    void SetSampleName(char* arg1);
 
     // 0x513CC0 | ?Update@Aud3DSampleWrapper@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, Aud3DSampleWrapper>>(0x513CC0, this);
-    }
+    void Update();
 };
+
+check_size(Aud3DSampleWrapper, 0x14);

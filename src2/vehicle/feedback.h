@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -38,104 +38,67 @@
     0x4D5A80 | public: virtual int __thiscall vehFeedback::Update(void) | ?Update@vehFeedback@@UAEHXZ
     public: virtual void * __thiscall vehFeedback::`vector deleting destructor'(unsigned int) | ??_EvehFeedback@@UAEPAXI@Z
     0x4D5B50 | public: virtual void * __thiscall vehFeedback::`scalar deleting destructor'(unsigned int) | ??_GvehFeedback@@UAEPAXI@Z
-    public: static struct vehFeedback::SampleRec const vehFeedback::sm_CollisionSmallFeedback | ?sm_CollisionSmallFeedback@vehFeedback@@2USampleRec@1@B
-    public: static struct vehFeedback::SampleRec const vehFeedback::sm_CollisionLargeFeedback | ?sm_CollisionLargeFeedback@vehFeedback@@2USampleRec@1@B
+    0x5B2E44 | public: static struct vehFeedback::SampleRec const vehFeedback::sm_CollisionSmallFeedback | ?sm_CollisionSmallFeedback@vehFeedback@@2USampleRec@1@B
+    0x5B2E54 | public: static struct vehFeedback::SampleRec const vehFeedback::sm_CollisionLargeFeedback | ?sm_CollisionLargeFeedback@vehFeedback@@2USampleRec@1@B
     0x5B2E5C | const vehFeedback::`vftable' | ??_7vehFeedback@@6B@
 */
 
 struct vehFeedback
 {
-public:
-    // vehFeedback::`vftable' @ 0x5B2E5C
+    // const vehFeedback::`vftable' @ 0x5B2E5C
 
+public:
     // 0x4D56C0 | ??0vehFeedback@@QAE@XZ
-    inline vehFeedback()
-    {
-        stub<member_func_t<void, vehFeedback>>(0x4D56C0, this);
-    }
+    vehFeedback();
+
+    // 0x4D5B50 | ??_GvehFeedback@@UAEPAXI@Z
+    // 0x4D5740 | ??1vehFeedback@@UAE@XZ
+    virtual ~vehFeedback();
 
     // 0x4D5750 | ?GetPad@vehFeedback@@QAEPAVioPad@@XZ
-    inline class ioPad* GetPad()
-    {
-        return stub<member_func_t<class ioPad*, vehFeedback>>(0x4D5750, this);
-    }
-
-    // 0x4D5760 | ?SetPad@vehFeedback@@QAEXPAVioPad@@@Z
-    inline void SetPad(class ioPad* arg1)
-    {
-        return stub<member_func_t<void, vehFeedback, class ioPad*>>(0x4D5760, this, arg1);
-    }
+    class ioPad* GetPad();
 
     // 0x4D5770 | ?GetPadID@vehFeedback@@QAEHXZ
-    inline int32_t GetPadID()
-    {
-        return stub<member_func_t<int32_t, vehFeedback>>(0x4D5770, this);
-    }
+    i32 GetPadID();
+
+    // 0x4D5760 | ?SetPad@vehFeedback@@QAEXPAVioPad@@@Z
+    void SetPad(class ioPad* arg1);
 
     // 0x4D5780 | ?SetPadID@vehFeedback@@QAEXH@Z
-    inline void SetPadID(int32_t arg1)
-    {
-        return stub<member_func_t<void, vehFeedback, int32_t>>(0x4D5780, this, arg1);
-    }
-
-    // 0x4D5740 | ??1vehFeedback@@UAE@XZ
-    virtual inline ~vehFeedback()
-    {
-        stub<member_func_t<void, vehFeedback>>(0x4D5740, this);
-    }
+    void SetPadID(i32 arg1);
 
     // 0x4D57A0 | ?SetFeedback@vehFeedback@@UAEH_N@Z
-    virtual inline int32_t SetFeedback(bool arg1)
-    {
-        return stub<member_func_t<int32_t, vehFeedback, bool>>(0x4D57A0, this, arg1);
-    }
+    virtual i32 SetFeedback(bool arg1);
 
     // 0x4D57B0 | ?SetTimingUnit@vehFeedback@@UAEHM@Z
-    virtual inline int32_t SetTimingUnit(float arg1)
-    {
-        return stub<member_func_t<int32_t, vehFeedback, float>>(0x4D57B0, this, arg1);
-    }
+    virtual i32 SetTimingUnit(f32 arg1);
 
     // 0x4D57E0 | ?GetNumActuators@vehFeedback@@UAEHXZ
-    virtual inline int32_t GetNumActuators()
-    {
-        return stub<member_func_t<int32_t, vehFeedback>>(0x4D57E0, this);
-    }
+    virtual i32 GetNumActuators();
 
     // 0x4D57F0 | ?SetActuatorValue@vehFeedback@@UAEHHM@Z
-    virtual inline int32_t SetActuatorValue(int32_t arg1, float arg2)
-    {
-        return stub<member_func_t<int32_t, vehFeedback, int32_t, float>>(0x4D57F0, this, arg1, arg2);
-    }
+    virtual i32 SetActuatorValue(i32 arg1, f32 arg2);
 
     // 0x4D5830 | ?PlayFeedbackSample@vehFeedback@@UAEHHHPAMPAH@Z
-    virtual inline int32_t PlayFeedbackSample(int32_t arg1, int32_t arg2, float* arg3, int32_t* arg4)
-    {
-        return stub<member_func_t<int32_t, vehFeedback, int32_t, int32_t, float*, int32_t*>>(
-            0x4D5830, this, arg1, arg2, arg3, arg4);
-    }
+    virtual i32 PlayFeedbackSample(i32 arg1, i32 arg2, f32* arg3, i32* arg4);
 
     // 0x4D58B0 | ?PlayFeedbackSampleID@vehFeedback@@UAEHH@Z
-    virtual inline int32_t PlayFeedbackSampleID(int32_t arg1)
-    {
-        return stub<member_func_t<int32_t, vehFeedback, int32_t>>(0x4D58B0, this, arg1);
-    }
+    virtual i32 PlayFeedbackSampleID(i32 arg1);
 
     // 0x4D5980 | ?GetNextUnit@vehFeedback@@UAEMH@Z
-    virtual inline float GetNextUnit(int32_t arg1)
-    {
-        return stub<member_func_t<float, vehFeedback, int32_t>>(0x4D5980, this, arg1);
-    }
+    virtual f32 GetNextUnit(i32 arg1);
 
     // 0x4D5A80 | ?Update@vehFeedback@@UAEHXZ
-    virtual inline int32_t Update()
-    {
-        return stub<member_func_t<int32_t, vehFeedback>>(0x4D5A80, this);
-    }
+    virtual i32 Update();
 
     // 0x4D5910 | ?ClearAllSamples@vehFeedback@@UAEH_N@Z
-    virtual inline int32_t ClearAllSamples(bool arg1)
-    {
-        return stub<member_func_t<int32_t, vehFeedback, bool>>(0x4D5910, this, arg1);
-    }
+    virtual i32 ClearAllSamples(bool arg1);
+
+    // 0x5B2E54 | ?sm_CollisionLargeFeedback@vehFeedback@@2USampleRec@1@B
+    static inline extern_var(0x5B2E54, struct vehFeedback::SampleRec const, sm_CollisionLargeFeedback);
+
+    // 0x5B2E44 | ?sm_CollisionSmallFeedback@vehFeedback@@2USampleRec@1@B
+    static inline extern_var(0x5B2E44, struct vehFeedback::SampleRec const, sm_CollisionSmallFeedback);
 };
+
+check_size(vehFeedback, 0x12C);

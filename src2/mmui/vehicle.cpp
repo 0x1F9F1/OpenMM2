@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,35 @@
 */
 
 #include "vehicle.h"
+
+Vehicle::Vehicle(i32 arg1)
+{
+    unimplemented();
+}
+
+Vehicle::~Vehicle()
+{
+    unimplemented();
+}
+
+void Vehicle::PostSetup()
+{
+    return stub<thiscall_t<void, Vehicle*>>(0x505810, this);
+}
+
+void Vehicle::PreSetup()
+{
+    return stub<thiscall_t<void, Vehicle*>>(0x505800, this);
+}
+
+void Vehicle::SetSubMenu(i32 arg1)
+{
+    return stub<thiscall_t<void, Vehicle*, i32>>(0x5057C0, this, arg1);
+}
+
+void Vehicle::SetSubMenuButtons()
+{
+    return stub<thiscall_t<void, Vehicle*>>(0x5057E0, this);
+}
+
+define_dummy_symbol(mmui_vehicle);

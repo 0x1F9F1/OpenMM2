@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,35 @@
 */
 
 #include "aiAmbientActiveData.h"
+
+aiVehicleData::aiVehicleData()
+{
+    unimplemented();
+}
+
+aiVehicleData::~aiVehicleData()
+{
+    unimplemented();
+}
+
+void aiVehicleData::FileIO(class datParser& arg1)
+{
+    return stub<thiscall_t<void, aiVehicleData*, class datParser&>>(0x56F7C0, this, arg1);
+}
+
+char* aiVehicleData::GetClassName()
+{
+    return stub<thiscall_t<char*, aiVehicleData*>>(0x56F940, this);
+}
+
+char const* aiVehicleData::GetDirName()
+{
+    return stub<thiscall_t<char const*, aiVehicleData*>>(0x56F950, this);
+}
+
+void aiVehicleData::SetFricElas()
+{
+    return stub<thiscall_t<void, aiVehicleData*>>(0x56F790, this);
+}
+
+define_dummy_symbol(ai_aiAmbientActiveData);

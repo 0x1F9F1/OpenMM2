@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/cullable.h"
 
 /*
     level:level
@@ -39,196 +41,98 @@
     public: virtual void * __thiscall lvlLevel::`vector deleting destructor'(unsigned int) | ??_ElvlLevel@@UAEPAXI@Z
     0x5B1A1C | const lvlLevel::`vftable' | ??_7lvlLevel@@6B@
     0x655790 | protected: static class datCallback (* lvlLevel::m_Callbacks)[64] | ?m_Callbacks@lvlLevel@@1PAY0EA@VdatCallback@@A
-    protected: static int * lvlLevel::m_DrawableCounts | ?m_DrawableCounts@lvlLevel@@1PAHA
-    0x655DA0 | protected: static bool lvlLevel::sm_PhysicsMode | ?sm_PhysicsMode@lvlLevel@@1_NA
+    0x655D90 | protected: static int * lvlLevel::m_DrawableCounts | ?m_DrawableCounts@lvlLevel@@1PAHA
+    protected: static bool lvlLevel::sm_PhysicsMode | ?sm_PhysicsMode@lvlLevel@@1_NA
     0x655D9C | protected: static class lvlLevel * lvlLevel::sm_Singleton | ?sm_Singleton@lvlLevel@@1PAV1@A
 */
 
-class lvlLevel : asCullable
+class lvlLevel : public asCullable
 {
-public:
-    // lvlLevel::`vftable' @ 0x5B1A1C
+    // const lvlLevel::`vftable' @ 0x5B1A1C
 
+public:
     // 0x4653A0 | ??0lvlLevel@@QAE@XZ
-    inline lvlLevel()
-    {
-        stub<member_func_t<void, lvlLevel>>(0x4653A0, this);
-    }
+    lvlLevel();
+
+    // 0x4656A0 | ??_GlvlLevel@@UAEPAXI@Z
+    // 0x465400 | ??1lvlLevel@@UAE@XZ
+    ~lvlLevel() override;
 
     // 0x465480 | ?MoveToRoom@lvlLevel@@QAEXPAVlvlInstance@@H@Z
-    inline void MoveToRoom(class lvlInstance* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, lvlLevel, class lvlInstance*, int32_t>>(0x465480, this, arg1, arg2);
-    }
+    void MoveToRoom(class lvlInstance* arg1, i32 arg2);
 
     // 0x4655E0 | ?RegisterDrawable@lvlLevel@@QAEXHVdatCallback@@@Z
-    inline void RegisterDrawable(int32_t arg1, class datCallback arg2)
-    {
-        return stub<member_func_t<void, lvlLevel, int32_t, class datCallback>>(0x4655E0, this, arg1, arg2);
-    }
-
-    // 0x465630 | ?CallCallbacks@lvlLevel@@IAEXH@Z
-    inline void CallCallbacks(int32_t arg1)
-    {
-        return stub<member_func_t<void, lvlLevel, int32_t>>(0x465630, this, arg1);
-    }
+    void RegisterDrawable(i32 arg1, class datCallback arg2);
 
     // 0x465680 | ?ResetCallbacks@lvlLevel@@QAEXXZ
-    inline void ResetCallbacks()
-    {
-        return stub<member_func_t<void, lvlLevel>>(0x465680, this);
-    }
-
-    // 0x655790 | ?m_Callbacks@lvlLevel@@1PAY0EA@VdatCallback@@A
-    inline extern_var(0x655790, class datCallback (*)[64], m_Callbacks);
-
-    // 0x655DA0 | ?sm_PhysicsMode@lvlLevel@@1_NA
-    static inline extern_var(0x655DA0, bool, sm_PhysicsMode);
-
-    // 0x655D9C | ?sm_Singleton@lvlLevel@@1PAV1@A
-    inline extern_var(0x655D9C, class lvlLevel*, sm_Singleton);
+    void ResetCallbacks();
 
     // 0x465E50 | ?ResetInstances@lvlLevel@@QAEXXZ
-    inline void ResetInstances()
-    {
-        return stub<member_func_t<void, lvlLevel>>(0x465E50, this);
-    }
+    void ResetInstances();
 
-    // 0x465400 | ??1lvlLevel@@UAE@XZ
-    virtual inline ~lvlLevel()
-    {
-        stub<member_func_t<void, lvlLevel>>(0x465400, this);
-    }
-
-    // 0x582519 | __purecall
-    virtual inline void Load(char const* arg1)
-    {
-        return stub<member_func_t<void, lvlLevel, char const*>>(0x582519, this, arg1);
-    }
+    virtual void Load(char const* arg1) = 0;
 
     // 0x465460 | ?Update@lvlLevel@@UAEXXZ
-    virtual inline void Update()
-    {
-        return stub<member_func_t<void, lvlLevel>>(0x465460, this);
-    }
+    virtual void Update();
 
-    // 0x582519 | __purecall
-    virtual inline void PreDraw()
-    {
-        return stub<member_func_t<void, lvlLevel>>(0x582519, this);
-    }
+    virtual void PreDraw() = 0;
 
-    // 0x582519 | __purecall
-    virtual inline void PostDraw()
-    {
-        return stub<member_func_t<void, lvlLevel>>(0x582519, this);
-    }
+    virtual void PostDraw() = 0;
 
-    // 0x582519 | __purecall
-    virtual inline void Draw(class gfxViewport const& arg1, uint32_t arg2)
-    {
-        return stub<member_func_t<void, lvlLevel, class gfxViewport const&, uint32_t>>(0x582519, this, arg1, arg2);
-    }
+    virtual void Draw(class gfxViewport const& arg1, u32 arg2) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline int32_t FindRoomId(class Vector3 const& arg1, int32_t arg2)
-    {
-        return stub<member_func_t<int32_t, lvlLevel, class Vector3 const&, int32_t>>(0x582519, this, arg1, arg2);
-    }
+    virtual i32 FindRoomId(class Vector3 const& arg1, i32 arg2) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline int32_t GetNeighborCount(int32_t arg1)
-    {
-        return stub<member_func_t<int32_t, lvlLevel, int32_t>>(0x582519, this, arg1);
-    }
+    virtual i32 GetNeighborCount(i32 arg1) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline int32_t GetNeighbors(int32_t* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<int32_t, lvlLevel, int32_t*, int32_t>>(0x582519, this, arg1, arg2);
-    }
+    virtual i32 GetNeighbors(i32* arg1, i32 arg2) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline int32_t GetTouchedNeighbors(int32_t* arg1, int32_t arg2, int32_t arg3, class Vector4 const& arg4)
-    {
-        return stub<member_func_t<int32_t, lvlLevel, int32_t*, int32_t, int32_t, class Vector4 const&>>(
-            0x582519, this, arg1, arg2, arg3, arg4);
-    }
+    virtual i32 GetTouchedNeighbors(i32* arg1, i32 arg2, i32 arg3, class Vector4 const& arg4) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline int32_t GetRoomPerimeter(int32_t arg1, class Vector3* const arg2, int32_t arg3)
-    {
-        return stub<member_func_t<int32_t, lvlLevel, int32_t, class Vector3* const, int32_t>>(
-            0x582519, this, arg1, arg2, arg3);
-    }
+    virtual i32 GetRoomPerimeter(i32 arg1, class Vector3* const arg2, i32 arg3) = 0;
 
     // 0x4655D0 | ?GetVisitList@lvlLevel@@UAEHPAHHABVVector3@@1HH@Z
-    virtual inline int32_t GetVisitList(
-        int32_t* arg1, int32_t arg2, class Vector3 const& arg3, class Vector3 const& arg4, int32_t arg5, int32_t arg6)
-    {
-        return stub<member_func_t<int32_t, lvlLevel, int32_t*, int32_t, class Vector3 const&, class Vector3 const&,
-            int32_t, int32_t>>(0x4655D0, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
+    virtual i32 GetVisitList(
+        i32* arg1, i32 arg2, class Vector3 const& arg3, class Vector3 const& arg4, i32 arg5, i32 arg6);
 
     // 0x4655B0 | ?Collide@lvlLevel@@UAE_NHAAVlvlSegment@@PAVlvlIntersection@@@Z
-    virtual inline bool Collide(int32_t arg1, class lvlSegment& arg2, class lvlIntersection* arg3)
-    {
-        return stub<member_func_t<bool, lvlLevel, int32_t, class lvlSegment&, class lvlIntersection*>>(
-            0x4655B0, this, arg1, arg2, arg3);
-    }
+    virtual bool Collide(i32 arg1, class lvlSegment& arg2, class lvlIntersection* arg3);
 
     // 0x4655C0 | ?GetBoundSphere@lvlLevel@@UAE_NAAVVector4@@H@Z
-    virtual inline bool GetBoundSphere(class Vector4& arg1, int32_t arg2)
-    {
-        return stub<member_func_t<bool, lvlLevel, class Vector4&, int32_t>>(0x4655C0, this, arg1, arg2);
-    }
+    virtual bool GetBoundSphere(class Vector4& arg1, i32 arg2);
 
-    // 0x582519 | __purecall
-    virtual inline class lvlLevelBound const* GetBound()
-    {
-        return stub<member_func_t<class lvlLevelBound const*, lvlLevel>>(0x582519, this);
-    }
+    virtual class lvlLevelBound const* GetBound() = 0;
 
     // 0x465470 | ?SetObjectDetail@lvlLevel@@UAEXH@Z
-    virtual inline void SetObjectDetail(int32_t arg1)
-    {
-        return stub<member_func_t<void, lvlLevel, int32_t>>(0x465470, this, arg1);
-    }
+    virtual void SetObjectDetail(i32 arg1);
 
-    // 0x582519 | __purecall
-    virtual inline float GetWaterLevel(int32_t arg1)
-    {
-        return stub<member_func_t<float, lvlLevel, int32_t>>(0x582519, this, arg1);
-    }
+    virtual f32 GetWaterLevel(i32 arg1) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline float GetLightingIntensity(class Vector3 const& arg1)
-    {
-        return stub<member_func_t<float, lvlLevel, class Vector3 const&>>(0x582519, this, arg1);
-    }
+    virtual f32 GetLightingIntensity(class Vector3 const& arg1) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline void SetPtxHeight(class asParticles& arg1)
-    {
-        return stub<member_func_t<void, lvlLevel, class asParticles&>>(0x582519, this, arg1);
-    }
+    virtual void SetPtxHeight(class asParticles& arg1) = 0;
 
     // 0x4472F0 | ?ClampToWorld@lvlLevel@@UAE_NAAVVector3@@@Z
-    virtual inline bool ClampToWorld(class Vector3& arg1)
-    {
-        return stub<member_func_t<bool, lvlLevel, class Vector3&>>(0x4472F0, this, arg1);
-    }
+    virtual bool ClampToWorld(class Vector3& arg1);
 
     // 0x4656F0 | ?LoadInstances@lvlLevel@@UAE_NPBD0@Z
-    virtual inline bool LoadInstances(char const* arg1, char const* arg2)
-    {
-        return stub<member_func_t<bool, lvlLevel, char const*, char const*>>(0x4656F0, this, arg1, arg2);
-    }
+    virtual bool LoadInstances(char const* arg1, char const* arg2);
 
     // 0x465690 | ?GetEnvMap@lvlLevel@@UAEPAVgfxTexture@@HABVVector3@@AAM@Z
-    virtual inline class gfxTexture* GetEnvMap(int32_t arg1, class Vector3 const& arg2, float& arg3)
-    {
-        return stub<member_func_t<class gfxTexture*, lvlLevel, int32_t, class Vector3 const&, float&>>(
-            0x465690, this, arg1, arg2, arg3);
-    }
+    virtual class gfxTexture* GetEnvMap(i32 arg1, class Vector3 const& arg2, f32& arg3);
+
+protected:
+    // 0x465630 | ?CallCallbacks@lvlLevel@@IAEXH@Z
+    void CallCallbacks(i32 arg1);
+
+    // 0x655790 | ?m_Callbacks@lvlLevel@@1PAY0EA@VdatCallback@@A
+    static inline extern_var(0x655790, class datCallback (*)[64], m_Callbacks);
+
+    // 0x655D90 | ?m_DrawableCounts@lvlLevel@@1PAHA
+    static inline extern_var(0x655D90, i32*, m_DrawableCounts);
+
+    // 0x655D9C | ?sm_Singleton@lvlLevel@@1PAV1@A
+    static inline extern_var(0x655D9C, class lvlLevel*, sm_Singleton);
 };
+
+check_size(lvlLevel, 0x0);

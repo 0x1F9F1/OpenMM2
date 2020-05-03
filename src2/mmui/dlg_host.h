@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "pu_menu.h"
+
 /*
     mmui:dlg_host
 
@@ -31,39 +33,26 @@
     0x5B3F24 | const Dialog_Host::`vftable' | ??_7Dialog_Host@@6B@
 */
 
-struct Dialog_Host : PUMenuBase
+class Dialog_Host : public PUMenuBase
 {
+    // const Dialog_Host::`vftable' @ 0x5B3F24
+
 public:
-    // Dialog_Host::`vftable' @ 0x5B3F24
-
     // 0x4FAD20 | ??0Dialog_Host@@QAE@HMMMMPAD@Z
-    inline Dialog_Host(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
-    {
-        stub<member_func_t<void, Dialog_Host, int32_t, float, float, float, float, char*>>(
-            0x4FAD20, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
+    Dialog_Host(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6);
 
-    // 0x4FAF90 | ?PasswordCallback@Dialog_Host@@QAEXXZ
-    inline void PasswordCallback()
-    {
-        return stub<member_func_t<void, Dialog_Host>>(0x4FAF90, this);
-    }
+    // 0x4FAFE0 | ??_GDialog_Host@@UAEPAXI@Z
+    // 0x4FAF40 | ??1Dialog_Host@@UAE@XZ
+    ~Dialog_Host() override;
 
     // 0x4FAFA0 | ?Clear@Dialog_Host@@QAEXXZ
-    inline void Clear()
-    {
-        return stub<member_func_t<void, Dialog_Host>>(0x4FAFA0, this);
-    }
+    void Clear();
 
-    // 0x4FAF40 | ??1Dialog_Host@@UAE@XZ
-    inline ~Dialog_Host() override
-    {
-        stub<member_func_t<void, Dialog_Host>>(0x4FAF40, this);
-    }
+    // 0x4FAF90 | ?PasswordCallback@Dialog_Host@@QAEXXZ
+    void PasswordCallback();
 
     // 0x4FAF50 | ?PreSetup@Dialog_Host@@UAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, Dialog_Host>>(0x4FAF50, this);
-    }
+    void PreSetup() override;
 };
+
+check_size(Dialog_Host, 0x0);

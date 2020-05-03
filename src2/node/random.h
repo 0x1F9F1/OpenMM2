@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -28,29 +28,19 @@
 */
 
 // 0x4A3750 | ?logf_fast@@YAMM@Z
-inline float logf_fast(float arg1)
-{
-    return stub<cdecl_t<float, float>>(0x4A3750, arg1);
-}
+f32 logf_fast(f32 arg1);
 
 struct Random
 {
 public:
-    // 0x4A37D0 | ?Seed@Random@@QAEXH@Z
-    inline void Seed(int32_t arg1)
-    {
-        return stub<member_func_t<void, Random, int32_t>>(0x4A37D0, this, arg1);
-    }
+    // 0x4A38E0 | ?Normal@Random@@QAEMMM@Z
+    f32 Normal(f32 arg1, f32 arg2);
 
     // 0x4A3880 | ?Number@Random@@QAEMXZ
-    inline float Number()
-    {
-        return stub<member_func_t<float, Random>>(0x4A3880, this);
-    }
+    f32 Number();
 
-    // 0x4A38E0 | ?Normal@Random@@QAEMMM@Z
-    inline float Normal(float arg1, float arg2)
-    {
-        return stub<member_func_t<float, Random, float, float>>(0x4A38E0, this, arg1, arg2);
-    }
+    // 0x4A37D0 | ?Seed@Random@@QAEXH@Z
+    void Seed(i32 arg1);
 };
+
+check_size(Random, 0x0);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,60 @@
 */
 
 #include "drivetrain.h"
+
+vehDrivetrain::vehDrivetrain()
+{
+    unimplemented();
+}
+
+vehDrivetrain::~vehDrivetrain()
+{
+    unimplemented();
+}
+
+i32 vehDrivetrain::AddWheel(class vehWheel* arg1)
+{
+    return stub<thiscall_t<i32, vehDrivetrain*, class vehWheel*>>(0x4D9E50, this, arg1);
+}
+
+void vehDrivetrain::Attach()
+{
+    return stub<thiscall_t<void, vehDrivetrain*>>(0x4D9E20, this);
+}
+
+void vehDrivetrain::CopyVars(class vehDrivetrain* arg1)
+{
+    return stub<thiscall_t<void, vehDrivetrain*, class vehDrivetrain*>>(0x4D9DE0, this, arg1);
+}
+
+void vehDrivetrain::Detach()
+{
+    return stub<thiscall_t<void, vehDrivetrain*>>(0x4D9E40, this);
+}
+
+void vehDrivetrain::FileIO(class datParser& arg1)
+{
+    return stub<thiscall_t<void, vehDrivetrain*, class datParser&>>(0x4DA570, this, arg1);
+}
+
+char* vehDrivetrain::GetClassName()
+{
+    return stub<thiscall_t<char*, vehDrivetrain*>>(0x4DA600, this);
+}
+
+void vehDrivetrain::Init(class vehCarSim* arg1)
+{
+    return stub<thiscall_t<void, vehDrivetrain*, class vehCarSim*>>(0x4D9DD0, this, arg1);
+}
+
+void vehDrivetrain::Reset()
+{
+    return stub<thiscall_t<void, vehDrivetrain*>>(0x4D9E00, this);
+}
+
+void vehDrivetrain::Update()
+{
+    return stub<thiscall_t<void, vehDrivetrain*>>(0x4D9E90, this);
+}
+
+define_dummy_symbol(vehicle_drivetrain);

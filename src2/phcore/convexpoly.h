@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -34,3 +34,44 @@
     0x497AC0 | public: static void __cdecl phConvexPoly::RecordNoIsect(int) | ?RecordNoIsect@phConvexPoly@@SAXH@Z
     0x497AF0 | public: static void __cdecl phConvexPoly::RecordInteriorCollides(bool) | ?RecordInteriorCollides@phConvexPoly@@SAX_N@Z
 */
+
+struct phConvexPoly
+{
+public:
+    // 0x4976A0 | ?AdvanceV@phConvexPoly@@SAXXZ
+    static void AdvanceV();
+
+    // 0x496F10 | ?ConvexPolyIntersect@phConvexPoly@@SAHHPBVVector2@@H0PAUData@1@@Z
+    static i32 ConvexPolyIntersect(
+        i32 arg1, class Vector2 const* arg2, i32 arg3, class Vector2 const* arg4, struct phConvexPoly::Data* arg5);
+
+    // 0x4977D0 | ?GetuHeadOut@phConvexPoly@@SAXXZ
+    static void GetuHeadOut();
+
+    // 0x497870 | ?GetuTailOut@phConvexPoly@@SAXXZ
+    static void GetuTailOut();
+
+    // 0x497730 | ?GetvHeadOut@phConvexPoly@@SAXXZ
+    static void GetvHeadOut();
+
+    // 0x497630 | ?PrecomputeRays@phConvexPoly@@SAXHPBVVector2@@PAV2@PAM@Z
+    static void PrecomputeRays(i32 arg1, class Vector2 const* arg2, class Vector2* arg3, f32* arg4);
+
+    // 0x4978F0 | ?RecordEE@phConvexPoly@@SAXXZ
+    static void RecordEE();
+
+    // 0x497AF0 | ?RecordInteriorCollides@phConvexPoly@@SAX_N@Z
+    static void RecordInteriorCollides(bool arg1);
+
+    // 0x497AC0 | ?RecordNoIsect@phConvexPoly@@SAXH@Z
+    static void RecordNoIsect(i32 arg1);
+
+    // 0x497A00 | ?RecordTail@phConvexPoly@@SAX_N@Z
+    static void RecordTail(bool arg1);
+
+    // 0x4979D0 | ?RecordUTail@phConvexPoly@@SAXXZ
+    static void RecordUTail();
+
+    // 0x4979E0 | ?RecordVTail@phConvexPoly@@SAXXZ
+    static void RecordVTail();
+};

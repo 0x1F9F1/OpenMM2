@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "mmwidget/menu.h"
+
 /*
     mmui:optionsbase
 
@@ -32,60 +34,37 @@
     0x5B4AD8 | const OptionsBase::`vftable' | ??_7OptionsBase@@6B@
 */
 
-// 0x50D490 | ??_9@$BFA@AE
-
-// 0x50D4A0 | ??_9@$BFE@AE
-
-struct OptionsBase : UIMenu
+class OptionsBase : public UIMenu
 {
-public:
-    // OptionsBase::`vftable' @ 0x5B4AD8
+    // const OptionsBase::`vftable' @ 0x5B4AD8
 
+public:
     // 0x50D230 | ??0OptionsBase@@QAE@H@Z
-    inline OptionsBase(int32_t arg1)
-    {
-        stub<member_func_t<void, OptionsBase, int32_t>>(0x50D230, this, arg1);
-    }
+    OptionsBase(i32 arg1);
+
+    // 0x50D460 | ??_GOptionsBase@@UAEPAXI@Z
+    // 0x50D3F0 | ??1OptionsBase@@UAE@XZ
+    ~OptionsBase() override;
 
     // 0x50D3C0 | ?CreateTitle@OptionsBase@@QAEXPAULocString@@@Z
-    inline void CreateTitle(struct LocString* arg1)
-    {
-        return stub<member_func_t<void, OptionsBase, struct LocString*>>(0x50D3C0, this, arg1);
-    }
-
-    // 0x50D3F0 | ??1OptionsBase@@UAE@XZ
-    inline ~OptionsBase() override
-    {
-        stub<member_func_t<void, OptionsBase>>(0x50D3F0, this);
-    }
+    void CreateTitle(struct LocString* arg1);
 
     // 0x4F5460 | ?IsAnOptionMenu@OptionsBase@@UAEHXZ
-    inline int32_t IsAnOptionMenu() override
-    {
-        return stub<member_func_t<int32_t, OptionsBase>>(0x4F5460, this);
-    }
+    i32 IsAnOptionMenu() override;
 
-    // 0x582519 | __purecall
-    virtual inline void CancelAction()
-    {
-        return stub<member_func_t<void, OptionsBase>>(0x582519, this);
-    }
+    virtual void CancelAction() = 0;
 
-    // 0x582519 | __purecall
-    virtual inline void DoneAction()
-    {
-        return stub<member_func_t<void, OptionsBase>>(0x582519, this);
-    }
+    virtual void DoneAction() = 0;
 
     // 0x50D4B0 | ?ResetDefaultAction@OptionsBase@@UAEXXZ
-    virtual inline void ResetDefaultAction()
-    {
-        return stub<member_func_t<void, OptionsBase>>(0x50D4B0, this);
-    }
+    virtual void ResetDefaultAction();
 
     // 0x4F5450 | ?StoreCurrentSetup@OptionsBase@@UAEXXZ
-    virtual inline void StoreCurrentSetup()
-    {
-        return stub<member_func_t<void, OptionsBase>>(0x4F5450, this);
-    }
+    virtual void StoreCurrentSetup();
 };
+
+check_size(OptionsBase, 0x0);
+
+// 0x50D490 | ??_9@$BFA@AE (Skipped: void)
+
+// 0x50D4A0 | ??_9@$BFE@AE (Skipped: void)

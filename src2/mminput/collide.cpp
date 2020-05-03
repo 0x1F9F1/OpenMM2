@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,30 @@
 */
 
 #include "collide.h"
+
+i32 mmCollideFF::Assign(i32 arg1, i32 arg2)
+{
+    return stub<thiscall_t<i32, mmCollideFF*, i32, i32>>(0x5317E0, this, arg1, arg2);
+}
+
+i32 mmCollideFF::Init(struct IDirectInputDevice2A* arg1)
+{
+    return stub<thiscall_t<i32, mmCollideFF*, struct IDirectInputDevice2A*>>(0x531600, this, arg1);
+}
+
+i32 mmCollideFF::Play()
+{
+    return stub<thiscall_t<i32, mmCollideFF*>>(0x5318E0, this);
+}
+
+i32 mmCollideFF::SetValues(f32 arg1, f32 arg2)
+{
+    return stub<thiscall_t<i32, mmCollideFF*, f32, f32>>(0x5317B0, this, arg1, arg2);
+}
+
+i32 mmCollideFF::Stop()
+{
+    return stub<thiscall_t<i32, mmCollideFF*>>(0x531930, this);
+}
+
+define_dummy_symbol(mminput_collide);

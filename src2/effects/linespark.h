@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/cullable.h"
 
 /*
     effects:linespark
@@ -41,79 +43,58 @@
     0x631650 | private: static int asLineSparks::RefCount | ?RefCount@asLineSparks@@0HA
 */
 
-// 0x631638 | ?SLH@@3VHashTable@@A
-inline extern_var(0x631638, class HashTable, SLH);
-
 class asSparkLut
 {
 public:
-    // 0x460470 | ?Get@asSparkLut@@SAPAV1@PAD@Z
-    static inline class asSparkLut* Get(char* arg1)
-    {
-        return stub<cdecl_t<class asSparkLut*, char*>>(0x460470, arg1);
-    }
-
     // 0x4604B0 | ?Init@asSparkLut@@QAEXPAD@Z
-    inline void Init(char* arg1)
-    {
-        return stub<member_func_t<void, asSparkLut, char*>>(0x4604B0, this, arg1);
-    }
+    void Init(char* arg1);
 
+    // 0x460470 | ?Get@asSparkLut@@SAPAV1@PAD@Z
+    static class asSparkLut* Get(char* arg1);
+
+private:
     // 0x5C6404 | ?BuiltinClut@asSparkLut@@0PAIA
-    inline extern_var(0x5C6404, uint32_t*, BuiltinClut);
+    static inline extern_var(0x5C6404, u32*, BuiltinClut);
 };
 
-struct asLineSparks : asCullable
+check_size(asSparkLut, 0x0);
+
+class asLineSparks : public asCullable
 {
+    // const asLineSparks::`vftable' @ 0x5B1968
+
 public:
-    // asLineSparks::`vftable' @ 0x5B1968
-
     // 0x460690 | ??0asLineSparks@@QAE@XZ
-    inline asLineSparks()
-    {
-        stub<member_func_t<void, asLineSparks>>(0x460690, this);
-    }
+    asLineSparks();
 
-    // 0x460740 | ?Init@asLineSparks@@QAEXHPAD@Z
-    inline void Init(int32_t arg1, char* arg2)
-    {
-        return stub<member_func_t<void, asLineSparks, int32_t, char*>>(0x460740, this, arg1, arg2);
-    }
-
-    // 0x460830 | ?RadialBlast@asLineSparks@@QAEXHAAVVector3@@0@Z
-    inline void RadialBlast(int32_t arg1, class Vector3& arg2, class Vector3& arg3)
-    {
-        return stub<member_func_t<void, asLineSparks, int32_t, class Vector3&, class Vector3&>>(
-            0x460830, this, arg1, arg2, arg3);
-    }
-
-    // 0x460BE0 | ?Update@asLineSparks@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, asLineSparks>>(0x460BE0, this);
-    }
-
-    // 0x460C20 | ?Update@asLineSparks@@QAEXM@Z
-    inline void Update(float arg1)
-    {
-        return stub<member_func_t<void, asLineSparks, float>>(0x460C20, this, arg1);
-    }
+    // 0x460E70 | ??_GasLineSparks@@UAEPAXI@Z
+    // 0x4606B0 | ??1asLineSparks@@UAE@XZ
+    ~asLineSparks() override;
 
     // 0x460DE0 | ?Draw@asLineSparks@@QAEXXZ
-    inline void Draw()
-    {
-        return stub<member_func_t<void, asLineSparks>>(0x460DE0, this);
-    }
+    void Draw();
+
+    // 0x460740 | ?Init@asLineSparks@@QAEXHPAD@Z
+    void Init(i32 arg1, char* arg2);
+
+    // 0x460830 | ?RadialBlast@asLineSparks@@QAEXHAAVVector3@@0@Z
+    void RadialBlast(i32 arg1, class Vector3& arg2, class Vector3& arg3);
+
+    // 0x460BE0 | ?Update@asLineSparks@@QAEXXZ
+    void Update();
+
+    // 0x460C20 | ?Update@asLineSparks@@QAEXM@Z
+    void Update(f32 arg1);
+
+private:
+    // 0x631650 | ?RefCount@asLineSparks@@0HA
+    static inline extern_var(0x631650, i32, RefCount);
 
     // 0x5C6400 | ?bEnabled@asLineSparks@@0_NA
     static inline extern_var(0x5C6400, bool, bEnabled);
-
-    // 0x631650 | ?RefCount@asLineSparks@@0HA
-    inline extern_var(0x631650, int32_t, RefCount);
-
-    // 0x4606B0 | ??1asLineSparks@@UAE@XZ
-    virtual inline ~asLineSparks()
-    {
-        stub<member_func_t<void, asLineSparks>>(0x4606B0, this);
-    }
 };
+
+check_size(asLineSparks, 0x60);
+
+// 0x631638 | ?SLH@@3VHashTable@@A
+inline extern_var(0x631638, class HashTable, SLH);

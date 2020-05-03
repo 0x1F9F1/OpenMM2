@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,20 @@
 */
 
 #include "netobject.h"
+
+asNetObject::asNetObject()
+{
+    unimplemented();
+}
+
+asNetObject::~asNetObject()
+{
+    unimplemented();
+}
+
+void asNetObject::Update()
+{
+    return stub<thiscall_t<void, asNetObject*>>(0x572C10, this);
+}
+
+define_dummy_symbol(mmnetwork_netobject);

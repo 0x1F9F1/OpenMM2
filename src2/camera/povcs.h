@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "carcs.h"
 
 /*
     camera:povcs
@@ -38,68 +40,42 @@
     0x5B4E80 | const camPovCS::`vftable' | ??_7camPovCS@@6B@
 */
 
-struct camPovCS : camCarCS
+class camPovCS : public camCarCS
 {
+    // const camPovCS::`vftable' @ 0x5B4E80
+
 public:
-    // camPovCS::`vftable' @ 0x5B4E80
-
     // 0x51D410 | ??0camPovCS@@QAE@XZ
-    inline camPovCS()
-    {
-        stub<member_func_t<void, camPovCS>>(0x51D410, this);
-    }
+    camPovCS();
 
-    // 0x51D5A0 | ?UpdatePOV@camPovCS@@AAEXXZ
-    inline void UpdatePOV()
-    {
-        return stub<member_func_t<void, camPovCS>>(0x51D5A0, this);
-    }
-
+    // 0x51D720 | ??_GcamPovCS@@UAEPAXI@Z
     // 0x51D520 | ??1camPovCS@@UAE@XZ
-    inline ~camPovCS() override
-    {
-        stub<member_func_t<void, camPovCS>>(0x51D520, this);
-    }
-
-    // 0x51D570 | ?Update@camPovCS@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, camPovCS>>(0x51D570, this);
-    }
-
-    // 0x51D540 | ?Reset@camPovCS@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, camPovCS>>(0x51D540, this);
-    }
-
-    // 0x51D690 | ?FileIO@camPovCS@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
-    {
-        return stub<member_func_t<void, camPovCS, class datParser&>>(0x51D690, this, arg1);
-    }
+    ~camPovCS() override;
 
     // 0x51D710 | ?AfterLoad@camPovCS@@UAEXXZ
-    inline void AfterLoad() override
-    {
-        return stub<member_func_t<void, camPovCS>>(0x51D710, this);
-    }
+    void AfterLoad() override;
+
+    // 0x51D690 | ?FileIO@camPovCS@@UAEXAAVdatParser@@@Z
+    void FileIO(class datParser& arg1) override;
 
     // 0x51D760 | ?GetClassName@camPovCS@@UAEPADXZ
-    inline char* GetClassName() override
-    {
-        return stub<member_func_t<char*, camPovCS>>(0x51D760, this);
-    }
+    char* GetClassName() override;
 
     // 0x51D530 | ?MakeActive@camPovCS@@UAEXXZ
-    inline void MakeActive() override
-    {
-        return stub<member_func_t<void, camPovCS>>(0x51D530, this);
-    }
+    void MakeActive() override;
+
+    // 0x51D540 | ?Reset@camPovCS@@UAEXXZ
+    void Reset() override;
+
+    // 0x51D570 | ?Update@camPovCS@@UAEXXZ
+    void Update() override;
 
     // 0x51D590 | ?UpdateInput@camPovCS@@UAEXXZ
-    inline void UpdateInput() override
-    {
-        return stub<member_func_t<void, camPovCS>>(0x51D590, this);
-    }
+    void UpdateInput() override;
+
+private:
+    // 0x51D5A0 | ?UpdatePOV@camPovCS@@AAEXXZ
+    void UpdatePOV();
 };
+
+check_size(camPovCS, 0x0);

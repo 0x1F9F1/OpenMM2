@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -35,51 +35,28 @@ struct aiPoliceForce
 {
 public:
     // 0x550EC0 | ??0aiPoliceForce@@QAE@XZ
-    inline aiPoliceForce()
-    {
-        stub<member_func_t<void, aiPoliceForce>>(0x550EC0, this);
-    }
+    aiPoliceForce();
 
     // 0x550EE0 | ??1aiPoliceForce@@QAE@XZ
-    inline ~aiPoliceForce()
-    {
-        stub<member_func_t<void, aiPoliceForce>>(0x550EE0, this);
-    }
-
-    // 0x550EF0 | ?Reset@aiPoliceForce@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, aiPoliceForce>>(0x550EF0, this);
-    }
-
-    // 0x550F30 | ?Update@aiPoliceForce@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, aiPoliceForce>>(0x550F30, this);
-    }
+    ~aiPoliceForce();
 
     // 0x550F40 | ?Find@aiPoliceForce@@QAEHPAVvehCar@@0@Z
-    inline int32_t Find(class vehCar* arg1, class vehCar* arg2)
-    {
-        return stub<member_func_t<int32_t, aiPoliceForce, class vehCar*, class vehCar*>>(0x550F40, this, arg1, arg2);
-    }
+    i32 Find(class vehCar* arg1, class vehCar* arg2);
 
     // 0x550FA0 | ?RegisterPerp@aiPoliceForce@@QAEHPAVvehCar@@0@Z
-    inline int32_t RegisterPerp(class vehCar* arg1, class vehCar* arg2)
-    {
-        return stub<member_func_t<int32_t, aiPoliceForce, class vehCar*, class vehCar*>>(0x550FA0, this, arg1, arg2);
-    }
+    i32 RegisterPerp(class vehCar* arg1, class vehCar* arg2);
 
-    // 0x551040 | ?UnRegisterCop@aiPoliceForce@@QAEHPAVvehCar@@0@Z
-    inline int32_t UnRegisterCop(class vehCar* arg1, class vehCar* arg2)
-    {
-        return stub<member_func_t<int32_t, aiPoliceForce, class vehCar*, class vehCar*>>(0x551040, this, arg1, arg2);
-    }
+    // 0x550EF0 | ?Reset@aiPoliceForce@@QAEXXZ
+    void Reset();
 
     // 0x551120 | ?State@aiPoliceForce@@QAEHPAVvehCar@@0M@Z
-    inline int32_t State(class vehCar* arg1, class vehCar* arg2, float arg3)
-    {
-        return stub<member_func_t<int32_t, aiPoliceForce, class vehCar*, class vehCar*, float>>(
-            0x551120, this, arg1, arg2, arg3);
-    }
+    i32 State(class vehCar* arg1, class vehCar* arg2, f32 arg3);
+
+    // 0x551040 | ?UnRegisterCop@aiPoliceForce@@QAEHPAVvehCar@@0@Z
+    i32 UnRegisterCop(class vehCar* arg1, class vehCar* arg2);
+
+    // 0x550F30 | ?Update@aiPoliceForce@@QAEXXZ
+    void Update();
 };
+
+check_size(aiPoliceForce, 0x0);

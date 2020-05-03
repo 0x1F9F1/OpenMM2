@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "mmwidget/menu.h"
+
 /*
     mmui:about
 
@@ -33,43 +35,28 @@
 */
 
 // 0x505850 | ?GetMidtownRegString@@YAXPADH00@Z
-inline void GetMidtownRegString(char* arg1, int32_t arg2, char* arg3, char* arg4)
-{
-    return stub<cdecl_t<void, char*, int32_t, char*, char*>>(0x505850, arg1, arg2, arg3, arg4);
-}
+void GetMidtownRegString(char* arg1, i32 arg2, char* arg3, char* arg4);
 
-struct AboutMenu : UIMenu
+class AboutMenu : public UIMenu
 {
+    // const AboutMenu::`vftable' @ 0x5B4584
+
 public:
-    // AboutMenu::`vftable' @ 0x5B4584
-
     // 0x5058D0 | ??0AboutMenu@@QAE@H@Z
-    inline AboutMenu(int32_t arg1)
-    {
-        stub<member_func_t<void, AboutMenu, int32_t>>(0x5058D0, this, arg1);
-    }
+    AboutMenu(i32 arg1);
 
+    // 0x505C00 | ??_GAboutMenu@@UAEPAXI@Z
     // 0x505AB0 | ??1AboutMenu@@UAE@XZ
-    inline ~AboutMenu() override
-    {
-        stub<member_func_t<void, AboutMenu>>(0x505AB0, this);
-    }
+    ~AboutMenu() override;
 
     // 0x505B50 | ?Cull@AboutMenu@@UAEXXZ
-    inline void Cull() override
-    {
-        return stub<member_func_t<void, AboutMenu>>(0x505B50, this);
-    }
-
-    // 0x505AE0 | ?Update@AboutMenu@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, AboutMenu>>(0x505AE0, this);
-    }
+    void Cull() override;
 
     // 0x505AC0 | ?PreSetup@AboutMenu@@UAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, AboutMenu>>(0x505AC0, this);
-    }
+    void PreSetup() override;
+
+    // 0x505AE0 | ?Update@AboutMenu@@UAEXXZ
+    void Update() override;
 };
+
+check_size(AboutMenu, 0xAC);

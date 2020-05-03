@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -30,21 +30,13 @@ class phIntersectionPoint
 {
 public:
     // 0x415220 | ??0phIntersectionPoint@@QAE@XZ
-    inline phIntersectionPoint()
-    {
-        stub<member_func_t<void, phIntersectionPoint>>(0x415220, this);
-    }
-
-    // 0x494CE0 | ?Transform@phIntersectionPoint@@QAEXPBVMatrix34@@@Z
-    inline void Transform(class Matrix34 const* arg1)
-    {
-        return stub<member_func_t<void, phIntersectionPoint, class Matrix34 const*>>(0x494CE0, this, arg1);
-    }
+    phIntersectionPoint();
 
     // 0x494D90 | ?Set@phIntersectionPoint@@QAEXABVVector3@@0MME@Z
-    inline void Set(class Vector3 const& arg1, class Vector3 const& arg2, float arg3, float arg4, uint8_t arg5)
-    {
-        return stub<member_func_t<void, phIntersectionPoint, class Vector3 const&, class Vector3 const&, float, float,
-            uint8_t>>(0x494D90, this, arg1, arg2, arg3, arg4, arg5);
-    }
+    void Set(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, f32 arg4, u8 arg5);
+
+    // 0x494CE0 | ?Transform@phIntersectionPoint@@QAEXPBVMatrix34@@@Z
+    void Transform(class Matrix34 const* arg1);
 };
+
+check_size(phIntersectionPoint, 0x0);

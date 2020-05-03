@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     vehicle:engine
@@ -39,81 +41,47 @@
     0x5B2FEC | const vehEngine::`vftable' | ??_7vehEngine@@6B@
 */
 
-struct vehEngine : asNode
+class vehEngine : public asNode
 {
+    // const vehEngine::`vftable' @ 0x5B2FEC
+
 public:
-    // vehEngine::`vftable' @ 0x5B2FEC
-
     // 0x4D8C10 | ??0vehEngine@@QAE@XZ
-    inline vehEngine()
-    {
-        stub<member_func_t<void, vehEngine>>(0x4D8C10, this);
-    }
+    vehEngine();
 
-    // 0x4D8D20 | ?Init@vehEngine@@QAEXPAVvehCarSim@@PBD1@Z
-    inline void Init(class vehCarSim* arg1, char const* arg2, char const* arg3)
-    {
-        return stub<member_func_t<void, vehEngine, class vehCarSim*, char const*, char const*>>(
-            0x4D8D20, this, arg1, arg2, arg3);
-    }
-
-    // 0x4D8DC0 | ?ComputeConstants@vehEngine@@QAEXXZ
-    inline void ComputeConstants()
-    {
-        return stub<member_func_t<void, vehEngine>>(0x4D8DC0, this);
-    }
-
-    // 0x4D8E20 | ?CalcTorqueAtFullThrottle@vehEngine@@QAEMM@Z
-    inline float CalcTorqueAtFullThrottle(float arg1)
-    {
-        return stub<member_func_t<float, vehEngine, float>>(0x4D8E20, this, arg1);
-    }
-
-    // 0x4D8EA0 | ?CalcTorqueAtZeroThrottle@vehEngine@@QAEMXZ
-    inline float CalcTorqueAtZeroThrottle()
-    {
-        return stub<member_func_t<float, vehEngine>>(0x4D8EA0, this);
-    }
-
-    // 0x4D8ED0 | ?CalcTorque@vehEngine@@QAEMM@Z
-    inline float CalcTorque(float arg1)
-    {
-        return stub<member_func_t<float, vehEngine, float>>(0x4D8ED0, this, arg1);
-    }
+    // 0x4D92E0 | ??_GvehEngine@@UAEPAXI@Z
+    // 0x4D8CD0 | ??1vehEngine@@UAE@XZ
+    ~vehEngine() override;
 
     // 0x4D8F10 | ?CalcHPAtFullThrottle@vehEngine@@QAEMM@Z
-    inline float CalcHPAtFullThrottle(float arg1)
-    {
-        return stub<member_func_t<float, vehEngine, float>>(0x4D8F10, this, arg1);
-    }
+    f32 CalcHPAtFullThrottle(f32 arg1);
 
-    // 0x4D8CD0 | ??1vehEngine@@UAE@XZ
-    inline ~vehEngine() override
-    {
-        stub<member_func_t<void, vehEngine>>(0x4D8CD0, this);
-    }
+    // 0x4D8ED0 | ?CalcTorque@vehEngine@@QAEMM@Z
+    f32 CalcTorque(f32 arg1);
 
-    // 0x4D8F30 | ?Update@vehEngine@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, vehEngine>>(0x4D8F30, this);
-    }
+    // 0x4D8E20 | ?CalcTorqueAtFullThrottle@vehEngine@@QAEMM@Z
+    f32 CalcTorqueAtFullThrottle(f32 arg1);
 
-    // 0x4D8CE0 | ?Reset@vehEngine@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, vehEngine>>(0x4D8CE0, this);
-    }
+    // 0x4D8EA0 | ?CalcTorqueAtZeroThrottle@vehEngine@@QAEMXZ
+    f32 CalcTorqueAtZeroThrottle();
+
+    // 0x4D8DC0 | ?ComputeConstants@vehEngine@@QAEXXZ
+    void ComputeConstants();
 
     // 0x4D9240 | ?FileIO@vehEngine@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
-    {
-        return stub<member_func_t<void, vehEngine, class datParser&>>(0x4D9240, this, arg1);
-    }
+    void FileIO(class datParser& arg1) override;
 
     // 0x4D9310 | ?GetClassName@vehEngine@@UAEPADXZ
-    inline char* GetClassName() override
-    {
-        return stub<member_func_t<char*, vehEngine>>(0x4D9310, this);
-    }
+    char* GetClassName() override;
+
+    // 0x4D8D20 | ?Init@vehEngine@@QAEXPAVvehCarSim@@PBD1@Z
+    void Init(class vehCarSim* arg1, char const* arg2, char const* arg3);
+
+    // 0x4D8CE0 | ?Reset@vehEngine@@UAEXXZ
+    void Reset() override;
+
+    // 0x4D8F30 | ?Update@vehEngine@@UAEXXZ
+    void Update() override;
 };
+
+check_size(vehEngine, 0x0);

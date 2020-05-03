@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "pu_menu.h"
+
 /*
     mmui:pu_key
 
@@ -30,33 +32,24 @@
     0x5B4840 | const PUKey::`vftable' | ??_7PUKey@@6B@
 */
 
-struct PUKey : PUMenuBase
+class PUKey : public PUMenuBase
 {
+    // const PUKey::`vftable' @ 0x5B4840
+
 public:
-    // PUKey::`vftable' @ 0x5B4840
-
     // 0x50B5A0 | ??0PUKey@@QAE@HMMMM@Z
-    inline PUKey(int32_t arg1, float arg2, float arg3, float arg4, float arg5)
-    {
-        stub<member_func_t<void, PUKey, int32_t, float, float, float, float>>(
-            0x50B5A0, this, arg1, arg2, arg3, arg4, arg5);
-    }
+    PUKey(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5);
 
+    // 0x50B950 | ??_GPUKey@@UAEPAXI@Z
     // 0x50B640 | ??1PUKey@@UAE@XZ
-    inline ~PUKey() override
-    {
-        stub<member_func_t<void, PUKey>>(0x50B640, this);
-    }
+    ~PUKey() override;
+
+private:
+    // 0x50B910 | ?PostSetup@PUKey@@EAEXXZ
+    void PostSetup() override;
 
     // 0x50B650 | ?PreSetup@PUKey@@EAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, PUKey>>(0x50B650, this);
-    }
-
-    // 0x50B910 | ?PostSetup@PUKey@@EAEXXZ
-    inline void PostSetup() override
-    {
-        return stub<member_func_t<void, PUKey>>(0x50B910, this);
-    }
+    void PreSetup() override;
 };
+
+check_size(PUKey, 0x0);

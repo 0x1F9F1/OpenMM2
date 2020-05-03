@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "node/node.h"
+
 /*
     mmwidget:ttip
 
@@ -32,44 +34,29 @@
     0x5B3B64 | const mmToolTip::`vftable' | ??_7mmToolTip@@6B@
 */
 
-struct mmToolTip : asNode
+class mmToolTip : public asNode
 {
-public:
-    // mmToolTip::`vftable' @ 0x5B3B64
+    // const mmToolTip::`vftable' @ 0x5B3B64
 
+public:
     // 0x4F1620 | ??0mmToolTip@@QAE@XZ
-    inline mmToolTip()
-    {
-        stub<member_func_t<void, mmToolTip>>(0x4F1620, this);
-    }
+    mmToolTip();
+
+    // 0x4F17E0 | ??_GmmToolTip@@UAEPAXI@Z
+    // 0x4F1690 | ??1mmToolTip@@UAE@XZ
+    ~mmToolTip() override;
 
     // 0x4F16F0 | ?Init@mmToolTip@@QAEXPAVUIMenu@@PAULocString@@@Z
-    inline void Init(class UIMenu* arg1, struct LocString* arg2)
-    {
-        return stub<member_func_t<void, mmToolTip, class UIMenu*, struct LocString*>>(0x4F16F0, this, arg1, arg2);
-    }
+    void Init(class UIMenu* arg1, struct LocString* arg2);
 
     // 0x4F17A0 | ?SetText@mmToolTip@@QAEXPAULocString@@@Z
-    inline void SetText(struct LocString* arg1)
-    {
-        return stub<member_func_t<void, mmToolTip, struct LocString*>>(0x4F17A0, this, arg1);
-    }
+    void SetText(struct LocString* arg1);
 
     // 0x4F17C0 | ?Switch@mmToolTip@@QAEXH@Z
-    inline void Switch(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmToolTip, int32_t>>(0x4F17C0, this, arg1);
-    }
-
-    // 0x4F1690 | ??1mmToolTip@@UAE@XZ
-    inline ~mmToolTip() override
-    {
-        stub<member_func_t<void, mmToolTip>>(0x4F1690, this);
-    }
+    void Switch(i32 arg1);
 
     // 0x4F17D0 | ?Update@mmToolTip@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmToolTip>>(0x4F17D0, this);
-    }
+    void Update() override;
 };
+
+check_size(mmToolTip, 0x0);

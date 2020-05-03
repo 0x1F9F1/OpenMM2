@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,30 @@
 */
 
 #include "callback.h"
+
+datCallback::datCallback()
+{
+    unimplemented();
+}
+
+datCallback::datCallback(void (*arg1)(void))
+{
+    unimplemented();
+}
+
+datCallback::datCallback(void (*arg1)(void*), void* arg2)
+{
+    unimplemented();
+}
+
+datCallback::datCallback(void (*arg1)(void*, void*), void* arg2)
+{
+    unimplemented();
+}
+
+void datCallback::Call(void* arg1)
+{
+    return stub<thiscall_t<void, datCallback*, void*>>(0x4C7B50, this, arg1);
+}
+
+define_dummy_symbol(data_callback);

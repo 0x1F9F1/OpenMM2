@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     effects:shard
@@ -42,121 +44,77 @@
     public: virtual void * __thiscall fxShardManager::`vector deleting destructor'(unsigned int) | ??_EfxShardManager@@UAEPAXI@Z
     0x4603C0 | public: void * __thiscall fxShard::`vector deleting destructor'(unsigned int) | ??_EfxShard@@QAEPAXI@Z
     0x5B1930 | const fxShardManager::`vftable' | ??_7fxShardManager@@6B@
-    protected: static class fxShardManager * * fxShardManager::Instances | ?Instances@fxShardManager@@1PAPAV1@A
-    protected: static int fxShardManager::NumInstances | ?NumInstances@fxShardManager@@1HA
+    0x631590 | protected: static class fxShardManager * * fxShardManager::Instances | ?Instances@fxShardManager@@1PAPAV1@A
+    0x631630 | protected: static int fxShardManager::NumInstances | ?NumInstances@fxShardManager@@1HA
 */
 
 // 0x45FC30 | ?draw_textured_tri@@YAXPAVgfxTexture@@ABVMatrix34@@MMM@Z
-inline void draw_textured_tri(class gfxTexture* arg1, class Matrix34 const& arg2, float arg3, float arg4, float arg5)
-{
-    return stub<cdecl_t<void, class gfxTexture*, class Matrix34 const&, float, float, float>>(
-        0x45FC30, arg1, arg2, arg3, arg4, arg5);
-}
-
-class fxShardManager : asNode
-{
-public:
-    // fxShardManager::`vftable' @ 0x5B1930
-
-    // 0x45FE70 | ??0fxShardManager@@QAE@XZ
-    inline fxShardManager()
-    {
-        stub<member_func_t<void, fxShardManager>>(0x45FE70, this);
-    }
-
-    // 0x45FF60 | ?GetInstance@fxShardManager@@SAPAV1@H@Z
-    static inline class fxShardManager* GetInstance(int32_t arg1)
-    {
-        return stub<cdecl_t<class fxShardManager*, int32_t>>(0x45FF60, arg1);
-    }
-
-    // 0x45FF80 | ?Init@fxShardManager@@QAEXHPAVmodShader@@H@Z
-    inline void Init(int32_t arg1, class modShader* arg2, int32_t arg3)
-    {
-        return stub<member_func_t<void, fxShardManager, int32_t, class modShader*, int32_t>>(
-            0x45FF80, this, arg1, arg2, arg3);
-    }
-
-    // 0x460010 | ?SetShader@fxShardManager@@QAEXPAVmodShader@@H@Z
-    inline void SetShader(class modShader* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, fxShardManager, class modShader*, int32_t>>(0x460010, this, arg1, arg2);
-    }
-
-    // 0x460030 | ?EmitShards@fxShardManager@@QAEXVVector3@@MMABVMatrix34@@@Z
-    inline void EmitShards(class Vector3 arg1, float arg2, float arg3, class Matrix34 const& arg4)
-    {
-        return stub<member_func_t<void, fxShardManager, class Vector3, float, float, class Matrix34 const&>>(
-            0x460030, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x4600B0 | ?EmitAllShards@fxShardManager@@QAEXVVector3@@MABVMatrix34@@@Z
-    inline void EmitAllShards(class Vector3 arg1, float arg2, class Matrix34 const& arg3)
-    {
-        return stub<member_func_t<void, fxShardManager, class Vector3, float, class Matrix34 const&>>(
-            0x4600B0, this, arg1, arg2, arg3);
-    }
-
-    // 0x460100 | ?EmitShard@fxShardManager@@QAEXVVector3@@MABVMatrix34@@@Z
-    inline void EmitShard(class Vector3 arg1, float arg2, class Matrix34 const& arg3)
-    {
-        return stub<member_func_t<void, fxShardManager, class Vector3, float, class Matrix34 const&>>(
-            0x460100, this, arg1, arg2, arg3);
-    }
-
-    // 0x4602D0 | ?Draw@fxShardManager@@QAEXXZ
-    inline void Draw()
-    {
-        return stub<member_func_t<void, fxShardManager>>(0x4602D0, this);
-    }
-
-    // 0x45FEE0 | ??1fxShardManager@@UAE@XZ
-    inline ~fxShardManager() override
-    {
-        stub<member_func_t<void, fxShardManager>>(0x45FEE0, this);
-    }
-
-    // 0x4602A0 | ?Update@fxShardManager@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, fxShardManager>>(0x4602A0, this);
-    }
-};
+void draw_textured_tri(class gfxTexture* arg1, class Matrix34 const& arg2, f32 arg3, f32 arg4, f32 arg5);
 
 struct fxShard
 {
 public:
     // 0x45FCE0 | ??0fxShard@@QAE@XZ
-    inline fxShard()
-    {
-        stub<member_func_t<void, fxShard>>(0x45FCE0, this);
-    }
+    fxShard();
 
     // 0x45FD20 | ??1fxShard@@QAE@XZ
-    inline ~fxShard()
-    {
-        stub<member_func_t<void, fxShard>>(0x45FD20, this);
-    }
+    // 0x4603C0 | ??_EfxShard@@QAEPAXI@Z
+    ~fxShard();
 
     // 0x45FD30 | ?AddShard@fxShard@@QAEXVVector3@@00M@Z
-    inline void AddShard(class Vector3 arg1, class Vector3 arg2, class Vector3 arg3, float arg4)
-    {
-        return stub<member_func_t<void, fxShard, class Vector3, class Vector3, class Vector3, float>>(
-            0x45FD30, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x45FDA0 | ?Update@fxShard@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, fxShard>>(0x45FDA0, this);
-    }
+    void AddShard(class Vector3 arg1, class Vector3 arg2, class Vector3 arg3, f32 arg4);
 
     // 0x45FE30 | ?Draw@fxShard@@QAEXPAVmodShader@@@Z
-    inline void Draw(class modShader* arg1)
-    {
-        return stub<member_func_t<void, fxShard, class modShader*>>(0x45FE30, this, arg1);
-    }
+    void Draw(class modShader* arg1);
 
-    // 0x4603C0 | ??_EfxShard@@QAEPAXI@Z
-    // Skipped (scalar/vector destructor)
+    // 0x45FDA0 | ?Update@fxShard@@QAEXXZ
+    void Update();
 };
+
+check_size(fxShard, 0x5C);
+
+class fxShardManager : public asNode
+{
+    // const fxShardManager::`vftable' @ 0x5B1930
+
+public:
+    // 0x45FE70 | ??0fxShardManager@@QAE@XZ
+    fxShardManager();
+
+    // 0x460390 | ??_GfxShardManager@@UAEPAXI@Z
+    // 0x45FEE0 | ??1fxShardManager@@UAE@XZ
+    ~fxShardManager() override;
+
+    // 0x4602D0 | ?Draw@fxShardManager@@QAEXXZ
+    void Draw();
+
+    // 0x4600B0 | ?EmitAllShards@fxShardManager@@QAEXVVector3@@MABVMatrix34@@@Z
+    void EmitAllShards(class Vector3 arg1, f32 arg2, class Matrix34 const& arg3);
+
+    // 0x460100 | ?EmitShard@fxShardManager@@QAEXVVector3@@MABVMatrix34@@@Z
+    void EmitShard(class Vector3 arg1, f32 arg2, class Matrix34 const& arg3);
+
+    // 0x460030 | ?EmitShards@fxShardManager@@QAEXVVector3@@MMABVMatrix34@@@Z
+    void EmitShards(class Vector3 arg1, f32 arg2, f32 arg3, class Matrix34 const& arg4);
+
+    // 0x45FF80 | ?Init@fxShardManager@@QAEXHPAVmodShader@@H@Z
+    void Init(i32 arg1, class modShader* arg2, i32 arg3);
+
+    // 0x460010 | ?SetShader@fxShardManager@@QAEXPAVmodShader@@H@Z
+    void SetShader(class modShader* arg1, i32 arg2);
+
+    // 0x4602A0 | ?Update@fxShardManager@@UAEXXZ
+    void Update() override;
+
+    // 0x45FF60 | ?GetInstance@fxShardManager@@SAPAV1@H@Z
+    static class fxShardManager* GetInstance(i32 arg1);
+
+protected:
+    // 0x631590 | ?Instances@fxShardManager@@1PAPAV1@A
+    static inline extern_var(0x631590, class fxShardManager**, Instances);
+
+    // 0x631630 | ?NumInstances@fxShardManager@@1HA
+    static inline extern_var(0x631630, i32, NumInstances);
+};
+
+check_size(fxShardManager, 0x4C);

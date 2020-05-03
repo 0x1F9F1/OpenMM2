@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "textfield.h"
 
 /*
     mmwidget:icon
@@ -35,62 +37,38 @@
     0x5B37DC | const UIIcon::`vftable' | ??_7UIIcon@@6B@
 */
 
-class UIIcon : uiWidget
+class UIIcon : public uiWidget
 {
+    // const UIIcon::`vftable' @ 0x5B37DC
+
 public:
-    // UIIcon::`vftable' @ 0x5B37DC
-
     // 0x4ED880 | ??0UIIcon@@QAE@XZ
-    inline UIIcon()
-    {
-        stub<member_func_t<void, UIIcon>>(0x4ED880, this);
-    }
+    UIIcon();
 
-    // 0x4ED8E0 | ?Init@UIIcon@@QAEXPADMM@Z
-    inline void Init(char* arg1, float arg2, float arg3)
-    {
-        return stub<member_func_t<void, UIIcon, char*, float, float>>(0x4ED8E0, this, arg1, arg2, arg3);
-    }
-
-    // 0x4ED920 | ?LoadBitchmap@UIIcon@@QAEXPAD@Z
-    inline void LoadBitchmap(char* arg1)
-    {
-        return stub<member_func_t<void, UIIcon, char*>>(0x4ED920, this, arg1);
-    }
-
-    // 0x4ED930 | ?LoadBitmap@UIIcon@@QAEXPAD@Z
-    inline void LoadBitmap(char* arg1)
-    {
-        return stub<member_func_t<void, UIIcon, char*>>(0x4ED930, this, arg1);
-    }
-
-    // 0x4ED970 | ?GetHitArea@UIIcon@@QAEXAAM0@Z
-    inline void GetHitArea(float& arg1, float& arg2)
-    {
-        return stub<member_func_t<void, UIIcon, float&, float&>>(0x4ED970, this, arg1, arg2);
-    }
-
+    // 0x4EDA40 | ??_GUIIcon@@UAEPAXI@Z
     // 0x4ED8D0 | ??1UIIcon@@UAE@XZ
-    inline ~UIIcon() override
-    {
-        stub<member_func_t<void, UIIcon>>(0x4ED8D0, this);
-    }
+    ~UIIcon() override;
 
     // 0x4EDA10 | ?Cull@UIIcon@@UAEXXZ
-    inline void Cull() override
-    {
-        return stub<member_func_t<void, UIIcon>>(0x4EDA10, this);
-    }
+    void Cull() override;
 
-    // 0x4ED9F0 | ?Update@UIIcon@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, UIIcon>>(0x4ED9F0, this);
-    }
+    // 0x4ED970 | ?GetHitArea@UIIcon@@QAEXAAM0@Z
+    void GetHitArea(f32& arg1, f32& arg2);
+
+    // 0x4ED8E0 | ?Init@UIIcon@@QAEXPADMM@Z
+    void Init(char* arg1, f32 arg2, f32 arg3);
+
+    // 0x4ED920 | ?LoadBitchmap@UIIcon@@QAEXPAD@Z
+    void LoadBitchmap(char* arg1);
+
+    // 0x4ED930 | ?LoadBitmap@UIIcon@@QAEXPAD@Z
+    void LoadBitmap(char* arg1);
 
     // 0x4ED9B0 | ?Switch@UIIcon@@UAEXH@Z
-    inline void Switch(int32_t arg1) override
-    {
-        return stub<member_func_t<void, UIIcon, int32_t>>(0x4ED9B0, this, arg1);
-    }
+    void Switch(i32 arg1) override;
+
+    // 0x4ED9F0 | ?Update@UIIcon@@UAEXXZ
+    void Update() override;
 };
+
+check_size(UIIcon, 0x84);

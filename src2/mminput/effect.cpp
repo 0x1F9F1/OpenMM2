@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,40 @@
 */
 
 #include "effect.h"
+
+i32 __stdcall inputEnumEffectTypeProc(struct DIEFFECTINFOA const* arg1, void* arg2)
+{
+    return stub<stdcall_t<i32, struct DIEFFECTINFOA const*, void*>>(0x5314E0, arg1, arg2);
+}
+
+mmEffectFF::mmEffectFF()
+{
+    unimplemented();
+}
+
+mmEffectFF::~mmEffectFF()
+{
+    unimplemented();
+}
+
+i32 mmEffectFF::Init(struct IDirectInputDevice2A* arg1)
+{
+    return stub<thiscall_t<i32, mmEffectFF*, struct IDirectInputDevice2A*>>(0x0, this, arg1);
+}
+
+i32 mmEffectFF::Play()
+{
+    return stub<thiscall_t<i32, mmEffectFF*>>(0x5315D0, this);
+}
+
+i32 mmEffectFF::Stop()
+{
+    return stub<thiscall_t<i32, mmEffectFF*>>(0x5315E0, this);
+}
+
+i32 mmEffectFF::SetValues(f32 arg1, f32 arg2)
+{
+    return stub<thiscall_t<i32, mmEffectFF*, f32, f32>>(0x5315F0, this, arg1, arg2);
+}
+
+define_dummy_symbol(mminput_effect);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "data/base.h"
 
 /*
     node:fileio
@@ -39,66 +41,40 @@
 
 struct asFileIO : Base
 {
-public:
-    // asFileIO::`vftable' @ 0x5B871C
+    // const asFileIO::`vftable' @ 0x5B871C
 
+public:
     // 0x597790 | ??0asFileIO@@QAE@XZ
-    inline asFileIO()
-    {
-        stub<member_func_t<void, asFileIO>>(0x597790, this);
-    }
+    asFileIO();
+
+    // 0x597980 | ??_GasFileIO@@UAEPAXI@Z
+    // 0x5977A0 | ??1asFileIO@@UAE@XZ
+    ~asFileIO() override;
 
     // 0x597940 | ?SetName@asFileIO@@QAEXPBD@Z
-    inline void SetName(char const* arg1)
-    {
-        return stub<member_func_t<void, asFileIO, char const*>>(0x597940, this, arg1);
-    }
+    void SetName(char const* arg1);
 
-    // 0x5977A0 | ??1asFileIO@@UAE@XZ
-    inline ~asFileIO() override
-    {
-        stub<member_func_t<void, asFileIO>>(0x5977A0, this);
-    }
-
+protected:
     // 0x5979B0 | ?FileIO@asFileIO@@MAEXAAVdatParser@@@Z
-    virtual inline void FileIO(class datParser& arg1)
-    {
-        return stub<member_func_t<void, asFileIO, class datParser&>>(0x5979B0, this, arg1);
-    }
+    virtual void FileIO(class datParser& arg1);
 
     // 0x595AE0 | ?AfterLoad@asFileIO@@MAEXXZ
-    virtual inline void AfterLoad()
-    {
-        return stub<member_func_t<void, asFileIO>>(0x595AE0, this);
-    }
+    virtual void AfterLoad();
 
     // 0x595AF0 | ?BeforeSave@asFileIO@@MAEXXZ
-    virtual inline void BeforeSave()
-    {
-        return stub<member_func_t<void, asFileIO>>(0x595AF0, this);
-    }
+    virtual void BeforeSave();
 
     // 0x597800 | ?Save@asFileIO@@MAE_NXZ
-    virtual inline bool Save()
-    {
-        return stub<member_func_t<bool, asFileIO>>(0x597800, this);
-    }
+    virtual bool Save();
 
     // 0x597890 | ?Load@asFileIO@@MAE_NXZ
-    virtual inline bool Load()
-    {
-        return stub<member_func_t<bool, asFileIO>>(0x597890, this);
-    }
+    virtual bool Load();
 
     // 0x597970 | ?GetDirName@asFileIO@@MAEPBDXZ
-    virtual inline char const* GetDirName()
-    {
-        return stub<member_func_t<char const*, asFileIO>>(0x597970, this);
-    }
+    virtual char const* GetDirName();
 
     // 0x5979C0 | ?GetClassName@asFileIO@@MAEPBDXZ
-    virtual inline char const* GetClassName()
-    {
-        return stub<member_func_t<char const*, asFileIO>>(0x5979C0, this);
-    }
+    virtual char const* GetClassName();
 };
+
+check_size(asFileIO, 0x0);

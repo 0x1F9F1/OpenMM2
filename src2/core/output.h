@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -51,56 +51,73 @@
     0x6A3D50 | void (__cdecl* ageExternalDebugHandler)(void) | ?ageExternalDebugHandler@@3P6AXXZA
 */
 
+// 0x4C9850 | ?Abortf@@YAXPBDZZ
+void Abortf(char const* arg1, ...);
+
 // 0x4C94D0 | ?DisablePopUpErrors@@YAXXZ
-inline void DisablePopUpErrors()
-{
-    return stub<cdecl_t<void>>(0x4C94D0);
-}
+void DisablePopUpErrors();
 
 // 0x4C94E0 | ?DisablePopUpQuits@@YAXXZ
-inline void DisablePopUpQuits()
-{
-    return stub<cdecl_t<void>>(0x4C94E0);
-}
-
-// 0x4C94F0 | ?EnablePopUpErrors@@YAXXZ
-inline void EnablePopUpErrors()
-{
-    return stub<cdecl_t<void>>(0x4C94F0);
-}
-
-// 0x4C9500 | ?EnablePopUpQuits@@YAXXZ
-inline void EnablePopUpQuits()
-{
-    return stub<cdecl_t<void>>(0x4C9500);
-}
-
-// 0x4C9720 | ?Printf@@YAXPBDZZ
-// Skipped (Variable Arguments)
-
-// 0x4C9750 | ?Messagef@@YAXPBDZZ
-// Skipped (Variable Arguments)
+void DisablePopUpQuits();
 
 // 0x4C9780 | ?Displayf@@YAXPBDZZ
-// Skipped (Variable Arguments)
+void Displayf(char const* arg1, ...);
 
-// 0x4C97B0 | ?Warningf@@YAXPBDZZ
-// Skipped (Variable Arguments)
+// 0x4C94F0 | ?EnablePopUpErrors@@YAXXZ
+void EnablePopUpErrors();
+
+// 0x4C9500 | ?EnablePopUpQuits@@YAXXZ
+void EnablePopUpQuits();
 
 // 0x4C97E0 | ?Errorf@@YAXPBDZZ
-// Skipped (Variable Arguments)
+void Errorf(char const* arg1, ...);
+
+// 0x4C9750 | ?Messagef@@YAXPBDZZ
+void Messagef(char const* arg1, ...);
+
+// 0x4C9720 | ?Printf@@YAXPBDZZ
+void Printf(char const* arg1, ...);
 
 // 0x4C9810 | ?Quitf@@YAXPBDZZ
-// Skipped (Variable Arguments)
+void Quitf(char const* arg1, ...);
 
-// 0x4C9850 | ?Abortf@@YAXPBDZZ
-// Skipped (Variable Arguments)
+// 0x4C97B0 | ?Warningf@@YAXPBDZZ
+void Warningf(char const* arg1, ...);
 
 // 0x5CECF0 | ?PrintString@@3P6AXPBD@ZA
-inline extern_var(0x5CECF0, void(__cdecl*)(char const*), PrintString);
-
-// 0x6A3D38 | ?gFatalMessageHandler@@3P6AXPBD@ZA
-inline extern_var(0x6A3D38, void(__cdecl*)(char const*), gFatalMessageHandler);
+inline extern_var(0x5CECF0, void (*)(char const*), PrintString);
 
 // 0x6A3D50 | ?ageExternalDebugHandler@@3P6AXXZA
-inline extern_var(0x6A3D50, void(__cdecl*)(void), ageExternalDebugHandler);
+inline extern_var(0x6A3D50, void (*)(void), ageExternalDebugHandler);
+
+// 0x6A3D38 | ?gFatalMessageHandler@@3P6AXPBD@ZA
+inline extern_var(0x6A3D38, void (*)(char const*), gFatalMessageHandler);
+
+struct datOutput
+{
+public:
+    // 0x4C9580 | ?CallAfterMsgBoxFunction@datOutput@@SAXXZ
+    static void CallAfterMsgBoxFunction();
+
+    // 0x4C9570 | ?CallBeforeMsgBoxFunction@datOutput@@SAXXZ
+    static void CallBeforeMsgBoxFunction();
+
+    // 0x4C9530 | ?CloseLog@datOutput@@SAXXZ
+    static void CloseLog();
+
+    // 0x4C95A0 | ?OpenLog@datOutput@@SA_NPBD@Z
+    static bool OpenLog(char const* arg1);
+
+    // 0x4C9560 | ?SetAfterMsgBoxFunction@datOutput@@SAXP6AXXZ@Z
+    static void SetAfterMsgBoxFunction(void (*arg1)(void));
+
+    // 0x4C9550 | ?SetBeforeMsgBoxFunction@datOutput@@SAXP6AXXZ@Z
+    static void SetBeforeMsgBoxFunction(void (*arg1)(void));
+
+    // 0x4C9590 | ?SetOutputMask@datOutput@@SAXI@Z
+    static void SetOutputMask(u32 arg1);
+
+private:
+    // 0x6A3D4C | ?OutputSent@datOutput@@0_NA
+    static inline extern_var(0x6A3D4C, bool, OutputSent);
+};

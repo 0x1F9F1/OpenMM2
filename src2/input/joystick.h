@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -38,69 +38,42 @@
 class ioJoystick
 {
 public:
-    // 0x4BB7F0 | ?EnumDeviceProc@ioJoystick@@CGHPBUDIDEVICEINSTANCEA@@PAX@Z
-    static inline int32_t __stdcall EnumDeviceProc(struct DIDEVICEINSTANCEA const* arg1, void* arg2)
-    {
-        return stub<stdcall_t<int32_t, struct DIDEVICEINSTANCEA const*, void*>>(0x4BB7F0, arg1, arg2);
-    }
-
     // 0x4BBA00 | ?BeginAll@ioJoystick@@SAXXZ
-    static inline void BeginAll()
-    {
-        return stub<cdecl_t<void>>(0x4BBA00);
-    }
-
-    // 0x4BBA50 | ?PollAll@ioJoystick@@SAXXZ
-    static inline void PollAll()
-    {
-        return stub<cdecl_t<void>>(0x4BBA50);
-    }
-
-    // 0x4BBA80 | ?UpdateAll@ioJoystick@@SAXXZ
-    static inline void UpdateAll()
-    {
-        return stub<cdecl_t<void>>(0x4BBA80);
-    }
+    static void BeginAll();
 
     // 0x4BBAB0 | ?EndAll@ioJoystick@@SAXXZ
-    static inline void EndAll()
-    {
-        return stub<cdecl_t<void>>(0x4BBAB0);
-    }
+    static void EndAll();
 
-    // 0x4BBAE0 | ?EnumObjectProc@ioJoystick@@CGHPBUDIDEVICEOBJECTINSTANCEA@@PAX@Z
-    static inline int32_t __stdcall EnumObjectProc(struct DIDEVICEOBJECTINSTANCEA const* arg1, void* arg2)
-    {
-        return stub<stdcall_t<int32_t, struct DIDEVICEOBJECTINSTANCEA const*, void*>>(0x4BBAE0, arg1, arg2);
-    }
+    // 0x4BBA50 | ?PollAll@ioJoystick@@SAXXZ
+    static void PollAll();
 
+    // 0x4BBA80 | ?UpdateAll@ioJoystick@@SAXXZ
+    static void UpdateAll();
+
+private:
     // 0x4BBAF0 | ?Begin@ioJoystick@@AAEXXZ
-    inline void Begin()
-    {
-        return stub<member_func_t<void, ioJoystick>>(0x4BBAF0, this);
-    }
-
-    // 0x4BBC50 | ?Poll@ioJoystick@@AAEXXZ
-    inline void Poll()
-    {
-        return stub<member_func_t<void, ioJoystick>>(0x4BBC50, this);
-    }
-
-    // 0x4BBC60 | ?Update@ioJoystick@@AAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, ioJoystick>>(0x4BBC60, this);
-    }
+    void Begin();
 
     // 0x4BBD20 | ?End@ioJoystick@@AAEXXZ
-    inline void End()
-    {
-        return stub<member_func_t<void, ioJoystick>>(0x4BBD20, this);
-    }
+    void End();
+
+    // 0x4BBC50 | ?Poll@ioJoystick@@AAEXXZ
+    void Poll();
+
+    // 0x4BBC60 | ?Update@ioJoystick@@AAEXXZ
+    void Update();
+
+    // 0x4BB7F0 | ?EnumDeviceProc@ioJoystick@@CGHPBUDIDEVICEINSTANCEA@@PAX@Z
+    static i32 __stdcall EnumDeviceProc(struct DIDEVICEINSTANCEA const* arg1, void* arg2);
+
+    // 0x4BBAE0 | ?EnumObjectProc@ioJoystick@@CGHPBUDIDEVICEOBJECTINSTANCEA@@PAX@Z
+    static i32 __stdcall EnumObjectProc(struct DIDEVICEOBJECTINSTANCEA const* arg1, void* arg2);
 
     // 0x6A3968 | ?STICKS@ioJoystick@@0PAV1@A
-    inline extern_var(0x6A3968, class ioJoystick*, STICKS);
+    static inline extern_var(0x6A3968, class ioJoystick*, STICKS);
 
     // 0x6A3AAC | ?StickCount@ioJoystick@@0HA
-    inline extern_var(0x6A3AAC, int32_t, StickCount);
+    static inline extern_var(0x6A3AAC, i32, StickCount);
 };
+
+check_size(ioJoystick, 0x0);

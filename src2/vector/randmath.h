@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -38,60 +38,39 @@
 */
 
 // 0x4BBD50 | ?DisableGlobalSeed@@YAXXZ
-inline void DisableGlobalSeed()
-{
-    return stub<cdecl_t<void>>(0x4BBD50);
-}
+void DisableGlobalSeed();
 
 // 0x4BBD80 | ?EnableGlobalSeed@@YAXXZ
-inline void EnableGlobalSeed()
-{
-    return stub<cdecl_t<void>>(0x4BBD80);
-}
+void EnableGlobalSeed();
 
 // 0x4BBDB0 | ?ResetRandomSeed@@YAXXZ
-inline void ResetRandomSeed()
-{
-    return stub<cdecl_t<void>>(0x4BBDB0);
-}
-
-// 0x4BBDC0 | ?irand@@YAHH@Z
-inline int32_t irand(int32_t arg1)
-{
-    return stub<cdecl_t<int32_t, int32_t>>(0x4BBDC0, arg1);
-}
-
-// 0x4BBDF0 | ?irand@@YAHXZ
-inline int32_t irand()
-{
-    return stub<cdecl_t<int32_t>>(0x4BBDF0);
-}
+void ResetRandomSeed();
 
 // 0x4BBE30 | ?frand@@YAMXZ
-inline float frand()
-{
-    return stub<cdecl_t<float>>(0x4BBE30);
-}
+f32 frand();
 
 // 0x4BBE50 | ?frand@@YAMH@Z
-inline float frand(int32_t arg1)
-{
-    return stub<cdecl_t<float, int32_t>>(0x4BBE50, arg1);
-}
+f32 frand(i32 arg1);
 
-// 0x4BBE70 | _rand
+// 0x4BBDF0 | ?irand@@YAHXZ
+i32 irand();
+
+// 0x4BBDC0 | ?irand@@YAHH@Z
+i32 irand(i32 arg1);
 
 // 0x6A3AB0 | ?LogRandomCalls@@3P6AXXZA
-inline extern_var(0x6A3AB0, void(__cdecl*)(void), LogRandomCalls);
+inline extern_var(0x6A3AB0, void (*)(void), LogRandomCalls);
 
-// 0x6A3AB4 | ?saveSeed@@3HA
-inline extern_var(0x6A3AB4, int32_t, saveSeed);
-
-// 0x6A3AB8 | ?oldLog@@3P6AXXZA
-inline extern_var(0x6A3AB8, void(__cdecl*)(void), oldLog);
-
-// 0x6A3ABC | ?secondarySeed@@3HA
-inline extern_var(0x6A3ABC, int32_t, secondarySeed);
+// 0x4BBE70 | _rand (Skipped: void)
 
 // 0x6A3AC0 | ?gRandSeed@@3HA
-inline extern_var(0x6A3AC0, int32_t, gRandSeed);
+inline extern_var(0x6A3AC0, i32, gRandSeed);
+
+// 0x6A3AB8 | ?oldLog@@3P6AXXZA
+inline extern_var(0x6A3AB8, void (*)(void), oldLog);
+
+// 0x6A3AB4 | ?saveSeed@@3HA
+inline extern_var(0x6A3AB4, i32, saveSeed);
+
+// 0x6A3ABC | ?secondarySeed@@3HA
+inline extern_var(0x6A3ABC, i32, secondarySeed);

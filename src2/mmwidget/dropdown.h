@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     mmwidget:dropdown
@@ -41,99 +43,57 @@
     0x5B3BD0 | const mmDropDown::`vftable' | ??_7mmDropDown@@6B@
 */
 
-struct mmDropDown : asNode
+class mmDropDown : public asNode
 {
+    // const mmDropDown::`vftable' @ 0x5B3BD0
+
 public:
-    // mmDropDown::`vftable' @ 0x5B3BD0
-
     // 0x4F1DA0 | ??0mmDropDown@@QAE@XZ
-    inline mmDropDown()
-    {
-        stub<member_func_t<void, mmDropDown>>(0x4F1DA0, this);
-    }
+    mmDropDown();
 
-    // 0x4F1EA0 | ?Init@mmDropDown@@QAEXPAXMMMMVstring@@H@Z
-    inline void Init(void* arg1, float arg2, float arg3, float arg4, float arg5, class string arg6, int32_t arg7)
-    {
-        return stub<member_func_t<void, mmDropDown, void*, float, float, float, float, class string, int32_t>>(
-            0x4F1EA0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-    }
-
-    // 0x4F2020 | ?InitString@mmDropDown@@QAEXVstring@@@Z
-    inline void InitString(class string arg1)
-    {
-        return stub<member_func_t<void, mmDropDown, class string>>(0x4F2020, this, arg1);
-    }
-
-    // 0x4F2420 | ?SetString@mmDropDown@@AAEXVstring@@@Z
-    inline void SetString(class string arg1)
-    {
-        return stub<member_func_t<void, mmDropDown, class string>>(0x4F2420, this, arg1);
-    }
-
-    // 0x4F2510 | ?GetCurrentString@mmDropDown@@QAEXPADH@Z
-    inline void GetCurrentString(char* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, mmDropDown, char*, int32_t>>(0x4F2510, this, arg1, arg2);
-    }
-
-    // 0x4F2560 | ?SetDisabledColors@mmDropDown@@QAEXXZ
-    inline void SetDisabledColors()
-    {
-        return stub<member_func_t<void, mmDropDown>>(0x4F2560, this);
-    }
+    // 0x4F27A0 | ??_GmmDropDown@@UAEPAXI@Z
+    // 0x4F1E20 | ??1mmDropDown@@UAE@XZ
+    ~mmDropDown() override;
 
     // 0x4F25E0 | ?FindFirstEnabled@mmDropDown@@QAEHXZ
-    inline int32_t FindFirstEnabled()
-    {
-        return stub<member_func_t<int32_t, mmDropDown>>(0x4F25E0, this);
-    }
+    i32 FindFirstEnabled();
 
-    // 0x4F2610 | ?SetHighlight@mmDropDown@@QAEXH@Z
-    inline void SetHighlight(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmDropDown, int32_t>>(0x4F2610, this, arg1);
-    }
-
-    // 0x4F2680 | ?GetHit@mmDropDown@@QAEHMM@Z
-    inline int32_t GetHit(float arg1, float arg2)
-    {
-        return stub<member_func_t<int32_t, mmDropDown, float, float>>(0x4F2680, this, arg1, arg2);
-    }
-
-    // 0x4F2760 | ?GetXmin@mmDropDown@@QAEMXZ
-    inline float GetXmin()
-    {
-        return stub<member_func_t<float, mmDropDown>>(0x4F2760, this);
-    }
-
-    // 0x4F2770 | ?GetYmin@mmDropDown@@QAEMXZ
-    inline float GetYmin()
-    {
-        return stub<member_func_t<float, mmDropDown>>(0x4F2770, this);
-    }
-
-    // 0x4F2780 | ?GetW@mmDropDown@@QAEMXZ
-    inline float GetW()
-    {
-        return stub<member_func_t<float, mmDropDown>>(0x4F2780, this);
-    }
+    // 0x4F2510 | ?GetCurrentString@mmDropDown@@QAEXPADH@Z
+    void GetCurrentString(char* arg1, i32 arg2);
 
     // 0x4F2790 | ?GetH@mmDropDown@@QAEMXZ
-    inline float GetH()
-    {
-        return stub<member_func_t<float, mmDropDown>>(0x4F2790, this);
-    }
+    f32 GetH();
 
-    // 0x4F1E20 | ??1mmDropDown@@UAE@XZ
-    inline ~mmDropDown() override
-    {
-        stub<member_func_t<void, mmDropDown>>(0x4F1E20, this);
-    }
+    // 0x4F2680 | ?GetHit@mmDropDown@@QAEHMM@Z
+    i32 GetHit(f32 arg1, f32 arg2);
+
+    // 0x4F2780 | ?GetW@mmDropDown@@QAEMXZ
+    f32 GetW();
+
+    // 0x4F2760 | ?GetXmin@mmDropDown@@QAEMXZ
+    f32 GetXmin();
+
+    // 0x4F2770 | ?GetYmin@mmDropDown@@QAEMXZ
+    f32 GetYmin();
+
+    // 0x4F1EA0 | ?Init@mmDropDown@@QAEXPAXMMMMVstring@@H@Z
+    void Init(void* arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, class string arg6, i32 arg7);
+
+    // 0x4F2020 | ?InitString@mmDropDown@@QAEXVstring@@@Z
+    void InitString(class string arg1);
+
+    // 0x4F2560 | ?SetDisabledColors@mmDropDown@@QAEXXZ
+    void SetDisabledColors();
+
+    // 0x4F2610 | ?SetHighlight@mmDropDown@@QAEXH@Z
+    void SetHighlight(i32 arg1);
 
     // 0x4F2750 | ?Update@mmDropDown@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmDropDown>>(0x4F2750, this);
-    }
+    void Update() override;
+
+private:
+    // 0x4F2420 | ?SetString@mmDropDown@@AAEXVstring@@@Z
+    void SetString(class string arg1);
 };
+
+check_size(mmDropDown, 0xE8);

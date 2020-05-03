@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     vehicle:drivetrain
@@ -35,79 +37,58 @@
     0x4DA5D0 | public: virtual void * __thiscall vehDrivetrain::`scalar deleting destructor'(unsigned int) | ??_GvehDrivetrain@@UAEPAXI@Z
     0x4DA600 | public: virtual char * __thiscall vehDrivetrain::GetClassName(void) | ?GetClassName@vehDrivetrain@@UAEPADXZ
     0x5B30D0 | const vehDrivetrain::`vftable' | ??_7vehDrivetrain@@6B@
-    public: static float vehDrivetrain::diffRatioMax | ?diffRatioMax@vehDrivetrain@@2MA
-    public: static float vehDrivetrain::diffRatioMaxHighSpeed | ?diffRatioMaxHighSpeed@vehDrivetrain@@2MA
-    public: static float vehDrivetrain::diffRatioHighSpeedLevel | ?diffRatioHighSpeedLevel@vehDrivetrain@@2MA
+    0x5CFB1C | public: static float vehDrivetrain::diffRatioMax | ?diffRatioMax@vehDrivetrain@@2MA
+    0x5CFB20 | public: static float vehDrivetrain::diffRatioMaxHighSpeed | ?diffRatioMaxHighSpeed@vehDrivetrain@@2MA
+    0x5CFB24 | public: static float vehDrivetrain::diffRatioHighSpeedLevel | ?diffRatioHighSpeedLevel@vehDrivetrain@@2MA
 */
 
-class vehDrivetrain : asNode
+class vehDrivetrain : public asNode
 {
+    // const vehDrivetrain::`vftable' @ 0x5B30D0
+
 public:
-    // vehDrivetrain::`vftable' @ 0x5B30D0
-
     // 0x4D9D60 | ??0vehDrivetrain@@QAE@XZ
-    inline vehDrivetrain()
-    {
-        stub<member_func_t<void, vehDrivetrain>>(0x4D9D60, this);
-    }
+    vehDrivetrain();
 
-    // 0x4D9DD0 | ?Init@vehDrivetrain@@QAEXPAVvehCarSim@@@Z
-    inline void Init(class vehCarSim* arg1)
-    {
-        return stub<member_func_t<void, vehDrivetrain, class vehCarSim*>>(0x4D9DD0, this, arg1);
-    }
-
-    // 0x4D9DE0 | ?CopyVars@vehDrivetrain@@QAEXPAV1@@Z
-    inline void CopyVars(class vehDrivetrain* arg1)
-    {
-        return stub<member_func_t<void, vehDrivetrain, class vehDrivetrain*>>(0x4D9DE0, this, arg1);
-    }
-
-    // 0x4D9E20 | ?Attach@vehDrivetrain@@QAEXXZ
-    inline void Attach()
-    {
-        return stub<member_func_t<void, vehDrivetrain>>(0x4D9E20, this);
-    }
-
-    // 0x4D9E40 | ?Detach@vehDrivetrain@@QAEXXZ
-    inline void Detach()
-    {
-        return stub<member_func_t<void, vehDrivetrain>>(0x4D9E40, this);
-    }
+    // 0x4DA5D0 | ??_GvehDrivetrain@@UAEPAXI@Z
+    // 0x4CCEC0 | ??1vehDrivetrain@@UAE@XZ
+    ~vehDrivetrain() override;
 
     // 0x4D9E50 | ?AddWheel@vehDrivetrain@@QAEHPAVvehWheel@@@Z
-    inline int32_t AddWheel(class vehWheel* arg1)
-    {
-        return stub<member_func_t<int32_t, vehDrivetrain, class vehWheel*>>(0x4D9E50, this, arg1);
-    }
+    i32 AddWheel(class vehWheel* arg1);
 
-    // 0x4CCEC0 | ??1vehDrivetrain@@UAE@XZ
-    inline ~vehDrivetrain() override
-    {
-        stub<member_func_t<void, vehDrivetrain>>(0x4CCEC0, this);
-    }
+    // 0x4D9E20 | ?Attach@vehDrivetrain@@QAEXXZ
+    void Attach();
 
-    // 0x4D9E90 | ?Update@vehDrivetrain@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, vehDrivetrain>>(0x4D9E90, this);
-    }
+    // 0x4D9DE0 | ?CopyVars@vehDrivetrain@@QAEXPAV1@@Z
+    void CopyVars(class vehDrivetrain* arg1);
 
-    // 0x4D9E00 | ?Reset@vehDrivetrain@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, vehDrivetrain>>(0x4D9E00, this);
-    }
+    // 0x4D9E40 | ?Detach@vehDrivetrain@@QAEXXZ
+    void Detach();
 
     // 0x4DA570 | ?FileIO@vehDrivetrain@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
-    {
-        return stub<member_func_t<void, vehDrivetrain, class datParser&>>(0x4DA570, this, arg1);
-    }
+    void FileIO(class datParser& arg1) override;
 
     // 0x4DA600 | ?GetClassName@vehDrivetrain@@UAEPADXZ
-    inline char* GetClassName() override
-    {
-        return stub<member_func_t<char*, vehDrivetrain>>(0x4DA600, this);
-    }
+    char* GetClassName() override;
+
+    // 0x4D9DD0 | ?Init@vehDrivetrain@@QAEXPAVvehCarSim@@@Z
+    void Init(class vehCarSim* arg1);
+
+    // 0x4D9E00 | ?Reset@vehDrivetrain@@UAEXXZ
+    void Reset() override;
+
+    // 0x4D9E90 | ?Update@vehDrivetrain@@UAEXXZ
+    void Update() override;
+
+    // 0x5CFB24 | ?diffRatioHighSpeedLevel@vehDrivetrain@@2MA
+    static inline extern_var(0x5CFB24, f32, diffRatioHighSpeedLevel);
+
+    // 0x5CFB1C | ?diffRatioMax@vehDrivetrain@@2MA
+    static inline extern_var(0x5CFB1C, f32, diffRatioMax);
+
+    // 0x5CFB20 | ?diffRatioMaxHighSpeed@vehDrivetrain@@2MA
+    static inline extern_var(0x5CFB20, f32, diffRatioMaxHighSpeed);
 };
+
+check_size(vehDrivetrain, 0x0);

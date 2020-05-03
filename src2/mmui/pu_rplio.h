@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "pu_menu.h"
+
 /*
     mmui:pu_rplio
 
@@ -28,21 +30,17 @@
     0x5B4888 | const PUReplaySave::`vftable' | ??_7PUReplaySave@@6B@
 */
 
-struct PUReplaySave : PUMenuBase
+class PUReplaySave : public PUMenuBase
 {
+    // const PUReplaySave::`vftable' @ 0x5B4888
+
 public:
-    // PUReplaySave::`vftable' @ 0x5B4888
-
     // 0x50B980 | ??0PUReplaySave@@QAE@HMMMMPAD@Z
-    inline PUReplaySave(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
-    {
-        stub<member_func_t<void, PUReplaySave, int32_t, float, float, float, float, char*>>(
-            0x50B980, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
+    PUReplaySave(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6);
 
+    // 0x50BAF0 | ??_GPUReplaySave@@UAEPAXI@Z
     // 0x50BAE0 | ??1PUReplaySave@@UAE@XZ
-    inline ~PUReplaySave() override
-    {
-        stub<member_func_t<void, PUReplaySave>>(0x50BAE0, this);
-    }
+    ~PUReplaySave() override;
 };
+
+check_size(PUReplaySave, 0xBC);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -42,96 +42,49 @@ class audHead
 {
 public:
     // 0x5A6500 | ?Create@audHead@@QAEPAV1@PAVaudManager@@@Z
-    inline class audHead* Create(class audManager* arg1)
-    {
-        return stub<member_func_t<class audHead*, audHead, class audManager*>>(0x5A6500, this, arg1);
-    }
-
-    // 0x5A6530 | ?Init@audHead@@QAEXXZ
-    inline void Init()
-    {
-        return stub<member_func_t<void, audHead>>(0x5A6530, this);
-    }
+    class audHead* Create(class audManager* arg1);
 
     // 0x5A65A0 | ?Destroy@audHead@@QAEXXZ
-    inline void Destroy()
-    {
-        return stub<member_func_t<void, audHead>>(0x5A65A0, this);
-    }
-
-    // 0x5A65B0 | ?SetHandle@audHead@@QAEXH@Z
-    inline void SetHandle(int32_t arg1)
-    {
-        return stub<member_func_t<void, audHead, int32_t>>(0x5A65B0, this, arg1);
-    }
+    void Destroy();
 
     // 0x5A65C0 | ?GetHandle@audHead@@QAEHXZ
-    inline int32_t GetHandle()
-    {
-        return stub<member_func_t<int32_t, audHead>>(0x5A65C0, this);
-    }
-
-    // 0x5A65D0 | ?SetHeadPosition@audHead@@QAEXPAU_audvector3_@@@Z
-    inline void SetHeadPosition(struct _audvector3_* arg1)
-    {
-        return stub<member_func_t<void, audHead, struct _audvector3_*>>(0x5A65D0, this, arg1);
-    }
-
-    // 0x5A65F0 | ?GetHeadPosition@audHead@@QAEPAU_audvector3_@@XZ
-    inline struct _audvector3_* GetHeadPosition()
-    {
-        return stub<member_func_t<struct _audvector3_*, audHead>>(0x5A65F0, this);
-    }
-
-    // 0x5A6600 | ?SetHeadVelocity@audHead@@QAEXPAU_audvector3_@@@Z
-    inline void SetHeadVelocity(struct _audvector3_* arg1)
-    {
-        return stub<member_func_t<void, audHead, struct _audvector3_*>>(0x5A6600, this, arg1);
-    }
-
-    // 0x5A6620 | ?GetHeadVelocity@audHead@@QAEPAU_audvector3_@@XZ
-    inline struct _audvector3_* GetHeadVelocity()
-    {
-        return stub<member_func_t<struct _audvector3_*, audHead>>(0x5A6620, this);
-    }
-
-    // 0x5A6630 | ?SetHeadFacingDir@audHead@@QAEXPAU_audvector3_@@_N@Z
-    inline void SetHeadFacingDir(struct _audvector3_* arg1, bool arg2)
-    {
-        return stub<member_func_t<void, audHead, struct _audvector3_*, bool>>(0x5A6630, this, arg1, arg2);
-    }
+    i32 GetHandle();
 
     // 0x5A6660 | ?GetHeadFacingDir@audHead@@QAEPAU_audvector3_@@XZ
-    inline struct _audvector3_* GetHeadFacingDir()
-    {
-        return stub<member_func_t<struct _audvector3_*, audHead>>(0x5A6660, this);
-    }
+    struct _audvector3_* GetHeadFacingDir();
 
-    // 0x5A6670 | ?SetHeadTF@audHead@@QAEXPAU_audvector3_@@0@Z
-    inline void SetHeadTF(struct _audvector3_* arg1, struct _audvector3_* arg2)
-    {
-        return stub<member_func_t<void, audHead, struct _audvector3_*, struct _audvector3_*>>(
-            0x5A6670, this, arg1, arg2);
-    }
+    // 0x5A65F0 | ?GetHeadPosition@audHead@@QAEPAU_audvector3_@@XZ
+    struct _audvector3_* GetHeadPosition();
 
-    // 0x5A66A0 | ?SetHeadLimits@audHead@@QAEXPAU_audvector3_@@0@Z
-    inline void SetHeadLimits(struct _audvector3_* arg1, struct _audvector3_* arg2)
-    {
-        return stub<member_func_t<void, audHead, struct _audvector3_*, struct _audvector3_*>>(
-            0x5A66A0, this, arg1, arg2);
-    }
-
-    // 0x5A6740 | ?SetHeadMinLimit@audHead@@QAEXM@Z
-    inline void SetHeadMinLimit(float arg1)
-    {
-        return stub<member_func_t<void, audHead, float>>(0x5A6740, this, arg1);
-    }
+    // 0x5A6620 | ?GetHeadVelocity@audHead@@QAEPAU_audvector3_@@XZ
+    struct _audvector3_* GetHeadVelocity();
 
     // 0x5A6750 | ?GetHeadVolumePanPitch@audHead@@QAE_NPAU_audvector3_@@0PAM11@Z
-    inline bool GetHeadVolumePanPitch(
-        struct _audvector3_* arg1, struct _audvector3_* arg2, float* arg3, float* arg4, float* arg5)
-    {
-        return stub<member_func_t<bool, audHead, struct _audvector3_*, struct _audvector3_*, float*, float*, float*>>(
-            0x5A6750, this, arg1, arg2, arg3, arg4, arg5);
-    }
+    bool GetHeadVolumePanPitch(struct _audvector3_* arg1, struct _audvector3_* arg2, f32* arg3, f32* arg4, f32* arg5);
+
+    // 0x5A6530 | ?Init@audHead@@QAEXXZ
+    void Init();
+
+    // 0x5A65B0 | ?SetHandle@audHead@@QAEXH@Z
+    void SetHandle(i32 arg1);
+
+    // 0x5A6630 | ?SetHeadFacingDir@audHead@@QAEXPAU_audvector3_@@_N@Z
+    void SetHeadFacingDir(struct _audvector3_* arg1, bool arg2);
+
+    // 0x5A66A0 | ?SetHeadLimits@audHead@@QAEXPAU_audvector3_@@0@Z
+    void SetHeadLimits(struct _audvector3_* arg1, struct _audvector3_* arg2);
+
+    // 0x5A6740 | ?SetHeadMinLimit@audHead@@QAEXM@Z
+    void SetHeadMinLimit(f32 arg1);
+
+    // 0x5A65D0 | ?SetHeadPosition@audHead@@QAEXPAU_audvector3_@@@Z
+    void SetHeadPosition(struct _audvector3_* arg1);
+
+    // 0x5A6670 | ?SetHeadTF@audHead@@QAEXPAU_audvector3_@@0@Z
+    void SetHeadTF(struct _audvector3_* arg1, struct _audvector3_* arg2);
+
+    // 0x5A6600 | ?SetHeadVelocity@audHead@@QAEXPAU_audvector3_@@@Z
+    void SetHeadVelocity(struct _audvector3_* arg1);
 };
+
+check_size(audHead, 0x0);

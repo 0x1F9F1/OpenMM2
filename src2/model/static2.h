@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -31,79 +31,47 @@
     0x4A4DB0 | public: int __thiscall modStatic::GetAdjunctCount(void) const | ?GetAdjunctCount@modStatic@@QBEHXZ
     0x4A4DE0 | public: int __thiscall modStatic::GetTriCount(void) const | ?GetTriCount@modStatic@@QBEHXZ
     0x4A4E30 | class modStatic * __cdecl modGetStatic(char const *,void (__cdecl*)(class Vector3 &,void *),void *,bool) | ?modGetStatic@@YAPAVmodStatic@@PBDP6AXAAVVector3@@PAX@Z2_N@Z
-    public: static bool modStatic::sm_Packing | ?sm_Packing@modStatic@@2_NA
+    0x5C9EA0 | public: static bool modStatic::sm_Packing | ?sm_Packing@modStatic@@2_NA
 */
-
-// 0x4A4E30 | ?modGetStatic@@YAPAVmodStatic@@PBDP6AXAAVVector3@@PAX@Z2_N@Z
-inline class modStatic* modGetStatic(
-    char const* arg1, void(__cdecl* arg2)(class Vector3&, void*), void* arg3, bool arg4)
-{
-    return stub<cdecl_t<class modStatic*, char const*, void(__cdecl*)(class Vector3&, void*), void*, bool>>(
-        0x4A4E30, arg1, arg2, arg3, arg4);
-}
 
 class modStatic
 {
 public:
-    // 0x4A4550 | ?Draw@modStatic@@QBEXPAVmodShader@@@Z
-    inline void Draw(class modShader* arg1)
-    {
-        return stub<member_func_t<void, modStatic, class modShader*>>(0x4A4550, this, arg1);
-    }
-
-    // 0x4A49A0 | ?Optimize@modStatic@@QAEXPAVmodShader@@@Z
-    inline void Optimize(class modShader* arg1)
-    {
-        return stub<member_func_t<void, modStatic, class modShader*>>(0x4A49A0, this, arg1);
-    }
-
-    // 0x4A4A20 | ?DrawNoAlpha@modStatic@@QBEXPAVmodShader@@@Z
-    inline void DrawNoAlpha(class modShader* arg1)
-    {
-        return stub<member_func_t<void, modStatic, class modShader*>>(0x4A4A20, this, arg1);
-    }
-
-    // 0x4A4A50 | ?DrawEnvMapped@modStatic@@QBEXPAVmodShader@@PAVgfxTexture@@M@Z
-    inline void DrawEnvMapped(class modShader* arg1, class gfxTexture* arg2, float arg3)
-    {
-        return stub<member_func_t<void, modStatic, class modShader*, class gfxTexture*, float>>(
-            0x4A4A50, this, arg1, arg2, arg3);
-    }
-
-    // 0x4A4B30 | ?DrawOrthoMapped@modStatic@@QBEXPAVmodShader@@PAVgfxTexture@@MI@Z
-    inline void DrawOrthoMapped(class modShader* arg1, class gfxTexture* arg2, float arg3, uint32_t arg4)
-    {
-        return stub<member_func_t<void, modStatic, class modShader*, class gfxTexture*, float, uint32_t>>(
-            0x4A4B30, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x4A4C50 | ?DrawWithTexGenAndTexMatrix@modStatic@@QBEXXZ
-    inline void DrawWithTexGenAndTexMatrix()
-    {
-        return stub<member_func_t<void, modStatic>>(0x4A4C50, this);
-    }
-
     // 0x4A4CA0 | ?Clone@modStatic@@QBEPAV1@XZ
-    inline class modStatic* Clone()
-    {
-        return stub<member_func_t<class modStatic*, modStatic>>(0x4A4CA0, this);
-    }
+    class modStatic* Clone();
 
     // 0x4A4D60 | ?CopyFrom@modStatic@@QAEXPBV1@@Z
-    inline void CopyFrom(class modStatic const* arg1)
-    {
-        return stub<member_func_t<void, modStatic, class modStatic const*>>(0x4A4D60, this, arg1);
-    }
+    void CopyFrom(class modStatic const* arg1);
+
+    // 0x4A4550 | ?Draw@modStatic@@QBEXPAVmodShader@@@Z
+    void Draw(class modShader* arg1);
+
+    // 0x4A4A50 | ?DrawEnvMapped@modStatic@@QBEXPAVmodShader@@PAVgfxTexture@@M@Z
+    void DrawEnvMapped(class modShader* arg1, class gfxTexture* arg2, f32 arg3);
+
+    // 0x4A4A20 | ?DrawNoAlpha@modStatic@@QBEXPAVmodShader@@@Z
+    void DrawNoAlpha(class modShader* arg1);
+
+    // 0x4A4B30 | ?DrawOrthoMapped@modStatic@@QBEXPAVmodShader@@PAVgfxTexture@@MI@Z
+    void DrawOrthoMapped(class modShader* arg1, class gfxTexture* arg2, f32 arg3, u32 arg4);
+
+    // 0x4A4C50 | ?DrawWithTexGenAndTexMatrix@modStatic@@QBEXXZ
+    void DrawWithTexGenAndTexMatrix();
 
     // 0x4A4DB0 | ?GetAdjunctCount@modStatic@@QBEHXZ
-    inline int32_t GetAdjunctCount()
-    {
-        return stub<member_func_t<int32_t, modStatic>>(0x4A4DB0, this);
-    }
+    i32 GetAdjunctCount();
 
     // 0x4A4DE0 | ?GetTriCount@modStatic@@QBEHXZ
-    inline int32_t GetTriCount()
-    {
-        return stub<member_func_t<int32_t, modStatic>>(0x4A4DE0, this);
-    }
+    i32 GetTriCount();
+
+    // 0x4A49A0 | ?Optimize@modStatic@@QAEXPAVmodShader@@@Z
+    void Optimize(class modShader* arg1);
+
+    // 0x5C9EA0 | ?sm_Packing@modStatic@@2_NA
+    static inline extern_var(0x5C9EA0, bool, sm_Packing);
 };
+
+check_size(modStatic, 0x0);
+
+// 0x4A4E30 | ?modGetStatic@@YAPAVmodStatic@@PBDP6AXAAVVector3@@PAX@Z2_N@Z
+class modStatic* modGetStatic(char const* arg1, void (*arg2)(class Vector3&, void*), void* arg3, bool arg4);

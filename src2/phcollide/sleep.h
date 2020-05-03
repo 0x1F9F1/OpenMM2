@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -41,73 +41,39 @@
 class phSleep
 {
 public:
-    // 0x403370 | ??_EphSleep@@QAEPAXI@Z
-    // Skipped (scalar/vector destructor)
-
     // 0x46C490 | ??0phSleep@@QAE@XZ
-    inline phSleep()
-    {
-        stub<member_func_t<void, phSleep>>(0x46C490, this);
-    }
+    phSleep();
 
     // 0x46C4B0 | ??0phSleep@@QAE@PAVphInertialCS@@PAVphColliderBase@@@Z
-    inline phSleep(class phInertialCS* arg1, class phColliderBase* arg2)
-    {
-        stub<member_func_t<void, phSleep, class phInertialCS*, class phColliderBase*>>(0x46C4B0, this, arg1, arg2);
-    }
+    phSleep(class phInertialCS* arg1, class phColliderBase* arg2);
 
     // 0x46C4E0 | ??1phSleep@@QAE@XZ
-    inline ~phSleep()
-    {
-        stub<member_func_t<void, phSleep>>(0x46C4E0, this);
-    }
+    // 0x403370 | ??_EphSleep@@QAEPAXI@Z
+    ~phSleep();
 
     // 0x46C4F0 | ?Init@phSleep@@QAEXPAVphInertialCS@@PAVphColliderBase@@@Z
-    inline void Init(class phInertialCS* arg1, class phColliderBase* arg2)
-    {
-        return stub<member_func_t<void, phSleep, class phInertialCS*, class phColliderBase*>>(
-            0x46C4F0, this, arg1, arg2);
-    }
-
-    // 0x46C550 | ?WakeUp@phSleep@@QAEXXZ
-    inline void WakeUp()
-    {
-        return stub<member_func_t<void, phSleep>>(0x46C550, this);
-    }
-
-    // 0x46C580 | ?WakeUpNextTime@phSleep@@QAEXXZ
-    inline void WakeUpNextTime()
-    {
-        return stub<member_func_t<void, phSleep>>(0x46C580, this);
-    }
+    void Init(class phInertialCS* arg1, class phColliderBase* arg2);
 
     // 0x46C590 | ?Reset@phSleep@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, phSleep>>(0x46C590, this);
-    }
+    void Reset();
 
     // 0x46C5A0 | ?SendToSleep@phSleep@@QAEXXZ
-    inline void SendToSleep()
-    {
-        return stub<member_func_t<void, phSleep>>(0x46C5A0, this);
-    }
-
-    // 0x46C5E0 | ?Update@phSleep@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, phSleep>>(0x46C5E0, this);
-    }
+    void SendToSleep();
 
     // 0x46C8D0 | ?SetAsleepCB@phSleep@@QAEXPAVdatCallback@@@Z
-    inline void SetAsleepCB(class datCallback* arg1)
-    {
-        return stub<member_func_t<void, phSleep, class datCallback*>>(0x46C8D0, this, arg1);
-    }
+    void SetAsleepCB(class datCallback* arg1);
+
+    // 0x46C5E0 | ?Update@phSleep@@QAEXXZ
+    void Update();
+
+    // 0x46C550 | ?WakeUp@phSleep@@QAEXXZ
+    void WakeUp();
+
+    // 0x46C580 | ?WakeUpNextTime@phSleep@@QAEXXZ
+    void WakeUpNextTime();
 
     // 0x46C8E0 | ?SmoothAngInertia@phSleep@@SAXAAVphInertialCS@@M@Z
-    static inline void SmoothAngInertia(class phInertialCS& arg1, float arg2)
-    {
-        return stub<cdecl_t<void, class phInertialCS&, float>>(0x46C8E0, arg1, arg2);
-    }
+    static void SmoothAngInertia(class phInertialCS& arg1, f32 arg2);
 };
+
+check_size(phSleep, 0x50);

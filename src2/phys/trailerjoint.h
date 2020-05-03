@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,9 @@
 */
 
 #pragma once
+
+#include "node/fileio.h"
+#include "phinertia/joint.h"
 
 /*
     phys:trailerjoint
@@ -69,162 +72,115 @@
     0x5B8650 | const dgTrailerJoint::`vftable'{for `asFileIO'} | ??_7dgTrailerJoint@@6BasFileIO@@@
 */
 
-struct dgTrailerJoint : phJoint
+struct dgTrailerJoint
+    : phJoint
+    , asFileIO /* Warning: Unordered Multiple Inheritance */
 {
+    // const dgTrailerJoint::`vftable'{for `phJoint'} @ 0x5B8638
+    // const dgTrailerJoint::`vftable'{for `asFileIO'} @ 0x5B8650
+
 public:
     // 0x592CC0 | ??0dgTrailerJoint@@QAE@XZ
-    inline dgTrailerJoint()
-    {
-        stub<member_func_t<void, dgTrailerJoint>>(0x592CC0, this);
-    }
+    dgTrailerJoint();
 
-    // 0x592D20 | ?Init@dgTrailerJoint@@QAEXPBDPAVphInertialCS@@1ABVVector3@@2@Z
-    inline void Init(char const* arg1, class phInertialCS* arg2, class phInertialCS* arg3, class Vector3 const& arg4,
-        class Vector3 const& arg5)
-    {
-        return stub<member_func_t<void, dgTrailerJoint, char const*, class phInertialCS*, class phInertialCS*,
-            class Vector3 const&, class Vector3 const&>>(0x592D20, this, arg1, arg2, arg3, arg4, arg5);
-    }
-
-    // 0x592E50 | ?Reset@dgTrailerJoint@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, dgTrailerJoint>>(0x592E50, this);
-    }
-
-    // 0x592EC0 | ?SetPosition@dgTrailerJoint@@QAEXABVVector3@@@Z
-    inline void SetPosition(class Vector3 const& arg1)
-    {
-        return stub<member_func_t<void, dgTrailerJoint, class Vector3 const&>>(0x592EC0, this, arg1);
-    }
-
-    // 0x592FF0 | ?SetCosFreeLean@dgTrailerJoint@@QAEXXZ
-    inline void SetCosFreeLean()
-    {
-        return stub<member_func_t<void, dgTrailerJoint>>(0x592FF0, this);
-    }
-
-    // 0x593000 | ?SetRotate1@dgTrailerJoint@@QAEXABVMatrix34@@@Z
-    inline void SetRotate1(class Matrix34 const& arg1)
-    {
-        return stub<member_func_t<void, dgTrailerJoint, class Matrix34 const&>>(0x593000, this, arg1);
-    }
-
-    // 0x593020 | ?SetRotate2@dgTrailerJoint@@QAEXABVMatrix34@@@Z
-    inline void SetRotate2(class Matrix34 const& arg1)
-    {
-        return stub<member_func_t<void, dgTrailerJoint, class Matrix34 const&>>(0x593020, this, arg1);
-    }
-
-    // 0x593040 | ?SetFrictionLean@dgTrailerJoint@@QAEXMMM@Z
-    inline void SetFrictionLean(float arg1, float arg2, float arg3)
-    {
-        return stub<member_func_t<void, dgTrailerJoint, float, float, float>>(0x593040, this, arg1, arg2, arg3);
-    }
-
-    // 0x593070 | ?SetFrictionRoll@dgTrailerJoint@@QAEXMMM@Z
-    inline void SetFrictionRoll(float arg1, float arg2, float arg3)
-    {
-        return stub<member_func_t<void, dgTrailerJoint, float, float, float>>(0x593070, this, arg1, arg2, arg3);
-    }
-
-    // 0x5930A0 | ?SetLeanLimit@dgTrailerJoint@@QAEXMM@Z
-    inline void SetLeanLimit(float arg1, float arg2)
-    {
-        return stub<member_func_t<void, dgTrailerJoint, float, float>>(0x5930A0, this, arg1, arg2);
-    }
-
-    // 0x5930C0 | ?SetRollLimit@dgTrailerJoint@@QAEXMM@Z
-    inline void SetRollLimit(float arg1, float arg2)
-    {
-        return stub<member_func_t<void, dgTrailerJoint, float, float>>(0x5930C0, this, arg1, arg2);
-    }
-
-    // 0x5930E0 | ?SetRollLimit@dgTrailerJoint@@QAEXMMM@Z
-    inline void SetRollLimit(float arg1, float arg2, float arg3)
-    {
-        return stub<member_func_t<void, dgTrailerJoint, float, float, float>>(0x5930E0, this, arg1, arg2, arg3);
-    }
-
-    // 0x593110 | ?SetRestOrientation@dgTrailerJoint@@QAEXXZ
-    inline void SetRestOrientation()
-    {
-        return stub<member_func_t<void, dgTrailerJoint>>(0x593110, this);
-    }
-
-    // 0x593170 | ?SetRestOrientMat@dgTrailerJoint@@QAEXABVMatrix34@@@Z
-    inline void SetRestOrientMat(class Matrix34 const& arg1)
-    {
-        return stub<member_func_t<void, dgTrailerJoint, class Matrix34 const&>>(0x593170, this, arg1);
-    }
-
-    // 0x5931B0 | ?SetRestOrientMat@dgTrailerJoint@@QAEXABVMatrix34@@0@Z
-    inline void SetRestOrientMat(class Matrix34 const& arg1, class Matrix34 const& arg2)
-    {
-        return stub<member_func_t<void, dgTrailerJoint, class Matrix34 const&, class Matrix34 const&>>(
-            0x5931B0, this, arg1, arg2);
-    }
-
-    // 0x593200 | ?SetForceLimit@dgTrailerJoint@@QAEXM@Z
-    inline void SetForceLimit(float arg1)
-    {
-        return stub<member_func_t<void, dgTrailerJoint, float>>(0x593200, this, arg1);
-    }
-
-    // 0x593210 | ?SetJointForceFlag@dgTrailerJoint@@QAEXXZ
-    inline void SetJointForceFlag()
-    {
-        return stub<member_func_t<void, dgTrailerJoint>>(0x593210, this);
-    }
-
-    // 0x5932B0 | ?Update@dgTrailerJoint@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, dgTrailerJoint>>(0x5932B0, this);
-    }
-
-    // 0x5942B0 | ?MoveICS@dgTrailerJoint@@QAEXXZ
-    inline void MoveICS()
-    {
-        return stub<member_func_t<void, dgTrailerJoint>>(0x5942B0, this);
-    }
+    // 0x595B40 | ??_GdgTrailerJoint@@UAEPAXI@Z
+    // 0x592CF0 | ??1dgTrailerJoint@@UAE@XZ
+    ~dgTrailerJoint() override;
 
     // 0x5942D0 | ?BreakJoint@dgTrailerJoint@@QAEXXZ
-    inline void BreakJoint()
-    {
-        return stub<member_func_t<void, dgTrailerJoint>>(0x5942D0, this);
-    }
+    void BreakJoint();
 
-    // 0x5942E0 | ?UnbreakJoint@dgTrailerJoint@@QAEXXZ
-    inline void UnbreakJoint()
-    {
-        return stub<member_func_t<void, dgTrailerJoint>>(0x5942E0, this);
-    }
-
-    // 0x5942F0 | ?DoJointTorque@dgTrailerJoint@@QAEXABVMatrix34@@000AAM1AAVVector3@@11@Z
-    inline void DoJointTorque(class Matrix34 const& arg1, class Matrix34 const& arg2, class Matrix34 const& arg3,
-        class Matrix34 const& arg4, float& arg5, float& arg6, class Vector3& arg7, float& arg8, float& arg9)
-    {
-        return stub<member_func_t<void, dgTrailerJoint, class Matrix34 const&, class Matrix34 const&,
-            class Matrix34 const&, class Matrix34 const&, float&, float&, class Vector3&, float&, float&>>(
-            0x5942F0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
-    }
-
-    // 0x5949B0 | ?DoJointLimits@dgTrailerJoint@@QAEXMABVVector3@@M0AAV2@ABVMatrix34@@2222@Z
-    inline void DoJointLimits(float arg1, class Vector3 const& arg2, float arg3, class Vector3 const& arg4,
-        class Vector3& arg5, class Matrix34 const& arg6, class Matrix34 const& arg7, class Matrix34 const& arg8,
-        class Matrix34 const& arg9, class Matrix34 const& arg10)
-    {
-        return stub<member_func_t<void, dgTrailerJoint, float, class Vector3 const&, float, class Vector3 const&,
-            class Vector3&, class Matrix34 const&, class Matrix34 const&, class Matrix34 const&, class Matrix34 const&,
-            class Matrix34 const&>>(0x5949B0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
-    }
+    // 0x595080 | ?ComputeInvMassMatrix@dgTrailerJoint@@UBEXPAVphInertialCS@@AAVMatrix34@@ABVVector3@@@Z
+    void ComputeInvMassMatrix(class phInertialCS* arg1, class Matrix34& arg2, class Vector3 const& arg3) override;
 
     // 0x595390 | ?ComputeInvMassMatrix@dgTrailerJoint@@QAEXPAVphInertialCS@@0AAVMatrix34@@ABVVector3@@@Z
-    inline void ComputeInvMassMatrix(
-        class phInertialCS* arg1, class phInertialCS* arg2, class Matrix34& arg3, class Vector3 const& arg4)
-    {
-        return stub<member_func_t<void, dgTrailerJoint, class phInertialCS*, class phInertialCS*, class Matrix34&,
-            class Vector3 const&>>(0x595390, this, arg1, arg2, arg3, arg4);
-    }
+    void ComputeInvMassMatrix(
+        class phInertialCS* arg1, class phInertialCS* arg2, class Matrix34& arg3, class Vector3 const& arg4);
+
+    // 0x5949B0 | ?DoJointLimits@dgTrailerJoint@@QAEXMABVVector3@@M0AAV2@ABVMatrix34@@2222@Z
+    void DoJointLimits(f32 arg1, class Vector3 const& arg2, f32 arg3, class Vector3 const& arg4, class Vector3& arg5,
+        class Matrix34 const& arg6, class Matrix34 const& arg7, class Matrix34 const& arg8, class Matrix34 const& arg9,
+        class Matrix34 const& arg10);
+
+    // 0x5942F0 | ?DoJointTorque@dgTrailerJoint@@QAEXABVMatrix34@@000AAM1AAVVector3@@11@Z
+    void DoJointTorque(class Matrix34 const& arg1, class Matrix34 const& arg2, class Matrix34 const& arg3,
+        class Matrix34 const& arg4, f32& arg5, f32& arg6, class Vector3& arg7, f32& arg8, f32& arg9);
+
+    // 0x595970 | ?FileIO@dgTrailerJoint@@UAEXAAVdatParser@@@Z
+    void FileIO(class datParser& arg1) override;
+
+    // 0x595B00 | ?GetClassName@dgTrailerJoint@@UAEPBDXZ
+    char const* GetClassName() override;
+
+    // 0x592D10 | ?GetDirName@dgTrailerJoint@@UAEPBDXZ
+    char const* GetDirName() override;
+
+    // 0x592D20 | ?Init@dgTrailerJoint@@QAEXPBDPAVphInertialCS@@1ABVVector3@@2@Z
+    void Init(char const* arg1, class phInertialCS* arg2, class phInertialCS* arg3, class Vector3 const& arg4,
+        class Vector3 const& arg5);
+
+    // 0x595B30 | ?IsBroken@dgTrailerJoint@@UBE_NXZ
+    bool IsBroken() override;
+
+    // 0x595B10 | ?Load@dgTrailerJoint@@UAE_NXZ
+    bool Load() override;
+
+    // 0x5942B0 | ?MoveICS@dgTrailerJoint@@QAEXXZ
+    void MoveICS();
+
+    // 0x592E50 | ?Reset@dgTrailerJoint@@QAEXXZ
+    void Reset();
+
+    // 0x595B20 | ?Save@dgTrailerJoint@@UAE_NXZ
+    bool Save() override;
+
+    // 0x592FF0 | ?SetCosFreeLean@dgTrailerJoint@@QAEXXZ
+    void SetCosFreeLean();
+
+    // 0x593200 | ?SetForceLimit@dgTrailerJoint@@QAEXM@Z
+    void SetForceLimit(f32 arg1);
+
+    // 0x593040 | ?SetFrictionLean@dgTrailerJoint@@QAEXMMM@Z
+    void SetFrictionLean(f32 arg1, f32 arg2, f32 arg3);
+
+    // 0x593070 | ?SetFrictionRoll@dgTrailerJoint@@QAEXMMM@Z
+    void SetFrictionRoll(f32 arg1, f32 arg2, f32 arg3);
+
+    // 0x593210 | ?SetJointForceFlag@dgTrailerJoint@@QAEXXZ
+    void SetJointForceFlag();
+
+    // 0x5930A0 | ?SetLeanLimit@dgTrailerJoint@@QAEXMM@Z
+    void SetLeanLimit(f32 arg1, f32 arg2);
+
+    // 0x592EC0 | ?SetPosition@dgTrailerJoint@@QAEXABVVector3@@@Z
+    void SetPosition(class Vector3 const& arg1);
+
+    // 0x593170 | ?SetRestOrientMat@dgTrailerJoint@@QAEXABVMatrix34@@@Z
+    void SetRestOrientMat(class Matrix34 const& arg1);
+
+    // 0x5931B0 | ?SetRestOrientMat@dgTrailerJoint@@QAEXABVMatrix34@@0@Z
+    void SetRestOrientMat(class Matrix34 const& arg1, class Matrix34 const& arg2);
+
+    // 0x593110 | ?SetRestOrientation@dgTrailerJoint@@QAEXXZ
+    void SetRestOrientation();
+
+    // 0x5930C0 | ?SetRollLimit@dgTrailerJoint@@QAEXMM@Z
+    void SetRollLimit(f32 arg1, f32 arg2);
+
+    // 0x5930E0 | ?SetRollLimit@dgTrailerJoint@@QAEXMMM@Z
+    void SetRollLimit(f32 arg1, f32 arg2, f32 arg3);
+
+    // 0x593000 | ?SetRotate1@dgTrailerJoint@@QAEXABVMatrix34@@@Z
+    void SetRotate1(class Matrix34 const& arg1);
+
+    // 0x593020 | ?SetRotate2@dgTrailerJoint@@QAEXABVMatrix34@@@Z
+    void SetRotate2(class Matrix34 const& arg1);
+
+    // 0x5942E0 | ?UnbreakJoint@dgTrailerJoint@@QAEXXZ
+    void UnbreakJoint();
+
+    // 0x5932B0 | ?Update@dgTrailerJoint@@QAEXXZ
+    void Update();
 };
+
+check_size(dgTrailerJoint, 0x0);

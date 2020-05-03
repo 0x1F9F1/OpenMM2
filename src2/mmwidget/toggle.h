@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "node/node.h"
+
 /*
     mmwidget:toggle
 
@@ -33,51 +35,33 @@
     0x5B3C6C | const mmToggle::`vftable' | ??_7mmToggle@@6B@
 */
 
-struct mmToggle : asNode
+class mmToggle : public asNode
 {
+    // const mmToggle::`vftable' @ 0x5B3C6C
+
 public:
-    // mmToggle::`vftable' @ 0x5B3C6C
-
     // 0x4F39E0 | ??0mmToggle@@QAE@XZ
-    inline mmToggle()
-    {
-        stub<member_func_t<void, mmToggle>>(0x4F39E0, this);
-    }
+    mmToggle();
 
-    // 0x4F3A60 | ?Init@mmToggle@@QAEXPADMMMM@Z
-    inline void Init(char* arg1, float arg2, float arg3, float arg4, float arg5)
-    {
-        return stub<member_func_t<void, mmToggle, char*, float, float, float, float>>(
-            0x4F3A60, this, arg1, arg2, arg3, arg4, arg5);
-    }
-
-    // 0x4F3B00 | ?LoadBitmap@mmToggle@@AAEXPAD@Z
-    inline void LoadBitmap(char* arg1)
-    {
-        return stub<member_func_t<void, mmToggle, char*>>(0x4F3B00, this, arg1);
-    }
-
-    // 0x4F3B40 | ?SetSize@mmToggle@@AAEXMM@Z
-    inline void SetSize(float arg1, float arg2)
-    {
-        return stub<member_func_t<void, mmToggle, float, float>>(0x4F3B40, this, arg1, arg2);
-    }
-
+    // 0x4F3C80 | ??_GmmToggle@@UAEPAXI@Z
     // 0x4F3A00 | ??1mmToggle@@UAE@XZ
-    inline ~mmToggle() override
-    {
-        stub<member_func_t<void, mmToggle>>(0x4F3A00, this);
-    }
+    ~mmToggle() override;
 
     // 0x4F3C10 | ?Cull@mmToggle@@UAEXXZ
-    inline void Cull() override
-    {
-        return stub<member_func_t<void, mmToggle>>(0x4F3C10, this);
-    }
+    void Cull() override;
+
+    // 0x4F3A60 | ?Init@mmToggle@@QAEXPADMMMM@Z
+    void Init(char* arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5);
 
     // 0x4F3BF0 | ?Update@mmToggle@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmToggle>>(0x4F3BF0, this);
-    }
+    void Update() override;
+
+private:
+    // 0x4F3B00 | ?LoadBitmap@mmToggle@@AAEXPAD@Z
+    void LoadBitmap(char* arg1);
+
+    // 0x4F3B40 | ?SetSize@mmToggle@@AAEXMM@Z
+    void SetSize(f32 arg1, f32 arg2);
 };
+
+check_size(mmToggle, 0x30);

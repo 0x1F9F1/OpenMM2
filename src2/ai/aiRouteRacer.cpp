@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,50 @@
 */
 
 #include "aiRouteRacer.h"
+
+aiRouteRacer::aiRouteRacer()
+{
+    unimplemented();
+}
+
+aiRouteRacer::~aiRouteRacer()
+{
+    unimplemented();
+}
+
+void aiRouteRacer::DrawRouteThroughTraffic()
+{
+    return stub<thiscall_t<void, aiRouteRacer*>>(0x53D900, this);
+}
+
+i32 aiRouteRacer::Finished()
+{
+    return stub<thiscall_t<i32, aiRouteRacer*>>(0x53D6E0, this);
+}
+
+void aiRouteRacer::Init(i32 arg1, char* arg2)
+{
+    return stub<thiscall_t<void, aiRouteRacer*, i32, char*>>(0x53D060, this, arg1, arg2);
+}
+
+void aiRouteRacer::Reset()
+{
+    return stub<thiscall_t<void, aiRouteRacer*>>(0x53D390, this);
+}
+
+void aiRouteRacer::Update()
+{
+    return stub<thiscall_t<void, aiRouteRacer*>>(0x53D3B0, this);
+}
+
+void aiRouteRacer::Disabled()
+{
+    return stub<thiscall_t<void, aiRouteRacer*>>(0x53D6B0, this);
+}
+
+void aiRouteRacer::DriveRoute()
+{
+    return stub<thiscall_t<void, aiRouteRacer*>>(0x53D4B0, this);
+}
+
+define_dummy_symbol(ai_aiRouteRacer);

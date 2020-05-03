@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,40 @@
 */
 
 #include "aiStuck.h"
+
+aiStuck::aiStuck()
+{
+    unimplemented();
+}
+
+aiStuck::~aiStuck()
+{
+    unimplemented();
+}
+
+void aiStuck::Impact()
+{
+    return stub<thiscall_t<void, aiStuck*>>(0x56FA10, this);
+}
+
+void aiStuck::Init(class vehCar* arg1)
+{
+    return stub<thiscall_t<void, aiStuck*, class vehCar*>>(0x56F9F0, this, arg1);
+}
+
+i32 aiStuck::Pegged()
+{
+    return stub<thiscall_t<i32, aiStuck*>>(0x56FA30, this);
+}
+
+void aiStuck::Reset()
+{
+    return stub<thiscall_t<void, aiStuck*>>(0x56FA20, this);
+}
+
+void aiStuck::Update()
+{
+    return stub<thiscall_t<void, aiStuck*>>(0x56FAA0, this);
+}
+
+define_dummy_symbol(ai_aiStuck);

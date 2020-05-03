@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -46,126 +46,67 @@
 class vehHornAudio
 {
 public:
-    // 0x4D0C50 | ??_GvehHornAudio@@QAEPAXI@Z
-    // Skipped (scalar/vector destructor)
-
     // 0x4DAEC0 | ??0vehHornAudio@@QAE@XZ
-    inline vehHornAudio()
-    {
-        stub<member_func_t<void, vehHornAudio>>(0x4DAEC0, this);
-    }
+    vehHornAudio();
 
     // 0x4DAEF0 | ??0vehHornAudio@@QAE@PAV0@@Z
-    inline vehHornAudio(class vehHornAudio* arg1)
-    {
-        stub<member_func_t<void, vehHornAudio, class vehHornAudio*>>(0x4DAEF0, this, arg1);
-    }
+    vehHornAudio(class vehHornAudio* arg1);
 
     // 0x4DB020 | ??1vehHornAudio@@QAE@XZ
-    inline ~vehHornAudio()
-    {
-        stub<member_func_t<void, vehHornAudio>>(0x4DB020, this);
-    }
+    // 0x4D0C50 | ??_GvehHornAudio@@QAEPAXI@Z
+    ~vehHornAudio();
 
     // 0x4DB080 | ?AllocTiming@vehHornAudio@@QAEXXZ
-    inline void AllocTiming()
-    {
-        return stub<member_func_t<void, vehHornAudio>>(0x4DB080, this);
-    }
-
-    // 0x4DB130 | ?GetHornAudioTimingPtr@vehHornAudio@@QAEPAVvehHornAudioTiming@@H@Z
-    inline class vehHornAudioTiming* GetHornAudioTimingPtr(int32_t arg1)
-    {
-        return stub<member_func_t<class vehHornAudioTiming*, vehHornAudio, int32_t>>(0x4DB130, this, arg1);
-    }
-
-    // 0x4DB140 | ?GetNumTimings@vehHornAudio@@QAEHXZ
-    inline int32_t GetNumTimings()
-    {
-        return stub<member_func_t<int32_t, vehHornAudio>>(0x4DB140, this);
-    }
-
-    // 0x4DB150 | ?UpdateDoppler@vehHornAudio@@QAEXMMM@Z
-    inline void UpdateDoppler(float arg1, float arg2, float arg3)
-    {
-        return stub<member_func_t<void, vehHornAudio, float, float, float>>(0x4DB150, this, arg1, arg2, arg3);
-    }
-
-    // 0x4DB1C0 | ?IsPlaying@vehHornAudio@@QAE_NXZ
-    inline bool IsPlaying()
-    {
-        return stub<member_func_t<bool, vehHornAudio>>(0x4DB1C0, this);
-    }
-
-    // 0x4DB1E0 | ?PlayAvoidance@vehHornAudio@@QAE_NXZ
-    inline bool PlayAvoidance()
-    {
-        return stub<member_func_t<bool, vehHornAudio>>(0x4DB1E0, this);
-    }
-
-    // 0x4DB280 | ?PlayImpact@vehHornAudio@@QAEXM@Z
-    inline void PlayImpact(float arg1)
-    {
-        return stub<member_func_t<void, vehHornAudio, float>>(0x4DB280, this, arg1);
-    }
-
-    // 0x4DB310 | ?Reset@vehHornAudio@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, vehHornAudio>>(0x4DB310, this);
-    }
+    void AllocTiming();
 
     // 0x4DB320 | ?AssignSounds@vehHornAudio@@QAEXH@Z
-    inline void AssignSounds(int32_t arg1)
-    {
-        return stub<member_func_t<void, vehHornAudio, int32_t>>(0x4DB320, this, arg1);
-    }
-
-    // 0x4DB350 | ?UnAssignSounds@vehHornAudio@@QAEXXZ
-    inline void UnAssignSounds()
-    {
-        return stub<member_func_t<void, vehHornAudio>>(0x4DB350, this);
-    }
-
-    // 0x4DB3D0 | ?Load@vehHornAudio@@SAHPAPAV1@PAD1PAH@Z
-    static inline int32_t Load(class vehHornAudio** arg1, char* arg2, char* arg3, int32_t* arg4)
-    {
-        return stub<cdecl_t<int32_t, class vehHornAudio**, char*, char*, int32_t*>>(0x4DB3D0, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x4DB490 | ?AddToHash@vehHornAudio@@SAXPADH@Z
-    static inline void AddToHash(char* arg1, int32_t arg2)
-    {
-        return stub<cdecl_t<void, char*, int32_t>>(0x4DB490, arg1, arg2);
-    }
-
-    // 0x4DB4D0 | ?ReadCSV@vehHornAudio@@AAEHPAVStream@@@Z
-    inline int32_t ReadCSV(class Stream* arg1)
-    {
-        return stub<member_func_t<int32_t, vehHornAudio, class Stream*>>(0x4DB4D0, this, arg1);
-    }
-
-    // 0x4DB680 | ?Update@vehHornAudio@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, vehHornAudio>>(0x4DB680, this);
-    }
-
-    // 0x4DB6A0 | ?EchoOn@vehHornAudio@@QAEXM@Z
-    inline void EchoOn(float arg1)
-    {
-        return stub<member_func_t<void, vehHornAudio, float>>(0x4DB6A0, this, arg1);
-    }
+    void AssignSounds(i32 arg1);
 
     // 0x4DB6D0 | ?EchoOff@vehHornAudio@@QAEXXZ
-    inline void EchoOff()
-    {
-        return stub<member_func_t<void, vehHornAudio>>(0x4DB6D0, this);
-    }
+    void EchoOff();
+
+    // 0x4DB6A0 | ?EchoOn@vehHornAudio@@QAEXM@Z
+    void EchoOn(f32 arg1);
+
+    // 0x4DB130 | ?GetHornAudioTimingPtr@vehHornAudio@@QAEPAVvehHornAudioTiming@@H@Z
+    class vehHornAudioTiming* GetHornAudioTimingPtr(i32 arg1);
+
+    // 0x4DB140 | ?GetNumTimings@vehHornAudio@@QAEHXZ
+    i32 GetNumTimings();
+
+    // 0x4DB1C0 | ?IsPlaying@vehHornAudio@@QAE_NXZ
+    bool IsPlaying();
+
+    // 0x4DB1E0 | ?PlayAvoidance@vehHornAudio@@QAE_NXZ
+    bool PlayAvoidance();
+
+    // 0x4DB280 | ?PlayImpact@vehHornAudio@@QAEXM@Z
+    void PlayImpact(f32 arg1);
+
+    // 0x4DB310 | ?Reset@vehHornAudio@@QAEXXZ
+    void Reset();
+
+    // 0x4DB350 | ?UnAssignSounds@vehHornAudio@@QAEXXZ
+    void UnAssignSounds();
+
+    // 0x4DB680 | ?Update@vehHornAudio@@QAEXXZ
+    void Update();
+
+    // 0x4DB150 | ?UpdateDoppler@vehHornAudio@@QAEXMMM@Z
+    void UpdateDoppler(f32 arg1, f32 arg2, f32 arg3);
 
     // 0x4DB6E0 | ?UpdateEcho@vehHornAudio@@QAEXXZ
-    inline void UpdateEcho()
-    {
-        return stub<member_func_t<void, vehHornAudio>>(0x4DB6E0, this);
-    }
+    void UpdateEcho();
+
+    // 0x4DB490 | ?AddToHash@vehHornAudio@@SAXPADH@Z
+    static void AddToHash(char* arg1, i32 arg2);
+
+    // 0x4DB3D0 | ?Load@vehHornAudio@@SAHPAPAV1@PAD1PAH@Z
+    static i32 Load(class vehHornAudio** arg1, char* arg2, char* arg3, i32* arg4);
+
+private:
+    // 0x4DB4D0 | ?ReadCSV@vehHornAudio@@AAEHPAVStream@@@Z
+    i32 ReadCSV(class Stream* arg1);
 };
+
+check_size(vehHornAudio, 0x34);

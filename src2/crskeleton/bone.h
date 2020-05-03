@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -29,14 +29,10 @@ class crBone
 {
 public:
     // 0x57CB20 | ??0crBone@@QAE@XZ
-    inline crBone()
-    {
-        stub<member_func_t<void, crBone>>(0x57CB20, this);
-    }
+    crBone();
 
     // 0x57CB50 | ?Transform@crBone@@QAEXPAVMatrix34@@@Z
-    inline void Transform(class Matrix34* arg1)
-    {
-        return stub<member_func_t<void, crBone, class Matrix34*>>(0x57CB50, this, arg1);
-    }
+    void Transform(class Matrix34* arg1);
 };
+
+check_size(crBone, 0x0);

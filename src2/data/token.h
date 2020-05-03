@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -79,475 +79,252 @@
     0x5B2B74 | const datBinTokenizer::`vftable' | ??_7datBinTokenizer@@6B@
     0x5B2BC0 | const datTokenizer::`vftable' | ??_7datTokenizer@@6B@
     0x5CEB6C | public: static void (__cdecl* datBaseTokenizer::sm_Errorf)(char const *,...) | ?sm_Errorf@datBaseTokenizer@@2P6AXPBDZZA
-    public: static int datBaseTokenizer::CommentChar | ?CommentChar@datBaseTokenizer@@2HA
+    0x5CEB70 | public: static int datBaseTokenizer::CommentChar | ?CommentChar@datBaseTokenizer@@2HA
 */
-
-class datBinTokenizer : datBaseTokenizer
-{
-public:
-    // datBinTokenizer::`vftable' @ 0x5B2B74
-
-    // 0x4C8BE0 | ?GetInt@datBinTokenizer@@UAEHXZ
-    inline int32_t GetInt() override
-    {
-        return stub<member_func_t<int32_t, datBinTokenizer>>(0x4C8BE0, this);
-    }
-
-    // 0x4C8C20 | ?GetFloat@datBinTokenizer@@UAEMXZ
-    inline float GetFloat() override
-    {
-        return stub<member_func_t<float, datBinTokenizer>>(0x4C8C20, this);
-    }
-
-    // 0x4C8CF0 | ?GetVector@datBinTokenizer@@UAEXAAVVector4@@@Z
-    inline void GetVector(class Vector4& arg1) override
-    {
-        return stub<member_func_t<void, datBinTokenizer, class Vector4&>>(0x4C8CF0, this, arg1);
-    }
-
-    // 0x4C8CB0 | ?GetVector@datBinTokenizer@@UAEXAAVVector3@@@Z
-    inline void GetVector(class Vector3& arg1) override
-    {
-        return stub<member_func_t<void, datBinTokenizer, class Vector3&>>(0x4C8CB0, this, arg1);
-    }
-
-    // 0x4C8C70 | ?GetVector@datBinTokenizer@@UAEXAAVVector2@@@Z
-    inline void GetVector(class Vector2& arg1) override
-    {
-        return stub<member_func_t<void, datBinTokenizer, class Vector2&>>(0x4C8C70, this, arg1);
-    }
-
-    // 0x4C8D30 | ?GetDelimiter@datBinTokenizer@@UAEXPBD@Z
-    inline void GetDelimiter(char const* arg1) override
-    {
-        return stub<member_func_t<void, datBinTokenizer, char const*>>(0x4C8D30, this, arg1);
-    }
-
-    // 0x4C8D40 | ?MatchInt@datBinTokenizer@@UAEHPBD@Z
-    inline int32_t MatchInt(char const* arg1) override
-    {
-        return stub<member_func_t<int32_t, datBinTokenizer, char const*>>(0x4C8D40, this, arg1);
-    }
-
-    // 0x4C8D50 | ?MatchFloat@datBinTokenizer@@UAEMPBD@Z
-    inline float MatchFloat(char const* arg1) override
-    {
-        return stub<member_func_t<float, datBinTokenizer, char const*>>(0x4C8D50, this, arg1);
-    }
-
-    // 0x4C8D80 | ?MatchVector@datBinTokenizer@@UAEXPBDAAVVector4@@@Z
-    inline void MatchVector(char const* arg1, class Vector4& arg2) override
-    {
-        return stub<member_func_t<void, datBinTokenizer, char const*, class Vector4&>>(0x4C8D80, this, arg1, arg2);
-    }
-
-    // 0x4C8D70 | ?MatchVector@datBinTokenizer@@UAEXPBDAAVVector3@@@Z
-    inline void MatchVector(char const* arg1, class Vector3& arg2) override
-    {
-        return stub<member_func_t<void, datBinTokenizer, char const*, class Vector3&>>(0x4C8D70, this, arg1, arg2);
-    }
-
-    // 0x4C8D60 | ?MatchVector@datBinTokenizer@@UAEXPBDAAVVector2@@@Z
-    inline void MatchVector(char const* arg1, class Vector2& arg2) override
-    {
-        return stub<member_func_t<void, datBinTokenizer, char const*, class Vector2&>>(0x4C8D60, this, arg1, arg2);
-    }
-
-    // 0x4C8E60 | ?Put@datBinTokenizer@@UAE_NABVVector4@@@Z
-    inline bool Put(class Vector4 const& arg1) override
-    {
-        return stub<member_func_t<bool, datBinTokenizer, class Vector4 const&>>(0x4C8E60, this, arg1);
-    }
-
-    // 0x4C8E40 | ?Put@datBinTokenizer@@UAE_NABVVector3@@@Z
-    inline bool Put(class Vector3 const& arg1) override
-    {
-        return stub<member_func_t<bool, datBinTokenizer, class Vector3 const&>>(0x4C8E40, this, arg1);
-    }
-
-    // 0x4C8E20 | ?Put@datBinTokenizer@@UAE_NABVVector2@@@Z
-    inline bool Put(class Vector2 const& arg1) override
-    {
-        return stub<member_func_t<bool, datBinTokenizer, class Vector2 const&>>(0x4C8E20, this, arg1);
-    }
-
-    // 0x4C8E00 | ?Put@datBinTokenizer@@UAE_NM@Z
-    inline bool Put(float arg1) override
-    {
-        return stub<member_func_t<bool, datBinTokenizer, float>>(0x4C8E00, this, arg1);
-    }
-
-    // 0x4C8DE0 | ?Put@datBinTokenizer@@UAE_NH@Z
-    inline bool Put(int32_t arg1) override
-    {
-        return stub<member_func_t<bool, datBinTokenizer, int32_t>>(0x4C8DE0, this, arg1);
-    }
-
-    // 0x4C8D90 | ?Put@datBinTokenizer@@UAE_NPBDI@Z
-    inline bool Put(char const* arg1, uint32_t arg2) override
-    {
-        return stub<member_func_t<bool, datBinTokenizer, char const*, uint32_t>>(0x4C8D90, this, arg1, arg2);
-    }
-
-    // 0x4C8E80 | ?PutDelimiter@datBinTokenizer@@UAE_NPBD@Z
-    inline bool PutDelimiter(char const* arg1) override
-    {
-        return stub<member_func_t<bool, datBinTokenizer, char const*>>(0x4C8E80, this, arg1);
-    }
-};
-
-class datTokenizer : datAsciiTokenizer
-{
-public:
-    // datTokenizer::`vftable' @ 0x5B2BC0
-
-    // 0x4C9000 | ??0datTokenizer@@QAE@XZ
-    inline datTokenizer()
-    {
-        stub<member_func_t<void, datTokenizer>>(0x4C9000, this);
-    }
-
-    // 0x4C9010 | ??0datTokenizer@@QAE@PBDPAVStream@@@Z
-    inline datTokenizer(char const* arg1, class Stream* arg2)
-    {
-        stub<member_func_t<void, datTokenizer, char const*, class Stream*>>(0x4C9010, this, arg1, arg2);
-    }
-};
 
 class datBaseTokenizer
 {
+    // const datBaseTokenizer::`vftable' @ 0x5B22A4
+
 public:
-    // datBaseTokenizer::`vftable' @ 0x5B22A4
-
-    // 0x4C8210 | ?Init@datBaseTokenizer@@QAEXPBDPAVStream@@@Z
-    inline void Init(char const* arg1, class Stream* arg2)
-    {
-        return stub<member_func_t<void, datBaseTokenizer, char const*, class Stream*>>(0x4C8210, this, arg1, arg2);
-    }
-
-    // 0x4C8240 | ?PushBack@datBaseTokenizer@@AAEXPBDH@Z
-    inline void PushBack(char const* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, datBaseTokenizer, char const*, int32_t>>(0x4C8240, this, arg1, arg2);
-    }
-
-    // 0x4C8270 | ?GetTokenCh@datBaseTokenizer@@AAEHXZ
-    inline int32_t GetTokenCh()
-    {
-        return stub<member_func_t<int32_t, datBaseTokenizer>>(0x4C8270, this);
-    }
-
-    // 0x4C82B0 | ?SkipComment@datBaseTokenizer@@IAEXXZ
-    inline void SkipComment()
-    {
-        return stub<member_func_t<void, datBaseTokenizer>>(0x4C82B0, this);
-    }
-
-    // 0x4C82F0 | ?GetToken@datBaseTokenizer@@QAEHPADH@Z
-    inline int32_t GetToken(char* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<int32_t, datBaseTokenizer, char*, int32_t>>(0x4C82F0, this, arg1, arg2);
-    }
+    // 0x4C8500 | ?CheckToken@datBaseTokenizer@@QAE_NPBD_N@Z
+    bool CheckToken(char const* arg1, bool arg2);
 
     // 0x4C8440 | ?GetBlock@datBaseTokenizer@@QAEHPADH@Z
-    inline int32_t GetBlock(char* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<int32_t, datBaseTokenizer, char*, int32_t>>(0x4C8440, this, arg1, arg2);
-    }
+    i32 GetBlock(char* arg1, i32 arg2);
 
-    // 0x4C8480 | ?MatchToken@datBaseTokenizer@@QAEXPBD@Z
-    inline void MatchToken(char const* arg1)
-    {
-        return stub<member_func_t<void, datBaseTokenizer, char const*>>(0x4C8480, this, arg1);
-    }
-
-    // 0x4C8500 | ?CheckToken@datBaseTokenizer@@QAE_NPBD_N@Z
-    inline bool CheckToken(char const* arg1, bool arg2)
-    {
-        return stub<member_func_t<bool, datBaseTokenizer, char const*, bool>>(0x4C8500, this, arg1, arg2);
-    }
+    // 0x4C82F0 | ?GetToken@datBaseTokenizer@@QAEHPADH@Z
+    i32 GetToken(char* arg1, i32 arg2);
 
     // 0x4C8590 | ?GetTokenToChar@datBaseTokenizer@@QAEHPADHD@Z
-    inline int32_t GetTokenToChar(char* arg1, int32_t arg2, char arg3)
-    {
-        return stub<member_func_t<int32_t, datBaseTokenizer, char*, int32_t, char>>(0x4C8590, this, arg1, arg2, arg3);
-    }
-
-    // 0x4C8650 | ?SkipToEndOfLine@datBaseTokenizer@@QAEXXZ
-    inline void SkipToEndOfLine()
-    {
-        return stub<member_func_t<void, datBaseTokenizer>>(0x4C8650, this);
-    }
+    i32 GetTokenToChar(char* arg1, i32 arg2, char arg3);
 
     // 0x4C8670 | ?IgnoreToken@datBaseTokenizer@@QAEXXZ
-    inline void IgnoreToken()
-    {
-        return stub<member_func_t<void, datBaseTokenizer>>(0x4C8670, this);
-    }
+    void IgnoreToken();
+
+    // 0x4C8210 | ?Init@datBaseTokenizer@@QAEXPBDPAVStream@@@Z
+    void Init(char const* arg1, class Stream* arg2);
+
+    // 0x4C8480 | ?MatchToken@datBaseTokenizer@@QAEXPBD@Z
+    void MatchToken(char const* arg1);
 
     // 0x4C8690 | ?Pop@datBaseTokenizer@@QAEXXZ
-    inline void Pop()
-    {
-        return stub<member_func_t<void, datBaseTokenizer>>(0x4C8690, this);
-    }
+    void Pop();
 
     // 0x4C8730 | ?PutStr@datBaseTokenizer@@QAA_NPBDZZ
-    // Skipped (Variable Arguments)
+    bool PutStr(char const* arg1, ...);
 
-    // 0x5CEB6C | ?sm_Errorf@datBaseTokenizer@@2P6AXPBDZZA
-    inline extern_var(0x5CEB6C, void(__cdecl*)(char const*, ...), sm_Errorf);
+    // 0x4C8650 | ?SkipToEndOfLine@datBaseTokenizer@@QAEXXZ
+    void SkipToEndOfLine();
 
-    // 0x582519 | __purecall
-    virtual inline int32_t GetInt()
-    {
-        return stub<member_func_t<int32_t, datBaseTokenizer>>(0x582519, this);
-    }
+    virtual i32 GetInt() = 0;
 
-    // 0x582519 | __purecall
-    virtual inline float GetFloat()
-    {
-        return stub<member_func_t<float, datBaseTokenizer>>(0x582519, this);
-    }
+    virtual f32 GetFloat() = 0;
 
-    // 0x582519 | __purecall
-    virtual inline void GetVector(class Vector4& arg1)
-    {
-        return stub<member_func_t<void, datBaseTokenizer, class Vector4&>>(0x582519, this, arg1);
-    }
+    virtual void GetVector(class Vector4& arg1) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline void GetVector(class Vector3& arg1)
-    {
-        return stub<member_func_t<void, datBaseTokenizer, class Vector3&>>(0x582519, this, arg1);
-    }
+    virtual void GetVector(class Vector3& arg1) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline void GetVector(class Vector2& arg1)
-    {
-        return stub<member_func_t<void, datBaseTokenizer, class Vector2&>>(0x582519, this, arg1);
-    }
+    virtual void GetVector(class Vector2& arg1) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline void GetDelimiter(char const* arg1)
-    {
-        return stub<member_func_t<void, datBaseTokenizer, char const*>>(0x582519, this, arg1);
-    }
+    virtual void GetDelimiter(char const* arg1) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline int32_t MatchInt(char const* arg1)
-    {
-        return stub<member_func_t<int32_t, datBaseTokenizer, char const*>>(0x582519, this, arg1);
-    }
+    virtual i32 MatchInt(char const* arg1) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline float MatchFloat(char const* arg1)
-    {
-        return stub<member_func_t<float, datBaseTokenizer, char const*>>(0x582519, this, arg1);
-    }
+    virtual f32 MatchFloat(char const* arg1) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline void MatchVector(char const* arg1, class Vector4& arg2)
-    {
-        return stub<member_func_t<void, datBaseTokenizer, char const*, class Vector4&>>(0x582519, this, arg1, arg2);
-    }
+    virtual void MatchVector(char const* arg1, class Vector4& arg2) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline void MatchVector(char const* arg1, class Vector3& arg2)
-    {
-        return stub<member_func_t<void, datBaseTokenizer, char const*, class Vector3&>>(0x582519, this, arg1, arg2);
-    }
+    virtual void MatchVector(char const* arg1, class Vector3& arg2) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline void MatchVector(char const* arg1, class Vector2& arg2)
-    {
-        return stub<member_func_t<void, datBaseTokenizer, char const*, class Vector2&>>(0x582519, this, arg1, arg2);
-    }
+    virtual void MatchVector(char const* arg1, class Vector2& arg2) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline bool Put(class Vector4 const& arg1)
-    {
-        return stub<member_func_t<bool, datBaseTokenizer, class Vector4 const&>>(0x582519, this, arg1);
-    }
+    virtual bool Put(class Vector4 const& arg1) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline bool Put(class Vector3 const& arg1)
-    {
-        return stub<member_func_t<bool, datBaseTokenizer, class Vector3 const&>>(0x582519, this, arg1);
-    }
+    virtual bool Put(class Vector3 const& arg1) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline bool Put(class Vector2 const& arg1)
-    {
-        return stub<member_func_t<bool, datBaseTokenizer, class Vector2 const&>>(0x582519, this, arg1);
-    }
+    virtual bool Put(class Vector2 const& arg1) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline bool Put(float arg1)
-    {
-        return stub<member_func_t<bool, datBaseTokenizer, float>>(0x582519, this, arg1);
-    }
+    virtual bool Put(f32 arg1) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline bool Put(int32_t arg1)
-    {
-        return stub<member_func_t<bool, datBaseTokenizer, int32_t>>(0x582519, this, arg1);
-    }
+    virtual bool Put(i32 arg1) = 0;
 
     // 0x4C86D0 | ?Put@datBaseTokenizer@@UAE_ND@Z
-    virtual inline bool Put(char arg1)
-    {
-        return stub<member_func_t<bool, datBaseTokenizer, char>>(0x4C86D0, this, arg1);
-    }
+    virtual bool Put(char arg1);
 
-    // 0x582519 | __purecall
-    virtual inline bool Put(char const* arg1, uint32_t arg2)
-    {
-        return stub<member_func_t<bool, datBaseTokenizer, char const*, uint32_t>>(0x582519, this, arg1, arg2);
-    }
+    virtual bool Put(char const* arg1, u32 arg2) = 0;
 
-    // 0x582519 | __purecall
-    virtual inline bool PutDelimiter(char const* arg1)
-    {
-        return stub<member_func_t<bool, datBaseTokenizer, char const*>>(0x582519, this, arg1);
-    }
+    virtual bool PutDelimiter(char const* arg1) = 0;
+
+    // 0x5CEB70 | ?CommentChar@datBaseTokenizer@@2HA
+    static inline extern_var(0x5CEB70, i32, CommentChar);
+
+    // 0x5CEB6C | ?sm_Errorf@datBaseTokenizer@@2P6AXPBDZZA
+    static inline extern_var(0x5CEB6C, void (*)(char const*, ...), sm_Errorf);
+
+protected:
+    // 0x4C82B0 | ?SkipComment@datBaseTokenizer@@IAEXXZ
+    void SkipComment();
+
+private:
+    // 0x4C8270 | ?GetTokenCh@datBaseTokenizer@@AAEHXZ
+    i32 GetTokenCh();
+
+    // 0x4C8240 | ?PushBack@datBaseTokenizer@@AAEXPBDH@Z
+    void PushBack(char const* arg1, i32 arg2);
 };
 
-class datAsciiTokenizer : datBaseTokenizer
-{
-public:
-    // datAsciiTokenizer::`vftable' @ 0x5B1778
+check_size(datBaseTokenizer, 0x0);
 
-    // 0x4C8770 | ?GetInt@datAsciiTokenizer@@UAEHXZ
-    inline int32_t GetInt() override
-    {
-        return stub<member_func_t<int32_t, datAsciiTokenizer>>(0x4C8770, this);
-    }
+class datAsciiTokenizer : public datBaseTokenizer
+{
+    // const datAsciiTokenizer::`vftable' @ 0x5B1778
+
+public:
+    // 0x4C88D0 | ?GetDelimiter@datAsciiTokenizer@@UAEXPBD@Z
+    void GetDelimiter(char const* arg1) override;
 
     // 0x4C87D0 | ?GetFloat@datAsciiTokenizer@@UAEMXZ
-    inline float GetFloat() override
-    {
-        return stub<member_func_t<float, datAsciiTokenizer>>(0x4C87D0, this);
-    }
+    f32 GetFloat() override;
 
-    // 0x4C8890 | ?GetVector@datAsciiTokenizer@@UAEXAAVVector4@@@Z
-    inline void GetVector(class Vector4& arg1) override
-    {
-        return stub<member_func_t<void, datAsciiTokenizer, class Vector4&>>(0x4C8890, this, arg1);
-    }
-
-    // 0x4C8860 | ?GetVector@datAsciiTokenizer@@UAEXAAVVector3@@@Z
-    inline void GetVector(class Vector3& arg1) override
-    {
-        return stub<member_func_t<void, datAsciiTokenizer, class Vector3&>>(0x4C8860, this, arg1);
-    }
+    // 0x4C8770 | ?GetInt@datAsciiTokenizer@@UAEHXZ
+    i32 GetInt() override;
 
     // 0x4C8830 | ?GetVector@datAsciiTokenizer@@UAEXAAVVector2@@@Z
-    inline void GetVector(class Vector2& arg1) override
-    {
-        return stub<member_func_t<void, datAsciiTokenizer, class Vector2&>>(0x4C8830, this, arg1);
-    }
+    void GetVector(class Vector2& arg1) override;
 
-    // 0x4C88D0 | ?GetDelimiter@datAsciiTokenizer@@UAEXPBD@Z
-    inline void GetDelimiter(char const* arg1) override
-    {
-        return stub<member_func_t<void, datAsciiTokenizer, char const*>>(0x4C88D0, this, arg1);
-    }
+    // 0x4C8860 | ?GetVector@datAsciiTokenizer@@UAEXAAVVector3@@@Z
+    void GetVector(class Vector3& arg1) override;
 
-    // 0x4C88E0 | ?MatchInt@datAsciiTokenizer@@UAEHPBD@Z
-    inline int32_t MatchInt(char const* arg1) override
-    {
-        return stub<member_func_t<int32_t, datAsciiTokenizer, char const*>>(0x4C88E0, this, arg1);
-    }
+    // 0x4C8890 | ?GetVector@datAsciiTokenizer@@UAEXAAVVector4@@@Z
+    void GetVector(class Vector4& arg1) override;
 
     // 0x4C8900 | ?MatchFloat@datAsciiTokenizer@@UAEMPBD@Z
-    inline float MatchFloat(char const* arg1) override
-    {
-        return stub<member_func_t<float, datAsciiTokenizer, char const*>>(0x4C8900, this, arg1);
-    }
+    f32 MatchFloat(char const* arg1) override;
 
-    // 0x4C8960 | ?MatchVector@datAsciiTokenizer@@UAEXPBDAAVVector4@@@Z
-    inline void MatchVector(char const* arg1, class Vector4& arg2) override
-    {
-        return stub<member_func_t<void, datAsciiTokenizer, char const*, class Vector4&>>(0x4C8960, this, arg1, arg2);
-    }
-
-    // 0x4C8940 | ?MatchVector@datAsciiTokenizer@@UAEXPBDAAVVector3@@@Z
-    inline void MatchVector(char const* arg1, class Vector3& arg2) override
-    {
-        return stub<member_func_t<void, datAsciiTokenizer, char const*, class Vector3&>>(0x4C8940, this, arg1, arg2);
-    }
+    // 0x4C88E0 | ?MatchInt@datAsciiTokenizer@@UAEHPBD@Z
+    i32 MatchInt(char const* arg1) override;
 
     // 0x4C8920 | ?MatchVector@datAsciiTokenizer@@UAEXPBDAAVVector2@@@Z
-    inline void MatchVector(char const* arg1, class Vector2& arg2) override
-    {
-        return stub<member_func_t<void, datAsciiTokenizer, char const*, class Vector2&>>(0x4C8920, this, arg1, arg2);
-    }
+    void MatchVector(char const* arg1, class Vector2& arg2) override;
 
-    // 0x4C8B50 | ?Put@datAsciiTokenizer@@UAE_NABVVector4@@@Z
-    inline bool Put(class Vector4 const& arg1) override
-    {
-        return stub<member_func_t<bool, datAsciiTokenizer, class Vector4 const&>>(0x4C8B50, this, arg1);
-    }
+    // 0x4C8940 | ?MatchVector@datAsciiTokenizer@@UAEXPBDAAVVector3@@@Z
+    void MatchVector(char const* arg1, class Vector3& arg2) override;
 
-    // 0x4C8AF0 | ?Put@datAsciiTokenizer@@UAE_NABVVector3@@@Z
-    inline bool Put(class Vector3 const& arg1) override
-    {
-        return stub<member_func_t<bool, datAsciiTokenizer, class Vector3 const&>>(0x4C8AF0, this, arg1);
-    }
+    // 0x4C8960 | ?MatchVector@datAsciiTokenizer@@UAEXPBDAAVVector4@@@Z
+    void MatchVector(char const* arg1, class Vector4& arg2) override;
 
     // 0x4C8A90 | ?Put@datAsciiTokenizer@@UAE_NABVVector2@@@Z
-    inline bool Put(class Vector2 const& arg1) override
-    {
-        return stub<member_func_t<bool, datAsciiTokenizer, class Vector2 const&>>(0x4C8A90, this, arg1);
-    }
+    bool Put(class Vector2 const& arg1) override;
+
+    // 0x4C8AF0 | ?Put@datAsciiTokenizer@@UAE_NABVVector3@@@Z
+    bool Put(class Vector3 const& arg1) override;
+
+    // 0x4C8B50 | ?Put@datAsciiTokenizer@@UAE_NABVVector4@@@Z
+    bool Put(class Vector4 const& arg1) override;
 
     // 0x4C8A40 | ?Put@datAsciiTokenizer@@UAE_NM@Z
-    inline bool Put(float arg1) override
-    {
-        return stub<member_func_t<bool, datAsciiTokenizer, float>>(0x4C8A40, this, arg1);
-    }
+    bool Put(f32 arg1) override;
 
     // 0x4C8A00 | ?Put@datAsciiTokenizer@@UAE_NH@Z
-    inline bool Put(int32_t arg1) override
-    {
-        return stub<member_func_t<bool, datAsciiTokenizer, int32_t>>(0x4C8A00, this, arg1);
-    }
+    bool Put(i32 arg1) override;
 
     // 0x4C8980 | ?Put@datAsciiTokenizer@@UAE_NPBDI@Z
-    inline bool Put(char const* arg1, uint32_t arg2) override
-    {
-        return stub<member_func_t<bool, datAsciiTokenizer, char const*, uint32_t>>(0x4C8980, this, arg1, arg2);
-    }
+    bool Put(char const* arg1, u32 arg2) override;
 
     // 0x4C8BC0 | ?PutDelimiter@datAsciiTokenizer@@UAE_NPBD@Z
-    inline bool PutDelimiter(char const* arg1) override
-    {
-        return stub<member_func_t<bool, datAsciiTokenizer, char const*>>(0x4C8BC0, this, arg1);
-    }
+    bool PutDelimiter(char const* arg1) override;
 };
 
-struct datMultiTokenizer : datAsciiTokenizer
+check_size(datAsciiTokenizer, 0x0);
+
+class datBinTokenizer : public datBaseTokenizer
+{
+    // const datBinTokenizer::`vftable' @ 0x5B2B74
+
+public:
+    // 0x4C8D30 | ?GetDelimiter@datBinTokenizer@@UAEXPBD@Z
+    void GetDelimiter(char const* arg1) override;
+
+    // 0x4C8C20 | ?GetFloat@datBinTokenizer@@UAEMXZ
+    f32 GetFloat() override;
+
+    // 0x4C8BE0 | ?GetInt@datBinTokenizer@@UAEHXZ
+    i32 GetInt() override;
+
+    // 0x4C8C70 | ?GetVector@datBinTokenizer@@UAEXAAVVector2@@@Z
+    void GetVector(class Vector2& arg1) override;
+
+    // 0x4C8CB0 | ?GetVector@datBinTokenizer@@UAEXAAVVector3@@@Z
+    void GetVector(class Vector3& arg1) override;
+
+    // 0x4C8CF0 | ?GetVector@datBinTokenizer@@UAEXAAVVector4@@@Z
+    void GetVector(class Vector4& arg1) override;
+
+    // 0x4C8D50 | ?MatchFloat@datBinTokenizer@@UAEMPBD@Z
+    f32 MatchFloat(char const* arg1) override;
+
+    // 0x4C8D40 | ?MatchInt@datBinTokenizer@@UAEHPBD@Z
+    i32 MatchInt(char const* arg1) override;
+
+    // 0x4C8D60 | ?MatchVector@datBinTokenizer@@UAEXPBDAAVVector2@@@Z
+    void MatchVector(char const* arg1, class Vector2& arg2) override;
+
+    // 0x4C8D70 | ?MatchVector@datBinTokenizer@@UAEXPBDAAVVector3@@@Z
+    void MatchVector(char const* arg1, class Vector3& arg2) override;
+
+    // 0x4C8D80 | ?MatchVector@datBinTokenizer@@UAEXPBDAAVVector4@@@Z
+    void MatchVector(char const* arg1, class Vector4& arg2) override;
+
+    // 0x4C8E20 | ?Put@datBinTokenizer@@UAE_NABVVector2@@@Z
+    bool Put(class Vector2 const& arg1) override;
+
+    // 0x4C8E40 | ?Put@datBinTokenizer@@UAE_NABVVector3@@@Z
+    bool Put(class Vector3 const& arg1) override;
+
+    // 0x4C8E60 | ?Put@datBinTokenizer@@UAE_NABVVector4@@@Z
+    bool Put(class Vector4 const& arg1) override;
+
+    // 0x4C8E00 | ?Put@datBinTokenizer@@UAE_NM@Z
+    bool Put(f32 arg1) override;
+
+    // 0x4C8DE0 | ?Put@datBinTokenizer@@UAE_NH@Z
+    bool Put(i32 arg1) override;
+
+    // 0x4C8D90 | ?Put@datBinTokenizer@@UAE_NPBDI@Z
+    bool Put(char const* arg1, u32 arg2) override;
+
+    // 0x4C8E80 | ?PutDelimiter@datBinTokenizer@@UAE_NPBD@Z
+    bool PutDelimiter(char const* arg1) override;
+};
+
+check_size(datBinTokenizer, 0x0);
+
+struct datMultiTokenizer
 {
 public:
     // 0x4C8E90 | ??0datMultiTokenizer@@QAE@XZ
-    inline datMultiTokenizer()
-    {
-        stub<member_func_t<void, datMultiTokenizer>>(0x4C8E90, this);
-    }
+    datMultiTokenizer();
 
     // 0x4C8EA0 | ?GetReadTokenizer@datMultiTokenizer@@QAEAAVdatBaseTokenizer@@PBDPAVStream@@00@Z
-    inline class datBaseTokenizer& GetReadTokenizer(
-        char const* arg1, class Stream* arg2, char const* arg3, char const* arg4)
-    {
-        return stub<member_func_t<class datBaseTokenizer&, datMultiTokenizer, char const*, class Stream*, char const*,
-            char const*>>(0x4C8EA0, this, arg1, arg2, arg3, arg4);
-    }
+    class datBaseTokenizer& GetReadTokenizer(char const* arg1, class Stream* arg2, char const* arg3, char const* arg4);
 
     // 0x4C8FB0 | ?GetWriteTokenizer@datMultiTokenizer@@QAEAAVdatBaseTokenizer@@PBDPAVStream@@_N0@Z
-    inline class datBaseTokenizer& GetWriteTokenizer(char const* arg1, class Stream* arg2, bool arg3, char const* arg4)
-    {
-        return stub<
-            member_func_t<class datBaseTokenizer&, datMultiTokenizer, char const*, class Stream*, bool, char const*>>(
-            0x4C8FB0, this, arg1, arg2, arg3, arg4);
-    }
+    class datBaseTokenizer& GetWriteTokenizer(char const* arg1, class Stream* arg2, bool arg3, char const* arg4);
 };
+
+check_size(datMultiTokenizer, 0x0);
+
+class datTokenizer : public datAsciiTokenizer
+{
+    // const datTokenizer::`vftable' @ 0x5B2BC0
+
+public:
+    // 0x4C9000 | ??0datTokenizer@@QAE@XZ
+    datTokenizer();
+
+    // 0x4C9010 | ??0datTokenizer@@QAE@PBDPAVStream@@@Z
+    datTokenizer(char const* arg1, class Stream* arg2);
+};
+
+check_size(datTokenizer, 0x0);

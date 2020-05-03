@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,15 @@
 */
 
 #include "pu_exit.h"
+
+PUExit::PUExit(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+{
+    unimplemented();
+}
+
+PUExit::~PUExit()
+{
+    unimplemented();
+}
+
+define_dummy_symbol(mmui_pu_exit);

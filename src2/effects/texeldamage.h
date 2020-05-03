@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -34,39 +34,23 @@ struct fxTexelDamage
 {
 public:
     // 0x591CA0 | ??0fxTexelDamage@@QAE@XZ
-    inline fxTexelDamage()
-    {
-        stub<member_func_t<void, fxTexelDamage>>(0x591CA0, this);
-    }
+    fxTexelDamage();
 
     // 0x591CC0 | ??1fxTexelDamage@@QAE@XZ
-    inline ~fxTexelDamage()
-    {
-        stub<member_func_t<void, fxTexelDamage>>(0x591CC0, this);
-    }
-
-    // 0x591CD0 | ?Kill@fxTexelDamage@@AAEXXZ
-    inline void Kill()
-    {
-        return stub<member_func_t<void, fxTexelDamage>>(0x591CD0, this);
-    }
-
-    // 0x591D10 | ?Init@fxTexelDamage@@QAE_NPAVmodStatic@@PAVmodShader@@H@Z
-    inline bool Init(class modStatic* arg1, class modShader* arg2, int32_t arg3)
-    {
-        return stub<member_func_t<bool, fxTexelDamage, class modStatic*, class modShader*, int32_t>>(
-            0x591D10, this, arg1, arg2, arg3);
-    }
-
-    // 0x592190 | ?Reset@fxTexelDamage@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, fxTexelDamage>>(0x592190, this);
-    }
+    ~fxTexelDamage();
 
     // 0x5921E0 | ?ApplyDamage@fxTexelDamage@@QAEXABVVector3@@M@Z
-    inline void ApplyDamage(class Vector3 const& arg1, float arg2)
-    {
-        return stub<member_func_t<void, fxTexelDamage, class Vector3 const&, float>>(0x5921E0, this, arg1, arg2);
-    }
+    void ApplyDamage(class Vector3 const& arg1, f32 arg2);
+
+    // 0x591D10 | ?Init@fxTexelDamage@@QAE_NPAVmodStatic@@PAVmodShader@@H@Z
+    bool Init(class modStatic* arg1, class modShader* arg2, i32 arg3);
+
+    // 0x592190 | ?Reset@fxTexelDamage@@QAEXXZ
+    void Reset();
+
+private:
+    // 0x591CD0 | ?Kill@fxTexelDamage@@AAEXXZ
+    void Kill();
 };
+
+check_size(fxTexelDamage, 0x0);

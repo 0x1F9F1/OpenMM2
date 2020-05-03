@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -26,29 +26,23 @@
     0x46A0F0 | public: void __thiscall lvlSegmentInfo::AllocateState(void) | ?AllocateState@lvlSegmentInfo@@QAEXXZ
 */
 
+class lvlSegment
+{
+public:
+    // 0x46A060 | ?CalculateInfo@lvlSegment@@QAEXXZ
+    void CalculateInfo();
+
+    // 0x469F90 | ?Set@lvlSegment@@QAEXABVVector3@@0HPAVlvlSegmentInfo@@@Z
+    void Set(class Vector3 const& arg1, class Vector3 const& arg2, i32 arg3, class lvlSegmentInfo* arg4);
+};
+
+check_size(lvlSegment, 0x0);
+
 class lvlSegmentInfo
 {
 public:
     // 0x46A0F0 | ?AllocateState@lvlSegmentInfo@@QAEXXZ
-    inline void AllocateState()
-    {
-        return stub<member_func_t<void, lvlSegmentInfo>>(0x46A0F0, this);
-    }
+    void AllocateState();
 };
 
-class lvlSegment
-{
-public:
-    // 0x469F90 | ?Set@lvlSegment@@QAEXABVVector3@@0HPAVlvlSegmentInfo@@@Z
-    inline void Set(class Vector3 const& arg1, class Vector3 const& arg2, int32_t arg3, class lvlSegmentInfo* arg4)
-    {
-        return stub<member_func_t<void, lvlSegment, class Vector3 const&, class Vector3 const&, int32_t,
-            class lvlSegmentInfo*>>(0x469F90, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x46A060 | ?CalculateInfo@lvlSegment@@QAEXXZ
-    inline void CalculateInfo()
-    {
-        return stub<member_func_t<void, lvlSegment>>(0x46A060, this);
-    }
-};
+check_size(lvlSegmentInfo, 0x0);

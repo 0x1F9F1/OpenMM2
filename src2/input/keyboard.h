@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -28,3 +28,26 @@
     0x6A3674 | private: static unsigned char (* ioKeyboard::m_Keys)[256] | ?m_Keys@ioKeyboard@@0PAY0BAA@EA
     0x6A387C | private: static int ioKeyboard::m_Active | ?m_Active@ioKeyboard@@0HA
 */
+
+struct ioKeyboard
+{
+public:
+    // 0x4BAA70 | ?Begin@ioKeyboard@@SAX_N@Z
+    static void Begin(bool arg1);
+
+    // 0x4BAB60 | ?End@ioKeyboard@@SAXXZ
+    static void End();
+
+    // 0x4BAC20 | ?GetBufferedInput@ioKeyboard@@SAHPADH@Z
+    static i32 GetBufferedInput(char* arg1, i32 arg2);
+
+    // 0x4BABA0 | ?Update@ioKeyboard@@SAXXZ
+    static void Update();
+
+private:
+    // 0x6A387C | ?m_Active@ioKeyboard@@0HA
+    static inline extern_var(0x6A387C, i32, m_Active);
+
+    // 0x6A3674 | ?m_Keys@ioKeyboard@@0PAY0BAA@EA
+    static inline extern_var(0x6A3674, u8 (*)[256], m_Keys);
+};

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,40 @@
 */
 
 #include "aipedaudio.h"
+
+aiPedAudio::aiPedAudio()
+{
+    unimplemented();
+}
+
+aiPedAudio::~aiPedAudio()
+{
+    unimplemented();
+}
+
+bool aiPedAudio::LoadFemaleVoices(char* arg1, bool arg2)
+{
+    return stub<thiscall_t<bool, aiPedAudio*, char*, bool>>(0x53CD90, this, arg1, arg2);
+}
+
+bool aiPedAudio::LoadMaleVoices(char* arg1, bool arg2)
+{
+    return stub<thiscall_t<bool, aiPedAudio*, char*, bool>>(0x53CE00, this, arg1, arg2);
+}
+
+void aiPedAudio::LoadNumFemaleChoices(char* arg1)
+{
+    return stub<cdecl_t<void, char*>>(0x53CEA0, arg1);
+}
+
+void aiPedAudio::LoadNumMaleChoices(char* arg1)
+{
+    return stub<cdecl_t<void, char*>>(0x53CEE0, arg1);
+}
+
+void aiPedAudio::SetCSVCatString(char* arg1)
+{
+    return stub<cdecl_t<void, char*>>(0x53CE70, arg1);
+}
+
+define_dummy_symbol(ai_aipedaudio);

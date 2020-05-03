@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "node/node.h"
+
 /*
     mmwidget:toggle2
 
@@ -33,51 +35,33 @@
     0x5B3CA0 | const mmToggle2::`vftable' | ??_7mmToggle2@@6B@
 */
 
-struct mmToggle2 : asNode
+class mmToggle2 : public asNode
 {
+    // const mmToggle2::`vftable' @ 0x5B3CA0
+
 public:
-    // mmToggle2::`vftable' @ 0x5B3CA0
-
     // 0x4F3CB0 | ??0mmToggle2@@QAE@XZ
-    inline mmToggle2()
-    {
-        stub<member_func_t<void, mmToggle2>>(0x4F3CB0, this);
-    }
+    mmToggle2();
 
-    // 0x4F3D30 | ?Init@mmToggle2@@QAEXPADMMPAH@Z
-    inline void Init(char* arg1, float arg2, float arg3, int32_t* arg4)
-    {
-        return stub<member_func_t<void, mmToggle2, char*, float, float, int32_t*>>(
-            0x4F3D30, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x4F3D60 | ?LoadBitmap@mmToggle2@@AAEXPAD@Z
-    inline void LoadBitmap(char* arg1)
-    {
-        return stub<member_func_t<void, mmToggle2, char*>>(0x4F3D60, this, arg1);
-    }
-
-    // 0x4F3DC0 | ?SetPosition@mmToggle2@@QAEXMM@Z
-    inline void SetPosition(float arg1, float arg2)
-    {
-        return stub<member_func_t<void, mmToggle2, float, float>>(0x4F3DC0, this, arg1, arg2);
-    }
-
+    // 0x4F3F20 | ??_GmmToggle2@@UAEPAXI@Z
     // 0x4F3CD0 | ??1mmToggle2@@UAE@XZ
-    inline ~mmToggle2() override
-    {
-        stub<member_func_t<void, mmToggle2>>(0x4F3CD0, this);
-    }
+    ~mmToggle2() override;
 
     // 0x4F3E80 | ?Cull@mmToggle2@@UAEXXZ
-    inline void Cull() override
-    {
-        return stub<member_func_t<void, mmToggle2>>(0x4F3E80, this);
-    }
+    void Cull() override;
+
+    // 0x4F3D30 | ?Init@mmToggle2@@QAEXPADMMPAH@Z
+    void Init(char* arg1, f32 arg2, f32 arg3, i32* arg4);
+
+    // 0x4F3DC0 | ?SetPosition@mmToggle2@@QAEXMM@Z
+    void SetPosition(f32 arg1, f32 arg2);
 
     // 0x4F3E60 | ?Update@mmToggle2@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmToggle2>>(0x4F3E60, this);
-    }
+    void Update() override;
+
+private:
+    // 0x4F3D60 | ?LoadBitmap@mmToggle2@@AAEXPAD@Z
+    void LoadBitmap(char* arg1);
 };
+
+check_size(mmToggle2, 0x38);

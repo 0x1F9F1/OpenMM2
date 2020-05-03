@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "mmwidget/menu.h"
+
 /*
     mmui:ccintro
 
@@ -30,32 +32,23 @@
     0x5B4394 | const CrashCourseIntro::`vftable' | ??_7CrashCourseIntro@@6B@
 */
 
-struct CrashCourseIntro : UIMenu
+class CrashCourseIntro : public UIMenu
 {
+    // const CrashCourseIntro::`vftable' @ 0x5B4394
+
 public:
-    // CrashCourseIntro::`vftable' @ 0x5B4394
-
     // 0x502D40 | ??0CrashCourseIntro@@QAE@H@Z
-    inline CrashCourseIntro(int32_t arg1)
-    {
-        stub<member_func_t<void, CrashCourseIntro, int32_t>>(0x502D40, this, arg1);
-    }
+    CrashCourseIntro(i32 arg1);
 
+    // 0x502EC0 | ??_GCrashCourseIntro@@UAEPAXI@Z
     // 0x502E80 | ??1CrashCourseIntro@@UAE@XZ
-    inline ~CrashCourseIntro() override
-    {
-        stub<member_func_t<void, CrashCourseIntro>>(0x502E80, this);
-    }
-
-    // 0x502E90 | ?PreSetup@CrashCourseIntro@@UAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, CrashCourseIntro>>(0x502E90, this);
-    }
+    ~CrashCourseIntro() override;
 
     // 0x502EB0 | ?PostSetup@CrashCourseIntro@@UAEXXZ
-    inline void PostSetup() override
-    {
-        return stub<member_func_t<void, CrashCourseIntro>>(0x502EB0, this);
-    }
+    void PostSetup() override;
+
+    // 0x502E90 | ?PreSetup@CrashCourseIntro@@UAEXXZ
+    void PreSetup() override;
 };
+
+check_size(CrashCourseIntro, 0x8C);

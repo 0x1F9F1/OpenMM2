@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -25,7 +25,4 @@
 */
 
 // 0x4A52E0 | ?modGetStatic@@YAPAVmodStatic@@PBDAAM_N@Z
-inline class modStatic* modGetStatic(char const* arg1, float& arg2, bool arg3)
-{
-    return stub<cdecl_t<class modStatic*, char const*, float&, bool>>(0x4A52E0, arg1, arg2, arg3);
-}
+class modStatic* modGetStatic(char const* arg1, f32& arg2, bool arg3);

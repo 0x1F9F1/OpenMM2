@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "pu_menu.h"
+
 /*
     mmui:dlg_hoff
 
@@ -34,58 +36,35 @@
     0x5B4000 | const Dialog_HallOfFame::`vftable' | ??_7Dialog_HallOfFame@@6B@
 */
 
-struct Dialog_HallOfFame : PUMenuBase
+class Dialog_HallOfFame : public PUMenuBase
 {
-public:
-    // Dialog_HallOfFame::`vftable' @ 0x5B4000
+    // const Dialog_HallOfFame::`vftable' @ 0x5B4000
 
+public:
     // 0x4FBA70 | ??0Dialog_HallOfFame@@QAE@HMMMMPAD@Z
-    inline Dialog_HallOfFame(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
-    {
-        stub<member_func_t<void, Dialog_HallOfFame, int32_t, float, float, float, float, char*>>(
-            0x4FBA70, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
+    Dialog_HallOfFame(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6);
+
+    // 0x4FC840 | ??_GDialog_HallOfFame@@UAEPAXI@Z
+    // 0x4FBFC0 | ??1Dialog_HallOfFame@@UAE@XZ
+    ~Dialog_HallOfFame() override;
 
     // 0x4FC040 | ?AddRaceRecord@Dialog_HallOfFame@@QAEXHPAD00H00@Z
-    inline void AddRaceRecord(int32_t arg1, char* arg2, char* arg3, char* arg4, int32_t arg5, char* arg6, char* arg7)
-    {
-        return stub<member_func_t<void, Dialog_HallOfFame, int32_t, char*, char*, char*, int32_t, char*, char*>>(
-            0x4FC040, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-    }
-
-    // 0x4FC570 | ?ResetRaceRecord@Dialog_HallOfFame@@QAEXXZ
-    inline void ResetRaceRecord()
-    {
-        return stub<member_func_t<void, Dialog_HallOfFame>>(0x4FC570, this);
-    }
-
-    // 0x4FC600 | ?SortByCity@Dialog_HallOfFame@@QAEXXZ
-    inline void SortByCity()
-    {
-        return stub<member_func_t<void, Dialog_HallOfFame>>(0x4FC600, this);
-    }
-
-    // 0x4FC620 | ?SetSortState@Dialog_HallOfFame@@QAEXXZ
-    inline void SetSortState()
-    {
-        return stub<member_func_t<void, Dialog_HallOfFame>>(0x4FC620, this);
-    }
+    void AddRaceRecord(i32 arg1, char* arg2, char* arg3, char* arg4, i32 arg5, char* arg6, char* arg7);
 
     // 0x4FC6A0 | ?InitRaceRecord@Dialog_HallOfFame@@QAEXXZ
-    inline void InitRaceRecord()
-    {
-        return stub<member_func_t<void, Dialog_HallOfFame>>(0x4FC6A0, this);
-    }
-
-    // 0x4FBFC0 | ??1Dialog_HallOfFame@@UAE@XZ
-    inline ~Dialog_HallOfFame() override
-    {
-        stub<member_func_t<void, Dialog_HallOfFame>>(0x4FBFC0, this);
-    }
+    void InitRaceRecord();
 
     // 0x4FC030 | ?PreSetup@Dialog_HallOfFame@@UAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, Dialog_HallOfFame>>(0x4FC030, this);
-    }
+    void PreSetup() override;
+
+    // 0x4FC570 | ?ResetRaceRecord@Dialog_HallOfFame@@QAEXXZ
+    void ResetRaceRecord();
+
+    // 0x4FC620 | ?SetSortState@Dialog_HallOfFame@@QAEXXZ
+    void SetSortState();
+
+    // 0x4FC600 | ?SortByCity@Dialog_HallOfFame@@QAEXXZ
+    void SortByCity();
 };
+
+check_size(Dialog_HallOfFame, 0x0);

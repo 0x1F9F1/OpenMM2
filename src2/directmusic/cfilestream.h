@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -51,59 +51,98 @@
 */
 
 class CFileStream
+    : public IStream
+    , public IDirectMusicGetLoader /* Warning: Unordered Multiple Inheritance */
 {
+    // const CFileStream::`vftable'{for `IDirectMusicGetLoader'} @ 0x5B4D6C
+    // const CFileStream::`vftable'{for `IStream'} @ 0x5B4D7C
+
 public:
     // 0x518A40 | ??0CFileStream@@QAE@PAVCLoader@@@Z
-    inline CFileStream(class CLoader* arg1)
-    {
-        stub<member_func_t<void, CFileStream, class CLoader*>>(0x518A40, this, arg1);
-    }
+    CFileStream(class CLoader* arg1);
 
     // 0x518A80 | ??1CFileStream@@QAE@XZ
-    inline ~CFileStream()
-    {
-        stub<member_func_t<void, CFileStream>>(0x518A80, this);
-    }
+    ~CFileStream();
 
-    // 0x518AB0 | ?Open@CFileStream@@QAEJPAGK@Z
-    inline int32_t Open(uint16_t* arg1, uint32_t arg2)
-    {
-        return stub<member_func_t<int32_t, CFileStream, uint16_t*, uint32_t>>(0x518AB0, this, arg1, arg2);
-    }
+    // 0x518C80 | ?AddRef@CFileStream@@UAGKXZ
+    u32 __stdcall AddRef() override;
+
+    // 0x518E80 | ?AddRef@CFileStream@@W3AGKXZ (Skipped: thunk)
+
+    // 0x518E40 | ?Clone@CFileStream@@UAGJPAPAUIStream@@@Z
+    i32 __stdcall Clone(struct IStream** arg1) override;
 
     // 0x518B80 | ?Close@CFileStream@@QAEJXZ
-    inline int32_t Close()
-    {
-        return stub<member_func_t<int32_t, CFileStream>>(0x518B80, this);
-    }
+    i32 Close();
+
+    // 0x518DF0 | ?Commit@CFileStream@@UAGJK@Z
+    i32 __stdcall Commit(u32 arg1) override;
+
+    // 0x518DE0 | ?CopyTo@CFileStream@@UAGJPAUIStream@@T_ULARGE_INTEGER@@PAT3@2@Z
+    i32 __stdcall CopyTo(struct IStream* arg1, union _ULARGE_INTEGER arg2, union _ULARGE_INTEGER* arg3,
+        union _ULARGE_INTEGER* arg4) override;
+
+    // 0x518C40 | ?GetLoader@CFileStream@@UAGJPAPAUIDirectMusicLoader@@@Z
+    i32 __stdcall GetLoader(struct IDirectMusicLoader** arg1) override;
 
     // 0x518E50 | ?GetNextPtr@CFileStream@@QAEPAV1@XZ
-    inline class CFileStream* GetNextPtr()
-    {
-        return stub<member_func_t<class CFileStream*, CFileStream>>(0x518E50, this);
-    }
+    class CFileStream* GetNextPtr();
+
+    // 0x518E10 | ?LockRegion@CFileStream@@UAGJT_ULARGE_INTEGER@@0K@Z
+    i32 __stdcall LockRegion(union _ULARGE_INTEGER arg1, union _ULARGE_INTEGER arg2, u32 arg3) override;
+
+    // 0x518AB0 | ?Open@CFileStream@@QAEJPAGK@Z
+    i32 Open(u16* arg1, u32 arg2);
+
+    // 0x518BA0 | ?QueryInterface@CFileStream@@UAGJABU_GUID@@PAPAX@Z
+    i32 __stdcall QueryInterface(struct _GUID const& arg1, void** arg2) override;
+
+    // 0x518E70 | ?QueryInterface@CFileStream@@W3AGJABU_GUID@@PAPAX@Z (Skipped: thunk)
+
+    // 0x518CE0 | ?Read@CFileStream@@UAGJPAXKPAK@Z
+    i32 __stdcall Read(void* arg1, u32 arg2, u32* arg3) override;
+
+    // 0x518CA0 | ?Release@CFileStream@@UAGKXZ
+    u32 __stdcall Release() override;
+
+    // 0x518E90 | ?Release@CFileStream@@W3AGKXZ (Skipped: thunk)
+
+    // 0x518E00 | ?Revert@CFileStream@@UAGJXZ
+    i32 __stdcall Revert() override;
+
+    // 0x518D60 | ?Seek@CFileStream@@UAGJT_LARGE_INTEGER@@KPAT_ULARGE_INTEGER@@@Z
+    i32 __stdcall Seek(union _LARGE_INTEGER arg1, u32 arg2, union _ULARGE_INTEGER* arg3) override;
 
     // 0x518E60 | ?SetNextPtr@CFileStream@@QAEXPAV1@@Z
-    inline void SetNextPtr(class CFileStream* arg1)
-    {
-        return stub<member_func_t<void, CFileStream, class CFileStream*>>(0x518E60, this, arg1);
-    }
+    void SetNextPtr(class CFileStream* arg1);
 
-    // 0x518E70 | ?QueryInterface@CFileStream@@W3AGJABU_GUID@@PAPAX@Z
-    inline int32_t __stdcall QueryInterface(struct _GUID const& arg1, void** arg2)
-    {
-        return stub<member_func_t<int32_t, CFileStream, struct _GUID const&, void**>>(0x518E70, this, arg1, arg2);
-    }
+    // 0x518DD0 | ?SetSize@CFileStream@@UAGJT_ULARGE_INTEGER@@@Z
+    i32 __stdcall SetSize(union _ULARGE_INTEGER arg1) override;
 
-    // 0x518E80 | ?AddRef@CFileStream@@W3AGKXZ
-    inline uint32_t __stdcall AddRef()
-    {
-        return stub<member_func_t<uint32_t, CFileStream>>(0x518E80, this);
-    }
+    // 0x518E30 | ?Stat@CFileStream@@UAGJPAUtagSTATSTG@@K@Z
+    i32 __stdcall Stat(struct tagSTATSTG* arg1, u32 arg2) override;
 
-    // 0x518E90 | ?Release@CFileStream@@W3AGKXZ
-    inline uint32_t __stdcall Release()
-    {
-        return stub<member_func_t<uint32_t, CFileStream>>(0x518E90, this);
-    }
+    // 0x518E20 | ?UnlockRegion@CFileStream@@UAGJT_ULARGE_INTEGER@@0K@Z
+    i32 __stdcall UnlockRegion(union _ULARGE_INTEGER arg1, union _ULARGE_INTEGER arg2, u32 arg3) override;
+
+    // 0x518D20 | ?Write@CFileStream@@UAGJPBXKPAK@Z
+    i32 __stdcall Write(void const* arg1, u32 arg2, u32* arg3) override;
 };
+
+check_size(CFileStream, 0x0);
+
+struct IDirectMusicGetLoader
+{
+    // const IDirectMusicGetLoader::`vftable' @ 0x5B4DB4
+
+public:
+    virtual i32 __stdcall QueryInterface(struct _GUID const& arg1, void** arg2) = 0;
+
+    virtual u32 __stdcall AddRef() = 0;
+
+    virtual u32 __stdcall Release() = 0;
+
+    virtual i32 __stdcall GetLoader(struct IDirectMusicLoader** arg1) = 0;
+};
+
+check_size(IDirectMusicGetLoader, 0x0);

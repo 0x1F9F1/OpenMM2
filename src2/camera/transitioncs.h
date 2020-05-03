@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "carcs.h"
 
 /*
     camera:transitioncs
@@ -37,74 +39,44 @@
     0x5B50EC | const camTransitionCS::`vftable' | ??_7camTransitionCS@@6B@
 */
 
-struct camTransitionCS : camCarCS
+class camTransitionCS : public camCarCS
 {
+    // const camTransitionCS::`vftable' @ 0x5B50EC
+
 public:
-    // camTransitionCS::`vftable' @ 0x5B50EC
-
     // 0x521530 | ??0camTransitionCS@@QAE@XZ
-    inline camTransitionCS()
-    {
-        stub<member_func_t<void, camTransitionCS>>(0x521530, this);
-    }
+    camTransitionCS();
 
-    // 0x5215D0 | ?Init@camTransitionCS@@QAEXPAVvehCar@@@Z
-    inline void Init(class vehCar* arg1)
-    {
-        return stub<member_func_t<void, camTransitionCS, class vehCar*>>(0x5215D0, this, arg1);
-    }
-
-    // 0x521BC0 | ?NewTransition@camTransitionCS@@QAEXPAVcamCarCS@@0@Z
-    inline void NewTransition(class camCarCS* arg1, class camCarCS* arg2)
-    {
-        return stub<member_func_t<void, camTransitionCS, class camCarCS*, class camCarCS*>>(0x521BC0, this, arg1, arg2);
-    }
-
-    // 0x521BF0 | ?NextTransition@camTransitionCS@@QAEXPAVcamCarCS@@@Z
-    inline void NextTransition(class camCarCS* arg1)
-    {
-        return stub<member_func_t<void, camTransitionCS, class camCarCS*>>(0x521BF0, this, arg1);
-    }
-
-    // 0x521C30 | ?StartTransition@camTransitionCS@@QAEXXZ
-    inline void StartTransition()
-    {
-        return stub<member_func_t<void, camTransitionCS>>(0x521C30, this);
-    }
-
-    // 0x521CA0 | ?StartNextTransition@camTransitionCS@@QAEXXZ
-    inline void StartNextTransition()
-    {
-        return stub<member_func_t<void, camTransitionCS>>(0x521CA0, this);
-    }
-
-    // 0x521CE0 | ?ReverseTransition@camTransitionCS@@QAEXXZ
-    inline void ReverseTransition()
-    {
-        return stub<member_func_t<void, camTransitionCS>>(0x521CE0, this);
-    }
-
+    // 0x521D30 | ??_GcamTransitionCS@@UAEPAXI@Z
     // 0x5215C0 | ??1camTransitionCS@@UAE@XZ
-    inline ~camTransitionCS() override
-    {
-        stub<member_func_t<void, camTransitionCS>>(0x5215C0, this);
-    }
-
-    // 0x521610 | ?Update@camTransitionCS@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, camTransitionCS>>(0x521610, this);
-    }
-
-    // 0x521600 | ?Reset@camTransitionCS@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, camTransitionCS>>(0x521600, this);
-    }
+    ~camTransitionCS() override;
 
     // 0x521B90 | ?ForceMatrixDelta@camTransitionCS@@UAEXABVVector3@@@Z
-    inline void ForceMatrixDelta(class Vector3 const& arg1) override
-    {
-        return stub<member_func_t<void, camTransitionCS, class Vector3 const&>>(0x521B90, this, arg1);
-    }
+    void ForceMatrixDelta(class Vector3 const& arg1) override;
+
+    // 0x5215D0 | ?Init@camTransitionCS@@QAEXPAVvehCar@@@Z
+    void Init(class vehCar* arg1);
+
+    // 0x521BC0 | ?NewTransition@camTransitionCS@@QAEXPAVcamCarCS@@0@Z
+    void NewTransition(class camCarCS* arg1, class camCarCS* arg2);
+
+    // 0x521BF0 | ?NextTransition@camTransitionCS@@QAEXPAVcamCarCS@@@Z
+    void NextTransition(class camCarCS* arg1);
+
+    // 0x521600 | ?Reset@camTransitionCS@@UAEXXZ
+    void Reset() override;
+
+    // 0x521CE0 | ?ReverseTransition@camTransitionCS@@QAEXXZ
+    void ReverseTransition();
+
+    // 0x521CA0 | ?StartNextTransition@camTransitionCS@@QAEXXZ
+    void StartNextTransition();
+
+    // 0x521C30 | ?StartTransition@camTransitionCS@@QAEXXZ
+    void StartTransition();
+
+    // 0x521610 | ?Update@camTransitionCS@@UAEXXZ
+    void Update() override;
 };
+
+check_size(camTransitionCS, 0x128);

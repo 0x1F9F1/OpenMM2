@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,31 @@
 */
 
 #include "landmark.h"
+
+i32 lvlLandmark::Init(char const* arg1, class Matrix34 const& arg2, i32 arg3)
+{
+    return stub<thiscall_t<i32, lvlLandmark*, char const*, class Matrix34 const&, i32>>(
+        0x468010, this, arg1, arg2, arg3);
+}
+
+bool lvlLandmark::IsCollidable()
+{
+    return stub<thiscall_t<bool, lvlLandmark*>>(0x465EB0, this);
+}
+
+bool lvlLandmark::IsLandmark()
+{
+    return stub<thiscall_t<bool, lvlLandmark*>>(0x467FF0, this);
+}
+
+i32 lvlLandmark::IsVisible(class gfxViewport const& arg1)
+{
+    return stub<thiscall_t<i32, lvlLandmark*, class gfxViewport const&>>(0x468030, this, arg1);
+}
+
+u32 lvlLandmark::SizeOf()
+{
+    return stub<thiscall_t<u32, lvlLandmark*>>(0x468000, this);
+}
+
+define_dummy_symbol(level_landmark);

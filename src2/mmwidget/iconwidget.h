@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "textfield.h"
+
 /*
     mmwidget:iconwidget
 
@@ -32,47 +34,29 @@
     0x5B3840 | const UIIconW::`vftable' | ??_7UIIconW@@6B@
 */
 
-class UIIconW : uiWidget
+class UIIconW : public uiWidget
 {
+    // const UIIconW::`vftable' @ 0x5B3840
+
 public:
-    // UIIconW::`vftable' @ 0x5B3840
-
     // 0x4EDA70 | ??0UIIconW@@QAE@XZ
-    inline UIIconW()
-    {
-        stub<member_func_t<void, UIIconW>>(0x4EDA70, this);
-    }
+    UIIconW();
 
-    // 0x4EDBA0 | ?Init@UIIconW@@QAEXPAULocString@@PADMMMMVdatCallback@@@Z
-    inline void Init(
-        struct LocString* arg1, char* arg2, float arg3, float arg4, float arg5, float arg6, class datCallback arg7)
-    {
-        return stub<
-            member_func_t<void, UIIconW, struct LocString*, char*, float, float, float, float, class datCallback>>(
-            0x4EDBA0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-    }
-
+    // 0x4EDDE0 | ??_GUIIconW@@UAEPAXI@Z
     // 0x4EDB30 | ??1UIIconW@@UAE@XZ
-    inline ~UIIconW() override
-    {
-        stub<member_func_t<void, UIIconW>>(0x4EDB30, this);
-    }
-
-    // 0x4EDCF0 | ?Update@UIIconW@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, UIIconW>>(0x4EDCF0, this);
-    }
+    ~UIIconW() override;
 
     // 0x4EDC90 | ?Action@UIIconW@@UAEXTeqEvent@@@Z
-    inline void Action(union eqEvent arg1) override
-    {
-        return stub<member_func_t<void, UIIconW, union eqEvent>>(0x4EDC90, this, arg1);
-    }
+    void Action(union eqEvent arg1) override;
+
+    // 0x4EDBA0 | ?Init@UIIconW@@QAEXPAULocString@@PADMMMMVdatCallback@@@Z
+    void Init(struct LocString* arg1, char* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, class datCallback arg7);
 
     // 0x4EDD70 | ?Switch@UIIconW@@UAEXH@Z
-    inline void Switch(int32_t arg1) override
-    {
-        return stub<member_func_t<void, UIIconW, int32_t>>(0x4EDD70, this, arg1);
-    }
+    void Switch(i32 arg1) override;
+
+    // 0x4EDCF0 | ?Update@UIIconW@@UAEXXZ
+    void Update() override;
 };
+
+check_size(UIIconW, 0xAC);

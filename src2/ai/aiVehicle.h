@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "aiVehiclePlayer.h"
+
 /*
     ai:aiVehicle
 
@@ -33,113 +35,53 @@
     0x5B5A3C | const aiObstacle::`vftable' | ??_7aiObstacle@@6B@
 */
 
-class aiVehicle : aiObstacle
+class aiVehicle : public aiObstacle
 {
-public:
-    // aiVehicle::`vftable' @ 0x5B59E8
+    // const aiVehicle::`vftable' @ 0x5B59E8
 
+public:
     // 0x5561E0 | ??0aiVehicle@@QAE@XZ
-    inline aiVehicle()
-    {
-        stub<member_func_t<void, aiVehicle>>(0x5561E0, this);
-    }
+    aiVehicle();
 
     // 0x5561F0 | ??1aiVehicle@@QAE@XZ
-    inline ~aiVehicle()
-    {
-        stub<member_func_t<void, aiVehicle>>(0x5561F0, this);
-    }
+    ~aiVehicle();
 
     // 0x556200 | ?Init@aiVehicle@@QAEXH@Z
-    inline void Init(int32_t arg1)
-    {
-        return stub<member_func_t<void, aiVehicle, int32_t>>(0x556200, this, arg1);
-    }
-
-    // 0x556250 | ?PreAvoid@aiVehicle@@UAEXABVVector3@@0MAAV2@1@Z
-    inline void PreAvoid(class Vector3 const& arg1, class Vector3 const& arg2, float arg3, class Vector3& arg4,
-        class Vector3& arg5) override
-    {
-        return stub<member_func_t<void, aiVehicle, class Vector3 const&, class Vector3 const&, float, class Vector3&,
-            class Vector3&>>(0x556250, this, arg1, arg2, arg3, arg4, arg5);
-    }
+    void Init(i32 arg1);
 
     // 0x556850 | ?IsBlockingTarget@aiVehicle@@UAEMABVVector3@@0MM@Z
-    inline float IsBlockingTarget(class Vector3 const& arg1, class Vector3 const& arg2, float arg3, float arg4) override
-    {
-        return stub<member_func_t<float, aiVehicle, class Vector3 const&, class Vector3 const&, float, float>>(
-            0x556850, this, arg1, arg2, arg3, arg4);
-    }
+    f32 IsBlockingTarget(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, f32 arg4) override;
+
+    // 0x556250 | ?PreAvoid@aiVehicle@@UAEXABVVector3@@0MAAV2@1@Z
+    void PreAvoid(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, class Vector3& arg4,
+        class Vector3& arg5) override;
 
     // 0x556230 | ?Update@aiVehicle@@UAEXXZ
-    virtual inline void Update()
-    {
-        return stub<member_func_t<void, aiVehicle>>(0x556230, this);
-    }
+    virtual void Update();
 
     // 0x556210 | ?Reset@aiVehicle@@UAEXXZ
-    virtual inline void Reset()
-    {
-        return stub<member_func_t<void, aiVehicle>>(0x556210, this);
-    }
+    virtual void Reset();
 
-    // 0x582519 | __purecall
-    virtual inline int32_t Type()
-    {
-        return stub<member_func_t<int32_t, aiVehicle>>(0x582519, this);
-    }
+    virtual i32 Type() = 0;
 
-    // 0x582519 | __purecall
-    virtual inline class Matrix34& GetMatrix()
-    {
-        return stub<member_func_t<class Matrix34&, aiVehicle>>(0x582519, this);
-    }
+    virtual class Matrix34& GetMatrix() = 0;
 
-    // 0x582519 | __purecall
-    virtual inline float FrontBumperDistance()
-    {
-        return stub<member_func_t<float, aiVehicle>>(0x582519, this);
-    }
+    virtual f32 FrontBumperDistance() = 0;
 
-    // 0x582519 | __purecall
-    virtual inline float BackBumperDistance()
-    {
-        return stub<member_func_t<float, aiVehicle>>(0x582519, this);
-    }
+    virtual f32 BackBumperDistance() = 0;
 
-    // 0x582519 | __purecall
-    virtual inline float LSideDistance()
-    {
-        return stub<member_func_t<float, aiVehicle>>(0x582519, this);
-    }
+    virtual f32 LSideDistance() = 0;
 
-    // 0x582519 | __purecall
-    virtual inline float RSideDistance()
-    {
-        return stub<member_func_t<float, aiVehicle>>(0x582519, this);
-    }
+    virtual f32 RSideDistance() = 0;
 
-    // 0x582519 | __purecall
-    virtual inline int32_t CurrentLane()
-    {
-        return stub<member_func_t<int32_t, aiVehicle>>(0x582519, this);
-    }
+    virtual i32 CurrentLane() = 0;
 
-    // 0x582519 | __purecall
-    virtual inline int32_t CurrentRoadId()
-    {
-        return stub<member_func_t<int32_t, aiVehicle>>(0x582519, this);
-    }
+    virtual i32 CurrentRoadId() = 0;
 
-    // 0x582519 | __purecall
-    virtual inline void DrawId()
-    {
-        return stub<member_func_t<void, aiVehicle>>(0x582519, this);
-    }
+    virtual void DrawId() = 0;
 
     // 0x556D00 | ?ReplayDebug@aiVehicle@@UAEXXZ
-    virtual inline void ReplayDebug()
-    {
-        return stub<member_func_t<void, aiVehicle>>(0x556D00, this);
-    }
+    virtual void ReplayDebug();
 };
+
+check_size(aiVehicle, 0x0);

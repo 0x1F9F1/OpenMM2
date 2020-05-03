@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     mmgame:cd
@@ -37,68 +39,41 @@
     0x5B0E6C | const mmCDPlayer::`vftable' | ??_7mmCDPlayer@@6B@
 */
 
-struct mmCDPlayer : asNode
+class mmCDPlayer : public asNode
 {
+    // const mmCDPlayer::`vftable' @ 0x5B0E6C
+
 public:
-    // mmCDPlayer::`vftable' @ 0x5B0E6C
-
     // 0x432F70 | ??0mmCDPlayer@@QAE@XZ
-    inline mmCDPlayer()
-    {
-        stub<member_func_t<void, mmCDPlayer>>(0x432F70, this);
-    }
+    mmCDPlayer();
 
-    // 0x433000 | ?Init@mmCDPlayer@@QAEXPAVmmHUD@@@Z
-    inline void Init(class mmHUD* arg1)
-    {
-        return stub<member_func_t<void, mmCDPlayer, class mmHUD*>>(0x433000, this, arg1);
-    }
-
-    // 0x433370 | ?PlayStop@mmCDPlayer@@QAEXXZ
-    inline void PlayStop()
-    {
-        return stub<member_func_t<void, mmCDPlayer>>(0x433370, this);
-    }
-
-    // 0x4333F0 | ?NextTrack@mmCDPlayer@@QAEXXZ
-    inline void NextTrack()
-    {
-        return stub<member_func_t<void, mmCDPlayer>>(0x4333F0, this);
-    }
-
-    // 0x433460 | ?PrevTrack@mmCDPlayer@@QAEXXZ
-    inline void PrevTrack()
-    {
-        return stub<member_func_t<void, mmCDPlayer>>(0x433460, this);
-    }
-
-    // 0x4334D0 | ?Toggle@mmCDPlayer@@QAEXXZ
-    inline void Toggle()
-    {
-        return stub<member_func_t<void, mmCDPlayer>>(0x4334D0, this);
-    }
-
+    // 0x433640 | ??_GmmCDPlayer@@UAEPAXI@Z
     // 0x433670 | ??1mmCDPlayer@@UAE@XZ
-    inline ~mmCDPlayer() override
-    {
-        stub<member_func_t<void, mmCDPlayer>>(0x433670, this);
-    }
+    ~mmCDPlayer() override;
 
     // 0x433170 | ?Cull@mmCDPlayer@@UAEXXZ
-    inline void Cull() override
-    {
-        return stub<member_func_t<void, mmCDPlayer>>(0x433170, this);
-    }
+    void Cull() override;
 
-    // 0x433100 | ?Update@mmCDPlayer@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmCDPlayer>>(0x433100, this);
-    }
+    // 0x433000 | ?Init@mmCDPlayer@@QAEXPAVmmHUD@@@Z
+    void Init(class mmHUD* arg1);
+
+    // 0x4333F0 | ?NextTrack@mmCDPlayer@@QAEXXZ
+    void NextTrack();
+
+    // 0x433370 | ?PlayStop@mmCDPlayer@@QAEXXZ
+    void PlayStop();
+
+    // 0x433460 | ?PrevTrack@mmCDPlayer@@QAEXXZ
+    void PrevTrack();
 
     // 0x4330F0 | ?Reset@mmCDPlayer@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmCDPlayer>>(0x4330F0, this);
-    }
+    void Reset() override;
+
+    // 0x4334D0 | ?Toggle@mmCDPlayer@@QAEXXZ
+    void Toggle();
+
+    // 0x433100 | ?Update@mmCDPlayer@@UAEXXZ
+    void Update() override;
 };
+
+check_size(mmCDPlayer, 0x138);

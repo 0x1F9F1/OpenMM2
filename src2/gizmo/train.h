@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,9 @@
 */
 
 #pragma once
+
+#include "banger/banger.h"
+#include "node/node.h"
 
 /*
     gizmo:train
@@ -49,154 +52,109 @@
     0x579250 | public: virtual unsigned int __thiscall gizTrainCar::SizeOf(void) | ?SizeOf@gizTrainCar@@UAEIXZ
     0x5B60D4 | const gizTrainCar::`vftable' | ??_7gizTrainCar@@6B@
     0x5B614C | const gizTrainMgr::`vftable' | ??_7gizTrainMgr@@6B@
-    float LagTime | ?LagTime@@3MA
-    float MaxSpeed | ?MaxSpeed@@3MA
-    float RestTime | ?RestTime@@3MA
-    float TrainAccel | ?TrainAccel@@3MA
+    0x5DC058 | float LagTime | ?LagTime@@3MA
+    0x5DC05C | float MaxSpeed | ?MaxSpeed@@3MA
+    0x5DC060 | float RestTime | ?RestTime@@3MA
+    0x5DC064 | float TrainAccel | ?TrainAccel@@3MA
     float HeightApproach | ?HeightApproach@@3MA
 */
 
-class gizTrainMgr : asNode
+class gizTrainCar : public dgUnhitMtxBangerInstance
 {
+    // const gizTrainCar::`vftable' @ 0x5B60D4
+
 public:
-    // gizTrainMgr::`vftable' @ 0x5B614C
-
-    // 0x578F10 | ??0gizTrainMgr@@QAE@XZ
-    inline gizTrainMgr()
-    {
-        stub<member_func_t<void, gizTrainMgr>>(0x578F10, this);
-    }
-
-    // 0x579020 | ?Init@gizTrainMgr@@QAE_NPAD00@Z
-    inline bool Init(char* arg1, char* arg2, char* arg3)
-    {
-        return stub<member_func_t<bool, gizTrainMgr, char*, char*, char*>>(0x579020, this, arg1, arg2, arg3);
-    }
-
-    // 0x5791B0 | ?ApplyTuning@gizTrainMgr@@AAEXXZ
-    inline void ApplyTuning()
-    {
-        return stub<member_func_t<void, gizTrainMgr>>(0x5791B0, this);
-    }
-
-    // 0x578F60 | ??1gizTrainMgr@@UAE@XZ
-    inline ~gizTrainMgr() override
-    {
-        stub<member_func_t<void, gizTrainMgr>>(0x578F60, this);
-    }
-
-    // 0x579170 | ?Update@gizTrainMgr@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, gizTrainMgr>>(0x579170, this);
-    }
-
-    // 0x578FF0 | ?Reset@gizTrainMgr@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, gizTrainMgr>>(0x578FF0, this);
-    }
-};
-
-struct gizTrainCar : dgUnhitMtxBangerInstance
-{
-public:
-    // gizTrainCar::`vftable' @ 0x5B60D4
-
     // 0x5788A0 | ??0gizTrainCar@@QAE@XZ
-    inline gizTrainCar()
-    {
-        stub<member_func_t<void, gizTrainCar>>(0x5788A0, this);
-    }
+    gizTrainCar();
 
     // 0x5788C0 | ??1gizTrainCar@@QAE@XZ
-    inline ~gizTrainCar()
-    {
-        stub<member_func_t<void, gizTrainCar>>(0x5788C0, this);
-    }
-
-    // 0x578930 | ?Reset@gizTrainCar@@QAEXH@Z
-    inline void Reset(int32_t arg1)
-    {
-        return stub<member_func_t<void, gizTrainCar, int32_t>>(0x578930, this, arg1);
-    }
+    ~gizTrainCar();
 
     // 0x578970 | ?Init@gizTrainCar@@QAEXPADPAVdgPath@@M@Z
-    inline void Init(char* arg1, class dgPath* arg2, float arg3)
-    {
-        return stub<member_func_t<void, gizTrainCar, char*, class dgPath*, float>>(0x578970, this, arg1, arg2, arg3);
-    }
-
-    // 0x578A30 | ?Update@gizTrainCar@@QAEXM@Z
-    inline void Update(float arg1)
-    {
-        return stub<member_func_t<void, gizTrainCar, float>>(0x578A30, this, arg1);
-    }
+    void Init(char* arg1, class dgPath* arg2, f32 arg3);
 
     // 0x578B20 | ?IsFirstStop@gizTrainCar@@QAE_NXZ
-    inline bool IsFirstStop()
-    {
-        return stub<member_func_t<bool, gizTrainCar>>(0x578B20, this);
-    }
+    bool IsFirstStop();
 
     // 0x578B30 | ?IsLastStop@gizTrainCar@@QAE_NXZ
-    inline bool IsLastStop()
-    {
-        return stub<member_func_t<bool, gizTrainCar>>(0x578B30, this);
-    }
+    bool IsLastStop();
+
+    // 0x578930 | ?Reset@gizTrainCar@@QAEXH@Z
+    void Reset(i32 arg1);
 
     // 0x579250 | ?SizeOf@gizTrainCar@@UAEIXZ
-    inline uint32_t SizeOf() override
-    {
-        return stub<member_func_t<uint32_t, gizTrainCar>>(0x579250, this);
-    }
+    u32 SizeOf() override;
+
+    // 0x578A30 | ?Update@gizTrainCar@@QAEXM@Z
+    void Update(f32 arg1);
 };
+
+check_size(gizTrainCar, 0x60);
 
 struct gizTrain
 {
 public:
     // 0x578B50 | ??0gizTrain@@QAE@XZ
-    inline gizTrain()
-    {
-        stub<member_func_t<void, gizTrain>>(0x578B50, this);
-    }
+    gizTrain();
 
     // 0x578BC0 | ??1gizTrain@@QAE@XZ
-    inline ~gizTrain()
-    {
-        stub<member_func_t<void, gizTrain>>(0x578BC0, this);
-    }
-
-    // 0x578C20 | ?Reset@gizTrain@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, gizTrain>>(0x578C20, this);
-    }
-
-    // 0x578C60 | ?Init@gizTrain@@QAEXPADPAVdgPath@@@Z
-    inline void Init(char* arg1, class dgPath* arg2)
-    {
-        return stub<member_func_t<void, gizTrain, char*, class dgPath*>>(0x578C60, this, arg1, arg2);
-    }
+    // 0x5791F0 | ??_EgizTrain@@QAEPAXI@Z
+    ~gizTrain();
 
     // 0x578CC0 | ?CalcTrainAccel@gizTrain@@QAEXXZ
-    inline void CalcTrainAccel()
-    {
-        return stub<member_func_t<void, gizTrain>>(0x578CC0, this);
-    }
-
-    // 0x578CD0 | ?Update@gizTrain@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, gizTrain>>(0x578CD0, this);
-    }
+    void CalcTrainAccel();
 
     // 0x578EF0 | ?InStation@gizTrain@@QAE_NXZ
-    inline bool InStation()
-    {
-        return stub<member_func_t<bool, gizTrain>>(0x578EF0, this);
-    }
+    bool InStation();
 
-    // 0x5791F0 | ??_EgizTrain@@QAEPAXI@Z
-    // Skipped (scalar/vector destructor)
+    // 0x578C60 | ?Init@gizTrain@@QAEXPADPAVdgPath@@@Z
+    void Init(char* arg1, class dgPath* arg2);
+
+    // 0x578C20 | ?Reset@gizTrain@@QAEXXZ
+    void Reset();
+
+    // 0x578CD0 | ?Update@gizTrain@@QAEXXZ
+    void Update();
 };
+
+check_size(gizTrain, 0x1B4);
+
+class gizTrainMgr : public asNode
+{
+    // const gizTrainMgr::`vftable' @ 0x5B614C
+
+public:
+    // 0x578F10 | ??0gizTrainMgr@@QAE@XZ
+    gizTrainMgr();
+
+    // 0x5791C0 | ??_GgizTrainMgr@@UAEPAXI@Z
+    // 0x578F60 | ??1gizTrainMgr@@UAE@XZ
+    ~gizTrainMgr() override;
+
+    // 0x579020 | ?Init@gizTrainMgr@@QAE_NPAD00@Z
+    bool Init(char* arg1, char* arg2, char* arg3);
+
+    // 0x578FF0 | ?Reset@gizTrainMgr@@UAEXXZ
+    void Reset() override;
+
+    // 0x579170 | ?Update@gizTrainMgr@@UAEXXZ
+    void Update() override;
+
+private:
+    // 0x5791B0 | ?ApplyTuning@gizTrainMgr@@AAEXXZ
+    void ApplyTuning();
+};
+
+check_size(gizTrainMgr, 0x24);
+
+// 0x5DC058 | ?LagTime@@3MA
+inline extern_var(0x5DC058, f32, LagTime);
+
+// 0x5DC05C | ?MaxSpeed@@3MA
+inline extern_var(0x5DC05C, f32, MaxSpeed);
+
+// 0x5DC060 | ?RestTime@@3MA
+inline extern_var(0x5DC060, f32, RestTime);
+
+// 0x5DC064 | ?TrainAccel@@3MA
+inline extern_var(0x5DC064, f32, TrainAccel);

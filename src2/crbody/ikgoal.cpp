@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,20 @@
 */
 
 #include "ikgoal.h"
+
+crIKGoal::crIKGoal()
+{
+    unimplemented();
+}
+
+void crIKGoal::FromMatrix(class Matrix34& arg1)
+{
+    return stub<thiscall_t<void, crIKGoal*, class Matrix34&>>(0x57ECC0, this, arg1);
+}
+
+void crIKGoal::ToMatrix(class Matrix34& arg1)
+{
+    return stub<thiscall_t<void, crIKGoal*, class Matrix34&>>(0x57EC90, this, arg1);
+}
+
+define_dummy_symbol(crbody_ikgoal);

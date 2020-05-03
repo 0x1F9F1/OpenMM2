@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -39,133 +39,91 @@
     0x573480 | public: bool __thiscall zipFile::Init(char const *) | ?Init@zipFile@@QAE_NPBD@Z
     0x573A80 | public: int __thiscall zipFile::Open(char const *) | ?Open@zipFile@@QAEHPBD@Z
     0x573B60 | public: int __thiscall zipFile::EnumFiles(char const *,void (__cdecl*)(char const *,bool,void *),void *) | ?EnumFiles@zipFile@@QAEHPBDP6AX0_NPAX@Z2@Z
-    public: static int zipFile::sm_SeekCount | ?sm_SeekCount@zipFile@@2HA
+    0x6B4200 | public: static int zipFile::sm_SeekCount | ?sm_SeekCount@zipFile@@2HA
     0x6B4208 | public: static bool zipFile::sm_LogOpen | ?sm_LogOpen@zipFile@@2_NA
-    public: static float zipFile::sm_ReadTime | ?sm_ReadTime@zipFile@@2MA
-    public: static float zipFile::sm_SeekTime | ?sm_SeekTime@zipFile@@2MA
+    0x6B420C | public: static float zipFile::sm_ReadTime | ?sm_ReadTime@zipFile@@2MA
+    0x6B4210 | public: static float zipFile::sm_SeekTime | ?sm_SeekTime@zipFile@@2MA
     0x6B4698 | private: static class zipFile * zipFile::sm_First | ?sm_First@zipFile@@0PAV1@A
 */
-
-class zipFile
-{
-public:
-    // 0x5731A0 | ?zipOpen@zipFile@@SAHPBD_N@Z
-    static inline int32_t zipOpen(char const* arg1, bool arg2)
-    {
-        return stub<cdecl_t<int32_t, char const*, bool>>(0x5731A0, arg1, arg2);
-    }
-
-    // 0x5731F0 | ?zipCreate@zipFile@@SAHPBD@Z
-    static inline int32_t zipCreate(char const* arg1)
-    {
-        return stub<cdecl_t<int32_t, char const*>>(0x5731F0, arg1);
-    }
-
-    // 0x573210 | ?zipRead@zipFile@@SAHHPAXH@Z
-    static inline int32_t zipRead(int32_t arg1, void* arg2, int32_t arg3)
-    {
-        return stub<cdecl_t<int32_t, int32_t, void*, int32_t>>(0x573210, arg1, arg2, arg3);
-    }
-
-    // 0x573230 | ?zipWrite@zipFile@@SAHHPBXH@Z
-    static inline int32_t zipWrite(int32_t arg1, void const* arg2, int32_t arg3)
-    {
-        return stub<cdecl_t<int32_t, int32_t, void const*, int32_t>>(0x573230, arg1, arg2, arg3);
-    }
-
-    // 0x573250 | ?zipSeek@zipFile@@SAHHHW4seekWhence@@@Z
-    static inline int32_t zipSeek(int32_t arg1, int32_t arg2, enum seekWhence arg3)
-    {
-        return stub<cdecl_t<int32_t, int32_t, int32_t, enum seekWhence>>(0x573250, arg1, arg2, arg3);
-    }
-
-    // 0x573270 | ?zipClose@zipFile@@SAHH@Z
-    static inline int32_t zipClose(int32_t arg1)
-    {
-        return stub<cdecl_t<int32_t, int32_t>>(0x573270, arg1);
-    }
-
-    // 0x5732A0 | ?zipEnumFiles@zipFile@@SAHPBDP6AX0_NPAX@Z2@Z
-    static inline int32_t zipEnumFiles(char const* arg1, void(__cdecl* arg2)(char const*, bool, void*), void* arg3)
-    {
-        return stub<cdecl_t<int32_t, char const*, void(__cdecl*)(char const*, bool, void*), void*>>(
-            0x5732A0, arg1, arg2, arg3);
-    }
-
-    // 0x5732E0 | ?zipSize@zipFile@@SAHH@Z
-    static inline int32_t zipSize(int32_t arg1)
-    {
-        return stub<cdecl_t<int32_t, int32_t>>(0x5732E0, arg1);
-    }
-
-    // 0x573300 | ??0zipFile@@QAE@XZ
-    inline zipFile()
-    {
-        stub<member_func_t<void, zipFile>>(0x573300, this);
-    }
-
-    // 0x573320 | ??1zipFile@@QAE@XZ
-    inline ~zipFile()
-    {
-        stub<member_func_t<void, zipFile>>(0x573320, this);
-    }
-
-    // 0x573360 | ?KillAll@zipFile@@SAXXZ
-    static inline void KillAll()
-    {
-        return stub<cdecl_t<void>>(0x573360);
-    }
-
-    // 0x573390 | ?internalSeek@zipFile@@AAEHH@Z
-    inline int32_t internalSeek(int32_t arg1)
-    {
-        return stub<member_func_t<int32_t, zipFile, int32_t>>(0x573390, this, arg1);
-    }
-
-    // 0x573410 | ?internalRead@zipFile@@AAEHPAXH_N@Z
-    inline int32_t internalRead(void* arg1, int32_t arg2, bool arg3)
-    {
-        return stub<member_func_t<int32_t, zipFile, void*, int32_t, bool>>(0x573410, this, arg1, arg2, arg3);
-    }
-
-    // 0x573480 | ?Init@zipFile@@QAE_NPBD@Z
-    inline bool Init(char const* arg1)
-    {
-        return stub<member_func_t<bool, zipFile, char const*>>(0x573480, this, arg1);
-    }
-
-    // 0x573A80 | ?Open@zipFile@@QAEHPBD@Z
-    inline int32_t Open(char const* arg1)
-    {
-        return stub<member_func_t<int32_t, zipFile, char const*>>(0x573A80, this, arg1);
-    }
-
-    // 0x573B60 | ?EnumFiles@zipFile@@QAEHPBDP6AX0_NPAX@Z2@Z
-    inline int32_t EnumFiles(char const* arg1, void(__cdecl* arg2)(char const*, bool, void*), void* arg3)
-    {
-        return stub<member_func_t<int32_t, zipFile, char const*, void(__cdecl*)(char const*, bool, void*), void*>>(
-            0x573B60, this, arg1, arg2, arg3);
-    }
-
-    // 0x6B4208 | ?sm_LogOpen@zipFile@@2_NA
-    static inline extern_var(0x6B4208, bool, sm_LogOpen);
-
-    // 0x6B4698 | ?sm_First@zipFile@@0PAV1@A
-    inline extern_var(0x6B4698, class zipFile*, sm_First);
-};
 
 struct zipHandle
 {
 public:
     // 0x572F80 | ?Read@zipHandle@@QAEHPAXH@Z
-    inline int32_t Read(void* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<int32_t, zipHandle, void*, int32_t>>(0x572F80, this, arg1, arg2);
-    }
+    i32 Read(void* arg1, i32 arg2);
 
     // 0x573080 | ?Seek@zipHandle@@QAEHHW4seekWhence@@@Z
-    inline int32_t Seek(int32_t arg1, enum seekWhence arg2)
-    {
-        return stub<member_func_t<int32_t, zipHandle, int32_t, enum seekWhence>>(0x573080, this, arg1, arg2);
-    }
+    i32 Seek(i32 arg1, enum seekWhence arg2);
 };
+
+check_size(zipHandle, 0x0);
+
+class zipFile
+{
+public:
+    // 0x573300 | ??0zipFile@@QAE@XZ
+    zipFile();
+
+    // 0x573320 | ??1zipFile@@QAE@XZ
+    ~zipFile();
+
+    // 0x573B60 | ?EnumFiles@zipFile@@QAEHPBDP6AX0_NPAX@Z2@Z
+    i32 EnumFiles(char const* arg1, void (*arg2)(char const*, bool, void*), void* arg3);
+
+    // 0x573480 | ?Init@zipFile@@QAE_NPBD@Z
+    bool Init(char const* arg1);
+
+    // 0x573A80 | ?Open@zipFile@@QAEHPBD@Z
+    i32 Open(char const* arg1);
+
+    // 0x573360 | ?KillAll@zipFile@@SAXXZ
+    static void KillAll();
+
+    // 0x573270 | ?zipClose@zipFile@@SAHH@Z
+    static i32 zipClose(i32 arg1);
+
+    // 0x5731F0 | ?zipCreate@zipFile@@SAHPBD@Z
+    static i32 zipCreate(char const* arg1);
+
+    // 0x5732A0 | ?zipEnumFiles@zipFile@@SAHPBDP6AX0_NPAX@Z2@Z
+    static i32 zipEnumFiles(char const* arg1, void (*arg2)(char const*, bool, void*), void* arg3);
+
+    // 0x5731A0 | ?zipOpen@zipFile@@SAHPBD_N@Z
+    static i32 zipOpen(char const* arg1, bool arg2);
+
+    // 0x573210 | ?zipRead@zipFile@@SAHHPAXH@Z
+    static i32 zipRead(i32 arg1, void* arg2, i32 arg3);
+
+    // 0x573250 | ?zipSeek@zipFile@@SAHHHW4seekWhence@@@Z
+    static i32 zipSeek(i32 arg1, i32 arg2, enum seekWhence arg3);
+
+    // 0x5732E0 | ?zipSize@zipFile@@SAHH@Z
+    static i32 zipSize(i32 arg1);
+
+    // 0x573230 | ?zipWrite@zipFile@@SAHHPBXH@Z
+    static i32 zipWrite(i32 arg1, void const* arg2, i32 arg3);
+
+    // 0x6B4208 | ?sm_LogOpen@zipFile@@2_NA
+    static inline extern_var(0x6B4208, bool, sm_LogOpen);
+
+    // 0x6B420C | ?sm_ReadTime@zipFile@@2MA
+    static inline extern_var(0x6B420C, f32, sm_ReadTime);
+
+    // 0x6B4200 | ?sm_SeekCount@zipFile@@2HA
+    static inline extern_var(0x6B4200, i32, sm_SeekCount);
+
+    // 0x6B4210 | ?sm_SeekTime@zipFile@@2MA
+    static inline extern_var(0x6B4210, f32, sm_SeekTime);
+
+private:
+    // 0x573410 | ?internalRead@zipFile@@AAEHPAXH_N@Z
+    i32 internalRead(void* arg1, i32 arg2, bool arg3);
+
+    // 0x573390 | ?internalSeek@zipFile@@AAEHH@Z
+    i32 internalSeek(i32 arg1);
+
+    // 0x6B4698 | ?sm_First@zipFile@@0PAV1@A
+    static inline extern_var(0x6B4698, class zipFile*, sm_First);
+};
+
+check_size(zipFile, 0x1C);

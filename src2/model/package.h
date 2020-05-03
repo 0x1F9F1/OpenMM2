@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -41,59 +41,35 @@ class modPackage
 {
 public:
     // 0x4A46D0 | ??0modPackage@@QAE@XZ
-    inline modPackage()
-    {
-        stub<member_func_t<void, modPackage>>(0x4A46D0, this);
-    }
+    modPackage();
 
     // 0x4A46F0 | ??1modPackage@@QAE@XZ
-    inline ~modPackage()
-    {
-        stub<member_func_t<void, modPackage>>(0x4A46F0, this);
-    }
-
-    // 0x4A4700 | ?Open@modPackage@@QAE_NPBD0@Z
-    inline bool Open(char const* arg1, char const* arg2)
-    {
-        return stub<member_func_t<bool, modPackage, char const*, char const*>>(0x4A4700, this, arg1, arg2);
-    }
+    ~modPackage();
 
     // 0x4A4790 | ?Close@modPackage@@QAEXXZ
-    inline void Close()
-    {
-        return stub<member_func_t<void, modPackage>>(0x4A4790, this);
-    }
-
-    // 0x4A47B0 | ?OpenFile@modPackage@@QAEPAVStream@@PBD@Z
-    inline class Stream* OpenFile(char const* arg1)
-    {
-        return stub<member_func_t<class Stream*, modPackage, char const*>>(0x4A47B0, this, arg1);
-    }
+    void Close();
 
     // 0x4A4800 | ?CloseFile@modPackage@@QAEXXZ
-    inline void CloseFile()
-    {
-        return stub<member_func_t<void, modPackage>>(0x4A4800, this);
-    }
+    void CloseFile();
 
-    // 0x4A4820 | ?NextItem@modPackage@@AAEXXZ
-    inline void NextItem()
-    {
-        return stub<member_func_t<void, modPackage>>(0x4A4820, this);
-    }
+    // 0x4A4700 | ?Open@modPackage@@QAE_NPBD0@Z
+    bool Open(char const* arg1, char const* arg2);
 
-    // 0x4A48D0 | ?SkipTo@modPackage@@QAEXPBD@Z
-    inline void SkipTo(char const* arg1)
-    {
-        return stub<member_func_t<void, modPackage, char const*>>(0x4A48D0, this, arg1);
-    }
+    // 0x4A47B0 | ?OpenFile@modPackage@@QAEPAVStream@@PBD@Z
+    class Stream* OpenFile(char const* arg1);
 
     // 0x4A4970 | ?Skip@modPackage@@QAEXXZ
-    inline void Skip()
-    {
-        return stub<member_func_t<void, modPackage>>(0x4A4970, this);
-    }
+    void Skip();
+
+    // 0x4A48D0 | ?SkipTo@modPackage@@QAEXPBD@Z
+    void SkipTo(char const* arg1);
+
+private:
+    // 0x4A4820 | ?NextItem@modPackage@@AAEXXZ
+    void NextItem();
 
     // 0x661924 | ?m_First@modPackage@@0PAV1@A
-    inline extern_var(0x661924, class modPackage*, m_First);
+    static inline extern_var(0x661924, class modPackage*, m_First);
 };
+
+check_size(modPackage, 0x30);

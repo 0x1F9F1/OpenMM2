@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "node/node.h"
+
 /*
     vehicle:wheelcheap
 
@@ -30,39 +32,26 @@
     0x5B8790 | const vehWheelCheap::`vftable' | ??_7vehWheelCheap@@6B@
 */
 
-struct vehWheelCheap : asNode
+class vehWheelCheap : public asNode
 {
-public:
-    // vehWheelCheap::`vftable' @ 0x5B8790
+    // const vehWheelCheap::`vftable' @ 0x5B8790
 
+public:
     // 0x59D790 | ??0vehWheelCheap@@QAE@XZ
-    inline vehWheelCheap()
-    {
-        stub<member_func_t<void, vehWheelCheap>>(0x59D790, this);
-    }
+    vehWheelCheap();
+
+    // 0x59E280 | ??_GvehWheelCheap@@UAEPAXI@Z
+    // 0x554360 | ??1vehWheelCheap@@UAE@XZ
+    ~vehWheelCheap() override;
 
     // 0x59D890 | ?Init@vehWheelCheap@@QAEXPAVVector3@@PAVaiVehicleData@@PAVphInertialCS@@@Z
-    inline void Init(class Vector3* arg1, class aiVehicleData* arg2, class phInertialCS* arg3)
-    {
-        return stub<member_func_t<void, vehWheelCheap, class Vector3*, class aiVehicleData*, class phInertialCS*>>(
-            0x59D890, this, arg1, arg2, arg3);
-    }
-
-    // 0x554360 | ??1vehWheelCheap@@UAE@XZ
-    inline ~vehWheelCheap() override
-    {
-        stub<member_func_t<void, vehWheelCheap>>(0x554360, this);
-    }
-
-    // 0x59D970 | ?Update@vehWheelCheap@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, vehWheelCheap>>(0x59D970, this);
-    }
+    void Init(class Vector3* arg1, class aiVehicleData* arg2, class phInertialCS* arg3);
 
     // 0x59D860 | ?Reset@vehWheelCheap@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, vehWheelCheap>>(0x59D860, this);
-    }
+    void Reset() override;
+
+    // 0x59D970 | ?Update@vehWheelCheap@@UAEXXZ
+    void Update() override;
 };
+
+check_size(vehWheelCheap, 0x0);

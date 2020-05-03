@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,9 @@
 */
 
 #pragma once
+
+#include "mmgame/mirror.h"
+#include "node/node.h"
 
 /*
     banger:active
@@ -47,115 +50,72 @@
     0x627630 | protected: static class dgBangerActiveManager * dgBangerActiveManager::Instance | ?Instance@dgBangerActiveManager@@1PAV1@A
 */
 
-class dgBangerActiveManager : asNode
+class dgBangerActive : public dgPhysEntity
 {
+    // const dgBangerActive::`vftable' @ 0x5B1398
+
 public:
-    // dgBangerActiveManager::`vftable' @ 0x5B13C4
-
-    // 0x440170 | ??0dgBangerActiveManager@@QAE@XZ
-    inline dgBangerActiveManager()
-    {
-        stub<member_func_t<void, dgBangerActiveManager>>(0x440170, this);
-    }
-
-    // 0x440290 | ?GetActive@dgBangerActiveManager@@QAEPAVdgBangerActive@@PAVdgBangerInstance@@@Z
-    inline class dgBangerActive* GetActive(class dgBangerInstance* arg1)
-    {
-        return stub<member_func_t<class dgBangerActive*, dgBangerActiveManager, class dgBangerInstance*>>(
-            0x440290, this, arg1);
-    }
-
-    // 0x4402C0 | ?Attach@dgBangerActiveManager@@QAEPAVdgBangerActive@@PAVdgBangerInstance@@@Z
-    inline class dgBangerActive* Attach(class dgBangerInstance* arg1)
-    {
-        return stub<member_func_t<class dgBangerActive*, dgBangerActiveManager, class dgBangerInstance*>>(
-            0x4402C0, this, arg1);
-    }
-
-    // 0x440350 | ?Detach@dgBangerActiveManager@@QAEXPAVdgBangerActive@@@Z
-    inline void Detach(class dgBangerActive* arg1)
-    {
-        return stub<member_func_t<void, dgBangerActiveManager, class dgBangerActive*>>(0x440350, this, arg1);
-    }
-
-    // 0x627630 | ?Instance@dgBangerActiveManager@@1PAV1@A
-    inline extern_var(0x627630, class dgBangerActiveManager*, Instance);
-
-    // 0x440220 | ??1dgBangerActiveManager@@UAE@XZ
-    inline ~dgBangerActiveManager() override
-    {
-        stub<member_func_t<void, dgBangerActiveManager>>(0x440220, this);
-    }
-
-    // 0x4403A0 | ?Update@dgBangerActiveManager@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, dgBangerActiveManager>>(0x4403A0, this);
-    }
-
-    // 0x440500 | ?Reset@dgBangerActiveManager@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, dgBangerActiveManager>>(0x440500, this);
-    }
-};
-
-class dgBangerActive : dgPhysEntity
-{
-public:
-    // dgBangerActive::`vftable' @ 0x5B1398
-
     // 0x43FC70 | ??0dgBangerActive@@QAE@XZ
-    inline dgBangerActive()
-    {
-        stub<member_func_t<void, dgBangerActive>>(0x43FC70, this);
-    }
+    dgBangerActive();
+
+    // 0x440560 | ??_GdgBangerActive@@UAEPAXI@Z
+    // 0x43FD40 | ??1dgBangerActive@@UAE@XZ
+    ~dgBangerActive() override;
 
     // 0x43FDC0 | ?Attach@dgBangerActive@@QAEXPAVdgBangerInstance@@@Z
-    inline void Attach(class dgBangerInstance* arg1)
-    {
-        return stub<member_func_t<void, dgBangerActive, class dgBangerInstance*>>(0x43FDC0, this, arg1);
-    }
+    void Attach(class dgBangerInstance* arg1);
 
     // 0x43FFF0 | ?Detach@dgBangerActive@@QAEXXZ
-    inline void Detach()
-    {
-        return stub<member_func_t<void, dgBangerActive>>(0x43FFF0, this);
-    }
-
-    // 0x43FD40 | ??1dgBangerActive@@UAE@XZ
-    inline ~dgBangerActive() override
-    {
-        stub<member_func_t<void, dgBangerActive>>(0x43FD40, this);
-    }
-
-    // 0x440050 | ?Update@dgBangerActive@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, dgBangerActive>>(0x440050, this);
-    }
-
-    // 0x4400E0 | ?PostUpdate@dgBangerActive@@UAEXXZ
-    inline void PostUpdate() override
-    {
-        return stub<member_func_t<void, dgBangerActive>>(0x4400E0, this);
-    }
-
-    // 0x4405C0 | ?GetICS@dgBangerActive@@UAEPAVphInertialCS@@XZ
-    inline class phInertialCS* GetICS() override
-    {
-        return stub<member_func_t<class phInertialCS*, dgBangerActive>>(0x4405C0, this);
-    }
-
-    // 0x43FDB0 | ?GetInst@dgBangerActive@@UAEPAVlvlInstance@@XZ
-    inline class lvlInstance* GetInst() override
-    {
-        return stub<member_func_t<class lvlInstance*, dgBangerActive>>(0x43FDB0, this);
-    }
+    void Detach();
 
     // 0x440030 | ?DetachMe@dgBangerActive@@UAEXXZ
-    inline void DetachMe() override
-    {
-        return stub<member_func_t<void, dgBangerActive>>(0x440030, this);
-    }
+    void DetachMe() override;
+
+    // 0x4405C0 | ?GetICS@dgBangerActive@@UAEPAVphInertialCS@@XZ
+    class phInertialCS* GetICS() override;
+
+    // 0x43FDB0 | ?GetInst@dgBangerActive@@UAEPAVlvlInstance@@XZ
+    class lvlInstance* GetInst() override;
+
+    // 0x4400E0 | ?PostUpdate@dgBangerActive@@UAEXXZ
+    void PostUpdate() override;
+
+    // 0x440050 | ?Update@dgBangerActive@@UAEXXZ
+    void Update() override;
 };
+
+check_size(dgBangerActive, 0x318);
+
+class dgBangerActiveManager : public asNode
+{
+    // const dgBangerActiveManager::`vftable' @ 0x5B13C4
+
+public:
+    // 0x440170 | ??0dgBangerActiveManager@@QAE@XZ
+    dgBangerActiveManager();
+
+    // 0x440590 | ??_GdgBangerActiveManager@@UAEPAXI@Z
+    // 0x440220 | ??1dgBangerActiveManager@@UAE@XZ
+    ~dgBangerActiveManager() override;
+
+    // 0x4402C0 | ?Attach@dgBangerActiveManager@@QAEPAVdgBangerActive@@PAVdgBangerInstance@@@Z
+    class dgBangerActive* Attach(class dgBangerInstance* arg1);
+
+    // 0x440350 | ?Detach@dgBangerActiveManager@@QAEXPAVdgBangerActive@@@Z
+    void Detach(class dgBangerActive* arg1);
+
+    // 0x440290 | ?GetActive@dgBangerActiveManager@@QAEPAVdgBangerActive@@PAVdgBangerInstance@@@Z
+    class dgBangerActive* GetActive(class dgBangerInstance* arg1);
+
+    // 0x440500 | ?Reset@dgBangerActiveManager@@UAEXXZ
+    void Reset() override;
+
+    // 0x4403A0 | ?Update@dgBangerActiveManager@@UAEXXZ
+    void Update() override;
+
+protected:
+    // 0x627630 | ?Instance@dgBangerActiveManager@@1PAV1@A
+    static inline extern_var(0x627630, class dgBangerActiveManager*, Instance);
+};
+
+check_size(dgBangerActiveManager, 0x639C);

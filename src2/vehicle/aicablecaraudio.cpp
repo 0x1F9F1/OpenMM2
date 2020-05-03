@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,45 @@
 */
 
 #include "aicablecaraudio.h"
+
+aiCableCarAudio::aiCableCarAudio()
+{
+    unimplemented();
+}
+
+aiCableCarAudio::~aiCableCarAudio()
+{
+    unimplemented();
+}
+
+void aiCableCarAudio::AssignSounds()
+{
+    return stub<thiscall_t<void, aiCableCarAudio*>>(0x59D530, this);
+}
+
+void aiCableCarAudio::Init(class Vector3* arg1, f32* arg2)
+{
+    return stub<thiscall_t<void, aiCableCarAudio*, class Vector3*, f32*>>(0x59D400, this, arg1, arg2);
+}
+
+void aiCableCarAudio::Reset()
+{
+    return stub<thiscall_t<void, aiCableCarAudio*>>(0x59D440, this);
+}
+
+void aiCableCarAudio::UnAssignSounds(i32 arg1)
+{
+    return stub<thiscall_t<void, aiCableCarAudio*, i32>>(0x59D450, this, arg1);
+}
+
+void aiCableCarAudio::UpdateAudio()
+{
+    return stub<thiscall_t<void, aiCableCarAudio*>>(0x59D460, this);
+}
+
+i32 aiCableCarAudio::UpdateAudio(f32 arg1)
+{
+    return stub<thiscall_t<i32, aiCableCarAudio*, f32>>(0x59D490, this, arg1);
+}
+
+define_dummy_symbol(vehicle_aicablecaraudio);

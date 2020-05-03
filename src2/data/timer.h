@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -35,45 +35,33 @@
 class Timer
 {
 public:
-    // 0x4C77E0 | ?Ticks@Timer@@SAIXZ
-    static inline uint32_t Ticks()
-    {
-        return stub<cdecl_t<uint32_t>>(0x4C77E0);
-    }
-
-    // 0x4C7810 | ?QuickTicks@Timer@@SAIXZ
-    static inline uint32_t QuickTicks()
-    {
-        return stub<cdecl_t<uint32_t>>(0x4C7810);
-    }
-
     // 0x4C7840 | ??0Timer@@QAE@XZ
-    inline Timer()
-    {
-        stub<member_func_t<void, Timer>>(0x4C7840, this);
-    }
+    Timer();
 
     // 0x4C7980 | ?BeginBenchmark@Timer@@SAXXZ
-    static inline void BeginBenchmark()
-    {
-        return stub<cdecl_t<void>>(0x4C7980);
-    }
+    static void BeginBenchmark();
 
     // 0x4C79F0 | ?EndBenchmark@Timer@@SAXXZ
-    static inline void EndBenchmark()
-    {
-        return stub<cdecl_t<void>>(0x4C79F0);
-    }
+    static void EndBenchmark();
 
+    // 0x4C7810 | ?QuickTicks@Timer@@SAIXZ
+    static u32 QuickTicks();
+
+    // 0x4C77E0 | ?Ticks@Timer@@SAIXZ
+    static u32 Ticks();
+
+private:
     // 0x6A3CFC | ?CpuSpeed@Timer@@0MA
-    inline extern_var(0x6A3CFC, float, CpuSpeed);
+    static inline extern_var(0x6A3CFC, f32, CpuSpeed);
 
     // 0x6A3CF0 | ?QuickTicksToMilliseconds@Timer@@0MA
-    inline extern_var(0x6A3CF0, float, QuickTicksToMilliseconds);
-
-    // 0x6A3D00 | ?TicksToSeconds@Timer@@0MA
-    inline extern_var(0x6A3D00, float, TicksToSeconds);
+    static inline extern_var(0x6A3CF0, f32, QuickTicksToMilliseconds);
 
     // 0x6A3D04 | ?TicksToMilliseconds@Timer@@0MA
-    inline extern_var(0x6A3D04, float, TicksToMilliseconds);
+    static inline extern_var(0x6A3D04, f32, TicksToMilliseconds);
+
+    // 0x6A3D00 | ?TicksToSeconds@Timer@@0MA
+    static inline extern_var(0x6A3D00, f32, TicksToSeconds);
 };
+
+check_size(Timer, 0x0);

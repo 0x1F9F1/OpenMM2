@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     vehicle:wheel
@@ -44,134 +46,79 @@
     0x4D4390 | public: virtual void * __thiscall vehWheel::`scalar deleting destructor'(unsigned int) | ??_GvehWheel@@UAEPAXI@Z
     0x4D43C0 | public: virtual char * __thiscall vehWheel::GetClassName(void) | ?GetClassName@vehWheel@@UAEPADXZ
     0x5B2DCC | const vehWheel::`vftable' | ??_7vehWheel@@6B@
-    public: static float vehWheel::WeatherFriction | ?WeatherFriction@vehWheel@@2MA
+    0x5CF6B8 | public: static float vehWheel::WeatherFriction | ?WeatherFriction@vehWheel@@2MA
 */
 
-class vehWheel : asNode
+class vehWheel : public asNode
 {
+    // const vehWheel::`vftable' @ 0x5B2DCC
+
 public:
-    // vehWheel::`vftable' @ 0x5B2DCC
-
     // 0x4D2190 | ??0vehWheel@@QAE@XZ
-    inline vehWheel()
-    {
-        stub<member_func_t<void, vehWheel>>(0x4D2190, this);
-    }
+    vehWheel();
 
-    // 0x4D23F0 | ?ComputeConstants@vehWheel@@QAEXXZ
-    inline void ComputeConstants()
-    {
-        return stub<member_func_t<void, vehWheel>>(0x4D23F0, this);
-    }
+    // 0x4D4390 | ??_GvehWheel@@UAEPAXI@Z
+    // 0x4CCED0 | ??1vehWheel@@UAE@XZ
+    ~vehWheel() override;
 
     // 0x4D2490 | ?AddNormalLoad@vehWheel@@QAEXM@Z
-    inline void AddNormalLoad(float arg1)
-    {
-        return stub<member_func_t<void, vehWheel, float>>(0x4D2490, this, arg1);
-    }
+    void AddNormalLoad(f32 arg1);
 
-    // 0x4D24C0 | ?SetNormalLoad@vehWheel@@QAEXM@Z
-    inline void SetNormalLoad(float arg1)
-    {
-        return stub<member_func_t<void, vehWheel, float>>(0x4D24C0, this, arg1);
-    }
-
-    // 0x4D25D0 | ?ComputeFriction@vehWheel@@AAEMMPAM@Z
-    inline float ComputeFriction(float arg1, float* arg2)
-    {
-        return stub<member_func_t<float, vehWheel, float, float*>>(0x4D25D0, this, arg1, arg2);
-    }
-
-    // 0x4D2690 | ?Init@vehWheel@@QAEXPAVvehCarSim@@PBDPADVVector3@@PAVphInertialCS@@HH@Z
-    inline void Init(class vehCarSim* arg1, char const* arg2, char* arg3, class Vector3 arg4, class phInertialCS* arg5,
-        int32_t arg6, int32_t arg7)
-    {
-        return stub<member_func_t<void, vehWheel, class vehCarSim*, char const*, char*, class Vector3,
-            class phInertialCS*, int32_t, int32_t>>(0x4D2690, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-    }
-
-    // 0x4D2720 | ?CalcSuspensionForce@vehWheel@@AAEXM_NM@Z
-    inline void CalcSuspensionForce(float arg1, bool arg2, float arg3)
-    {
-        return stub<member_func_t<void, vehWheel, float, bool, float>>(0x4D2720, this, arg1, arg2, arg3);
-    }
+    // 0x4D23F0 | ?ComputeConstants@vehWheel@@QAEXXZ
+    void ComputeConstants();
 
     // 0x4D2A00 | ?ComputeDwtdw@vehWheel@@QAEXMPAM00@Z
-    inline void ComputeDwtdw(float arg1, float* arg2, float* arg3, float* arg4)
-    {
-        return stub<member_func_t<void, vehWheel, float, float*, float*, float*>>(
-            0x4D2A00, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x4D3440 | ?GetBumpDisplacement@vehWheel@@AAEMM@Z
-    inline float GetBumpDisplacement(float arg1)
-    {
-        return stub<member_func_t<float, vehWheel, float>>(0x4D3440, this, arg1);
-    }
-
-    // 0x4D3F60 | ?GetSurfaceSound@vehWheel@@QAEHXZ
-    inline int32_t GetSurfaceSound()
-    {
-        return stub<member_func_t<int32_t, vehWheel>>(0x4D3F60, this);
-    }
-
-    // 0x4D3F80 | ?SetInputs@vehWheel@@QAEXMMM@Z
-    inline void SetInputs(float arg1, float arg2, float arg3)
-    {
-        return stub<member_func_t<void, vehWheel, float, float, float>>(0x4D3F80, this, arg1, arg2, arg3);
-    }
-
-    // 0x4D4030 | ?GetVisualDispVert@vehWheel@@QAEMXZ
-    inline float GetVisualDispVert()
-    {
-        return stub<member_func_t<float, vehWheel>>(0x4D4030, this);
-    }
-
-    // 0x4D4090 | ?GetVisualDispLat@vehWheel@@QAEMXZ
-    inline float GetVisualDispLat()
-    {
-        return stub<member_func_t<float, vehWheel>>(0x4D4090, this);
-    }
-
-    // 0x4D40D0 | ?GetVisualDispLong@vehWheel@@QAEMXZ
-    inline float GetVisualDispLong()
-    {
-        return stub<member_func_t<float, vehWheel>>(0x4D40D0, this);
-    }
+    void ComputeDwtdw(f32 arg1, f32* arg2, f32* arg3, f32* arg4);
 
     // 0x4D4110 | ?CopyVars@vehWheel@@QAEXPAV1@@Z
-    inline void CopyVars(class vehWheel* arg1)
-    {
-        return stub<member_func_t<void, vehWheel, class vehWheel*>>(0x4D4110, this, arg1);
-    }
-
-    // 0x4CCED0 | ??1vehWheel@@UAE@XZ
-    inline ~vehWheel() override
-    {
-        stub<member_func_t<void, vehWheel>>(0x4CCED0, this);
-    }
-
-    // 0x4D34E0 | ?Update@vehWheel@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, vehWheel>>(0x4D34E0, this);
-    }
-
-    // 0x4D22E0 | ?Reset@vehWheel@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, vehWheel>>(0x4D22E0, this);
-    }
+    void CopyVars(class vehWheel* arg1);
 
     // 0x4D41C0 | ?FileIO@vehWheel@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
-    {
-        return stub<member_func_t<void, vehWheel, class datParser&>>(0x4D41C0, this, arg1);
-    }
+    void FileIO(class datParser& arg1) override;
 
     // 0x4D43C0 | ?GetClassName@vehWheel@@UAEPADXZ
-    inline char* GetClassName() override
-    {
-        return stub<member_func_t<char*, vehWheel>>(0x4D43C0, this);
-    }
+    char* GetClassName() override;
+
+    // 0x4D3F60 | ?GetSurfaceSound@vehWheel@@QAEHXZ
+    i32 GetSurfaceSound();
+
+    // 0x4D4090 | ?GetVisualDispLat@vehWheel@@QAEMXZ
+    f32 GetVisualDispLat();
+
+    // 0x4D40D0 | ?GetVisualDispLong@vehWheel@@QAEMXZ
+    f32 GetVisualDispLong();
+
+    // 0x4D4030 | ?GetVisualDispVert@vehWheel@@QAEMXZ
+    f32 GetVisualDispVert();
+
+    // 0x4D2690 | ?Init@vehWheel@@QAEXPAVvehCarSim@@PBDPADVVector3@@PAVphInertialCS@@HH@Z
+    void Init(class vehCarSim* arg1, char const* arg2, char* arg3, class Vector3 arg4, class phInertialCS* arg5,
+        i32 arg6, i32 arg7);
+
+    // 0x4D22E0 | ?Reset@vehWheel@@UAEXXZ
+    void Reset() override;
+
+    // 0x4D3F80 | ?SetInputs@vehWheel@@QAEXMMM@Z
+    void SetInputs(f32 arg1, f32 arg2, f32 arg3);
+
+    // 0x4D24C0 | ?SetNormalLoad@vehWheel@@QAEXM@Z
+    void SetNormalLoad(f32 arg1);
+
+    // 0x4D34E0 | ?Update@vehWheel@@UAEXXZ
+    void Update() override;
+
+    // 0x5CF6B8 | ?WeatherFriction@vehWheel@@2MA
+    static inline extern_var(0x5CF6B8, f32, WeatherFriction);
+
+private:
+    // 0x4D2720 | ?CalcSuspensionForce@vehWheel@@AAEXM_NM@Z
+    void CalcSuspensionForce(f32 arg1, bool arg2, f32 arg3);
+
+    // 0x4D25D0 | ?ComputeFriction@vehWheel@@AAEMMPAM@Z
+    f32 ComputeFriction(f32 arg1, f32* arg2);
+
+    // 0x4D3440 | ?GetBumpDisplacement@vehWheel@@AAEMM@Z
+    f32 GetBumpDisplacement(f32 arg1);
 };
+
+check_size(vehWheel, 0x0);

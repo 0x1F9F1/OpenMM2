@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -43,96 +43,50 @@ struct gizPathspline
 {
 public:
     // 0x57A050 | ??0gizPathspline@@QAE@XZ
-    inline gizPathspline()
-    {
-        stub<member_func_t<void, gizPathspline>>(0x57A050, this);
-    }
+    gizPathspline();
 
     // 0x57A080 | ??1gizPathspline@@QAE@XZ
-    inline ~gizPathspline()
-    {
-        stub<member_func_t<void, gizPathspline>>(0x57A080, this);
-    }
-
-    // 0x57A090 | ?Reset@gizPathspline@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, gizPathspline>>(0x57A090, this);
-    }
-
-    // 0x57A0E0 | ?Init@gizPathspline@@QAEXPAVdgPath@@M@Z
-    inline void Init(class dgPath* arg1, float arg2)
-    {
-        return stub<member_func_t<void, gizPathspline, class dgPath*, float>>(0x57A0E0, this, arg1, arg2);
-    }
-
-    // 0x57A100 | ?Compute@gizPathspline@@IAEXAAVVector3@@000@Z
-    inline void Compute(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3, class Vector3& arg4)
-    {
-        return stub<member_func_t<void, gizPathspline, class Vector3&, class Vector3&, class Vector3&, class Vector3&>>(
-            0x57A100, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x57A370 | ?Solve@gizPathspline@@IAEXAAVVector3@@0M@Z
-    inline void Solve(class Vector3& arg1, class Vector3& arg2, float arg3)
-    {
-        return stub<member_func_t<void, gizPathspline, class Vector3&, class Vector3&, float>>(
-            0x57A370, this, arg1, arg2, arg3);
-    }
-
-    // 0x57A410 | ?Update@gizPathspline@@QAEXAAVVector3@@0M@Z
-    inline void Update(class Vector3& arg1, class Vector3& arg2, float arg3)
-    {
-        return stub<member_func_t<void, gizPathspline, class Vector3&, class Vector3&, float>>(
-            0x57A410, this, arg1, arg2, arg3);
-    }
-
-    // 0x57A440 | ?UpdateRatio@gizPathspline@@QAEXAAVVector3@@0M@Z
-    inline void UpdateRatio(class Vector3& arg1, class Vector3& arg2, float arg3)
-    {
-        return stub<member_func_t<void, gizPathspline, class Vector3&, class Vector3&, float>>(
-            0x57A440, this, arg1, arg2, arg3);
-    }
+    ~gizPathspline();
 
     // 0x57A520 | ?GetCurrRatio@gizPathspline@@QAEMXZ
-    inline float GetCurrRatio()
-    {
-        return stub<member_func_t<float, gizPathspline>>(0x57A520, this);
-    }
-
-    // 0x57A530 | ?ComputePath@gizPathspline@@IAEXHHH@Z
-    inline void ComputePath(int32_t arg1, int32_t arg2, int32_t arg3)
-    {
-        return stub<member_func_t<void, gizPathspline, int32_t, int32_t, int32_t>>(0x57A530, this, arg1, arg2, arg3);
-    }
-
-    // 0x57A6D0 | ?IncrementPath@gizPathspline@@IAEXXZ
-    inline void IncrementPath()
-    {
-        return stub<member_func_t<void, gizPathspline>>(0x57A6D0, this);
-    }
-
-    // 0x57A710 | ?DecrementPath@gizPathspline@@IAEXXZ
-    inline void DecrementPath()
-    {
-        return stub<member_func_t<void, gizPathspline>>(0x57A710, this);
-    }
+    f32 GetCurrRatio();
 
     // 0x57A750 | ?GetNumVertex@gizPathspline@@QAEHXZ
-    inline int32_t GetNumVertex()
-    {
-        return stub<member_func_t<int32_t, gizPathspline>>(0x57A750, this);
-    }
-
-    // 0x57A760 | ?SetSpeed@gizPathspline@@QAEXM@Z
-    inline void SetSpeed(float arg1)
-    {
-        return stub<member_func_t<void, gizPathspline, float>>(0x57A760, this, arg1);
-    }
+    i32 GetNumVertex();
 
     // 0x57A780 | ?GetVertex@gizPathspline@@QAEAAVVector3@@H@Z
-    inline class Vector3& GetVertex(int32_t arg1)
-    {
-        return stub<member_func_t<class Vector3&, gizPathspline, int32_t>>(0x57A780, this, arg1);
-    }
+    class Vector3& GetVertex(i32 arg1);
+
+    // 0x57A0E0 | ?Init@gizPathspline@@QAEXPAVdgPath@@M@Z
+    void Init(class dgPath* arg1, f32 arg2);
+
+    // 0x57A090 | ?Reset@gizPathspline@@QAEXXZ
+    void Reset();
+
+    // 0x57A760 | ?SetSpeed@gizPathspline@@QAEXM@Z
+    void SetSpeed(f32 arg1);
+
+    // 0x57A410 | ?Update@gizPathspline@@QAEXAAVVector3@@0M@Z
+    void Update(class Vector3& arg1, class Vector3& arg2, f32 arg3);
+
+    // 0x57A440 | ?UpdateRatio@gizPathspline@@QAEXAAVVector3@@0M@Z
+    void UpdateRatio(class Vector3& arg1, class Vector3& arg2, f32 arg3);
+
+protected:
+    // 0x57A100 | ?Compute@gizPathspline@@IAEXAAVVector3@@000@Z
+    void Compute(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3, class Vector3& arg4);
+
+    // 0x57A530 | ?ComputePath@gizPathspline@@IAEXHHH@Z
+    void ComputePath(i32 arg1, i32 arg2, i32 arg3);
+
+    // 0x57A710 | ?DecrementPath@gizPathspline@@IAEXXZ
+    void DecrementPath();
+
+    // 0x57A6D0 | ?IncrementPath@gizPathspline@@IAEXXZ
+    void IncrementPath();
+
+    // 0x57A370 | ?Solve@gizPathspline@@IAEXAAVVector3@@0M@Z
+    void Solve(class Vector3& arg1, class Vector3& arg2, f32 arg3);
 };
+
+check_size(gizPathspline, 0x48);

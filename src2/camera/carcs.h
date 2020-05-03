@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "appcs.h"
+
 /*
     camera:carcs
 
@@ -32,32 +34,23 @@
     0x5B50A8 | const camCarCS::`vftable' | ??_7camCarCS@@6B@
 */
 
-class camCarCS : camAppCS
+class camCarCS : public camAppCS
 {
+    // const camCarCS::`vftable' @ 0x5B50A8
+
 public:
-    // camCarCS::`vftable' @ 0x5B50A8
-
     // 0x521470 | ??0camCarCS@@QAE@XZ
-    inline camCarCS()
-    {
-        stub<member_func_t<void, camCarCS>>(0x521470, this);
-    }
+    camCarCS();
 
-    // 0x5214A0 | ?Init@camCarCS@@QAEXPAVvehCar@@PAD@Z
-    inline void Init(class vehCar* arg1, char* arg2)
-    {
-        return stub<member_func_t<void, camCarCS, class vehCar*, char*>>(0x5214A0, this, arg1, arg2);
-    }
-
+    // 0x5214F0 | ??_GcamCarCS@@UAEPAXI@Z
     // 0x521490 | ??1camCarCS@@UAE@XZ
-    inline ~camCarCS() override
-    {
-        stub<member_func_t<void, camCarCS>>(0x521490, this);
-    }
+    ~camCarCS() override;
 
     // 0x5214E0 | ?FileIO@camCarCS@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
-    {
-        return stub<member_func_t<void, camCarCS, class datParser&>>(0x5214E0, this, arg1);
-    }
+    void FileIO(class datParser& arg1) override;
+
+    // 0x5214A0 | ?Init@camCarCS@@QAEXPAVvehCar@@PAD@Z
+    void Init(class vehCar* arg1, char* arg2);
 };
+
+check_size(camCarCS, 0x0);

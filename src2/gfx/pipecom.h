@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -40,14 +40,8 @@
     private: static char * gfxPipeline::m_FBDump | ?m_FBDump@gfxPipeline@@0PADA
 */
 
-// 0x4B2E30 | ?gfxFVFSize@@YAII@Z
-inline uint32_t gfxFVFSize(uint32_t arg1)
-{
-    return stub<cdecl_t<uint32_t, uint32_t>>(0x4B2E30, arg1);
-}
-
 // 0x4B2E80 | ?gfxFVFOffset@@YAIII@Z
-inline uint32_t gfxFVFOffset(uint32_t arg1, uint32_t arg2)
-{
-    return stub<cdecl_t<uint32_t, uint32_t, uint32_t>>(0x4B2E80, arg1, arg2);
-}
+u32 gfxFVFOffset(u32 arg1, u32 arg2);
+
+// 0x4B2E30 | ?gfxFVFSize@@YAII@Z
+u32 gfxFVFSize(u32 arg1);

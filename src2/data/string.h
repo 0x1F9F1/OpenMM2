@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -26,4 +26,4 @@
 */
 
 // 0x4C81D0 | ?formatf@@YAPADPADHPBDZZ
-// Skipped (Variable Arguments)
+char* formatf(char* arg1, i32 arg2, char const* arg3, ...);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,40 @@
 */
 
 #include "polarcs.h"
+
+camPolarCS::camPolarCS()
+{
+    unimplemented();
+}
+
+camPolarCS::~camPolarCS()
+{
+    unimplemented();
+}
+
+void camPolarCS::FileIO(class datParser& arg1)
+{
+    return stub<thiscall_t<void, camPolarCS*, class datParser&>>(0x521380, this, arg1);
+}
+
+char* camPolarCS::GetClassName()
+{
+    return stub<thiscall_t<char*, camPolarCS*>>(0x521460, this);
+}
+
+void camPolarCS::MakeActive()
+{
+    return stub<thiscall_t<void, camPolarCS*>>(0x521020, this);
+}
+
+void camPolarCS::Reset()
+{
+    return stub<thiscall_t<void, camPolarCS*>>(0x521010, this);
+}
+
+void camPolarCS::Update()
+{
+    return stub<thiscall_t<void, camPolarCS*>>(0x521030, this);
+}
+
+define_dummy_symbol(camera_polarcs);

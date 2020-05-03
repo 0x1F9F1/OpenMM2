@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "ageaudio/aud3dambientobject.h"
+
 /*
     vehicle:aisubwayaudio
 
@@ -31,32 +33,25 @@
     0x5B876C | const aiSubwayAudio::`vftable' | ??_7aiSubwayAudio@@6B@
 */
 
-struct aiSubwayAudio : Aud3DAmbientObject
+class aiSubwayAudio : public Aud3DAmbientObject
 {
-public:
-    // aiSubwayAudio::`vftable' @ 0x5B876C
+    // const aiSubwayAudio::`vftable' @ 0x5B876C
 
+public:
     // 0x59D660 | ??0aiSubwayAudio@@QAE@XZ
-    inline aiSubwayAudio()
-    {
-        stub<member_func_t<void, aiSubwayAudio>>(0x59D660, this);
-    }
+    aiSubwayAudio();
+
+    // 0x59D680 | ??1aiSubwayAudio@@UAE@XZ
+    ~aiSubwayAudio();
 
     // 0x59D690 | ?Activate@aiSubwayAudio@@QAEXH@Z
-    inline void Activate(int32_t arg1)
-    {
-        return stub<member_func_t<void, aiSubwayAudio, int32_t>>(0x59D690, this, arg1);
-    }
+    void Activate(i32 arg1);
 
     // 0x59D6D0 | ?Deactivate@aiSubwayAudio@@QAEXH@Z
-    inline void Deactivate(int32_t arg1)
-    {
-        return stub<member_func_t<void, aiSubwayAudio, int32_t>>(0x59D6D0, this, arg1);
-    }
+    void Deactivate(i32 arg1);
 
     // 0x59D710 | ?Update@aiSubwayAudio@@QAEXM@Z
-    inline void Update(float arg1)
-    {
-        return stub<member_func_t<void, aiSubwayAudio, float>>(0x59D710, this, arg1);
-    }
+    void Update(f32 arg1);
 };
+
+check_size(aiSubwayAudio, 0x0);

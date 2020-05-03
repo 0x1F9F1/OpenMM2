@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -44,105 +44,66 @@
     public: virtual void * __thiscall AudImpact::`vector deleting destructor'(unsigned int) | ??_EAudImpact@@UAEPAXI@Z
     public: virtual void * __thiscall AudImpact::`scalar deleting destructor'(unsigned int) | ??_GAudImpact@@UAEPAXI@Z
     const AudImpact::`vftable' | ??_7AudImpact@@6B@
-    private: static float AudImpact::s_fSecondsElapsed | ?s_fSecondsElapsed@AudImpact@@0MA
+    0x6B14C4 | private: static float AudImpact::s_fSecondsElapsed | ?s_fSecondsElapsed@AudImpact@@0MA
 */
 
 class AudImpact
 {
 public:
     // 0x511130 | ??0AudImpact@@QAE@XZ
-    inline AudImpact()
-    {
-        stub<member_func_t<void, AudImpact>>(0x511130, this);
-    }
+    AudImpact();
 
     // 0x511160 | ??0AudImpact@@QAE@PAV0@@Z
-    inline AudImpact(class AudImpact* arg1)
-    {
-        stub<member_func_t<void, AudImpact, class AudImpact*>>(0x511160, this, arg1);
-    }
+    AudImpact(class AudImpact* arg1);
 
-    // 0x5112D0 | ?SetSecondsElapsed@AudImpact@@SAXM@Z
-    static inline void SetSecondsElapsed(float arg1)
-    {
-        return stub<cdecl_t<void, float>>(0x5112D0, arg1);
-    }
-
-    // 0x5112E0 | ?GetSecondsElapsed@AudImpact@@SAMXZ
-    static inline float GetSecondsElapsed()
-    {
-        return stub<cdecl_t<float>>(0x5112E0);
-    }
-
-    // 0x5112F0 | ?GetAudImpactDataPtr@AudImpact@@QAEPAVAudImpactData@@H@Z
-    inline class AudImpactData* GetAudImpactDataPtr(int32_t arg1)
-    {
-        return stub<member_func_t<class AudImpactData*, AudImpact, int32_t>>(0x5112F0, this, arg1);
-    }
-
-    // 0x511370 | ?Load@AudImpact@@SAHPAPAV1@PAD1PAH@Z
-    static inline int32_t Load(class AudImpact** arg1, char* arg2, char* arg3, int32_t* arg4)
-    {
-        return stub<cdecl_t<int32_t, class AudImpact**, char*, char*, int32_t*>>(0x511370, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x511460 | ?AddToHash@AudImpact@@SAXPADH@Z
-    static inline void AddToHash(char* arg1, int32_t arg2)
-    {
-        return stub<cdecl_t<void, char*, int32_t>>(0x511460, arg1, arg2);
-    }
-
-    // 0x5114A0 | ?ReadCSV@AudImpact@@AAEHPAVStream@@@Z
-    inline int32_t ReadCSV(class Stream* arg1)
-    {
-        return stub<member_func_t<int32_t, AudImpact, class Stream*>>(0x5114A0, this, arg1);
-    }
+    // 0x511270 | ??1AudImpact@@UAE@XZ
+    ~AudImpact();
 
     // 0x5117F0 | ?AssignSounds@AudImpact@@QAEXH@Z
-    inline void AssignSounds(int32_t arg1)
-    {
-        return stub<member_func_t<void, AudImpact, int32_t>>(0x5117F0, this, arg1);
-    }
+    void AssignSounds(i32 arg1);
 
-    // 0x511820 | ?UnAssignSounds@AudImpact@@QAEXXZ
-    inline void UnAssignSounds()
-    {
-        return stub<member_func_t<void, AudImpact>>(0x511820, this);
-    }
-
-    // 0x511840 | ?Update@AudImpact@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, AudImpact>>(0x511840, this);
-    }
+    // 0x5112F0 | ?GetAudImpactDataPtr@AudImpact@@QAEPAVAudImpactData@@H@Z
+    class AudImpactData* GetAudImpactDataPtr(i32 arg1);
 
     // 0x511860 | ?Play@AudImpact@@QAEXMH@Z
-    inline void Play(float arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, AudImpact, float, int32_t>>(0x511860, this, arg1, arg2);
-    }
+    void Play(f32 arg1, i32 arg2);
 
     // 0x511880 | ?Play@AudImpact@@QAEXHM@Z
-    inline void Play(int32_t arg1, float arg2)
-    {
-        return stub<member_func_t<void, AudImpact, int32_t, float>>(0x511880, this, arg1, arg2);
-    }
+    void Play(i32 arg1, f32 arg2);
 
     // 0x5118D0 | ?Set3D@AudImpact@@QAEX_NM@Z
-    inline void Set3D(bool arg1, float arg2)
-    {
-        return stub<member_func_t<void, AudImpact, bool, float>>(0x5118D0, this, arg1, arg2);
-    }
+    void Set3D(bool arg1, f32 arg2);
 
     // 0x5118F0 | ?SetPan@AudImpact@@QAEXM@Z
-    inline void SetPan(float arg1)
-    {
-        return stub<member_func_t<void, AudImpact, float>>(0x5118F0, this, arg1);
-    }
+    void SetPan(f32 arg1);
+
+    // 0x511820 | ?UnAssignSounds@AudImpact@@QAEXXZ
+    void UnAssignSounds();
+
+    // 0x511840 | ?Update@AudImpact@@QAEXXZ
+    void Update();
 
     // 0x511950 | ?UpdateAttenuation@AudImpact@@QAEXMM@Z
-    inline void UpdateAttenuation(float arg1, float arg2)
-    {
-        return stub<member_func_t<void, AudImpact, float, float>>(0x511950, this, arg1, arg2);
-    }
+    void UpdateAttenuation(f32 arg1, f32 arg2);
+
+    // 0x511460 | ?AddToHash@AudImpact@@SAXPADH@Z
+    static void AddToHash(char* arg1, i32 arg2);
+
+    // 0x5112E0 | ?GetSecondsElapsed@AudImpact@@SAMXZ
+    static f32 GetSecondsElapsed();
+
+    // 0x511370 | ?Load@AudImpact@@SAHPAPAV1@PAD1PAH@Z
+    static i32 Load(class AudImpact** arg1, char* arg2, char* arg3, i32* arg4);
+
+    // 0x5112D0 | ?SetSecondsElapsed@AudImpact@@SAXM@Z
+    static void SetSecondsElapsed(f32 arg1);
+
+private:
+    // 0x5114A0 | ?ReadCSV@AudImpact@@AAEHPAVStream@@@Z
+    i32 ReadCSV(class Stream* arg1);
+
+    // 0x6B14C4 | ?s_fSecondsElapsed@AudImpact@@0MA
+    static inline extern_var(0x6B14C4, f32, s_fSecondsElapsed);
 };
+
+check_size(AudImpact, 0x20);

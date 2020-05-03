@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -32,51 +32,31 @@
     0x5B5BDC | const aiGoalRegainRail::`vftable' | ??_7aiGoalRegainRail@@6B@
 */
 
-struct aiGoalRegainRail : aiGoal
+struct aiGoalRegainRail
 {
-public:
-    // aiGoalRegainRail::`vftable' @ 0x5B5BDC
+    // const aiGoalRegainRail::`vftable' @ 0x5B5BDC
 
+public:
     // 0x56B6E0 | ??0aiGoalRegainRail@@QAE@PAVaiRailSet@@PAVaiVehicleAmbient@@@Z
-    inline aiGoalRegainRail(class aiRailSet* arg1, class aiVehicleAmbient* arg2)
-    {
-        stub<member_func_t<void, aiGoalRegainRail, class aiRailSet*, class aiVehicleAmbient*>>(
-            0x56B6E0, this, arg1, arg2);
-    }
+    aiGoalRegainRail(class aiRailSet* arg1, class aiVehicleAmbient* arg2);
 
     // 0x56B710 | ??1aiGoalRegainRail@@QAE@XZ
-    inline ~aiGoalRegainRail()
-    {
-        stub<member_func_t<void, aiGoalRegainRail>>(0x56B710, this);
-    }
+    ~aiGoalRegainRail();
 
     // 0x56BF00 | ?Dump@aiGoalRegainRail@@QAEXXZ
-    inline void Dump()
-    {
-        return stub<member_func_t<void, aiGoalRegainRail>>(0x56BF00, this);
-    }
+    void Dump();
 
     // 0x56BF60 | ?ReplayDebug@aiGoalRegainRail@@QAEXXZ
-    inline void ReplayDebug()
-    {
-        return stub<member_func_t<void, aiGoalRegainRail>>(0x56BF60, this);
-    }
+    void ReplayDebug();
 
     // 0x56B720 | ?Init@aiGoalRegainRail@@UAEXXZ
-    inline void Init() override
-    {
-        return stub<member_func_t<void, aiGoalRegainRail>>(0x56B720, this);
-    }
+    virtual void Init();
 
     // 0x56B750 | ?Reset@aiGoalRegainRail@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, aiGoalRegainRail>>(0x56B750, this);
-    }
+    virtual void Reset();
 
     // 0x56BD80 | ?Update@aiGoalRegainRail@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, aiGoalRegainRail>>(0x56BD80, this);
-    }
+    virtual void Update();
 };
+
+check_size(aiGoalRegainRail, 0x24);

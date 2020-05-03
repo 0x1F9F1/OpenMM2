@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,35 @@
 */
 
 #include "ttip.h"
+
+mmToolTip::mmToolTip()
+{
+    unimplemented();
+}
+
+mmToolTip::~mmToolTip()
+{
+    unimplemented();
+}
+
+void mmToolTip::Init(class UIMenu* arg1, struct LocString* arg2)
+{
+    return stub<thiscall_t<void, mmToolTip*, class UIMenu*, struct LocString*>>(0x4F16F0, this, arg1, arg2);
+}
+
+void mmToolTip::SetText(struct LocString* arg1)
+{
+    return stub<thiscall_t<void, mmToolTip*, struct LocString*>>(0x4F17A0, this, arg1);
+}
+
+void mmToolTip::Switch(i32 arg1)
+{
+    return stub<thiscall_t<void, mmToolTip*, i32>>(0x4F17C0, this, arg1);
+}
+
+void mmToolTip::Update()
+{
+    return stub<thiscall_t<void, mmToolTip*>>(0x4F17D0, this);
+}
+
+define_dummy_symbol(mmwidget_ttip);

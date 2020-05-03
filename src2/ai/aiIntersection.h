@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -57,178 +57,92 @@
 class aiIntersection
 {
 public:
-    // 0x53C000 | ?Road@aiIntersection@@QAEPAVaiPath@@H@Z
-    inline class aiPath* Road(int32_t arg1)
-    {
-        return stub<member_func_t<class aiPath*, aiIntersection, int32_t>>(0x53C000, this, arg1);
-    }
-
     // 0x5499E0 | ??0aiIntersection@@QAE@H@Z
-    inline aiIntersection(int32_t arg1)
-    {
-        stub<member_func_t<void, aiIntersection, int32_t>>(0x5499E0, this, arg1);
-    }
+    aiIntersection(i32 arg1);
 
     // 0x549A00 | ??1aiIntersection@@QAE@XZ
-    inline ~aiIntersection()
-    {
-        stub<member_func_t<void, aiIntersection>>(0x549A00, this);
-    }
-
-    // 0x549A40 | ?Init@aiIntersection@@QAEXXZ
-    inline void Init()
-    {
-        return stub<member_func_t<void, aiIntersection>>(0x549A40, this);
-    }
-
-    // 0x549B20 | ?Reset@aiIntersection@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, aiIntersection>>(0x549B20, this);
-    }
-
-    // 0x549B40 | ?AddRoad@aiIntersection@@QAEXPAVaiPath@@@Z
-    inline void AddRoad(class aiPath* arg1)
-    {
-        return stub<member_func_t<void, aiIntersection, class aiPath*>>(0x549B40, this, arg1);
-    }
-
-    // 0x549BB0 | ?SaveBinary@aiIntersection@@QAEXPAVStream@@@Z
-    inline void SaveBinary(class Stream* arg1)
-    {
-        return stub<member_func_t<void, aiIntersection, class Stream*>>(0x549BB0, this, arg1);
-    }
-
-    // 0x549C20 | ?ReadBinary@aiIntersection@@QAEXPAVStream@@@Z
-    inline void ReadBinary(class Stream* arg1)
-    {
-        return stub<member_func_t<void, aiIntersection, class Stream*>>(0x549C20, this, arg1);
-    }
-
-    // 0x549D60 | ?NumSources@aiIntersection@@QAEHXZ
-    inline int32_t NumSources()
-    {
-        return stub<member_func_t<int32_t, aiIntersection>>(0x549D60, this);
-    }
-
-    // 0x549D90 | ?NumSinks@aiIntersection@@QAEHXZ
-    inline int32_t NumSinks()
-    {
-        return stub<member_func_t<int32_t, aiIntersection>>(0x549D90, this);
-    }
-
-    // 0x549DD0 | ?SetFourWay@aiIntersection@@QAEXXZ
-    inline void SetFourWay()
-    {
-        return stub<member_func_t<void, aiIntersection>>(0x549DD0, this);
-    }
-
-    // 0x549DF0 | ?Dump@aiIntersection@@QAEXXZ
-    inline void Dump()
-    {
-        return stub<member_func_t<void, aiIntersection>>(0x549DF0, this);
-    }
-
-    // 0x549E40 | ?CreateRoadMap@aiIntersection@@QAEXXZ
-    inline void CreateRoadMap()
-    {
-        return stub<member_func_t<void, aiIntersection>>(0x549E40, this);
-    }
-
-    // 0x54A010 | ?NumOneWays@aiIntersection@@QAEHXZ
-    inline int32_t NumOneWays()
-    {
-        return stub<member_func_t<int32_t, aiIntersection>>(0x54A010, this);
-    }
-
-    // 0x54A030 | ?Path@aiIntersection@@QAEPAVaiPath@@H@Z
-    inline class aiPath* Path(int32_t arg1)
-    {
-        return stub<member_func_t<class aiPath*, aiIntersection, int32_t>>(0x54A030, this, arg1);
-    }
-
-    // 0x54A060 | ?NumAvailSinks@aiIntersection@@QAEHPAVaiPath@@@Z
-    inline int32_t NumAvailSinks(class aiPath* arg1)
-    {
-        return stub<member_func_t<int32_t, aiIntersection, class aiPath*>>(0x54A060, this, arg1);
-    }
-
-    // 0x54A0B0 | ?AddVehicle@aiIntersection@@QAEXPAVaiObstacle@@@Z
-    inline void AddVehicle(class aiObstacle* arg1)
-    {
-        return stub<member_func_t<void, aiIntersection, class aiObstacle*>>(0x54A0B0, this, arg1);
-    }
-
-    // 0x54A0D0 | ?RemoveVehicle@aiIntersection@@QAEXPAVaiObstacle@@@Z
-    inline void RemoveVehicle(class aiObstacle* arg1)
-    {
-        return stub<member_func_t<void, aiIntersection, class aiObstacle*>>(0x54A0D0, this, arg1);
-    }
+    ~aiIntersection();
 
     // 0x54A110 | ?AddBanger@aiIntersection@@QAEXPAVaiObstacle@@@Z
-    inline void AddBanger(class aiObstacle* arg1)
-    {
-        return stub<member_func_t<void, aiIntersection, class aiObstacle*>>(0x54A110, this, arg1);
-    }
-
-    // 0x54A130 | ?RemoveBanger@aiIntersection@@QAEXPAVaiObstacle@@@Z
-    inline void RemoveBanger(class aiObstacle* arg1)
-    {
-        return stub<member_func_t<void, aiIntersection, class aiObstacle*>>(0x54A130, this, arg1);
-    }
+    void AddBanger(class aiObstacle* arg1);
 
     // 0x54A170 | ?AddBangersToObsMap@aiIntersection@@QAEXXZ
-    inline void AddBangersToObsMap()
-    {
-        return stub<member_func_t<void, aiIntersection>>(0x54A170, this);
-    }
+    void AddBangersToObsMap();
 
-    // 0x54A220 | ?IsCableCarStart@aiIntersection@@QAE_NPAHPAF@Z
-    inline bool IsCableCarStart(int32_t* arg1, int16_t* arg2)
-    {
-        return stub<member_func_t<bool, aiIntersection, int32_t*, int16_t*>>(0x54A220, this, arg1, arg2);
-    }
-
-    // 0x54A2B0 | ?IsSubwayStart@aiIntersection@@QAE_NPAH00@Z
-    inline bool IsSubwayStart(int32_t* arg1, int32_t* arg2, int32_t* arg3)
-    {
-        return stub<member_func_t<bool, aiIntersection, int32_t*, int32_t*, int32_t*>>(
-            0x54A2B0, this, arg1, arg2, arg3);
-    }
-
-    // 0x54A340 | ?IsSubwayEnd@aiIntersection@@QAE_NPAH@Z
-    inline bool IsSubwayEnd(int32_t* arg1)
-    {
-        return stub<member_func_t<bool, aiIntersection, int32_t*>>(0x54A340, this, arg1);
-    }
+    // 0x549B40 | ?AddRoad@aiIntersection@@QAEXPAVaiPath@@@Z
+    void AddRoad(class aiPath* arg1);
 
     // 0x54A3C0 | ?AddToStopSignCntl@aiIntersection@@QAEXPAVaiVehicle@@@Z
-    inline void AddToStopSignCntl(class aiVehicle* arg1)
-    {
-        return stub<member_func_t<void, aiIntersection, class aiVehicle*>>(0x54A3C0, this, arg1);
-    }
+    void AddToStopSignCntl(class aiVehicle* arg1);
+
+    // 0x54A0B0 | ?AddVehicle@aiIntersection@@QAEXPAVaiObstacle@@@Z
+    void AddVehicle(class aiObstacle* arg1);
+
+    // 0x549E40 | ?CreateRoadMap@aiIntersection@@QAEXXZ
+    void CreateRoadMap();
+
+    // 0x549DF0 | ?Dump@aiIntersection@@QAEXXZ
+    void Dump();
+
+    // 0x549A40 | ?Init@aiIntersection@@QAEXXZ
+    void Init();
+
+    // 0x54A220 | ?IsCableCarStart@aiIntersection@@QAE_NPAHPAF@Z
+    bool IsCableCarStart(i32* arg1, i16* arg2);
+
+    // 0x54A340 | ?IsSubwayEnd@aiIntersection@@QAE_NPAH@Z
+    bool IsSubwayEnd(i32* arg1);
+
+    // 0x54A2B0 | ?IsSubwayStart@aiIntersection@@QAE_NPAH00@Z
+    bool IsSubwayStart(i32* arg1, i32* arg2, i32* arg3);
+
+    // 0x54A060 | ?NumAvailSinks@aiIntersection@@QAEHPAVaiPath@@@Z
+    i32 NumAvailSinks(class aiPath* arg1);
+
+    // 0x54A010 | ?NumOneWays@aiIntersection@@QAEHXZ
+    i32 NumOneWays();
+
+    // 0x549D90 | ?NumSinks@aiIntersection@@QAEHXZ
+    i32 NumSinks();
+
+    // 0x549D60 | ?NumSources@aiIntersection@@QAEHXZ
+    i32 NumSources();
+
+    // 0x54A030 | ?Path@aiIntersection@@QAEPAVaiPath@@H@Z
+    class aiPath* Path(i32 arg1);
+
+    // 0x549C20 | ?ReadBinary@aiIntersection@@QAEXPAVStream@@@Z
+    void ReadBinary(class Stream* arg1);
+
+    // 0x54A130 | ?RemoveBanger@aiIntersection@@QAEXPAVaiObstacle@@@Z
+    void RemoveBanger(class aiObstacle* arg1);
 
     // 0x54A400 | ?RemoveFromStopSignCntl@aiIntersection@@QAEXPAVaiVehicle@@@Z
-    inline void RemoveFromStopSignCntl(class aiVehicle* arg1)
-    {
-        return stub<member_func_t<void, aiIntersection, class aiVehicle*>>(0x54A400, this, arg1);
-    }
+    void RemoveFromStopSignCntl(class aiVehicle* arg1);
 
     // 0x54A460 | ?RemoveTotalFromStopSignCntl@aiIntersection@@QAEXPAVaiVehicle@@@Z
-    inline void RemoveTotalFromStopSignCntl(class aiVehicle* arg1)
-    {
-        return stub<member_func_t<void, aiIntersection, class aiVehicle*>>(0x54A460, this, arg1);
-    }
+    void RemoveTotalFromStopSignCntl(class aiVehicle* arg1);
+
+    // 0x54A0D0 | ?RemoveVehicle@aiIntersection@@QAEXPAVaiObstacle@@@Z
+    void RemoveVehicle(class aiObstacle* arg1);
+
+    // 0x549B20 | ?Reset@aiIntersection@@QAEXXZ
+    void Reset();
+
+    // 0x53C000 | ?Road@aiIntersection@@QAEPAVaiPath@@H@Z
+    class aiPath* Road(i32 arg1);
+
+    // 0x549BB0 | ?SaveBinary@aiIntersection@@QAEXPAVStream@@@Z
+    void SaveBinary(class Stream* arg1);
+
+    // 0x549DD0 | ?SetFourWay@aiIntersection@@QAEXXZ
+    void SetFourWay();
 
     // 0x54A4E0 | ?StopSignOkayToGo@aiIntersection@@QAE_NPAVaiVehicle@@@Z
-    inline bool StopSignOkayToGo(class aiVehicle* arg1)
-    {
-        return stub<member_func_t<bool, aiIntersection, class aiVehicle*>>(0x54A4E0, this, arg1);
-    }
+    bool StopSignOkayToGo(class aiVehicle* arg1);
 
     // 0x54A5A0 | ?StopSources@aiIntersection@@QAEXH@Z
-    inline void StopSources(int32_t arg1)
-    {
-        return stub<member_func_t<void, aiIntersection, int32_t>>(0x54A5A0, this, arg1);
-    }
+    void StopSources(i32 arg1);
 };
+
+check_size(aiIntersection, 0x2C);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,25 @@
 */
 
 #include "eventq.h"
+
+void ioEventQueue::Command(void* arg1)
+{
+    return stub<cdecl_t<void, void*>>(0x4BAA50, arg1);
+}
+
+bool ioEventQueue::Peek(struct ioEvent& arg1, i32& arg2)
+{
+    return stub<cdecl_t<bool, struct ioEvent&, i32&>>(0x4BA980, arg1, arg2);
+}
+
+bool ioEventQueue::Pop(struct ioEvent& arg1)
+{
+    return stub<cdecl_t<bool, struct ioEvent&>>(0x4BA930, arg1);
+}
+
+void ioEventQueue::Queue(enum ioEvent::ioEventType arg1, i32 arg2, i32 arg3, i32 arg4)
+{
+    return stub<cdecl_t<void, enum ioEvent::ioEventType, i32, i32, i32>>(0x4BA9D0, arg1, arg2, arg3, arg4);
+}
+
+define_dummy_symbol(input_eventq);

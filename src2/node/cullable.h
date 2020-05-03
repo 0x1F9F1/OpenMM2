@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,9 +18,23 @@
 
 #pragma once
 
+#include "data/base.h"
+
 /*
     node:cullable
 
     0x4A3440 | public: virtual void __thiscall asCullable::Cull(void) | ?Cull@asCullable@@UAEXXZ
     public: virtual void __thiscall asCullable::Stats(void) | ?Stats@asCullable@@UAEXXZ
 */
+
+class asCullable : public Base
+{
+public:
+    // 0x460EA0 | ??1asCullable@@UAE@XZ
+    ~asCullable();
+
+    // 0x4A3440 | ?Cull@asCullable@@UAEXXZ
+    virtual void Cull();
+};
+
+check_size(asCullable, 0x0);

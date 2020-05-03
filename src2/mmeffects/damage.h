@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -28,36 +28,23 @@
     0x5345F0 | public: void __thiscall mmDamage::Apply(class Vector3 &,float) | ?Apply@mmDamage@@QAEXAAVVector3@@M@Z
 */
 
-struct mmDamage
+class mmDamage
 {
 public:
     // 0x5345B0 | ??0mmDamage@@QAE@XZ
-    inline mmDamage()
-    {
-        stub<member_func_t<void, mmDamage>>(0x5345B0, this);
-    }
+    mmDamage();
 
     // 0x5345C0 | ??1mmDamage@@QAE@XZ
-    inline ~mmDamage()
-    {
-        stub<member_func_t<void, mmDamage>>(0x5345C0, this);
-    }
-
-    // 0x5345D0 | ?Init@mmDamage@@QAEXPAVmodStatic@@@Z
-    inline void Init(class modStatic* arg1)
-    {
-        return stub<member_func_t<void, mmDamage, class modStatic*>>(0x5345D0, this, arg1);
-    }
-
-    // 0x5345E0 | ?Reset@mmDamage@@QAEXH@Z
-    inline void Reset(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmDamage, int32_t>>(0x5345E0, this, arg1);
-    }
+    ~mmDamage();
 
     // 0x5345F0 | ?Apply@mmDamage@@QAEXAAVVector3@@M@Z
-    inline void Apply(class Vector3& arg1, float arg2)
-    {
-        return stub<member_func_t<void, mmDamage, class Vector3&, float>>(0x5345F0, this, arg1, arg2);
-    }
+    void Apply(class Vector3& arg1, f32 arg2);
+
+    // 0x5345D0 | ?Init@mmDamage@@QAEXPAVmodStatic@@@Z
+    void Init(class modStatic* arg1);
+
+    // 0x5345E0 | ?Reset@mmDamage@@QAEXH@Z
+    void Reset(i32 arg1);
 };
+
+check_size(mmDamage, 0x0);

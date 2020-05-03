@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "mmwidget/menu.h"
+
 /*
     mmui:options
 
@@ -31,38 +33,26 @@
     0x5B434C | const OptionsMenu::`vftable' | ??_7OptionsMenu@@6B@
 */
 
-struct OptionsMenu : UIMenu
+class OptionsMenu : public UIMenu
 {
-public:
-    // OptionsMenu::`vftable' @ 0x5B434C
+    // const OptionsMenu::`vftable' @ 0x5B434C
 
+public:
     // 0x502950 | ??0OptionsMenu@@QAE@H@Z
-    inline OptionsMenu(int32_t arg1)
-    {
-        stub<member_func_t<void, OptionsMenu, int32_t>>(0x502950, this, arg1);
-    }
+    OptionsMenu(i32 arg1);
+
+    // 0x502D10 | ??_GOptionsMenu@@UAEPAXI@Z
+    // 0x502C70 | ??1OptionsMenu@@UAE@XZ
+    ~OptionsMenu() override;
 
     // 0x502CE0 | ?FocusDescription@OptionsMenu@@QAEXHH@Z
-    inline void FocusDescription(int32_t arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, OptionsMenu, int32_t, int32_t>>(0x502CE0, this, arg1, arg2);
-    }
-
-    // 0x502C70 | ??1OptionsMenu@@UAE@XZ
-    inline ~OptionsMenu() override
-    {
-        stub<member_func_t<void, OptionsMenu>>(0x502C70, this);
-    }
-
-    // 0x502C80 | ?PreSetup@OptionsMenu@@UAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, OptionsMenu>>(0x502C80, this);
-    }
+    void FocusDescription(i32 arg1, i32 arg2);
 
     // 0x502CC0 | ?PostSetup@OptionsMenu@@UAEXXZ
-    inline void PostSetup() override
-    {
-        return stub<member_func_t<void, OptionsMenu>>(0x502CC0, this);
-    }
+    void PostSetup() override;
+
+    // 0x502C80 | ?PreSetup@OptionsMenu@@UAEXXZ
+    void PreSetup() override;
 };
+
+check_size(OptionsMenu, 0x98);

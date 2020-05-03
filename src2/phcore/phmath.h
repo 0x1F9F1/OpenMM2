@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -68,292 +68,150 @@
 */
 
 // 0x494DE0 | ?AngleToMatrix@@YAXABVVector3@@PAVMatrix34@@@Z
-inline void AngleToMatrix(class Vector3 const& arg1, class Matrix34* arg2)
-{
-    return stub<cdecl_t<void, class Vector3 const&, class Matrix34*>>(0x494DE0, arg1, arg2);
-}
-
-// 0x494EE0 | ?QuaternionToMatrix@@YAXABVQuaternion@@PAVMatrix34@@@Z
-inline void QuaternionToMatrix(class Quaternion const& arg1, class Matrix34* arg2)
-{
-    return stub<cdecl_t<void, class Quaternion const&, class Matrix34*>>(0x494EE0, arg1, arg2);
-}
-
-// 0x494FB0 | ?CreateRotatedMatrix@@YA?AVMatrix34@@ABVVector3@@0@Z
-inline class Matrix34 CreateRotatedMatrix(class Vector3 const& arg1, class Vector3 const& arg2)
-{
-    return stub<cdecl_t<class Matrix34, class Vector3 const&, class Vector3 const&>>(0x494FB0, arg1, arg2);
-}
-
-// 0x495060 | ?RotateMatrix@@YAXPAVMatrix34@@ABVVector3@@@Z
-inline void RotateMatrix(class Matrix34* arg1, class Vector3 const& arg2)
-{
-    return stub<cdecl_t<void, class Matrix34*, class Vector3 const&>>(0x495060, arg1, arg2);
-}
-
-// 0x4950E0 | ?ReOrderVerts@@YAXPAVVector3@@PAM@Z
-inline void ReOrderVerts(class Vector3* arg1, float* arg2)
-{
-    return stub<cdecl_t<void, class Vector3*, float*>>(0x4950E0, arg1, arg2);
-}
-
-// 0x495170 | ?VertOrderIsOK@@YA_NPBVVector3@@@Z
-inline bool VertOrderIsOK(class Vector3 const* arg1)
-{
-    return stub<cdecl_t<bool, class Vector3 const*>>(0x495170, arg1);
-}
-
-// 0x495220 | ?CubeRoot@@YAMM@Z
-inline float CubeRoot(float arg1)
-{
-    return stub<cdecl_t<float, float>>(0x495220, arg1);
-}
+void AngleToMatrix(class Vector3 const& arg1, class Matrix34* arg2);
 
 // 0x495270 | ?ArcTangent@@YAMMM@Z
-inline float ArcTangent(float arg1, float arg2)
-{
-    return stub<cdecl_t<float, float, float>>(0x495270, arg1, arg2);
-}
+f32 ArcTangent(f32 arg1, f32 arg2);
 
-// 0x4952D0 | ?RealQuadratic@@YAHMMPAM0M@Z
-inline int32_t RealQuadratic(float arg1, float arg2, float* arg3, float* arg4, float arg5)
-{
-    return stub<cdecl_t<int32_t, float, float, float*, float*, float>>(0x4952D0, arg1, arg2, arg3, arg4, arg5);
-}
+// 0x494FB0 | ?CreateRotatedMatrix@@YA?AVMatrix34@@ABVVector3@@0@Z
+class Matrix34 CreateRotatedMatrix(class Vector3 const& arg1, class Vector3 const& arg2);
 
-// 0x495350 | ?RealCubic@@YAHMMMPAM00M@Z
-inline int32_t RealCubic(float arg1, float arg2, float arg3, float* arg4, float* arg5, float* arg6, float arg7)
-{
-    return stub<cdecl_t<int32_t, float, float, float, float*, float*, float*, float>>(
-        0x495350, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-}
-
-// 0x495520 | ?RealQuartic@@YAHMMMMPAM000M@Z
-inline int32_t RealQuartic(
-    float arg1, float arg2, float arg3, float arg4, float* arg5, float* arg6, float* arg7, float* arg8, float arg9)
-{
-    return stub<cdecl_t<int32_t, float, float, float, float, float*, float*, float*, float*, float>>(
-        0x495520, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
-}
-
-// 0x495A40 | ?FindTValuesLineToCircle@@YAHABVVector3@@000MPAMPAV1@1121@Z
-inline int32_t FindTValuesLineToCircle(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
-    class Vector3 const& arg4, float arg5, float* arg6, class Vector3* arg7, float* arg8, float* arg9,
-    class Vector3* arg10, float* arg11)
-{
-    return stub<cdecl_t<int32_t, class Vector3 const&, class Vector3 const&, class Vector3 const&, class Vector3 const&,
-        float, float*, class Vector3*, float*, float*, class Vector3*, float*>>(
-        0x495A40, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
-}
+// 0x495220 | ?CubeRoot@@YAMM@Z
+f32 CubeRoot(f32 arg1);
 
 // 0x495D60 | ?FindHomingAccel@@YAMMMMMM@Z
-inline float FindHomingAccel(float arg1, float arg2, float arg3, float arg4, float arg5)
-{
-    return stub<cdecl_t<float, float, float, float, float, float>>(0x495D60, arg1, arg2, arg3, arg4, arg5);
-}
+f32 FindHomingAccel(f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5);
 
 // 0x495DE0 | ?FindHomingAccel3D@@YA?AVVector3@@MABV1@000@Z
-inline class Vector3 FindHomingAccel3D(float arg1, class Vector3 const& arg2, class Vector3 const& arg3,
-    class Vector3 const& arg4, class Vector3 const& arg5)
-{
-    return stub<cdecl_t<class Vector3, float, class Vector3 const&, class Vector3 const&, class Vector3 const&,
-        class Vector3 const&>>(0x495DE0, arg1, arg2, arg3, arg4, arg5);
-}
+class Vector3 FindHomingAccel3D(f32 arg1, class Vector3 const& arg2, class Vector3 const& arg3,
+    class Vector3 const& arg4, class Vector3 const& arg5);
 
 // 0x495E80 | ?FindHomingAngAccel@@YA?AVVector3@@ABV1@0MM@Z
-inline class Vector3 FindHomingAngAccel(class Vector3 const& arg1, class Vector3 const& arg2, float arg3, float arg4)
-{
-    return stub<cdecl_t<class Vector3, class Vector3 const&, class Vector3 const&, float, float>>(
-        0x495E80, arg1, arg2, arg3, arg4);
-}
+class Vector3 FindHomingAngAccel(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, f32 arg4);
 
 // 0x495FF0 | ?FindHomingAngAccel3D@@YA?AVVector3@@MMABVMatrix34@@ABV1@01@Z
-inline class Vector3 FindHomingAngAccel3D(float arg1, float arg2, class Matrix34 const& arg3, class Vector3 const& arg4,
-    class Matrix34 const& arg5, class Vector3 const& arg6)
-{
-    return stub<cdecl_t<class Vector3, float, float, class Matrix34 const&, class Vector3 const&, class Matrix34 const&,
-        class Vector3 const&>>(0x495FF0, arg1, arg2, arg3, arg4, arg5, arg6);
-}
+class Vector3 FindHomingAngAccel3D(f32 arg1, f32 arg2, class Matrix34 const& arg3, class Vector3 const& arg4,
+    class Matrix34 const& arg5, class Vector3 const& arg6);
 
-class Matrix66
-{
-public:
-    // 0x496A00 | ?Set@Matrix66@@QAEXABV1@@Z
-    inline void Set(class Matrix66 const& arg1)
-    {
-        return stub<member_func_t<void, Matrix66, class Matrix66 const&>>(0x496A00, this, arg1);
-    }
+// 0x495A40 | ?FindTValuesLineToCircle@@YAHABVVector3@@000MPAMPAV1@1121@Z
+i32 FindTValuesLineToCircle(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
+    class Vector3 const& arg4, f32 arg5, f32* arg6, class Vector3* arg7, f32* arg8, f32* arg9, class Vector3* arg10,
+    f32* arg11);
 
-    // 0x496A20 | ?Set@Matrix66@@QAEXABVMatrix33@@000@Z
-    inline void Set(
-        class Matrix33 const& arg1, class Matrix33 const& arg2, class Matrix33 const& arg3, class Matrix33 const& arg4)
-    {
-        return stub<member_func_t<void, Matrix66, class Matrix33 const&, class Matrix33 const&, class Matrix33 const&,
-            class Matrix33 const&>>(0x496A20, this, arg1, arg2, arg3, arg4);
-    }
+// 0x494EE0 | ?QuaternionToMatrix@@YAXABVQuaternion@@PAVMatrix34@@@Z
+void QuaternionToMatrix(class Quaternion const& arg1, class Matrix34* arg2);
 
-    // 0x496A60 | ?Add@Matrix66@@QAEXABV1@@Z
-    inline void Add(class Matrix66 const& arg1)
-    {
-        return stub<member_func_t<void, Matrix66, class Matrix66 const&>>(0x496A60, this, arg1);
-    }
+// 0x4950E0 | ?ReOrderVerts@@YAXPAVVector3@@PAM@Z
+void ReOrderVerts(class Vector3* arg1, f32* arg2);
 
-    // 0x496AA0 | ?Add@Matrix66@@QAEXABV1@0@Z
-    inline void Add(class Matrix66 const& arg1, class Matrix66 const& arg2)
-    {
-        return stub<member_func_t<void, Matrix66, class Matrix66 const&, class Matrix66 const&>>(
-            0x496AA0, this, arg1, arg2);
-    }
+// 0x495350 | ?RealCubic@@YAHMMMPAM00M@Z
+i32 RealCubic(f32 arg1, f32 arg2, f32 arg3, f32* arg4, f32* arg5, f32* arg6, f32 arg7);
 
-    // 0x496AF0 | ?Subtract@Matrix66@@QAEXABV1@@Z
-    inline void Subtract(class Matrix66 const& arg1)
-    {
-        return stub<member_func_t<void, Matrix66, class Matrix66 const&>>(0x496AF0, this, arg1);
-    }
+// 0x4952D0 | ?RealQuadratic@@YAHMMPAM0M@Z
+i32 RealQuadratic(f32 arg1, f32 arg2, f32* arg3, f32* arg4, f32 arg5);
 
-    // 0x496B30 | ?Subtract@Matrix66@@QAEXABV1@0@Z
-    inline void Subtract(class Matrix66 const& arg1, class Matrix66 const& arg2)
-    {
-        return stub<member_func_t<void, Matrix66, class Matrix66 const&, class Matrix66 const&>>(
-            0x496B30, this, arg1, arg2);
-    }
+// 0x495520 | ?RealQuartic@@YAHMMMMPAM000M@Z
+i32 RealQuartic(f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32* arg5, f32* arg6, f32* arg7, f32* arg8, f32 arg9);
 
-    // 0x496B80 | ?Dot@Matrix66@@QAEXABV1@@Z
-    inline void Dot(class Matrix66 const& arg1)
-    {
-        return stub<member_func_t<void, Matrix66, class Matrix66 const&>>(0x496B80, this, arg1);
-    }
+// 0x495060 | ?RotateMatrix@@YAXPAVMatrix34@@ABVVector3@@@Z
+void RotateMatrix(class Matrix34* arg1, class Vector3 const& arg2);
 
-    // 0x496C70 | ?Transpose@Matrix66@@QAEXXZ
-    inline void Transpose()
-    {
-        return stub<member_func_t<void, Matrix66>>(0x496C70, this);
-    }
-
-    // 0x496CC0 | ?Transpose@Matrix66@@QAEXABV1@@Z
-    inline void Transpose(class Matrix66 const& arg1)
-    {
-        return stub<member_func_t<void, Matrix66, class Matrix66 const&>>(0x496CC0, this, arg1);
-    }
-
-    // 0x496D00 | ?Inverse@Matrix66@@QAEXXZ
-    inline void Inverse()
-    {
-        return stub<member_func_t<void, Matrix66>>(0x496D00, this);
-    }
-
-    // 0x496D30 | ?Inverse@Matrix66@@QAEXABV1@@Z
-    inline void Inverse(class Matrix66 const& arg1)
-    {
-        return stub<member_func_t<void, Matrix66, class Matrix66 const&>>(0x496D30, this, arg1);
-    }
-};
+// 0x495170 | ?VertOrderIsOK@@YA_NPBVVector3@@@Z
+bool VertOrderIsOK(class Vector3 const* arg1);
 
 class Matrix33
 {
 public:
-    // 0x496230 | ?Set@Matrix33@@QAEXABV1@@Z
-    inline void Set(class Matrix33 const& arg1)
-    {
-        return stub<member_func_t<void, Matrix33, class Matrix33 const&>>(0x496230, this, arg1);
-    }
-
     // 0x496270 | ?Add@Matrix33@@QAEXABV1@@Z
-    inline void Add(class Matrix33 const& arg1)
-    {
-        return stub<member_func_t<void, Matrix33, class Matrix33 const&>>(0x496270, this, arg1);
-    }
+    void Add(class Matrix33 const& arg1);
 
     // 0x4962D0 | ?Add@Matrix33@@QAEXABV1@0@Z
-    inline void Add(class Matrix33 const& arg1, class Matrix33 const& arg2)
-    {
-        return stub<member_func_t<void, Matrix33, class Matrix33 const&, class Matrix33 const&>>(
-            0x4962D0, this, arg1, arg2);
-    }
-
-    // 0x496330 | ?Subtract@Matrix33@@QAEXABV1@@Z
-    inline void Subtract(class Matrix33 const& arg1)
-    {
-        return stub<member_func_t<void, Matrix33, class Matrix33 const&>>(0x496330, this, arg1);
-    }
-
-    // 0x496390 | ?Subtract@Matrix33@@QAEXABV1@0@Z
-    inline void Subtract(class Matrix33 const& arg1, class Matrix33 const& arg2)
-    {
-        return stub<member_func_t<void, Matrix33, class Matrix33 const&, class Matrix33 const&>>(
-            0x496390, this, arg1, arg2);
-    }
-
-    // 0x4963F0 | ?IsZero@Matrix33@@QBE_NXZ
-    inline bool IsZero()
-    {
-        return stub<member_func_t<bool, Matrix33>>(0x4963F0, this);
-    }
-
-    // 0x496490 | ?Dot@Matrix33@@QAEXABV1@@Z
-    inline void Dot(class Matrix33 const& arg1)
-    {
-        return stub<member_func_t<void, Matrix33, class Matrix33 const&>>(0x496490, this, arg1);
-    }
-
-    // 0x4965B0 | ?Dot@Matrix33@@QAEXABV1@0@Z
-    inline void Dot(class Matrix33 const& arg1, class Matrix33 const& arg2)
-    {
-        return stub<member_func_t<void, Matrix33, class Matrix33 const&, class Matrix33 const&>>(
-            0x4965B0, this, arg1, arg2);
-    }
-
-    // 0x4966A0 | ?DotCrossProdMtx@Matrix33@@QAEXABVVector3@@@Z
-    inline void DotCrossProdMtx(class Vector3 const& arg1)
-    {
-        return stub<member_func_t<void, Matrix33, class Vector3 const&>>(0x4966A0, this, arg1);
-    }
+    void Add(class Matrix33 const& arg1, class Matrix33 const& arg2);
 
     // 0x496750 | ?CrossProduct@Matrix33@@QAEXABVVector3@@@Z
-    inline void CrossProduct(class Vector3 const& arg1)
-    {
-        return stub<member_func_t<void, Matrix33, class Vector3 const&>>(0x496750, this, arg1);
-    }
-
-    // 0x496790 | ?Diagonal@Matrix33@@QAEXM@Z
-    inline void Diagonal(float arg1)
-    {
-        return stub<member_func_t<void, Matrix33, float>>(0x496790, this, arg1);
-    }
+    void CrossProduct(class Vector3 const& arg1);
 
     // 0x4967C0 | ?Diagonal@Matrix33@@QAEXABVVector3@@@Z
-    inline void Diagonal(class Vector3 const& arg1)
-    {
-        return stub<member_func_t<void, Matrix33, class Vector3 const&>>(0x4967C0, this, arg1);
-    }
+    void Diagonal(class Vector3 const& arg1);
 
-    // 0x4967F0 | ?Negate@Matrix33@@QAEXXZ
-    inline void Negate()
-    {
-        return stub<member_func_t<void, Matrix33>>(0x4967F0, this);
-    }
+    // 0x496790 | ?Diagonal@Matrix33@@QAEXM@Z
+    void Diagonal(f32 arg1);
 
-    // 0x496840 | ?Transpose@Matrix33@@QAEXXZ
-    inline void Transpose()
-    {
-        return stub<member_func_t<void, Matrix33>>(0x496840, this);
-    }
+    // 0x496490 | ?Dot@Matrix33@@QAEXABV1@@Z
+    void Dot(class Matrix33 const& arg1);
 
-    // 0x496870 | ?Transpose@Matrix33@@QAEXABV1@@Z
-    inline void Transpose(class Matrix33 const& arg1)
-    {
-        return stub<member_func_t<void, Matrix33, class Matrix33 const&>>(0x496870, this, arg1);
-    }
+    // 0x4965B0 | ?Dot@Matrix33@@QAEXABV1@0@Z
+    void Dot(class Matrix33 const& arg1, class Matrix33 const& arg2);
+
+    // 0x4966A0 | ?DotCrossProdMtx@Matrix33@@QAEXABVVector3@@@Z
+    void DotCrossProdMtx(class Vector3 const& arg1);
 
     // 0x4968B0 | ?Inverse@Matrix33@@QAEXXZ
-    inline void Inverse()
-    {
-        return stub<member_func_t<void, Matrix33>>(0x4968B0, this);
-    }
+    void Inverse();
 
     // 0x4969D0 | ?Inverse@Matrix33@@QAEXABV1@@Z
-    inline void Inverse(class Matrix33 const& arg1)
-    {
-        return stub<member_func_t<void, Matrix33, class Matrix33 const&>>(0x4969D0, this, arg1);
-    }
+    void Inverse(class Matrix33 const& arg1);
+
+    // 0x4963F0 | ?IsZero@Matrix33@@QBE_NXZ
+    bool IsZero();
+
+    // 0x4967F0 | ?Negate@Matrix33@@QAEXXZ
+    void Negate();
+
+    // 0x496230 | ?Set@Matrix33@@QAEXABV1@@Z
+    void Set(class Matrix33 const& arg1);
+
+    // 0x496330 | ?Subtract@Matrix33@@QAEXABV1@@Z
+    void Subtract(class Matrix33 const& arg1);
+
+    // 0x496390 | ?Subtract@Matrix33@@QAEXABV1@0@Z
+    void Subtract(class Matrix33 const& arg1, class Matrix33 const& arg2);
+
+    // 0x496840 | ?Transpose@Matrix33@@QAEXXZ
+    void Transpose();
+
+    // 0x496870 | ?Transpose@Matrix33@@QAEXABV1@@Z
+    void Transpose(class Matrix33 const& arg1);
 };
+
+check_size(Matrix33, 0x0);
+
+class Matrix66
+{
+public:
+    // 0x496A60 | ?Add@Matrix66@@QAEXABV1@@Z
+    void Add(class Matrix66 const& arg1);
+
+    // 0x496AA0 | ?Add@Matrix66@@QAEXABV1@0@Z
+    void Add(class Matrix66 const& arg1, class Matrix66 const& arg2);
+
+    // 0x496B80 | ?Dot@Matrix66@@QAEXABV1@@Z
+    void Dot(class Matrix66 const& arg1);
+
+    // 0x496D00 | ?Inverse@Matrix66@@QAEXXZ
+    void Inverse();
+
+    // 0x496D30 | ?Inverse@Matrix66@@QAEXABV1@@Z
+    void Inverse(class Matrix66 const& arg1);
+
+    // 0x496A00 | ?Set@Matrix66@@QAEXABV1@@Z
+    void Set(class Matrix66 const& arg1);
+
+    // 0x496A20 | ?Set@Matrix66@@QAEXABVMatrix33@@000@Z
+    void Set(
+        class Matrix33 const& arg1, class Matrix33 const& arg2, class Matrix33 const& arg3, class Matrix33 const& arg4);
+
+    // 0x496AF0 | ?Subtract@Matrix66@@QAEXABV1@@Z
+    void Subtract(class Matrix66 const& arg1);
+
+    // 0x496B30 | ?Subtract@Matrix66@@QAEXABV1@0@Z
+    void Subtract(class Matrix66 const& arg1, class Matrix66 const& arg2);
+
+    // 0x496C70 | ?Transpose@Matrix66@@QAEXXZ
+    void Transpose();
+
+    // 0x496CC0 | ?Transpose@Matrix66@@QAEXABV1@@Z
+    void Transpose(class Matrix66 const& arg1);
+};
+
+check_size(Matrix66, 0x0);

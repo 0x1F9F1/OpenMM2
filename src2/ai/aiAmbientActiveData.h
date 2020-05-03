@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "node/node.h"
+
 /*
     ai:aiAmbientActiveData
 
@@ -32,44 +34,29 @@
     0x5B5C20 | const aiVehicleData::`vftable' | ??_7aiVehicleData@@6B@
 */
 
-class aiVehicleData : asNode
+class aiVehicleData : public asNode
 {
+    // const aiVehicleData::`vftable' @ 0x5B5C20
+
 public:
-    // aiVehicleData::`vftable' @ 0x5B5C20
-
     // 0x56F770 | ??0aiVehicleData@@QAE@XZ
-    inline aiVehicleData()
-    {
-        stub<member_func_t<void, aiVehicleData>>(0x56F770, this);
-    }
+    aiVehicleData();
 
-    // 0x56F790 | ?SetFricElas@aiVehicleData@@QAEXXZ
-    inline void SetFricElas()
-    {
-        return stub<member_func_t<void, aiVehicleData>>(0x56F790, this);
-    }
-
+    // 0x56F910 | ??_GaiVehicleData@@UAEPAXI@Z
     // 0x5543A0 | ??1aiVehicleData@@UAE@XZ
-    inline ~aiVehicleData() override
-    {
-        stub<member_func_t<void, aiVehicleData>>(0x5543A0, this);
-    }
+    ~aiVehicleData() override;
 
     // 0x56F7C0 | ?FileIO@aiVehicleData@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
-    {
-        return stub<member_func_t<void, aiVehicleData, class datParser&>>(0x56F7C0, this, arg1);
-    }
+    void FileIO(class datParser& arg1) override;
 
     // 0x56F940 | ?GetClassName@aiVehicleData@@UAEPADXZ
-    inline char* GetClassName() override
-    {
-        return stub<member_func_t<char*, aiVehicleData>>(0x56F940, this);
-    }
+    char* GetClassName() override;
 
     // 0x56F950 | ?GetDirName@aiVehicleData@@UAEPBDXZ
-    inline char const* GetDirName() override
-    {
-        return stub<member_func_t<char const*, aiVehicleData>>(0x56F950, this);
-    }
+    char const* GetDirName() override;
+
+    // 0x56F790 | ?SetFricElas@aiVehicleData@@QAEXXZ
+    void SetFricElas();
 };
+
+check_size(aiVehicleData, 0xBC);

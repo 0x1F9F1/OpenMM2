@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -35,57 +35,32 @@
 struct audRedbook
 {
 public:
-    // 0x5A6C20 | ?Update@audRedbook@@QAE_NH@Z
-    inline bool Update(int32_t arg1)
-    {
-        return stub<member_func_t<bool, audRedbook, int32_t>>(0x5A6C20, this, arg1);
-    }
+    // 0x5A6DF0 | ?Destroy@audRedbook@@QAEXXZ
+    void Destroy();
 
     // 0x5A6C30 | ?GetStatus@audRedbook@@QAE?AW4AUD_OBJECTSTATUS@audObject@@XZ
-    inline enum audObject::AUD_OBJECTSTATUS GetStatus()
-    {
-        return stub<member_func_t<enum audObject::AUD_OBJECTSTATUS, audRedbook>>(0x5A6C30, this);
-    }
-
-    // 0x5A6CB0 | ?Play@audRedbook@@QAE_NXZ
-    inline bool Play()
-    {
-        return stub<member_func_t<bool, audRedbook>>(0x5A6CB0, this);
-    }
-
-    // 0x5A6D00 | ?Stop@audRedbook@@QAE_NXZ
-    inline bool Stop()
-    {
-        return stub<member_func_t<bool, audRedbook>>(0x5A6D00, this);
-    }
-
-    // 0x5A6D30 | ?SetVolume@audRedbook@@QAE_NM@Z
-    inline bool SetVolume(float arg1)
-    {
-        return stub<member_func_t<bool, audRedbook, float>>(0x5A6D30, this, arg1);
-    }
-
-    // 0x5A6D40 | ?SetPitch@audRedbook@@QAE_NM@Z
-    inline bool SetPitch(float arg1)
-    {
-        return stub<member_func_t<bool, audRedbook, float>>(0x5A6D40, this, arg1);
-    }
-
-    // 0x5A6D50 | ?SetPan@audRedbook@@QAE_NM@Z
-    inline bool SetPan(float arg1)
-    {
-        return stub<member_func_t<bool, audRedbook, float>>(0x5A6D50, this, arg1);
-    }
+    enum audObject::AUD_OBJECTSTATUS GetStatus();
 
     // 0x5A6D60 | ?PauseResume@audRedbook@@QAE_N_N@Z
-    inline bool PauseResume(bool arg1)
-    {
-        return stub<member_func_t<bool, audRedbook, bool>>(0x5A6D60, this, arg1);
-    }
+    bool PauseResume(bool arg1);
 
-    // 0x5A6DF0 | ?Destroy@audRedbook@@QAEXXZ
-    inline void Destroy()
-    {
-        return stub<member_func_t<void, audRedbook>>(0x5A6DF0, this);
-    }
+    // 0x5A6CB0 | ?Play@audRedbook@@QAE_NXZ
+    bool Play();
+
+    // 0x5A6D50 | ?SetPan@audRedbook@@QAE_NM@Z
+    bool SetPan(f32 arg1);
+
+    // 0x5A6D40 | ?SetPitch@audRedbook@@QAE_NM@Z
+    bool SetPitch(f32 arg1);
+
+    // 0x5A6D30 | ?SetVolume@audRedbook@@QAE_NM@Z
+    bool SetVolume(f32 arg1);
+
+    // 0x5A6D00 | ?Stop@audRedbook@@QAE_NXZ
+    bool Stop();
+
+    // 0x5A6C20 | ?Update@audRedbook@@QAE_NH@Z
+    bool Update(i32 arg1);
 };
+
+check_size(audRedbook, 0x0);

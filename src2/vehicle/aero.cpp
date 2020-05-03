@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,30 @@
 */
 
 #include "aero.h"
+
+vehAero::vehAero()
+{
+    unimplemented();
+}
+
+vehAero::~vehAero()
+{
+    unimplemented();
+}
+
+void vehAero::FileIO(class datParser& arg1)
+{
+    return stub<thiscall_t<void, vehAero*, class datParser&>>(0x4D96E0, this, arg1);
+}
+
+char* vehAero::GetClassName()
+{
+    return stub<thiscall_t<char*, vehAero*>>(0x4D9790, this);
+}
+
+void vehAero::Update()
+{
+    return stub<thiscall_t<void, vehAero*>>(0x4D9360, this);
+}
+
+define_dummy_symbol(vehicle_aero);

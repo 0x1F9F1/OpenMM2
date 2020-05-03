@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -30,8 +30,17 @@ class audMemObj
 {
 public:
     // 0x5A5E20 | ?audMemObjFree@audMemObj@@QAEXXZ
-    inline void audMemObjFree()
-    {
-        return stub<member_func_t<void, audMemObj>>(0x5A5E20, this);
-    }
+    void audMemObjFree();
+};
+
+check_size(audMemObj, 0x0);
+
+struct audMemMgr
+{
+public:
+    // 0x5A5E30 | ?audAlloc@audMemMgr@@SAPAVaudMemObj@@H@Z
+    static class audMemObj* audAlloc(i32 arg1);
+
+    // 0x5A5E70 | ?audFree@audMemMgr@@SA_NPAVaudMemObj@@@Z
+    static bool audFree(class audMemObj* arg1);
 };

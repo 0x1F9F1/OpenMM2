@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -26,15 +26,62 @@
     0x4C5D10 | public: static void __cdecl datArgParser::RestoreFromArchive(char *) | ?RestoreFromArchive@datArgParser@@SAXPAD@Z
     0x4C5EC0 | public: static int __cdecl datArgParser::SaveToArchive(char *) | ?SaveToArchive@datArgParser@@SAHPAD@Z
     0x4C6110 | public: static void __cdecl datArgParser::Kill(void) | ?Kill@datArgParser@@SAXXZ
-    public: static void __cdecl datArgParser::AddReplace(char const *,char *) | ?AddReplace@datArgParser@@SAXPBDPAD@Z
-    public: static bool __cdecl datArgParser::Get(char const *) | ?Get@datArgParser@@SA_NPBD@Z
+    0x4C6120 | public: static void __cdecl datArgParser::AddReplace(char const *,char *) | ?AddReplace@datArgParser@@SAXPBDPAD@Z
+    0x4C6190 | public: static bool __cdecl datArgParser::Get(char const *) | ?Get@datArgParser@@SA_NPBD@Z
     0x4C61C0 | public: static bool __cdecl datArgParser::Get(char const *,unsigned int,int &) | ?Get@datArgParser@@SA_NPBDIAAH@Z
     0x4C6210 | public: static bool __cdecl datArgParser::Get(char const *,unsigned int,float &) | ?Get@datArgParser@@SA_NPBDIAAM@Z
     0x4C6260 | public: static bool __cdecl datArgParser::Get(char const *,unsigned int,char const * *) | ?Get@datArgParser@@SA_NPBDIPAPBD@Z
-    public: static int __cdecl datArgParser::GetNum(char const *) | ?GetNum@datArgParser@@SAHPBD@Z
+    0x4C62A0 | public: static int __cdecl datArgParser::GetNum(char const *) | ?GetNum@datArgParser@@SAHPBD@Z
     public: static void __cdecl datArgParser::SetDebugLevel(char const *,int &) | ?SetDebugLevel@datArgParser@@SAXPBDAAH@Z
     public: static char const datArgParser::CMD_OPTION_PREFIX | ?CMD_OPTION_PREFIX@datArgParser@@2DB
     0x6A3C10 | private: static class HashTable datArgParser::ArgHash | ?ArgHash@datArgParser@@0VHashTable@@A
     0x6A3C28 | public: static char * * datArgParser::Argv | ?Argv@datArgParser@@2PAPADA
     0x6A3C30 | public: static int datArgParser::Argc | ?Argc@datArgParser@@2HA
 */
+
+struct datArgParser
+{
+public:
+    // 0x4C6120 | ?AddReplace@datArgParser@@SAXPBDPAD@Z
+    static void AddReplace(char const* arg1, char* arg2);
+
+    // 0x4C6190 | ?Get@datArgParser@@SA_NPBD@Z
+    static bool Get(char const* arg1);
+
+    // 0x4C6260 | ?Get@datArgParser@@SA_NPBDIPAPBD@Z
+    static bool Get(char const* arg1, u32 arg2, char const** arg3);
+
+    // 0x4C6210 | ?Get@datArgParser@@SA_NPBDIAAM@Z
+    static bool Get(char const* arg1, u32 arg2, f32& arg3);
+
+    // 0x4C61C0 | ?Get@datArgParser@@SA_NPBDIAAH@Z
+    static bool Get(char const* arg1, u32 arg2, i32& arg3);
+
+    // 0x4C62A0 | ?GetNum@datArgParser@@SAHPBD@Z
+    static i32 GetNum(char const* arg1);
+
+    // 0x4C5BB0 | ?Init@datArgParser@@SAXXZ
+    static void Init();
+
+    // 0x4C5BC0 | ?Init@datArgParser@@SAXHPAPAD@Z
+    static void Init(i32 arg1, char** arg2);
+
+    // 0x4C6110 | ?Kill@datArgParser@@SAXXZ
+    static void Kill();
+
+    // 0x4C5D10 | ?RestoreFromArchive@datArgParser@@SAXPAD@Z
+    static void RestoreFromArchive(char* arg1);
+
+    // 0x4C5EC0 | ?SaveToArchive@datArgParser@@SAHPAD@Z
+    static i32 SaveToArchive(char* arg1);
+
+    // 0x6A3C30 | ?Argc@datArgParser@@2HA
+    static inline extern_var(0x6A3C30, i32, Argc);
+
+    // 0x6A3C28 | ?Argv@datArgParser@@2PAPADA
+    static inline extern_var(0x6A3C28, char**, Argv);
+
+private:
+    // 0x6A3C10 | ?ArgHash@datArgParser@@0VHashTable@@A
+    static inline extern_var(0x6A3C10, class HashTable, ArgHash);
+};

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "node/node.h"
+
 /*
     vehicle:aero
 
@@ -31,38 +33,26 @@
     0x5B3034 | const vehAero::`vftable' | ??_7vehAero@@6B@
 */
 
-struct vehAero : asNode
+class vehAero : public asNode
 {
+    // const vehAero::`vftable' @ 0x5B3034
+
 public:
-    // vehAero::`vftable' @ 0x5B3034
-
     // 0x4D9320 | ??0vehAero@@QAE@XZ
-    inline vehAero()
-    {
-        stub<member_func_t<void, vehAero>>(0x4D9320, this);
-    }
+    vehAero();
 
+    // 0x4D9760 | ??_GvehAero@@UAEPAXI@Z
     // 0x4CCF00 | ??1vehAero@@UAE@XZ
-    inline ~vehAero() override
-    {
-        stub<member_func_t<void, vehAero>>(0x4CCF00, this);
-    }
-
-    // 0x4D9360 | ?Update@vehAero@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, vehAero>>(0x4D9360, this);
-    }
+    ~vehAero() override;
 
     // 0x4D96E0 | ?FileIO@vehAero@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
-    {
-        return stub<member_func_t<void, vehAero, class datParser&>>(0x4D96E0, this, arg1);
-    }
+    void FileIO(class datParser& arg1) override;
 
     // 0x4D9790 | ?GetClassName@vehAero@@UAEPADXZ
-    inline char* GetClassName() override
-    {
-        return stub<member_func_t<char*, vehAero>>(0x4D9790, this);
-    }
+    char* GetClassName() override;
+
+    // 0x4D9360 | ?Update@vehAero@@UAEXXZ
+    void Update() override;
 };
+
+check_size(vehAero, 0x0);

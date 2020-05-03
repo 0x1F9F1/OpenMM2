@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -59,219 +59,114 @@
     0x517390 | public: void * __thiscall SegmentWrapper::`vector deleting destructor'(unsigned int) | ??_ESegmentWrapper@@QAEPAXI@Z
 */
 
-// 0x517060 | ?ThreadProc@@YGKPAX@Z
-inline uint32_t __stdcall ThreadProc(void* arg1)
-{
-    return stub<stdcall_t<uint32_t, void*>>(0x517060, arg1);
-}
-
-// 0x5170F0 | ?ErrorDisplay@@YAXPAD0J@Z
-inline void ErrorDisplay(char* arg1, char* arg2, int32_t arg3)
-{
-    return stub<cdecl_t<void, char*, char*, int32_t>>(0x5170F0, arg1, arg2, arg3);
-}
-
 class DMusicObject
 {
 public:
     // 0x515D40 | ??0DMusicObject@@QAE@H@Z
-    inline DMusicObject(int32_t arg1)
-    {
-        stub<member_func_t<void, DMusicObject, int32_t>>(0x515D40, this, arg1);
-    }
+    DMusicObject(i32 arg1);
 
     // 0x515DF0 | ??1DMusicObject@@QAE@XZ
-    inline ~DMusicObject()
-    {
-        stub<member_func_t<void, DMusicObject>>(0x515DF0, this);
-    }
-
-    // 0x515F00 | ?CleanUpSegmentWrappers@DMusicObject@@QAEXXZ
-    inline void CleanUpSegmentWrappers()
-    {
-        return stub<member_func_t<void, DMusicObject>>(0x515F00, this);
-    }
-
-    // 0x515F60 | ?Init@DMusicObject@@QAEHPAUIDirectSound@@KHKK@Z
-    inline int32_t Init(struct IDirectSound* arg1, uint32_t arg2, int32_t arg3, uint32_t arg4, uint32_t arg5)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, struct IDirectSound*, uint32_t, int32_t, uint32_t, uint32_t>>(
-            0x515F60, this, arg1, arg2, arg3, arg4, arg5);
-    }
-
-    // 0x516050 | ?InitPerformance@DMusicObject@@AAEHPAUIDirectSound@@@Z
-    inline int32_t InitPerformance(struct IDirectSound* arg1)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, struct IDirectSound*>>(0x516050, this, arg1);
-    }
-
-    // 0x516120 | ?InitNotificationThread@DMusicObject@@AAEHXZ
-    inline int32_t InitNotificationThread()
-    {
-        return stub<member_func_t<int32_t, DMusicObject>>(0x516120, this);
-    }
-
-    // 0x516220 | ?InitLoader@DMusicObject@@AAEHXZ
-    inline int32_t InitLoader()
-    {
-        return stub<member_func_t<int32_t, DMusicObject>>(0x516220, this);
-    }
-
-    // 0x5162B0 | ?IsPlaying@DMusicObject@@QAEHXZ
-    inline int32_t IsPlaying()
-    {
-        return stub<member_func_t<int32_t, DMusicObject>>(0x5162B0, this);
-    }
-
-    // 0x5162D0 | ?HandleNotifications@DMusicObject@@QAEXXZ
-    inline void HandleNotifications()
-    {
-        return stub<member_func_t<void, DMusicObject>>(0x5162D0, this);
-    }
-
-    // 0x516300 | ?InitPort@DMusicObject@@AAEHPAUIDirectSound@@KHKK@Z
-    inline int32_t InitPort(struct IDirectSound* arg1, uint32_t arg2, int32_t arg3, uint32_t arg4, uint32_t arg5)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, struct IDirectSound*, uint32_t, int32_t, uint32_t, uint32_t>>(
-            0x516300, this, arg1, arg2, arg3, arg4, arg5);
-    }
-
-    // 0x5164B0 | ?AssignPChannelBlocks@DMusicObject@@AAEHK@Z
-    inline int32_t AssignPChannelBlocks(uint32_t arg1)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, uint32_t>>(0x5164B0, this, arg1);
-    }
-
-    // 0x516510 | ?FindBestPort@DMusicObject@@QAEHAAU_DMUS_PORTCAPS@@@Z
-    inline int32_t FindBestPort(struct _DMUS_PORTCAPS& arg1)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, struct _DMUS_PORTCAPS&>>(0x516510, this, arg1);
-    }
-
-    // 0x516520 | ?RatePort@DMusicObject@@AAEHAAU_DMUS_PORTCAPS@@@Z
-    inline int32_t RatePort(struct _DMUS_PORTCAPS& arg1)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, struct _DMUS_PORTCAPS&>>(0x516520, this, arg1);
-    }
-
-    // 0x516530 | ?GetNumPorts@DMusicObject@@QAEHXZ
-    inline int32_t GetNumPorts()
-    {
-        return stub<member_func_t<int32_t, DMusicObject>>(0x516530, this);
-    }
-
-    // 0x516540 | ?FindMSSoftWareSynth@DMusicObject@@QAEHAAU_DMUS_PORTCAPS@@@Z
-    inline int32_t FindMSSoftWareSynth(struct _DMUS_PORTCAPS& arg1)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, struct _DMUS_PORTCAPS&>>(0x516540, this, arg1);
-    }
-
-    // 0x516610 | ?SetSearchDirectory@DMusicObject@@QAEHPAD@Z
-    inline int32_t SetSearchDirectory(char* arg1)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, char*>>(0x516610, this, arg1);
-    }
-
-    // 0x516680 | ?ScanDirectory@DMusicObject@@QAEHXZ
-    inline int32_t ScanDirectory()
-    {
-        return stub<member_func_t<int32_t, DMusicObject>>(0x516680, this);
-    }
-
-    // 0x516750 | ?OpenSegmentFile@DMusicObject@@QAEHPADH_N@Z
-    inline int32_t OpenSegmentFile(char* arg1, int32_t arg2, bool arg3)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, char*, int32_t, bool>>(0x516750, this, arg1, arg2, arg3);
-    }
-
-    // 0x516860 | ?PlaySegment@DMusicObject@@QAEHK@Z
-    inline int32_t PlaySegment(uint32_t arg1)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, uint32_t>>(0x516860, this, arg1);
-    }
-
-    // 0x5168A0 | ?PlayMotif@DMusicObject@@QAEHHK@Z
-    inline int32_t PlayMotif(int32_t arg1, uint32_t arg2)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, int32_t, uint32_t>>(0x5168A0, this, arg1, arg2);
-    }
-
-    // 0x516900 | ?StopSegment@DMusicObject@@QAEHH@Z
-    inline int32_t StopSegment(int32_t arg1)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, int32_t>>(0x516900, this, arg1);
-    }
-
-    // 0x516970 | ?LoadMotif@DMusicObject@@QAEHPAD0H@Z
-    inline int32_t LoadMotif(char* arg1, char* arg2, int32_t arg3)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, char*, char*, int32_t>>(0x516970, this, arg1, arg2, arg3);
-    }
-
-    // 0x516BB0 | ?LoadBand@DMusicObject@@QAEHPADHH@Z
-    inline int32_t LoadBand(char* arg1, int32_t arg2, int32_t arg3)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, char*, int32_t, int32_t>>(0x516BB0, this, arg1, arg2, arg3);
-    }
-
-    // 0x516CD0 | ?AllocateMotifs@DMusicObject@@QAEXH@Z
-    inline void AllocateMotifs(int32_t arg1)
-    {
-        return stub<member_func_t<void, DMusicObject, int32_t>>(0x516CD0, this, arg1);
-    }
-
-    // 0x516D60 | ?PlayBand@DMusicObject@@QAEHHH@Z
-    inline int32_t PlayBand(int32_t arg1, int32_t arg2)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, int32_t, int32_t>>(0x516D60, this, arg1, arg2);
-    }
-
-    // 0x516DE0 | ?CreateComposer@DMusicObject@@QAEHXZ
-    inline int32_t CreateComposer()
-    {
-        return stub<member_func_t<int32_t, DMusicObject>>(0x516DE0, this);
-    }
-
-    // 0x516E20 | ?SegmentSwitch@DMusicObject@@QAEHH@Z
-    inline int32_t SegmentSwitch(int32_t arg1)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, int32_t>>(0x516E20, this, arg1);
-    }
-
-    // 0x516E90 | ?SegmentSwitch@DMusicObject@@QAEHHGK@Z
-    inline int32_t SegmentSwitch(int32_t arg1, uint16_t arg2, uint32_t arg3)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, int32_t, uint16_t, uint32_t>>(
-            0x516E90, this, arg1, arg2, arg3);
-    }
-
-    // 0x516FB0 | ?ScaleMasterVolume@DMusicObject@@QAEHJ@Z
-    inline int32_t ScaleMasterVolume(int32_t arg1)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, int32_t>>(0x516FB0, this, arg1);
-    }
-
-    // 0x516FF0 | ?SetGrooveLevel@DMusicObject@@AAEHEE@Z
-    inline int32_t SetGrooveLevel(uint8_t arg1, uint8_t arg2)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, uint8_t, uint8_t>>(0x516FF0, this, arg1, arg2);
-    }
-
-    // 0x517020 | ?ScaleMasterTempo@DMusicObject@@QAEHM@Z
-    inline int32_t ScaleMasterTempo(float arg1)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, float>>(0x517020, this, arg1);
-    }
+    ~DMusicObject();
 
     // 0x5170A0 | ?Activate@DMusicObject@@QAEHH@Z
-    inline int32_t Activate(int32_t arg1)
-    {
-        return stub<member_func_t<int32_t, DMusicObject, int32_t>>(0x5170A0, this, arg1);
-    }
+    i32 Activate(i32 arg1);
+
+    // 0x516CD0 | ?AllocateMotifs@DMusicObject@@QAEXH@Z
+    void AllocateMotifs(i32 arg1);
+
+    // 0x515F00 | ?CleanUpSegmentWrappers@DMusicObject@@QAEXXZ
+    void CleanUpSegmentWrappers();
+
+    // 0x516DE0 | ?CreateComposer@DMusicObject@@QAEHXZ
+    i32 CreateComposer();
+
+    // 0x516510 | ?FindBestPort@DMusicObject@@QAEHAAU_DMUS_PORTCAPS@@@Z
+    i32 FindBestPort(struct _DMUS_PORTCAPS& arg1);
+
+    // 0x516540 | ?FindMSSoftWareSynth@DMusicObject@@QAEHAAU_DMUS_PORTCAPS@@@Z
+    i32 FindMSSoftWareSynth(struct _DMUS_PORTCAPS& arg1);
 
     // 0x5170E0 | ?GetDMusicWaveBuffer@DMusicObject@@QAEPAVDMusicWaveBuffer@@XZ
-    inline class DMusicWaveBuffer* GetDMusicWaveBuffer()
-    {
-        return stub<member_func_t<class DMusicWaveBuffer*, DMusicObject>>(0x5170E0, this);
-    }
+    class DMusicWaveBuffer* GetDMusicWaveBuffer();
+
+    // 0x516530 | ?GetNumPorts@DMusicObject@@QAEHXZ
+    i32 GetNumPorts();
+
+    // 0x5162D0 | ?HandleNotifications@DMusicObject@@QAEXXZ
+    void HandleNotifications();
+
+    // 0x515F60 | ?Init@DMusicObject@@QAEHPAUIDirectSound@@KHKK@Z
+    i32 Init(struct IDirectSound* arg1, u32 arg2, i32 arg3, u32 arg4, u32 arg5);
+
+    // 0x5162B0 | ?IsPlaying@DMusicObject@@QAEHXZ
+    i32 IsPlaying();
+
+    // 0x516BB0 | ?LoadBand@DMusicObject@@QAEHPADHH@Z
+    i32 LoadBand(char* arg1, i32 arg2, i32 arg3);
+
+    // 0x516970 | ?LoadMotif@DMusicObject@@QAEHPAD0H@Z
+    i32 LoadMotif(char* arg1, char* arg2, i32 arg3);
+
+    // 0x516750 | ?OpenSegmentFile@DMusicObject@@QAEHPADH_N@Z
+    i32 OpenSegmentFile(char* arg1, i32 arg2, bool arg3);
+
+    // 0x516D60 | ?PlayBand@DMusicObject@@QAEHHH@Z
+    i32 PlayBand(i32 arg1, i32 arg2);
+
+    // 0x5168A0 | ?PlayMotif@DMusicObject@@QAEHHK@Z
+    i32 PlayMotif(i32 arg1, u32 arg2);
+
+    // 0x516860 | ?PlaySegment@DMusicObject@@QAEHK@Z
+    i32 PlaySegment(u32 arg1);
+
+    // 0x517020 | ?ScaleMasterTempo@DMusicObject@@QAEHM@Z
+    i32 ScaleMasterTempo(f32 arg1);
+
+    // 0x516FB0 | ?ScaleMasterVolume@DMusicObject@@QAEHJ@Z
+    i32 ScaleMasterVolume(i32 arg1);
+
+    // 0x516680 | ?ScanDirectory@DMusicObject@@QAEHXZ
+    i32 ScanDirectory();
+
+    // 0x516E20 | ?SegmentSwitch@DMusicObject@@QAEHH@Z
+    i32 SegmentSwitch(i32 arg1);
+
+    // 0x516E90 | ?SegmentSwitch@DMusicObject@@QAEHHGK@Z
+    i32 SegmentSwitch(i32 arg1, u16 arg2, u32 arg3);
+
+    // 0x516610 | ?SetSearchDirectory@DMusicObject@@QAEHPAD@Z
+    i32 SetSearchDirectory(char* arg1);
+
+    // 0x516900 | ?StopSegment@DMusicObject@@QAEHH@Z
+    i32 StopSegment(i32 arg1);
+
+private:
+    // 0x5164B0 | ?AssignPChannelBlocks@DMusicObject@@AAEHK@Z
+    i32 AssignPChannelBlocks(u32 arg1);
+
+    // 0x516220 | ?InitLoader@DMusicObject@@AAEHXZ
+    i32 InitLoader();
+
+    // 0x516120 | ?InitNotificationThread@DMusicObject@@AAEHXZ
+    i32 InitNotificationThread();
+
+    // 0x516050 | ?InitPerformance@DMusicObject@@AAEHPAUIDirectSound@@@Z
+    i32 InitPerformance(struct IDirectSound* arg1);
+
+    // 0x516300 | ?InitPort@DMusicObject@@AAEHPAUIDirectSound@@KHKK@Z
+    i32 InitPort(struct IDirectSound* arg1, u32 arg2, i32 arg3, u32 arg4, u32 arg5);
+
+    // 0x516520 | ?RatePort@DMusicObject@@AAEHAAU_DMUS_PORTCAPS@@@Z
+    i32 RatePort(struct _DMUS_PORTCAPS& arg1);
+
+    // 0x516FF0 | ?SetGrooveLevel@DMusicObject@@AAEHEE@Z
+    i32 SetGrooveLevel(u8 arg1, u8 arg2);
 };
+
+check_size(DMusicObject, 0x38);
+
+// 0x5170F0 | ?ErrorDisplay@@YAXPAD0J@Z
+void ErrorDisplay(char* arg1, char* arg2, i32 arg3);
+
+// 0x517060 | ?ThreadProc@@YGKPAX@Z
+u32 __stdcall ThreadProc(void* arg1);

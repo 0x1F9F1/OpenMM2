@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "carcs.h"
+
 /*
     camera:aics
 
@@ -33,56 +35,35 @@
     0x5B501C | const camAICS::`vftable' | ??_7camAICS@@6B@
 */
 
-struct camAICS : camCarCS
+class camAICS : public camCarCS
 {
-public:
-    // camAICS::`vftable' @ 0x5B501C
+    // const camAICS::`vftable' @ 0x5B501C
 
+public:
     // 0x520A30 | ??0camAICS@@QAE@XZ
-    inline camAICS()
-    {
-        stub<member_func_t<void, camAICS>>(0x520A30, this);
-    }
+    camAICS();
+
+    // 0x520F80 | ??_GcamAICS@@UAEPAXI@Z
+    // 0x406810 | ??1camAICS@@UAE@XZ
+    ~camAICS() override;
 
     // 0x520A70 | ?Init@camAICS@@QAEXPAVvehCar@@@Z
-    inline void Init(class vehCar* arg1)
-    {
-        return stub<member_func_t<void, camAICS, class vehCar*>>(0x520A70, this, arg1);
-    }
-
-    // 0x520AC0 | ?SetPosition@camAICS@@QAEXAAVVector3@@@Z
-    inline void SetPosition(class Vector3& arg1)
-    {
-        return stub<member_func_t<void, camAICS, class Vector3&>>(0x520AC0, this, arg1);
-    }
-
-    // 0x520AE0 | ?SetMatrix@camAICS@@QAEXPAVMatrix34@@@Z
-    inline void SetMatrix(class Matrix34* arg1)
-    {
-        return stub<member_func_t<void, camAICS, class Matrix34*>>(0x520AE0, this, arg1);
-    }
-
-    // 0x406810 | ??1camAICS@@UAE@XZ
-    inline ~camAICS() override
-    {
-        stub<member_func_t<void, camAICS>>(0x406810, this);
-    }
-
-    // 0x520C50 | ?Update@camAICS@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, camAICS>>(0x520C50, this);
-    }
-
-    // 0x520AB0 | ?Reset@camAICS@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, camAICS>>(0x520AB0, this);
-    }
+    void Init(class vehCar* arg1);
 
     // 0x520BA0 | ?MakeActive@camAICS@@UAEXXZ
-    inline void MakeActive() override
-    {
-        return stub<member_func_t<void, camAICS>>(0x520BA0, this);
-    }
+    void MakeActive() override;
+
+    // 0x520AB0 | ?Reset@camAICS@@UAEXXZ
+    void Reset() override;
+
+    // 0x520AE0 | ?SetMatrix@camAICS@@QAEXPAVMatrix34@@@Z
+    void SetMatrix(class Matrix34* arg1);
+
+    // 0x520AC0 | ?SetPosition@camAICS@@QAEXAAVVector3@@@Z
+    void SetPosition(class Vector3& arg1);
+
+    // 0x520C50 | ?Update@camAICS@@UAEXXZ
+    void Update() override;
 };
+
+check_size(camAICS, 0x0);

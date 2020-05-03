@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     camera:viewcs
@@ -39,81 +41,47 @@
     0x5B4F18 | const camViewCS::`vftable' | ??_7camViewCS@@6B@
 */
 
-class camViewCS : asNode
+class camViewCS : public asNode
 {
+    // const camViewCS::`vftable' @ 0x5B4F18
+
 public:
-    // camViewCS::`vftable' @ 0x5B4F18
-
     // 0x51FD70 | ??0camViewCS@@QAE@XZ
-    inline camViewCS()
-    {
-        stub<member_func_t<void, camViewCS>>(0x51FD70, this);
-    }
+    camViewCS();
 
-    // 0x51FE30 | ?Instance@camViewCS@@SAPAV1@AAVvehCar@@@Z
-    static inline class camViewCS* Instance(class vehCar& arg1)
-    {
-        return stub<cdecl_t<class camViewCS*, class vehCar&>>(0x51FE30, arg1);
-    }
-
-    // 0x51FE90 | ?SetCam@camViewCS@@QAEXPAVcamCarCS@@@Z
-    inline void SetCam(class camCarCS* arg1)
-    {
-        return stub<member_func_t<void, camViewCS, class camCarCS*>>(0x51FE90, this, arg1);
-    }
-
-    // 0x51FF30 | ?NewCam@camViewCS@@QAEHPAVcamCarCS@@HMVdatCallback@@@Z
-    inline int32_t NewCam(class camCarCS* arg1, int32_t arg2, float arg3, class datCallback arg4)
-    {
-        return stub<member_func_t<int32_t, camViewCS, class camCarCS*, int32_t, float, class datCallback>>(
-            0x51FF30, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x51FFF0 | ?Init@camViewCS@@QAEXPAVvehCar@@@Z
-    inline void Init(class vehCar* arg1)
-    {
-        return stub<member_func_t<void, camViewCS, class vehCar*>>(0x51FFF0, this, arg1);
-    }
-
-    // 0x520080 | ?ForceMatrixDelta@camViewCS@@QAEXABVMatrix34@@@Z
-    inline void ForceMatrixDelta(class Matrix34 const& arg1)
-    {
-        return stub<member_func_t<void, camViewCS, class Matrix34 const&>>(0x520080, this, arg1);
-    }
-
-    // 0x5200A0 | ?ForceMatrixDelta@camViewCS@@QAEXABVVector3@@@Z
-    inline void ForceMatrixDelta(class Vector3 const& arg1)
-    {
-        return stub<member_func_t<void, camViewCS, class Vector3 const&>>(0x5200A0, this, arg1);
-    }
-
-    // 0x5200C0 | ?OneShot@camViewCS@@QAEXXZ
-    inline void OneShot()
-    {
-        return stub<member_func_t<void, camViewCS>>(0x5200C0, this);
-    }
-
+    // 0x5200E0 | ??_GcamViewCS@@UAEPAXI@Z
     // 0x51FE20 | ??1camViewCS@@UAE@XZ
-    inline ~camViewCS() override
-    {
-        stub<member_func_t<void, camViewCS>>(0x51FE20, this);
-    }
-
-    // 0x51FFC0 | ?Update@camViewCS@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, camViewCS>>(0x51FFC0, this);
-    }
-
-    // 0x520010 | ?Reset@camViewCS@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, camViewCS>>(0x520010, this);
-    }
+    ~camViewCS() override;
 
     // 0x5200D0 | ?FileIO@camViewCS@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
-    {
-        return stub<member_func_t<void, camViewCS, class datParser&>>(0x5200D0, this, arg1);
-    }
+    void FileIO(class datParser& arg1) override;
+
+    // 0x520080 | ?ForceMatrixDelta@camViewCS@@QAEXABVMatrix34@@@Z
+    void ForceMatrixDelta(class Matrix34 const& arg1);
+
+    // 0x5200A0 | ?ForceMatrixDelta@camViewCS@@QAEXABVVector3@@@Z
+    void ForceMatrixDelta(class Vector3 const& arg1);
+
+    // 0x51FFF0 | ?Init@camViewCS@@QAEXPAVvehCar@@@Z
+    void Init(class vehCar* arg1);
+
+    // 0x51FF30 | ?NewCam@camViewCS@@QAEHPAVcamCarCS@@HMVdatCallback@@@Z
+    i32 NewCam(class camCarCS* arg1, i32 arg2, f32 arg3, class datCallback arg4);
+
+    // 0x5200C0 | ?OneShot@camViewCS@@QAEXXZ
+    void OneShot();
+
+    // 0x520010 | ?Reset@camViewCS@@UAEXXZ
+    void Reset() override;
+
+    // 0x51FE90 | ?SetCam@camViewCS@@QAEXPAVcamCarCS@@@Z
+    void SetCam(class camCarCS* arg1);
+
+    // 0x51FFC0 | ?Update@camViewCS@@UAEXXZ
+    void Update() override;
+
+    // 0x51FE30 | ?Instance@camViewCS@@SAPAV1@AAVvehCar@@@Z
+    static class camViewCS* Instance(class vehCar& arg1);
 };
+
+check_size(camViewCS, 0x4C);

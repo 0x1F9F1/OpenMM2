@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -42,114 +42,59 @@
     0x682B90 | class Matrix44 * mtxstack | ?mtxstack@@3PAVMatrix44@@A
 */
 
-// 0x4A6970 | ?rglOpenPipe@@YAXHH_N@Z
-inline void rglOpenPipe(int32_t arg1, int32_t arg2, bool arg3)
-{
-    return stub<cdecl_t<void, int32_t, int32_t, bool>>(0x4A6970, arg1, arg2, arg3);
-}
-
-// 0x4A6A00 | ?rglClosePipe@@YAXXZ
-inline void rglClosePipe()
-{
-    return stub<cdecl_t<void>>(0x4A6A00);
-}
+// 0x4A6A70 | ?rglAlive@@YAHXZ
+i32 rglAlive();
 
 // 0x4A6A10 | ?rglBeginFrame@@YAXI@Z
-inline void rglBeginFrame(uint32_t arg1)
-{
-    return stub<cdecl_t<void, uint32_t>>(0x4A6A10, arg1);
-}
-
-// 0x4A6A40 | ?rglEndFrame@@YAXXZ
-inline void rglEndFrame()
-{
-    return stub<cdecl_t<void>>(0x4A6A40);
-}
+void rglBeginFrame(u32 arg1);
 
 // 0x4A6A50 | ?rglCameraMatrix@@YAXABVMatrix34@@@Z
-inline void rglCameraMatrix(class Matrix34 const& arg1)
-{
-    return stub<cdecl_t<void, class Matrix34 const&>>(0x4A6A50, arg1);
-}
+void rglCameraMatrix(class Matrix34 const& arg1);
 
-// 0x4A6A70 | ?rglAlive@@YAHXZ
-inline int32_t rglAlive()
-{
-    return stub<cdecl_t<int32_t>>(0x4A6A70);
-}
-
-// 0x4A6AB0 | ?rglDrawBox@@YAXABVVector3@@ABVMatrix34@@@Z
-inline void rglDrawBox(class Vector3 const& arg1, class Matrix34 const& arg2)
-{
-    return stub<cdecl_t<void, class Vector3 const&, class Matrix34 const&>>(0x4A6AB0, arg1, arg2);
-}
-
-// 0x4A6D30 | ?rglDrawSolidBox@@YAXABVVector3@@ABVMatrix34@@0@Z
-inline void rglDrawSolidBox(class Vector3 const& arg1, class Matrix34 const& arg2, class Vector3 const& arg3)
-{
-    return stub<cdecl_t<void, class Vector3 const&, class Matrix34 const&, class Vector3 const&>>(
-        0x4A6D30, arg1, arg2, arg3);
-}
+// 0x4A6A00 | ?rglClosePipe@@YAXXZ
+void rglClosePipe();
 
 // 0x4A7050 | ?rglDrawAxis@@YAXMABVMatrix34@@@Z
-inline void rglDrawAxis(float arg1, class Matrix34 const& arg2)
-{
-    return stub<cdecl_t<void, float, class Matrix34 const&>>(0x4A7050, arg1, arg2);
-}
+void rglDrawAxis(f32 arg1, class Matrix34 const& arg2);
 
-// 0x4A70F0 | ?rglDrawSphere@@YAXMH@Z
-inline void rglDrawSphere(float arg1, int32_t arg2)
-{
-    return stub<cdecl_t<void, float, int32_t>>(0x4A70F0, arg1, arg2);
-}
-
-// 0x4A7200 | ?rglDrawSphere@@YAXMABVMatrix34@@H@Z
-inline void rglDrawSphere(float arg1, class Matrix34 const& arg2, int32_t arg3)
-{
-    return stub<cdecl_t<void, float, class Matrix34 const&, int32_t>>(0x4A7200, arg1, arg2, arg3);
-}
+// 0x4A6AB0 | ?rglDrawBox@@YAXABVVector3@@ABVMatrix34@@@Z
+void rglDrawBox(class Vector3 const& arg1, class Matrix34 const& arg2);
 
 // 0x4A7230 | ?rglDrawEllipsoid@@YAXABVVector3@@ABVMatrix34@@H@Z
-inline void rglDrawEllipsoid(class Vector3 const& arg1, class Matrix34 const& arg2, int32_t arg3)
-{
-    return stub<cdecl_t<void, class Vector3 const&, class Matrix34 const&, int32_t>>(0x4A7230, arg1, arg2, arg3);
-}
+void rglDrawEllipsoid(class Vector3 const& arg1, class Matrix34 const& arg2, i32 arg3);
 
 // 0x4A7310 | ?rglDrawParticle@@YAXABVVector3@@MABVVector4@@@Z
-inline void rglDrawParticle(class Vector3 const& arg1, float arg2, class Vector4 const& arg3)
-{
-    return stub<cdecl_t<void, class Vector3 const&, float, class Vector4 const&>>(0x4A7310, arg1, arg2, arg3);
-}
+void rglDrawParticle(class Vector3 const& arg1, f32 arg2, class Vector4 const& arg3);
 
-// 0x4A7540 | ?rglResetDrawTexture@@YAXXZ
-inline void rglResetDrawTexture()
-{
-    return stub<cdecl_t<void>>(0x4A7540);
-}
+// 0x4A6D30 | ?rglDrawSolidBox@@YAXABVVector3@@ABVMatrix34@@0@Z
+void rglDrawSolidBox(class Vector3 const& arg1, class Matrix34 const& arg2, class Vector3 const& arg3);
+
+// 0x4A70F0 | ?rglDrawSphere@@YAXMH@Z
+void rglDrawSphere(f32 arg1, i32 arg2);
+
+// 0x4A7200 | ?rglDrawSphere@@YAXMABVMatrix34@@H@Z
+void rglDrawSphere(f32 arg1, class Matrix34 const& arg2, i32 arg3);
 
 // 0x4A7560 | ?rglDrawTexture@@YAXPAVgfxTexture@@@Z
-inline void rglDrawTexture(class gfxTexture* arg1)
-{
-    return stub<cdecl_t<void, class gfxTexture*>>(0x4A7560, arg1);
-}
+void rglDrawTexture(class gfxTexture* arg1);
 
-// 0x4A7750 | ?rglPushMatrix@@YAXXZ
-inline void rglPushMatrix()
-{
-    return stub<cdecl_t<void>>(0x4A7750);
-}
-
-// 0x4A7790 | ?rglPopMatrix@@YAXXZ
-inline void rglPopMatrix()
-{
-    return stub<cdecl_t<void>>(0x4A7790);
-}
+// 0x4A6A40 | ?rglEndFrame@@YAXXZ
+void rglEndFrame();
 
 // 0x4A77D0 | ?rglMultMatrix@@YAXAAVMatrix34@@@Z
-inline void rglMultMatrix(class Matrix34& arg1)
-{
-    return stub<cdecl_t<void, class Matrix34&>>(0x4A77D0, arg1);
-}
+void rglMultMatrix(class Matrix34& arg1);
+
+// 0x4A6970 | ?rglOpenPipe@@YAXHH_N@Z
+void rglOpenPipe(i32 arg1, i32 arg2, bool arg3);
+
+// 0x4A7790 | ?rglPopMatrix@@YAXXZ
+void rglPopMatrix();
+
+// 0x4A7750 | ?rglPushMatrix@@YAXXZ
+void rglPushMatrix();
+
+// 0x4A7540 | ?rglResetDrawTexture@@YAXXZ
+void rglResetDrawTexture();
 
 // 0x682B90 | ?mtxstack@@3PAVMatrix44@@A
 inline extern_var(0x682B90, class Matrix44*, mtxstack);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "node/node.h"
+
 /*
     mmeffects:mousesteerbar
 
@@ -32,29 +34,22 @@
     0x5B53C0 | const mmMouseSteerBar::`vftable' | ??_7mmMouseSteerBar@@6B@
 */
 
-struct mmMouseSteerBar : asNode
+class mmMouseSteerBar : public asNode
 {
+    // const mmMouseSteerBar::`vftable' @ 0x5B53C0
+
 public:
-    // mmMouseSteerBar::`vftable' @ 0x5B53C0
-
-    // 0x534450 | ?Init@mmMouseSteerBar@@QAEXMMPAM@Z
-    inline void Init(float arg1, float arg2, float* arg3)
-    {
-        return stub<member_func_t<void, mmMouseSteerBar, float, float, float*>>(0x534450, this, arg1, arg2, arg3);
-    }
-
     // 0x534580 | ??_GmmMouseSteerBar@@UAEPAXI@Z
-    // Skipped (scalar/vector destructor)
+    ~mmMouseSteerBar() override;
 
     // 0x534500 | ?Cull@mmMouseSteerBar@@UAEXXZ
-    inline void Cull() override
-    {
-        return stub<member_func_t<void, mmMouseSteerBar>>(0x534500, this);
-    }
+    void Cull() override;
+
+    // 0x534450 | ?Init@mmMouseSteerBar@@QAEXMMPAM@Z
+    void Init(f32 arg1, f32 arg2, f32* arg3);
 
     // 0x5344D0 | ?Update@mmMouseSteerBar@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmMouseSteerBar>>(0x5344D0, this);
-    }
+    void Update() override;
 };
+
+check_size(mmMouseSteerBar, 0x0);

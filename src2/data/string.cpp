@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,10 @@
 */
 
 #include "string.h"
+
+char* formatf(char* arg1, i32 arg2, char const* arg3, ...)
+{
+    unimplemented();
+}
+
+define_dummy_symbol(data_string);

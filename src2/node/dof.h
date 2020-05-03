@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "linear.h"
+
 /*
     node:dof
 
@@ -32,50 +34,33 @@
     0x5B86E8 | const asDofCS::`vftable' | ??_7asDofCS@@6B@
 */
 
-class asDofCS : asLinearCS
+class asDofCS : public asLinearCS
 {
-public:
-    // asDofCS::`vftable' @ 0x5B86E8
+    // const asDofCS::`vftable' @ 0x5B86E8
 
+public:
     // 0x596E20 | ??0asDofCS@@QAE@XZ
-    inline asDofCS()
-    {
-        stub<member_func_t<void, asDofCS>>(0x596E20, this);
-    }
+    asDofCS();
+
+    // 0x4F7990 | ??_EasDofCS@@UAEPAXI@Z
+    // 0x4F79F0 | ??1asDofCS@@UAE@XZ
+    // 0x597760 | ??_GasDofCS@@UAEPAXI@Z
+    ~asDofCS() override;
 
     // 0x596F10 | ??4asDofCS@@QAEXABV0@@Z
-    inline void operator=(class asDofCS const& arg1)
-    {
-        return stub<member_func_t<void, asDofCS, class asDofCS const&>>(0x596F10, this, arg1);
-    }
-
-    // 0x597080 | ?SetTime@asDofCS@@QAEXMMH@Z
-    inline void SetTime(float arg1, float arg2, int32_t arg3)
-    {
-        return stub<member_func_t<void, asDofCS, float, float, int32_t>>(0x597080, this, arg1, arg2, arg3);
-    }
+    void operator=(class asDofCS const& arg1);
 
     // 0x597750 | ?AddWidgets@asDofCS@@QAEXPAVBank@@@Z
-    inline void AddWidgets(class Bank* arg1)
-    {
-        return stub<member_func_t<void, asDofCS, class Bank*>>(0x597750, this, arg1);
-    }
-
-    // 0x4F79F0 | ??1asDofCS@@UAE@XZ
-    inline ~asDofCS() override
-    {
-        stub<member_func_t<void, asDofCS>>(0x4F79F0, this);
-    }
-
-    // 0x5970F0 | ?Update@asDofCS@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, asDofCS>>(0x5970F0, this);
-    }
+    void AddWidgets(class Bank* arg1);
 
     // 0x597050 | ?Reset@asDofCS@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, asDofCS>>(0x597050, this);
-    }
+    void Reset() override;
+
+    // 0x597080 | ?SetTime@asDofCS@@QAEXMMH@Z
+    void SetTime(f32 arg1, f32 arg2, i32 arg3);
+
+    // 0x5970F0 | ?Update@asDofCS@@UAEXXZ
+    void Update() override;
 };
+
+check_size(asDofCS, 0xF0);

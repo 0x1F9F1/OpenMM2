@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -32,30 +32,23 @@
 
 struct datRefCount
 {
-public:
-    // datRefCount::`vftable' @ 0x5B8740
+    // const datRefCount::`vftable' @ 0x5B8740
 
-    // 0x59AAD0 | ??0datRefCount@@IAE@XZ
-    inline datRefCount()
-    {
-        stub<member_func_t<void, datRefCount>>(0x59AAD0, this);
-    }
+protected:
+    // 0x59AB20 | ??_GdatRefCount@@MAEPAXI@Z
+    // 0x59AAE0 | ??1datRefCount@@MAE@XZ
+    virtual ~datRefCount();
+
+public:
+    // 0x59AB00 | ?DecRef@datRefCount@@QBEHXZ
+    i32 DecRef();
 
     // 0x59AAF0 | ?IncRef@datRefCount@@QBEHXZ
-    inline int32_t IncRef()
-    {
-        return stub<member_func_t<int32_t, datRefCount>>(0x59AAF0, this);
-    }
+    i32 IncRef();
 
-    // 0x59AB00 | ?DecRef@datRefCount@@QBEHXZ
-    inline int32_t DecRef()
-    {
-        return stub<member_func_t<int32_t, datRefCount>>(0x59AB00, this);
-    }
-
-    // 0x59AAE0 | ??1datRefCount@@MAE@XZ
-    virtual inline ~datRefCount()
-    {
-        stub<member_func_t<void, datRefCount>>(0x59AAE0, this);
-    }
+protected:
+    // 0x59AAD0 | ??0datRefCount@@IAE@XZ
+    datRefCount();
 };
+
+check_size(datRefCount, 0x0);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -49,136 +49,83 @@
 
 class phMaterial
 {
+    // const phMaterial::`vftable' @ 0x5B2404
+
 public:
-    // phMaterial::`vftable' @ 0x5B2404
-
     // 0x492FF0 | ??0phMaterial@@QAE@XZ
-    inline phMaterial()
-    {
-        stub<member_func_t<void, phMaterial>>(0x492FF0, this);
-    }
-
-    // 0x493050 | ?SetName@phMaterial@@QAEXPBD@Z
-    inline void SetName(char const* arg1)
-    {
-        return stub<member_func_t<void, phMaterial, char const*>>(0x493050, this, arg1);
-    }
+    phMaterial();
 
     // 0x493070 | ?Load@phMaterial@@QAEXAAVdatAsciiTokenizer@@@Z
-    inline void Load(class datAsciiTokenizer& arg1)
-    {
-        return stub<member_func_t<void, phMaterial, class datAsciiTokenizer&>>(0x493070, this, arg1);
-    }
+    void Load(class datAsciiTokenizer& arg1);
 
     // 0x4932A0 | ?LoadBinary@phMaterial@@QAEXPAVStream@@@Z
-    inline void LoadBinary(class Stream* arg1)
-    {
-        return stub<member_func_t<void, phMaterial, class Stream*>>(0x4932A0, this, arg1);
-    }
+    void LoadBinary(class Stream* arg1);
+
+    // 0x493050 | ?SetName@phMaterial@@QAEXPBD@Z
+    void SetName(char const* arg1);
 
     // 0x493270 | ?Copy@phMaterial@@UAEXABV1@@Z
-    virtual inline void Copy(class phMaterial const& arg1)
-    {
-        return stub<member_func_t<void, phMaterial, class phMaterial const&>>(0x493270, this, arg1);
-    }
+    virtual void Copy(class phMaterial const& arg1);
 
     // 0x493160 | ?Save@phMaterial@@UAEXAAVdatAsciiTokenizer@@@Z
-    virtual inline void Save(class datAsciiTokenizer& arg1)
-    {
-        return stub<member_func_t<void, phMaterial, class datAsciiTokenizer&>>(0x493160, this, arg1);
-    }
+    virtual void Save(class datAsciiTokenizer& arg1);
 
     // 0x493340 | ?SaveBinary@phMaterial@@UAEXPAVStream@@@Z
-    virtual inline void SaveBinary(class Stream* arg1)
-    {
-        return stub<member_func_t<void, phMaterial, class Stream*>>(0x493340, this, arg1);
-    }
+    virtual void SaveBinary(class Stream* arg1);
 };
+
+check_size(phMaterial, 0x30);
 
 class phMaterialMgr
 {
+    // const phMaterialMgr::`vftable' @ 0x5B2410
+
 public:
-    // phMaterialMgr::`vftable' @ 0x5B2410
-
-    // 0x493420 | ?CreateInstance@phMaterialMgr@@SAAAV1@H@Z
-    static inline class phMaterialMgr& CreateInstance(int32_t arg1)
-    {
-        return stub<cdecl_t<class phMaterialMgr&, int32_t>>(0x493420, arg1);
-    }
-
-    // 0x4934A0 | ??0phMaterialMgr@@IAE@XZ
-    inline phMaterialMgr()
-    {
-        stub<member_func_t<void, phMaterialMgr>>(0x4934A0, this);
-    }
-
-    // 0x4934E0 | ??0phMaterialMgr@@IAE@PAVphMaterial@@H@Z
-    inline phMaterialMgr(class phMaterial* arg1, int32_t arg2)
-    {
-        stub<member_func_t<void, phMaterialMgr, class phMaterial*, int32_t>>(0x4934E0, this, arg1, arg2);
-    }
-
     // 0x4935C0 | ??1phMaterialMgr@@QAE@XZ
-    inline ~phMaterialMgr()
-    {
-        stub<member_func_t<void, phMaterialMgr>>(0x4935C0, this);
-    }
-
-    // 0x493640 | ?Find@phMaterialMgr@@QAEPAVphMaterial@@PBD@Z
-    inline class phMaterial* Find(char const* arg1)
-    {
-        return stub<member_func_t<class phMaterial*, phMaterialMgr, char const*>>(0x493640, this, arg1);
-    }
+    ~phMaterialMgr();
 
     // 0x493660 | ?AddToTable@phMaterialMgr@@QAEXPAVphMaterial@@@Z
-    inline void AddToTable(class phMaterial* arg1)
-    {
-        return stub<member_func_t<void, phMaterialMgr, class phMaterial*>>(0x493660, this, arg1);
-    }
+    void AddToTable(class phMaterial* arg1);
 
-    // 0x493680 | ?LoadTable@phMaterialMgr@@QAE_NPBD@Z
-    inline bool LoadTable(char const* arg1)
-    {
-        return stub<member_func_t<bool, phMaterialMgr, char const*>>(0x493680, this, arg1);
-    }
-
-    // 0x493800 | ?Save@phMaterialMgr@@QAEXPAVphMaterial@@PAVdatAsciiTokenizer@@@Z
-    inline void Save(class phMaterial* arg1, class datAsciiTokenizer* arg2)
-    {
-        return stub<member_func_t<void, phMaterialMgr, class phMaterial*, class datAsciiTokenizer*>>(
-            0x493800, this, arg1, arg2);
-    }
-
-    // 0x493840 | ?FindNameOfIndex@phMaterialMgr@@QAEPBDH@Z
-    inline char const* FindNameOfIndex(int32_t arg1)
-    {
-        return stub<member_func_t<char const*, phMaterialMgr, int32_t>>(0x493840, this, arg1);
-    }
+    // 0x493640 | ?Find@phMaterialMgr@@QAEPAVphMaterial@@PBD@Z
+    class phMaterial* Find(char const* arg1);
 
     // 0x493870 | ?FindIndexOfName@phMaterialMgr@@QAEHPBD@Z
-    inline int32_t FindIndexOfName(char const* arg1)
-    {
-        return stub<member_func_t<int32_t, phMaterialMgr, char const*>>(0x493870, this, arg1);
-    }
+    i32 FindIndexOfName(char const* arg1);
 
-    // 0x66134C | ?RefCount@phMaterialMgr@@1HA
-    inline extern_var(0x66134C, int32_t, RefCount);
+    // 0x493840 | ?FindNameOfIndex@phMaterialMgr@@QAEPBDH@Z
+    char const* FindNameOfIndex(i32 arg1);
 
-    // 0x661350 | ?Instance@phMaterialMgr@@1PAV1@A
-    inline extern_var(0x661350, class phMaterialMgr*, Instance);
+    // 0x493680 | ?LoadTable@phMaterialMgr@@QAE_NPBD@Z
+    bool LoadTable(char const* arg1);
 
-    // 0x661354 | ?DefaultPhysMaterial@phMaterialMgr@@1PAVphMaterial@@A
-    inline extern_var(0x661354, class phMaterial*, DefaultPhysMaterial);
+    // 0x493800 | ?Save@phMaterialMgr@@QAEXPAVphMaterial@@PAVdatAsciiTokenizer@@@Z
+    void Save(class phMaterial* arg1, class datAsciiTokenizer* arg2);
 
     // 0x493780 | ?Load@phMaterialMgr@@UAEPAVphMaterial@@PAVStream@@@Z
-    virtual inline class phMaterial* Load(class Stream* arg1)
-    {
-        return stub<member_func_t<class phMaterial*, phMaterialMgr, class Stream*>>(0x493780, this, arg1);
-    }
+    virtual class phMaterial* Load(class Stream* arg1);
 
     // 0x493700 | ?Load@phMaterialMgr@@UAEPAVphMaterial@@PAVdatAsciiTokenizer@@@Z
-    virtual inline class phMaterial* Load(class datAsciiTokenizer* arg1)
-    {
-        return stub<member_func_t<class phMaterial*, phMaterialMgr, class datAsciiTokenizer*>>(0x493700, this, arg1);
-    }
+    virtual class phMaterial* Load(class datAsciiTokenizer* arg1);
+
+    // 0x493420 | ?CreateInstance@phMaterialMgr@@SAAAV1@H@Z
+    static class phMaterialMgr& CreateInstance(i32 arg1);
+
+protected:
+    // 0x4934A0 | ??0phMaterialMgr@@IAE@XZ
+    phMaterialMgr();
+
+    // 0x4934E0 | ??0phMaterialMgr@@IAE@PAVphMaterial@@H@Z
+    phMaterialMgr(class phMaterial* arg1, i32 arg2);
+
+    // 0x661354 | ?DefaultPhysMaterial@phMaterialMgr@@1PAVphMaterial@@A
+    static inline extern_var(0x661354, class phMaterial*, DefaultPhysMaterial);
+
+    // 0x661350 | ?Instance@phMaterialMgr@@1PAV1@A
+    static inline extern_var(0x661350, class phMaterialMgr*, Instance);
+
+    // 0x66134C | ?RefCount@phMaterialMgr@@1HA
+    static inline extern_var(0x66134C, i32, RefCount);
 };
+
+check_size(phMaterialMgr, 0x0);

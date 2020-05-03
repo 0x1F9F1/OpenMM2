@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "vselect.h"
+
 /*
     mmui:vehicle
 
@@ -32,44 +34,29 @@
     0x5B453C | const Vehicle::`vftable' | ??_7Vehicle@@6B@
 */
 
-struct Vehicle : VehicleSelectBase
+class Vehicle : public VehicleSelectBase
 {
+    // const Vehicle::`vftable' @ 0x5B453C
+
 public:
-    // Vehicle::`vftable' @ 0x5B453C
-
     // 0x5056D0 | ??0Vehicle@@QAE@H@Z
-    inline Vehicle(int32_t arg1)
-    {
-        stub<member_func_t<void, Vehicle, int32_t>>(0x5056D0, this, arg1);
-    }
+    Vehicle(i32 arg1);
 
-    // 0x5057C0 | ?SetSubMenu@Vehicle@@QAEXH@Z
-    inline void SetSubMenu(int32_t arg1)
-    {
-        return stub<member_func_t<void, Vehicle, int32_t>>(0x5057C0, this, arg1);
-    }
-
-    // 0x5057E0 | ?SetSubMenuButtons@Vehicle@@QAEXXZ
-    inline void SetSubMenuButtons()
-    {
-        return stub<member_func_t<void, Vehicle>>(0x5057E0, this);
-    }
-
+    // 0x505820 | ??_GVehicle@@UAEPAXI@Z
     // 0x5057B0 | ??1Vehicle@@UAE@XZ
-    inline ~Vehicle() override
-    {
-        stub<member_func_t<void, Vehicle>>(0x5057B0, this);
-    }
-
-    // 0x505800 | ?PreSetup@Vehicle@@UAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, Vehicle>>(0x505800, this);
-    }
+    ~Vehicle() override;
 
     // 0x505810 | ?PostSetup@Vehicle@@UAEXXZ
-    inline void PostSetup() override
-    {
-        return stub<member_func_t<void, Vehicle>>(0x505810, this);
-    }
+    void PostSetup() override;
+
+    // 0x505800 | ?PreSetup@Vehicle@@UAEXXZ
+    void PreSetup() override;
+
+    // 0x5057C0 | ?SetSubMenu@Vehicle@@QAEXH@Z
+    void SetSubMenu(i32 arg1);
+
+    // 0x5057E0 | ?SetSubMenuButtons@Vehicle@@QAEXXZ
+    void SetSubMenuButtons();
 };
+
+check_size(Vehicle, 0x178);

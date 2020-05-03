@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "pu_menu.h"
 
 /*
     mmui:dlg_replay
@@ -44,111 +46,62 @@
     0x5B3EDC | const Dialog_Replay::`vftable' | ??_7Dialog_Replay@@6B@
 */
 
-// 0x4FAB50 | ?isReplayFile@@YA_NPBD@Z
-inline bool isReplayFile(char const* arg1)
+class Dialog_Replay : public PUMenuBase
 {
-    return stub<cdecl_t<bool, char const*>>(0x4FAB50, arg1);
-}
+    // const Dialog_Replay::`vftable' @ 0x5B3EDC
 
-// 0x4FABC0 | ?LoadDlgReplayCB@@YAXPBD_NPAX@Z
-inline void LoadDlgReplayCB(char const* arg1, bool arg2, void* arg3)
-{
-    return stub<cdecl_t<void, char const*, bool, void*>>(0x4FABC0, arg1, arg2, arg3);
-}
-
-struct Dialog_Replay : PUMenuBase
-{
 public:
-    // Dialog_Replay::`vftable' @ 0x5B3EDC
-
     // 0x4FA2B0 | ??0Dialog_Replay@@QAE@HMMMMPAD@Z
-    inline Dialog_Replay(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
-    {
-        stub<member_func_t<void, Dialog_Replay, int32_t, float, float, float, float, char*>>(
-            0x4FA2B0, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
+    Dialog_Replay(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6);
 
-    // 0x4FA7C0 | ?ScrollCB@Dialog_Replay@@QAEXXZ
-    inline void ScrollCB()
-    {
-        return stub<member_func_t<void, Dialog_Replay>>(0x4FA7C0, this);
-    }
+    // 0x4FAC90 | ??_GDialog_Replay@@UAEPAXI@Z
+    // 0x4FA6F0 | ??1Dialog_Replay@@UAE@XZ
+    ~Dialog_Replay() override;
 
     // 0x4FA7E0 | ?CancelCB@Dialog_Replay@@QAEXXZ
-    inline void CancelCB()
-    {
-        return stub<member_func_t<void, Dialog_Replay>>(0x4FA7E0, this);
-    }
-
-    // 0x4FA810 | ?DoneCB@Dialog_Replay@@QAEXXZ
-    inline void DoneCB()
-    {
-        return stub<member_func_t<void, Dialog_Replay>>(0x4FA810, this);
-    }
-
-    // 0x4FA830 | ?EditCB@Dialog_Replay@@QAEXXZ
-    inline void EditCB()
-    {
-        return stub<member_func_t<void, Dialog_Replay>>(0x4FA830, this);
-    }
-
-    // 0x4FA840 | ?SetDescription@Dialog_Replay@@QAEXPAD@Z
-    inline void SetDescription(char* arg1)
-    {
-        return stub<member_func_t<void, Dialog_Replay, char*>>(0x4FA840, this, arg1);
-    }
-
-    // 0x4FA890 | ?GetDescription@Dialog_Replay@@QAEPADXZ
-    inline char* GetDescription()
-    {
-        return stub<member_func_t<char*, Dialog_Replay>>(0x4FA890, this);
-    }
+    void CancelCB();
 
     // 0x4FA9A0 | ?DeleteCB@Dialog_Replay@@QAEXXZ
-    inline void DeleteCB()
-    {
-        return stub<member_func_t<void, Dialog_Replay>>(0x4FA9A0, this);
-    }
+    void DeleteCB();
 
-    // 0x4FAA60 | ?SetCurrentReplay@Dialog_Replay@@QAEXH@Z
-    inline void SetCurrentReplay(int32_t arg1)
-    {
-        return stub<member_func_t<void, Dialog_Replay, int32_t>>(0x4FAA60, this, arg1);
-    }
+    // 0x4FA810 | ?DoneCB@Dialog_Replay@@QAEXXZ
+    void DoneCB();
+
+    // 0x4FA830 | ?EditCB@Dialog_Replay@@QAEXXZ
+    void EditCB();
+
+    // 0x4FA890 | ?GetDescription@Dialog_Replay@@QAEPADXZ
+    char* GetDescription();
 
     // 0x4FAAB0 | ?GetSelectedReplay@Dialog_Replay@@QAEPADXZ
-    inline char* GetSelectedReplay()
-    {
-        return stub<member_func_t<char*, Dialog_Replay>>(0x4FAAB0, this);
-    }
-
-    // 0x4FAAF0 | ?SetDriverStats@Dialog_Replay@@QAEXPAD00@Z
-    inline void SetDriverStats(char* arg1, char* arg2, char* arg3)
-    {
-        return stub<member_func_t<void, Dialog_Replay, char*, char*, char*>>(0x4FAAF0, this, arg1, arg2, arg3);
-    }
+    char* GetSelectedReplay();
 
     // 0x4FAC70 | ?LoadAll@Dialog_Replay@@QAEXXZ
-    inline void LoadAll()
-    {
-        return stub<member_func_t<void, Dialog_Replay>>(0x4FAC70, this);
-    }
-
-    // 0x4FA6F0 | ??1Dialog_Replay@@UAE@XZ
-    inline ~Dialog_Replay() override
-    {
-        stub<member_func_t<void, Dialog_Replay>>(0x4FA6F0, this);
-    }
-
-    // 0x4FA7A0 | ?PreSetup@Dialog_Replay@@UAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, Dialog_Replay>>(0x4FA7A0, this);
-    }
+    void LoadAll();
 
     // 0x4FA7B0 | ?PostSetup@Dialog_Replay@@UAEXXZ
-    inline void PostSetup() override
-    {
-        return stub<member_func_t<void, Dialog_Replay>>(0x4FA7B0, this);
-    }
+    void PostSetup() override;
+
+    // 0x4FA7A0 | ?PreSetup@Dialog_Replay@@UAEXXZ
+    void PreSetup() override;
+
+    // 0x4FA7C0 | ?ScrollCB@Dialog_Replay@@QAEXXZ
+    void ScrollCB();
+
+    // 0x4FAA60 | ?SetCurrentReplay@Dialog_Replay@@QAEXH@Z
+    void SetCurrentReplay(i32 arg1);
+
+    // 0x4FA840 | ?SetDescription@Dialog_Replay@@QAEXPAD@Z
+    void SetDescription(char* arg1);
+
+    // 0x4FAAF0 | ?SetDriverStats@Dialog_Replay@@QAEXPAD00@Z
+    void SetDriverStats(char* arg1, char* arg2, char* arg3);
 };
+
+check_size(Dialog_Replay, 0x168);
+
+// 0x4FABC0 | ?LoadDlgReplayCB@@YAXPBD_NPAX@Z
+void LoadDlgReplayCB(char const* arg1, bool arg2, void* arg3);
+
+// 0x4FAB50 | ?isReplayFile@@YA_NPBD@Z
+bool isReplayFile(char const* arg1);

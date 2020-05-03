@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "gamemulti.h"
 
 /*
     mmgame:multirace
@@ -42,104 +44,59 @@
     0x5B0AB0 | const mmMultiRace::`vftable' | ??_7mmMultiRace@@6B@
 */
 
-struct mmMultiRace : mmGameMulti
+class mmMultiRace : public mmGameMulti
 {
+    // const mmMultiRace::`vftable' @ 0x5B0AB0
+
 public:
-    // mmMultiRace::`vftable' @ 0x5B0AB0
-
     // 0x428260 | ??0mmMultiRace@@QAE@XZ
-    inline mmMultiRace()
-    {
-        stub<member_func_t<void, mmMultiRace>>(0x428260, this);
-    }
+    mmMultiRace();
 
-    // 0x429BE0 | ?SetTimeoutOn@mmMultiRace@@QAEXXZ
-    inline void SetTimeoutOn()
-    {
-        return stub<member_func_t<void, mmMultiRace>>(0x429BE0, this);
-    }
-
-    // 0x429C10 | ?SetTimeoutOff@mmMultiRace@@QAEXXZ
-    inline void SetTimeoutOff()
-    {
-        return stub<member_func_t<void, mmMultiRace>>(0x429C10, this);
-    }
-
+    // 0x429D50 | ??_GmmMultiRace@@UAEPAXI@Z
     // 0x4282A0 | ??1mmMultiRace@@UAE@XZ
-    inline ~mmMultiRace() override
-    {
-        stub<member_func_t<void, mmMultiRace>>(0x4282A0, this);
-    }
-
-    // 0x428AD0 | ?Reset@mmMultiRace@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmMultiRace>>(0x428AD0, this);
-    }
-
-    // 0x428340 | ?Init@mmMultiRace@@UAEHXZ
-    inline int32_t Init() override
-    {
-        return stub<member_func_t<int32_t, mmMultiRace>>(0x428340, this);
-    }
-
-    // 0x428430 | ?InitMyPlayer@mmMultiRace@@UAEXXZ
-    inline void InitMyPlayer() override
-    {
-        return stub<member_func_t<void, mmMultiRace>>(0x428430, this);
-    }
-
-    // 0x4284F0 | ?InitGameObjects@mmMultiRace@@UAEXXZ
-    inline void InitGameObjects() override
-    {
-        return stub<member_func_t<void, mmMultiRace>>(0x4284F0, this);
-    }
-
-    // 0x4284A0 | ?InitHUD@mmMultiRace@@UAEXXZ
-    inline void InitHUD() override
-    {
-        return stub<member_func_t<void, mmMultiRace>>(0x4284A0, this);
-    }
-
-    // 0x428BA0 | ?UpdateGameInput@mmMultiRace@@UAEXH@Z
-    inline void UpdateGameInput(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmMultiRace, int32_t>>(0x428BA0, this, arg1);
-    }
-
-    // 0x428BE0 | ?UpdateGame@mmMultiRace@@UAEXXZ
-    inline void UpdateGame() override
-    {
-        return stub<member_func_t<void, mmMultiRace>>(0x428BE0, this);
-    }
-
-    // 0x429440 | ?SwitchState@mmMultiRace@@UAEXH@Z
-    inline void SwitchState(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmMultiRace, int32_t>>(0x429440, this, arg1);
-    }
-
-    // 0x429D80 | ?GetWaypoints@mmMultiRace@@UAEPAVmmWaypoints@@XZ
-    inline class mmWaypoints* GetWaypoints() override
-    {
-        return stub<member_func_t<class mmWaypoints*, mmMultiRace>>(0x429D80, this);
-    }
-
-    // 0x428700 | ?InitNetworkPlayers@mmMultiRace@@UAEXXZ
-    inline void InitNetworkPlayers() override
-    {
-        return stub<member_func_t<void, mmMultiRace>>(0x428700, this);
-    }
-
-    // 0x429450 | ?SystemMessage@mmMultiRace@@UAEXPAUNETSYS_MSG@@@Z
-    inline void SystemMessage(struct NETSYS_MSG* arg1) override
-    {
-        return stub<member_func_t<void, mmMultiRace, struct NETSYS_MSG*>>(0x429450, this, arg1);
-    }
+    ~mmMultiRace() override;
 
     // 0x429560 | ?GameMessage@mmMultiRace@@UAEXPAUNET_RCXHEAD@@@Z
-    inline void GameMessage(struct NET_RCXHEAD* arg1) override
-    {
-        return stub<member_func_t<void, mmMultiRace, struct NET_RCXHEAD*>>(0x429560, this, arg1);
-    }
+    void GameMessage(struct NET_RCXHEAD* arg1) override;
+
+    // 0x429D80 | ?GetWaypoints@mmMultiRace@@UAEPAVmmWaypoints@@XZ
+    class mmWaypoints* GetWaypoints() override;
+
+    // 0x428340 | ?Init@mmMultiRace@@UAEHXZ
+    i32 Init() override;
+
+    // 0x4284F0 | ?InitGameObjects@mmMultiRace@@UAEXXZ
+    void InitGameObjects() override;
+
+    // 0x4284A0 | ?InitHUD@mmMultiRace@@UAEXXZ
+    void InitHUD() override;
+
+    // 0x428430 | ?InitMyPlayer@mmMultiRace@@UAEXXZ
+    void InitMyPlayer() override;
+
+    // 0x428700 | ?InitNetworkPlayers@mmMultiRace@@UAEXXZ
+    void InitNetworkPlayers() override;
+
+    // 0x428AD0 | ?Reset@mmMultiRace@@UAEXXZ
+    void Reset() override;
+
+    // 0x429C10 | ?SetTimeoutOff@mmMultiRace@@QAEXXZ
+    void SetTimeoutOff();
+
+    // 0x429BE0 | ?SetTimeoutOn@mmMultiRace@@QAEXXZ
+    void SetTimeoutOn();
+
+    // 0x429440 | ?SwitchState@mmMultiRace@@UAEXH@Z
+    void SwitchState(i32 arg1) override;
+
+    // 0x429450 | ?SystemMessage@mmMultiRace@@UAEXPAUNETSYS_MSG@@@Z
+    void SystemMessage(struct NETSYS_MSG* arg1) override;
+
+    // 0x428BE0 | ?UpdateGame@mmMultiRace@@UAEXXZ
+    void UpdateGame() override;
+
+    // 0x428BA0 | ?UpdateGameInput@mmMultiRace@@UAEXH@Z
+    void UpdateGameInput(i32 arg1) override;
 };
+
+check_size(mmMultiRace, 0x0);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,40 @@
 */
 
 #include "pu_audio.h"
+
+PUAudioOptions::PUAudioOptions(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5)
+{
+    unimplemented();
+}
+
+PUAudioOptions::~PUAudioOptions()
+{
+    unimplemented();
+}
+
+void PUAudioOptions::CancelAction()
+{
+    return stub<thiscall_t<void, PUAudioOptions*>>(0x50C990, this);
+}
+
+void PUAudioOptions::PreSetup()
+{
+    return stub<thiscall_t<void, PUAudioOptions*>>(0x50C980, this);
+}
+
+void PUAudioOptions::SetBalance()
+{
+    return stub<thiscall_t<void, PUAudioOptions*>>(0x50C940, this);
+}
+
+void PUAudioOptions::SetCDVolume()
+{
+    return stub<thiscall_t<void, PUAudioOptions*>>(0x50C910, this);
+}
+
+void PUAudioOptions::SetWaveVolume()
+{
+    return stub<thiscall_t<void, PUAudioOptions*>>(0x50C8F0, this);
+}
+
+define_dummy_symbol(mmui_pu_audio);

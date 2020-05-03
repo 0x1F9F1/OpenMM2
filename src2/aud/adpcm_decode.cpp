@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,11 @@
 */
 
 #include "adpcm_decode.h"
+
+void adpcm_decoder(char const* const arg1, i16* const arg2, i32 arg3, struct adpcm_state* arg4)
+{
+    return stub<cdecl_t<void, char const* const, i16* const, i32, struct adpcm_state*>>(
+        0x5A7600, arg1, arg2, arg3, arg4);
+}
+
+define_dummy_symbol(aud_adpcm_decode);

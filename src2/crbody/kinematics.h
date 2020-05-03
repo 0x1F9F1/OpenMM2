@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -46,111 +46,68 @@
     0x5B63F0 | const crKinematics::`vftable' | ??_7crKinematics@@6B@
 */
 
-class crKinematics : crKinematicsBase
-{
-public:
-    // crKinematics::`vftable' @ 0x5B63F0
-
-    // 0x57E460 | ??0crKinematics@@QAE@XZ
-    inline crKinematics()
-    {
-        stub<member_func_t<void, crKinematics>>(0x57E460, this);
-    }
-
-    // 0x57E790 | ?TestPose@crKinematics@@QAEXXZ
-    inline void TestPose()
-    {
-        return stub<member_func_t<void, crKinematics>>(0x57E790, this);
-    }
-
-    // 0x57E590 | ??1crKinematics@@UAE@XZ
-    inline ~crKinematics() override
-    {
-        stub<member_func_t<void, crKinematics>>(0x57E590, this);
-    }
-
-    // 0x57E600 | ?Reset@crKinematics@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, crKinematics>>(0x57E600, this);
-    }
-
-    // 0x57E880 | ?Update@crKinematics@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, crKinematics>>(0x57E880, this);
-    }
-
-    // 0x57E6E0 | ?MatchPose@crKinematics@@UAEXXZ
-    inline void MatchPose() override
-    {
-        return stub<member_func_t<void, crKinematics>>(0x57E6E0, this);
-    }
-
-    // 0x57E620 | ?SetIKBlend@crKinematics@@UAEXM@Z
-    inline void SetIKBlend(float arg1) override
-    {
-        return stub<member_func_t<void, crKinematics, float>>(0x57E620, this, arg1);
-    }
-
-    // 0x57E680 | ?SetLimp@crKinematics@@UAEX_N@Z
-    inline void SetLimp(bool arg1) override
-    {
-        return stub<member_func_t<void, crKinematics, bool>>(0x57E680, this, arg1);
-    }
-};
-
 struct crKinematicsBase
 {
+    // const crKinematicsBase::`vftable' @ 0x5B63D4
+
 public:
-    // crKinematicsBase::`vftable' @ 0x5B63D4
-
     // 0x57E3C0 | ??0crKinematicsBase@@QAE@XZ
-    inline crKinematicsBase()
-    {
-        stub<member_func_t<void, crKinematicsBase>>(0x57E3C0, this);
-    }
+    crKinematicsBase();
 
+    // 0x57E970 | ??_GcrKinematicsBase@@UAEPAXI@Z
     // 0x57E3E0 | ??1crKinematicsBase@@UAE@XZ
-    virtual inline ~crKinematicsBase()
-    {
-        stub<member_func_t<void, crKinematicsBase>>(0x57E3E0, this);
-    }
+    virtual ~crKinematicsBase();
 
     // 0x57E3F0 | ?Init@crKinematicsBase@@UAEXAAVcrSkeleton@@ABVcrBodyDataBase@@@Z
-    virtual inline void Init(class crSkeleton& arg1, class crBodyDataBase const& arg2)
-    {
-        return stub<member_func_t<void, crKinematicsBase, class crSkeleton&, class crBodyDataBase const&>>(
-            0x57E3F0, this, arg1, arg2);
-    }
+    virtual void Init(class crSkeleton& arg1, class crBodyDataBase const& arg2);
 
     // 0x57E410 | ?Reset@crKinematicsBase@@UAEXXZ
-    virtual inline void Reset()
-    {
-        return stub<member_func_t<void, crKinematicsBase>>(0x57E410, this);
-    }
+    virtual void Reset();
 
     // 0x57E420 | ?Update@crKinematicsBase@@UAEXXZ
-    virtual inline void Update()
-    {
-        return stub<member_func_t<void, crKinematicsBase>>(0x57E420, this);
-    }
+    virtual void Update();
 
     // 0x57E430 | ?MatchPose@crKinematicsBase@@UAEXXZ
-    virtual inline void MatchPose()
-    {
-        return stub<member_func_t<void, crKinematicsBase>>(0x57E430, this);
-    }
+    virtual void MatchPose();
 
     // 0x57E440 | ?SetIKBlend@crKinematicsBase@@UAEXM@Z
-    virtual inline void SetIKBlend(float arg1)
-    {
-        return stub<member_func_t<void, crKinematicsBase, float>>(0x57E440, this, arg1);
-    }
+    virtual void SetIKBlend(f32 arg1);
 
     // 0x57E450 | ?SetLimp@crKinematicsBase@@UAEX_N@Z
-    virtual inline void SetLimp(bool arg1)
-    {
-        return stub<member_func_t<void, crKinematicsBase, bool>>(0x57E450, this, arg1);
-    }
+    virtual void SetLimp(bool arg1);
 };
+
+check_size(crKinematicsBase, 0x0);
+
+class crKinematics : public crKinematicsBase
+{
+    // const crKinematics::`vftable' @ 0x5B63F0
+
+public:
+    // 0x57E460 | ??0crKinematics@@QAE@XZ
+    crKinematics();
+
+    // 0x57E9A0 | ??_GcrKinematics@@UAEPAXI@Z
+    // 0x57E590 | ??1crKinematics@@UAE@XZ
+    ~crKinematics() override;
+
+    // 0x57E6E0 | ?MatchPose@crKinematics@@UAEXXZ
+    void MatchPose() override;
+
+    // 0x57E600 | ?Reset@crKinematics@@UAEXXZ
+    void Reset() override;
+
+    // 0x57E620 | ?SetIKBlend@crKinematics@@UAEXM@Z
+    void SetIKBlend(f32 arg1) override;
+
+    // 0x57E680 | ?SetLimp@crKinematics@@UAEX_N@Z
+    void SetLimp(bool arg1) override;
+
+    // 0x57E790 | ?TestPose@crKinematics@@QAEXXZ
+    void TestPose();
+
+    // 0x57E880 | ?Update@crKinematics@@UAEXXZ
+    void Update() override;
+};
+
+check_size(crKinematics, 0x20);

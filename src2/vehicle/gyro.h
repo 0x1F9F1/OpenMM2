@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "node/node.h"
+
 /*
     vehicle:gyro
 
@@ -34,50 +36,32 @@
     0x5B2E84 | const vehGyro::`vftable' | ??_7vehGyro@@6B@
 */
 
-struct vehGyro : asNode
+class vehGyro : public asNode
 {
+    // const vehGyro::`vftable' @ 0x5B2E84
+
 public:
-    // vehGyro::`vftable' @ 0x5B2E84
-
     // 0x4D5B80 | ??0vehGyro@@QAE@XZ
-    inline vehGyro()
-    {
-        stub<member_func_t<void, vehGyro>>(0x4D5B80, this);
-    }
+    vehGyro();
 
-    // 0x4D5BD0 | ?Init@vehGyro@@QAEXPAVvehCarSim@@PBD@Z
-    inline void Init(class vehCarSim* arg1, char const* arg2)
-    {
-        return stub<member_func_t<void, vehGyro, class vehCarSim*, char const*>>(0x4D5BD0, this, arg1, arg2);
-    }
-
+    // 0x4D5F60 | ??_GvehGyro@@UAEPAXI@Z
     // 0x4D5F90 | ??1vehGyro@@UAE@XZ
-    inline ~vehGyro() override
-    {
-        stub<member_func_t<void, vehGyro>>(0x4D5F90, this);
-    }
-
-    // 0x4D5C00 | ?Update@vehGyro@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, vehGyro>>(0x4D5C00, this);
-    }
+    ~vehGyro() override;
 
     // 0x4D5EE0 | ?FileIO@vehGyro@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
-    {
-        return stub<member_func_t<void, vehGyro, class datParser&>>(0x4D5EE0, this, arg1);
-    }
+    void FileIO(class datParser& arg1) override;
 
     // 0x4D5FA0 | ?GetClassName@vehGyro@@UAEPADXZ
-    inline char* GetClassName() override
-    {
-        return stub<member_func_t<char*, vehGyro>>(0x4D5FA0, this);
-    }
+    char* GetClassName() override;
 
     // 0x4D5BC0 | ?GetDirName@vehGyro@@UAEPBDXZ
-    inline char const* GetDirName() override
-    {
-        return stub<member_func_t<char const*, vehGyro>>(0x4D5BC0, this);
-    }
+    char const* GetDirName() override;
+
+    // 0x4D5BD0 | ?Init@vehGyro@@QAEXPAVvehCarSim@@PBD@Z
+    void Init(class vehCarSim* arg1, char const* arg2);
+
+    // 0x4D5C00 | ?Update@vehGyro@@UAEXXZ
+    void Update() override;
 };
+
+check_size(vehGyro, 0x30);

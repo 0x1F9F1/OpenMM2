@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "ageaudio/audcreaturecontainer.h"
 
 /*
     ai:aipedaudio
@@ -36,53 +38,41 @@
     0x6B3020 | private: static int aiPedAudio::s_iMaleFileNum | ?s_iMaleFileNum@aiPedAudio@@0HA
 */
 
-struct aiPedAudio : AudCreatureContainer
+class aiPedAudio : public AudCreatureContainer
 {
-public:
-    // aiPedAudio::`vftable' @ 0x5B5568
+    // const aiPedAudio::`vftable' @ 0x5B5568
 
+public:
     // 0x53CD60 | ??0aiPedAudio@@QAE@XZ
-    inline aiPedAudio()
-    {
-        stub<member_func_t<void, aiPedAudio>>(0x53CD60, this);
-    }
+    aiPedAudio();
+
+    // 0x53CD80 | ??1aiPedAudio@@UAE@XZ
+    ~aiPedAudio();
 
     // 0x53CD90 | ?LoadFemaleVoices@aiPedAudio@@QAE_NPAD_N@Z
-    inline bool LoadFemaleVoices(char* arg1, bool arg2)
-    {
-        return stub<member_func_t<bool, aiPedAudio, char*, bool>>(0x53CD90, this, arg1, arg2);
-    }
+    bool LoadFemaleVoices(char* arg1, bool arg2);
 
     // 0x53CE00 | ?LoadMaleVoices@aiPedAudio@@QAE_NPAD_N@Z
-    inline bool LoadMaleVoices(char* arg1, bool arg2)
-    {
-        return stub<member_func_t<bool, aiPedAudio, char*, bool>>(0x53CE00, this, arg1, arg2);
-    }
-
-    // 0x53CE70 | ?SetCSVCatString@aiPedAudio@@SAXPAD@Z
-    static inline void SetCSVCatString(char* arg1)
-    {
-        return stub<cdecl_t<void, char*>>(0x53CE70, arg1);
-    }
+    bool LoadMaleVoices(char* arg1, bool arg2);
 
     // 0x53CEA0 | ?LoadNumFemaleChoices@aiPedAudio@@SAXPAD@Z
-    static inline void LoadNumFemaleChoices(char* arg1)
-    {
-        return stub<cdecl_t<void, char*>>(0x53CEA0, arg1);
-    }
+    static void LoadNumFemaleChoices(char* arg1);
 
     // 0x53CEE0 | ?LoadNumMaleChoices@aiPedAudio@@SAXPAD@Z
-    static inline void LoadNumMaleChoices(char* arg1)
-    {
-        return stub<cdecl_t<void, char*>>(0x53CEE0, arg1);
-    }
+    static void LoadNumMaleChoices(char* arg1);
+
+    // 0x53CE70 | ?SetCSVCatString@aiPedAudio@@SAXPAD@Z
+    static void SetCSVCatString(char* arg1);
+
+private:
+    // 0x6B3014 | ?s_CSVCatString@aiPedAudio@@0PADA
+    static inline extern_var(0x6B3014, char*, s_CSVCatString);
 
     // 0x6B3004 | ?s_iFemaleFileNum@aiPedAudio@@0HA
-    inline extern_var(0x6B3004, int32_t, s_iFemaleFileNum);
-
-    // 0x6B3014 | ?s_CSVCatString@aiPedAudio@@0PADA
-    inline extern_var(0x6B3014, char*, s_CSVCatString);
+    static inline extern_var(0x6B3004, i32, s_iFemaleFileNum);
 
     // 0x6B3020 | ?s_iMaleFileNum@aiPedAudio@@0HA
-    inline extern_var(0x6B3020, int32_t, s_iMaleFileNum);
+    static inline extern_var(0x6B3020, i32, s_iMaleFileNum);
 };
+
+check_size(aiPedAudio, 0x0);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "gamesingle.h"
 
 /*
     mmgame:singleblitz
@@ -56,128 +58,72 @@
     struct OppIconInfo * WpIcons | ?WpIcons@@3PAUOppIconInfo@@A
 */
 
-struct mmSingleBlitz : mmGameSingle
+class mmSingleBlitz : public mmGameSingle
 {
+    // const mmSingleBlitz::`vftable' @ 0x5B064C
+
 public:
-    // mmSingleBlitz::`vftable' @ 0x5B064C
-
     // 0x41AC00 | ??0mmSingleBlitz@@QAE@XZ
-    inline mmSingleBlitz()
-    {
-        stub<member_func_t<void, mmSingleBlitz>>(0x41AC00, this);
-    }
+    mmSingleBlitz();
 
-    // 0x41BDC0 | ?RegisterFinish@mmSingleBlitz@@AAEHXZ
-    inline int32_t RegisterFinish()
-    {
-        return stub<member_func_t<int32_t, mmSingleBlitz>>(0x41BDC0, this);
-    }
-
-    // 0x41BFA0 | ?FinishMessage@mmSingleBlitz@@AAEXH@Z
-    inline void FinishMessage(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmSingleBlitz, int32_t>>(0x41BFA0, this, arg1);
-    }
-
-    // 0x41BFD0 | ?ProgressCheck@mmSingleBlitz@@AAEHHH@Z
-    inline int32_t ProgressCheck(int32_t arg1, int32_t arg2)
-    {
-        return stub<member_func_t<int32_t, mmSingleBlitz, int32_t, int32_t>>(0x41BFD0, this, arg1, arg2);
-    }
-
-    // 0x41C260 | ?PlayTimerWarning@mmSingleBlitz@@QAEXM@Z
-    inline void PlayTimerWarning(float arg1)
-    {
-        return stub<member_func_t<void, mmSingleBlitz, float>>(0x41C260, this, arg1);
-    }
-
+    // 0x41C450 | ??_GmmSingleBlitz@@UAEPAXI@Z
     // 0x41AC70 | ??1mmSingleBlitz@@UAE@XZ
-    inline ~mmSingleBlitz() override
-    {
-        stub<member_func_t<void, mmSingleBlitz>>(0x41AC70, this);
-    }
-
-    // 0x41B460 | ?Update@mmSingleBlitz@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmSingleBlitz>>(0x41B460, this);
-    }
-
-    // 0x41B370 | ?Reset@mmSingleBlitz@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmSingleBlitz>>(0x41B370, this);
-    }
-
-    // 0x41AD30 | ?Init@mmSingleBlitz@@UAEHXZ
-    inline int32_t Init() override
-    {
-        return stub<member_func_t<int32_t, mmSingleBlitz>>(0x41AD30, this);
-    }
-
-    // 0x41AE50 | ?InitMyPlayer@mmSingleBlitz@@UAEXXZ
-    inline void InitMyPlayer() override
-    {
-        return stub<member_func_t<void, mmSingleBlitz>>(0x41AE50, this);
-    }
-
-    // 0x41B360 | ?InitOtherPlayers@mmSingleBlitz@@UAEXXZ
-    inline void InitOtherPlayers() override
-    {
-        return stub<member_func_t<void, mmSingleBlitz>>(0x41B360, this);
-    }
-
-    // 0x41B0D0 | ?InitGameObjects@mmSingleBlitz@@UAEXXZ
-    inline void InitGameObjects() override
-    {
-        return stub<member_func_t<void, mmSingleBlitz>>(0x41B0D0, this);
-    }
-
-    // 0x41AEC0 | ?InitHUD@mmSingleBlitz@@UAEXXZ
-    inline void InitHUD() override
-    {
-        return stub<member_func_t<void, mmSingleBlitz>>(0x41AEC0, this);
-    }
-
-    // 0x41B590 | ?UpdateGameInput@mmSingleBlitz@@UAEXH@Z
-    inline void UpdateGameInput(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmSingleBlitz, int32_t>>(0x41B590, this, arg1);
-    }
-
-    // 0x41C480 | ?UpdateDebugKeyInput@mmSingleBlitz@@UAEXH@Z
-    inline void UpdateDebugKeyInput(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmSingleBlitz, int32_t>>(0x41C480, this, arg1);
-    }
-
-    // 0x41B5D0 | ?UpdateGame@mmSingleBlitz@@UAEXXZ
-    inline void UpdateGame() override
-    {
-        return stub<member_func_t<void, mmSingleBlitz>>(0x41B5D0, this);
-    }
-
-    // 0x41C080 | ?NextRace@mmSingleBlitz@@UAEXXZ
-    inline void NextRace() override
-    {
-        return stub<member_func_t<void, mmSingleBlitz>>(0x41C080, this);
-    }
-
-    // 0x41B400 | ?HitWaterHandler@mmSingleBlitz@@UAEXXZ
-    inline void HitWaterHandler() override
-    {
-        return stub<member_func_t<void, mmSingleBlitz>>(0x41B400, this);
-    }
-
-    // 0x41BDB0 | ?SwitchState@mmSingleBlitz@@UAEXH@Z
-    inline void SwitchState(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmSingleBlitz, int32_t>>(0x41BDB0, this, arg1);
-    }
+    ~mmSingleBlitz() override;
 
     // 0x41C490 | ?GetWaypoints@mmSingleBlitz@@UAEPAVmmWaypoints@@XZ
-    inline class mmWaypoints* GetWaypoints() override
-    {
-        return stub<member_func_t<class mmWaypoints*, mmSingleBlitz>>(0x41C490, this);
-    }
+    class mmWaypoints* GetWaypoints() override;
+
+    // 0x41B400 | ?HitWaterHandler@mmSingleBlitz@@UAEXXZ
+    void HitWaterHandler() override;
+
+    // 0x41AD30 | ?Init@mmSingleBlitz@@UAEHXZ
+    i32 Init() override;
+
+    // 0x41B0D0 | ?InitGameObjects@mmSingleBlitz@@UAEXXZ
+    void InitGameObjects() override;
+
+    // 0x41AEC0 | ?InitHUD@mmSingleBlitz@@UAEXXZ
+    void InitHUD() override;
+
+    // 0x41AE50 | ?InitMyPlayer@mmSingleBlitz@@UAEXXZ
+    void InitMyPlayer() override;
+
+    // 0x41B360 | ?InitOtherPlayers@mmSingleBlitz@@UAEXXZ
+    void InitOtherPlayers() override;
+
+    // 0x41C080 | ?NextRace@mmSingleBlitz@@UAEXXZ
+    void NextRace() override;
+
+    // 0x41C260 | ?PlayTimerWarning@mmSingleBlitz@@QAEXM@Z
+    void PlayTimerWarning(f32 arg1);
+
+    // 0x41B370 | ?Reset@mmSingleBlitz@@UAEXXZ
+    void Reset() override;
+
+    // 0x41BDB0 | ?SwitchState@mmSingleBlitz@@UAEXH@Z
+    void SwitchState(i32 arg1) override;
+
+    // 0x41B460 | ?Update@mmSingleBlitz@@UAEXXZ
+    void Update() override;
+
+    // 0x41C480 | ?UpdateDebugKeyInput@mmSingleBlitz@@UAEXH@Z
+    void UpdateDebugKeyInput(i32 arg1) override;
+
+    // 0x41B5D0 | ?UpdateGame@mmSingleBlitz@@UAEXXZ
+    void UpdateGame() override;
+
+    // 0x41B590 | ?UpdateGameInput@mmSingleBlitz@@UAEXH@Z
+    void UpdateGameInput(i32 arg1) override;
+
+private:
+    // 0x41BFA0 | ?FinishMessage@mmSingleBlitz@@AAEXH@Z
+    void FinishMessage(i32 arg1);
+
+    // 0x41BFD0 | ?ProgressCheck@mmSingleBlitz@@AAEHHH@Z
+    i32 ProgressCheck(i32 arg1, i32 arg2);
+
+    // 0x41BDC0 | ?RegisterFinish@mmSingleBlitz@@AAEHXZ
+    i32 RegisterFinish();
 };
+
+check_size(mmSingleBlitz, 0x7710);

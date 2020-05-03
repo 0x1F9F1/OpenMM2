@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -31,18 +31,18 @@
     0x5743E0 | _inflateSyncPoint
 */
 
-// 0x573C60 | _inflateReset
+// 0x573E40 | _inflate (Skipped: void)
 
-// 0x573CB0 | _inflateEnd
+// 0x573CB0 | _inflateEnd (Skipped: void)
 
-// 0x573D00 | _inflateInit2_
+// 0x573D00 | _inflateInit2_ (Skipped: void)
 
-// 0x573E20 | _inflateInit_
+// 0x573E20 | _inflateInit_ (Skipped: void)
 
-// 0x573E40 | _inflate
+// 0x573C60 | _inflateReset (Skipped: void)
 
-// 0x574270 | _inflateSetDictionary
+// 0x574270 | _inflateSetDictionary (Skipped: void)
 
-// 0x574300 | _inflateSync
+// 0x574300 | _inflateSync (Skipped: void)
 
-// 0x5743E0 | _inflateSyncPoint
+// 0x5743E0 | _inflateSyncPoint (Skipped: void)

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -35,50 +35,28 @@ class vehHornAudioTiming
 {
 public:
     // 0x4DF260 | ??0vehHornAudioTiming@@QAE@XZ
-    inline vehHornAudioTiming()
-    {
-        stub<member_func_t<void, vehHornAudioTiming>>(0x4DF260, this);
-    }
+    vehHornAudioTiming();
 
     // 0x4DF280 | ??0vehHornAudioTiming@@QAE@PAV0@@Z
-    inline vehHornAudioTiming(class vehHornAudioTiming* arg1)
-    {
-        stub<member_func_t<void, vehHornAudioTiming, class vehHornAudioTiming*>>(0x4DF280, this, arg1);
-    }
+    vehHornAudioTiming(class vehHornAudioTiming* arg1);
 
     // 0x4DF2E0 | ??1vehHornAudioTiming@@QAE@XZ
-    inline ~vehHornAudioTiming()
-    {
-        stub<member_func_t<void, vehHornAudioTiming>>(0x4DF2E0, this);
-    }
-
-    // 0x4DF330 | ?Reset@vehHornAudioTiming@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, vehHornAudioTiming>>(0x4DF330, this);
-    }
+    ~vehHornAudioTiming();
 
     // 0x4DF340 | ?AllocPlayPause@vehHornAudioTiming@@QAEXMM@Z
-    inline void AllocPlayPause(float arg1, float arg2)
-    {
-        return stub<member_func_t<void, vehHornAudioTiming, float, float>>(0x4DF340, this, arg1, arg2);
-    }
-
-    // 0x4DF3D0 | ?Stop@vehHornAudioTiming@@QAEXPAVAudSoundBase@@@Z
-    inline void Stop(class AudSoundBase* arg1)
-    {
-        return stub<member_func_t<void, vehHornAudioTiming, class AudSoundBase*>>(0x4DF3D0, this, arg1);
-    }
+    void AllocPlayPause(f32 arg1, f32 arg2);
 
     // 0x4DF400 | ?Play@vehHornAudioTiming@@QAEXPAVAudSoundBase@@@Z
-    inline void Play(class AudSoundBase* arg1)
-    {
-        return stub<member_func_t<void, vehHornAudioTiming, class AudSoundBase*>>(0x4DF400, this, arg1);
-    }
+    void Play(class AudSoundBase* arg1);
+
+    // 0x4DF330 | ?Reset@vehHornAudioTiming@@QAEXXZ
+    void Reset();
+
+    // 0x4DF3D0 | ?Stop@vehHornAudioTiming@@QAEXPAVAudSoundBase@@@Z
+    void Stop(class AudSoundBase* arg1);
 
     // 0x4DF440 | ?Update@vehHornAudioTiming@@QAEXPAVAudSoundBase@@@Z
-    inline void Update(class AudSoundBase* arg1)
-    {
-        return stub<member_func_t<void, vehHornAudioTiming, class AudSoundBase*>>(0x4DF440, this, arg1);
-    }
+    void Update(class AudSoundBase* arg1);
 };
+
+check_size(vehHornAudioTiming, 0x14);

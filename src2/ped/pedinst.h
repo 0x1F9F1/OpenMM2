@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "level/inst.h"
 
 /*
     ped:pedinst
@@ -39,98 +41,55 @@
     0x5B62F0 | const aiPedestrianInstance::`vftable' | ??_7aiPedestrianInstance@@6B@
 */
 
-class aiPedestrianInstance : lvlInstance
+class aiPedestrianInstance : public lvlInstance
 {
+    // const aiPedestrianInstance::`vftable' @ 0x5B62F0
+
 public:
-    // aiPedestrianInstance::`vftable' @ 0x5B62F0
-
     // 0x57B580 | ??0aiPedestrianInstance@@QAE@PAVaiPedestrian@@@Z
-    inline aiPedestrianInstance(class aiPedestrian* arg1)
-    {
-        stub<member_func_t<void, aiPedestrianInstance, class aiPedestrian*>>(0x57B580, this, arg1);
-    }
-
-    // 0x57B5C0 | ?GetPosition@aiPedestrianInstance@@UAEABVVector3@@XZ
-    inline class Vector3 const& GetPosition() override
-    {
-        return stub<member_func_t<class Vector3 const&, aiPedestrianInstance>>(0x57B5C0, this);
-    }
-
-    // 0x57B5A0 | ?GetMatrix@aiPedestrianInstance@@UAEABVMatrix34@@AAV2@@Z
-    inline class Matrix34 const& GetMatrix(class Matrix34& arg1) override
-    {
-        return stub<member_func_t<class Matrix34 const&, aiPedestrianInstance, class Matrix34&>>(0x57B5A0, this, arg1);
-    }
-
-    // 0x57B5B0 | ?SetMatrix@aiPedestrianInstance@@UAEXABVMatrix34@@@Z
-    inline void SetMatrix(class Matrix34 const& arg1) override
-    {
-        return stub<member_func_t<void, aiPedestrianInstance, class Matrix34 const&>>(0x57B5B0, this, arg1);
-    }
-
-    // 0x57B720 | ?GetEntity@aiPedestrianInstance@@UAEPAVdgPhysEntity@@XZ
-    inline class dgPhysEntity* GetEntity() override
-    {
-        return stub<member_func_t<class dgPhysEntity*, aiPedestrianInstance>>(0x57B720, this);
-    }
+    aiPedestrianInstance(class aiPedestrian* arg1);
 
     // 0x57B730 | ?AttachEntity@aiPedestrianInstance@@UAEPAVdgPhysEntity@@XZ
-    inline class dgPhysEntity* AttachEntity() override
-    {
-        return stub<member_func_t<class dgPhysEntity*, aiPedestrianInstance>>(0x57B730, this);
-    }
-
-    // 0x57B750 | ?GetVelocity@aiPedestrianInstance@@UAEABVVector3@@XZ
-    inline class Vector3 const& GetVelocity() override
-    {
-        return stub<member_func_t<class Vector3 const&, aiPedestrianInstance>>(0x57B750, this);
-    }
+    class dgPhysEntity* AttachEntity() override;
 
     // 0x57B760 | ?Detach@aiPedestrianInstance@@UAEXXZ
-    inline void Detach() override
-    {
-        return stub<member_func_t<void, aiPedestrianInstance>>(0x57B760, this);
-    }
+    void Detach() override;
 
     // 0x57B5F0 | ?Draw@aiPedestrianInstance@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
-    {
-        return stub<member_func_t<void, aiPedestrianInstance, int32_t>>(0x57B5F0, this, arg1);
-    }
+    void Draw(i32 arg1) override;
 
     // 0x57B700 | ?DrawShadow@aiPedestrianInstance@@UAEXXZ
-    inline void DrawShadow() override
-    {
-        return stub<member_func_t<void, aiPedestrianInstance>>(0x57B700, this);
-    }
+    void DrawShadow() override;
 
     // 0x57B710 | ?DrawShadowMap@aiPedestrianInstance@@UAEXXZ
-    inline void DrawShadowMap() override
-    {
-        return stub<member_func_t<void, aiPedestrianInstance>>(0x57B710, this);
-    }
-
-    // 0x57B5E0 | ?SizeOf@aiPedestrianInstance@@UAEIXZ
-    inline uint32_t SizeOf() override
-    {
-        return stub<member_func_t<uint32_t, aiPedestrianInstance>>(0x57B5E0, this);
-    }
-
-    // 0x57B780 | ?IsCollidable@aiPedestrianInstance@@UAE_NXZ
-    inline bool IsCollidable() override
-    {
-        return stub<member_func_t<bool, aiPedestrianInstance>>(0x57B780, this);
-    }
+    void DrawShadowMap() override;
 
     // 0x57B770 | ?GetBound@aiPedestrianInstance@@UAEPBVphBound@@H@Z
-    inline class phBound const* GetBound(int32_t arg1) override
-    {
-        return stub<member_func_t<class phBound const*, aiPedestrianInstance, int32_t>>(0x57B770, this, arg1);
-    }
+    class phBound const* GetBound(i32 arg1) override;
+
+    // 0x57B720 | ?GetEntity@aiPedestrianInstance@@UAEPAVdgPhysEntity@@XZ
+    class dgPhysEntity* GetEntity() override;
+
+    // 0x57B5A0 | ?GetMatrix@aiPedestrianInstance@@UAEABVMatrix34@@AAV2@@Z
+    class Matrix34 const& GetMatrix(class Matrix34& arg1) override;
+
+    // 0x57B5C0 | ?GetPosition@aiPedestrianInstance@@UAEABVVector3@@XZ
+    class Vector3 const& GetPosition() override;
+
+    // 0x57B750 | ?GetVelocity@aiPedestrianInstance@@UAEABVVector3@@XZ
+    class Vector3 const& GetVelocity() override;
+
+    // 0x57B780 | ?IsCollidable@aiPedestrianInstance@@UAE_NXZ
+    bool IsCollidable() override;
+
+    // 0x57B5B0 | ?SetMatrix@aiPedestrianInstance@@UAEXABVMatrix34@@@Z
+    void SetMatrix(class Matrix34 const& arg1) override;
+
+    // 0x57B5E0 | ?SizeOf@aiPedestrianInstance@@UAEIXZ
+    u32 SizeOf() override;
 
     // 0x57B5D0 | ?ComputeLod@aiPedestrianInstance@@UAEHMM@Z
-    virtual inline int32_t ComputeLod(float arg1, float arg2)
-    {
-        return stub<member_func_t<int32_t, aiPedestrianInstance, float, float>>(0x57B5D0, this, arg1, arg2);
-    }
+    virtual i32 ComputeLod(f32 arg1, f32 arg2);
 };
+
+check_size(aiPedestrianInstance, 0x0);

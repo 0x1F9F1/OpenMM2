@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,15 @@
 */
 
 #include "jdmaster.h"
+
+void jinit_master_decompress(struct jpeg_decompress_struct* arg1)
+{
+    return stub<cdecl_t<void, struct jpeg_decompress_struct*>>(0x49B740, arg1);
+}
+
+void jpeg_calc_output_dimensions(struct jpeg_decompress_struct* arg1)
+{
+    return stub<cdecl_t<void, struct jpeg_decompress_struct*>>(0x49B680, arg1);
+}
+
+define_dummy_symbol(djpeg_jdmaster);

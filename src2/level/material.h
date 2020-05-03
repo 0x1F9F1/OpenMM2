@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "phcore/material.h"
 
 /*
     level:material
@@ -37,80 +39,52 @@
     0x5B1B04 | const lvlMaterialMgr::`vftable' | ??_7lvlMaterialMgr@@6B@
 */
 
-class lvlMaterial : phMaterial
+class lvlMaterialMgr : public phMaterialMgr
 {
+    // const lvlMaterialMgr::`vftable' @ 0x5B1B04
+
 public:
-    // lvlMaterial::`vftable' @ 0x5B1AF8
-
-    // 0x4664C0 | ??0lvlMaterial@@QAE@XZ
-    inline lvlMaterial()
-    {
-        stub<member_func_t<void, lvlMaterial>>(0x4664C0, this);
-    }
-
-    // 0x466510 | ?Load@lvlMaterial@@QAEXAAVdatAsciiTokenizer@@@Z
-    inline void Load(class datAsciiTokenizer& arg1)
-    {
-        return stub<member_func_t<void, lvlMaterial, class datAsciiTokenizer&>>(0x466510, this, arg1);
-    }
-
-    // 0x4668E0 | ?Copy@lvlMaterial@@QAEXABV1@@Z
-    inline void Copy(class lvlMaterial const& arg1)
-    {
-        return stub<member_func_t<void, lvlMaterial, class lvlMaterial const&>>(0x4668E0, this, arg1);
-    }
-
-    // 0x4666F0 | ?Save@lvlMaterial@@UAEXAAVdatAsciiTokenizer@@@Z
-    inline void Save(class datAsciiTokenizer& arg1) override
-    {
-        return stub<member_func_t<void, lvlMaterial, class datAsciiTokenizer&>>(0x4666F0, this, arg1);
-    }
-};
-
-class lvlMaterialMgr : phMaterialMgr
-{
-public:
-    // lvlMaterialMgr::`vftable' @ 0x5B1B04
-
-    // 0x42CCA0 | ?GetInstance@lvlMaterialMgr@@SAAAV1@XZ
-    static inline class lvlMaterialMgr& GetInstance()
-    {
-        return stub<cdecl_t<class lvlMaterialMgr&>>(0x42CCA0);
-    }
-
-    // 0x466930 | ?CreateInstance@lvlMaterialMgr@@SAAAV1@XZ
-    static inline class lvlMaterialMgr& CreateInstance()
-    {
-        return stub<cdecl_t<class lvlMaterialMgr&>>(0x466930);
-    }
-
-    // 0x466990 | ??0lvlMaterialMgr@@IAE@XZ
-    inline lvlMaterialMgr()
-    {
-        stub<member_func_t<void, lvlMaterialMgr>>(0x466990, this);
-    }
-
-    // 0x466A00 | ?DeleteInstance@lvlMaterialMgr@@SAXXZ
-    static inline void DeleteInstance()
-    {
-        return stub<cdecl_t<void>>(0x466A00);
-    }
-
     // 0x466A30 | ?Find@lvlMaterialMgr@@QAEPAVlvlMaterial@@PBD@Z
-    inline class lvlMaterial* Find(char const* arg1)
-    {
-        return stub<member_func_t<class lvlMaterial*, lvlMaterialMgr, char const*>>(0x466A30, this, arg1);
-    }
-
-    // 0x466A40 | ?Lookup@lvlMaterialMgr@@QAEPAVlvlMaterial@@H@Z
-    inline class lvlMaterial* Lookup(int32_t arg1)
-    {
-        return stub<member_func_t<class lvlMaterial*, lvlMaterialMgr, int32_t>>(0x466A40, this, arg1);
-    }
+    class lvlMaterial* Find(char const* arg1);
 
     // 0x466A50 | ?Load@lvlMaterialMgr@@UAEPAVphMaterial@@PAVdatAsciiTokenizer@@@Z
-    inline class phMaterial* Load(class datAsciiTokenizer* arg1) override
-    {
-        return stub<member_func_t<class phMaterial*, lvlMaterialMgr, class datAsciiTokenizer*>>(0x466A50, this, arg1);
-    }
+    class phMaterial* Load(class datAsciiTokenizer* arg1) override;
+
+    // 0x466A40 | ?Lookup@lvlMaterialMgr@@QAEPAVlvlMaterial@@H@Z
+    class lvlMaterial* Lookup(i32 arg1);
+
+    // 0x466930 | ?CreateInstance@lvlMaterialMgr@@SAAAV1@XZ
+    static class lvlMaterialMgr& CreateInstance();
+
+    // 0x466A00 | ?DeleteInstance@lvlMaterialMgr@@SAXXZ
+    static void DeleteInstance();
+
+    // 0x42CCA0 | ?GetInstance@lvlMaterialMgr@@SAAAV1@XZ
+    static class lvlMaterialMgr& GetInstance();
+
+protected:
+    // 0x466990 | ??0lvlMaterialMgr@@IAE@XZ
+    lvlMaterialMgr();
 };
+
+check_size(lvlMaterialMgr, 0x1C);
+
+class lvlMaterial : public phMaterial
+{
+    // const lvlMaterial::`vftable' @ 0x5B1AF8
+
+public:
+    // 0x4664C0 | ??0lvlMaterial@@QAE@XZ
+    lvlMaterial();
+
+    // 0x4668E0 | ?Copy@lvlMaterial@@QAEXABV1@@Z
+    void Copy(class lvlMaterial const& arg1);
+
+    // 0x466510 | ?Load@lvlMaterial@@QAEXAAVdatAsciiTokenizer@@@Z
+    void Load(class datAsciiTokenizer& arg1);
+
+    // 0x4666F0 | ?Save@lvlMaterial@@UAEXAAVdatAsciiTokenizer@@@Z
+    void Save(class datAsciiTokenizer& arg1) override;
+};
+
+check_size(lvlMaterial, 0x4C);

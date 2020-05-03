@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     vehicle:transmission
@@ -42,104 +44,60 @@
     0x5B2D2C | const vehTransmission::`vftable' | ??_7vehTransmission@@6B@
 */
 
-struct vehTransmission : asNode
+class vehTransmission : public asNode
 {
+    // const vehTransmission::`vftable' @ 0x5B2D2C
+
 public:
-    // vehTransmission::`vftable' @ 0x5B2D2C
-
     // 0x4CF0F0 | ??0vehTransmission@@QAE@XZ
-    inline vehTransmission()
-    {
-        stub<member_func_t<void, vehTransmission>>(0x4CF0F0, this);
-    }
+    vehTransmission();
 
-    // 0x4CF220 | ?ComputeConstants@vehTransmission@@QAEXXZ
-    inline void ComputeConstants()
-    {
-        return stub<member_func_t<void, vehTransmission>>(0x4CF220, this);
-    }
-
-    // 0x4CF530 | ?GearRatioFromMPH@vehTransmission@@AAEMM@Z
-    inline float GearRatioFromMPH(float arg1)
-    {
-        return stub<member_func_t<float, vehTransmission, float>>(0x4CF530, this, arg1);
-    }
-
-    // 0x4CF560 | ?Init@vehTransmission@@QAEXPAVvehCarSim@@@Z
-    inline void Init(class vehCarSim* arg1)
-    {
-        return stub<member_func_t<void, vehTransmission, class vehCarSim*>>(0x4CF560, this, arg1);
-    }
-
-    // 0x4CF570 | ?Upshift@vehTransmission@@QAEHXZ
-    inline int32_t Upshift()
-    {
-        return stub<member_func_t<int32_t, vehTransmission>>(0x4CF570, this);
-    }
-
-    // 0x4CF5B0 | ?Downshift@vehTransmission@@QAEHXZ
-    inline int32_t Downshift()
-    {
-        return stub<member_func_t<int32_t, vehTransmission>>(0x4CF5B0, this);
-    }
+    // 0x4CF850 | ??_GvehTransmission@@UAEPAXI@Z
+    // 0x4CCEB0 | ??1vehTransmission@@UAE@XZ
+    ~vehTransmission() override;
 
     // 0x4CF6B0 | ?Automatic@vehTransmission@@QAEXH@Z
-    inline void Automatic(int32_t arg1)
-    {
-        return stub<member_func_t<void, vehTransmission, int32_t>>(0x4CF6B0, this, arg1);
-    }
+    void Automatic(i32 arg1);
 
-    // 0x4CF6C0 | ?SetReverse@vehTransmission@@QAEXXZ
-    inline void SetReverse()
-    {
-        return stub<member_func_t<void, vehTransmission>>(0x4CF6C0, this);
-    }
+    // 0x4CF220 | ?ComputeConstants@vehTransmission@@QAEXXZ
+    void ComputeConstants();
 
-    // 0x4CF6D0 | ?SetNeutral@vehTransmission@@QAEXXZ
-    inline void SetNeutral()
-    {
-        return stub<member_func_t<void, vehTransmission>>(0x4CF6D0, this);
-    }
-
-    // 0x4CF6E0 | ?SetForward@vehTransmission@@QAEXXZ
-    inline void SetForward()
-    {
-        return stub<member_func_t<void, vehTransmission>>(0x4CF6E0, this);
-    }
-
-    // 0x4CF700 | ?SetCurrentGear@vehTransmission@@QAEHH@Z
-    inline int32_t SetCurrentGear(int32_t arg1)
-    {
-        return stub<member_func_t<int32_t, vehTransmission, int32_t>>(0x4CF700, this, arg1);
-    }
-
-    // 0x4CCEB0 | ??1vehTransmission@@UAE@XZ
-    inline ~vehTransmission() override
-    {
-        stub<member_func_t<void, vehTransmission>>(0x4CCEB0, this);
-    }
-
-    // 0x4CF600 | ?Update@vehTransmission@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, vehTransmission>>(0x4CF600, this);
-    }
-
-    // 0x4CF200 | ?Reset@vehTransmission@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, vehTransmission>>(0x4CF200, this);
-    }
+    // 0x4CF5B0 | ?Downshift@vehTransmission@@QAEHXZ
+    i32 Downshift();
 
     // 0x4CF740 | ?FileIO@vehTransmission@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
-    {
-        return stub<member_func_t<void, vehTransmission, class datParser&>>(0x4CF740, this, arg1);
-    }
+    void FileIO(class datParser& arg1) override;
 
     // 0x4CF880 | ?GetClassName@vehTransmission@@UAEPADXZ
-    inline char* GetClassName() override
-    {
-        return stub<member_func_t<char*, vehTransmission>>(0x4CF880, this);
-    }
+    char* GetClassName() override;
+
+    // 0x4CF560 | ?Init@vehTransmission@@QAEXPAVvehCarSim@@@Z
+    void Init(class vehCarSim* arg1);
+
+    // 0x4CF200 | ?Reset@vehTransmission@@UAEXXZ
+    void Reset() override;
+
+    // 0x4CF700 | ?SetCurrentGear@vehTransmission@@QAEHH@Z
+    i32 SetCurrentGear(i32 arg1);
+
+    // 0x4CF6E0 | ?SetForward@vehTransmission@@QAEXXZ
+    void SetForward();
+
+    // 0x4CF6D0 | ?SetNeutral@vehTransmission@@QAEXXZ
+    void SetNeutral();
+
+    // 0x4CF6C0 | ?SetReverse@vehTransmission@@QAEXXZ
+    void SetReverse();
+
+    // 0x4CF600 | ?Update@vehTransmission@@UAEXXZ
+    void Update() override;
+
+    // 0x4CF570 | ?Upshift@vehTransmission@@QAEHXZ
+    i32 Upshift();
+
+private:
+    // 0x4CF530 | ?GearRatioFromMPH@vehTransmission@@AAEMM@Z
+    f32 GearRatioFromMPH(f32 arg1);
 };
+
+check_size(vehTransmission, 0x0);

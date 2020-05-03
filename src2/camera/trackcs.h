@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "carcs.h"
 
 /*
     camera:trackcs
@@ -47,122 +49,69 @@
     0x5B4EC4 | const camTrackCS::`vftable' | ??_7camTrackCS@@6B@
 */
 
-struct camTrackCS : camCarCS
+class camTrackCS : public camCarCS
 {
+    // const camTrackCS::`vftable' @ 0x5B4EC4
+
 public:
-    // camTrackCS::`vftable' @ 0x5B4EC4
-
     // 0x51D770 | ??0camTrackCS@@QAE@XZ
-    inline camTrackCS()
-    {
-        stub<member_func_t<void, camTrackCS>>(0x51D770, this);
-    }
+    camTrackCS();
 
-    // 0x51DC70 | ?UpdateCar@camTrackCS@@AAEXXZ
-    inline void UpdateCar()
-    {
-        return stub<member_func_t<void, camTrackCS>>(0x51DC70, this);
-    }
-
-    // 0x51DEE0 | ?UpdateHill@camTrackCS@@AAEXXZ
-    inline void UpdateHill()
-    {
-        return stub<member_func_t<void, camTrackCS>>(0x51DEE0, this);
-    }
-
-    // 0x51E400 | ?UpdateTrack@camTrackCS@@AAEXXZ
-    inline void UpdateTrack()
-    {
-        return stub<member_func_t<void, camTrackCS>>(0x51E400, this);
-    }
-
-    // 0x51EB30 | ?UpdateSwing@camTrackCS@@AAEXXZ
-    inline void UpdateSwing()
-    {
-        return stub<member_func_t<void, camTrackCS>>(0x51EB30, this);
-    }
-
-    // 0x51EB40 | ?PreApproach@camTrackCS@@AAEXXZ
-    inline void PreApproach()
-    {
-        return stub<member_func_t<void, camTrackCS>>(0x51EB40, this);
-    }
-
-    // 0x51ECC0 | ?MinMax@camTrackCS@@AAEXVMatrix34@@@Z
-    inline void MinMax(class Matrix34 arg1)
-    {
-        return stub<member_func_t<void, camTrackCS, class Matrix34>>(0x51ECC0, this, arg1);
-    }
-
-    // 0x51EED0 | ?Collide@camTrackCS@@AAEXVVector3@@@Z
-    inline void Collide(class Vector3 arg1)
-    {
-        return stub<member_func_t<void, camTrackCS, class Vector3>>(0x51EED0, this, arg1);
-    }
-
-    // 0x51F920 | ?SwingToRear@camTrackCS@@QAEXXZ
-    inline void SwingToRear()
-    {
-        return stub<member_func_t<void, camTrackCS>>(0x51F920, this);
-    }
-
-    // 0x51F980 | ?Front@camTrackCS@@AAEXM@Z
-    inline void Front(float arg1)
-    {
-        return stub<member_func_t<void, camTrackCS, float>>(0x51F980, this, arg1);
-    }
-
-    // 0x51FA00 | ?Rear@camTrackCS@@AAEXM@Z
-    inline void Rear(float arg1)
-    {
-        return stub<member_func_t<void, camTrackCS, float>>(0x51FA00, this, arg1);
-    }
-
+    // 0x51FD20 | ??_GcamTrackCS@@UAEPAXI@Z
     // 0x51DA80 | ??1camTrackCS@@UAE@XZ
-    inline ~camTrackCS() override
-    {
-        stub<member_func_t<void, camTrackCS>>(0x51DA80, this);
-    }
-
-    // 0x51DB50 | ?Update@camTrackCS@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, camTrackCS>>(0x51DB50, this);
-    }
-
-    // 0x51DB00 | ?Reset@camTrackCS@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, camTrackCS>>(0x51DB00, this);
-    }
-
-    // 0x51FA80 | ?FileIO@camTrackCS@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
-    {
-        return stub<member_func_t<void, camTrackCS, class datParser&>>(0x51FA80, this, arg1);
-    }
+    ~camTrackCS() override;
 
     // 0x51DAF0 | ?AfterLoad@camTrackCS@@UAEXXZ
-    inline void AfterLoad() override
-    {
-        return stub<member_func_t<void, camTrackCS>>(0x51DAF0, this);
-    }
+    void AfterLoad() override;
+
+    // 0x51FA80 | ?FileIO@camTrackCS@@UAEXAAVdatParser@@@Z
+    void FileIO(class datParser& arg1) override;
 
     // 0x51FD60 | ?GetClassName@camTrackCS@@UAEPADXZ
-    inline char* GetClassName() override
-    {
-        return stub<member_func_t<char*, camTrackCS>>(0x51FD60, this);
-    }
+    char* GetClassName() override;
 
     // 0x51DAE0 | ?MakeActive@camTrackCS@@UAEXXZ
-    inline void MakeActive() override
-    {
-        return stub<member_func_t<void, camTrackCS>>(0x51DAE0, this);
-    }
+    void MakeActive() override;
+
+    // 0x51DB00 | ?Reset@camTrackCS@@UAEXXZ
+    void Reset() override;
+
+    // 0x51F920 | ?SwingToRear@camTrackCS@@QAEXXZ
+    void SwingToRear();
+
+    // 0x51DB50 | ?Update@camTrackCS@@UAEXXZ
+    void Update() override;
 
     // 0x51DC60 | ?UpdateInput@camTrackCS@@UAEXXZ
-    inline void UpdateInput() override
-    {
-        return stub<member_func_t<void, camTrackCS>>(0x51DC60, this);
-    }
+    void UpdateInput() override;
+
+private:
+    // 0x51EED0 | ?Collide@camTrackCS@@AAEXVVector3@@@Z
+    void Collide(class Vector3 arg1);
+
+    // 0x51F980 | ?Front@camTrackCS@@AAEXM@Z
+    void Front(f32 arg1);
+
+    // 0x51ECC0 | ?MinMax@camTrackCS@@AAEXVMatrix34@@@Z
+    void MinMax(class Matrix34 arg1);
+
+    // 0x51EB40 | ?PreApproach@camTrackCS@@AAEXXZ
+    void PreApproach();
+
+    // 0x51FA00 | ?Rear@camTrackCS@@AAEXM@Z
+    void Rear(f32 arg1);
+
+    // 0x51DC70 | ?UpdateCar@camTrackCS@@AAEXXZ
+    void UpdateCar();
+
+    // 0x51DEE0 | ?UpdateHill@camTrackCS@@AAEXXZ
+    void UpdateHill();
+
+    // 0x51EB30 | ?UpdateSwing@camTrackCS@@AAEXXZ
+    void UpdateSwing();
+
+    // 0x51E400 | ?UpdateTrack@camTrackCS@@AAEXXZ
+    void UpdateTrack();
 };
+
+check_size(camTrackCS, 0x0);

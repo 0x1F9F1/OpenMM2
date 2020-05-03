@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,25 @@
 */
 
 #include "refcount.h"
+
+datRefCount::~datRefCount()
+{
+    unimplemented();
+}
+
+i32 datRefCount::DecRef()
+{
+    return stub<thiscall_t<i32, datRefCount*>>(0x59AB00, this);
+}
+
+i32 datRefCount::IncRef()
+{
+    return stub<thiscall_t<i32, datRefCount*>>(0x59AAF0, this);
+}
+
+datRefCount::datRefCount()
+{
+    unimplemented();
+}
+
+define_dummy_symbol(data_refcount);

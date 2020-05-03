@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,40 @@
 */
 
 #include "toggle2.h"
+
+mmToggle2::mmToggle2()
+{
+    unimplemented();
+}
+
+mmToggle2::~mmToggle2()
+{
+    unimplemented();
+}
+
+void mmToggle2::Cull()
+{
+    return stub<thiscall_t<void, mmToggle2*>>(0x4F3E80, this);
+}
+
+void mmToggle2::Init(char* arg1, f32 arg2, f32 arg3, i32* arg4)
+{
+    return stub<thiscall_t<void, mmToggle2*, char*, f32, f32, i32*>>(0x4F3D30, this, arg1, arg2, arg3, arg4);
+}
+
+void mmToggle2::SetPosition(f32 arg1, f32 arg2)
+{
+    return stub<thiscall_t<void, mmToggle2*, f32, f32>>(0x4F3DC0, this, arg1, arg2);
+}
+
+void mmToggle2::Update()
+{
+    return stub<thiscall_t<void, mmToggle2*>>(0x4F3E60, this);
+}
+
+void mmToggle2::LoadBitmap(char* arg1)
+{
+    return stub<thiscall_t<void, mmToggle2*, char*>>(0x4F3D60, this, arg1);
+}
+
+define_dummy_symbol(mmwidget_toggle2);

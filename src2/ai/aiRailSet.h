@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -43,103 +43,53 @@ class aiRailSet
 {
 public:
     // 0x556D50 | ??0aiRailSet@@QAE@XZ
-    inline aiRailSet()
-    {
-        stub<member_func_t<void, aiRailSet>>(0x556D50, this);
-    }
+    aiRailSet();
 
     // 0x556E10 | ??1aiRailSet@@QAE@XZ
-    inline ~aiRailSet()
-    {
-        stub<member_func_t<void, aiRailSet>>(0x556E10, this);
-    }
-
-    // 0x556E20 | ?Reset@aiRailSet@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, aiRailSet>>(0x556E20, this);
-    }
-
-    // 0x556E60 | ?CalcRailPosition@aiRailSet@@QAEXAAVVector3@@M@Z
-    inline void CalcRailPosition(class Vector3& arg1, float arg2)
-    {
-        return stub<member_func_t<void, aiRailSet, class Vector3&, float>>(0x556E60, this, arg1, arg2);
-    }
+    ~aiRailSet();
 
     // 0x5577A0 | ?CalcRailPosOrient@aiRailSet@@QAEXAAVVector3@@0M@Z
-    inline void CalcRailPosOrient(class Vector3& arg1, class Vector3& arg2, float arg3)
-    {
-        return stub<member_func_t<void, aiRailSet, class Vector3&, class Vector3&, float>>(
-            0x5577A0, this, arg1, arg2, arg3);
-    }
+    void CalcRailPosOrient(class Vector3& arg1, class Vector3& arg2, f32 arg3);
 
-    // 0x558270 | ?SolveTurnType@aiRailSet@@QAEHPAVaiPath@@0@Z
-    inline int32_t SolveTurnType(class aiPath* arg1, class aiPath* arg2)
-    {
-        return stub<member_func_t<int32_t, aiRailSet, class aiPath*, class aiPath*>>(0x558270, this, arg1, arg2);
-    }
-
-    // 0x5583F0 | ?CalcXZPosition@aiRailSet@@QAEXAAVVector3@@0000M@Z
-    inline void CalcXZPosition(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3, class Vector3& arg4,
-        class Vector3& arg5, float arg6)
-    {
-        return stub<member_func_t<void, aiRailSet, class Vector3&, class Vector3&, class Vector3&, class Vector3&,
-            class Vector3&, float>>(0x5583F0, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
+    // 0x556E60 | ?CalcRailPosition@aiRailSet@@QAEXAAVVector3@@M@Z
+    void CalcRailPosition(class Vector3& arg1, f32 arg2);
 
     // 0x5585E0 | ?CalcXZDirection@aiRailSet@@QAEXAAVVector3@@0000M@Z
-    inline void CalcXZDirection(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3, class Vector3& arg4,
-        class Vector3& arg5, float arg6)
-    {
-        return stub<member_func_t<void, aiRailSet, class Vector3&, class Vector3&, class Vector3&, class Vector3&,
-            class Vector3&, float>>(0x5585E0, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
+    void CalcXZDirection(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3, class Vector3& arg4,
+        class Vector3& arg5, f32 arg6);
 
     // 0x558780 | ?CalcXZPosOrient@aiRailSet@@QAEXAAVVector3@@00000M@Z
-    inline void CalcXZPosOrient(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3, class Vector3& arg4,
-        class Vector3& arg5, class Vector3& arg6, float arg7)
-    {
-        return stub<member_func_t<void, aiRailSet, class Vector3&, class Vector3&, class Vector3&, class Vector3&,
-            class Vector3&, class Vector3&, float>>(0x558780, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-    }
+    void CalcXZPosOrient(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3, class Vector3& arg4,
+        class Vector3& arg5, class Vector3& arg6, f32 arg7);
+
+    // 0x5583F0 | ?CalcXZPosition@aiRailSet@@QAEXAAVVector3@@0000M@Z
+    void CalcXZPosition(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3, class Vector3& arg4,
+        class Vector3& arg5, f32 arg6);
 
     // 0x558990 | ?ComputeXZCurve@aiRailSet@@QAEXAAVVector3@@000@Z
-    inline void ComputeXZCurve(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3, class Vector3& arg4)
-    {
-        return stub<member_func_t<void, aiRailSet, class Vector3&, class Vector3&, class Vector3&, class Vector3&>>(
-            0x558990, this, arg1, arg2, arg3, arg4);
-    }
+    void ComputeXZCurve(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3, class Vector3& arg4);
 
     // 0x558B40 | ?ComputeXZCurve@aiRailSet@@QAEXAAVVector3@@000AAVVector4@@1@Z
-    inline void ComputeXZCurve(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3, class Vector3& arg4,
-        class Vector4& arg5, class Vector4& arg6)
-    {
-        return stub<member_func_t<void, aiRailSet, class Vector3&, class Vector3&, class Vector3&, class Vector3&,
-            class Vector4&, class Vector4&>>(0x558B40, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
-
-    // 0x558D00 | ?SolveXZCurve@aiRailSet@@QAEXAAVVector3@@0M@Z
-    inline void SolveXZCurve(class Vector3& arg1, class Vector3& arg2, float arg3)
-    {
-        return stub<member_func_t<void, aiRailSet, class Vector3&, class Vector3&, float>>(
-            0x558D00, this, arg1, arg2, arg3);
-    }
-
-    // 0x558D80 | ?SolveXZPosition@aiRailSet@@QAEXAAVVector3@@M@Z
-    inline void SolveXZPosition(class Vector3& arg1, float arg2)
-    {
-        return stub<member_func_t<void, aiRailSet, class Vector3&, float>>(0x558D80, this, arg1, arg2);
-    }
+    void ComputeXZCurve(class Vector3& arg1, class Vector3& arg2, class Vector3& arg3, class Vector3& arg4,
+        class Vector4& arg5, class Vector4& arg6);
 
     // 0x558DC0 | ?Dump@aiRailSet@@QAEXXZ
-    inline void Dump()
-    {
-        return stub<member_func_t<void, aiRailSet>>(0x558DC0, this);
-    }
+    void Dump();
 
     // 0x558FB0 | ?ReplayDebug@aiRailSet@@QAEXXZ
-    inline void ReplayDebug()
-    {
-        return stub<member_func_t<void, aiRailSet>>(0x558FB0, this);
-    }
+    void ReplayDebug();
+
+    // 0x556E20 | ?Reset@aiRailSet@@QAEXXZ
+    void Reset();
+
+    // 0x558270 | ?SolveTurnType@aiRailSet@@QAEHPAVaiPath@@0@Z
+    i32 SolveTurnType(class aiPath* arg1, class aiPath* arg2);
+
+    // 0x558D00 | ?SolveXZCurve@aiRailSet@@QAEXAAVVector3@@0M@Z
+    void SolveXZCurve(class Vector3& arg1, class Vector3& arg2, f32 arg3);
+
+    // 0x558D80 | ?SolveXZPosition@aiRailSet@@QAEXAAVVector3@@M@Z
+    void SolveXZPosition(class Vector3& arg1, f32 arg2);
 };
+
+check_size(aiRailSet, 0x0);

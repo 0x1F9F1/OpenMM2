@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "pu_menu.h"
+
 /*
     mmui:dlg_ctrl
 
@@ -29,27 +31,20 @@
     0x5B416C | const Dialog_ControlAssign::`vftable' | ??_7Dialog_ControlAssign@@6B@
 */
 
-struct Dialog_ControlAssign : PUMenuBase
+class Dialog_ControlAssign : public PUMenuBase
 {
+    // const Dialog_ControlAssign::`vftable' @ 0x5B416C
+
 public:
-    // Dialog_ControlAssign::`vftable' @ 0x5B416C
-
     // 0x4FE4C0 | ??0Dialog_ControlAssign@@QAE@HMMMMPAD@Z
-    inline Dialog_ControlAssign(int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6)
-    {
-        stub<member_func_t<void, Dialog_ControlAssign, int32_t, float, float, float, float, char*>>(
-            0x4FE4C0, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
+    Dialog_ControlAssign(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6);
 
+    // 0x4FE5F0 | ??_GDialog_ControlAssign@@UAEPAXI@Z
     // 0x4FE5D0 | ??1Dialog_ControlAssign@@UAE@XZ
-    inline ~Dialog_ControlAssign() override
-    {
-        stub<member_func_t<void, Dialog_ControlAssign>>(0x4FE5D0, this);
-    }
+    ~Dialog_ControlAssign() override;
 
     // 0x4FE5E0 | ?PreSetup@Dialog_ControlAssign@@UAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, Dialog_ControlAssign>>(0x4FE5E0, this);
-    }
+    void PreSetup() override;
 };
+
+check_size(Dialog_ControlAssign, 0x0);

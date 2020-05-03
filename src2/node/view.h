@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "linear.h"
 
 /*
     node:view
@@ -39,74 +41,44 @@
     0x5B86A8 | const asViewCS::`vftable' | ??_7asViewCS@@6B@
 */
 
-struct asViewCS : asLinearCS
+class asViewCS : public asLinearCS
 {
+    // const asViewCS::`vftable' @ 0x5B86A8
+
 public:
-    // asViewCS::`vftable' @ 0x5B86A8
-
     // 0x596200 | ??0asViewCS@@QAE@XZ
-    inline asViewCS()
-    {
-        stub<member_func_t<void, asViewCS>>(0x596200, this);
-    }
+    asViewCS();
 
-    // 0x596330 | ?SetAzimuth@asViewCS@@QAEXXZ
-    inline void SetAzimuth()
-    {
-        return stub<member_func_t<void, asViewCS>>(0x596330, this);
-    }
-
-    // 0x596580 | ?UpdatePolar@asViewCS@@QAEXXZ
-    inline void UpdatePolar()
-    {
-        return stub<member_func_t<void, asViewCS>>(0x596580, this);
-    }
-
-    // 0x5966E0 | ?UpdateRoam@asViewCS@@QAEXXZ
-    inline void UpdateRoam()
-    {
-        return stub<member_func_t<void, asViewCS>>(0x5966E0, this);
-    }
-
-    // 0x5967E0 | ?UpdatePOV@asViewCS@@QAEXXZ
-    inline void UpdatePOV()
-    {
-        return stub<member_func_t<void, asViewCS>>(0x5967E0, this);
-    }
-
-    // 0x596880 | ?UpdateLookAt@asViewCS@@QAEXXZ
-    inline void UpdateLookAt()
-    {
-        return stub<member_func_t<void, asViewCS>>(0x596880, this);
-    }
-
-    // 0x5968E0 | ?UpdateTrack@asViewCS@@QAEXXZ
-    inline void UpdateTrack()
-    {
-        return stub<member_func_t<void, asViewCS>>(0x5968E0, this);
-    }
-
-    // 0x596C80 | ?UpdateStereo@asViewCS@@QAEXXZ
-    inline void UpdateStereo()
-    {
-        return stub<member_func_t<void, asViewCS>>(0x596C80, this);
-    }
-
+    // 0x596DE0 | ??_GasViewCS@@UAEPAXI@Z
     // 0x596E10 | ??1asViewCS@@UAE@XZ
-    inline ~asViewCS() override
-    {
-        stub<member_func_t<void, asViewCS>>(0x596E10, this);
-    }
-
-    // 0x596500 | ?Update@asViewCS@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, asViewCS>>(0x596500, this);
-    }
+    ~asViewCS() override;
 
     // 0x596390 | ?Reset@asViewCS@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, asViewCS>>(0x596390, this);
-    }
+    void Reset() override;
+
+    // 0x596330 | ?SetAzimuth@asViewCS@@QAEXXZ
+    void SetAzimuth();
+
+    // 0x596500 | ?Update@asViewCS@@UAEXXZ
+    void Update() override;
+
+    // 0x596880 | ?UpdateLookAt@asViewCS@@QAEXXZ
+    void UpdateLookAt();
+
+    // 0x5967E0 | ?UpdatePOV@asViewCS@@QAEXXZ
+    void UpdatePOV();
+
+    // 0x596580 | ?UpdatePolar@asViewCS@@QAEXXZ
+    void UpdatePolar();
+
+    // 0x5966E0 | ?UpdateRoam@asViewCS@@QAEXXZ
+    void UpdateRoam();
+
+    // 0x596C80 | ?UpdateStereo@asViewCS@@QAEXXZ
+    void UpdateStereo();
+
+    // 0x5968E0 | ?UpdateTrack@asViewCS@@QAEXXZ
+    void UpdateTrack();
 };
+
+check_size(asViewCS, 0x11C);

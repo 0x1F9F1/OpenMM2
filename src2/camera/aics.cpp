@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,45 @@
 */
 
 #include "aics.h"
+
+camAICS::camAICS()
+{
+    unimplemented();
+}
+
+camAICS::~camAICS()
+{
+    unimplemented();
+}
+
+void camAICS::Init(class vehCar* arg1)
+{
+    return stub<thiscall_t<void, camAICS*, class vehCar*>>(0x520A70, this, arg1);
+}
+
+void camAICS::MakeActive()
+{
+    return stub<thiscall_t<void, camAICS*>>(0x520BA0, this);
+}
+
+void camAICS::Reset()
+{
+    return stub<thiscall_t<void, camAICS*>>(0x520AB0, this);
+}
+
+void camAICS::SetMatrix(class Matrix34* arg1)
+{
+    return stub<thiscall_t<void, camAICS*, class Matrix34*>>(0x520AE0, this, arg1);
+}
+
+void camAICS::SetPosition(class Vector3& arg1)
+{
+    return stub<thiscall_t<void, camAICS*, class Vector3&>>(0x520AC0, this, arg1);
+}
+
+void camAICS::Update()
+{
+    return stub<thiscall_t<void, camAICS*>>(0x520C50, this);
+}
+
+define_dummy_symbol(camera_aics);

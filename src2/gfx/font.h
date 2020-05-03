@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -32,56 +32,29 @@
     0x5CD530 | struct gfxFontInfo SYSFONT | ?SYSFONT@@3UgfxFontInfo@@A
 */
 
-// 0x4B1090 | ?gfxDrawFont@@YAXABVVector4@@PBDABUgfxFontInfo@@@Z
-inline void gfxDrawFont(class Vector4 const& arg1, char const* arg2, struct gfxFontInfo const& arg3)
-{
-    return stub<cdecl_t<void, class Vector4 const&, char const*, struct gfxFontInfo const&>>(
-        0x4B1090, arg1, arg2, arg3);
-}
-
-// 0x4B11C0 | ?gfxDrawFont@@YAXHHPBDABUgfxFontInfo@@@Z
-inline void gfxDrawFont(int32_t arg1, int32_t arg2, char const* arg3, struct gfxFontInfo const& arg4)
-{
-    return stub<cdecl_t<void, int32_t, int32_t, char const*, struct gfxFontInfo const&>>(
-        0x4B11C0, arg1, arg2, arg3, arg4);
-}
+// 0x4B1330 | ?gfxComputeFontExtents@@YAXAAH0PBDABUgfxFontInfo@@@Z
+void gfxComputeFontExtents(i32& arg1, i32& arg2, char const* arg3, struct gfxFontInfo const& arg4);
 
 // 0x4B1200 | ?gfxCreateFont@@YAXXZ
-inline void gfxCreateFont()
-{
-    return stub<cdecl_t<void>>(0x4B1200);
-}
+void gfxCreateFont();
 
-// 0x4B1260 | ?gfxFontGetWidth@@YAHXZ
-inline int32_t gfxFontGetWidth()
-{
-    return stub<cdecl_t<int32_t>>(0x4B1260);
-}
-
-// 0x4B1270 | ?gfxFontGetHeight@@YAHXZ
-inline int32_t gfxFontGetHeight()
-{
-    return stub<cdecl_t<int32_t>>(0x4B1270);
-}
+// 0x4B1090 | ?gfxDrawFont@@YAXABVVector4@@PBDABUgfxFontInfo@@@Z
+void gfxDrawFont(class Vector4 const& arg1, char const* arg2, struct gfxFontInfo const& arg3);
 
 // 0x4B1280 | ?gfxDrawFont@@YAXHHPBD@Z
-inline void gfxDrawFont(int32_t arg1, int32_t arg2, char const* arg3)
-{
-    return stub<cdecl_t<void, int32_t, int32_t, char const*>>(0x4B1280, arg1, arg2, arg3);
-}
+void gfxDrawFont(i32 arg1, i32 arg2, char const* arg3);
+
+// 0x4B11C0 | ?gfxDrawFont@@YAXHHPBDABUgfxFontInfo@@@Z
+void gfxDrawFont(i32 arg1, i32 arg2, char const* arg3, struct gfxFontInfo const& arg4);
+
+// 0x4B1270 | ?gfxFontGetHeight@@YAHXZ
+i32 gfxFontGetHeight();
+
+// 0x4B1260 | ?gfxFontGetWidth@@YAHXZ
+i32 gfxFontGetWidth();
 
 // 0x4B12D0 | ?gfxReleaseFont@@YAXXZ
-inline void gfxReleaseFont()
-{
-    return stub<cdecl_t<void>>(0x4B12D0);
-}
-
-// 0x4B1330 | ?gfxComputeFontExtents@@YAXAAH0PBDABUgfxFontInfo@@@Z
-inline void gfxComputeFontExtents(int32_t& arg1, int32_t& arg2, char const* arg3, struct gfxFontInfo const& arg4)
-{
-    return stub<cdecl_t<void, int32_t&, int32_t&, char const*, struct gfxFontInfo const&>>(
-        0x4B1330, arg1, arg2, arg3, arg4);
-}
+void gfxReleaseFont();
 
 // 0x5CD530 | ?SYSFONT@@3UgfxFontInfo@@A
 inline extern_var(0x5CD530, struct gfxFontInfo, SYSFONT);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -32,39 +32,23 @@
 class datMemStream
 {
 public:
-    // 0x4C9280 | ?Read@datMemStream@@QAEHPAXH@Z
-    inline int32_t Read(void* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<int32_t, datMemStream, void*, int32_t>>(0x4C9280, this, arg1, arg2);
-    }
-
-    // 0x4C92D0 | ?Write@datMemStream@@QAEHPBXH@Z
-    inline int32_t Write(void const* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<int32_t, datMemStream, void const*, int32_t>>(0x4C92D0, this, arg1, arg2);
-    }
+    // 0x4C9390 | ?Close@datMemStream@@QAEHXZ
+    i32 Close();
 
     // 0x4C9330 | ?GetCh@datMemStream@@QAEHXZ
-    inline int32_t GetCh()
-    {
-        return stub<member_func_t<int32_t, datMemStream>>(0x4C9330, this);
-    }
+    i32 GetCh();
 
     // 0x4C9360 | ?PutCh@datMemStream@@QAEHE@Z
-    inline int32_t PutCh(uint8_t arg1)
-    {
-        return stub<member_func_t<int32_t, datMemStream, uint8_t>>(0x4C9360, this, arg1);
-    }
+    i32 PutCh(u8 arg1);
 
-    // 0x4C9390 | ?Close@datMemStream@@QAEHXZ
-    inline int32_t Close()
-    {
-        return stub<member_func_t<int32_t, datMemStream>>(0x4C9390, this);
-    }
+    // 0x4C9280 | ?Read@datMemStream@@QAEHPAXH@Z
+    i32 Read(void* arg1, i32 arg2);
 
     // 0x4C93A0 | ?Size@datMemStream@@QAEHXZ
-    inline int32_t Size()
-    {
-        return stub<member_func_t<int32_t, datMemStream>>(0x4C93A0, this);
-    }
+    i32 Size();
+
+    // 0x4C92D0 | ?Write@datMemStream@@QAEHPBXH@Z
+    i32 Write(void const* arg1, i32 arg2);
 };
+
+check_size(datMemStream, 0x0);

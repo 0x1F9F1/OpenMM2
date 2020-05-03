@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "button.h"
 
 /*
     mmwidget:togglebutton
@@ -35,58 +37,37 @@
     protected: static int UIToggleButton::ToggleBMLoaded | ?ToggleBMLoaded@UIToggleButton@@1HA
 */
 
-class UIToggleButton : UIButton
+class UIToggleButton : public UIButton
 {
+    // const UIToggleButton::`vftable' @ 0x5B38A4
+
 public:
-    // UIToggleButton::`vftable' @ 0x5B38A4
-
     // 0x4EDE10 | ??0UIToggleButton@@QAE@XZ
-    inline UIToggleButton()
-    {
-        stub<member_func_t<void, UIToggleButton>>(0x4EDE10, this);
-    }
+    UIToggleButton();
 
-    // 0x4EDF00 | ?Init@UIToggleButton@@QAEXPAULocString@@PAHMMMMHHVdatCallback@@@Z
-    inline void Init(struct LocString* arg1, int32_t* arg2, float arg3, float arg4, float arg5, float arg6,
-        int32_t arg7, int32_t arg8, class datCallback arg9)
-    {
-        return stub<member_func_t<void, UIToggleButton, struct LocString*, int32_t*, float, float, float, float,
-            int32_t, int32_t, class datCallback>>(0x4EDF00, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
-    }
-
+    // 0x4EE080 | ??_GUIToggleButton@@UAEPAXI@Z
     // 0x4EDE90 | ??1UIToggleButton@@UAE@XZ
-    inline ~UIToggleButton() override
-    {
-        stub<member_func_t<void, UIToggleButton>>(0x4EDE90, this);
-    }
-
-    // 0x4EE0B0 | ?Update@UIToggleButton@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, UIToggleButton>>(0x4EE0B0, this);
-    }
+    ~UIToggleButton() override;
 
     // 0x4EE000 | ?Action@UIToggleButton@@UAEXTeqEvent@@@Z
-    inline void Action(union eqEvent arg1) override
-    {
-        return stub<member_func_t<void, UIToggleButton, union eqEvent>>(0x4EE000, this, arg1);
-    }
+    void Action(union eqEvent arg1) override;
+
+    // 0x4EDF00 | ?Init@UIToggleButton@@QAEXPAULocString@@PAHMMMMHHVdatCallback@@@Z
+    void Init(struct LocString* arg1, i32* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7, i32 arg8,
+        class datCallback arg9);
+
+    // 0x4EE0B0 | ?Update@UIToggleButton@@UAEXXZ
+    void Update() override;
 
     // 0x4EDFE0 | ?DoToggle@UIToggleButton@@UAEXXZ
-    virtual inline void DoToggle()
-    {
-        return stub<member_func_t<void, UIToggleButton>>(0x4EDFE0, this);
-    }
+    virtual void DoToggle();
 
+protected:
     // 0x4EDFA0 | ?DrawOff@UIToggleButton@@MAEXXZ
-    virtual inline void DrawOff()
-    {
-        return stub<member_func_t<void, UIToggleButton>>(0x4EDFA0, this);
-    }
+    virtual void DrawOff();
 
     // 0x4EDFC0 | ?DrawOn@UIToggleButton@@MAEXXZ
-    virtual inline void DrawOn()
-    {
-        return stub<member_func_t<void, UIToggleButton>>(0x4EDFC0, this);
-    }
+    virtual void DrawOn();
 };
+
+check_size(UIToggleButton, 0xAC);

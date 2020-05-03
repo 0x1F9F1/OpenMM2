@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,21 @@
 */
 
 #include "effectbase.h"
+
+EffectBase::~EffectBase()
+{
+    unimplemented();
+}
+
+struct IDirectSoundBuffer* EffectBase::CreateDSoundBuffer(u32 arg1, struct IDirectSoundBuffer* arg2)
+{
+    return stub<thiscall_t<struct IDirectSoundBuffer*, EffectBase*, u32, struct IDirectSoundBuffer*>>(
+        0x5A74E0, this, arg1, arg2);
+}
+
+i16 EffectBase::OriginalBufferPlaying(i16 arg1)
+{
+    return stub<thiscall_t<i16, EffectBase*, i16>>(0x5A7590, this, arg1);
+}
+
+define_dummy_symbol(aud_effectbase);

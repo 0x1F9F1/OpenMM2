@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -25,10 +25,5 @@
 */
 
 // 0x49E350 | ?jpeg_idct_islow@@YAXPAUjpeg_decompress_struct@@PAUjpeg_component_info@@PAFPAPAEI@Z
-inline void jpeg_idct_islow(
-    struct jpeg_decompress_struct* arg1, struct jpeg_component_info* arg2, int16_t* arg3, uint8_t** arg4, uint32_t arg5)
-{
-    return stub<
-        cdecl_t<void, struct jpeg_decompress_struct*, struct jpeg_component_info*, int16_t*, uint8_t**, uint32_t>>(
-        0x49E350, arg1, arg2, arg3, arg4, arg5);
-}
+void jpeg_idct_islow(
+    struct jpeg_decompress_struct* arg1, struct jpeg_component_info* arg2, i16* arg3, u8** arg4, u32 arg5);

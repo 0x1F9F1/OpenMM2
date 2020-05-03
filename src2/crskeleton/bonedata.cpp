@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,31 @@
 */
 
 #include "bonedata.h"
+
+crBoneData::crBoneData()
+{
+    unimplemented();
+}
+
+void crBoneData::AddChild(class crBoneData* arg1)
+{
+    return stub<thiscall_t<void, crBoneData*, class crBoneData*>>(0x57CC00, this, arg1);
+}
+
+void crBoneData::ApplyLimits(class Matrix34& arg1)
+{
+    return stub<thiscall_t<void, crBoneData*, class Matrix34&>>(0x57CDC0, this, arg1);
+}
+
+bool crBoneData::Load(class datTokenizer& arg1, class crBoneData** arg2, i32& arg3)
+{
+    return stub<thiscall_t<bool, crBoneData*, class datTokenizer&, class crBoneData**, i32&>>(
+        0x57CC40, this, arg1, arg2, arg3);
+}
+
+void crBoneData::Transform(class Matrix34 const* arg1, class crBone* arg2)
+{
+    return stub<thiscall_t<void, crBoneData*, class Matrix34 const*, class crBone*>>(0x57CD50, this, arg1, arg2);
+}
+
+define_dummy_symbol(crskeleton_bonedata);

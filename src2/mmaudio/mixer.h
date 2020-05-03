@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "data/base.h"
 
 /*
     mmaudio:mixer
@@ -45,127 +47,75 @@
     0x5B4E70 | const MixerCTL::`vftable' | ??_7MixerCTL@@6B@
 */
 
-class MixerCTL
-{
-public:
-    // MixerCTL::`vftable' @ 0x5B4E70
-
-    // 0x51C1F0 | ?Init@MixerCTL@@QAEKXZ
-    inline uint32_t Init()
-    {
-        return stub<member_func_t<uint32_t, MixerCTL>>(0x51C1F0, this);
-    }
-
-    // 0x51C240 | ?AssignWaveBalance@MixerCTL@@QAEXM@Z
-    inline void AssignWaveBalance(float arg1)
-    {
-        return stub<member_func_t<void, MixerCTL, float>>(0x51C240, this, arg1);
-    }
-
-    // 0x51C290 | ?AssignCDBalance@MixerCTL@@QAEXM@Z
-    inline void AssignCDBalance(float arg1)
-    {
-        return stub<member_func_t<void, MixerCTL, float>>(0x51C290, this, arg1);
-    }
-
-    // 0x51C2E0 | ?RefreshAll@MixerCTL@@QAEXK@Z
-    inline void RefreshAll(uint32_t arg1)
-    {
-        return stub<member_func_t<void, MixerCTL, uint32_t>>(0x51C2E0, this, arg1);
-    }
-
-    // 0x51C2F0 | ?GetWaveBalance@MixerCTL@@QAEMXZ
-    inline float GetWaveBalance()
-    {
-        return stub<member_func_t<float, MixerCTL>>(0x51C2F0, this);
-    }
-
-    // 0x51C300 | ?GetWaveVolume@MixerCTL@@QAEMXZ
-    inline float GetWaveVolume()
-    {
-        return stub<member_func_t<float, MixerCTL>>(0x51C300, this);
-    }
-
-    // 0x51C310 | ?AssignWaveVolume@MixerCTL@@QAEXM@Z
-    inline void AssignWaveVolume(float arg1)
-    {
-        return stub<member_func_t<void, MixerCTL, float>>(0x51C310, this, arg1);
-    }
-
-    // 0x51C330 | ?AssignCDVolume@MixerCTL@@QAEXM@Z
-    inline void AssignCDVolume(float arg1)
-    {
-        return stub<member_func_t<void, MixerCTL, float>>(0x51C330, this, arg1);
-    }
-
-    // 0x51C350 | ?GetCDBalance@MixerCTL@@QAEMXZ
-    inline float GetCDBalance()
-    {
-        return stub<member_func_t<float, MixerCTL>>(0x51C350, this);
-    }
-
-    // 0x51C360 | ?GetCDVolume@MixerCTL@@QAEMXZ
-    inline float GetCDVolume()
-    {
-        return stub<member_func_t<float, MixerCTL>>(0x51C360, this);
-    }
-
-    // 0x51C370 | ?AssignMixerVolume@MixerCTL@@QAEKMK@Z
-    inline uint32_t AssignMixerVolume(float arg1, uint32_t arg2)
-    {
-        return stub<member_func_t<uint32_t, MixerCTL, float, uint32_t>>(0x51C370, this, arg1, arg2);
-    }
-
-    // 0x51C5C0 | ?AssignMixerBalance@MixerCTL@@QAEKMK@Z
-    inline uint32_t AssignMixerBalance(float arg1, uint32_t arg2)
-    {
-        return stub<member_func_t<uint32_t, MixerCTL, float, uint32_t>>(0x51C5C0, this, arg1, arg2);
-    }
-
-    // 0x51C870 | ?GetMixerBalance@MixerCTL@@QAEMK@Z
-    inline float GetMixerBalance(uint32_t arg1)
-    {
-        return stub<member_func_t<float, MixerCTL, uint32_t>>(0x51C870, this, arg1);
-    }
-
-    // 0x51CAE0 | ?SetDeviceNum@MixerCTL@@QAEXI@Z
-    inline void SetDeviceNum(uint32_t arg1)
-    {
-        return stub<member_func_t<void, MixerCTL, uint32_t>>(0x51CAE0, this, arg1);
-    }
-
-    // 0x51CB00 | ?GetErrorMessage@MixerCTL@@AAEPADK@Z
-    inline char* GetErrorMessage(uint32_t arg1)
-    {
-        return stub<member_func_t<char*, MixerCTL, uint32_t>>(0x51CB00, this, arg1);
-    }
-
-    // 0x51CBA0 | ?WindowProc@MixerCTL@@AAEJPAUHWND__@@IIJ@Z
-    inline int32_t WindowProc(struct HWND__* arg1, uint32_t arg2, uint32_t arg3, int32_t arg4)
-    {
-        return stub<member_func_t<int32_t, MixerCTL, struct HWND__*, uint32_t, uint32_t, int32_t>>(
-            0x51CBA0, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x51C230 | ??1MixerCTL@@UAE@XZ
-    virtual inline ~MixerCTL()
-    {
-        stub<member_func_t<void, MixerCTL>>(0x51C230, this);
-    }
-};
-
 struct VolumeDW
 {
 public:
     // 0x51C100 | ?Set@VolumeDW@@QAEXMM@Z
-    inline void Set(float arg1, float arg2)
-    {
-        return stub<member_func_t<void, VolumeDW, float, float>>(0x51C100, this, arg1, arg2);
-    }
+    void Set(f32 arg1, f32 arg2);
 
     // 0x51C1C0 | ?Value@VolumeDW@@QAEKXZ
-    inline uint32_t Value()
-    {
-        return stub<member_func_t<uint32_t, VolumeDW>>(0x51C1C0, this);
-    }
+    u32 Value();
 };
+
+check_size(VolumeDW, 0x0);
+
+class MixerCTL : public Base
+{
+    // const MixerCTL::`vftable' @ 0x5B4E70
+
+public:
+    // 0x51CBB0 | ??_GMixerCTL@@UAEPAXI@Z
+    // 0x51C230 | ??1MixerCTL@@UAE@XZ
+    ~MixerCTL() override;
+
+    // 0x51C290 | ?AssignCDBalance@MixerCTL@@QAEXM@Z
+    void AssignCDBalance(f32 arg1);
+
+    // 0x51C330 | ?AssignCDVolume@MixerCTL@@QAEXM@Z
+    void AssignCDVolume(f32 arg1);
+
+    // 0x51C5C0 | ?AssignMixerBalance@MixerCTL@@QAEKMK@Z
+    u32 AssignMixerBalance(f32 arg1, u32 arg2);
+
+    // 0x51C370 | ?AssignMixerVolume@MixerCTL@@QAEKMK@Z
+    u32 AssignMixerVolume(f32 arg1, u32 arg2);
+
+    // 0x51C240 | ?AssignWaveBalance@MixerCTL@@QAEXM@Z
+    void AssignWaveBalance(f32 arg1);
+
+    // 0x51C310 | ?AssignWaveVolume@MixerCTL@@QAEXM@Z
+    void AssignWaveVolume(f32 arg1);
+
+    // 0x51C350 | ?GetCDBalance@MixerCTL@@QAEMXZ
+    f32 GetCDBalance();
+
+    // 0x51C360 | ?GetCDVolume@MixerCTL@@QAEMXZ
+    f32 GetCDVolume();
+
+    // 0x51C870 | ?GetMixerBalance@MixerCTL@@QAEMK@Z
+    f32 GetMixerBalance(u32 arg1);
+
+    // 0x51C2F0 | ?GetWaveBalance@MixerCTL@@QAEMXZ
+    f32 GetWaveBalance();
+
+    // 0x51C300 | ?GetWaveVolume@MixerCTL@@QAEMXZ
+    f32 GetWaveVolume();
+
+    // 0x51C1F0 | ?Init@MixerCTL@@QAEKXZ
+    u32 Init();
+
+    // 0x51C2E0 | ?RefreshAll@MixerCTL@@QAEXK@Z
+    void RefreshAll(u32 arg1);
+
+    // 0x51CAE0 | ?SetDeviceNum@MixerCTL@@QAEXI@Z
+    void SetDeviceNum(u32 arg1);
+
+private:
+    // 0x51CB00 | ?GetErrorMessage@MixerCTL@@AAEPADK@Z
+    char* GetErrorMessage(u32 arg1);
+
+    // 0x51CBA0 | ?WindowProc@MixerCTL@@AAEJPAUHWND__@@IIJ@Z
+    i32 WindowProc(struct HWND__* arg1, u32 arg2, u32 arg3, i32 arg4);
+};
+
+check_size(MixerCTL, 0x0);

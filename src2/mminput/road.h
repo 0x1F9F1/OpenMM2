@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "effect.h"
+
 /*
     mminput:road
 
@@ -28,38 +30,25 @@
     0x531BD0 | public: virtual int __thiscall mmRoadFF::Stop(void) | ?Stop@mmRoadFF@@UAEHXZ
 */
 
-struct mmRoadFF
+class mmRoadFF : public mmEffectFF
 {
-public:
-    // mmRoadFF::`vftable' @ 0x5B52CC
+    // const mmRoadFF::`vftable' @ 0x5B52CC
 
+public:
     // 0x531A70 | ?Assign@mmRoadFF@@QAEHJJ@Z
-    inline int32_t Assign(int32_t arg1, int32_t arg2)
-    {
-        return stub<member_func_t<int32_t, mmRoadFF, int32_t, int32_t>>(0x531A70, this, arg1, arg2);
-    }
+    i32 Assign(i32 arg1, i32 arg2);
 
     // 0x531940 | ?Init@mmRoadFF@@UAEHPAUIDirectInputDevice2A@@@Z
-    virtual inline int32_t Init(struct IDirectInputDevice2A* arg1)
-    {
-        return stub<member_func_t<int32_t, mmRoadFF, struct IDirectInputDevice2A*>>(0x531940, this, arg1);
-    }
+    i32 Init(struct IDirectInputDevice2A* arg1) override;
 
     // 0x531B60 | ?Play@mmRoadFF@@UAEHXZ
-    virtual inline int32_t Play()
-    {
-        return stub<member_func_t<int32_t, mmRoadFF>>(0x531B60, this);
-    }
-
-    // 0x531BD0 | ?Stop@mmRoadFF@@UAEHXZ
-    virtual inline int32_t Stop()
-    {
-        return stub<member_func_t<int32_t, mmRoadFF>>(0x531BD0, this);
-    }
+    i32 Play() override;
 
     // 0x531A40 | ?SetValues@mmRoadFF@@UAEHMM@Z
-    virtual inline int32_t SetValues(float arg1, float arg2)
-    {
-        return stub<member_func_t<int32_t, mmRoadFF, float, float>>(0x531A40, this, arg1, arg2);
-    }
+    i32 SetValues(f32 arg1, f32 arg2) override;
+
+    // 0x531BD0 | ?Stop@mmRoadFF@@UAEHXZ
+    i32 Stop() override;
 };
+
+check_size(mmRoadFF, 0x0);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,20 @@
 */
 
 #include "jdapistd.h"
+
+u32 jpeg_read_raw_data(struct jpeg_decompress_struct* arg1, u8*** arg2, u32 arg3)
+{
+    return stub<cdecl_t<u32, struct jpeg_decompress_struct*, u8***, u32>>(0x498440, arg1, arg2, arg3);
+}
+
+u32 jpeg_read_scanlines(struct jpeg_decompress_struct* arg1, u8** arg2, u32 arg3)
+{
+    return stub<cdecl_t<u32, struct jpeg_decompress_struct*, u8**, u32>>(0x4983A0, arg1, arg2, arg3);
+}
+
+u8 jpeg_start_decompress(struct jpeg_decompress_struct* arg1)
+{
+    return stub<cdecl_t<u8, struct jpeg_decompress_struct*>>(0x498290, arg1);
+}
+
+define_dummy_symbol(djpeg_jdapistd);

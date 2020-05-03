@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     ped:ragdollmgr
@@ -37,59 +39,38 @@
     0x6B4740 | public: static class pedRagdollMgr * pedRagdollMgr::Instance | ?Instance@pedRagdollMgr@@2PAV1@A
 */
 
-class pedRagdollMgr : asNode
+class pedRagdollMgr : public asNode
 {
+    // const pedRagdollMgr::`vftable' @ 0x5B635C
+
 public:
-    // pedRagdollMgr::`vftable' @ 0x5B635C
-
     // 0x57B8B0 | ??0pedRagdollMgr@@QAE@XZ
-    inline pedRagdollMgr()
-    {
-        stub<member_func_t<void, pedRagdollMgr>>(0x57B8B0, this);
-    }
+    pedRagdollMgr();
 
-    // 0x57B9B0 | ?Init@pedRagdollMgr@@QAEXHPAPAD@Z
-    inline void Init(int32_t arg1, char** arg2)
-    {
-        return stub<member_func_t<void, pedRagdollMgr, int32_t, char**>>(0x57B9B0, this, arg1, arg2);
-    }
+    // 0x57BC80 | ??_EpedRagdollMgr@@UAEPAXI@Z
+    // 0x57B910 | ??1pedRagdollMgr@@UAE@XZ
+    ~pedRagdollMgr() override;
 
     // 0x57BAF0 | ?Attach@pedRagdollMgr@@QAEPAVpedActive@@PAVaiPedestrianInstance@@@Z
-    inline class pedActive* Attach(class aiPedestrianInstance* arg1)
-    {
-        return stub<member_func_t<class pedActive*, pedRagdollMgr, class aiPedestrianInstance*>>(0x57BAF0, this, arg1);
-    }
+    class pedActive* Attach(class aiPedestrianInstance* arg1);
 
     // 0x57BB80 | ?Detach@pedRagdollMgr@@QAEXPAVaiPedestrianInstance@@@Z
-    inline void Detach(class aiPedestrianInstance* arg1)
-    {
-        return stub<member_func_t<void, pedRagdollMgr, class aiPedestrianInstance*>>(0x57BB80, this, arg1);
-    }
+    void Detach(class aiPedestrianInstance* arg1);
 
-    // 0x57BBB0 | ?UnusedActive@pedRagdollMgr@@QAE_NXZ
-    inline bool UnusedActive()
-    {
-        return stub<member_func_t<bool, pedRagdollMgr>>(0x57BBB0, this);
-    }
-
-    // 0x6B4740 | ?Instance@pedRagdollMgr@@2PAV1@A
-    inline extern_var(0x6B4740, class pedRagdollMgr*, Instance);
-
-    // 0x57B910 | ??1pedRagdollMgr@@UAE@XZ
-    inline ~pedRagdollMgr() override
-    {
-        stub<member_func_t<void, pedRagdollMgr>>(0x57B910, this);
-    }
-
-    // 0x57BC10 | ?Update@pedRagdollMgr@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, pedRagdollMgr>>(0x57BC10, this);
-    }
+    // 0x57B9B0 | ?Init@pedRagdollMgr@@QAEXHPAPAD@Z
+    void Init(i32 arg1, char** arg2);
 
     // 0x57BBD0 | ?Reset@pedRagdollMgr@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, pedRagdollMgr>>(0x57BBD0, this);
-    }
+    void Reset() override;
+
+    // 0x57BBB0 | ?UnusedActive@pedRagdollMgr@@QAE_NXZ
+    bool UnusedActive();
+
+    // 0x57BC10 | ?Update@pedRagdollMgr@@UAEXXZ
+    void Update() override;
+
+    // 0x6B4740 | ?Instance@pedRagdollMgr@@2PAV1@A
+    static inline extern_var(0x6B4740, class pedRagdollMgr*, Instance);
 };
+
+check_size(pedRagdollMgr, 0x0);

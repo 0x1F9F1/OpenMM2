@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,25 @@
 */
 
 #include "carcs.h"
+
+camCarCS::camCarCS()
+{
+    unimplemented();
+}
+
+camCarCS::~camCarCS()
+{
+    unimplemented();
+}
+
+void camCarCS::FileIO(class datParser& arg1)
+{
+    return stub<thiscall_t<void, camCarCS*, class datParser&>>(0x5214E0, this, arg1);
+}
+
+void camCarCS::Init(class vehCar* arg1, char* arg2)
+{
+    return stub<thiscall_t<void, camCarCS*, class vehCar*, char*>>(0x5214A0, this, arg1, arg2);
+}
+
+define_dummy_symbol(camera_carcs);

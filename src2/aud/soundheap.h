@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -39,76 +39,40 @@ class audSoundHeap
 {
 public:
     // 0x5A5E90 | ?Create@audSoundHeap@@QAEPAV1@PAV1@H@Z
-    inline class audSoundHeap* Create(class audSoundHeap* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<class audSoundHeap*, audSoundHeap, class audSoundHeap*, int32_t>>(
-            0x5A5E90, this, arg1, arg2);
-    }
+    class audSoundHeap* Create(class audSoundHeap* arg1, i32 arg2);
 
     // 0x5A5EB0 | ?CreateNodeList@audSoundHeap@@QAEPAV1@PAV1@HH@Z
-    inline class audSoundHeap* CreateNodeList(class audSoundHeap* arg1, int32_t arg2, int32_t arg3)
-    {
-        return stub<member_func_t<class audSoundHeap*, audSoundHeap, class audSoundHeap*, int32_t, int32_t>>(
-            0x5A5EB0, this, arg1, arg2, arg3);
-    }
-
-    // 0x5A5F90 | ?ReserveBuffer@audSoundHeap@@QAEPAVaudSoundBuffer@@H@Z
-    inline class audSoundBuffer* ReserveBuffer(int32_t arg1)
-    {
-        return stub<member_func_t<class audSoundBuffer*, audSoundHeap, int32_t>>(0x5A5F90, this, arg1);
-    }
-
-    // 0x5A6010 | ?ReleaseBuffer@audSoundHeap@@QAE_NPAVaudSoundBuffer@@@Z
-    inline bool ReleaseBuffer(class audSoundBuffer* arg1)
-    {
-        return stub<member_func_t<bool, audSoundHeap, class audSoundBuffer*>>(0x5A6010, this, arg1);
-    }
+    class audSoundHeap* CreateNodeList(class audSoundHeap* arg1, i32 arg2, i32 arg3);
 
     // 0x5A6080 | ?Destroy@audSoundHeap@@QAEXXZ
-    inline void Destroy()
-    {
-        return stub<member_func_t<void, audSoundHeap>>(0x5A6080, this);
-    }
-
-    // 0x5A6090 | ?SetBottomOfTopStack@audSoundHeap@@QAE_NPAX@Z
-    inline bool SetBottomOfTopStack(void* arg1)
-    {
-        return stub<member_func_t<bool, audSoundHeap, void*>>(0x5A6090, this, arg1);
-    }
-
-    // 0x5A60D0 | ?SetTopOfBottomStack@audSoundHeap@@QAE_NPAX@Z
-    inline bool SetTopOfBottomStack(void* arg1)
-    {
-        return stub<member_func_t<bool, audSoundHeap, void*>>(0x5A60D0, this, arg1);
-    }
-
-    // 0x5A6110 | ?GetSoundBufferList@audSoundHeap@@QAEPAVaudSoundBuffer@@XZ
-    inline class audSoundBuffer* GetSoundBufferList()
-    {
-        return stub<member_func_t<class audSoundBuffer*, audSoundHeap>>(0x5A6110, this);
-    }
-
-    // 0x5A6120 | ?GetTop@audSoundHeap@@QAEPAXXZ
-    inline void* GetTop()
-    {
-        return stub<member_func_t<void*, audSoundHeap>>(0x5A6120, this);
-    }
-
-    // 0x5A6130 | ?GetBotttomOfTopStack@audSoundHeap@@QAEPAXXZ
-    inline void* GetBotttomOfTopStack()
-    {
-        return stub<member_func_t<void*, audSoundHeap>>(0x5A6130, this);
-    }
-
-    // 0x5A6140 | ?GetTopOfBottomStack@audSoundHeap@@QAEPAXXZ
-    inline void* GetTopOfBottomStack()
-    {
-        return stub<member_func_t<void*, audSoundHeap>>(0x5A6140, this);
-    }
+    void Destroy();
 
     // 0x5A6150 | ?GetBottom@audSoundHeap@@QAEPAXXZ
-    inline void* GetBottom()
-    {
-        return stub<member_func_t<void*, audSoundHeap>>(0x5A6150, this);
-    }
+    void* GetBottom();
+
+    // 0x5A6130 | ?GetBotttomOfTopStack@audSoundHeap@@QAEPAXXZ
+    void* GetBotttomOfTopStack();
+
+    // 0x5A6110 | ?GetSoundBufferList@audSoundHeap@@QAEPAVaudSoundBuffer@@XZ
+    class audSoundBuffer* GetSoundBufferList();
+
+    // 0x5A6120 | ?GetTop@audSoundHeap@@QAEPAXXZ
+    void* GetTop();
+
+    // 0x5A6140 | ?GetTopOfBottomStack@audSoundHeap@@QAEPAXXZ
+    void* GetTopOfBottomStack();
+
+    // 0x5A6010 | ?ReleaseBuffer@audSoundHeap@@QAE_NPAVaudSoundBuffer@@@Z
+    bool ReleaseBuffer(class audSoundBuffer* arg1);
+
+    // 0x5A5F90 | ?ReserveBuffer@audSoundHeap@@QAEPAVaudSoundBuffer@@H@Z
+    class audSoundBuffer* ReserveBuffer(i32 arg1);
+
+    // 0x5A6090 | ?SetBottomOfTopStack@audSoundHeap@@QAE_NPAX@Z
+    bool SetBottomOfTopStack(void* arg1);
+
+    // 0x5A60D0 | ?SetTopOfBottomStack@audSoundHeap@@QAE_NPAX@Z
+    bool SetTopOfBottomStack(void* arg1);
 };
+
+check_size(audSoundHeap, 0x0);

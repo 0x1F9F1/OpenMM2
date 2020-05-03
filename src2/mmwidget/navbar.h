@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "menu.h"
 
 /*
     mmwidget:navbar
@@ -39,86 +41,50 @@
     0x5B32C8 | const uiNavBar::`vftable' | ??_7uiNavBar@@6B@
 */
 
-struct uiNavBar : UIMenu
+class uiNavBar : public UIMenu
 {
+    // const uiNavBar::`vftable' @ 0x5B32C8
+
 public:
-    // uiNavBar::`vftable' @ 0x5B32C8
-
     // 0x4E6230 | ??0uiNavBar@@QAE@H@Z
-    inline uiNavBar(int32_t arg1)
-    {
-        stub<member_func_t<void, uiNavBar, int32_t>>(0x4E6230, this, arg1);
-    }
+    uiNavBar(i32 arg1);
 
-    // 0x4E6460 | ?Help@uiNavBar@@QAEXXZ
-    inline void Help()
-    {
-        return stub<member_func_t<void, uiNavBar>>(0x4E6460, this);
-    }
-
-    // 0x4E6470 | ?Minimize@uiNavBar@@QAEXXZ
-    inline void Minimize()
-    {
-        return stub<member_func_t<void, uiNavBar>>(0x4E6470, this);
-    }
-
-    // 0x4E64B0 | ?ResetState@uiNavBar@@QAEXXZ
-    inline void ResetState()
-    {
-        return stub<member_func_t<void, uiNavBar>>(0x4E64B0, this);
-    }
-
-    // 0x4E64C0 | ?OptionActive@uiNavBar@@QAEXXZ
-    inline void OptionActive()
-    {
-        return stub<member_func_t<void, uiNavBar>>(0x4E64C0, this);
-    }
-
-    // 0x4E64E0 | ?OptionInActive@uiNavBar@@QAEXXZ
-    inline void OptionInActive()
-    {
-        return stub<member_func_t<void, uiNavBar>>(0x4E64E0, this);
-    }
-
-    // 0x4E65A0 | ?SetPrevPos@uiNavBar@@QAEXMM@Z
-    inline void SetPrevPos(float arg1, float arg2)
-    {
-        return stub<member_func_t<void, uiNavBar, float, float>>(0x4E65A0, this, arg1, arg2);
-    }
-
-    // 0x4E65F0 | ?TurnOnPrev@uiNavBar@@QAEXXZ
-    inline void TurnOnPrev()
-    {
-        return stub<member_func_t<void, uiNavBar>>(0x4E65F0, this);
-    }
-
-    // 0x4E6610 | ?TurnOffPrev@uiNavBar@@QAEXXZ
-    inline void TurnOffPrev()
-    {
-        return stub<member_func_t<void, uiNavBar>>(0x4E6610, this);
-    }
-
-    // 0x4E6630 | ?SetPrevBitmap@uiNavBar@@QAEXPAD@Z
-    inline void SetPrevBitmap(char* arg1)
-    {
-        return stub<member_func_t<void, uiNavBar, char*>>(0x4E6630, this, arg1);
-    }
-
+    // 0x4E6650 | ??_GuiNavBar@@UAEPAXI@Z
     // 0x4E64A0 | ??1uiNavBar@@UAE@XZ
-    inline ~uiNavBar() override
-    {
-        stub<member_func_t<void, uiNavBar>>(0x4E64A0, this);
-    }
-
-    // 0x4E6500 | ?Update@uiNavBar@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, uiNavBar>>(0x4E6500, this);
-    }
+    ~uiNavBar() override;
 
     // 0x4E6680 | ?BackUp@uiNavBar@@UAEXXZ
-    inline void BackUp() override
-    {
-        return stub<member_func_t<void, uiNavBar>>(0x4E6680, this);
-    }
+    void BackUp() override;
+
+    // 0x4E6460 | ?Help@uiNavBar@@QAEXXZ
+    void Help();
+
+    // 0x4E6470 | ?Minimize@uiNavBar@@QAEXXZ
+    void Minimize();
+
+    // 0x4E64C0 | ?OptionActive@uiNavBar@@QAEXXZ
+    void OptionActive();
+
+    // 0x4E64E0 | ?OptionInActive@uiNavBar@@QAEXXZ
+    void OptionInActive();
+
+    // 0x4E64B0 | ?ResetState@uiNavBar@@QAEXXZ
+    void ResetState();
+
+    // 0x4E6630 | ?SetPrevBitmap@uiNavBar@@QAEXPAD@Z
+    void SetPrevBitmap(char* arg1);
+
+    // 0x4E65A0 | ?SetPrevPos@uiNavBar@@QAEXMM@Z
+    void SetPrevPos(f32 arg1, f32 arg2);
+
+    // 0x4E6610 | ?TurnOffPrev@uiNavBar@@QAEXXZ
+    void TurnOffPrev();
+
+    // 0x4E65F0 | ?TurnOnPrev@uiNavBar@@QAEXXZ
+    void TurnOnPrev();
+
+    // 0x4E6500 | ?Update@uiNavBar@@UAEXXZ
+    void Update() override;
 };
+
+check_size(uiNavBar, 0xBC);

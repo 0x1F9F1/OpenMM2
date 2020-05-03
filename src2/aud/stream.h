@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -38,75 +38,41 @@
 class audStream
 {
 public:
-    // 0x5A4C80 | ?Create@audStream@@QAEPAV1@PAVaudObject@@@Z
-    inline class audStream* Create(class audObject* arg1)
-    {
-        return stub<member_func_t<class audStream*, audStream, class audObject*>>(0x5A4C80, this, arg1);
-    }
+    // 0x5A4E00 | ?CloseStream@audStream@@QAE_NXZ
+    bool CloseStream();
 
-    // 0x5A4CC0 | ?Init@audStream@@QAEXXZ
-    inline void Init()
-    {
-        return stub<member_func_t<void, audStream>>(0x5A4CC0, this);
-    }
+    // 0x5A4C80 | ?Create@audStream@@QAEPAV1@PAVaudObject@@@Z
+    class audStream* Create(class audObject* arg1);
 
     // 0x5A4CD0 | ?Destroy@audStream@@QAEXXZ
-    inline void Destroy()
-    {
-        return stub<member_func_t<void, audStream>>(0x5A4CD0, this);
-    }
-
-    // 0x5A4CF0 | ?Update@audStream@@QAE_NH@Z
-    inline bool Update(int32_t arg1)
-    {
-        return stub<member_func_t<bool, audStream, int32_t>>(0x5A4CF0, this, arg1);
-    }
-
-    // 0x5A4E00 | ?CloseStream@audStream@@QAE_NXZ
-    inline bool CloseStream()
-    {
-        return stub<member_func_t<bool, audStream>>(0x5A4E00, this);
-    }
-
-    // 0x5A4E60 | ?GetCurrentCursor@audStream@@QAEHXZ
-    inline int32_t GetCurrentCursor()
-    {
-        return stub<member_func_t<int32_t, audStream>>(0x5A4E60, this);
-    }
-
-    // 0x5A4E70 | ?SetBufferSize@audStream@@QAEXH@Z
-    inline void SetBufferSize(int32_t arg1)
-    {
-        return stub<member_func_t<void, audStream, int32_t>>(0x5A4E70, this, arg1);
-    }
+    void Destroy();
 
     // 0x5A4E80 | ?GetBufferSize@audStream@@QAEHXZ
-    inline int32_t GetBufferSize()
-    {
-        return stub<member_func_t<int32_t, audStream>>(0x5A4E80, this);
-    }
+    i32 GetBufferSize();
 
-    // 0x5A4E90 | ?SetFileInfo@audStream@@QAEXPAX@Z
-    inline void SetFileInfo(void* arg1)
-    {
-        return stub<member_func_t<void, audStream, void*>>(0x5A4E90, this, arg1);
-    }
+    // 0x5A4E60 | ?GetCurrentCursor@audStream@@QAEHXZ
+    i32 GetCurrentCursor();
+
+    // 0x5A4CC0 | ?Init@audStream@@QAEXXZ
+    void Init();
 
     // 0x5A4EA0 | ?IsFinished@audStream@@QAE_NXZ
-    inline bool IsFinished()
-    {
-        return stub<member_func_t<bool, audStream>>(0x5A4EA0, this);
-    }
+    bool IsFinished();
 
-    // 0x5A4EB0 | ?SetVolume@audStream@@QAEXM@Z
-    inline void SetVolume(float arg1)
-    {
-        return stub<member_func_t<void, audStream, float>>(0x5A4EB0, this, arg1);
-    }
+    // 0x5A4E70 | ?SetBufferSize@audStream@@QAEXH@Z
+    void SetBufferSize(i32 arg1);
+
+    // 0x5A4E90 | ?SetFileInfo@audStream@@QAEXPAX@Z
+    void SetFileInfo(void* arg1);
 
     // 0x5A4EC0 | ?SetLooping@audStream@@QAEX_N@Z
-    inline void SetLooping(bool arg1)
-    {
-        return stub<member_func_t<void, audStream, bool>>(0x5A4EC0, this, arg1);
-    }
+    void SetLooping(bool arg1);
+
+    // 0x5A4EB0 | ?SetVolume@audStream@@QAEXM@Z
+    void SetVolume(f32 arg1);
+
+    // 0x5A4CF0 | ?Update@audStream@@QAE_NH@Z
+    bool Update(i32 arg1);
 };
+
+check_size(audStream, 0x0);

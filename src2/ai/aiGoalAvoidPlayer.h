@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -36,93 +36,56 @@
     0x5B5BC4 | const aiGoal::`vftable' | ??_7aiGoal@@6B@
 */
 
-struct aiGoalAvoidPlayer : aiGoal
+struct aiGoalAvoidPlayer
 {
-public:
-    // aiGoalAvoidPlayer::`vftable' @ 0x5B5BB8
+    // const aiGoalAvoidPlayer::`vftable' @ 0x5B5BB8
 
+public:
     // 0x56AD00 | ??0aiGoalAvoidPlayer@@QAE@PAVaiRailSet@@PAVaiVehicleAmbient@@@Z
-    inline aiGoalAvoidPlayer(class aiRailSet* arg1, class aiVehicleAmbient* arg2)
-    {
-        stub<member_func_t<void, aiGoalAvoidPlayer, class aiRailSet*, class aiVehicleAmbient*>>(
-            0x56AD00, this, arg1, arg2);
-    }
+    aiGoalAvoidPlayer(class aiRailSet* arg1, class aiVehicleAmbient* arg2);
 
     // 0x56AD30 | ??1aiGoalAvoidPlayer@@QAE@XZ
-    inline ~aiGoalAvoidPlayer()
-    {
-        stub<member_func_t<void, aiGoalAvoidPlayer>>(0x56AD30, this);
-    }
-
-    // 0x56B200 | ?AvoidPlayer@aiGoalAvoidPlayer@@AAEXXZ
-    inline void AvoidPlayer()
-    {
-        return stub<member_func_t<void, aiGoalAvoidPlayer>>(0x56B200, this);
-    }
+    ~aiGoalAvoidPlayer();
 
     // 0x56B4F0 | ?Context@aiGoalAvoidPlayer@@QAEHXZ
-    inline int32_t Context()
-    {
-        return stub<member_func_t<int32_t, aiGoalAvoidPlayer>>(0x56B4F0, this);
-    }
-
-    // 0x56B510 | ?Priority@aiGoalAvoidPlayer@@QAEHXZ
-    inline int32_t Priority()
-    {
-        return stub<member_func_t<int32_t, aiGoalAvoidPlayer>>(0x56B510, this);
-    }
+    i32 Context();
 
     // 0x56B520 | ?Dump@aiGoalAvoidPlayer@@QAEXXZ
-    inline void Dump()
-    {
-        return stub<member_func_t<void, aiGoalAvoidPlayer>>(0x56B520, this);
-    }
+    void Dump();
+
+    // 0x56B510 | ?Priority@aiGoalAvoidPlayer@@QAEHXZ
+    i32 Priority();
 
     // 0x56B570 | ?ReplayDebug@aiGoalAvoidPlayer@@QAEXXZ
-    inline void ReplayDebug()
-    {
-        return stub<member_func_t<void, aiGoalAvoidPlayer>>(0x56B570, this);
-    }
+    void ReplayDebug();
 
     // 0x56AD40 | ?Init@aiGoalAvoidPlayer@@UAEXXZ
-    inline void Init() override
-    {
-        return stub<member_func_t<void, aiGoalAvoidPlayer>>(0x56AD40, this);
-    }
+    virtual void Init();
 
     // 0x56AD50 | ?Reset@aiGoalAvoidPlayer@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, aiGoalAvoidPlayer>>(0x56AD50, this);
-    }
+    virtual void Reset();
 
     // 0x56AF50 | ?Update@aiGoalAvoidPlayer@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, aiGoalAvoidPlayer>>(0x56AF50, this);
-    }
+    virtual void Update();
+
+private:
+    // 0x56B200 | ?AvoidPlayer@aiGoalAvoidPlayer@@AAEXXZ
+    void AvoidPlayer();
 };
+
+check_size(aiGoalAvoidPlayer, 0x20);
 
 struct aiGoal
 {
+    // const aiGoal::`vftable' @ 0x5B5BC4
+
 public:
-    // aiGoal::`vftable' @ 0x5B5BC4
-
-    // 0x582519 | __purecall
-    virtual inline void Init()
-    {
-        return stub<member_func_t<void, aiGoal>>(0x582519, this);
-    }
-
-    // 0x582519 | __purecall
-    virtual inline void Reset()
-    {
-        return stub<member_func_t<void, aiGoal>>(0x582519, this);
-    }
-
     // 0x56B6D0 | ?Update@aiGoal@@UAEXXZ
-    virtual inline void Update()
-    {
-        return stub<member_func_t<void, aiGoal>>(0x56B6D0, this);
-    }
+    virtual void Update();
+
+    // 0x582519 | __purecall (Skipped: void)
+
+    // 0x582519 | __purecall (Skipped: void)
 };
+
+check_size(aiGoal, 0x0);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -90,66 +90,277 @@
     0x684520 | public: static struct gfxVertexBuffer * gfxVertexBuffer::sm_First | ?sm_First@gfxVertexBuffer@@2PAU1@A
 */
 
+struct gfxPipeline
+{
+public:
+    // 0x4AA130 | ?BeginFrame@gfxPipeline@@SAXXZ
+    static void BeginFrame();
+
+    // 0x4A9350 | ?BeginGfx@gfxPipeline@@SA_NXZ
+    static bool BeginGfx();
+
+    // 0x4A9370 | ?BeginGfx2D@gfxPipeline@@SA_NXZ
+    static bool BeginGfx2D();
+
+    // 0x4A96C0 | ?BeginGfx3D@gfxPipeline@@SA_NXZ
+    static bool BeginGfx3D();
+
+    // 0x4B53A0 | ?BeginInternal@gfxPipeline@@SAXXZ
+    static void BeginInternal();
+
+    // 0x4AA590 | ?BeginOffscreen@gfxPipeline@@SAXXZ
+    static void BeginOffscreen();
+
+    // 0x4AA270 | ?BeginScene@gfxPipeline@@SAXXZ
+    static void BeginScene();
+
+    // 0x4AAEC0 | ?Blit2D@gfxPipeline@@SAXABVVector4@@PAGPAEHI@Z
+    static void Blit2D(class Vector4 const& arg1, u16* arg2, u8* arg3, i32 arg4, u32 arg5);
+
+    // 0x4AB1C0 | ?BlitText@gfxPipeline@@SAXABVVector4@@PAGPAEHI@Z
+    static void BlitText(class Vector4 const& arg1, u16* arg2, u8* arg3, i32 arg4, u32 arg5);
+
+    // 0x4AADC0 | ?Clear@gfxPipeline@@SAXHIMI@Z
+    static void Clear(i32 arg1, u32 arg2, f32 arg3, u32 arg4);
+
+    // 0x4AB520 | ?ClearRect@gfxPipeline@@SAXHHHHI@Z
+    static void ClearRect(i32 arg1, i32 arg2, i32 arg3, i32 arg4, u32 arg5);
+
+    // 0x4AB4C0 | ?CopyBitmap@gfxPipeline@@SAXHHPAVgfxBitmap@@HHHH_N@Z
+    static void CopyBitmap(
+        i32 arg1, i32 arg2, class gfxBitmap* arg3, i32 arg4, i32 arg5, i32 arg6, i32 arg7, bool arg8);
+
+    // 0x4B2D40 | ?CopyClippedBitmap@gfxPipeline@@SA_NHHPAVgfxBitmap@@HHHH_N@Z
+    static bool CopyClippedBitmap(
+        i32 arg1, i32 arg2, class gfxBitmap* arg3, i32 arg4, i32 arg5, i32 arg6, i32 arg7, bool arg8);
+
+    // 0x4B2D80 | ?CopyClippedBitmap@gfxPipeline@@SA_NHHPAVgfxBitmap@@HHHHHHHH_N@Z
+    static bool CopyClippedBitmap(i32 arg1, i32 arg2, class gfxBitmap* arg3, i32 arg4, i32 arg5, i32 arg6, i32 arg7,
+        i32 arg8, i32 arg9, i32 arg10, i32 arg11, bool arg12);
+
+    // 0x4AAC90 | ?CreateReadbackImage@gfxPipeline@@SAPAVgfxImage@@XZ
+    static class gfxImage* CreateReadbackImage();
+
+    // 0x4AB830 | ?CreateVertexBuffer@gfxPipeline@@SAPAUgfxVertexBuffer@@II_N@Z
+    static struct gfxVertexBuffer* CreateVertexBuffer(u32 arg1, u32 arg2, bool arg3);
+
+    // 0x4A90B0 | ?CreateViewport@gfxPipeline@@SAPAVgfxViewport@@XZ
+    static class gfxViewport* CreateViewport();
+
+    // 0x4AB950 | ?DestroyVertexBuffer@gfxPipeline@@SAXPAUgfxVertexBuffer@@@Z
+    static void DestroyVertexBuffer(struct gfxVertexBuffer* arg1);
+
+    // 0x4AB970 | ?DoLockVertexBuffer@gfxPipeline@@SAPAXPAUgfxVertexBuffer@@I@Z
+    static void* DoLockVertexBuffer(struct gfxVertexBuffer* arg1, u32 arg2);
+
+    // 0x4AAAF0 | ?Draw@gfxPipeline@@SAXW4gfxDrawMode@@IHABUgfxStridedData@@@Z
+    static void Draw(enum gfxDrawMode arg1, u32 arg2, i32 arg3, struct gfxStridedData const& arg4);
+
+    // 0x4AAB50 | ?Draw@gfxPipeline@@SAXW4gfxDrawMode@@IHPAX@Z
+    static void Draw(enum gfxDrawMode arg1, u32 arg2, i32 arg3, void* arg4);
+
+    // 0x4AABB0 | ?DrawIdx@gfxPipeline@@SAXW4gfxDrawMode@@IHABUgfxStridedData@@IPAG@Z
+    static void DrawIdx(
+        enum gfxDrawMode arg1, u32 arg2, i32 arg3, struct gfxStridedData const& arg4, u32 arg5, u16* arg6);
+
+    // 0x4AAC20 | ?DrawIdx@gfxPipeline@@SAXW4gfxDrawMode@@IHPAXIPAG@Z
+    static void DrawIdx(enum gfxDrawMode arg1, u32 arg2, i32 arg3, void* arg4, u32 arg5, u16* arg6);
+
+    // 0x4ABB40 | ?DrawIdxVB@gfxPipeline@@SAXW4gfxDrawMode@@IIPAUgfxVertexBuffer@@IPAG@Z
+    static void DrawIdxVB(enum gfxDrawMode arg1, u32 arg2, u32 arg3, struct gfxVertexBuffer* arg4, u32 arg5, u16* arg6);
+
+    // 0x4ABA50 | ?DrawVB@gfxPipeline@@SAXW4gfxDrawMode@@IIPAUgfxVertexBuffer@@@Z
+    static void DrawVB(enum gfxDrawMode arg1, u32 arg2, u32 arg3, struct gfxVertexBuffer* arg4);
+
+    // 0x4AA330 | ?EndFrame@gfxPipeline@@SAXXZ
+    static void EndFrame();
+
+    // 0x4AA750 | ?EndGfx@gfxPipeline@@SAXXZ
+    static void EndGfx();
+
+    // 0x4AAA10 | ?EndGfx2D@gfxPipeline@@SAXXZ
+    static void EndGfx2D();
+
+    // 0x4AA760 | ?EndGfx3D@gfxPipeline@@SAXXZ
+    static void EndGfx3D();
+
+    // 0x4B53C0 | ?EndInternal@gfxPipeline@@SAXXZ
+    static void EndInternal();
+
+    // 0x4AA5A0 | ?EndOffscreen@gfxPipeline@@SAXXZ
+    static void EndOffscreen();
+
+    // 0x4AA2B0 | ?EndScene@gfxPipeline@@SAXXZ
+    static void EndScene();
+
+    // 0x4AA5B0 | ?FlushFrame@gfxPipeline@@SAXXZ
+    static void FlushFrame();
+
+    // 0x4E88C0 | ?GetWidth@gfxPipeline@@SAHXZ
+    static i32 GetWidth();
+
+    // 0x4A9110 | ?Manage@gfxPipeline@@SAXXZ
+    static void Manage();
+
+    // 0x4ABC50 | ?PersistVertexBuffer@gfxPipeline@@SAXPAUgfxVertexBuffer@@@Z
+    static void PersistVertexBuffer(struct gfxVertexBuffer* arg1);
+
+    // 0x4AACC0 | ?Readback@gfxPipeline@@SAXPAVgfxImage@@HHHH@Z
+    static void Readback(class gfxImage* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5);
+
+    // 0x4AA5C0 | ?RefreshFrame@gfxPipeline@@SAXXZ
+    static void RefreshFrame();
+
+    // 0x4B5440 | ?Render@gfxPipeline@@SAXW4gfxDrawMode@@IIPAX@Z
+    static void Render(enum gfxDrawMode arg1, u32 arg2, u32 arg3, void* arg4);
+
+    // 0x4B54B0 | ?RenderIdx@gfxPipeline@@SAXW4gfxDrawMode@@IIPAXIPAG@Z
+    static void RenderIdx(enum gfxDrawMode arg1, u32 arg2, u32 arg3, void* arg4, u32 arg5, u16* arg6);
+
+    // 0x4A92B0 | ?SafeBeginGfx@gfxPipeline@@SAXXZ
+    static void SafeBeginGfx();
+
+    // 0x4B2D20 | ?SetFade@gfxPipeline@@SAXI@Z
+    static void SetFade(u32 arg1);
+
+    // 0x4AB570 | ?SetRenderTarget@gfxPipeline@@SA_NPBVgfxTexture@@@Z
+    static bool SetRenderTarget(class gfxTexture const* arg1);
+
+    // 0x4A8CE0 | ?SetRes@gfxPipeline@@SAXHHHH_N@Z
+    static void SetRes(i32 arg1, i32 arg2, i32 arg3, i32 arg4, bool arg5);
+
+    // 0x4A9180 | ?SetTitle@gfxPipeline@@SAXPBD@Z
+    static void SetTitle(char const* arg1);
+
+    // 0x4A8CA0 | ?SetWindow@gfxPipeline@@SAX_NHH@Z
+    static void SetWindow(bool arg1, i32 arg2, i32 arg3);
+
+    // 0x4B2CE0 | ?StartFade@gfxPipeline@@SAXIM@Z
+    static void StartFade(u32 arg1, f32 arg2);
+
+    // 0x68310C | ?OrthoVP@gfxPipeline@@2PAVgfxViewport@@A
+    static inline extern_var(0x68310C, class gfxViewport*, OrthoVP);
+
+    // 0x6830FC | ?VP@gfxPipeline@@2PAVgfxViewport@@A
+    static inline extern_var(0x6830FC, class gfxViewport*, VP);
+
+private:
+    // 0x4AB9C0 | ?DoUnlockVertexBuffer@gfxPipeline@@CAXPAUgfxVertexBuffer@@@Z
+    static void DoUnlockVertexBuffer(struct gfxVertexBuffer* arg1);
+
+    // 0x4B2EE0 | ?ForceSetViewport@gfxPipeline@@CAXPAVgfxViewport@@@Z
+    static void ForceSetViewport(class gfxViewport* arg1);
+
+    // 0x4ABA00 | ?OptimizeVertexBuffer@gfxPipeline@@CAXPAUgfxVertexBuffer@@@Z
+    static void OptimizeVertexBuffer(struct gfxVertexBuffer* arg1);
+
+    // 0x4A91F0 | ?gfxEnumTexs@gfxPipeline@@CGJPAU_DDPIXELFORMAT@@PAX@Z
+    static i32 __stdcall gfxEnumTexs(struct _DDPIXELFORMAT* arg1, void* arg2);
+
+    // 0x4A91A0 | ?gfxEnumZ@gfxPipeline@@CGJPAU_DDPIXELFORMAT@@PAX@Z
+    static i32 __stdcall gfxEnumZ(struct _DDPIXELFORMAT* arg1, void* arg2);
+
+    // 0x4A8A90 | ?gfxWindowCreate@gfxPipeline@@CAXPBD@Z
+    static void gfxWindowCreate(char const* arg1);
+
+    // 0x4A88F0 | ?gfxWindowProc@gfxPipeline@@CGJPAUHWND__@@IIJ@Z
+    static i32 __stdcall gfxWindowProc(struct HWND__* arg1, u32 arg2, u32 arg3, i32 arg4);
+
+    // 0x685794 | ?EndFadeColor@gfxPipeline@@0IA
+    static inline extern_var(0x685794, u32, EndFadeColor);
+
+    // 0x68579C | ?FadeColor@gfxPipeline@@0IA
+    static inline extern_var(0x68579C, u32, FadeColor);
+
+    // 0x685798 | ?FadeSpeed@gfxPipeline@@0MA
+    static inline extern_var(0x685798, f32, FadeSpeed);
+
+    // 0x68578C | ?FadeValue@gfxPipeline@@0MA
+    static inline extern_var(0x68578C, f32, FadeValue);
+
+    // 0x685790 | ?StartFadeColor@gfxPipeline@@0IA
+    static inline extern_var(0x685790, u32, StartFadeColor);
+
+    // 0x6830F8 | ?m_ColorDepth@gfxPipeline@@0HA
+    static inline extern_var(0x6830F8, i32, m_ColorDepth);
+
+    // 0x683114 | ?m_EvtFlags@gfxPipeline@@0IA
+    static inline extern_var(0x683114, u32, m_EvtFlags);
+
+    // 0x6844F4 | ?m_RenderTarget@gfxPipeline@@0PBVgfxTexture@@B
+    static inline extern_var(0x6844F4, class gfxTexture const* const, m_RenderTarget);
+
+    // 0x683124 | ?m_Viewport@gfxPipeline@@0PAVgfxViewport@@A
+    static inline extern_var(0x683124, class gfxViewport*, m_Viewport);
+
+    // 0x6830EC | ?m_X@gfxPipeline@@0HA
+    static inline extern_var(0x6830EC, i32, m_X);
+
+    // 0x683110 | ?m_Y@gfxPipeline@@0HA
+    static inline extern_var(0x683110, i32, m_Y);
+
+    // 0x6830E4 | ?m_ZDepth@gfxPipeline@@0HA
+    static inline extern_var(0x6830E4, i32, m_ZDepth);
+
+    // 0x683120 | ?m_fHeight@gfxPipeline@@0MA
+    static inline extern_var(0x683120, f32, m_fHeight);
+
+    // 0x6830F4 | ?m_fWidth@gfxPipeline@@0MA
+    static inline extern_var(0x6830F4, f32, m_fWidth);
+
+    // 0x683100 | ?m_iHeight@gfxPipeline@@0HA
+    static inline extern_var(0x683100, i32, m_iHeight);
+
+    // 0x683128 | ?m_iWidth@gfxPipeline@@0HA
+    static inline extern_var(0x683128, i32, m_iWidth);
+};
+
 // 0x4A9270 | ?MultiMonCallback@@YGHPAU_GUID@@PAD1PAXPAUHMONITOR__@@@Z
-inline int32_t __stdcall MultiMonCallback(
-    struct _GUID* arg1, char* arg2, char* arg3, void* arg4, struct HMONITOR__* arg5)
-{
-    return stub<stdcall_t<int32_t, struct _GUID*, char*, char*, void*, struct HMONITOR__*>>(
-        0x4A9270, arg1, arg2, arg3, arg4, arg5);
-}
-
-// 0x4ABD00 | ?gfxSaveSettings@@YA_NXZ
-inline bool gfxSaveSettings()
-{
-    return stub<cdecl_t<bool>>(0x4ABD00);
-}
-
-// 0x4ABD70 | ?gfxLoadSettings@@YA_NXZ
-inline bool gfxLoadSettings()
-{
-    return stub<cdecl_t<bool>>(0x4ABD70);
-}
+i32 __stdcall MultiMonCallback(struct _GUID* arg1, char* arg2, char* arg3, void* arg4, struct HMONITOR__* arg5);
 
 // 0x4ABE00 | ?gfxAutoDetect@@YA_NPA_N@Z
-inline bool gfxAutoDetect(bool* arg1)
-{
-    return stub<cdecl_t<bool, bool*>>(0x4ABE00, arg1);
-}
+bool gfxAutoDetect(bool* arg1);
 
-// 0x5B2A00 | _IID_IDirect3DBladeDevice
+// 0x4ABD70 | ?gfxLoadSettings@@YA_NXZ
+bool gfxLoadSettings();
+
+// 0x4ABD00 | ?gfxSaveSettings@@YA_NXZ
+bool gfxSaveSettings();
+
+// 0x5B2A00 | _IID_IDirect3DBladeDevice (Skipped: void)
 
 // 0x5CA664 | ?allowHWTnL@@3_NA
 inline extern_var(0x5CA664, bool, allowHWTnL);
 
-// 0x683130 | ?gfxInterfaces@@3PAUgfxInterface@@A
-inline extern_var(0x683130, struct gfxInterface*, gfxInterfaces);
-
-// 0x6844B0 | ?gfxMinScreenWidth@@3HA
-inline extern_var(0x6844B0, int32_t, gfxMinScreenWidth);
-
-// 0x6844B4 | ?g_VisualizeZ@@3_NA
-inline extern_var(0x6844B4, bool, g_VisualizeZ);
-
-// 0x6830E8 | ?gfxLostCallback@@3P6AXXZA
-inline extern_var(0x6830E8, void(__cdecl*)(void), gfxLostCallback);
-
-// 0x6844C0 | ?gfxInterfaceCount@@3HA
-inline extern_var(0x6844C0, int32_t, gfxInterfaceCount);
+// 0x6844D0 | ?g_Tex555@@3_NA
+inline extern_var(0x6844D0, bool, g_Tex555);
 
 // 0x6844C4 | ?g_Tex565@@3_NA
 inline extern_var(0x6844C4, bool, g_Tex565);
 
+// 0x6844B4 | ?g_VisualizeZ@@3_NA
+inline extern_var(0x6844B4, bool, g_VisualizeZ);
+
 // 0x6844C8 | ?gfxInterfaceChoice@@3HA
-inline extern_var(0x6844C8, int32_t, gfxInterfaceChoice);
+inline extern_var(0x6844C8, i32, gfxInterfaceChoice);
+
+// 0x6844C0 | ?gfxInterfaceCount@@3HA
+inline extern_var(0x6844C0, i32, gfxInterfaceCount);
+
+// 0x683130 | ?gfxInterfaces@@3PAUgfxInterface@@A
+inline extern_var(0x683130, struct gfxInterface*, gfxInterfaces);
+
+// 0x6830E8 | ?gfxLostCallback@@3P6AXXZA
+inline extern_var(0x6830E8, void (*)(void), gfxLostCallback);
 
 // 0x6844CC | ?gfxMinScreenHeight@@3HA
-inline extern_var(0x6844CC, int32_t, gfxMinScreenHeight);
+inline extern_var(0x6844CC, i32, gfxMinScreenHeight);
 
-// 0x6844D0 | ?g_Tex555@@3_NA
-inline extern_var(0x6844D0, bool, g_Tex555);
+// 0x6844B0 | ?gfxMinScreenWidth@@3HA
+inline extern_var(0x6844B0, i32, gfxMinScreenWidth);
 
-// 0x6844F8 | ?useNativeVBs@@3_NA
-inline extern_var(0x6844F8, bool, useNativeVBs);
+// 0x68451D | ?novblank@@3_NA
+inline extern_var(0x68451D, bool, novblank);
 
 // 0x684500 | ?sm_UseInternal@@3_NA
 inline extern_var(0x684500, bool, sm_UseInternal);
@@ -157,42 +368,29 @@ inline extern_var(0x684500, bool, sm_UseInternal);
 // 0x684501 | ?useHWTnL@@3_NA
 inline extern_var(0x684501, bool, useHWTnL);
 
-// 0x68451D | ?novblank@@3_NA
-inline extern_var(0x68451D, bool, novblank);
+// 0x6844F8 | ?useNativeVBs@@3_NA
+inline extern_var(0x6844F8, bool, useNativeVBs);
 
 struct gfxVertexBuffer
 {
 public:
     // 0x4AB660 | ??0gfxVertexBuffer@@QAE@PAUIDirect3DVertexBuffer7@@@Z
-    inline gfxVertexBuffer(struct IDirect3DVertexBuffer7* arg1)
-    {
-        stub<member_func_t<void, gfxVertexBuffer, struct IDirect3DVertexBuffer7*>>(0x4AB660, this, arg1);
-    }
+    gfxVertexBuffer(struct IDirect3DVertexBuffer7* arg1);
 
     // 0x4AB690 | ??0gfxVertexBuffer@@QAE@II@Z
-    inline gfxVertexBuffer(uint32_t arg1, uint32_t arg2)
-    {
-        stub<member_func_t<void, gfxVertexBuffer, uint32_t, uint32_t>>(0x4AB690, this, arg1, arg2);
-    }
+    gfxVertexBuffer(u32 arg1, u32 arg2);
 
     // 0x4AB6E0 | ??1gfxVertexBuffer@@QAE@XZ
-    inline ~gfxVertexBuffer()
-    {
-        stub<member_func_t<void, gfxVertexBuffer>>(0x4AB6E0, this);
-    }
-
-    // 0x4AB730 | ?RestoreAll@gfxVertexBuffer@@SAXXZ
-    static inline void RestoreAll()
-    {
-        return stub<cdecl_t<void>>(0x4AB730);
-    }
+    ~gfxVertexBuffer();
 
     // 0x4AB800 | ?KillAll@gfxVertexBuffer@@SAXXZ
-    static inline void KillAll()
-    {
-        return stub<cdecl_t<void>>(0x4AB800);
-    }
+    static void KillAll();
+
+    // 0x4AB730 | ?RestoreAll@gfxVertexBuffer@@SAXXZ
+    static void RestoreAll();
 
     // 0x684520 | ?sm_First@gfxVertexBuffer@@2PAU1@A
-    inline extern_var(0x684520, struct gfxVertexBuffer*, sm_First);
+    static inline extern_var(0x684520, struct gfxVertexBuffer*, sm_First);
 };
+
+check_size(gfxVertexBuffer, 0x10);

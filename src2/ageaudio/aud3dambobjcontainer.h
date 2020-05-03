@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -33,38 +33,23 @@ struct Aud3DAmbObjContainer
 {
 public:
     // 0x513710 | ??0Aud3DAmbObjContainer@@QAE@XZ
-    inline Aud3DAmbObjContainer()
-    {
-        stub<member_func_t<void, Aud3DAmbObjContainer>>(0x513710, this);
-    }
+    Aud3DAmbObjContainer();
 
     // 0x513720 | ??1Aud3DAmbObjContainer@@QAE@XZ
-    inline ~Aud3DAmbObjContainer()
-    {
-        stub<member_func_t<void, Aud3DAmbObjContainer>>(0x513720, this);
-    }
-
-    // 0x513780 | ?FileValid@Aud3DAmbObjContainer@@AAE_NPAD@Z
-    inline bool FileValid(char* arg1)
-    {
-        return stub<member_func_t<bool, Aud3DAmbObjContainer, char*>>(0x513780, this, arg1);
-    }
+    ~Aud3DAmbObjContainer();
 
     // 0x5137C0 | ?Init@Aud3DAmbObjContainer@@QAE_NPAD@Z
-    inline bool Init(char* arg1)
-    {
-        return stub<member_func_t<bool, Aud3DAmbObjContainer, char*>>(0x5137C0, this, arg1);
-    }
-
-    // 0x5138A0 | ?CreateAmbientObject@Aud3DAmbObjContainer@@AAEXPAD@Z
-    inline void CreateAmbientObject(char* arg1)
-    {
-        return stub<member_func_t<void, Aud3DAmbObjContainer, char*>>(0x5138A0, this, arg1);
-    }
+    bool Init(char* arg1);
 
     // 0x513970 | ?Update@Aud3DAmbObjContainer@@QAEXM@Z
-    inline void Update(float arg1)
-    {
-        return stub<member_func_t<void, Aud3DAmbObjContainer, float>>(0x513970, this, arg1);
-    }
+    void Update(f32 arg1);
+
+private:
+    // 0x5138A0 | ?CreateAmbientObject@Aud3DAmbObjContainer@@AAEXPAD@Z
+    void CreateAmbientObject(char* arg1);
+
+    // 0x513780 | ?FileValid@Aud3DAmbObjContainer@@AAE_NPAD@Z
+    bool FileValid(char* arg1);
 };
+
+check_size(Aud3DAmbObjContainer, 0x0);

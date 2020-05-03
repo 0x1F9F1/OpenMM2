@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "directmusic/dmusicmanager.h"
 
 /*
     mmaudio:mmdmusicmanager
@@ -38,94 +40,53 @@
     0x6B15EC | class MMDMusicManager * MUSICMANAGERPTR | ?MUSICMANAGERPTR@@3PAVMMDMusicManager@@A
 */
 
-// 0x6B15EC | ?MUSICMANAGERPTR@@3PAVMMDMusicManager@@A
-inline extern_var(0x6B15EC, class MMDMusicManager*, MUSICMANAGERPTR);
-
-class MMDMusicManager : DMusicManager
+class MMDMusicManager : public DMusicManager
 {
 public:
     // 0x519EB0 | ??0MMDMusicManager@@QAE@XZ
-    inline MMDMusicManager()
-    {
-        stub<member_func_t<void, MMDMusicManager>>(0x519EB0, this);
-    }
+    MMDMusicManager();
 
     // 0x519EE0 | ??1MMDMusicManager@@QAE@XZ
-    inline ~MMDMusicManager()
-    {
-        stub<member_func_t<void, MMDMusicManager>>(0x519EE0, this);
-    }
-
-    // 0x519F60 | ?Init@MMDMusicManager@@QAEXHK@Z
-    inline void Init(int32_t arg1, uint32_t arg2)
-    {
-        return stub<member_func_t<void, MMDMusicManager, int32_t, uint32_t>>(0x519F60, this, arg1, arg2);
-    }
-
-    // 0x519FE0 | ?Update@MMDMusicManager@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, MMDMusicManager>>(0x519FE0, this);
-    }
-
-    // 0x519FF0 | ?UpdateSeconds@MMDMusicManager@@QAEXXZ
-    inline void UpdateSeconds()
-    {
-        return stub<member_func_t<void, MMDMusicManager>>(0x519FF0, this);
-    }
-
-    // 0x51A020 | ?UpdateAmbientSFX@MMDMusicManager@@QAEXXZ
-    inline void UpdateAmbientSFX()
-    {
-        return stub<member_func_t<void, MMDMusicManager>>(0x51A020, this);
-    }
-
-    // 0x51A070 | ?UpdateMusic@MMDMusicManager@@QAEXMH_N@Z
-    inline void UpdateMusic(float arg1, int32_t arg2, bool arg3)
-    {
-        return stub<member_func_t<void, MMDMusicManager, float, int32_t, bool>>(0x51A070, this, arg1, arg2, arg3);
-    }
-
-    // 0x51A0F0 | ?UpdateSpeedEvents@MMDMusicManager@@QAEXXZ
-    inline void UpdateSpeedEvents()
-    {
-        return stub<member_func_t<void, MMDMusicManager>>(0x51A0F0, this);
-    }
+    ~MMDMusicManager();
 
     // 0x51A170 | ?CreateSpeedRanges@MMDMusicManager@@QAEXH@Z
-    inline void CreateSpeedRanges(int32_t arg1)
-    {
-        return stub<member_func_t<void, MMDMusicManager, int32_t>>(0x51A170, this, arg1);
-    }
-
-    // 0x51A1A0 | ?SetSpeedEventRange@MMDMusicManager@@QAEXMMEH@Z
-    inline void SetSpeedEventRange(float arg1, float arg2, uint8_t arg3, int32_t arg4)
-    {
-        return stub<member_func_t<void, MMDMusicManager, float, float, uint8_t, int32_t>>(
-            0x51A1A0, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x51A1D0 | ?MatchMusicToPlayerSpeed@MMDMusicManager@@QAEXM@Z
-    inline void MatchMusicToPlayerSpeed(float arg1)
-    {
-        return stub<member_func_t<void, MMDMusicManager, float>>(0x51A1D0, this, arg1);
-    }
-
-    // 0x51A2C0 | ?Reset@MMDMusicManager@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, MMDMusicManager>>(0x51A2C0, this);
-    }
-
-    // 0x51A2D0 | ?EchoOn@MMDMusicManager@@QAEXMM@Z
-    inline void EchoOn(float arg1, float arg2)
-    {
-        return stub<member_func_t<void, MMDMusicManager, float, float>>(0x51A2D0, this, arg1, arg2);
-    }
+    void CreateSpeedRanges(i32 arg1);
 
     // 0x51A3A0 | ?EchoOff@MMDMusicManager@@QAEXXZ
-    inline void EchoOff()
-    {
-        return stub<member_func_t<void, MMDMusicManager>>(0x51A3A0, this);
-    }
+    void EchoOff();
+
+    // 0x51A2D0 | ?EchoOn@MMDMusicManager@@QAEXMM@Z
+    void EchoOn(f32 arg1, f32 arg2);
+
+    // 0x519F60 | ?Init@MMDMusicManager@@QAEXHK@Z
+    void Init(i32 arg1, u32 arg2);
+
+    // 0x51A1D0 | ?MatchMusicToPlayerSpeed@MMDMusicManager@@QAEXM@Z
+    void MatchMusicToPlayerSpeed(f32 arg1);
+
+    // 0x51A2C0 | ?Reset@MMDMusicManager@@QAEXXZ
+    void Reset();
+
+    // 0x51A1A0 | ?SetSpeedEventRange@MMDMusicManager@@QAEXMMEH@Z
+    void SetSpeedEventRange(f32 arg1, f32 arg2, u8 arg3, i32 arg4);
+
+    // 0x519FE0 | ?Update@MMDMusicManager@@QAEXXZ
+    void Update();
+
+    // 0x51A020 | ?UpdateAmbientSFX@MMDMusicManager@@QAEXXZ
+    void UpdateAmbientSFX();
+
+    // 0x51A070 | ?UpdateMusic@MMDMusicManager@@QAEXMH_N@Z
+    void UpdateMusic(f32 arg1, i32 arg2, bool arg3);
+
+    // 0x519FF0 | ?UpdateSeconds@MMDMusicManager@@QAEXXZ
+    void UpdateSeconds();
+
+    // 0x51A0F0 | ?UpdateSpeedEvents@MMDMusicManager@@QAEXXZ
+    void UpdateSpeedEvents();
 };
+
+check_size(MMDMusicManager, 0x58);
+
+// 0x6B15EC | ?MUSICMANAGERPTR@@3PAVMMDMusicManager@@A
+inline extern_var(0x6B15EC, class MMDMusicManager*, MUSICMANAGERPTR);

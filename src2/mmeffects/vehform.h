@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "node/node.h"
+
 /*
     mmeffects:vehform
 
@@ -29,49 +31,41 @@
     0x534070 | public: virtual void __thiscall mmVehicleForm::Cull(void) | ?Cull@mmVehicleForm@@UAEXXZ
     0x5343F0 | public: virtual void * __thiscall mmVehicleForm::`scalar deleting destructor'(unsigned int) | ??_GmmVehicleForm@@UAEPAXI@Z
     0x5B538C | const mmVehicleForm::`vftable' | ??_7mmVehicleForm@@6B@
-    char * * MiscMeshNames | ?MiscMeshNames@@3PAPADA
-    private: static class gfxTexture * mmVehicleForm::SphMapTex | ?SphMapTex@mmVehicleForm@@0PAVgfxTexture@@A
+    0x5D71AC | char * * MiscMeshNames | ?MiscMeshNames@@3PAPADA
+    0x6B1D7C | private: static class gfxTexture * mmVehicleForm::SphMapTex | ?SphMapTex@mmVehicleForm@@0PAVgfxTexture@@A
 */
 
-struct mmVehicleForm : asNode
+class mmVehicleForm : public asNode
 {
+    // const mmVehicleForm::`vftable' @ 0x5B538C
+
 public:
-    // mmVehicleForm::`vftable' @ 0x5B538C
-
     // 0x5339E0 | ??0mmVehicleForm@@QAE@XZ
-    inline mmVehicleForm()
-    {
-        stub<member_func_t<void, mmVehicleForm>>(0x5339E0, this);
-    }
+    mmVehicleForm();
 
-    // 0x533B50 | ?LoadAllModLOD@mmVehicleForm@@AAEXPAD@Z
-    inline void LoadAllModLOD(char* arg1)
-    {
-        return stub<member_func_t<void, mmVehicleForm, char*>>(0x533B50, this, arg1);
-    }
-
-    // 0x533BF0 | ?SetShape@mmVehicleForm@@QAEXPAD00PAVVector3@@@Z
-    inline void SetShape(char* arg1, char* arg2, char* arg3, class Vector3* arg4)
-    {
-        return stub<member_func_t<void, mmVehicleForm, char*, char*, char*, class Vector3*>>(
-            0x533BF0, this, arg1, arg2, arg3, arg4);
-    }
-
+    // 0x4F7A00 | ??_EmmVehicleForm@@UAEPAXI@Z
     // 0x533AA0 | ??1mmVehicleForm@@UAE@XZ
-    inline ~mmVehicleForm() override
-    {
-        stub<member_func_t<void, mmVehicleForm>>(0x533AA0, this);
-    }
+    // 0x5343F0 | ??_GmmVehicleForm@@UAEPAXI@Z
+    ~mmVehicleForm() override;
 
     // 0x534070 | ?Cull@mmVehicleForm@@UAEXXZ
-    inline void Cull() override
-    {
-        return stub<member_func_t<void, mmVehicleForm>>(0x534070, this);
-    }
+    void Cull() override;
+
+    // 0x533BF0 | ?SetShape@mmVehicleForm@@QAEXPAD00PAVVector3@@@Z
+    void SetShape(char* arg1, char* arg2, char* arg3, class Vector3* arg4);
 
     // 0x534040 | ?Update@mmVehicleForm@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmVehicleForm>>(0x534040, this);
-    }
+    void Update() override;
+
+private:
+    // 0x533B50 | ?LoadAllModLOD@mmVehicleForm@@AAEXPAD@Z
+    void LoadAllModLOD(char* arg1);
+
+    // 0x6B1D7C | ?SphMapTex@mmVehicleForm@@0PAVgfxTexture@@A
+    static inline extern_var(0x6B1D7C, class gfxTexture*, SphMapTex);
 };
+
+check_size(mmVehicleForm, 0x68);
+
+// 0x5D71AC | ?MiscMeshNames@@3PAPADA
+inline extern_var(0x5D71AC, char**, MiscMeshNames);

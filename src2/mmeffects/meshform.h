@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     mmeffects:meshform
@@ -36,63 +38,38 @@
     public: static class gfxTexture * asMeshSetForm::SphMapTex | ?SphMapTex@asMeshSetForm@@2PAVgfxTexture@@A
 */
 
-struct asMeshSetForm : asNode
+class asMeshSetForm : public asNode
 {
+    // const asMeshSetForm::`vftable' @ 0x5B5358
+
 public:
-    // asMeshSetForm::`vftable' @ 0x5B5358
-
     // 0x533600 | ??0asMeshSetForm@@QAE@XZ
-    inline asMeshSetForm()
-    {
-        stub<member_func_t<void, asMeshSetForm>>(0x533600, this);
-    }
+    asMeshSetForm();
 
-    // 0x533660 | ?SetShape@asMeshSetForm@@QAEXPAD0_NPAVVector3@@@Z
-    inline void SetShape(char* arg1, char* arg2, bool arg3, class Vector3* arg4)
-    {
-        return stub<member_func_t<void, asMeshSetForm, char*, char*, bool, class Vector3*>>(
-            0x533660, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x533770 | ?SetZRead@asMeshSetForm@@QAEX_N@Z
-    inline void SetZRead(bool arg1)
-    {
-        return stub<member_func_t<void, asMeshSetForm, bool>>(0x533770, this, arg1);
-    }
-
-    // 0x533790 | ?SetZWrite@asMeshSetForm@@QAEX_N@Z
-    inline void SetZWrite(bool arg1)
-    {
-        return stub<member_func_t<void, asMeshSetForm, bool>>(0x533790, this, arg1);
-    }
-
-    // 0x5337B0 | ?EnableLighting@asMeshSetForm@@QAEX_N@Z
-    inline void EnableLighting(bool arg1)
-    {
-        return stub<member_func_t<void, asMeshSetForm, bool>>(0x5337B0, this, arg1);
-    }
-
-    // 0x5337D0 | ?EnableAlpha@asMeshSetForm@@QAEX_N@Z
-    inline void EnableAlpha(bool arg1)
-    {
-        return stub<member_func_t<void, asMeshSetForm, bool>>(0x5337D0, this, arg1);
-    }
-
+    // 0x5339A0 | ??_EasMeshSetForm@@UAEPAXI@Z
     // 0x5339D0 | ??1asMeshSetForm@@UAE@XZ
-    inline ~asMeshSetForm() override
-    {
-        stub<member_func_t<void, asMeshSetForm>>(0x5339D0, this);
-    }
+    ~asMeshSetForm() override;
 
     // 0x533810 | ?Cull@asMeshSetForm@@UAEXXZ
-    inline void Cull() override
-    {
-        return stub<member_func_t<void, asMeshSetForm>>(0x533810, this);
-    }
+    void Cull() override;
+
+    // 0x5337D0 | ?EnableAlpha@asMeshSetForm@@QAEX_N@Z
+    void EnableAlpha(bool arg1);
+
+    // 0x5337B0 | ?EnableLighting@asMeshSetForm@@QAEX_N@Z
+    void EnableLighting(bool arg1);
+
+    // 0x533660 | ?SetShape@asMeshSetForm@@QAEXPAD0_NPAVVector3@@@Z
+    void SetShape(char* arg1, char* arg2, bool arg3, class Vector3* arg4);
+
+    // 0x533770 | ?SetZRead@asMeshSetForm@@QAEX_N@Z
+    void SetZRead(bool arg1);
+
+    // 0x533790 | ?SetZWrite@asMeshSetForm@@QAEX_N@Z
+    void SetZWrite(bool arg1);
 
     // 0x5337F0 | ?Update@asMeshSetForm@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, asMeshSetForm>>(0x5337F0, this);
-    }
+    void Update() override;
 };
+
+check_size(asMeshSetForm, 0x60);

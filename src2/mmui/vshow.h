@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "mmwidget/menu.h"
+
 /*
     mmui:vshow
 
@@ -30,32 +32,23 @@
     0x5B44F4 | const VehShowcase::`vftable' | ??_7VehShowcase@@6B@
 */
 
-struct VehShowcase : UIMenu
+class VehShowcase : public UIMenu
 {
+    // const VehShowcase::`vftable' @ 0x5B44F4
+
 public:
-    // VehShowcase::`vftable' @ 0x5B44F4
-
     // 0x505470 | ??0VehShowcase@@QAE@H@Z
-    inline VehShowcase(int32_t arg1)
-    {
-        stub<member_func_t<void, VehShowcase, int32_t>>(0x505470, this, arg1);
-    }
+    VehShowcase(i32 arg1);
 
+    // 0x5056A0 | ??_GVehShowcase@@UAEPAXI@Z
     // 0x5055C0 | ??1VehShowcase@@UAE@XZ
-    inline ~VehShowcase() override
-    {
-        stub<member_func_t<void, VehShowcase>>(0x5055C0, this);
-    }
-
-    // 0x505620 | ?PreSetup@VehShowcase@@UAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, VehShowcase>>(0x505620, this);
-    }
+    ~VehShowcase() override;
 
     // 0x505690 | ?PostSetup@VehShowcase@@UAEXXZ
-    inline void PostSetup() override
-    {
-        return stub<member_func_t<void, VehShowcase>>(0x505690, this);
-    }
+    void PostSetup() override;
+
+    // 0x505620 | ?PreSetup@VehShowcase@@UAEXXZ
+    void PreSetup() override;
 };
+
+check_size(VehShowcase, 0x94);

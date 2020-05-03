@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,22 @@
 */
 
 #include "jdmarker.h"
+
+void jinit_marker_reader(struct jpeg_decompress_struct* arg1)
+{
+    return stub<cdecl_t<void, struct jpeg_decompress_struct*>>(0x499030, arg1);
+}
+
+u8 jpeg_resync_to_restart(struct jpeg_decompress_struct* arg1, i32 arg2)
+{
+    return stub<cdecl_t<u8, struct jpeg_decompress_struct*, i32>>(0x498E10, arg1, arg2);
+}
+
+void jpeg_set_marker_processor(
+    struct jpeg_decompress_struct* arg1, i32 arg2, u8 (*arg3)(struct jpeg_decompress_struct*))
+{
+    return stub<cdecl_t<void, struct jpeg_decompress_struct*, i32, u8 (*)(struct jpeg_decompress_struct*)>>(
+        0x49A900, arg1, arg2, arg3);
+}
+
+define_dummy_symbol(djpeg_jdmarker);

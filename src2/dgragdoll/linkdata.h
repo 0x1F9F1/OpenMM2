@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -30,14 +30,10 @@ class dgLinkData
 {
 public:
     // 0x5A8890 | ??0dgLinkData@@QAE@XZ
-    inline dgLinkData()
-    {
-        stub<member_func_t<void, dgLinkData>>(0x5A8890, this);
-    }
+    dgLinkData();
 
     // 0x5A88E0 | ?FileIO@dgLinkData@@QAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1)
-    {
-        return stub<member_func_t<void, dgLinkData, class datParser&>>(0x5A88E0, this, arg1);
-    }
+    void FileIO(class datParser& arg1);
 };
+
+check_size(dgLinkData, 0x0);

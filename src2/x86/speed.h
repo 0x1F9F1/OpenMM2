@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -25,14 +25,8 @@
     0x4C9470 | unsigned int __cdecl ComputeCpuSpeed(void) | ?ComputeCpuSpeed@@YAIXZ
 */
 
-// 0x4C93B0 | ?__ComputeCpuSpeed@@YAIXZ
-inline uint32_t __ComputeCpuSpeed()
-{
-    return stub<cdecl_t<uint32_t>>(0x4C93B0);
-}
-
 // 0x4C9470 | ?ComputeCpuSpeed@@YAIXZ
-inline uint32_t ComputeCpuSpeed()
-{
-    return stub<cdecl_t<uint32_t>>(0x4C9470);
-}
+u32 ComputeCpuSpeed();
+
+// 0x4C93B0 | ?__ComputeCpuSpeed@@YAIXZ
+u32 __ComputeCpuSpeed();

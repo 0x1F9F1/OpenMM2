@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -31,51 +31,31 @@
     0x5B5C14 | const aiGoalCollision::`vftable' | ??_7aiGoalCollision@@6B@
 */
 
-struct aiGoalCollision : aiGoal
+struct aiGoalCollision
 {
-public:
-    // aiGoalCollision::`vftable' @ 0x5B5C14
+    // const aiGoalCollision::`vftable' @ 0x5B5C14
 
+public:
     // 0x56F550 | ??0aiGoalCollision@@QAE@PAVaiRailSet@@PAVaiVehicleSpline@@@Z
-    inline aiGoalCollision(class aiRailSet* arg1, class aiVehicleSpline* arg2)
-    {
-        stub<member_func_t<void, aiGoalCollision, class aiRailSet*, class aiVehicleSpline*>>(
-            0x56F550, this, arg1, arg2);
-    }
+    aiGoalCollision(class aiRailSet* arg1, class aiVehicleSpline* arg2);
 
     // 0x56F580 | ??1aiGoalCollision@@QAE@XZ
-    inline ~aiGoalCollision()
-    {
-        stub<member_func_t<void, aiGoalCollision>>(0x56F580, this);
-    }
+    ~aiGoalCollision();
 
     // 0x56F620 | ?Context@aiGoalCollision@@QAEHXZ
-    inline int32_t Context()
-    {
-        return stub<member_func_t<int32_t, aiGoalCollision>>(0x56F620, this);
-    }
+    i32 Context();
 
     // 0x56F640 | ?Priority@aiGoalCollision@@QAEHXZ
-    inline int32_t Priority()
-    {
-        return stub<member_func_t<int32_t, aiGoalCollision>>(0x56F640, this);
-    }
+    i32 Priority();
 
     // 0x56F590 | ?Init@aiGoalCollision@@UAEXXZ
-    inline void Init() override
-    {
-        return stub<member_func_t<void, aiGoalCollision>>(0x56F590, this);
-    }
+    virtual void Init();
 
     // 0x56F5A0 | ?Reset@aiGoalCollision@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, aiGoalCollision>>(0x56F5A0, this);
-    }
+    virtual void Reset();
 
     // 0x56F5B0 | ?Update@aiGoalCollision@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, aiGoalCollision>>(0x56F5B0, this);
-    }
+    virtual void Update();
 };
+
+check_size(aiGoalCollision, 0x10);

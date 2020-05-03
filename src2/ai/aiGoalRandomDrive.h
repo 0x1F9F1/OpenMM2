@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -44,123 +44,68 @@
     0x5B5BF4 | const aiGoalRandomDrive::`vftable' | ??_7aiGoalRandomDrive@@6B@
 */
 
-struct aiGoalRandomDrive : aiGoal
+struct aiGoalRandomDrive
 {
-public:
-    // aiGoalRandomDrive::`vftable' @ 0x5B5BF4
+    // const aiGoalRandomDrive::`vftable' @ 0x5B5BF4
 
+public:
     // 0x56C0C0 | ??0aiGoalRandomDrive@@QAE@PAVaiRailSet@@PAVaiVehicleSpline@@@Z
-    inline aiGoalRandomDrive(class aiRailSet* arg1, class aiVehicleSpline* arg2)
-    {
-        stub<member_func_t<void, aiGoalRandomDrive, class aiRailSet*, class aiVehicleSpline*>>(
-            0x56C0C0, this, arg1, arg2);
-    }
+    aiGoalRandomDrive(class aiRailSet* arg1, class aiVehicleSpline* arg2);
 
     // 0x56C180 | ??1aiGoalRandomDrive@@QAE@XZ
-    inline ~aiGoalRandomDrive()
-    {
-        stub<member_func_t<void, aiGoalRandomDrive>>(0x56C180, this);
-    }
+    ~aiGoalRandomDrive();
 
     // 0x56CDC0 | ?Context@aiGoalRandomDrive@@QAEHXZ
-    inline int32_t Context()
-    {
-        return stub<member_func_t<int32_t, aiGoalRandomDrive>>(0x56CDC0, this);
-    }
-
-    // 0x56CDE0 | ?Priority@aiGoalRandomDrive@@QAEHXZ
-    inline int32_t Priority()
-    {
-        return stub<member_func_t<int32_t, aiGoalRandomDrive>>(0x56CDE0, this);
-    }
-
-    // 0x56CDF0 | ?SolveVelocity@aiGoalRandomDrive@@AAEXXZ
-    inline void SolveVelocity()
-    {
-        return stub<member_func_t<void, aiGoalRandomDrive>>(0x56CDF0, this);
-    }
-
-    // 0x56D5F0 | ?UpcomingAccident@aiGoalRandomDrive@@AAEHXZ
-    inline int32_t UpcomingAccident()
-    {
-        return stub<member_func_t<int32_t, aiGoalRandomDrive>>(0x56D5F0, this);
-    }
-
-    // 0x56D6A0 | ?SpeedLimit@aiGoalRandomDrive@@AAEMXZ
-    inline float SpeedLimit()
-    {
-        return stub<member_func_t<float, aiGoalRandomDrive>>(0x56D6A0, this);
-    }
-
-    // 0x56D6F0 | ?OkayToEnterIntersection@aiGoalRandomDrive@@AAEHM@Z
-    inline int32_t OkayToEnterIntersection(float arg1)
-    {
-        return stub<member_func_t<int32_t, aiGoalRandomDrive, float>>(0x56D6F0, this, arg1);
-    }
-
-    // 0x56D8A0 | ?AnyVehiclesComingThisWay@aiGoalRandomDrive@@AAEHXZ
-    inline int32_t AnyVehiclesComingThisWay()
-    {
-        return stub<member_func_t<int32_t, aiGoalRandomDrive>>(0x56D8A0, this);
-    }
-
-    // 0x56DB20 | ?AvoidCollision@aiGoalRandomDrive@@AAEXPAVaiVehicleSpline@@M@Z
-    inline void AvoidCollision(class aiVehicleSpline* arg1, float arg2)
-    {
-        return stub<member_func_t<void, aiGoalRandomDrive, class aiVehicleSpline*, float>>(0x56DB20, this, arg1, arg2);
-    }
-
-    // 0x56DD60 | ?SolvePosition@aiGoalRandomDrive@@QAEXAAVVector3@@M@Z
-    inline void SolvePosition(class Vector3& arg1, float arg2)
-    {
-        return stub<member_func_t<void, aiGoalRandomDrive, class Vector3&, float>>(0x56DD60, this, arg1, arg2);
-    }
-
-    // 0x56DDB0 | ?SolveRailType@aiGoalRandomDrive@@AAE_NXZ
-    inline bool SolveRailType()
-    {
-        return stub<member_func_t<bool, aiGoalRandomDrive>>(0x56DDB0, this);
-    }
-
-    // 0x56ED50 | ?SolveLane@aiGoalRandomDrive@@AAEXXZ
-    inline void SolveLane()
-    {
-        return stub<member_func_t<void, aiGoalRandomDrive>>(0x56ED50, this);
-    }
-
-    // 0x56EE60 | ?ChangeLanes@aiGoalRandomDrive@@AAEXXZ
-    inline void ChangeLanes()
-    {
-        return stub<member_func_t<void, aiGoalRandomDrive>>(0x56EE60, this);
-    }
+    i32 Context();
 
     // 0x56F3C0 | ?Dump@aiGoalRandomDrive@@QAEXXZ
-    inline void Dump()
-    {
-        return stub<member_func_t<void, aiGoalRandomDrive>>(0x56F3C0, this);
-    }
+    void Dump();
+
+    // 0x56CDE0 | ?Priority@aiGoalRandomDrive@@QAEHXZ
+    i32 Priority();
 
     // 0x56F3F0 | ?ReplayDebug@aiGoalRandomDrive@@QAEXXZ
-    inline void ReplayDebug()
-    {
-        return stub<member_func_t<void, aiGoalRandomDrive>>(0x56F3F0, this);
-    }
+    void ReplayDebug();
+
+    // 0x56DD60 | ?SolvePosition@aiGoalRandomDrive@@QAEXAAVVector3@@M@Z
+    void SolvePosition(class Vector3& arg1, f32 arg2);
 
     // 0x56C190 | ?Init@aiGoalRandomDrive@@UAEXXZ
-    inline void Init() override
-    {
-        return stub<member_func_t<void, aiGoalRandomDrive>>(0x56C190, this);
-    }
+    virtual void Init();
 
     // 0x56C1B0 | ?Reset@aiGoalRandomDrive@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, aiGoalRandomDrive>>(0x56C1B0, this);
-    }
+    virtual void Reset();
 
     // 0x56CBF0 | ?Update@aiGoalRandomDrive@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, aiGoalRandomDrive>>(0x56CBF0, this);
-    }
+    virtual void Update();
+
+private:
+    // 0x56D8A0 | ?AnyVehiclesComingThisWay@aiGoalRandomDrive@@AAEHXZ
+    i32 AnyVehiclesComingThisWay();
+
+    // 0x56DB20 | ?AvoidCollision@aiGoalRandomDrive@@AAEXPAVaiVehicleSpline@@M@Z
+    void AvoidCollision(class aiVehicleSpline* arg1, f32 arg2);
+
+    // 0x56EE60 | ?ChangeLanes@aiGoalRandomDrive@@AAEXXZ
+    void ChangeLanes();
+
+    // 0x56D6F0 | ?OkayToEnterIntersection@aiGoalRandomDrive@@AAEHM@Z
+    i32 OkayToEnterIntersection(f32 arg1);
+
+    // 0x56ED50 | ?SolveLane@aiGoalRandomDrive@@AAEXXZ
+    void SolveLane();
+
+    // 0x56DDB0 | ?SolveRailType@aiGoalRandomDrive@@AAE_NXZ
+    bool SolveRailType();
+
+    // 0x56CDF0 | ?SolveVelocity@aiGoalRandomDrive@@AAEXXZ
+    void SolveVelocity();
+
+    // 0x56D6A0 | ?SpeedLimit@aiGoalRandomDrive@@AAEMXZ
+    f32 SpeedLimit();
+
+    // 0x56D5F0 | ?UpcomingAccident@aiGoalRandomDrive@@AAEHXZ
+    i32 UpcomingAccident();
 };
+
+check_size(aiGoalRandomDrive, 0x14);

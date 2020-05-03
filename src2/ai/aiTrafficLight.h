@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,9 @@
 */
 
 #pragma once
+
+#include "banger/banger.h"
+#include "node/node.h"
 
 /*
     ai:aiTrafficLight
@@ -37,73 +40,50 @@
     0x6B2FFC | private: static short aiTrafficLightSet::ObjCount | ?ObjCount@aiTrafficLightSet@@0FA
 */
 
-struct aiTrafficLightSet : asNode
+class aiTrafficLightSet : public asNode
 {
+    // const aiTrafficLightSet::`vftable' @ 0x5B5528
+
 public:
-    // aiTrafficLightSet::`vftable' @ 0x5B5528
-
     // 0x53C040 | ??0aiTrafficLightSet@@QAE@PAVaiIntersection@@@Z
-    inline aiTrafficLightSet(class aiIntersection* arg1)
-    {
-        stub<member_func_t<void, aiTrafficLightSet, class aiIntersection*>>(0x53C040, this, arg1);
-    }
+    aiTrafficLightSet(class aiIntersection* arg1);
 
-    // 0x53C180 | ?SetFourWay@aiTrafficLightSet@@QAEXXZ
-    inline void SetFourWay()
-    {
-        return stub<member_func_t<void, aiTrafficLightSet>>(0x53C180, this);
-    }
-
-    // 0x6B2FFC | ?ObjCount@aiTrafficLightSet@@0FA
-    inline extern_var(0x6B2FFC, int16_t, ObjCount);
-
+    // 0x53CD20 | ??_GaiTrafficLightSet@@UAEPAXI@Z
     // 0x53C440 | ??1aiTrafficLightSet@@UAE@XZ
-    inline ~aiTrafficLightSet() override
-    {
-        stub<member_func_t<void, aiTrafficLightSet>>(0x53C440, this);
-    }
-
-    // 0x53C4B0 | ?Update@aiTrafficLightSet@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, aiTrafficLightSet>>(0x53C4B0, this);
-    }
+    ~aiTrafficLightSet() override;
 
     // 0x53C460 | ?Reset@aiTrafficLightSet@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, aiTrafficLightSet>>(0x53C460, this);
-    }
+    void Reset() override;
+
+    // 0x53C180 | ?SetFourWay@aiTrafficLightSet@@QAEXXZ
+    void SetFourWay();
+
+    // 0x53C4B0 | ?Update@aiTrafficLightSet@@UAEXXZ
+    void Update() override;
+
+private:
+    // 0x6B2FFC | ?ObjCount@aiTrafficLightSet@@0FA
+    static inline extern_var(0x6B2FFC, i16, ObjCount);
 };
 
-struct aiTrafficLightInstance : dgUnhitYBangerInstance
-{
-public:
-    // aiTrafficLightInstance::`vftable' @ 0x5B54AC
+check_size(aiTrafficLightSet, 0x0);
 
+class aiTrafficLightInstance : public dgUnhitYBangerInstance
+{
+    // const aiTrafficLightInstance::`vftable' @ 0x5B54AC
+
+public:
     // 0x53C960 | ?Draw@aiTrafficLightInstance@@UAEXH@Z
-    inline void Draw(int32_t arg1) override
-    {
-        return stub<member_func_t<void, aiTrafficLightInstance, int32_t>>(0x53C960, this, arg1);
-    }
+    void Draw(i32 arg1) override;
 
     // 0x53CA70 | ?DrawGlow@aiTrafficLightInstance@@UAEXXZ
-    inline void DrawGlow() override
-    {
-        return stub<member_func_t<void, aiTrafficLightInstance>>(0x53CA70, this);
-    }
+    void DrawGlow() override;
 
     // 0x53CD50 | ?SizeOf@aiTrafficLightInstance@@UAEIXZ
-    inline uint32_t SizeOf() override
-    {
-        return stub<member_func_t<uint32_t, aiTrafficLightInstance>>(0x53CD50, this);
-    }
+    u32 SizeOf() override;
 
     // 0x53C6F0 | ?Init@aiTrafficLightInstance@@UAEHPADAAVVector3@@1H0@Z
-    virtual inline int32_t Init(char* arg1, class Vector3& arg2, class Vector3& arg3, int32_t arg4, char* arg5)
-    {
-        return stub<
-            member_func_t<int32_t, aiTrafficLightInstance, char*, class Vector3&, class Vector3&, int32_t, char*>>(
-            0x53C6F0, this, arg1, arg2, arg3, arg4, arg5);
-    }
+    virtual i32 Init(char* arg1, class Vector3& arg2, class Vector3& arg3, i32 arg4, char* arg5);
 };
+
+check_size(aiTrafficLightInstance, 0x0);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -42,92 +42,49 @@ class mmRaceData
 {
 public:
     // 0x529B80 | ??0mmRaceData@@QAE@XZ
-    inline mmRaceData()
-    {
-        stub<member_func_t<void, mmRaceData>>(0x529B80, this);
-    }
+    mmRaceData();
 
     // 0x529B90 | ??1mmRaceData@@QAE@XZ
-    inline ~mmRaceData()
-    {
-        stub<member_func_t<void, mmRaceData>>(0x529B90, this);
-    }
-
-    // 0x529BA0 | ?Load@mmRaceData@@QAEHPAD0@Z
-    inline int32_t Load(char* arg1, char* arg2)
-    {
-        return stub<member_func_t<int32_t, mmRaceData, char*, char*>>(0x529BA0, this, arg1, arg2);
-    }
-
-    // 0x529EB0 | ?GetNumRaces@mmRaceData@@QAEHXZ
-    inline int32_t GetNumRaces()
-    {
-        return stub<member_func_t<int32_t, mmRaceData>>(0x529EB0, this);
-    }
-
-    // 0x529EC0 | ?GetRaceName@mmRaceData@@QAEPADH@Z
-    inline char* GetRaceName(int32_t arg1)
-    {
-        return stub<member_func_t<char*, mmRaceData, int32_t>>(0x529EC0, this, arg1);
-    }
-
-    // 0x529ED0 | ?GetCarType@mmRaceData@@QAEHHW4dgSkillLevel@@@Z
-    inline int32_t GetCarType(int32_t arg1, enum dgSkillLevel arg2)
-    {
-        return stub<member_func_t<int32_t, mmRaceData, int32_t, enum dgSkillLevel>>(0x529ED0, this, arg1, arg2);
-    }
-
-    // 0x529F00 | ?GetNumLaps@mmRaceData@@QAEHHW4dgSkillLevel@@@Z
-    inline int32_t GetNumLaps(int32_t arg1, enum dgSkillLevel arg2)
-    {
-        return stub<member_func_t<int32_t, mmRaceData, int32_t, enum dgSkillLevel>>(0x529F00, this, arg1, arg2);
-    }
-
-    // 0x529F30 | ?GetTimeLimit@mmRaceData@@QAEMHW4dgSkillLevel@@@Z
-    inline float GetTimeLimit(int32_t arg1, enum dgSkillLevel arg2)
-    {
-        return stub<member_func_t<float, mmRaceData, int32_t, enum dgSkillLevel>>(0x529F30, this, arg1, arg2);
-    }
-
-    // 0x529F60 | ?GetNumOpponents@mmRaceData@@QAEHHW4dgSkillLevel@@@Z
-    inline int32_t GetNumOpponents(int32_t arg1, enum dgSkillLevel arg2)
-    {
-        return stub<member_func_t<int32_t, mmRaceData, int32_t, enum dgSkillLevel>>(0x529F60, this, arg1, arg2);
-    }
-
-    // 0x529F90 | ?GetNumCops@mmRaceData@@QAEHHW4dgSkillLevel@@@Z
-    inline int32_t GetNumCops(int32_t arg1, enum dgSkillLevel arg2)
-    {
-        return stub<member_func_t<int32_t, mmRaceData, int32_t, enum dgSkillLevel>>(0x529F90, this, arg1, arg2);
-    }
-
-    // 0x529FC0 | ?GetTimeOfDay@mmRaceData@@QAEHHW4dgSkillLevel@@@Z
-    inline int32_t GetTimeOfDay(int32_t arg1, enum dgSkillLevel arg2)
-    {
-        return stub<member_func_t<int32_t, mmRaceData, int32_t, enum dgSkillLevel>>(0x529FC0, this, arg1, arg2);
-    }
-
-    // 0x529FF0 | ?GetWeather@mmRaceData@@QAEHHW4dgSkillLevel@@@Z
-    inline int32_t GetWeather(int32_t arg1, enum dgSkillLevel arg2)
-    {
-        return stub<member_func_t<int32_t, mmRaceData, int32_t, enum dgSkillLevel>>(0x529FF0, this, arg1, arg2);
-    }
-
-    // 0x52A020 | ?GetPedDensity@mmRaceData@@QAEMHW4dgSkillLevel@@@Z
-    inline float GetPedDensity(int32_t arg1, enum dgSkillLevel arg2)
-    {
-        return stub<member_func_t<float, mmRaceData, int32_t, enum dgSkillLevel>>(0x52A020, this, arg1, arg2);
-    }
+    ~mmRaceData();
 
     // 0x52A050 | ?GetAmbientDensity@mmRaceData@@QAEMHW4dgSkillLevel@@@Z
-    inline float GetAmbientDensity(int32_t arg1, enum dgSkillLevel arg2)
-    {
-        return stub<member_func_t<float, mmRaceData, int32_t, enum dgSkillLevel>>(0x52A050, this, arg1, arg2);
-    }
+    f32 GetAmbientDensity(i32 arg1, enum dgSkillLevel arg2);
+
+    // 0x529ED0 | ?GetCarType@mmRaceData@@QAEHHW4dgSkillLevel@@@Z
+    i32 GetCarType(i32 arg1, enum dgSkillLevel arg2);
 
     // 0x52A080 | ?GetDifficulty@mmRaceData@@QAEMHW4dgSkillLevel@@@Z
-    inline float GetDifficulty(int32_t arg1, enum dgSkillLevel arg2)
-    {
-        return stub<member_func_t<float, mmRaceData, int32_t, enum dgSkillLevel>>(0x52A080, this, arg1, arg2);
-    }
+    f32 GetDifficulty(i32 arg1, enum dgSkillLevel arg2);
+
+    // 0x529F90 | ?GetNumCops@mmRaceData@@QAEHHW4dgSkillLevel@@@Z
+    i32 GetNumCops(i32 arg1, enum dgSkillLevel arg2);
+
+    // 0x529F00 | ?GetNumLaps@mmRaceData@@QAEHHW4dgSkillLevel@@@Z
+    i32 GetNumLaps(i32 arg1, enum dgSkillLevel arg2);
+
+    // 0x529F60 | ?GetNumOpponents@mmRaceData@@QAEHHW4dgSkillLevel@@@Z
+    i32 GetNumOpponents(i32 arg1, enum dgSkillLevel arg2);
+
+    // 0x529EB0 | ?GetNumRaces@mmRaceData@@QAEHXZ
+    i32 GetNumRaces();
+
+    // 0x52A020 | ?GetPedDensity@mmRaceData@@QAEMHW4dgSkillLevel@@@Z
+    f32 GetPedDensity(i32 arg1, enum dgSkillLevel arg2);
+
+    // 0x529EC0 | ?GetRaceName@mmRaceData@@QAEPADH@Z
+    char* GetRaceName(i32 arg1);
+
+    // 0x529F30 | ?GetTimeLimit@mmRaceData@@QAEMHW4dgSkillLevel@@@Z
+    f32 GetTimeLimit(i32 arg1, enum dgSkillLevel arg2);
+
+    // 0x529FC0 | ?GetTimeOfDay@mmRaceData@@QAEHHW4dgSkillLevel@@@Z
+    i32 GetTimeOfDay(i32 arg1, enum dgSkillLevel arg2);
+
+    // 0x529FF0 | ?GetWeather@mmRaceData@@QAEHHW4dgSkillLevel@@@Z
+    i32 GetWeather(i32 arg1, enum dgSkillLevel arg2);
+
+    // 0x529BA0 | ?Load@mmRaceData@@QAEHPAD0@Z
+    i32 Load(char* arg1, char* arg2);
 };
+
+check_size(mmRaceData, 0x4B4);

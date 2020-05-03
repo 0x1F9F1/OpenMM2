@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "data/base.h"
+
 /*
     ai:aiCityData
 
@@ -31,18 +33,15 @@
 
 struct aiCityData : Base
 {
+    // const aiCityData::`vftable' @ 0x5B59E4
+
 public:
-    // aiCityData::`vftable' @ 0x5B59E4
-
     // 0x555BD0 | ??0aiCityData@@QAE@PAD0@Z
-    inline aiCityData(char* arg1, char* arg2)
-    {
-        stub<member_func_t<void, aiCityData, char*, char*>>(0x555BD0, this, arg1, arg2);
-    }
+    aiCityData(char* arg1, char* arg2);
 
+    // 0x5561B0 | ??_GaiCityData@@UAEPAXI@Z
     // 0x5560E0 | ??1aiCityData@@UAE@XZ
-    inline ~aiCityData() override
-    {
-        stub<member_func_t<void, aiCityData>>(0x5560E0, this);
-    }
+    ~aiCityData() override;
 };
+
+check_size(aiCityData, 0x34);

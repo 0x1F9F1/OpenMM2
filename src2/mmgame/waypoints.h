@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     mmgame:waypoints
@@ -65,193 +67,102 @@
     0x5B0F34 | const mmWaypoints::`vftable' | ??_7mmWaypoints@@6B@
 */
 
-class mmWaypoints : asNode
+class mmWaypoints : public asNode
 {
+    // const mmWaypoints::`vftable' @ 0x5B0F34
+
 public:
-    // mmWaypoints::`vftable' @ 0x5B0F34
-
     // 0x434260 | ??0mmWaypoints@@QAE@XZ
-    inline mmWaypoints()
-    {
-        stub<member_func_t<void, mmWaypoints>>(0x434260, this);
-    }
+    mmWaypoints();
 
-    // 0x434430 | ?Init@mmWaypoints@@QAEHPAVmmPlayer@@PADHHHHI@Z
-    inline int32_t Init(
-        class mmPlayer* arg1, char* arg2, int32_t arg3, int32_t arg4, int32_t arg5, int32_t arg6, uint32_t arg7)
-    {
-        return stub<
-            member_func_t<int32_t, mmWaypoints, class mmPlayer*, char*, int32_t, int32_t, int32_t, int32_t, uint32_t>>(
-            0x434430, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-    }
-
-    // 0x434540 | ?InitStatic@mmWaypoints@@QAEXPAVmmPlayer@@HI@Z
-    inline void InitStatic(class mmPlayer* arg1, int32_t arg2, uint32_t arg3)
-    {
-        return stub<member_func_t<void, mmWaypoints, class mmPlayer*, int32_t, uint32_t>>(
-            0x434540, this, arg1, arg2, arg3);
-    }
-
-    // 0x434700 | ?ReInit@mmWaypoints@@QAEXHPADI@Z
-    inline void ReInit(int32_t arg1, char* arg2, uint32_t arg3)
-    {
-        return stub<member_func_t<void, mmWaypoints, int32_t, char*, uint32_t>>(0x434700, this, arg1, arg2, arg3);
-    }
-
-    // 0x434960 | ?GetStartAngle@mmWaypoints@@QAEMXZ
-    inline float GetStartAngle()
-    {
-        return stub<member_func_t<float, mmWaypoints>>(0x434960, this);
-    }
-
-    // 0x434980 | ?SaveCSV@mmWaypoints@@QAEHPAD@Z
-    inline int32_t SaveCSV(char* arg1)
-    {
-        return stub<member_func_t<int32_t, mmWaypoints, char*>>(0x434980, this, arg1);
-    }
-
-    // 0x434A70 | ?LoadCSV@mmWaypoints@@QAEHPADH@Z
-    inline int32_t LoadCSV(char* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<int32_t, mmWaypoints, char*, int32_t>>(0x434A70, this, arg1, arg2);
-    }
-
-    // 0x4357D0 | ?DeactivateFinish@mmWaypoints@@QAEXXZ
-    inline void DeactivateFinish()
-    {
-        return stub<member_func_t<void, mmWaypoints>>(0x4357D0, this);
-    }
-
-    // 0x4358F0 | ?GetStart@mmWaypoints@@QAEXAAVVector3@@@Z
-    inline void GetStart(class Vector3& arg1)
-    {
-        return stub<member_func_t<void, mmWaypoints, class Vector3&>>(0x4358F0, this, arg1);
-    }
-
-    // 0x435930 | ?GetWaypoint@mmWaypoints@@QAEXHAAVVector3@@@Z
-    inline void GetWaypoint(int32_t arg1, class Vector3& arg2)
-    {
-        return stub<member_func_t<void, mmWaypoints, int32_t, class Vector3&>>(0x435930, this, arg1, arg2);
-    }
-
-    // 0x435970 | ?GetHeading@mmWaypoints@@QAEMH@Z
-    inline float GetHeading(int32_t arg1)
-    {
-        return stub<member_func_t<float, mmWaypoints, int32_t>>(0x435970, this, arg1);
-    }
-
-    // 0x4359A0 | ?GenerateHitRooms@mmWaypoints@@IAEXXZ
-    inline void GenerateHitRooms()
-    {
-        return stub<member_func_t<void, mmWaypoints>>(0x4359A0, this);
-    }
-
-    // 0x435A00 | ?GetHitRoom@mmWaypoints@@QAEHH@Z
-    inline int32_t GetHitRoom(int32_t arg1)
-    {
-        return stub<member_func_t<int32_t, mmWaypoints, int32_t>>(0x435A00, this, arg1);
-    }
-
-    // 0x435A20 | ?SetArrow@mmWaypoints@@QAEXXZ
-    inline void SetArrow()
-    {
-        return stub<member_func_t<void, mmWaypoints>>(0x435A20, this);
-    }
-
-    // 0x435A50 | ?GetCurrentDistance@mmWaypoints@@QAEMXZ
-    inline float GetCurrentDistance()
-    {
-        return stub<member_func_t<float, mmWaypoints>>(0x435A50, this);
-    }
-
-    // 0x435AA0 | ?ResetAllTags@mmWaypoints@@QAEXXZ
-    inline void ResetAllTags()
-    {
-        return stub<member_func_t<void, mmWaypoints>>(0x435AA0, this);
-    }
-
-    // 0x435B10 | ?GetClosestWaypoint@mmWaypoints@@QAEXXZ
-    inline void GetClosestWaypoint()
-    {
-        return stub<member_func_t<void, mmWaypoints>>(0x435B10, this);
-    }
-
-    // 0x435BD0 | ?CycleCurrentWaypoint@mmWaypoints@@IAEXH@Z
-    inline void CycleCurrentWaypoint(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmWaypoints, int32_t>>(0x435BD0, this, arg1);
-    }
-
-    // 0x435C40 | ?GetNextWaypoint@mmWaypoints@@QAEXXZ
-    inline void GetNextWaypoint()
-    {
-        return stub<member_func_t<void, mmWaypoints>>(0x435C40, this);
-    }
-
-    // 0x435C50 | ?GetLastWaypoint@mmWaypoints@@QAEXXZ
-    inline void GetLastWaypoint()
-    {
-        return stub<member_func_t<void, mmWaypoints>>(0x435C50, this);
-    }
-
-    // 0x435C60 | ?SetCurrentGoals@mmWaypoints@@IAEXH@Z
-    inline void SetCurrentGoals(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmWaypoints, int32_t>>(0x435C60, this, arg1);
-    }
-
-    // 0x435CA0 | ?AnyDrawn@mmWaypoints@@QAEHXZ
-    inline int32_t AnyDrawn()
-    {
-        return stub<member_func_t<int32_t, mmWaypoints>>(0x435CA0, this);
-    }
+    // 0x4363A0 | ??_GmmWaypoints@@UAEPAXI@Z
+    // 0x434370 | ??1mmWaypoints@@UAE@XZ
+    ~mmWaypoints() override;
 
     // 0x435CE0 | ?AIWPHit@mmWaypoints@@QAEHHHVMatrix34@@VVector3@@M@Z
-    inline int32_t AIWPHit(int32_t arg1, int32_t arg2, class Matrix34 arg3, class Vector3 arg4, float arg5)
-    {
-        return stub<member_func_t<int32_t, mmWaypoints, int32_t, int32_t, class Matrix34, class Vector3, float>>(
-            0x435CE0, this, arg1, arg2, arg3, arg4, arg5);
-    }
+    i32 AIWPHit(i32 arg1, i32 arg2, class Matrix34 arg3, class Vector3 arg4, f32 arg5);
+
+    // 0x435CA0 | ?AnyDrawn@mmWaypoints@@QAEHXZ
+    i32 AnyDrawn();
 
     // 0x435DE0 | ?AnyWPHits@mmWaypoints@@QAEHH@Z
-    inline int32_t AnyWPHits(int32_t arg1)
-    {
-        return stub<member_func_t<int32_t, mmWaypoints, int32_t>>(0x435DE0, this, arg1);
-    }
-
-    // 0x435F60 | ?ClearWaypoint@mmWaypoints@@IAEXH@Z
-    inline void ClearWaypoint(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmWaypoints, int32_t>>(0x435F60, this, arg1);
-    }
-
-    // 0x4360C0 | ?DisplayHUDMessage@mmWaypoints@@QAEXH@Z
-    inline void DisplayHUDMessage(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmWaypoints, int32_t>>(0x4360C0, this, arg1);
-    }
-
-    // 0x434370 | ??1mmWaypoints@@UAE@XZ
-    inline ~mmWaypoints() override
-    {
-        stub<member_func_t<void, mmWaypoints>>(0x434370, this);
-    }
+    i32 AnyWPHits(i32 arg1);
 
     // 0x435240 | ?Cull@mmWaypoints@@UAEXXZ
-    inline void Cull() override
-    {
-        return stub<member_func_t<void, mmWaypoints>>(0x435240, this);
-    }
+    void Cull() override;
 
-    // 0x435280 | ?Update@mmWaypoints@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmWaypoints>>(0x435280, this);
-    }
+    // 0x4357D0 | ?DeactivateFinish@mmWaypoints@@QAEXXZ
+    void DeactivateFinish();
+
+    // 0x4360C0 | ?DisplayHUDMessage@mmWaypoints@@QAEXH@Z
+    void DisplayHUDMessage(i32 arg1);
+
+    // 0x435B10 | ?GetClosestWaypoint@mmWaypoints@@QAEXXZ
+    void GetClosestWaypoint();
+
+    // 0x435A50 | ?GetCurrentDistance@mmWaypoints@@QAEMXZ
+    f32 GetCurrentDistance();
+
+    // 0x435970 | ?GetHeading@mmWaypoints@@QAEMH@Z
+    f32 GetHeading(i32 arg1);
+
+    // 0x435A00 | ?GetHitRoom@mmWaypoints@@QAEHH@Z
+    i32 GetHitRoom(i32 arg1);
+
+    // 0x435C50 | ?GetLastWaypoint@mmWaypoints@@QAEXXZ
+    void GetLastWaypoint();
+
+    // 0x435C40 | ?GetNextWaypoint@mmWaypoints@@QAEXXZ
+    void GetNextWaypoint();
+
+    // 0x4358F0 | ?GetStart@mmWaypoints@@QAEXAAVVector3@@@Z
+    void GetStart(class Vector3& arg1);
+
+    // 0x434960 | ?GetStartAngle@mmWaypoints@@QAEMXZ
+    f32 GetStartAngle();
+
+    // 0x435930 | ?GetWaypoint@mmWaypoints@@QAEXHAAVVector3@@@Z
+    void GetWaypoint(i32 arg1, class Vector3& arg2);
+
+    // 0x434430 | ?Init@mmWaypoints@@QAEHPAVmmPlayer@@PADHHHHI@Z
+    i32 Init(class mmPlayer* arg1, char* arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6, u32 arg7);
+
+    // 0x434540 | ?InitStatic@mmWaypoints@@QAEXPAVmmPlayer@@HI@Z
+    void InitStatic(class mmPlayer* arg1, i32 arg2, u32 arg3);
+
+    // 0x434A70 | ?LoadCSV@mmWaypoints@@QAEHPADH@Z
+    i32 LoadCSV(char* arg1, i32 arg2);
+
+    // 0x434700 | ?ReInit@mmWaypoints@@QAEXHPADI@Z
+    void ReInit(i32 arg1, char* arg2, u32 arg3);
 
     // 0x4357E0 | ?Reset@mmWaypoints@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmWaypoints>>(0x4357E0, this);
-    }
+    void Reset() override;
+
+    // 0x435AA0 | ?ResetAllTags@mmWaypoints@@QAEXXZ
+    void ResetAllTags();
+
+    // 0x434980 | ?SaveCSV@mmWaypoints@@QAEHPAD@Z
+    i32 SaveCSV(char* arg1);
+
+    // 0x435A20 | ?SetArrow@mmWaypoints@@QAEXXZ
+    void SetArrow();
+
+    // 0x435280 | ?Update@mmWaypoints@@UAEXXZ
+    void Update() override;
+
+protected:
+    // 0x435F60 | ?ClearWaypoint@mmWaypoints@@IAEXH@Z
+    void ClearWaypoint(i32 arg1);
+
+    // 0x435BD0 | ?CycleCurrentWaypoint@mmWaypoints@@IAEXH@Z
+    void CycleCurrentWaypoint(i32 arg1);
+
+    // 0x4359A0 | ?GenerateHitRooms@mmWaypoints@@IAEXXZ
+    void GenerateHitRooms();
+
+    // 0x435C60 | ?SetCurrentGoals@mmWaypoints@@IAEXH@Z
+    void SetCurrentGoals(i32 arg1);
 };
+
+check_size(mmWaypoints, 0x90);

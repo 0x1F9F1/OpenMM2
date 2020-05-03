@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,25 @@
 */
 
 #include "mousesteerbar.h"
+
+mmMouseSteerBar::~mmMouseSteerBar()
+{
+    unimplemented();
+}
+
+void mmMouseSteerBar::Cull()
+{
+    return stub<thiscall_t<void, mmMouseSteerBar*>>(0x534500, this);
+}
+
+void mmMouseSteerBar::Init(f32 arg1, f32 arg2, f32* arg3)
+{
+    return stub<thiscall_t<void, mmMouseSteerBar*, f32, f32, f32*>>(0x534450, this, arg1, arg2, arg3);
+}
+
+void mmMouseSteerBar::Update()
+{
+    return stub<thiscall_t<void, mmMouseSteerBar*>>(0x5344D0, this);
+}
+
+define_dummy_symbol(mmeffects_mousesteerbar);

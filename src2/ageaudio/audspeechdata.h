@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -35,51 +35,29 @@ struct AudSpeechData
 {
 public:
     // 0x513CF0 | ??0AudSpeechData@@QAE@PADMM_N00@Z
-    inline AudSpeechData(char* arg1, float arg2, float arg3, bool arg4, char* arg5, char* arg6)
-    {
-        stub<member_func_t<void, AudSpeechData, char*, float, float, bool, char*, char*>>(
-            0x513CF0, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
+    AudSpeechData(char* arg1, f32 arg2, f32 arg3, bool arg4, char* arg5, char* arg6);
 
     // 0x513DB0 | ??1AudSpeechData@@QAE@XZ
-    inline ~AudSpeechData()
-    {
-        stub<member_func_t<void, AudSpeechData>>(0x513DB0, this);
-    }
-
-    // 0x513E20 | ?LoadOneShots@AudSpeechData@@AAEXPAD0@Z
-    inline void LoadOneShots(char* arg1, char* arg2)
-    {
-        return stub<member_func_t<void, AudSpeechData, char*, char*>>(0x513E20, this, arg1, arg2);
-    }
-
-    // 0x513F70 | ?SetVolume@AudSpeechData@@QAEXM@Z
-    inline void SetVolume(float arg1)
-    {
-        return stub<member_func_t<void, AudSpeechData, float>>(0x513F70, this, arg1);
-    }
+    ~AudSpeechData();
 
     // 0x513FB0 | ?GetName@AudSpeechData@@QAEPADH@Z
-    inline char* GetName(int32_t arg1)
-    {
-        return stub<member_func_t<char*, AudSpeechData, int32_t>>(0x513FB0, this, arg1);
-    }
+    char* GetName(i32 arg1);
 
     // 0x513FF0 | ?GetOneShot@AudSpeechData@@QAEPAVAudSoundBase@@H@Z
-    inline class AudSoundBase* GetOneShot(int32_t arg1)
-    {
-        return stub<member_func_t<class AudSoundBase*, AudSpeechData, int32_t>>(0x513FF0, this, arg1);
-    }
+    class AudSoundBase* GetOneShot(i32 arg1);
 
     // 0x514010 | ?GetRandomName@AudSpeechData@@QAEPADXZ
-    inline char* GetRandomName()
-    {
-        return stub<member_func_t<char*, AudSpeechData>>(0x514010, this);
-    }
+    char* GetRandomName();
 
     // 0x5140B0 | ?GetRandomOneShot@AudSpeechData@@QAEPAVAudSoundBase@@XZ
-    inline class AudSoundBase* GetRandomOneShot()
-    {
-        return stub<member_func_t<class AudSoundBase*, AudSpeechData>>(0x5140B0, this);
-    }
+    class AudSoundBase* GetRandomOneShot();
+
+    // 0x513F70 | ?SetVolume@AudSpeechData@@QAEXM@Z
+    void SetVolume(f32 arg1);
+
+private:
+    // 0x513E20 | ?LoadOneShots@AudSpeechData@@AAEXPAD0@Z
+    void LoadOneShots(char* arg1, char* arg2);
 };
+
+check_size(AudSpeechData, 0x1C);

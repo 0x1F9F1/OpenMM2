@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -41,89 +41,53 @@
     0x6B1CA0 | class mmCityList * CityListPtr | ?CityListPtr@@3PAVmmCityList@@A
 */
 
-// 0x524460 | ?isCityInfoFile@@YA_NPBD@Z
-inline bool isCityInfoFile(char const* arg1)
+class mmCityList
 {
-    return stub<cdecl_t<bool, char const*>>(0x524460, arg1);
-}
+    // const mmCityList::`vftable' @ 0x5B5200
+
+public:
+    // 0x524160 | ??0mmCityList@@QAE@XZ
+    mmCityList();
+
+    // 0x524520 | ??_EmmCityList@@UAEPAXI@Z
+    // 0x524180 | ??1mmCityList@@UAE@XZ
+    virtual ~mmCityList();
+
+    // 0x524270 | ?GetCityID@mmCityList@@QAEHPAD@Z
+    i32 GetCityID(char* arg1);
+
+    // 0x524220 | ?GetCityInfo@mmCityList@@QAEPAVmmCityInfo@@PAD@Z
+    class mmCityInfo* GetCityInfo(char* arg1);
+
+    // 0x5241F0 | ?GetCityInfo@mmCityList@@QAEPAVmmCityInfo@@H@Z
+    class mmCityInfo* GetCityInfo(i32 arg1);
+
+    // 0x524320 | ?GetCurrentCity@mmCityList@@QAEPAVmmCityInfo@@XZ
+    class mmCityInfo* GetCurrentCity();
+
+    // 0x5241E0 | ?Init@mmCityList@@QAEXH@Z
+    void Init(i32 arg1);
+
+    // 0x524330 | ?Load@mmCityList@@QAEXPAD@Z
+    void Load(char* arg1);
+
+    // 0x5244F0 | ?LoadAll@mmCityList@@QAEXXZ
+    void LoadAll();
+
+    // 0x524420 | ?Print@mmCityList@@QAEXXZ
+    void Print();
+
+    // 0x5242C0 | ?SetCurrentCity@mmCityList@@QAEXPAD@Z
+    void SetCurrentCity(char* arg1);
+
+    // 0x5242F0 | ?SetCurrentCity@mmCityList@@QAEXH@Z
+    void SetCurrentCity(i32 arg1);
+};
+
+check_size(mmCityList, 0x10);
+
+// 0x524460 | ?isCityInfoFile@@YA_NPBD@Z
+bool isCityInfoFile(char const* arg1);
 
 // 0x6B1CA0 | ?CityListPtr@@3PAVmmCityList@@A
 inline extern_var(0x6B1CA0, class mmCityList*, CityListPtr);
-
-class mmCityList
-{
-public:
-    // mmCityList::`vftable' @ 0x5B5200
-
-    // 0x524160 | ??0mmCityList@@QAE@XZ
-    inline mmCityList()
-    {
-        stub<member_func_t<void, mmCityList>>(0x524160, this);
-    }
-
-    // 0x5241E0 | ?Init@mmCityList@@QAEXH@Z
-    inline void Init(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmCityList, int32_t>>(0x5241E0, this, arg1);
-    }
-
-    // 0x5241F0 | ?GetCityInfo@mmCityList@@QAEPAVmmCityInfo@@H@Z
-    inline class mmCityInfo* GetCityInfo(int32_t arg1)
-    {
-        return stub<member_func_t<class mmCityInfo*, mmCityList, int32_t>>(0x5241F0, this, arg1);
-    }
-
-    // 0x524220 | ?GetCityInfo@mmCityList@@QAEPAVmmCityInfo@@PAD@Z
-    inline class mmCityInfo* GetCityInfo(char* arg1)
-    {
-        return stub<member_func_t<class mmCityInfo*, mmCityList, char*>>(0x524220, this, arg1);
-    }
-
-    // 0x524270 | ?GetCityID@mmCityList@@QAEHPAD@Z
-    inline int32_t GetCityID(char* arg1)
-    {
-        return stub<member_func_t<int32_t, mmCityList, char*>>(0x524270, this, arg1);
-    }
-
-    // 0x5242C0 | ?SetCurrentCity@mmCityList@@QAEXPAD@Z
-    inline void SetCurrentCity(char* arg1)
-    {
-        return stub<member_func_t<void, mmCityList, char*>>(0x5242C0, this, arg1);
-    }
-
-    // 0x5242F0 | ?SetCurrentCity@mmCityList@@QAEXH@Z
-    inline void SetCurrentCity(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmCityList, int32_t>>(0x5242F0, this, arg1);
-    }
-
-    // 0x524320 | ?GetCurrentCity@mmCityList@@QAEPAVmmCityInfo@@XZ
-    inline class mmCityInfo* GetCurrentCity()
-    {
-        return stub<member_func_t<class mmCityInfo*, mmCityList>>(0x524320, this);
-    }
-
-    // 0x524330 | ?Load@mmCityList@@QAEXPAD@Z
-    inline void Load(char* arg1)
-    {
-        return stub<member_func_t<void, mmCityList, char*>>(0x524330, this, arg1);
-    }
-
-    // 0x524420 | ?Print@mmCityList@@QAEXXZ
-    inline void Print()
-    {
-        return stub<member_func_t<void, mmCityList>>(0x524420, this);
-    }
-
-    // 0x5244F0 | ?LoadAll@mmCityList@@QAEXXZ
-    inline void LoadAll()
-    {
-        return stub<member_func_t<void, mmCityList>>(0x5244F0, this);
-    }
-
-    // 0x524180 | ??1mmCityList@@UAE@XZ
-    virtual inline ~mmCityList()
-    {
-        stub<member_func_t<void, mmCityList>>(0x524180, this);
-    }
-};

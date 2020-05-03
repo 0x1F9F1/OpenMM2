@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -37,49 +37,26 @@ class lvlTrackManager
 {
 public:
     // 0x465EC0 | ??0lvlTrackManager@@QAE@XZ
-    inline lvlTrackManager()
-    {
-        stub<member_func_t<void, lvlTrackManager>>(0x465EC0, this);
-    }
+    lvlTrackManager();
 
     // 0x465ED0 | ??1lvlTrackManager@@QAE@XZ
-    inline ~lvlTrackManager()
-    {
-        stub<member_func_t<void, lvlTrackManager>>(0x465ED0, this);
-    }
-
-    // 0x465EE0 | ?Init@lvlTrackManager@@QAEXABVMatrix34@@MH@Z
-    inline void Init(class Matrix34 const& arg1, float arg2, int32_t arg3)
-    {
-        return stub<member_func_t<void, lvlTrackManager, class Matrix34 const&, float, int32_t>>(
-            0x465EE0, this, arg1, arg2, arg3);
-    }
-
-    // 0x465F50 | ?Reset@lvlTrackManager@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, lvlTrackManager>>(0x465F50, this);
-    }
-
-    // 0x465F60 | ?Update@lvlTrackManager@@QAEXABVVector3@@0PAVgfxTexture@@@Z
-    inline void Update(class Vector3 const& arg1, class Vector3 const& arg2, class gfxTexture* arg3)
-    {
-        return stub<
-            member_func_t<void, lvlTrackManager, class Vector3 const&, class Vector3 const&, class gfxTexture*>>(
-            0x465F60, this, arg1, arg2, arg3);
-    }
+    ~lvlTrackManager();
 
     // 0x466320 | ?Draw@lvlTrackManager@@QAEXXZ
-    inline void Draw()
-    {
-        return stub<member_func_t<void, lvlTrackManager>>(0x466320, this);
-    }
+    void Draw();
 
+    // 0x465EE0 | ?Init@lvlTrackManager@@QAEXABVMatrix34@@MH@Z
+    void Init(class Matrix34 const& arg1, f32 arg2, i32 arg3);
+
+    // 0x465F50 | ?Reset@lvlTrackManager@@QAEXXZ
+    void Reset();
+
+    // 0x465F60 | ?Update@lvlTrackManager@@QAEXABVVector3@@0PAVgfxTexture@@@Z
+    void Update(class Vector3 const& arg1, class Vector3 const& arg2, class gfxTexture* arg3);
+
+private:
     // 0x4663E0 | ?AddVertex@lvlTrackManager@@AAEXPAVgfxTexture@@MABVVector3@@1@Z
-    inline void AddVertex(class gfxTexture* arg1, float arg2, class Vector3 const& arg3, class Vector3 const& arg4)
-    {
-        return stub<
-            member_func_t<void, lvlTrackManager, class gfxTexture*, float, class Vector3 const&, class Vector3 const&>>(
-            0x4663E0, this, arg1, arg2, arg3, arg4);
-    }
+    void AddVertex(class gfxTexture* arg1, f32 arg2, class Vector3 const& arg3, class Vector3 const& arg4);
 };
+
+check_size(lvlTrackManager, 0x0);

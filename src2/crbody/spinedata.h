@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -31,36 +31,23 @@
 
 struct crSpineData
 {
-public:
-    // crSpineData::`vftable' @ 0x5B6440
+    // const crSpineData::`vftable' @ 0x5B6440
 
+public:
     // 0x580FE0 | ??0crSpineData@@QAE@XZ
-    inline crSpineData()
-    {
-        stub<member_func_t<void, crSpineData>>(0x580FE0, this);
-    }
+    crSpineData();
 
     // 0x5810F0 | ??1crSpineData@@QAE@XZ
-    inline ~crSpineData()
-    {
-        stub<member_func_t<void, crSpineData>>(0x5810F0, this);
-    }
+    ~crSpineData();
 
     // 0x581000 | ?Init@crSpineData@@UAEXAAVcrSkeletonData@@@Z
-    virtual inline void Init(class crSkeletonData& arg1)
-    {
-        return stub<member_func_t<void, crSpineData, class crSkeletonData&>>(0x581000, this, arg1);
-    }
+    virtual void Init(class crSkeletonData& arg1);
 
     // 0x581170 | ?SolveIK@crSpineData@@UBEXAAVcrSkeleton@@AAVcrIKGoal@@@Z
-    virtual inline void SolveIK(class crSkeleton& arg1, class crIKGoal& arg2)
-    {
-        return stub<member_func_t<void, crSpineData, class crSkeleton&, class crIKGoal&>>(0x581170, this, arg1, arg2);
-    }
+    virtual void SolveIK(class crSkeleton& arg1, class crIKGoal& arg2);
 
     // 0x581110 | ?MatchPose@crSpineData@@UBEXAAVcrSkeleton@@AAVcrIKGoal@@@Z
-    virtual inline void MatchPose(class crSkeleton& arg1, class crIKGoal& arg2)
-    {
-        return stub<member_func_t<void, crSpineData, class crSkeleton&, class crIKGoal&>>(0x581110, this, arg1, arg2);
-    }
+    virtual void MatchPose(class crSkeleton& arg1, class crIKGoal& arg2);
 };
+
+check_size(crSpineData, 0x0);

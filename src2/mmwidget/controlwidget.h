@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "textfield.h"
 
 /*
     mmwidget:controlwidget
@@ -37,84 +39,48 @@
     0x5B35E8 | const UIControlWidget::`vftable' | ??_7UIControlWidget@@6B@
 */
 
-class UIControlWidget : uiWidget
+class UIControlWidget : public uiWidget
 {
+    // const UIControlWidget::`vftable' @ 0x5B35E8
+
 public:
-    // UIControlWidget::`vftable' @ 0x5B35E8
-
     // 0x4EBF20 | ??0UIControlWidget@@QAE@XZ
-    inline UIControlWidget()
-    {
-        stub<member_func_t<void, UIControlWidget>>(0x4EBF20, this);
-    }
+    UIControlWidget();
 
-    // 0x4EC0D0 | ?Init@UIControlWidget@@QAEXMMMMMPAVmmIO@@VdatCallback@@@Z
-    inline void Init(
-        float arg1, float arg2, float arg3, float arg4, float arg5, class mmIO* arg6, class datCallback arg7)
-    {
-        return stub<
-            member_func_t<void, UIControlWidget, float, float, float, float, float, class mmIO*, class datCallback>>(
-            0x4EC0D0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-    }
-
-    // 0x4EC250 | ?SetPosition@UIControlWidget@@QAEXMMMM@Z
-    inline void SetPosition(float arg1, float arg2, float arg3, float arg4)
-    {
-        return stub<member_func_t<void, UIControlWidget, float, float, float, float>>(
-            0x4EC250, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x4EC330 | ?UpdateField@UIControlWidget@@QAEXXZ
-    inline void UpdateField()
-    {
-        return stub<member_func_t<void, UIControlWidget>>(0x4EC330, this);
-    }
-
-    // 0x4EC420 | ?EnableField@UIControlWidget@@QAEXXZ
-    inline void EnableField()
-    {
-        return stub<member_func_t<void, UIControlWidget>>(0x4EC420, this);
-    }
-
-    // 0x4EC480 | ?DisableField@UIControlWidget@@QAEXXZ
-    inline void DisableField()
-    {
-        return stub<member_func_t<void, UIControlWidget>>(0x4EC480, this);
-    }
-
+    // 0x4F02A0 | ??_EUIControlWidget@@UAEPAXI@Z
     // 0x4EC030 | ??1UIControlWidget@@UAE@XZ
-    inline ~UIControlWidget() override
-    {
-        stub<member_func_t<void, UIControlWidget>>(0x4EC030, this);
-    }
-
-    // 0x4EC310 | ?Update@UIControlWidget@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, UIControlWidget>>(0x4EC310, this);
-    }
-
-    // 0x4EC500 | ?TurnOn@UIControlWidget@@UAEXXZ
-    inline void TurnOn() override
-    {
-        return stub<member_func_t<void, UIControlWidget>>(0x4EC500, this);
-    }
-
-    // 0x4EC510 | ?TurnOff@UIControlWidget@@UAEXXZ
-    inline void TurnOff() override
-    {
-        return stub<member_func_t<void, UIControlWidget>>(0x4EC510, this);
-    }
+    // 0x4EC4D0 | ??_GUIControlWidget@@UAEPAXI@Z
+    ~UIControlWidget() override;
 
     // 0x4EC360 | ?Action@UIControlWidget@@UAEXTeqEvent@@@Z
-    inline void Action(union eqEvent arg1) override
-    {
-        return stub<member_func_t<void, UIControlWidget, union eqEvent>>(0x4EC360, this, arg1);
-    }
+    void Action(union eqEvent arg1) override;
+
+    // 0x4EC480 | ?DisableField@UIControlWidget@@QAEXXZ
+    void DisableField();
+
+    // 0x4EC420 | ?EnableField@UIControlWidget@@QAEXXZ
+    void EnableField();
+
+    // 0x4EC0D0 | ?Init@UIControlWidget@@QAEXMMMMMPAVmmIO@@VdatCallback@@@Z
+    void Init(f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, class mmIO* arg6, class datCallback arg7);
+
+    // 0x4EC250 | ?SetPosition@UIControlWidget@@QAEXMMMM@Z
+    void SetPosition(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
 
     // 0x4EC3B0 | ?Switch@UIControlWidget@@UAEXH@Z
-    inline void Switch(int32_t arg1) override
-    {
-        return stub<member_func_t<void, UIControlWidget, int32_t>>(0x4EC3B0, this, arg1);
-    }
+    void Switch(i32 arg1) override;
+
+    // 0x4EC510 | ?TurnOff@UIControlWidget@@UAEXXZ
+    void TurnOff() override;
+
+    // 0x4EC500 | ?TurnOn@UIControlWidget@@UAEXXZ
+    void TurnOn() override;
+
+    // 0x4EC310 | ?Update@UIControlWidget@@UAEXXZ
+    void Update() override;
+
+    // 0x4EC330 | ?UpdateField@UIControlWidget@@QAEXXZ
+    void UpdateField();
 };
+
+check_size(UIControlWidget, 0xA8);

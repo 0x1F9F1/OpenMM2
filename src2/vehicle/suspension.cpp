@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,36 @@
 */
 
 #include "suspension.h"
+
+vehSuspension::vehSuspension()
+{
+    unimplemented();
+}
+
+vehSuspension::~vehSuspension()
+{
+    unimplemented();
+}
+
+void vehSuspension::FileIO(class datParser& arg1)
+{
+    return stub<thiscall_t<void, vehSuspension*, class datParser&>>(0x4D9920, this, arg1);
+}
+
+char* vehSuspension::GetClassName()
+{
+    return stub<thiscall_t<char*, vehSuspension*>>(0x4D9980, this);
+}
+
+void vehSuspension::Init(class vehCarSim* arg1, char const* arg2, char const* arg3, class vehWheel* arg4)
+{
+    return stub<thiscall_t<void, vehSuspension*, class vehCarSim*, char const*, char const*, class vehWheel*>>(
+        0x4D9810, this, arg1, arg2, arg3, arg4);
+}
+
+void vehSuspension::Update()
+{
+    return stub<thiscall_t<void, vehSuspension*>>(0x4D98B0, this);
+}
+
+define_dummy_symbol(vehicle_suspension);

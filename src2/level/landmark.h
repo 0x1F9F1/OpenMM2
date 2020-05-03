@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "fixed.h"
+
 /*
     level:landmark
 
@@ -27,39 +29,25 @@
     0x468030 | public: virtual int __thiscall lvlLandmark::IsVisible(class gfxViewport const &) | ?IsVisible@lvlLandmark@@UAEHABVgfxViewport@@@Z
 */
 
-struct lvlLandmark : lvlFixedRotY
+class lvlLandmark : public lvlFixedRotY
 {
+    // const lvlLandmark::`vftable' @ 0x5B1A88
+
 public:
-    // lvlLandmark::`vftable' @ 0x5B1A88
-
-    // 0x468030 | ?IsVisible@lvlLandmark@@UAEHABVgfxViewport@@@Z
-    inline int32_t IsVisible(class gfxViewport const& arg1) override
-    {
-        return stub<member_func_t<int32_t, lvlLandmark, class gfxViewport const&>>(0x468030, this, arg1);
-    }
-
     // 0x468010 | ?Init@lvlLandmark@@UAEHPBDABVMatrix34@@H@Z
-    inline int32_t Init(char const* arg1, class Matrix34 const& arg2, int32_t arg3) override
-    {
-        return stub<member_func_t<int32_t, lvlLandmark, char const*, class Matrix34 const&, int32_t>>(
-            0x468010, this, arg1, arg2, arg3);
-    }
-
-    // 0x468000 | ?SizeOf@lvlLandmark@@UAEIXZ
-    inline uint32_t SizeOf() override
-    {
-        return stub<member_func_t<uint32_t, lvlLandmark>>(0x468000, this);
-    }
-
-    // 0x467FF0 | ?IsLandmark@lvlLandmark@@UAE_NXZ
-    inline bool IsLandmark() override
-    {
-        return stub<member_func_t<bool, lvlLandmark>>(0x467FF0, this);
-    }
+    i32 Init(char const* arg1, class Matrix34 const& arg2, i32 arg3) override;
 
     // 0x465EB0 | ?IsCollidable@lvlLandmark@@UAE_NXZ
-    inline bool IsCollidable() override
-    {
-        return stub<member_func_t<bool, lvlLandmark>>(0x465EB0, this);
-    }
+    bool IsCollidable() override;
+
+    // 0x467FF0 | ?IsLandmark@lvlLandmark@@UAE_NXZ
+    bool IsLandmark() override;
+
+    // 0x468030 | ?IsVisible@lvlLandmark@@UAEHABVgfxViewport@@@Z
+    i32 IsVisible(class gfxViewport const& arg1) override;
+
+    // 0x468000 | ?SizeOf@lvlLandmark@@UAEIXZ
+    u32 SizeOf() override;
 };
+
+check_size(lvlLandmark, 0x0);

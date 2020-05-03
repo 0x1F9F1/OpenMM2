@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -40,91 +40,47 @@
 
 class phJoint
 {
+    // const phJoint::`vftable' @ 0x5B8690
+
 public:
-    // phJoint::`vftable' @ 0x5B8690
-
     // 0x595B90 | ??0phJoint@@QAE@XZ
-    inline phJoint()
-    {
-        stub<member_func_t<void, phJoint>>(0x595B90, this);
-    }
-
-    // 0x595BE0 | ??0phJoint@@QAE@PAVphInertialCS@@0ABVVector3@@1@Z
-    inline phJoint(
-        class phInertialCS* arg1, class phInertialCS* arg2, class Vector3 const& arg3, class Vector3 const& arg4)
-    {
-        stub<member_func_t<void, phJoint, class phInertialCS*, class phInertialCS*, class Vector3 const&,
-            class Vector3 const&>>(0x595BE0, this, arg1, arg2, arg3, arg4);
-    }
+    phJoint();
 
     // 0x595C10 | ??0phJoint@@QAE@PAVphInertialCS@@0ABVVector3@@@Z
-    inline phJoint(class phInertialCS* arg1, class phInertialCS* arg2, class Vector3 const& arg3)
-    {
-        stub<member_func_t<void, phJoint, class phInertialCS*, class phInertialCS*, class Vector3 const&>>(
-            0x595C10, this, arg1, arg2, arg3);
-    }
+    phJoint(class phInertialCS* arg1, class phInertialCS* arg2, class Vector3 const& arg3);
+
+    // 0x595BE0 | ??0phJoint@@QAE@PAVphInertialCS@@0ABVVector3@@1@Z
+    phJoint(class phInertialCS* arg1, class phInertialCS* arg2, class Vector3 const& arg3, class Vector3 const& arg4);
 
     // 0x595C40 | ?Init@phJoint@@QAEXPAVphInertialCS@@0ABVVector3@@@Z
-    inline void Init(class phInertialCS* arg1, class phInertialCS* arg2, class Vector3 const& arg3)
-    {
-        return stub<member_func_t<void, phJoint, class phInertialCS*, class phInertialCS*, class Vector3 const&>>(
-            0x595C40, this, arg1, arg2, arg3);
-    }
+    void Init(class phInertialCS* arg1, class phInertialCS* arg2, class Vector3 const& arg3);
 
     // 0x595D10 | ?Init@phJoint@@QAEXPAVphInertialCS@@0ABVVector3@@1@Z
-    inline void Init(
-        class phInertialCS* arg1, class phInertialCS* arg2, class Vector3 const& arg3, class Vector3 const& arg4)
-    {
-        return stub<member_func_t<void, phJoint, class phInertialCS*, class phInertialCS*, class Vector3 const&,
-            class Vector3 const&>>(0x595D10, this, arg1, arg2, arg3, arg4);
-    }
+    void Init(class phInertialCS* arg1, class phInertialCS* arg2, class Vector3 const& arg3, class Vector3 const& arg4);
 
     // 0x595DB0 | ?Reset@phJoint@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, phJoint>>(0x595DB0, this);
-    }
+    void Reset();
 
     // 0x595DD0 | ?Update@phJoint@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, phJoint>>(0x595DD0, this);
-    }
+    void Update();
 
     // 0x5961F0 | ?IsBroken@phJoint@@UBE_NXZ
-    virtual inline bool IsBroken()
-    {
-        return stub<member_func_t<bool, phJoint>>(0x5961F0, this);
-    }
+    virtual bool IsBroken();
 
     // 0x595E90 | ?ComputeInvMassMatrix@phJoint@@UBEXPAVphInertialCS@@AAVMatrix34@@ABVVector3@@@Z
-    virtual inline void ComputeInvMassMatrix(class phInertialCS* arg1, class Matrix34& arg2, class Vector3 const& arg3)
-    {
-        return stub<member_func_t<void, phJoint, class phInertialCS*, class Matrix34&, class Vector3 const&>>(
-            0x595E90, this, arg1, arg2, arg3);
-    }
+    virtual void ComputeInvMassMatrix(class phInertialCS* arg1, class Matrix34& arg2, class Vector3 const& arg3);
 
     // 0x595DF0 | ?ComputeInvMassMatrix@phJoint@@UAEXXZ
-    virtual inline void ComputeInvMassMatrix()
-    {
-        return stub<member_func_t<void, phJoint>>(0x595DF0, this);
-    }
+    virtual void ComputeInvMassMatrix();
 
     // 0x595EA0 | ?ComputeJointForce@phJoint@@UAEXXZ
-    virtual inline void ComputeJointForce()
-    {
-        return stub<member_func_t<void, phJoint>>(0x595EA0, this);
-    }
+    virtual void ComputeJointForce();
 
     // 0x5960C0 | ?ComputeJointPush@phJoint@@UAEXXZ
-    virtual inline void ComputeJointPush()
-    {
-        return stub<member_func_t<void, phJoint>>(0x5960C0, this);
-    }
+    virtual void ComputeJointPush();
 
     // 0x595AD0 | ?GetInvMassMatrix@phJoint@@UAEAAVMatrix34@@XZ
-    virtual inline class Matrix34& GetInvMassMatrix()
-    {
-        return stub<member_func_t<class Matrix34&, phJoint>>(0x595AD0, this);
-    }
+    virtual class Matrix34& GetInvMassMatrix();
 };
+
+check_size(phJoint, 0x0);

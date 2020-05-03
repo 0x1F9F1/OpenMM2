@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "aud/dirsnd.h"
+
 /*
     mmaudio:mmdirsnd
 
@@ -31,52 +33,31 @@
     0x5B4E74 | const mmDirSnd::`vftable' | ??_7mmDirSnd@@6B@
 */
 
-class mmDirSnd : DirSnd
+class mmDirSnd : public DirSnd
 {
-public:
-    // mmDirSnd::`vftable' @ 0x5B4E74
+    // const mmDirSnd::`vftable' @ 0x5B4E74
 
+public:
     // 0x51CBE0 | ??0mmDirSnd@@QAE@XZ
-    inline mmDirSnd()
-    {
-        stub<member_func_t<void, mmDirSnd>>(0x51CBE0, this);
-    }
+    mmDirSnd();
 
     // 0x51CC00 | ??1mmDirSnd@@QAE@XZ
-    inline ~mmDirSnd()
-    {
-        stub<member_func_t<void, mmDirSnd>>(0x51CC00, this);
-    }
-
-    // 0x51CC10 | ?DeInit@mmDirSnd@@QAEXFF@Z
-    inline void DeInit(int16_t arg1, int16_t arg2)
-    {
-        return stub<member_func_t<void, mmDirSnd, int16_t, int16_t>>(0x51CC10, this, arg1, arg2);
-    }
-
-    // 0x51CC50 | ?Init@mmDirSnd@@SAPAV1@KEHHPADFF@Z
-    static inline class mmDirSnd* Init(
-        uint32_t arg1, uint8_t arg2, int32_t arg3, int32_t arg4, char* arg5, int16_t arg6, int16_t arg7)
-    {
-        return stub<cdecl_t<class mmDirSnd*, uint32_t, uint8_t, int32_t, int32_t, char*, int16_t, int16_t>>(
-            0x51CC50, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-    }
-
-    // 0x51CE60 | ?EAXEnabled@mmDirSnd@@QAEIXZ
-    inline uint32_t EAXEnabled()
-    {
-        return stub<member_func_t<uint32_t, mmDirSnd>>(0x51CE60, this);
-    }
+    ~mmDirSnd();
 
     // 0x51CE70 | ?DSound3DEnabled@mmDirSnd@@QAEIXZ
-    inline uint32_t DSound3DEnabled()
-    {
-        return stub<member_func_t<uint32_t, mmDirSnd>>(0x51CE70, this);
-    }
+    u32 DSound3DEnabled();
+
+    // 0x51CC10 | ?DeInit@mmDirSnd@@QAEXFF@Z
+    void DeInit(i16 arg1, i16 arg2);
+
+    // 0x51CE60 | ?EAXEnabled@mmDirSnd@@QAEIXZ
+    u32 EAXEnabled();
 
     // 0x51CD90 | ?InitPrimarySoundBuffer@mmDirSnd@@UAEHKEPAD@Z
-    inline int32_t InitPrimarySoundBuffer(uint32_t arg1, uint8_t arg2, char* arg3) override
-    {
-        return stub<member_func_t<int32_t, mmDirSnd, uint32_t, uint8_t, char*>>(0x51CD90, this, arg1, arg2, arg3);
-    }
+    i32 InitPrimarySoundBuffer(u32 arg1, u8 arg2, char* arg3) override;
+
+    // 0x51CC50 | ?Init@mmDirSnd@@SAPAV1@KEHHPADFF@Z
+    static class mmDirSnd* Init(u32 arg1, u8 arg2, i32 arg3, i32 arg4, char* arg5, i16 arg6, i16 arg7);
 };
+
+check_size(mmDirSnd, 0x44);

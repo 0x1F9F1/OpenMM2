@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "textfield.h"
 
 /*
     mmwidget:vscrollbar
@@ -44,118 +46,66 @@
     0x5B3ACC | const UIVScrollBar::`vftable' | ??_7UIVScrollBar@@6B@
 */
 
-class UIVScrollBar : uiWidget
+class UIVScrollBar : public uiWidget
 {
+    // const UIVScrollBar::`vftable' @ 0x5B3ACC
+
 public:
-    // UIVScrollBar::`vftable' @ 0x5B3ACC
-
     // 0x4F0300 | ??0UIVScrollBar@@QAE@XZ
-    inline UIVScrollBar()
-    {
-        stub<member_func_t<void, UIVScrollBar>>(0x4F0300, this);
-    }
+    UIVScrollBar();
 
-    // 0x4F0430 | ?Init@UIVScrollBar@@QAEXMMMMHMMPAHVdatCallback@@H@Z
-    inline void Init(float arg1, float arg2, float arg3, float arg4, int32_t arg5, float arg6, float arg7,
-        int32_t* arg8, class datCallback arg9, int32_t arg10)
-    {
-        return stub<member_func_t<void, UIVScrollBar, float, float, float, float, int32_t, float, float, int32_t*,
-            class datCallback, int32_t>>(0x4F0430, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
-    }
-
-    // 0x4F04A0 | ?LoadBitmap@UIVScrollBar@@QAEXXZ
-    inline void LoadBitmap()
-    {
-        return stub<member_func_t<void, UIVScrollBar>>(0x4F04A0, this);
-    }
-
-    // 0x4F05C0 | ?SetHotSpots@UIVScrollBar@@QAEXXZ
-    inline void SetHotSpots()
-    {
-        return stub<member_func_t<void, UIVScrollBar>>(0x4F05C0, this);
-    }
-
-    // 0x4F0650 | ?Inc@UIVScrollBar@@QAEMXZ
-    inline float Inc()
-    {
-        return stub<member_func_t<float, UIVScrollBar>>(0x4F0650, this);
-    }
-
-    // 0x4F06B0 | ?Dec@UIVScrollBar@@QAEMXZ
-    inline float Dec()
-    {
-        return stub<member_func_t<float, UIVScrollBar>>(0x4F06B0, this);
-    }
-
-    // 0x4F0710 | ?SetStep@UIVScrollBar@@QAEXHM@Z
-    inline void SetStep(int32_t arg1, float arg2)
-    {
-        return stub<member_func_t<void, UIVScrollBar, int32_t, float>>(0x4F0710, this, arg1, arg2);
-    }
-
-    // 0x4F0770 | ?SetRange@UIVScrollBar@@QAEXMM@Z
-    inline void SetRange(float arg1, float arg2)
-    {
-        return stub<member_func_t<void, UIVScrollBar, float, float>>(0x4F0770, this, arg1, arg2);
-    }
-
-    // 0x4F07D0 | ?SetTrough@UIVScrollBar@@QAEXMM@Z
-    inline void SetTrough(float arg1, float arg2)
-    {
-        return stub<member_func_t<void, UIVScrollBar, float, float>>(0x4F07D0, this, arg1, arg2);
-    }
-
-    // 0x4F0990 | ?EvalMouseXY@UIVScrollBar@@QAEXMM@Z
-    inline void EvalMouseXY(float arg1, float arg2)
-    {
-        return stub<member_func_t<void, UIVScrollBar, float, float>>(0x4F0990, this, arg1, arg2);
-    }
-
+    // 0x4F0C90 | ??_GUIVScrollBar@@UAEPAXI@Z
     // 0x4F03A0 | ??1UIVScrollBar@@UAE@XZ
-    inline ~UIVScrollBar() override
-    {
-        stub<member_func_t<void, UIVScrollBar>>(0x4F03A0, this);
-    }
-
-    // 0x4F0B20 | ?Cull@UIVScrollBar@@UAEXXZ
-    inline void Cull() override
-    {
-        return stub<member_func_t<void, UIVScrollBar>>(0x4F0B20, this);
-    }
-
-    // 0x4F0850 | ?Update@UIVScrollBar@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, UIVScrollBar>>(0x4F0850, this);
-    }
-
-    // 0x4F0D00 | ?Disable@UIVScrollBar@@UAEXXZ
-    inline void Disable() override
-    {
-        return stub<member_func_t<void, UIVScrollBar>>(0x4F0D00, this);
-    }
-
-    // 0x4F0CE0 | ?Enable@UIVScrollBar@@UAEXXZ
-    inline void Enable() override
-    {
-        return stub<member_func_t<void, UIVScrollBar>>(0x4F0CE0, this);
-    }
+    ~UIVScrollBar() override;
 
     // 0x4F08C0 | ?Action@UIVScrollBar@@UAEXTeqEvent@@@Z
-    inline void Action(union eqEvent arg1) override
-    {
-        return stub<member_func_t<void, UIVScrollBar, union eqEvent>>(0x4F08C0, this, arg1);
-    }
+    void Action(union eqEvent arg1) override;
 
-    // 0x4F0870 | ?Switch@UIVScrollBar@@UAEXH@Z
-    inline void Switch(int32_t arg1) override
-    {
-        return stub<member_func_t<void, UIVScrollBar, int32_t>>(0x4F0870, this, arg1);
-    }
+    // 0x4F0B20 | ?Cull@UIVScrollBar@@UAEXXZ
+    void Cull() override;
+
+    // 0x4F06B0 | ?Dec@UIVScrollBar@@QAEMXZ
+    f32 Dec();
+
+    // 0x4F0D00 | ?Disable@UIVScrollBar@@UAEXXZ
+    void Disable() override;
+
+    // 0x4F0CE0 | ?Enable@UIVScrollBar@@UAEXXZ
+    void Enable() override;
+
+    // 0x4F0990 | ?EvalMouseXY@UIVScrollBar@@QAEXMM@Z
+    void EvalMouseXY(f32 arg1, f32 arg2);
+
+    // 0x4F0650 | ?Inc@UIVScrollBar@@QAEMXZ
+    f32 Inc();
+
+    // 0x4F0430 | ?Init@UIVScrollBar@@QAEXMMMMHMMPAHVdatCallback@@H@Z
+    void Init(f32 arg1, f32 arg2, f32 arg3, f32 arg4, i32 arg5, f32 arg6, f32 arg7, i32* arg8, class datCallback arg9,
+        i32 arg10);
+
+    // 0x4F04A0 | ?LoadBitmap@UIVScrollBar@@QAEXXZ
+    void LoadBitmap();
+
+    // 0x4F05C0 | ?SetHotSpots@UIVScrollBar@@QAEXXZ
+    void SetHotSpots();
 
     // 0x4F0CC0 | ?SetPosition@UIVScrollBar@@UAEXMM@Z
-    inline void SetPosition(float arg1, float arg2) override
-    {
-        return stub<member_func_t<void, UIVScrollBar, float, float>>(0x4F0CC0, this, arg1, arg2);
-    }
+    void SetPosition(f32 arg1, f32 arg2) override;
+
+    // 0x4F0770 | ?SetRange@UIVScrollBar@@QAEXMM@Z
+    void SetRange(f32 arg1, f32 arg2);
+
+    // 0x4F0710 | ?SetStep@UIVScrollBar@@QAEXHM@Z
+    void SetStep(i32 arg1, f32 arg2);
+
+    // 0x4F07D0 | ?SetTrough@UIVScrollBar@@QAEXMM@Z
+    void SetTrough(f32 arg1, f32 arg2);
+
+    // 0x4F0870 | ?Switch@UIVScrollBar@@UAEXH@Z
+    void Switch(i32 arg1) override;
+
+    // 0x4F0850 | ?Update@UIVScrollBar@@UAEXXZ
+    void Update() override;
 };
+
+check_size(UIVScrollBar, 0xFC);

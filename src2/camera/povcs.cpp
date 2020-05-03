@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,55 @@
 */
 
 #include "povcs.h"
+
+camPovCS::camPovCS()
+{
+    unimplemented();
+}
+
+camPovCS::~camPovCS()
+{
+    unimplemented();
+}
+
+void camPovCS::AfterLoad()
+{
+    return stub<thiscall_t<void, camPovCS*>>(0x51D710, this);
+}
+
+void camPovCS::FileIO(class datParser& arg1)
+{
+    return stub<thiscall_t<void, camPovCS*, class datParser&>>(0x51D690, this, arg1);
+}
+
+char* camPovCS::GetClassName()
+{
+    return stub<thiscall_t<char*, camPovCS*>>(0x51D760, this);
+}
+
+void camPovCS::MakeActive()
+{
+    return stub<thiscall_t<void, camPovCS*>>(0x51D530, this);
+}
+
+void camPovCS::Reset()
+{
+    return stub<thiscall_t<void, camPovCS*>>(0x51D540, this);
+}
+
+void camPovCS::Update()
+{
+    return stub<thiscall_t<void, camPovCS*>>(0x51D570, this);
+}
+
+void camPovCS::UpdateInput()
+{
+    return stub<thiscall_t<void, camPovCS*>>(0x51D590, this);
+}
+
+void camPovCS::UpdatePOV()
+{
+    return stub<thiscall_t<void, camPovCS*>>(0x51D5A0, this);
+}
+
+define_dummy_symbol(camera_povcs);

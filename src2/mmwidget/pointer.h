@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     mmwidget:pointer
@@ -35,62 +37,39 @@
     0x5B3B30 | const sfPointer::`vftable' | ??_7sfPointer@@6B@
 */
 
-struct sfPointer : asNode
+class sfPointer : public asNode
 {
+    // const sfPointer::`vftable' @ 0x5B3B30
+
 public:
-    // sfPointer::`vftable' @ 0x5B3B30
-
     // 0x4F1200 | ??0sfPointer@@QAE@XZ
-    inline sfPointer()
-    {
-        stub<member_func_t<void, sfPointer>>(0x4F1200, this);
-    }
+    sfPointer();
 
-    // 0x4F12D0 | ?Init@sfPointer@@QAEXXZ
-    inline void Init()
-    {
-        return stub<member_func_t<void, sfPointer>>(0x4F12D0, this);
-    }
-
-    // 0x4F1350 | ?GetPointerHeight@sfPointer@@QAEMXZ
-    inline float GetPointerHeight()
-    {
-        return stub<member_func_t<float, sfPointer>>(0x4F1350, this);
-    }
-
-    // 0x4F1560 | ?UpdateAttached@sfPointer@@AAEXXZ
-    inline void UpdateAttached()
-    {
-        return stub<member_func_t<void, sfPointer>>(0x4F1560, this);
-    }
-
-    // 0x4F1570 | ?WaitForRelease@sfPointer@@QAEXXZ
-    inline void WaitForRelease()
-    {
-        return stub<member_func_t<void, sfPointer>>(0x4F1570, this);
-    }
-
+    // 0x4F15F0 | ??_GsfPointer@@UAEPAXI@Z
     // 0x4F1270 | ??1sfPointer@@UAE@XZ
-    inline ~sfPointer() override
-    {
-        stub<member_func_t<void, sfPointer>>(0x4F1270, this);
-    }
+    ~sfPointer() override;
 
     // 0x4F1580 | ?Cull@sfPointer@@UAEXXZ
-    inline void Cull() override
-    {
-        return stub<member_func_t<void, sfPointer>>(0x4F1580, this);
-    }
+    void Cull() override;
 
-    // 0x4F1360 | ?Update@sfPointer@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, sfPointer>>(0x4F1360, this);
-    }
+    // 0x4F1350 | ?GetPointerHeight@sfPointer@@QAEMXZ
+    f32 GetPointerHeight();
+
+    // 0x4F12D0 | ?Init@sfPointer@@QAEXXZ
+    void Init();
 
     // 0x4F12F0 | ?ResChange@sfPointer@@UAEXHH@Z
-    inline void ResChange(int32_t arg1, int32_t arg2) override
-    {
-        return stub<member_func_t<void, sfPointer, int32_t, int32_t>>(0x4F12F0, this, arg1, arg2);
-    }
+    void ResChange(i32 arg1, i32 arg2) override;
+
+    // 0x4F1360 | ?Update@sfPointer@@UAEXXZ
+    void Update() override;
+
+    // 0x4F1570 | ?WaitForRelease@sfPointer@@QAEXXZ
+    void WaitForRelease();
+
+private:
+    // 0x4F1560 | ?UpdateAttached@sfPointer@@AAEXXZ
+    void UpdateAttached();
 };
+
+check_size(sfPointer, 0x4C);

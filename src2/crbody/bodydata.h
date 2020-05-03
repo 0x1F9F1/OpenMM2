@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -35,36 +35,30 @@
 
 class crBodyDataBase
 {
-public:
-    // crBodyDataBase::`vftable' @ 0x5B640C
+    // const crBodyDataBase::`vftable' @ 0x5B640C
 
+public:
     // 0x57E9D0 | ??0crBodyDataBase@@QAE@AAVcrSkeletonData@@@Z
-    inline crBodyDataBase(class crSkeletonData& arg1)
-    {
-        stub<member_func_t<void, crBodyDataBase, class crSkeletonData&>>(0x57E9D0, this, arg1);
-    }
+    crBodyDataBase(class crSkeletonData& arg1);
 
+    // 0x57EC00 | ??_GcrBodyDataBase@@UAEPAXI@Z
     // 0x57E9F0 | ??1crBodyDataBase@@UAE@XZ
-    virtual inline ~crBodyDataBase()
-    {
-        stub<member_func_t<void, crBodyDataBase>>(0x57E9F0, this);
-    }
+    virtual ~crBodyDataBase();
 };
 
-struct crBodyData : crBodyDataBase
+check_size(crBodyDataBase, 0x0);
+
+class crBodyData : public crBodyDataBase
 {
+    // const crBodyData::`vftable' @ 0x5B6410
+
 public:
-    // crBodyData::`vftable' @ 0x5B6410
-
     // 0x57EA00 | ??0crBodyData@@QAE@AAVcrSkeletonData@@@Z
-    inline crBodyData(class crSkeletonData& arg1)
-    {
-        stub<member_func_t<void, crBodyData, class crSkeletonData&>>(0x57EA00, this, arg1);
-    }
+    crBodyData(class crSkeletonData& arg1);
 
+    // 0x57EC30 | ??_GcrBodyData@@UAEPAXI@Z
     // 0x57EB80 | ??1crBodyData@@UAE@XZ
-    inline ~crBodyData() override
-    {
-        stub<member_func_t<void, crBodyData>>(0x57EB80, this);
-    }
+    ~crBodyData() override;
 };
+
+check_size(crBodyData, 0x20);

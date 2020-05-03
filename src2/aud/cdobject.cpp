@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,51 @@
 */
 
 #include "cdobject.h"
+
+i32 audCDObject::GetCDEndPosition(struct _cd_position_* arg1)
+{
+    return stub<thiscall_t<i32, audCDObject*, struct _cd_position_*>>(0x5A70A0, this, arg1);
+}
+
+i32 audCDObject::GetCDPosition(struct _cd_position_* arg1)
+{
+    return stub<thiscall_t<i32, audCDObject*, struct _cd_position_*>>(0x5A7370, this, arg1);
+}
+
+i32 audCDObject::GetCDStartPosition(struct _cd_position_* arg1)
+{
+    return stub<thiscall_t<i32, audCDObject*, struct _cd_position_*>>(0x5A70F0, this, arg1);
+}
+
+i32 audCDObject::GetFramesBetween(struct _cd_position_* arg1, struct _cd_position_* arg2)
+{
+    return stub<thiscall_t<i32, audCDObject*, struct _cd_position_*, struct _cd_position_*>>(
+        0x5A6FD0, this, arg1, arg2);
+}
+
+i32 audCDObject::GetNumCDTracks()
+{
+    return stub<thiscall_t<i32, audCDObject*>>(0x5A7290, this);
+}
+
+bool audCDObject::GetTrackInfo(i32 arg1)
+{
+    return stub<thiscall_t<bool, audCDObject*, i32>>(0x5A7140, this, arg1);
+}
+
+i32 audCDObject::GetTrackTime()
+{
+    return stub<thiscall_t<i32, audCDObject*>>(0x5A7060, this);
+}
+
+void audCDObject::Init()
+{
+    return stub<thiscall_t<void, audCDObject*>>(0x5A6F20, this);
+}
+
+bool audCDObject::SetCDPosition(struct _cd_position_* arg1)
+{
+    return stub<thiscall_t<bool, audCDObject*, struct _cd_position_*>>(0x5A72E0, this, arg1);
+}
+
+define_dummy_symbol(aud_cdobject);

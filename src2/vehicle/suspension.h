@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "node/node.h"
+
 /*
     vehicle:suspension
 
@@ -25,53 +27,37 @@
     0x4D9810 | public: void __thiscall vehSuspension::Init(class vehCarSim *,char const *,char const *,class vehWheel *) | ?Init@vehSuspension@@QAEXPAVvehCarSim@@PBD1PAVvehWheel@@@Z
     0x4D98B0 | public: virtual void __thiscall vehSuspension::Update(void) | ?Update@vehSuspension@@UAEXXZ
     public: virtual void __thiscall vehSuspension::AddWidgets(class bkBank &) | ?AddWidgets@vehSuspension@@UAEXAAVbkBank@@@Z
-    0x4D9920 | public: void __thiscall vehSuspension::Copy(class vehSuspension const &) | ?Copy@vehSuspension@@QAEXABV1@@Z
-    public: virtual void __thiscall vehSuspension::FileIO(class datParser &) | ?FileIO@vehSuspension@@UAEXAAVdatParser@@@Z
+    public: void __thiscall vehSuspension::Copy(class vehSuspension const &) | ?Copy@vehSuspension@@QAEXABV1@@Z
+    0x4D9920 | public: virtual void __thiscall vehSuspension::FileIO(class datParser &) | ?FileIO@vehSuspension@@UAEXAAVdatParser@@@Z
     0x4D9950 | public: virtual void * __thiscall vehSuspension::`scalar deleting destructor'(unsigned int) | ??_GvehSuspension@@UAEPAXI@Z
     public: virtual void * __thiscall vehSuspension::`vector deleting destructor'(unsigned int) | ??_EvehSuspension@@UAEPAXI@Z
     0x4D9980 | public: virtual char * __thiscall vehSuspension::GetClassName(void) | ?GetClassName@vehSuspension@@UAEPADXZ
     0x5B3068 | const vehSuspension::`vftable' | ??_7vehSuspension@@6B@
 */
 
-class vehSuspension : asNode
+class vehSuspension : public asNode
 {
+    // const vehSuspension::`vftable' @ 0x5B3068
+
 public:
-    // vehSuspension::`vftable' @ 0x5B3068
-
     // 0x4D97A0 | ??0vehSuspension@@QAE@XZ
-    inline vehSuspension()
-    {
-        stub<member_func_t<void, vehSuspension>>(0x4D97A0, this);
-    }
+    vehSuspension();
 
-    // 0x4D9810 | ?Init@vehSuspension@@QAEXPAVvehCarSim@@PBD1PAVvehWheel@@@Z
-    inline void Init(class vehCarSim* arg1, char const* arg2, char const* arg3, class vehWheel* arg4)
-    {
-        return stub<member_func_t<void, vehSuspension, class vehCarSim*, char const*, char const*, class vehWheel*>>(
-            0x4D9810, this, arg1, arg2, arg3, arg4);
-    }
-
+    // 0x4D9950 | ??_GvehSuspension@@UAEPAXI@Z
     // 0x4CCEF0 | ??1vehSuspension@@UAE@XZ
-    inline ~vehSuspension() override
-    {
-        stub<member_func_t<void, vehSuspension>>(0x4CCEF0, this);
-    }
+    ~vehSuspension() override;
 
-    // 0x4D98B0 | ?Update@vehSuspension@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, vehSuspension>>(0x4D98B0, this);
-    }
-
-    // 0x4D9920 | ?Copy@vehSuspension@@QAEXABV1@@Z
-    inline void Copy(class vehSuspension const& arg1) override
-    {
-        return stub<member_func_t<void, vehSuspension, class vehSuspension const&>>(0x4D9920, this, arg1);
-    }
+    // 0x4D9920 | ?FileIO@vehSuspension@@UAEXAAVdatParser@@@Z
+    void FileIO(class datParser& arg1) override;
 
     // 0x4D9980 | ?GetClassName@vehSuspension@@UAEPADXZ
-    inline char* GetClassName() override
-    {
-        return stub<member_func_t<char*, vehSuspension>>(0x4D9980, this);
-    }
+    char* GetClassName() override;
+
+    // 0x4D9810 | ?Init@vehSuspension@@QAEXPAVvehCarSim@@PBD1PAVvehWheel@@@Z
+    void Init(class vehCarSim* arg1, char const* arg2, char const* arg3, class vehWheel* arg4);
+
+    // 0x4D98B0 | ?Update@vehSuspension@@UAEXXZ
+    void Update() override;
 };
+
+check_size(vehSuspension, 0x0);

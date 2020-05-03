@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,25 @@
 */
 
 #include "dlg_password.h"
+
+Dialog_Password::Dialog_Password(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6)
+{
+    unimplemented();
+}
+
+Dialog_Password::~Dialog_Password()
+{
+    unimplemented();
+}
+
+void Dialog_Password::PasswordCallback()
+{
+    return stub<thiscall_t<void, Dialog_Password*>>(0x4FB1C0, this);
+}
+
+void Dialog_Password::PreSetup()
+{
+    return stub<thiscall_t<void, Dialog_Password*>>(0x4FB1B0, this);
+}
+
+define_dummy_symbol(mmui_dlg_password);

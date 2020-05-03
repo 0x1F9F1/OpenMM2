@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,36 @@
 */
 
 #include "splash.h"
+
+vehSplash::vehSplash()
+{
+    unimplemented();
+}
+
+vehSplash::~vehSplash()
+{
+    unimplemented();
+}
+
+void vehSplash::Activate(f32 arg1)
+{
+    return stub<thiscall_t<void, vehSplash*, f32>>(0x4D6BD0, this, arg1);
+}
+
+void vehSplash::Init(class phInertialCS* arg1, class Vector3 const& arg2, class Vector3 const& arg3)
+{
+    return stub<thiscall_t<void, vehSplash*, class phInertialCS*, class Vector3 const&, class Vector3 const&>>(
+        0x4D6A80, this, arg1, arg2, arg3);
+}
+
+void vehSplash::Reset()
+{
+    return stub<thiscall_t<void, vehSplash*>>(0x4D6A70, this);
+}
+
+void vehSplash::Update()
+{
+    return stub<thiscall_t<void, vehSplash*>>(0x4D6BF0, this);
+}
+
+define_dummy_symbol(vehicle_splash);

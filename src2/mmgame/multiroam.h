@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "gamemulti.h"
 
 /*
     mmgame:multiroam
@@ -40,92 +42,53 @@
     0x5B0A20 | const mmMultiRoam::`vftable' | ??_7mmMultiRoam@@6B@
 */
 
-struct mmMultiRoam : mmGameMulti
+class mmMultiRoam : public mmGameMulti
 {
+    // const mmMultiRoam::`vftable' @ 0x5B0A20
+
 public:
-    // mmMultiRoam::`vftable' @ 0x5B0A20
-
     // 0x427530 | ??0mmMultiRoam@@QAE@XZ
-    inline mmMultiRoam()
-    {
-        stub<member_func_t<void, mmMultiRoam>>(0x427530, this);
-    }
+    mmMultiRoam();
 
+    // 0x428220 | ??_GmmMultiRoam@@UAEPAXI@Z
     // 0x427560 | ??1mmMultiRoam@@UAE@XZ
-    inline ~mmMultiRoam() override
-    {
-        stub<member_func_t<void, mmMultiRoam>>(0x427560, this);
-    }
-
-    // 0x427C50 | ?Reset@mmMultiRoam@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmMultiRoam>>(0x427C50, this);
-    }
-
-    // 0x427600 | ?Init@mmMultiRoam@@UAEHXZ
-    inline int32_t Init() override
-    {
-        return stub<member_func_t<int32_t, mmMultiRoam>>(0x427600, this);
-    }
-
-    // 0x427700 | ?InitMyPlayer@mmMultiRoam@@UAEXXZ
-    inline void InitMyPlayer() override
-    {
-        return stub<member_func_t<void, mmMultiRoam>>(0x427700, this);
-    }
-
-    // 0x4277A0 | ?InitGameObjects@mmMultiRoam@@UAEXXZ
-    inline void InitGameObjects() override
-    {
-        return stub<member_func_t<void, mmMultiRoam>>(0x4277A0, this);
-    }
-
-    // 0x427770 | ?InitHUD@mmMultiRoam@@UAEXXZ
-    inline void InitHUD() override
-    {
-        return stub<member_func_t<void, mmMultiRoam>>(0x427770, this);
-    }
-
-    // 0x427CC0 | ?UpdateGameInput@mmMultiRoam@@UAEXH@Z
-    inline void UpdateGameInput(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmMultiRoam, int32_t>>(0x427CC0, this, arg1);
-    }
-
-    // 0x427CD0 | ?UpdateGame@mmMultiRoam@@UAEXXZ
-    inline void UpdateGame() override
-    {
-        return stub<member_func_t<void, mmMultiRoam>>(0x427CD0, this);
-    }
-
-    // 0x427EB0 | ?SwitchState@mmMultiRoam@@UAEXH@Z
-    inline void SwitchState(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmMultiRoam, int32_t>>(0x427EB0, this, arg1);
-    }
-
-    // 0x428250 | ?GetWaypoints@mmMultiRoam@@UAEPAVmmWaypoints@@XZ
-    inline class mmWaypoints* GetWaypoints() override
-    {
-        return stub<member_func_t<class mmWaypoints*, mmMultiRoam>>(0x428250, this);
-    }
-
-    // 0x427880 | ?InitNetworkPlayers@mmMultiRoam@@UAEXXZ
-    inline void InitNetworkPlayers() override
-    {
-        return stub<member_func_t<void, mmMultiRoam>>(0x427880, this);
-    }
-
-    // 0x427EC0 | ?SystemMessage@mmMultiRoam@@UAEXPAUNETSYS_MSG@@@Z
-    inline void SystemMessage(struct NETSYS_MSG* arg1) override
-    {
-        return stub<member_func_t<void, mmMultiRoam, struct NETSYS_MSG*>>(0x427EC0, this, arg1);
-    }
+    ~mmMultiRoam() override;
 
     // 0x428050 | ?GameMessage@mmMultiRoam@@UAEXPAUNET_RCXHEAD@@@Z
-    inline void GameMessage(struct NET_RCXHEAD* arg1) override
-    {
-        return stub<member_func_t<void, mmMultiRoam, struct NET_RCXHEAD*>>(0x428050, this, arg1);
-    }
+    void GameMessage(struct NET_RCXHEAD* arg1) override;
+
+    // 0x428250 | ?GetWaypoints@mmMultiRoam@@UAEPAVmmWaypoints@@XZ
+    class mmWaypoints* GetWaypoints() override;
+
+    // 0x427600 | ?Init@mmMultiRoam@@UAEHXZ
+    i32 Init() override;
+
+    // 0x4277A0 | ?InitGameObjects@mmMultiRoam@@UAEXXZ
+    void InitGameObjects() override;
+
+    // 0x427770 | ?InitHUD@mmMultiRoam@@UAEXXZ
+    void InitHUD() override;
+
+    // 0x427700 | ?InitMyPlayer@mmMultiRoam@@UAEXXZ
+    void InitMyPlayer() override;
+
+    // 0x427880 | ?InitNetworkPlayers@mmMultiRoam@@UAEXXZ
+    void InitNetworkPlayers() override;
+
+    // 0x427C50 | ?Reset@mmMultiRoam@@UAEXXZ
+    void Reset() override;
+
+    // 0x427EB0 | ?SwitchState@mmMultiRoam@@UAEXH@Z
+    void SwitchState(i32 arg1) override;
+
+    // 0x427EC0 | ?SystemMessage@mmMultiRoam@@UAEXPAUNETSYS_MSG@@@Z
+    void SystemMessage(struct NETSYS_MSG* arg1) override;
+
+    // 0x427CD0 | ?UpdateGame@mmMultiRoam@@UAEXXZ
+    void UpdateGame() override;
+
+    // 0x427CC0 | ?UpdateGameInput@mmMultiRoam@@UAEXH@Z
+    void UpdateGameInput(i32 arg1) override;
 };
+
+check_size(mmMultiRoam, 0x0);

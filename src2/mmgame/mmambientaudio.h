@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -30,20 +30,13 @@ struct mmAmbientAudio
 {
 public:
     // 0x432C40 | ??0mmAmbientAudio@@QAE@PAVmmPlayer@@@Z
-    inline mmAmbientAudio(class mmPlayer* arg1)
-    {
-        stub<member_func_t<void, mmAmbientAudio, class mmPlayer*>>(0x432C40, this, arg1);
-    }
+    mmAmbientAudio(class mmPlayer* arg1);
 
     // 0x432D00 | ??1mmAmbientAudio@@QAE@XZ
-    inline ~mmAmbientAudio()
-    {
-        stub<member_func_t<void, mmAmbientAudio>>(0x432D00, this);
-    }
+    ~mmAmbientAudio();
 
     // 0x432D10 | ?Update@mmAmbientAudio@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, mmAmbientAudio>>(0x432D10, this);
-    }
+    void Update();
 };
+
+check_size(mmAmbientAudio, 0x0);

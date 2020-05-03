@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,36 @@
 */
 
 #include "texeldamage.h"
+
+fxTexelDamage::fxTexelDamage()
+{
+    unimplemented();
+}
+
+fxTexelDamage::~fxTexelDamage()
+{
+    unimplemented();
+}
+
+void fxTexelDamage::ApplyDamage(class Vector3 const& arg1, f32 arg2)
+{
+    return stub<thiscall_t<void, fxTexelDamage*, class Vector3 const&, f32>>(0x5921E0, this, arg1, arg2);
+}
+
+bool fxTexelDamage::Init(class modStatic* arg1, class modShader* arg2, i32 arg3)
+{
+    return stub<thiscall_t<bool, fxTexelDamage*, class modStatic*, class modShader*, i32>>(
+        0x591D10, this, arg1, arg2, arg3);
+}
+
+void fxTexelDamage::Reset()
+{
+    return stub<thiscall_t<void, fxTexelDamage*>>(0x592190, this);
+}
+
+void fxTexelDamage::Kill()
+{
+    return stub<thiscall_t<void, fxTexelDamage*>>(0x591CD0, this);
+}
+
+define_dummy_symbol(effects_texeldamage);

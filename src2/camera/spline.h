@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     camera:spline
@@ -37,74 +39,44 @@
     0x5B51B8 | const Spline::`vftable' | ??_7Spline@@6B@
 */
 
-struct Spline : asNode
+class Spline : public asNode
 {
+    // const Spline::`vftable' @ 0x5B51B8
+
 public:
-    // Spline::`vftable' @ 0x5B51B8
-
     // 0x522BC0 | ??0Spline@@QAE@XZ
-    inline Spline()
-    {
-        stub<member_func_t<void, Spline>>(0x522BC0, this);
-    }
+    Spline();
 
-    // 0x522BF0 | ?Init@Spline@@QAEXPAMH@Z
-    inline void Init(float* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, Spline, float*, int32_t>>(0x522BF0, this, arg1, arg2);
-    }
-
-    // 0x522D00 | ?InRange@Spline@@QAEHXZ
-    inline int32_t InRange()
-    {
-        return stub<member_func_t<int32_t, Spline>>(0x522D00, this);
-    }
+    // 0x523260 | ??_GSpline@@UAEPAXI@Z
+    // 0x51FD50 | ??1Spline@@UAE@XZ
+    ~Spline() override;
 
     // 0x522D50 | ?CalcCoeff@Spline@@QAEXXZ
-    inline void CalcCoeff()
-    {
-        return stub<member_func_t<void, Spline>>(0x522D50, this);
-    }
-
-    // 0x522E60 | ?SetValue@Spline@@QAEXPAM@Z
-    inline void SetValue(float* arg1)
-    {
-        return stub<member_func_t<void, Spline, float*>>(0x522E60, this, arg1);
-    }
-
-    // 0x522ED0 | ?SetGoal@Spline@@QAEXPAMM@Z
-    inline void SetGoal(float* arg1, float arg2)
-    {
-        return stub<member_func_t<void, Spline, float*, float>>(0x522ED0, this, arg1, arg2);
-    }
-
-    // 0x522FB0 | ?Solve@Spline@@QAEXM@Z
-    inline void Solve(float arg1)
-    {
-        return stub<member_func_t<void, Spline, float>>(0x522FB0, this, arg1);
-    }
-
-    // 0x5230E0 | ?Print@Spline@@QAEXH@Z
-    inline void Print(int32_t arg1)
-    {
-        return stub<member_func_t<void, Spline, int32_t>>(0x5230E0, this, arg1);
-    }
+    void CalcCoeff();
 
     // 0x5231E0 | ?FixTimeStop@Spline@@QAEXXZ
-    inline void FixTimeStop()
-    {
-        return stub<member_func_t<void, Spline>>(0x5231E0, this);
-    }
+    void FixTimeStop();
 
-    // 0x51FD50 | ??1Spline@@UAE@XZ
-    inline ~Spline() override
-    {
-        stub<member_func_t<void, Spline>>(0x51FD50, this);
-    }
+    // 0x522D00 | ?InRange@Spline@@QAEHXZ
+    i32 InRange();
+
+    // 0x522BF0 | ?Init@Spline@@QAEXPAMH@Z
+    void Init(f32* arg1, i32 arg2);
+
+    // 0x5230E0 | ?Print@Spline@@QAEXH@Z
+    void Print(i32 arg1);
+
+    // 0x522ED0 | ?SetGoal@Spline@@QAEXPAMM@Z
+    void SetGoal(f32* arg1, f32 arg2);
+
+    // 0x522E60 | ?SetValue@Spline@@QAEXPAM@Z
+    void SetValue(f32* arg1);
+
+    // 0x522FB0 | ?Solve@Spline@@QAEXM@Z
+    void Solve(f32 arg1);
 
     // 0x523210 | ?Update@Spline@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, Spline>>(0x523210, this);
-    }
+    void Update() override;
 };
+
+check_size(Spline, 0x0);

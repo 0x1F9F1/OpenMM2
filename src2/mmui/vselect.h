@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "mmwidget/menu.h"
 
 /*
     mmui:vselect
@@ -65,197 +67,104 @@
     public: static float VehicleSelectBase::PolarApproach | ?PolarApproach@VehicleSelectBase@@2MA
 */
 
-// 0x4F73E0 | ?max@@YAMMM@Z
-inline float max(float arg1, float arg2)
+class VehicleSelectBase : public UIMenu
 {
-    return stub<cdecl_t<float, float, float>>(0x4F73E0, arg1, arg2);
-}
+    // const VehicleSelectBase::`vftable' @ 0x5B3D38
 
-// 0x4F7400 | ?min@@YAMMM@Z
-inline float min(float arg1, float arg2)
-{
-    return stub<cdecl_t<float, float, float>>(0x4F7400, arg1, arg2);
-}
-
-struct VehicleSelectBase : UIMenu
-{
 public:
-    // VehicleSelectBase::`vftable' @ 0x5B3D38
-
     // 0x4F5470 | ??0VehicleSelectBase@@QAE@H@Z
-    inline VehicleSelectBase(int32_t arg1)
-    {
-        stub<member_func_t<void, VehicleSelectBase, int32_t>>(0x4F5470, this, arg1);
-    }
+    VehicleSelectBase(i32 arg1);
 
-    // 0x4F55F0 | ?IncColor@VehicleSelectBase@@QAEXXZ
-    inline void IncColor()
-    {
-        return stub<member_func_t<void, VehicleSelectBase>>(0x4F55F0, this);
-    }
-
-    // 0x4F56B0 | ?DecColor@VehicleSelectBase@@QAEXXZ
-    inline void DecColor()
-    {
-        return stub<member_func_t<void, VehicleSelectBase>>(0x4F56B0, this);
-    }
-
-    // 0x4F5780 | ?IncTrans@VehicleSelectBase@@QAEXXZ
-    inline void IncTrans()
-    {
-        return stub<member_func_t<void, VehicleSelectBase>>(0x4F5780, this);
-    }
-
-    // 0x4F5790 | ?DecTrans@VehicleSelectBase@@QAEXXZ
-    inline void DecTrans()
-    {
-        return stub<member_func_t<void, VehicleSelectBase>>(0x4F5790, this);
-    }
-
-    // 0x4F57A0 | ?ColorCB@VehicleSelectBase@@QAEXXZ
-    inline void ColorCB()
-    {
-        return stub<member_func_t<void, VehicleSelectBase>>(0x4F57A0, this);
-    }
-
-    // 0x4F57C0 | ?InitCarSelection@VehicleSelectBase@@QAEXHMMMM@Z
-    inline void InitCarSelection(int32_t arg1, float arg2, float arg3, float arg4, float arg5)
-    {
-        return stub<member_func_t<void, VehicleSelectBase, int32_t, float, float, float, float>>(
-            0x4F57C0, this, arg1, arg2, arg3, arg4, arg5);
-    }
+    // 0x4F7960 | ??_GVehicleSelectBase@@UAEPAXI@Z
+    // 0x4F68F0 | ??1VehicleSelectBase@@UAE@XZ
+    ~VehicleSelectBase() override;
 
     // 0x4F6AF0 | ?AllSetCar@VehicleSelectBase@@QAEXPADH@Z
-    inline void AllSetCar(char* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, VehicleSelectBase, char*, int32_t>>(0x4F6AF0, this, arg1, arg2);
-    }
-
-    // 0x4F6B40 | ?TDPickCB@VehicleSelectBase@@QAEXXZ
-    inline void TDPickCB()
-    {
-        return stub<member_func_t<void, VehicleSelectBase>>(0x4F6B40, this);
-    }
-
-    // 0x4F6C00 | ?GetCarTitle@VehicleSelectBase@@QAEPADHPADFPAVstring@@@Z
-    inline char* GetCarTitle(int32_t arg1, char* arg2, int16_t arg3, class string* arg4)
-    {
-        return stub<member_func_t<char*, VehicleSelectBase, int32_t, char*, int16_t, class string*>>(
-            0x4F6C00, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x4F6D30 | ?CurrentVehicleIsLocked@VehicleSelectBase@@QAEHXZ
-    inline int32_t CurrentVehicleIsLocked()
-    {
-        return stub<member_func_t<int32_t, VehicleSelectBase>>(0x4F6D30, this);
-    }
-
-    // 0x4F6D90 | ?SetLastUnlockedVehicle@VehicleSelectBase@@QAEXXZ
-    inline void SetLastUnlockedVehicle()
-    {
-        return stub<member_func_t<void, VehicleSelectBase>>(0x4F6D90, this);
-    }
-
-    // 0x4F6DF0 | ?CarMod@VehicleSelectBase@@QAEXAAH@Z
-    inline void CarMod(int32_t& arg1)
-    {
-        return stub<member_func_t<void, VehicleSelectBase, int32_t&>>(0x4F6DF0, this, arg1);
-    }
-
-    // 0x4F6E20 | ?SetPick@VehicleSelectBase@@QAEXHF@Z
-    inline void SetPick(int32_t arg1, int16_t arg2)
-    {
-        return stub<member_func_t<void, VehicleSelectBase, int32_t, int16_t>>(0x4F6E20, this, arg1, arg2);
-    }
-
-    // 0x4F7120 | ?ShowCarDesc@VehicleSelectBase@@QAEXXZ
-    inline void ShowCarDesc()
-    {
-        return stub<member_func_t<void, VehicleSelectBase>>(0x4F7120, this);
-    }
-
-    // 0x4F7340 | ?LoadStats@VehicleSelectBase@@QAEHPAD@Z
-    inline int32_t LoadStats(char* arg1)
-    {
-        return stub<member_func_t<int32_t, VehicleSelectBase, char*>>(0x4F7340, this, arg1);
-    }
+    void AllSetCar(char* arg1, i32 arg2);
 
     // 0x4F7420 | ?AssignVehicleStats@VehicleSelectBase@@QAEXHMMMM@Z
-    inline void AssignVehicleStats(int32_t arg1, float arg2, float arg3, float arg4, float arg5)
-    {
-        return stub<member_func_t<void, VehicleSelectBase, int32_t, float, float, float, float>>(
-            0x4F7420, this, arg1, arg2, arg3, arg4, arg5);
-    }
+    void AssignVehicleStats(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5);
 
-    // 0x4F7590 | ?FillStats@VehicleSelectBase@@QAEXXZ
-    inline void FillStats()
-    {
-        return stub<member_func_t<void, VehicleSelectBase>>(0x4F7590, this);
-    }
+    // 0x4F6DF0 | ?CarMod@VehicleSelectBase@@QAEXAAH@Z
+    void CarMod(i32& arg1);
 
-    // 0x4F75E0 | ?SetLockedLabel@VehicleSelectBase@@QAEXXZ
-    inline void SetLockedLabel()
-    {
-        return stub<member_func_t<void, VehicleSelectBase>>(0x4F75E0, this);
-    }
+    // 0x4F57A0 | ?ColorCB@VehicleSelectBase@@QAEXXZ
+    void ColorCB();
 
-    // 0x4F7770 | ?LockColor@VehicleSelectBase@@QAEXXZ
-    inline void LockColor()
-    {
-        return stub<member_func_t<void, VehicleSelectBase>>(0x4F7770, this);
-    }
-
-    // 0x4F77F0 | ?FocusDescription@VehicleSelectBase@@QAEXHH@Z
-    inline void FocusDescription(int32_t arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, VehicleSelectBase, int32_t, int32_t>>(0x4F77F0, this, arg1, arg2);
-    }
+    // 0x4F6D30 | ?CurrentVehicleIsLocked@VehicleSelectBase@@QAEHXZ
+    i32 CurrentVehicleIsLocked();
 
     // 0x4F7A60 | ?DecCar@VehicleSelectBase@@QAEXXZ
-    inline void DecCar()
-    {
-        return stub<member_func_t<void, VehicleSelectBase>>(0x4F7A60, this);
-    }
+    void DecCar();
+
+    // 0x4F56B0 | ?DecColor@VehicleSelectBase@@QAEXXZ
+    void DecColor();
+
+    // 0x4F5790 | ?DecTrans@VehicleSelectBase@@QAEXXZ
+    void DecTrans();
+
+    // 0x4F7590 | ?FillStats@VehicleSelectBase@@QAEXXZ
+    void FillStats();
+
+    // 0x4F77F0 | ?FocusDescription@VehicleSelectBase@@QAEXHH@Z
+    void FocusDescription(i32 arg1, i32 arg2);
+
+    // 0x4F6C00 | ?GetCarTitle@VehicleSelectBase@@QAEPADHPADFPAVstring@@@Z
+    char* GetCarTitle(i32 arg1, char* arg2, i16 arg3, class string* arg4);
 
     // 0x4F7A70 | ?IncCar@VehicleSelectBase@@QAEXXZ
-    inline void IncCar()
-    {
-        return stub<member_func_t<void, VehicleSelectBase>>(0x4F7A70, this);
-    }
+    void IncCar();
 
-    // 0x4F7A80 | ?SetShowcaseFlag@VehicleSelectBase@@QAEXXZ
-    inline void SetShowcaseFlag()
-    {
-        return stub<member_func_t<void, VehicleSelectBase>>(0x4F7A80, this);
-    }
+    // 0x4F55F0 | ?IncColor@VehicleSelectBase@@QAEXXZ
+    void IncColor();
 
-    // 0x4F68F0 | ??1VehicleSelectBase@@UAE@XZ
-    inline ~VehicleSelectBase() override
-    {
-        stub<member_func_t<void, VehicleSelectBase>>(0x4F68F0, this);
-    }
+    // 0x4F5780 | ?IncTrans@VehicleSelectBase@@QAEXXZ
+    void IncTrans();
 
-    // 0x4F6B60 | ?Update@VehicleSelectBase@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, VehicleSelectBase>>(0x4F6B60, this);
-    }
+    // 0x4F57C0 | ?InitCarSelection@VehicleSelectBase@@QAEXHMMMM@Z
+    void InitCarSelection(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5);
 
-    // 0x4F6B50 | ?Reset@VehicleSelectBase@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, VehicleSelectBase>>(0x4F6B50, this);
-    }
+    // 0x4F7340 | ?LoadStats@VehicleSelectBase@@QAEHPAD@Z
+    i32 LoadStats(char* arg1);
 
-    // 0x4F6A00 | ?PreSetup@VehicleSelectBase@@UAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, VehicleSelectBase>>(0x4F6A00, this);
-    }
+    // 0x4F7770 | ?LockColor@VehicleSelectBase@@QAEXXZ
+    void LockColor();
 
     // 0x4F6AD0 | ?PostSetup@VehicleSelectBase@@UAEXXZ
-    inline void PostSetup() override
-    {
-        return stub<member_func_t<void, VehicleSelectBase>>(0x4F6AD0, this);
-    }
+    void PostSetup() override;
+
+    // 0x4F6A00 | ?PreSetup@VehicleSelectBase@@UAEXXZ
+    void PreSetup() override;
+
+    // 0x4F6B50 | ?Reset@VehicleSelectBase@@UAEXXZ
+    void Reset() override;
+
+    // 0x4F6D90 | ?SetLastUnlockedVehicle@VehicleSelectBase@@QAEXXZ
+    void SetLastUnlockedVehicle();
+
+    // 0x4F75E0 | ?SetLockedLabel@VehicleSelectBase@@QAEXXZ
+    void SetLockedLabel();
+
+    // 0x4F6E20 | ?SetPick@VehicleSelectBase@@QAEXHF@Z
+    void SetPick(i32 arg1, i16 arg2);
+
+    // 0x4F7A80 | ?SetShowcaseFlag@VehicleSelectBase@@QAEXXZ
+    void SetShowcaseFlag();
+
+    // 0x4F7120 | ?ShowCarDesc@VehicleSelectBase@@QAEXXZ
+    void ShowCarDesc();
+
+    // 0x4F6B40 | ?TDPickCB@VehicleSelectBase@@QAEXXZ
+    void TDPickCB();
+
+    // 0x4F6B60 | ?Update@VehicleSelectBase@@UAEXXZ
+    void Update() override;
 };
+
+check_size(VehicleSelectBase, 0x0);
+
+// 0x4F73E0 | ?max@@YAMMM@Z
+f32 max(f32 arg1, f32 arg2);
+
+// 0x4F7400 | ?min@@YAMMM@Z
+f32 min(f32 arg1, f32 arg2);

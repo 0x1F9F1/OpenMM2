@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "node.h"
+
 /*
     node:linear
 
@@ -28,47 +30,42 @@
     public: virtual void * __thiscall asLinearCS::`scalar deleting destructor'(unsigned int) | ??_GasLinearCS@@UAEPAXI@Z
     public: virtual char * __thiscall asLinearCS::GetClassName(void) | ?GetClassName@asLinearCS@@UAEPADXZ
     0x5B29AC | const asLinearCS::`vftable' | ??_7asLinearCS@@6B@
-    private: static int asLinearCS::FrameHeight | ?FrameHeight@asLinearCS@@0HA
+    0x5C8D2C | private: static int asLinearCS::FrameHeight | ?FrameHeight@asLinearCS@@0HA
     0x6617A8 | private: static class asLinearCS asLinearCS::RootFrame | ?RootFrame@asLinearCS@@0V1@A
     0x661828 | private: static class asLinearCS * * asLinearCS::FrameStack | ?FrameStack@asLinearCS@@0PAPAV1@A
     0x6618AC | private: static class Matrix34 * asLinearCS::CurrentMatrix | ?CurrentMatrix@asLinearCS@@0PAVMatrix34@@A
 */
 
-class asLinearCS : asNode
+class asLinearCS : public asNode
 {
-public:
-    // asLinearCS::`vftable' @ 0x5B29AC
+    // const asLinearCS::`vftable' @ 0x5B29AC
 
+public:
     // 0x4A32F0 | ??0asLinearCS@@QAE@XZ
-    inline asLinearCS()
-    {
-        stub<member_func_t<void, asLinearCS>>(0x4A32F0, this);
-    }
+    asLinearCS();
+
+    // 0x4A3410 | ??_EasLinearCS@@UAEPAXI@Z
+    // 0x431B80 | ??1asLinearCS@@UAE@XZ
+    ~asLinearCS() override;
+
+    // 0x4A3400 | ?Cull@asLinearCS@@UAEXXZ
+    void Cull() override;
+
+    // 0x4A3370 | ?Update@asLinearCS@@UAEXXZ
+    void Update() override;
+
+private:
+    // 0x6618AC | ?CurrentMatrix@asLinearCS@@0PAVMatrix34@@A
+    static inline extern_var(0x6618AC, class Matrix34*, CurrentMatrix);
+
+    // 0x5C8D2C | ?FrameHeight@asLinearCS@@0HA
+    static inline extern_var(0x5C8D2C, i32, FrameHeight);
+
+    // 0x661828 | ?FrameStack@asLinearCS@@0PAPAV1@A
+    static inline extern_var(0x661828, class asLinearCS**, FrameStack);
 
     // 0x6617A8 | ?RootFrame@asLinearCS@@0V1@A
     static inline extern_var(0x6617A8, class asLinearCS, RootFrame);
-
-    // 0x661828 | ?FrameStack@asLinearCS@@0PAPAV1@A
-    inline extern_var(0x661828, class asLinearCS**, FrameStack);
-
-    // 0x6618AC | ?CurrentMatrix@asLinearCS@@0PAVMatrix34@@A
-    inline extern_var(0x6618AC, class Matrix34*, CurrentMatrix);
-
-    // 0x431B80 | ??1asLinearCS@@UAE@XZ
-    inline ~asLinearCS() override
-    {
-        stub<member_func_t<void, asLinearCS>>(0x431B80, this);
-    }
-
-    // 0x4A3400 | ?Cull@asLinearCS@@UAEXXZ
-    inline void Cull() override
-    {
-        return stub<member_func_t<void, asLinearCS>>(0x4A3400, this);
-    }
-
-    // 0x4A3370 | ?Update@asLinearCS@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, asLinearCS>>(0x4A3370, this);
-    }
 };
+
+check_size(asLinearCS, 0x0);

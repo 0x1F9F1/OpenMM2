@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "carcs.h"
 
 /*
     camera:pointcs
@@ -37,80 +39,47 @@
     0x5B4FD8 | const camPointCS::`vftable' | ??_7camPointCS@@6B@
 */
 
-struct camPointCS : camCarCS
+class camPointCS : public camCarCS
 {
+    // const camPointCS::`vftable' @ 0x5B4FD8
+
 public:
-    // camPointCS::`vftable' @ 0x5B4FD8
-
     // 0x520610 | ??0camPointCS@@QAE@XZ
-    inline camPointCS()
-    {
-        stub<member_func_t<void, camPointCS>>(0x520610, this);
-    }
+    camPointCS();
 
-    // 0x5206B0 | ?SetPos@camPointCS@@QAEXAAVVector3@@@Z
-    inline void SetPos(class Vector3& arg1)
-    {
-        return stub<member_func_t<void, camPointCS, class Vector3&>>(0x5206B0, this, arg1);
-    }
-
-    // 0x5206F0 | ?SetMaxDist@camPointCS@@QAEXM@Z
-    inline void SetMaxDist(float arg1)
-    {
-        return stub<member_func_t<void, camPointCS, float>>(0x5206F0, this, arg1);
-    }
-
-    // 0x520710 | ?SetMinDist@camPointCS@@QAEXM@Z
-    inline void SetMinDist(float arg1)
-    {
-        return stub<member_func_t<void, camPointCS, float>>(0x520710, this, arg1);
-    }
-
-    // 0x520730 | ?SetAppRate@camPointCS@@QAEXM@Z
-    inline void SetAppRate(float arg1)
-    {
-        return stub<member_func_t<void, camPointCS, float>>(0x520730, this, arg1);
-    }
-
-    // 0x520740 | ?SetVel@camPointCS@@QAEXAAVVector3@@@Z
-    inline void SetVel(class Vector3& arg1)
-    {
-        return stub<member_func_t<void, camPointCS, class Vector3&>>(0x520740, this, arg1);
-    }
-
-    // 0x520760 | ?GetPos@camPointCS@@QAE?AVVector3@@XZ
-    inline class Vector3 GetPos()
-    {
-        return stub<member_func_t<class Vector3, camPointCS>>(0x520760, this);
-    }
-
+    // 0x5209F0 | ??_GcamPointCS@@UAEPAXI@Z
     // 0x406820 | ??1camPointCS@@UAE@XZ
-    inline ~camPointCS() override
-    {
-        stub<member_func_t<void, camPointCS>>(0x406820, this);
-    }
-
-    // 0x520790 | ?Update@camPointCS@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, camPointCS>>(0x520790, this);
-    }
-
-    // 0x520690 | ?Reset@camPointCS@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, camPointCS>>(0x520690, this);
-    }
+    ~camPointCS() override;
 
     // 0x520A20 | ?GetClassName@camPointCS@@UAEPADXZ
-    inline char* GetClassName() override
-    {
-        return stub<member_func_t<char*, camPointCS>>(0x520A20, this);
-    }
+    char* GetClassName() override;
+
+    // 0x520760 | ?GetPos@camPointCS@@QAE?AVVector3@@XZ
+    class Vector3 GetPos();
 
     // 0x5206A0 | ?MakeActive@camPointCS@@UAEXXZ
-    inline void MakeActive() override
-    {
-        return stub<member_func_t<void, camPointCS>>(0x5206A0, this);
-    }
+    void MakeActive() override;
+
+    // 0x520690 | ?Reset@camPointCS@@UAEXXZ
+    void Reset() override;
+
+    // 0x520730 | ?SetAppRate@camPointCS@@QAEXM@Z
+    void SetAppRate(f32 arg1);
+
+    // 0x5206F0 | ?SetMaxDist@camPointCS@@QAEXM@Z
+    void SetMaxDist(f32 arg1);
+
+    // 0x520710 | ?SetMinDist@camPointCS@@QAEXM@Z
+    void SetMinDist(f32 arg1);
+
+    // 0x5206B0 | ?SetPos@camPointCS@@QAEXAAVVector3@@@Z
+    void SetPos(class Vector3& arg1);
+
+    // 0x520740 | ?SetVel@camPointCS@@QAEXAAVVector3@@@Z
+    void SetVel(class Vector3& arg1);
+
+    // 0x520790 | ?Update@camPointCS@@UAEXXZ
+    void Update() override;
 };
+
+check_size(camPointCS, 0x0);

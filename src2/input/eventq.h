@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -29,3 +29,29 @@
     0x6A3470 | private: static struct ioEvent * ioEventQueue::Q | ?Q@ioEventQueue@@0PAUioEvent@@A
     0x6A3468 | private: static int ioEventQueue::m_Head | ?m_Head@ioEventQueue@@0HA
 */
+
+struct ioEventQueue
+{
+public:
+    // 0x4BAA50 | ?Command@ioEventQueue@@SAXPAX@Z
+    static void Command(void* arg1);
+
+    // 0x4BA980 | ?Peek@ioEventQueue@@SA_NAAUioEvent@@AAH@Z
+    static bool Peek(struct ioEvent& arg1, i32& arg2);
+
+    // 0x4BA930 | ?Pop@ioEventQueue@@SA_NAAUioEvent@@@Z
+    static bool Pop(struct ioEvent& arg1);
+
+    // 0x4BA9D0 | ?Queue@ioEventQueue@@SAXW4ioEventType@ioEvent@@HHH@Z
+    static void Queue(enum ioEvent::ioEventType arg1, i32 arg2, i32 arg3, i32 arg4);
+
+private:
+    // 0x6A3470 | ?Q@ioEventQueue@@0PAUioEvent@@A
+    static inline extern_var(0x6A3470, struct ioEvent*, Q);
+
+    // 0x6A3468 | ?m_Head@ioEventQueue@@0HA
+    static inline extern_var(0x6A3468, i32, m_Head);
+
+    // 0x6A3670 | ?m_Tail@ioEventQueue@@0HA
+    static inline extern_var(0x6A3670, i32, m_Tail);
+};

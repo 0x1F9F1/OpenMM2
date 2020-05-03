@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "node/node.h"
+
 /*
     camera:basecs
 
@@ -33,77 +35,50 @@
     0x521F40 | public: virtual void * __thiscall camBaseCS::`scalar deleting destructor'(unsigned int) | ??_GcamBaseCS@@UAEPAXI@Z
     public: virtual void * __thiscall camBaseCS::`vector deleting destructor'(unsigned int) | ??_EcamBaseCS@@UAEPAXI@Z
     0x5B5130 | const camBaseCS::`vftable' | ??_7camBaseCS@@6B@
-    public: static float camBaseCS::sm_cameraFar | ?sm_cameraFar@camBaseCS@@2MA
+    0x5D4420 | public: static float camBaseCS::sm_cameraFar | ?sm_cameraFar@camBaseCS@@2MA
 */
 
-struct camBaseCS : asNode
+class camBaseCS : public asNode
 {
+    // const camBaseCS::`vftable' @ 0x5B5130
+
 public:
-    // camBaseCS::`vftable' @ 0x5B5130
-
     // 0x521D60 | ??0camBaseCS@@QAE@XZ
-    inline camBaseCS()
-    {
-        stub<member_func_t<void, camBaseCS>>(0x521D60, this);
-    }
+    camBaseCS();
 
-    // 0x521E10 | ?IsViewCSInTransition@camBaseCS@@QAEHXZ
-    inline int32_t IsViewCSInTransition()
-    {
-        return stub<member_func_t<int32_t, camBaseCS>>(0x521E10, this);
-    }
-
-    // 0x521E30 | ?UpdateView@camBaseCS@@QAEXXZ
-    inline void UpdateView()
-    {
-        return stub<member_func_t<void, camBaseCS>>(0x521E30, this);
-    }
-
+    // 0x521F40 | ??_GcamBaseCS@@UAEPAXI@Z
     // 0x521DF0 | ??1camBaseCS@@UAE@XZ
-    inline ~camBaseCS() override
-    {
-        stub<member_func_t<void, camBaseCS>>(0x521DF0, this);
-    }
-
-    // 0x521EA0 | ?FileIO@camBaseCS@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
-    {
-        return stub<member_func_t<void, camBaseCS, class datParser&>>(0x521EA0, this, arg1);
-    }
+    ~camBaseCS() override;
 
     // 0x521F30 | ?AfterLoad@camBaseCS@@UAEXXZ
-    inline void AfterLoad() override
-    {
-        return stub<member_func_t<void, camBaseCS>>(0x521F30, this);
-    }
+    void AfterLoad() override;
+
+    // 0x521EA0 | ?FileIO@camBaseCS@@UAEXAAVdatParser@@@Z
+    void FileIO(class datParser& arg1) override;
 
     // 0x521E00 | ?GetDirName@camBaseCS@@UAEPBDXZ
-    inline char const* GetDirName() override
-    {
-        return stub<member_func_t<char const*, camBaseCS>>(0x521E00, this);
-    }
+    char const* GetDirName() override;
+
+    // 0x521E10 | ?IsViewCSInTransition@camBaseCS@@QAEHXZ
+    i32 IsViewCSInTransition();
+
+    // 0x521E30 | ?UpdateView@camBaseCS@@QAEXXZ
+    void UpdateView();
 
     // 0x521520 | ?MakeActive@camBaseCS@@UAEXXZ
-    virtual inline void MakeActive()
-    {
-        return stub<member_func_t<void, camBaseCS>>(0x521520, this);
-    }
+    virtual void MakeActive();
 
     // 0x520410 | ?UpdateInput@camBaseCS@@UAEXXZ
-    virtual inline void UpdateInput()
-    {
-        return stub<member_func_t<void, camBaseCS>>(0x520410, this);
-    }
+    virtual void UpdateInput();
 
     // 0x521E60 | ?ForceMatrixDelta@camBaseCS@@UAEXABVVector3@@@Z
-    virtual inline void ForceMatrixDelta(class Vector3 const& arg1)
-    {
-        return stub<member_func_t<void, camBaseCS, class Vector3 const&>>(0x521E60, this, arg1);
-    }
+    virtual void ForceMatrixDelta(class Vector3 const& arg1);
 
     // 0x51D750 | ?SetST@camBaseCS@@UAEXPAM@Z
-    virtual inline void SetST(float* arg1)
-    {
-        return stub<member_func_t<void, camBaseCS, float*>>(0x51D750, this, arg1);
-    }
+    virtual void SetST(f32* arg1);
+
+    // 0x5D4420 | ?sm_cameraFar@camBaseCS@@2MA
+    static inline extern_var(0x5D4420, f32, sm_cameraFar);
 };
+
+check_size(camBaseCS, 0x0);

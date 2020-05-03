@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     mmgame:gameman
@@ -44,62 +46,42 @@
     0x5E0CC8 | class memMemoryAllocator * pShadowMem | ?pShadowMem@@3PAVmemMemoryAllocator@@A
 */
 
-// 0x5E0CC8 | ?pShadowMem@@3PAVmemMemoryAllocator@@A
-inline extern_var(0x5E0CC8, class memMemoryAllocator*, pShadowMem);
-
-class mmGameManager : asNode
+class mmGameManager : public asNode
 {
-public:
-    // mmGameManager::`vftable' @ 0x5B0368
+    // const mmGameManager::`vftable' @ 0x5B0368
 
+public:
     // 0x4029E0 | ??0mmGameManager@@QAE@XZ
-    inline mmGameManager()
-    {
-        stub<member_func_t<void, mmGameManager>>(0x4029E0, this);
-    }
+    mmGameManager();
+
+    // 0x403300 | ??_GmmGameManager@@UAEPAXI@Z
+    // 0x402E40 | ??1mmGameManager@@UAE@XZ
+    ~mmGameManager() override;
 
     // 0x402FA0 | ?BeDone@mmGameManager@@QAEXXZ
-    inline void BeDone()
-    {
-        return stub<member_func_t<void, mmGameManager>>(0x402FA0, this);
-    }
-
-    // 0x402FB0 | ?ForcePopupUI@mmGameManager@@QAEXXZ
-    inline void ForcePopupUI()
-    {
-        return stub<member_func_t<void, mmGameManager>>(0x402FB0, this);
-    }
-
-    // 0x402FE0 | ?ForceReplayUI@mmGameManager@@QAEXXZ
-    inline void ForceReplayUI()
-    {
-        return stub<member_func_t<void, mmGameManager>>(0x402FE0, this);
-    }
-
-    // 0x5E0D08 | ?Instance@mmGameManager@@0PAV1@A
-    inline extern_var(0x5E0D08, class mmGameManager*, Instance);
-
-    // 0x402E40 | ??1mmGameManager@@UAE@XZ
-    inline ~mmGameManager() override
-    {
-        stub<member_func_t<void, mmGameManager>>(0x402E40, this);
-    }
+    void BeDone();
 
     // 0x4031D0 | ?Cull@mmGameManager@@UAEXXZ
-    inline void Cull() override
-    {
-        return stub<member_func_t<void, mmGameManager>>(0x4031D0, this);
-    }
+    void Cull() override;
 
-    // 0x403000 | ?Update@mmGameManager@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmGameManager>>(0x403000, this);
-    }
+    // 0x402FB0 | ?ForcePopupUI@mmGameManager@@QAEXXZ
+    void ForcePopupUI();
+
+    // 0x402FE0 | ?ForceReplayUI@mmGameManager@@QAEXXZ
+    void ForceReplayUI();
 
     // 0x402E30 | ?Reset@mmGameManager@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmGameManager>>(0x402E30, this);
-    }
+    void Reset() override;
+
+    // 0x403000 | ?Update@mmGameManager@@UAEXXZ
+    void Update() override;
+
+private:
+    // 0x5E0D08 | ?Instance@mmGameManager@@0PAV1@A
+    static inline extern_var(0x5E0D08, class mmGameManager*, Instance);
 };
+
+check_size(mmGameManager, 0x1B8);
+
+// 0x5E0CC8 | ?pShadowMem@@3PAVmemMemoryAllocator@@A
+inline extern_var(0x5E0CC8, class memMemoryAllocator*, pShadowMem);

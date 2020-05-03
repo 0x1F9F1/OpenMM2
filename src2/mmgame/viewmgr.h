@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "node/node.h"
+
 /*
     mmgame:viewmgr
 
@@ -31,39 +33,26 @@
     0x5B0DE8 | const mmViewMgr::`vftable' | ??_7mmViewMgr@@6B@
 */
 
-struct mmViewMgr : asNode
+class mmViewMgr : public asNode
 {
-public:
-    // mmViewMgr::`vftable' @ 0x5B0DE8
+    // const mmViewMgr::`vftable' @ 0x5B0DE8
 
+public:
     // 0x431C40 | ??0mmViewMgr@@QAE@XZ
-    inline mmViewMgr()
-    {
-        stub<member_func_t<void, mmViewMgr>>(0x431C40, this);
-    }
+    mmViewMgr();
+
+    // 0x432110 | ??_GmmViewMgr@@UAEPAXI@Z
+    // 0x431C60 | ??1mmViewMgr@@UAE@XZ
+    ~mmViewMgr() override;
 
     // 0x431C80 | ?Init@mmViewMgr@@QAEXPAVmmHUD@@PAVmmHudMap@@PAVmmPlayer@@@Z
-    inline void Init(class mmHUD* arg1, class mmHudMap* arg2, class mmPlayer* arg3)
-    {
-        return stub<member_func_t<void, mmViewMgr, class mmHUD*, class mmHudMap*, class mmPlayer*>>(
-            0x431C80, this, arg1, arg2, arg3);
-    }
+    void Init(class mmHUD* arg1, class mmHudMap* arg2, class mmPlayer* arg3);
 
     // 0x431D10 | ?SetViewSetting@mmViewMgr@@QAEXH@Z
-    inline void SetViewSetting(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmViewMgr, int32_t>>(0x431D10, this, arg1);
-    }
-
-    // 0x431C60 | ??1mmViewMgr@@UAE@XZ
-    inline ~mmViewMgr() override
-    {
-        stub<member_func_t<void, mmViewMgr>>(0x431C60, this);
-    }
+    void SetViewSetting(i32 arg1);
 
     // 0x432100 | ?Update@mmViewMgr@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmViewMgr>>(0x432100, this);
-    }
+    void Update() override;
 };
+
+check_size(mmViewMgr, 0x0);

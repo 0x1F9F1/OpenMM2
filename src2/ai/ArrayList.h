@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -30,36 +30,21 @@
 class CArrayList
 {
 public:
-    // 0x53BE80 | ??_ECArrayList@@QAEPAXI@Z
-    // Skipped (scalar/vector destructor)
-
     // 0x53C030 | ??0CArrayList@@QAE@XZ
-    inline CArrayList()
-    {
-        stub<member_func_t<void, CArrayList>>(0x53C030, this);
-    }
+    CArrayList();
 
     // 0x543D40 | ??1CArrayList@@QAE@XZ
-    inline ~CArrayList()
-    {
-        stub<member_func_t<void, CArrayList>>(0x543D40, this);
-    }
+    // 0x53BE80 | ??_ECArrayList@@QAEPAXI@Z
+    ~CArrayList();
 
     // 0x543D50 | ?Append@CArrayList@@QAEXH@Z
-    inline void Append(int32_t arg1)
-    {
-        return stub<member_func_t<void, CArrayList, int32_t>>(0x543D50, this, arg1);
-    }
-
-    // 0x543DB0 | ?SaveBinary@CArrayList@@QAEXPAVStream@@@Z
-    inline void SaveBinary(class Stream* arg1)
-    {
-        return stub<member_func_t<void, CArrayList, class Stream*>>(0x543DB0, this, arg1);
-    }
+    void Append(i32 arg1);
 
     // 0x543DE0 | ?ReadBinary@CArrayList@@QAEXPAVStream@@@Z
-    inline void ReadBinary(class Stream* arg1)
-    {
-        return stub<member_func_t<void, CArrayList, class Stream*>>(0x543DE0, this, arg1);
-    }
+    void ReadBinary(class Stream* arg1);
+
+    // 0x543DB0 | ?SaveBinary@CArrayList@@QAEXPAVStream@@@Z
+    void SaveBinary(class Stream* arg1);
 };
+
+check_size(CArrayList, 0x8);

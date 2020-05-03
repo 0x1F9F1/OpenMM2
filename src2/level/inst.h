@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -55,8 +55,8 @@
     0x464400 | public: virtual void __thiscall lvlInstance::DrawShadowMap(void) | ?DrawShadowMap@lvlInstance@@UAEXXZ
     0x464410 | public: virtual void __thiscall lvlInstance::DrawGlow(void) | ?DrawGlow@lvlInstance@@UAEXXZ
     0x464420 | public: virtual void __thiscall lvlInstance::DrawReflected(float) | ?DrawReflected@lvlInstance@@UAEXM@Z
-    0x464430 | public: virtual void __thiscall lvlInstance::DrawPhysics(class Vector3 const &) | ?DrawPhysics@lvlInstance@@UAEXABVVector3@@@Z
-    public: static bool __cdecl lvlInstance::ComputeShadowMatrix(class Matrix34 &,int,class Matrix34 const &) | ?ComputeShadowMatrix@lvlInstance@@SA_NAAVMatrix34@@HABV2@@Z
+    public: virtual void __thiscall lvlInstance::DrawPhysics(class Vector3 const &) | ?DrawPhysics@lvlInstance@@UAEXABVVector3@@@Z
+    0x464430 | public: static bool __cdecl lvlInstance::ComputeShadowMatrix(class Matrix34 &,int,class Matrix34 const &) | ?ComputeShadowMatrix@lvlInstance@@SA_NAAVMatrix34@@HABV2@@Z
     0x464670 | public: virtual int __thiscall lvlInstance::SetupGfxLights(class Matrix34 const &) | ?SetupGfxLights@lvlInstance@@UAEHABVMatrix34@@@Z
     0x464680 | protected: static void __cdecl lvlInstance::CreateTempBounds(void) | ?CreateTempBounds@lvlInstance@@KAXXZ
     0x4647E0 | protected: static void __cdecl lvlInstance::DeleteTempBounds(void) | ?DeleteTempBounds@lvlInstance@@KAXXZ
@@ -73,10 +73,10 @@
     0x5C6658 | public: static float lvlInstance::sm_ObjVLowThresh | ?sm_ObjVLowThresh@lvlInstance@@2MA
     0x5C665C | public: static float lvlInstance::sm_ObjLowThresh | ?sm_ObjLowThresh@lvlInstance@@2MA
     0x5C6660 | public: static float lvlInstance::sm_ObjMedThresh | ?sm_ObjMedThresh@lvlInstance@@2MA
-    0x655764 | private: static unsigned int lvlInstance::sm_InstanceCount | ?sm_InstanceCount@lvlInstance@@0IA
+    0x6316CC | private: static unsigned int lvlInstance::sm_InstanceCount | ?sm_InstanceCount@lvlInstance@@0IA
     unsigned int accumTimeAMBIENT_VEHICLES | ?accumTimeAMBIENT_VEHICLES@@3IA
     protected: static char lvlInstance::TempBoundInUse | ?TempBoundInUse@lvlInstance@@1DA
-    0x6316B8 | protected: static struct lvlInstance::GeomTableEntry * lvlInstance::GeomTable | ?GeomTable@lvlInstance@@1PAUGeomTableEntry@1@A
+    0x6316D8 | protected: static struct lvlInstance::GeomTableEntry * lvlInstance::GeomTable | ?GeomTable@lvlInstance@@1PAUGeomTableEntry@1@A
     int accumTriPLAYER_VEHICLES | ?accumTriPLAYER_VEHICLES@@3HA
     0x6516D8 | private: static unsigned char * lvlInstance::sm_Heap | ?sm_Heap@lvlInstance@@0PAEA
     int accumTriWHEELS | ?accumTriWHEELS@@3HA
@@ -87,361 +87,235 @@
     0x655760 | private: static unsigned int lvlInstance::sm_HeapTop | ?sm_HeapTop@lvlInstance@@0IA
     unsigned int accumTimePLAYER_VEHICLES | ?accumTimePLAYER_VEHICLES@@3IA
     int accumTriAMBIENT_VEHICLES | ?accumTriAMBIENT_VEHICLES@@3HA
-    protected: static int lvlInstance::GeomSetCount | ?GeomSetCount@lvlInstance@@1HA
-    private: static bool lvlInstance::sm_EnableGlows | ?sm_EnableGlows@lvlInstance@@0_NA
-    protected: static class phBoundBox * lvlInstance::Box1 | ?Box1@lvlInstance@@1PAVphBoundBox@@A
-    protected: static class phBoundBox * lvlInstance::Box2 | ?Box2@lvlInstance@@1PAVphBoundBox@@A
-    protected: static class phBoundHotdog * lvlInstance::Dog1 | ?Dog1@lvlInstance@@1PAVphBoundHotdog@@A
-    protected: static class phBoundHotdog * lvlInstance::Dog2 | ?Dog2@lvlInstance@@1PAVphBoundHotdog@@A
-    protected: static class phBoundSphere * lvlInstance::Sph1 | ?Sph1@lvlInstance@@1PAVphBoundSphere@@A
-    protected: static class phBoundSphere * lvlInstance::Sph2 | ?Sph2@lvlInstance@@1PAVphBoundSphere@@A
-    public: static bool lvlInstance::sm_EnableNoClip | ?sm_EnableNoClip@lvlInstance@@2_NA
+    0x655764 | protected: static int lvlInstance::GeomSetCount | ?GeomSetCount@lvlInstance@@1HA
+    0x6B2FA4 | private: static bool lvlInstance::sm_EnableGlows | ?sm_EnableGlows@lvlInstance@@0_NA
+    0x65576C | protected: static class phBoundBox * lvlInstance::Box1 | ?Box1@lvlInstance@@1PAVphBoundBox@@A
+    0x655770 | protected: static class phBoundBox * lvlInstance::Box2 | ?Box2@lvlInstance@@1PAVphBoundBox@@A
+    0x655774 | protected: static class phBoundHotdog * lvlInstance::Dog1 | ?Dog1@lvlInstance@@1PAVphBoundHotdog@@A
+    0x655778 | protected: static class phBoundHotdog * lvlInstance::Dog2 | ?Dog2@lvlInstance@@1PAVphBoundHotdog@@A
+    0x65577C | protected: static class phBoundSphere * lvlInstance::Sph1 | ?Sph1@lvlInstance@@1PAVphBoundSphere@@A
+    0x655780 | protected: static class phBoundSphere * lvlInstance::Sph2 | ?Sph2@lvlInstance@@1PAVphBoundSphere@@A
+    0x655784 | public: static bool lvlInstance::sm_EnableNoClip | ?sm_EnableNoClip@lvlInstance@@2_NA
     public: static bool lvlInstance::sm_DrawInstSpheres | ?sm_DrawInstSpheres@lvlInstance@@2_NA
 */
 
-// 0x463190 | ?Init@@YAHPBDABVMatrix34@@@Z
-inline int32_t Init(char const* arg1, class Matrix34 const& arg2)
-{
-    return stub<cdecl_t<int32_t, char const*, class Matrix34 const&>>(0x463190, arg1, arg2);
-}
-
-// 0x5C6650 | ?gInstanceAlignMask@@3IA
-inline extern_var(0x5C6650, uint32_t, gInstanceAlignMask);
-
 class lvlInstance
 {
+    // const lvlInstance::`vftable' @ 0x5B1988
+
 public:
-    // lvlInstance::`vftable' @ 0x5B1988
-
-    // 0x463110 | ??2lvlInstance@@SAPAXI@Z
-    static inline void* operator new(uint32_t arg1)
-    {
-        return stub<cdecl_t<void*, uint32_t>>(0x463110, arg1);
-    }
-
-    // 0x463170 | ??3lvlInstance@@SAXPAX@Z
-    static inline void operator delete(void* arg1)
-    {
-        return stub<cdecl_t<void, void*>>(0x463170, arg1);
-    }
-
-    // 0x4631A0 | ?ResetInstanceHeap@lvlInstance@@SAXXZ
-    static inline void ResetInstanceHeap()
-    {
-        return stub<cdecl_t<void>>(0x4631A0);
-    }
-
-    // 0x4631E0 | ?ResetAll@lvlInstance@@SAXXZ
-    static inline void ResetAll()
-    {
-        return stub<cdecl_t<void>>(0x4631E0);
-    }
-
     // 0x4631F0 | ??0lvlInstance@@QAE@XZ
-    inline lvlInstance()
-    {
-        stub<member_func_t<void, lvlInstance>>(0x4631F0, this);
-    }
+    lvlInstance();
 
     // 0x463220 | ??1lvlInstance@@QAE@XZ
-    inline ~lvlInstance()
-    {
-        stub<member_func_t<void, lvlInstance>>(0x463220, this);
-    }
-
-    // 0x463290 | ?SetShadowBillboardMtx@lvlInstance@@SAXAAVMatrix44@@@Z
-    static inline void SetShadowBillboardMtx(class Matrix44& arg1)
-    {
-        return stub<cdecl_t<void, class Matrix44&>>(0x463290, arg1);
-    }
-
-    // 0x4632C0 | ?GetGeomSet@lvlInstance@@KAHPBD0H@Z
-    static inline int32_t GetGeomSet(char const* arg1, char const* arg2, int32_t arg3)
-    {
-        return stub<cdecl_t<int32_t, char const*, char const*, int32_t>>(0x4632C0, arg1, arg2, arg3);
-    }
-
-    // 0x463940 | ?LoadBoundOnLastEntry@lvlInstance@@QAE_NPBD@Z
-    inline bool LoadBoundOnLastEntry(char const* arg1)
-    {
-        return stub<member_func_t<bool, lvlInstance, char const*>>(0x463940, this, arg1);
-    }
-
-    // 0x463A40 | ?GetBoundSphere@lvlInstance@@QAEAAVVector4@@AAV2@@Z
-    inline class Vector4& GetBoundSphere(class Vector4& arg1)
-    {
-        return stub<member_func_t<class Vector4&, lvlInstance, class Vector4&>>(0x463A40, this, arg1);
-    }
-
-    // 0x463A80 | ?BeginGeom@lvlInstance@@QAE_NPBD0H@Z
-    inline bool BeginGeom(char const* arg1, char const* arg2, int32_t arg3)
-    {
-        return stub<member_func_t<bool, lvlInstance, char const*, char const*, int32_t>>(
-            0x463A80, this, arg1, arg2, arg3);
-    }
+    ~lvlInstance();
 
     // 0x463BA0 | ?AddGeom@lvlInstance@@QAEHPBD0H@Z
-    inline int32_t AddGeom(char const* arg1, char const* arg2, int32_t arg3)
-    {
-        return stub<member_func_t<int32_t, lvlInstance, char const*, char const*, int32_t>>(
-            0x463BA0, this, arg1, arg2, arg3);
-    }
+    i32 AddGeom(char const* arg1, char const* arg2, i32 arg3);
+
+    // 0x463A80 | ?BeginGeom@lvlInstance@@QAE_NPBD0H@Z
+    bool BeginGeom(char const* arg1, char const* arg2, i32 arg3);
 
     // 0x463BC0 | ?EndGeom@lvlInstance@@QAEXXZ
-    inline void EndGeom()
-    {
-        return stub<member_func_t<void, lvlInstance>>(0x463BC0, this);
-    }
+    void EndGeom();
 
-    // 0x463D50 | ?AddSphere@lvlInstance@@SAHM@Z
-    static inline int32_t AddSphere(float arg1)
-    {
-        return stub<cdecl_t<int32_t, float>>(0x463D50, arg1);
-    }
+    // 0x463A40 | ?GetBoundSphere@lvlInstance@@QAEAAVVector4@@AAV2@@Z
+    class Vector4& GetBoundSphere(class Vector4& arg1);
 
     // 0x463DA0 | ?InitBoundTerrain@lvlInstance@@QAE_NPBD@Z
-    inline bool InitBoundTerrain(char const* arg1)
-    {
-        return stub<member_func_t<bool, lvlInstance, char const*>>(0x463DA0, this, arg1);
-    }
+    bool InitBoundTerrain(char const* arg1);
 
     // 0x463F50 | ?InitBoundTerrainLocal@lvlInstance@@QAE_NPBD@Z
-    inline bool InitBoundTerrainLocal(char const* arg1)
-    {
-        return stub<member_func_t<bool, lvlInstance, char const*>>(0x463F50, this, arg1);
-    }
-
-    // 0x4641A0 | ?NeedGhostBound@lvlInstance@@QAE_NPBVVector3@@H@Z
-    inline bool NeedGhostBound(class Vector3 const* arg1, int32_t arg2)
-    {
-        return stub<member_func_t<bool, lvlInstance, class Vector3 const*, int32_t>>(0x4641A0, this, arg1, arg2);
-    }
-
-    // 0x464200 | ?InitGhostBound@lvlInstance@@QAE_NPAVphBound@@PBVVector3@@H@Z
-    inline bool InitGhostBound(class phBound* arg1, class Vector3 const* arg2, int32_t arg3)
-    {
-        return stub<member_func_t<bool, lvlInstance, class phBound*, class Vector3 const*, int32_t>>(
-            0x464200, this, arg1, arg2, arg3);
-    }
+    bool InitBoundTerrainLocal(char const* arg1);
 
     // 0x464330 | ?InitGhost@lvlInstance@@QAEHPBDABVMatrix34@@@Z
-    inline int32_t InitGhost(char const* arg1, class Matrix34 const& arg2)
-    {
-        return stub<member_func_t<int32_t, lvlInstance, char const*, class Matrix34 const&>>(
-            0x464330, this, arg1, arg2);
-    }
+    i32 InitGhost(char const* arg1, class Matrix34 const& arg2);
 
-    // 0x464680 | ?CreateTempBounds@lvlInstance@@KAXXZ
-    static inline void CreateTempBounds()
-    {
-        return stub<cdecl_t<void>>(0x464680);
-    }
+    // 0x464200 | ?InitGhostBound@lvlInstance@@QAE_NPAVphBound@@PBVVector3@@H@Z
+    bool InitGhostBound(class phBound* arg1, class Vector3 const* arg2, i32 arg3);
 
-    // 0x4647E0 | ?DeleteTempBounds@lvlInstance@@KAXXZ
-    static inline void DeleteTempBounds()
-    {
-        return stub<cdecl_t<void>>(0x4647E0);
-    }
+    // 0x463940 | ?LoadBoundOnLastEntry@lvlInstance@@QAE_NPBD@Z
+    bool LoadBoundOnLastEntry(char const* arg1);
 
-    // 0x464B00 | ?PreLoadShader@lvlInstance@@QAEXH@Z
-    inline void PreLoadShader(int32_t arg1)
-    {
-        return stub<member_func_t<void, lvlInstance, int32_t>>(0x464B00, this, arg1);
-    }
+    // 0x4641A0 | ?NeedGhostBound@lvlInstance@@QAE_NPBVVector3@@H@Z
+    bool NeedGhostBound(class Vector3 const* arg1, i32 arg2);
 
     // 0x464B70 | ?Optimize@lvlInstance@@QAEXH@Z
-    inline void Optimize(int32_t arg1)
-    {
-        return stub<member_func_t<void, lvlInstance, int32_t>>(0x464B70, this, arg1);
-    }
+    void Optimize(i32 arg1);
 
-    // 0x5C6654 | ?sm_ObjNoDrawThresh@lvlInstance@@2MA
-    inline extern_var(0x5C6654, float, sm_ObjNoDrawThresh);
+    // 0x464B00 | ?PreLoadShader@lvlInstance@@QAEXH@Z
+    void PreLoadShader(i32 arg1);
 
-    // 0x5C6658 | ?sm_ObjVLowThresh@lvlInstance@@2MA
-    inline extern_var(0x5C6658, float, sm_ObjVLowThresh);
+    // 0x463280 | ?Reset@lvlInstance@@UAEXXZ
+    virtual void Reset();
+
+    virtual class Vector3 const& GetPosition() = 0;
+
+    // 0x4649F0 | ?IsVisible@lvlInstance@@UAEHABVgfxViewport@@@Z
+    virtual i32 IsVisible(class gfxViewport const& arg1);
+
+    virtual class Matrix34 const& GetMatrix(class Matrix34& arg1) = 0;
+
+    virtual void SetMatrix(class Matrix34 const& arg1) = 0;
+
+    // 0x4643D0 | ?SetVariant@lvlInstance@@UAEXH@Z
+    virtual void SetVariant(i32 arg1);
+
+    // 0x4643E0 | ?GetRadius@lvlInstance@@UAE?BMXZ
+    virtual f32 const GetRadius();
+
+    // 0x4643B0 | ?GetEntity@lvlInstance@@UAEPAVdgPhysEntity@@XZ
+    virtual class dgPhysEntity* GetEntity();
+
+    // 0x4643C0 | ?AttachEntity@lvlInstance@@UAEPAVdgPhysEntity@@XZ
+    virtual class dgPhysEntity* AttachEntity();
+
+    // 0x4643A0 | ?GetVelocity@lvlInstance@@UAEABVVector3@@XZ
+    virtual class Vector3 const& GetVelocity();
+
+    // 0x43FC30 | ?Detach@lvlInstance@@UAEXXZ
+    virtual void Detach();
+
+    virtual void Draw(i32 arg1) = 0;
+
+    // 0x4643F0 | ?DrawShadow@lvlInstance@@UAEXXZ
+    virtual void DrawShadow();
+
+    // 0x464400 | ?DrawShadowMap@lvlInstance@@UAEXXZ
+    virtual void DrawShadowMap();
+
+    // 0x464410 | ?DrawGlow@lvlInstance@@UAEXXZ
+    virtual void DrawGlow();
+
+    // 0x464420 | ?DrawReflected@lvlInstance@@UAEXM@Z
+    virtual void DrawReflected(f32 arg1);
+
+    // 0x4648B0 | ?DrawReflectedParts@lvlInstance@@UAEXH@Z
+    virtual void DrawReflectedParts(i32 arg1);
+
+    // 0x463D90 | ?Init@lvlInstance@@UAEHPBDABVMatrix34@@H@Z
+    virtual i32 Init(char const* arg1, class Matrix34 const& arg2, i32 arg3);
+
+    virtual u32 SizeOf() = 0;
+
+    // 0x463180 | ?IsLandmark@lvlInstance@@UAE_NXZ
+    virtual bool IsLandmark();
+
+    // 0x43FC40 | ?IsCollidable@lvlInstance@@UAE_NXZ
+    virtual bool IsCollidable();
+
+    // 0x43FC50 | ?IsTerrainCollidable@lvlInstance@@UAE_NXZ
+    virtual bool IsTerrainCollidable();
+
+    // 0x4632B0 | ?GetNumLightSources@lvlInstance@@UAEHXZ
+    virtual i32 GetNumLightSources();
+
+    // 0x4630B0 | ?GetLightInfo@lvlInstance@@UAEXHPAVcltLight@@@Z
+    virtual void GetLightInfo(i32 arg1, class cltLight* arg2);
+
+    // 0x464670 | ?SetupGfxLights@lvlInstance@@UAEHABVMatrix34@@@Z
+    virtual i32 SetupGfxLights(class Matrix34 const& arg1);
+
+    // 0x4648C0 | ?GetBound@lvlInstance@@UAEPBVphBound@@H@Z
+    virtual class phBound const* GetBound(i32 arg1);
+
+    // 0x463170 | ??3lvlInstance@@SAXPAX@Z
+    static void operator delete(void* arg1);
+
+    // 0x463110 | ??2lvlInstance@@SAPAXI@Z
+    static void* operator new(u32 arg1);
+
+    // 0x463D50 | ?AddSphere@lvlInstance@@SAHM@Z
+    static i32 AddSphere(f32 arg1);
+
+    // 0x464430 | ?ComputeShadowMatrix@lvlInstance@@SA_NAAVMatrix34@@HABV2@@Z
+    static bool ComputeShadowMatrix(class Matrix34& arg1, i32 arg2, class Matrix34 const& arg3);
+
+    // 0x4631E0 | ?ResetAll@lvlInstance@@SAXXZ
+    static void ResetAll();
+
+    // 0x4631A0 | ?ResetInstanceHeap@lvlInstance@@SAXXZ
+    static void ResetInstanceHeap();
+
+    // 0x463290 | ?SetShadowBillboardMtx@lvlInstance@@SAXAAVMatrix44@@@Z
+    static void SetShadowBillboardMtx(class Matrix44& arg1);
+
+    // 0x655784 | ?sm_EnableNoClip@lvlInstance@@2_NA
+    static inline extern_var(0x655784, bool, sm_EnableNoClip);
 
     // 0x5C665C | ?sm_ObjLowThresh@lvlInstance@@2MA
-    inline extern_var(0x5C665C, float, sm_ObjLowThresh);
+    static inline extern_var(0x5C665C, f32, sm_ObjLowThresh);
 
     // 0x5C6660 | ?sm_ObjMedThresh@lvlInstance@@2MA
-    inline extern_var(0x5C6660, float, sm_ObjMedThresh);
+    static inline extern_var(0x5C6660, f32, sm_ObjMedThresh);
 
-    // 0x655764 | ?sm_InstanceCount@lvlInstance@@0IA
-    inline extern_var(0x655764, uint32_t, sm_InstanceCount);
+    // 0x5C6654 | ?sm_ObjNoDrawThresh@lvlInstance@@2MA
+    static inline extern_var(0x5C6654, f32, sm_ObjNoDrawThresh);
 
-    // 0x6316B8 | ?GeomTable@lvlInstance@@1PAUGeomTableEntry@1@A
-    inline extern_var(0x6316B8, struct lvlInstance::GeomTableEntry*, GeomTable);
-
-    // 0x6516D8 | ?sm_Heap@lvlInstance@@0PAEA
-    inline extern_var(0x6516D8, uint8_t*, sm_Heap);
+    // 0x5C6658 | ?sm_ObjVLowThresh@lvlInstance@@2MA
+    static inline extern_var(0x5C6658, f32, sm_ObjVLowThresh);
 
     // 0x6516E0 | ?sm_ShadowBillBoardMtx@lvlInstance@@2VMatrix44@@A
     static inline extern_var(0x6516E0, class Matrix44, sm_ShadowBillBoardMtx);
 
-    // 0x651748 | ?sm_XrefHash@lvlInstance@@0VHashTable@@A
-    static inline extern_var(0x651748, class HashTable, sm_XrefHash);
+protected:
+    // 0x464680 | ?CreateTempBounds@lvlInstance@@KAXXZ
+    static void CreateTempBounds();
+
+    // 0x4647E0 | ?DeleteTempBounds@lvlInstance@@KAXXZ
+    static void DeleteTempBounds();
+
+    // 0x4632C0 | ?GetGeomSet@lvlInstance@@KAHPBD0H@Z
+    static i32 GetGeomSet(char const* arg1, char const* arg2, i32 arg3);
+
+    // 0x65576C | ?Box1@lvlInstance@@1PAVphBoundBox@@A
+    static inline extern_var(0x65576C, class phBoundBox*, Box1);
+
+    // 0x655770 | ?Box2@lvlInstance@@1PAVphBoundBox@@A
+    static inline extern_var(0x655770, class phBoundBox*, Box2);
+
+    // 0x655774 | ?Dog1@lvlInstance@@1PAVphBoundHotdog@@A
+    static inline extern_var(0x655774, class phBoundHotdog*, Dog1);
+
+    // 0x655778 | ?Dog2@lvlInstance@@1PAVphBoundHotdog@@A
+    static inline extern_var(0x655778, class phBoundHotdog*, Dog2);
 
     // 0x651760 | ?GeomNames@lvlInstance@@1PAPBDA
-    inline extern_var(0x651760, char const**, GeomNames);
+    static inline extern_var(0x651760, char const**, GeomNames);
+
+    // 0x655764 | ?GeomSetCount@lvlInstance@@1HA
+    static inline extern_var(0x655764, i32, GeomSetCount);
+
+    // 0x6316D8 | ?GeomTable@lvlInstance@@1PAUGeomTableEntry@1@A
+    static inline extern_var(0x6316D8, struct lvlInstance::GeomTableEntry*, GeomTable);
+
+    // 0x65577C | ?Sph1@lvlInstance@@1PAVphBoundSphere@@A
+    static inline extern_var(0x65577C, class phBoundSphere*, Sph1);
+
+    // 0x655780 | ?Sph2@lvlInstance@@1PAVphBoundSphere@@A
+    static inline extern_var(0x655780, class phBoundSphere*, Sph2);
+
+private:
+    // 0x6B2FA4 | ?sm_EnableGlows@lvlInstance@@0_NA
+    static inline extern_var(0x6B2FA4, bool, sm_EnableGlows);
+
+    // 0x6516D8 | ?sm_Heap@lvlInstance@@0PAEA
+    static inline extern_var(0x6516D8, u8*, sm_Heap);
 
     // 0x655760 | ?sm_HeapTop@lvlInstance@@0IA
-    inline extern_var(0x655760, uint32_t, sm_HeapTop);
+    static inline extern_var(0x655760, u32, sm_HeapTop);
 
-    // 0x463280 | ?Reset@lvlInstance@@UAEXXZ
-    virtual inline void Reset()
-    {
-        return stub<member_func_t<void, lvlInstance>>(0x463280, this);
-    }
+    // 0x6316CC | ?sm_InstanceCount@lvlInstance@@0IA
+    static inline extern_var(0x6316CC, u32, sm_InstanceCount);
 
-    // 0x582519 | __purecall
-    virtual inline class Vector3 const& GetPosition()
-    {
-        return stub<member_func_t<class Vector3 const&, lvlInstance>>(0x582519, this);
-    }
-
-    // 0x4649F0 | ?IsVisible@lvlInstance@@UAEHABVgfxViewport@@@Z
-    virtual inline int32_t IsVisible(class gfxViewport const& arg1)
-    {
-        return stub<member_func_t<int32_t, lvlInstance, class gfxViewport const&>>(0x4649F0, this, arg1);
-    }
-
-    // 0x582519 | __purecall
-    virtual inline class Matrix34 const& GetMatrix(class Matrix34& arg1)
-    {
-        return stub<member_func_t<class Matrix34 const&, lvlInstance, class Matrix34&>>(0x582519, this, arg1);
-    }
-
-    // 0x582519 | __purecall
-    virtual inline void SetMatrix(class Matrix34 const& arg1)
-    {
-        return stub<member_func_t<void, lvlInstance, class Matrix34 const&>>(0x582519, this, arg1);
-    }
-
-    // 0x4643D0 | ?SetVariant@lvlInstance@@UAEXH@Z
-    virtual inline void SetVariant(int32_t arg1)
-    {
-        return stub<member_func_t<void, lvlInstance, int32_t>>(0x4643D0, this, arg1);
-    }
-
-    // 0x4643E0 | ?GetRadius@lvlInstance@@UAE?BMXZ
-    virtual inline float const GetRadius()
-    {
-        return stub<member_func_t<float const, lvlInstance>>(0x4643E0, this);
-    }
-
-    // 0x4643B0 | ?GetEntity@lvlInstance@@UAEPAVdgPhysEntity@@XZ
-    virtual inline class dgPhysEntity* GetEntity()
-    {
-        return stub<member_func_t<class dgPhysEntity*, lvlInstance>>(0x4643B0, this);
-    }
-
-    // 0x4643C0 | ?AttachEntity@lvlInstance@@UAEPAVdgPhysEntity@@XZ
-    virtual inline class dgPhysEntity* AttachEntity()
-    {
-        return stub<member_func_t<class dgPhysEntity*, lvlInstance>>(0x4643C0, this);
-    }
-
-    // 0x4643A0 | ?GetVelocity@lvlInstance@@UAEABVVector3@@XZ
-    virtual inline class Vector3 const& GetVelocity()
-    {
-        return stub<member_func_t<class Vector3 const&, lvlInstance>>(0x4643A0, this);
-    }
-
-    // 0x43FC30 | ?Detach@lvlInstance@@UAEXXZ
-    virtual inline void Detach()
-    {
-        return stub<member_func_t<void, lvlInstance>>(0x43FC30, this);
-    }
-
-    // 0x582519 | __purecall
-    virtual inline void Draw(int32_t arg1)
-    {
-        return stub<member_func_t<void, lvlInstance, int32_t>>(0x582519, this, arg1);
-    }
-
-    // 0x4643F0 | ?DrawShadow@lvlInstance@@UAEXXZ
-    virtual inline void DrawShadow()
-    {
-        return stub<member_func_t<void, lvlInstance>>(0x4643F0, this);
-    }
-
-    // 0x464400 | ?DrawShadowMap@lvlInstance@@UAEXXZ
-    virtual inline void DrawShadowMap()
-    {
-        return stub<member_func_t<void, lvlInstance>>(0x464400, this);
-    }
-
-    // 0x464410 | ?DrawGlow@lvlInstance@@UAEXXZ
-    virtual inline void DrawGlow()
-    {
-        return stub<member_func_t<void, lvlInstance>>(0x464410, this);
-    }
-
-    // 0x464420 | ?DrawReflected@lvlInstance@@UAEXM@Z
-    virtual inline void DrawReflected(float arg1)
-    {
-        return stub<member_func_t<void, lvlInstance, float>>(0x464420, this, arg1);
-    }
-
-    // 0x4648B0 | ?DrawReflectedParts@lvlInstance@@UAEXH@Z
-    virtual inline void DrawReflectedParts(int32_t arg1)
-    {
-        return stub<member_func_t<void, lvlInstance, int32_t>>(0x4648B0, this, arg1);
-    }
-
-    // 0x463D90 | ?Init@lvlInstance@@UAEHPBDABVMatrix34@@H@Z
-    virtual inline int32_t Init(char const* arg1, class Matrix34 const& arg2, int32_t arg3)
-    {
-        return stub<member_func_t<int32_t, lvlInstance, char const*, class Matrix34 const&, int32_t>>(
-            0x463D90, this, arg1, arg2, arg3);
-    }
-
-    // 0x582519 | __purecall
-    virtual inline uint32_t SizeOf()
-    {
-        return stub<member_func_t<uint32_t, lvlInstance>>(0x582519, this);
-    }
-
-    // 0x463180 | ?IsLandmark@lvlInstance@@UAE_NXZ
-    virtual inline bool IsLandmark()
-    {
-        return stub<member_func_t<bool, lvlInstance>>(0x463180, this);
-    }
-
-    // 0x43FC40 | ?IsCollidable@lvlInstance@@UAE_NXZ
-    virtual inline bool IsCollidable()
-    {
-        return stub<member_func_t<bool, lvlInstance>>(0x43FC40, this);
-    }
-
-    // 0x43FC50 | ?IsTerrainCollidable@lvlInstance@@UAE_NXZ
-    virtual inline bool IsTerrainCollidable()
-    {
-        return stub<member_func_t<bool, lvlInstance>>(0x43FC50, this);
-    }
-
-    // 0x4632B0 | ?GetNumLightSources@lvlInstance@@UAEHXZ
-    virtual inline int32_t GetNumLightSources()
-    {
-        return stub<member_func_t<int32_t, lvlInstance>>(0x4632B0, this);
-    }
-
-    // 0x4630B0 | ?GetLightInfo@lvlInstance@@UAEXHPAVcltLight@@@Z
-    virtual inline void GetLightInfo(int32_t arg1, class cltLight* arg2)
-    {
-        return stub<member_func_t<void, lvlInstance, int32_t, class cltLight*>>(0x4630B0, this, arg1, arg2);
-    }
-
-    // 0x464670 | ?SetupGfxLights@lvlInstance@@UAEHABVMatrix34@@@Z
-    virtual inline int32_t SetupGfxLights(class Matrix34 const& arg1)
-    {
-        return stub<member_func_t<int32_t, lvlInstance, class Matrix34 const&>>(0x464670, this, arg1);
-    }
-
-    // 0x4648C0 | ?GetBound@lvlInstance@@UAEPBVphBound@@H@Z
-    virtual inline class phBound const* GetBound(int32_t arg1)
-    {
-        return stub<member_func_t<class phBound const*, lvlInstance, int32_t>>(0x4648C0, this, arg1);
-    }
+    // 0x651748 | ?sm_XrefHash@lvlInstance@@0VHashTable@@A
+    static inline extern_var(0x651748, class HashTable, sm_XrefHash);
 };
+
+check_size(lvlInstance, 0x0);
+
+// 0x463190 | ?Init@@YAHPBDABVMatrix34@@@Z
+i32 Init(char const* arg1, class Matrix34 const& arg2);
+
+// 0x5C6650 | ?gInstanceAlignMask@@3IA
+inline extern_var(0x5C6650, u32, gInstanceAlignMask);

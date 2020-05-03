@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,36 @@
 */
 
 #include "skeleton.h"
+
+crSkeleton::crSkeleton()
+{
+    unimplemented();
+}
+
+crSkeleton::~crSkeleton()
+{
+    unimplemented();
+}
+
+void crSkeleton::Attach(class Matrix34* const arg1)
+{
+    return stub<thiscall_t<void, crSkeleton*, class Matrix34* const>>(0x57C650, this, arg1);
+}
+
+void crSkeleton::Attach(class Matrix44* const arg1)
+{
+    return stub<thiscall_t<void, crSkeleton*, class Matrix44* const>>(0x57C690, this, arg1);
+}
+
+void crSkeleton::Init(class crSkeletonData const& arg1, class Matrix34* arg2)
+{
+    return stub<thiscall_t<void, crSkeleton*, class crSkeletonData const&, class Matrix34*>>(
+        0x57C5D0, this, arg1, arg2);
+}
+
+void crSkeleton::Update()
+{
+    return stub<thiscall_t<void, crSkeleton*>>(0x57C630, this);
+}
+
+define_dummy_symbol(crskeleton_skeleton);

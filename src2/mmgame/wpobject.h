@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     mmgame:wpobject
@@ -46,133 +48,71 @@
     0x5B1180 | const mmWaypointObject::`vftable' | ??_7mmWaypointObject@@6B@
 */
 
-// 0x43DDF0 | ?wpmin@@YAMMM@Z
-inline float wpmin(float arg1, float arg2)
-{
-    return stub<cdecl_t<float, float, float>>(0x43DDF0, arg1, arg2);
-}
-
 // 0x43DE10 | ?wpmax@@YAMMM@Z
-inline float wpmax(float arg1, float arg2)
-{
-    return stub<cdecl_t<float, float, float>>(0x43DE10, arg1, arg2);
-}
+f32 wpmax(f32 arg1, f32 arg2);
 
-struct mmWaypointObject : asNode
+// 0x43DDF0 | ?wpmin@@YAMMM@Z
+f32 wpmin(f32 arg1, f32 arg2);
+
+class mmWaypointObject : public asNode
 {
+    // const mmWaypointObject::`vftable' @ 0x5B1180
+
 public:
-    // mmWaypointObject::`vftable' @ 0x5B1180
-
     // 0x43DE30 | ??0mmWaypointObject@@QAE@AAVVector4@@PADHMHM@Z
-    inline mmWaypointObject(class Vector4& arg1, char* arg2, int32_t arg3, float arg4, int32_t arg5, float arg6)
-    {
-        stub<member_func_t<void, mmWaypointObject, class Vector4&, char*, int32_t, float, int32_t, float>>(
-            0x43DE30, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
+    mmWaypointObject(class Vector4& arg1, char* arg2, i32 arg3, f32 arg4, i32 arg5, f32 arg6);
+
+    // 0x43E6E0 | ??_GmmWaypointObject@@UAEPAXI@Z
+    // 0x43E010 | ??1mmWaypointObject@@UAE@XZ
+    ~mmWaypointObject() override;
 
     // 0x43E0C0 | ?Activate@mmWaypointObject@@QAEXXZ
-    inline void Activate()
-    {
-        return stub<member_func_t<void, mmWaypointObject>>(0x43E0C0, this);
-    }
-
-    // 0x43E0D0 | ?Deactivate@mmWaypointObject@@QAEXXZ
-    inline void Deactivate()
-    {
-        return stub<member_func_t<void, mmWaypointObject>>(0x43E0D0, this);
-    }
-
-    // 0x43E0E0 | ?SetHeading@mmWaypointObject@@QAEXM@Z
-    inline void SetHeading(float arg1)
-    {
-        return stub<member_func_t<void, mmWaypointObject, float>>(0x43E0E0, this, arg1);
-    }
-
-    // 0x43E140 | ?SetPos@mmWaypointObject@@QAEXVVector3@@@Z
-    inline void SetPos(class Vector3 arg1)
-    {
-        return stub<member_func_t<void, mmWaypointObject, class Vector3>>(0x43E140, this, arg1);
-    }
-
-    // 0x43E160 | ?SetHeadingType@mmWaypointObject@@QAEXH@Z
-    inline void SetHeadingType(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmWaypointObject, int32_t>>(0x43E160, this, arg1);
-    }
-
-    // 0x43E170 | ?SetRadius@mmWaypointObject@@QAEXM@Z
-    inline void SetRadius(float arg1)
-    {
-        return stub<member_func_t<void, mmWaypointObject, float>>(0x43E170, this, arg1);
-    }
+    void Activate();
 
     // 0x43E190 | ?CalculateGatePoints@mmWaypointObject@@QAEXXZ
-    inline void CalculateGatePoints()
-    {
-        return stub<member_func_t<void, mmWaypointObject>>(0x43E190, this);
-    }
+    void CalculateGatePoints();
 
-    // 0x43E210 | ?PlaneHit@mmWaypointObject@@QAEHVMatrix34@@VVector2@@1VVector3@@@Z
-    inline int32_t PlaneHit(class Matrix34 arg1, class Vector2 arg2, class Vector2 arg3, class Vector3 arg4)
-    {
-        return stub<
-            member_func_t<int32_t, mmWaypointObject, class Matrix34, class Vector2, class Vector2, class Vector3>>(
-            0x43E210, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x43E3B0 | ?RadiusHit@mmWaypointObject@@QAEHVVector3@@@Z
-    inline int32_t RadiusHit(class Vector3 arg1)
-    {
-        return stub<member_func_t<int32_t, mmWaypointObject, class Vector3>>(0x43E3B0, this, arg1);
-    }
-
-    // 0x43E400 | ?LineIntersect@mmWaypointObject@@QAEHVVector2@@000M@Z
-    inline int32_t LineIntersect(
-        class Vector2 arg1, class Vector2 arg2, class Vector2 arg3, class Vector2 arg4, float arg5)
-    {
-        return stub<member_func_t<int32_t, mmWaypointObject, class Vector2, class Vector2, class Vector2, class Vector2,
-            float>>(0x43E400, this, arg1, arg2, arg3, arg4, arg5);
-    }
+    // 0x43E0D0 | ?Deactivate@mmWaypointObject@@QAEXXZ
+    void Deactivate();
 
     // 0x43E5E0 | ?GetDrawFlag@mmWaypointObject@@QAEHXZ
-    inline int32_t GetDrawFlag()
-    {
-        return stub<member_func_t<int32_t, mmWaypointObject>>(0x43E5E0, this);
-    }
-
-    // 0x43E5F0 | ?Move@mmWaypointObject@@QAEXXZ
-    inline void Move()
-    {
-        return stub<member_func_t<void, mmWaypointObject>>(0x43E5F0, this);
-    }
+    i32 GetDrawFlag();
 
     // 0x43E6C0 | ?GetHitFlag@mmWaypointObject@@QAEHXZ
-    inline int32_t GetHitFlag()
-    {
-        return stub<member_func_t<int32_t, mmWaypointObject>>(0x43E6C0, this);
-    }
+    i32 GetHitFlag();
 
-    // 0x43E6D0 | ?SetHitFlag@mmWaypointObject@@QAEXH@Z
-    inline void SetHitFlag(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmWaypointObject, int32_t>>(0x43E6D0, this, arg1);
-    }
+    // 0x43E400 | ?LineIntersect@mmWaypointObject@@QAEHVVector2@@000M@Z
+    i32 LineIntersect(class Vector2 arg1, class Vector2 arg2, class Vector2 arg3, class Vector2 arg4, f32 arg5);
 
-    // 0x43E010 | ??1mmWaypointObject@@UAE@XZ
-    inline ~mmWaypointObject() override
-    {
-        stub<member_func_t<void, mmWaypointObject>>(0x43E010, this);
-    }
+    // 0x43E5F0 | ?Move@mmWaypointObject@@QAEXXZ
+    void Move();
 
-    // 0x43E060 | ?Update@mmWaypointObject@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmWaypointObject>>(0x43E060, this);
-    }
+    // 0x43E210 | ?PlaneHit@mmWaypointObject@@QAEHVMatrix34@@VVector2@@1VVector3@@@Z
+    i32 PlaneHit(class Matrix34 arg1, class Vector2 arg2, class Vector2 arg3, class Vector3 arg4);
+
+    // 0x43E3B0 | ?RadiusHit@mmWaypointObject@@QAEHVVector3@@@Z
+    i32 RadiusHit(class Vector3 arg1);
 
     // 0x43E020 | ?Reset@mmWaypointObject@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmWaypointObject>>(0x43E020, this);
-    }
+    void Reset() override;
+
+    // 0x43E0E0 | ?SetHeading@mmWaypointObject@@QAEXM@Z
+    void SetHeading(f32 arg1);
+
+    // 0x43E160 | ?SetHeadingType@mmWaypointObject@@QAEXH@Z
+    void SetHeadingType(i32 arg1);
+
+    // 0x43E6D0 | ?SetHitFlag@mmWaypointObject@@QAEXH@Z
+    void SetHitFlag(i32 arg1);
+
+    // 0x43E140 | ?SetPos@mmWaypointObject@@QAEXVVector3@@@Z
+    void SetPos(class Vector3 arg1);
+
+    // 0x43E170 | ?SetRadius@mmWaypointObject@@QAEXM@Z
+    void SetRadius(f32 arg1);
+
+    // 0x43E060 | ?Update@mmWaypointObject@@UAEXXZ
+    void Update() override;
 };
+
+check_size(mmWaypointObject, 0x5C);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "ageaudio/aud3dambientobject.h"
+
 /*
     gizmo:bridgeaudio
 
@@ -30,26 +32,22 @@
     0x5B6260 | const mmBridgeAudio::`vftable' | ??_7mmBridgeAudio@@6B@
 */
 
-struct mmBridgeAudio : Aud3DAmbientObject
+class mmBridgeAudio : public Aud3DAmbientObject
 {
-public:
-    // mmBridgeAudio::`vftable' @ 0x5B6260
+    // const mmBridgeAudio::`vftable' @ 0x5B6260
 
+public:
     // 0x579D00 | ??0mmBridgeAudio@@QAE@XZ
-    inline mmBridgeAudio()
-    {
-        stub<member_func_t<void, mmBridgeAudio>>(0x579D00, this);
-    }
+    mmBridgeAudio();
+
+    // 0x579D20 | ??1mmBridgeAudio@@UAE@XZ
+    ~mmBridgeAudio();
 
     // 0x579D30 | ?Activate@mmBridgeAudio@@QAEXH@Z
-    inline void Activate(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmBridgeAudio, int32_t>>(0x579D30, this, arg1);
-    }
+    void Activate(i32 arg1);
 
     // 0x579D70 | ?Deactivate@mmBridgeAudio@@QAEXH@Z
-    inline void Deactivate(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmBridgeAudio, int32_t>>(0x579D70, this, arg1);
-    }
+    void Deactivate(i32 arg1);
 };
+
+check_size(mmBridgeAudio, 0x0);

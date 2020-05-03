@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "pu_menu.h"
 
 /*
     mmui:pu_results
@@ -45,125 +47,68 @@
     0x5B4680 | const PUResults::`vftable' | ??_7PUResults@@6B@
 */
 
-struct PUResults : PUMenuBase
+class PUResults : public PUMenuBase
 {
+    // const PUResults::`vftable' @ 0x5B4680
+
 public:
-    // PUResults::`vftable' @ 0x5B4680
-
     // 0x508FC0 | ??0PUResults@@QAE@HMMMMPADHH@Z
-    inline PUResults(
-        int32_t arg1, float arg2, float arg3, float arg4, float arg5, char* arg6, int32_t arg7, int32_t arg8)
-    {
-        stub<member_func_t<void, PUResults, int32_t, float, float, float, float, char*, int32_t, int32_t>>(
-            0x508FC0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
-    }
+    PUResults(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6, i32 arg7, i32 arg8);
 
-    // 0x509120 | ?Init320@PUResults@@QAEXXZ
-    inline void Init320()
-    {
-        return stub<member_func_t<void, PUResults>>(0x509120, this);
-    }
-
-    // 0x509600 | ?Init640@PUResults@@QAEXXZ
-    inline void Init640()
-    {
-        return stub<member_func_t<void, PUResults>>(0x509600, this);
-    }
-
-    // 0x509B20 | ?AddTitle@PUResults@@QAEXPAULocString@@0@Z
-    inline void AddTitle(struct LocString* arg1, struct LocString* arg2)
-    {
-        return stub<member_func_t<void, PUResults, struct LocString*, struct LocString*>>(0x509B20, this, arg1, arg2);
-    }
-
-    // 0x509B60 | ?RosterRO@PUResults@@QAEXH@Z
-    inline void RosterRO(int32_t arg1)
-    {
-        return stub<member_func_t<void, PUResults, int32_t>>(0x509B60, this, arg1);
-    }
-
-    // 0x509B80 | ?RestartRO@PUResults@@QAEXH@Z
-    inline void RestartRO(int32_t arg1)
-    {
-        return stub<member_func_t<void, PUResults, int32_t>>(0x509B80, this, arg1);
-    }
-
-    // 0x509BA0 | ?IsRosterReadOnly@PUResults@@QAEHXZ
-    inline int32_t IsRosterReadOnly()
-    {
-        return stub<member_func_t<int32_t, PUResults>>(0x509BA0, this);
-    }
-
-    // 0x509BB0 | ?IsRaceMenuReadOnly@PUResults@@QAEHXZ
-    inline int32_t IsRaceMenuReadOnly()
-    {
-        return stub<member_func_t<int32_t, PUResults>>(0x509BB0, this);
-    }
-
-    // 0x509BC0 | ?RaceMenuRO@PUResults@@QAEXH@Z
-    inline void RaceMenuRO(int32_t arg1)
-    {
-        return stub<member_func_t<void, PUResults, int32_t>>(0x509BC0, this, arg1);
-    }
-
-    // 0x509BE0 | ?AddName@PUResults@@QAEXHPBDM@Z
-    inline void AddName(int32_t arg1, char const* arg2, float arg3)
-    {
-        return stub<member_func_t<void, PUResults, int32_t, char const*, float>>(0x509BE0, this, arg1, arg2, arg3);
-    }
-
-    // 0x509CA0 | ?AddName@PUResults@@QAEXHPBD0@Z
-    inline void AddName(int32_t arg1, char const* arg2, char const* arg3)
-    {
-        return stub<member_func_t<void, PUResults, int32_t, char const*, char const*>>(
-            0x509CA0, this, arg1, arg2, arg3);
-    }
-
-    // 0x509D40 | ?AddName@PUResults@@QAEXHPBDH@Z
-    inline void AddName(int32_t arg1, char const* arg2, int32_t arg3)
-    {
-        return stub<member_func_t<void, PUResults, int32_t, char const*, int32_t>>(0x509D40, this, arg1, arg2, arg3);
-    }
+    // 0x509F20 | ??_GPUResults@@UAEPAXI@Z
+    // 0x509B10 | ??1PUResults@@UAE@XZ
+    ~PUResults() override;
 
     // 0x509E10 | ?AddLoser@PUResults@@QAEXHPBD@Z
-    inline void AddLoser(int32_t arg1, char const* arg2)
-    {
-        return stub<member_func_t<void, PUResults, int32_t, char const*>>(0x509E10, this, arg1, arg2);
-    }
+    void AddLoser(i32 arg1, char const* arg2);
+
+    // 0x509CA0 | ?AddName@PUResults@@QAEXHPBD0@Z
+    void AddName(i32 arg1, char const* arg2, char const* arg3);
+
+    // 0x509BE0 | ?AddName@PUResults@@QAEXHPBDM@Z
+    void AddName(i32 arg1, char const* arg2, f32 arg3);
+
+    // 0x509D40 | ?AddName@PUResults@@QAEXHPBDH@Z
+    void AddName(i32 arg1, char const* arg2, i32 arg3);
+
+    // 0x509B20 | ?AddTitle@PUResults@@QAEXPAULocString@@0@Z
+    void AddTitle(struct LocString* arg1, struct LocString* arg2);
 
     // 0x509E70 | ?ClearNames@PUResults@@QAEXXZ
-    inline void ClearNames()
-    {
-        return stub<member_func_t<void, PUResults>>(0x509E70, this);
-    }
+    void ClearNames();
 
     // 0x509EE0 | ?DisableNextRace@PUResults@@QAEXXZ
-    inline void DisableNextRace()
-    {
-        return stub<member_func_t<void, PUResults>>(0x509EE0, this);
-    }
+    void DisableNextRace();
 
     // 0x509EF0 | ?EnableNextRace@PUResults@@QAEXXZ
-    inline void EnableNextRace()
-    {
-        return stub<member_func_t<void, PUResults>>(0x509EF0, this);
-    }
+    void EnableNextRace();
 
-    // 0x509F00 | ?SetMessage@PUResults@@QAEXPAULocString@@@Z
-    inline void SetMessage(struct LocString* arg1)
-    {
-        return stub<member_func_t<void, PUResults, struct LocString*>>(0x509F00, this, arg1);
-    }
+    // 0x509120 | ?Init320@PUResults@@QAEXXZ
+    void Init320();
 
-    // 0x509B10 | ??1PUResults@@UAE@XZ
-    inline ~PUResults() override
-    {
-        stub<member_func_t<void, PUResults>>(0x509B10, this);
-    }
+    // 0x509600 | ?Init640@PUResults@@QAEXXZ
+    void Init640();
+
+    // 0x509BB0 | ?IsRaceMenuReadOnly@PUResults@@QAEHXZ
+    i32 IsRaceMenuReadOnly();
+
+    // 0x509BA0 | ?IsRosterReadOnly@PUResults@@QAEHXZ
+    i32 IsRosterReadOnly();
+
+    // 0x509BC0 | ?RaceMenuRO@PUResults@@QAEXH@Z
+    void RaceMenuRO(i32 arg1);
 
     // 0x509B50 | ?Reset@PUResults@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, PUResults>>(0x509B50, this);
-    }
+    void Reset() override;
+
+    // 0x509B80 | ?RestartRO@PUResults@@QAEXH@Z
+    void RestartRO(i32 arg1);
+
+    // 0x509B60 | ?RosterRO@PUResults@@QAEXH@Z
+    void RosterRO(i32 arg1);
+
+    // 0x509F00 | ?SetMessage@PUResults@@QAEXPAULocString@@@Z
+    void SetMessage(struct LocString* arg1);
 };
+
+check_size(PUResults, 0x0);

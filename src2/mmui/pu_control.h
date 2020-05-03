@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "pu_menu.h"
+
 /*
     mmui:pu_control
 
@@ -33,51 +35,32 @@
     0x5B4918 | const PUControl::`vftable' | ??_7PUControl@@6B@
 */
 
-struct PUControl : PUMenuBase
+class PUControl : public PUMenuBase
 {
-public:
-    // PUControl::`vftable' @ 0x5B4918
+    // const PUControl::`vftable' @ 0x5B4918
 
+public:
     // 0x50BD00 | ??0PUControl@@QAE@HMMMM@Z
-    inline PUControl(int32_t arg1, float arg2, float arg3, float arg4, float arg5)
-    {
-        stub<member_func_t<void, PUControl, int32_t, float, float, float, float>>(
-            0x50BD00, this, arg1, arg2, arg3, arg4, arg5);
-    }
+    PUControl(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5);
+
+    // 0x50C200 | ??_GPUControl@@UAEPAXI@Z
+    // 0x50C090 | ??1PUControl@@UAE@XZ
+    ~PUControl() override;
 
     // 0x50C110 | ?CancelAction@PUControl@@QAEXXZ
-    inline void CancelAction()
-    {
-        return stub<member_func_t<void, PUControl>>(0x50C110, this);
-    }
-
-    // 0x50C130 | ?SetRWStates@PUControl@@QAEXXZ
-    inline void SetRWStates()
-    {
-        return stub<member_func_t<void, PUControl>>(0x50C130, this);
-    }
+    void CancelAction();
 
     // 0x50C1C0 | ?ControlSelect@PUControl@@QAEXXZ
-    inline void ControlSelect()
-    {
-        return stub<member_func_t<void, PUControl>>(0x50C1C0, this);
-    }
-
-    // 0x50C1F0 | ?SetSensitivityCB@PUControl@@QAEXXZ
-    inline void SetSensitivityCB()
-    {
-        return stub<member_func_t<void, PUControl>>(0x50C1F0, this);
-    }
-
-    // 0x50C090 | ??1PUControl@@UAE@XZ
-    inline ~PUControl() override
-    {
-        stub<member_func_t<void, PUControl>>(0x50C090, this);
-    }
+    void ControlSelect();
 
     // 0x50C0F0 | ?PreSetup@PUControl@@UAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, PUControl>>(0x50C0F0, this);
-    }
+    void PreSetup() override;
+
+    // 0x50C130 | ?SetRWStates@PUControl@@QAEXXZ
+    void SetRWStates();
+
+    // 0x50C1F0 | ?SetSensitivityCB@PUControl@@QAEXXZ
+    void SetSensitivityCB();
 };
+
+check_size(PUControl, 0xD4);

@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     vehicle:carsim
@@ -52,138 +54,80 @@
     0x4CCF00 | public: virtual __thiscall vehAero::~vehAero(void) | ??1vehAero@@UAE@XZ
     0x4CCF10 | public: virtual char * __thiscall vehCarSim::GetClassName(void) | ?GetClassName@vehCarSim@@UAEPADXZ
     0x5B2C74 | const vehCarSim::`vftable' | ??_7vehCarSim@@6B@
-    float MetricFactor | ?MetricFactor@@3MA
+    0x5CEF3C | float MetricFactor | ?MetricFactor@@3MA
 */
 
-class vehCarSim : asNode
+class vehCarSim : public asNode
 {
+    // const vehCarSim::`vftable' @ 0x5B2C74
+
 public:
-    // vehCarSim::`vftable' @ 0x5B2C74
-
     // 0x4CB660 | ??0vehCarSim@@QAE@XZ
-    inline vehCarSim()
-    {
-        stub<member_func_t<void, vehCarSim>>(0x4CB660, this);
-    }
+    vehCarSim();
 
-    // 0x4CBB00 | ?OnGround@vehCarSim@@QAEHXZ
-    inline int32_t OnGround()
-    {
-        return stub<member_func_t<int32_t, vehCarSim>>(0x4CBB00, this);
-    }
+    // 0x4CCE80 | ??_GvehCarSim@@UAEPAXI@Z
+    // 0x4CB8E0 | ??1vehCarSim@@UAE@XZ
+    ~vehCarSim() override;
 
     // 0x4CBB40 | ?BottomedOut@vehCarSim@@QAEHXZ
-    inline int32_t BottomedOut()
-    {
-        return stub<member_func_t<int32_t, vehCarSim>>(0x4CBB40, this);
-    }
-
-    // 0x4CBB80 | ?Init@vehCarSim@@QAEXPBDPAVphColliderJointed@@PAVlvlInstance@@@Z
-    inline void Init(char const* arg1, class phColliderJointed* arg2, class lvlInstance* arg3)
-    {
-        return stub<member_func_t<void, vehCarSim, char const*, class phColliderJointed*, class lvlInstance*>>(
-            0x4CBB80, this, arg1, arg2, arg3);
-    }
-
-    // 0x4CBF50 | ?SetWorldMatrix@vehCarSim@@QAEXXZ
-    inline void SetWorldMatrix()
-    {
-        return stub<member_func_t<void, vehCarSim>>(0x4CBF50, this);
-    }
-
-    // 0x4CC050 | ?RestoreImpactParams@vehCarSim@@QAEXXZ
-    inline void RestoreImpactParams()
-    {
-        return stub<member_func_t<void, vehCarSim>>(0x4CC050, this);
-    }
-
-    // 0x4CC080 | ?SetHackedImpactParams@vehCarSim@@QAEXXZ
-    inline void SetHackedImpactParams()
-    {
-        return stub<member_func_t<void, vehCarSim>>(0x4CC080, this);
-    }
-
-    // 0x4CC0B0 | ?ReconfigureDrivetrain@vehCarSim@@QAEXXZ
-    inline void ReconfigureDrivetrain()
-    {
-        return stub<member_func_t<void, vehCarSim>>(0x4CC0B0, this);
-    }
-
-    // 0x4CC0D0 | ?ConfigureDrivetrain@vehCarSim@@QAEXXZ
-    inline void ConfigureDrivetrain()
-    {
-        return stub<member_func_t<void, vehCarSim>>(0x4CC0D0, this);
-    }
-
-    // 0x4CC4E0 | ?UnconfigureDrivetrain@vehCarSim@@QAEXXZ
-    inline void UnconfigureDrivetrain()
-    {
-        return stub<member_func_t<void, vehCarSim>>(0x4CC4E0, this);
-    }
-
-    // 0x4CC830 | ?SetResetPos@vehCarSim@@QAEXABVVector3@@@Z
-    inline void SetResetPos(class Vector3 const& arg1)
-    {
-        return stub<member_func_t<void, vehCarSim, class Vector3 const&>>(0x4CC830, this, arg1);
-    }
+    i32 BottomedOut();
 
     // 0x4CC880 | ?ClearDamage@vehCarSim@@QAEXXZ
-    inline void ClearDamage()
-    {
-        return stub<member_func_t<void, vehCarSim>>(0x4CC880, this);
-    }
+    void ClearDamage();
 
-    // 0x4CC890 | ?GetSSSFactor@vehCarSim@@QAEMM@Z
-    inline float GetSSSFactor(float arg1)
-    {
-        return stub<member_func_t<float, vehCarSim, float>>(0x4CC890, this, arg1);
-    }
-
-    // 0x4CCAB0 | ?PlaybackReplay@vehCarSim@@QAEXXZ
-    inline void PlaybackReplay()
-    {
-        return stub<member_func_t<void, vehCarSim>>(0x4CCAB0, this);
-    }
-
-    // 0x4CCB30 | ?RecordReplay@vehCarSim@@QAEXXZ
-    inline void RecordReplay()
-    {
-        return stub<member_func_t<void, vehCarSim>>(0x4CCB30, this);
-    }
-
-    // 0x4CB8E0 | ??1vehCarSim@@UAE@XZ
-    inline ~vehCarSim() override
-    {
-        stub<member_func_t<void, vehCarSim>>(0x4CB8E0, this);
-    }
-
-    // 0x4CC8E0 | ?Update@vehCarSim@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, vehCarSim>>(0x4CC8E0, this);
-    }
-
-    // 0x4CBA70 | ?Reset@vehCarSim@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, vehCarSim>>(0x4CBA70, this);
-    }
+    // 0x4CC0D0 | ?ConfigureDrivetrain@vehCarSim@@QAEXXZ
+    void ConfigureDrivetrain();
 
     // 0x4CCC70 | ?FileIO@vehCarSim@@UAEXAAVdatParser@@@Z
-    inline void FileIO(class datParser& arg1) override
-    {
-        return stub<member_func_t<void, vehCarSim, class datParser&>>(0x4CCC70, this, arg1);
-    }
+    void FileIO(class datParser& arg1) override;
 
     // 0x4CCF10 | ?GetClassName@vehCarSim@@UAEPADXZ
-    inline char* GetClassName() override
-    {
-        return stub<member_func_t<char*, vehCarSim>>(0x4CCF10, this);
-    }
+    char* GetClassName() override;
 
     // 0x4CBAF0 | ?GetDirName@vehCarSim@@UAEPBDXZ
-    inline char const* GetDirName() override
-    {
-        return stub<member_func_t<char const*, vehCarSim>>(0x4CBAF0, this);
-    }
+    char const* GetDirName() override;
+
+    // 0x4CC890 | ?GetSSSFactor@vehCarSim@@QAEMM@Z
+    f32 GetSSSFactor(f32 arg1);
+
+    // 0x4CBB80 | ?Init@vehCarSim@@QAEXPBDPAVphColliderJointed@@PAVlvlInstance@@@Z
+    void Init(char const* arg1, class phColliderJointed* arg2, class lvlInstance* arg3);
+
+    // 0x4CBB00 | ?OnGround@vehCarSim@@QAEHXZ
+    i32 OnGround();
+
+    // 0x4CCAB0 | ?PlaybackReplay@vehCarSim@@QAEXXZ
+    void PlaybackReplay();
+
+    // 0x4CC0B0 | ?ReconfigureDrivetrain@vehCarSim@@QAEXXZ
+    void ReconfigureDrivetrain();
+
+    // 0x4CCB30 | ?RecordReplay@vehCarSim@@QAEXXZ
+    void RecordReplay();
+
+    // 0x4CBA70 | ?Reset@vehCarSim@@UAEXXZ
+    void Reset() override;
+
+    // 0x4CC050 | ?RestoreImpactParams@vehCarSim@@QAEXXZ
+    void RestoreImpactParams();
+
+    // 0x4CC080 | ?SetHackedImpactParams@vehCarSim@@QAEXXZ
+    void SetHackedImpactParams();
+
+    // 0x4CC830 | ?SetResetPos@vehCarSim@@QAEXABVVector3@@@Z
+    void SetResetPos(class Vector3 const& arg1);
+
+    // 0x4CBF50 | ?SetWorldMatrix@vehCarSim@@QAEXXZ
+    void SetWorldMatrix();
+
+    // 0x4CC4E0 | ?UnconfigureDrivetrain@vehCarSim@@QAEXXZ
+    void UnconfigureDrivetrain();
+
+    // 0x4CC8E0 | ?Update@vehCarSim@@UAEXXZ
+    void Update() override;
 };
+
+check_size(vehCarSim, 0x0);
+
+// 0x5CEF3C | ?MetricFactor@@3MA
+inline extern_var(0x5CEF3C, f32, MetricFactor);

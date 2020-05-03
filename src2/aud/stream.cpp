@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,65 @@
 */
 
 #include "stream.h"
+
+bool audStream::CloseStream()
+{
+    return stub<thiscall_t<bool, audStream*>>(0x5A4E00, this);
+}
+
+class audStream* audStream::Create(class audObject* arg1)
+{
+    return stub<thiscall_t<class audStream*, audStream*, class audObject*>>(0x5A4C80, this, arg1);
+}
+
+void audStream::Destroy()
+{
+    return stub<thiscall_t<void, audStream*>>(0x5A4CD0, this);
+}
+
+i32 audStream::GetBufferSize()
+{
+    return stub<thiscall_t<i32, audStream*>>(0x5A4E80, this);
+}
+
+i32 audStream::GetCurrentCursor()
+{
+    return stub<thiscall_t<i32, audStream*>>(0x5A4E60, this);
+}
+
+void audStream::Init()
+{
+    return stub<thiscall_t<void, audStream*>>(0x5A4CC0, this);
+}
+
+bool audStream::IsFinished()
+{
+    return stub<thiscall_t<bool, audStream*>>(0x5A4EA0, this);
+}
+
+void audStream::SetBufferSize(i32 arg1)
+{
+    return stub<thiscall_t<void, audStream*, i32>>(0x5A4E70, this, arg1);
+}
+
+void audStream::SetFileInfo(void* arg1)
+{
+    return stub<thiscall_t<void, audStream*, void*>>(0x5A4E90, this, arg1);
+}
+
+void audStream::SetLooping(bool arg1)
+{
+    return stub<thiscall_t<void, audStream*, bool>>(0x5A4EC0, this, arg1);
+}
+
+void audStream::SetVolume(f32 arg1)
+{
+    return stub<thiscall_t<void, audStream*, f32>>(0x5A4EB0, this, arg1);
+}
+
+bool audStream::Update(i32 arg1)
+{
+    return stub<thiscall_t<bool, audStream*, i32>>(0x5A4CF0, this, arg1);
+}
+
+define_dummy_symbol(aud_stream);

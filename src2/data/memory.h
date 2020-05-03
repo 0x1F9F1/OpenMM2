@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -26,11 +26,11 @@
     0x6A3C38 | int datCurrentMemoryBucket | ?datCurrentMemoryBucket@@3HA
 */
 
-// 0x5CE81C | ?datDisplayUsed@@3P6AXPBD@ZA
-inline extern_var(0x5CE81C, void(__cdecl*)(char const*), datDisplayUsed);
-
 // 0x6A3C34 | ?datCurrentMemoryAlign@@3HA
-inline extern_var(0x6A3C34, int32_t, datCurrentMemoryAlign);
+inline extern_var(0x6A3C34, i32, datCurrentMemoryAlign);
 
 // 0x6A3C38 | ?datCurrentMemoryBucket@@3HA
-inline extern_var(0x6A3C38, int32_t, datCurrentMemoryBucket);
+inline extern_var(0x6A3C38, i32, datCurrentMemoryBucket);
+
+// 0x5CE81C | ?datDisplayUsed@@3P6AXPBD@ZA
+inline extern_var(0x5CE81C, void (*)(char const*), datDisplayUsed);

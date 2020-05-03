@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -55,247 +55,114 @@
     0x4C4A10 | bool __cdecl CollideRayTriangle(class Vector3 const &,class Vector3 const &,class Vector3 const &,class Vector3 const &,class Vector3 const &,float *) | ?CollideRayTriangle@@YA_NABVVector3@@0000PAM@Z
 */
 
-// 0x4C1E80 | ?ComputeBoundSphere@@YAXHQBMIAAVVector4@@@Z
-inline void ComputeBoundSphere(int32_t arg1, float const* const arg2, uint32_t arg3, class Vector4& arg4)
-{
-    return stub<cdecl_t<void, int32_t, float const* const, uint32_t, class Vector4&>>(0x4C1E80, arg1, arg2, arg3, arg4);
-}
-
-// 0x4C1ED0 | ?ComputeBoundInfo@@YAXHQBMIPAVVector3@@11PAM@Z
-inline void ComputeBoundInfo(int32_t arg1, float const* const arg2, uint32_t arg3, class Vector3* arg4,
-    class Vector3* arg5, class Vector3* arg6, float* arg7)
-{
-    return stub<
-        cdecl_t<void, int32_t, float const* const, uint32_t, class Vector3*, class Vector3*, class Vector3*, float*>>(
-        0x4C1ED0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-}
-
-// 0x4C23F0 | ?FindImpactPolygonToSphere@@YAHABVVector3@@MPBV1@H0PAV1@PAH2PAM@Z
-inline int32_t FindImpactPolygonToSphere(class Vector3 const& arg1, float arg2, class Vector3 const* arg3, int32_t arg4,
-    class Vector3 const& arg5, class Vector3* arg6, int32_t* arg7, class Vector3* arg8, float* arg9)
-{
-    return stub<cdecl_t<int32_t, class Vector3 const&, float, class Vector3 const*, int32_t, class Vector3 const&,
-        class Vector3*, int32_t*, class Vector3*, float*>>(
-        0x4C23F0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
-}
-
-// 0x4C28C0 | ?FindImpactEdgeToShaft@@YAHABVVector3@@000MPAHPAV1@PAM2@Z
-inline int32_t FindImpactEdgeToShaft(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
-    class Vector3 const& arg4, float arg5, int32_t* arg6, class Vector3* arg7, float* arg8, class Vector3* arg9)
-{
-    return stub<cdecl_t<int32_t, class Vector3 const&, class Vector3 const&, class Vector3 const&, class Vector3 const&,
-        float, int32_t*, class Vector3*, float*, class Vector3*>>(
-        0x4C28C0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
-}
-
-// 0x4C2B30 | ?IsPointBehindPlane@@YA_NABVVector3@@00M@Z
-inline bool IsPointBehindPlane(
-    class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3, float arg4)
-{
-    return stub<cdecl_t<bool, class Vector3 const&, class Vector3 const&, class Vector3 const&, float>>(
-        0x4C2B30, arg1, arg2, arg3, arg4);
-}
-
-// 0x4C2B70 | ?IsPointNearPlane@@YA_NABVVector3@@00M@Z
-inline bool IsPointNearPlane(
-    class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3, float arg4)
-{
-    return stub<cdecl_t<bool, class Vector3 const&, class Vector3 const&, class Vector3 const&, float>>(
-        0x4C2B70, arg1, arg2, arg3, arg4);
-}
-
-// 0x4C2BC0 | ?IsPointInBox@@YA_NABVVector3@@MMM@Z
-inline bool IsPointInBox(class Vector3 const& arg1, float arg2, float arg3, float arg4)
-{
-    return stub<cdecl_t<bool, class Vector3 const&, float, float, float>>(0x4C2BC0, arg1, arg2, arg3, arg4);
-}
-
-// 0x4C2C20 | ?IsNearZero@@YAHMM@Z
-inline int32_t IsNearZero(float arg1, float arg2)
-{
-    return stub<cdecl_t<int32_t, float, float>>(0x4C2C20, arg1, arg2);
-}
-
-// 0x4C2C50 | ?FindClosestPointSegToPoint@@YAHABVVector3@@00PAV1@PAM@Z
-inline int32_t FindClosestPointSegToPoint(
-    class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3, class Vector3* arg4, float* arg5)
-{
-    return stub<
-        cdecl_t<int32_t, class Vector3 const&, class Vector3 const&, class Vector3 const&, class Vector3*, float*>>(
-        0x4C2C50, arg1, arg2, arg3, arg4, arg5);
-}
-
-// 0x4C2CD0 | ?FindClosestPointSegToOrigin@@YAHABVVector3@@0PAV1@PAM@Z
-inline int32_t FindClosestPointSegToOrigin(
-    class Vector3 const& arg1, class Vector3 const& arg2, class Vector3* arg3, float* arg4)
-{
-    return stub<cdecl_t<int32_t, class Vector3 const&, class Vector3 const&, class Vector3*, float*>>(
-        0x4C2CD0, arg1, arg2, arg3, arg4);
-}
-
-// 0x4C2DB0 | ?DistanceLineToLine@@YAMABVVector3@@000PAV1@M@Z
-inline float DistanceLineToLine(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
-    class Vector3 const& arg4, class Vector3* arg5, float arg6)
-{
-    return stub<cdecl_t<float, class Vector3 const&, class Vector3 const&, class Vector3 const&, class Vector3 const&,
-        class Vector3*, float>>(0x4C2DB0, arg1, arg2, arg3, arg4, arg5, arg6);
-}
-
-// 0x4C2F00 | ?DistanceParallelLineToLine@@YAMABVVector3@@000PAV1@@Z
-inline float DistanceParallelLineToLine(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
-    class Vector3 const& arg4, class Vector3* arg5)
-{
-    return stub<cdecl_t<float, class Vector3 const&, class Vector3 const&, class Vector3 const&, class Vector3 const&,
-        class Vector3*>>(0x4C2F00, arg1, arg2, arg3, arg4, arg5);
-}
-
-// 0x4C2FF0 | ?DistanceLineToYAxis@@YAMABVVector3@@0PAV1@@Z
-inline float DistanceLineToYAxis(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3* arg3)
-{
-    return stub<cdecl_t<float, class Vector3 const&, class Vector3 const&, class Vector3*>>(0x4C2FF0, arg1, arg2, arg3);
-}
-
-// 0x4C30A0 | ?DistanceLineToPoint@@YAMABVVector3@@00@Z
-inline float DistanceLineToPoint(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3)
-{
-    return stub<cdecl_t<float, class Vector3 const&, class Vector3 const&, class Vector3 const&>>(
-        0x4C30A0, arg1, arg2, arg3);
-}
-
-// 0x4C3170 | ?FindTValueSegToPoint@@YAMABVVector3@@00@Z
-inline float FindTValueSegToPoint(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3)
-{
-    return stub<cdecl_t<float, class Vector3 const&, class Vector3 const&, class Vector3 const&>>(
-        0x4C3170, arg1, arg2, arg3);
-}
-
-// 0x4C31B0 | ?FindTValueSegToOrigin@@YAMABVVector3@@0@Z
-inline float FindTValueSegToOrigin(class Vector3 const& arg1, class Vector3 const& arg2)
-{
-    return stub<cdecl_t<float, class Vector3 const&, class Vector3 const&>>(0x4C31B0, arg1, arg2);
-}
-
-// 0x4C3230 | ?FindTValuesSegToSeg@@YA_NABVVector3@@000PAM1@Z
-inline bool FindTValuesSegToSeg(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
-    class Vector3 const& arg4, float* arg5, float* arg6)
-{
-    return stub<cdecl_t<bool, class Vector3 const&, class Vector3 const&, class Vector3 const&, class Vector3 const&,
-        float*, float*>>(0x4C3230, arg1, arg2, arg3, arg4, arg5, arg6);
-}
-
-// 0x4C3530 | ?FindTValuesLineToLine@@YA_NABVVector3@@000PAM1@Z
-inline bool FindTValuesLineToLine(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
-    class Vector3 const& arg4, float* arg5, float* arg6)
-{
-    return stub<cdecl_t<bool, class Vector3 const&, class Vector3 const&, class Vector3 const&, class Vector3 const&,
-        float*, float*>>(0x4C3530, arg1, arg2, arg3, arg4, arg5, arg6);
-}
-
-// 0x4C3740 | ?FindTValuesLineToYAxis@@YA_NABVVector3@@0MMPAM1@Z
-inline bool FindTValuesLineToYAxis(
-    class Vector3 const& arg1, class Vector3 const& arg2, float arg3, float arg4, float* arg5, float* arg6)
-{
-    return stub<cdecl_t<bool, class Vector3 const&, class Vector3 const&, float, float, float*, float*>>(
-        0x4C3740, arg1, arg2, arg3, arg4, arg5, arg6);
-}
-
-// 0x4C3910 | ?FindTValuesLineToBoxFace@@YA_NABVVector3@@000PAM1PAH2@Z
-inline bool FindTValuesLineToBoxFace(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
-    class Vector3 const& arg4, float* arg5, float* arg6, int32_t* arg7, int32_t* arg8)
-{
-    return stub<cdecl_t<bool, class Vector3 const&, class Vector3 const&, class Vector3 const&, class Vector3 const&,
-        float*, float*, int32_t*, int32_t*>>(0x4C3910, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
-}
-
-// 0x4C3C20 | ?SegmentToSphereIntersections@@YAHABVVector3@@0MPAM1@Z
-inline int32_t SegmentToSphereIntersections(
-    class Vector3 const& arg1, class Vector3 const& arg2, float arg3, float* arg4, float* arg5)
-{
-    return stub<cdecl_t<int32_t, class Vector3 const&, class Vector3 const&, float, float*, float*>>(
-        0x4C3C20, arg1, arg2, arg3, arg4, arg5);
-}
-
-// 0x4C3D80 | ?SegmentToHemisphereIntersections@@YAHABVVector3@@0MPAM1_N@Z
-inline int32_t SegmentToHemisphereIntersections(
-    class Vector3 const& arg1, class Vector3 const& arg2, float arg3, float* arg4, float* arg5, bool arg6)
-{
-    return stub<cdecl_t<int32_t, class Vector3 const&, class Vector3 const&, float, float*, float*, bool>>(
-        0x4C3D80, arg1, arg2, arg3, arg4, arg5, arg6);
-}
-
-// 0x4C3FA0 | ?SegmentToDiskIntersection@@YA_NABVVector3@@0MPAM@Z
-inline bool SegmentToDiskIntersection(class Vector3 const& arg1, class Vector3 const& arg2, float arg3, float* arg4)
-{
-    return stub<cdecl_t<bool, class Vector3 const&, class Vector3 const&, float, float*>>(
-        0x4C3FA0, arg1, arg2, arg3, arg4);
-}
-
-// 0x4C4020 | ?SegmentToUprightCylIsects@@YAHABVVector3@@0MMPAM111@Z
-inline int32_t SegmentToUprightCylIsects(class Vector3 const& arg1, class Vector3 const& arg2, float arg3, float arg4,
-    float* arg5, float* arg6, float* arg7, float* arg8)
-{
-    return stub<
-        cdecl_t<int32_t, class Vector3 const&, class Vector3 const&, float, float, float*, float*, float*, float*>>(
-        0x4C4020, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
-}
-
-// 0x4C4190 | ?SegmentToInfCylIsects@@YAHABVVector3@@000MPAM1@Z
-inline int32_t SegmentToInfCylIsects(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
-    class Vector3 const& arg4, float arg5, float* arg6, float* arg7)
-{
-    return stub<cdecl_t<int32_t, class Vector3 const&, class Vector3 const&, class Vector3 const&, class Vector3 const&,
-        float, float*, float*>>(0x4C4190, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-}
-
-// 0x4C4380 | ?SegmentToBoxIntersections@@YAHABVVector3@@0MMMPAM1PAV1@2PAH3@Z
-inline int32_t SegmentToBoxIntersections(class Vector3 const& arg1, class Vector3 const& arg2, float arg3, float arg4,
-    float arg5, float* arg6, float* arg7, class Vector3* arg8, class Vector3* arg9, int32_t* arg10, int32_t* arg11)
-{
-    return stub<cdecl_t<int32_t, class Vector3 const&, class Vector3 const&, float, float, float, float*, float*,
-        class Vector3*, class Vector3*, int32_t*, int32_t*>>(
-        0x4C4380, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
-}
+// 0x4C4810 | ?AddIntersection@@YAHMPAM0HPAH1H@Z
+i32 AddIntersection(f32 arg1, f32* arg2, f32* arg3, i32 arg4, i32* arg5, i32* arg6, i32 arg7);
 
 // 0x4C4740 | ?AddIntersection@@YAHMPAM0ABVVector3@@PAV1@2HHPAH3@Z
-inline int32_t AddIntersection(float arg1, float* arg2, float* arg3, class Vector3 const& arg4, class Vector3* arg5,
-    class Vector3* arg6, int32_t arg7, int32_t arg8, int32_t* arg9, int32_t* arg10)
-{
-    return stub<cdecl_t<int32_t, float, float*, float*, class Vector3 const&, class Vector3*, class Vector3*, int32_t,
-        int32_t, int32_t*, int32_t*>>(0x4C4740, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
-}
-
-// 0x4C4810 | ?AddIntersection@@YAHMPAM0HPAH1H@Z
-inline int32_t AddIntersection(
-    float arg1, float* arg2, float* arg3, int32_t arg4, int32_t* arg5, int32_t* arg6, int32_t arg7)
-{
-    return stub<cdecl_t<int32_t, float, float*, float*, int32_t, int32_t*, int32_t*, int32_t>>(
-        0x4C4810, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-}
-
-// 0x4C4890 | ?OrderIntersections@@YAXPAM000PAH1@Z
-inline void OrderIntersections(float* arg1, float* arg2, float* arg3, float* arg4, int32_t* arg5, int32_t* arg6)
-{
-    return stub<cdecl_t<void, float*, float*, float*, float*, int32_t*, int32_t*>>(
-        0x4C4890, arg1, arg2, arg3, arg4, arg5, arg6);
-}
-
-// 0x4C48D0 | ?IsPointInRegion@@YA_NMMPBVVector3@@H@Z
-inline bool IsPointInRegion(float arg1, float arg2, class Vector3 const* arg3, int32_t arg4)
-{
-    return stub<cdecl_t<bool, float, float, class Vector3 const*, int32_t>>(0x4C48D0, arg1, arg2, arg3, arg4);
-}
+i32 AddIntersection(f32 arg1, f32* arg2, f32* arg3, class Vector3 const& arg4, class Vector3* arg5, class Vector3* arg6,
+    i32 arg7, i32 arg8, i32* arg9, i32* arg10);
 
 // 0x4C49B0 | ?CollidePlane@@YA_NABVVector3@@0ABVVector4@@PAM@Z
-inline bool CollidePlane(class Vector3 const& arg1, class Vector3 const& arg2, class Vector4 const& arg3, float* arg4)
-{
-    return stub<cdecl_t<bool, class Vector3 const&, class Vector3 const&, class Vector4 const&, float*>>(
-        0x4C49B0, arg1, arg2, arg3, arg4);
-}
+bool CollidePlane(class Vector3 const& arg1, class Vector3 const& arg2, class Vector4 const& arg3, f32* arg4);
 
 // 0x4C4A10 | ?CollideRayTriangle@@YA_NABVVector3@@0000PAM@Z
-inline bool CollideRayTriangle(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
-    class Vector3 const& arg4, class Vector3 const& arg5, float* arg6)
-{
-    return stub<cdecl_t<bool, class Vector3 const&, class Vector3 const&, class Vector3 const&, class Vector3 const&,
-        class Vector3 const&, float*>>(0x4C4A10, arg1, arg2, arg3, arg4, arg5, arg6);
-}
+bool CollideRayTriangle(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
+    class Vector3 const& arg4, class Vector3 const& arg5, f32* arg6);
+
+// 0x4C1ED0 | ?ComputeBoundInfo@@YAXHQBMIPAVVector3@@11PAM@Z
+void ComputeBoundInfo(i32 arg1, f32 const* const arg2, u32 arg3, class Vector3* arg4, class Vector3* arg5,
+    class Vector3* arg6, f32* arg7);
+
+// 0x4C1E80 | ?ComputeBoundSphere@@YAXHQBMIAAVVector4@@@Z
+void ComputeBoundSphere(i32 arg1, f32 const* const arg2, u32 arg3, class Vector4& arg4);
+
+// 0x4C2DB0 | ?DistanceLineToLine@@YAMABVVector3@@000PAV1@M@Z
+f32 DistanceLineToLine(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
+    class Vector3 const& arg4, class Vector3* arg5, f32 arg6);
+
+// 0x4C30A0 | ?DistanceLineToPoint@@YAMABVVector3@@00@Z
+f32 DistanceLineToPoint(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3);
+
+// 0x4C2FF0 | ?DistanceLineToYAxis@@YAMABVVector3@@0PAV1@@Z
+f32 DistanceLineToYAxis(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3* arg3);
+
+// 0x4C2F00 | ?DistanceParallelLineToLine@@YAMABVVector3@@000PAV1@@Z
+f32 DistanceParallelLineToLine(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
+    class Vector3 const& arg4, class Vector3* arg5);
+
+// 0x4C2CD0 | ?FindClosestPointSegToOrigin@@YAHABVVector3@@0PAV1@PAM@Z
+i32 FindClosestPointSegToOrigin(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3* arg3, f32* arg4);
+
+// 0x4C2C50 | ?FindClosestPointSegToPoint@@YAHABVVector3@@00PAV1@PAM@Z
+i32 FindClosestPointSegToPoint(
+    class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3, class Vector3* arg4, f32* arg5);
+
+// 0x4C28C0 | ?FindImpactEdgeToShaft@@YAHABVVector3@@000MPAHPAV1@PAM2@Z
+i32 FindImpactEdgeToShaft(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
+    class Vector3 const& arg4, f32 arg5, i32* arg6, class Vector3* arg7, f32* arg8, class Vector3* arg9);
+
+// 0x4C23F0 | ?FindImpactPolygonToSphere@@YAHABVVector3@@MPBV1@H0PAV1@PAH2PAM@Z
+i32 FindImpactPolygonToSphere(class Vector3 const& arg1, f32 arg2, class Vector3 const* arg3, i32 arg4,
+    class Vector3 const& arg5, class Vector3* arg6, i32* arg7, class Vector3* arg8, f32* arg9);
+
+// 0x4C31B0 | ?FindTValueSegToOrigin@@YAMABVVector3@@0@Z
+f32 FindTValueSegToOrigin(class Vector3 const& arg1, class Vector3 const& arg2);
+
+// 0x4C3170 | ?FindTValueSegToPoint@@YAMABVVector3@@00@Z
+f32 FindTValueSegToPoint(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3);
+
+// 0x4C3910 | ?FindTValuesLineToBoxFace@@YA_NABVVector3@@000PAM1PAH2@Z
+bool FindTValuesLineToBoxFace(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
+    class Vector3 const& arg4, f32* arg5, f32* arg6, i32* arg7, i32* arg8);
+
+// 0x4C3530 | ?FindTValuesLineToLine@@YA_NABVVector3@@000PAM1@Z
+bool FindTValuesLineToLine(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
+    class Vector3 const& arg4, f32* arg5, f32* arg6);
+
+// 0x4C3740 | ?FindTValuesLineToYAxis@@YA_NABVVector3@@0MMPAM1@Z
+bool FindTValuesLineToYAxis(
+    class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, f32 arg4, f32* arg5, f32* arg6);
+
+// 0x4C3230 | ?FindTValuesSegToSeg@@YA_NABVVector3@@000PAM1@Z
+bool FindTValuesSegToSeg(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
+    class Vector3 const& arg4, f32* arg5, f32* arg6);
+
+// 0x4C2C20 | ?IsNearZero@@YAHMM@Z
+i32 IsNearZero(f32 arg1, f32 arg2);
+
+// 0x4C2B30 | ?IsPointBehindPlane@@YA_NABVVector3@@00M@Z
+bool IsPointBehindPlane(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3, f32 arg4);
+
+// 0x4C2BC0 | ?IsPointInBox@@YA_NABVVector3@@MMM@Z
+bool IsPointInBox(class Vector3 const& arg1, f32 arg2, f32 arg3, f32 arg4);
+
+// 0x4C48D0 | ?IsPointInRegion@@YA_NMMPBVVector3@@H@Z
+bool IsPointInRegion(f32 arg1, f32 arg2, class Vector3 const* arg3, i32 arg4);
+
+// 0x4C2B70 | ?IsPointNearPlane@@YA_NABVVector3@@00M@Z
+bool IsPointNearPlane(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3, f32 arg4);
+
+// 0x4C4890 | ?OrderIntersections@@YAXPAM000PAH1@Z
+void OrderIntersections(f32* arg1, f32* arg2, f32* arg3, f32* arg4, i32* arg5, i32* arg6);
+
+// 0x4C4380 | ?SegmentToBoxIntersections@@YAHABVVector3@@0MMMPAM1PAV1@2PAH3@Z
+i32 SegmentToBoxIntersections(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, f32 arg4, f32 arg5,
+    f32* arg6, f32* arg7, class Vector3* arg8, class Vector3* arg9, i32* arg10, i32* arg11);
+
+// 0x4C3FA0 | ?SegmentToDiskIntersection@@YA_NABVVector3@@0MPAM@Z
+bool SegmentToDiskIntersection(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, f32* arg4);
+
+// 0x4C3D80 | ?SegmentToHemisphereIntersections@@YAHABVVector3@@0MPAM1_N@Z
+i32 SegmentToHemisphereIntersections(
+    class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, f32* arg4, f32* arg5, bool arg6);
+
+// 0x4C4190 | ?SegmentToInfCylIsects@@YAHABVVector3@@000MPAM1@Z
+i32 SegmentToInfCylIsects(class Vector3 const& arg1, class Vector3 const& arg2, class Vector3 const& arg3,
+    class Vector3 const& arg4, f32 arg5, f32* arg6, f32* arg7);
+
+// 0x4C3C20 | ?SegmentToSphereIntersections@@YAHABVVector3@@0MPAM1@Z
+i32 SegmentToSphereIntersections(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, f32* arg4, f32* arg5);
+
+// 0x4C4020 | ?SegmentToUprightCylIsects@@YAHABVVector3@@0MMPAM111@Z
+i32 SegmentToUprightCylIsects(class Vector3 const& arg1, class Vector3 const& arg2, f32 arg3, f32 arg4, f32* arg5,
+    f32* arg6, f32* arg7, f32* arg8);

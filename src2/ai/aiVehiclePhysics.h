@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "aiVehicle.h"
 
 /*
     ai:aiVehiclePhysics
@@ -99,433 +101,223 @@
     0x5B5A7C | const aiVehiclePhysics::`vftable' | ??_7aiVehiclePhysics@@6B@
 */
 
-struct aiVehiclePhysics : aiVehicle
+class aiVehiclePhysics : public aiVehicle
 {
-public:
-    // aiVehiclePhysics::`vftable' @ 0x5B5A7C
+    // const aiVehiclePhysics::`vftable' @ 0x5B5A7C
 
+public:
     // 0x5592A0 | ??0aiVehiclePhysics@@QAE@XZ
-    inline aiVehiclePhysics()
-    {
-        stub<member_func_t<void, aiVehiclePhysics>>(0x5592A0, this);
-    }
+    aiVehiclePhysics();
 
     // 0x559380 | ??1aiVehiclePhysics@@QAE@XZ
-    inline ~aiVehiclePhysics()
-    {
-        stub<member_func_t<void, aiVehiclePhysics>>(0x559380, this);
-    }
-
-    // 0x5593E0 | ?Init@aiVehiclePhysics@@QAEXHPADFH@Z
-    inline void Init(int32_t arg1, char* arg2, int16_t arg3, int32_t arg4)
-    {
-        return stub<member_func_t<void, aiVehiclePhysics, int32_t, char*, int16_t, int32_t>>(
-            0x5593E0, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x5598A0 | ?RegisterRoute@aiVehiclePhysics@@QAEXPAFFABVVector3@@1HMM_N22222MMMM@Z
-    inline void RegisterRoute(int16_t* arg1, int16_t arg2, class Vector3 const& arg3, class Vector3 const& arg4,
-        int32_t arg5, float arg6, float arg7, bool arg8, bool arg9, bool arg10, bool arg11, bool arg12, bool arg13,
-        float arg14, float arg15, float arg16, float arg17)
-    {
-        return stub<member_func_t<void, aiVehiclePhysics, int16_t*, int16_t, class Vector3 const&, class Vector3 const&,
-            int32_t, float, float, bool, bool, bool, bool, bool, bool, float, float, float, float>>(0x5598A0, this,
-            arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16,
-            arg17);
-    }
-
-    // 0x55A570 | ?Mirror@aiVehiclePhysics@@QAEXPAVvehCar@@@Z
-    inline void Mirror(class vehCar* arg1)
-    {
-        return stub<member_func_t<void, aiVehiclePhysics, class vehCar*>>(0x55A570, this, arg1);
-    }
-
-    // 0x55A740 | ?DestMapComponent@aiVehiclePhysics@@AAEXABVVector3@@PAF1@Z
-    inline void DestMapComponent(class Vector3 const& arg1, int16_t* arg2, int16_t* arg3)
-    {
-        return stub<member_func_t<void, aiVehiclePhysics, class Vector3 const&, int16_t*, int16_t*>>(
-            0x55A740, this, arg1, arg2, arg3);
-    }
-
-    // 0x55A8E0 | ?CheckForShortcut@aiVehiclePhysics@@AAEXXZ
-    inline void CheckForShortcut()
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x55A8E0, this);
-    }
-
-    // 0x55A8F0 | ?DriveRoute@aiVehiclePhysics@@QAEXH@Z
-    inline void DriveRoute(int32_t arg1)
-    {
-        return stub<member_func_t<void, aiVehiclePhysics, int32_t>>(0x55A8F0, this, arg1);
-    }
-
-    // 0x55AB50 | ?InitShortcut@aiVehiclePhysics@@AAEXXZ
-    inline void InitShortcut()
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x55AB50, this);
-    }
-
-    // 0x55ABE0 | ?Shortcut@aiVehiclePhysics@@AAEXXZ
-    inline void Shortcut()
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x55ABE0, this);
-    }
-
-    // 0x55ADA0 | ?Stop@aiVehiclePhysics@@AAEXXZ
-    inline void Stop()
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x55ADA0, this);
-    }
-
-    // 0x55AE80 | ?InitForward@aiVehiclePhysics@@AAEXXZ
-    inline void InitForward()
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x55AE80, this);
-    }
-
-    // 0x55AF50 | ?Forward@aiVehiclePhysics@@AAEXXZ
-    inline void Forward()
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x55AF50, this);
-    }
-
-    // 0x55B400 | ?InitBackup@aiVehiclePhysics@@AAEXXZ
-    inline void InitBackup()
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x55B400, this);
-    }
-
-    // 0x55B460 | ?Backup@aiVehiclePhysics@@AAEXXZ
-    inline void Backup()
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x55B460, this);
-    }
-
-    // 0x55B5B0 | ?FinishedBackingUp@aiVehiclePhysics@@AAEXXZ
-    inline void FinishedBackingUp()
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x55B5B0, this);
-    }
-
-    // 0x55B660 | ?CalcSpeed@aiVehiclePhysics@@AAEXXZ
-    inline void CalcSpeed()
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x55B660, this);
-    }
-
-    // 0x55B830 | ?CalcRoadSpeed@aiVehiclePhysics@@AAEXXZ
-    inline void CalcRoadSpeed()
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x55B830, this);
-    }
-
-    // 0x55C080 | ?CheckDistance@aiVehiclePhysics@@AAEMH@Z
-    inline float CheckDistance(int32_t arg1)
-    {
-        return stub<member_func_t<float, aiVehiclePhysics, int32_t>>(0x55C080, this, arg1);
-    }
-
-    // 0x55C0A0 | ?SolveRoadTargetPoint@aiVehiclePhysics@@AAEXXZ
-    inline void SolveRoadTargetPoint()
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x55C0A0, this);
-    }
-
-    // 0x55C180 | ?SolveShortcutTargetPoint@aiVehiclePhysics@@AAEXXZ
-    inline void SolveShortcutTargetPoint()
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x55C180, this);
-    }
-
-    // 0x55C510 | ?PlanRoute@aiVehiclePhysics@@AAEHXZ
-    inline int32_t PlanRoute()
-    {
-        return stub<member_func_t<int32_t, aiVehiclePhysics>>(0x55C510, this);
-    }
-
-    // 0x55C7A0 | ?StopRoadTraffic@aiVehiclePhysics@@QAEX_N@Z
-    inline void StopRoadTraffic(bool arg1)
-    {
-        return stub<member_func_t<void, aiVehiclePhysics, bool>>(0x55C7A0, this, arg1);
-    }
-
-    // 0x55C860 | ?LocateWayPtFromInt@aiVehiclePhysics@@AAEHH@Z
-    inline int32_t LocateWayPtFromInt(int32_t arg1)
-    {
-        return stub<member_func_t<int32_t, aiVehiclePhysics, int32_t>>(0x55C860, this, arg1);
-    }
-
-    // 0x55CD40 | ?LocateWayPtFromRoad@aiVehiclePhysics@@AAEHPAVaiPath@@@Z
-    inline int32_t LocateWayPtFromRoad(class aiPath* arg1)
-    {
-        return stub<member_func_t<int32_t, aiVehiclePhysics, class aiPath*>>(0x55CD40, this, arg1);
-    }
-
-    // 0x55D9F0 | ?CalcRoute@aiVehiclePhysics@@AAEXXZ
-    inline void CalcRoute()
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x55D9F0, this);
-    }
-
-    // 0x55DBC0 | ?DetermineBestRoute@aiVehiclePhysics@@AAEXXZ
-    inline void DetermineBestRoute()
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x55DBC0, this);
-    }
-
-    // 0x55DD10 | ?EnumRoutes@aiVehiclePhysics@@AAEXH@Z
-    inline void EnumRoutes(int32_t arg1)
-    {
-        return stub<member_func_t<void, aiVehiclePhysics, int32_t>>(0x55DD10, this, arg1);
-    }
-
-    // 0x55E0C0 | ?CalcObstacleAvoidPoints@aiVehiclePhysics@@AAEHPAVaiObstacle@@HHPAVVector3@@PAPAV2@PAF3@Z
-    inline int32_t CalcObstacleAvoidPoints(class aiObstacle* arg1, int32_t arg2, int32_t arg3, class Vector3* arg4,
-        class aiObstacle** arg5, int16_t* arg6, int16_t* arg7)
-    {
-        return stub<member_func_t<int32_t, aiVehiclePhysics, class aiObstacle*, int32_t, int32_t, class Vector3*,
-            class aiObstacle**, int16_t*, int16_t*>>(0x55E0C0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
-    }
-
-    // 0x55E4D0 | ?EnumTargets@aiVehiclePhysics@@AAEXAAVVector3@@PAVaiObstacle@@HHHHHHPAV2@PAPAV3@PAF4PAH@Z
-    inline void EnumTargets(class Vector3& arg1, class aiObstacle* arg2, int32_t arg3, int32_t arg4, int32_t arg5,
-        int32_t arg6, int32_t arg7, int32_t arg8, class Vector3* arg9, class aiObstacle** arg10, int16_t* arg11,
-        int16_t* arg12, int32_t* arg13)
-    {
-        return stub<member_func_t<void, aiVehiclePhysics, class Vector3&, class aiObstacle*, int32_t, int32_t, int32_t,
-            int32_t, int32_t, int32_t, class Vector3*, class aiObstacle**, int16_t*, int16_t*, int32_t*>>(
-            0x55E4D0, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
-    }
-
-    // 0x55EC50 | ?CalcSharpTurnTarget@aiVehiclePhysics@@AAEHAAHHAAVVector3@@@Z
-    inline int32_t CalcSharpTurnTarget(int32_t& arg1, int32_t arg2, class Vector3& arg3)
-    {
-        return stub<member_func_t<int32_t, aiVehiclePhysics, int32_t&, int32_t, class Vector3&>>(
-            0x55EC50, this, arg1, arg2, arg3);
-    }
-
-    // 0x55F800 | ?SaveTurnTarget@aiVehiclePhysics@@AAEXHH@Z
-    inline void SaveTurnTarget(int32_t arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, aiVehiclePhysics, int32_t, int32_t>>(0x55F800, this, arg1, arg2);
-    }
-
-    // 0x55F9B0 | ?InitRoadTurns@aiVehiclePhysics@@AAEXXZ
-    inline void InitRoadTurns()
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x55F9B0, this);
-    }
-
-    // 0x55FB60 | ?CalcRoadTurns@aiVehiclePhysics@@AAEXXZ
-    inline void CalcRoadTurns()
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x55FB60, this);
-    }
-
-    // 0x5600B0 | ?CalcTurnIntersection@aiVehiclePhysics@@AAEMH@Z
-    inline float CalcTurnIntersection(int32_t arg1)
-    {
-        return stub<member_func_t<float, aiVehiclePhysics, int32_t>>(0x5600B0, this, arg1);
-    }
-
-    // 0x560900 | ?CalcCurrentMaxWidthAdjustment@aiVehiclePhysics@@AAEMH@Z
-    inline float CalcCurrentMaxWidthAdjustment(int32_t arg1)
-    {
-        return stub<member_func_t<float, aiVehiclePhysics, int32_t>>(0x560900, this, arg1);
-    }
-
-    // 0x560B50 | ?CalcCurrentRdOffset@aiVehiclePhysics@@AAEMH@Z
-    inline float CalcCurrentRdOffset(int32_t arg1)
-    {
-        return stub<member_func_t<float, aiVehiclePhysics, int32_t>>(0x560B50, this, arg1);
-    }
-
-    // 0x560DC0 | ?CalcNextMaxWidthAdjustment@aiVehiclePhysics@@AAEMH@Z
-    inline float CalcNextMaxWidthAdjustment(int32_t arg1)
-    {
-        return stub<member_func_t<float, aiVehiclePhysics, int32_t>>(0x560DC0, this, arg1);
-    }
-
-    // 0x561020 | ?CalcNextRdOffset@aiVehiclePhysics@@AAEMH@Z
-    inline float CalcNextRdOffset(int32_t arg1)
-    {
-        return stub<member_func_t<float, aiVehiclePhysics, int32_t>>(0x561020, this, arg1);
-    }
-
-    // 0x561290 | ?InSharpTurn@aiVehiclePhysics@@AAEHH@Z
-    inline int32_t InSharpTurn(int32_t arg1)
-    {
-        return stub<member_func_t<int32_t, aiVehiclePhysics, int32_t>>(0x561290, this, arg1);
-    }
-
-    // 0x5616F0 | ?SaveTarget@aiVehiclePhysics@@AAEXHAAVVector3@@PAVaiObstacle@@AAFH2@Z
-    inline void SaveTarget(
-        int32_t arg1, class Vector3& arg2, class aiObstacle* arg3, int16_t& arg4, int32_t arg5, int16_t& arg6)
-    {
-        return stub<member_func_t<void, aiVehiclePhysics, int32_t, class Vector3&, class aiObstacle*, int16_t&, int32_t,
-            int16_t&>>(0x5616F0, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
-
-    // 0x561950 | ?ContinueCheck@aiVehiclePhysics@@AAEXH@Z
-    inline void ContinueCheck(int32_t arg1)
-    {
-        return stub<member_func_t<void, aiVehiclePhysics, int32_t>>(0x561950, this, arg1);
-    }
-
-    // 0x561AD0 | ?CalcDestinationTarget@aiVehiclePhysics@@AAEXHAAVVector3@@@Z
-    inline void CalcDestinationTarget(int32_t arg1, class Vector3& arg2)
-    {
-        return stub<member_func_t<void, aiVehiclePhysics, int32_t, class Vector3&>>(0x561AD0, this, arg1, arg2);
-    }
-
-    // 0x5638D0 | ?SetTargetPtToDestination@aiVehiclePhysics@@AAEXH@Z
-    inline void SetTargetPtToDestination(int32_t arg1)
-    {
-        return stub<member_func_t<void, aiVehiclePhysics, int32_t>>(0x5638D0, this, arg1);
-    }
-
-    // 0x563B60 | ?CalcRoadTarget@aiVehiclePhysics@@AAEXHAAVVector3@@@Z
-    inline void CalcRoadTarget(int32_t arg1, class Vector3& arg2)
-    {
-        return stub<member_func_t<void, aiVehiclePhysics, int32_t, class Vector3&>>(0x563B60, this, arg1, arg2);
-    }
-
-    // 0x567230 | ?IsTargetBlocked@aiVehiclePhysics@@AAEPAVaiObstacle@@AAVVector3@@0HHHHMPAH@Z
-    inline class aiObstacle* IsTargetBlocked(class Vector3& arg1, class Vector3& arg2, int32_t arg3, int32_t arg4,
-        int32_t arg5, int32_t arg6, float arg7, int32_t* arg8)
-    {
-        return stub<member_func_t<class aiObstacle*, aiVehiclePhysics, class Vector3&, class Vector3&, int32_t, int32_t,
-            int32_t, int32_t, float, int32_t*>>(0x567230, this, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
-    }
-
-    // 0x5677D0 | ?DrawRouteThroughTraffic@aiVehiclePhysics@@QAEXXZ
-    inline void DrawRouteThroughTraffic()
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x5677D0, this);
-    }
-
-    // 0x5677E0 | ?DrawTurn@aiVehiclePhysics@@QAEXH@Z
-    inline void DrawTurn(int32_t arg1)
-    {
-        return stub<member_func_t<void, aiVehiclePhysics, int32_t>>(0x5677E0, this, arg1);
-    }
-
-    // 0x5677F0 | ?Dump@aiVehiclePhysics@@QAEXXZ
-    inline void Dump()
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x5677F0, this);
-    }
-
-    // 0x567C10 | ?Position@aiVehiclePhysics@@UAEXAAVVector3@@@Z
-    inline void Position(class Vector3& arg1) override
-    {
-        return stub<member_func_t<void, aiVehiclePhysics, class Vector3&>>(0x567C10, this, arg1);
-    }
-
-    // 0x567C00 | ?Speed@aiVehiclePhysics@@UAEMXZ
-    inline float Speed() override
-    {
-        return stub<member_func_t<float, aiVehiclePhysics>>(0x567C00, this);
-    }
-
-    // 0x55AAD0 | ?CurrentRoadIdx@aiVehiclePhysics@@UAEHPAPAVaiPath@@QA_NPAH@Z
-    inline int32_t CurrentRoadIdx(class aiPath** arg1, bool* const arg2, int32_t* arg3) override
-    {
-        return stub<member_func_t<int32_t, aiVehiclePhysics, class aiPath**, bool* const, int32_t*>>(
-            0x55AAD0, this, arg1, arg2, arg3);
-    }
-
-    // 0x567BB0 | ?CurrentRdVert@aiVehiclePhysics@@UAEHXZ
-    inline int32_t CurrentRdVert() override
-    {
-        return stub<member_func_t<int32_t, aiVehiclePhysics>>(0x567BB0, this);
-    }
-
-    // 0x5597A0 | ?Reset@aiVehiclePhysics@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x5597A0, this);
-    }
-
-    // 0x567B90 | ?Type@aiVehiclePhysics@@UAEHXZ
-    inline int32_t Type() override
-    {
-        return stub<member_func_t<int32_t, aiVehiclePhysics>>(0x567B90, this);
-    }
-
-    // 0x567C40 | ?GetMatrix@aiVehiclePhysics@@UAEAAVMatrix34@@XZ
-    inline class Matrix34& GetMatrix() override
-    {
-        return stub<member_func_t<class Matrix34&, aiVehiclePhysics>>(0x567C40, this);
-    }
-
-    // 0x567BC0 | ?FrontBumperDistance@aiVehiclePhysics@@UAEMXZ
-    inline float FrontBumperDistance() override
-    {
-        return stub<member_func_t<float, aiVehiclePhysics>>(0x567BC0, this);
-    }
+    ~aiVehiclePhysics();
 
     // 0x567BD0 | ?BackBumperDistance@aiVehiclePhysics@@UAEMXZ
-    inline float BackBumperDistance() override
-    {
-        return stub<member_func_t<float, aiVehiclePhysics>>(0x567BD0, this);
-    }
-
-    // 0x567BE0 | ?LSideDistance@aiVehiclePhysics@@UAEMXZ
-    inline float LSideDistance() override
-    {
-        return stub<member_func_t<float, aiVehiclePhysics>>(0x567BE0, this);
-    }
-
-    // 0x567BF0 | ?RSideDistance@aiVehiclePhysics@@UAEMXZ
-    inline float RSideDistance() override
-    {
-        return stub<member_func_t<float, aiVehiclePhysics>>(0x567BF0, this);
-    }
+    f32 BackBumperDistance() override;
 
     // 0x567BA0 | ?CurrentLane@aiVehiclePhysics@@UAEHXZ
-    inline int32_t CurrentLane() override
-    {
-        return stub<member_func_t<int32_t, aiVehiclePhysics>>(0x567BA0, this);
-    }
+    i32 CurrentLane() override;
+
+    // 0x567BB0 | ?CurrentRdVert@aiVehiclePhysics@@UAEHXZ
+    i32 CurrentRdVert() override;
 
     // 0x567C50 | ?CurrentRoadId@aiVehiclePhysics@@UAEHXZ
-    inline int32_t CurrentRoadId() override
-    {
-        return stub<member_func_t<int32_t, aiVehiclePhysics>>(0x567C50, this);
-    }
+    i32 CurrentRoadId() override;
+
+    // 0x55AAD0 | ?CurrentRoadIdx@aiVehiclePhysics@@UAEHPAPAVaiPath@@QA_NPAH@Z
+    i32 CurrentRoadIdx(class aiPath** arg1, bool* const arg2, i32* arg3) override;
 
     // 0x5677C0 | ?DrawId@aiVehiclePhysics@@UAEXXZ
-    inline void DrawId() override
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x5677C0, this);
-    }
+    void DrawId() override;
+
+    // 0x5677D0 | ?DrawRouteThroughTraffic@aiVehiclePhysics@@QAEXXZ
+    void DrawRouteThroughTraffic();
+
+    // 0x5677E0 | ?DrawTurn@aiVehiclePhysics@@QAEXH@Z
+    void DrawTurn(i32 arg1);
+
+    // 0x55A8F0 | ?DriveRoute@aiVehiclePhysics@@QAEXH@Z
+    void DriveRoute(i32 arg1);
+
+    // 0x5677F0 | ?Dump@aiVehiclePhysics@@QAEXXZ
+    void Dump();
+
+    // 0x567BC0 | ?FrontBumperDistance@aiVehiclePhysics@@UAEMXZ
+    f32 FrontBumperDistance() override;
+
+    // 0x567C40 | ?GetMatrix@aiVehiclePhysics@@UAEAAVMatrix34@@XZ
+    class Matrix34& GetMatrix() override;
+
+    // 0x5593E0 | ?Init@aiVehiclePhysics@@QAEXHPADFH@Z
+    void Init(i32 arg1, char* arg2, i16 arg3, i32 arg4);
+
+    // 0x567BE0 | ?LSideDistance@aiVehiclePhysics@@UAEMXZ
+    f32 LSideDistance() override;
+
+    // 0x55A570 | ?Mirror@aiVehiclePhysics@@QAEXPAVvehCar@@@Z
+    void Mirror(class vehCar* arg1);
+
+    // 0x567C10 | ?Position@aiVehiclePhysics@@UAEXAAVVector3@@@Z
+    void Position(class Vector3& arg1) override;
+
+    // 0x567BF0 | ?RSideDistance@aiVehiclePhysics@@UAEMXZ
+    f32 RSideDistance() override;
+
+    // 0x5598A0 | ?RegisterRoute@aiVehiclePhysics@@QAEXPAFFABVVector3@@1HMM_N22222MMMM@Z
+    void RegisterRoute(i16* arg1, i16 arg2, class Vector3 const& arg3, class Vector3 const& arg4, i32 arg5, f32 arg6,
+        f32 arg7, bool arg8, bool arg9, bool arg10, bool arg11, bool arg12, bool arg13, f32 arg14, f32 arg15, f32 arg16,
+        f32 arg17);
 
     // 0x5679D0 | ?ReplayDebug@aiVehiclePhysics@@UAEXXZ
-    inline void ReplayDebug() override
-    {
-        return stub<member_func_t<void, aiVehiclePhysics>>(0x5679D0, this);
-    }
+    void ReplayDebug() override;
+
+    // 0x5597A0 | ?Reset@aiVehiclePhysics@@UAEXXZ
+    void Reset() override;
+
+    // 0x567C00 | ?Speed@aiVehiclePhysics@@UAEMXZ
+    f32 Speed() override;
+
+    // 0x55C7A0 | ?StopRoadTraffic@aiVehiclePhysics@@QAEX_N@Z
+    void StopRoadTraffic(bool arg1);
+
+    // 0x567B90 | ?Type@aiVehiclePhysics@@UAEHXZ
+    i32 Type() override;
+
+private:
+    // 0x55B460 | ?Backup@aiVehiclePhysics@@AAEXXZ
+    void Backup();
+
+    // 0x560900 | ?CalcCurrentMaxWidthAdjustment@aiVehiclePhysics@@AAEMH@Z
+    f32 CalcCurrentMaxWidthAdjustment(i32 arg1);
+
+    // 0x560B50 | ?CalcCurrentRdOffset@aiVehiclePhysics@@AAEMH@Z
+    f32 CalcCurrentRdOffset(i32 arg1);
+
+    // 0x561AD0 | ?CalcDestinationTarget@aiVehiclePhysics@@AAEXHAAVVector3@@@Z
+    void CalcDestinationTarget(i32 arg1, class Vector3& arg2);
+
+    // 0x560DC0 | ?CalcNextMaxWidthAdjustment@aiVehiclePhysics@@AAEMH@Z
+    f32 CalcNextMaxWidthAdjustment(i32 arg1);
+
+    // 0x561020 | ?CalcNextRdOffset@aiVehiclePhysics@@AAEMH@Z
+    f32 CalcNextRdOffset(i32 arg1);
+
+    // 0x55E0C0 | ?CalcObstacleAvoidPoints@aiVehiclePhysics@@AAEHPAVaiObstacle@@HHPAVVector3@@PAPAV2@PAF3@Z
+    i32 CalcObstacleAvoidPoints(
+        class aiObstacle* arg1, i32 arg2, i32 arg3, class Vector3* arg4, class aiObstacle** arg5, i16* arg6, i16* arg7);
+
+    // 0x55B830 | ?CalcRoadSpeed@aiVehiclePhysics@@AAEXXZ
+    void CalcRoadSpeed();
+
+    // 0x563B60 | ?CalcRoadTarget@aiVehiclePhysics@@AAEXHAAVVector3@@@Z
+    void CalcRoadTarget(i32 arg1, class Vector3& arg2);
+
+    // 0x55FB60 | ?CalcRoadTurns@aiVehiclePhysics@@AAEXXZ
+    void CalcRoadTurns();
+
+    // 0x55D9F0 | ?CalcRoute@aiVehiclePhysics@@AAEXXZ
+    void CalcRoute();
+
+    // 0x55EC50 | ?CalcSharpTurnTarget@aiVehiclePhysics@@AAEHAAHHAAVVector3@@@Z
+    i32 CalcSharpTurnTarget(i32& arg1, i32 arg2, class Vector3& arg3);
+
+    // 0x55B660 | ?CalcSpeed@aiVehiclePhysics@@AAEXXZ
+    void CalcSpeed();
+
+    // 0x5600B0 | ?CalcTurnIntersection@aiVehiclePhysics@@AAEMH@Z
+    f32 CalcTurnIntersection(i32 arg1);
+
+    // 0x55C080 | ?CheckDistance@aiVehiclePhysics@@AAEMH@Z
+    f32 CheckDistance(i32 arg1);
+
+    // 0x55A8E0 | ?CheckForShortcut@aiVehiclePhysics@@AAEXXZ
+    void CheckForShortcut();
+
+    // 0x561950 | ?ContinueCheck@aiVehiclePhysics@@AAEXH@Z
+    void ContinueCheck(i32 arg1);
+
+    // 0x55A740 | ?DestMapComponent@aiVehiclePhysics@@AAEXABVVector3@@PAF1@Z
+    void DestMapComponent(class Vector3 const& arg1, i16* arg2, i16* arg3);
+
+    // 0x55DBC0 | ?DetermineBestRoute@aiVehiclePhysics@@AAEXXZ
+    void DetermineBestRoute();
+
+    // 0x55DD10 | ?EnumRoutes@aiVehiclePhysics@@AAEXH@Z
+    void EnumRoutes(i32 arg1);
+
+    // 0x55E4D0 | ?EnumTargets@aiVehiclePhysics@@AAEXAAVVector3@@PAVaiObstacle@@HHHHHHPAV2@PAPAV3@PAF4PAH@Z
+    void EnumTargets(class Vector3& arg1, class aiObstacle* arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6, i32 arg7,
+        i32 arg8, class Vector3* arg9, class aiObstacle** arg10, i16* arg11, i16* arg12, i32* arg13);
+
+    // 0x55B5B0 | ?FinishedBackingUp@aiVehiclePhysics@@AAEXXZ
+    void FinishedBackingUp();
+
+    // 0x55AF50 | ?Forward@aiVehiclePhysics@@AAEXXZ
+    void Forward();
+
+    // 0x561290 | ?InSharpTurn@aiVehiclePhysics@@AAEHH@Z
+    i32 InSharpTurn(i32 arg1);
+
+    // 0x55B400 | ?InitBackup@aiVehiclePhysics@@AAEXXZ
+    void InitBackup();
+
+    // 0x55AE80 | ?InitForward@aiVehiclePhysics@@AAEXXZ
+    void InitForward();
+
+    // 0x55F9B0 | ?InitRoadTurns@aiVehiclePhysics@@AAEXXZ
+    void InitRoadTurns();
+
+    // 0x55AB50 | ?InitShortcut@aiVehiclePhysics@@AAEXXZ
+    void InitShortcut();
+
+    // 0x567230 | ?IsTargetBlocked@aiVehiclePhysics@@AAEPAVaiObstacle@@AAVVector3@@0HHHHMPAH@Z
+    class aiObstacle* IsTargetBlocked(
+        class Vector3& arg1, class Vector3& arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6, f32 arg7, i32* arg8);
+
+    // 0x55C860 | ?LocateWayPtFromInt@aiVehiclePhysics@@AAEHH@Z
+    i32 LocateWayPtFromInt(i32 arg1);
+
+    // 0x55CD40 | ?LocateWayPtFromRoad@aiVehiclePhysics@@AAEHPAVaiPath@@@Z
+    i32 LocateWayPtFromRoad(class aiPath* arg1);
+
+    // 0x55C510 | ?PlanRoute@aiVehiclePhysics@@AAEHXZ
+    i32 PlanRoute();
+
+    // 0x5616F0 | ?SaveTarget@aiVehiclePhysics@@AAEXHAAVVector3@@PAVaiObstacle@@AAFH2@Z
+    void SaveTarget(i32 arg1, class Vector3& arg2, class aiObstacle* arg3, i16& arg4, i32 arg5, i16& arg6);
+
+    // 0x55F800 | ?SaveTurnTarget@aiVehiclePhysics@@AAEXHH@Z
+    void SaveTurnTarget(i32 arg1, i32 arg2);
+
+    // 0x5638D0 | ?SetTargetPtToDestination@aiVehiclePhysics@@AAEXH@Z
+    void SetTargetPtToDestination(i32 arg1);
+
+    // 0x55ABE0 | ?Shortcut@aiVehiclePhysics@@AAEXXZ
+    void Shortcut();
+
+    // 0x55C0A0 | ?SolveRoadTargetPoint@aiVehiclePhysics@@AAEXXZ
+    void SolveRoadTargetPoint();
+
+    // 0x55C180 | ?SolveShortcutTargetPoint@aiVehiclePhysics@@AAEXXZ
+    void SolveShortcutTargetPoint();
+
+    // 0x55ADA0 | ?Stop@aiVehiclePhysics@@AAEXXZ
+    void Stop();
 };
+
+check_size(aiVehiclePhysics, 0x0);
 
 struct aiRouteNode
 {
 public:
     // 0x559340 | ??0aiRouteNode@@QAE@XZ
-    inline aiRouteNode()
-    {
-        stub<member_func_t<void, aiRouteNode>>(0x559340, this);
-    }
-
-    // 0x559350 | ?Reset@aiRouteNode@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, aiRouteNode>>(0x559350, this);
-    }
+    aiRouteNode();
 
     // 0x567920 | ?ReplayDebug@aiRouteNode@@QAEXXZ
-    inline void ReplayDebug()
-    {
-        return stub<member_func_t<void, aiRouteNode>>(0x567920, this);
-    }
+    void ReplayDebug();
+
+    // 0x559350 | ?Reset@aiRouteNode@@QAEXXZ
+    void Reset();
 };
+
+check_size(aiRouteNode, 0x0);

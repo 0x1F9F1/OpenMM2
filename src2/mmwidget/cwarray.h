@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "textfield.h"
 
 /*
     mmwidget:cwarray
@@ -49,141 +51,77 @@
     0x5B3A60 | const UICWArray::`vftable' | ??_7UICWArray@@6B@
 */
 
-class UICWArray : uiWidget
+class UICWArray : public uiWidget
 {
+    // const UICWArray::`vftable' @ 0x5B3A60
+
 public:
-    // UICWArray::`vftable' @ 0x5B3A60
-
     // 0x4EF6D0 | ??0UICWArray@@QAE@XZ
-    inline UICWArray()
-    {
-        stub<member_func_t<void, UICWArray>>(0x4EF6D0, this);
-    }
+    UICWArray();
 
-    // 0x4EF840 | ?Init@UICWArray@@QAEXMMMMHVdatCallback@@@Z
-    inline void Init(float arg1, float arg2, float arg3, float arg4, int32_t arg5, class datCallback arg6)
-    {
-        return stub<member_func_t<void, UICWArray, float, float, float, float, int32_t, class datCallback>>(
-            0x4EF840, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
-
-    // 0x4EFA90 | ?VScrollCB@UICWArray@@QAEXXZ
-    inline void VScrollCB()
-    {
-        return stub<member_func_t<void, UICWArray>>(0x4EFA90, this);
-    }
-
-    // 0x4EFB00 | ?SetVScrollVals@UICWArray@@QAEXXZ
-    inline void SetVScrollVals()
-    {
-        return stub<member_func_t<void, UICWArray>>(0x4EFB00, this);
-    }
-
-    // 0x4EFB70 | ?SetVScrollPos@UICWArray@@QAEXXZ
-    inline void SetVScrollPos()
-    {
-        return stub<member_func_t<void, UICWArray>>(0x4EFB70, this);
-    }
-
-    // 0x4EFBA0 | ?SetStartOffset@UICWArray@@QAEXH@Z
-    inline void SetStartOffset(int32_t arg1)
-    {
-        return stub<member_func_t<void, UICWArray, int32_t>>(0x4EFBA0, this, arg1);
-    }
-
-    // 0x4EFBE0 | ?Redraw@UICWArray@@QAEXXZ
-    inline void Redraw()
-    {
-        return stub<member_func_t<void, UICWArray>>(0x4EFBE0, this);
-    }
-
-    // 0x4EFFC0 | ?EnterCapture@UICWArray@@QAEXH@Z
-    inline void EnterCapture(int32_t arg1)
-    {
-        return stub<member_func_t<void, UICWArray, int32_t>>(0x4EFFC0, this, arg1);
-    }
-
-    // 0x4F0030 | ?ForceCapture@UICWArray@@QAEXXZ
-    inline void ForceCapture()
-    {
-        return stub<member_func_t<void, UICWArray>>(0x4F0030, this);
-    }
+    // 0x4F0270 | ??_GUICWArray@@UAEPAXI@Z
+    // 0x4EF7A0 | ??1UICWArray@@UAE@XZ
+    ~UICWArray() override;
 
     // 0x4F0060 | ?AcceptCapture@UICWArray@@QAEXXZ
-    inline void AcceptCapture()
-    {
-        return stub<member_func_t<void, UICWArray>>(0x4F0060, this);
-    }
-
-    // 0x4F00B0 | ?ResetCapture@UICWArray@@QAEXXZ
-    inline void ResetCapture()
-    {
-        return stub<member_func_t<void, UICWArray>>(0x4F00B0, this);
-    }
-
-    // 0x4F00E0 | ?CheckCapture@UICWArray@@QAEXXZ
-    inline void CheckCapture()
-    {
-        return stub<member_func_t<void, UICWArray>>(0x4F00E0, this);
-    }
-
-    // 0x4F0190 | ?SaveCFG@UICWArray@@QAEXXZ
-    inline void SaveCFG()
-    {
-        return stub<member_func_t<void, UICWArray>>(0x4F0190, this);
-    }
-
-    // 0x4F01D0 | ?LoadCFG@UICWArray@@QAEXXZ
-    inline void LoadCFG()
-    {
-        return stub<member_func_t<void, UICWArray>>(0x4F01D0, this);
-    }
-
-    // 0x4F0220 | ?DefaultCFG@UICWArray@@QAEXXZ
-    inline void DefaultCFG()
-    {
-        return stub<member_func_t<void, UICWArray>>(0x4F0220, this);
-    }
-
-    // 0x4F0250 | ?DebugForceSetting@UICWArray@@QAEXXZ
-    inline void DebugForceSetting()
-    {
-        return stub<member_func_t<void, UICWArray>>(0x4F0250, this);
-    }
-
-    // 0x4EF7A0 | ??1UICWArray@@UAE@XZ
-    inline ~UICWArray() override
-    {
-        stub<member_func_t<void, UICWArray>>(0x4EF7A0, this);
-    }
-
-    // 0x4EFF30 | ?Update@UICWArray@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, UICWArray>>(0x4EFF30, this);
-    }
-
-    // 0x4EF830 | ?Reset@UICWArray@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, UICWArray>>(0x4EF830, this);
-    }
+    void AcceptCapture();
 
     // 0x4EFD80 | ?Action@UICWArray@@UAEXTeqEvent@@@Z
-    inline void Action(union eqEvent arg1) override
-    {
-        return stub<member_func_t<void, UICWArray, union eqEvent>>(0x4EFD80, this, arg1);
-    }
+    void Action(union eqEvent arg1) override;
 
     // 0x4EFEC0 | ?CaptureAction@UICWArray@@UAEXTeqEvent@@@Z
-    inline void CaptureAction(union eqEvent arg1) override
-    {
-        return stub<member_func_t<void, UICWArray, union eqEvent>>(0x4EFEC0, this, arg1);
-    }
+    void CaptureAction(union eqEvent arg1) override;
+
+    // 0x4F00E0 | ?CheckCapture@UICWArray@@QAEXXZ
+    void CheckCapture();
+
+    // 0x4F0250 | ?DebugForceSetting@UICWArray@@QAEXXZ
+    void DebugForceSetting();
+
+    // 0x4F0220 | ?DefaultCFG@UICWArray@@QAEXXZ
+    void DefaultCFG();
+
+    // 0x4EFFC0 | ?EnterCapture@UICWArray@@QAEXH@Z
+    void EnterCapture(i32 arg1);
+
+    // 0x4F0030 | ?ForceCapture@UICWArray@@QAEXXZ
+    void ForceCapture();
+
+    // 0x4EF840 | ?Init@UICWArray@@QAEXMMMMHVdatCallback@@@Z
+    void Init(f32 arg1, f32 arg2, f32 arg3, f32 arg4, i32 arg5, class datCallback arg6);
+
+    // 0x4F01D0 | ?LoadCFG@UICWArray@@QAEXXZ
+    void LoadCFG();
+
+    // 0x4EFBE0 | ?Redraw@UICWArray@@QAEXXZ
+    void Redraw();
+
+    // 0x4EF830 | ?Reset@UICWArray@@UAEXXZ
+    void Reset() override;
+
+    // 0x4F00B0 | ?ResetCapture@UICWArray@@QAEXXZ
+    void ResetCapture();
+
+    // 0x4F0190 | ?SaveCFG@UICWArray@@QAEXXZ
+    void SaveCFG();
+
+    // 0x4EFBA0 | ?SetStartOffset@UICWArray@@QAEXH@Z
+    void SetStartOffset(i32 arg1);
+
+    // 0x4EFB70 | ?SetVScrollPos@UICWArray@@QAEXXZ
+    void SetVScrollPos();
+
+    // 0x4EFB00 | ?SetVScrollVals@UICWArray@@QAEXXZ
+    void SetVScrollVals();
 
     // 0x4EFD40 | ?Switch@UICWArray@@UAEXH@Z
-    inline void Switch(int32_t arg1) override
-    {
-        return stub<member_func_t<void, UICWArray, int32_t>>(0x4EFD40, this, arg1);
-    }
+    void Switch(i32 arg1) override;
+
+    // 0x4EFF30 | ?Update@UICWArray@@UAEXXZ
+    void Update() override;
+
+    // 0x4EFA90 | ?VScrollCB@UICWArray@@QAEXXZ
+    void VScrollCB();
 };
+
+check_size(UICWArray, 0xCC);

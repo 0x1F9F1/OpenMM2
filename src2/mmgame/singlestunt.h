@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,10 @@
 */
 
 #pragma once
+
+#include "data/base.h"
+#include "gamesingle.h"
+#include "mmgamemusicdata.h"
 
 /*
     mmgame:singlestunt
@@ -77,276 +81,171 @@
     0x5B0634 | const mmInfoBase::`vftable' | ??_7mmInfoBase@@6B@
 */
 
-struct mmSingleStunt : mmGameSingle
+class mmSingleStunt : public mmGameSingle
 {
+    // const mmSingleStunt::`vftable' @ 0x5B059C
+
 public:
-    // mmSingleStunt::`vftable' @ 0x5B059C
-
     // 0x415B00 | ??0mmSingleStunt@@QAE@XZ
-    inline mmSingleStunt()
-    {
-        stub<member_func_t<void, mmSingleStunt>>(0x415B00, this);
-    }
+    mmSingleStunt();
 
-    // 0x416070 | ?LoadEventFile@mmSingleStunt@@AAE_NPAD@Z
-    inline bool LoadEventFile(char* arg1)
-    {
-        return stub<member_func_t<bool, mmSingleStunt, char*>>(0x416070, this, arg1);
-    }
-
-    // 0x416310 | ?InitNewEvent@mmSingleStunt@@QAEXXZ
-    inline void InitNewEvent()
-    {
-        return stub<member_func_t<void, mmSingleStunt>>(0x416310, this);
-    }
+    // 0x41AA40 | ??_EmmSingleStunt@@UAEPAXI@Z
+    // 0x415BC0 | ??1mmSingleStunt@@UAE@XZ
+    ~mmSingleStunt() override;
 
     // 0x416820 | ?EnableRacers@mmSingleStunt@@QAEXXZ
-    inline void EnableRacers()
-    {
-        return stub<member_func_t<void, mmSingleStunt>>(0x416820, this);
-    }
-
-    // 0x416900 | ?GetOpponentIndex@mmSingleStunt@@AAEHXZ
-    inline int32_t GetOpponentIndex()
-    {
-        return stub<member_func_t<int32_t, mmSingleStunt>>(0x416900, this);
-    }
-
-    // 0x416A50 | ?UpdateEvade@mmSingleStunt@@AAEXXZ
-    inline void UpdateEvade()
-    {
-        return stub<member_func_t<void, mmSingleStunt>>(0x416A50, this);
-    }
-
-    // 0x417030 | ?UpdateAccel@mmSingleStunt@@AAEXXZ
-    inline void UpdateAccel()
-    {
-        return stub<member_func_t<void, mmSingleStunt>>(0x417030, this);
-    }
-
-    // 0x4174C0 | ?UpdateJump@mmSingleStunt@@AAEXXZ
-    inline void UpdateJump()
-    {
-        return stub<member_func_t<void, mmSingleStunt>>(0x4174C0, this);
-    }
-
-    // 0x417B10 | ?UpdateChase@mmSingleStunt@@AAEXXZ
-    inline void UpdateChase()
-    {
-        return stub<member_func_t<void, mmSingleStunt>>(0x417B10, this);
-    }
-
-    // 0x4180F0 | ?UpdateFrogger@mmSingleStunt@@AAEXXZ
-    inline void UpdateFrogger()
-    {
-        return stub<member_func_t<void, mmSingleStunt>>(0x4180F0, this);
-    }
-
-    // 0x4187A0 | ?UpdateCorner@mmSingleStunt@@AAEXXZ
-    inline void UpdateCorner()
-    {
-        return stub<member_func_t<void, mmSingleStunt>>(0x4187A0, this);
-    }
-
-    // 0x419010 | ?UpdateBlitz@mmSingleStunt@@AAEXXZ
-    inline void UpdateBlitz()
-    {
-        return stub<member_func_t<void, mmSingleStunt>>(0x419010, this);
-    }
-
-    // 0x4195F0 | ?UpdateStop@mmSingleStunt@@AAEXXZ
-    inline void UpdateStop()
-    {
-        return stub<member_func_t<void, mmSingleStunt>>(0x4195F0, this);
-    }
-
-    // 0x419C90 | ?UpdateCollide@mmSingleStunt@@AAEXXZ
-    inline void UpdateCollide()
-    {
-        return stub<member_func_t<void, mmSingleStunt>>(0x419C90, this);
-    }
-
-    // 0x41A130 | ?CheckTimeUp@mmSingleStunt@@AAE_NXZ
-    inline bool CheckTimeUp()
-    {
-        return stub<member_func_t<bool, mmSingleStunt>>(0x41A130, this);
-    }
-
-    // 0x41A1B0 | ?CheckCopPursuit@mmSingleStunt@@AAE_NXZ
-    inline bool CheckCopPursuit()
-    {
-        return stub<member_func_t<bool, mmSingleStunt>>(0x41A1B0, this);
-    }
-
-    // 0x41A310 | ?HUDMessage@mmSingleStunt@@AAEXH@Z
-    inline void HUDMessage(int32_t arg1)
-    {
-        return stub<member_func_t<void, mmSingleStunt, int32_t>>(0x41A310, this, arg1);
-    }
+    void EnableRacers();
 
     // 0x41A340 | ?EventSoundCtrl@mmSingleStunt@@QAEX_NH@Z
-    inline void EventSoundCtrl(bool arg1, int32_t arg2)
-    {
-        return stub<member_func_t<void, mmSingleStunt, bool, int32_t>>(0x41A340, this, arg1, arg2);
-    }
-
-    // 0x41A390 | ?PlayTimerWarning@mmSingleStunt@@AAEXM@Z
-    inline void PlayTimerWarning(float arg1)
-    {
-        return stub<member_func_t<void, mmSingleStunt, float>>(0x41A390, this, arg1);
-    }
-
-    // 0x41A470 | ?NextRaceAvailable@mmSingleStunt@@AAE_NXZ
-    inline bool NextRaceAvailable()
-    {
-        return stub<member_func_t<bool, mmSingleStunt>>(0x41A470, this);
-    }
-
-    // 0x41A6F0 | ?RegisterFinish@mmSingleStunt@@QAEHH@Z
-    inline int32_t RegisterFinish(int32_t arg1)
-    {
-        return stub<member_func_t<int32_t, mmSingleStunt, int32_t>>(0x41A6F0, this, arg1);
-    }
-
-    // 0x415BC0 | ??1mmSingleStunt@@UAE@XZ
-    inline ~mmSingleStunt() override
-    {
-        stub<member_func_t<void, mmSingleStunt>>(0x415BC0, this);
-    }
-
-    // 0x416970 | ?Update@mmSingleStunt@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmSingleStunt>>(0x416970, this);
-    }
-
-    // 0x416760 | ?Reset@mmSingleStunt@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmSingleStunt>>(0x416760, this);
-    }
-
-    // 0x415C40 | ?Init@mmSingleStunt@@UAEHXZ
-    inline int32_t Init() override
-    {
-        return stub<member_func_t<int32_t, mmSingleStunt>>(0x415C40, this);
-    }
-
-    // 0x415D40 | ?InitMyPlayer@mmSingleStunt@@UAEXXZ
-    inline void InitMyPlayer() override
-    {
-        return stub<member_func_t<void, mmSingleStunt>>(0x415D40, this);
-    }
-
-    // 0x416720 | ?InitOtherPlayers@mmSingleStunt@@UAEXXZ
-    inline void InitOtherPlayers() override
-    {
-        return stub<member_func_t<void, mmSingleStunt>>(0x416720, this);
-    }
-
-    // 0x416450 | ?InitGameObjects@mmSingleStunt@@UAEXXZ
-    inline void InitGameObjects() override
-    {
-        return stub<member_func_t<void, mmSingleStunt>>(0x416450, this);
-    }
-
-    // 0x415DB0 | ?InitHUD@mmSingleStunt@@UAEXXZ
-    inline void InitHUD() override
-    {
-        return stub<member_func_t<void, mmSingleStunt>>(0x415DB0, this);
-    }
-
-    // 0x416980 | ?UpdateGameInput@mmSingleStunt@@UAEXH@Z
-    inline void UpdateGameInput(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmSingleStunt, int32_t>>(0x416980, this, arg1);
-    }
-
-    // 0x41ABF0 | ?UpdateDebugKeyInput@mmSingleStunt@@UAEXH@Z
-    inline void UpdateDebugKeyInput(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmSingleStunt, int32_t>>(0x41ABF0, this, arg1);
-    }
-
-    // 0x416990 | ?UpdateGame@mmSingleStunt@@UAEXXZ
-    inline void UpdateGame() override
-    {
-        return stub<member_func_t<void, mmSingleStunt>>(0x416990, this);
-    }
-
-    // 0x41A490 | ?NextRace@mmSingleStunt@@UAEXXZ
-    inline void NextRace() override
-    {
-        return stub<member_func_t<void, mmSingleStunt>>(0x41A490, this);
-    }
+    void EventSoundCtrl(bool arg1, i32 arg2);
 
     // 0x416920 | ?HitWaterHandler@mmSingleStunt@@UAEXXZ
-    inline void HitWaterHandler() override
-    {
-        return stub<member_func_t<void, mmSingleStunt>>(0x416920, this);
-    }
+    void HitWaterHandler() override;
+
+    // 0x415C40 | ?Init@mmSingleStunt@@UAEHXZ
+    i32 Init() override;
+
+    // 0x416450 | ?InitGameObjects@mmSingleStunt@@UAEXXZ
+    void InitGameObjects() override;
+
+    // 0x415DB0 | ?InitHUD@mmSingleStunt@@UAEXXZ
+    void InitHUD() override;
+
+    // 0x415D40 | ?InitMyPlayer@mmSingleStunt@@UAEXXZ
+    void InitMyPlayer() override;
+
+    // 0x416310 | ?InitNewEvent@mmSingleStunt@@QAEXXZ
+    void InitNewEvent();
+
+    // 0x416720 | ?InitOtherPlayers@mmSingleStunt@@UAEXXZ
+    void InitOtherPlayers() override;
+
+    // 0x41A490 | ?NextRace@mmSingleStunt@@UAEXXZ
+    void NextRace() override;
+
+    // 0x41A6F0 | ?RegisterFinish@mmSingleStunt@@QAEHH@Z
+    i32 RegisterFinish(i32 arg1);
+
+    // 0x416760 | ?Reset@mmSingleStunt@@UAEXXZ
+    void Reset() override;
 
     // 0x41A460 | ?SwitchState@mmSingleStunt@@UAEXH@Z
-    inline void SwitchState(int32_t arg1) override
-    {
-        return stub<member_func_t<void, mmSingleStunt, int32_t>>(0x41A460, this, arg1);
-    }
+    void SwitchState(i32 arg1) override;
+
+    // 0x416970 | ?Update@mmSingleStunt@@UAEXXZ
+    void Update() override;
+
+    // 0x41ABF0 | ?UpdateDebugKeyInput@mmSingleStunt@@UAEXH@Z
+    void UpdateDebugKeyInput(i32 arg1) override;
+
+    // 0x416990 | ?UpdateGame@mmSingleStunt@@UAEXXZ
+    void UpdateGame() override;
+
+    // 0x416980 | ?UpdateGameInput@mmSingleStunt@@UAEXH@Z
+    void UpdateGameInput(i32 arg1) override;
+
+private:
+    // 0x41A1B0 | ?CheckCopPursuit@mmSingleStunt@@AAE_NXZ
+    bool CheckCopPursuit();
+
+    // 0x41A130 | ?CheckTimeUp@mmSingleStunt@@AAE_NXZ
+    bool CheckTimeUp();
+
+    // 0x416900 | ?GetOpponentIndex@mmSingleStunt@@AAEHXZ
+    i32 GetOpponentIndex();
+
+    // 0x41A310 | ?HUDMessage@mmSingleStunt@@AAEXH@Z
+    void HUDMessage(i32 arg1);
+
+    // 0x416070 | ?LoadEventFile@mmSingleStunt@@AAE_NPAD@Z
+    bool LoadEventFile(char* arg1);
+
+    // 0x41A470 | ?NextRaceAvailable@mmSingleStunt@@AAE_NXZ
+    bool NextRaceAvailable();
+
+    // 0x41A390 | ?PlayTimerWarning@mmSingleStunt@@AAEXM@Z
+    void PlayTimerWarning(f32 arg1);
+
+    // 0x417030 | ?UpdateAccel@mmSingleStunt@@AAEXXZ
+    void UpdateAccel();
+
+    // 0x419010 | ?UpdateBlitz@mmSingleStunt@@AAEXXZ
+    void UpdateBlitz();
+
+    // 0x417B10 | ?UpdateChase@mmSingleStunt@@AAEXXZ
+    void UpdateChase();
+
+    // 0x419C90 | ?UpdateCollide@mmSingleStunt@@AAEXXZ
+    void UpdateCollide();
+
+    // 0x4187A0 | ?UpdateCorner@mmSingleStunt@@AAEXXZ
+    void UpdateCorner();
+
+    // 0x416A50 | ?UpdateEvade@mmSingleStunt@@AAEXXZ
+    void UpdateEvade();
+
+    // 0x4180F0 | ?UpdateFrogger@mmSingleStunt@@AAEXXZ
+    void UpdateFrogger();
+
+    // 0x4174C0 | ?UpdateJump@mmSingleStunt@@AAEXXZ
+    void UpdateJump();
+
+    // 0x4195F0 | ?UpdateStop@mmSingleStunt@@AAEXXZ
+    void UpdateStop();
 };
+
+check_size(mmSingleStunt, 0x7970);
 
 struct mmInfoBase : Base
 {
-public:
-    // mmInfoBase::`vftable' @ 0x5B0634
+    // const mmInfoBase::`vftable' @ 0x5B0634
 
+public:
     // 0x528230 | ??0mmInfoBase@@QAE@XZ
-    inline mmInfoBase()
-    {
-        stub<member_func_t<void, mmInfoBase>>(0x528230, this);
-    }
+    mmInfoBase();
+
+    // 0x41AB60 | ??_GmmInfoBase@@UAEPAXI@Z
+    // 0x41AB90 | ??1mmInfoBase@@UAE@XZ
+    ~mmInfoBase() override;
 
     // 0x528260 | ?Load@mmInfoBase@@QAEHPAD@Z
-    inline int32_t Load(char* arg1)
-    {
-        return stub<member_func_t<int32_t, mmInfoBase, char*>>(0x528260, this, arg1);
-    }
+    i32 Load(char* arg1);
 
     // 0x528310 | ?Save@mmInfoBase@@QAEHPAD@Z
-    inline int32_t Save(char* arg1)
-    {
-        return stub<member_func_t<int32_t, mmInfoBase, char*>>(0x528310, this, arg1);
-    }
+    i32 Save(char* arg1);
 
     // 0x5283C0 | ?SetIOPath@mmInfoBase@@QAEXPAD@Z
-    inline void SetIOPath(char* arg1)
-    {
-        return stub<member_func_t<void, mmInfoBase, char*>>(0x5283C0, this, arg1);
-    }
-
-    // 0x41AB90 | ??1mmInfoBase@@UAE@XZ
-    inline ~mmInfoBase() override
-    {
-        stub<member_func_t<void, mmInfoBase>>(0x41AB90, this);
-    }
+    void SetIOPath(char* arg1);
 
     // 0x41AB50 | ?FileIO@mmInfoBase@@UAEXAAVdatParser@@@Z
-    virtual inline void FileIO(class datParser& arg1)
-    {
-        return stub<member_func_t<void, mmInfoBase, class datParser&>>(0x41AB50, this, arg1);
-    }
+    virtual void FileIO(class datParser& arg1);
 };
+
+check_size(mmInfoBase, 0x0);
 
 struct mmCCData
 {
 public:
     // 0x41ABC0 | ??0mmCCData@@QAE@XZ
-    inline mmCCData()
-    {
-        stub<member_func_t<void, mmCCData>>(0x41ABC0, this);
-    }
+    mmCCData();
 
     // 0x41ABE0 | ??1mmCCData@@QAE@XZ
-    inline ~mmCCData()
-    {
-        stub<member_func_t<void, mmCCData>>(0x41ABE0, this);
-    }
+    ~mmCCData();
 };
+
+check_size(mmCCData, 0x3C);
+
+struct mmSingleRaceMusicData : mmGameMusicData
+{
+    // const mmSingleRaceMusicData::`vftable' @ 0x5B0610
+
+public:
+    // 0x4336D0 | ?LoadMusic@mmSingleRaceMusicData@@UAE_NPAD@Z
+    bool LoadMusic(char* arg1) override;
+
+private:
+    // 0x433890 | ?LoadMusicSegments@mmSingleRaceMusicData@@AAE_NPAVStream@@F@Z
+    bool LoadMusicSegments(class Stream* arg1, i16 arg2);
+};
+
+check_size(mmSingleRaceMusicData, 0x0);

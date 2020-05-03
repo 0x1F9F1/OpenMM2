@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "optionsbase.h"
 
 /*
     mmui:graphics
@@ -45,88 +47,58 @@
     int data5 | ?data5@@3HA
     int data6 | ?data6@@3HA
     0x6B0454 | unsigned int mmCpuSpeed | ?mmCpuSpeed@@3IA
-    bool NeedFullShutdown | ?NeedFullShutdown@@3_NA
+    0x6B0468 | bool NeedFullShutdown | ?NeedFullShutdown@@3_NA
     int RenderToSystemMemory | ?RenderToSystemMemory@@3HA
     int TextureLevel | ?TextureLevel@@3HA
 */
 
 // 0x4F3F50 | ?AutoDetect@@YAXH@Z
-inline void AutoDetect(int32_t arg1)
-{
-    return stub<cdecl_t<void, int32_t>>(0x4F3F50, arg1);
-}
+void AutoDetect(i32 arg1);
+
+// 0x6B0468 | ?NeedFullShutdown@@3_NA
+inline extern_var(0x6B0468, bool, NeedFullShutdown);
 
 // 0x6B0454 | ?mmCpuSpeed@@3IA
-inline extern_var(0x6B0454, uint32_t, mmCpuSpeed);
+inline extern_var(0x6B0454, u32, mmCpuSpeed);
 
-struct GraphicsOptions : OptionsBase
+class GraphicsOptions : public OptionsBase
 {
+    // const GraphicsOptions::`vftable' @ 0x5B3CD4
+
 public:
-    // GraphicsOptions::`vftable' @ 0x5B3CD4
-
     // 0x4F4280 | ??0GraphicsOptions@@QAE@H@Z
-    inline GraphicsOptions(int32_t arg1)
-    {
-        stub<member_func_t<void, GraphicsOptions, int32_t>>(0x4F4280, this, arg1);
-    }
+    GraphicsOptions(i32 arg1);
 
-    // 0x4F5140 | ?SetResolution@GraphicsOptions@@QAEXXZ
-    inline void SetResolution()
-    {
-        return stub<member_func_t<void, GraphicsOptions>>(0x4F5140, this);
-    }
-
-    // 0x4F5150 | ?TogglePeds@GraphicsOptions@@QAEXXZ
-    inline void TogglePeds()
-    {
-        return stub<member_func_t<void, GraphicsOptions>>(0x4F5150, this);
-    }
-
-    // 0x4F5170 | ?SetLightQuality@GraphicsOptions@@QAEXXZ
-    inline void SetLightQuality()
-    {
-        return stub<member_func_t<void, GraphicsOptions>>(0x4F5170, this);
-    }
-
-    // 0x4F5220 | ?SetRenderer@GraphicsOptions@@QAEXXZ
-    inline void SetRenderer()
-    {
-        return stub<member_func_t<void, GraphicsOptions>>(0x4F5220, this);
-    }
-
-    // 0x4F53F0 | ?FocusDescription@GraphicsOptions@@QAEXPAX0@Z
-    inline void FocusDescription(void* arg1, void* arg2)
-    {
-        return stub<member_func_t<void, GraphicsOptions, void*, void*>>(0x4F53F0, this, arg1, arg2);
-    }
-
+    // 0x4F5420 | ??_GGraphicsOptions@@UAEPAXI@Z
     // 0x4F50D0 | ??1GraphicsOptions@@UAE@XZ
-    inline ~GraphicsOptions() override
-    {
-        stub<member_func_t<void, GraphicsOptions>>(0x4F50D0, this);
-    }
-
-    // 0x4F5230 | ?PreSetup@GraphicsOptions@@UAEXXZ
-    inline void PreSetup() override
-    {
-        return stub<member_func_t<void, GraphicsOptions>>(0x4F5230, this);
-    }
+    ~GraphicsOptions() override;
 
     // 0x4F53A0 | ?CancelAction@GraphicsOptions@@UAEXXZ
-    inline void CancelAction() override
-    {
-        return stub<member_func_t<void, GraphicsOptions>>(0x4F53A0, this);
-    }
+    void CancelAction() override;
 
     // 0x4F53B0 | ?DoneAction@GraphicsOptions@@UAEXXZ
-    inline void DoneAction() override
-    {
-        return stub<member_func_t<void, GraphicsOptions>>(0x4F53B0, this);
-    }
+    void DoneAction() override;
+
+    // 0x4F53F0 | ?FocusDescription@GraphicsOptions@@QAEXPAX0@Z
+    void FocusDescription(void* arg1, void* arg2);
+
+    // 0x4F5230 | ?PreSetup@GraphicsOptions@@UAEXXZ
+    void PreSetup() override;
 
     // 0x4F52E0 | ?ResetDefaultAction@GraphicsOptions@@UAEXXZ
-    inline void ResetDefaultAction() override
-    {
-        return stub<member_func_t<void, GraphicsOptions>>(0x4F52E0, this);
-    }
+    void ResetDefaultAction() override;
+
+    // 0x4F5170 | ?SetLightQuality@GraphicsOptions@@QAEXXZ
+    void SetLightQuality();
+
+    // 0x4F5220 | ?SetRenderer@GraphicsOptions@@QAEXXZ
+    void SetRenderer();
+
+    // 0x4F5140 | ?SetResolution@GraphicsOptions@@QAEXXZ
+    void SetResolution();
+
+    // 0x4F5150 | ?TogglePeds@GraphicsOptions@@QAEXXZ
+    void TogglePeds();
 };
+
+check_size(GraphicsOptions, 0x7228);

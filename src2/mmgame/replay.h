@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/node.h"
 
 /*
     mmgame:replay
@@ -52,149 +54,84 @@
     0x627248 | private: static class mmReplayManager * mmReplayManager::Instance | ?Instance@mmReplayManager@@0PAV1@A
 */
 
-class mmReplayManager : asNode
+class mmReplayManager : public asNode
 {
+    // const mmReplayManager::`vftable' @ 0x5B0444
+
 public:
-    // mmReplayManager::`vftable' @ 0x5B0444
-
     // 0x406870 | ??0mmReplayManager@@QAE@XZ
-    inline mmReplayManager()
-    {
-        stub<member_func_t<void, mmReplayManager>>(0x406870, this);
-    }
+    mmReplayManager();
 
-    // 0x406E00 | ?ProcessCam@mmReplayManager@@AAEXXZ
-    inline void ProcessCam()
-    {
-        return stub<member_func_t<void, mmReplayManager>>(0x406E00, this);
-    }
-
-    // 0x406E80 | ?StartReplay@mmReplayManager@@AAEXXZ
-    inline void StartReplay()
-    {
-        return stub<member_func_t<void, mmReplayManager>>(0x406E80, this);
-    }
-
-    // 0x406EF0 | ?SetReplayDesc@mmReplayManager@@QAEXPAD@Z
-    inline void SetReplayDesc(char* arg1)
-    {
-        return stub<member_func_t<void, mmReplayManager, char*>>(0x406EF0, this, arg1);
-    }
-
-    // 0x406F30 | ?LoadReplayDesc@mmReplayManager@@QAEHPAD@Z
-    inline int32_t LoadReplayDesc(char* arg1)
-    {
-        return stub<member_func_t<int32_t, mmReplayManager, char*>>(0x406F30, this, arg1);
-    }
-
-    // 0x407000 | ?LoadReplay@mmReplayManager@@QAEXPAD@Z
-    inline void LoadReplay(char* arg1)
-    {
-        return stub<member_func_t<void, mmReplayManager, char*>>(0x407000, this, arg1);
-    }
-
-    // 0x407130 | ?EndOfReplay@mmReplayManager@@QAE_NXZ
-    inline bool EndOfReplay()
-    {
-        return stub<member_func_t<bool, mmReplayManager>>(0x407130, this);
-    }
-
-    // 0x407150 | ?SaveReplayDesc@mmReplayManager@@QAEXPAD@Z
-    inline void SaveReplayDesc(char* arg1)
-    {
-        return stub<member_func_t<void, mmReplayManager, char*>>(0x407150, this, arg1);
-    }
-
-    // 0x4071E0 | ?SaveReplay@mmReplayManager@@QAEXPAD@Z
-    inline void SaveReplay(char* arg1)
-    {
-        return stub<member_func_t<void, mmReplayManager, char*>>(0x4071E0, this, arg1);
-    }
-
-    // 0x4072D0 | ?GetBrakes@mmReplayManager@@QAEMXZ
-    inline float GetBrakes()
-    {
-        return stub<member_func_t<float, mmReplayManager>>(0x4072D0, this);
-    }
-
-    // 0x407300 | ?GetHandBrakes@mmReplayManager@@QAEMXZ
-    inline float GetHandBrakes()
-    {
-        return stub<member_func_t<float, mmReplayManager>>(0x407300, this);
-    }
-
-    // 0x407330 | ?GetSteering@mmReplayManager@@QAEMXZ
-    inline float GetSteering()
-    {
-        return stub<member_func_t<float, mmReplayManager>>(0x407330, this);
-    }
-
-    // 0x407360 | ?GetThrottle@mmReplayManager@@QAEMXZ
-    inline float GetThrottle()
-    {
-        return stub<member_func_t<float, mmReplayManager>>(0x407360, this);
-    }
-
-    // 0x407390 | ?GetData@mmReplayManager@@QAEXPAHPA_N@Z
-    inline void GetData(int32_t* arg1, bool* arg2)
-    {
-        return stub<member_func_t<void, mmReplayManager, int32_t*, bool*>>(0x407390, this, arg1, arg2);
-    }
-
-    // 0x4073D0 | ?SetData@mmReplayManager@@QAEXH_N@Z
-    inline void SetData(int32_t arg1, bool arg2)
-    {
-        return stub<member_func_t<void, mmReplayManager, int32_t, bool>>(0x4073D0, this, arg1, arg2);
-    }
-
-    // 0x407410 | ?GetReplayInfo@mmReplayManager@@AAEXXZ
-    inline void GetReplayInfo()
-    {
-        return stub<member_func_t<void, mmReplayManager>>(0x407410, this);
-    }
-
-    // 0x4075A0 | ?SetReplayInfo@mmReplayManager@@AAEXXZ
-    inline void SetReplayInfo()
-    {
-        return stub<member_func_t<void, mmReplayManager>>(0x4075A0, this);
-    }
-
-    // 0x407720 | ?WriteReplayInfo@mmReplayManager@@AAEXPAVStream@@@Z
-    inline void WriteReplayInfo(class Stream* arg1)
-    {
-        return stub<member_func_t<void, mmReplayManager, class Stream*>>(0x407720, this, arg1);
-    }
-
-    // 0x407920 | ?ReadReplayInfo@mmReplayManager@@AAEXPAVStream@@@Z
-    inline void ReadReplayInfo(class Stream* arg1)
-    {
-        return stub<member_func_t<void, mmReplayManager, class Stream*>>(0x407920, this, arg1);
-    }
-
-    // 0x627248 | ?Instance@mmReplayManager@@0PAV1@A
-    inline extern_var(0x627248, class mmReplayManager*, Instance);
-
+    // 0x407B10 | ??_GmmReplayManager@@UAEPAXI@Z
     // 0x406930 | ??1mmReplayManager@@UAE@XZ
-    inline ~mmReplayManager() override
-    {
-        stub<member_func_t<void, mmReplayManager>>(0x406930, this);
-    }
+    ~mmReplayManager() override;
 
     // 0x406DF0 | ?Cull@mmReplayManager@@UAEXXZ
-    inline void Cull() override
-    {
-        return stub<member_func_t<void, mmReplayManager>>(0x406DF0, this);
-    }
+    void Cull() override;
 
-    // 0x4069E0 | ?Update@mmReplayManager@@UAEXXZ
-    inline void Update() override
-    {
-        return stub<member_func_t<void, mmReplayManager>>(0x4069E0, this);
-    }
+    // 0x407130 | ?EndOfReplay@mmReplayManager@@QAE_NXZ
+    bool EndOfReplay();
+
+    // 0x4072D0 | ?GetBrakes@mmReplayManager@@QAEMXZ
+    f32 GetBrakes();
+
+    // 0x407390 | ?GetData@mmReplayManager@@QAEXPAHPA_N@Z
+    void GetData(i32* arg1, bool* arg2);
+
+    // 0x407300 | ?GetHandBrakes@mmReplayManager@@QAEMXZ
+    f32 GetHandBrakes();
+
+    // 0x407330 | ?GetSteering@mmReplayManager@@QAEMXZ
+    f32 GetSteering();
+
+    // 0x407360 | ?GetThrottle@mmReplayManager@@QAEMXZ
+    f32 GetThrottle();
+
+    // 0x407000 | ?LoadReplay@mmReplayManager@@QAEXPAD@Z
+    void LoadReplay(char* arg1);
+
+    // 0x406F30 | ?LoadReplayDesc@mmReplayManager@@QAEHPAD@Z
+    i32 LoadReplayDesc(char* arg1);
 
     // 0x406990 | ?Reset@mmReplayManager@@UAEXXZ
-    inline void Reset() override
-    {
-        return stub<member_func_t<void, mmReplayManager>>(0x406990, this);
-    }
+    void Reset() override;
+
+    // 0x4071E0 | ?SaveReplay@mmReplayManager@@QAEXPAD@Z
+    void SaveReplay(char* arg1);
+
+    // 0x407150 | ?SaveReplayDesc@mmReplayManager@@QAEXPAD@Z
+    void SaveReplayDesc(char* arg1);
+
+    // 0x4073D0 | ?SetData@mmReplayManager@@QAEXH_N@Z
+    void SetData(i32 arg1, bool arg2);
+
+    // 0x406EF0 | ?SetReplayDesc@mmReplayManager@@QAEXPAD@Z
+    void SetReplayDesc(char* arg1);
+
+    // 0x4069E0 | ?Update@mmReplayManager@@UAEXXZ
+    void Update() override;
+
+private:
+    // 0x407410 | ?GetReplayInfo@mmReplayManager@@AAEXXZ
+    void GetReplayInfo();
+
+    // 0x406E00 | ?ProcessCam@mmReplayManager@@AAEXXZ
+    void ProcessCam();
+
+    // 0x407920 | ?ReadReplayInfo@mmReplayManager@@AAEXPAVStream@@@Z
+    void ReadReplayInfo(class Stream* arg1);
+
+    // 0x4075A0 | ?SetReplayInfo@mmReplayManager@@AAEXXZ
+    void SetReplayInfo();
+
+    // 0x406E80 | ?StartReplay@mmReplayManager@@AAEXXZ
+    void StartReplay();
+
+    // 0x407720 | ?WriteReplayInfo@mmReplayManager@@AAEXPAVStream@@@Z
+    void WriteReplayInfo(class Stream* arg1);
+
+    // 0x627248 | ?Instance@mmReplayManager@@0PAV1@A
+    static inline extern_var(0x627248, class mmReplayManager*, Instance);
 };
+
+check_size(mmReplayManager, 0x840);

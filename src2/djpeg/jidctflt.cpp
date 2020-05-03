@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,3 +17,12 @@
 */
 
 #include "jidctflt.h"
+
+void jpeg_idct_float(
+    struct jpeg_decompress_struct* arg1, struct jpeg_component_info* arg2, i16* arg3, u8** arg4, u32 arg5)
+{
+    return stub<cdecl_t<void, struct jpeg_decompress_struct*, struct jpeg_component_info*, i16*, u8**, u32>>(
+        0x49ED70, arg1, arg2, arg3, arg4, arg5);
+}
+
+define_dummy_symbol(djpeg_jidctflt);

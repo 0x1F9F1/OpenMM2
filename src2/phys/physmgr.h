@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 */
 
 #pragma once
+
+#include "node/cullable.h"
 
 /*
     phys:physmgr
@@ -72,118 +74,125 @@
     public: static int dgPhysManager::sm_ncollidable_locs2 | ?sm_ncollidable_locs2@dgPhysManager@@2HA
 */
 
-class dgPhysManager : Base
+class dgPhysManager
+    : public phPhysicsManager
+    , public asCullable /* Warning: Unordered Multiple Inheritance */
 {
+    // const dgPhysManager::`vftable'{for `phPhysicsManager'} @ 0x5B1CE8
+    // const dgPhysManager::`vftable'{for `asCullable'} @ 0x5B1D0C
+
 public:
     // 0x4681A0 | ??0dgPhysManager@@QAE@XZ
-    inline dgPhysManager()
-    {
-        stub<member_func_t<void, dgPhysManager>>(0x4681A0, this);
-    }
+    dgPhysManager();
 
-    // 0x4682D0 | ?Reset@dgPhysManager@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, dgPhysManager>>(0x4682D0, this);
-    }
-
-    // 0x468370 | ?DeclareMover@dgPhysManager@@QAEXPAVlvlInstance@@HH@Z
-    inline void DeclareMover(class lvlInstance* arg1, int32_t arg2, int32_t arg3)
-    {
-        return stub<member_func_t<void, dgPhysManager, class lvlInstance*, int32_t, int32_t>>(
-            0x468370, this, arg1, arg2, arg3);
-    }
-
-    // 0x468550 | ?NewMover@dgPhysManager@@QAEXPAVlvlInstance@@0@Z
-    inline void NewMover(class lvlInstance* arg1, class lvlInstance* arg2)
-    {
-        return stub<member_func_t<void, dgPhysManager, class lvlInstance*, class lvlInstance*>>(
-            0x468550, this, arg1, arg2);
-    }
-
-    // 0x468670 | ?NewMover@dgPhysManager@@QAEXPAVlvlInstance@@@Z
-    inline void NewMover(class lvlInstance* arg1)
-    {
-        return stub<member_func_t<void, dgPhysManager, class lvlInstance*>>(0x468670, this, arg1);
-    }
-
-    // 0x468720 | ?NewMover@dgPhysManager@@QAEXPAVlvlInstance@@00@Z
-    inline void NewMover(class lvlInstance* arg1, class lvlInstance* arg2, class lvlInstance* arg3)
-    {
-        return stub<member_func_t<void, dgPhysManager, class lvlInstance*, class lvlInstance*, class lvlInstance*>>(
-            0x468720, this, arg1, arg2, arg3);
-    }
-
-    // 0x468860 | ?IgnoreMover@dgPhysManager@@QAEXPAVlvlInstance@@@Z
-    inline void IgnoreMover(class lvlInstance* arg1)
-    {
-        return stub<member_func_t<void, dgPhysManager, class lvlInstance*>>(0x468860, this, arg1);
-    }
-
-    // 0x4688B0 | ?Update@dgPhysManager@@QAEXXZ
-    inline void Update()
-    {
-        return stub<member_func_t<void, dgPhysManager>>(0x4688B0, this);
-    }
-
-    // 0x468E10 | ?ResetTable@dgPhysManager@@QAEXXZ
-    inline void ResetTable()
-    {
-        return stub<member_func_t<void, dgPhysManager>>(0x468E10, this);
-    }
+    // 0x469ED0 | ??_GdgPhysManager@@UAEPAXI@Z
+    // 0x468250 | ??1dgPhysManager@@UAE@XZ
+    ~dgPhysManager() override;
 
     // 0x468E40 | ?Collide@dgPhysManager@@QAE_NAAVlvlSegment@@PAVlvlIntersection@@HPAVlvlInstance@@HH@Z
-    inline bool Collide(class lvlSegment& arg1, class lvlIntersection* arg2, int32_t arg3, class lvlInstance* arg4,
-        int32_t arg5, int32_t arg6)
-    {
-        return stub<member_func_t<bool, dgPhysManager, class lvlSegment&, class lvlIntersection*, int32_t,
-            class lvlInstance*, int32_t, int32_t>>(0x468E40, this, arg1, arg2, arg3, arg4, arg5, arg6);
-    }
-
-    // 0x469110 | ?CollideProbe@dgPhysManager@@QAE_NAAVlvlSegment@@PAVlvlIntersection@@PAVlvlInstance@@@Z
-    inline bool CollideProbe(class lvlSegment& arg1, class lvlIntersection* arg2, class lvlInstance* arg3)
-    {
-        return stub<member_func_t<bool, dgPhysManager, class lvlSegment&, class lvlIntersection*, class lvlInstance*>>(
-            0x469110, this, arg1, arg2, arg3);
-    }
-
-    // 0x4692E0 | ?TrivialCollideInstances@dgPhysManager@@QAE_NPAVlvlInstance@@0@Z
-    inline bool TrivialCollideInstances(class lvlInstance* arg1, class lvlInstance* arg2)
-    {
-        return stub<member_func_t<bool, dgPhysManager, class lvlInstance*, class lvlInstance*>>(
-            0x4692E0, this, arg1, arg2);
-    }
-
-    // 0x4694E0 | ?GatherCollidables@dgPhysManager@@QAEXPAUCollisionTableEntry@1@@Z
-    inline void GatherCollidables(struct dgPhysManager::CollisionTableEntry* arg1)
-    {
-        return stub<member_func_t<void, dgPhysManager, struct dgPhysManager::CollisionTableEntry*>>(
-            0x4694E0, this, arg1);
-    }
+    bool Collide(
+        class lvlSegment& arg1, class lvlIntersection* arg2, i32 arg3, class lvlInstance* arg4, i32 arg5, i32 arg6);
 
     // 0x469620 | ?CollideInstances@dgPhysManager@@QAE_NPAVlvlInstance@@0@Z
-    inline bool CollideInstances(class lvlInstance* arg1, class lvlInstance* arg2)
-    {
-        return stub<member_func_t<bool, dgPhysManager, class lvlInstance*, class lvlInstance*>>(
-            0x469620, this, arg1, arg2);
-    }
+    bool CollideInstances(class lvlInstance* arg1, class lvlInstance* arg2);
+
+    // 0x469110 | ?CollideProbe@dgPhysManager@@QAE_NAAVlvlSegment@@PAVlvlIntersection@@PAVlvlInstance@@@Z
+    bool CollideProbe(class lvlSegment& arg1, class lvlIntersection* arg2, class lvlInstance* arg3);
 
     // 0x469A60 | ?CollideTerrain@dgPhysManager@@QAE_NPAUCollisionTableEntry@1@@Z
-    inline bool CollideTerrain(struct dgPhysManager::CollisionTableEntry* arg1)
-    {
-        return stub<member_func_t<bool, dgPhysManager, struct dgPhysManager::CollisionTableEntry*>>(
-            0x469A60, this, arg1);
-    }
+    bool CollideTerrain(struct dgPhysManager::CollisionTableEntry* arg1);
+
+    // 0x469F80 | ?CreateInstance@dgPhysManager@@UAEPAVphInstance@@XZ
+    class phInstance* CreateInstance() override;
+
+    // 0x468370 | ?DeclareMover@dgPhysManager@@QAEXPAVlvlInstance@@HH@Z
+    void DeclareMover(class lvlInstance* arg1, i32 arg2, i32 arg3);
+
+    // 0x469F30 | ?DemoteInstance@dgPhysManager@@UAEXPAVphInstance@@@Z
+    void DemoteInstance(class phInstance* arg1) override;
+
+    // 0x469F50 | ?DisableInstance@dgPhysManager@@UAEXPAVphInstance@@@Z
+    void DisableInstance(class phInstance* arg1) override;
 
     // 0x469EC0 | ?Draw@dgPhysManager@@QAEXXZ
-    inline void Draw()
-    {
-        return stub<member_func_t<void, dgPhysManager>>(0x469EC0, this);
-    }
+    void Draw();
 
-    // 0x65D9DC | ?m_pInst@dgPhysManager@@2PAV1@A
-    inline extern_var(0x65D9DC, class dgPhysManager*, m_pInst);
+    // 0x469F60 | ?EnableInstance@dgPhysManager@@UAEXPAVphInstance@@H@Z
+    void EnableInstance(class phInstance* arg1, i32 arg2) override;
+
+    // 0x4694E0 | ?GatherCollidables@dgPhysManager@@QAEXPAUCollisionTableEntry@1@@Z
+    void GatherCollidables(struct dgPhysManager::CollisionTableEntry* arg1);
+
+    // 0x469F70 | ?GetCollider@dgPhysManager@@UBEPAVphColliderBase@@PBVphInstance@@@Z
+    class phColliderBase* GetCollider(class phInstance const* arg1) override;
+
+    // 0x468860 | ?IgnoreMover@dgPhysManager@@QAEXPAVlvlInstance@@@Z
+    void IgnoreMover(class lvlInstance* arg1);
+
+    // 0x469F40 | ?KillInstance@dgPhysManager@@UAEXPAVphInstance@@@Z
+    void KillInstance(class phInstance* arg1) override;
+
+    // 0x468670 | ?NewMover@dgPhysManager@@QAEXPAVlvlInstance@@@Z
+    void NewMover(class lvlInstance* arg1);
+
+    // 0x468550 | ?NewMover@dgPhysManager@@QAEXPAVlvlInstance@@0@Z
+    void NewMover(class lvlInstance* arg1, class lvlInstance* arg2);
+
+    // 0x468720 | ?NewMover@dgPhysManager@@QAEXPAVlvlInstance@@00@Z
+    void NewMover(class lvlInstance* arg1, class lvlInstance* arg2, class lvlInstance* arg3);
+
+    // 0x469F20 | ?PromoteInstance@dgPhysManager@@UAEPAVphColliderBase@@PAVphInstance@@@Z
+    class phColliderBase* PromoteInstance(class phInstance* arg1) override;
+
+    // 0x4682D0 | ?Reset@dgPhysManager@@QAEXXZ
+    void Reset();
+
+    // 0x468E10 | ?ResetTable@dgPhysManager@@QAEXXZ
+    void ResetTable();
+
+    // 0x469F00 | ?TestProbe@dgPhysManager@@UBE_NABVphSegment@@PAVphIntersection@@IH@Z
+    bool TestProbe(class phSegment const& arg1, class phIntersection* arg2, u32 arg3, i32 arg4) override;
+
+    // 0x469F10 | ?TestSphere@dgPhysManager@@UBE_NABVVector3@@MPAVphImpact@@IH@Z
+    bool TestSphere(class Vector3 const& arg1, f32 arg2, class phImpact* arg3, u32 arg4, i32 arg5) override;
+
+    // 0x4692E0 | ?TrivialCollideInstances@dgPhysManager@@QAE_NPAVlvlInstance@@0@Z
+    bool TrivialCollideInstances(class lvlInstance* arg1, class lvlInstance* arg2);
+
+    // 0x4688B0 | ?Update@dgPhysManager@@QAEXXZ
+    void Update();
 
     // 0x65D9E0 | ?PlayerInst@dgPhysManager@@2PAVlvlInstance@@A
-    inline extern_var(0x65D9E0, class lvlInstance*, PlayerInst);
+    static inline extern_var(0x65D9E0, class lvlInstance*, PlayerInst);
+
+    // 0x65D9DC | ?m_pInst@dgPhysManager@@2PAV1@A
+    static inline extern_var(0x65D9DC, class dgPhysManager*, m_pInst);
 };
+
+check_size(dgPhysManager, 0x12B0);
+
+struct phPhysicsManager
+{
+    // const phPhysicsManager::`vftable' @ 0x5B1D14
+
+public:
+    virtual bool TestProbe(class phSegment const& arg1, class phIntersection* arg2, u32 arg3, i32 arg4) = 0;
+
+    virtual bool TestSphere(class Vector3 const& arg1, f32 arg2, class phImpact* arg3, u32 arg4, i32 arg5) = 0;
+
+    virtual class phColliderBase* PromoteInstance(class phInstance* arg1) = 0;
+
+    virtual void DemoteInstance(class phInstance* arg1) = 0;
+
+    virtual void KillInstance(class phInstance* arg1) = 0;
+
+    virtual void DisableInstance(class phInstance* arg1) = 0;
+
+    virtual void EnableInstance(class phInstance* arg1, i32 arg2) = 0;
+
+    virtual class phColliderBase* GetCollider(class phInstance const* arg1) = 0;
+
+    virtual class phInstance* CreateInstance() = 0;
+};
+
+check_size(phPhysicsManager, 0x0);

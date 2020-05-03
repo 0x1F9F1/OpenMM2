@@ -1,6 +1,6 @@
 /*
-    OpenMM1 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2020 0x1F9F1
+    OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
+    Copyright (C) 2020 Brick
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 
 #pragma once
 
+#include "colliderbase.h"
+
 /*
     phcollide:collider
 
@@ -31,53 +33,31 @@
     0x46D8D0 | public: void __thiscall phCollider::Reset(void) | ?Reset@phCollider@@QAEXXZ
 */
 
-class phCollider : phColliderBase
+class phCollider : public phColliderBase
 {
+    // const phCollider::`vftable' @ 0x5B1CB0
+
 public:
-    // phCollider::`vftable' @ 0x5B1CB0
-
-    // 0x46D610 | ?InitArray@phCollider@@SAXQAV1@H@Z
-    static inline void InitArray(class phCollider* const arg1, int32_t arg2)
-    {
-        return stub<cdecl_t<void, class phCollider* const, int32_t>>(0x46D610, arg1, arg2);
-    }
-
-    // 0x46D6E0 | ?Init@phCollider@@QAEXPBVphBound@@PAVInstanceData@@PAVphInertialCS@@PAVphSleep@@@Z
-    inline void Init(class phBound const* arg1, class InstanceData* arg2, class phInertialCS* arg3, class phSleep* arg4)
-    {
-        return stub<member_func_t<void, phCollider, class phBound const*, class InstanceData*, class phInertialCS*,
-            class phSleep*>>(0x46D6E0, this, arg1, arg2, arg3, arg4);
-    }
-
-    // 0x46D740 | ?Init@phCollider@@QAEXPBVphBound@@PAVphInertialCS@@PAVphSleep@@@Z
-    inline void Init(class phBound const* arg1, class phInertialCS* arg2, class phSleep* arg3)
-    {
-        return stub<member_func_t<void, phCollider, class phBound const*, class phInertialCS*, class phSleep*>>(
-            0x46D740, this, arg1, arg2, arg3);
-    }
-
-    // 0x46D7A0 | ?Init@phCollider@@QAEXPBVphBound@@PAVMatrix34@@PAVphInertialCS@@PAVphSleep@@@Z
-    inline void Init(class phBound const* arg1, class Matrix34* arg2, class phInertialCS* arg3, class phSleep* arg4)
-    {
-        return stub<member_func_t<void, phCollider, class phBound const*, class Matrix34*, class phInertialCS*,
-            class phSleep*>>(0x46D7A0, this, arg1, arg2, arg3, arg4);
-    }
+    // 0x46D870 | ?Init@phCollider@@QAEXPAVMatrix34@@PBVphBound@@@Z
+    void Init(class Matrix34* arg1, class phBound const* arg2);
 
     // 0x46D800 | ?Init@phCollider@@QAEXPBVphBound@@PAVMatrix34@@@Z
-    inline void Init(class phBound const* arg1, class Matrix34* arg2)
-    {
-        return stub<member_func_t<void, phCollider, class phBound const*, class Matrix34*>>(0x46D800, this, arg1, arg2);
-    }
+    void Init(class phBound const* arg1, class Matrix34* arg2);
 
-    // 0x46D870 | ?Init@phCollider@@QAEXPAVMatrix34@@PBVphBound@@@Z
-    inline void Init(class Matrix34* arg1, class phBound const* arg2)
-    {
-        return stub<member_func_t<void, phCollider, class Matrix34*, class phBound const*>>(0x46D870, this, arg1, arg2);
-    }
+    // 0x46D740 | ?Init@phCollider@@QAEXPBVphBound@@PAVphInertialCS@@PAVphSleep@@@Z
+    void Init(class phBound const* arg1, class phInertialCS* arg2, class phSleep* arg3);
+
+    // 0x46D6E0 | ?Init@phCollider@@QAEXPBVphBound@@PAVInstanceData@@PAVphInertialCS@@PAVphSleep@@@Z
+    void Init(class phBound const* arg1, class InstanceData* arg2, class phInertialCS* arg3, class phSleep* arg4);
+
+    // 0x46D7A0 | ?Init@phCollider@@QAEXPBVphBound@@PAVMatrix34@@PAVphInertialCS@@PAVphSleep@@@Z
+    void Init(class phBound const* arg1, class Matrix34* arg2, class phInertialCS* arg3, class phSleep* arg4);
 
     // 0x46D8D0 | ?Reset@phCollider@@QAEXXZ
-    inline void Reset()
-    {
-        return stub<member_func_t<void, phCollider>>(0x46D8D0, this);
-    }
+    void Reset();
+
+    // 0x46D610 | ?InitArray@phCollider@@SAXQAV1@H@Z
+    static void InitArray(class phCollider* const arg1, i32 arg2);
 };
+
+check_size(phCollider, 0x0);
