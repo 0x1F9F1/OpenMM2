@@ -1,5 +1,7 @@
 # OpenMM2
 
+## This project is mostly abandoned, due to technical limitations. Check out [mm2hook](https://github.com/Fireboyd78/mm2hook) instead.
+
 [![Build status](https://ci.appveyor.com/api/projects/status/xahrpn8fefb5cwfx/branch/master?svg=true)](https://ci.appveyor.com/project/0x1F9F1/openmm2/branch/master)
 
 OpenMM2 is an open source re-implementation of Midtown Madness 2.
